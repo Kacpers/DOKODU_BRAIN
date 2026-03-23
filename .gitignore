@@ -1,0 +1,36 @@
+# Python
+scripts/__pycache__/
+scripts/*.pyc
+*.pyc
+*.pyo
+
+# Lokalne bazy SQLite (regenerowane przez skrypty)
+*.db
+*.db-shm
+*.db-wal
+
+# Tokeny i credentials (trzymane w ~/.config/dokodu/)
+*.pickle
+*.json
+*.key
+
+# Logi
+*.log
+/tmp/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Edytory
+.vscode/
+.idea/
+*.swp
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Pliki tymczasowe
+*.tmp
+*.bak

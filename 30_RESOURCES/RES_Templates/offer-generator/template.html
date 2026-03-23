@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Propozycja — {{CLIENT_NAME}}</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:       #0F2137;
+    --navy-light: #1a3352;
+    --red:        #E63946;
+    --bg:         #F8FAFC;
+    --text:       #343D48;
+    --muted:      #5A6677;
+    --white:      #ffffff;
+    --border:     #E2E8F0;
+    --green:      #16a34a;
+    --blue:       #1d4ed8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'DejaVu Sans', sans-serif;
+    color: var(--text);
+    background: var(--white);
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+
+  /* ─── PAGE BREAKS ─── */
+  .cover  { page-break-after: always; }
+  .page   { page-break-after: always; }
+  .page.last { page-break-after: avoid; }
+
+  @page { margin: 0; size: A4; }
+
+  /* ─── COVER ─── */
+  .cover {
+    background: var(--navy);
+    color: var(--white);
+    height: 297mm;
+    padding: 48px 56px;
+    display: block;
+    position: relative;
+  }
+
+  .cover-accent-top {
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle at top right, rgba(230,57,70,0.25) 0%, transparent 65%);
+  }
+
+  .cover-accent-bottom {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 250px; height: 200px;
+    background: radial-gradient(circle at bottom left, rgba(29,78,216,0.2) 0%, transparent 65%);
+  }
+
+  .cover-logo {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .cover-logo img {
+    height: 26px;
+    filter: brightness(0) invert(1);
+  }
+
+  .cover-body {
+    margin-top: 140px;
+  }
+
+  .cover-label {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 20px;
+  }
+
+  .cover-title {
+    font-size: 38pt;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .cover-title-highlight {
+    color: #60a5fa;
+  }
+
+  .cover-subtitle {
+    font-size: 13pt;
+    color: rgba(255,255,255,0.6);
+    font-weight: 400;
+    max-width: 460px;
+    line-height: 1.55;
+    margin-bottom: 56px;
+  }
+
+  .cover-divider {
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin-bottom: 24px;
+  }
+
+  .cover-meta {
+    display: table;
+    width: 100%;
+  }
+
+  .cover-meta-item {
+    display: table-cell;
+    width: 25%;
+    vertical-align: top;
+  }
+
+  .cover-meta-item .label {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.38);
+    display: block;
+    margin-bottom: 5px;
+    white-space: nowrap;
+  }
+
+  .cover-meta-item .value {
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--white);
+    display: block;
+    white-space: nowrap;
+  }
+
+  /* ─── CONTENT PAGE ─── */
+  .page {
+    height: 297mm;
+    padding: 36px 52px 28px;
+    display: block;
+    position: relative;
+  }
+
+  .page-header {
+    display: table;
+    width: 100%;
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .page-header .logo-cell {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .page-header .client-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: right;
+    font-size: 8pt;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .page-header img { height: 18px; }
+
+  /* ─── TYPOGRAPHY ─── */
+  .section-label {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  h2 {
+    font-size: 20pt;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 18px;
+    line-height: 1.2;
+  }
+
+  h3 {
+    font-size: 12pt;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  p { margin-bottom: 10px; }
+
+  /* ─── EXEC SUMMARY BOX ─── */
+  .summary-box {
+    background: var(--navy);
+    border-radius: 12px;
+    padding: 28px 32px;
+    margin-bottom: 28px;
+    border-left: 5px solid var(--red);
+  }
+
+  .summary-box p {
+    font-size: 12pt;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.92);
+    font-weight: 400;
+    margin: 0;
+  }
+
+  /* ─── PAIN ITEMS ─── */
+  .pain-item {
+    margin-bottom: 10px;
+    padding: 13px 18px 13px 22px;
+    background: #fff5f5;
+    border-left: 4px solid var(--red);
+    border-radius: 0 8px 8px 0;
+  }
+
+  .pain-title {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 10.5pt;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .pain-desc { font-size: 10pt; color: var(--muted); display: block; }
+
+  /* ─── APPROACH STEPS ─── */
+  .step {
+    display: table;
+    width: 100%;
+    margin-bottom: 13px;
+  }
+
+  .step-num-cell {
+    display: table-cell;
+    width: 44px;
+    vertical-align: top;
+    padding-top: 1px;
+  }
+
+  .step-num {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 11pt;
+    text-align: center;
+    line-height: 32px;
+  }
+
+  .step-body-cell { display: table-cell; vertical-align: top; padding-top: 5px; }
+  .step-title { font-weight: 700; font-size: 11pt; color: var(--navy); display: block; margin-bottom: 3px; }
+  .step-desc { font-size: 10pt; color: var(--muted); display: block; }
+
+  /* ─── SCOPE CARDS (2-column table layout) ─── */
+  .scope-table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 14px 0;
+    margin: 0 -14px;
+  }
+
+  .scope-col { display: table-cell; width: 50%; vertical-align: top; }
+
+  .scope-card {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    height: 100%;
+  }
+
+  .scope-card.featured {
+    border-color: var(--navy);
+    background: #f0f4ff;
+  }
+
+  .scope-badge {
+    display: inline-block;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    background: var(--border);
+    color: var(--muted);
+  }
+
+  .scope-card.featured .scope-badge {
+    background: var(--navy);
+    color: var(--white);
+  }
+
+  .scope-item {
+    font-size: 10pt;
+    color: var(--text);
+    margin-bottom: 7px;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .scope-item::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 800;
+    position: absolute;
+    left: 0;
+  }
+
+  /* ─── TIMELINE ─── */
+  .tl-row {
+    display: table;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .tl-week {
+    display: table-cell;
+    width: 82px;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  .tl-bar-cell { display: table-cell; vertical-align: middle; }
+
+  .tl-bar-bg {
+    background: var(--bg);
+    border-radius: 4px;
+    height: 10px;
+    margin-right: 12px;
+    overflow: hidden;
+  }
+
+  .tl-bar-fill {
+    background: var(--navy);
+    height: 10px;
+    border-radius: 4px;
+  }
+
+  .tl-label {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--navy);
+    white-space: nowrap;
+    padding-left: 0;
+  }
+
+  /* ─── PRICING CARDS ─── */
+  .pricing-table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 14px 0;
+    margin: 18px -14px 0;
+  }
+
+  .pricing-col { display: table-cell; width: 50%; vertical-align: top; }
+
+  .price-card {
+    border: 2px solid var(--border);
+    border-radius: 14px;
+    padding: 24px 26px;
+  }
+
+  .price-card.featured {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+  }
+
+  .price-option-label {
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+    display: block;
+  }
+
+  .price-card.featured .price-option-label { color: rgba(255,255,255,0.45); }
+
+  .price-name {
+    font-size: 14pt;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .price-card.featured .price-name { color: var(--white); }
+
+  .price-amount {
+    font-size: 26pt;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    display: block;
+  }
+
+  .price-card.featured .price-amount { color: var(--white); }
+
+  .price-vat {
+    font-size: 8.5pt;
+    color: var(--muted);
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .price-card.featured .price-vat { color: rgba(255,255,255,0.45); }
+
+  .price-hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 12px 0;
+  }
+
+  .price-card.featured .price-hr { border-color: rgba(255,255,255,0.15); }
+
+  .price-feature {
+    font-size: 10pt;
+    color: var(--text);
+    margin-bottom: 7px;
+    padding-left: 18px;
+    position: relative;
+  }
+
+  .price-feature::before {
+    content: '✓';
+    color: var(--green);
+    font-weight: 800;
+    position: absolute;
+    left: 0;
+  }
+
+  .price-card.featured .price-feature { color: rgba(255,255,255,0.85); }
+  .price-card.featured .price-feature::before { color: #4ade80; }
+
+  /* ─── ROI BOX ─── */
+  .roi-box {
+    background: #f0fdf4;
+    border: 1.5px solid #86efac;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    display: table;
+    width: 100%;
+  }
+
+  .roi-bar { display: table-cell; vertical-align: middle; width: 6px; }
+  .roi-bar-fill { width: 4px; background: var(--green); border-radius: 2px; height: 36px; }
+  .roi-content { display: table-cell; vertical-align: middle; padding-left: 14px; }
+  .roi-headline { font-size: 11pt; font-weight: 700; color: #15803d; display: block; margin-bottom: 2px; }
+  .roi-detail { font-size: 10pt; color: #166534; }
+
+  /* ─── WHY DOKODU ─── */
+  .why-table {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 12px;
+    margin: 16px -12px;
+  }
+
+  .why-row { display: table-row; }
+  .why-col { display: table-cell; width: 50%; vertical-align: top; padding: 4px; }
+
+  .why-card {
+    border: 1.5px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: var(--bg);
+  }
+
+  .why-icon-box {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: var(--navy);
+    margin-bottom: 10px;
+  }
+
+  .why-title {
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--navy);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .why-desc { font-size: 9.5pt; color: var(--muted); line-height: 1.45; }
+
+  /* ─── CTA BOX ─── */
+  .cta-box {
+    background: var(--red);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-top: 24px;
+  }
+
+  .cta-title {
+    font-size: 14pt;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 18px;
+    display: block;
+  }
+
+  .cta-step {
+    display: table;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .cta-num-cell { display: table-cell; width: 36px; vertical-align: middle; }
+  .cta-num {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.22);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 10pt;
+    text-align: center;
+    line-height: 26px;
+    display: block;
+  }
+
+  .cta-text-cell {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 10.5pt;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .cta-divider {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.22);
+    margin: 18px 0 16px;
+  }
+
+  .cta-contact-table { display: table; width: 100%; }
+  .cta-contact-cell {
+    display: table-cell;
+    font-size: 9.5pt;
+    color: rgba(255,255,255,0.8);
+    vertical-align: middle;
+    padding-right: 20px;
+  }
+
+  .cta-contact-cell strong { color: var(--white); font-weight: 600; }
+
+  /* ─── PAGE FOOTER ─── */
+  .page-footer {
+    position: absolute;
+    bottom: 24px;
+    left: 52px;
+    right: 52px;
+    display: table;
+    width: calc(100% - 104px);
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+  }
+
+  .footer-left {
+    display: table-cell;
+    font-size: 8pt;
+    color: var(--muted);
+    vertical-align: middle;
+  }
+
+  .footer-right {
+    display: table-cell;
+    text-align: right;
+    font-size: 8pt;
+    font-weight: 700;
+    color: var(--muted);
+    vertical-align: middle;
+  }
+
+  @media print {
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ OKŁADKA ═══════════ -->
+<div class="cover">
+  <div class="cover-accent-top"></div>
+  <div class="cover-accent-bottom"></div>
+
+  <div class="cover-logo">
+    <img src="{{LOGO_PATH}}" alt="Dokodu">
+  </div>
+
+  <div class="cover-body">
+    <div class="cover-label">Propozycja Współpracy</div>
+    <div class="cover-title">
+      Automatyzacja AI<br>dla <span class="cover-title-highlight">{{CLIENT_NAME}}</span>
+    </div>
+    <div class="cover-subtitle">{{COVER_SUBTITLE}}</div>
+    <div class="cover-divider"></div>
+    <table width="100%" cellspacing="0" cellpadding="0" style="border-collapse:collapse;">
+      <tr>
+        <td width="25%" style="vertical-align:top; padding-right:16px;">
+          <p style="font-size:7.5pt; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.38); margin:0 0 6px 0;">Klient</p>
+          <p style="font-size:11pt; font-weight:600; color:#ffffff; margin:0;">{{CLIENT_NAME}}</p>
+        </td>
+        <td width="25%" style="vertical-align:top; padding-right:16px;">
+          <p style="font-size:7.5pt; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.38); margin:0 0 6px 0;">Data</p>
+          <p style="font-size:11pt; font-weight:600; color:#ffffff; margin:0;">{{DATE}}</p>
+        </td>
+        <td width="25%" style="vertical-align:top; padding-right:16px;">
+          <p style="font-size:7.5pt; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.38); margin:0 0 6px 0;">Ważna do</p>
+          <p style="font-size:11pt; font-weight:600; color:#ffffff; margin:0;">{{VALID_UNTIL}}</p>
+        </td>
+        <td width="25%" style="vertical-align:top;">
+          <p style="font-size:7.5pt; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,0.38); margin:0 0 6px 0;">Przygotował</p>
+          <p style="font-size:11pt; font-weight:600; color:#ffffff; margin:0;">Kacper Sieradzński</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<!-- ═══════════ STRONA 2: EXECUTIVE SUMMARY + PROBLEM ═══════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
+  </div>
+
+  <span class="section-label">Executive Summary</span>
+  <h2>W skrócie: co robimy i co z tego macie</h2>
+  <div class="summary-box"><p>{{EXEC_SUMMARY}}</p></div>
+
+  <span class="section-label">Rozumiemy Wasz Problem</span>
+  <h2>Obecna sytuacja</h2>
+  <p>{{PROBLEM_INTRO}}</p>
+
+  {{PAIN_ITEMS}}
+
+  <div class="page-footer">
+    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.pl | dokodu.it</span>
+    <span class="footer-right">2</span>
+  </div>
+</div>
+
+<!-- ═══════════ STRONA 3: PODEJŚCIE + ZAKRES ═══════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
+  </div>
+
+  <span class="section-label">Nasze Podejście</span>
+  <h2>Jak to robimy</h2>
+  {{APPROACH_STEPS}}
+
+  <span class="section-label" style="margin-top: 22px; display: block;">Zakres</span>
+  <h2>Co dostarczamy</h2>
+  <div class="scope-table">
+    {{SCOPE_COLS}}
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.pl | dokodu.it</span>
+    <span class="footer-right">3</span>
+  </div>
+</div>
+
+<!-- ═══════════ STRONA 4: TIMELINE + INWESTYCJA ═══════════ -->
+<div class="page">
+  <div class="page-header">
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
+  </div>
+
+  <span class="section-label">Harmonogram</span>
+  <h2>Kiedy i jak</h2>
+  {{TIMELINE_ITEMS}}
+
+  <span class="section-label" style="margin-top: 26px; display: block;">Inwestycja</span>
+  <h2>Dwie opcje dopasowane do Waszych potrzeb</h2>
+  <div class="pricing-table">
+    {{PRICING_COLS}}
+  </div>
+
+  <div class="roi-box">
+    <div class="roi-bar"><div class="roi-bar-fill"></div></div>
+    <div class="roi-content">
+      <span class="roi-headline">{{ROI_HEADLINE}}</span>
+      <span class="roi-detail">{{ROI_DETAIL}}</span>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.pl | dokodu.it</span>
+    <span class="footer-right">4</span>
+  </div>
+</div>
+
+<!-- ═══════════ STRONA 5: DLACZEGO DOKODU + NEXT STEP ═══════════ -->
+<div class="page last">
+  <div class="page-header">
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
+  </div>
+
+  <span class="section-label">Dlaczego Dokodu</span>
+  <h2>Co nas wyróżnia</h2>
+  <div class="why-table">
+    {{WHY_ROWS}}
+  </div>
+
+  <span class="section-label" style="margin-top: 20px; display: block;">Następny Krok</span>
+  <h2>Co teraz?</h2>
+  <div class="cta-box">
+    <span class="cta-title">Gotowi zacząć? Oto co się dzieje dalej:</span>
+    {{CTA_STEPS}}
+    <hr class="cta-divider">
+    <div class="cta-contact-table">
+      <div class="cta-contact-cell">Email: <strong>kacper@dokodu.pl</strong></div>
+      <div class="cta-contact-cell">Web: <strong>dokodu.it</strong></div>
+      <div class="cta-contact-cell">Oferta ważna do: <strong>{{VALID_UNTIL}}</strong></div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.pl | dokodu.it</span>
+    <span class="footer-right">5</span>
+  </div>
+</div>
+
+</body>
+</html>

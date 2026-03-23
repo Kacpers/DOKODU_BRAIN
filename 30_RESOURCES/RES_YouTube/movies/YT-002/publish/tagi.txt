@@ -1,0 +1,7 @@
+# TAGI — YT-002: Gemini CLI od zera — AI agent w terminalu
+# Wklej w YT Studio → Tagi (każdy tag osobno lub przecinkiem)
+
+
+
+────────────────────────────────────────
+Każdy tag osobno:

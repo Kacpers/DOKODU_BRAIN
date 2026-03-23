@@ -1,0 +1,188 @@
+--- SCENARIUSZ: YT-002 ---
+
+--- HOOK (0:00–0:35) ---
+
+Dałem temu narzędziu dostęp do serwera.
+
+Napisałem mu co chcę wdrożyć — aplikację Next.js, bazę danych, reverse proxy. I odszedłem od klawiatury.
+
+Kiedy wróciłem — pliki były gotowe. Docker Compose, konfiguracja nginx, plik z wszystkimi zmiennymi środowiskowymi. Wyjaśnione linia po linii.
+
+To nie jest demo z konferencji. Za chwilę zrobię to na żywo — na prawdziwym serwerze, bez skryptów, bez przygotowanych odpowiedzi.
+
+Narzędzie nazywa się Gemini CLI. Jest open source, za darmo, i działa w terminalu. Pokażę ci od zera — instalacja, dwa konkretne demo, i kiedy faktycznie ma sens użycie tego w firmie.
+
+--- CO TO JEST GEMINI CLI (0:35–2:00) ---
+
+Zacznijmy od kontekstu — co to właściwie jest i czym różni się od zwykłego chatbota.
+
+Gemini CLI to agent AI działający bezpośrednio w terminalu. I słowo "agent" jest tu kluczowe.
+
+Zwykły chatbot — piszesz pytanie, dostajesz odpowiedź, koniec. Gemini CLI działa inaczej. Dostajesz polecenie, on je analizuje, wykonuje polecenia w terminalu, patrzy na wyniki, i na tej podstawie robi kolejny krok. Sam z siebie.
+
+Technicznie — to się nazywa ReAct loop. Gemini myśli, działa, obserwuje wynik, znów myśli. Może czytać i pisać pliki, wykonywać komendy shell, nawet przeszukiwać web.
+
+I to nie wymaga GPU. Nie wymaga lokalnego modelu. Model siedzi w Google, ty masz klienta w terminalu.
+
+Co ważne — jest open source. Kod jest na GitHubie pod adresem github.com/google-gemini/gemini-cli. Możesz zajrzeć co robi zanim dasz mu dostęp do czegokolwiek.
+
+Rejestracja jest za darmo — milion tokenów kontekstu, klucz API w minutę z Google AI Studio. Jedno zastrzeżenie: w darmowym planie limity zapytań na minutę są dość restrykcyjne dla modeli Pro. Do pierwszych testów wystarczy, ale do płynnej, agentowej pracy na co dzień warto podpiąć kartę i przejść na Pay-as-you-go. Limity skaczą w kosmos, a i tak płacisz grosze — dosłownie kilkanaście centów za sesję taką jak ta.
+
+No to zaczynamy.
+
+--- INSTALACJA (2:00–4:00) ---
+
+Instalacja — jedna komenda. Nic więcej.
+
+Zanim zaczniesz — Node.js w wersji 18 lub wyższej, najlepiej 20+. Jeśli masz starszą wersję, instalacja się posypie. Sprawdź: `node --version`.
+
+Jedna komenda, globalna instalacja przez npm.
+
+Pro-tip dla tych którzy nie lubią zaśmiecać środowiska globalną instalacją — możesz użyć npx i w ogóle nie instalować: `npx @google/gemini-cli`. Odpali jednorazowo bez śladu w systemie.
+
+Przy pierwszym uruchomieniu pyta o klucz API. Wchodzisz na aistudio.google.com — dosłownie chwila — klikasz "Create API key" i wklejasz tutaj.
+
+I to wszystko. Cała instalacja.
+
+(z lekkim uśmiechem) Serio — tyle. Żadnego dockera, żadnego Pythona, żadnych virtualenvów. npm install, klucz, gotowe.
+
+Dobra — pora na to co faktycznie chciałem ci pokazać. Zacznijmy od serwera.
+
+--- DEMO 1 — SERWER + HOSTINGER (4:00–8:30) ---
+
+Jestem teraz zalogowany przez SSH na serwerze VPS. To jest Hostinger VPS — link do oferty wrzucę w opis pod filmem. Używam go do projektów klientów — konfiguracja zajmuje 5 minut od momentu zamówienia i mam pełną kontrolę nad środowiskiem. Żadnego współdzielonego hostingu, żadnych ograniczeń co mogę zainstalować.
+
+Scenariusz jest taki — mam aplikację Next.js którą chcę wdrożyć na tym serwerze. Potrzebuję: docker-compose do uruchomienia aplikacji razem z bazą danych i cacheiem, konfigurację nginx jako reverse proxy, i plik ze zmiennymi środowiskowymi.
+
+Normalnie — godzina pracy, może dwie. Szukanie przykładów, składanie konfiguracji, debugowanie.
+
+Zobaczmy co zrobi Gemini CLI.
+
+Patrz co robi — zaczął od sprawdzenia co już jest na serwerze. Sam z siebie. Nikt go nie prosił. Chce zobaczyć kontekst zanim zacznie pisać konfigurację.
+
+Jedna rzecz którą warto wiedzieć — domyślnie Gemini CLI przed wykonaniem każdej komendy w terminalu pyta o pozwolenie. Widzisz ten prompt z potwierdzeniem. Ja dla tego nagrania mam włączony tryb YOLO, który to pomija — ale normalnie, na nowym serwerze, dostajesz pełną kontrolę nad tym co agent faktycznie wykonuje.
+
+Teraz tworzy docker-compose. Widzisz — definiuje trzy serwisy: aplikację, postgres, redis. Volumes żeby dane przeżyły restart kontenera. Healthchecks — to ważny szczegół, dużo osób o tym zapomina.
+
+Nginx config z SSL pass-through — to znaczy że nginx nie terminuje SSL sam, tylko przekazuje zaszyfrowany ruch dalej. Sensowne jeśli masz certbot poza kontenerem.
+
+I tu jest rzecz którą cenię najbardziej — na końcu sam wyjaśnia co zrobił, co trzeba uzupełnić i w jakiej kolejności odpalić. Nie musisz się domyślać.
+
+Szczerze mówiąc — gdybym to pisał ręcznie, zajęłoby mi to godzinę. Z Gemini CLI — może kwadrans, wliczając czas na przejrzenie co wygenerował i ewentualne poprawki.
+
+Dobra — to był scenariusz serverowy. Teraz wróćmy lokalnie i pokażę ci coś innego.
+
+--- DEMO 2 — LOKALNIE: BUG FINDER (8:30–12:30) ---
+
+Drugi scenariusz — mam projekt backendowy. API w Node.js z Expressem. I chcę wiedzieć czy jest bezpieczny zanim go wdrożę.
+
+Normalnie — albo robisz code review samodzielnie (żmudne), albo zatrudniasz kogoś z bezpieczeństwa (drogie), albo po prostu masz nadzieję że jest OK (nieodpowiedzialne).
+
+Gemini CLI ma dostęp do plików. Niech przejrzy cały projekt.
+
+Patrz na to — czyta plik po pliku. Sam decyduje co czytać jako następne. To nie jest grep po keywordach — to jest rzeczywista analiza kontekstu.
+
+Widać że wyłapał brak walidacji inputu. To jest klasyczny błąd — przyjmujesz dane od użytkownika, nie sprawdzasz czy to co dostajesz ma sens, i możesz dostać SQL injection albo w najlepszym razie crash.
+
+(spokojnie) Trzy krytyczne znaleziska. Sekret bazy danych w kodzie — to jest coś co widzę regularnie w projektach które trafiają do mnie na audyt. Ktoś wklejił connection string bezpośrednio w pliku, wrzucił na GitHuba — i po problemie.
+
+Gemini CLI to wyłapał. Bez mojego pytania. Bo przeczytał cały projekt i rozumiał co widzi.
+
+To jest rzecz którą możesz zrobić przed każdym deployem. Kwadrans, darmowe, i masz przynajmniej pewność że wyłapałeś to co rzuca się w oczy.
+
+--- KIEDY TEGO UŻYWAĆ (12:30–14:00) ---
+
+Żeby nie owijać w bawełnę — Gemini CLI nie jest dla każdego. Ale dla konkretnych przypadków jest bardzo trafiony.
+
+Pierwsza grupa — solo developer lub mały zespół bez dedykowanego DevOpsa. Masz aplikację, masz serwer, nie masz czasu na bycie ekspertem od konfiguracji infrastruktury. Gemini CLI robi za ciebie tę żmudną część — docker-compose, nginx, CI/CD — i wyjaśnia co wygenerował.
+
+Druga grupa — code review przed deployem. To co pokazałem w demo dwa. Nie zastąpi audytu bezpieczeństwa robionego przez człowieka. Ale jako pierwsza linia obrony — wyłapuje oczywiste błędy zanim trafią na produkcję.
+
+Trzecia — i to jest kąt który mnie interesuje z perspektywy Dokodu — konfiguracja środowisk po stronie klienta. Firmy które wdrażają automatyzacje mają często wiele środowisk — dev, staging, produkcja. Gemini CLI świetnie radzi sobie z generowaniem spójnych konfiguracji dla różnych środowisk. Parametryzujesz jeden raz, reszta się dopasowuje.
+
+Konkretnie — co zajmowało dwie godziny konfiguracji na nowym serwerze — z Gemini CLI to jest 15 minut. I te 15 minut to głównie czas na przejrzenie co wygenerował, nie na samo pisanie.
+
+Jedna rzecz którą warto powiedzieć wprost — to narzędzie ma dostęp do twoich plików i może wykonywać komendy. Czyli przed użyciem na produkcji: wiesz co wpisujesz w prompt, widzisz co robi zanim zatwierdzi. Nie jest to narzędzie do używania na ślepo. Ale użyte świadomie — bardzo oszczędza czas.
+
+--- CTA (14:00–15:00) ---
+
+Jeśli pracujesz technicznie i szukasz narzędzi które faktycznie przyspieszają robotę — przetestuj. Instalacja to dwie minuty, klucz API jest darmowy. Linki wrzuciłem w opis pod filmem — do Gemini CLI na GitHubie, do Google AI Studio, i do oferty Hostingera jeśli potrzebujesz serwera pod tego typu projekty.
+
+Jedno pytanie do ciebie — czy w twojej firmie jest ktoś kto mógłby użyć takiego narzędzia od razu? Bo to jest dokładnie ten typ narzędzia który adoptuje się oddolnie — jeden developer zaczyna używać, inni widzą że oszczędza czas, i nagle cały team chce to mieć.
+
+Napisz mi w komentarzu do czego byś to użył — albo jeśli już próbowałeś Gemini CLI, jak ci poszło.
+
+A jeśli chcesz wiedzieć jak Gemini CLI wypada w porównaniu z Claude Code na konkretnych zadaniach B2B — to mam oddzielny film z pięcioma testami. Link pojawi się na ekranie. Dzięki za obejrzenie.
+
+--- NOTATKI PRODUKCYJNE ---
+
+--- SCREENCASTS DO PRZYGOTOWANIA ---
+
+- Terminal z sesją SSH na Hostingerze (prawdziwy serwer, zamazaj IP w razie potrzeby)
+- Demo 1: pełna sesja Gemini CLI od `gemini` do stworzenia wszystkich 3 plików
+- Demo 2: pełna sesja Gemini CLI na projekcie Node.js — od `gemini` do listy znalezisk
+- Lokalna instalacja od zera (osobna sesja na czystym terminalu) — do sekcji Instalacja
+
+--- ANIMACJE REMOTION (LISTA) ---
+
+1. Opener — zielony tekst terminala "SSH... połączono" + "gemini" z kursorem
+2. Title card "GEMINI CLI OD ZERA"
+3. Schemat ReAct loop (Terminal → Gemini Cloud → Komputer)
+4. Lista features: read/write pliki, komendy shell, web search, 1M tokenów
+5. Podsumowanie instalacji: "2 minuty. Node.js + klucz API (darmowy)"
+6. Porównanie czasowe Demo 1: "Ręcznie: ~60 min" vs "Gemini CLI: ~15 min"
+7. Diagram przepływu Demo 2: Prompt → Agent czyta → Lista priorytetowa
+8. Podsumowanie "Kiedy ma sens" — 4 punkty
+9. End screen z miniaturą YT-001 + subscribe
+
+--- PLACEMENT HOSTINGERA ---
+
+- Czas: ~4:00, na początku Demo 1
+- Tekst do wypowiedzenia: zawarty w scenariuszu (sekcja Demo 1, akapit 2)
+- Link w opisie: do uzupełnienia przez Kacpra (link afiliacyjny Hostingera)
+
+--- OPIS YOUTUBE (DO SKOPIOWANIA) ---
+
+Akapit 1 (SEO, max 155 zn.):
+Gemini CLI — instalacja od zera + 2 demo na żywo: konfiguracja serwera i code review. Agent AI w terminalu, open source, za darmo.
+
+Akapit 2:
+W tym filmie pokazuję jak zainstalować Gemini CLI (npm, 2 minuty), jak użyć go na prawdziwym serwerze VPS do wygenerowania docker-compose, nginx i .env — i jak przejrzeć cały projekt backendowy pod kątem błędów bezpieczeństwa. Bez skryptów, bez przygotowanych odpowiedzi — na żywo.
+
+Akapit 3:
+Jeśli jesteś developerem, DevOpsem albo technicznym managerem i szukasz narzędzi które faktycznie oszczędzają czas — ten film jest dla ciebie.
+
+Linki:
+🔗 Gemini CLI na GitHub: https://github.com/google-gemini/gemini-cli
+🔗 Google AI Studio (klucz API): https://aistudio.google.com
+🔗 Hostinger VPS: [LINK AFILIACYJNY]
+🔗 Bezpłatna konsultacja AI dla firmy: https://dokodu.it/kontakt
+📺 Gemini CLI vs Claude Code (5 testów): [LINK YT-001 po publikacji]
+
+Hashtagi: #GeminiCLI #AIwTerminalu #AutomatyzacjaAI #DevOps #AIwFirmie
+
+Chapters:
+0:00 Hook
+0:35 Co to jest Gemini CLI
+2:00 Instalacja krok po kroku
+4:00 Demo 1: Serwer VPS (Hostinger) — docker-compose, nginx, .env
+8:30 Demo 2: Lokalnie — bug finder i code review
+12:30 Kiedy warto używać (kąt B2B)
+14:00 CTA
+
+--- TAGI (18) ---
+
+`gemini cli`, `gemini cli tutorial`, `gemini cli po polsku`, `ai agent terminal`, `ai w firmie`, `automatyzacja ai`, `docker compose ai`, `code review ai`, `devops ai`, `hostinger vps`, `ai dla firm`, `ai coding assistant`, `google gemini`, `agent ai`, `node.js bezpieczenstwo`, `automatyzacja biznesu`, `ai developer tools`, `gemini api`
+
+--- THUMBNAIL BRIEF ---
+
+- Twarz: skupienie + lekkie zaskoczenie — "to naprawdę działa" — nie hype, bardziej "no dobra, OK"
+- Tekst: "AI AGENT W TERMINALU" (biały bold, czarny obrys, max 3 linie)
+- Tło: ciemne (#1C1C1E) z zieloną poświatą sugerującą terminal
+- Element graficzny: ikonka terminala / komendy `>_` po lewej stronie
+- Logo: Gemini star logo (Google) w prawym górnym rogu
+- Kontrast z YT-001: YT-001 ma tło podzielone ciemny/niebieski — tu pełne ciemne z akcentem zielonym
+
+Scenariusz wygenerowany: 2026-03-18
+Długość szacunkowa przy normalnym tempie mówienia: ~14–15 minut
+Sekcje do nagrania z promptera: Hook, Co to jest, Instalacja (komentarz), Demo 1 (komentarz), Demo 2 (komentarz), Kiedy używać, CTA

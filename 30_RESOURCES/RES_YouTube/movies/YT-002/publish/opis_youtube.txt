@@ -1,0 +1,26 @@
+# OPIS YOUTUBE — YT-002: Gemini CLI od zera — AI agent w terminalu
+# Wygenerowano: 2026-03-18 12:52
+
+============================================================
+OPIS (wklej do YT Studio → Opis):
+============================================================
+
+Gemini CLI — instalacja od zera + 2 demo na żywo: konfiguracja serwera i code review. Agent AI w terminalu, open source, za darmo.
+
+W tym filmie pokazuję jak zainstalować Gemini CLI (npm, 2 minuty), jak użyć go na prawdziwym serwerze VPS do wygenerowania docker-compose, nginx i .env — i jak przejrzeć cały projekt backendowy pod kątem błędów bezpieczeństwa. Bez skryptów, bez przygotowanych odpowiedzi — na żywo.
+
+Jeśli jesteś developerem, DevOpsem albo technicznym managerem i szukasz narzędzi które faktycznie oszczędzają czas — ten film jest dla ciebie.
+
+🔗 Gemini CLI na GitHub: https://github.com/google-gemini/gemini-cli
+🔗 Google AI Studio (klucz API): https://aistudio.google.com
+🔗 Hostinger VPS: [LINK AFILIACYJNY]
+🔗 Bezpłatna konsultacja AI dla firmy: https://dokodu.it/kontakt
+📺 Gemini CLI vs Claude Code (5 testów): [LINK YT-001 — po publikacji]
+
+#GeminiCLI #AIwTerminalu #AutomatyzacjaAI #DevOps #AIwFirmie
+
+────────────────────────────────────────
+CHAPTERS:
+0:00 Hook | 0:35 Co to jest Gemini CLI | 2:00 Instalacja
+4:00 Demo 1: Serwer VPS (Hostinger) | 8:30 Demo 2: Bug finder lokalnie
+12:30 Kiedy warto używać | 14:00 CTA
