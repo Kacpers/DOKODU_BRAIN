@@ -18,6 +18,7 @@ import os
 import sys
 import json
 import argparse
+import sqlite3
 import urllib.request
 import urllib.error
 import urllib.parse
@@ -30,8 +31,87 @@ CONFIG_DIR   = Path.home() / ".config" / "dokodu"
 API_KEY_FILE = CONFIG_DIR / "mailerlite_api_key"
 AREA_DIR     = BRAIN_DIR / "20_AREAS" / "AREA_Newsletter"
 OUTPUT_FILE  = AREA_DIR / "Newsletter_Last_Sync.md"
+DB_FILE      = SCRIPT_DIR / "mailerlite_history.db"
 
 API_BASE = "https://api.mailerlite.com/api/v2"
+
+
+# ══════════════════════════════════════════════
+# HISTORY (SQLite)
+# ══════════════════════════════════════════════
+
+def db_connect() -> sqlite3.Connection:
+    conn = sqlite3.connect(DB_FILE)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS snapshots (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            fetched_at  TEXT NOT NULL,
+            total       INTEGER NOT NULL
+        )
+    """)
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS group_snapshots (
+            id          INTEGER PRIMARY KEY AUTOINCREMENT,
+            snapshot_id INTEGER NOT NULL REFERENCES snapshots(id),
+            group_name  TEXT NOT NULL,
+            active      INTEGER NOT NULL
+        )
+    """)
+    conn.commit()
+    return conn
+
+
+def save_snapshot(data: dict) -> int:
+    """Zapisuje snapshot do SQLite. Zwraca ID snapshotu."""
+    conn = db_connect()
+    cur = conn.execute(
+        "INSERT INTO snapshots (fetched_at, total) VALUES (?, ?)",
+        (data["fetched_at"], data["subscriber_count"])
+    )
+    snap_id = cur.lastrowid
+    for g in data.get("groups", []):
+        conn.execute(
+            "INSERT INTO group_snapshots (snapshot_id, group_name, active) VALUES (?, ?, ?)",
+            (snap_id, g.get("name", ""), g.get("active", 0))
+        )
+    conn.commit()
+    conn.close()
+    return snap_id
+
+
+def get_previous_snapshot(current_snap_id: int) -> dict:
+    """Zwraca dict {group_name: active} z poprzedniego snapshotu."""
+    conn = db_connect()
+    row = conn.execute(
+        "SELECT id FROM snapshots WHERE id < ? ORDER BY id DESC LIMIT 1",
+        (current_snap_id,)
+    ).fetchone()
+    if not row:
+        conn.close()
+        return {}
+    prev_id = row[0]
+    rows = conn.execute(
+        "SELECT group_name, active FROM group_snapshots WHERE snapshot_id = ?",
+        (prev_id,)
+    ).fetchall()
+    conn.close()
+    return {r[0]: r[1] for r in rows}
+
+
+def get_history_table(limit: int = 30) -> list[dict]:
+    """Zwraca historię snapshots z delta total."""
+    conn = db_connect()
+    rows = conn.execute(
+        "SELECT id, fetched_at, total FROM snapshots ORDER BY id DESC LIMIT ?",
+        (limit,)
+    ).fetchall()
+    conn.close()
+    result = []
+    for i, (sid, fetched_at, total) in enumerate(rows):
+        prev_total = rows[i + 1][2] if i + 1 < len(rows) else None
+        delta = (total - prev_total) if prev_total is not None else None
+        result.append({"date": fetched_at[:10], "total": total, "delta": delta})
+    return result
 
 
 # ══════════════════════════════════════════════
@@ -129,13 +209,21 @@ def fetch_all(campaigns_limit: int = 20) -> dict:
     autos = fetch_automations()
     print(f"✓ ({len(autos)} automatyzacji)")
 
-    return {
+    data = {
         "fetched_at": datetime.now().isoformat(),
         "subscriber_count": count,
         "campaigns": camps,
         "groups": groups,
         "automations": autos,
     }
+
+    print("  → Zapisuję snapshot...", end=" ", flush=True)
+    snap_id = save_snapshot(data)
+    data["snap_id"] = snap_id
+    data["prev_groups"] = get_previous_snapshot(snap_id)
+    print(f"✓ (snapshot #{snap_id})")
+
+    return data
 
 
 # ══════════════════════════════════════════════
@@ -169,10 +257,11 @@ def shorten(text: str, max_len: int = 50) -> str:
 
 def format_markdown(data: dict) -> str:
     now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
-    count   = data.get("subscriber_count", 0)
-    camps   = data.get("campaigns", [])
-    groups  = data.get("groups", [])
-    autos   = data.get("automations", [])
+    count       = data.get("subscriber_count", 0)
+    camps       = data.get("campaigns", [])
+    groups      = data.get("groups", [])
+    autos       = data.get("automations", [])
+    prev_groups = data.get("prev_groups", {})
 
     lines = []
 
@@ -196,22 +285,52 @@ def format_markdown(data: dict) -> str:
         "",
     ]
 
+    # Historia subskrybentów
+    history = get_history_table(10)
+    if len(history) > 1:
+        lines += [
+            "## Historia subskrybentów",
+            "",
+            "| Data | Łącznie | Zmiana |",
+            "|------|---------|--------|",
+        ]
+        for h in history:
+            delta_str = "—"
+            if h["delta"] is not None:
+                sign = "+" if h["delta"] >= 0 else ""
+                delta_str = f"{sign}{h['delta']:,}".replace(",", " ")
+            lines.append(f"| {h['date']} | {num(h['total'])} | {delta_str} |")
+        lines.append("")
+
     # Grupy
     if groups:
+        has_prev = bool(prev_groups)
+        header = "| Nazwa grupy | Aktywni | Zmiana | Sent | Opened | Clicked |" if has_prev else "| Nazwa grupy | Aktywni | Wypisani | Sent | Opened | Clicked |"
+        sep    = "|-------------|---------|--------|------|--------|---------|" if has_prev else "|-------------|---------|----------|------|--------|---------|"
         lines += [
             "## Grupy / Segmenty",
             "",
-            "| Nazwa grupy | Aktywni | Wypisani | Sent | Opened | Clicked |",
-            "|-------------|---------|----------|------|--------|---------|",
+            header,
+            sep,
         ]
         for g in groups:
             gname  = g.get("name", "—")
             active = g.get("active", 0)
-            unsub  = g.get("unsubscribed", 0)
             sent   = g.get("sent", 0)
             opened = g.get("opened", 0)
             clicked= g.get("clicked", 0)
-            lines.append(f"| {gname} | {num(active)} | {num(unsub)} | {num(sent)} | {num(opened)} | {num(clicked)} |")
+            if has_prev:
+                prev_active = prev_groups.get(gname)
+                if prev_active is not None:
+                    d = active - prev_active
+                    sign = "+" if d >= 0 else ""
+                    delta_str = f"{sign}{d}"
+                else:
+                    delta_str = "nowa"
+                lines.append(f"| {gname} | {num(active)} | {delta_str} | {num(sent)} | {num(opened)} | {num(clicked)} |")
+            else:
+                unsub = g.get("unsubscribed", 0)
+                lines.append(f"| {gname} | {num(active)} | {num(unsub)} | {num(sent)} | {num(opened)} | {num(clicked)} |")
         lines.append("")
 
     # Automatyzacje
@@ -297,7 +416,20 @@ def main():
     parser.add_argument("--save",      action="store_true", help="Zapisz do BRAIN")
     parser.add_argument("--json",      action="store_true", help="Surowy JSON (debug)")
     parser.add_argument("--campaigns", type=int, default=20, help="Liczba kampanii (domyślnie 20)")
+    parser.add_argument("--history",   type=int, default=0,  metavar="N", help="Pokaż historię N ostatnich snapshotów bez fetchowania")
     args = parser.parse_args()
+
+    if args.history:
+        rows = get_history_table(args.history)
+        print(f"{'Data':<12} {'Łącznie':>8} {'Zmiana':>8}")
+        print("-" * 32)
+        for h in rows:
+            delta_str = "—"
+            if h["delta"] is not None:
+                sign = "+" if h["delta"] >= 0 else ""
+                delta_str = f"{sign}{h['delta']}"
+            print(f"{h['date']:<12} {h['total']:>8,} {delta_str:>8}")
+        return
 
     api_key = get_api_key()
     print(f"MailerLite Fetch (Classic API v2) — {datetime.now().strftime('%Y-%m-%d %H:%M')}")

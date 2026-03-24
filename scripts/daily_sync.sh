@@ -27,6 +27,11 @@ echo "  → GA4..." >> "$LOG_FILE"
 python3 /home/kacper/DOKODU_BRAIN/scripts/ga_fetch.py --days 28 --save >> "$LOG_FILE" 2>&1
 echo "  ✓ GA4 done" >> "$LOG_FILE"
 
+# MailerLite
+echo "  → MailerLite..." >> "$LOG_FILE"
+python3 /home/kacper/DOKODU_BRAIN/scripts/mailerlite_fetch.py --save >> "$LOG_FILE" 2>&1
+echo "  ✓ MailerLite done" >> "$LOG_FILE"
+
 # YT — tylko w poniedziałek
 if [ "$(date +%u)" = "1" ]; then
     echo "  → YouTube (poniedziałek)..." >> "$LOG_FILE"
@@ -52,6 +57,19 @@ if [ -f "$REMINDERS_FILE" ]; then
         echo "  ✓ Reminders wstrzyknięte do INBOX" >> "$LOG_FILE"
     fi
 fi
+
+# Gmail
+echo "  → Gmail..." >> "$LOG_FILE"
+python3 /home/kacper/DOKODU_BRAIN/scripts/gmail_fetch.py --days 2 >> "$LOG_FILE" 2>&1
+echo "  ✓ Gmail done" >> "$LOG_FILE"
+
+# Git commit & push
+echo "  → Git push..." >> "$LOG_FILE"
+cd /home/kacper/DOKODU_BRAIN
+git add -A
+git diff --cached --quiet || git commit -m "sync: dzienny update $TODAY [auto]" >> "$LOG_FILE" 2>&1
+git push origin main >> "$LOG_FILE" 2>&1
+echo "  ✓ Git push done" >> "$LOG_FILE"
 
 # Zapisz datę wykonania
 echo "$TODAY" > "$LOCK_FILE"
