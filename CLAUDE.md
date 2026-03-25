@@ -39,6 +39,9 @@ Zarządzaj systemem przez skille, nie edytując plików manualnie:
 | `/brain-new-prompt` | Dodaje prompt do `300_BIBLIOTEKA_PROMPTOW.md` |
 | `/brain-weekly-review` | Tygodniowy przegląd (piątek) |
 | `/brain-archive-project` | Archiwizuje projekt + retrospektywa |
+| `/brain-draft-email` | Pisze gotowy email do klienta — na podstawie profilu z BRAIN, w stylu Kacpra |
+| `/brain-remind` | Reminder z datą → jednocześnie do REMINDERS.md i Google Calendar |
+| `/pdf` | Czyta i analizuje PDF — dla umów wyciąga kluczowe klauzule (płatność, zakres, kary, logo) |
 | `/brain-new-offer` | Generuje ofertę handlową dla klienta — 2 opcje cenowe, szablon propozycji, zapis w katalogu klienta |
 | `/skill-creator` | Tworzy nowe skille — wywiad, SKILL.md, test cases, zapis |
 | `/survey-sync` | Pobiera wyniki ankiet poszkoleniowych z dokodu.it API → `Survey_Last_Sync.md` |
