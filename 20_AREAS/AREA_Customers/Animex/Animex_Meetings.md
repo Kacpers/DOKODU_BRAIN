@@ -19,7 +19,7 @@ tags: [animex, spotkania, notatki]
 
 **Kluczowe ustalenia:**
 - Umowa szkoleniowa podpisana
-- Zaliczka 50% = 9 000 PLN oplacona
+- Zaliczka 50% = 9 000 PLN — ⚠️ NIEAKTUALNE: wg Kacpra (2026-03-24) zaliczka NIE została zapłacona, całe 40 000 PLN płatne po realizacji
 - Termin szkolenia: ~20 marca 2026
 - Liczba uczestnikow: 15 osob z dzialu BOK
 

@@ -24,7 +24,7 @@ client_since: 2026-02-15
 | **Glowny system (ERP)** | SAP _[potwierdzic wersje]_ |
 | **Email** | Outlook (O365) |
 | **AI wczesniej** | Brak / minimalne uzytakowanie |
-| **Klientem od** | 2026-02-15 |
+| **Klientem od** | 2026-02-20 |
 | **Zrodlo leada** | Przetarg |
 
 ---
@@ -34,7 +34,7 @@ client_since: 2026-02-15
 | Imie i Nazwisko | Stanowisko | Email | Telefon | Rola |
 | :--- | :--- | :--- | :--- | :--- |
 | **Kamil Kowalski** | Osoba kontaktowa (kontrakt §7) | Kamil.Kowalski@animex.pl | 668140030 | Kontakt operacyjny — właściwy kanał upsell |
-| **Rafał Wilk** | Dyrektor Zarządzający ds. HR | — | — | Podpisał umowę, Decision Maker |
+| **Katarzyna Kasprzak** | Dyrektor Zarządzający ds. Finansów, Pełnomocnik | — | — | Podpisała umowę (strona Animex) |
 
 **Preferowany kanal:** Email (Kamil Kowalski)
 **Ważne:** Klient z przetargu — wszelki kontakt handlowy wyłącznie przez Kamila Kowalskiego, nie przez uczestników szkoleń.
@@ -100,7 +100,7 @@ Pliki:       SharePoint (TBD)
 
 | Data | Zdarzenie | Wartosc | Status |
 | :---: | :--- | ---: | :---: |
-| 2026-02-24 | Podpisanie umowy szkoleniowej (5 grup) | 40 000 PLN netto | Aktywne |
+| 2026-02-20 | Podpisanie umowy szkoleniowej (5 grup + 6 konsultacji) | 40 000 PLN netto | Aktywne — brak zaliczki, płatność po realizacji całości (szkolenia + konsultacje) |
 | 2026-03-05/06 | Szkolenie Grupa 1 | — | Zrealizowane |
 | 2026-03-10/11 | Szkolenie Grupa 2 | — | Zrealizowane |
 | 2026-03-12/13 | Szkolenie Grupa 3 | — | Zrealizowane |

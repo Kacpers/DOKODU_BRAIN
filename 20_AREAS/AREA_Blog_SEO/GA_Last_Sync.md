@@ -1,62 +1,62 @@
 # Google Analytics 4 — dokodu.it
-Pobrano: 2026-03-24 19:00 | Okres: 2026-02-24 → 2026-03-23 (28 dni)
+Pobrano: 2026-03-25 09:00 | Okres: 2026-02-25 → 2026-03-24 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
 |---------|---------|
-| Łączne sesje | **6,869** |
-| Unikalni użytkownicy | **4,947** |
-| Odsłony | **7,137** |
-| Średni bounce rate | 52.3% |
+| Łączne sesje | **6,859** |
+| Unikalni użytkownicy | **4,930** |
+| Odsłony | **7,163** |
+| Średni bounce rate | 55.5% |
 
 ## Top 20 Stron (wg sesji)
 | # | Strona | Sesje | Użytkownicy | Bounce | Avg. czas |
 |---|--------|-------|-------------|--------|-----------|
-| 1 | `/blog/n8n` | 1223 | 770 | 77.3% | 1m 10s |
-| 2 | `/` | 487 | 351 | 56.3% | 1m 51s |
-| 3 | `/kursy/pystart` | 284 | 206 | 55.3% | 1m 49s |
-| 4 | `/blog/python/podstawy/list-comprehension` | 180 | 174 | 92.8% | 0m 31s |
-| 5 | `/newslettery/podstawy-pythona` | 180 | 135 | 56.1% | 1m 35s |
-| 6 | `/blog/n8n/docker-instalacja-konfiguracja` | 178 | 73 | 77.5% | 0m 54s |
-| 7 | `/blog/sql/zadania-sql-poziom-podstawowy` | 154 | 123 | 57.1% | 1m 20s |
-| 8 | `/blog/python/podstawy/podstawy-programowania` | 145 | 60 | 51.7% | 1m 30s |
-| 9 | `/blog/sql/normalizacja-baz-danych` | 134 | 114 | 67.2% | 1m 26s |
-| 10 | `/blog/sql/sql-interview-pytania` | 128 | 85 | 64.8% | 1m 18s |
-| 11 | `/blog/sql/case-when-w-sql` | 122 | 103 | 73.8% | 1m 35s |
-| 12 | `/kursy/n8n` | 104 | 76 | 35.6% | 3m 14s |
-| 13 | `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 96 | 42 | 77.1% | 1m 36s |
-| 14 | `/blog/python` | 83 | 43 | 21.7% | 2m 18s |
-| 15 | `/blog/n8n/przyklady-workflow-automatyzacji` | 78 | 69 | 56.4% | 2m 29s |
-| 16 | `/blog/python/praktyka/programowanie-obiektowe-w-pythonie-klasy-i-obiekty` | 72 | 53 | 65.3% | 1m 23s |
-| 17 | `/oto/pystart-newsletter` | 72 | 43 | 36.1% | 1m 7s |
-| 18 | `/blog/sql/funkcje-okienkowe-sql-postgresql-i-mysql` | 70 | 25 | 78.6% | 1m 22s |
-| 19 | `/blog/vector-database-co-to-jest-pgvector-milvus-weaviate-pinecone` | 69 | 42 | 72.5% | 2m 7s |
-| 20 | `/transformacja/` | 69 | 51 | 26.1% | 2m 2s |
+| 1 | `/blog/n8n` | 1215 | 767 | 78.3% | 1m 9s |
+| 2 | `/` | 455 | 329 | 57.6% | 1m 57s |
+| 3 | `/kursy/pystart` | 270 | 190 | 56.3% | 1m 41s |
+| 4 | `/blog/python/podstawy/list-comprehension` | 188 | 180 | 93.1% | 0m 30s |
+| 5 | `/blog/n8n/docker-instalacja-konfiguracja` | 178 | 74 | 78.7% | 1m 5s |
+| 6 | `/newslettery/podstawy-pythona` | 178 | 136 | 57.9% | 1m 32s |
+| 7 | `/blog/sql/zadania-sql-poziom-podstawowy` | 151 | 121 | 58.3% | 1m 21s |
+| 8 | `/blog/python/podstawy/podstawy-programowania` | 147 | 59 | 52.4% | 1m 29s |
+| 9 | `/blog/sql/normalizacja-baz-danych` | 131 | 111 | 68.7% | 1m 42s |
+| 10 | `/blog/sql/sql-interview-pytania` | 128 | 85 | 66.4% | 1m 22s |
+| 11 | `/blog/sql/case-when-w-sql` | 119 | 101 | 73.9% | 1m 37s |
+| 12 | `/kursy/n8n` | 101 | 73 | 37.6% | 3m 16s |
+| 13 | `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 100 | 44 | 79.0% | 1m 23s |
+| 14 | `/blog/python` | 83 | 41 | 22.9% | 2m 17s |
+| 15 | `/blog/n8n/przyklady-workflow-automatyzacji` | 75 | 64 | 57.3% | 2m 27s |
+| 16 | `/oto/pystart-newsletter` | 74 | 42 | 40.5% | 1m 11s |
+| 17 | `/blog/n8n/licencja-cennik` | 73 | 59 | 67.1% | 2m 0s |
+| 18 | `/blog/python/praktyka/programowanie-obiektowe-w-pythonie-klasy-i-obiekty` | 73 | 54 | 67.1% | 1m 14s |
+| 19 | `/transformacja/` | 67 | 49 | 28.4% | 2m 4s |
+| 20 | `/blog/sql/funkcje-okienkowe-sql-postgresql-i-mysql` | 65 | 23 | 78.5% | 1m 29s |
 
 ## Źródła Ruchu
 | Źródło | Medium | Sesje | Użytkownicy |
 |--------|--------|-------|-------------|
-| google | organic | 3765 | 2661 |
-| (direct) | (none) | 846 | 579 |
-| youtube.com | referral | 373 | 202 |
-| bing | organic | 369 | 299 |
-| (not set) | (not set) | 192 | 162 |
-| statics.teams.cdn.office.net | referral | 65 | 49 |
-| duckduckgo | organic | 47 | 38 |
-| 127.0.0.1:3001 | referral | 43 | 1 |
-| sieradzinski.pl | referral | 40 | 22 |
-| l.facebook.com | referral | 24 | 13 |
-| pl.search.yahoo.com | referral | 23 | 20 |
-| yahoo | organic | 19 | 5 |
-| newsletter | email | 14 | 10 |
-| lm.facebook.com | referral | 13 | 13 |
-| chatgpt.com | referral | 11 | 9 |
+| google | organic | 3755 | 2671 |
+| (direct) | (none) | 859 | 589 |
+| bing | organic | 372 | 306 |
+| youtube.com | referral | 360 | 197 |
+| (not set) | (not set) | 269 | 234 |
+| statics.teams.cdn.office.net | referral | 78 | 59 |
+| duckduckgo | organic | 49 | 39 |
+| sieradzinski.pl | referral | 40 | 23 |
+| 127.0.0.1:3001 | referral | 38 | 1 |
+| pl.search.yahoo.com | referral | 20 | 17 |
+| yahoo | organic | 18 | 5 |
+| l.facebook.com | referral | 14 | 7 |
+| newsletter | email | 13 | 9 |
+| chatgpt.com | referral | 10 | 9 |
+| chatgptpolsku.app | referral | 8 | 1 |
 
 ## Ścieżki B2B — Lead Generation
 | Strona | Źródło | Medium | Sesje |
 |--------|--------|--------|-------|
+| /sciezki/google | google | organic | 3 |
 | /sciezki/google | chatgptpolsku.app | referral | 2 |
-| /sciezki/google | google | organic | 2 |
 | /sciezki/openai | google | organic | 2 |
 | /sciezki/microsoft | (direct) | (none) | 1 |
 | /sciezki/microsoft | 127.0.0.1:3001 | referral | 1 |
@@ -64,21 +64,20 @@ Pobrano: 2026-03-24 19:00 | Okres: 2026-02-24 → 2026-03-23 (28 dni)
 | /sciezki/openai | (direct) | (none) | 1 |
 | /sciezki/openai | 127.0.0.1:3001 | referral | 1 |
 | /sciezki/openai | chatgptpolsku.app | referral | 1 |
-| /sciezki/openai | l.facebook.com | referral | 1 |
 
 ## Strony z Wysokim Bounce Rate (>70%)
 | Strona | Bounce | Sesje |
 |--------|--------|-------|
-| `/blog/python/podstawy/list-comprehension` | 92.8% | 180 |
-| `/blog/python/testowanie/testowanie-jednostkowe-python` | 89.2% | 37 |
-| `/blog/cursor-cursor-pro-programowanie-ai` | 82.5% | 40 |
+| `/blog/python/podstawy/list-comprehension` | 93.1% | 188 |
+| `/blog/python/testowanie/testowanie-jednostkowe-python` | 90.0% | 40 |
+| `/blog/sql/jak-uczyc-sie-sql` | 81.2% | 64 |
 | `/blog/python/automatyzacja/tkinter-gui` | 81.0% | 42 |
-| `/blog/sql/jak-uczyc-sie-sql` | 80.0% | 65 |
-| `/blog/sql/funkcje-okienkowe-sql-postgresql-i-mysql` | 78.6% | 70 |
-| `/blog/n8n/docker-instalacja-konfiguracja` | 77.5% | 178 |
-| `/blog/n8n` | 77.3% | 1223 |
-| `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 77.1% | 96 |
-| `/blog/python/podstawy/obsluga-plikow-czytanie-zapisywanie` | 75.0% | 28 |
+| `/blog/cursor-cursor-pro-programowanie-ai` | 80.6% | 36 |
+| `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 79.0% | 100 |
+| `/blog/n8n/docker-instalacja-konfiguracja` | 78.7% | 178 |
+| `/blog/python/podstawy/obsluga-plikow-czytanie-zapisywanie` | 78.6% | 28 |
+| `/blog/sql/funkcje-okienkowe-sql-postgresql-i-mysql` | 78.5% | 65 |
+| `/blog/n8n` | 78.3% | 1215 |
 
 ---
-*DOKODU BRAIN GA4 Integration | 2026-03-24 19:00*
+*DOKODU BRAIN GA4 Integration | 2026-03-25 09:00*
