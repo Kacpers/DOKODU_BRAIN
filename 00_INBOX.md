@@ -61,3 +61,10 @@ Dla kazdego elementu zadaj pytanie:
 
 ---
 *Ten plik powinien byc PUSTY w poniedzialek rano. Zapelniony do piatku. Oczyszczony w piatek. Powtarzaj.*
+
+## Przypomnienia z 2026-03-27
+- [SEO] Sprawdź CTR frazy "llm" po zmianie title/meta — było 0.0% na #1.2, powinno wzrosnąć
+- [SEO] Sprawdź CTR "python list comprehension" po zmianie meta — było 0.3% na #2.1
+- [SEO] Sprawdź CTR "Cursor Pro" po zmianie meta — było 0.1% na #8
+- [GA] Sprawdź czy reklamy sciezka_* generują kliknięcia (ad_click events) — wdrożono 2026-03-20
+- [BIZNES] Animex: napisz do Kamila Kowalskiego (668 140 030 / Kamil.Kowalski@animex.pl) — umów 6 sesji konsultacyjnych (30 min każda) na początku kwietnia. Faktura 40 000 PLN netto idzie po ostatniej sesji (celowo kwiecień → Q2)
