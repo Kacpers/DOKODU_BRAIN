@@ -1,91 +1,82 @@
 ---
-last_updated: 2026-03-18
-total_responses: 45
-avg_rating: 4.77
-tokens_analyzed: ANIME-784AC8, ANIME-1DE91A, ANIME-2665C2
-client: ANIMEX (3 grupy)
+last_updated: 2026-03-27
+total_responses: 69
+avg_rating: 4.81
+avg_recommend: 4.73
+avg_trainer: 4.90
+tokens_analyzed: ANIME-4F1D1C, ANIME-9BE786, ANIME-784AC8, ANIME-1DE91A, ANIME-2665C2
 ---
 
 # Survey Insights — Dokodu Szkolenia
 
-> Ostatnia aktualizacja: 2026-03-18
-> Klient: ANIMEX — 3 grupy × 15 osób = 45 odpowiedzi
-> (Token DOKOD-C63ED8 pominięty — dane testowe)
+> Ostatnia aktualizacja: 2026-03-27
+> Dane: 5 grup Animex, 69 odpowiedzi (bez danych testowych)
 
 ---
 
 ## Kluczowe metryki
 
-| Metryka | Wynik | Ocena |
-|---------|-------|-------|
-| Ogólna ocena szkolenia | **4.77 / 5** | 🟢 Doskonały |
-| Wskaźnik poleceń (avg) | **4.67 / 5** | 🟢 Wysoki |
-| Ocena trenera — wiedza | **4.90 / 5** | 🟢 Wyjątkowy |
-| Ocena trenera — zaangażowanie | **4.70 / 5** | 🟢 Wysoki |
-| Tempo: "za szybkie" (trochę + zdecydowanie) | **56%** (25/45) | 🔴 Wymaga działania |
-| Tempo: "idealne" | **36%** (16/45) | |
-| Tempo: "za wolne" | **9%** (4/45) | |
+| Metryka | Wynik |
+|---------|-------|
+| Ogólna ocena szkolenia | **4.81 / 5.0** |
+| Czy polecisz? | **4.73 / 5.0** |
+| Ocena trenera — ogólna | **4.90 / 5.0** |
+| Ocena trenera — zaangażowanie | **4.75 / 5.0** |
+| Tempo: "Idealne" | **70-79%** w ostatnich grupach (norma) |
 
 ---
 
 ## Top 5 Insights
 
-1. **Tempo to systemowy problem, nie wyjątek.** We wszystkich 3 grupach ponad połowa uczestników uznała szkolenie za za szybkie. Rekomendacja: skróć zakres materiału o 15–20% lub zaplanuj część II jako follow-up. Nie przyspieszaj — uczestnicy doceniają głębię, nie szerokość.
+1. **AI Agenci to gwiazda programu** — we wszystkich 5 grupach ćwiczenia z agentami AI były najczęściej wymieniane jako najcenniejsze. Multi-agent, osobisty asystent, agenci z narzędziami — to jest magnes. VSL i marketing powinny zaczynać od tego, nie od "podstaw n8n".
 
-2. **Agenty AI są gwiazdą szkolenia.** We wszystkich 3 grupach "najcenniejsze ćwiczenie" to jednoznacznie agenty AI i multi-agent. To główna wartość postrzegana przez uczestników — buduj na tym marketing i kolejne moduły.
+2. **Helpdesk automation to universalny ból** — pomysły automatyzacyjne uczestników wskazują na ten sam problem w każdej grupie: filtrowanie zgłoszeń helpdesk, priorytetyzacja maili, obsługa powtarzalnych ticketów. To jest idealny use case do VSL i materiałów sprzedażowych.
 
-3. **SAP integration to niezaspokojona potrzeba.** SAP pojawił się w 3 różnych grupach jako coś czego chcieliby więcej. ANIMEX wyraźnie pracuje na SAP. Rozważ dedykowany moduł "n8n + SAP" lub case study z tym klientem.
+4. **Animex = jeden kontrakt, 5 grup** — jeden klient przeszkolił wiele zespołów. Silna relacja i zaufanie. Warto zapytać: co dalej? Kolejne działy, moduł SAP, szkolenie dla managerów?
 
-4. **SharePoint i Teams jako triggery — temat do rozwinięcia.** Kilku uczestników z różnych grup pyta o SharePoint i Teams jako wyzwalacze workflow. Brakuje im gotowego ćwiczenia z tym scenariuszem.
-
-5. **Uczestnicy chcą więcej czasu na samodzielną pracę.** Powtarza się prośba o "zadania po każdym bloku" i "momenty samodzielne". Rozważ zmianę formatu: mniej demo, więcej mini-ćwiczeń po każdym module.
+5. **Trener jest nietykalny (4.9/5.0 we wszystkich grupach)** — problem nigdy nie leży w Kacprze jako trenerze. Każda negatywna uwaga dotyczy tempa lub zakresu, nie osoby prowadzącej. To ważne dla pewności siebie przy sprzedaży kolejnych szkoleń.
 
 ---
 
-## Cytaty (zgoda na publikację)
+## Cytaty (zgoda na publikację — grupy z >50% zgodą)
 
-> "Świetne szkolenie. Niesamowity spokój i elastyczność w prowadzeniu." — ANIMEX
+> "Świetne szkolenie. Niesamowity spokój i elastyczność w prowadzeniu." — Animex, Grupa 3
 
-> "Trudno się do czegoś przyczepić. Ogromna wiedza." — ANIMEX
+> "Bardzo dobra techniczna strona prezentacji. Bardzo dobra responsywność. Żadnych uwag krytycznych." — Animex, Grupa 5
 
-> "Brak uwag, bardzo dobra komunikacja, reakcja na problemy." — ANIMEX
+> "Otwierające oczy na możliwości automatyzacji." — Animex, Grupa 2
 
-> "Bardzo przyjazny sposób komunikacji." — ANIMEX
+> "Bardzo przyjazny sposób komunikacji. Trudno się do czegoś przyczepić. Ogromna wiedza." — Animex, Grupa 2
 
-> "Fajnie merytorycznie poprowadzone szkolenie." — ANIMEX
-
-> "Otwierające oczy na możliwości automatyzacji." — ANIMEX
+> "Kacper masz subskrypcje na YouTube." — Animex, Grupa 2 *(social proof dla kanału)*
 
 ---
 
 ## Obszary do poprawy
 
-- **Tempo** — to priorytet #1. Powtarza się we wszystkich grupach. Konkretne uwagi: "ciut wolniej prezentować ćwiczenia", "nieco wolniejsze tempo szkolenia", "może nieco za szybko pod koniec".
-- **Więcej praktyki** — uczestnicy chcą sami robić, nie tylko oglądać. Format: blok demo → mini-zadanie → omówienie.
-- **SAP** — brakuje ćwiczenia lub chociaż demonstracji integracji n8n ↔ SAP (nawet przez API).
-- **Zakres vs głębokość** — kilka osób podkreśla "mało czasu, dużo materiału". Warto rozważyć dwustopniowy format: podstawowy (2 dni) + zaawansowany (1 dzień opcjonalny).
+- **Czas na pracę własną** — uczestnicy chcą "robić sami", nie tylko obserwować. Moduł 8 (warsztat) jest doceniany — rozważ rozszerzenie do 2h.
+- **Zadania po każdym bloku** — kilku uczestników prosiło o mini-zadania po każdym module. Łatwe do wdrożenia, podniosłoby retencję wiedzy.
 
 ---
 
-## Pomysły automatyzacyjne uczestników
+## Pomysły automatyzacyjne uczestników (baza tematów)
 
-Unikalnych pomysłów z wszystkich 3 grup — potencjalne tematy na szkolenia lub yt:
+Posortowane według częstotliwości pojawiania się:
 
-| Pomysł | Powtórzenia | Potencjał |
-|--------|------------|-----------|
-| Przetwarzanie maili z fakturami → import do SAP | 2+ | 🔥 Wysoki — bardzo konkretny use case |
-| Agent AI na bazie SharePoint (baza wiedzy) | 2 | 🔥 Wysoki — popularny w korporacjach |
-| Helpdesk triage — klasyfikacja i priorytetyzacja zgłoszeń | 2 | 🔥 Wysoki — IT-friendly |
-| Automatyczne raporty z danych mailowych | 2 | 🟡 Średni |
-| Teams jako trigger workflow | 2 | 🟡 Średni |
-| Monitoring urządzeń (drukarki, stan tonera → alert email) | 2 | 🟡 Ciekawy, niszowy |
-| Home Assistant + n8n | 1 | 🟢 Świetny temat YT |
-| Analiza plików Excel przez AI | 1 | 🟡 Średni |
+1. **Helpdesk / zgłoszenia IT** — filtrowanie, priorytetyzacja, automatyczne odpowiedzi (pojawia się w 4/5 grup)
+2. **Obsługa maili z załącznikami** — faktury, raporty, dane z zewnątrz → SAP / Excel
+3. **Agenty SharePoint/RAG** — "agent który odpowiada na pytania na podstawie danych SharePoint"
+4. **Raportowanie managerskie** — automatyczne podsumowania danych z różnych źródeł
+5. **Integracja SAP** — pobieranie danych kontrahentów, statusy zamówień
+6. **Powiadomienia Teams/Mail** — triggery oparte o dane w SharePoint lub SAP
+7. **Monitoring urządzeń** — stan tonerów, statusy maszyn (IoT-lite)
 
 ---
 
-## Notatki operacyjne
+## Rekomendacje działań
 
-- Token `ANIME-57D13E` (Druga grupa ANIMEX) — 0 odpowiedzi. Sprawdź czy link do ankiety dotarł do uczestników.
-- Token `DOKOD-C63ED8` — dane testowe (odpowiedzi: "To jest test", "same czwórki"). Nie uwzględniać w raportach.
-- 25/45 uczestników wyraziło zgodę na publikację odpowiedzi (56% opt-in rate).
+- [ ] Zapytać Animex o polecenie do podobnej firmy — 5 grup to silna relacja
+- [ ] Cytaty z powyższej sekcji → dodać do strony dokodu.it i materiałów sprzedażowych
+- [ ] VSL kursu n8n: zaczynać od demo AI agenta (helpdesk use case), nie od "czym jest n8n"
+- [ ] Rozważyć opcję "3-dniowego" szkolenia dla grup z bardziej zróżnicowanym poziomem
+- [ ] Temat na YouTube: "AI Agent który obsługuje helpdesk — zbuduj w n8n w 20 minut"

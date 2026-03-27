@@ -150,6 +150,60 @@ NIP: 5882473305
 
 ---
 
+### T-006: Email zamknięcia szkolenia (po ostatniej grupie)
+
+> Wysyłasz dzień po ostatniej grupie. Uzupełnij: [IMIĘ], [OCENA_OGÓLNA], [OCENA_TRENERA],
+> [HIGHLIGHT_ĆWICZENIA], [POMYSŁY_UCZESTNIKÓW], [LICZBA_SESJI], [CZAS_SESJI].
+> Pełny proces zamknięcia: `RES_Templates/Proces_Zamkniecia_Szkolenia.md`
+
+```
+Temat: Podsumowanie warsztatów + kolejne kroki | [FIRMA] × Dokodu
+
+Dzień dobry [IMIĘ],
+
+wczoraj zakończyliśmy ostatnią grupę, dlatego chciałem krótko podsumować
+ten etap warsztatowy i ustalić nasze kolejne kroki.
+
+Wyniki ankiet i wnioski: Zebraliśmy ankiety ze wszystkich grup (łącznie
+[LICZBA] odpowiedzi). Średnia ogólna ocena szkolenia to [OCENA_OGÓLNA]/5,
+a ocena trenera [OCENA_TRENERA]/5. Najbardziej docenione zostały
+praktyczne ćwiczenia z [HIGHLIGHT_ĆWICZENIA] – ten punkt pojawiał się
+jako główny atut w każdej z grup. Co dla mnie najważniejsze, uczestnicy
+wychodzili z sali z konkretnymi pomysłami na wdrożenia (m.in.
+[POMYSŁY_UCZESTNIKÓW]). To świetny znak, że szkolenie zadziałało dokładnie
+tak, jak zakładaliśmy, i pobudziło zespół do działania.
+
+Certyfikaty i materiały: Abyśmy mogli dopiąć ten etap, potrzebuję listy
+wszystkich uczestników (imiona, nazwiska i adresy e-mail) – najlepiej
+z podziałem na grupy, abym mógł wpisać odpowiednie daty. Te dane są mi
+potrzebne do wystawienia imiennych certyfikatów oraz wysyłki paczki
+materiałów poszkoleniowych. Oczywiście mogę też wysłać wszystko zbiorczo
+do jednej osoby, jeśli taki proces jest dla Was wygodniejszy.
+
+Sesje konsultacyjne: Zgodnie z umową, mamy przed sobą jeszcze [LICZBA_SESJI]
+sesje konsultacyjne (po [CZAS_SESJI] min). Chciałbym zrealizować je na
+początku [MIESIĄC] i odpowiednio się do nich przygotować. Będę wdzięczny
+za informację, z kim i w jakich terminach je planujemy oraz z jakimi
+konkretnie wyzwaniami będziemy się mierzyć. Super, gdyby udało nam się
+spiąć ten kalendarz w ciągu najbliższego tygodnia.
+
+Logotyp / Case Study: Biorąc pod uwagę tak pozytywny odbiór warsztatów,
+będę bardzo wdzięczny za zgodę na umieszczenie Waszego logotypu w gronie
+moich zaufanych klientów na stronie dokodu.it. Chętnie opracowałbym też
+krótkie, anonimowe Case Study z naszych warsztatów, które oczywiście
+prześlę do Waszej pełnej autoryzacji przed jakąkolwiek publikacją.
+
+Jeszcze raz dziękuję za świetną współpracę przy tym projekcie i czekam
+na informacje.
+
+Pozdrawiam,
+Kacper Sieradziński
+CEO & Head of AI
+Telefon: +48 508 106 046
+```
+
+---
+
 ## SZABLONY DOKUMENTOW
 
 ### T-010: Notatka z projektu (Project Note)

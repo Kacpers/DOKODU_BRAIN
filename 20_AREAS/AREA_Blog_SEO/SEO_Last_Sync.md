@@ -1,5 +1,5 @@
 # Google Search Console — dokodu.it
-Pobrano: 2026-03-27 00:00 | Okres: 2026-02-24 → 2026-03-24 (28 dni)
+Pobrano: 2026-03-27 10:00 | Okres: 2026-02-24 → 2026-03-24 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
@@ -140,4 +140,4 @@ Pobrano: 2026-03-27 00:00 | Okres: 2026-02-24 → 2026-03-24 (28 dni)
 | `/blog/uzycie-generative-ai-w-automatycznym-generowaniu-kodu` | 171 | #8.1 |
 
 ---
-*DOKODU BRAIN GSC Integration | 2026-03-27 00:00*
+*DOKODU BRAIN GSC Integration | 2026-03-27 10:00*

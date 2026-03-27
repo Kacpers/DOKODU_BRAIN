@@ -77,7 +77,7 @@ Dane:       PDF (ING) + Excel .xlsm (Arkusz1)
 | Data | Zdarzenie | Wartosc | Status |
 | :---: | :--- | ---: | :---: |
 | 2026-02-25 | Umowa o dzielo nr 1/2026 — System reconciliation | 12 000 PLN netto | Aktywne |
-| 2026-02-25 | Zaliczka 30% | 3 600 PLN | Do odebrania |
+| 2026-02-25 | Zaliczka 30% | 3 600 PLN | Zapłacona ✅ |
 
 **Lacna wartosc wspolpracy:** 12 000 PLN netto
 **Retainer aktywny:** Nie

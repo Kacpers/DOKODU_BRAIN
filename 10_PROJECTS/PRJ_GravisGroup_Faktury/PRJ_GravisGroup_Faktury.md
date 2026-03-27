@@ -176,7 +176,7 @@ False positives: 0
 | Klient zgloszi uwagi poza Lista Uwagi/Bledow (rozproszone maile) | Sredni | Przypomniec o §7 ust. 3 — jedno zbiorcze zestawienie |
 | Nowe formaty PDF/Excel po odbiorze | Niski | §4 ust. 6f — nowy bank to Change Request |
 | Zbyt maly procent dopasowania na danych produkcyjnych | Sredni | Wyniki testow 60% (bez AI) / umowny prog 85% lacznie z propozycjami |
-| Klient nie zaplacil zaliczki | Nieznany | Sprawdzic status platnosci |
+| Klient nie zaplacil zaliczki | Nieaktywny | Zaliczka 3 600 PLN wpłynęła ✅ |
 
 ---
 

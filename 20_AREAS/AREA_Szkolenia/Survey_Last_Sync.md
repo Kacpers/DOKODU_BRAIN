@@ -1,7 +1,160 @@
 # Wyniki Ankiet Poszkoleniowych — Dokodu
 
-> Wygenerowano: 2026-03-17T23:27:47.247Z
-> Liczba tokenów: 5 | Łącznie odpowiedzi: 48
+> Wygenerowano: 2026-03-26T23:44:59.270Z
+> Liczba tokenów: 7 | Łącznie odpowiedzi: 72
+
+---
+
+## ANIMEX
+
+| Pole | Wartość |
+|------|---------|
+| Token | `ANIME-4F1D1C` |
+| Status | Aktywny |
+| Opis | GRUPA 5 |
+| Liczba odpowiedzi | **14** |
+| Certyfikat | Nie |
+
+### Oceny (skala 1–5)
+
+| Metryka | Średnia |
+|---------|---------|
+| Ogólna ocena szkolenia | **4.9** |
+| Czy polecisz? | **4.8** |
+| Ocena trenera — ogólna | **4.9** |
+| Ocena trenera — zaangażowanie | **4.8** |
+
+### Tempo szkolenia
+
+- **Zdecydowanie za wolne**: 0
+- **Trochę za wolne**: 1
+- **Idealne**: 11
+- **Trochę za szybkie**: 2
+- **Zdecydowanie za szybkie**: 0
+
+### Jedno słowo o szkoleniu
+
+`Pomocne`, `Fantastyczne`, `Wiedzodajne `, `Wzorowe.`, `ciekawe`, `Interesujące`, `praktyczne`, `stymulujące`, `przewidywalne`, `angażujące `
+
+### Najcenniejsze ćwiczenie
+
+- "Formularz"
+- "Wszystkie, pierwszy raz miałem styczność z takimi rozwiązaniami."
+- "Działania oparte o AI (wyszukiwanie treści, interpretacja danych)"
+- "multi agent"
+- "Ogólnie wszystkie, ponieważ od początku mi się podobało"
+- "To z wieloma agentami, pokazujące w jaki sposób można łączyć ze sobą duże procesy"
+- "ogólnie chyba największa wartością dodatnią było to, że w razie potknięć poszczegołnych osób była próba wyrównania postępu u wszystkich"
+- "Poczta_AI."
+- "tworzenie agentów AI"
+
+### Czego chcieliby więcej
+
+- "Wszystkie moje potrzeby zostały zaspokojone."
+- "Oczywiście, zdobywanie nowej wiedzy jest bardzo przyjemne"
+- "Jak wyżej. Zagadnienia związane z wyszukiwaniem treści AI."
+- "Przykłady wykonanych rozwiązań"
+- "Więcej ciekawych zastosowań w pracy, może inne funkcje niż maile/czaty"
+- "Czy/Gdzie jest 'orchestrator' n8n?"
+- "więcej bug-ow w n8n :)"
+
+### Co można ulepszyć
+
+- "Nic"
+- "Wszystko było bardzo dobrze."
+- "nic"
+- "Nie wiem"
+- "Nic w takim czasie. Jest ok."
+- "Może minimalnie wolniej, merytorycznie czy to zadaniowo nie mam się do czego przyczepić."
+- "Podzielić szkolenie na krótsze sesje."
+- "Dobrać kursantów :)"
+
+### Pomysły na automatyzację
+
+- "Procesy pisania zgłoszeń przez produkcję na helpdesk."
+- "Jeszcze się nad tym nie zastanawiałem, ale na pewno coś się znajdzie"
+- "Zgłoszenia problemów"
+- "zgłaszanie standardowych problemów przez maila"
+- "Mam dużo maili ze zautomatyzowanych powiadomień( przeważnie koło 100 dziennie) ale nie wszystkie są ważne natomiast nie da się tego dobrze posortować zasadami w outlooku, myślę że to rozwiązanie może być w tym pomocne, aby wyjąć tylko to co potrzebuje."
+
+### Notatki o trenerze
+
+- "Wszystko jest ok."
+- "brak"
+- "Bardzo dobra techniczna strona prezentacji (porządny mikrofon). Bardzo dobra repsonsywność. Żadnych uwag krytycznych."
+- "Brak uwag"
+- "Bardzo dobrze skonstruowane tematy które dały przegląd możliwości rozwiązania."
+- "Więcej skupić się na debugowaniu."
+- "brak"
+
+> **6/14** uczestników wyraziło zgodę na publikację odpowiedzi.
+
+---
+
+## ANIMEX
+
+| Pole | Wartość |
+|------|---------|
+| Token | `ANIME-9BE786` |
+| Status | Aktywny |
+| Opis | grupa czwarta |
+| Liczba odpowiedzi | **10** |
+| Certyfikat | Nie |
+
+### Oceny (skala 1–5)
+
+| Metryka | Średnia |
+|---------|---------|
+| Ogólna ocena szkolenia | **4.9** |
+| Czy polecisz? | **4.9** |
+| Ocena trenera — ogólna | **4.9** |
+| Ocena trenera — zaangażowanie | **4.9** |
+
+### Tempo szkolenia
+
+- **Zdecydowanie za wolne**: 0
+- **Trochę za wolne**: 0
+- **Idealne**: 7
+- **Trochę za szybkie**: 3
+- **Zdecydowanie za szybkie**: 0
+
+### Jedno słowo o szkoleniu
+
+`dużo cennej i przydatnej wiedzy`, `takich szkoleń więcej`, `Inspirujące z pewnością`, `inspirujące`, `ciekawe, sporo rozbudowanych przykładów`
+
+### Najcenniejsze ćwiczenie
+
+- "te z agentami AI"
+- "Każde z ćwiczeń przekazywało wiedze o obiekcie, elemencie, który byłby wartościowy do wykorzystania w potencjalnych rozwiązaniach."
+- "Agenci"
+- "Te z AI i agentami"
+- "Ćwiczenia dotyczące agentów."
+
+### Czego chcieliby więcej
+
+- "integracje z MS SQL Tool"
+- "Zagadnień związanych z agentami AI"
+- "Więcej interakcji z aplikacjami Office"
+
+### Co można ulepszyć
+
+- "-"
+- "To co było, zostało przedstawione, tłumaczone w moim odczuciu było optymalnie wykonane"
+
+### Pomysły na automatyzację
+
+- "sięganie po dane wygenerowane przez AI z danych SQL przez RestAPI"
+- "Pomysły się rodzą, wstępnie obsługa zgłoszeń helpdesk"
+- "do przemyślenia"
+- "na początek pewnie pocztę, może testowanie REST-owego API, żeby ręcznie nie klikać po "szwagrze""
+
+### Notatki o trenerze
+
+- "brak"
+- "brak"
+- "Brak uwag, sporo wiedzy, aż za dużo jak na pierwszy rzut, ostatnia godzina to już czacha dymi :)"
+
+> **3/10** uczestników wyraziło zgodę na publikację odpowiedzi.
 
 ---
 

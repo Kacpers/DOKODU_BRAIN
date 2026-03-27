@@ -1,30 +1,30 @@
 # Google Analytics 4 — dokodu.it
-Pobrano: 2026-03-27 00:00 | Okres: 2026-02-27 → 2026-03-26 (28 dni)
+Pobrano: 2026-03-27 10:00 | Okres: 2026-02-27 → 2026-03-26 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
 |---------|---------|
-| Łączne sesje | **6,875** |
-| Unikalni użytkownicy | **4,963** |
-| Odsłony | **7,201** |
-| Średni bounce rate | 54.3% |
+| Łączne sesje | **6,880** |
+| Unikalni użytkownicy | **4,968** |
+| Odsłony | **7,208** |
+| Średni bounce rate | 54.4% |
 
 ## Top 20 Stron (wg sesji)
 | # | Strona | Sesje | Użytkownicy | Bounce | Avg. czas |
 |---|--------|-------|-------------|--------|-----------|
-| 1 | `/blog/n8n` | 1164 | 728 | 77.9% | 1m 9s |
+| 1 | `/blog/n8n` | 1165 | 729 | 77.9% | 1m 10s |
 | 2 | `/` | 455 | 328 | 58.7% | 1m 55s |
 | 3 | `/kursy/pystart` | 272 | 195 | 56.6% | 1m 31s |
 | 4 | `/blog/python/podstawy/list-comprehension` | 193 | 187 | 94.8% | 0m 14s |
 | 5 | `/newslettery/podstawy-pythona` | 181 | 138 | 59.1% | 1m 33s |
 | 6 | `/blog/n8n/docker-instalacja-konfiguracja` | 165 | 68 | 79.4% | 1m 6s |
 | 7 | `/blog/sql/zadania-sql-poziom-podstawowy` | 152 | 125 | 59.2% | 1m 14s |
-| 8 | `/blog/python/podstawy/podstawy-programowania` | 146 | 58 | 51.4% | 1m 30s |
+| 8 | `/blog/python/podstawy/podstawy-programowania` | 147 | 59 | 51.7% | 1m 29s |
 | 9 | `/blog/sql/sql-interview-pytania` | 135 | 93 | 64.4% | 1m 21s |
 | 10 | `/blog/sql/normalizacja-baz-danych` | 124 | 110 | 69.4% | 1m 5s |
 | 11 | `/blog/sql/case-when-w-sql` | 115 | 98 | 77.4% | 1m 21s |
 | 12 | `/kursy/n8n` | 103 | 71 | 37.9% | 3m 26s |
-| 13 | `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 97 | 42 | 77.3% | 1m 26s |
+| 13 | `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 98 | 43 | 77.6% | 1m 25s |
 | 14 | `/blog/n8n/przyklady-workflow-automatyzacji` | 81 | 68 | 56.8% | 2m 29s |
 | 15 | `/blog/python` | 81 | 39 | 22.2% | 2m 1s |
 | 16 | `/blog/python/praktyka/programowanie-obiektowe-w-pythonie-klasy-i-obiekty` | 81 | 61 | 67.9% | 1m 11s |
@@ -36,11 +36,11 @@ Pobrano: 2026-03-27 00:00 | Okres: 2026-02-27 → 2026-03-26 (28 dni)
 ## Źródła Ruchu
 | Źródło | Medium | Sesje | Użytkownicy |
 |--------|--------|-------|-------------|
-| google | organic | 3751 | 2665 |
-| (direct) | (none) | 900 | 617 |
+| google | organic | 3754 | 2668 |
+| (direct) | (none) | 901 | 618 |
 | bing | organic | 378 | 316 |
 | youtube.com | referral | 345 | 192 |
-| (not set) | (not set) | 249 | 223 |
+| (not set) | (not set) | 250 | 224 |
 | statics.teams.cdn.office.net | referral | 95 | 75 |
 | duckduckgo | organic | 50 | 41 |
 | sieradzinski.pl | referral | 38 | 22 |
@@ -76,8 +76,8 @@ Pobrano: 2026-03-27 00:00 | Okres: 2026-02-27 → 2026-03-26 (28 dni)
 | `/blog/n8n/docker-instalacja-konfiguracja` | 79.4% | 165 |
 | `/blog/sql/funkcje-okienkowe-sql-postgresql-i-mysql` | 79.4% | 63 |
 | `/blog/sql/jak-uczyc-sie-sql` | 79.3% | 58 |
-| `/blog/n8n` | 77.9% | 1164 |
+| `/blog/n8n` | 77.9% | 1165 |
 | `/blog/python/web/flask-vs-fastapi` | 77.8% | 27 |
 
 ---
-*DOKODU BRAIN GA4 Integration | 2026-03-27 00:00*
+*DOKODU BRAIN GA4 Integration | 2026-03-27 10:00*
