@@ -6,15 +6,15 @@ last_reviewed: 2026-03-06
 tags: [projekt, kurs, n8n, launch, produkt-cyfrowy]
 client: internal
 value_pln: 120000
-deadline: 2026-03-31
-health: red
+deadline: 2026-05-06
+health: yellow
 ---
 
 # PRJ: Kurs n8n — Launch
 > **Typ:** Produkt cyfrowy (kurs online)
 > **Cel przychodowy:** 120 000 PLN (launch goal) — 200 kursantow × 599 PLN
-> **Status:** CZERWONY — Opoznienie (blokada: brak skryptu VSL)
-> **Termin Launch:** 2026-03-31 → moze przesunac sie na Q2
+> **Status:** ŻÓŁTY — Przedsprzedaż ogłoszona na 6 maja 2026, waitlista aktywna
+> **Termin Launch (przedsprzedaż):** 2026-05-06, godz. 10:00
 > **Lead projektu:** Kacper (content) + Alina (marketing prawny)
 
 ---

@@ -83,6 +83,8 @@ Automatyczny pipeline obiegowy:
 - [x] Analiza API Comarch ERP XL — dokumentacja odebrana
 - [x] Ocena wolumenu (500 dok/mies.) i jakosci skanov
 
+### STATUS (2026-03-27): Kacper dzwonił — Corleonis daje znać w pon. 2026-03-30 co robimy dalej.
+
 ### FAZA 2: SETUP I DEVELOPMENT (W TRAKCIE)
 - [x] VPS skonfigurowany, n8n zainstalowany
 - [x] Vault wdrozony, sekrety API zaladowane

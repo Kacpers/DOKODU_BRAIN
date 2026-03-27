@@ -78,11 +78,15 @@ Szkolenie 2-dniowe (8h + 8h) dla 15 osob. Zakres:
 - [ ] Zebranie ankiet satysfakcji (papier lub online)
 
 ### FAZA 4: FOLLOWUP (do 7 dni po szkoleniu)
-- [ ] Wyslac materialy do uczestnikow (zip: PDFy + JSONy workflows)
-- [ ] Wyslac fakture koncowa (50% pozostale = 9 000 PLN)
-- [ ] NPS survey (3 pytania, Google Forms)
-- [ ] **Oferta upsell:** Wdrozenie produkcyjne agenta AI w BOK — wycena w [[30_RESOURCES/RES_Sales_Playbook/Sales_Playbook]]
-- [ ] Poprosic o referencje pisemne (do case study)
+- [x] **Email zamknięcia wysłany** (2026-03-27) — czekamy na odpowiedź Kamila
+  - Prośba o listę uczestników (imiona, nazwiska, emaile z podziałem na grupy)
+  - Ustalenie terminów 6 sesji konsultacyjnych (początek kwietnia)
+  - Zgoda na logo + propozycja case study
+- [ ] **Po odpowiedzi:** Certyfikaty imienne + paczka materiałów (zip: PDFy + JSONy)
+- [ ] **Sesje konsultacyjne** (6 × 30 min, początek kwietnia) — zaproszenia po otrzymaniu listy
+- [ ] **Faktura końcowa 40 000 PLN netto** — po ostatniej sesji konsultacyjnej (celowo kwiecień → Q2)
+- [ ] **Logo Animex** na dokodu.it — po pisemnej zgodzie emailowej
+- [ ] **Case study** — draft → autoryzacja Kamila → publikacja
 
 ---
 

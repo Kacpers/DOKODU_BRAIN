@@ -14,10 +14,10 @@ tags: [kurs, n8n, marketing, launch]
 
 | URL | Co robi | Stan | Uwagi |
 |-----|---------|------|-------|
-| `/blog/n8n` | SEO content hub, 30 min lektura | ✅ działa | Dobry ruch organiczny, 4 CTA, YT playlist |
-| `/kursy/n8n` | Waitlista + opis kursu | ⚠️ działa, ale | Data "czerwiec 2025" — NIEAKTUALNA. Wymaga aktualizacji |
+| `/blog/n8n` | SEO content hub, 30 min lektura | ✅ działa | Dobry ruch organiczny, CTA do ebooka (404!) i konsultacji |
+| `/kursy/n8n` | Waitlista + opis kursu | ✅ zaktualizowana | Cena 1 490 PLN netto pre-sale, timer → **6 maja 2026 10:00**, limit 50 miejsc, CTA "Dołącz do listy oczekujących" |
 | `/lp.dokodu.it/transformacja/` | Lead magnet — e-book "automatyzacja biznesowa" | ✅ działa | Ogólny, nie n8n-specyficzny. Leady idą do innej grupy niż waitlista |
-| `/ebooki/n8n-automatyzacja` | E-book n8n | ❌ 404 | Blog post kieruje tu — ZEPSUTY funnel |
+| `/ebooki/n8n-automatyzacja` | 307 → `lp.dokodu.it/transformacja/` | ⚠️ działa | Ogólny e-book "automatyzacja biznesowa", zbiera do głównej listy (nie waitlista n8n). Rozważyć przeniesienie na dokodu.it lub podmianę na stronę n8n-specyficzną |
 
 ### Email / Lista
 
@@ -51,19 +51,18 @@ tags: [kurs, n8n, marketing, launch]
 
 ## 2. Krytyczne błędy funnelu (napraw ASAP)
 
-### 🔴 PRIORYTET 1 — E-book 404
-Blog post `/blog/n8n` → CTA "Pobierz darmowy e-book" → `/ebooki/n8n-automatyzacja` → **404**
-- Każdy zainteresowany widz wychodzi z błędem
-- Strata leadów z najlepszego organicznego ruchu
+### 🟡 PRIORYTET 1 — E-book nie n8n-specyficzny
+Blog `/blog/n8n` → CTA "Pobierz bezpłatnie" → `/ebooki/n8n-automatyzacja` → 307 → `lp.dokodu.it/transformacja/`
+- Działa technicznie, ale zbiera do ogólnej listy zamiast waitlisty n8n
+- Potencjalnie ciepły lead n8n trafia do zimnego segmentu
 
-**Fix:** Albo stwórz stronę e-booka, albo zmień CTA w blogu na kierowanie do waitlisty kursu
+**Fix (opcje):**
+- A) Podmień CTA w blogu na `/kursy/n8n` (waitlista kursu) — najszybsze
+- B) Stwórz n8n-specyfyczną stronę e-booka na dokodu.it i przekieruj tam
+- C) Zostaw jak jest, ale dodaj cross-sell mail o kursie do sekwencji "transformacja"
 
-### 🔴 PRIORYTET 2 — Nieaktualna data
-`/kursy/n8n` mówi "cena wzrośnie od czerwca 2025" — jest marzec 2026
-- Niszczy zaufanie przy pierwszej wizycie
-- Sugeruje że projekt jest porzucony
-
-**Fix:** Zmień na datę launch albo usuń konkretną datę → "cena wzrośnie przy starcie przedsprzedaży"
+### ✅ PRIORYTET 2 — Nieaktualna data — NAPRAWIONE
+`/kursy/n8n` zaktualizowana. Timer odlicza do 6 maja 2026, cena 1 490 PLN, brak starej daty.
 
 ### 🟡 PRIORYTET 3 — Rozjechany funnel
 LP `transformacja` zbiera leady na "automatyzację biznesową" → inna lista niż waitlista kursu

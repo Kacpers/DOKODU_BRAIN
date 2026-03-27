@@ -23,7 +23,7 @@ tags: [klienci, crm, relacje, historia]
 
 | Prospekt | Zrodlo | Etap | Wartosc est. | Link |
 | :--- | :--- | :--- | ---: | :--- |
-| _[dodaj z CRM]_ | | | | |
+| [[_PROSPECTS/Korollo\|Korollo]] | Polecenie (Alina) | Discovery ✅ → Oferta | [do ustalenia] | korollo.pl |
 
 ---
 
