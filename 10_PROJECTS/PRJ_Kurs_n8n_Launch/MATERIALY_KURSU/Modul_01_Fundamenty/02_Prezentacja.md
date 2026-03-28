@@ -226,7 +226,7 @@ curl -X POST https://twoj-n8n.com/webhook/moj-webhook \
 ## Slajd 13: HTTP Request Node — Szczegółowo
 **Najważniejsze pola:**
 - **Method:** GET, POST, PUT, PATCH, DELETE
-- **URL:** pełny adres endpointu
+- **URL:** pełny adres endpointuDo
 - **Authentication:** tu podłączasz credential
 - **Headers:** Content-Type, Accept
 - **Body:** JSON / Form Data / Raw

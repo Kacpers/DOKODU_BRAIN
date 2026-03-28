@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown → HTML Prezentacje: Porównanie narzędzi</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --surface2: #22263a;
+    --border: #2e3352;
+    --accent: #5b8af5;
+    --accent2: #7c5bf5;
+    --green: #4ade80;
+    --yellow: #fbbf24;
+    --red: #f87171;
+    --text: #e2e8f0;
+    --muted: #8892aa;
+    --code-bg: #0d1117;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    padding: 32px 16px 80px;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    text-align: center;
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 40px;
+  }
+  .header .badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #e2e8f0, #94a3cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    color: var(--muted);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  /* Section headings */
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 48px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 22px;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin: 24px 0 10px;
+  }
+
+  /* Comparison table */
+  .table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  thead tr {
+    background: var(--surface2);
+  }
+  th {
+    padding: 14px 16px;
+    text-align: left;
+    font-weight: 700;
+    color: var(--muted);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  th.tool-name {
+    color: var(--accent);
+    font-size: 0.9rem;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+  .feature-label {
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .feature-desc {
+    color: var(--muted);
+    font-size: 0.78rem;
+    margin-top: 2px;
+  }
+
+  /* Status icons */
+  .yes { color: var(--green); font-weight: 700; }
+  .no { color: var(--red); font-weight: 700; }
+  .partial { color: var(--yellow); font-weight: 700; }
+  .note { color: var(--muted); font-size: 0.8rem; display: block; margin-top: 2px; }
+
+  /* Tool cards */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 0;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    transition: border-color 0.2s;
+  }
+  .card:hover { border-color: var(--accent); }
+  .card.winner {
+    border-color: var(--accent);
+    background: linear-gradient(135deg, #1a1d27, #1e2240);
+    position: relative;
+  }
+  .card.winner::before {
+    content: 'REKOMENDOWANE';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    padding: 3px 10px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
+  .card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .card-title { font-weight: 700; font-size: 1rem; color: var(--text); }
+  .card-url { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+  .tag {
+    display: inline-block;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin: 2px 2px 0 0;
+  }
+  .tag.green { border-color: #166534; background: #052e16; color: var(--green); }
+  .tag.red { border-color: #7f1d1d; background: #2d0a0a; color: var(--red); }
+  .tag.yellow { border-color: #713f12; background: #1c0f00; color: var(--yellow); }
+  .tag.blue { border-color: #1e3a5f; background: #0a1628; color: #7cb4f5; }
+
+  /* Code blocks */
+  pre {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 20px;
+    overflow-x: auto;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    margin: 10px 0;
+  }
+  code {
+    font-family: 'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    color: #c9d1d9;
+  }
+  .code-comment { color: #6e7681; }
+  .code-string { color: #a5d6ff; }
+  .code-keyword { color: #ff7b72; }
+  .code-tag { color: #7ee787; }
+  .code-attr { color: #79c0ff; }
+  .code-accent { color: #ffa657; }
+
+  /* Install blocks */
+  .install-block {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin: 8px 0;
+    overflow: hidden;
+  }
+  .install-header {
+    background: var(--surface2);
+    padding: 6px 16px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .install-header .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  .install-body { padding: 12px 16px; }
+  .install-body code { font-size: 0.82rem; }
+  .cmd-prefix { color: #6e7681; }
+  .cmd-main { color: #79c0ff; }
+  .cmd-arg { color: #a5d6ff; }
+  .cmd-comment { color: #6e7681; display: block; margin-top: 2px; }
+
+  /* Recommendation box */
+  .recommendation {
+    background: linear-gradient(135deg, #0f1a35, #12143a);
+    border: 1px solid #2a4494;
+    border-radius: 16px;
+    padding: 32px 36px;
+    margin-top: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .recommendation::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent2));
+  }
+  .rec-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .rec-subtitle {
+    color: #8898cc;
+    font-size: 0.875rem;
+    margin-bottom: 24px;
+  }
+  .rec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 680px) { .rec-grid { grid-template-columns: 1fr; } }
+  .rec-col h4 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .rec-col ul {
+    list-style: none;
+    padding: 0;
+  }
+  .rec-col ul li {
+    color: #c8d4ee;
+    font-size: 0.875rem;
+    padding: 4px 0 4px 16px;
+    position: relative;
+  }
+  .rec-col ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .rec-verdict {
+    background: rgba(91, 138, 245, 0.08);
+    border: 1px solid rgba(91, 138, 245, 0.2);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-top: 24px;
+    color: #c8d4ee;
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+  .rec-verdict strong { color: white; }
+
+  /* Caveats */
+  .alert {
+    display: flex;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin: 12px 0;
+    font-size: 0.875rem;
+  }
+  .alert.warn {
+    background: rgba(251, 191, 36, 0.06);
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    color: #e8c76a;
+  }
+  .alert.info {
+    background: rgba(91, 138, 245, 0.06);
+    border: 1px solid rgba(91, 138, 245, 0.2);
+    color: #8ab4f8;
+  }
+  .alert-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+
+  /* Divider */
+  hr { border: none; border-top: 1px solid var(--border); margin: 0; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="badge">Research Report</div>
+    <h1>Markdown → Prezentacje HTML</h1>
+    <p class="subtitle">Porównanie narzędzi pod kątem kursów online: Slidev, Marp, reveal-md, Remark.js — 2026</p>
+  </div>
+
+  <!-- TOOL CARDS -->
+  <h2>Narzędzia w skrócie</h2>
+  <div class="cards">
+
+    <div class="card winner">
+      <div class="card-header">
+        <div class="card-icon" style="background:#1e2a52">⚡</div>
+        <div>
+          <div class="card-title">Slidev</div>
+          <div class="card-url">sli.dev</div>
+        </div>
+      </div>
+      <div style="margin-bottom:10px; font-size:0.82rem; color:var(--muted)">Vue 3 + Vite. Najnowocześniejsze narzędzie. Developer-first — kod traktowany jako first-class citizen.</div>
+      <span class="tag green">Vue components</span>
+      <span class="tag green">Shiki highlighting</span>
+      <span class="tag green">Magic Move</span>
+      <span class="tag green">Mermaid/PlantUML</span>
+      <span class="tag yellow">Dist = SPA folder</span>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background:#1a2d1a">📄</div>
+        <div>
+          <div class="card-title">Marp</div>
+          <div class="card-url">marp.app</div>
+        </div>
+      </div>
+      <div style="margin-bottom:10px; font-size:0.82rem; color:var(--muted)">Minimalistyczny. Skupia się na prostocie i przenośności. Jeden plik .md → jeden plik .html.</div>
+      <span class="tag green">Single HTML file</span>
+      <span class="tag green">PDF export</span>
+      <span class="tag blue">VS Code plugin</span>
+      <span class="tag yellow">Brak zaawansowanych animacji</span>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background:#2d1a1a">🎤</div>
+        <div>
+          <div class="card-title">reveal-md</div>
+          <div class="card-url">github.com/webpro/reveal-md</div>
+        </div>
+      </div>
+      <div style="margin-bottom:10px; font-size:0.82rem; color:var(--muted)">Nakładka Markdown na klasyczny reveal.js. Dojrzały, sprawdzony w produkcji od lat.</div>
+      <span class="tag green">Standalone HTML</span>
+      <span class="tag green">Auto-Animate</span>
+      <span class="tag green">Line-by-line code</span>
+      <span class="tag blue">Wiele motywów</span>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-icon" style="background:#1a1a2d">📖</div>
+        <div>
+          <div class="card-title">Remark.js</div>
+          <div class="card-url">remarkjs.com</div>
+        </div>
+      </div>
+      <div style="margin-bottom:10px; font-size:0.82rem; color:var(--muted)">In-browser Markdown slides. Jeden HTML z wbudowanym JS. Ultraprosty — zero build tooling.</div>
+      <span class="tag green">Zero dependencies</span>
+      <span class="tag green">Offline ready</span>
+      <span class="tag red">Brak animacji elementów</span>
+      <span class="tag red">Stary wygląd</span>
+    </div>
+
+  </div>
+
+  <!-- COMPARISON TABLE -->
+  <h2>Tabela porównawcza</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Cecha</th>
+          <th class="tool-name">Slidev</th>
+          <th class="tool-name">Marp</th>
+          <th class="tool-name">reveal-md</th>
+          <th class="tool-name">Remark.js</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td><div class="feature-label">Animacje przejść</div><div class="feature-desc">Slajd do slajdu</div></td>
+          <td><span class="yes">TAK</span><span class="note">Vue transitions, slide-in, fade, custom CSS</span></td>
+          <td><span class="partial">Ograniczone</span><span class="note">Tylko CSS transitions między slajdami</span></td>
+          <td><span class="yes">TAK</span><span class="note">Wiele wbudowanych: fade, zoom, slide, convex</span></td>
+          <td><span class="partial">Ograniczone</span><span class="note">Transition: fade przez CSS, brak presetów</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Animacje elementów</div><div class="feature-desc">Stopniowe pojawianie się</div></td>
+          <td><span class="yes">TAK</span><span class="note">v-click, v-after, Shiki Magic Move (animacja kodu!)</span></td>
+          <td><span class="no">NIE</span><span class="note">Brak wbudowanego mechanizmu click-to-reveal</span></td>
+          <td><span class="yes">TAK</span><span class="note">Auto-Animate (matching elements), fragments</span></td>
+          <td><span class="partial">Ograniczone</span><span class="note">Klasy CSS .remark-visible / .incremental</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Syntax highlighting kodu</div><div class="feature-desc">Jakość i języki</div></td>
+          <td><span class="yes">Najlepszy</span><span class="note">Shiki (identyczny z VS Code), 200+ języków, Monaco editor live</span></td>
+          <td><span class="partial">Podstawowy</span><span class="note">highlight.js, OK dla prostych bloków</span></td>
+          <td><span class="yes">Bardzo dobry</span><span class="note">highlight.js + line-by-line step-through [1-3|4|5]</span></td>
+          <td><span class="yes">Dobry</span><span class="note">highlight.js, standardowe kolorowanie</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Notatki prowadzącego</div><div class="feature-desc">Speaker notes</div></td>
+          <td><span class="yes">TAK</span><span class="note">Bloki HTML komentarzy <!-- --> widoczne w presenter mode</span></td>
+          <td><span class="yes">TAK</span><span class="note"><!-- --> komentarze, eksport przez --notes</span></td>
+          <td><span class="yes">TAK</span><span class="note">note: / notes: prefix, osobne okno prezentacji</span></td>
+          <td><span class="yes">TAK</span><span class="note">.notes CSS klasa, wbudowany presenter mode</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Export HTML</div><div class="feature-desc">Plik do dystrybucji</div></td>
+          <td><span class="partial">SPA folder</span><span class="note">slidev build → dist/ (wiele plików, wymaga serwera HTTP lub zip)</span></td>
+          <td><span class="yes">Jeden plik</span><span class="note">npx @marp-team/marp-cli deck.md -o slides.html</span></td>
+          <td><span class="yes">Folder statyczny</span><span class="note">reveal-md --static → self-contained folder, działa offline</span></td>
+          <td><span class="yes">Jeden plik HTML</span><span class="note">Ręczne osadzenie MD w HTML + CDN script tag</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Export PDF</div></td>
+          <td><span class="yes">TAK</span><span class="note">slidev export (wymaga Playwright/Chromium)</span></td>
+          <td><span class="yes">TAK</span><span class="note">Wbudowany, przez headless Chrome</span></td>
+          <td><span class="yes">TAK</span><span class="note">Wbudowany, reveal.js decktape</span></td>
+          <td><span class="partial">Ręcznie</span><span class="note">Tylko Print → PDF przez przeglądarkę</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Separator slajdów</div></td>
+          <td><code style="font-size:0.8rem">---</code><span class="note">Trzy myślniki z pustą linią</span></td>
+          <td><code style="font-size:0.8rem">---</code><span class="note">Standard Markdown HR</span></td>
+          <td><code style="font-size:0.8rem">---</code><span class="note">Konfigurowalne regex</span></td>
+          <td><code style="font-size:0.8rem">---</code><span class="note">Trzy myślniki</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Instalacja</div></td>
+          <td><span class="yes">npm/pnpm</span><span class="note">npm init slidev@latest</span></td>
+          <td><span class="yes">npx / npm</span><span class="note">npx @marp-team/marp-cli</span></td>
+          <td><span class="yes">npx / npm</span><span class="note">npx reveal-md</span></td>
+          <td><span class="yes">Zero install</span><span class="note">Jeden tag script w HTML</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Linux / WSL</div></td>
+          <td><span class="yes">TAK</span><span class="note">Node.js + pnpm, brak problemów</span></td>
+          <td><span class="yes">TAK</span><span class="note">Node.js, działa perfekt</span></td>
+          <td><span class="yes">TAK</span><span class="note">Node.js, pełna kompatybilność</span></td>
+          <td><span class="yes">TAK</span><span class="note">Brak tooling — plik HTML edytujesz ręcznie</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Jakość wizualna</div><div class="feature-desc">Out-of-the-box</div></td>
+          <td><span class="yes">Excellent</span><span class="note">Profesjonalne motywy, nadaje się na płatny kurs</span></td>
+          <td><span class="partial">Minimalist</span><span class="note">Czysty wygląd, ale wymaga CSS dla "wow efektu"</span></td>
+          <td><span class="yes">Bardzo dobry</span><span class="note">Dojrzałe motywy (moon, black, white, league...)</span></td>
+          <td><span class="no">Podstawowy</span><span class="note">Wymaga własnego CSS — surowy wygląd</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Diagramy tekstowe</div><div class="feature-desc">Mermaid / ASCII</div></td>
+          <td><span class="yes">TAK</span><span class="note">Mermaid + PlantUML wbudowane. ASCII art działa jako monospace.</span></td>
+          <td><span class="partial">Mermaid</span><span class="note">Opcjonalnie przez plugin. ASCII działa w code block.</span></td>
+          <td><span class="partial">Plugin</span><span class="note">Mermaid przez plugin. ASCII w &lt;pre&gt; / code block.</span></td>
+          <td><span class="partial">Ręcznie</span><span class="note">Tylko &lt;pre&gt; / code block dla ASCII art.</span></td>
+        </tr>
+
+        <tr>
+          <td><div class="feature-label">Dojrzałość / aktywność</div></td>
+          <td><span class="yes">Aktywny</span><span class="note">32k+ GitHub stars, aktualizacje 2025/2026</span></td>
+          <td><span class="yes">Stabilny</span><span class="note">Dojrzały projekt, marp-cli aktywnie rozwijany</span></td>
+          <td><span class="yes">Bardzo dojrzały</span><span class="note">reveal.js ~67k stars, reveal-md ~3.5k</span></td>
+          <td><span class="partial">Utrzymywany</span><span class="note">~13k stars, wolniejszy rozwój</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- INSTALL + SYNTAX DETAILS -->
+  <h2>Instalacja i podstawowa składnia</h2>
+
+  <!-- Slidev -->
+  <h3>Slidev — szybki start (WSL/Linux)</h3>
+  <div class="install-block">
+    <div class="install-header">
+      <div class="dot" style="background:#f87171"></div>
+      <div class="dot" style="background:#fbbf24"></div>
+      <div class="dot" style="background:#4ade80"></div>
+      bash
+    </div>
+    <div class="install-body">
+      <code>
+<span class="cmd-comment"># Wymaga Node.js 18+</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npm init</span> <span class="cmd-arg">slidev@latest</span>
+<span class="cmd-comment"># Lub: npx slidev slides.md</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx slidev</span> <span class="cmd-arg">slides.md</span>          <span class="cmd-comment"># dev server :3030</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx slidev build</span>              <span class="cmd-comment"># → dist/ (SPA)</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx slidev export</span>             <span class="cmd-comment"># → PDF (wymaga Playwright)</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx slidev export</span> <span class="cmd-arg">--format pptx</span> <span class="cmd-comment"># → PPTX</span>
+      </code>
+    </div>
+  </div>
+
+  <pre><code><span class="code-comment">---
+# slides.md — format slajdów Slidev
+</span>
+<span class="code-attr">theme</span>: <span class="code-string">seriph</span>
+<span class="code-attr">title</span>: <span class="code-string">Kurs n8n — Moduł 1</span>
+<span class="code-attr">highlighter</span>: <span class="code-string">shiki</span>
+<span class="code-comment">---</span>
+
+<span class="code-tag"># Slajd 1: Tytuł</span>
+
+Witaj w kursie n8n!
+
+<span class="code-comment">&lt;!-- Notatka prowadzącego: przywitaj uczestników --&gt;</span>
+
+<span class="code-comment">---</span>
+
+<span class="code-tag"># Slajd 2: Flow z animacją</span>
+
+<span class="code-keyword">Krok po kroku</span>:
+
+<span class="code-tag">&lt;v-clicks&gt;</span>
+- Trigger: Webhook odbiera dane
+- HTTP Request: zapytanie do API
+- Set Node: transformacja JSON
+- Send Email: wyślij powiadomienie
+<span class="code-tag">&lt;/v-clicks&gt;</span>
+
+<span class="code-comment">---</span>
+
+<span class="code-tag"># Slajd 3: Kod JavaScript</span>
+
+```js {1-3|4-6|all}
+<span class="code-comment">// Code Node w n8n</span>
+<span class="code-keyword">const</span> items = $input.all();
+<span class="code-keyword">return</span> items.map(item => ({
+  json: {
+    name: item.json.name.toUpperCase(),
+    ts: <span class="code-string">new Date().toISOString()</span>
+  }
+}));
+```
+
+<span class="code-comment">&lt;!-- Notatki: omów pętlę map, wytłumacz $input --&gt;</span></code></pre>
+
+  <!-- Marp -->
+  <h3>Marp — szybki start</h3>
+  <div class="install-block">
+    <div class="install-header">
+      <div class="dot" style="background:#f87171"></div>
+      <div class="dot" style="background:#fbbf24"></div>
+      <div class="dot" style="background:#4ade80"></div>
+      bash
+    </div>
+    <div class="install-body">
+      <code>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx @marp-team/marp-cli</span> <span class="cmd-arg">slides.md</span>          <span class="cmd-comment"># → slides.html (JEDEN plik!)</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx @marp-team/marp-cli</span> <span class="cmd-arg">slides.md -o out.pdf</span> <span class="cmd-comment"># → PDF</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx @marp-team/marp-cli</span> <span class="cmd-arg">--server slides.md</span> <span class="cmd-comment"># dev preview</span>
+      </code>
+    </div>
+  </div>
+
+  <pre><code><span class="code-comment">---
+marp: true
+theme: default
+paginate: true
+</span>
+<span class="code-comment">---</span>
+
+<span class="code-tag"># Slajd 1</span>
+
+Treść slajdu.
+
+<span class="code-comment">&lt;!-- Notatka prowadzącego --&gt;</span>
+
+<span class="code-comment">---</span>
+
+<span class="code-tag"># Slajd 2: Kod</span>
+
+```javascript
+const flow = <span class="code-string">"n8n"</span>;
+```</code></pre>
+
+  <!-- reveal-md -->
+  <h3>reveal-md — szybki start</h3>
+  <div class="install-block">
+    <div class="install-header">
+      <div class="dot" style="background:#f87171"></div>
+      <div class="dot" style="background:#fbbf24"></div>
+      <div class="dot" style="background:#4ade80"></div>
+      bash
+    </div>
+    <div class="install-body">
+      <code>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx reveal-md</span> <span class="cmd-arg">slides.md</span>               <span class="cmd-comment"># dev server</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx reveal-md</span> <span class="cmd-arg">slides.md --static</span>      <span class="cmd-comment"># → ./_static/ (self-contained)</span>
+<span class="cmd-prefix">$ </span><span class="cmd-main">npx reveal-md</span> <span class="cmd-arg">slides.md --print out.pdf</span> <span class="cmd-comment"># → PDF</span>
+      </code>
+    </div>
+  </div>
+
+  <pre><code><span class="code-comment"># slides.md — format reveal-md</span>
+
+<span class="code-tag"># Slajd 1: Tytuł</span>
+
+Treść
+
+Note: <span class="code-comment">Notatka prowadzącego (note: prefix)</span>
+
+<span class="code-comment">---</span>
+
+<span class="code-tag"># Slajd 2: Kod z podświetlaniem linii</span>
+
+```javascript [1-2|3-5]
+<span class="code-comment">// Krok 1: konfiguracja</span>
+<span class="code-keyword">const</span> opts = { url: <span class="code-string">"https://..."</span> };
+<span class="code-comment">// Krok 2: wywołanie</span>
+<span class="code-keyword">const</span> result = <span class="code-keyword">await</span> fetch(opts.url);
+<span class="code-keyword">return</span> result.json();
+```</code></pre>
+
+  <!-- RECOMMENDATION -->
+  <div class="recommendation">
+    <div class="rec-title">
+      Rekomendacja dla kursu n8n
+    </div>
+    <div class="rec-subtitle">Use case: płatny kurs online z dużą ilością kodu, diagramami ASCII, notatkami prowadzącego, output: standalone HTML dla studentów</div>
+
+    <div class="rec-grid">
+      <div class="rec-col">
+        <h4>Kiedy wybrać Slidev</h4>
+        <ul>
+          <li>Animacje v-click — każdy krok workflow pojawia się osobno</li>
+          <li>Shiki Magic Move — animowana ewolucja kodu (idealna dla n8n Code Node)</li>
+          <li>Wbudowane Mermaid — renderuje diagramy przepływu</li>
+          <li>Monaco Editor — live coding bezpośrednio w slajdzie</li>
+          <li>Profesjonalna jakość wizualna bez dodatkowego CSS</li>
+          <li>Najnowocześniejszy tooling — aktywny development</li>
+        </ul>
+      </div>
+      <div class="rec-col">
+        <h4>Kiedy wybrać reveal-md</h4>
+        <ul>
+          <li>Potrzebujesz JEDNEGO folderu --static gotowego offline</li>
+          <li>Wolisz prostszy setup (zero Vue/Vite)</li>
+          <li>Chcesz line-by-line code highlighting bez JS komponentów</li>
+          <li>Bardziej znasz reveal.js ekosystem</li>
+          <li>Dystrybucja jako prosty folder ZIP bez serwera Node</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rec-verdict">
+      <strong>Verdict dla kursu n8n:</strong> Pierwsze wybór to <strong>Slidev</strong> — Shiki Magic Move animuje zmiany w kodzie JS (idealne do pokazywania refaktoryzacji Code Node), v-click buduje workflow krok po kroku, Mermaid renderuje diagramy przepływu n8n. Jakość wizualna jest na poziomie płatnego kursu out-of-the-box. <br><br>
+      <strong>Jedyne zastrzeżenie:</strong> Slidev nie eksportuje do jednego pliku .html — eksportuje folder <code>dist/</code>. Możesz go spakować do ZIP i kazać studentom odpalić przez <code>python -m http.server</code> lub hostować na GitHub Pages / własnym serwerze. Jeśli potrzebujesz bezwzględnie jednego pliku HTML — użyj <strong>reveal-md</strong> z opcją <code>--static</code> (generuje self-contained folder) lub <strong>Marp</strong> (generuje jeden .html, ale bez zaawansowanych animacji).
+    </div>
+  </div>
+
+  <!-- CAVEATS -->
+  <h2>Kluczowe zastrzeżenia</h2>
+
+  <div class="alert warn">
+    <div class="alert-icon">!</div>
+    <div><strong>Slidev: brak single-file HTML.</strong> <code>slidev build</code> generuje folder SPA (wiele plików). Nie da się otworzyć bezpośrednio jako plik .html w przeglądarce bez serwera HTTP lub bez wypakowywania archiwum. Jeśli studenci mają otwierać podwójnym kliknięciem — wybierz Marp lub reveal-md.</div>
+  </div>
+
+  <div class="alert warn">
+    <div class="alert-icon">!</div>
+    <div><strong>Slidev: animacje a eksport PDF.</strong> Domyślnie PDF nie zawiera kroków animacji. Użyj flagi <code>--with-clicks</code> żeby każdy v-click stał się osobną stroną PDF. Dla studentów lepiej dystrybuować HTML niż PDF.</div>
+  </div>
+
+  <div class="alert info">
+    <div class="alert-icon">i</div>
+    <div><strong>ASCII diagramy we wszystkich narzędziach:</strong> ASCII art działa wszędzie jako blok kodu z fontami monospace. Żadne z narzędzi nie renderuje ASCII jako SVG — po prostu wyświetla jako tekst w <code>pre</code>. Dla przepływów n8n rozważ Mermaid (Slidev/Marp) który renderuje ładne diagramy z bloków tekstu.</div>
+  </div>
+
+  <div class="alert info">
+    <div class="alert-icon">i</div>
+    <div><strong>WSL / Linux:</strong> Wszystkie narzędzia oparte na Node.js działają identycznie na Linux i WSL2. PDF export w Slidev i Marp wymaga Chromium (Playwright/Puppeteer) — na WSL może wymagać dodatkowych zależności systemowych (<code>apt-get install chromium-browser</code>).</div>
+  </div>
+
+  <!-- QUICK DECISION MATRIX -->
+  <h2>Matryca decyzyjna</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Jeśli potrzebujesz...</th>
+          <th>Wybierz</th>
+          <th>Dlaczego</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Jeden plik .html do wysłania mailem studentom</td>
+          <td><strong style="color:var(--green)">Marp</strong></td>
+          <td>npx marp-cli deck.md -o slides.html — to wszystko</td>
+        </tr>
+        <tr>
+          <td>Maksimum animacji + najlepsza jakość kodu</td>
+          <td><strong style="color:var(--green)">Slidev</strong></td>
+          <td>v-click, Magic Move, Monaco, Mermaid out-of-the-box</td>
+        </tr>
+        <tr>
+          <td>Offline folder bez serwera Node.js</td>
+          <td><strong style="color:var(--green)">reveal-md</strong></td>
+          <td>--static generuje self-contained folder HTML+CSS+JS</td>
+        </tr>
+        <tr>
+          <td>Zero build tooling, jeden HTML z CDN</td>
+          <td><strong style="color:var(--green)">Remark.js</strong></td>
+          <td>Jeden &lt;script&gt; tag, edytujesz plik .html ręcznie</td>
+        </tr>
+        <tr>
+          <td>Kurs n8n: animowany kod + notatki + dystrybucja</td>
+          <td><strong style="color:var(--accent)">Slidev + GitHub Pages</strong></td>
+          <td>Slidev build → deploy na GH Pages → link dla studentów</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Dokodu BRAIN — Research 2026-03-27 | Narzędzia: Slidev 49.x · Marp CLI 3.x · reveal-md 5.x · Remark.js 15.x
+  </div>
+
+</div>
+</body>
+</html>

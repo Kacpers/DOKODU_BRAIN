@@ -1,0 +1,330 @@
+/* ═══════════════════════════════════════════════════════
+   DOKODU COURSE THEME v2 — premium developer presentation
+═══════════════════════════════════════════════════════ */
+
+:root {
+  --c-navy:    #0F2137;
+  --c-red:     #E63946;
+  --c-slate:   #334155;
+  --c-light:   #64748B;
+  --c-muted:   #94A3B8;
+  --c-dark:    #0A1628;
+  --c-code:    #0F172A;
+  --c-border:  #E2E8F0;
+  --c-bg:      #F8FAFC;
+  --c-bg2:     #F1F5F9;
+}
+
+/* ─── BASE ──────────────────────────────────────────── */
+.slidev-layout {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── COVER ─────────────────────────────────────────── */
+.slidev-layout.cover {
+  background: var(--c-dark) !important;
+  color: #fff !important;
+  padding: 3rem 3.5rem !important;
+}
+.slidev-layout.cover * { color: inherit; }
+.slidev-layout.cover h1 {
+  color: #ffffff !important;
+  font-size: 2.6rem !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+  border-left: 5px solid var(--c-red);
+  padding-left: 1.2rem;
+  margin: 0.8rem 0 1.5rem !important;
+  background: transparent !important;
+}
+.slidev-layout.cover p { color: var(--c-muted) !important; }
+.cover-tag {
+  display: inline-block;
+  background: rgba(230,57,70,.15);
+  border: 1px solid rgba(230,57,70,.35);
+  color: #E63946 !important;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+/* ─── CONTENT: white bg + subtle dot grid ───────────── */
+.slidev-layout:not(.cover) {
+  background: #ffffff !important;
+  background-image: radial-gradient(#E2E8F0 1px, transparent 1px) !important;
+  background-size: 28px 28px !important;
+  color: var(--c-slate) !important;
+}
+
+/* ─── TITLE BAR (h1) ────────────────────────────────── */
+.slidev-layout:not(.cover) h1 {
+  background: var(--c-navy) !important;
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  padding: 0.55rem 1.4rem !important;
+  border-bottom: 3px solid var(--c-red) !important;
+  margin: -1.6rem -1.6rem 1.4rem !important;
+  border-radius: 0 !important;
+  letter-spacing: 0.01em;
+}
+
+/* ─── SECTION DIVIDERS (h2) — pill badges ───────────── */
+.slidev-layout:not(.cover) h2 {
+  display: inline-flex !important;
+  align-items: center;
+  background: var(--c-navy) !important;
+  color: #ffffff !important;
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em;
+  padding: 0.22rem 0.85rem !important;
+  border-radius: 3px !important;
+  margin: 1rem 0 0.55rem !important;
+  border: none !important;
+}
+
+/* ─── TWO-COLS: comparison column headers ───────────── */
+.col-header {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.8rem;
+  border-radius: 3px;
+  margin-bottom: 0.9rem;
+  display: inline-block;
+}
+.col-header.col-neg {
+  background: #FEF2F2;
+  color: #B91C1C;
+  border-left: 3px solid #EF4444;
+}
+.col-header.col-pos {
+  background: #F0FDF4;
+  color: #15803D;
+  border-left: 3px solid #22C55E;
+}
+
+/* ─── BODY TEXT ─────────────────────────────────────── */
+.slidev-layout:not(.cover) p {
+  color: var(--c-slate) !important;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin: 0.4rem 0;
+}
+.slidev-layout:not(.cover) strong {
+  color: var(--c-navy) !important;
+  font-weight: 700;
+}
+.slidev-layout:not(.cover) em { color: var(--c-light); }
+
+/* ─── LISTS — flexbox + ::before marker (zawsze wyrównany) ── */
+.slidev-layout:not(.cover) ul,
+.slidev-layout:not(.cover) ol {
+  padding-left: 0 !important;
+  margin: 0.25rem 0;
+  list-style: none !important;
+}
+.slidev-layout:not(.cover) li {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.6rem;
+  list-style: none !important;
+  padding: 0.35rem 0.5rem !important;
+  margin: 0.2rem 0;
+  font-size: 0.95rem !important;
+  line-height: 1.55;
+  font-weight: 600;
+  color: var(--c-navy) !important;
+  border-radius: 4px;
+}
+.slidev-layout:not(.cover) li::before {
+  content: '';
+  min-width: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-red);
+  flex-shrink: 0;
+  /* marginTop = (line-height - dot-size) / 2 przy font 0.95rem lh 1.55 */
+  margin-top: 0.52rem;
+}
+/* Nested list items — muted, lighter weight */
+.slidev-layout:not(.cover) li li {
+  font-weight: 400;
+  color: var(--c-slate) !important;
+}
+.slidev-layout:not(.cover) li li::before {
+  width: 4px;
+  height: 4px;
+  min-width: 4px;
+  background: var(--c-muted);
+  margin-top: 0.56rem;
+}
+
+/* Numbered lists */
+.slidev-layout:not(.cover) ol { counter-reset: li-counter; }
+.slidev-layout:not(.cover) ol li { counter-increment: li-counter; }
+.slidev-layout:not(.cover) ol li::before {
+  content: counter(li-counter);
+  background: var(--c-navy);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0.42rem;
+  left: 0.3rem;
+}
+
+/* ─── TABLES ─────────────────────────────────────────── */
+.slidev-layout table {
+  font-size: 0.84rem;
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0.6rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.slidev-layout table th {
+  background: var(--c-navy) !important;
+  color: #ffffff !important;
+  padding: 0.5rem 0.9rem;
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-align: left;
+  letter-spacing: 0.04em;
+}
+.slidev-layout table td {
+  padding: 0.42rem 0.9rem;
+  border-bottom: 1px solid var(--c-border);
+  color: var(--c-slate) !important;
+  background: #ffffff;
+}
+.slidev-layout table tr:nth-child(even) td { background: var(--c-bg); }
+.slidev-layout table td strong { color: var(--c-navy) !important; }
+
+/* ─── CODE BLOCKS ────────────────────────────────────── */
+.slidev-layout pre {
+  background: var(--c-code) !important;
+  border-left: 3px solid var(--c-red) !important;
+  border-radius: 0 8px 8px 0 !important;
+  font-size: 0.78rem !important;
+  line-height: 1.55 !important;
+  padding: 1rem 1.2rem !important;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  position: relative;
+}
+.slidev-layout pre code {
+  background: transparent !important;
+  color: #A8D8EA !important;
+  font-size: inherit !important;
+}
+.slidev-layout code:not(pre code) {
+  background: #EEF2FF;
+  color: var(--c-navy) !important;
+  padding: 0.1em 0.4em;
+  border-radius: 3px;
+  font-size: 0.88em;
+  font-weight: 600;
+}
+.code-filename {
+  display: inline-block;
+  background: var(--c-code);
+  color: var(--c-muted);
+  font-family: 'Fira Code', monospace;
+  font-size: 0.68rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: -2px;
+  letter-spacing: 0.5px;
+  border-left: 3px solid var(--c-red);
+}
+
+/* ─── DIAGRAM ASCII blocks ───────────────────────────── */
+.diagram-block pre {
+  color: #7DD3FC !important;
+  font-size: 0.72rem !important;
+  line-height: 1.4 !important;
+}
+
+/* ─── MERMAID ────────────────────────────────────────── */
+.slidev-layout .mermaid { background: transparent !important; }
+.slidev-layout .mermaid svg { max-height: 340px; }
+
+/* ─── UTILITY: callout box ───────────────────────────── */
+.callout {
+  background: #EFF6FF;
+  border-left: 4px solid #3B82F6;
+  border-radius: 0 6px 6px 0;
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  color: var(--c-navy);
+  margin: 0.8rem 0;
+}
+.callout.warning { background: #FFFBEB; border-color: #F59E0B; }
+.callout.success { background: #F0FDF4; border-color: #22C55E; }
+.callout.danger  { background: #FEF2F2; border-color: #EF4444; }
+
+/* ─── UTILITY: stat box ──────────────────────────────── */
+.stat-box {
+  background: var(--c-navy);
+  color: #fff;
+  border-radius: 8px;
+  padding: 1rem 1.4rem;
+  text-align: center;
+  border-bottom: 4px solid var(--c-red);
+  display: inline-block;
+}
+.stat-box .stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+.stat-box .stat-label {
+  font-size: 0.72rem;
+  color: var(--c-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+/* ─── UTILITY: tags / pills ──────────────────────────── */
+.tag {
+  display: inline-block;
+  background: #EFF6FF;
+  color: #1D4ED8;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15em 0.6em;
+  border-radius: 999px;
+}
+.tag.red   { background: #FEF2F2; color: #B91C1C; }
+.tag.green { background: #F0FDF4; color: #15803D; }
+.tag.navy  { background: var(--c-navy); color: #fff; }
+
+/* ─── TRANSITIONS ────────────────────────────────────── */
+.slidev-vclick-target { transition: opacity 0.3s ease, transform 0.3s ease; }
+.slidev-vclick-hidden { opacity: 0 !important; transform: translateY(8px); }
+
+/* ─── FOOTER ─────────────────────────────────────────── */
+footer { color: var(--c-muted) !important; font-size: 0.68rem; }
+
+/* ─── CAPTION ────────────────────────────────────────── */
+.caption {
+  color: var(--c-muted) !important;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  margin-top: 0.4rem;
+}
