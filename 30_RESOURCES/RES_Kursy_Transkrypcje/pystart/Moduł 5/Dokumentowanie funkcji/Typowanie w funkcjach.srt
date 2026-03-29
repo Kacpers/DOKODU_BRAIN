@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:10,779
+Pierwszą z rzeczy, na których się skupimy, będzie dodawanie typów do funkcji, zarówno typów, które mogą przychodzić jako typy argumentów, jak i typów zwracanych.
+
+2
+00:00:10,779 --> 00:00:23,199
+To jest pierwsza, tak naprawdę niezwykle ważna informacja i w Pythonie, tym najnowszym, jest to już w 100% wbudowane, nie musisz niczego importować, wystarczy, będziesz po prostu dodawać typy.
+
+3
+00:00:23,199 --> 00:00:37,100
+Typy argumentów, najpierw od tego zacznijmy, dodaje się po dwukropku, w ten sposób, zobacz, funkcja add przyjmuje dwa argumenty a i b, oba te argumenty mają być liczbami całkowitymi integer.
+
+4
+00:00:37,879 --> 00:00:44,259
+Funkcja some lists przyjmuje dwie listy, lista pierwsza, lista druga, czyli typ list.
+
+5
+00:00:45,399 --> 00:00:49,519
+Funkcja print dict przyjmuje słownik, więc dict.
+
+6
+00:00:49,519 --> 00:00:52,920
+Tak naprawdę wszystkie te funkcje, które do tej pory używałem.
+
+7
+00:00:53,200 --> 00:01:10,900
+Jeżeli chciałeś do tego, żeby na przykład zamienić string na liczbę, to był integer, czy string na float, to był float, czy liczbę na string, to było str, to są tak naprawdę też i nazwy i typy, które możesz tutaj wprowadzać jako właśnie opisy typów.
+
+8
+00:01:10,900 --> 00:01:14,620
+I dzięki temu wszystkie nasze argumenty będą otypowane.
+
+9
+00:01:14,960 --> 00:01:18,820
+A druga rzecz, którą możesz dodawać, to są typy zwracane.
+
+10
+00:01:19,280 --> 00:01:22,879
+I typy zwracane tutaj podajemy po nowym operatorze.
+
+11
+00:01:22,879 --> 00:01:30,000
+Można powiedzieć, że jest nim strzałka, ale zobacz, strzałka składająca się z pojedynczego ogrotu, czyli myślnik i zamykający nawias ostry.
+
+12
+00:01:30,519 --> 00:01:36,359
+I za tym zapisujesz sobie wtedy to, jaki jest zwracany typ twojej funkcji.
+
+13
+00:01:36,459 --> 00:01:48,179
+I zobacz, może być to integer, może być to lista, może być to nic, wtedy można byłoby napisać none, ale może być to też inna klasa, jakaś inny obiekt, obiekt innej klasy.
+
+14
+00:01:48,179 --> 00:01:52,379
+O programowaniu obiektowym oczywiście powiemy sobie już w przyszłości, ale już tutaj zaznaczam,
+
+15
+00:01:52,879 --> 00:02:00,000
+że też tego typu rzeczy pojawiają się w funkcjach i też tego typu rzeczy sobie musimy zakodować, że mogą się tutaj też znajdować.
+
+16
+00:02:00,119 --> 00:02:01,340
+Czyli po prostu zwracany typ.
+
+17
+00:02:01,699 --> 00:02:05,599
+I zawsze będzie strzałka, typ, dwukropek i to jest zwracany typ.
+
+18
+00:02:05,859 --> 00:02:08,280
+A w środku dwukropek wartość, dwukropek wartość.
+
+19
+00:02:08,740 --> 00:02:16,479
+Jeżeli argument miałby wartość, parametr miałby wartość domyślną, to wtedy robimy a dwukropek list, równa się i tutaj przypisujemy jakąś wartość domyślną.
+
+20
+00:02:16,840 --> 00:02:18,560
+Okej, chodźcie.

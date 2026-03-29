@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:03,080
+No i przed nami trzy zadania, żeby przetestować sobie testy,
+
+2
+00:00:03,180 --> 00:00:07,759
+czyli tak naprawdę będziemy mieli nie takie zbyt skomplikowane funkcje.
+
+3
+00:00:07,879 --> 00:00:10,179
+Tutaj chodzi o takie rzeczy, które już robiliśmy,
+
+4
+00:00:10,859 --> 00:00:16,399
+tylko chodzi też o to, żeby najpierw napisać prawidłowo testy do tych funkcji
+
+5
+00:00:16,399 --> 00:00:20,219
+i upewnić się, że nasz kod będzie działał prawidłowo.
+
+6
+00:00:20,800 --> 00:00:24,719
+Czyli najpierw piszę test, później tworzę funkcję,
+
+7
+00:00:24,719 --> 00:00:29,679
+następnie sprawdzam, czy ten test przechodzi.
+
+8
+00:00:30,239 --> 00:00:31,479
+Powinien nie przechodzić.
+
+9
+00:00:31,899 --> 00:00:36,840
+Następnie realizuję kod i sprawdzam, czy testy mi zadziałały.
+
+10
+00:00:37,399 --> 00:00:40,980
+Przygotuj funkcję, która zwróci największy wspólny dzielnik dwóch liczb.
+
+11
+00:00:41,079 --> 00:00:43,599
+Jeśli takiego nie ma, funkcja powinna zwrócić none.
+
+12
+00:00:43,960 --> 00:00:46,120
+None tu zdecydowanie będzie lepiej wyglądał.
+
+13
+00:00:46,519 --> 00:00:50,539
+Po drugie, przygotuj funkcję, która zwróci listę wszystkich liczb
+
+14
+00:00:50,539 --> 00:00:54,640
+z zakresu od n do m, które będą podzielne przez liczbę z.
+
+15
+00:00:54,719 --> 00:00:59,100
+Czyli powiedzmy, bierzemy sobie liczby od 6 do 20
+
+16
+00:00:59,100 --> 00:01:01,759
+i interesują nas liczby podzielne przez 2,
+
+17
+00:01:02,240 --> 00:01:04,579
+czyli powinniśmy dostać wszystkie liczby parzyste.
+
+18
+00:01:04,799 --> 00:01:08,280
+6, 8, 10, 12, 14, 16, 18, 20.
+
+19
+00:01:08,819 --> 00:01:13,400
+Załóżmy, że wartość n i m też biorą udział w zabawie.
+
+20
+00:01:13,939 --> 00:01:15,200
+A z to jest ten krok.
+
+21
+00:01:16,280 --> 00:01:19,340
+I po trzecie, napisz funkcję, która wczyta tekst
+
+22
+00:01:19,340 --> 00:01:22,780
+i wypisuje wszystkie wyrazy, które zaczynają się na spółgłoskę
+
+23
+00:01:22,780 --> 00:01:24,000
+i kończą na samogłoskę.
+
+24
+00:01:24,719 --> 00:01:26,319
+Czyli na przykład Ala ma kota,
+
+25
+00:01:26,700 --> 00:01:29,319
+no to Ala, samogłoska, samogłoska, odpada.
+
+26
+00:01:29,679 --> 00:01:34,019
+Ma pasuje i kota też pasuje.
+
+27
+00:01:34,359 --> 00:01:37,039
+To co? Siadamy i rozwiązujemy.

@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:04,500
+O tej terminologii już rozmawialiśmy, ale tutaj masz przykład.
+
+2
+00:00:04,900 --> 00:00:08,960
+Czyli zobacz, mamy bazę danych, nazwałem ją na przykład PyStart.
+
+3
+00:00:08,960 --> 00:00:20,839
+To też jest dosyć częste podejście, że jeżeli mamy firmę typu DoCodu i robimy jakiś projekt, który miałby być na stronie DoCodu.pl, to często baza danych nazywa się DoCodu.
+
+4
+00:00:21,000 --> 00:00:24,339
+Chodzi o to, żeby łatwiej w ten sposób jest nam po prostu tym zarządzać.
+
+5
+00:00:25,019 --> 00:00:27,580
+Po drugie, w ramach tej bazy mamy tabelę.
+
+6
+00:00:27,579 --> 00:00:36,920
+No i tu jak widzisz, skoro mamy użytkowników, użytkownicy są zapisani na różnych kursach, no to mamy tabelę Users oraz tabelę Courses.
+
+7
+00:00:37,099 --> 00:00:43,060
+Czyli w tabeli Users będę miał takie kolumny jak ID, Login, Password, First Name, Last Name oraz E-mail.
+
+8
+00:00:43,439 --> 00:00:48,219
+Natomiast tabela Courses może posiadać ID, Title, Category, Start, End, End i tak dalej.
+
+9
+00:00:49,399 --> 00:00:50,599
+Czyli to są nasze kolumny.
+
+10
+00:00:51,239 --> 00:00:57,179
+Dodatkowo mógłbym mieć też inne tabele, na przykład Reports, Vouchers, Posts, Files i Lessons.
+
+11
+00:00:57,579 --> 00:01:03,719
+Czyli to wszystko, co widzisz na stronie, widzisz w aplikacji, gdzieś musi się znajdować.
+
+12
+00:01:04,140 --> 00:01:06,299
+I najczęściej przechowujemy to właśnie w bazie danych.
+
+13
+00:01:06,299 --> 00:01:14,640
+Z tego względu, że jeżeli mamy to w bazie danych, to możemy zmodyfikować to na przykład poprzez użytkownika administracyjnego.
+
+14
+00:01:14,780 --> 00:01:18,239
+On może gdzieś wejść do jakiegoś specjalnego miejsca i takie dane może zmieniać.
+
+15
+00:01:18,579 --> 00:01:24,640
+Oraz mamy też bardzo wygodną możliwość prezentowania tych danych, wyświetlania ich po prostu użytkownikowi.
+
+16
+00:01:25,039 --> 00:01:27,259
+Więc to jest taka powtórka terminologii.
+
+17
+00:01:27,579 --> 00:01:31,280
+W tamtym momencie było za dużo wierści i się wyłączyłeś, to bardzo proszę.

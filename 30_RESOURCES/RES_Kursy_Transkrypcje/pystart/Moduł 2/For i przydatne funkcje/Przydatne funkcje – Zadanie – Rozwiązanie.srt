@@ -1,0 +1,199 @@
+1
+00:00:00,000 --> 00:00:05,000
+No to co potrzebujemy mieć oceny czyli jakąś tam zmienną notes.
+
+2
+00:00:05,200 --> 00:00:11,080
+Możemy sobie wstawić trójkę czwórkę dwie szóstki jedną jedynkę jeszcze jedną trójkę
+
+3
+00:00:11,279 --> 00:00:17,080
+jeszcze jedną czwórkę załóżmy takie mamy oceny oczywiście tutaj skasujemy te nawiasy.
+
+4
+00:00:17,280 --> 00:00:18,280
+To jest primo.
+
+5
+00:00:18,480 --> 00:00:20,359
+Secondo czyli co robimy dalej.
+
+6
+00:00:20,559 --> 00:00:27,120
+Chcemy posortować te oceny od najniższej do najwyższej czyli potrzebujemy wykonać print
+
+7
+00:00:27,120 --> 00:00:35,399
+oceny ucznia sorted na notes.
+
+8
+00:00:35,600 --> 00:00:39,880
+W ten sposób jeżeli teraz to sobie wywołam czyli Python 3 myślnik średnia.
+
+9
+00:00:40,079 --> 00:00:43,000
+No to dostałem wszystkie oceny posortowane.
+
+10
+00:00:43,200 --> 00:00:52,200
+Następnie mamy policzyć średnią jego ocen za pomocą lena i sumy czyli średnia to
+
+11
+00:00:52,400 --> 00:00:57,000
+jakiś average równa się sum z notes.
+
+12
+00:00:57,320 --> 00:01:02,599
+No choć podzielone przez len na notes.
+
+13
+00:01:02,799 --> 00:01:05,599
+No i informacja czy otrzymał średnią.
+
+14
+00:01:05,799 --> 00:01:11,200
+Wypadałoby tą średnią też sobie wypisać średnia ocen.
+
+15
+00:01:11,400 --> 00:01:13,400
+Tutaj z f-ką.
+
+16
+00:01:13,599 --> 00:01:16,519
+Average 2 kropka 2d.
+
+17
+00:01:16,719 --> 00:01:18,799
+Jeżeli chcemy dwa miejsca dziesiętne.
+
+18
+00:01:19,000 --> 00:01:21,000
+No i teraz czy dostał średnią.
+
+19
+00:01:21,200 --> 00:01:25,000
+Dostał dostanie świadectwo z paskiem.
+
+20
+00:01:25,200 --> 00:01:26,400
+If average.
+
+21
+00:01:26,400 --> 00:01:36,080
+Average jest większe lub równo 4 75 print otrzymujesz świadectwo z paskiem.
+
+22
+00:01:36,280 --> 00:01:38,080
+else.
+
+23
+00:01:38,280 --> 00:01:43,280
+Print spróbuj za rok.
+
+24
+00:01:43,480 --> 00:01:44,320
+Sprawdzamy.
+
+25
+00:01:44,520 --> 00:01:48,560
+Jeżeli teraz to sobie wykonam czyli sobie Python 3 średnia Enter.
+
+26
+00:01:48,760 --> 00:01:49,719
+Ojoj.
+
+27
+00:01:49,920 --> 00:01:53,480
+Pojawił nam się błąd.
+
+28
+00:01:54,000 --> 00:01:55,120
+Ach to jest float.
+
+29
+00:01:55,320 --> 00:01:56,320
+Więc musimy użyć literki.
+
+30
+00:01:56,600 --> 00:02:00,320
+F a nie d to zawsze było.
+
+31
+00:02:00,520 --> 00:02:01,080
+Oczywiście.
+
+32
+00:02:01,280 --> 00:02:03,800
+No i mamy średnia ocen 3 86.
+
+33
+00:02:04,000 --> 00:02:05,480
+O nie spróbuj za rok.
+
+34
+00:02:05,680 --> 00:02:08,520
+To spróbujmy sobie jedną jedynkę wymienić na szóstkę.
+
+35
+00:02:08,719 --> 00:02:11,120
+Tak zupełnie przypadkowo.
+
+36
+00:02:11,319 --> 00:02:13,000
+Znowu 4 57.
+
+37
+00:02:13,200 --> 00:02:17,319
+Dobra to jeszcze jedną trójkę wymieńmy na piątkę.
+
+38
+00:02:17,520 --> 00:02:19,400
+Jest 4 86.
+
+39
+00:02:19,599 --> 00:02:21,599
+Świadectwo z paskiem.
+
+40
+00:02:21,800 --> 00:02:22,599
+Bardzo ważna rzecz.
+
+41
+00:02:22,680 --> 00:02:25,200
+Zwróćcie uwagę na to że ja zmieniałem wartości w tupli.
+
+42
+00:02:25,400 --> 00:02:26,200
+Czyli tutaj podmieniałem.
+
+43
+00:02:26,259 --> 00:02:26,400
+Po.
+
+44
+00:02:26,599 --> 00:02:27,520
+Wartości.
+
+45
+00:02:27,719 --> 00:02:29,520
+I to jak najbardziej mogę robić.
+
+46
+00:02:29,719 --> 00:02:34,680
+Natomiast to że te tuple są nie mutowalne czyli nie zmienialne oznacza że kiedy ten
+
+47
+00:02:34,879 --> 00:02:39,680
+program już uruchomię to w ramach tego programu nie będę mógł do tych wartości się
+
+48
+00:02:39,879 --> 00:02:43,080
+odnosić na tym ta nie mutowalne noś polega.
+
+49
+00:02:43,280 --> 00:02:44,000
+To co.
+
+50
+00:02:44,200 --> 00:02:45,120
+Chodźcie dalej.

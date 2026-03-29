@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:13,740
+I tu ponownie mam dla Ciebie dwa zadania, a mianowicie korzystając z dokumentacji oraz Google'a, no bo jakoś trzeba na tą dokumentację wpaść, stwórz tuple zawierającą papier, kamień i nożyce, czyli robimy sobie tuple z trzema opcjami.
+
+2
+00:00:14,300 --> 00:00:18,500
+Zapytaj użytkownika o jego wybór, czyli powinien wybrać P, K albo N.
+
+3
+00:00:19,240 --> 00:00:25,219
+Wylosuj jeden z elementów tupli i wyświetl informację, kto wygrał, użytkownik czy komputer.
+
+4
+00:00:25,219 --> 00:00:35,100
+Tak naprawdę możemy zamiast odbierać P, K, N, możemy też po prostu odebrać papier, kamień, nożyce, czy opcję 1, 2, 3, czy 0, 1, 2 byłoby łatwiej, nie?
+
+5
+00:00:35,539 --> 00:00:39,420
+Więc to zostawiam Tobie, jak chcesz to zaimplementować, zrób tak, żeby było Ci wygodniej.
+
+6
+00:00:39,939 --> 00:00:46,239
+No i oczywiście zasady są takie, że papier wygrywa z kamieniem, kamień wygrywa z nożycami, a nożyce wygrywają z papierem.
+
+7
+00:00:46,700 --> 00:00:51,219
+No i w zależności od tego, kto wygrał, wyświetlamy odpowiednią informację.
+
+8
+00:00:51,219 --> 00:00:55,219
+No i zadanie drugie, które zrobię w osobnym filmie zaraz za tym pieśniem.
+
+9
+00:00:55,259 --> 00:01:02,500
+Pierwszym napisz program, który wylosuje, wylosuje w cudzysłowie, wiecie, żona prawnik, to ja nie muszę uważać na takie rzeczy,
+
+10
+00:01:03,079 --> 00:01:07,439
+liczbę w przedziału od 1 do 100, a następnie korzystając z biblioteki MAF,
+
+11
+00:01:07,700 --> 00:01:12,620
+wypiszę kwadrat i pierwiastek kwadratowy, zaokrąglony w dół i w górę tej liczby.
+
+12
+00:01:13,000 --> 00:01:19,900
+Czyli jeżeli pierwiastek kwadratowy to będzie 3,333, to chcemy w dół dostać 3, a w górę dostać 4.
+
+13
+00:01:21,219 --> 00:01:23,780
+I tyle. Widzimy się w rozwiązaniach.

@@ -1,0 +1,207 @@
+1
+00:00:00,000 --> 00:00:02,379
+A jak takie pobieranie wykonać w Pythonie?
+
+2
+00:00:02,819 --> 00:00:09,140
+Zobacz, import SQLite3, po czym robimy with SQLite3 connect library db as connection,
+
+3
+00:00:09,279 --> 00:00:11,359
+to jest ten zapis, który już Ci pokazywałem,
+
+4
+00:00:11,800 --> 00:00:15,839
+ten zapis, który służy do tego, żeby po prostu połączyć się do bazy danych.
+
+5
+00:00:16,379 --> 00:00:19,960
+Jeżeli ta baza nie będzie istniała, to nic nie szkodzi, on sam sobie ją utworzy.
+
+6
+00:00:20,420 --> 00:00:24,260
+Następnie wykonujemy cursor, równa się connection.cursor,
+
+7
+00:00:24,260 --> 00:00:26,379
+czyli jakby pobieramy sobie kursor.
+
+8
+00:00:26,839 --> 00:00:29,600
+Connection to jest to, co przechowuje połączenie,
+
+9
+00:00:29,600 --> 00:00:34,000
+natomiast cursor to jest taki obiekt, który wykonuje właśnie zapytania.
+
+10
+00:00:34,640 --> 00:00:39,539
+Następnie, jeżeli chcemy wykonać zapytanie, to wykonujemy cursor.execute,
+
+11
+00:00:39,859 --> 00:00:45,640
+select bookid title, przecinek autor powinno być, from books
+
+12
+00:00:45,640 --> 00:00:49,299
+i to spowoduje, że pobierze nam te trzy kolumny z tabeli books.
+
+13
+00:00:49,579 --> 00:00:51,480
+No i przypisze to nam do zmiennej books,
+
+14
+00:00:51,920 --> 00:00:54,219
+dzięki czemu będziemy mogli potem śmiało iterować,
+
+15
+00:00:54,320 --> 00:00:58,500
+czyli for book in books, print book i wszystko nam pięknie zadziała.
+
+16
+00:00:58,500 --> 00:01:02,460
+Oczywiście wcześniej trzeba mieć taką tabelę uzupełnioną danymi,
+
+17
+00:01:02,560 --> 00:01:04,739
+co też za moment sobie wykonamy.
+
+18
+00:01:04,959 --> 00:01:07,299
+W tym momencie, jeżeli wykonasz takie zapytanie,
+
+19
+00:01:07,400 --> 00:01:11,379
+to oczywiście w tej linii dziewiątej już to połączenie zostanie zamknięte,
+
+20
+00:01:11,719 --> 00:01:17,500
+no i będzie można śmiało mieć nadzieję, że wszystko się nam pobrało
+
+21
+00:01:18,079 --> 00:01:20,240
+i połączenie się rozwiązało.
+
+22
+00:01:20,819 --> 00:01:24,400
+Jeżeli natomiast chodzi o dodawanie nowych książek,
+
+23
+00:01:24,400 --> 00:01:27,900
+to robimy to tak, czyli import SQLite 3,
+
+24
+00:01:27,900 --> 00:01:30,160
+with i tu dalej połączenie.
+
+25
+00:01:30,719 --> 00:01:32,880
+Ponownie będziemy potrzebowali mieć też kursor,
+
+26
+00:01:33,160 --> 00:01:35,880
+no i na przykład jeżeli chcemy odebrać dane od użytkownika,
+
+27
+00:01:36,000 --> 00:01:38,340
+no to robimy title równa się input tytuł,
+
+28
+00:01:38,460 --> 00:01:40,080
+autor równa się input autor,
+
+29
+00:01:40,540 --> 00:01:43,540
+no i kursor execute, insert into books,
+
+30
+00:01:43,760 --> 00:01:45,740
+zwróć uwagę, że poszedłem w tą konstrukcję,
+
+31
+00:01:45,840 --> 00:01:47,219
+gdzie nie podaje nas w kolumn,
+
+32
+00:01:47,640 --> 00:01:50,280
+więc muszę po kolei podawać mu wszystkie wartości.
+
+33
+00:01:50,900 --> 00:01:52,900
+Tyle tylko, że jest taka rzecz wygodniejsza,
+
+34
+00:01:53,840 --> 00:01:56,420
+żeby nie trzeba było tego przekazywać, wiesz,
+
+35
+00:01:56,780 --> 00:01:57,460
+łącząc,
+
+36
+00:01:57,900 --> 00:02:01,960
+tu zysłów z przekazywaniem stringów i tak dalej, i tak dalej.
+
+37
+00:02:02,340 --> 00:02:04,859
+To jest takie coś, co nazywa się prepared statements,
+
+38
+00:02:04,960 --> 00:02:07,800
+co zakłada, że najpierw podajemy na wiec znaki zapytania,
+
+39
+00:02:08,159 --> 00:02:11,460
+a następnie pod te znaki zapytania będziemy przekazywali mu tuple,
+
+40
+00:02:11,620 --> 00:02:14,540
+czyli kolejne elementy, które znajdują się tutaj.
+
+41
+00:02:14,800 --> 00:02:17,259
+Czyli zobacz, insert into books values 0,
+
+42
+00:02:17,460 --> 00:02:20,340
+przecinek, znak zapytania, przecinek, znak zapytania
+
+43
+00:02:20,740 --> 00:02:23,240
+i to powoduje, że on będzie nam wiedział,
+
+44
+00:02:23,340 --> 00:02:27,540
+że on ma w tym miejscu do tego pierwszego znaku zapytania wstawić title,
+
+45
+00:02:27,900 --> 00:02:30,400
+a do drugiego znaku zapytania wstawić autor.
+
+46
+00:02:31,260 --> 00:02:32,640
+I niezwykle ważne jest też to,
+
+47
+00:02:33,039 --> 00:02:35,400
+że jeżeli zmieniamy coś w naszej bazie danych,
+
+48
+00:02:35,500 --> 00:02:38,099
+to na koniec musimy pamiętać o poleceniu commit
+
+49
+00:02:38,500 --> 00:02:42,500
+i connection.commit to jest polecenie wykonujące to zapytanie
+
+50
+00:02:42,900 --> 00:02:44,960
+i w ten właśnie sposób wykonamy zapytanie
+
+51
+00:02:45,060 --> 00:02:48,659
+i zostaną te książki, ta książka zostanie dodana do naszej bazy danych.
+
+52
+00:02:49,140 --> 00:02:50,640
+Ot, cała filozofia.

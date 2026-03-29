@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:24,039
+Poproszę Cię o to, abyśmy stworzyli taki program, który będzie odbierał argumenty takie jak path wymagany string, target wymagany string, with integer domyślnie 300, domyślność to jest default i tam można przypisać po prostu argumenty, jak wpiszesz default zobaczysz tych różnych przełączek, tam różnych tych kwarków, które można mu przekazywać, jeszcze jest całe mnóstwo,
+
+2
+00:00:24,039 --> 00:00:47,659
+więc musiałbym Ci po prostu wprost dać dokumentację i powiedzieć zobacz to jest wszystko, a to byłoby bez sensu, lepiej sobie zawsze zerknąć do dokumentacji w takich momentach i po prostu się douczyć, bo zawsze może coś jeszcze zobaczysz, coś się przyda w jakimś Twoim programie, który wymyślisz, więc with integer domyślne 300, domyślne tak jak mówiłem default, high integer domyślne 300, czyli jeżeli ktoś nie poda nam tych wartości, to chcemy, żeby domyślnie miały one wartość 300.
+
+3
+00:00:47,659 --> 00:00:53,600
+I co jest do zrobienia? Na chwilę obecną chciałbym, żebyśmy tylko wyświetlili te wartości jedna pod drugą.
+
+4
+00:00:53,600 --> 00:01:10,400
+Czyli sobie skonfigurowali ten nasz projekt, żeby on nam wyświetlił w ramach tej ścieżki, w ramach tego targetu te wartości, no i jeżeli nie będzie podane with i high, to żeby miały wartość 300, a jeżeli będą podane, no to żeby się wyświetliły te wartości, które mają.
+
+5
+00:01:10,900 --> 00:01:14,760
+To co? Znowu 5 minut dla każdego i widzimy się już za moment w rozwiązaniu.

@@ -1,0 +1,635 @@
+1
+00:00:00,380 --> 00:00:03,700
+To co? Idziemy z naszą nauką dalej.
+
+2
+00:00:04,360 --> 00:00:08,000
+Mówiliśmy sobie do tej pory, że jest coś takiego jak pętla FOR.
+
+3
+00:00:08,580 --> 00:00:12,339
+Ogólnie rzecz biorąc, wróćmy, zróbmy krok w tył i zwróćmy do tego, czym są pętle.
+
+4
+00:00:12,880 --> 00:00:17,219
+Czasem zdarza się, że w naszym życiu jest taka potrzeba, że chcemy wykonać coś wiele razy.
+
+5
+00:00:17,539 --> 00:00:21,199
+Czyli na przykład właśnie mamy dane pochodzące z jakiegoś pliku,
+
+6
+00:00:21,339 --> 00:00:23,980
+chcemy dla każdego wiersza wykonać jakąś czynność.
+
+7
+00:00:24,580 --> 00:00:29,060
+Czasem mamy dane po prostu gdzieś w postaci listy, tupli, czegokolwiek.
+
+8
+00:00:29,059 --> 00:00:31,299
+Chcemy dla każdego elementu coś wykonać.
+
+9
+00:00:31,559 --> 00:00:34,140
+Czasem chcemy coś zrobić określoną liczbę razy.
+
+10
+00:00:34,259 --> 00:00:38,879
+Powiedzmy wyświetl 10 informacji, zapytaj użytkownika 10 razy.
+
+11
+00:00:39,420 --> 00:00:44,320
+I za każdym razem, kiedy bierzemy sobie którąkolwiek z tych zadań,
+
+12
+00:00:44,739 --> 00:00:50,420
+to my tak naprawdę zanim zaczniemy, to wiemy ile razy dane zagadnienie będziemy chcieli powtarzać.
+
+13
+00:00:50,920 --> 00:00:54,960
+No bo dla range'a mamy odpowiednią ilość, od razu wprost powiedziano, nie?
+
+14
+00:00:54,960 --> 00:00:56,759
+Dla każdego elementu przedziału od do.
+
+15
+00:00:57,259 --> 00:00:58,960
+Dla listy też wiemy.
+
+16
+00:00:59,060 --> 00:01:02,560
+Tak samo w przypadku pliku, no bo widzimy ile tych linii jest
+
+17
+00:01:02,560 --> 00:01:05,879
+i w momencie, w którym mamy to zrobić za pomocą pętli for,
+
+18
+00:01:05,980 --> 00:01:08,640
+to my już wiemy, że on będzie to robił dla każdej linii.
+
+19
+00:01:08,840 --> 00:01:10,180
+Będzie wiedział ile tych linii jest.
+
+20
+00:01:10,939 --> 00:01:15,060
+Natomiast czasem zdarza się, że chcemy coś powtarzać w nieskończoność.
+
+21
+00:01:16,400 --> 00:01:19,099
+Czasem chcemy coś powtarzać dopóki coś się nie wydarzy.
+
+22
+00:01:19,579 --> 00:01:21,480
+No i to tak samo jak rozmowa z dziećmi, nie?
+
+23
+00:01:21,960 --> 00:01:22,879
+Podnieś papierek.
+
+24
+00:01:24,099 --> 00:01:25,060
+Zero reakcji.
+
+25
+00:01:25,480 --> 00:01:26,300
+Podnieś papierek.
+
+26
+00:01:26,900 --> 00:01:27,719
+Zero reakcji.
+
+27
+00:01:27,719 --> 00:01:29,040
+Podnieś papierek.
+
+28
+00:01:29,219 --> 00:01:30,920
+O! Udało się, zaskoczyło.
+
+29
+00:01:31,340 --> 00:01:32,560
+Papierek został podniesiony.
+
+30
+00:01:33,100 --> 00:01:36,159
+Czy ja mogłem wcześniej założyć, że będę powtarzał trzy razy?
+
+31
+00:01:37,140 --> 00:01:39,020
+No opierając się na jakiejś statystyce,
+
+32
+00:01:39,159 --> 00:01:42,480
+pewnie bym mógł powiedzieć, że dziesięć razy powinno wystarczyć, tak?
+
+33
+00:01:42,540 --> 00:01:44,480
+Ewentualnie wzmacniając ton głosu.
+
+34
+00:01:44,920 --> 00:01:49,719
+Natomiast bardzo często jest tak, że my powtarzamy pewne czynności dopóki.
+
+35
+00:01:50,359 --> 00:01:56,820
+Na przykład dostajemy, widzimy, że jest nieskończona jakaś tam ilość paczek do zapakowania,
+
+36
+00:01:56,820 --> 00:01:58,820
+więc dopóki wszystkie paczki nie będą zapakowane,
+
+37
+00:01:59,060 --> 00:02:01,060
+no to my będziemy musieli je pakować.
+
+38
+00:02:01,060 --> 00:02:05,060
+Nie wiadomo jak daleko jeszcze ta lista, ten zbiór tych paczek,
+
+39
+00:02:05,060 --> 00:02:08,060
+czy tam cokolwiek, używam słów, których nie chcę używać,
+
+40
+00:02:08,060 --> 00:02:10,060
+bo to są słowa zarezerwowane przez Pythona,
+
+41
+00:02:10,060 --> 00:02:13,060
+więc mogą Cię kojarzyć od razu z konkretnymi kolekcjami.
+
+42
+00:02:13,060 --> 00:02:15,060
+Natomiast wiesz o co mi chodzi.
+
+43
+00:02:15,060 --> 00:02:19,060
+Czyli tak długo jak nie zrobimy czegoś, tak długo będziemy musieli to robić.
+
+44
+00:02:19,060 --> 00:02:22,060
+I tutaj znowu wracając do pomysłu ze sprzątaniem,
+
+45
+00:02:22,060 --> 00:02:27,060
+mam taki bardzo ulubiony właśnie swój sposób na rozróżnienie tych dwóch pętli.
+
+46
+00:02:27,060 --> 00:02:29,060
+Bardzo często moje dzieci do mnie pytają,
+
+47
+00:02:29,060 --> 00:02:32,060
+do mnie przychodzą, mówią tato, a czy mogę obejrzeć bajkę?
+
+48
+00:02:32,060 --> 00:02:34,060
+Albo tato, czy mogę, jeszcze pytają.
+
+49
+00:02:34,060 --> 00:02:36,060
+Tato, czy mogę zrobić coś tam, coś tam?
+
+50
+00:02:36,060 --> 00:02:38,060
+Ja wtedy na przykład mówię, możesz.
+
+51
+00:02:38,060 --> 00:02:44,060
+Albo mówię, jeżeli pokój będzie posprzątany, to będziesz mógł, będziesz mogła to zrobić.
+
+52
+00:02:44,060 --> 00:02:48,060
+I w tym momencie nie wiadomo jak długo to będzie trwało.
+
+53
+00:02:48,060 --> 00:02:50,060
+Może się okazać, że będzie to trwało 3 minuty,
+
+54
+00:02:50,060 --> 00:02:52,060
+może się okazać, że będzie to trwało 3 godziny,
+
+55
+00:02:52,060 --> 00:02:54,060
+a może się okazać, że bajka dzisiaj nie będzie włączona.
+
+56
+00:02:54,060 --> 00:02:57,060
+No bo różna jest motywacja.
+
+57
+00:02:57,060 --> 00:02:59,060
+I różna jest ilość rzeczy, które się dzieje.
+
+58
+00:02:59,060 --> 00:03:01,060
+I liczba rzeczy do posprzątania.
+
+59
+00:03:01,060 --> 00:03:03,060
+Więc często, kiedy daję taką prośbę,
+
+60
+00:03:03,060 --> 00:03:05,060
+to mówię, że dopóki pokój nie będzie posprzątany,
+
+61
+00:03:05,060 --> 00:03:07,060
+to nie będziesz mogła oglądać bajki.
+
+62
+00:03:07,060 --> 00:03:09,060
+I wtedy dziecko wie,
+
+63
+00:03:09,060 --> 00:03:11,060
+znaczy mam taką nadzieję,
+
+64
+00:03:11,060 --> 00:03:13,060
+że dopóki nie wykona tych czynności,
+
+65
+00:03:13,060 --> 00:03:15,060
+które musi zrobić, żeby móc,
+
+66
+00:03:15,060 --> 00:03:19,060
+no to tak naprawdę nie obejrzy,
+
+67
+00:03:19,060 --> 00:03:21,060
+nie włączy tego telewizora.
+
+68
+00:03:21,060 --> 00:03:23,060
+Pytanie, czy dla mnie te czynności w tym momencie,
+
+69
+00:03:23,060 --> 00:03:25,060
+kiedy tak formuję, to pytanie są ważne.
+
+70
+00:03:25,060 --> 00:03:27,060
+No nie są.
+
+71
+00:03:27,060 --> 00:03:29,060
+Dla mnie ważne jest tylko to,
+
+72
+00:03:29,060 --> 00:03:31,060
+że dopóki nie będzie posprzątany,
+
+73
+00:03:31,060 --> 00:03:33,060
+nie będziesz mogła włączyć bajki.
+
+74
+00:03:33,060 --> 00:03:35,060
+Zamieńmy to na drugą stronę,
+
+75
+00:03:35,060 --> 00:03:37,060
+w drugą stronę, bo używam negacji.
+
+76
+00:03:37,060 --> 00:03:39,060
+Czy dopóki nie będzie czysto,
+
+77
+00:03:39,060 --> 00:03:41,060
+czy dopóki jest brudno,
+
+78
+00:03:41,060 --> 00:03:43,060
+nie możesz oglądać bajki.
+
+79
+00:03:43,060 --> 00:03:45,060
+Tak? To jest brak negacji.
+
+80
+00:03:45,060 --> 00:03:47,060
+Dopóki jest brudno, nie możesz oglądać bajki.
+
+81
+00:03:47,060 --> 00:03:49,060
+I teraz, jeżeli
+
+82
+00:03:49,060 --> 00:03:51,060
+za każdym razem, po każdej chwili
+
+83
+00:03:51,060 --> 00:03:53,060
+padałoby pytanie, czy już mogę oglądać bajkę,
+
+84
+00:03:53,060 --> 00:03:55,060
+to ja sprawdzam, jest brudno, nie możesz.
+
+85
+00:03:55,060 --> 00:03:57,060
+Jest brudno, nie możesz.
+
+86
+00:03:57,060 --> 00:03:59,060
+I tak właśnie działa pętla WHILE.
+
+87
+00:03:59,060 --> 00:04:01,060
+Pętla FOR polegałaby na tym,
+
+88
+00:04:01,060 --> 00:04:03,060
+że czy mogę już posprzątać bajkę?
+
+89
+00:04:03,060 --> 00:04:05,060
+Posprzątaj 10 rzeczy z podłogi
+
+90
+00:04:05,060 --> 00:04:07,060
+i możesz ją włączyć. Czyli bierze sobie 10
+
+91
+00:04:07,060 --> 00:04:09,060
+skarpetek i zanosi je do prania
+
+92
+00:04:09,060 --> 00:04:11,060
+i może już włączyć bajkę.
+
+93
+00:04:11,060 --> 00:04:13,060
+Natomiast to nie oznacza, że pokój został posprzątany.
+
+94
+00:04:13,060 --> 00:04:15,060
+Czyli pętla WHILE
+
+95
+00:04:15,060 --> 00:04:17,060
+zakłada, że my często czynność
+
+96
+00:04:17,060 --> 00:04:19,060
+zapętlamy, dopóki pewien warunek
+
+97
+00:04:19,060 --> 00:04:21,060
+jest spełniony,
+
+98
+00:04:21,060 --> 00:04:23,060
+czyli jest brudno.
+
+99
+00:04:23,060 --> 00:04:25,060
+A pętla FOR zakłada określoną
+
+100
+00:04:25,060 --> 00:04:27,060
+ilość tych
+
+101
+00:04:27,060 --> 00:04:29,060
+wystąpień.
+
+102
+00:04:29,060 --> 00:04:31,060
+Więc kiedy używamy WHILE, a kiedy używamy FOR?
+
+103
+00:04:31,060 --> 00:04:33,060
+Czasem jest taka sytuacja,
+
+104
+00:04:33,060 --> 00:04:35,060
+że w pętli WHILE, bo WHILE to w ogóle
+
+105
+00:04:35,060 --> 00:04:37,060
+po angielsku dopóki, prawda?
+
+106
+00:04:37,060 --> 00:04:39,060
+Czyli WHILE używamy wtedy, kiedy
+
+107
+00:04:39,060 --> 00:04:41,060
+na przykład chcielibyśmy powtarzać coś,
+
+108
+00:04:41,060 --> 00:04:43,060
+dopóki to się nie zadziałało.
+
+109
+00:04:43,060 --> 00:04:45,060
+Na przykład, dopóki
+
+110
+00:04:45,060 --> 00:04:47,060
+nie mogę połączyć się
+
+111
+00:04:47,060 --> 00:04:49,060
+z jakąś stroną
+
+112
+00:04:49,060 --> 00:04:51,060
+internetową, to będę
+
+113
+00:04:51,060 --> 00:04:53,060
+ponawiać to połączenie.
+
+114
+00:04:53,060 --> 00:04:55,060
+Dopóki użytkownik nie napisał słowa
+
+115
+00:04:55,060 --> 00:04:57,060
+na koniec, to będę go pytać.
+
+116
+00:04:57,060 --> 00:04:59,060
+Dopóki nie napotkam na koniec pliku,
+
+117
+00:04:59,060 --> 00:05:01,060
+to będę przetwarzać wiersz po wierszu.
+
+118
+00:05:01,060 --> 00:05:03,060
+Dzięki czemu też mogę zaoszczędzić trochę przestrzeni
+
+119
+00:05:03,060 --> 00:05:05,060
+w swojej pamięci, bo nie muszę
+
+120
+00:05:05,060 --> 00:05:07,060
+od razu załadować wszystkich tych linii,
+
+121
+00:05:07,060 --> 00:05:09,060
+albo nie muszę najpierw policzyć ile ich jest,
+
+122
+00:05:09,060 --> 00:05:11,060
+tylko wiem, że dopóki nie napotkam na koniec
+
+123
+00:05:11,060 --> 00:05:13,060
+pliku, to tak długo będę
+
+124
+00:05:13,060 --> 00:05:15,060
+powtarzać.
+
+125
+00:05:15,060 --> 00:05:17,060
+Użytkownik chce pytać użytkownika
+
+126
+00:05:17,060 --> 00:05:19,060
+dopóki nie poda mi wartości
+
+127
+00:05:19,060 --> 00:05:21,060
+przekraczającej jakąś
+
+128
+00:05:21,060 --> 00:05:23,060
+wartość graniczną, powiedzmy tak,
+
+129
+00:05:23,060 --> 00:05:25,060
+że mogę zbierać tylko dane,
+
+130
+00:05:25,060 --> 00:05:27,060
+dopóki nie wyczerpie się pamięć.
+
+131
+00:05:27,060 --> 00:05:29,060
+Jak się wyczerpie pamięć, to muszę najpierw
+
+132
+00:05:29,060 --> 00:05:31,060
+te dane wtedy wszystkie
+
+133
+00:05:31,060 --> 00:05:33,060
+zrealizować, dopiero wtedy mogę
+
+134
+00:05:33,060 --> 00:05:35,060
+pytać użytkownika o kolejne dane.
+
+135
+00:05:35,060 --> 00:05:37,060
+Więc wtedy używamy pętli dopóki.
+
+136
+00:05:37,060 --> 00:05:39,060
+Ona też powoduje, że pewne
+
+137
+00:05:39,060 --> 00:05:41,060
+rzeczy nam się zapętlają,
+
+138
+00:05:41,060 --> 00:05:43,060
+bo powtarzamy pewne czynności,
+
+139
+00:05:43,060 --> 00:05:45,060
+natomiast my nie powtarzamy ich
+
+140
+00:05:45,060 --> 00:05:47,060
+określoną liczbę razy, tylko my powtarzamy je
+
+141
+00:05:47,060 --> 00:05:49,060
+dopóki coś
+
+142
+00:05:49,060 --> 00:05:51,060
+jest spełnione.
+
+143
+00:05:51,060 --> 00:05:53,060
+I to właśnie oznacza dopóki.
+
+144
+00:05:53,060 --> 00:05:55,060
+I podczas dzisiejszej lekcji
+
+145
+00:05:55,060 --> 00:05:57,060
+pokażemy sobie właśnie
+
+146
+00:05:57,060 --> 00:05:59,060
+tego while'a, pokażemy sobie
+
+147
+00:05:59,060 --> 00:06:01,060
+co tak naprawdę to dopóki oznacza
+
+148
+00:06:01,060 --> 00:06:03,060
+i pokażę Ci też jeszcze jeden
+
+149
+00:06:03,060 --> 00:06:05,060
+ciekawy, jeszcze jedno ciekawe
+
+150
+00:06:05,060 --> 00:06:07,060
+zagadnienie, a mianowicie while true.
+
+151
+00:06:07,060 --> 00:06:09,060
+Bo tak naprawdę skoro
+
+152
+00:06:09,060 --> 00:06:11,060
+while wymaga, żeby
+
+153
+00:06:11,060 --> 00:06:13,060
+była prawda, to co by się stało
+
+154
+00:06:13,060 --> 00:06:15,060
+gdybyśmy napisali while true?
+
+155
+00:06:15,060 --> 00:06:17,060
+Tak naprawdę nasza pętla powinna
+
+156
+00:06:17,060 --> 00:06:19,060
+wykonywać się w nieskończoność.
+
+157
+00:06:19,060 --> 00:06:21,060
+Ale
+
+158
+00:06:21,060 --> 00:06:23,060
+my możemy tę nieskończoność
+
+159
+00:06:23,060 --> 00:06:25,060
+przywołać szybciej, niż by się wydawało.

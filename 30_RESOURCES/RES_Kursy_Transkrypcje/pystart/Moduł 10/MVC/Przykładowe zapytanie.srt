@@ -1,0 +1,315 @@
+1
+00:00:00,000 --> 00:00:05,900
+No i jak tak sobie na to patrzymy, to możemy pomyśleć, o rany, jakie to jest skomplikowane.
+
+2
+00:00:06,060 --> 00:00:07,080
+Po co tego jest tyle?
+
+3
+00:00:07,500 --> 00:00:14,200
+Ale tego jest tyle dlatego, żeby nasza aplikacja miała jasno sprecyzowane miejsca,
+
+4
+00:00:14,439 --> 00:00:16,339
+które mają swoją odpowiedzialność.
+
+5
+00:00:16,539 --> 00:00:21,519
+Znowu, czyli zależy nam na tym, żeby poprzez to, że sobie zakładamy takie trzy warstwy,
+
+6
+00:00:21,519 --> 00:00:26,120
+żeby nie mieszać tej odpowiedzialności i żeby później, kiedy będziemy chcieli coś zmienić,
+
+7
+00:00:26,120 --> 00:00:31,700
+dopisać to, żeby było wiadomo, w jakim miejscu należy taką zmianę wykonać.
+
+8
+00:00:31,900 --> 00:00:35,660
+I wiem, że to, co powiedziałem przed chwilą, może nie być aż tak bardzo intuicyjne,
+
+9
+00:00:35,760 --> 00:00:39,799
+dlatego przejdziemy sobie teraz przez cały ten schemat takiej komunikacji.
+
+10
+00:00:40,560 --> 00:00:42,359
+Zobacz, jest użytkownik.
+
+11
+00:00:43,520 --> 00:00:46,719
+Użytkownik bardzo chce zobaczyć jakąś stronę internetową,
+
+12
+00:00:46,840 --> 00:00:52,260
+więc wchodzi sobie na przykład na adres dogodu.it ukośnik szkolenia ukośnik paystart.
+
+13
+00:00:52,260 --> 00:00:56,100
+W momencie, w którym użytkownik wykonuje takie zapytanie,
+
+14
+00:00:56,119 --> 00:00:58,879
+odzywa się kontroler.
+
+15
+00:00:58,879 --> 00:01:03,320
+Tam po drodze jeszcze jest taka mała warstwa, która odpowiada tylko i wyłącznie za to,
+
+16
+00:01:03,320 --> 00:01:09,159
+żeby zmapować, czyli żeby zamienić dany adres URL na konkretny kontroler,
+
+17
+00:01:09,159 --> 00:01:10,560
+który powinien zostać wykonany.
+
+18
+00:01:10,560 --> 00:01:13,359
+Ta warstwa różnie jest nazywana, ale tym się teraz nie przejmujemy.
+
+19
+00:01:13,359 --> 00:01:14,719
+Taki routing.
+
+20
+00:01:14,719 --> 00:01:20,759
+Następnie ten kontroler pyta o informację model.
+
+21
+00:01:20,759 --> 00:01:25,920
+No bo skoro ktoś wszedł na szkolenie paystart, to interesują go na przykład
+
+22
+00:01:25,920 --> 00:01:27,600
+informacje o tym szkoleniu.
+
+23
+00:01:27,600 --> 00:01:31,159
+Powinny też zostać pobrane wszystkie moduły, z których to szkolenie się składa
+
+24
+00:01:31,159 --> 00:01:36,480
+oraz na przykład powinny być policzeni użytkownicy, którzy na tym paystarcie są.
+
+25
+00:01:36,480 --> 00:01:39,840
+Więc wszystkie te zapytania, które powinny być wykonane,
+
+26
+00:01:39,840 --> 00:01:42,960
+to kontroler o tym powiadamia model.
+
+27
+00:01:42,960 --> 00:01:44,680
+Model wówczas,
+
+28
+00:01:44,680 --> 00:01:48,680
+i tutaj model w tym przypadku, byłyby na przykład trzy modele,
+
+29
+00:01:48,680 --> 00:01:52,560
+czyli model od szkolenia i model od użytkowników, czyli dwa.
+
+30
+00:01:52,560 --> 00:01:55,719
+I załóżmy jakiś jeszcze jeden model od kategorii, nie wiem,
+
+31
+00:01:55,719 --> 00:01:56,560
+czegoś takiego, nie?
+
+32
+00:01:56,560 --> 00:02:01,280
+Bo pamiętamy o tym, że każda tabela ma swój własny model.
+
+33
+00:02:01,280 --> 00:02:05,200
+Czyli kontroler wykonuje odpowiednie czynności na modelu
+
+34
+00:02:05,200 --> 00:02:09,280
+i model połączy się z bazą danych, wykonuje zapytania,
+
+35
+00:02:09,280 --> 00:02:13,599
+dostaje odpowiedzi i prezentuje te odpowiedzi kontrolerowi.
+
+36
+00:02:13,599 --> 00:02:17,360
+Czyli mówi, zobacz, to jest lista użytkowników, którzy się zapisali na ten kurs,
+
+37
+00:02:17,360 --> 00:02:21,439
+to jest liczna lista modułów i lekcji, z których ten kurs się składa.
+
+38
+00:02:21,439 --> 00:02:24,599
+No i tu są jeszcze informacje o tym kursie.
+
+39
+00:02:24,599 --> 00:02:24,719
+Kontroler najczęściej, to jest ten kurs, który się składa, no i tu są jeszcze informacje o tym kursie.
+
+40
+00:02:24,719 --> 00:02:29,439
+Kontroler najczęściej wszystkie te dane wtedy będzie odbierał w postaci listy obiektów
+
+41
+00:02:29,439 --> 00:02:31,240
+albo samych obiektów.
+
+42
+00:02:31,240 --> 00:02:34,199
+W momencie, kiedy kontroler otrzyma już te dane, no to mówi,
+
+43
+00:02:34,199 --> 00:02:36,439
+OK, coś muszę teraz z tym zrobić.
+
+44
+00:02:36,439 --> 00:02:38,319
+Muszę to jakoś pokazać użytkownikowi.
+
+45
+00:02:38,319 --> 00:02:39,479
+Co ten użytkownik chciał?
+
+46
+00:02:39,479 --> 00:02:43,919
+On chciał stronę internetową, o kurczę, więc idę do widoku.
+
+47
+00:02:43,919 --> 00:02:48,280
+I w tym momencie wszystkie te dane są przekazywane do widoku z prośbą,
+
+48
+00:02:48,280 --> 00:02:53,159
+drogi widoku, pokaż mi, jak ta strona będzie wyglądała.
+
+49
+00:02:53,159 --> 00:02:54,639
+Co tam ma być?
+
+50
+00:02:54,719 --> 00:02:58,960
+I po prostu to jest tak, jakbyście wzięli sobie formularz w urzędzie skarbowym
+
+51
+00:02:58,960 --> 00:03:02,840
+i w tym formularzu macie w poszczególnych miejscach wstawić poszczególne wartości.
+
+52
+00:03:02,840 --> 00:03:04,360
+I tutaj działa to tak samo.
+
+53
+00:03:04,360 --> 00:03:09,199
+Jak sobie przejrzycie dowolną stronę internetową, to zobaczycie, że te strony są najczęściej,
+
+54
+00:03:09,199 --> 00:03:12,199
+szczególnie te, które naprawdę dotyczą poszczególnych produktów,
+
+55
+00:03:12,199 --> 00:03:14,159
+one mają bardzo zbliżoną do siebie strukturę.
+
+56
+00:03:14,159 --> 00:03:17,639
+Bo to jest taki formularz, gdzie w poszczególnych miejscach,
+
+57
+00:03:17,639 --> 00:03:21,159
+tu wstaw mi taki obrazek, tu wstaw mi ten opis, tu wstaw mi ten tytuł,
+
+58
+00:03:21,159 --> 00:03:23,599
+tu, jeżeli jest w promocji, wyświetl mi informację, że trwa promocja,
+
+59
+00:03:23,599 --> 00:03:29,599
+i właśnie za pomocą takiego bardzo prostego już tam programowania,
+
+60
+00:03:29,599 --> 00:03:33,240
+te strony internetowe są przygotowywane.
+
+61
+00:03:33,240 --> 00:03:35,919
+Czyli tutaj pobraliśmy sobie dane z bazy danych,
+
+62
+00:03:35,919 --> 00:03:38,199
+tu kontroler przekazuje te dane do widoku,
+
+63
+00:03:38,199 --> 00:03:41,240
+widok uzupełnia te dane, wrzuca je w jakieś miejsca,
+
+64
+00:03:41,240 --> 00:03:45,439
+na przykład gdzieś jest jakaś tabelka, więc zrobił sobie fora po tych elementach
+
+65
+00:03:45,439 --> 00:03:51,359
+i zrobił nam ładną tabelkę i mówi, dobra, słuchaj, kontroler, słuchaj, to są moje dane,
+
+66
+00:03:51,359 --> 00:03:53,560
+to jest wszystko to, co już ładnie,
+
+67
+00:03:53,599 --> 00:03:57,120
+już w ogóle zostało przedstawione w HTML, w CSS, z Javascript,
+
+68
+00:03:57,120 --> 00:03:59,199
+i teraz ty daj to użytkownikowi.
+
+69
+00:03:59,199 --> 00:04:04,079
+Kontroler mówi OK, bardzo dziękuję i zwraca te dane użytkownikowi.
+
+70
+00:04:04,079 --> 00:04:08,840
+Użytkownik widzi stronę, stwierdza, o, ciekawe, co jest w tej lekcji,
+
+71
+00:04:08,840 --> 00:04:13,840
+klika w lekcję i to znowu powoduje, że idzie zapytanie do kontrolera,
+
+72
+00:04:13,840 --> 00:04:17,439
+kontroler uruchamia odpowiednie modele, modele wracają do kontrolera,
+
+73
+00:04:17,439 --> 00:04:19,519
+widok, widok, użytkownik.
+
+74
+00:04:19,519 --> 00:04:23,600
+I zawsze taki przepływ będzie nam miał miejsce i będziemy użytkownikowi,
+
+75
+00:04:23,600 --> 00:04:26,640
+zawsze prezentowali to, co użytkownik może zobaczyć,
+
+76
+00:04:26,640 --> 00:04:28,720
+w takiej formie, w jakiej może zobaczyć,
+
+77
+00:04:28,720 --> 00:04:30,960
+czy też ten klient finalny,
+
+78
+00:04:30,960 --> 00:04:35,040
+natomiast naszym zadaniem będzie po prostu przeprowadzenie takiego przejścia,
+
+79
+00:04:35,040 --> 00:04:37,360
+tak, żeby użytkownik zobaczył to, co chce.

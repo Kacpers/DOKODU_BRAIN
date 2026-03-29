@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:03,720
+Zapomniałbym, mieliśmy zrobić jeszcze wartość bezwzględną.
+
+2
+00:00:03,720 --> 00:00:05,719
+Jak zrobić wartość bezwzględną?
+
+3
+00:00:05,719 --> 00:00:09,519
+Jeżeli chodzi o umiejętności, które mamy do tej pory,
+
+4
+00:00:09,519 --> 00:00:13,120
+to możemy napisać if aria jest mniejsze od 0,
+
+5
+00:00:13,120 --> 00:00:16,519
+no to aria razy minus 1, prawda?
+
+6
+00:00:16,519 --> 00:00:20,760
+aria równa się, razy równa się minus 1
+
+7
+00:00:20,760 --> 00:00:24,920
+i w ten sposób będziemy mieli zawsze wartość bezwzględną.
+
+8
+00:00:24,920 --> 00:00:26,920
+Natomiast zamiast tego
+
+9
+00:00:26,920 --> 00:00:29,920
+można też użyć wyrażenia takiego Pythonowego.
+
+10
+00:00:29,920 --> 00:00:33,039
+Można oczywiście użyć funkcji, która nazywa się abs
+
+11
+00:00:33,039 --> 00:00:38,040
+i funkcja ta abs, ona zawsze zwróci nam wartość bezwzględną.
+
+12
+00:00:38,040 --> 00:00:40,040
+To jest tak zwany absolut.
+
+13
+00:00:40,040 --> 00:00:42,040
+Ok? Chodźcie dalej.

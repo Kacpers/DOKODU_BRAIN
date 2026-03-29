@@ -1,0 +1,567 @@
+1
+00:00:00,000 --> 00:00:04,759
+W zadaniu szóstym ponownie musimy otworzyć sobie plik logi.txt i trochę go poczytać.
+
+2
+00:00:04,759 --> 00:00:15,759
+No to lecimy with open logi.txt encoding utf-8 as file for line in file println.
+
+3
+00:00:18,760 --> 00:00:22,539
+Python 6 logi i mam.
+
+4
+00:00:22,780 --> 00:00:26,980
+Oczywiście nie mam stripa, to go sobie dodaję.
+
+5
+00:00:26,980 --> 00:00:40,039
+I zobacz, mam pliki, tutaj mam linie, gdzie w tym pliku te linie mają strukturę taką, że jest data, imię i akcja.
+
+6
+00:00:40,200 --> 00:00:41,320
+Albo login, albo logout.
+
+7
+00:00:41,859 --> 00:00:42,840
+Co muszę teraz zrobić?
+
+8
+00:00:43,200 --> 00:00:44,880
+Będę musiał to sobie rozbić.
+
+9
+00:00:45,280 --> 00:00:54,079
+Czyli strip.split i rozbijam to po średnikach, gdzie interesować będzie mnie date, czyli może created at.
+
+10
+00:00:56,979 --> 00:01:00,640
+Może być user, może być username, no i action.
+
+11
+00:01:03,519 --> 00:01:13,459
+I tak naprawdę najważniejszym elementem teraz tego ćwiczenia będzie zamiana tej daty w tym formacie na datę.
+
+12
+00:01:13,640 --> 00:01:16,819
+Tak naprawdę, bo to jest string i musimy ten string zamienić na datę.
+
+13
+00:01:17,239 --> 00:01:21,340
+Czyli musimy sparsować string do postaci daty.
+
+14
+00:01:21,340 --> 00:01:25,679
+Czyli będziemy z biblioteki datetime potrzebowali strptime.
+
+15
+00:01:26,019 --> 00:01:26,959
+Czyli from datetime.
+
+16
+00:01:26,980 --> 00:01:33,880
+I możemy sobie stworzyć created at.
+
+17
+00:01:34,040 --> 00:01:35,920
+Tu zrobię sobie przerwę, żeby to lepiej widzieć.
+
+18
+00:01:36,340 --> 00:01:40,980
+Created at równa się created at.strp.
+
+19
+00:01:41,880 --> 00:01:44,000
+Nie created at, przepraszam, datetime.
+
+20
+00:01:44,780 --> 00:01:46,980
+Kropka strptime.
+
+21
+00:01:47,980 --> 00:01:51,580
+I teraz ten nasz strptime musi otrzymać najpierw date string.
+
+22
+00:01:51,580 --> 00:01:54,100
+Czyli to będzie nasze created at.
+
+23
+00:01:54,400 --> 00:01:56,580
+A po przecinku tą naszą datę.
+
+24
+00:01:56,980 --> 00:01:57,480
+Datę.
+
+25
+00:01:57,840 --> 00:01:59,320
+Najpierw jest rok.
+
+26
+00:01:59,540 --> 00:02:01,880
+Rok w pełnej formie, czyli wielkie Y.
+
+27
+00:02:02,200 --> 00:02:03,880
+Następnie jest myślnik.
+
+28
+00:02:03,980 --> 00:02:06,880
+I po myślniku mamy miesiąc, czyli małe m.
+
+29
+00:02:09,379 --> 00:02:10,700
+Myślnik małe d.
+
+30
+00:02:11,280 --> 00:02:11,680
+Spacja.
+
+31
+00:02:12,219 --> 00:02:16,439
+No i później mamy godziny, minuty, sekundy, gdzie to jest wielkie H, wielkie M i wielkie S.
+
+32
+00:02:16,879 --> 00:02:22,480
+Czyli wielkie H, wielkie M i wielkie S.
+
+33
+00:02:22,480 --> 00:02:26,140
+Możemy sobie wyprintować zawsze created at, żeby się upewnić,
+
+34
+00:02:26,139 --> 00:02:28,839
+że wszystkie daty zostały poprawnie odczytane.
+
+35
+00:02:28,839 --> 00:02:33,039
+Jeżeli któraś data byłaby niepoprawnie odczytana, no to właśnie zobaczylibyśmy błąd.
+
+36
+00:02:33,039 --> 00:02:35,039
+I tu widzę, że mam błąd.
+
+37
+00:02:35,039 --> 00:02:36,039
+Coś mi się nie podoba.
+
+38
+00:02:36,039 --> 00:02:38,039
+Not enough values to unpack.
+
+39
+00:02:38,039 --> 00:02:42,039
+Czyli w tym moim pliku logi nie mam zawsze trzech linii.
+
+40
+00:02:42,039 --> 00:02:45,039
+Wydaje mi się, że to jest problem, nie mam zawsze trzech wartości.
+
+41
+00:02:45,039 --> 00:02:49,039
+Wydaje mi się, że jest to problem, który wynika z tego, że po prostu mam jeden wiersz pusty,
+
+42
+00:02:49,039 --> 00:02:54,039
+więc mogę sobie, a taki wiersz i tak jest niepoprawny tutaj do parsowania,
+
+43
+00:02:54,039 --> 00:02:56,039
+więc mogę sobie zrobić if lenny.
+
+44
+00:02:56,139 --> 00:03:01,139
+Jeżeli długość elementów tych, które są w linii nie jest równa 3,
+
+45
+00:03:01,139 --> 00:03:07,139
+to mogę zrobić dwukropek, continue, czyli przejdźmy do kolejnej daty.
+
+46
+00:03:07,139 --> 00:03:09,139
+I w tym momencie...
+
+47
+00:03:11,139 --> 00:03:16,139
+Ach, bo my tutaj mamy line strip, czyli tak naprawdę powinniśmy...
+
+48
+00:03:18,139 --> 00:03:24,139
+Możemy najpierw sobie zrobić te rozbicie, czyli row na przykład.
+
+49
+00:03:26,139 --> 00:03:29,139
+Jeżeli row nie równa się 3,
+
+50
+00:03:29,139 --> 00:03:33,139
+i wtedy będziemy sobie tutaj przetwarzali row.
+
+51
+00:03:33,139 --> 00:03:35,139
+To takie zabezpieczenie.
+
+52
+00:03:35,139 --> 00:03:37,139
+O, i zobacz, mam teraz już wszystkie daty.
+
+53
+00:03:37,139 --> 00:03:39,139
+Ostatnią datą jest 15.49.
+
+54
+00:03:39,139 --> 00:03:44,139
+Jak mieliśmy wyżej, to dokładnie o 15.49 była też taka sytuacja,
+
+55
+00:03:44,139 --> 00:03:49,139
+więc myślę, że po prostu jest to wolny wiersz, który gdzieś tam nam się zapamiętał,
+
+56
+00:03:49,139 --> 00:03:52,139
+ale jak najbardziej już jesteśmy na niego przygotowani.
+
+57
+00:03:52,139 --> 00:03:54,139
+I teraz, skoro mamy też te daty,
+
+58
+00:03:54,139 --> 00:03:57,139
+no to będziemy chcieli na tych datach wykonywać obliczenia.
+
+59
+00:03:57,139 --> 00:03:58,139
+Jaka to data?
+
+60
+00:03:58,139 --> 00:04:04,139
+No jeżeli ktoś się loguje, no to wtedy będziemy chcieli rejestrować ten czas,
+
+61
+00:04:04,139 --> 00:04:06,139
+kiedy nasz delikwent się zalogował,
+
+62
+00:04:06,139 --> 00:04:11,139
+i ten czas przypisać sobie gdzieś do jego jakiejś tam, do jakiegoś jego słownika.
+
+63
+00:04:11,139 --> 00:04:18,139
+Jeżeli natomiast się on wylogował, no to będziemy chcieli od tej daty zalogowania
+
+64
+00:04:18,139 --> 00:04:22,139
+odjąć czas wylogowania, i to będzie czas spędzony na stronie,
+
+65
+00:04:22,139 --> 00:04:23,139
+czy tam spędzony w aplikacji.
+
+66
+00:04:23,139 --> 00:04:28,139
+I dzięki temu będziemy ten czas mogli dodać do drugiego słownika,
+
+67
+00:04:28,139 --> 00:04:32,139
+który będzie przetwarzał informacje o tym, jak długo użytkownik jest na stronie.
+
+68
+00:04:32,139 --> 00:04:35,139
+Czyli tak naprawdę, stąd wniosek, że potrzebujemy dwóch słowników.
+
+69
+00:04:35,139 --> 00:04:40,139
+Jeden przechowujący ostatnio widziany był,
+
+70
+00:04:40,139 --> 00:04:47,139
+a drugi będzie on dotyczył tego obliczenia, ile czasu już jest na stronie.
+
+71
+00:04:47,139 --> 00:04:52,139
+Czyli potrzebujemy mieć zmienną time spent, która może być klamerką,
+
+72
+00:04:52,139 --> 00:04:58,139
+oraz last seen, która też może być klamerką, klamerką, czyli oczywiście słownikiem.
+
+73
+00:04:58,139 --> 00:05:02,139
+I teraz, zamiast printować sobie tą datę, możemy zrobić,
+
+74
+00:05:02,139 --> 00:05:11,139
+jeżeli action równa się login, czyli za każdym razem, kiedy się zalogował,
+
+75
+00:05:11,139 --> 00:05:19,139
+to wtedy chcemy ustawić mu last seen dla tego konkretnego użytkownika na tę datę.
+
+76
+00:05:19,139 --> 00:05:20,139
+Czyli last seen od username.
+
+77
+00:05:20,139 --> 00:05:26,139
+równa się created at.
+
+78
+00:05:26,139 --> 00:05:31,139
+W naszym przypadku mamy taką sytuację, że zadbaliśmy o to, że zawsze mamy login, logout,
+
+79
+00:05:31,139 --> 00:05:33,139
+i to już jakby system nam zarządził.
+
+80
+00:05:33,139 --> 00:05:37,139
+Raczej zakładamy, że nie będzie sytuacji, gdy ktoś na przykład się dwa razy wyloguje,
+
+81
+00:05:37,139 --> 00:05:41,139
+a nie był zalogowany, więc w ten sposób, jak najbardziej też ta konwencja będzie nam działała.
+
+82
+00:05:41,139 --> 00:05:44,139
+Co innego może się stać?
+
+83
+00:05:44,139 --> 00:05:49,139
+Możemy mieć też zalogowanie, wylogowanie, czyli if action, ja nie robię else'a,
+
+84
+00:05:50,139 --> 00:05:55,139
+nie boli mnie to, że będę jakby dwa razy sprawdzał, a wydaje mi się, że dzięki temu kod będzie czytelniejszy.
+
+85
+00:05:55,139 --> 00:06:02,139
+Logout, dwukropek, to wtedy potrzebujemy policzyć sobie czas spędzony.
+
+86
+00:06:02,139 --> 00:06:06,139
+Żeby policzyć czas spędzony, potrzebujemy policzyć time delta.
+
+87
+00:06:06,139 --> 00:06:13,139
+Time delta to będzie created at, bo to będzie data większa, minus last seen od username.
+
+88
+00:06:13,139 --> 00:06:18,139
+Z tego względu, że nasz użytkownik ma już jakąś datę zapisaną w tym last seen,
+
+89
+00:06:18,139 --> 00:06:24,139
+i my sobie zapamiętaliśmy, a ostatni raz widziałem go od wtedy i wtedy,
+
+90
+00:06:24,139 --> 00:06:28,139
+więc my dzięki tej operacji możemy policzyć sobie time delta.
+
+91
+00:06:28,139 --> 00:06:30,139
+I to jest ta nasza delta.
+
+92
+00:06:30,139 --> 00:06:38,139
+I teraz będziemy chcieli zaktualizować to nasze time spent naszego użytkownika.
+
+93
+00:06:38,139 --> 00:06:46,139
+Oto time delta, czyli tak naprawdę, w sekundach, czyli tak naprawdę time spent od usera,
+
+94
+00:06:48,139 --> 00:06:50,139
+równa się.
+
+95
+00:06:50,139 --> 00:06:55,139
+Ja potrzebuję mieć już ten czas, który on wcześniej spędził, czyli time spent.
+
+96
+00:06:55,139 --> 00:07:00,139
+Jeszcze bardzo ważna rzecz, wydaje mi się, a nie, dobra, tu mamy datę, więc sparsowaliśmy ją,
+
+97
+00:07:00,139 --> 00:07:02,139
+myślałem, że gdzieś tam będą sekundy.
+
+98
+00:07:02,139 --> 00:07:09,139
+Czyli time spent od kropka get, username, dlaczego robię kropka get?
+
+99
+00:07:09,139 --> 00:07:15,139
+No bo jeżeli nie było go wcześniej w time spent, to chciałbym, żeby miał wartość zero, plus,
+
+100
+00:07:15,139 --> 00:07:18,139
+i tutaj delta w sekundach.
+
+101
+00:07:18,139 --> 00:07:24,139
+No i wtedy nie pozostaje nam nic innego, jak tylko wyświetlić sobie ten time spent,
+
+102
+00:07:24,139 --> 00:07:31,139
+czyli for username in time spent, to takie trudniejsze zadanie, ale mam nadzieję, że się podoba.
+
+103
+00:07:31,139 --> 00:07:36,139
+Tu będzie time spent, czy też time, może po prostu spent, o tak.
+
+104
+00:07:40,139 --> 00:07:44,139
+Print użytkownik
+
+105
+00:07:46,139 --> 00:07:48,139
+username
+
+106
+00:07:48,139 --> 00:07:50,139
+spędził na stronie
+
+107
+00:07:50,139 --> 00:07:52,139
+spend
+
+108
+00:07:52,139 --> 00:07:54,139
+second.
+
+109
+00:07:56,139 --> 00:07:57,139
+Ok.
+
+110
+00:07:57,139 --> 00:07:59,139
+Wywołam to raz jeszcze,
+
+111
+00:07:59,139 --> 00:08:01,139
+czyli strzałka do góry logi,
+
+112
+00:08:01,139 --> 00:08:07,139
+i mam użytkownik Adam spędził na stronie 2836 sekund,
+
+113
+00:08:07,139 --> 00:08:10,139
+a użytkownik Asper 2242 sekundy.
+
+114
+00:08:10,139 --> 00:08:12,139
+Jak to sprawdzić?
+
+115
+00:08:12,139 --> 00:08:17,139
+Najprościej byłoby zeedytować ten nasz czas, te logi, tak, żeby były tam wartości, które są bardziej oczywiste.
+
+116
+00:08:18,139 --> 00:08:19,139
+Zobaczcie.
+
+117
+00:08:19,139 --> 00:08:23,139
+Zrobię tak, żeby Adam spędził na stronie 10 minut i Kacper 10 minut.
+
+118
+00:08:23,139 --> 00:08:29,139
+Czyli od 13.22, a Kacper może mieć 13.22.11 sekundę później.
+
+119
+00:08:29,139 --> 00:08:33,139
+Adam wylogował się wtedy o 13.32,
+
+120
+00:08:34,139 --> 00:08:36,139
+z taką samą ilością sekund,
+
+121
+00:08:36,139 --> 00:08:39,139
+no i Kacper poniżej wylogował się
+
+122
+00:08:41,139 --> 00:08:44,139
+o 13.22, czyli 32...
+
+123
+00:08:44,139 --> 00:08:48,139
+11.
+
+124
+00:08:48,139 --> 00:08:53,139
+Czyli mamy dwa razy sytuację po 10 minut spędzonych na stronie.
+
+125
+00:08:53,139 --> 00:08:56,139
+Strzałka do góry jest 600, ok.
+
+126
+00:08:56,139 --> 00:08:59,139
+To możemy jeszcze dać im drugie logowanie,
+
+127
+00:08:59,139 --> 00:09:03,139
+na przykład takie samo, ale dzień później, żeby też za dużo nie nazmieniać się.
+
+128
+00:09:03,139 --> 00:09:05,139
+Czy będzie 1200?
+
+129
+00:09:05,139 --> 00:09:07,139
+Nie ma 1200, ok.
+
+130
+00:09:07,139 --> 00:09:09,139
+Czy coś jest nie tak?
+
+131
+00:09:09,139 --> 00:09:11,139
+Było 600, tu jest 600.
+
+132
+00:09:11,139 --> 00:09:13,139
+Czy zapisałem ten plik?
+
+133
+00:09:14,139 --> 00:09:16,139
+Jest 600, ok.
+
+134
+00:09:16,139 --> 00:09:17,139
+Coś jest nie tak.
+
+135
+00:09:17,139 --> 00:09:21,139
+Już widzę, tu oczywiście nie username, o tak, to jest błąd.
+
+136
+00:09:21,139 --> 00:09:24,139
+Powinien być username nie jako string.
+
+137
+00:09:24,139 --> 00:09:26,139
+O, i teraz jest 1200.
+
+138
+00:09:26,139 --> 00:09:28,139
+Czyli wychodzi na to, że wszystko działa.
+
+139
+00:09:28,139 --> 00:09:29,139
+To co?
+
+140
+00:09:29,139 --> 00:09:31,139
+Zostało nam jeszcze API wolne lektury.
+
+141
+00:09:31,139 --> 00:09:33,139
+Zobaczymy, jak funkcjonuje.
+
+142
+00:09:33,139 --> 00:09:34,139
+Chodźcie.

@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:02,899
+No i tak, przerobiliśmy sobie temat funkcji.
+
+2
+00:00:03,620 --> 00:00:07,820
+Tak wiem, że na razie na pewnym takim poziomie wysokim,
+
+3
+00:00:07,940 --> 00:00:09,700
+zaraz do tego jeszcze będziemy sobie przechodzili.
+
+4
+00:00:10,220 --> 00:00:13,040
+Natomiast skoro tych funkcji robi się tak dużo,
+
+5
+00:00:13,519 --> 00:00:15,939
+to zawsze nagle rodzi się takie pytanie,
+
+6
+00:00:16,120 --> 00:00:17,179
+jeżeli robię jakiś projekt,
+
+7
+00:00:17,600 --> 00:00:20,199
+kurczę, czy one nie mogłyby być gdzieś przeniesione?
+
+8
+00:00:20,539 --> 00:00:22,519
+Czy na przykład nie powinienem zastanowić się nad tym,
+
+9
+00:00:22,519 --> 00:00:26,780
+że funkcje dotyczące studentów będą w jakimś tam pliku students,
+
+10
+00:00:26,920 --> 00:00:29,900
+funkcje dotyczące ocen będą w jakimś tam pliku notes,
+
+11
+00:00:30,000 --> 00:00:32,119
+a funkcje dotyczące czegoś jeszcze będą gdzieś jeszcze.
+
+12
+00:00:32,659 --> 00:00:34,140
+No bo jak mam wszystko mieć na górze,
+
+13
+00:00:34,280 --> 00:00:36,579
+potem mam mieć trochę mojego kodu wykorzystującego,
+
+14
+00:00:36,920 --> 00:00:38,740
+to nagle będę miał takie ośmiotysięczniki,
+
+15
+00:00:39,100 --> 00:00:40,519
+jeżeli chodzi o ilość linii.
+
+16
+00:00:40,880 --> 00:00:43,460
+I tutaj, jeżeli masz takie odczucie,
+
+17
+00:00:43,539 --> 00:00:44,759
+to masz jak najbardziej rację,
+
+18
+00:00:44,939 --> 00:00:46,719
+ponieważ kiedy tworzymy sobie projekt,
+
+19
+00:00:47,159 --> 00:00:50,760
+to celem tego projektu nie jest posiadanie całego kodu w jednym pliku,
+
+20
+00:00:50,760 --> 00:00:53,519
+tylko podział tego projektu na mniejsze pliki.
+
+21
+00:00:54,100 --> 00:00:57,240
+Stąd też będziemy sobie teraz poruszali takie tematy,
+
+22
+00:00:57,340 --> 00:00:58,120
+jak czym jest funkcja,
+
+23
+00:00:58,240 --> 00:00:59,980
+o tym już bardzo dużo sobie powiem,
+
+24
+00:01:00,000 --> 00:01:01,240
+bo w tym filmie już powiedzieliśmy,
+
+25
+00:01:01,240 --> 00:01:03,240
+czym jest moduł oraz czym jest pakiet.
+
+26
+00:01:03,659 --> 00:01:06,560
+Bo moduły to jest coś, na co można podzielić projekt,
+
+27
+00:01:06,819 --> 00:01:08,340
+natomiast pakiety to jest coś,
+
+28
+00:01:08,620 --> 00:01:12,120
+co może nam pomóc uporządkować moduły.
+
+29
+00:01:12,700 --> 00:01:14,359
+To co? Zacznijmy od początku.
+
+30
+00:01:15,319 --> 00:01:16,780
+Jeżeli chodzi o to, czym jest funkcja,
+
+31
+00:01:16,879 --> 00:01:21,519
+no to wiadomo, funkcja jest po prostu zadeklarowaną funkcją w naszym kodzie.
+
+32
+00:01:21,900 --> 00:01:23,799
+Uniknąć należy przede wszystkim takich sytuacji,
+
+33
+00:01:23,920 --> 00:01:28,319
+gdzie funkcja i nazwa zmiennej mają tą samą nazwę.
+
+34
+00:01:28,319 --> 00:01:29,480
+No i to jest funkcja.
+
+35
+00:01:30,000 --> 00:01:32,640
+Teraz załóżmy, że ta funkcja jest w jakimś innym pliku.
+
+36
+00:01:33,159 --> 00:01:36,420
+Ten plik nazywany jest po prostu modułem,
+
+37
+00:01:36,939 --> 00:01:40,859
+gdyż moduł to jest po prostu zwykły plik z rozszerzeniem py,
+
+38
+00:01:41,159 --> 00:01:43,700
+znajdujący się gdzieś obok twojego projektu.
+
+39
+00:01:44,340 --> 00:01:47,240
+Czyli w projekcie możesz mieć plik jakiś main,
+
+40
+00:01:47,799 --> 00:01:49,879
+czyli plik główny, o tym też sobie za moment powiemy,
+
+41
+00:01:50,260 --> 00:01:53,159
+no i obok pliczek, który się może nazywać functions albo students.
+
+42
+00:01:53,579 --> 00:01:57,120
+I zwykły plik z rozszerzeniem py to już jest moduł pythonowy.
+
+43
+00:01:57,620 --> 00:01:59,980
+Po drugie, w tym pliku są tylko,
+
+44
+00:01:59,980 --> 00:02:00,920
+i wyłącznie funkcje.
+
+45
+00:02:01,000 --> 00:02:02,780
+Czyli nie ma wykorzystania funkcji,
+
+46
+00:02:02,880 --> 00:02:05,880
+jest tylko i wyłącznie kod, który służy do tego,
+
+47
+00:02:05,980 --> 00:02:07,980
+żeby te funkcje były zadeklarowane.
+
+48
+00:02:08,219 --> 00:02:11,480
+Po trzecie, jeżeli chodzi o nazwy funkcji i nazwy modułów,
+
+49
+00:02:11,599 --> 00:02:12,939
+to reguła jest taka sama.
+
+50
+00:02:13,400 --> 00:02:15,819
+Czyli jeżeli mamy sytuację, gdzie byłoby więcej słów,
+
+51
+00:02:15,960 --> 00:02:17,939
+to rozdzielamy moduły podkreśleniem.
+
+52
+00:02:18,480 --> 00:02:21,280
+I tu uwaga, jeżeli masz funkcję,
+
+53
+00:02:21,360 --> 00:02:24,759
+na przykład chcesz zaimportować coś z biblioteki random,
+
+54
+00:02:25,400 --> 00:02:26,780
+no to piszesz import random.
+
+55
+00:02:26,780 --> 00:02:29,780
+Nie możesz mieć modułu, który będzie nazywał się random,
+
+56
+00:02:29,979 --> 00:02:31,239
+w twoim projekcie.
+
+57
+00:02:31,699 --> 00:02:34,819
+Bo to spowoduje, że jakby zasłonisz moduł,
+
+58
+00:02:34,899 --> 00:02:36,039
+który jest zawarty w Pythonie.
+
+59
+00:02:36,919 --> 00:02:40,299
+Czyli jak robiliśmy na przykład from random import choice
+
+60
+00:02:40,299 --> 00:02:43,000
+albo from math import sqrt,
+
+61
+00:02:43,579 --> 00:02:46,139
+to w momencie, w którym nazwiesz swój moduł math
+
+62
+00:02:46,139 --> 00:02:48,719
+albo nazwiesz swój moduł random,
+
+63
+00:02:49,199 --> 00:02:51,359
+to sprawisz, że Python zapomni o tym,
+
+64
+00:02:51,439 --> 00:02:53,419
+że on ma swój taki moduł, który robi to samo.
+
+65
+00:02:54,639 --> 00:02:55,780
+To jest bardzo ważna uwaga.
+
+66
+00:02:55,780 --> 00:02:59,500
+No i po trzecie, główny moduł nazywa się mainpy.
+
+67
+00:02:59,979 --> 00:03:03,079
+Czyli w momencie, w którym tworzę sobie mój projekt,
+
+68
+00:03:03,239 --> 00:03:05,280
+to zawsze ten plik, od którego zaczynam,
+
+69
+00:03:05,359 --> 00:03:06,859
+w którym znajduje się cały mój kod,
+
+70
+00:03:07,280 --> 00:03:08,199
+nazywa się mainpy.
+
+71
+00:03:08,780 --> 00:03:09,219
+Dlaczego?
+
+72
+00:03:09,799 --> 00:03:10,839
+Zobacz następny slajd.

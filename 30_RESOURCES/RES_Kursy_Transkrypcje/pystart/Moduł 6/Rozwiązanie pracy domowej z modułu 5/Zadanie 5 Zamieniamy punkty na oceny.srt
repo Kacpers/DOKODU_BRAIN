@@ -1,0 +1,243 @@
+1
+00:00:00,000 --> 00:00:03,260
+No i dochodzimy do takiego zadania, gdzie mieliśmy taką tabelkę
+
+2
+00:00:03,260 --> 00:00:05,480
+i w tej tabelce były różne wartości procentowe,
+
+3
+00:00:05,580 --> 00:00:08,820
+mniej niż 45 to niedostateczny, więcej niż 95 to celujący itd.
+
+4
+00:00:09,480 --> 00:00:12,320
+I chcemy przygotować funkcję, która odbierze od użytkownika
+
+5
+00:00:12,320 --> 00:00:15,160
+procent zdobytych punktów, a w odpowiedzi zwróci ocenę,
+
+6
+00:00:15,240 --> 00:00:16,920
+jaką otrzymał użytkownik.
+
+7
+00:00:17,420 --> 00:00:21,780
+Czyli możemy się umówić w ten sposób, że będziemy mieli jakąś taką funkcję,
+
+8
+00:00:21,780 --> 00:00:25,379
+którą nazwiemy getNode, czyli weź ocenę
+
+9
+00:00:25,379 --> 00:00:28,679
+i pierwszym argumentem jej będzie
+
+10
+00:00:28,679 --> 00:00:33,299
+score od użytkownika,
+
+11
+00:00:33,880 --> 00:00:34,780
+to zawsze będzie integer,
+
+12
+00:00:34,939 --> 00:00:36,500
+czyli na przykład powiedział na 6 pytań,
+
+13
+00:00:37,019 --> 00:00:39,579
+natomiast drugim argumentem powinien być total score,
+
+14
+00:00:41,039 --> 00:00:43,460
+no i to będzie też integer, możemy przyjąć, że wartość domyślna
+
+15
+00:00:43,460 --> 00:00:46,780
+to jest na przykład 100, czyli uzyskał jakąś ocenę
+
+16
+00:00:47,320 --> 00:00:48,640
+z jakiejś ilości.
+
+17
+00:00:48,640 --> 00:00:52,799
+Ja wspominałem w zadaniu, że można to sobie gdzieś też w środku zadeklarować,
+
+18
+00:00:52,859 --> 00:00:55,320
+natomiast jeżeli chcemy mieć możliwość zmieniania tego,
+
+19
+00:00:55,679 --> 00:00:57,719
+no to to jest również dobre podejście.
+
+20
+00:00:57,719 --> 00:01:01,320
+Zwracać będziemy na pewno float, to jest pewność.
+
+21
+00:01:01,320 --> 00:01:04,179
+No to będzie jakaś tam informacja percent score
+
+22
+00:01:04,179 --> 00:01:11,099
+równa się score podzielony przez total score.
+
+23
+00:01:11,200 --> 00:01:15,280
+Nie, no bo jak uzyskał 10 punktów ze 100, no to miał 0,1%.
+
+24
+00:01:15,280 --> 00:01:17,579
+I teraz będziemy chcieli sprawdzić
+
+25
+00:01:17,579 --> 00:01:23,000
+if percent score jest mniejsze niż 0,45,
+
+26
+00:01:24,840 --> 00:01:26,519
+no to wówczas return,
+
+27
+00:01:26,519 --> 00:01:26,599
+no to wówczas return,
+
+28
+00:01:26,599 --> 00:01:29,299
+niedostateczne.
+
+29
+00:01:31,299 --> 00:01:33,059
+Elif, percent score.
+
+30
+00:01:33,899 --> 00:01:36,379
+I ja teraz może nie tyle zrobię cięcie,
+
+31
+00:01:36,459 --> 00:01:37,679
+bo już wiesz czego się spodziewać,
+
+32
+00:01:38,259 --> 00:01:41,339
+co przyspieszę sobie ten fragment, żeby nie zajmować się czasu.
+
+33
+00:01:41,939 --> 00:01:44,619
+Tutaj zwracam ocenę, więc to nie będzie float,
+
+34
+00:01:44,619 --> 00:01:46,879
+to oczywiście tylko string, to była moja pomyłka.
+
+35
+00:01:47,319 --> 00:01:49,259
+Jak widzisz, zrobiłem to zadanie w ten sposób.
+
+36
+00:01:49,879 --> 00:01:52,879
+Natomiast też tu często ludzie pytają mnie,
+
+37
+00:01:52,939 --> 00:01:55,619
+a gdzie mają się zaliczać te wartości, gdzie ma być wartość równa.
+
+38
+00:01:56,599 --> 00:01:58,659
+Napisałem tego wprost, tak naprawdę zależy od ciebie.
+
+39
+00:01:58,780 --> 00:02:01,319
+Czy jesteś bardziej pobłażliwym nauczycielem, czy mniej.
+
+40
+00:02:01,640 --> 00:02:04,519
+Nie przykładam do tego dużej uwagi na tym etapie.
+
+41
+00:02:04,519 --> 00:02:07,979
+Jeżeli to byłby projekt dla klienta, to oczywiście bym go o to zapytał.
+
+42
+00:02:08,419 --> 00:02:10,519
+Natomiast skoro jest to takie zadanie do pouczenia się,
+
+43
+00:02:10,659 --> 00:02:14,340
+to czy tutaj dam znak równości, czy tutaj dam znak równości,
+
+44
+00:02:14,419 --> 00:02:16,120
+to myślę, że to jest żaden problem.
+
+45
+00:02:16,639 --> 00:02:17,639
+I to jest jedno podejście.
+
+46
+00:02:18,039 --> 00:02:20,620
+Drugie podejście, które też niezwykle lubię, jest takie,
+
+47
+00:02:21,039 --> 00:02:24,719
+że można zapisywać to za pomocą range'a.
+
+48
+00:02:25,120 --> 00:02:26,519
+Czyli jeżeli ja bym chciał to sobie zamienić,
+
+49
+00:02:26,599 --> 00:02:32,780
+zobacz, na razie wykonam sobie, tylko sprawdzę to zadanie w ten sposób, jaki mam.
+
+50
+00:02:33,340 --> 00:02:38,479
+Czyli zrobię print get node.
+
+51
+00:02:39,539 --> 00:02:45,759
+I powiedzmy ktoś dostał 56%, czy tam 56 punktów zdobył na 100,
+
+52
+00:02:46,379 --> 00:02:50,959
+no to powinien się wyświetlić w ten sposób dopuszczający, dostateczny.
+
+53
+00:02:50,959 --> 00:02:55,959
+Czyli robię python, spacja, 5 punkty na ocenę i mam dostateczny.
+
+54
+00:02:56,599 --> 00:03:00,159
+No i jak najbardziej w ten sposób możemy to sobie wykonać.
+
+55
+00:03:00,280 --> 00:03:04,280
+Jak widać ocena została zwrócona prawidłowo, dostateczny.
+
+56
+00:03:04,359 --> 00:03:07,139
+Mogę sobie jeszcze sprawdzić, czy jeżeli podam wyższą ocenę,
+
+57
+00:03:07,560 --> 00:03:10,039
+niech dostanie 0,9 punktów,
+
+58
+00:03:10,859 --> 00:03:13,180
+procent, punkta to niedostateczny,
+
+59
+00:03:13,259 --> 00:03:16,979
+ale jak dostanie 90, no to wtedy dostaję celujący.
+
+60
+00:03:17,259 --> 00:03:19,859
+Czyli wychodzi na to, że wszystko działa bardzo dobrze.
+
+61
+00:03:20,240 --> 00:03:22,740
+Dzięki i zapraszam do kolejnego zadania.

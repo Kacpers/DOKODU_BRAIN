@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:02,020
+I tutaj mam dla Ciebie zadanie.
+
+2
+00:00:02,520 --> 00:00:04,600
+Utwórz pakiet główny o nazwie PyStart.
+
+3
+00:00:04,820 --> 00:00:07,799
+W pakiecie utwórz dwa pakiety, Utils oraz Calculations.
+
+4
+00:00:07,799 --> 00:00:12,839
+W pakiecie Utils stwórz moduł Lists, zawierający funkcję AddLists,
+
+5
+00:00:12,960 --> 00:00:16,100
+dodający wartości dwóch list znajdujących się na tych samych indeksach,
+
+6
+00:00:16,160 --> 00:00:19,400
+czyli to co robiliśmy z zipem w pracy domowej.
+
+7
+00:00:20,000 --> 00:00:23,660
+W czwartym punkcie mamy w pakiecie Calculations, czyli w tym drugim pakiecie,
+
+8
+00:00:24,120 --> 00:00:28,480
+stworzyć moduł Geometry, a w nim funkcję do obliczania pola oraz obwodu okręgu
+
+9
+00:00:28,480 --> 00:00:29,760
+i trójkąta równobocznego.
+
+10
+00:00:29,960 --> 00:00:31,940
+Oczywiście parametry takie jak potrzebne.
+
+11
+00:00:32,560 --> 00:00:37,020
+No i w punkcie B funkcję do obliczania długości i wyznaczania środka odcinka
+
+12
+00:00:37,020 --> 00:00:40,539
+o zadanych współrzędnych, czyli mamy początek i koniec.
+
+13
+00:00:41,320 --> 00:00:45,320
+Wiem, że to trzeba jeszcze przeczytać z dwa razy, żeby zobaczyć jaka ma być tego hierarchia,
+
+14
+00:00:45,760 --> 00:00:50,280
+więc chwila dłuższa dla każdego na to, żeby stworzyć sobie w nowym projekcie,
+
+15
+00:00:50,340 --> 00:00:54,780
+zaznaczam, taki pakiet o nazwie PyStart i do niego wprowadzić takie dane.

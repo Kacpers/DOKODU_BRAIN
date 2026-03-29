@@ -1,0 +1,207 @@
+1
+00:00:00,000 --> 00:00:02,100
+To co lecimy z pracą domową.
+
+2
+00:00:02,580 --> 00:00:06,379
+W zadaniu pierwszym mamy napisać program, który będzie wykonywał różne operacje matematyczne
+
+3
+00:00:06,379 --> 00:00:08,040
+w zależności od wyboru użytkownika.
+
+4
+00:00:08,460 --> 00:00:12,660
+Czyli użytkownik może powiedzieć, że chce dodawać, odejmować, mnożyć lub dzielić.
+
+5
+00:00:13,080 --> 00:00:15,960
+Użytkownik powinien mieć możliwość wyboru między, no właśnie,
+
+6
+00:00:16,420 --> 00:00:19,039
+i będziemy chcieli odebrać od użytkownika dwie wartości.
+
+7
+00:00:19,539 --> 00:00:21,780
+Możemy więc stworzyć sobie zmienną value 1,
+
+8
+00:00:23,300 --> 00:00:24,839
+napisać wartość pierwsza,
+
+9
+00:00:26,519 --> 00:00:29,679
+możemy zrobić dokładnie to samo z wartością drugą,
+
+10
+00:00:30,000 --> 00:00:35,520
+no i odbieramy też od użytkownika działanie, czyli jakąś akcję.
+
+11
+00:00:37,799 --> 00:00:41,500
+Jaką akcję chcesz wykonać?
+
+12
+00:00:42,000 --> 00:00:48,100
+Z racji tego, że nasz program tak naprawdę będzie wykonywał za każdym razem się raz,
+
+13
+00:00:48,519 --> 00:00:52,140
+no to jak najbardziej możemy też za chwilę wpleść tutaj while'a jako taki dodatek,
+
+14
+00:00:52,140 --> 00:00:55,519
+żeby móc sprawić, żeby wykonywał się więcej razy.
+
+15
+00:00:56,379 --> 00:00:59,640
+Ale na razie wykonamy program tylko i wyłącznie dla jednego przebiegu.
+
+16
+00:01:00,000 --> 00:01:07,000
+Czyli match action case dodawanie
+
+17
+00:01:08,200 --> 00:01:14,400
+i możemy sobie stworzyć na przykład zmienną wynik jako value 1 plus value 2.
+
+18
+00:01:14,799 --> 00:01:18,400
+Analogicznie będę potrzebował zrobić jeszcze pozostałe cztery działania,
+
+19
+00:01:18,599 --> 00:01:22,200
+no i sytuację, w której czynność nie byłaby określona.
+
+20
+00:01:22,700 --> 00:01:29,799
+Czyli odejmowanie, mnożenie i dzielenie.
+
+21
+00:01:29,799 --> 00:01:35,039
+Mnożenie może wystąpić też bez polskiego znaku,
+
+22
+00:01:35,159 --> 00:01:38,879
+więc można jak najbardziej zrobić też mnożenie po prostu jako alternatywę.
+
+23
+00:01:39,340 --> 00:01:46,640
+No i wtedy print, wynik operacji, wynosi, no i result.
+
+24
+00:01:50,420 --> 00:01:52,659
+Dobra, sprawdźmy czy zadziałało.
+
+25
+00:01:52,780 --> 00:01:58,879
+Czyli python, spacja 1, operacje matematyczne, wartość pierwsza 10, 20, dodawanie.
+
+26
+00:01:59,799 --> 00:02:02,879
+I wynik operacji to 30, czyli zadziałało.
+
+27
+00:02:03,340 --> 00:02:05,819
+Jeżeli sobie sprawdzimy, zrobimy to samo z mnożeniem,
+
+28
+00:02:07,399 --> 00:02:12,879
+to czy zapiszemy mnożenie czy mnożenie, to powinniśmy dostać też poprawne wyniki.
+
+29
+00:02:13,079 --> 00:02:15,340
+Ach, tylko jeszcze operatory wypadałoby zmienić.
+
+30
+00:02:15,879 --> 00:02:20,719
+Tutaj odejmowanie, tu oczywiście będzie mnożenie, a tutaj będzie dzielenie.
+
+31
+00:02:21,139 --> 00:02:25,819
+Jeżeli natomiast chcielibyśmy wykonać tę czynność dla większej liczby operacji,
+
+32
+00:02:26,319 --> 00:02:29,460
+no to tak na a, jeszcze sytuacja taka, zanim do tego przejdziemy,
+
+33
+00:02:29,460 --> 00:02:37,460
+no to case, podkreślenie, można napisać result, równa się error.
+
+34
+00:02:39,900 --> 00:02:45,219
+Jeżeli chcemy zrobić dwie rzeczy, to można napisać print, jeszcze wyżej sobie print,
+
+35
+00:02:45,400 --> 00:02:46,740
+nie wiem co mam zrobić.
+
+36
+00:02:52,080 --> 00:02:56,439
+I teraz jeszcze będziemy mieli tę sytuację, że kiedy ktoś nam poda dwie różne wartości,
+
+37
+00:02:56,439 --> 00:02:58,560
+to zawsze będzie nie wiem co mam zrobić.
+
+38
+00:02:58,560 --> 00:03:00,159
+Wynik operacji wynosi error.
+
+39
+00:03:01,000 --> 00:03:04,960
+I teraz tak jak wspominałem, jeżeli chcielibyśmy sobie to zadanie zapętlić,
+
+40
+00:03:05,259 --> 00:03:09,140
+no to można użyć pętli while, na przykład z opcją true.
+
+41
+00:03:09,699 --> 00:03:13,500
+Tego typu rzeczy nie znajdują się w rozwiązaniu i też nie spodziewałem się, że to dodasz,
+
+42
+00:03:13,620 --> 00:03:21,819
+natomiast jak najbardziej takie kombinacje czy takie dodatki są moim zdaniem w porządku.
+
+43
+00:03:22,259 --> 00:03:25,280
+Im więcej takich rzeczy dodasz samodzielnie, tym więcej się nauczysz.
+
+44
+00:03:25,280 --> 00:03:28,520
+Czyli zrobiłem while true, na wypadek hasła koniec.
+
+45
+00:03:28,560 --> 00:03:29,840
+Pojawia się break.
+
+46
+00:03:29,840 --> 00:03:36,280
+No i jeszcze mam taką możliwość, że mogę tutaj dorzucić input, tak żeby po prostu zaczekać sobie na enter.
+
+47
+00:03:36,280 --> 00:03:37,479
+Zobaczmy to.
+
+48
+00:03:37,479 --> 00:03:40,740
+20, 30, dodawanie.
+
+49
+00:03:41,180 --> 00:03:45,340
+Mam 50, robię enter i mogę ponownie podawać te wartości.
+
+50
+00:03:45,340 --> 00:03:49,379
+Ten enter powoduje też, że pojawia się ładna pusta linia pomiędzy naszymi operacjami,
+
+51
+00:03:49,379 --> 00:03:54,699
+więc można tego typu działanie wykorzystać też oczywiście do bardziej skomplikowanych obliczeń.
+
+52
+00:03:54,699 --> 00:03:58,039
+No i cóż, dziękuję, zapraszam do kolejnego filmu.

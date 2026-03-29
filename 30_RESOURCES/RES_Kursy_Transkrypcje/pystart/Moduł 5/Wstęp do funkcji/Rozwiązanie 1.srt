@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:00,860
+No to lecimy.
+
+2
+00:00:01,540 --> 00:00:02,319
+Zadanie pierwsze.
+
+3
+00:00:03,040 --> 00:00:07,200
+Mamy stworzyć funkcję, która ma się nazywać word counter.
+
+4
+00:00:08,060 --> 00:00:11,320
+Musi przyjmować jakiś tekst jako argument.
+
+5
+00:00:11,320 --> 00:00:15,740
+I teraz chcielibyśmy zwrócić ilość słów.
+
+6
+00:00:16,080 --> 00:00:19,140
+Czyli należałoby rozbić sobie ten nasz tekst po spacjach.
+
+7
+00:00:19,519 --> 00:00:26,019
+Czyli words równa się text split po spacjach.
+
+8
+00:00:26,539 --> 00:00:28,280
+A następnie zwrócić ilość.
+
+9
+00:00:28,280 --> 00:00:32,740
+Czyli return len words.
+
+10
+00:00:33,179 --> 00:00:36,299
+I teraz uruchomienie tego kodu nic nie zrobi.
+
+11
+00:00:36,600 --> 00:00:38,700
+Zobacz, to jest to o czym mówiłem już parokrotnie,
+
+12
+00:00:38,799 --> 00:00:41,960
+że jeżeli wykonam funkcję zadanie jeden, to nic nie mam.
+
+13
+00:00:42,340 --> 00:00:42,600
+Pusto.
+
+14
+00:00:43,280 --> 00:00:45,740
+Jeżeli natomiast chciałbym zobaczyć wynik,
+
+15
+00:00:45,840 --> 00:00:47,180
+no to potrzebuję mieć jakiś tekst.
+
+16
+00:00:47,299 --> 00:00:51,700
+Mogę sobie wykonać więc tekst równa się ala makota
+
+17
+00:00:51,700 --> 00:00:55,640
+i pozdrawiamy wszystkie ale.
+
+18
+00:00:58,280 --> 00:01:00,280
+I koty też.
+
+19
+00:01:00,280 --> 00:01:06,280
+Przyszedłem na koty uczulenie, ale niech będzie.
+
+20
+00:01:06,280 --> 00:01:07,280
+Niech straca.
+
+21
+00:01:07,280 --> 00:01:13,280
+Następnie możemy zrobić print word counter od tekst.
+
+22
+00:01:13,280 --> 00:01:17,280
+Ten tekst oczywiście może być dowolny.
+
+23
+00:01:17,280 --> 00:01:18,280
+Nie musi się nazywać tekst.
+
+24
+00:01:18,280 --> 00:01:20,280
+Może nawet lepiej, żeby się nie nazywał.
+
+25
+00:01:20,280 --> 00:01:23,280
+Mógłbym też wkleić sobie ten argument tutaj do środka.
+
+26
+00:01:23,280 --> 00:01:24,280
+Ale po co?
+
+27
+00:01:24,280 --> 00:01:27,280
+Jeżeli to jest takie długie, to nie chcę zaciemniać obrazu.
+
+28
+00:01:27,280 --> 00:01:28,280
+Lepiej stworzyć sobie tekst.
+
+29
+00:01:28,280 --> 00:01:29,280
+Zrobić taką pojedynczą zmienną.
+
+30
+00:01:29,280 --> 00:01:32,280
+I teraz jak zrobię Python, to pojawi mi się 9.
+
+31
+00:01:32,280 --> 00:01:34,280
+Uwaga, liczymy.
+
+32
+00:01:34,280 --> 00:01:38,280
+1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+33
+00:01:38,280 --> 00:01:39,280
+Działa.
+
+34
+00:01:39,280 --> 00:01:41,280
+Wykrzykniki też zostały tutaj potraktowane.
+
+35
+00:01:41,280 --> 00:01:45,280
+Jeżeli miałbym spację w tym miejscu, no to niestety miałbym 10.
+
+36
+00:01:45,280 --> 00:01:48,280
+Ale myślę, że nie musimy się tym przejmować.
+
+37
+00:01:48,280 --> 00:01:52,280
+Raczej nie stawiamy spacji przed znakiem interpunkcyjnym.
+
+38
+00:01:52,280 --> 00:01:53,280
+To co?
+
+39
+00:01:53,280 --> 00:01:55,280
+Chodźcie do zadania drugiego.

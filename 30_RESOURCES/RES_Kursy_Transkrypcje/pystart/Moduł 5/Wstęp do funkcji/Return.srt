@@ -1,0 +1,483 @@
+1
+00:00:00,000 --> 00:00:06,020
+Pojawił nam się return. Wspomniałem o nim, że on zwraca nam wartość z funkcji.
+
+2
+00:00:06,100 --> 00:00:08,919
+To jest pierwsza rzecz, o której powiedziałem. Powiedziałem też drugą rzecz,
+
+3
+00:00:09,320 --> 00:00:13,500
+a mianowicie, że on może pojawić się gdzieś na końcu, może pojawić się gdzieś w trakcie.
+
+4
+00:00:13,980 --> 00:00:18,699
+Ale to, co jest bardzo ważne, to jest to, że kiedy my mamy już wynik i mówimy
+
+5
+00:00:18,699 --> 00:00:24,359
+dobra, mam funkcję, zwróć mi ten wynik, to w tym momencie ta funkcja przestaje działać.
+
+6
+00:00:24,359 --> 00:00:29,359
+Ona zrobiła już swoje. Jej istotą jest to, jej sensem istnienia jest to,
+
+7
+00:00:29,359 --> 00:00:33,079
+żeby móc użytkownikowi przekazać wynik działania.
+
+8
+00:00:33,619 --> 00:00:37,799
+Więc w momencie, w którym return nastąpi gdzieś wyżej, a później będą jeszcze jakieś linie kodu,
+
+9
+00:00:38,259 --> 00:00:41,560
+to one już nie mają sensu, no bo ta funkcja zwróciła wartość.
+
+10
+00:00:41,679 --> 00:00:44,799
+Na tym to polegało. Ona po to powstała, żeby zwrócić tę wartość,
+
+11
+00:00:44,859 --> 00:00:46,780
+więc po co ona ma dalej wykonywać jakieś linie?
+
+12
+00:00:47,679 --> 00:00:53,480
+Chyba, że ten return znalazłby się w jakimś ifie, albo znalazłby się w jakiejś pętli,
+
+13
+00:00:53,480 --> 00:00:57,560
+ale to też nie bardzo, bo jeżeli return znalazłby się w pętli,
+
+14
+00:00:57,560 --> 00:01:03,560
+to jak nastąpi pierwszy return, to od razu wyjdziemy z tej pętli, z tej funkcji w ogóle.
+
+15
+00:01:03,560 --> 00:01:10,000
+Bo return właśnie, skoro zwraca wartość, to on po pierwsze zwraca, po drugie zatrzymuje wykonanie funkcji.
+
+16
+00:01:10,000 --> 00:01:15,120
+No i właśnie, że funkcja za pomocą returna może tylko coś zwracać jeden raz.
+
+17
+00:01:15,120 --> 00:01:20,000
+Więc jeżeli tworzysz funkcję, która ma zwracać więcej wartości,
+
+18
+00:01:20,000 --> 00:01:23,560
+no to możesz zwracać na przykład listę, tuple, albo słownik.
+
+19
+00:01:23,560 --> 00:01:25,879
+Nie możesz zwracać kilka razy.
+
+20
+00:01:25,879 --> 00:01:26,620
+Na przykład w pętli nie można, za pomocą returnu, zwracać więcej wartości, bo to jest tylko jedna funkcja.
+
+21
+00:01:26,620 --> 00:01:27,560
+Więc jeżeli tworzysz funkcję, która ma zwracać więcej wartości, no to możesz zwracać listę, tuple, albo słownik.
+
+22
+00:01:27,560 --> 00:01:32,159
+Nie można za pomocą returnu zrobić zwracam, zwracam, zwracam, bo działa pętla.
+
+23
+00:01:32,159 --> 00:01:37,560
+Tylko można to zrobić raz. Pierwszy napotkanie returna zakończy nam działanie pętli.
+
+24
+00:01:37,560 --> 00:01:39,560
+No i przykład tego returna.
+
+25
+00:01:39,560 --> 00:01:42,240
+Zobacz, mamy dwie funkcje, polygWatt, polygWatt.
+
+26
+00:01:42,240 --> 00:01:45,719
+Oczywiście w twoim kodzie nie możesz mieć dwóch funkcji o tej samej nazwie.
+
+27
+00:01:45,719 --> 00:01:47,800
+Po prostu to nie zadziała.
+
+28
+00:01:47,800 --> 00:01:52,640
+Tak samo jak nie możesz mieć funkcji o nazwie takiej samej jak nazwa zmiennej, czy też odwrotnie.
+
+29
+00:01:52,640 --> 00:01:54,640
+Bo to nie zadziała.
+
+30
+00:01:54,640 --> 00:01:56,640
+Więc tutaj jeżeli chciałbyś,
+
+31
+00:01:56,640 --> 00:01:57,560
+jeżeli chcesz,
+
+32
+00:01:57,560 --> 00:02:02,560
+sprawdzić to wyżej i niżej taką samą funkcję, to polecam zmienić im nazwy.
+
+33
+00:02:02,560 --> 00:02:06,560
+I wtedy w pierwszym przypadku my sobie liczymy wartość brutto.
+
+34
+00:02:06,560 --> 00:02:10,560
+Licząc to jako brutto równa się netto razy jeden plus Watt.
+
+35
+00:02:10,560 --> 00:02:12,560
+No i w drugim jest dokładnie tak samo.
+
+36
+00:02:12,560 --> 00:02:17,560
+Mając wartość brutto, w tym przypadku po lewej stronie ja tylko go printuję.
+
+37
+00:02:17,560 --> 00:02:21,560
+Zakładam, że moja funkcja ma wyświetlić jakąś informację.
+
+38
+00:02:21,560 --> 00:02:25,560
+Natomiast w tym przypadku ja wykonam return brutto.
+
+39
+00:02:25,560 --> 00:02:27,560
+I to spowoduje, zobacz, że kiedy
+
+40
+00:02:27,560 --> 00:02:32,560
+będę chciał sobie przypisać wartość do zmiennej,
+
+41
+00:02:32,560 --> 00:02:34,560
+no to nie mogę tego zrobić.
+
+42
+00:02:34,560 --> 00:02:35,560
+Bo wykonam polycz VAT,
+
+43
+00:02:35,560 --> 00:02:37,560
+przypiszę to do zmiennej wartość
+
+44
+00:02:37,560 --> 00:02:39,560
+i wtedy jak wykonam print wartość,
+
+45
+00:02:39,560 --> 00:02:40,560
+pojawi mi się none.
+
+46
+00:02:40,560 --> 00:02:41,560
+Dlaczego none?
+
+47
+00:02:41,560 --> 00:02:43,560
+No bo ta funkcja nie miała returna.
+
+48
+00:02:43,560 --> 00:02:44,560
+Nic nie zwróciła.
+
+49
+00:02:44,560 --> 00:02:45,560
+Stąd jest none.
+
+50
+00:02:45,560 --> 00:02:48,560
+Ona po prostu wyświetli komunikat w konsoli.
+
+51
+00:02:48,560 --> 00:02:52,560
+Natomiast tutaj mamy sytuację, gdzie jest return.
+
+52
+00:02:52,560 --> 00:02:55,560
+Co powoduje, że mogę wykonać wartość równa się polycz VAT
+
+53
+00:02:55,560 --> 00:02:56,560
+i wyprintować wartość.
+
+54
+00:02:56,560 --> 00:02:59,560
+Mógłbym też niżej napisać od razu print
+
+55
+00:02:59,560 --> 00:03:02,560
+i w nawiasie napisać polycz VAT 100 023.
+
+56
+00:03:02,560 --> 00:03:04,560
+Więc dzięki temu, że używamy słowa return,
+
+57
+00:03:04,560 --> 00:03:07,560
+ta funkcja ma dużo więcej sensu.
+
+58
+00:03:07,560 --> 00:03:09,560
+Jeżeli będziemy używali tylko print,
+
+59
+00:03:09,560 --> 00:03:11,560
+to tak naprawdę w niektórych językach programowania
+
+60
+00:03:11,560 --> 00:03:13,560
+tego typu funkcje nazywane są procedurami.
+
+61
+00:03:13,560 --> 00:03:15,560
+Po prostu coś, co ma się zadziać,
+
+62
+00:03:15,560 --> 00:03:19,560
+ale nie mamy żadnego wyniku tego działania.
+
+63
+00:03:19,560 --> 00:03:21,560
+Tutaj mamy wynik, robimy return
+
+64
+00:03:21,560 --> 00:03:25,560
+i w 90% naszych funkcji ten return będzie się pojawiał.
+
+65
+00:03:25,560 --> 00:03:27,560
+I tutaj jeszcze jedna bardzo ważna rzecz.
+
+66
+00:03:27,560 --> 00:03:31,560
+Jeżeli tworzysz funkcję i w tej funkcji tworzysz jakąś zmienną,
+
+67
+00:03:31,560 --> 00:03:35,560
+to nie licz na to, że ta zmienna będzie dostępna na zewnątrz.
+
+68
+00:03:35,560 --> 00:03:40,560
+To jest tak, że kiedy tworzysz sobie wewnątrz funkcję jakąś zmienną,
+
+69
+00:03:40,560 --> 00:03:43,560
+to nie masz do niej dostępu na zewnątrz.
+
+70
+00:03:43,560 --> 00:03:45,560
+Natomiast odwrotnie masz.
+
+71
+00:03:45,560 --> 00:03:48,560
+Czyli jeżeli tworzysz sobie from math import p,
+
+72
+00:03:48,560 --> 00:03:54,560
+to nie ma problemu, żeby odwołać się później do tej zmiennej wewnątrz funkcji.
+
+73
+00:03:54,560 --> 00:03:59,560
+Ja jestem zwolennikiem, że lepiej jest tego typu rzeczy przekazywać przez parametry,
+
+74
+00:03:59,560 --> 00:04:02,560
+tworzyć argument od danej wartości.
+
+75
+00:04:02,560 --> 00:04:04,560
+Natomiast jeżeli jest taka potrzeba,
+
+76
+00:04:04,560 --> 00:04:06,560
+gdzie robimy na przykład from math import p
+
+77
+00:04:06,560 --> 00:04:09,560
+i wiemy, że p to jest taka wartość, która nie będzie się zmieniała,
+
+78
+00:04:09,560 --> 00:04:10,560
+to też jest bardzo ważne,
+
+79
+00:04:10,560 --> 00:04:14,560
+to wtedy jak najbardziej można tego po prostu nie wymieniać tutaj.
+
+80
+00:04:14,560 --> 00:04:18,560
+Bo te wartości, które przekazujemy sobie z zewnątrz,
+
+81
+00:04:18,560 --> 00:04:21,560
+ich też nie możemy zmodyfikować wewnątrz funkcji.
+
+82
+00:04:21,560 --> 00:04:24,560
+To zdecydowanie nie powinno działać,
+
+83
+00:04:24,560 --> 00:04:26,560
+nie jest to dobra praktyka.
+
+84
+00:04:26,560 --> 00:04:28,560
+Nie pamiętam, czy to zadziała, czy nie.
+
+85
+00:04:28,560 --> 00:04:30,560
+Po prostu tak nigdy nie robię,
+
+86
+00:04:30,560 --> 00:04:32,560
+że nie tworzę sobie tutaj na zewnątrz zmiennej result,
+
+87
+00:04:32,560 --> 00:04:34,560
+w środku nie robię result, równa się tutaj
+
+88
+00:04:34,560 --> 00:04:36,560
+i potem nie liczę na to, że ta zmienna mi się zmieni.
+
+89
+00:04:36,560 --> 00:04:39,560
+Jest taka zasada, ogólnie rzecz biorąc,
+
+90
+00:04:39,560 --> 00:04:42,560
+z programowania z wykorzystaniem funkcji,
+
+91
+00:04:42,560 --> 00:04:46,560
+że funkcja, która jest uruchamiana z określonymi argumentami,
+
+92
+00:04:46,560 --> 00:04:49,560
+powinna zawsze zwracać tą samą wartość.
+
+93
+00:04:49,560 --> 00:04:51,560
+Czyli unikamy tak zwanych side-efektów,
+
+94
+00:04:51,560 --> 00:04:53,560
+takich skutków ubocznych.
+
+95
+00:04:53,560 --> 00:04:55,560
+Staramy się uruchomić funkcję 2,2
+
+96
+00:04:55,560 --> 00:04:57,560
+i zawsze ma mieć wbity wynik 4.
+
+97
+00:04:57,560 --> 00:04:59,560
+6,6 zawsze wynik 12.
+
+98
+00:04:59,560 --> 00:05:01,560
+Nigdy nie raz 12, raz 36.
+
+99
+00:05:01,560 --> 00:05:03,560
+Nie ma takiej sytuacji.
+
+100
+00:05:03,560 --> 00:05:06,560
+Dlatego też unikamy takiego przypadku,
+
+101
+00:05:06,560 --> 00:05:08,560
+gdzie wartości z zewnątrz,
+
+102
+00:05:08,560 --> 00:05:11,560
+które mogą mieć różne wartości,
+
+103
+00:05:11,560 --> 00:05:14,560
+różne zmiany, różne dane,
+
+104
+00:05:14,560 --> 00:05:16,560
+nie powinny wpływać na działanie naszych funkcji.
+
+105
+00:05:16,560 --> 00:05:18,560
+Więc zawsze, kiedy tworzymy sobie funkcję,
+
+106
+00:05:18,560 --> 00:05:20,560
+to dbajmy o to, żeby te wartości,
+
+107
+00:05:20,560 --> 00:05:22,560
+które pochodzą z zewnątrz, się nie zmieniały.
+
+108
+00:05:22,560 --> 00:05:24,560
+Żeby zawsze były stałe.
+
+109
+00:05:24,560 --> 00:05:26,560
+Żeby ta zasada, o której mówiłem przed momentem,
+
+110
+00:05:26,560 --> 00:05:28,560
+zawsze miała zastosowanie.
+
+111
+00:05:28,560 --> 00:05:30,560
+Więc raz jeszcze powtórzę.
+
+112
+00:05:30,560 --> 00:05:33,560
+Jeżeli na zewnątrz coś zadeklarujesz poza funkcją,
+
+113
+00:05:33,560 --> 00:05:34,560
+jak pi,
+
+114
+00:05:34,560 --> 00:05:37,560
+to możesz odwołać się do tego wewnątrz funkcji.
+
+115
+00:05:37,560 --> 00:05:40,560
+Natomiast jeżeli w funkcji stworzysz jakąś zmienną,
+
+116
+00:05:40,560 --> 00:05:44,560
+to nie spodziewaj się, że ta zmienna będzie dostępna na zewnątrz,
+
+117
+00:05:44,560 --> 00:05:46,560
+bo po prostu nie będzie.
+
+118
+00:05:46,560 --> 00:05:48,560
+Tutaj PyCharm słusznie sugeruje,
+
+119
+00:05:48,560 --> 00:05:50,560
+że mógłbym nie tworzyć tej zmiennej,
+
+120
+00:05:50,560 --> 00:05:53,560
+ale potrzebowałem zmiennej, żeby pokazać Ci to
+
+121
+00:05:53,560 --> 00:05:55,560
+i powiedzieć o tej zasadzie.

@@ -1,0 +1,235 @@
+1
+00:00:00,000 --> 00:00:02,120
+No to zaczynamy rozwiązywanie pracy domowej.
+
+2
+00:00:02,220 --> 00:00:04,139
+Na pierwszy ogień idzie zadanie pierwsze,
+
+3
+00:00:04,299 --> 00:00:05,780
+gdzie mamy napisać program,
+
+4
+00:00:05,980 --> 00:00:07,780
+który wyświetli bieżącą datę i godzinę.
+
+5
+00:00:08,359 --> 00:00:09,820
+Jeżeli chodzi o datę i godzinę,
+
+6
+00:00:09,919 --> 00:00:12,780
+no to from datetime import datetime.
+
+7
+00:00:14,519 --> 00:00:16,500
+Następnie potrzebujemy mieć takie coś,
+
+8
+00:00:16,600 --> 00:00:17,440
+co będzie nam mówiło,
+
+9
+00:00:17,580 --> 00:00:19,199
+jaka jest teraz data i godzina,
+
+10
+00:00:19,820 --> 00:00:22,580
+co możemy osiągnąć za pomocą datetime now.
+
+11
+00:00:23,000 --> 00:00:23,699
+I teraz zobacz,
+
+12
+00:00:23,839 --> 00:00:26,740
+jeżeli ja sobie zrobię taką zmienną jak time,
+
+13
+00:00:26,739 --> 00:00:30,399
+time równa się i przypiszę sobie do niej datetime now,
+
+14
+00:00:31,019 --> 00:00:32,500
+czy też może time to zła nazwa,
+
+15
+00:00:32,859 --> 00:00:34,259
+time now niech będzie, o tak.
+
+16
+00:00:35,799 --> 00:00:39,299
+No to będę miał obiekt datetime.
+
+17
+00:00:39,739 --> 00:00:43,659
+A żeby teraz wyświetlić z tego obiektu konkretną datę,
+
+18
+00:00:43,700 --> 00:00:45,700
+no to muszę w konkretnym formacie,
+
+19
+00:00:46,259 --> 00:00:48,799
+to muszę zapisać time now, kropka
+
+20
+00:00:48,799 --> 00:00:51,840
+i użyć string format time.
+
+21
+00:00:52,280 --> 00:00:54,519
+I tak naprawdę to, co wpiszemy tutaj do środka,
+
+22
+00:00:54,519 --> 00:00:55,799
+będzie rzutowało na to,
+
+23
+00:00:55,799 --> 00:00:59,079
+w jakim formacie ta data powinna nam się wyświetlać.
+
+24
+00:00:59,159 --> 00:01:01,059
+I tak, jeżeli chcemy mieć najpierw dni,
+
+25
+00:01:01,459 --> 00:01:02,899
+to jest to procent d.
+
+26
+00:01:03,339 --> 00:01:05,359
+Następnie robimy ukośnik,
+
+27
+00:01:05,620 --> 00:01:08,079
+a oczywiście to musimy przekazywać jako string.
+
+28
+00:01:10,640 --> 00:01:13,159
+Czyli dni, później są miesiące.
+
+29
+00:01:13,579 --> 00:01:16,679
+Miesiące też chcielibyśmy dostać jako 0,1, 0,12,
+
+30
+00:01:17,179 --> 00:01:18,799
+czyli będziemy używali procent m.
+
+31
+00:01:20,420 --> 00:01:21,239
+No i rok.
+
+32
+00:01:21,239 --> 00:01:25,159
+Jeżeli chodzi o rok wraz z jakby na czterech cyfrach,
+
+33
+00:01:25,159 --> 00:01:27,159
+czyli dwudziestką z przodu w naszym przypadku,
+
+34
+00:01:27,159 --> 00:01:29,159
+to robimy procent i wielkie y,
+
+35
+00:01:29,159 --> 00:01:34,159
+gdyż małe y to jest bez wieku, można powiedzieć.
+
+36
+00:01:34,159 --> 00:01:36,159
+Spacja i lecimy z czasem,
+
+37
+00:01:36,159 --> 00:01:39,159
+czyli interesują nas godziny, minuty i sekundy.
+
+38
+00:01:39,159 --> 00:01:41,159
+Jeżeli chcemy godziny w formacie 24-godzinnym,
+
+39
+00:01:41,159 --> 00:01:43,159
+to robimy procent h.
+
+40
+00:01:43,159 --> 00:01:45,159
+Następnie robimy dwukropek.
+
+41
+00:01:45,159 --> 00:01:47,159
+Dalej będą nas interesowały minuty,
+
+42
+00:01:47,159 --> 00:01:49,159
+to jest wielkie m.
+
+43
+00:01:49,159 --> 00:01:52,159
+No i sekundy, czyli wielkie s.
+
+44
+00:01:53,159 --> 00:01:54,159
+Skąd to wiem?
+
+45
+00:01:54,159 --> 00:01:55,159
+Jest taka strona w dół,
+
+46
+00:01:55,159 --> 00:01:57,159
+że w tym miejscu,
+
+47
+00:01:57,159 --> 00:01:59,159
+gdzie jest dokumentacja,
+
+48
+00:01:59,159 --> 00:02:01,159
+która znajduje się pod,
+
+49
+00:02:01,159 --> 00:02:04,159
+jak wpiszecie na pewno strftime, strptime, format codes,
+
+50
+00:02:04,159 --> 00:02:06,159
+to tu dokładnie wszystko znajdziecie
+
+51
+00:02:06,159 --> 00:02:07,159
+i właśnie w ten sposób,
+
+52
+00:02:07,159 --> 00:02:08,159
+używając tych liter,
+
+53
+00:02:08,159 --> 00:02:10,159
+uda się skonstruować takie wyrażenie.
+
+54
+00:02:10,159 --> 00:02:12,159
+No i właśnie budując takie wyrażenie,
+
+55
+00:02:12,159 --> 00:02:15,159
+również otrzymamy konkretną datę i godzinę.
+
+56
+00:02:15,159 --> 00:02:17,159
+Oczywiście, jeżeli chcemy ją wyświetlić,
+
+57
+00:02:17,159 --> 00:02:19,159
+wypadałoby dorzucić jeszcze instrukcję print.
+
+58
+00:02:19,159 --> 00:02:20,159
+To co?
+
+59
+00:02:20,159 --> 00:02:22,159
+Idziemy do zadania numer 2.

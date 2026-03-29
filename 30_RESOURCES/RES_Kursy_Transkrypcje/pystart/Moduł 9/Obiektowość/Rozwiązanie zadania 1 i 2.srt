@@ -1,0 +1,167 @@
+1
+00:00:00,000 --> 00:00:02,359
+W tych zadaniach będzie troszkę więcej pisania,
+
+2
+00:00:02,500 --> 00:00:06,200
+więc też żeby nie robić takich pisania i przeskakiwania,
+
+3
+00:00:06,320 --> 00:00:09,900
+pozwoliłem sobie już przygotować ten kod wcześniej.
+
+4
+00:00:10,519 --> 00:00:14,220
+Więc zobacz, to co zrobiłem, to napisałem sobie klasę o nazwie Circle.
+
+5
+00:00:14,880 --> 00:00:20,640
+Następnie wykonałem def init i odebrałem od użytkownika radius, czyli promień.
+
+6
+00:00:21,699 --> 00:00:24,339
+Założyłem sobie, że ten promień będzie integerem
+
+7
+00:00:24,339 --> 00:00:32,640
+i jedyne co robię w tym moim initie, to przypisuję ten radius do tej mojej właściwości nowoutworzonej.
+
+8
+00:00:32,719 --> 00:00:34,980
+No i teraz potrzebuję mieć dwie metody.
+
+9
+00:00:35,340 --> 00:00:40,960
+Metoda pierwsza to jest getCircumference, która dotyczy policzenia obwodu.
+
+10
+00:00:41,500 --> 00:00:45,399
+Natomiast druga metoda, getField, dotyczy policzenia pola.
+
+11
+00:00:46,000 --> 00:00:49,439
+Metoda getCircumference, ona będzie mi zwracała floata.
+
+12
+00:00:49,920 --> 00:00:53,679
+Ja potrzebuję odwołać się znowu do tej zmiennej radius.
+
+13
+00:00:53,679 --> 00:00:56,780
+Czyli jeżeli potrzebuję dostać się do właściwości,
+
+14
+00:00:57,320 --> 00:01:01,939
+to zaczynam sobie zawsze od wykonania self.radius,
+
+15
+00:01:02,280 --> 00:01:07,700
+bo obwód koła to jest 2pr, czyli razy 2 i razy pi.
+
+16
+00:01:08,159 --> 00:01:11,319
+I to powinno zwrócić mi obwód koła.
+
+17
+00:01:11,939 --> 00:01:15,000
+Natomiast jeżeli będę chciał policzyć pole koła,
+
+18
+00:01:15,260 --> 00:01:21,280
+no to muszę wykonać self.radius do kwadratu, no bo pr kwadrat, razy pi.
+
+19
+00:01:21,280 --> 00:01:23,280
+I w ten sposób dostanę pole koła.
+
+20
+00:01:23,680 --> 00:01:27,680
+Czyli pole i obwód będą policzone.
+
+21
+00:01:28,260 --> 00:01:31,420
+Kolejna rzecz, którą zrobiłem, to przygotowałem sobie też testy.
+
+22
+00:01:31,700 --> 00:01:35,080
+No i w ramach testów, przez to, że pi ma wartość 3.14,
+
+23
+00:01:36,200 --> 00:01:42,060
+no to z większą dokładnością, no to zrobiłem sobie takie przybliżenie małe.
+
+24
+00:01:42,580 --> 00:01:46,219
+Czyli circle to jest nowe koło z wartością 5.
+
+25
+00:01:46,780 --> 00:01:49,640
+Field to jest po prostu wynik getField.
+
+26
+00:01:50,360 --> 00:01:53,640
+Simulacjumference to jest wynik po prostu circle getCircumference.
+
+27
+00:01:53,680 --> 00:02:00,880
+Natomiast żeby policzyć to moje pole i żeby sprawdzić, czy testy zadziałały OK,
+
+28
+00:02:01,240 --> 00:02:09,439
+sprawdziłem, czy jest to mniejsze niż 78,5 i większe, mniejsze niż 78,6 i większe niż 78,5.
+
+29
+00:02:09,819 --> 00:02:12,800
+I z racji tego, że jest, no to wszystko jest OK.
+
+30
+00:02:13,560 --> 00:02:15,340
+I to samo zrobiłem też z obwodem.
+
+31
+00:02:15,520 --> 00:02:19,560
+Czyli porównałem sobie obwód względem tych dwóch wartości.
+
+32
+00:02:20,140 --> 00:02:23,480
+No i w podpunkcie drugim była prośba, żebyśmy odebrali
+
+33
+00:02:23,479 --> 00:02:28,579
+od użytkownika informację o tym, jaki jest promień koła,
+
+34
+00:02:29,000 --> 00:02:33,539
+a następnie wyświetliliśmy mu informację o obwodzie oraz o polu.
+
+35
+00:02:33,939 --> 00:02:37,359
+Stąd też napisałem sobie if name równa się main,
+
+36
+00:02:37,819 --> 00:02:43,879
+czyli sprawdziłem, czy mój kod, czy moja nazwa modułu to jest main.
+
+37
+00:02:44,319 --> 00:02:47,939
+I skoro jest, no to odebrałem od użytkownika promień.
+
+38
+00:02:48,379 --> 00:02:52,739
+Następnie stworzyłem sobie koło o tym konkretnym promieniu przekazanym przez użytkownika.
+
+39
+00:02:52,740 --> 00:02:57,879
+A skoro promień jest już znany, to wyświetliłem pole koła wynosi get field,
+
+40
+00:02:58,320 --> 00:03:00,740
+no i obwód koła wynosi get circumference.
+
+41
+00:03:01,200 --> 00:03:05,640
+No i dzięki temu zadanie z kołem, właściwie to dwa podpunkty zadania z kołem,
+
+42
+00:03:06,040 --> 00:03:07,600
+zostały zrealizowane.

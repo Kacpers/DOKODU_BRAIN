@@ -1,0 +1,251 @@
+1
+00:00:00,560 --> 00:00:05,379
+Dzisiaj poznasz sposób na to, żeby to zadanie zhakować po prostu w jednej linijce,
+
+2
+00:00:05,459 --> 00:00:12,580
+natomiast jeżeli mamy posłużyć się ifami, no to trzeba będzie po prostu sobie te liczby pobrać trzy,
+
+3
+00:00:13,240 --> 00:00:28,580
+czyli a równa się int input liczba 1, b liczba 2 i c liczba 3.
+
+4
+00:00:28,579 --> 00:00:34,140
+Zacznijmy od tego, że musimy mieć jeszcze wartość maksymalną, niech to będzie wartość c
+
+5
+00:00:34,140 --> 00:00:36,420
+i wartość minimalną, niech to będzie wartość c.
+
+6
+00:00:36,420 --> 00:00:42,679
+I teraz zaczniemy sobie od tego, że sprawdzimy, czy nasza wartość a jest większa od wartości b.
+
+7
+00:00:43,039 --> 00:00:49,579
+Jeżeli mamy taką sytuację, no to wówczas możemy sprawdzić, czy nasza wartość a jest też większa od wartości c,
+
+8
+00:00:50,280 --> 00:00:52,560
+czyli a jest większa od c.
+
+9
+00:00:53,560 --> 00:00:57,420
+Jeżeli jest taka sytuacja, no to wówczas wartość nasza maksymalna,
+
+10
+00:00:57,420 --> 00:00:59,020
+maksymalna to jest wartość a.
+
+11
+00:01:02,020 --> 00:01:09,560
+Jeżeli natomiast a nie jest większa od c, no to wówczas nasza wartość maksymalna to jest wartość c.
+
+12
+00:01:15,320 --> 00:01:21,460
+Dlaczego? No bo skoro a jest większa od b, natomiast a nie jest większa od c,
+
+13
+00:01:21,620 --> 00:01:26,000
+no to znaczy, że jest, naszą wartością maksymalną będzie c.
+
+14
+00:01:26,000 --> 00:01:27,000
+Co tutaj?
+
+15
+00:01:27,420 --> 00:01:31,560
+Tutaj tu robimy sobie elsa, no bo a nie było większe od b,
+
+16
+00:01:31,980 --> 00:01:38,359
+no i tu musimy sprawdzić, czy nasze b jest większe od naszej wartości c.
+
+17
+00:01:39,019 --> 00:01:43,640
+Jeżeli tak jest, ja to sobie wszystko rozrysowałem, więc idę tak naprawdę według tego, co sobie rozrysowałem.
+
+18
+00:01:44,159 --> 00:01:50,840
+Jeżeli nasze b jest większe od c, no to wtedy powinniśmy przyjąć, że nasze maksymum to jest wartość b.
+
+19
+00:01:50,840 --> 00:01:57,200
+W przeciwnym wypadku nasze maksymum to jest wartość c.
+
+20
+00:01:57,420 --> 00:02:03,260
+I dzięki temu tylko zmienna max tutaj nie powinna być używana.
+
+21
+00:02:03,359 --> 00:02:07,040
+Mamy funkcję, która nazywa się max, więc możemy tę wartość zmienić.
+
+22
+00:02:07,200 --> 00:02:08,379
+Jak ją zmienić najszybciej?
+
+23
+00:02:08,740 --> 00:02:14,199
+W PyCharmie możesz kliknąć na refactor, rename i wtedy zmienić to na max value.
+
+24
+00:02:14,819 --> 00:02:18,500
+Kiedy klikniesz na refactor, on wszystkie te nazwy zmieni.
+
+25
+00:02:18,800 --> 00:02:20,259
+Tak samo można zrobić z minimum.
+
+26
+00:02:20,259 --> 00:02:26,599
+To nie zadziała w ten sam sposób jak w przypadku, gdybyś użył metody znajdź i zamień.
+
+27
+00:02:26,599 --> 00:02:30,400
+Z tego względu, że znajdź i zamień zmieniłoby też w stringach gdzieś wyrażenia,
+
+28
+00:02:30,719 --> 00:02:35,060
+a tu on tylko sprawdza, w którym miejscu ma tę wartość jakby zamienić.
+
+29
+00:02:35,539 --> 00:02:37,240
+No i print możemy sobie zweryfikować.
+
+30
+00:02:37,359 --> 00:02:46,459
+Print największą wartością jest, no i tutaj wypowiadałoby sobie napisać max value.
+
+31
+00:02:48,299 --> 00:02:51,759
+Dorzucamy sobie f, no i możemy sprawdzić.
+
+32
+00:02:51,759 --> 00:02:55,259
+Python 11, 3 liczby.
+
+33
+00:02:55,919 --> 00:02:56,299
+3.
+
+34
+00:02:56,599 --> 00:02:57,239
+5.
+
+35
+00:02:57,560 --> 00:02:58,099
+9.
+
+36
+00:02:58,359 --> 00:03:00,280
+Największą wartością jest 9.
+
+37
+00:03:00,699 --> 00:03:01,299
+Zadziałało.
+
+38
+00:03:01,659 --> 00:03:06,379
+I teraz cały ten algorytm musimy odwrócić, sprawdzając tak samo wartości minimalne.
+
+39
+00:03:07,060 --> 00:03:11,859
+Czyli jeżeli a jest mniejsze od b, dwukropek,
+
+40
+00:03:12,659 --> 00:03:15,199
+if a jest mniejsze od c,
+
+41
+00:03:15,199 --> 00:03:22,039
+no to wtedy min value równa się a.
+
+42
+00:03:23,579 --> 00:03:25,199
+W przeciwnym wypadku,
+
+43
+00:03:25,199 --> 00:03:28,060
+min value równa się c.
+
+44
+00:03:29,359 --> 00:03:30,119
+Else,
+
+45
+00:03:31,139 --> 00:03:35,539
+if a, to oczywiście zakłada, że wartości są odwrotne, nie?
+
+46
+00:03:36,259 --> 00:03:39,759
+Mniejsze od c, dwukropek, min value,
+
+47
+00:03:40,719 --> 00:03:44,659
+równa się, czemu a, to powinno być b.
+
+48
+00:03:45,280 --> 00:03:48,859
+b jest mniejsze od c, to wtedy min value to jest b.
+
+49
+00:03:50,539 --> 00:03:53,859
+Else, min value to jest c.
+
+50
+00:03:54,579 --> 00:03:55,039
+Jeżeli nie, to jest b.
+
+51
+00:03:55,039 --> 00:03:56,120
+Jeżeli nic nie skiepściłem,
+
+52
+00:03:57,139 --> 00:03:58,699
+to możemy sobie sprawdzić też.
+
+53
+00:03:58,780 --> 00:04:00,479
+Najmniejszą wartością jest
+
+54
+00:04:00,479 --> 00:04:03,280
+min value.
+
+55
+00:04:05,280 --> 00:04:07,199
+I raz jeszcze możemy sobie to uruchomić.
+
+56
+00:04:07,379 --> 00:04:10,120
+3, 5, 9, 8 może być.
+
+57
+00:04:10,560 --> 00:04:12,039
+Najmniejszą wartością jest 3,
+
+58
+00:04:12,139 --> 00:04:13,599
+największą wartością jest 8.
+
+59
+00:04:14,500 --> 00:04:15,919
+Bo było 3, 5, 8.
+
+60
+00:04:16,680 --> 00:04:17,279
+Zadziałało.
+
+61
+00:04:17,719 --> 00:04:19,079
+Bardzo dziękuję za pracę domową
+
+62
+00:04:19,079 --> 00:04:21,219
+i zapraszam do regularnych ćwiczeń.
+
+63
+00:04:21,560 --> 00:04:22,060
+Do zobaczenia.

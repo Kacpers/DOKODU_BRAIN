@@ -1,0 +1,455 @@
+1
+00:00:00,000 --> 00:00:04,879
+W tym zadaniu odbieramy od użytkownika liczbę.
+
+2
+00:00:05,060 --> 00:00:06,660
+Znowu będzie to liczba całkowita.
+
+3
+00:00:07,140 --> 00:00:12,099
+No i będziemy chcieli odpowiedzieć na pytanie, jaka to jest godzina i ile ta godzina ma minut.
+
+4
+00:00:12,640 --> 00:00:15,460
+Trzeba będzie sobie po prostu podzielić i trochę podejmować.
+
+5
+00:00:15,780 --> 00:00:16,600
+Zacznijmy od początku.
+
+6
+00:00:17,300 --> 00:00:20,359
+Znowu możemy zrobić value jako integer input.
+
+7
+00:00:21,300 --> 00:00:24,480
+Podaj czas wyrażony w sekundach.
+
+8
+00:00:25,920 --> 00:00:29,960
+Wówczas będzie trzeba najpierw odpowiedzieć na pytanie, która to będzie godzina.
+
+9
+00:00:30,480 --> 00:00:33,479
+Więc możemy sobie zatworzyć zmienną hour.
+
+10
+00:00:35,460 --> 00:00:36,600
+Równa się.
+
+11
+00:00:37,100 --> 00:00:39,179
+No i nasze value trzeba będzie podzielić.
+
+12
+00:00:39,759 --> 00:00:44,200
+Jeżeli to jest czas wyrażony w sekundach, to każda godzina ma 60 minut.
+
+13
+00:00:45,640 --> 00:00:49,200
+A każda minuta ma 60 sekund.
+
+14
+00:00:50,460 --> 00:00:55,560
+Więc wydaje mi się, że musimy tak naprawdę podzielić to przez wartość.
+
+15
+00:00:56,200 --> 00:00:59,600
+60 razy 60, czyli 3600.
+
+16
+00:01:00,000 --> 00:01:02,219
+Czyli mamy czas wyrażony przez print.
+
+17
+00:01:02,219 --> 00:01:03,000
+Print hour.
+
+18
+00:01:03,000 --> 00:01:05,000
+Zobaczmy, co się wydarzyło.
+
+19
+00:01:05,959 --> 00:01:06,459
+Python.
+
+20
+00:01:07,760 --> 00:01:08,260
+Jeszcze raz.
+
+21
+00:01:08,260 --> 00:01:08,760
+Print hour.
+
+22
+00:01:10,719 --> 00:01:12,079
+I tu robimy Python.
+
+23
+00:01:12,859 --> 00:01:14,180
+5 czas w sekundach.
+
+24
+00:01:14,719 --> 00:01:16,280
+No i podajmy sobie tę wartość z góry.
+
+25
+00:01:16,280 --> 00:01:18,599
+23400.
+
+26
+00:01:19,519 --> 00:01:21,280
+6 i pół się pokazało.
+
+27
+00:01:21,560 --> 00:01:22,060
+OK.
+
+28
+00:01:22,319 --> 00:01:27,099
+To znaczy, że on nam stąd pobrał informację, że to jest 6 godzin.
+
+29
+00:01:27,439 --> 00:01:28,120
+W porządku.
+
+30
+00:01:28,420 --> 00:01:29,539
+Nas nie interesuje to pół.
+
+31
+00:01:29,540 --> 00:01:30,240
+Tak naprawdę.
+
+32
+00:01:30,600 --> 00:01:32,580
+Chociaż moglibyśmy też je wykorzystać.
+
+33
+00:01:32,640 --> 00:01:34,219
+Ale o tym porozmawiamy sobie za chwilę.
+
+34
+00:01:34,700 --> 00:01:38,520
+Żeby pobrać sobie szóstą, musimy po prostu pobrać część całkowitą.
+
+35
+00:01:39,020 --> 00:01:40,560
+Tu można było trochę pokombinować.
+
+36
+00:01:40,700 --> 00:01:43,880
+Natomiast ja chciałem, żebyśmy operowali na tym, co wiemy.
+
+37
+00:01:44,320 --> 00:01:47,000
+Więc można skorzystać z podwójnego dzielenia.
+
+38
+00:01:47,400 --> 00:01:50,840
+I zobacz, jeżeli raz jeszcze podasz tę wartość, to dostaniesz samą szóstkę.
+
+39
+00:01:51,420 --> 00:01:51,580
+OK.
+
+40
+00:01:52,240 --> 00:01:54,200
+No i teraz pytanie, co zrobić z tą resztą.
+
+41
+00:01:54,680 --> 00:01:55,320
+No bo tam było.
+
+42
+00:01:55,820 --> 00:01:57,520
+Mamy jakąś resztę z tego dzielenia.
+
+43
+00:01:57,520 --> 00:01:59,440
+Warto byłoby ją sobie pobrać.
+
+44
+00:01:59,540 --> 00:02:02,900
+No i ta reszta powinna nam się z kolei dzielić przez 60.
+
+45
+00:02:03,200 --> 00:02:04,360
+No bo to będzie ilość minut.
+
+46
+00:02:04,800 --> 00:02:05,500
+Sprawdźmy to.
+
+47
+00:02:05,980 --> 00:02:06,700
+Czyli minut.
+
+48
+00:02:06,800 --> 00:02:07,320
+Minuts.
+
+49
+00:02:08,099 --> 00:02:10,240
+Równa się value.
+
+50
+00:02:10,780 --> 00:02:12,620
+Modulo 3600.
+
+51
+00:02:13,860 --> 00:02:16,219
+I zobaczmy, co się nam w tym momencie pokaże.
+
+52
+00:02:16,360 --> 00:02:17,300
+Print minutes.
+
+53
+00:02:19,120 --> 00:02:20,120
+Strzała do góry.
+
+54
+00:02:20,200 --> 00:02:21,500
+2, 3, 4, 0, 0.
+
+55
+00:02:21,980 --> 00:02:23,400
+No i mam 1800.
+
+56
+00:02:23,400 --> 00:02:26,759
+To 1800 to jest wartość, która dzieli się przez 60.
+
+57
+00:02:27,200 --> 00:02:28,400
+No bo ona znowu jest w sekundach.
+
+58
+00:02:29,539 --> 00:02:33,359
+Jeżeli sobie to minutes podzielimy przez 60,
+
+59
+00:02:35,759 --> 00:02:36,739
+no to dostaniemy
+
+60
+00:02:39,299 --> 00:02:40,340
+szóstą 30.
+
+61
+00:02:40,939 --> 00:02:41,719
+Ładnie, co?
+
+62
+00:02:42,060 --> 00:02:47,699
+I teraz wystarczy tylko i wyłącznie wyświetlić te dwie wartości obok siebie w takiej postaci.
+
+63
+00:02:48,139 --> 00:02:53,759
+I tu trochę trzeba będzie pokombinować, bo jednak ten print z f-ką trzeba odrobinę znać.
+
+64
+00:02:54,139 --> 00:02:56,459
+Więc żeby to wyświetlić, ja sobie zrobię tak.
+
+65
+00:02:56,579 --> 00:02:57,259
+Print.
+
+66
+00:02:59,539 --> 00:03:00,659
+I to jest najpierw hour.
+
+67
+00:03:01,060 --> 00:03:02,599
+No bo to jest najpierw godzina.
+
+68
+00:03:03,340 --> 00:03:04,699
+Następnie dwukropek.
+
+69
+00:03:05,759 --> 00:03:07,780
+I ilość sekund.
+
+70
+00:03:08,159 --> 00:03:15,680
+Więc żeby wyświetlić ilość sekund, muszę napisać tę wartość, ten minut, muszę napisać tę wartość minutes.
+
+71
+00:03:17,060 --> 00:03:17,379
+OK.
+
+72
+00:03:17,719 --> 00:03:21,099
+I następnie napisać dwukropek, kropka 0f.
+
+73
+00:03:21,739 --> 00:03:26,659
+Gdyż w ten sposób właśnie on mi wyświetli tę wartość minutes jako 0.
+
+74
+00:03:26,659 --> 00:03:27,699
+Czego brakuje?
+
+75
+00:03:27,759 --> 00:03:28,620
+Brakuje apostrofa.
+
+76
+00:03:28,919 --> 00:03:29,519
+Dorzucam sobie.
+
+77
+00:03:29,539 --> 00:03:30,379
+Apostrof.
+
+78
+00:03:31,739 --> 00:03:32,659
+Strzała do góry.
+
+79
+00:03:33,239 --> 00:03:33,819
+Enter.
+
+80
+00:03:34,280 --> 00:03:34,859
+Raz jeszcze.
+
+81
+00:03:34,859 --> 00:03:36,039
+2, 3, 400.
+
+82
+00:03:37,219 --> 00:03:37,659
+I mam.
+
+83
+00:03:37,759 --> 00:03:39,060
+Ojej, coś zrobiłem nie tak.
+
+84
+00:03:40,219 --> 00:03:41,959
+Minutes, minutes, minutes, minutes.
+
+85
+00:03:41,959 --> 00:03:43,879
+Ach, muszę to jeszcze podzielić przez 60.
+
+86
+00:03:45,859 --> 00:03:46,579
+Oczywiście.
+
+87
+00:03:48,079 --> 00:03:49,359
+2, 3, 4, 0, 0.
+
+88
+00:03:49,579 --> 00:03:51,780
+I mam 6.30.
+
+89
+00:03:52,419 --> 00:03:58,199
+A co jeżeli chciałbym zawsze mieć 0 z przodu, żeby była 0, 6, 30 albo 0, 6, 0, 5.
+
+90
+00:03:58,719 --> 00:03:59,219
+Zobacz.
+
+91
+00:03:59,539 --> 00:04:02,539
+Wystarczy dopiszesz 0, 2.
+
+92
+00:04:03,079 --> 00:04:05,919
+I będziesz chciał mieć 2 miejsca z przodu.
+
+93
+00:04:06,620 --> 00:04:09,259
+W tym momencie to będzie dotyczyło tylko i wyłącznie minut.
+
+94
+00:04:11,000 --> 00:04:13,500
+Ale trzeba byłoby jakąś wartość mniejszą podać.
+
+95
+00:04:15,019 --> 00:04:15,719
+O, zobacz.
+
+96
+00:04:15,979 --> 00:04:16,980
+Tu już przesadziłem.
+
+97
+00:04:16,980 --> 00:04:18,379
+Jest minut po północy.
+
+98
+00:04:18,800 --> 00:04:21,620
+Ale jeżeli chcemy to samo przy godzinach, to można zrobić dokładnie to samo.
+
+99
+00:04:22,159 --> 00:04:24,439
+Dwukropek 0f, 0, 2f.
+
+100
+00:04:26,159 --> 00:04:27,139
+Zróbmy teraz jeszcze.
+
+101
+00:04:27,139 --> 00:04:30,000
+O, oj.
+
+102
+00:04:31,879 --> 00:04:33,419
+Dwukropek 0, 2f.
+
+103
+00:04:34,439 --> 00:04:35,680
+Kropka 0f.
+
+104
+00:04:35,819 --> 00:04:36,759
+O, tak powinno być.
+
+105
+00:04:39,939 --> 00:04:41,159
+O, jest.
+
+106
+00:04:41,360 --> 00:04:42,279
+0, 0, 38.
+
+107
+00:04:42,719 --> 00:04:42,779
+Nie?
+
+108
+00:04:43,240 --> 00:04:49,560
+Czyli można w ten sposób też jakby dokładać te zera i spowodować, żeby zawsze wartość była na dwóch miejscach po przecinku.
+
+109
+00:04:49,560 --> 00:04:54,919
+Czyli jakbyśmy sobie wzięli tę naszą wartość 2, 3, 4 i zmienili na 300.
+
+110
+00:04:55,339 --> 00:04:56,959
+To też nam zamienił na szóstą.
+
+111
+00:04:57,139 --> 00:04:57,659
+28.
+
+112
+00:04:58,259 --> 00:04:58,800
+Czyli działa.
+
+113
+00:04:59,419 --> 00:05:02,800
+Pokazaliśmy sobie w ten sposób też odrobinę tych formaty stringów.
+
+114
+00:05:03,699 --> 00:05:05,199
+Zapraszam do kolejnego zadania.

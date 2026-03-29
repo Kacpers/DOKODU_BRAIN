@@ -1,0 +1,539 @@
+1
+00:00:00,000 --> 00:00:07,679
+Przede wszystkim powiedzmy sobie, że zbieranie wymagań i przygotowywanie tych wymagań to nie jest robota dla ciebie.
+
+2
+00:00:07,740 --> 00:00:13,280
+To znaczy, jeżeli robisz ten projekt dla żony, męża, brata, siostry, córki i tak dalej,
+
+3
+00:00:13,720 --> 00:00:17,820
+no to oczywiście jest to coś, co będziesz ty musiał, musiała zrobić,
+
+4
+00:00:17,980 --> 00:00:22,559
+chociaż nigdy tego do tej pory nie robiłeś i nie wiesz, jak się za to zabrać.
+
+5
+00:00:23,640 --> 00:00:24,260
+Tak jest.
+
+6
+00:00:24,260 --> 00:00:28,660
+Natomiast w momencie, w którym pracujesz w zespole programistycznym,
+
+7
+00:00:28,660 --> 00:00:33,140
+to najczęściej robi to ktoś inny. On po prostu do ciebie przychodzi z konkretem.
+
+8
+00:00:33,560 --> 00:00:37,719
+Więc tutaj chciałem uspokoić wszystkich tych, którzy bardzo się martwią,
+
+9
+00:00:38,219 --> 00:00:44,760
+że kurczę, jak pójdę do tej pierwszej pracy, to nagle będę musiał wszystko sobie sam zaplanować
+
+10
+00:00:44,760 --> 00:00:52,060
+i wszystko, te wszystkie rzeczy samodzielnie rozpisywać, przygotowywać, wszystko przeanalizować.
+
+11
+00:00:52,539 --> 00:00:53,379
+Raczej tak nie jest.
+
+12
+00:00:53,379 --> 00:00:58,120
+Raczej te zadania, które dostaje się w pracy, bardziej przypominają te ćwiczenia, które są u nas,
+
+13
+00:00:58,119 --> 00:01:00,439
+gdzie większość rzeczy powinna być rozpisana.
+
+14
+00:01:00,739 --> 00:01:04,359
+No ale jeżeli nie, no to warto wiedzieć, jak się za to zabrać.
+
+15
+00:01:04,500 --> 00:01:10,459
+Więc tak naprawdę warto wówczas mieć na uwadze to, że jest parę metod,
+
+16
+00:01:10,599 --> 00:01:13,120
+które mogą ci pomóc w zbieraniu tych zadań.
+
+17
+00:01:14,120 --> 00:01:17,120
+Ogólnie, jeżeli chodzi o pracę w firmie, tylko jeszcze na moment do tego nawiążę,
+
+18
+00:01:18,060 --> 00:01:23,359
+to najczęściej jest tak, że jest, ja pracowałem też jako osoba, która zbierała te wymagania od klienta,
+
+19
+00:01:23,359 --> 00:01:28,099
+to wyglądało tak, że po prostu jako one man army leciałem gdzieś do klienta,
+
+20
+00:01:28,120 --> 00:01:32,120
+gdzieś, nie wiem, do Barcelony, czy do Oslo, czy do Sztokholmu
+
+21
+00:01:32,120 --> 00:01:35,620
+i tam rozmawiałem z konkretnymi osobami, które coś chciały,
+
+22
+00:01:35,620 --> 00:01:38,620
+no i musiałem sobie rozpisać, jak najwięcej notatek robić.
+
+23
+00:01:38,620 --> 00:01:42,120
+Po prostu zapisywać każde jedno zdanie, co jest tak naprawdę problemem,
+
+24
+00:01:42,120 --> 00:01:48,120
+jak ten problem rozwiązać, jakie dane oni posiadają, jakie zasoby posiadają,
+
+25
+00:01:48,120 --> 00:01:53,620
+jakie problemy mam rozwiązywać, co mam ulepszyć, usprawnić,
+
+26
+00:01:53,620 --> 00:01:56,620
+no i w ten sposób mniej więcej te wymagania pobierałem.
+
+27
+00:01:56,620 --> 00:01:58,120
+Natomiast najczęściej to jest tak, że,
+
+28
+00:01:58,120 --> 00:02:01,620
+tak jak wspomniałem, jest tak, że ktoś do Ciebie przychodzi już z konkretnymi zadaniami.
+
+29
+00:02:01,620 --> 00:02:04,120
+Więc jeżeli ktoś do Ciebie przychodzi z konkretnymi zadaniami,
+
+30
+00:02:04,120 --> 00:02:09,620
+to tutaj w zależności od tego, jakiego narzędzia, o tych narzędziach też jeszcze za chwilę,
+
+31
+00:02:09,620 --> 00:02:13,120
+będziecie używali w pracy, po prostu na przykład na JIR-ze,
+
+32
+00:02:13,120 --> 00:02:17,620
+Jira to jest taki bardzo popularny, przez J pisane, bardzo popularne narzędzie,
+
+33
+00:02:17,620 --> 00:02:23,120
+dostaniesz wypisane taski i te taski będzie trzeba zrealizować.
+
+34
+00:02:23,120 --> 00:02:25,620
+W jakim czasie, o tym też zaraz sobie porozmawiamy.
+
+35
+00:02:25,620 --> 00:02:28,120
+Z takich ciekawostek odnośnie zbierania wymagania,
+
+36
+00:02:28,120 --> 00:02:32,120
+to serdecznie polecam takie metody, jak na przykład Impact Mapping.
+
+37
+00:02:32,120 --> 00:02:36,120
+Nie chcę tutaj wchodzić w szczegóły, bo to z tego można byłoby w ogóle zrobić odrębne szkolenie.
+
+38
+00:02:36,120 --> 00:02:39,120
+Natomiast jeżeli taka praca Product Ownera,
+
+39
+00:02:39,120 --> 00:02:44,120
+bo najczęściej to taka osoba wykonuje takie zbieranie wymagań Cię interesuje,
+
+40
+00:02:44,120 --> 00:02:51,120
+to właśnie taki Impact Mapping jest tutaj jednym z metod rozwiązywania tego problemu zbierania wymagań.
+
+41
+00:02:51,120 --> 00:02:53,120
+Pair Programming, Mop Programming.
+
+42
+00:02:53,120 --> 00:02:56,120
+To też w ramach takiego uspokojenia chciałem powiedzieć,
+
+43
+00:02:56,120 --> 00:02:58,120
+że z juniorami, które rzut korzyści mają,
+
+44
+00:02:58,120 --> 00:03:01,120
+którzy byli u nas w firmie, czy w firmach,
+
+45
+00:03:01,120 --> 00:03:04,120
+najczęściej pracowaliśmy na początku w parach.
+
+46
+00:03:04,120 --> 00:03:06,120
+Po prostu oni dostawali jakieś zadanie,
+
+47
+00:03:06,120 --> 00:03:09,120
+przez pewien czas wykonywali to zadanie samodzielnie,
+
+48
+00:03:09,120 --> 00:03:13,120
+a później pracowaliśmy w parach, staraliśmy się wspólnie tej osobie pomóc.
+
+49
+00:03:13,120 --> 00:03:16,120
+Natomiast Mop, Pair Programming to są dwie osoby,
+
+50
+00:03:16,120 --> 00:03:19,120
+które siedzą przy jednym komputerze i mają jedną klawiaturę, jedną myszkę.
+
+51
+00:03:19,120 --> 00:03:22,120
+Dlaczego wspominam o klawiaturze i myszce?
+
+52
+00:03:22,120 --> 00:03:26,120
+Z tego względu, że Mop Programming realizowaliśmy z wieloma klawiaturami
+
+53
+00:03:26,120 --> 00:03:28,120
+i Mop Programming jest wtedy,
+
+54
+00:03:28,120 --> 00:03:31,120
+kiedy na przykład mamy zbiór osób,
+
+55
+00:03:31,120 --> 00:03:33,120
+które mają zakodować wspólną funkcjonalność,
+
+56
+00:03:33,120 --> 00:03:36,120
+przy której później wspólnie będą siedzieli i będą nad nią pracowali
+
+57
+00:03:36,120 --> 00:03:40,120
+i wtedy takie trzy, cztery osoby siadają z klawiaturami swoimi,
+
+58
+00:03:40,120 --> 00:03:43,120
+podłączonymi do jednego komputera przed rzutnikiem
+
+59
+00:03:43,120 --> 00:03:45,120
+i wspólnie kodują ten fragment.
+
+60
+00:03:45,120 --> 00:03:48,120
+Ktoś mówi, ej, a tu można byłoby użyć wzorca projektowego,
+
+61
+00:03:48,120 --> 00:03:51,120
+a ktoś mówi, ej, ale to jest bez sensu ten fragment, bo coś tam, coś tam.
+
+62
+00:03:51,120 --> 00:03:54,120
+Jeżeli mamy bardziej skomplikowane zadanie,
+
+63
+00:03:54,120 --> 00:03:58,120
+no to w ten sposób warto też pomyśleć o takiej formie pracy.
+
+64
+00:03:58,120 --> 00:04:01,120
+Jeżeli u was w firmie taka forma nie jest uskuteczniana,
+
+65
+00:04:01,120 --> 00:04:03,120
+to ja serdecznie, z całego serca polecam.
+
+66
+00:04:03,120 --> 00:04:08,120
+Biznes najczęściej wtedy mówi, no tak, ale w cztery osoby moglibyście zrobić cztery task,
+
+67
+00:04:08,120 --> 00:04:11,120
+a tak siedzicie nad jednym, ale jeżeli są to funkcjonalności,
+
+68
+00:04:11,120 --> 00:04:14,120
+które później każdy z nich musi też, z tych programistów,
+
+69
+00:04:14,120 --> 00:04:16,120
+musi z nich też korzystać samodzielnie,
+
+70
+00:04:16,120 --> 00:04:19,120
+no to dzięki temu ma już tą wiedzę,
+
+71
+00:04:19,120 --> 00:04:22,120
+bo jest też autorem, współautorem tego rozwiązania.
+
+72
+00:04:22,120 --> 00:04:25,120
+Więc takie ciekawostki to właśnie Per Programming, Mop Programming,
+
+73
+00:04:25,120 --> 00:04:28,120
+to jakby z zupełnie innej gałęzi, natomiast ten imię,
+
+74
+00:04:28,120 --> 00:04:30,120
+Impact Mapping, to jest bardzo przydatna sprawa,
+
+75
+00:04:30,120 --> 00:04:32,120
+jeżeli chodzi o tą analizę wymagań.
+
+76
+00:04:32,120 --> 00:04:38,120
+Czyli podsumowując, tak naprawdę analizując wymagania do projektu,
+
+77
+00:04:38,120 --> 00:04:40,120
+musimy się skupić na takich aspektach,
+
+78
+00:04:40,120 --> 00:04:44,120
+jaki jest problem, musimy umieć go przedstawić,
+
+79
+00:04:44,120 --> 00:04:48,120
+musimy wiedzieć, czym dysponuje ta firma, jakie ma dane,
+
+80
+00:04:48,120 --> 00:04:53,120
+jakich danych nie ma oraz jaki ma być skutek tego rozwiązania.
+
+81
+00:04:53,120 --> 00:04:56,120
+Czyli dla przykładu, mówię teraz o moich klientach,
+
+82
+00:04:56,120 --> 00:05:01,120
+mamy zbiór produktów, bo tu jest baza zawierająca produkty.
+
+83
+00:05:01,120 --> 00:05:04,120
+Naszym problemem jest to, że nie wiemy,
+
+84
+00:05:04,120 --> 00:05:10,120
+które produkty w danym momencie powinniśmy ich ceny albo podnieść, albo obniżyć.
+
+85
+00:05:10,120 --> 00:05:14,120
+Dla nas rozwiązaniem byłaby taka dodatkowa tabela,
+
+86
+00:05:14,120 --> 00:05:18,120
+w której dostalibyśmy wskaźniki mówiące o tym,
+
+87
+00:05:18,120 --> 00:05:21,120
+jakie są, jaka jest średnia cena konkurencji
+
+88
+00:05:21,120 --> 00:05:25,120
+i ile tych danych, ile firm z konkurencji te produkty wystawia.
+
+89
+00:05:25,120 --> 00:05:31,120
+To jest konkretny jeden problem, który w ten sposób został sformułowany.
+
+90
+00:05:31,120 --> 00:05:33,120
+Ja mogę sobie z nim jakoś poradzić.
+
+91
+00:05:33,120 --> 00:05:35,120
+Inny problem może być taki,
+
+92
+00:05:35,120 --> 00:05:41,120
+mamy, dysponujemy wielkim segregatorem zawierającym mnóstwo danych.
+
+93
+00:05:41,120 --> 00:05:44,120
+Te dane to są głównie dane personalne
+
+94
+00:05:44,120 --> 00:05:48,120
+i potrzebujemy te dane w sposób zanonimizowany,
+
+95
+00:05:48,120 --> 00:05:50,120
+czyli usuwając imiona, nazwiska,
+
+96
+00:05:50,120 --> 00:05:53,120
+zaimportować, czyli tam PESEL-e, wiadomo, numer telefonów,
+
+97
+00:05:53,120 --> 00:05:55,120
+zaimportować do systemu,
+
+98
+00:05:55,120 --> 00:06:02,120
+tak, żeby każdy ten dokument miał swój unikatowy klucz
+
+99
+00:06:02,120 --> 00:06:05,120
+i żeby później można było porównać te dane ze sobą.
+
+100
+00:06:05,120 --> 00:06:08,120
+Chodzi o to, że nasz software house, którym dysponujemy,
+
+101
+00:06:08,120 --> 00:06:11,120
+będzie wypożyczał te osoby gdzieś na zewnątrz
+
+102
+00:06:11,120 --> 00:06:15,120
+i te firmy, które będą później z tego korzystały, muszą dostać te dane.
+
+103
+00:06:15,120 --> 00:06:17,120
+No i tu może się okazać, że padnie pytanie,
+
+104
+00:06:17,120 --> 00:06:19,120
+a po co ta anonimizacja?
+
+105
+00:06:19,120 --> 00:06:21,120
+Czy nie można byłoby tych imion i nazwisk dodawać?
+
+106
+00:06:21,120 --> 00:06:23,120
+Może po prostu można ich nie pokazywać itp. itd.?
+
+107
+00:06:23,120 --> 00:06:25,120
+Tutaj już im więcej wiedzy,
+
+108
+00:06:25,120 --> 00:06:27,120
+ale tym bardziej wiedzy programistycznej się ma,
+
+109
+00:06:27,120 --> 00:06:30,120
+tym bardziej można pomóc ten problem trochę przekształcić.
+
+110
+00:06:30,120 --> 00:06:32,120
+Jeżeli się nie ma tej wiedzy,
+
+111
+00:06:32,120 --> 00:06:34,120
+po prostu wykonuje się to, co klient powiedział
+
+112
+00:06:34,120 --> 00:06:36,120
+i nabywa się doświadczenia.
+
+113
+00:06:36,120 --> 00:06:38,120
+No i dzięki temu,
+
+114
+00:06:38,120 --> 00:06:41,120
+dzięki takim sprecyzowanemu problemowi,
+
+115
+00:06:41,120 --> 00:06:44,120
+jeżeli już wiemy, co tak naprawdę musimy zrobić,
+
+116
+00:06:44,120 --> 00:06:46,120
+możemy zastanowić się nad tym,
+
+117
+00:06:46,120 --> 00:06:49,120
+jak technicznie do takiego problemu podejść.
+
+118
+00:06:49,120 --> 00:06:51,120
+No bo problem pod tytułem,
+
+119
+00:06:51,120 --> 00:06:53,120
+tak jak w naszym projekcie,
+
+120
+00:06:53,120 --> 00:06:56,120
+to jest taki taki program do zarządzania budżetem domowym.
+
+121
+00:06:56,120 --> 00:06:59,120
+Jeżeli tak naprawdę nie wiemy, co w tym programie ma się znajdować,
+
+122
+00:06:59,120 --> 00:07:02,120
+to taki ogólny opis problemu tak naprawdę nic nam nie mówi.
+
+123
+00:07:02,120 --> 00:07:04,120
+I to jest bardzo dura bariera.
+
+124
+00:07:04,120 --> 00:07:08,120
+Dlatego nie wiemy, co mamy robić tak naprawdę siadając do tego IDE,
+
+125
+00:07:08,120 --> 00:07:12,120
+bo IDE to jest trochę tak, jakbyśmy już byli tym budowniczym na budowie,
+
+126
+00:07:12,120 --> 00:07:14,120
+tak? Tym majstrem na budowie.
+
+127
+00:07:14,120 --> 00:07:18,120
+Zanim ten majster gdzieś tam coś odmierzy i coś postawi,
+
+128
+00:07:18,120 --> 00:07:20,120
+to ktoś musi mu najpierw to wytyczyć,
+
+129
+00:07:20,120 --> 00:07:22,120
+powiedzieć ile, jak, gdzie i po co.
+
+130
+00:07:23,120 --> 00:07:25,120
+I do tego właśnie jest ta analiza wymagań.
+
+131
+00:07:25,120 --> 00:07:29,120
+Trochę się rozgadałem, czuję, że to trochę było takie,
+
+132
+00:07:29,120 --> 00:07:31,120
+można powiedzieć, nie wprost,
+
+133
+00:07:31,120 --> 00:07:34,120
+ale mam nadzieję, że mniej więcej chociaż rozumiesz,
+
+134
+00:07:34,120 --> 00:07:36,120
+dlaczego jest to ważny krok
+
+135
+00:07:36,120 --> 00:07:39,120
+i jak ten krok powinien wyglądać w twoim projekcie.

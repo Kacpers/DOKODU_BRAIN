@@ -1,0 +1,375 @@
+1
+00:00:00,000 --> 00:00:05,919
+No dobra, w pliku balagan.txt jest wiele linii zawierających wyrażenie java oraz javascript.
+
+2
+00:00:06,040 --> 00:00:11,700
+Wszystkie wyrażenia java wymień na python, natomiast linie zawierające javascript pozostaw niezmienione.
+
+3
+00:00:12,380 --> 00:00:17,900
+No to co? Będziemy odczarowywać ten plik. W tym celu najpierw możemy go sobie otworzyć.
+
+4
+00:00:17,900 --> 00:00:29,140
+Czyli with open balagan.txt as file for line in file print line.
+
+5
+00:00:29,140 --> 00:00:34,399
+In strip. W ten sposób będziemy widzieli co w tym pliku się znajduje.
+
+6
+00:00:34,539 --> 00:00:40,399
+Jeżeli ja to sobie teraz wywołam, czyli zrobię 5 balagan.py, no to dowiem się, że nie mam pliku balagan.txt.
+
+7
+00:00:40,399 --> 00:00:44,579
+No tak, bo balagan jest przez uły. Ja już usunąłem te polskie znaki stąd.
+
+8
+00:00:45,020 --> 00:00:48,299
+I zobaczcie mamy, jaki język wybrałem. O, jeszcze kodowanie.
+
+9
+00:00:48,840 --> 00:00:54,700
+No to encoding utf8. O, i teraz jest pięknie.
+
+10
+00:00:55,240 --> 00:00:58,939
+Jaki język wybrać na początek? Zdania są podzielone. Java to świetny język.
+
+11
+00:00:58,939 --> 00:01:01,000
+Czyli tutaj powinno być Python to świetny język.
+
+12
+00:01:01,439 --> 00:01:04,780
+Javascript to język do tworzenia web aplikacji. No i tak dalej.
+
+13
+00:01:05,280 --> 00:01:09,359
+Czyli powinniśmy to javascript zostawić, a java wymienić.
+
+14
+00:01:09,939 --> 00:01:19,479
+Natomiast nie możemy robić tego w tym samym pliku, bo jeżeli będę dodawał kolejne linie na końcu, no to one znikną.
+
+15
+00:01:19,560 --> 00:01:25,319
+Jeżeli otworzę ten sam plik do odczytu i do zapisu z w, to też nie będzie to działało dobrze.
+
+16
+00:01:25,900 --> 00:01:28,420
+Usuwanie linii też nie jest dobrym pomysłem.
+
+17
+00:01:28,939 --> 00:01:29,840
+Mamy dwie opcje.
+
+18
+00:01:30,039 --> 00:01:39,340
+Opcja pierwsza jest taka, że możemy trzymać zmieniony plik już ten zawartość zmienionego pliku w zmiennej i później zapisać go z powrotem do bałagan txt.
+
+19
+00:01:39,539 --> 00:01:41,000
+To jest opcja pierwsza.
+
+20
+00:01:41,420 --> 00:01:51,019
+Opcja druga jest taka, że możemy po prostu najpierw otworzyć sobie ten plik bałagan posprzątane txt, a później zmienić mu nazwę z powrotem na bałagan.
+
+21
+00:01:51,319 --> 00:01:52,519
+Ja pójdę w tą pierwszą opcję.
+
+22
+00:01:52,519 --> 00:01:53,840
+Wiem, że plik nie jest zbyt duży.
+
+23
+00:01:54,859 --> 00:01:57,280
+Może później zaimplementujemy tą drugą.
+
+24
+00:01:57,739 --> 00:01:58,239
+Czyli.
+
+25
+00:01:58,939 --> 00:02:04,379
+Żeby zrobić jakąś zmienną correct lines to jest pusta lista.
+
+26
+00:02:05,840 --> 00:02:06,500
+Line strip.
+
+27
+00:02:06,539 --> 00:02:08,060
+No to nas jak najbardziej interesuje.
+
+28
+00:02:08,599 --> 00:02:14,120
+Tylko, że my będziemy chcieli to wymieniać tylko wtedy, jeżeli javascript się nie znajduje w tej linii.
+
+29
+00:02:14,539 --> 00:02:22,300
+Czyli if javascript not in line, dwukropek.
+
+30
+00:02:22,819 --> 00:02:25,120
+Line strip replace.
+
+31
+00:02:27,079 --> 00:02:28,740
+No i chcemy zamieniać old na new.
+
+32
+00:02:28,939 --> 00:02:31,379
+Nasze old to jest java.
+
+33
+00:02:32,180 --> 00:02:34,060
+Nasze new to jest python.
+
+34
+00:02:36,259 --> 00:02:41,539
+No i to co tutaj będziemy mieli będziemy chcieli tak naprawdę sobie później dodać do naszego pliku.
+
+35
+00:02:41,960 --> 00:02:50,000
+Tylko jeżeli ja bym tutaj to dodanie do correct lines zrobił to później muszę zrobić else i też muszę zrobić dodanie do correct lines.
+
+36
+00:02:50,319 --> 00:02:57,620
+Więc zdecydowanie lepiej byłoby gdybym zrobił sobie po prostu zmienną line równa się line strip.
+
+37
+00:02:57,620 --> 00:02:58,400
+Jeszcze na to patrzę.
+
+38
+00:02:58,400 --> 00:02:58,560
+Bo.
+
+39
+00:02:58,560 --> 00:03:01,379
+Strip musi zadziałać dla jednego i dla drugiego przypadku.
+
+40
+00:03:01,800 --> 00:03:04,500
+Więc tak naprawdę wykonam sobie jeszcze wyżej jedną linijkę.
+
+41
+00:03:07,199 --> 00:03:09,240
+Line równa się line strip.
+
+42
+00:03:10,020 --> 00:03:20,099
+Tak żeby niezależnie od tego czy jest if czy nie czy weszliśmy do if czy nie weszliśmy to żeby ten strip nam tutaj zadziałał i wtedy na koniec możemy wykonać correct lines.
+
+43
+00:03:21,539 --> 00:03:23,879
+Jeszcze myślę o jednej rzeczy że strip mógłby być też tutaj.
+
+44
+00:03:26,219 --> 00:03:27,379
+Tak można byłoby zrobić.
+
+45
+00:03:27,439 --> 00:03:27,659
+O.
+
+46
+00:03:27,659 --> 00:03:38,699
+I wtedy będziemy mieli stripa w obu tych przypadkach a nam nie zależy na tym żeby on usuwał nam ten nowy wiersz wcześniej zanim zrobi tego replace to jest jak najbardziej w porządku.
+
+47
+00:03:39,060 --> 00:03:44,159
+No i co możemy sobie wyprintować te correct lines i zobaczyć czy dobrą mamy zawartość.
+
+48
+00:03:44,479 --> 00:03:45,759
+Strzała do góry enter.
+
+49
+00:03:46,139 --> 00:03:47,300
+Jaki język wybrać na początek.
+
+50
+00:03:47,300 --> 00:03:47,979
+Zdania są podzielone.
+
+51
+00:03:47,979 --> 00:03:49,000
+Python to świetny język.
+
+52
+00:03:49,419 --> 00:03:51,759
+Czyli wcześniej był Java to świetny język wymieniły się.
+
+53
+00:03:52,139 --> 00:03:55,199
+No i JavaScript również ma swoją zawartość.
+
+54
+00:03:55,199 --> 00:03:56,879
+Czyli wszystko wygląda na to że jest.
+
+55
+00:03:56,879 --> 00:03:58,439
+Że jest OK.
+
+56
+00:03:58,439 --> 00:04:04,759
+Jedyna rzecz którą musimy zrobić to musimy zapisać te linie do pliku bałagan czyli with open.
+
+57
+00:04:06,099 --> 00:04:08,460
+Bałagan txt w.
+
+58
+00:04:11,719 --> 00:04:12,879
+Encoding.
+
+59
+00:04:14,699 --> 00:04:15,859
+UTF 8.
+
+60
+00:04:16,600 --> 00:04:17,339
+As file.
+
+61
+00:04:18,480 --> 00:04:24,300
+I tak naprawdę możemy wykonać write lines czyli file kropka write lines.
+
+62
+00:04:25,120 --> 00:04:25,939
+Tylko write line.
+
+63
+00:04:25,939 --> 00:04:26,639
+Zaraz zobaczycie.
+
+64
+00:04:26,639 --> 00:04:28,139
+Jak nam zadziała.
+
+65
+00:04:28,519 --> 00:04:29,399
+Ja sobie na razie.
+
+66
+00:04:30,539 --> 00:04:31,620
+Tutaj przypisze.
+
+67
+00:04:31,620 --> 00:04:36,139
+Correct lines tylko zmienię nazwę na razie na bałagan 2 bo chcę wam coś pokazać.
+
+68
+00:04:36,620 --> 00:04:37,779
+Czyli strzałka do góry enter.
+
+69
+00:04:38,800 --> 00:04:40,319
+W tym momencie kod mi zadziałał.
+
+70
+00:04:40,399 --> 00:04:42,539
+Otworzę sobie plik bałagan 2 i zobacz.
+
+71
+00:04:42,839 --> 00:04:50,139
+Write lines w żadnym wypadku nie powoduje że te linie na końcu one nam się one nam się usuwają.
+
+72
+00:04:50,399 --> 00:04:52,919
+Znaczy że dodają nam się znaki końca wiersza.
+
+73
+00:04:53,259 --> 00:04:56,560
+Po prostu wszystko zostało zapisane jako jeden długi.
+
+74
+00:04:56,639 --> 00:04:57,519
+Wiersz.
+
+75
+00:04:57,759 --> 00:05:00,240
+Więc nie wiem czy to jest takim dobrym pomysłem.
+
+76
+00:05:00,699 --> 00:05:02,599
+Natomiast na pewno możemy wykonać.
+
+77
+00:05:02,680 --> 00:05:03,279
+Right.
+
+78
+00:05:04,139 --> 00:05:08,219
+I połączyć sobie te nasze wyrażenia znakiem nowego wiersza.
+
+79
+00:05:13,459 --> 00:05:15,000
+To będzie chyba nawet bezpieczniejsze.
+
+80
+00:05:15,519 --> 00:05:17,199
+Raz jeszcze strzałka do góry enter.
+
+81
+00:05:17,620 --> 00:05:19,579
+Raz jeszcze otwieram bałagan 2 i zobacz.
+
+82
+00:05:19,740 --> 00:05:20,939
+Prawie jest ok.
+
+83
+00:05:21,060 --> 00:05:22,139
+Różnica jest bardzo mała.
+
+84
+00:05:22,159 --> 00:05:24,439
+Na końcu nie mam znaku nowego wiersza.
+
+85
+00:05:24,839 --> 00:05:26,339
+Lepiej byłoby go mieć ale.
+
+86
+00:05:26,639 --> 00:05:28,779
+Myślę że na tym etapie spokojnie nam to wystarczy.
+
+87
+00:05:28,800 --> 00:05:30,199
+Taka forma jaka jest.
+
+88
+00:05:30,219 --> 00:05:34,759
+Stąd też mogę już zmienić nazwę na bałagan i mogę ten bałagan posprzątać.
+
+89
+00:05:34,779 --> 00:05:36,699
+Czyli strzałka do góry enter.
+
+90
+00:05:36,719 --> 00:05:40,939
+Jeżeli teraz wyświetlimy sobie bałagan to wszystko powinno być ok.
+
+91
+00:05:40,979 --> 00:05:42,139
+Zobacz.
+
+92
+00:05:42,180 --> 00:05:43,939
+Bałagan posprzątany.
+
+93
+00:05:43,959 --> 00:05:44,740
+No to co.
+
+94
+00:05:44,759 --> 00:05:47,740
+Zapraszam do zadania numer 6.

@@ -1,0 +1,527 @@
+1
+00:00:00,660 --> 00:00:04,060
+Rozwiązywanie zacząłem od tego, że z poprzedniego zadania skopiowałem sobie kod,
+
+2
+00:00:04,179 --> 00:00:07,219
+chociaż tutaj nie będę miał zbyt dużych potrzeb.
+
+3
+00:00:08,120 --> 00:00:09,939
+Co będę musiał zrobić na początku?
+
+4
+00:00:10,560 --> 00:00:15,700
+Najpierw stworzę sobie, ogólnie rzecz biorąc, ten interfejs, który będę potrzebował,
+
+5
+00:00:16,240 --> 00:00:19,000
+ale jeżeli chodzi o działanie programu, to też muszę pamiętać,
+
+6
+00:00:19,100 --> 00:00:20,699
+żeby najpierw wczytać wszystkie te osoby.
+
+7
+00:00:21,240 --> 00:00:23,379
+Ale okej, może zróbmy po kolei.
+
+8
+00:00:23,379 --> 00:00:29,960
+Najpierw utworzymy sobie nowe okienko, czyli import tkinterstk,
+
+9
+00:00:30,000 --> 00:00:37,799
+następnie tworzymy sobie nowe okno window, równa się tk.tk,
+
+10
+00:00:38,899 --> 00:00:42,620
+dalej wykonujemy, możemy dodać tytuł, tak jak było też w przykładzie,
+
+11
+00:00:43,880 --> 00:00:48,500
+dodaj osobę, no i koniecznie window.mainloop.
+
+12
+00:00:49,640 --> 00:00:52,980
+Oj, oj, oj, o tak, window.mainloop.
+
+13
+00:00:53,159 --> 00:00:55,799
+W ten sposób okno będzie gotowe.
+
+14
+00:00:56,299 --> 00:00:58,500
+To okno będziemy chcieli wypakować poszczególnymi informacjami,
+
+15
+00:00:58,500 --> 00:01:04,019
+a mianowicie taką pierwszą dodającą etykietę i nazwę na imię
+
+16
+00:01:04,019 --> 00:01:07,879
+i drugą analogiczną do zarządzania nazwiskiem.
+
+17
+00:01:08,540 --> 00:01:14,460
+Czyli first name label równa się tk.label.
+
+18
+00:01:14,700 --> 00:01:18,700
+Możemy też sobie dorzucić informację o tym gdzie, no i jakąś tam informację,
+
+19
+00:01:18,799 --> 00:01:20,740
+niech to będzie to samo, co tutaj, jak masz na imię.
+
+20
+00:01:21,319 --> 00:01:26,680
+Czyli tekst równa się i mogę to sobie wyciąć, wstawić tu.
+
+21
+00:01:27,319 --> 00:01:28,439
+Po drugie.
+
+22
+00:01:28,500 --> 00:01:32,079
+Będę potrzebował umieścić tą labelkę w moim oknie,
+
+23
+00:01:32,540 --> 00:01:35,659
+czyli first name label.pack.
+
+24
+00:01:36,500 --> 00:01:40,680
+Kolejną rzeczą potrzebną mi będzie entry, czyli pole do wpisywania,
+
+25
+00:01:40,980 --> 00:01:45,659
+czyli first name entry, to jest tk.entry.
+
+26
+00:01:46,079 --> 00:01:49,640
+Tu ponownie moglibyśmy określić sobie szereg rzeczy,
+
+27
+00:01:49,960 --> 00:01:53,340
+natomiast tym razem nie są one nam potrzebne, wystarczy, że zostawimy to pole
+
+28
+00:01:53,659 --> 00:01:56,620
+i dodamy, czyli first name entry.pack.
+
+29
+00:01:57,340 --> 00:01:58,019
+W tym momencie,
+
+30
+00:01:58,019 --> 00:02:02,299
+jeżeli zrobiliśmy to dobrze, ten kod na dole można oczywiście na razie zakomentować,
+
+31
+00:02:02,699 --> 00:02:06,840
+to po wywołaniu tego powinniśmy zobaczyć, że pojawi nam się okno.
+
+32
+00:02:07,259 --> 00:02:11,539
+Ono u mnie się pojawiło, jak zwykle mam problem z przeciągnięciem go i pokazaniem go Wam,
+
+33
+00:02:11,979 --> 00:02:15,479
+ale uwaga już jest, o jak masz na imię i jest imię pod spodem.
+
+34
+00:02:16,099 --> 00:02:17,859
+To samo musimy zrobić z nazwiskiem.
+
+35
+00:02:18,060 --> 00:02:26,300
+Możemy sobie zatem to skopiować, zmienić first na last, ponieważ po angielsku last name to jest nazwisko.
+
+36
+00:02:28,020 --> 00:02:30,020
+No i jak masz na nazwisko.
+
+37
+00:02:31,659 --> 00:02:35,620
+No i ostatnim elementem, który będzie nam przydatny, będzie guzik.
+
+38
+00:02:35,939 --> 00:02:40,500
+Guzik, który powinien również obsłużyć to zdarzenie wysłania naszego formularza,
+
+39
+00:02:40,939 --> 00:02:51,420
+czyli button równa się tk.button text, może być dodaj przecinek.
+
+40
+00:02:53,420 --> 00:02:55,620
+I co jeszcze potrzebujemy mieć? Akcje.
+
+41
+00:02:55,740 --> 00:02:57,939
+Możemy więc dorzucić przecinek command,
+
+42
+00:02:58,020 --> 00:03:02,500
+równa się, no i np. add person.
+
+43
+00:03:02,900 --> 00:03:04,900
+Tak może nazywać się nasza akcja.
+
+44
+00:03:05,060 --> 00:03:07,620
+Oczywiście akcja teraz jest tutaj przekazana jako string,
+
+45
+00:03:07,620 --> 00:03:11,939
+ja powinienem ją przekazać jako po prostu uchwyt do funkcji, więc sobie to odznaczam
+
+46
+00:03:11,939 --> 00:03:16,740
+i taką funkcję deklaruję wyżej, czyli def add person.
+
+47
+00:03:17,219 --> 00:03:18,219
+Dwukropek.
+
+48
+00:03:18,700 --> 00:03:20,500
+Co powinno się dziać w moim kodzie?
+
+49
+00:03:20,500 --> 00:03:24,340
+No w moim kodzie powinna się stać rzecz następująca, a mianowicie najpierw,
+
+50
+00:03:24,340 --> 00:03:27,740
+zanim w ogóle mój program zadziała, powinienem odczytać z wszystkich osobowych,
+
+51
+00:03:27,740 --> 00:03:31,820
+wszystkie osoby i zapisać je w jakiś sposób tak, żebym mógł sprawdzić,
+
+52
+00:03:31,820 --> 00:03:34,620
+czy ta nowa osoba nie jest duplikatem.
+
+53
+00:03:35,300 --> 00:03:39,780
+Natomiast na razie możemy się skupić po prostu na tym, żeby dodać sobie nowe osoby do pliku,
+
+54
+00:03:40,340 --> 00:03:42,620
+więc to pomijam.
+
+55
+00:03:43,540 --> 00:03:47,780
+Te dwie linijki tak naprawdę mogę wyciąć i mogę je sobie wstawić do mojej funkcji.
+
+56
+00:03:50,020 --> 00:03:56,820
+Ponieważ ja będę chciał wewnątrz tej funkcji dodawać właśnie te informacje, tylko że first name tak naprawdę,
+
+57
+00:03:56,819 --> 00:04:04,780
+to będzie first name entry kropka get, a last name to będzie last name entry kropka get.
+
+58
+00:04:05,139 --> 00:04:10,459
+W ten sposób nowy plik, nowa osoba powinna już dodawać mi się do pliku.
+
+59
+00:04:10,780 --> 00:04:16,219
+Sprawdzę to, czyli otwieram sobie raz jeszcze mój plik, przenoszę, a jeszcze batona nie mam,
+
+60
+00:04:16,219 --> 00:04:26,379
+nie dodałem go, nie zrobiłem pack, więc robię baton kropka pack, zatrzymuję kontrol C, czy też zatrzymuję po prostu klikając w krzyż,
+
+61
+00:04:26,379 --> 00:04:36,819
+wywołuję to raz jeszcze, w tym momencie powinienem już mieć batona, mam tekst, wprowadzam sobie AB, robię dodaj,
+
+62
+00:04:36,819 --> 00:04:45,259
+błąd się żaden tutaj nie pojawił, mogę więc sobie zamknąć moje okno i zobaczę, czy pojawił mi się trzeci wiersz na samym dole AB.
+
+63
+00:04:45,259 --> 00:04:53,579
+I jest, Kacper Śradziński AB AB, ta druga osoba została dodana tutaj przez nas ręcznie, więc wszystko jest jak najbardziej w porządku, tak jak się spodziewaliśmy.
+
+64
+00:04:53,579 --> 00:04:55,659
+Teraz będziemy chcieli otworzyć plik i załadować go do pliku.
+
+65
+00:04:55,659 --> 00:04:56,300
+Teraz będziemy chcieli otworzyć plik i załadować go do pliku.
+
+66
+00:04:56,300 --> 00:04:57,579
+Teraz będziemy chcieli otworzyć plik i załadować go do pliku.
+
+67
+00:04:57,579 --> 00:04:59,740
+I upewnić się, że tej osoby tam nie ma.
+
+68
+00:04:59,740 --> 00:05:00,300
+I upewnić się, że tej osoby tam nie ma.
+
+69
+00:05:00,300 --> 00:05:10,460
+Jak to można zrobić? Moglibyśmy to w ogóle robić wcześniej, tylko że za każdym razem, kiedy dodajemy sobie nową osobę, no to wykonywanie tego w ten sposób mogłoby być trochę mylące.
+
+70
+00:05:10,460 --> 00:05:17,939
+Chociaż z drugiej strony jest to też dobre, z tego względu, że jak dodają nam się nowe osoby, no to chcemy, żeby duplikaty nie były też liczone.
+
+71
+00:05:17,939 --> 00:05:22,660
+Czyli żeby nie robić tej zmiennej globalnej, możemy sobie w tym pliku odczytać te osoby raz jeszcze.
+
+72
+00:05:22,660 --> 00:05:25,580
+Czyli with open, osoby.txt.
+
+73
+00:05:25,579 --> 00:05:36,139
+I tu bardzo ważna informacja, na końcu każdego wiersza znajduje się znak nowej linii.
+
+74
+00:05:36,139 --> 00:05:42,699
+Ja nie mogę więc tych osób po prostu sobie przypisać do jakiejś zmiennej, bo tutaj nowej linii nie będzie.
+
+75
+00:05:42,699 --> 00:05:47,259
+Zatem ja sobie stworzę jakiś zbiór. Niech to będzie zbiór o nazwie persons.
+
+76
+00:05:47,259 --> 00:05:51,259
+Pusty zbiór, przypominam, robimy za pomocą wyrażenia set.
+
+77
+00:05:51,259 --> 00:05:54,860
+I następnie for line in file.
+
+78
+00:05:54,860 --> 00:05:58,220
+Możemy wykonać line.strip.
+
+79
+00:05:58,220 --> 00:06:05,420
+Czyli od razu możemy też zrobić first name, last name.
+
+80
+00:06:05,420 --> 00:06:08,699
+Równa się line.strip.
+
+81
+00:06:08,699 --> 00:06:12,460
+I my chcemy sobie tę osobę rozdzielać po spacjach.
+
+82
+00:06:12,460 --> 00:06:15,660
+Czyli split, spacja.
+
+83
+00:06:15,660 --> 00:06:22,540
+W ten sposób możemy do persons dodawać na przykład tuple zawierające imiona i nazwiska.
+
+84
+00:06:22,540 --> 00:06:24,699
+Czyli first name.strip.
+
+85
+00:06:24,860 --> 00:06:26,860
+Last name.
+
+86
+00:06:26,860 --> 00:06:34,460
+W ten sposób, jeżeli będziemy chcieli sprawdzić, czy taka osoba, tu jeszcze nawias by się przydał,
+
+87
+00:06:34,460 --> 00:06:36,860
+z tego względu, że dodajemy to wewnątrz funkcji.
+
+88
+00:06:36,860 --> 00:06:41,259
+I w ten sposób, kiedy będziemy chcieli sprawdzić, czy ta osoba znajduje się w naszym zbiorze, czy jej nie ma,
+
+89
+00:06:41,259 --> 00:06:51,420
+możemy po prostu zrobić if to, przecinek to.
+
+90
+00:06:51,420 --> 00:06:52,699
+If to.
+
+91
+00:06:52,699 --> 00:06:57,339
+Not in persons.
+
+92
+00:06:57,339 --> 00:07:01,339
+To wtedy wykonaj file write.
+
+93
+00:07:01,339 --> 00:07:04,379
+Bo na chwilę obecną mamy duplikat ab, ab, ab.
+
+94
+00:07:04,379 --> 00:07:07,579
+Jeżeli natomiast teraz wywołam ten program.
+
+95
+00:07:07,579 --> 00:07:11,899
+I spróbuję raz jeszcze dodać sobie osobę, która będzie się nazywała ab.
+
+96
+00:07:11,899 --> 00:07:13,899
+To ta osoba nie powinna mi się już dodać.
+
+97
+00:07:13,899 --> 00:07:15,899
+Czyli robię ab, robię dodaj.
+
+98
+00:07:15,899 --> 00:07:17,099
+Bez błędu.
+
+99
+00:07:17,099 --> 00:07:19,099
+Wcisnę sobie to jeszcze parę razy.
+
+100
+00:07:19,099 --> 00:07:21,099
+Dorzucę jeszcze cd.
+
+101
+00:07:21,099 --> 00:07:22,539
+Też parę razy.
+
+102
+00:07:22,540 --> 00:07:24,540
+I na przykład ggg.
+
+103
+00:07:24,540 --> 00:07:25,660
+I coś tam jeszcze.
+
+104
+00:07:25,660 --> 00:07:27,100
+Dodaj, dodaj, dodaj.
+
+105
+00:07:27,100 --> 00:07:29,900
+Sprawdźmy, jak wygląda nasz plik.
+
+106
+00:07:29,900 --> 00:07:32,379
+Mam pojedyncze osoby ab, ab.
+
+107
+00:07:32,379 --> 00:07:37,340
+To wynikało z tego, że zanim zacząłem pracować, to te duplikaty już były tutaj dostępne.
+
+108
+00:07:37,340 --> 00:07:39,820
+Następnie cd też wystąpiło tylko raz.
+
+109
+00:07:39,820 --> 00:07:43,820
+No i tak samo tu pojawiło nam się to tylko też raz.
+
+110
+00:07:43,820 --> 00:07:47,420
+Przypominam, że jeżeli chcielibyśmy wyświetlić komunikat,
+
+111
+00:07:47,420 --> 00:07:50,939
+no to zawsze można byłoby też napisać from tkinter
+
+112
+00:07:50,939 --> 00:07:51,900
+import
+
+113
+00:07:51,899 --> 00:07:53,500
+message box
+
+114
+00:07:53,500 --> 00:07:59,259
+i na przykład dorzucić tutaj wyrażenie else
+
+115
+00:07:59,259 --> 00:08:04,939
+message box kropka show info
+
+116
+00:08:04,939 --> 00:08:09,579
+title równa się uważaj
+
+117
+00:08:09,579 --> 00:08:11,500
+no i message
+
+118
+00:08:11,500 --> 00:08:16,379
+ta osoba już była na liście.
+
+119
+00:08:16,379 --> 00:08:21,019
+I w tym momencie, jeżeli spróbuję sobie ponownie dodać osobę, którą już miałem na liście, ab,
+
+120
+00:08:21,019 --> 00:08:24,939
+to już dostaję komunikat, że ta osoba była na liście.
+
+121
+00:08:24,939 --> 00:08:28,139
+Nie wiem, czy ta aplikacja się nada do spisu powszechnego,
+
+122
+00:08:28,139 --> 00:08:34,699
+ale do jakiejś takiej małej pracy w jakiejś firmie, gdzie chcemy tworzyć aplikacje,
+
+123
+00:08:34,699 --> 00:08:38,620
+z którymi nie do końca pracują osoby techniczne,
+
+124
+00:08:38,620 --> 00:08:42,620
+myślę, że jak najbardziej takie rozwiązanie może być zadowalające.
+
+125
+00:08:42,620 --> 00:08:48,220
+No bo dzięki temu każdy może sobie to odpalić i wywołać i mieć program już okienkowy.
+
+126
+00:08:48,220 --> 00:08:51,259
+No i ten program, tak jak wspominałem, też nie jest zbyt duży,
+
+127
+00:08:51,259 --> 00:08:54,139
+natomiast jeżeli będziesz potrzebować taki program stworzyć większy,
+
+128
+00:08:54,139 --> 00:08:57,500
+to też jak najbardziej na podstawie tego, co sobie pokazaliśmy tutaj
+
+129
+00:08:57,500 --> 00:09:03,180
+i odrobiny kopania na pewno uda Ci się też taki program stworzyć.
+
+130
+00:09:03,180 --> 00:09:05,180
+Zostały nam jeszcze trzy zadania.
+
+131
+00:09:05,180 --> 00:09:08,379
+Nie pozostaje mi nic innego, jak zaprosić Cię więc do kolejnego.
+
+132
+00:09:08,379 --> 00:09:10,379
+No to zapraszam.

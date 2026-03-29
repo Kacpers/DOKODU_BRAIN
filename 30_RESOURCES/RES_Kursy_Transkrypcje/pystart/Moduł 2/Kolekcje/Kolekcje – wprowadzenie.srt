@@ -1,0 +1,135 @@
+1
+00:00:00,300 --> 00:00:06,100
+Moi drodzy, wielki dzień, rozpoczynamy moduł drugi i dzisiaj dowiemy się też kilku nowości,
+
+2
+00:00:06,240 --> 00:00:10,339
+m.in. że nie zawsze musimy do wartości przypisywać pojedynczą, do zmiennej,
+
+3
+00:00:10,400 --> 00:00:13,419
+przypisywać pojedynczą wartość, taką jak liczba czy wartość logiczna.
+
+4
+00:00:13,919 --> 00:00:17,660
+Przecież był też tekst, o tym tekście też sobie dzisiaj porozmawiamy, a mianowicie o stringach.
+
+5
+00:00:18,100 --> 00:00:21,559
+Porozmawiamy sobie dzisiaj również o tuplach, czyli o takim typie,
+
+6
+00:00:21,940 --> 00:00:26,359
+gdzie również możemy przechowywać trochę więcej danych pod zmienną,
+
+7
+00:00:26,359 --> 00:00:30,859
+ale jest też parę innych typów, o nich porozmawiamy sobie już w przyszłości.
+
+8
+00:00:31,420 --> 00:00:33,380
+Tu macie po prawej stronie taki mały przykład.
+
+9
+00:00:33,979 --> 00:00:39,399
+Typy ogólnie w Pythonie, te kolekcje w Pythonie, które się znajdują, to są tuple, zwane też krotkami.
+
+10
+00:00:39,859 --> 00:00:44,700
+Tu akurat wyszło trochę niefortunnie, ponieważ po angielsku ten typ nazywany jest tuple,
+
+11
+00:00:45,140 --> 00:00:51,200
+natomiast po polsku zawsze nazywało się to krotką i tutaj przez kalkę językową część programistów
+
+12
+00:00:51,200 --> 00:00:54,320
+po prostu zaczęła nazywać to tuplami, tłumacząc to bezpośrednio,
+
+13
+00:00:54,560 --> 00:00:56,200
+znaczy nawet nie tłumacząc, tylko używając angielskiego.
+
+14
+00:00:56,359 --> 00:01:03,479
+Inny typ to listy, są też słowniki, zbiory, no i są też stringi, czyli napisy.
+
+15
+00:01:03,840 --> 00:01:06,140
+O tych wszystkich kolekcjach będziemy się uczyli w tym kursie,
+
+16
+00:01:06,239 --> 00:01:11,859
+natomiast w tym module porozmawiamy sobie na razie tylko i wyłącznie o tuplach oraz o stringach, napisach.
+
+17
+00:01:12,239 --> 00:01:14,239
+Taki jest plan na to nasze spotkanie.
+
+18
+00:01:15,219 --> 00:01:19,780
+Generalnie, jeżeli chodzi o nasze kolekcje, to mamy dwa rodzaje kolekcji.
+
+19
+00:01:20,120 --> 00:01:23,500
+Tutaj pod względem rodzajów można byłoby jeszcze pewnie parę wyszczególnić,
+
+20
+00:01:23,500 --> 00:01:26,120
+natomiast mamy dwa takie podstawowe rodzaje, a mianowicie
+
+21
+00:01:26,359 --> 00:01:28,359
+mutowalne i niemutowalne.
+
+22
+00:01:28,640 --> 00:01:33,799
+Kolekcje, które są mutowalne, to są kolekcje, do których możemy śmiało dodawać nowe elementy,
+
+23
+00:01:33,799 --> 00:01:37,359
+odejmować z nich elementy, po prostu zmieniać ich wygląd.
+
+24
+00:01:37,359 --> 00:01:39,359
+Natomiast jeżeli chodzi o... czy strukturę.
+
+25
+00:01:39,719 --> 00:01:42,200
+Natomiast jeżeli chodzi o kolekcje niemutowalne,
+
+26
+00:01:42,439 --> 00:01:47,120
+to w momencie, w którym już stworzymy taką kolekcję, to nic się z nią zrobić nie da.
+
+27
+00:01:47,400 --> 00:01:51,840
+I zobaczysz, że zarówno string, jak i tupla, to właśnie są kolekcje niemutowalne.
+
+28
+00:01:52,079 --> 00:01:56,319
+Ale ten slajd pojawił się tutaj dlatego, żeby się nie denerwować, ojej, to w Pythonie się nie da tego zrobić,
+
+29
+00:01:56,359 --> 00:02:00,079
+da się, po prostu różne typy danych służą do różnych rzeczy.
+
+30
+00:02:00,079 --> 00:02:04,680
+I będziemy sobie omawiali te poszczególne typy na bieżąco
+
+31
+00:02:04,680 --> 00:02:10,199
+i na koniec zrobimy sobie takie małe podsumowanie, żeby ta wiedza ładnie nam się zamknęła.
+
+32
+00:02:10,199 --> 00:02:13,639
+Ale tak jak wspomniałem na początku, ten temat jest rozbity na kilka modułów,
+
+33
+00:02:13,639 --> 00:02:18,680
+nie jest to tylko i wyłącznie jeden moduł, żeby na spokojnie sobie w ten temat wejść.
+
+34
+00:02:18,680 --> 00:02:21,680
+To co? Zapraszam was do kolejnej lekcji.

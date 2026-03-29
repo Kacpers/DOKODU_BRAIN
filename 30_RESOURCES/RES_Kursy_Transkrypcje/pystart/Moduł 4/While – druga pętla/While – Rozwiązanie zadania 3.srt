@@ -1,0 +1,351 @@
+1
+00:00:00,000 --> 00:00:03,320
+W zadaniu trzecim chcemy najpierw wylosować jakąś liczbę.
+
+2
+00:00:03,399 --> 00:00:05,459
+Możemy sobie przyjąć jakiś przedział od 0 do 100.
+
+3
+00:00:05,679 --> 00:00:06,219
+No to lecimy.
+
+4
+00:00:06,940 --> 00:00:11,040
+From random import randint.
+
+5
+00:00:11,919 --> 00:00:13,740
+No i potrzebujemy mieć jakąś liczbę.
+
+6
+00:00:14,179 --> 00:00:16,339
+Czyli guess równa się.
+
+7
+00:00:16,660 --> 00:00:20,400
+Zamieniam ją od razu na integer, chociaż nie muszę, bo to jest randint.
+
+8
+00:00:20,580 --> 00:00:21,480
+Od 0 do 100.
+
+9
+00:00:22,900 --> 00:00:24,780
+Może od 100 to za dużo, weźmy do 20.
+
+10
+00:00:25,500 --> 00:00:26,940
+Co by nie było tak długo.
+
+11
+00:00:26,940 --> 00:00:32,460
+No i teraz będziemy chcieli pytać użytkownika o to, jaki jest jego typ.
+
+12
+00:00:32,980 --> 00:00:35,280
+Czyli możemy sobie zatem napisać.
+
+13
+00:00:36,179 --> 00:00:39,539
+While true, może być tak.
+
+14
+00:00:40,799 --> 00:00:43,439
+Podaj mi swój typ, czyli jakaś tam liczba.
+
+15
+00:00:43,740 --> 00:00:47,100
+Niech to będzie number równa się int input.
+
+16
+00:00:48,200 --> 00:00:48,980
+Podaj liczbę.
+
+17
+00:00:51,340 --> 00:00:54,880
+Jeżeli number to guess.
+
+18
+00:00:54,880 --> 00:00:56,900
+No to print.
+
+19
+00:00:56,939 --> 00:00:59,280
+Brawo, zgadłeś.
+
+20
+00:00:59,839 --> 00:01:02,759
+Piszę do siebie, więc wybrałem rodzaj męski.
+
+21
+00:01:03,599 --> 00:01:07,739
+Elif, number mniejszy niż guess.
+
+22
+00:01:08,739 --> 00:01:15,599
+To znaczy, że ktoś próbował podać wartość mniejszą niż tą, którą zgadłem.
+
+23
+00:01:16,140 --> 00:01:17,780
+Czyli wyświetlam podpowiedź za mało.
+
+24
+00:01:20,859 --> 00:01:23,340
+W przeciwnym wypadku mam tylko jedną opcję.
+
+25
+00:01:23,340 --> 00:01:25,379
+Mogę wyświetlić print zbyt dużo.
+
+26
+00:01:26,939 --> 00:01:28,939
+No i sprawdzamy, czy zadziałało.
+
+27
+00:01:28,939 --> 00:01:30,939
+Python while 3.
+
+28
+00:01:30,939 --> 00:01:32,939
+I lecimy.
+
+29
+00:01:32,939 --> 00:01:33,939
+Podaj liczbę.
+
+30
+00:01:33,939 --> 00:01:34,939
+1.
+
+31
+00:01:34,939 --> 00:01:35,939
+Zbyt dużo?
+
+32
+00:01:35,939 --> 00:01:36,939
+0?
+
+33
+00:01:36,939 --> 00:01:37,939
+Ok.
+
+34
+00:01:37,939 --> 00:01:38,939
+Zgadłem.
+
+35
+00:01:38,939 --> 00:01:41,939
+Jak zgadłem, to wypadałoby jeszcze zrobić break.
+
+36
+00:01:41,939 --> 00:01:43,939
+Ale się trafiło, co?
+
+37
+00:01:43,939 --> 00:01:45,939
+Od 0 do 20 wylosował 0.
+
+38
+00:01:45,939 --> 00:01:46,939
+No dobra.
+
+39
+00:01:46,939 --> 00:01:48,939
+Control C zrobiłem raz jeszcze.
+
+40
+00:01:48,939 --> 00:01:50,939
+Uruchamiam ten sam program.
+
+41
+00:01:50,939 --> 00:01:51,939
+Podaj liczbę.
+
+42
+00:01:51,939 --> 00:01:52,939
+5.
+
+43
+00:01:52,939 --> 00:01:53,939
+Za mało.
+
+44
+00:01:53,939 --> 00:01:54,939
+No to dobra.
+
+45
+00:01:54,939 --> 00:01:55,939
+15.
+
+46
+00:01:55,939 --> 00:01:56,900
+Zbyt dużo. 10.
+
+47
+00:01:56,900 --> 00:01:57,900
+Zbyt dużo.
+
+48
+00:01:57,900 --> 00:01:58,900
+Czyli 12.
+
+49
+00:01:58,900 --> 00:01:59,900
+13.
+
+50
+00:01:59,900 --> 00:02:00,900
+12.
+
+51
+00:02:00,900 --> 00:02:02,900
+Jest. Udało się.
+
+52
+00:02:02,900 --> 00:02:05,900
+Brakuje tylko jeszcze informacji po ilu próbach zgadłem.
+
+53
+00:02:05,900 --> 00:02:08,900
+Mogę sobie więc stworzyć zmienną tries.
+
+54
+00:02:08,900 --> 00:02:10,900
+Równa się 0.
+
+55
+00:02:10,900 --> 00:02:12,900
+Za każdym zgadnięciem.
+
+56
+00:02:12,900 --> 00:02:17,900
+Czyli tak naprawdę za każdą próbą odgadnięcia możemy sobie zwiększać nasze tries.
+
+57
+00:02:18,900 --> 00:02:20,900
+Brawo, zgadłeś.
+
+58
+00:02:20,900 --> 00:02:22,900
+Print ilość prób.
+
+59
+00:02:26,900 --> 00:02:27,900
+Tries.
+
+60
+00:02:27,900 --> 00:02:29,900
+F z przodu jeszcze by się przydała.
+
+61
+00:02:29,900 --> 00:02:34,900
+Mała poprawka formatowania i sprawdzamy czy teraz zadziała.
+
+62
+00:02:34,900 --> 00:02:37,900
+Jak zadziała to pójdziemy do kolejnego tematu.
+
+63
+00:02:37,900 --> 00:02:38,900
+39.
+
+64
+00:02:38,900 --> 00:02:39,900
+Zbyt dużo.
+
+65
+00:02:39,900 --> 00:02:40,900
+No to od 0 do 20.
+
+66
+00:02:40,900 --> 00:02:41,900
+Brawo ja.
+
+67
+00:02:41,900 --> 00:02:43,900
+20 będzie za dużo.
+
+68
+00:02:43,900 --> 00:02:49,900
+Powinienem tak naprawdę mechanizm rozwiązania tego zadania powinienem zaraz wam pokazać jak to schakować.
+
+69
+00:02:49,900 --> 00:02:50,900
+Zobaczcie.
+
+70
+00:02:50,900 --> 00:02:51,900
+Rozpalę raz jeszcze.
+
+71
+00:02:51,900 --> 00:02:52,900
+Podaj liczbę.
+
+72
+00:02:52,900 --> 00:02:54,900
+Jeżeli wiem, że od 0 do 20.
+
+73
+00:02:54,900 --> 00:02:56,900
+A nie chcę iść w strzelanie.
+
+74
+00:02:56,900 --> 00:02:58,900
+To robię 10.
+
+75
+00:02:58,900 --> 00:03:00,900
+Zbyt dużo.
+
+76
+00:03:00,900 --> 00:03:03,900
+Teraz już wiem, że mam od 0 do 10.
+
+77
+00:03:03,900 --> 00:03:04,900
+Sprawdzę 5.
+
+78
+00:03:04,900 --> 00:03:06,900
+Za mało.
+
+79
+00:03:06,900 --> 00:03:09,900
+Czyli wiem, że liczba mieści się między 5 a 10.
+
+80
+00:03:09,900 --> 00:03:14,900
+Czyli tak naprawdę mam do wyboru 6, 7, 8 i 9.
+
+81
+00:03:14,900 --> 00:03:18,900
+Więc najpierw strzelę w środkową wartość czyli w 7.
+
+82
+00:03:18,900 --> 00:03:20,900
+No i udało się w trzech próbach.
+
+83
+00:03:20,900 --> 00:03:23,900
+Dzięki temu można byłoby zminimalizować ilość strzałów.
+
+84
+00:03:23,900 --> 00:03:30,900
+Żeby zgadnąć w którą stronę jaka liczba jest wylosowana.
+
+85
+00:03:30,900 --> 00:03:31,900
+Ok.
+
+86
+00:03:31,900 --> 00:03:32,900
+Bardzo wam dziękuję.
+
+87
+00:03:32,900 --> 00:03:34,900
+Zapraszam do kolejnych tematów.
+
+88
+00:03:34,900 --> 00:03:35,900
+Cześć.

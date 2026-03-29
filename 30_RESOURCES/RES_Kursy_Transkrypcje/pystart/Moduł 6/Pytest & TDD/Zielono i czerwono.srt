@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:01,720
+No dobrze, jak wygląda szczęście?
+
+2
+00:00:01,860 --> 00:00:03,180
+Tak wygląda szczęście. Jeżeli
+
+3
+00:00:03,180 --> 00:00:05,879
+napisaliśmy nasz kod i w naszym
+
+4
+00:00:05,879 --> 00:00:07,719
+kodzie znalazły się testy i te testy
+
+5
+00:00:07,719 --> 00:00:09,540
+przeszły, to tak to właśnie wygląda.
+
+6
+00:00:10,240 --> 00:00:11,700
+Zobaczcie jak wykonałem ten kod.
+
+7
+00:00:11,779 --> 00:00:13,980
+Czyli napisałem python-m pytest
+
+8
+00:00:13,980 --> 00:00:15,380
+spacja tam training py.
+
+9
+00:00:16,059 --> 00:00:17,480
+W efekcie dostałem informację
+
+10
+00:00:17,480 --> 00:00:19,820
+one passed in, no i tam
+
+11
+00:00:19,820 --> 00:00:21,879
+w jedną dziesiątą sekundy
+
+12
+00:00:21,879 --> 00:00:23,100
+ten test przeszedł.
+
+13
+00:00:23,559 --> 00:00:25,820
+Jeżeli mamy testów dużo, to czasem fajnie
+
+14
+00:00:25,820 --> 00:00:27,940
+widać jak tak lecą, na zielono
+
+15
+00:00:27,940 --> 00:00:29,859
+się świecąc. Jak się świeci coś na czerwono,
+
+16
+00:00:29,859 --> 00:00:31,539
+no to mniej fajnie, ale też tak
+
+17
+00:00:31,539 --> 00:00:34,000
+trrrt. I dzięki temu
+
+18
+00:00:34,000 --> 00:00:35,780
+możemy sprawdzić co należy poprawić
+
+19
+00:00:35,780 --> 00:00:36,439
+w naszym kodzie.
+
+20
+00:00:38,100 --> 00:00:39,960
+Jeżeli zrobimy coś natomiast źle,
+
+21
+00:00:40,420 --> 00:00:41,560
+bo na przykład zamiast
+
+22
+00:00:41,560 --> 00:00:43,740
+pięciu dostaniemy osiem,
+
+23
+00:00:44,379 --> 00:00:46,079
+czy zamiast ośmiu dostaniemy pięć,
+
+24
+00:00:46,340 --> 00:00:47,859
+czy cokolwiek innego takiego się stanie,
+
+25
+00:00:48,340 --> 00:00:49,980
+to zobacz, możemy sobie ten
+
+26
+00:00:49,980 --> 00:00:51,840
+test wtedy przeczytać. Pojawia nam się
+
+27
+00:00:51,840 --> 00:00:53,679
+informacja test add numbers
+
+28
+00:00:53,679 --> 00:00:55,780
+na czerwono. To jest informacja o tym
+
+29
+00:00:55,780 --> 00:00:57,399
+jaki test się wysypał.
+
+30
+00:00:57,399 --> 00:00:59,620
+I co poszło nie tak.
+
+31
+00:00:59,859 --> 00:01:01,859
+Czyli stąd wiem, że ten test
+
+32
+00:01:01,859 --> 00:01:03,799
+nie zadziałał. Po drugie,
+
+33
+00:01:04,120 --> 00:01:05,920
+kiedy zerkam sobie na mój
+
+34
+00:01:05,920 --> 00:01:07,920
+kod, widzę, że co w tym teście
+
+35
+00:01:07,920 --> 00:01:09,319
+się znajduje, widzę value
+
+36
+00:01:09,319 --> 00:01:11,319
+i widzę assert value
+
+37
+00:01:11,319 --> 00:01:13,319
+równa się osiem.
+
+38
+00:01:14,180 --> 00:01:15,879
+To jest linia zaznaczona tym takim
+
+39
+00:01:15,879 --> 00:01:17,980
+dzióbkiem po lewej, mówiąca o tym,
+
+40
+00:01:18,079 --> 00:01:19,819
+że to się zepsuło. Dlaczego
+
+41
+00:01:19,819 --> 00:01:21,780
+to się zepsuło? Ponieważ ja się
+
+42
+00:01:21,780 --> 00:01:24,219
+spodziewałem wartości osiem, a moje value
+
+43
+00:01:24,219 --> 00:01:25,819
+miało wartość pięć.
+
+44
+00:01:26,299 --> 00:01:28,180
+I wtedy już wiem, że dla tych danych
+
+45
+00:01:28,180 --> 00:01:29,500
+ta funkcja
+
+46
+00:01:29,859 --> 00:01:31,400
+miała zwracać osiem,
+
+47
+00:01:31,679 --> 00:01:33,459
+a zwraca pięć. Coś jest nie tak.
+
+48
+00:01:33,959 --> 00:01:35,539
+To oczywiście jest błąd w teście, który
+
+49
+00:01:35,539 --> 00:01:37,019
+widzisz tutaj, no bo tak naprawdę
+
+50
+00:01:37,019 --> 00:01:39,859
+piątka powinna być zwrócona, a nie ósemka.
+
+51
+00:01:40,299 --> 00:01:41,560
+I czasem błędy w testach też
+
+52
+00:01:41,560 --> 00:01:43,659
+się znajdują. To jest taki przykry
+
+53
+00:01:43,659 --> 00:01:44,780
+moment, no bo
+
+54
+00:01:44,780 --> 00:01:47,460
+trzeba sobie z tym jakoś poradzić, że się pojawił
+
+55
+00:01:47,460 --> 00:01:49,420
+błąd w teście, albo
+
+56
+00:01:49,420 --> 00:01:51,379
+poprawić test. Natomiast jeżeli
+
+57
+00:01:51,379 --> 00:01:53,480
+jesteśmy pewni, że w teście wszystko jest okej,
+
+58
+00:01:53,700 --> 00:01:55,239
+no to wtedy trzeba poprawić coś w kodzie.
+
+59
+00:01:55,620 --> 00:01:57,780
+Tutaj ewidentny błąd w teście.
+
+60
+00:01:59,379 --> 00:01:59,819
+Stąd,
+
+61
+00:01:59,859 --> 00:02:01,200
+pojawiło się właśnie sformułowanie
+
+62
+00:02:01,200 --> 00:02:03,780
+u mnie działa, albo dyskusja z kimś.
+
+63
+00:02:03,840 --> 00:02:05,680
+Ej, ten test jest nieprawidłowy, bo coś tam,
+
+64
+00:02:05,739 --> 00:02:07,640
+coś tam. Nie bierzesz pod uwagę tego,
+
+65
+00:02:07,739 --> 00:02:09,419
+co ja tutaj zrobiłem. No i
+
+66
+00:02:09,419 --> 00:02:11,840
+ale w ramie wiadomo, zapaliło się światełko,
+
+67
+00:02:11,939 --> 00:02:13,960
+tak, zapaliła się kontrolka. Coś musisz sprawdzić,
+
+68
+00:02:14,080 --> 00:02:15,300
+musisz zmienić test.
+
+69
+00:02:15,860 --> 00:02:17,699
+Raczej naprawianie testów
+
+70
+00:02:17,699 --> 00:02:19,620
+poprzez ich usuwanie nie jest
+
+71
+00:02:19,620 --> 00:02:21,699
+rekomendowanym sposobem naprawiania błędów
+
+72
+00:02:21,699 --> 00:02:22,259
+w testach.

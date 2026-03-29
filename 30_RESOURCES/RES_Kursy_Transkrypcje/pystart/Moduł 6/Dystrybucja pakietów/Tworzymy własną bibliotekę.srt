@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:02,339
+No i cóż, jeżeli mamy taką bibliotekę stworzoną,
+
+2
+00:00:02,419 --> 00:00:06,360
+to teraz i mamy ten plik setup.py stworzony,
+
+3
+00:00:06,440 --> 00:00:08,339
+to teraz należy wykonać takie polecenie.
+
+4
+00:00:08,779 --> 00:00:13,859
+Python, spacja, setup.py, spacja, sdist.
+
+5
+00:00:14,300 --> 00:00:16,920
+Gdzie dist to jest skrót od distribution,
+
+6
+00:00:17,420 --> 00:00:19,980
+czyli coś, co możemy dystrybuować.
+
+7
+00:00:19,980 --> 00:00:24,060
+Jeżeli wykonamy polecenie python setup.py sdist,
+
+8
+00:00:25,000 --> 00:00:26,500
+nie mylić sadist,
+
+9
+00:00:26,900 --> 00:00:29,219
+to wówczas on nam wygeneruje taki plik,
+
+10
+00:00:29,219 --> 00:00:31,619
+taki folder dist i w nim będzie plik
+
+11
+00:00:31,619 --> 00:00:33,560
+py start myślnik numer wersji,
+
+12
+00:00:33,679 --> 00:00:35,579
+to jest nazwa naszego pakietu,
+
+13
+00:00:35,679 --> 00:00:38,079
+myślnik numer wersji .tar.gz.
+
+14
+00:00:38,640 --> 00:00:40,799
+Tar.gz to jest coś takiego jak zip,
+
+15
+00:00:40,920 --> 00:00:42,479
+czyli po prostu spakowany plik,
+
+16
+00:00:42,920 --> 00:00:44,280
+tylko w innym sposobie.
+
+17
+00:00:44,939 --> 00:00:47,500
+I dzięki temu taki plik będziemy mogli później
+
+18
+00:00:47,500 --> 00:00:49,700
+zainstalować w dowolnym projekcie.
+
+19
+00:00:49,700 --> 00:00:50,840
+A jak to zrobić?
+
+20
+00:00:51,359 --> 00:00:52,500
+To już za moment Ci pokażę.

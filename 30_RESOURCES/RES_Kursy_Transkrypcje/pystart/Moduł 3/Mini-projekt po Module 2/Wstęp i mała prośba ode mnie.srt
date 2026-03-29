@@ -1,0 +1,83 @@
+1
+00:00:00,160 --> 00:00:04,200
+Cześć, wraz z zakończeniem ostatniego modułu, tego poprzedniego modułu,
+
+2
+00:00:04,600 --> 00:00:07,080
+przyszedł czas na jeszcze jedną przyjemną rzecz,
+
+3
+00:00:07,500 --> 00:00:10,839
+a mianowicie zrobimy sobie projekt, w którym wykorzystamy
+
+4
+00:00:10,839 --> 00:00:15,220
+praktycznie większość tej wiedzy, którą do tej pory zdobyliśmy.
+
+5
+00:00:15,720 --> 00:00:19,460
+Cóż to za projekt, opowiem Ci już za chwilę, natomiast zanim do tego projektu przejdziemy,
+
+6
+00:00:19,800 --> 00:00:22,920
+mam jedną gorącą prośbę. W chwili, w której to nagrywam,
+
+7
+00:00:23,179 --> 00:00:27,260
+na Facebooku profil Kacper Sieradziński ma jedną opinię,
+
+8
+00:00:27,260 --> 00:00:31,460
+natomiast na Google jeszcze nas nie ma, jako do kodu.
+
+9
+00:00:31,679 --> 00:00:35,280
+Więc jeżeli masz możliwość, to wejdź, zerknij, czy na Google pojawił się profil do kodu,
+
+10
+00:00:35,340 --> 00:00:39,179
+a jeżeli nie, to wejdź na Facebooka, na profil Kacper Sieradziński i zostaw opinię,
+
+11
+00:00:39,500 --> 00:00:42,719
+co myślisz o tym kursie. Mam nadzieję, że ta opinia będzie pozytywna,
+
+12
+00:00:42,800 --> 00:00:45,540
+a jeżeli nie, to śmiało możesz też najpierw napisać do mnie na do kodu,
+
+13
+00:00:45,660 --> 00:00:51,200
+bardzo na Discordzie, bardzo chętnie odniosę się do tego i spróbuję poprawić
+
+14
+00:00:51,200 --> 00:00:54,180
+jakość tego kursu, bo na tym kursie szczególnie mi zależy,
+
+15
+00:00:54,700 --> 00:00:57,180
+ponieważ uważam, że to, jak stawia się pierwsze kursy,
+
+16
+00:00:57,259 --> 00:01:00,659
+kroki w programowaniu, wpływa później na przyszłość.
+
+17
+00:01:01,099 --> 00:01:04,879
+To tyle ode mnie, będę niezmiernie wdzięczny, jeżeli wejdziesz na tego Facebooka,
+
+18
+00:01:04,920 --> 00:01:08,099
+zostawisz chociaż jedno zdanie opinii na temat kursu,
+
+19
+00:01:08,359 --> 00:01:10,759
+no i napisz koniecznie, że to jest opinia dotycząca Pajstartu,
+
+20
+00:01:10,799 --> 00:01:13,379
+albo dotycząca mnie. Bardzo serdecznie za to dziękuję
+
+21
+00:01:13,379 --> 00:01:16,659
+i jesteśmy w kontakcie. Chodźcie do projektu.

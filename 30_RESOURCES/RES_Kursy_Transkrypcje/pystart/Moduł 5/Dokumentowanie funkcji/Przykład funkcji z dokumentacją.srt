@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:07,120
+No dobra, napisaliśmy sobie te argumenty, wiemy jakie typy są przyjmowane, wiemy jaki typ jest zwracany, ale gdzie ten opis?
+
+2
+00:00:07,620 --> 00:00:11,040
+Opis zapisujemy zawsze w czymś, co nazywa się pyDoc.
+
+3
+00:00:11,040 --> 00:00:21,820
+pyDoc zaczyna się od potrójnego cudzysłowu, po którym następuje nazwa, czy też opis funkcji, czyli this function adds two numbers together.
+
+4
+00:00:22,280 --> 00:00:23,960
+Niech będzie taki opis.
+
+5
+00:00:23,960 --> 00:00:40,859
+Następnie opisujemy poszczególne parametry naszej funkcji, czyli dwukropek param a dwukropek, opis parametru, dwukropek param b dwukropek, gdzie oczywiście a i b wymieniamy na konkretne nazwy zmienne, które się tutaj znajdują, the second number.
+
+6
+00:00:41,480 --> 00:00:45,840
+Następnie zapisujemy dwukropek return i piszemy co nasza funkcja zwraca.
+
+7
+00:00:45,840 --> 00:00:53,840
+Tutaj powinien być taki prosty opis tego, co możecie zobaczyć, kiedy będziemy zwracali jakąś wartość z funkcji.
+
+8
+00:00:53,960 --> 00:00:58,259
+No i zamykamy sobie ten opis też potrójnym cudzysłowem.
+
+9
+00:00:58,259 --> 00:01:02,140
+Czyli sprowadzając do ogólnego schematu wygląda to tak.
+
+10
+00:01:02,500 --> 00:01:11,819
+Potrójny cudzysłów, opis funkcji, parametr jego nazwa dwukropek opis, parametr jego nazwa dwukropek opis, dwukropek return, dwukropek co zwracamy i zamknięcie tegoż.
+
+11
+00:01:12,519 --> 00:01:18,980
+Tak to właśnie wygląda i my już za moment będziemy pisali sobie też takie przykładowe pyDoki.
+
+12
+00:01:18,980 --> 00:01:23,680
+Tu zaznaczam, że wiem, że do Visual Studio Code trzeba doinstalować rozszerzenie.
+
+13
+00:01:23,959 --> 00:01:25,559
+Takie pyDoki mieć, tak mi się wydaje.
+
+14
+00:01:26,199 --> 00:01:30,539
+Natomiast PyCharm częściowo uzupełnia je za nas.
+
+15
+00:01:30,659 --> 00:01:35,199
+Zresztą zaraz to zobaczymy, bo będziemy sobie kodowali i pisali pyDoki.
+
+16
+00:01:36,099 --> 00:01:38,079
+Czy do każdej funkcji trzeba pisać pyDoka?
+
+17
+00:01:38,539 --> 00:01:41,179
+Tak naprawdę do większości tak.
+
+18
+00:01:41,439 --> 00:01:51,079
+Natomiast na kursie, jeżeli ten kurs ma być w miarę dynamiczny i chcemy pokazywać nowe aspekty programowania, to nie zawsze te pyDoki będę pisał.
+
+19
+00:01:51,579 --> 00:01:53,159
+Pokażę teraz jak je pisać.
+
+20
+00:01:53,159 --> 00:01:55,859
+Natomiast w przyszłych funkcjach po prostu będę je pomijał.
+
+21
+00:01:55,859 --> 00:01:58,359
+Może raz na jakiś czas gdzieś tam takiego pyDoka dodam.
+
+22
+00:01:58,659 --> 00:02:07,620
+Natomiast zależy mi na tym, żebyście wiedzieli, że jeżeli przygotowuję kod dla klienta czy produkcyjnie dla kogoś, to zawsze te pyDoki dodaję.

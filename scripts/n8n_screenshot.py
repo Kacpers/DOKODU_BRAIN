@@ -76,8 +76,7 @@ def wait_for_login(page):
 
 def do_screenshot(browser, shot: dict):
     """Robi jeden screenshot według specyfikacji."""
-    vw, vh = shot.get("viewport", (1400, 900))
-    page = browser.new_page(viewport={"width": vw, "height": vh})
+    page = browser.new_page()
 
     url = shot["url"]
     if not url.startswith("http"):

@@ -1,0 +1,167 @@
+1
+00:00:00,000 --> 00:00:12,939
+I tak, mogłoby się wydawać, i pewnie wielu z Was się wydawało, że kiedy stajemy w szranki z projektem, to otworzymy od razu IDE i prezentacji tu nie będzie żadnej.
+
+2
+00:00:13,320 --> 00:00:22,539
+No to umówmy się tak, taki mały zróbmy układ. Najpierw ja Ci opowiem wszystko co wiem, a później dopiero usiądziemy do kodu. Tak samo jak było w kursie.
+
+3
+00:00:22,539 --> 00:00:39,480
+Bo w kursie też nie było tak, że od razu pokazywaliśmy sobie wszystkie rzeczy, trzeba było trochę nabrać wiedzy. I moim zdaniem, zanim zajmiemy się projektem i zanim zdecydujemy się, że chcemy napisać jakieś pierwsze linie kodu, warto mieć też trochę wiedzy projektowej.
+
+4
+00:00:39,480 --> 00:00:51,200
+I tę wiedzę chciałem Ci przekazać. Przede wszystkim od czego zacząć. Bo kiedy stajemy przed jakimś projektem, mówię nawet o projekcie, który sam sobie wymyśliłeś, wymyśliłaś,
+
+5
+00:00:51,200 --> 00:00:52,200
+to zawsze...
+
+6
+00:00:52,539 --> 00:01:01,439
+zmierzymy się z tym smutnym IDE, które jest puste, chciałoby się już zacząć coś wpisywać, a nigdy nie wiadomo od czego zacząć.
+
+7
+00:01:01,439 --> 00:01:07,019
+Więc moim zdaniem są takie elementy, od których ja bym zaczął.
+
+8
+00:01:07,019 --> 00:01:16,539
+W ogóle na kanale też jest film na ten temat, jeśli Was interesuje. Idealny projekt rekrutacyjny, tam też trochę o tym mówię, ale od strony takiej technicznej, tu będziemy poruszali bardziej aspekt merytoryczny.
+
+9
+00:01:16,539 --> 00:01:19,539
+Pierwszą rzeczą jest analiza wymagań.
+
+10
+00:01:19,539 --> 00:01:22,539
+Albert Einstein powiedział kiedyś, że gdyby miał...
+
+11
+00:01:22,540 --> 00:01:32,540
+tam czasu na rozwiązanie pewnego problemu, to najpierw by postarał się bardzo dobrze go sformułować, a dopiero później małą część czasu przeznaczyłby na jego rozwiązanie.
+
+12
+00:01:32,540 --> 00:01:41,540
+Moim zdaniem w przypadku wielu projektów dokładnie tak jest, że jeżeli nie przeanalizujemy sobie dokładnie tego, co trzeba zrobić, to później może się okazać, że zrobimy coś zupełnie innego.
+
+13
+00:01:41,540 --> 00:01:43,540
+O tym porozmawiamy.
+
+14
+00:01:43,540 --> 00:01:45,540
+Następnie jest modelowanie danych.
+
+15
+00:01:45,540 --> 00:01:50,540
+Modelowanie danych takie bardzo mocno podstawowe, to jest to, że mamy jakąś bazę danych.
+
+16
+00:01:50,540 --> 00:01:51,540
+Chcemy w tej bazie przechowywać informacje.
+
+17
+00:01:51,540 --> 00:01:58,540
+Dzisiaj też parę takich gratisów dotyczących baz danych też postaram się w tej naszej prezentacji przemycić.
+
+18
+00:01:58,540 --> 00:02:01,540
+A po drugie modelowanie danych to są też wszystkie te przepływy.
+
+19
+00:02:01,540 --> 00:02:09,540
+Czyli to, że ja sobie wymyśliłem, że gdzieś tam będę miał klasę person, tak jak w poprzedniej pracy domowej, tu będę ją dodawał, tu będę coś tam, to takie rzeczy też warto wiedzieć.
+
+20
+00:02:09,540 --> 00:02:20,540
+Na początku, jeżeli to jest twój pierwszy projekt, to nie martw się z tym, że to będzie może trochę bardziej ułomne, czy że w pewnych miejscach będziesz nadużywać słowników zamiast tworzyć obiekty.
+
+21
+00:02:20,540 --> 00:02:21,540
+Tak jest.
+
+22
+00:02:21,539 --> 00:02:28,539
+Natomiast, jeżeli się nad tym dobrze zastanowisz wcześniej, to na pewno część decyzji od ciebie odejdzie.
+
+23
+00:02:28,539 --> 00:02:31,539
+Po trzecie, zaplanowanie przypadków użycia.
+
+24
+00:02:31,539 --> 00:02:41,539
+W momencie, w którym chcemy stworzyć projekt, warto jest przygotować sobie takie ścieżki, czyli co ma się wydarzyć kiedy, jeżeli ktoś kliknie w to, to coś się tam wtedy stanie.
+
+25
+00:02:41,539 --> 00:02:48,539
+I taki, może nie w postaci diagramu, ale chociażby w przypadku takiego opisu tekstowego, warto jest wiedzieć, co ma się stać.
+
+26
+00:02:48,539 --> 00:02:49,539
+Przy okazji, kiedy, jeżeli robicie projekt danych, to możecie sobie zapytać, czy to jest w porządku.
+
+27
+00:02:49,539 --> 00:02:50,539
+Tak?
+
+28
+00:02:50,539 --> 00:02:51,539
+Tak.
+
+29
+00:02:51,539 --> 00:03:00,539
+Jeżeli robicie projekt dla kogoś, bo na przykład stwierdzicie, że chcecie takim projektem wykorzystującym całą waszą Pythonową wiedzę obdarzyć jakąś osobę, bo tak też można,
+
+30
+00:03:00,539 --> 00:03:08,539
+no to wówczas polecam też z tą osobą wtedy dobrze porozmawiać, bo może się okazać, że pewne problemy wyjdą w tym momencie, a nie gdzieś dalej.
+
+31
+00:03:08,539 --> 00:03:18,539
+Ja w moim życiu miałem wiele takich projektów, gdzie zbyt mało zaplanowałem przypadków użycia i później się okazało, że tak naprawdę, no nie przewidziałem wszystkiego i trzeba było dużo rzeczy zmieniać.
+
+32
+00:03:18,539 --> 00:03:19,539
+Tak.
+
+33
+00:03:19,539 --> 00:03:24,539
+Kolejna rzecz, jak już mniej więcej wiemy, co jest do zrobienia, to warto podzielić sobie projekt na podzadania.
+
+34
+00:03:24,539 --> 00:03:34,539
+No w ogóle na zadania, na taski, ogólnie rzecz biorąc, żeby wiedzieć, co trzeba zrobić i żeby móc sobie w którymś momencie zaplanować, od czego warto byłoby zacząć.
+
+35
+00:03:34,539 --> 00:03:38,539
+Następnie oceniamy złożoność poszczególnych zadań.
+
+36
+00:03:38,539 --> 00:03:46,539
+To są też rzeczy, które najczęściej wykonujemy w momencie, w którym pracujemy gdzieś na etacie i dzisiaj też trochę o tej pracy takiej etatowej będę ci opowiadał.
+
+37
+00:03:46,539 --> 00:03:47,539
+Jak to się dzieje, że pojawiają się zadania w moim...
+
+38
+00:03:47,539 --> 00:03:48,539
+Tak.
+
+39
+00:03:48,539 --> 00:03:50,539
+Gdzieś tam planie i że muszę je wykonać.
+
+40
+00:03:50,539 --> 00:03:52,539
+No i ostatnie, to jest właśnie przejście do kodu.
+
+41
+00:03:52,539 --> 00:03:54,539
+Więc to był taki wstęp.
+
+42
+00:03:54,539 --> 00:04:01,539
+Zapraszam cię do kolejnego slajdu, gdzie porozmawiamy o już rzeczach konkretnych.

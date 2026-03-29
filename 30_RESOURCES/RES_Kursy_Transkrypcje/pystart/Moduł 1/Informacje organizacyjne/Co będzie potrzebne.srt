@@ -1,0 +1,243 @@
+1
+00:00:00,000 --> 00:00:04,960
+I tutaj mam też kilka rad dla ciebie, jak dobrze jest się uczyć.
+
+2
+00:00:05,419 --> 00:00:10,779
+Jeżeli uczysz się programowania, a to robiłem już wiele lat, od wielu lat też uczę innych programowania,
+
+3
+00:00:11,140 --> 00:00:15,099
+to wypracowałem sobie takie cztery punkty, które myślę, że są bardzo istotne.
+
+4
+00:00:15,560 --> 00:00:20,620
+O pierwszym tym punkcie mówiliśmy sobie już moment temu, czyli wykonywanie prac domowych i nauka wymagają czasu.
+
+5
+00:00:21,160 --> 00:00:25,199
+Tutaj nie należy zupełnie iść na szybkość.
+
+6
+00:00:25,199 --> 00:00:31,100
+Jeżeli nawet w którymś momencie będziesz się źle czuć i będziesz potrzebował przerwy,
+
+7
+00:00:31,660 --> 00:00:37,240
+to zrób sobie tą przerwę, ale koniecznie jak najszybciej wróć do tej nauki.
+
+8
+00:00:37,740 --> 00:00:43,420
+Tutaj zdecydowanie strategia małych kroków, czyli małymi krokami do celu jest dużo lepsza,
+
+9
+00:00:43,739 --> 00:00:47,239
+niż tylko w weekendy będę się uczyć i przerabiać moduły.
+
+10
+00:00:47,579 --> 00:00:48,600
+To nie jest dobry pomysł.
+
+11
+00:00:48,600 --> 00:00:53,899
+15-20 minut każdego dnia to jest czas, który trzeba koniecznie wygospodarować,
+
+12
+00:00:53,899 --> 00:00:56,979
+żeby na pewno ten cały moduł przerobić w jednym tygodniu.
+
+13
+00:00:57,320 --> 00:01:00,479
+Czasem może się okazać, że tego czasu będziesz potrzebować troszeczkę więcej.
+
+14
+00:01:00,939 --> 00:01:06,120
+Natomiast tutaj serdecznie zachęcam do tego, żeby po prostu siedzieć, uczyć się i robić to na bieżąco.
+
+15
+00:01:06,659 --> 00:01:12,759
+No i jeżeli czegoś nie wiesz w tym ćwiczeniu, a nie wiem, masz już zaległości jednego, dwóch modułów,
+
+16
+00:01:13,099 --> 00:01:18,460
+to nie staraj się teraz na szybko biec tylko po to, żeby się wyrównać z tymi zaległościami,
+
+17
+00:01:18,460 --> 00:01:23,140
+tylko po prostu usiądź sobie do tego, podaj sobie więcej czasu,
+
+18
+00:01:23,140 --> 00:01:28,780
+przygotuj sobie kawę, herbatę czy cokolwiek tam lubisz i rób to na spokojnie w swoim tempie.
+
+19
+00:01:28,780 --> 00:01:33,140
+Jeżeli czegoś nie pamiętasz, to wracaj do tego, czego nie pamiętasz.
+
+20
+00:01:33,140 --> 00:01:37,780
+Jeżeli widzisz, że częściej wracasz do jakiegoś zagadnienia, no to rób sobie notatki,
+
+21
+00:01:37,780 --> 00:01:44,420
+otwórz sobie zeszyt, który będzie zeszytem pajstartowym i tylko w tym zeszycie zapisuj poszczególne informacje.
+
+22
+00:01:44,420 --> 00:01:46,780
+To będzie ci się bardzo, bardzo mocno przydawało.
+
+23
+00:01:46,780 --> 00:01:53,099
+Możesz korzystać też z Google Doców, możesz korzystać z jakiegoś OneNote'a, z czego tylko chcesz, rób notatki.
+
+24
+00:01:53,140 --> 00:02:00,980
+Rzecz druga czy też trzecia, programowanie to nie jest czynność, którą można robić w przerwach.
+
+25
+00:02:00,980 --> 00:02:10,939
+Czyli jeżeli liczysz na przykład na to, że między w czasie, w którym herbata, woda się będzie gotowała na kaszkę dla dziecka,
+
+26
+00:02:10,939 --> 00:02:15,340
+to ja sobie szybko zrobię jeden moduł, to to nie jest dobre podejście, to ci tak naprawdę nic nie da.
+
+27
+00:02:15,340 --> 00:02:21,420
+Oglądanie, słuchanie mnie, a w tle robienie drugiej rzeczy też nie jest dobrym pomysłem, nie polecam.
+
+28
+00:02:21,420 --> 00:02:23,099
+Na pewno takie rozmowy jak tato,
+
+29
+00:02:23,099 --> 00:02:24,739
+można sobie gdzieś tam przyspieszyć, prawda?
+
+30
+00:02:24,739 --> 00:02:26,139
+Ja sobie zdaję z tego sprawę.
+
+31
+00:02:26,139 --> 00:02:30,579
+Natomiast jeżeli mówimy o pracy, mówimy o wiedzy, to nie jest to dobry pomysł.
+
+32
+00:02:30,579 --> 00:02:34,259
+No i zadbaj o to, żeby w tym czasie po prostu nikt nie przeszkadzał.
+
+33
+00:02:34,259 --> 00:02:35,459
+No to jest nauka.
+
+34
+00:02:35,459 --> 00:02:42,819
+Tak naprawdę, jeżeli uczysz się, nie wiem, angielskiego, czy uczysz się, zapamiętujesz słówka, czy uczysz się na jakiś egzamin, kolokwium,
+
+35
+00:02:42,819 --> 00:02:49,219
+czy podczas studiów, które może już były, albo będą, albo są teraz, to z programowaniem będzie dokładnie tak samo.
+
+36
+00:02:49,219 --> 00:02:51,099
+To nie jest tak, że można to robić do skoku.
+
+37
+00:02:51,099 --> 00:02:53,060
+Trzeba po prostu zarezerwować stały czas.
+
+38
+00:02:53,060 --> 00:02:56,780
+Robić to regularnie i to wtedy będzie zawsze przynosiło efekty.
+
+39
+00:02:56,780 --> 00:03:00,420
+Więc zawsze, kiedy ktoś mnie pyta, czy po tym kursie mogę być programistą,
+
+40
+00:03:00,420 --> 00:03:04,460
+to ja pierwsze, o czym sobie myślę, to sobie myślę, że zależy, jak się będziesz uczyć.
+
+41
+00:03:04,460 --> 00:03:07,659
+Bo jeżeli ktoś się będzie uczyć na zasadzie takiej, że tylko, no dobra,
+
+42
+00:03:07,659 --> 00:03:12,860
+to teraz, teraz Kacper mi przez dwie godziny będzie wkładał wiedzę, a potem zostanę programistą, to tak nie zadziała.
+
+43
+00:03:12,860 --> 00:03:18,980
+Ale jeżeli za tym kursem będzie szła solidna praca, ten kurs będzie taką, taką pomocą, no to uważam, że tak.
+
+44
+00:03:18,980 --> 00:03:22,539
+I kolejna rzecz, to jest porządek w tych naszych,
+
+45
+00:03:22,539 --> 00:03:27,900
+nie tylko materiałach, prezentacjach, ale też ćwiczeniach i ich rozwiązaniach.
+
+46
+00:03:27,900 --> 00:03:33,659
+Zauważyłem, że często, kiedy uczyłem stacjonarnie, czy jeszcze uczę stacjonarnie,
+
+47
+00:03:33,659 --> 00:03:38,939
+to ludzie coś sobie zapisali w katalogu dzień pierwszy, coś w katalogu dzień drugi, coś gdzieś tam,
+
+48
+00:03:38,939 --> 00:03:41,459
+coś czasem na jednym komputerze, coś na drugim.
+
+49
+00:03:41,459 --> 00:03:47,539
+I potem ja mówiłem, nawet nie wiem, Robert, Rafał, pamiętasz, gdzie masz ten, to rozwiązanie tego zadania z koszykiem?
+
+50
+00:03:47,539 --> 00:03:52,340
+A on mówił, o, to było chyba albo na komputerze żony, albo na komputerze brata, męża, coś, siostry, coś.
+
+51
+00:03:52,539 --> 00:03:53,859
+Coś tam i tak dalej.
+
+52
+00:03:53,859 --> 00:03:55,099
+To nie jest też dobry pomysł.
+
+53
+00:03:55,099 --> 00:03:57,819
+Lepiej jest wszystko mieć na jednym komputerze.
+
+54
+00:03:57,819 --> 00:03:59,659
+Możesz używać Gita.
+
+55
+00:03:59,659 --> 00:04:05,019
+Jak już się nauczysz też z niego korzystać, zobaczysz, że jest to bardzo proste, przyjemne i bardzo
+
+56
+00:04:05,019 --> 00:04:07,099
+pomocne w takiej nauce.
+
+57
+00:04:07,099 --> 00:04:12,180
+I trzymać ten kod, te wszystkie ćwiczenia w jednym miejscu, tak żeby móc też do nich sobie wracać.
+
+58
+00:04:12,180 --> 00:04:19,180
+Bo bardzo często będziemy, na przykład będę nawiązywał, że o, to jest bardzo podobne ćwiczenie do tego, które robiliśmy w module drugim, takie i takie.
+
+59
+00:04:19,180 --> 00:04:21,819
+I wtedy dobrze jest móc sobie tam to ćwiczenie obejrzeć.
+
+60
+00:04:21,819 --> 00:04:22,539
+Na przykład porównać, jak to jest.
+
+61
+00:04:22,540 --> 00:04:24,540
+Pracować na nich.

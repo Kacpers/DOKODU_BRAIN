@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:11,380
+I teraz w zadaniu jest druga część tego zadania, która mówi o tym, że mamy wyświetlić sumę, liczbę średnią oraz iloczyn tych liczb.
+
+2
+00:00:11,679 --> 00:00:15,220
+Więc żeby to wykonać powinniśmy sobie przygotować też taki podpunkt o.
+
+3
+00:00:15,580 --> 00:00:22,140
+I teraz żeby wyświetlić sumę, no to na dzień dobry potrzebujemy mieć jakąś zmienną, niech to będzie total, równa się.
+
+4
+00:00:22,719 --> 00:00:25,320
+No i suma zazwyczaj na początek ma wartość 0.
+
+5
+00:00:25,320 --> 00:00:35,539
+I wtedy tego ifa sobie usuwam, bo jak wiecie on nie jest nam potrzebny, z tego względu, że tutaj przecież dodajemy co dwa, więc pod tym względem możemy go usunąć.
+
+6
+00:00:36,000 --> 00:00:39,740
+No i robimy total plus równa się counter.
+
+7
+00:00:40,179 --> 00:00:46,359
+Przypominam, to jest ten sam zapis, co gdybyśmy wykonali total równa się counter plus total, czy też odwrotnie, nie?
+
+8
+00:00:46,359 --> 00:00:54,740
+I wtedy, żeby wyświetlić sumę tych cyfr możemy napisać print suma tych liczb wynosi.
+
+9
+00:00:54,740 --> 00:01:01,380
+No i oczywiście z f-ką świat jest piękniejszy, więc nie płacz f-ka, total.
+
+10
+00:01:03,500 --> 00:01:05,040
+Dobra, średnia.
+
+11
+00:01:05,519 --> 00:01:06,980
+Jak sobie poradzić ze średnią?
+
+12
+00:01:07,200 --> 00:01:10,460
+Żeby powiedzieć jaka jest średnia potrzebujemy mieć ilość tych liczb.
+
+13
+00:01:10,799 --> 00:01:11,859
+No i jak zrobić tą ilość?
+
+14
+00:01:11,980 --> 00:01:16,420
+Moglibyśmy na przykład posłużyć się tym rangem i raz jeszcze go sobie wskazać.
+
+15
+00:01:16,820 --> 00:01:23,020
+Albo możemy mieć też zmienną, która będzie nam zliczała tę ilość wystąpień tych naszych wartości.
+
+16
+00:01:23,019 --> 00:01:27,039
+Ja chyba wolę pójść w zliczanie, ale pokażę Wam oczywiście dwie opcje.
+
+17
+00:01:27,599 --> 00:01:31,119
+Czyli length równa się 0.
+
+18
+00:01:31,759 --> 00:01:35,899
+Wtedy length plus równa się 1.
+
+19
+00:01:36,479 --> 00:01:47,759
+No i wtedy możemy napisać, że średnia tych liczb, zrobiłem skrótu klawiszowego ctrl d, wynosi total podzielone przez length.
+
+20
+00:01:47,759 --> 00:01:51,759
+To jest dodatkowa zmienna, która nie jest najpiękniejsza.
+
+21
+00:01:51,760 --> 00:02:05,480
+Ja takich zmiennych staram się unikać, więc to o czym mówiłem na początku, to wydaje mi się, że poszedłbym bardziej w kierunku takim, że użyłbym funkcji len, o której sobie rozmawialiśmy i odwołałbym się do tego range'a.
+
+22
+00:02:05,800 --> 00:02:08,219
+Po prostu raz jeszcze niech on sobie stworzy tego range'a.
+
+23
+00:02:08,599 --> 00:02:12,560
+Wydaje mi się, że to jest jedno polecenie do zrobienia, a tu jest trochę więcej poleceń.
+
+24
+00:02:12,920 --> 00:02:20,240
+Nie wiem jak dokładnie by to wyglądało, jeżeli chodzi o optymalizację tego programu, ale jednak poszedłbym raczej w tym kierunku.
+
+25
+00:02:20,240 --> 00:02:21,740
+Jak widzicie w obu przypadkach.
+
+26
+00:02:21,740 --> 00:02:23,740
+Mamy ten sam przypadek.
+
+27
+00:02:23,740 --> 00:02:25,740
+Tu tylko tę samą wartość.
+
+28
+00:02:25,740 --> 00:02:27,740
+Tutaj tylko wypadałoby jeszcze printa pustego dorzucić.
+
+29
+00:02:27,740 --> 00:02:29,740
+Tak jak robiliśmy sobie przy ABCD.
+
+30
+00:02:29,740 --> 00:02:31,740
+Nie przy ABCD, przy tym 4321.
+
+31
+00:02:31,740 --> 00:02:35,740
+Tak, żeby te wartości nam ładnie się ułożyły.
+
+32
+00:02:35,740 --> 00:02:37,740
+O i tutaj mamy to zrobione.
+
+33
+00:02:37,740 --> 00:02:39,740
+Dobra, co dalej tam mamy?
+
+34
+00:02:39,740 --> 00:02:43,740
+Sumę, liczbę średnią oraz iloczyn tych liczb.
+
+35
+00:02:43,740 --> 00:02:47,740
+No i do iloczynu już trzeba będzie zdecydowanie stworzyć sobie jakąś zmienną.
+
+36
+00:02:47,740 --> 00:02:49,820
+I tutaj bardzo ważne jest to, żeby pamiętać, że ta zmienna nie może mieć wartość zewnętrznej.
+
+37
+00:02:49,820 --> 00:02:50,820
+I tutaj bardzo ważne jest to, żeby pamiętać, że ta zmienna nie może mieć wartości zewnętrznej.
+
+38
+00:02:50,819 --> 00:02:51,819
+I tutaj bardzo ważne jest to, żeby pamiętać, że ta zmienna nie może mieć wartości zewnętrznej.
+
+39
+00:02:51,819 --> 00:02:53,819
+No bo każda liczba przemnożona przez 0 daje nam 0.
+
+40
+00:02:53,819 --> 00:02:54,819
+No bo każda liczba przemnożona przez 0 daje nam 0.
+
+41
+00:02:54,819 --> 00:02:56,819
+Tylko musimy zacząć od wartości 1.
+
+42
+00:02:56,819 --> 00:02:58,819
+Tylko musimy zacząć od wartości 1.
+
+43
+00:02:58,819 --> 00:03:00,819
+Iloczyn to jest multiply.
+
+44
+00:03:00,819 --> 00:03:02,819
+Więc możemy sobie napisać multiply.
+
+45
+00:03:02,819 --> 00:03:04,819
+Więc możemy sobie napisać multiply.
+
+46
+00:03:04,819 --> 00:03:06,819
+Równa się, nie mylić z multiplą.
+
+47
+00:03:06,819 --> 00:03:08,819
+Chociaż mogę wam powiedzieć, że jak byłem dzieckiem to mi się ten samochód strasznie podobał.
+
+48
+00:03:08,819 --> 00:03:10,819
+Chociaż mogę wam powiedzieć, że jak byłem dzieckiem to mi się ten samochód strasznie podobał.
+
+49
+00:03:10,819 --> 00:03:12,819
+Razy równa się counter.
+
+50
+00:03:12,819 --> 00:03:14,819
+Razy równa się counter.
+
+51
+00:03:14,819 --> 00:03:16,819
+Tutaj ten counter przypominam to jest ta nasza liczba, którą wykorzystujemy tutaj.
+
+52
+00:03:16,819 --> 00:03:18,819
+Tutaj ten counter przypominam to jest ta nasza liczba, którą wykorzystujemy tutaj.
+
+53
+00:03:18,819 --> 00:03:20,819
+Więc stąd też ona może ta zmienna nie jest najpiękniejsza.
+
+54
+00:03:20,819 --> 00:03:22,819
+Więc stąd też ona może ta zmienna nie jest najpiękniejsza.
+
+55
+00:03:22,819 --> 00:03:24,819
+Ale w ten sposób iloczyn tych wartości powinien nam się też wyświetlić.
+
+56
+00:03:24,819 --> 00:03:26,819
+Ale w ten sposób iloczyn tych wartości powinien nam się też wyświetlić.
+
+57
+00:03:26,819 --> 00:03:28,819
+Ja sobie skopiuję.
+
+58
+00:03:28,819 --> 00:03:30,819
+Napiszę iloczyn tych liczb wynosi.
+
+59
+00:03:30,819 --> 00:03:32,819
+Wynosi.
+
+60
+00:03:32,819 --> 00:03:34,819
+Tych liczb wynosi.
+
+61
+00:03:34,819 --> 00:03:36,819
+I to będzie multiply.
+
+62
+00:03:36,819 --> 00:03:38,819
+I mi zależy na tym, żeby móc to sprawdzić.
+
+63
+00:03:38,819 --> 00:03:40,819
+I mi zależy na tym, żeby móc to sprawdzić.
+
+64
+00:03:40,819 --> 00:03:44,180
+więc podam mu taką wartość, którą bym potrafił przeliczyć.
+
+65
+00:03:44,479 --> 00:03:49,239
+Niech to będzie 2 razy 4 to będzie 8, razy 6 to będzie 48.
+
+66
+00:03:49,780 --> 00:03:54,319
+Czyli żeby wyświetliło się 2, 4, 6, muszę podać mu 6.
+
+67
+00:03:54,919 --> 00:03:57,740
+Czyli tak, robię 6 i mam 48.
+
+68
+00:03:58,719 --> 00:03:59,280
+Zadziałało.
+
+69
+00:03:59,599 --> 00:04:02,859
+I w ten sposób zrobiliśmy sobie zadanie pierwsze z wielu zadań,
+
+70
+00:04:02,959 --> 00:04:04,180
+więc lecimy dalej.
+
+71
+00:04:04,479 --> 00:04:05,459
+Nie ma co tracić czasu.
+
+72
+00:04:05,719 --> 00:04:06,139
+Do zobaczenia.

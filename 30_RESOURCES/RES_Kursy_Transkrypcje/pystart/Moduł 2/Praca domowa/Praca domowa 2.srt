@@ -1,0 +1,507 @@
+1
+00:00:00,000 --> 00:00:15,679
+A pracę domową w tym module rozbiłem na poszczególne zagadnienia, no i tych zadań jest trochę sporo, ale mam nadzieję, że też niektóre z nich przynajmniej będą dla Ciebie może zabawne, będą Ci się podobały i pozwolą Ci popraktykować trochę Pythona.
+
+2
+00:00:15,679 --> 00:00:45,659
+Jeżeli w którymś momencie uznasz, kurczę, nie wyrabiam się przed kolejnym modułem, to też się nie przejmuj, daj sobie czas, to, że ja wrzucę ten moduł w poniedziałek nie znaczy, że nie możesz zacząć rozwiązywać go we wtorek czy w środę, tutaj zależy mi bardzo na tym, żebyś kontynuował naukę, szedł swoim tempem, natomiast to, że ja wrzucam moduł nie musi oznaczać, że od razu przeskakujesz do nowych treści zapominając o tych poprzednich, więc powoli w swoim tempie, jeżeli okaże się, że gdzieś idziemy za szybko, to bez problemu też możesz się napisać.
+
+3
+00:00:45,679 --> 00:00:51,740
+Na Discordzie możemy sobie zrobić przerwę, możemy gdzieś coś zwolnić, ja jestem dla Was, więc zależy mi na tym, żeby było dobrze.
+
+4
+00:00:52,539 --> 00:00:54,079
+Zaczynamy pracę domową.
+
+5
+00:00:54,780 --> 00:01:06,000
+Pętla 4. W zadaniu pierwszym mamy napisać program, który odbierze od użytkownika liczbę całkowitą, a następnie wyświetli na ekranie wszystkie liczby parzyste między 2 a tą liczbą.
+
+6
+00:01:06,420 --> 00:01:08,500
+Wyświetl wszystkie te liczby oddzielone przecinkami.
+
+7
+00:01:09,500 --> 00:01:15,379
+Tutaj trochę trzeba będzie pokombinować, co zrobić, żeby były oddzielone przecinkami, może być jeden przecinek też na końcu.
+
+8
+00:01:15,640 --> 00:01:15,659
+Zatrzymajmy.
+
+9
+00:01:15,680 --> 00:01:17,380
+Zaznaczam jako taka mała podpowiedź.
+
+10
+00:01:17,920 --> 00:01:24,340
+Po drugie, poniżej wyświetl sumę, liczbę, średnią oraz iloczyn tych liczb.
+
+11
+00:01:24,720 --> 00:01:32,320
+Czyli suma, to powiedzmy, jeżeli mamy od 2 do 10, to chcemy dodać 2, 4, 6, 8, 10, sumę tych liczb.
+
+12
+00:01:33,080 --> 00:01:35,080
+Liczbę ich, no to tyle ile ich jest.
+
+13
+00:01:35,360 --> 00:01:43,520
+Średnią, czyli suma dzielona przez liczbę, a iloczyn to wartości pomnożone przez siebie, czyli 2 razy 4 razy 6 razy 8 razy 10.
+
+14
+00:01:43,520 --> 00:01:44,120
+OK?
+
+15
+00:01:44,120 --> 00:01:46,120
+Zadanie trzecie.
+
+16
+00:01:46,359 --> 00:01:53,320
+Odbierz od użytkownika liczbę, a następnie wyświetl tę liczbę podniesioną do potęgi 2, 3, 4 oraz 5.
+
+17
+00:01:53,560 --> 00:01:55,780
+I tutaj uwaga, używamy pętli for.
+
+18
+00:01:56,320 --> 00:02:01,939
+Wiem, że wiesz, że możesz użyć dwóch gwiazdek, natomiast użyj tych dwóch gwiazdek tylko do sprawdzenia.
+
+19
+00:02:02,140 --> 00:02:05,580
+Spróbuj zrobić tę potęgę za pomocą pętli for.
+
+20
+00:02:06,300 --> 00:02:12,080
+W zadaniu czwartym mamy napisać małe przejnoczenie, niekoniecznie chodzimy o funkcję, bardziej napisać kod.
+
+21
+00:02:12,080 --> 00:02:12,439
+Uwaga.
+
+22
+00:02:13,520 --> 00:02:13,680
+O!
+
+23
+00:02:14,120 --> 00:02:15,300
+Teraz wygląda dużo lepiej.
+
+24
+00:02:15,740 --> 00:02:25,420
+Napisz kod, który przejdzie po wszystkich znakach łańcucha znaków, czyli po stringu i wyświetli osobno każdy znak oraz odpowiednik z tablicy ASCII za pomocą funkcji ORD.
+
+25
+00:02:25,700 --> 00:02:36,159
+To jest ciekawe, że jeżeli piszesz coś na klawiaturze, to komputer nie rozumie do końca tych literek, tylko rozumie znaki, liczby odpowiadające tym znakom.
+
+26
+00:02:36,759 --> 00:02:41,680
+I jeżeli użyjesz funkcji ORD, to możesz zobaczyć jaką liczbę ma każdy pojedynczy znak.
+
+27
+00:02:41,680 --> 00:02:44,080
+Co ciekawe, jeżeli do tej liczby dodasz 1,
+
+28
+00:02:44,120 --> 00:02:52,340
+to i zamienisz to z powrotem na literę za pomocą funkcji CHR, to będziesz mieć możliwość zobaczenia kolejnej litery.
+
+29
+00:02:52,420 --> 00:03:03,939
+Czyli np. ABCDEFG można byłoby zrobić zamieniając literę za pomocą funkcji ORD na liczbę, dodając 1, a potem za pomocą funkcji CHR można tę liczbę zamienić na literę.
+
+30
+00:03:04,300 --> 00:03:07,780
+To trochę bardziej skomplikowane, ale to taka też ciekawostka.
+
+31
+00:03:07,780 --> 00:03:14,099
+W zadaniu piątym chcemy zapytać użytkownika o liczbę i wyświetlić w informację, czy ta liczba jest liczbą.
+
+32
+00:03:14,099 --> 00:03:22,599
+A jeśli jest liczba pierwsza, to musimy sprawdzić czy ma jakieś dzielniki od 2 do tej liczby.
+
+33
+00:03:22,599 --> 00:03:27,599
+Ale tam jest też jeden taki trik, w rozwiązaniu też Ci go pokażę.
+
+34
+00:03:27,599 --> 00:03:29,599
+Jak to można zrobić?
+
+35
+00:03:29,599 --> 00:03:37,099
+Kolejna część pracy domowej to stwórz tuple zawierającą liczby podzielne przez 6 z zakresu od 12 do 1024.
+
+36
+00:03:37,099 --> 00:03:39,099
+I odpowiedz na poniższe pytania.
+
+37
+00:03:39,099 --> 00:03:42,099
+Tutaj od razu zaznaczę, żeby użyć range'a.
+
+38
+00:03:42,099 --> 00:03:44,099
+Nie używać swoich liczb.
+
+39
+00:03:44,099 --> 00:03:50,099
+Nie używaj swoich palców do pisania wartości 12, 18, 24 itd.
+
+40
+00:03:50,099 --> 00:03:52,099
+Nie róbcie tego.
+
+41
+00:03:52,099 --> 00:03:54,099
+Użyjcie funkcji range.
+
+42
+00:03:54,099 --> 00:03:56,099
+I pytania brzmią.
+
+43
+00:03:56,099 --> 00:03:58,099
+Ile jest tych liczb?
+
+44
+00:03:58,099 --> 00:04:07,099
+Wyświetl 3 pierwsze liczby, przedostatni element, co szósty element licząc od czwartego, co trzeci element licząc od końca i ile wynosi średnia 10 ostatnich wartości.
+
+45
+00:04:07,099 --> 00:04:10,099
+Żeby to zrobić trzeba pokombinować ze slicingiem.
+
+46
+00:04:10,099 --> 00:04:12,099
+Tutaj też Wam pokażę jak to zrobić.
+
+47
+00:04:12,099 --> 00:04:18,100
+Jeżeli chodzi o średnią, to musimy po prostu użyć funkcji sum i podzielić to przez 10.
+
+48
+00:04:18,100 --> 00:04:24,100
+Trzecia część pracy domowej to przygotuj tuple przechowującą imię, nazwisko oraz wiek osoby.
+
+49
+00:04:24,100 --> 00:04:28,100
+Następnie wyświetl te dane w postaci John, Smith i 40.
+
+50
+00:04:28,100 --> 00:04:31,100
+Chodzi tylko i wyłącznie o odwoływanie się do poszczególnych elementów tupli.
+
+51
+00:04:31,100 --> 00:04:40,100
+A następnie w drugim zadaniu mamy zadeklarować tuple w postaci a równa się 1, 2, 3, b 4, 5, 6, 7, 8, 9.
+
+52
+00:04:40,100 --> 00:04:49,100
+A następnie przechodząc po nich za pomocą pętli for wyświetlić 1, 2, 3 równa się 6, 4, 5, 6 równa się 15.
+
+53
+00:04:49,100 --> 00:04:56,100
+Chcielibyśmy takie rozwiązania zadań wyświetlić, gdzie dodajemy do siebie poszczególne elementy tupli i wyświetlamy ich sumy.
+
+54
+00:04:56,100 --> 00:05:03,100
+Takie zadanie trochę na poćwiczenie, na wskazywanie konkretnych elementów tupli i na pętlę for.
+
+55
+00:05:03,100 --> 00:05:07,100
+Kolejna część pracy domowej dotyczy stringów i pracy z tekstem.
+
+56
+00:05:07,100 --> 00:05:14,100
+Chcielibyśmy napisać program, który pobierze od użytkownika dowolny ciąg znaków i napisze go na ekranie w odwrotnej kolejności.
+
+57
+00:05:14,100 --> 00:05:19,100
+Przypominam slicing i nasze zadanie z liczbą palindromiczną.
+
+58
+00:05:19,100 --> 00:05:27,100
+Czyli będziemy po prostu potrzebowali albo użyć reverse, albo możemy zrobić 2, 2, minus 1 i odwrócić sobie ten nasz tekst.
+
+59
+00:05:27,100 --> 00:05:34,100
+Po drugie napisz program, który pobierze od użytkownika ciąg znaków, zwróci ten sam tekst bez spacji oraz znaków interpunkcyjnych.
+
+60
+00:05:34,100 --> 00:05:37,100
+Te znaki interpunkcyjne umówmy się na krok.
+
+61
+00:05:37,100 --> 00:05:44,100
+Wybierz kropkę, przecinek, ewentualnie dwukropek, wybierz konkretne te znaki i spróbuj zapisać je do tupli i w pętli wykonać replace.
+
+62
+00:05:44,100 --> 00:05:46,100
+Możesz też zrobić w poszczególnych liniach.
+
+63
+00:05:46,100 --> 00:05:49,100
+Tu zależy od tego jak to do tego zadania podejdzie.
+
+64
+00:05:49,100 --> 00:05:59,100
+Podpunkt trzeci. Odbierz od użytkownika zdanie, a następnie wypisz je w taki sposób, by poszczególne wyrazy były zapisane raz małymi, raz wielkimi literami.
+
+65
+00:05:59,100 --> 00:06:06,100
+Czyli Ala ma kota, chcemy mieć Ala małymi, ma wielkimi, kota małymi.
+
+66
+00:06:06,100 --> 00:06:19,100
+Czyli znowu musimy sobie rozbić, sprawdzić, który raz przechodzimy przez tę pętlę, czy parzyście, czy nieparzyście, a następnie będziemy chcieli sprawdzać, czy zamieniać na wielkie albo na małe litery za pomocą ifa.
+
+67
+00:06:19,100 --> 00:06:31,100
+Tutaj, kto nie wie, jak sprawdzić, który raz przechodzimy przez pętlę, to polecam na przykład zrobić sobie tak, już pokazuję, że możemy stworzyć sobie takie tutaj, dam wam podpowiedzi.
+
+68
+00:06:31,100 --> 00:06:35,100
+Zobacz. Możesz napisać tak.
+
+69
+00:06:35,100 --> 00:06:36,100
+Zobacz. Możesz napisać tak.
+
+70
+00:06:36,100 --> 00:06:48,100
+A to już sobie rozbijemy.
+
+71
+00:06:48,100 --> 00:06:49,100
+Również automate, więc nie zapomnij Godовину, ale weźmą?
+
+72
+00:06:49,100 --> 00:06:50,100
+No oczywiście.
+
+73
+00:06:50,100 --> 00:06:51,100
+H�arłówkin again.
+
+74
+00:06:51,100 --> 00:06:52,100
+AdOv irrelevant.
+
+75
+00:06:52,100 --> 00:06:55,600
+triُnhă Devor mer солão ar x.
+
+76
+00:06:55,600 --> 00:07:00,100
+hõorliv I teraz jeżeli chcielibyśmy to rozbić, to oczywiście możemy wykonać sentence, split i spatia, nie?
+
+77
+00:07:00,100 --> 00:07:01,100
+Tak jak robiliśmy.
+
+78
+00:07:01,100 --> 00:07:02,100
+Othíciaми metfi spot cosine.
+
+79
+00:07:02,100 --> 00:07:03,100
+S clapem do rfounderu.
+
+80
+00:07:03,100 --> 00:07:04,100
+D Kennedy poprzez puerta z powrotem English.
+
+81
+00:07:04,100 --> 00:07:05,100
+Yes, to ky venator qualchalla et Eryk.
+
+82
+00:07:05,100 --> 00:07:09,240
+do tego zadania oczywiście jeszcze sobie wrócimy
+
+83
+00:07:09,240 --> 00:07:10,580
+chcę tylko pokazać jedną rzecz
+
+84
+00:07:10,580 --> 00:07:12,900
+a mianowicie jak stwierdzić
+
+85
+00:07:12,900 --> 00:07:15,600
+czy to jest wartość
+
+86
+00:07:15,600 --> 00:07:18,820
+parzysta czy nieparzysta
+
+87
+00:07:18,820 --> 00:07:21,540
+możesz sobie stworzyć tą zmienną counter u góry
+
+88
+00:07:21,540 --> 00:07:23,260
+i tutaj sprawdzać
+
+89
+00:07:23,260 --> 00:07:24,280
+if counter
+
+90
+00:07:24,280 --> 00:07:27,540
+modulo 2 równa się 0
+
+91
+00:07:27,540 --> 00:07:29,379
+to wtedy coś tam
+
+92
+00:07:29,379 --> 00:07:30,460
+else coś tam
+
+93
+00:07:30,460 --> 00:07:32,840
+i pamiętaj o tym koniecznie
+
+94
+00:07:32,840 --> 00:07:34,140
+żeby też zwiększać counter
+
+95
+00:07:34,139 --> 00:07:37,019
+dajcie znać na discordzie
+
+96
+00:07:37,019 --> 00:07:38,319
+czy takie podpowiedzi
+
+97
+00:07:38,319 --> 00:07:39,879
+dawać czy nie dawać
+
+98
+00:07:39,879 --> 00:07:41,500
+to oczywiście dla chętnych
+
+99
+00:07:41,500 --> 00:07:44,620
+kto nie chce podpowiedzi może sobie śmiało to ominąć
+
+100
+00:07:44,620 --> 00:07:46,839
+to było zadanie trzecie
+
+101
+00:07:46,839 --> 00:07:47,819
+zadanie czwarte
+
+102
+00:07:47,819 --> 00:07:50,599
+poniżej wypisz małymi literami tylko te słowa
+
+103
+00:07:50,599 --> 00:07:52,860
+z podanego zdania które zaczynają się i kończą
+
+104
+00:07:52,860 --> 00:07:54,360
+na tę samą literę
+
+105
+00:07:54,360 --> 00:07:55,839
+czyli jeżeli mamy ala
+
+106
+00:07:55,839 --> 00:07:58,159
+no to zaczyna się i kończy na tę samą literę
+
+107
+00:07:58,159 --> 00:07:59,939
+wyświetlamy ale
+
+108
+00:07:59,939 --> 00:08:02,019
+mogą być też inne zdania oczywiście
+
+109
+00:08:02,019 --> 00:08:04,120
+no i w zadaniu piątym
+
+110
+00:08:04,120 --> 00:08:06,600
+poniżej wyświetl wszystkie słowa ze zdania
+
+111
+00:08:06,600 --> 00:08:08,000
+z usuniętymi samogłoskami
+
+112
+00:08:08,000 --> 00:08:10,620
+czyli będzie ala będzie l
+
+113
+00:08:10,620 --> 00:08:12,199
+ma to będzie m
+
+114
+00:08:12,199 --> 00:08:14,000
+kota to będzie kt
+
+115
+00:08:14,000 --> 00:08:16,620
+i tutaj samogłoski sobie po prostu przygotuj
+
+116
+00:08:16,620 --> 00:08:17,920
+a e i o u y
+
+117
+00:08:17,920 --> 00:08:19,160
+o e
+
+118
+00:08:19,160 --> 00:08:21,300
+i możesz je po prostu usunąć
+
+119
+00:08:21,300 --> 00:08:22,879
+za pomocą na przykład replace
+
+120
+00:08:22,879 --> 00:08:24,920
+i to byłoby na tyle jeżeli chodzi o pracę domową
+
+121
+00:08:24,920 --> 00:08:27,160
+mam nadzieję że ilość wiedzy
+
+122
+00:08:27,160 --> 00:08:29,879
+wystarczy do tego żeby popraktykować
+
+123
+00:08:29,879 --> 00:08:31,160
+i się pouczyć
+
+124
+00:08:31,160 --> 00:08:32,680
+i że spędzicie przy niej miło czas
+
+125
+00:08:32,680 --> 00:08:34,080
+do zobaczenia w kolejnym
+
+126
+00:08:34,120 --> 00:08:36,000
+module już w najbliższy poniedziałek
+
+127
+00:08:36,000 --> 00:08:36,600
+cześć

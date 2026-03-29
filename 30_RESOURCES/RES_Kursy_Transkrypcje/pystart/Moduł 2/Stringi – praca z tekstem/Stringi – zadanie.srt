@@ -1,0 +1,267 @@
+1
+00:00:00,000 --> 00:00:03,280
+Znów mamy kilka, no bo chcemy praktykować.
+
+2
+00:00:03,740 --> 00:00:04,700
+Więc zadanie pierwsze.
+
+3
+00:00:05,200 --> 00:00:07,280
+Poproś użytkownika o podanie imienia.
+
+4
+00:00:07,640 --> 00:00:09,660
+W zależności od jego ostatniej litery
+
+5
+00:00:09,660 --> 00:00:11,980
+wyświetl witam panią lub witam pana.
+
+6
+00:00:12,460 --> 00:00:13,640
+Jak pobrać ostatnią literę?
+
+7
+00:00:13,980 --> 00:00:16,559
+Pokażę Ci to raz jeszcze, bo o tym mówiliśmy sobie wcześniej,
+
+8
+00:00:16,640 --> 00:00:18,260
+ale wiem, że możesz o tym nie pamiętać.
+
+9
+00:00:18,260 --> 00:00:20,140
+Albo robiąc można ends with,
+
+10
+00:00:20,260 --> 00:00:24,640
+czyli na przykład można napisać sobie Kuba ends with A.
+
+11
+00:00:25,560 --> 00:00:28,120
+I oczywiście Kuba to jest najczęściej Jakub,
+
+12
+00:00:28,120 --> 00:00:31,339
+chociaż słyszałem o osobach, które też zostały ochrzczone jako Kuba,
+
+13
+00:00:31,460 --> 00:00:32,939
+czy zapisy zarejestrowane jako Kuba.
+
+14
+00:00:33,439 --> 00:00:35,799
+Więc w tym momencie powinno się pokazać witam panią.
+
+15
+00:00:36,320 --> 00:00:37,640
+No i inny przykład to NEL.
+
+16
+00:00:39,000 --> 00:00:41,200
+Ends with false i też zobaczymy witam pana.
+
+17
+00:00:41,520 --> 00:00:43,079
+Ale my uczymy się Pythona,
+
+18
+00:00:43,340 --> 00:00:46,280
+a nie takich proprawnych zwrotów do wszystkich,
+
+19
+00:00:46,280 --> 00:00:49,400
+więc na takie wyjątki można było obsłużyć jakąś listą.
+
+20
+00:00:49,679 --> 00:00:51,760
+Jeżeli masz ochotę, rozwiń ten program w ten sposób.
+
+21
+00:00:52,400 --> 00:00:56,140
+Dopisz sobie tablicę, dopisz sobie tuple z wyjątkami
+
+22
+00:00:56,140 --> 00:00:58,079
+i użyj jej po prostu w tym wyraźniku.
+
+23
+00:00:58,119 --> 00:00:59,119
+I w tym wyrażeniu.
+
+24
+00:00:59,119 --> 00:01:00,119
+Więc to jest pierwsze zadanie.
+
+25
+00:01:00,119 --> 00:01:05,120
+Można byłoby też oczywiście zrobić Kuba od minus jeden, prawda?
+
+26
+00:01:05,120 --> 00:01:08,120
+Tak jak rozmawialiśmy a propos pobierania ostatniego,
+
+27
+00:01:08,120 --> 00:01:11,120
+ostatniego, ostatnie litery, to tak też działa.
+
+28
+00:01:11,120 --> 00:01:14,120
+Natomiast skoro mamy te metody ends with, starts with,
+
+29
+00:01:14,120 --> 00:01:16,120
+to zdecydowanie lepiej będzie ich użyć.
+
+30
+00:01:16,120 --> 00:01:21,120
+Kolejna rzecz to mamy napisać program generujący bardzo silne hasła.
+
+31
+00:01:21,120 --> 00:01:27,120
+Chcemy zamienić każdą literę A na małpę oraz każdą literę S na dolar.
+
+32
+00:01:27,120 --> 00:01:28,039
+Czyli jedno z popularnych,
+
+33
+00:01:28,040 --> 00:01:30,040
+najpopularniejszych haseł password.
+
+34
+00:01:30,040 --> 00:01:33,040
+Jeżeli wyciekłem twoje hasło, to bardzo przepraszam.
+
+35
+00:01:33,040 --> 00:01:37,040
+Chcielibyśmy zamienić A na symbol małpy.
+
+36
+00:01:38,040 --> 00:01:40,040
+No i wtedy pojawi się coś takiego.
+
+37
+00:01:40,040 --> 00:01:44,040
+No i symbol S na dolara.
+
+38
+00:01:44,040 --> 00:01:49,040
+Jeżeli masz pomysł na inne wymiany, to też jak najbardziej możesz je zastosować.
+
+39
+00:01:49,040 --> 00:01:50,040
+Na przykład O na zero.
+
+40
+00:01:50,040 --> 00:01:53,040
+Zwróć uwagę na to, że jeżeli mamy kilka liter,
+
+41
+00:01:53,040 --> 00:01:56,040
+to wszystkie te litery wymieniają się nam naraz.
+
+42
+00:01:56,040 --> 00:01:57,040
+Zadanie trzecie.
+
+43
+00:01:57,040 --> 00:02:00,040
+Policz ile razy w zdaniu pies to najlepszy przyjaciel człowieka,
+
+44
+00:02:00,040 --> 00:02:04,040
+lecz nie każdy o tym wie, wystąpiło słowo pies.
+
+45
+00:02:04,040 --> 00:02:07,040
+Można byłoby to zrobić za pomocą na przykład counta,
+
+46
+00:02:07,040 --> 00:02:11,040
+ale zwróć uwagę na to, że kiedy będziesz to liczyć,
+
+47
+00:02:11,040 --> 00:02:14,040
+to w zależności od tego czy pies będzie zapisany z wielkiej litery czy z małej,
+
+48
+00:02:14,040 --> 00:02:17,040
+on będzie nam to liczył z wielkiej albo z małej.
+
+49
+00:02:17,040 --> 00:02:21,040
+Pomyśl co można najpierw zrobić z tym zdaniem, żeby ten problem wyeliminować.
+
+50
+00:02:21,040 --> 00:02:23,040
+No i zadanie czwarte.
+
+51
+00:02:23,040 --> 00:02:26,040
+Poszukaj innych funkcji niż upper i lower
+
+52
+00:02:26,039 --> 00:02:28,039
+i spróbuj zrobić to zadanie.
+
+53
+00:02:28,039 --> 00:02:33,039
+Spróbuj ze zdania policzyć ile łącznie razem ważą zakupione produkty.
+
+54
+00:02:33,039 --> 00:02:35,039
+Spacje przed kilogramami muszą być.
+
+55
+00:02:35,039 --> 00:02:38,039
+Zwróć uwagę, że tutaj mamy 12 spacja kilogramów jabłek, przecinek,
+
+56
+00:02:38,039 --> 00:02:42,039
+10 spacja, to też jest spacja, 10 kilogramów gruszek.
+
+57
+00:02:42,039 --> 00:02:46,039
+Czyli my tak naprawdę będziemy chcieli rozbić sobie to wyrażenie po spacjach.
+
+58
+00:02:46,039 --> 00:02:47,039
+Ok?
+
+59
+00:02:47,039 --> 00:02:52,039
+Czyli najpierw ten cudzysłów oczywiście nie jest część, nie bawi się w tę grę.
+
+60
+00:02:52,039 --> 00:02:54,039
+Czyli rozbijamy sobie to wyrażenie po spacjach.
+
+61
+00:02:54,039 --> 00:02:56,039
+Przechodzimy po poszczególnych wyrazach.
+
+62
+00:02:56,039 --> 00:02:59,039
+No bo to już umiemy, bo możemy użyć pętli for.
+
+63
+00:02:59,039 --> 00:03:03,039
+I następnie jeżeli wartość, którą mamy sprawia wrażenie, że jest liczbą
+
+64
+00:03:03,039 --> 00:03:07,039
+is numeric, to wówczas możemy ją dodać.
+
+65
+00:03:07,039 --> 00:03:13,039
+No i dzięki temu dostaniemy informację, że jest 12 plus 10 plus 20, czyli 42.
+
+66
+00:03:13,039 --> 00:03:15,039
+Widzimy się za moment w rozwiązaniu.
+
+67
+00:03:15,039 --> 00:03:16,039
+Do zobaczenia.

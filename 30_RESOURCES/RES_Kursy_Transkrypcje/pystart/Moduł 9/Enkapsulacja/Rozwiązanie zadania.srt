@@ -1,0 +1,1487 @@
+1
+00:00:00,000 --> 00:00:05,540
+To co? Lecimy. Pójdziemy najmniejszą siłą oporu, czyli zaczynamy od produktu.
+
+2
+00:00:06,060 --> 00:00:14,439
+I nasz produkt, jak wiemy z końca opisu tego zadania, musi mieć nazwę, która będzie stringiem i cenę, która będzie floatem.
+
+3
+00:00:15,179 --> 00:00:19,359
+Myślę, że zarówno nazwa, jak i cena mogą być polami dostępnymi publicznie.
+
+4
+00:00:20,019 --> 00:00:27,060
+No bo tu, jeżeli ktoś chciałby dostać się do tej nazwy, czy do ceny, no to ja chciałbym dać mu możliwość wykonania po prostu, nie wiem,
+
+5
+00:00:27,059 --> 00:00:32,239
+chleb.name czy chleb.price. Nie chcę pod tym względem sobie tego utrudniać.
+
+6
+00:00:33,079 --> 00:00:38,739
+Drugą rzecz, którą zrobię, to stworzę sobie ten koszyk, czyli klasę cart.
+
+7
+00:00:39,159 --> 00:00:44,060
+Znaczy tutaj była klasa list, miała być tym określeniem. Niech to będzie w takim razie list.
+
+8
+00:00:44,700 --> 00:00:54,320
+I w tej klasie ja na chwilę obecną po prostu zaimplementuję te metody, które też zostały wymienione na slajdzie, żeby ułatwić sobie życie.
+
+9
+00:00:54,320 --> 00:00:57,039
+Czyli dev.add.
+
+10
+00:00:57,060 --> 00:00:59,060
+item. To jest pierwsza metoda.
+
+11
+00:00:59,060 --> 00:01:03,700
+Tu add item jest napisane kapitalikami, raczej powinno być zapisane tak.
+
+12
+00:01:03,700 --> 00:01:07,700
+No i widzimy, że jest tutaj product, który ma być produktem właśnie.
+
+13
+00:01:09,700 --> 00:01:11,700
+Oraz quantity,
+
+14
+00:01:12,700 --> 00:01:14,040
+który ma być floatem.
+
+15
+00:01:14,040 --> 00:01:20,460
+Jeżeli patrząc na ten moment stwierdzasz, kurczę, to w sumie nie jest takie trudne, już chyba wiem, co mam zrobić,
+
+16
+00:01:20,460 --> 00:01:27,060
+to nie ma sprawy, zrób pauzę i pokoduj sobie dalej. Czyli nie przejmuj się tym, że ja zaczekam na nagraniu specjalnie. Nie ma problemu.
+
+17
+00:01:27,060 --> 00:01:29,060
+I co ma ta metoda add item robić?
+
+18
+00:01:29,060 --> 00:01:37,060
+No ona powinna dodawać ten nasz produkt do naszej listy produktów.
+
+19
+00:01:37,060 --> 00:01:41,060
+My tej listy produktów jeszcze nie mamy, więc na razie napiszę sobie tutaj pass.
+
+20
+00:01:41,060 --> 00:01:43,060
+Dev.removeItem.
+
+21
+00:01:43,060 --> 00:01:52,060
+Tu też self, też potrzebujemy mieć product i też potrzebujemy mieć quantity, no bo musimy wiedzieć, ile tych produktów wyjmujemy z koszyka.
+
+22
+00:01:52,060 --> 00:01:56,060
+Żeby na przykład jak byśmy kupowali coś, to nie wyjmować tego 100 razy.
+
+23
+00:01:56,060 --> 00:02:02,060
+Do tego potrzebujemy mieć jeszcze list items, czyli po prostu zwrócić sobie te nasze elementy.
+
+24
+00:02:05,060 --> 00:02:08,060
+I tu najpewniej będziemy po prostu zwracali listę.
+
+25
+00:02:11,060 --> 00:02:15,060
+No i ostatnia metoda, którą potrzebujemy, to jest ta metoda calculateTotalCost.
+
+26
+00:02:18,060 --> 00:02:25,060
+Która to metoda ma po prostu zwracać nam łączną ilość wartość zakupionych produktów, czyli będzie zwracała nam float.
+
+27
+00:02:25,060 --> 00:02:28,060
+Czyli już wiemy mniej więcej, co się tutaj znajduje.
+
+28
+00:02:28,060 --> 00:02:35,060
+Natomiast wiemy też, że skoro będziemy potrzebowali dodawać produkty, usuwać, listować i tak dalej, no to gdzieś te produkty muszą się znaleźć.
+
+29
+00:02:35,060 --> 00:02:45,060
+Czyli potrzebujemy mieć jakiś init, w którym to initie stworzymy sobie jakieś self items i zrobimy to jako pustą listę.
+
+30
+00:02:45,060 --> 00:02:51,060
+Zerkam jeszcze, czy tutaj nie zostało coś powiedziane, że coś ma być zrobione inaczej, ale wydaje mi się, że jest ok.
+
+31
+00:02:51,060 --> 00:02:54,060
+Z tą różnicą, o już widzę, że to items to ma być zmienna prywatna.
+
+32
+00:02:55,060 --> 00:02:58,060
+Czyli potrzebujemy z przodu dodać jeden symbol podkreślenia.
+
+33
+00:02:58,060 --> 00:03:00,060
+To tyle tak naprawdę.
+
+34
+00:03:00,060 --> 00:03:09,060
+I teraz, jeżeli ktoś będzie nam dodawał produkt w jakiejś ilości, to my produkt wiemy gdzie przechowywać, bo to jest produkt.
+
+35
+00:03:09,060 --> 00:03:11,060
+On ma nazwę i cenę.
+
+36
+00:03:11,060 --> 00:03:15,060
+Natomiast zupełnie nie wiemy, co powinniśmy zrobić z ilością.
+
+37
+00:03:15,060 --> 00:03:23,060
+Więc tak naprawdę, jeżeli ktoś nam dodaje produkt do koszyka, to my powinniśmy mieć jeszcze jeden taki twór, który nazwaliśmy na prezentacji list item.
+
+38
+00:03:23,060 --> 00:03:31,060
+I ten twór powinien posiadać produkt, po prostu jako produkt oraz ilość.
+
+39
+00:03:31,060 --> 00:03:37,060
+Czyli my możemy sobie stworzyć też taki mechanizm, w którym będziemy mogli go przechowywać.
+
+40
+00:03:37,060 --> 00:03:44,060
+Czyli produkt jako produkt, no i quantity też tu jest określone jako float, niech będzie jako float.
+
+41
+00:03:44,060 --> 00:03:48,060
+No bo może się okazać, że gdzieś potrzebujemy pół kilograma czegoś, a produktem jest kilogram.
+
+42
+00:03:48,060 --> 00:03:50,060
+Wiecie o co chodzi.
+
+43
+00:03:50,060 --> 00:03:51,060
+I w tym momencie też musimy sobie uzupełniać.
+
+44
+00:03:51,060 --> 00:03:52,060
+I w tym momencie też musimy sobie uzupełniać.
+
+45
+00:03:52,060 --> 00:03:54,060
+I w tym momencie też musimy sobie uzupełniać.
+
+46
+00:03:54,060 --> 00:03:59,060
+Czyli self-product to jest product, tylko bez literówek będzie działało zdecydowanie lepiej.
+
+47
+00:03:59,060 --> 00:04:18,060
+I wtedy już wiemy, że jeżeli dodajemy produkt do koszyka, czy do tej naszej listy, to powinniśmy stworzyć sobie nowy obiekt list item i go do tej listy dodać.
+
+48
+00:04:18,060 --> 00:04:20,060
+Czyli self.items.
+
+49
+00:04:20,060 --> 00:04:35,060
+I to co będziemy chcieli appendować, to będzie to list item, który to list item musi otrzymać rodzaj, czyli produkt plus ilość.
+
+50
+00:04:35,060 --> 00:04:48,060
+I to co zrobiliśmy tutaj ogarnia nam taką sytuację, jak wtedy, kiedy ktoś dodaje nam trzy chleby i przychodzi z trzema chlebami i mówi proszę to są twoje trzy chleby, my je dodajemy do koszyka.
+
+51
+00:04:48,060 --> 00:04:49,060
+Sprawa jest prosta.
+
+52
+00:04:49,060 --> 00:04:50,060
+Sprawa jest prosta.
+
+53
+00:04:50,060 --> 00:04:55,060
+Chłopot zrobi się wtedy, jeżeli ktoś przyjdzie i powie a tu masz jeszcze dwa.
+
+54
+00:04:55,060 --> 00:05:02,060
+Bo wtedy nie powinniśmy mieć raz trzech chlebów, drugi raz dwóch chlebów, bo my za każdym razem to dodajemy, appendujemy.
+
+55
+00:05:02,060 --> 00:05:10,060
+Tylko powinniśmy zmodyfikować wartość quantity, tą wartość quantity dla tego jednego konkretnego produktu.
+
+56
+00:05:10,060 --> 00:05:17,060
+Na chwilę obecną nasze produkty mają cechę charakterystyczną, jaką jest nazwa.
+
+57
+00:05:17,060 --> 00:05:19,060
+Więc moglibyśmy się posługiwać tą nazwą.
+
+58
+00:05:19,060 --> 00:05:24,060
+Jako tym co wyróżnia, co jest takim unikatowym identyfikatorem dla tych naszych produktów.
+
+59
+00:05:24,060 --> 00:05:28,060
+W innym świecie moglibyśmy używać id na przykład, jeżeli mamy jakąś liczbę.
+
+60
+00:05:28,060 --> 00:05:30,060
+Tak jak robiliśmy z bazą danych.
+
+61
+00:05:30,060 --> 00:05:31,060
+Pamiętasz?
+
+62
+00:05:31,060 --> 00:05:36,060
+To tutaj tak samo moglibyśmy posługiwać się bazą danych jako tym co będzie wyróżniało ten nasz produkt.
+
+63
+00:05:36,060 --> 00:05:38,060
+No ale z braku laku name też jest ok.
+
+64
+00:05:38,060 --> 00:05:44,060
+Pod warunkiem, że chleb taki, siaki, owaki nie będzie czymś innym tylko będzie zawsze name.
+
+65
+00:05:44,060 --> 00:05:46,060
+Będzie miał różne name.
+
+66
+00:05:46,060 --> 00:05:48,060
+Więc wtedy ten nasz add item wypełni się.
+
+67
+00:05:48,060 --> 00:05:51,060
+I list item wypadałoby o to zmodyfikować.
+
+68
+00:05:51,060 --> 00:05:53,060
+Tak samo remove item.
+
+69
+00:05:53,060 --> 00:05:59,060
+Żeby wykonać remove item my tak naprawdę musimy wiedzieć gdzie ten item się znajduje.
+
+70
+00:05:59,060 --> 00:06:02,060
+Na którym indeksie listy on się znajduje.
+
+71
+00:06:02,060 --> 00:06:05,060
+No bo nasz plan będzie wyglądał tak.
+
+72
+00:06:05,060 --> 00:06:10,060
+Self items od i tu będzie jakaś wartość.
+
+73
+00:06:10,060 --> 00:06:14,060
+To co zawiera nam self items to jest list item.
+
+74
+00:06:14,060 --> 00:06:16,060
+List item posiada quantity.
+
+75
+00:06:16,060 --> 00:06:17,060
+Więc możemy zrobić kropka quantity.
+
+76
+00:06:17,060 --> 00:06:23,060
+Minus równa się quantity.
+
+77
+00:06:23,060 --> 00:06:32,060
+I my na podstawie tej nazwy produktu musimy stwierdzić który element na którym indeksie ten produkt nasz się znajduje.
+
+78
+00:06:32,060 --> 00:06:36,060
+Bo jak dodaliśmy sobie chleb jako pierwszy to jest on na zerowym indeksie.
+
+79
+00:06:36,060 --> 00:06:39,060
+Potem skoczyło masło, kalafior, brokuły coś jeszcze.
+
+80
+00:06:39,060 --> 00:06:40,060
+I znowu chleb.
+
+81
+00:06:40,060 --> 00:06:42,060
+Albo wtedy jest ej zabierz te dwa chleby.
+
+82
+00:06:42,060 --> 00:06:45,060
+I wtedy musimy wiedzieć gdzie ten chleb na którym indeksie się znajduje.
+
+83
+00:06:45,060 --> 00:06:48,060
+Żeby móc tym zarządzać.
+
+84
+00:06:48,060 --> 00:06:53,060
+W tym celu zdecydowanie przydałaby nam się tutaj jakaś logika.
+
+85
+00:06:53,060 --> 00:06:55,060
+Która pozwoliłaby nam na znalezienie tego produktu.
+
+86
+00:06:55,060 --> 00:07:00,060
+My możemy szukać tego produktu na podstawie jego pozycji.
+
+87
+00:07:00,060 --> 00:07:01,060
+Na podstawie jego nazwy.
+
+88
+00:07:01,060 --> 00:07:03,060
+Więc możemy sobie zrobić taką metodę.
+
+89
+00:07:03,060 --> 00:07:06,060
+Którą nazwiemy find product.
+
+90
+00:07:06,060 --> 00:07:08,060
+I tylko jak się nad tym zastanowimy.
+
+91
+00:07:08,060 --> 00:07:11,060
+To tylko i wyłącznie nasza lista powinna wiedzieć o tym.
+
+92
+00:07:11,060 --> 00:07:13,060
+Że nasze produkty są przechowywane w liście.
+
+93
+00:07:13,060 --> 00:07:16,060
+I tylko nasza lista powinna wiedzieć o tym.
+
+94
+00:07:16,060 --> 00:07:18,060
+Że my tak naprawdę szukamy tutaj indeksu.
+
+95
+00:07:18,060 --> 00:07:20,060
+Więc my możemy sobie dołożyć informację.
+
+96
+00:07:20,060 --> 00:07:22,060
+Że słuchaj my szukamy produktu.
+
+97
+00:07:22,060 --> 00:07:25,060
+I teraz nasza metoda.
+
+98
+00:07:25,060 --> 00:07:27,060
+Będzie zwracała albo pozycję.
+
+99
+00:07:27,060 --> 00:07:29,060
+Albo none.
+
+100
+00:07:29,060 --> 00:07:30,060
+Jeżeli tej pozycji.
+
+101
+00:07:30,060 --> 00:07:33,060
+Jeżeli tego produktu w naszym koszyku nie ma.
+
+102
+00:07:33,060 --> 00:07:36,060
+Czyli możemy sobie przejść po naszych produktach.
+
+103
+00:07:36,060 --> 00:07:40,060
+Czyli for item in self items.
+
+104
+00:07:40,060 --> 00:07:42,060
+Dwukropek.
+
+105
+00:07:42,060 --> 00:07:45,060
+Jeżeli item.
+
+106
+00:07:45,060 --> 00:07:47,060
+Item to jest to.
+
+107
+00:07:47,060 --> 00:07:50,060
+Czyli item.product.
+
+108
+00:07:50,060 --> 00:07:53,060
+Kropka name.
+
+109
+00:07:53,060 --> 00:07:55,060
+To jest ten nasz produkt.
+
+110
+00:07:55,060 --> 00:07:56,060
+Który mam w koszyku.
+
+111
+00:07:56,060 --> 00:07:59,060
+Pokrywa się z name produktu.
+
+112
+00:07:59,060 --> 00:08:01,060
+Czyli product.name.
+
+113
+00:08:01,060 --> 00:08:03,060
+To to znaczy.
+
+114
+00:08:03,060 --> 00:08:05,060
+Że ta pozycja nas zadowala.
+
+115
+00:08:05,060 --> 00:08:07,060
+Czyli my powinniśmy tutaj zwrócić.
+
+116
+00:08:07,060 --> 00:08:10,060
+Informację o tym na którym indeksie.
+
+117
+00:08:10,060 --> 00:08:11,060
+Znaleźliśmy ten produkt.
+
+118
+00:08:11,060 --> 00:08:13,060
+Jak to zrobić.
+
+119
+00:08:13,060 --> 00:08:15,060
+Pokazywałem wam kiedyś.
+
+120
+00:08:15,060 --> 00:08:17,060
+Że mamy taką funkcję.
+
+121
+00:08:17,060 --> 00:08:19,060
+Która nazywa się enumerate.
+
+122
+00:08:19,060 --> 00:08:21,060
+I ta funkcja spowoduje.
+
+123
+00:08:21,060 --> 00:08:23,060
+Że podczas iterowania.
+
+124
+00:08:23,060 --> 00:08:25,060
+My nie dostajemy tylko i wyłącznie itema.
+
+125
+00:08:25,060 --> 00:08:27,060
+Tylko dostajemy też jego id.
+
+126
+00:08:27,060 --> 00:08:29,060
+Jego pozycję.
+
+127
+00:08:29,060 --> 00:08:31,060
+Czyli możemy zrobić pos.item.
+
+128
+00:08:31,060 --> 00:08:33,059
+I wtedy wiemy że chcemy zwrócić pos.
+
+129
+00:08:33,059 --> 00:08:35,059
+W przeciwnym wypadku.
+
+130
+00:08:35,059 --> 00:08:37,059
+Zgodnie z tym o czym rozmawialiśmy.
+
+131
+00:08:37,059 --> 00:08:39,059
+Zwracamy none.
+
+132
+00:08:39,059 --> 00:08:41,059
+Dlaczego tego produktu nie ma.
+
+133
+00:08:41,059 --> 00:08:43,059
+W naszym koszyku.
+
+134
+00:08:43,059 --> 00:08:45,059
+Dlaczego none.
+
+135
+00:08:45,059 --> 00:08:47,059
+Z tego względu że dzięki temu.
+
+136
+00:08:47,059 --> 00:08:49,059
+Logicznym jest że skoro nie ma pozycji to none.
+
+137
+00:08:49,059 --> 00:08:51,059
+Po drugie.
+
+138
+00:08:51,059 --> 00:08:53,059
+Dzięki temu możemy sprawdzić is none.
+
+139
+00:08:53,059 --> 00:08:55,059
+Też możemy zrobić i stwierdzić.
+
+140
+00:08:55,059 --> 00:08:57,059
+Czy go nie ma.
+
+141
+00:08:57,059 --> 00:08:59,059
+No i odróżniamy też się od zera.
+
+142
+00:08:59,059 --> 00:09:01,059
+Która też jest pozycją która byłaby okej.
+
+143
+00:09:01,059 --> 00:09:03,059
+Czyli w naszym przypadku.
+
+144
+00:09:03,059 --> 00:09:05,059
+Podczas dodawania produktu do koszyka.
+
+145
+00:09:05,059 --> 00:09:07,059
+Powinniśmy spróbować go najpierw znaleźć.
+
+146
+00:09:07,059 --> 00:09:09,059
+I sprawdzić czy ta pozycja nie jest none.
+
+147
+00:09:09,059 --> 00:09:11,059
+Czyli pos.
+
+148
+00:09:11,059 --> 00:09:13,059
+Równa się self.
+
+149
+00:09:13,059 --> 00:09:15,059
+Find product.
+
+150
+00:09:15,059 --> 00:09:17,059
+I znajdź mi ten produkt.
+
+151
+00:09:17,059 --> 00:09:19,059
+Jeżeli pozycja is none.
+
+152
+00:09:19,059 --> 00:09:21,059
+Czyli jeżeli pozycja nie została znaleziona.
+
+153
+00:09:21,059 --> 00:09:23,059
+To wtedy.
+
+154
+00:09:23,059 --> 00:09:25,059
+Wykonaj mi to.
+
+155
+00:09:25,059 --> 00:09:27,059
+W przeciwnym wypadku.
+
+156
+00:09:27,059 --> 00:09:29,059
+Będziemy chcieli zwiększyć.
+
+157
+00:09:29,059 --> 00:09:31,059
+Ilość produktów w koszyku.
+
+158
+00:09:31,059 --> 00:09:33,059
+Czyli będziemy chcieli wykonać self.
+
+159
+00:09:33,059 --> 00:09:35,059
+Od items.
+
+160
+00:09:35,059 --> 00:09:37,059
+Patrz na to co napisałem na dole.
+
+161
+00:09:37,059 --> 00:09:39,059
+W tym miejscu.
+
+162
+00:09:39,059 --> 00:09:41,059
+3 kropki to jest nasza pozycja.
+
+163
+00:09:41,059 --> 00:09:43,059
+Kropka quantity.
+
+164
+00:09:43,059 --> 00:09:45,059
+Plus równa się.
+
+165
+00:09:45,059 --> 00:09:47,059
+Pomyślałem o tym co jest na dole.
+
+166
+00:09:47,059 --> 00:09:49,059
+Patrzę na to co jest na dole.
+
+167
+00:09:49,059 --> 00:09:51,059
+I mam za swoje.
+
+168
+00:09:51,059 --> 00:09:53,059
+I tu możemy zrobić jeszcze jeden test.
+
+169
+00:09:53,059 --> 00:09:55,059
+A mianowicie sprawdzić.
+
+170
+00:09:55,059 --> 00:09:57,059
+Czy nie ma tej ilości równej 0.
+
+171
+00:09:57,059 --> 00:09:59,059
+Czyli if.
+
+172
+00:09:59,059 --> 00:10:01,059
+Jeżeli ta ilość.
+
+173
+00:10:01,059 --> 00:10:03,059
+Tylko tutaj mamy none.
+
+174
+00:10:03,059 --> 00:10:05,059
+Więc to powinno być wcięte.
+
+175
+00:10:05,059 --> 00:10:07,059
+Jeżeli ta ilość.
+
+176
+00:10:07,059 --> 00:10:09,059
+No co tu jest.
+
+177
+00:10:09,059 --> 00:10:11,059
+Równa się 0.
+
+178
+00:10:11,059 --> 00:10:13,059
+To możemy zupełnie usunąć ten produkt z koszyka.
+
+179
+00:10:13,059 --> 00:10:15,059
+Czyli delete.
+
+180
+00:10:15,059 --> 00:10:17,059
+No bo po co nam informacja.
+
+181
+00:10:17,059 --> 00:10:19,059
+Że czegoś tam jest 0.
+
+182
+00:10:19,059 --> 00:10:21,059
+Raczej nie jest nam do niczego potrzebne.
+
+183
+00:10:21,059 --> 00:10:23,059
+I to jest to.
+
+184
+00:10:23,059 --> 00:10:25,059
+Co robi nasze add item.
+
+185
+00:10:25,059 --> 00:10:27,059
+Natomiast remove item.
+
+186
+00:10:27,059 --> 00:10:29,059
+Powinno zadziałać bardzo podobnie.
+
+187
+00:10:29,059 --> 00:10:31,059
+A mianowicie powinniśmy znaleźć.
+
+188
+00:10:31,059 --> 00:10:33,059
+Produkt.
+
+189
+00:10:33,059 --> 00:10:35,059
+Który jest nam potrzebny.
+
+190
+00:10:35,059 --> 00:10:37,059
+Następnie.
+
+191
+00:10:37,059 --> 00:10:39,059
+Na tej pozycji.
+
+192
+00:10:39,059 --> 00:10:41,059
+Jeżeli oczywiście ten produkt jest w koszyku.
+
+193
+00:10:43,059 --> 00:10:45,059
+Usunąć.
+
+194
+00:10:45,059 --> 00:10:47,059
+Tę ilość.
+
+195
+00:10:47,059 --> 00:10:49,059
+W ten sposób będziemy mieli zrobione.
+
+196
+00:10:49,059 --> 00:10:51,059
+Add item.
+
+197
+00:10:51,059 --> 00:10:53,059
+Remove item.
+
+198
+00:10:53,059 --> 00:10:55,059
+Find product.
+
+199
+00:10:55,059 --> 00:10:57,059
+I jeszcze jedna rzecz.
+
+200
+00:10:57,059 --> 00:10:59,059
+Find product miało być wewnętrzną metodą.
+
+201
+00:10:59,059 --> 00:11:01,059
+Więc można sobie śmiało dorzucić tutaj symbol podkreślenia.
+
+202
+00:11:01,059 --> 00:11:03,059
+Co każdemu programiście pythona.
+
+203
+00:11:03,059 --> 00:11:05,059
+Da taki sygnał.
+
+204
+00:11:05,059 --> 00:11:07,059
+Że a ok.
+
+205
+00:11:07,059 --> 00:11:09,059
+To jest jakaś metoda.
+
+206
+00:11:09,059 --> 00:11:11,059
+Której on używa w środku.
+
+207
+00:11:11,059 --> 00:11:13,059
+Gdzieś będzie ona pewnie wykorzystywana.
+
+208
+00:11:13,059 --> 00:11:15,059
+Nie będę jej nigdzie potrzebował.
+
+209
+00:11:15,059 --> 00:11:17,059
+I została nam wtedy jeszcze jedna rzecz do zrobienia.
+
+210
+00:11:17,059 --> 00:11:19,059
+Bo list items jest prostą sprawą.
+
+211
+00:11:19,059 --> 00:11:21,059
+Po prostu chcemy sobie zwrócić tutaj.
+
+212
+00:11:21,059 --> 00:11:23,059
+Nasze items.
+
+213
+00:11:23,059 --> 00:11:25,059
+Natomiast calculate total cost.
+
+214
+00:11:25,059 --> 00:11:27,059
+To jest zadanie.
+
+215
+00:11:27,059 --> 00:11:29,059
+Które wymaga od nas tego.
+
+216
+00:11:29,059 --> 00:11:31,059
+Żebyśmy przeliczyli sobie quantity.
+
+217
+00:11:31,059 --> 00:11:33,059
+Razy.
+
+218
+00:11:33,059 --> 00:11:35,059
+Gdzie jest produkt?
+
+219
+00:11:35,059 --> 00:11:37,059
+Razy price.
+
+220
+00:11:37,059 --> 00:11:39,059
+I zwrócili taką sumę.
+
+221
+00:11:39,059 --> 00:11:41,059
+Czyli.
+
+222
+00:11:41,059 --> 00:11:43,059
+For item in self items.
+
+223
+00:11:43,059 --> 00:11:45,059
+Dwu kropek.
+
+224
+00:11:45,059 --> 00:11:47,059
+Total równa się zero.
+
+225
+00:11:47,059 --> 00:11:49,059
+I teraz potrzebujemy zrobić.
+
+226
+00:11:49,059 --> 00:11:51,059
+Total plus równa się item.
+
+227
+00:11:51,059 --> 00:11:53,059
+Item ma product.
+
+228
+00:11:53,059 --> 00:11:55,059
+Oraz item ma też quantity.
+
+229
+00:11:55,059 --> 00:11:57,059
+Czyli quantity.
+
+230
+00:11:57,059 --> 00:11:59,059
+Czemu nie ma quantity?
+
+231
+00:11:59,059 --> 00:12:01,059
+I teraz.
+
+232
+00:12:01,059 --> 00:12:03,059
+I teraz.
+
+233
+00:12:03,059 --> 00:12:05,059
+To jest.
+
+234
+00:12:05,059 --> 00:12:07,059
+Czego?
+
+235
+00:12:07,059 --> 00:12:09,059
+Wszystko jest okej.
+
+236
+00:12:09,059 --> 00:12:11,059
+Powinno to działać.
+
+237
+00:12:11,059 --> 00:12:13,059
+Item , quantity.
+
+238
+00:12:13,059 --> 00:12:15,059
+Bo wartość to jest cena razy ilość.
+
+239
+00:12:15,059 --> 00:12:17,059
+Item, product, price.
+
+240
+00:12:17,059 --> 00:12:19,059
+Return total.
+
+241
+00:12:19,059 --> 00:12:21,059
+I w ten sposób.
+
+242
+00:12:21,059 --> 00:12:23,059
+Możemy do tego dopisać testy.
+
+243
+00:12:23,059 --> 00:12:25,059
+I sprawdzić czy nam działa.
+
+244
+00:12:25,059 --> 00:12:27,059
+Czyli test.
+
+245
+00:12:27,059 --> 00:12:29,059
+Check total cost.
+
+246
+00:12:29,059 --> 00:12:31,059
+I w ten sposób.
+
+247
+00:12:31,059 --> 00:12:36,439
+potrzebujemy mieć ze dwa produkty
+
+248
+00:12:36,439 --> 00:12:39,500
+niech to będzie wspominane już do tej pory parę razy chleb
+
+249
+00:12:39,500 --> 00:12:44,219
+niech nasz chleb kosztuje 6 zł
+
+250
+00:12:44,219 --> 00:12:45,979
+dobra 6,50
+
+251
+00:12:45,979 --> 00:12:48,199
+robimy kanapkę
+
+252
+00:12:48,199 --> 00:12:51,239
+do chleba przydadzą nam się jeszcze dwa plasterki szynki
+
+253
+00:12:51,239 --> 00:12:53,199
+czyli jakiś będzie ham
+
+254
+00:12:53,199 --> 00:12:57,439
+szynka
+
+255
+00:12:57,439 --> 00:12:58,679
+szybka, nie szynka
+
+256
+00:12:58,679 --> 00:13:02,939
+nasza szynka będzie kosztowała niech to będzie szynka za 80 zł za kilogram
+
+257
+00:13:02,939 --> 00:13:07,399
+no i do tego będziemy potrzebowali jeszcze masło
+
+258
+00:13:07,399 --> 00:13:13,419
+kto jest głodny to przepraszam
+
+259
+00:13:13,419 --> 00:13:16,399
+masło niech kosztuje 8 zł za sztukę
+
+260
+00:13:16,399 --> 00:13:20,019
+teraz chcemy dodać te ceny, te informacje do koszyka
+
+261
+00:13:20,019 --> 00:13:21,419
+czyli wykonujemy
+
+262
+00:13:21,419 --> 00:13:24,319
+cart równa się list
+
+263
+00:13:24,319 --> 00:13:27,019
+cart add pro item
+
+264
+00:13:27,019 --> 00:13:28,439
+bread
+
+265
+00:13:28,440 --> 00:13:30,160
+dwa
+
+266
+00:13:30,160 --> 00:13:31,580
+bo jesteśmy bardzo głodni
+
+267
+00:13:31,580 --> 00:13:33,620
+szynki
+
+268
+00:13:33,620 --> 00:13:38,760
+szynki potrzebujemy
+
+269
+00:13:38,760 --> 00:13:40,060
+weźmy pół kilo
+
+270
+00:13:40,060 --> 00:13:41,940
+na wszelki wypadek
+
+271
+00:13:41,940 --> 00:13:43,240
+zaraz odłożymy trochę
+
+272
+00:13:43,240 --> 00:13:47,300
+jeszcze potrzebujemy mieć masła
+
+273
+00:13:47,300 --> 00:13:48,700
+tutaj na sztuki
+
+274
+00:13:48,700 --> 00:13:50,180
+niech będą dwa masła
+
+275
+00:13:50,180 --> 00:13:52,600
+kolejna rzecz, którą będę chciał zrobić
+
+276
+00:13:52,600 --> 00:13:55,260
+to będę chciał teraz odjąć kilka z tych produktów z koszyka
+
+277
+00:13:55,260 --> 00:13:57,360
+ale najpierw napiszę sobie test sprawdzający to
+
+278
+00:13:58,440 --> 00:14:00,960
+może zanim odejmiemy produkty
+
+279
+00:14:00,960 --> 00:14:02,960
+to sprawdźmy jeszcze czy ilość nam się zgadza
+
+280
+00:14:02,960 --> 00:14:06,560
+czyli będzie trzeba wykonać solidne działania matematyczne
+
+281
+00:14:06,560 --> 00:14:07,920
+assert
+
+282
+00:14:07,920 --> 00:14:09,480
+jak możemy sprawdzać ilość
+
+283
+00:14:09,480 --> 00:14:11,280
+jeżeli chodzi w ogóle o testowanie tego
+
+284
+00:14:11,280 --> 00:14:14,240
+to nie powinniśmy odwoływać się do naszej właściwości items
+
+285
+00:14:14,240 --> 00:14:15,780
+w końcu jest prywatna
+
+286
+00:14:15,780 --> 00:14:18,320
+możemy posłużyć się list items
+
+287
+00:14:18,320 --> 00:14:19,740
+to jest jedna propozycja
+
+288
+00:14:19,740 --> 00:14:22,320
+czyli nasze cart list items
+
+289
+00:14:22,320 --> 00:14:24,320
+powinno być długie
+
+290
+00:14:24,320 --> 00:14:28,160
+na 3 sztuki
+
+291
+00:14:28,160 --> 00:14:28,260
+na 3 sztuki
+
+292
+00:14:28,259 --> 00:14:32,259
+a druga rzecz, którą moglibyśmy sprawdzić
+
+293
+00:14:32,259 --> 00:14:34,080
+na temat naszego list items
+
+294
+00:14:34,080 --> 00:14:35,240
+nie list items
+
+295
+00:14:35,240 --> 00:14:38,000
+na temat calculate total cost
+
+296
+00:14:38,000 --> 00:14:39,620
+to czy to się równa
+
+297
+00:14:39,620 --> 00:14:42,279
+nie będę się popisywał, że umiem liczyć
+
+298
+00:14:42,279 --> 00:14:43,439
+2x650
+
+299
+00:14:43,439 --> 00:14:44,899
+za duże ryzyko, że się pomylę
+
+300
+00:14:44,899 --> 00:14:48,120
+plus 40, dobra plus 16
+
+301
+00:14:48,120 --> 00:14:48,899
+niech będzie
+
+302
+00:14:48,899 --> 00:14:51,220
+sprawdźmy czy zadziałało
+
+303
+00:14:51,220 --> 00:14:53,519
+czyli odpalam sobie python-m
+
+304
+00:14:53,519 --> 00:14:55,779
+pytest enkapsulacja
+
+305
+00:14:55,779 --> 00:14:56,340
+py
+
+306
+00:14:56,340 --> 00:14:57,740
+py test enkapsulacja py
+
+307
+00:14:58,259 --> 00:14:59,259
+test
+
+308
+00:14:59,259 --> 00:15:00,259
+przeszedł
+
+309
+00:15:00,259 --> 00:15:04,259
+no to teraz wypadałoby odjąć trochę tych produktów
+
+310
+00:15:04,259 --> 00:15:06,259
+i zobaczyć czy dobrze nam to wszystko dalej działa
+
+311
+00:15:06,259 --> 00:15:08,259
+to co moglibyśmy jeszcze sprawdzić
+
+312
+00:15:08,259 --> 00:15:10,259
+to czy jeżeli dodamy 2 chleby
+
+313
+00:15:10,259 --> 00:15:12,259
+to czy będziemy mieli jeszcze 2 chleby
+
+314
+00:15:12,259 --> 00:15:14,259
+to czy dalej będziemy mieli ilość dobrą
+
+315
+00:15:14,259 --> 00:15:16,259
+no wartość nam się nie zgadza
+
+316
+00:15:16,259 --> 00:15:18,259
+bo w tym momencie mamy 4 chleby
+
+317
+00:15:18,259 --> 00:15:20,259
+natomiast widzę, że test z ilością przeszedł
+
+318
+00:15:20,259 --> 00:15:22,259
+więc wszystko jest jak najbardziej ok
+
+319
+00:15:22,259 --> 00:15:24,259
+czyli to dodawanie
+
+320
+00:15:24,259 --> 00:15:26,259
+które zakłada, że ilość produktów nam się nie będzie zmieniała
+
+321
+00:15:26,259 --> 00:15:28,259
+tylko będzie zmieniać ilość produktów, które mamy w tym momencie, to jest ok
+
+322
+00:15:28,259 --> 00:15:30,259
+tylko będzie się zwiększała ilość
+
+323
+00:15:30,259 --> 00:15:32,259
+jest jak najbardziej ok
+
+324
+00:15:32,259 --> 00:15:34,259
+natomiast odejmowanie
+
+325
+00:15:34,259 --> 00:15:36,259
+no to co, jak dodaliśmy 2 chleby możemy je raz jeszcze odjąć
+
+326
+00:15:36,259 --> 00:15:42,259
+czyli tak naprawdę tu powinienem to zrobić, żebym miał ręce i nogi
+
+327
+00:15:42,259 --> 00:15:44,259
+card remove item
+
+328
+00:15:44,259 --> 00:15:46,259
+ten sam bread w 2 sztukach
+
+329
+00:15:46,259 --> 00:15:48,259
+no i mogę sprawdzić dalej
+
+330
+00:15:48,259 --> 00:15:50,259
+czy mam 3 sztuki
+
+331
+00:15:50,259 --> 00:15:54,259
+i czy tutaj będę miał 2 razy 6,50
+
+332
+00:15:54,259 --> 00:15:56,259
+i mógłbym jeszcze raz odjąć
+
+333
+00:15:56,259 --> 00:15:58,259
+te 2 chleby
+
+334
+00:15:58,259 --> 00:16:00,259
+wtedy ilość powinna być równa 2 sztuki
+
+335
+00:16:00,259 --> 00:16:02,259
+no bo odjęliśmy zupełnie chleb z listy
+
+336
+00:16:02,259 --> 00:16:04,259
+no i tutaj powinno nam zostać tylko i wyłącznie 56 zł
+
+337
+00:16:04,259 --> 00:16:06,259
+strzała do góry enter
+
+338
+00:16:06,259 --> 00:16:08,259
+coś się nie zgadza jeszcze
+
+339
+00:16:08,259 --> 00:16:10,259
+3 nie równa się 2
+
+340
+00:16:10,259 --> 00:16:12,259
+czyli on tutaj zostawił nam tę ilość
+
+341
+00:16:12,259 --> 00:16:14,259
+zastanówmy się
+
+342
+00:16:14,259 --> 00:16:16,259
+czy to na pewno jest dobrze
+
+343
+00:16:16,259 --> 00:16:18,259
+tutaj mamy 4 chleby
+
+344
+00:16:18,259 --> 00:16:20,259
+i tutaj mamy 4 chleby
+
+345
+00:16:20,259 --> 00:16:22,259
+i tutaj mamy 4 chleby
+
+346
+00:16:22,259 --> 00:16:24,259
+i tutaj mamy 4 chleby
+
+347
+00:16:24,259 --> 00:16:26,259
+i tutaj mamy 4 chleby
+
+348
+00:16:26,259 --> 00:16:28,259
+i tutaj mamy 4 chleby
+
+349
+00:16:28,259 --> 00:16:30,259
+tu odjęliśmy 2
+
+350
+00:16:30,259 --> 00:16:32,259
+i tu odjęliśmy 2
+
+351
+00:16:32,259 --> 00:16:34,259
+czyli tak naprawdę powinno być 0
+
+352
+00:16:34,259 --> 00:16:36,259
+bo powinna nam zadziałać ta logika
+
+353
+00:16:36,259 --> 00:16:38,259
+tu ta
+
+354
+00:16:38,259 --> 00:16:40,259
+jeżeli pozycja quantity równa się 0
+
+355
+00:16:40,259 --> 00:16:42,259
+to wtedy jest delete
+
+356
+00:16:42,259 --> 00:16:44,259
+to powinno nam usunąć
+
+357
+00:16:44,259 --> 00:16:46,259
+chwila zastanowienia dlaczego się nie usunęło
+
+358
+00:16:46,259 --> 00:16:48,259
+i zaraz do was wrócę
+
+359
+00:16:48,259 --> 00:16:50,259
+no dobra nie musiałem się zastanawiać
+
+360
+00:16:50,259 --> 00:16:52,259
+usuwanie powinno być nie przy dodawaniu przecież
+
+361
+00:16:52,259 --> 00:16:54,259
+tylko tutaj
+
+362
+00:16:54,259 --> 00:16:56,259
+to mój błąd
+
+363
+00:16:56,259 --> 00:16:58,259
+jeżeli pozycja nie równa się none
+
+364
+00:16:58,259 --> 00:17:00,259
+to tutaj mój błąd
+
+365
+00:17:00,259 --> 00:17:02,259
+i tutaj miało być to usuwanie
+
+366
+00:17:02,259 --> 00:17:04,259
+znowu usuwanie pomyliłem z dodawaniem
+
+367
+00:17:04,259 --> 00:17:06,259
+cały czas test przechodzi
+
+368
+00:17:06,259 --> 00:17:08,259
+więc wszystko jest ok
+
+369
+00:17:08,259 --> 00:17:10,259
+możemy iść dalej
+
+370
+00:17:10,259 --> 00:17:12,259
+zajmiemy się najbardziej obiektowym
+
+371
+00:17:12,259 --> 00:17:14,259
+sposobem zdobywania funduszy
+
+372
+00:17:14,259 --> 00:17:16,259
+czyli dziedziczeniem

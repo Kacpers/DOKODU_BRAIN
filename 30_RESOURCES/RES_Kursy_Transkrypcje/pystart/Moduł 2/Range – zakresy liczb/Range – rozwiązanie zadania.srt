@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:03,620
+No to lecimy. Zakres liczb od 90 do 110.
+
+2
+00:00:04,179 --> 00:00:10,279
+Czyli muszę wykonać tuple od range, chcę zobaczyć 99 i chcę zobaczyć 110.
+
+3
+00:00:11,080 --> 00:00:15,740
+Więc muszę napisać 111. Zamykam koniecznie dwa nawiasy, no i mam.
+
+4
+00:00:16,379 --> 00:00:19,440
+Zadanie drugie to zakres liczb parzystych od 100 do 140.
+
+5
+00:00:20,100 --> 00:00:27,920
+Czyli znowu robię tuple range od 100 i teraz jeżeli chcę mieć 140, no to 141.
+
+6
+00:00:27,920 --> 00:00:32,859
+I mnie interesują tylko wartości parzyste, więc robię przecinek 2.
+
+7
+00:00:34,500 --> 00:00:39,420
+W tym momencie zobaczę 100, 102, 104 i tak dalej aż do 140.
+
+8
+00:00:40,300 --> 00:00:46,140
+No i zadanie trzecie. W zadaniu trzecim chodzi o wszystkie liczby podzielne przez 3 od 3 do 303.
+
+9
+00:00:46,660 --> 00:00:50,640
+No to sprawa prosta, tak naprawdę bardzo będzie to podobne do tego co robiliśmy wyżej.
+
+10
+00:00:50,640 --> 00:00:57,900
+Z tą różnicą, że inaczej powiedziałem Ci o liczbach parzystych, czyli liczby podzielne przez 2.
+
+11
+00:00:57,920 --> 00:01:00,780
+A tu będzie to samo, tylko że liczby mają być podzielne przez 3.
+
+12
+00:01:01,280 --> 00:01:05,540
+Czyli range tuple 3 do 33 co 3.
+
+13
+00:01:07,680 --> 00:01:10,299
+Tuple, tuple, tuple. Odwrotnie.
+
+14
+00:01:11,079 --> 00:01:13,260
+Tuple na zewnątrz, range w środku.
+
+15
+00:01:14,540 --> 00:01:18,799
+O i mamy od 3 do 33, czyli musimy napisać do 34.
+
+16
+00:01:19,400 --> 00:01:22,020
+O tak i wszystko się zgadza.
+
+17
+00:01:22,379 --> 00:01:26,820
+Kiedyś prosiliście mnie, żebym nie wycinał takich pomyłek, żeby pokazać, że każdy się myli.
+
+18
+00:01:26,820 --> 00:01:27,900
+Więc bardzo proszę.
+
+19
+00:01:27,900 --> 00:01:32,300
+Zostanie. Ta jedna została. Te 500 innych wyciąłem, ale nie żartuję.
+
+20
+00:01:32,840 --> 00:01:33,900
+Chodźmy do zadania kolejnego.
+
+21
+00:01:35,380 --> 00:01:36,760
+Choć też chodźmy do lekcji.

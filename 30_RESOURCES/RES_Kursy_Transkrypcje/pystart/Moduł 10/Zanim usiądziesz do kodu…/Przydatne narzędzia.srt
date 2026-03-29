@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:09,140
+No i z takich programów, czy takich aplikacji, które mogą Ci pomóc planować Twój czas, czy też planować Twoje zadania, jest ich oczywiście troszeczkę więcej.
+
+2
+00:00:09,700 --> 00:00:16,399
+Warto też zerknąć, no nie wszystkie z nich są płatne, niektóre są darmowe i możesz po prostu planować sobie w nich zadanie bez problemu.
+
+3
+00:00:16,719 --> 00:00:25,839
+Więc jeżeli nawet zaczynasz swój własny projekt, to też proponuję Ci serdecznie, żeby od samego początku już iść tymi regułami.
+
+4
+00:00:25,839 --> 00:00:32,840
+I jeżeli coś sobie zaplanujesz na dwa tygodnie, no to po prostu konsekwentnie ten czas na to przeznaczać.
+
+5
+00:00:33,859 --> 00:00:37,039
+Miej na uwadze też to, że oczywiście będziesz też robić inne rzeczy.
+
+6
+00:00:37,519 --> 00:00:44,320
+Mówmy, że ten projekt pewnie będzie bardziej projektem po godzinach, więc ilość punktów, które będziesz mógł sobie na niego przeznaczyć też będzie mniejsza.
+
+7
+00:00:45,100 --> 00:00:47,899
+Okej, jakie narzędzia mamy? GitHub Issues.
+
+8
+00:00:48,359 --> 00:00:55,019
+GitHub to pewnie wiesz, jest to taka platforma, która jest połączona z Gitem, gdzie możesz wysyłać kod.
+
+9
+00:00:55,019 --> 00:00:55,820
+No i każdy...
+
+10
+00:00:55,840 --> 00:01:00,080
+Każda zmiana, którą wyślesz, będzie prezentowana graficznie właśnie na GitHubie.
+
+11
+00:01:00,540 --> 00:01:07,840
+Natomiast na GitHubie jest też zakładka Issues, w której w tej zakładce możesz zaplanować sobie zadania, które będziesz chcieć wykonać.
+
+12
+00:01:08,140 --> 00:01:13,020
+Co jest ciekawe, to później też poszczególne komity, czyli ten wysyłany kod, możesz wiązać z zadaniami,
+
+13
+00:01:13,420 --> 00:01:20,060
+dzięki czemu ładnie jest, można potem sprawdzić, jaki fragment kodu rozwiązał dane zadanie.
+
+14
+00:01:20,060 --> 00:01:25,760
+Tu oczywiście osoby, które by chciały na szybko coś poprawić, będą się złościły, że najpierw muszą wystawić sobie buga,
+
+15
+00:01:25,840 --> 00:01:28,200
+dopiero później mogą tego buga rozwiązać.
+
+16
+00:01:28,460 --> 00:01:31,180
+No ale dzięki temu wszystko jest bardzo mocno uporządkowane.
+
+17
+00:01:32,260 --> 00:01:36,100
+Innym narzędziem jest narzędzie od Atlagiana, nazywa się Jira.
+
+18
+00:01:36,600 --> 00:01:40,180
+To narzędzie jest chyba darmowe, w jakimś tam stanie.
+
+19
+00:01:40,359 --> 00:01:49,840
+Warto sobie, w sensie w jakimś ograniczonym zakresie, warto je zobaczyć, ponieważ 90% projektów, w których pracowałem, wykorzystywałem właśnie Jirę.
+
+20
+00:01:50,320 --> 00:01:55,260
+Druga część, druga grupa projektów, to były projekty, w których pracowałem na Mondayu.
+
+21
+00:01:55,260 --> 00:01:56,800
+W tym ostatnim podpunkcie.
+
+22
+00:01:56,800 --> 00:02:00,260
+Monday jest płatny chyba dla dwóch użytkowników, czy dla jednego jest bezpłatny.
+
+23
+00:02:00,260 --> 00:02:04,020
+Możesz też go sobie obejrzeć, zobaczyć jak praca z nim wygląda.
+
+24
+00:02:04,020 --> 00:02:07,260
+Inne narzędzia to Asana i Trello.
+
+25
+00:02:07,260 --> 00:02:08,759
+Trello też jest darmowe.
+
+26
+00:02:08,759 --> 00:02:11,759
+Tutaj, jeżeli chodzi o Trello, możesz spokojnie sobie używać Trello.
+
+27
+00:02:11,759 --> 00:02:18,759
+Ja Trello używam też do takich innych zastosowań, bardziej do projektów, do takich, do kursów.
+
+28
+00:02:18,759 --> 00:02:24,439
+Jeżeli ktoś z Was zgłasza mi jakąś poprawkę, że coś w kursie jest nie tak, zawsze sobie przypinam to do Trello.
+
+29
+00:02:24,439 --> 00:02:24,920
+I później staram się, żeby to było w porządku.
+
+30
+00:02:24,919 --> 00:02:30,919
+I później staram się to sukcesywnie stamtąd wyczyścić i te filmy albo podmieniam, albo po prostu dogrywam nowe.
+
+31
+00:02:30,919 --> 00:02:32,919
+Więc naprawdę do tego używam Trello.
+
+32
+00:02:32,919 --> 00:02:35,919
+Trello używam też do takiej pracy codziennej, typu co dzisiaj muszę zrobić.
+
+33
+00:02:35,919 --> 00:02:43,919
+Tam sobie wtedy używam go jako takich stick notesów, które przyklejam sobie i mam po prostu taką jedną tablicę, która jest zawsze na koniec dnia czyszczona.
+
+34
+00:02:43,919 --> 00:02:49,919
+Albo część rzeczy, które wiem, że muszę jeszcze wykonać na następny dzień, tam sobie zostawiam.
+
+35
+00:02:49,919 --> 00:02:53,919
+Ale tak bardziej patrzę na to Trello ogólnie, niż jako narzędzie, do którego miałbym przypisywać jakieś konkretne rzeczy.
+
+36
+00:02:53,919 --> 00:02:54,919
+Ale tak bardziej patrzę na to Trello ogólnie, niż jako narzędzie, do którego miałbym przypisywać jakieś konkretne rzeczy.
+
+37
+00:02:54,919 --> 00:02:56,919
+Jakieś konkretne taski, którymi miałbym pracować.
+
+38
+00:02:56,919 --> 00:03:06,919
+Po prostu trudno jest nad tym zapanować i mam wrażenie, że łatwiej jest, jeżeli pracujemy z jakimiś takimi narzędziami, które do tego służą, typu właśnie Jira albo Monday.

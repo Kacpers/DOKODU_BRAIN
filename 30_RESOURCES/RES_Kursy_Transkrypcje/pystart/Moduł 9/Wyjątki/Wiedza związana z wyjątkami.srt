@@ -1,0 +1,491 @@
+1
+00:00:00,000 --> 00:00:03,700
+No to cóż, przechodzimy do obsługi błędów.
+
+2
+00:00:03,899 --> 00:00:08,779
+Co może pójść nie tak w naszej aplikacji i dlaczego w ogóle ta obsługa błędów jest taka ważna?
+
+3
+00:00:09,380 --> 00:00:13,160
+Na pewno spotkałeś się nieraz z takim podkreśleniem jak blue screen.
+
+4
+00:00:13,560 --> 00:00:19,780
+I zawsze blue screen to był taki moment, w którym nasz pro komputer się zatrzymywał i wyświetlał jakąś informację.
+
+5
+00:00:20,480 --> 00:00:28,120
+Czasem bywało też tak, że ten blue screen zawierał jakieś bardzo dziwne fragmenty kodu i te błędy nie były zbyt czytelne.
+
+6
+00:00:28,120 --> 00:00:32,380
+W naszych aplikacjach również takie błędy mogą się zdarzać.
+
+7
+00:00:32,500 --> 00:00:39,120
+I tutaj chodzi o to, żeby umieć w określony sposób je obsłużyć tak, żeby ten blue screen nam się nie wyświetlał.
+
+8
+00:00:40,079 --> 00:00:46,520
+Dla przykładu, jeżeli Twoja aplikacja potrzebuje łączności z internetem albo z jakimś konkretnym API,
+
+9
+00:00:46,620 --> 00:00:50,400
+a to API akurat nie działa, to dużo ładniej byłoby wyświetlić komunikat
+
+10
+00:00:50,400 --> 00:00:55,140
+Zaczekaj, trwają prace serwisowe nad czymś i nie rób teraz nic.
+
+11
+00:00:55,439 --> 00:00:57,140
+Aniżeli wyrzucać błąd.
+
+12
+00:00:57,140 --> 00:01:03,140
+Czasem wiemy o tym, że takie zdarzenia mogą nastąpić i chcielibyśmy móc je obsłużyć.
+
+13
+00:01:03,640 --> 00:01:11,019
+Zdarza się też tak, że użytkownik podaje login hasło, te dane są nieprawidłowe i wtedy też chcielibyśmy wyświetlić określony komunikat.
+
+14
+00:01:11,460 --> 00:01:15,219
+Czasem jest tak, że wiemy, że fragment kodu w którymś momencie może nie zadziałać
+
+15
+00:01:15,219 --> 00:01:21,700
+i tu ponownie chcielibyśmy obsłużyć ten wyjątek, ten błąd w taki sposób, żeby coś się stało.
+
+16
+00:01:22,680 --> 00:01:24,219
+Jak możemy te wyjątki obsługiwać?
+
+17
+00:01:24,219 --> 00:01:25,879
+Tutaj sposoby są bardzo różne.
+
+18
+00:01:27,140 --> 00:01:30,140
+Po prostu o to, żeby wyświetlić użytkownikowi jakiś konkretny komunikat.
+
+19
+00:01:30,140 --> 00:01:33,140
+Natomiast czasem chodzi o coś bardziej złożonego.
+
+20
+00:01:33,140 --> 00:01:42,140
+Na przykład o to, żeby wysłać sobie maila z informacją, słuchaj na komputerze takim i takim nastąpił taki i taki wyjątek.
+
+21
+00:01:42,140 --> 00:01:45,140
+Są też całe aplikacje, między innymi Sentry.
+
+22
+00:01:45,140 --> 00:01:48,140
+Jeżeli wpiszecie Sentry w Google to znajdziecie.
+
+23
+00:01:48,140 --> 00:01:54,140
+Które działają właśnie w ten sposób, że łapią wszystkie wyjątki, które dzieją się w waszych aplikacjach i powiadamiają was o tym.
+
+24
+00:01:54,140 --> 00:01:55,140
+To więcej, one też grupują wyjątki pod względem tego, że są takie wyjątki, które nie są złożone.
+
+25
+00:01:55,140 --> 00:01:58,140
+To więcej, one też grupują wyjątki pod względem typów, opisów.
+
+26
+00:01:58,140 --> 00:02:02,140
+Jeżeli wyjątek występuje częściej, no to widzicie go też na liście wyżej.
+
+27
+00:02:02,140 --> 00:02:09,139
+Jest to jedna z pierwszych rzeczy, które wtedy trzeba naprawić w momencie, w którym aplikacja działa, a jakieś błędy się w niej pojawiają.
+
+28
+00:02:09,139 --> 00:02:15,139
+No i takie sytuacje właśnie musimy sobie obsługiwać za pomocą obsługi wyjątków.
+
+29
+00:02:15,139 --> 00:02:23,139
+Zanim jednak przejdziemy do takich wyjątków, które sami będziemy tworzyć, czy też sami będziemy chcieli prowokować, albo sami będziemy chcieli obsługiwać.
+
+30
+00:02:23,139 --> 00:02:24,139
+Spójrzmy na takie wyjątki, które w naszym kontekście są bardzo różne.
+
+31
+00:02:25,139 --> 00:02:27,139
+I w tym kodzie mogą się dziać równie często.
+
+32
+00:02:27,139 --> 00:02:29,139
+I pochodzą one bezpośrednio z Pythona.
+
+33
+00:02:29,139 --> 00:02:31,139
+Spójrz na ten fragment kodu.
+
+34
+00:02:31,139 --> 00:02:34,139
+Number1 równa się int input number1.
+
+35
+00:02:34,139 --> 00:02:37,139
+Number2 równa się int input number2.
+
+36
+00:02:37,139 --> 00:02:39,139
+Czyli po prostu odbieramy od użytkownika dwie liczby.
+
+37
+00:02:39,139 --> 00:02:46,139
+Następnie w zmiennej result przechowujemy wynik dzielenia liczby drugiej przez liczbę pierwszą i ten wynik wyświetlamy na ekranie.
+
+38
+00:02:46,139 --> 00:02:51,139
+Pytanie brzmi, co w tej układance może pójść nie tak?
+
+39
+00:02:51,139 --> 00:02:53,139
+A uwierz mi, może pójść nie tak więcej rzeczy.
+
+40
+00:02:53,139 --> 00:02:55,139
+Po pierwsze w linii drugiej.
+
+41
+00:02:55,139 --> 00:02:57,139
+Po drugie i trzeciej.
+
+42
+00:02:57,139 --> 00:03:00,139
+Input może zwrócić coś, czego int nie będzie mógł zamienić na liczbę.
+
+43
+00:03:00,139 --> 00:03:03,139
+Czyli na przykład ktoś wpisze komunikat 2.
+
+44
+00:03:03,139 --> 00:03:05,139
+Albo wpisze 2,5.
+
+45
+00:03:05,139 --> 00:03:07,139
+Albo zrobi spację.
+
+46
+00:03:07,139 --> 00:03:13,139
+Albo wpisze cokolwiek innego typu 2 złote, czego się nie będzie dało zamienić na liczbę od tak.
+
+47
+00:03:13,139 --> 00:03:20,139
+Druga rzecz jest taka, że w naszym kodzie w linii piątej może się okazać, że będziemy musieli dzielić przez zero.
+
+48
+00:03:20,139 --> 00:03:25,139
+I zarówno ten pierwszy przypadek powinien zwrócić nam odpowiedni błąd.
+
+49
+00:03:25,139 --> 00:03:30,139
+Tak i druga sytuacja też powinna zwrócić odpowiedni błąd.
+
+50
+00:03:30,139 --> 00:03:32,139
+W tym przypadku zero division error.
+
+51
+00:03:32,139 --> 00:03:38,139
+W momencie, w którym wykonujemy sobie taki kod, od razu Python mówi nam o tym, jaki wyjątek nastąpił.
+
+52
+00:03:38,139 --> 00:03:44,139
+I on tutaj bardzo często dodaje informację, że to jest value error, to jest zero division error.
+
+53
+00:03:44,139 --> 00:03:50,139
+Ta informacja o błędzie znajduje się bezpośrednio w tym błędzie po prostu.
+
+54
+00:03:50,139 --> 00:03:52,139
+W ostatniej linii po lewej stronie.
+
+55
+00:03:52,139 --> 00:03:54,139
+Często widzieliście pewnie value error.
+
+56
+00:03:54,139 --> 00:03:55,139
+Key error.
+
+57
+00:03:55,139 --> 00:03:56,139
+Index error.
+
+58
+00:03:56,139 --> 00:03:58,139
+Albo zero division error.
+
+59
+00:03:58,139 --> 00:04:10,139
+To co mamy tutaj, to jest sposób, jak można ten kod obsłużyć tak, żeby zamiast wyświetlać te błędy, stało się coś przyjemniejszego.
+
+60
+00:04:10,139 --> 00:04:21,139
+Czyli na przykład, żeby zamiast wyświetlać komunikat o błędzie, zamiast wyświetlać ten komunikat Pythonowo o błędzie, napisać podano nieprawidłową wartość lub nie dzielimy przez zero.
+
+61
+00:04:21,139 --> 00:04:22,139
+I teraz zobacz.
+
+62
+00:04:22,139 --> 00:04:29,139
+Blok kodu, który znajduje się w try, to jest kod, który zostanie wykonany ot tak.
+
+63
+00:04:29,139 --> 00:04:32,139
+Czyli spróbuj wykonać ten kod.
+
+64
+00:04:32,139 --> 00:04:36,139
+Próbowanie ma to do siebie, że czasem się udaje, a czasem się nie udaje.
+
+65
+00:04:36,139 --> 00:04:38,139
+Jeżeli się uda, to wszystko będzie ok.
+
+66
+00:04:38,139 --> 00:04:45,139
+Jeżeli natomiast zostanie zwrócony jakiś wyjątek, to tutaj my te wyjątki sobie łapiemy.
+
+67
+00:04:45,139 --> 00:04:46,139
+I zobacz.
+
+68
+00:04:46,139 --> 00:04:48,139
+Accept value error.
+
+69
+00:04:48,139 --> 00:04:50,139
+Oznacza, że jeżeli wystąpi value error.
+
+70
+00:04:50,139 --> 00:04:51,139
+To wtedy.
+
+71
+00:04:51,139 --> 00:04:55,139
+To wtedy nasz z tego miejsca, gdzie wystąpił ten value error.
+
+72
+00:04:55,139 --> 00:04:58,139
+Nasz program od razu poleci do tego miejsca.
+
+73
+00:04:58,139 --> 00:05:01,139
+I wyświetli komunikat podano nieprawidłową wartość.
+
+74
+00:05:01,139 --> 00:05:06,139
+Jeżeli natomiast value error nie wystąpi, to ta linia nigdy też nie wystąpi.
+
+75
+00:05:06,139 --> 00:05:09,139
+Jeżeli natomiast nasze number jeden to będzie zero.
+
+76
+00:05:09,139 --> 00:05:13,139
+No to w tym momencie wykonamy number dwa przez number jeden.
+
+77
+00:05:13,139 --> 00:05:18,139
+Co spowoduje, że wyświetli nam się, będziemy mieli błąd zero division error.
+
+78
+00:05:18,139 --> 00:05:20,139
+I pojawi nam się komunikat nie dzielimy przez zero.
+
+79
+00:05:20,139 --> 00:05:24,139
+Bardzo często, kiedy korzystamy też z zewnętrznych aplikacji.
+
+80
+00:05:24,139 --> 00:05:27,139
+Takich jak na przykład z requests.
+
+81
+00:05:27,139 --> 00:05:32,139
+To wtedy też wyświetlona ta biblioteka requests ma swoje własne komunikaty błędów.
+
+82
+00:05:32,139 --> 00:05:34,139
+I my kiedy widzimy ten błąd.
+
+83
+00:05:34,139 --> 00:05:36,139
+Możemy też w jakiś sposób go obsłużyć.
+
+84
+00:05:36,139 --> 00:05:37,139
+Po prostu zerkamy.
+
+85
+00:05:37,139 --> 00:05:39,139
+Aha tam jest zero division error.
+
+86
+00:05:39,139 --> 00:05:42,139
+Albo aha tam jest request timeout.
+
+87
+00:05:42,139 --> 00:05:44,139
+To zamiast robić request timeout.
+
+88
+00:05:44,139 --> 00:05:46,139
+I wyświetlać użytkownikowi taką brzydką informację.
+
+89
+00:05:46,139 --> 00:05:48,139
+My możemy na przykład zdecydować się na to.
+
+90
+00:05:48,139 --> 00:05:49,139
+Że w tym momencie chcemy ponowić.
+
+91
+00:05:49,139 --> 00:05:51,139
+Nasze zapytanie.
+
+92
+00:05:51,139 --> 00:05:53,139
+I tak chcemy pytać użytkownika o to.
+
+93
+00:05:53,139 --> 00:05:54,139
+Co ma się właściwie stać.
+
+94
+00:05:54,139 --> 00:05:55,139
+Kilkakrotnie.
+
+95
+00:05:55,139 --> 00:05:57,139
+Natomiast tutaj na tym przykładzie.
+
+96
+00:05:57,139 --> 00:05:59,139
+Wydaje mi się, że mamy już pełnię wiedzy.
+
+97
+00:05:59,139 --> 00:06:02,139
+Na takim no niezbyt dużym fragmencie kodu.
+
+98
+00:06:02,139 --> 00:06:04,139
+Żeby sobie to odrobinę przećwiczyć.
+
+99
+00:06:04,139 --> 00:06:06,139
+Po prostu spróbujcie fragment kodu.
+
+100
+00:06:06,139 --> 00:06:10,139
+Który może być potencjalnie w cudzysłowie niebezpieczny.
+
+101
+00:06:10,139 --> 00:06:11,139
+Może zwracać błąd.
+
+102
+00:06:11,139 --> 00:06:13,139
+Opakować w blog try accept.
+
+103
+00:06:13,139 --> 00:06:17,139
+Za accept wymieńcie jakie błędy mogą się pojawić.
+
+104
+00:06:17,139 --> 00:06:18,139
+I spróbujcie je obsługiwać.
+
+105
+00:06:18,139 --> 00:06:21,139
+I spróbujcie je obsłużyć za pomocą komunikatu.
+
+106
+00:06:21,139 --> 00:06:22,139
+To co tutaj jest.
+
+107
+00:06:22,139 --> 00:06:24,139
+Jest też bardzo ważna informacja.
+
+108
+00:06:24,139 --> 00:06:25,139
+A mianowicie.
+
+109
+00:06:25,139 --> 00:06:27,139
+Jeżeli byśmy chcieli naraz łapać value error.
+
+110
+00:06:27,139 --> 00:06:28,139
+I zero division error.
+
+111
+00:06:28,139 --> 00:06:30,139
+To możemy to łapać tak na dwa sposoby.
+
+112
+00:06:30,139 --> 00:06:32,139
+To też jest możliwe.
+
+113
+00:06:32,139 --> 00:06:33,139
+Natomiast blog finally.
+
+114
+00:06:33,139 --> 00:06:35,139
+To jest blog który się pojawi na samym końcu.
+
+115
+00:06:35,139 --> 00:06:37,139
+I on będzie dotyczył sytuacji.
+
+116
+00:06:37,139 --> 00:06:39,139
+W której nie wystąpił błąd.
+
+117
+00:06:39,139 --> 00:06:40,139
+Lub kiedy wystąpił.
+
+118
+00:06:40,139 --> 00:06:42,139
+Czyli tak naprawdę za każdym razem.
+
+119
+00:06:42,139 --> 00:06:44,139
+Kiedy wystąpił czy też nie wystąpił.
+
+120
+00:06:44,139 --> 00:06:46,139
+Blog finally nam się pojawi.
+
+121
+00:06:46,139 --> 00:06:47,139
+Okej.
+
+122
+00:06:47,139 --> 00:06:48,139
+No to co.
+
+123
+00:06:48,139 --> 00:06:49,139
+Chodźmy do ćwiczenia.

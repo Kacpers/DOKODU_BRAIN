@@ -1,0 +1,503 @@
+1
+00:00:00,440 --> 00:00:04,400
+I przyszedł czas, żeby porozmawiać sobie o Pythonie.
+
+2
+00:00:05,000 --> 00:00:07,799
+Czym tak naprawdę jest Python? Jakie są cechy tego języka?
+
+3
+00:00:08,000 --> 00:00:12,160
+Dlaczego warto się go uczyć? No i co jeszcze możemy sobie opowiedzieć o jego zastosowaniach?
+
+4
+00:00:12,740 --> 00:00:13,560
+Porozmawiajmy o tym.
+
+5
+00:00:14,060 --> 00:00:18,920
+Przede wszystkim, jeżeli chodzi o składnie, jest to język o najbardziej przyjaznej składni
+
+6
+00:00:18,920 --> 00:00:21,960
+ze wszystkich języków obecnie panujących na rynku.
+
+7
+00:00:22,500 --> 00:00:27,539
+Tak naprawdę jest to język, który w większości przypadków przypomina język angielski.
+
+8
+00:00:27,539 --> 00:00:31,239
+Są tam oczywiście pewne takie dodatki, jak gdzieś tam jest nawias kwadratowy,
+
+9
+00:00:31,339 --> 00:00:36,200
+gdzieś jest nawias okrągły, dwukropek, ale twórcy tego języka, czy twórca tego języka
+
+10
+00:00:36,200 --> 00:00:41,259
+postawił sobie za cel, żeby był to najbardziej przyjazny język na rynku.
+
+11
+00:00:42,060 --> 00:00:46,259
+Drugą cechą Pythona jest to, że jest on niezwykle wszechstronny.
+
+12
+00:00:46,640 --> 00:00:50,920
+Czyli niezależnie od tego, czy myślisz w przyszłości o tym, żeby zajmować się web developmentem,
+
+13
+00:00:51,000 --> 00:00:55,859
+czyli tworzeniem aplikacji internetowych, czy chcesz zajmować się automatyzacją,
+
+14
+00:00:55,859 --> 00:01:01,280
+czyli na przykład testowaniem, czy wykonywaniem pewnych czynności za pomocą Pythona,
+
+15
+00:01:01,700 --> 00:01:05,099
+no to tutaj też będziesz miał szerokie pole do popisu.
+
+16
+00:01:05,620 --> 00:01:08,760
+Inne zastosowania Pythona na przykład to jest praca z danymi.
+
+17
+00:01:09,060 --> 00:01:14,780
+Czyli takie biblioteki jak Pandas, NumPy pokazują, że można z Pythona wykorzystywać
+
+18
+00:01:14,780 --> 00:01:19,340
+bardzo też do takich prac związanych właśnie z danymi, czy też do tworzenia wykresów.
+
+19
+00:01:20,019 --> 00:01:24,260
+Krążą takie pogłoski, ja nigdy nie pracowałem w MATLABie, ale krążą takie pogłoski,
+
+20
+00:01:24,260 --> 00:01:29,980
+że tak naprawdę korzystając z darmowych elementów Pythona można mieć taki substytut MATLABA.
+
+21
+00:01:30,660 --> 00:01:34,219
+No i ostatnie wykorzystanie Pythona to oczywiście sztuczna inteligencja,
+
+22
+00:01:34,380 --> 00:01:38,320
+czyli analiza obrazów, analiza mowy. Naprawdę jest tego bardzo, bardzo dużo.
+
+23
+00:01:39,180 --> 00:01:43,860
+Trzecia rzecz, o której mamy sobie porozmawiać to ogromna wspierająca społeczność.
+
+24
+00:01:44,240 --> 00:01:49,560
+Tutaj nie tylko na naszym Discordzie można zauważyć to, że ludzie bardzo są dla siebie przyjaźni,
+
+25
+00:01:49,560 --> 00:01:53,840
+bardzo chętni i bardzo się wspierają, ale są też takie strony jak Python.org,
+
+26
+00:01:54,260 --> 00:01:59,460
+jest takie całe forum, możesz zobaczyć też Stack Overflow, gdzie możesz dyskutować z innymi ludźmi.
+
+27
+00:01:59,920 --> 00:02:04,520
+No i widać, że ta społeczność jest bardzo chętna do wspierania się.
+
+28
+00:02:05,040 --> 00:02:09,159
+Jest też mnóstwo bibliotek, jeżeli chodzi o właśnie zastosowanie Pythona,
+
+29
+00:02:09,280 --> 00:02:13,120
+tworzonych przez społeczność, które znajdziesz na stronie pypi.org.
+
+30
+00:02:13,480 --> 00:02:18,599
+I tam niezależnie od tego, co chcesz zrobić, zawsze warto przed rozpoczęciem projektu
+
+31
+00:02:18,599 --> 00:02:23,800
+zerknąć sobie na tę stronę i obejrzeć, jakie są gotowe komponenty, z których można korzystać,
+
+32
+00:02:24,259 --> 00:02:27,699
+dzięki czemu twój czas developmentu znacząco się skraca.
+
+33
+00:02:27,699 --> 00:02:34,479
+No i ostatni podpunkt, który szczególnie w ostatnim czasie można bardzo dostrzec, bardzo poczuć,
+
+34
+00:02:34,479 --> 00:02:40,079
+to jest to, że każda wersja tego języka przynosi tak naprawdę coś nowego.
+
+35
+00:02:40,079 --> 00:02:43,519
+Z takich nowości na przykład mamy asynchroniczność w Pythonie,
+
+36
+00:02:43,519 --> 00:02:48,199
+czyli część kodu może się wykonywać jakby niezależnie od siebie.
+
+37
+00:02:48,199 --> 00:02:51,000
+Tak, że możemy na przykład, czym jest asynchroniczność?
+
+38
+00:02:51,000 --> 00:02:51,959
+Najprościej, jeżeli trzy osoby do ciebie przyjdą i poproszą cię o to, żebyś coś zrobił, to wiesz, że to jest coś nowego.
+
+39
+00:02:51,959 --> 00:02:52,959
+Jeżeli trzy osoby do ciebie przyjdą i poproszą cię o to, żebyś coś zrobił, to wiesz, że to jest coś nowego.
+
+40
+00:02:52,960 --> 00:02:56,360
+Jeżeli trzy osoby do ciebie przyjdą i poproszą cię o to, żebyś coś zrobił, to wiesz, że to jest coś nowego.
+
+41
+00:02:56,360 --> 00:03:01,500
+To ty nie musisz robić każdej czynności osobno, tylko możesz te trzy potrawy gotować na raz.
+
+42
+00:03:01,500 --> 00:03:03,000
+To jest asynchroniczność.
+
+43
+00:03:03,000 --> 00:03:06,180
+I Python też od niedawna jest językiem asynchronicznym.
+
+44
+00:03:06,180 --> 00:03:12,020
+I ilość takich elementów, które stale dochodzą do Pythona, naprawdę jest z każdą kolejną wersją coraz większa.
+
+45
+00:03:12,020 --> 00:03:17,020
+Zachęcam do tego, żeby jak już nauczysz się Pythona, też śledzić ten postęp,
+
+46
+00:03:17,020 --> 00:03:21,080
+by móc wykorzystywać te nowości w swojej codziennej pracy.
+
+47
+00:03:22,960 --> 00:03:25,960
+Druga rzecz to właśnie zastosowania Pythona.
+
+48
+00:03:25,960 --> 00:03:27,960
+Tutaj część rzeczy już sobie powiedzieliśmy.
+
+49
+00:03:27,960 --> 00:03:31,460
+Mamy Web Development, tu mamy takie biblioteki jak Django.
+
+50
+00:03:31,460 --> 00:03:37,700
+To jest taki wielki właściwie framework, służący do tworzenia zaawansowanych aplikacji internetowych.
+
+51
+00:03:37,700 --> 00:03:41,700
+I tu jeżeli interesuje cię ten temat, to zerknij na pywww.pl.
+
+52
+00:03:41,700 --> 00:03:46,700
+To jest inny mój produkt, który wykorzystuje właśnie, pokazuje Web Development.
+
+53
+00:03:46,700 --> 00:03:52,080
+Web Development ten nowoczesny, to jest również tworzenie stron internetowych w oparciu o REST API,
+
+54
+00:03:52,080 --> 00:03:52,960
+oraz jakąś aplikację, którą można wykorzystać.
+
+55
+00:03:52,960 --> 00:03:56,960
+Aplikację kliencką stworzoną na przykład w React, czy w Angularze, czy w Vue.
+
+56
+00:03:56,960 --> 00:03:58,960
+To są też takie nazwy frameworków.
+
+57
+00:03:58,960 --> 00:04:01,960
+I tutaj świetnie sprawdzicie się w FastAPI.
+
+58
+00:04:01,960 --> 00:04:06,960
+W tym celu możesz też zerknąć na pyrest.pl, gdzie właśnie o tym mówię.
+
+59
+00:04:06,960 --> 00:04:09,960
+Sztuczna inteligencja, no to już mówiłem.
+
+60
+00:04:09,960 --> 00:04:12,960
+Analiza obrazów, czyli powiedzmy wypikselowywanie twarzy,
+
+61
+00:04:12,960 --> 00:04:17,960
+stwierdzanie co na obrazie się znajduje, generowanie obrazów.
+
+62
+00:04:17,960 --> 00:04:22,960
+Ostatnio bardzo modne jest tworzenie sztuki tak naprawdę za pomocą programowania.
+
+63
+00:04:22,959 --> 00:04:25,959
+Analiza głosu, możemy już klonować głosy.
+
+64
+00:04:25,959 --> 00:04:31,959
+Tak naprawdę ta technologia poszła na tyle daleko, że każdy może praktycznie to zrobić u siebie na komputerze w domu.
+
+65
+00:04:31,959 --> 00:04:37,959
+Może za pomocą gotowych modeli odczytać jakby czyjś głos, zamienić go na równanie matematyczne,
+
+66
+00:04:37,959 --> 00:04:41,959
+po czym jego głosem wypowiedzieć dowolne sformułowanie.
+
+67
+00:04:41,959 --> 00:04:47,959
+Tak samo jak te deepfake'i, czyli wstawianie czyjejś twarzy w film.
+
+68
+00:04:47,959 --> 00:04:51,959
+Do tego też wszystkiego wykorzystywany jest Python.
+
+69
+00:04:52,959 --> 00:04:55,959
+Scraping to jest wielki temat.
+
+70
+00:04:55,959 --> 00:04:59,959
+Mówi się o tym, że ten ma władzę kto ma dane.
+
+71
+00:04:59,959 --> 00:05:05,959
+Czyli im więcej danych masz, im większej ilości danych możesz operować i możesz je przetwarzać,
+
+72
+00:05:05,959 --> 00:05:07,959
+tym lepiej dla ciebie.
+
+73
+00:05:07,959 --> 00:05:09,959
+No i scraping jest takim tematem troszeczkę szarym.
+
+74
+00:05:09,959 --> 00:05:14,959
+On pozwala na to, żeby wejść na stronę internetową, pobrać z niej określone dane
+
+75
+00:05:14,959 --> 00:05:17,959
+i zapisać je gdzieś w swoich bazach.
+
+76
+00:05:17,959 --> 00:05:21,959
+Czyli tak naprawdę to samo co można byłoby zrobić, tak jak się mówi,
+
+77
+00:05:21,959 --> 00:05:25,959
+z nieskończoną liczbą studentów, już teraz można również zrobić Pythonem.
+
+78
+00:05:25,959 --> 00:05:27,959
+Czyli porównywanie cen.
+
+79
+00:05:27,959 --> 00:05:31,959
+Jeżeli np. masz taki sklep internetowy, czy chcesz komuś przygotować sklep internetowy
+
+80
+00:05:31,959 --> 00:05:34,959
+i ten ktoś chciałby mieć na bieżąco zmieniające się ceny,
+
+81
+00:05:34,959 --> 00:05:37,959
+w zależności od tego jakie ceny ma konkurencja,
+
+82
+00:05:37,959 --> 00:05:42,959
+no to właśnie za pomocą scrapingu można śledzić ceny różnych produktów na różnych stronach
+
+83
+00:05:42,959 --> 00:05:44,959
+i wysyłać sobie powiadomienia.
+
+84
+00:05:44,959 --> 00:05:46,959
+Hej, w tym sklepie jest taniej.
+
+85
+00:05:46,959 --> 00:05:48,959
+Hej, te wszystkie sklepy podniosły cenę.
+
+86
+00:05:48,959 --> 00:05:49,959
+Podnieś też i tyce te ceny.
+
+87
+00:05:49,959 --> 00:05:50,959
+Tak?
+
+88
+00:05:50,959 --> 00:05:54,959
+Przy pięciu produktach myślę, że łatwo byłoby to ogarnąć samodzielnie,
+
+89
+00:05:54,959 --> 00:06:00,959
+ale jeżeli ilość produktów się zwiększa, no to warto też na bieżąco te ceny monitorować.
+
+90
+00:06:00,959 --> 00:06:04,959
+Krok czwarty, czy też część czwarta to jest testowanie, automatyzacja.
+
+91
+00:06:04,959 --> 00:06:06,959
+Czyli wszystko to co dzieje się na stronach internetowych,
+
+92
+00:06:06,959 --> 00:06:10,959
+to jest, podlega też właśnie web developmentowi.
+
+93
+00:06:10,959 --> 00:06:16,959
+Jeżeli chcesz sprawdzić, czy zawartość strony internetowej jest taka, jakiej się spodziewasz,
+
+94
+00:06:16,959 --> 00:06:19,959
+to możesz napisać automat w Pythonie, który będzie wchodził na stronę,
+
+95
+00:06:19,959 --> 00:06:24,959
+klikał w poszczególne guziki i sprawdzał, czy kod tej strony,
+
+96
+00:06:24,959 --> 00:06:28,959
+czy działania na tej stronie będą takie jak te, których się spodziewasz.
+
+97
+00:06:28,959 --> 00:06:31,959
+Automatyzacja to również wykonywanie poszczególnych czynności.
+
+98
+00:06:31,959 --> 00:06:34,959
+Tak jak na przykład właśnie wchodzenie, zamawianie czegoś.
+
+99
+00:06:34,959 --> 00:06:37,959
+Mówi się o tym, że jeżeli pojawiają się okazje,
+
+100
+00:06:37,959 --> 00:06:41,959
+to w pierwszej kolejności wszystkie te okazje wykupują boty.
+
+101
+00:06:41,959 --> 00:06:46,959
+To też może być robione za pomocą Pythona i na przykład biblioteki Selenium.
+
+102
+00:06:46,959 --> 00:06:49,959
+Inny przykład automatyzacji, też połączony trochę z analizą,
+
+103
+00:06:49,959 --> 00:06:53,959
+to jest giełda czy kryptowaluty.
+
+104
+00:06:53,959 --> 00:06:58,959
+Tam też mówi się o tym, że boty analizują ceny, dokonują akcji sprzedaży, kupna
+
+105
+00:06:58,959 --> 00:07:03,959
+i na takich mini zarobkach, z racji tego, że tych czynności jest bardzo dużo,
+
+106
+00:07:03,959 --> 00:07:06,959
+potrafią i tak codziennie jakąś sumę pieniędzy wygenerować.
+
+107
+00:07:06,959 --> 00:07:09,959
+Takie boty również bardzo często pisze się w Pythonie.
+
+108
+00:07:09,959 --> 00:07:12,959
+Nie byłoby to jednak możliwe, gdyby nie analiza danych.
+
+109
+00:07:12,959 --> 00:07:16,959
+Tu już wspomniałem Ci, że biblioteka Pandas, biblioteka NumPy,
+
+110
+00:07:16,959 --> 00:07:18,959
+to NumPy służy do robienia macierzy i do wszystkich operacji z macierzami.
+
+111
+00:07:19,959 --> 00:07:22,959
+Natomiast Pandas to jest taki jakby Excel w Pythonie.
+
+112
+00:07:22,959 --> 00:07:27,959
+I tutaj śmiało możesz wykorzystywać go do tego, żeby importować pliki CSV,
+
+113
+00:07:27,959 --> 00:07:29,959
+importować bazy danych.
+
+114
+00:07:29,959 --> 00:07:32,959
+Jeżeli nie znasz baz danych, polecam skumajbazy.pl
+
+115
+00:07:32,959 --> 00:07:36,959
+i tam też możesz wtedy te dane przetwarzać, robić jakieś agregaty,
+
+116
+00:07:36,959 --> 00:07:41,959
+sortować, filtrować, naprawdę robić wszystko to, co jest możliwe w Excelu,
+
+117
+00:07:41,959 --> 00:07:43,959
+łącznie z tworzeniem wykresów.
+
+118
+00:07:43,959 --> 00:07:47,959
+No i ostatni temat, Internet of Things, bardzo modny temat,
+
+119
+00:07:47,959 --> 00:07:52,959
+czyli wszystkie te rzeczy, które masz w domu, tak naprawdę mogą stać się smart,
+
+120
+00:07:52,959 --> 00:07:56,959
+mogą stać się mądre, też właśnie dzięki temu, że możesz podpiąć do nich
+
+121
+00:07:56,959 --> 00:08:00,959
+na przykład Raspberry Pi, czyli taki mikrokomputer, analizować ich zachowanie,
+
+122
+00:08:00,959 --> 00:08:05,959
+wykonywać czynności i wykonywać tego typu operacje.
+
+123
+00:08:05,959 --> 00:08:08,959
+Do tego wszystkiego świetnie sprawdza się Python.
+
+124
+00:08:08,959 --> 00:08:11,959
+Myślę, że właśnie dlatego stał się takim językiem popularnym,
+
+125
+00:08:11,959 --> 00:08:15,959
+bo ucząc się go możesz naprawdę bardzo, bardzo wiele
+
+126
+00:08:15,959 --> 00:08:18,959
+i możesz wykonywać wiele różnych czynności.

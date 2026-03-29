@@ -1,0 +1,231 @@
+1
+00:00:00,660 --> 00:00:03,899
+Jeżeli odpowiedź na poprzednie pytanie brzmiała dawaj więcej,
+
+2
+00:00:04,419 --> 00:00:06,879
+czy daj więcej, to spróbuj też w tym zadaniu,
+
+3
+00:00:07,160 --> 00:00:09,800
+jeżeli już masz je rozwiązane, wykorzystać funkcję map.
+
+4
+00:00:10,160 --> 00:00:13,179
+Ale to nie jest, to jest, wiesz, jakby ktoś się nudził,
+
+5
+00:00:13,240 --> 00:00:16,800
+szukał więcej wyzwań, to to jest dla ciebie wyzwanie.
+
+6
+00:00:16,940 --> 00:00:19,559
+Ja tego tutaj już nie pokażę, to zostawiam tobie.
+
+7
+00:00:19,980 --> 00:00:21,559
+Możesz do mnie napisać wiadomość prywatną,
+
+8
+00:00:21,640 --> 00:00:23,820
+jeżeli jesteś bardziej ambitny, pogadamy, zobaczymy,
+
+9
+00:00:23,879 --> 00:00:25,699
+czy się uda to nam wspólnie też rozwiązać.
+
+10
+00:00:25,780 --> 00:00:28,019
+W sensie, czy rozwiązanie twoje jest okej.
+
+11
+00:00:28,019 --> 00:00:32,539
+I teraz, chcemy napisać funkcję, która zamieni każdy jeden
+
+12
+00:00:32,539 --> 00:00:35,619
+dodatni element listy na ujemny, a ujemny na dodatni.
+
+13
+00:00:36,000 --> 00:00:39,480
+No to lecimy, convert list.
+
+14
+00:00:40,100 --> 00:00:43,799
+Tu nie będę już się wysilał na jakąś wymyślanie nazwy tej listy,
+
+15
+00:00:45,120 --> 00:00:47,079
+nazwy też tej funkcji.
+
+16
+00:00:48,439 --> 00:00:49,799
+Wiadomo, forma ćwiczenia.
+
+17
+00:00:50,439 --> 00:00:53,039
+Czyli będziemy potrzebowali mieć zmienną output
+
+18
+00:00:53,039 --> 00:00:56,899
+for element in list 1
+
+19
+00:00:56,899 --> 00:00:58,000
+i znowu, że to jest, to jest, to jest, to jest, to jest,
+
+20
+00:00:58,000 --> 00:01:01,380
+i w element większy od zera,
+
+21
+00:01:02,219 --> 00:01:04,599
+to wtedy output
+
+22
+00:01:04,599 --> 00:01:10,319
+append element razy,
+
+23
+00:01:10,640 --> 00:01:12,920
+tak naprawdę zawsze razy minus jeden,
+
+24
+00:01:13,400 --> 00:01:14,819
+tu nie muszę sprawdzać tego nawet,
+
+25
+00:01:14,939 --> 00:01:16,159
+wystarczy, że zrobię output,
+
+26
+00:01:16,599 --> 00:01:21,200
+output append element razy minus jeden,
+
+27
+00:01:21,560 --> 00:01:23,599
+no bo w sumie zawsze mamy tą samą sytuację.
+
+28
+00:01:24,219 --> 00:01:24,780
+Return
+
+29
+00:01:24,780 --> 00:01:26,000
+output
+
+30
+00:01:26,000 --> 00:01:28,319
+,
+
+31
+00:01:28,319 --> 00:01:28,340
+output.
+
+32
+00:01:28,620 --> 00:01:30,700
+Ja wydaje mi się, że w treści zadania,
+
+33
+00:01:30,780 --> 00:01:33,120
+tutaj poprosiłem was o to, żeby użyć skróconego ifa
+
+34
+00:01:33,120 --> 00:01:35,780
+i jak to zadanie wcześniej rozwiązałem,
+
+35
+00:01:35,859 --> 00:01:37,239
+to nie zwróciłem na to uwagę,
+
+36
+00:01:37,439 --> 00:01:40,319
+że to zadanie można po prostu zrobić mnożąc razy minus jeden.
+
+37
+00:01:40,900 --> 00:01:44,439
+Jeżeli jednak chcielibyśmy zrobić to,
+
+38
+00:01:44,620 --> 00:01:47,439
+zrobić to ze skróconym ifem,
+
+39
+00:01:47,900 --> 00:01:49,280
+to wyglądałoby to w ten sposób.
+
+40
+00:01:50,599 --> 00:01:52,859
+Output append element razy minus jeden,
+
+41
+00:01:52,859 --> 00:01:55,859
+if element mniejsze od zera,
+
+42
+00:01:56,000 --> 00:02:00,159
+w przeciwnym wypadku element razy minus jeden.
+
+43
+00:02:00,379 --> 00:02:03,480
+Ale skoro w obu przypadkach mnożymy razy minus jeden,
+
+44
+00:02:03,640 --> 00:02:06,980
+to ten skrócony if tutaj nie ma zbyt dużego sensu,
+
+45
+00:02:07,439 --> 00:02:10,099
+no ale jak prowadzący wymagał,
+
+46
+00:02:10,500 --> 00:02:11,419
+to bardzo proszę.
+
+47
+00:02:12,500 --> 00:02:13,580
+Czyli convert list.
+
+48
+00:02:16,319 --> 00:02:17,819
+Mamy jakąś listę,
+
+49
+00:02:18,020 --> 00:02:19,020
+oczywiście nie ma printa,
+
+50
+00:02:19,099 --> 00:02:20,020
+dorzutam printa.
+
+51
+00:02:22,379 --> 00:02:24,580
+O, zobaczmy jedenastkę.
+
+52
+00:02:26,000 --> 00:02:27,520
+I działa.
+
+53
+00:02:28,080 --> 00:02:30,060
+Wszystko się nam ładnie zamieniło.
+
+54
+00:02:30,419 --> 00:02:31,080
+Ale tak jak mówię,
+
+55
+00:02:31,479 --> 00:02:34,360
+można byłoby to uprościć też do tej postaci.
+
+56
+00:02:34,780 --> 00:02:36,479
+O, i też jest wynik ten sam.
+
+57
+00:02:36,680 --> 00:02:38,520
+Skoro wynik ten sam, to po co przepłacać.
+
+58
+00:02:39,060 --> 00:02:39,620
+Chodźmy dalej.

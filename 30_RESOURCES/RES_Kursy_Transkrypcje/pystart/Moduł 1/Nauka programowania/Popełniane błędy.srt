@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:13,179
+No i kolejna rzecz to samo programowanie. Jeżeli programujesz, to też, szczególnie w Pythonie, to też jest parę rzeczy, na które koniecznie musisz zwrócić uwagę. I o tych rzeczach sobie porozmawiajmy.
+
+2
+00:00:13,179 --> 00:00:32,100
+Przede wszystkim Python to język, w którym nie ma klamerek. W nim są dwukropki oraz wcięcia. O tym pewnie wiesz, bo zakładam, że skoro jesteśmy tutaj razem, to jakiś mój film z YouTube'a czy z Continent gdzieś zobaczyłeś i wiesz, jak Python mniej więcej wygląda.
+
+3
+00:00:32,739 --> 00:00:42,679
+Więc uwaga na wcięcia. Wcięcia można robić tabulatorem, on za każdym razem zmienia nam się na wielokrotność spacji, bo tak naprawdę poprawnie wcięcie powinno być zrobione czterema spacjami.
+
+4
+00:00:42,679 --> 00:00:47,679
+No ale nikt normalny nie liczyłby za każdym razem czterech spacji, więc tabulator robi to dla ciebie.
+
+5
+00:00:48,619 --> 00:00:59,679
+Po drugie, zwróć uwagę na nazwy zmiennych funkcji. Wiem, że jeszcze nie wiesz, czym są zmienne, może nie wiesz, nie wiesz, czym są funkcje, natomiast zwróć uwagę na to, jak poszczególne rzeczy nazywasz.
+
+6
+00:01:00,519 --> 00:01:11,420
+Nazywanie tych zmiennych warto pielęgnować w taki sposób, warto je nazywać w taki sposób, żeby one zawsze opisywały to, co się pod tą wartością znajduje.
+
+7
+00:01:11,799 --> 00:01:12,680
+To bardzo ułatwia.
+
+8
+00:01:12,680 --> 00:01:29,320
+To ułatwia pracę. Dlaczego o tym piszę i dlaczego o tym mówię tak szybko? Z tego względu, że kiedyś spotkałem na kursie taką osobę, która mi powiedziała, że wszystkie zmienne w jego kodzie, bo to był mężczyzna, nazywają się zawsze bardzo krótko, bo ktoś mu powiedział, że w ten sposób program działa szybciej.
+
+9
+00:01:29,320 --> 00:01:42,460
+No i były zmienne x1, x2, x5, z1, z5 i tak dalej, i tak dalej. Po czym mówię, a co robi ta zmienna, a zaraz, zaraz wyciągnął taki kajec, przejrzał sobie którąś stronę, bo znalazł, to było z,
+
+10
+00:01:42,680 --> 00:02:09,100
+musiał pójść daleko, mówi z4 i tu był opis tej zmiennej. To jest bez sensu. W ten sposób marnujesz mu swój czas. Warto używać nazw poprawnych. No i tutaj też bardzo ważna informacja. Ja na początku kodowania mam taką zasadę i staram się czasem jej używać, ale już parę razy została mi zwrócona uwaga, że tak się nie robi, czego ty uczysz tych ludzi, że nazwy zmiennych czy funkcji piszę po polsku.
+
+11
+00:02:09,100 --> 00:02:11,879
+Dzięki temu jest taki adept programowania.
+
+12
+00:02:12,680 --> 00:02:23,860
+No i tutaj też bardzo ważna informacja. Ja na początku kodowania mam taką zasadę i staram się czasem jej używać, ale już parę razy została mi zwrócona uwaga, że tak się nie robi, czego ty uczysz tych ludzi, że nazwę swój czas. W tym momencie, gdy ja mam czas na mój kod, to wie, które fragmenty tego kodu to jest coś, co jest jakby częścią Pythona, a które fragmenty tego kodu to jest coś, co pochodzi od zewnątrz, nie? Znaczy ode mnie.
+
+13
+00:02:24,140 --> 00:02:38,400
+Więc tutaj zachęcam do tego, żeby pisać wszystko po angielsku. Natomiast jeżeli poczujesz, że gdzieś ta reguła, że nie wiesz, co jest to, kto to napisał i też ciebie dotyka, no to mam taką radę, możesz spróbować robić tak.
+
+14
+00:02:39,319 --> 00:02:41,379
+Natomiast we wszystkich firmach, w których pracowałem,
+
+15
+00:02:42,680 --> 00:02:52,800
+są pewne przykłady w internecie latające wciąż, nie z moich firm oczywiście, ale gdzie są zmienne po polsku, taka zasada była praktykowana, że zmienne były po angielsku.
+
+16
+00:02:53,439 --> 00:03:04,159
+Wydawało mi się to kiedyś, no, niezbyt istotne, aż napotkałem na firmę, w której pracowało większość Szwedów i zobaczyłem, że zmienne wszystkie piszą po szwedzku.
+
+17
+00:03:04,700 --> 00:03:10,520
+No i moja praca w dużej mierze była spowolniona przez Google Translate i zastanawianie się, co to kurczę jest.
+
+18
+00:03:11,520 --> 00:03:12,560
+Po trzecie,
+
+19
+00:03:12,680 --> 00:03:13,840
+brak analizy z kodu.
+
+20
+00:03:14,219 --> 00:03:16,760
+Mówiłem o tym wcześniej przy okazji cierpliwości do kodu.
+
+21
+00:03:16,920 --> 00:03:24,240
+Jeżeli zaczynasz kodować, to i używasz jakiś kod, czy kopiujesz ten kod skądś z zewnątrz,
+
+22
+00:03:24,520 --> 00:03:34,040
+to zachęcam cię do tego, żeby na bieżąco analizować, co poszczególne linie robią, a nie wykorzystywać kod skądś i cieszyć się, że działa.
+
+23
+00:03:34,040 --> 00:03:39,560
+Czy kopiować go od kogoś, czy kopiować go nawet ode mnie, czy w ogóle przepisywać go ode mnie bezmyślnie.
+
+24
+00:03:39,840 --> 00:03:42,560
+Jeżeli nie wiesz, co właśnie zostało przepisane, no to
+
+25
+00:03:42,680 --> 00:03:44,680
+bez sensu jest to przepisywać.
+
+26
+00:03:45,520 --> 00:03:48,080
+Po czwarte, często sprawdzaj kod.
+
+27
+00:03:48,920 --> 00:03:56,280
+To jest taka uwaga, którą daję wszystkim młodym adeptom programowania, znaczy młodym stażem, nie wiekiem, bo wiek tu nie ma absolutnie żadnego znaczenia.
+
+28
+00:03:56,560 --> 00:04:09,680
+Chodzi o to, że kiedy wprowadzasz jakiś fragment kodu, to uruchom go sobie tak często, jak tylko wiesz, że doszedłeś do jakiegoś momentu, w którym logika została, pewna jakaś część logiki została wykonana.
+
+29
+00:04:10,439 --> 00:04:11,640
+Uruchom sobie ten kod.
+
+30
+00:04:11,879 --> 00:04:12,520
+Sprawdź,
+
+31
+00:04:12,520 --> 00:04:15,719
+czy faktycznie wyświetlił się komunikat taki, jakiego się spodziewasz.
+
+32
+00:04:16,000 --> 00:04:35,480
+Nie staraj się napisać od razu całego programu, tylko jeżeli masz jakieś wyzwanie przed sobą, to w najmniejszych możliwych momentach printuj sobie czy wyświetlaj poszczególne rzeczy o tym kodowaniu, czy sobie oczywiście będziemy mówili, ale wyświetlaj to jak najczęściej te tematy, tak żeby widzieć, czy faktycznie program zachowuje się tak, jak się tego spodziewasz.
+
+33
+00:04:35,920 --> 00:04:40,680
+Bo później, jak ten program będzie długi i wtedy spróbujesz go uruchomić i nagle nie zadziała,
+
+34
+00:04:41,439 --> 00:04:42,400
+no to będzie takie o rano,
+
+35
+00:04:42,519 --> 00:04:43,519
+a potem będzie trudniej.
+
+36
+00:04:43,719 --> 00:04:53,680
+Teraz muszę te 50 czy 60 linii zrozumieć, a tak to łatwiej jest uruchamiać go po kawałku i po kawałku go rozumieć, żeby później w całości to wszystko było OK.
+
+37
+00:04:54,680 --> 00:04:56,799
+No właśnie, nie przeklejaj kodu bez zrozumienia.
+
+38
+00:04:57,000 --> 00:04:58,759
+Myślę, że tego już nie musimy rozwijać.
+
+39
+00:04:58,959 --> 00:05:05,399
+No i znowu ten brak cierpliwości do kodu tutaj się pojawił, który też został już parę razy omówiony, więc myślę, że sprawa jest dla ciebie jasna.

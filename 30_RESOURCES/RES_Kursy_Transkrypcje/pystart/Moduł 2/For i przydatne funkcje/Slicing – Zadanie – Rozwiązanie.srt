@@ -1,0 +1,563 @@
+1
+00:00:00,000 --> 00:00:02,399
+No to co? Lecimy!
+
+2
+00:00:02,879 --> 00:00:04,320
+Za pomocą range i tuple
+
+3
+00:00:04,320 --> 00:00:06,320
+stwórz tam zakres liczb
+
+4
+00:00:06,320 --> 00:00:08,320
+od 1 do 100. No to sobie możemy zrobić
+
+5
+00:00:08,320 --> 00:00:10,320
+jakieś digits, numbers.
+
+6
+00:00:11,339 --> 00:00:12,140
+Równa się.
+
+7
+00:00:12,599 --> 00:00:14,320
+Przypominam o tym, że jeżeli używamy,
+
+8
+00:00:15,620 --> 00:00:16,260
+przechowujemy
+
+9
+00:00:16,260 --> 00:00:17,780
+tuple, no to zdecydowanie
+
+10
+00:00:17,780 --> 00:00:20,440
+zmienna powinna być liczbę mnogiej.
+
+11
+00:00:21,300 --> 00:00:21,719
+Tuple
+
+12
+00:00:21,719 --> 00:00:24,320
+range. Od 1 do 100,
+
+13
+00:00:24,460 --> 00:00:26,320
+czyli 1,101.
+
+14
+00:00:26,320 --> 00:00:27,480
+1.
+
+15
+00:00:29,060 --> 00:00:31,120
+Możemy to sobie zawsze wyprintować.
+
+16
+00:00:32,100 --> 00:00:33,460
+Te printy bardzo się przydają.
+
+17
+00:00:33,460 --> 00:00:35,579
+Ja się zawsze czuję pewnie, jak uczę
+
+18
+00:00:35,579 --> 00:00:37,659
+i też wiem, że mogę pokazać
+
+19
+00:00:37,659 --> 00:00:39,259
+poszczególne te printy,
+
+20
+00:00:39,320 --> 00:00:41,100
+poszczególne etapy, no bo wiem, że
+
+21
+00:00:41,100 --> 00:00:43,159
+zostanę zrozumiany.
+
+22
+00:00:43,280 --> 00:00:44,320
+Mam nadzieję taką.
+
+23
+00:00:45,240 --> 00:00:47,299
+Dobra. Czyli to mamy.
+
+24
+00:00:48,240 --> 00:00:48,960
+To lecimy dalej.
+
+25
+00:00:49,799 --> 00:00:51,460
+Tu możemy sobie zrobić o tak,
+
+26
+00:00:51,659 --> 00:00:52,900
+o i proszę.
+
+27
+00:00:53,420 --> 00:00:55,400
+Wyciągnij tylko pierwsze 10 liczb.
+
+28
+00:00:55,399 --> 00:00:57,359
+No to muszę zrobić print
+
+29
+00:00:57,359 --> 00:00:59,179
+numbers.
+
+30
+00:00:59,399 --> 00:01:01,259
+Jak chcę 10 pierwszych,
+
+31
+00:01:01,359 --> 00:01:02,420
+to znaczy, że od początku
+
+32
+00:01:02,420 --> 00:01:04,659
+do dziesiątego elementu,
+
+33
+00:01:05,079 --> 00:01:07,140
+czyli dwukropek 10.
+
+34
+00:01:07,659 --> 00:01:09,359
+Bo na początku musiałbym napisać 0,
+
+35
+00:01:09,519 --> 00:01:11,379
+ale skoro 0 mogę pominąć, to mogę napisać
+
+36
+00:01:11,379 --> 00:01:12,819
+właśnie w ten sposób.
+
+37
+00:01:13,000 --> 00:01:15,280
+I zobacz, tu jeszcze można byłoby
+
+38
+00:01:15,280 --> 00:01:17,180
+sobie to oddzielić jakimś tam
+
+39
+00:01:17,180 --> 00:01:19,560
+printem albo pierwsze 10 napisać o tak.
+
+40
+00:01:23,219 --> 00:01:23,819
+O.
+
+41
+00:01:24,180 --> 00:01:25,379
+I w ten sposób pojawiło się.
+
+42
+00:01:25,379 --> 00:01:27,339
+Pierwsze 10 i mamy faktycznie wartości
+
+43
+00:01:27,339 --> 00:01:28,619
+od 1 do 10.
+
+44
+00:01:28,859 --> 00:01:30,619
+Idziemy dalej? Chodź, chodź.
+
+45
+00:01:31,179 --> 00:01:33,479
+Kolejne to chcemy tylko ostatnie
+
+46
+00:01:33,479 --> 00:01:34,219
+10 liczb.
+
+47
+00:01:36,319 --> 00:01:37,500
+Ostatnie 10.
+
+48
+00:01:37,819 --> 00:01:39,000
+Czyli jak mnie pamięć nie myli,
+
+49
+00:01:39,140 --> 00:01:42,000
+powinniśmy dostać od 91 do 100.
+
+50
+00:01:42,519 --> 00:01:43,079
+Zatem
+
+51
+00:01:43,079 --> 00:01:44,599
+wykonujemy numbers
+
+52
+00:01:44,599 --> 00:01:47,159
+i najpierw musimy powiedzieć
+
+53
+00:01:47,159 --> 00:01:48,379
+od którego elementu.
+
+54
+00:01:48,919 --> 00:01:51,340
+Czyli tak naprawdę od minus 10.
+
+55
+00:01:51,759 --> 00:01:53,419
+Bo minus znaczy od końca.
+
+56
+00:01:53,419 --> 00:01:55,219
+Czyli minus 10,
+
+57
+00:01:55,379 --> 00:01:56,519
+dwukropek.
+
+58
+00:01:57,420 --> 00:01:59,759
+W ten sposób pobierzemy właśnie wartości
+
+59
+00:01:59,759 --> 00:02:01,140
+od końca. Zobacz.
+
+60
+00:02:02,179 --> 00:02:03,619
+I mamy 91.
+
+61
+00:02:04,119 --> 00:02:05,239
+Liczymy razem. 92,
+
+62
+00:02:05,640 --> 00:02:07,579
+93, 94, 95,
+
+63
+00:02:07,780 --> 00:02:09,799
+96, 97, 98, 99, 100.
+
+64
+00:02:10,180 --> 00:02:11,979
+Działa. Ostatnie 10 elementów.
+
+65
+00:02:13,859 --> 00:02:14,519
+Kolejna rzecz.
+
+66
+00:02:15,219 --> 00:02:16,819
+To są tylko nieparzyste.
+
+67
+00:02:20,300 --> 00:02:21,819
+Tylko nieparzyste.
+
+68
+00:02:22,300 --> 00:02:23,699
+Zaczynam od początku.
+
+69
+00:02:23,699 --> 00:02:25,619
+No nie.
+
+70
+00:02:26,099 --> 00:02:27,699
+Zaczynam od pierwszego elementu.
+
+71
+00:02:28,039 --> 00:02:29,159
+Bo 0 jest parzyste.
+
+72
+00:02:30,280 --> 00:02:31,359
+Następnie chcę
+
+73
+00:02:31,359 --> 00:02:32,459
+wszystkie.
+
+74
+00:02:33,159 --> 00:02:35,679
+Więc skoro do końca to wszystkie,
+
+75
+00:02:35,939 --> 00:02:37,539
+to mogę sobie tę środkową wartość
+
+76
+00:02:37,539 --> 00:02:38,159
+pominąć.
+
+77
+00:02:39,019 --> 00:02:41,859
+I skoro chcę nieparzyste, to muszę skakać co 2.
+
+78
+00:02:42,219 --> 00:02:43,759
+Tak jakbym myślał o parzystych,
+
+79
+00:02:44,179 --> 00:02:45,599
+natomiast tutaj myślę o nieparzystych.
+
+80
+00:02:45,659 --> 00:02:46,859
+A skoro zacząłem od jedynki,
+
+81
+00:02:47,280 --> 00:02:48,199
+no to będę je miał.
+
+82
+00:02:48,199 --> 00:02:49,339
+O i zepsułem.
+
+83
+00:02:49,659 --> 00:02:50,799
+Dlaczego tylko nieparzyste?
+
+84
+00:02:50,919 --> 00:02:53,000
+1, dwukropek, 2.
+
+85
+00:02:53,359 --> 00:02:53,620
+Ok.
+
+86
+00:02:53,699 --> 00:02:54,379
+Tu zepsułem.
+
+87
+00:02:54,439 --> 00:02:55,179
+Dlaczego zepsułem?
+
+88
+00:02:55,599 --> 00:02:59,060
+Bo na zerowym indeksie mamy wartość 1.
+
+89
+00:02:59,539 --> 00:03:00,079
+Ja myślałem,
+
+90
+00:03:00,199 --> 00:03:03,639
+że na zerowym indeksie mamy wartość 0.
+
+91
+00:03:03,719 --> 00:03:04,539
+To oczywiście błąd.
+
+92
+00:03:04,879 --> 00:03:07,119
+Więc od początku co drugą wartość
+
+93
+00:03:07,119 --> 00:03:09,099
+i wtedy dostaniemy wartości nieparzyste.
+
+94
+00:03:09,479 --> 00:03:11,379
+Bo on jakby weźmie 1, doda 2,
+
+95
+00:03:11,539 --> 00:03:13,379
+3, doda 2 itd.
+
+96
+00:03:14,060 --> 00:03:15,939
+Jeżeli byśmy startowali od 0,
+
+97
+00:03:16,219 --> 00:03:17,439
+czy tutaj nie byłoby jedynki,
+
+98
+00:03:17,759 --> 00:03:19,000
+to wtedy musielibyśmy mu powiedzieć,
+
+99
+00:03:19,120 --> 00:03:20,079
+że od jedynki ma zacząć.
+
+100
+00:03:20,079 --> 00:03:21,399
+Bo to jest jakby ta wartość.
+
+101
+00:03:22,239 --> 00:03:23,439
+Myślę, że się rozumiemy.
+
+102
+00:03:23,699 --> 00:03:25,699
+Chodzi o to, że tu po prostu jeżeli bym
+
+103
+00:03:25,699 --> 00:03:27,599
+chce od jedynki zacząć,
+
+104
+00:03:27,659 --> 00:03:28,479
+od liczby 1,
+
+105
+00:03:29,039 --> 00:03:31,179
+to liczba 1 jest na zerowym indeksie,
+
+106
+00:03:31,239 --> 00:03:32,839
+więc nie podaję jej po prostu i tyle.
+
+107
+00:03:33,879 --> 00:03:34,899
+To był ten mój błąd.
+
+108
+00:03:35,419 --> 00:03:36,219
+No i ostatnia rzecz.
+
+109
+00:03:36,560 --> 00:03:38,759
+Wyciągnij z listy tylko wartości parzyste
+
+110
+00:03:38,759 --> 00:03:40,780
+w kolejności od największej do najmniejszej.
+
+111
+00:03:40,879 --> 00:03:44,319
+No to print parzyste od końca.
+
+112
+00:03:46,599 --> 00:03:47,539
+Zobacz co się stanie,
+
+113
+00:03:47,539 --> 00:03:49,639
+gdy zrobię numbers od
+
+114
+00:03:49,639 --> 00:03:51,959
+no i tak samo zrobię minus 2.
+
+115
+00:03:52,379 --> 00:03:53,359
+W tym momencie
+
+116
+00:03:53,360 --> 00:03:56,960
+dostanę 100, 98, 96 i tak dalej.
+
+117
+00:03:57,060 --> 00:03:58,560
+Nie będę czytał tych 50 liczb,
+
+118
+00:03:58,940 --> 00:03:59,680
+ale jak widzisz,
+
+119
+00:04:00,100 --> 00:04:01,540
+dokładnie zaznaczyłem się tutaj,
+
+120
+00:04:01,740 --> 00:04:04,080
+zwróciłem się tutaj parzyste od końca.
+
+121
+00:04:04,220 --> 00:04:05,160
+Część z nich zasłaniam,
+
+122
+00:04:05,280 --> 00:04:06,940
+ale skoro tyle zadziałało wcześniej,
+
+123
+00:04:07,080 --> 00:04:08,580
+to myślę, że wszystkie też zadziałały.
+
+124
+00:04:09,220 --> 00:04:11,440
+To była taka trudniejsza część.
+
+125
+00:04:11,860 --> 00:04:12,960
+Jeżeli kogoś wystraszyłem,
+
+126
+00:04:13,040 --> 00:04:14,140
+to bardzo za to przepraszam.
+
+127
+00:04:14,400 --> 00:04:15,640
+Nie miałem takiego zamiaru.
+
+128
+00:04:16,139 --> 00:04:17,819
+Natomiast w przyszłości,
+
+129
+00:04:17,819 --> 00:04:20,259
+jeżeli będziesz potrzebować używać slicingu,
+
+130
+00:04:20,620 --> 00:04:22,120
+to wróć koniecznie do tej lekcji,
+
+131
+00:04:22,220 --> 00:04:22,980
+do tego ćwiczenia.
+
+132
+00:04:23,360 --> 00:04:25,000
+Jak widzisz, prawie wszystkie takie
+
+133
+00:04:25,000 --> 00:04:27,580
+najpopularniejsze przypadki tutaj zrobiliśmy.
+
+134
+00:04:28,100 --> 00:04:29,360
+Czasem widziałem, że w jakichś
+
+135
+00:04:29,360 --> 00:04:32,020
+pytaniach rekrutacyjnych pojawiają się pytania typu
+
+136
+00:04:32,020 --> 00:04:34,780
+co trzecią wartość od końca,
+
+137
+00:04:34,939 --> 00:04:36,400
+coś tam i są kombinacje,
+
+138
+00:04:36,540 --> 00:04:38,280
+ale w życiu się czegoś takiego nie używa,
+
+139
+00:04:38,420 --> 00:04:40,379
+więc te rzeczy, które pokazałem,
+
+140
+00:04:40,740 --> 00:04:42,080
+na życie ci wystarczą.
+
+141
+00:04:42,740 --> 00:04:43,280
+Chodźcie dalej.

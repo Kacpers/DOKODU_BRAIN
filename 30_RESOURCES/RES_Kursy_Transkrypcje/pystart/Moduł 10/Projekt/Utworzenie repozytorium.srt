@@ -1,0 +1,819 @@
+1
+00:00:00,000 --> 00:00:03,000
+To co? Lecimy z naszym repozytorium.
+
+2
+00:00:03,000 --> 00:00:06,000
+Co my o nim wiemy? Wiemy, że to musi być klasa.
+
+3
+00:00:06,000 --> 00:00:10,000
+Klasa, która może nazywać się po prostu repozytory.
+
+4
+00:00:10,000 --> 00:00:16,000
+Ja zwykłem takie klasy nazywać od konkretnej czynności, którą wykonuję.
+
+5
+00:00:16,000 --> 00:00:20,000
+Tutaj znowu z racji naszego projektu nie chcę też tworzyć miliona plików,
+
+6
+00:00:20,000 --> 00:00:22,000
+bo wydaje mi się, że nie ma takiej potrzeby.
+
+7
+00:00:22,000 --> 00:00:29,000
+Natomiast jeżeli projekt byłby większy, to na przykład osobno chcielibyśmy zarządzać jeszcze dodawaniem, usuwaniem, edytowaniem itd. kategorii,
+
+8
+00:00:29,000 --> 00:00:36,000
+to nazwałbym tę klasę osobno item repozytory i kategorii repozytory.
+
+9
+00:00:36,000 --> 00:00:42,000
+Natomiast z racji tego, że tak jak mówię, nasz projekt nie jest aż taki skomplikowany, no to wystarczy myślę tak.
+
+10
+00:00:42,000 --> 00:00:47,000
+Co będzie nam potrzebne, żeby móc pracować z naszą bazą danych?
+
+11
+00:00:47,000 --> 00:00:49,000
+Na pewno połączenie.
+
+12
+00:00:49,000 --> 00:00:58,000
+Więc możemy sobie stworzyć zmienną connection i tę zmienną będziemy potrzebowali przypisać do właściwości.
+
+13
+00:00:58,000 --> 00:00:59,000
+Dlaczego to jest klasy?
+
+14
+00:00:59,000 --> 00:01:01,000
+Ponieważ to jest connection, a nie kursor.
+
+15
+00:01:01,000 --> 00:01:07,000
+Z tego względu, że jak pamiętasz tę część dotyczącą pracy z naszym projektem,
+
+16
+00:01:07,000 --> 00:01:13,000
+to tam z SQLite, to tam w momencie, kiedy dodawaliśmy nowe wpisy,
+
+17
+00:01:13,000 --> 00:01:19,000
+była nam potrzebna taka informacja jak commit jeszcze.
+
+18
+00:01:19,000 --> 00:01:21,000
+Czyli na connection trzeba było robić commit.
+
+19
+00:01:21,000 --> 00:01:24,000
+Natomiast zapytania wykonywaliśmy na kursorze.
+
+20
+00:01:24,000 --> 00:01:28,000
+Stąd też te dwie rzeczy potrzebujemy mieć po prostu osobno.
+
+21
+00:01:28,000 --> 00:01:31,000
+Następnie będziemy potrzebowali mieć odpowiednie metody.
+
+22
+00:01:31,000 --> 00:01:34,000
+Będę je sobie przygotowywał po kolei.
+
+23
+00:01:34,000 --> 00:01:37,000
+Pierwsza z metod to będzie metoda addIncome.
+
+24
+00:01:37,000 --> 00:01:39,000
+Co ta metoda będzie otrzymywała?
+
+25
+00:01:39,000 --> 00:01:45,000
+No ja się spodziewam, że metoda addIncome będzie otrzymywała dokładnie te same rzeczy, jakie tutaj są przekazane.
+
+26
+00:01:45,000 --> 00:01:50,000
+Czyli name, category, date i value.
+
+27
+00:01:50,000 --> 00:01:53,000
+Tak naprawdę to nie będzie addIncome, tylko to będzie addItem.
+
+28
+00:01:53,000 --> 00:01:54,000
+Przepraszam.
+
+29
+00:01:54,000 --> 00:01:57,000
+Gdzie tak jak ustaliliśmy,
+
+30
+00:01:57,000 --> 00:02:02,000
+value będzie miało wartość ujemną, jeżeli będzie wydatkiem.
+
+31
+00:02:02,000 --> 00:02:05,000
+Znaczy ustaliliśmy, ja to wam przekazałem, wyście nie mieli kiedy zaprotestować.
+
+32
+00:02:05,000 --> 00:02:10,000
+A będzie miało tą wartość value, jeżeli to jest item.
+
+33
+00:02:10,000 --> 00:02:13,000
+I lub będzie miało wartość,
+
+34
+00:02:13,000 --> 00:02:17,000
+znaczy dodatnią, jeżeli to jest income, a ujemną, jeżeli to jest expense.
+
+35
+00:02:17,000 --> 00:02:20,000
+I wtedy możemy wykonać nasze zapytanie.
+
+36
+00:02:20,000 --> 00:02:24,000
+Do tego zapytania będziemy potrzebowali mieć jeszcze jedną bardzo ważną rzecz,
+
+37
+00:02:24,000 --> 00:02:26,000
+a mianowicie categoryId.
+
+38
+00:02:26,000 --> 00:02:31,000
+I jeżeli categoryId nie istnieje, no to powinniśmy też je sobie tutaj pobrać.
+
+39
+00:02:31,000 --> 00:02:39,000
+Więc ja założę na razie, że moje categoryId równa się 1, natomiast tym zajmiemy się już za chwilę.
+
+40
+00:02:39,000 --> 00:02:43,000
+Zaczynam od początku, czyli potrzebuję mieć zapytanie SQL,
+
+41
+00:02:43,000 --> 00:02:46,000
+które będzie wyglądało mniej więcej tak.
+
+42
+00:02:46,000 --> 00:02:52,000
+Insert into items values.
+
+43
+00:02:52,000 --> 00:02:54,000
+I tutaj na początek mamy id.
+
+44
+00:02:54,000 --> 00:02:59,000
+Więc przekazujemy mu 0, co mamy dalej?
+
+45
+00:02:59,000 --> 00:03:02,000
+Wracam sobie do mojego main, w dobrym miejscu jestem.
+
+46
+00:03:02,000 --> 00:03:04,000
+I tutaj sobie zerkam.
+
+47
+00:03:04,000 --> 00:03:06,000
+Id, dalej jest categoryId.
+
+48
+00:03:06,000 --> 00:03:09,000
+Czyli potrzebujemy mu przekazać znak zapytania,
+
+49
+00:03:09,000 --> 00:03:12,000
+przecinek, amount, przecinek,
+
+50
+00:03:12,000 --> 00:03:18,000
+i date, przecinek.
+
+51
+00:03:18,000 --> 00:03:23,000
+I teraz będę chciał wykonać to zapytanie i przekazać mu te 4 wartości.
+
+52
+00:03:23,000 --> 00:03:25,000
+4, coś jest nie tak.
+
+53
+00:03:25,000 --> 00:03:28,000
+Id, raz, dwa, trzy wartości, wszystko się zgadza.
+
+54
+00:03:28,000 --> 00:03:35,000
+Czyli wykonuję cursor, równa się self.connection, cursor.
+
+55
+00:03:35,000 --> 00:03:46,000
+Następnie robię cursor, execute, sql, przecinek,
+
+56
+00:03:46,000 --> 00:03:49,000
+i tutaj w formie tupli muszę mu przekazać te wartości.
+
+57
+00:03:49,000 --> 00:03:51,000
+Czyli categoryId,
+
+58
+00:03:51,000 --> 00:03:58,000
+przecinek, date, przecinek, value.
+
+59
+00:03:58,000 --> 00:04:01,000
+Ok? Co dalej?
+
+60
+00:04:01,000 --> 00:04:05,000
+Dalej powinienem skądś wziąć to categoryId.
+
+61
+00:04:05,000 --> 00:04:09,000
+I categoryId może istnieć w bazie danych,
+
+62
+00:04:09,000 --> 00:04:11,000
+a może też jej nie być.
+
+63
+00:04:11,000 --> 00:04:18,000
+Więc możemy sobie stworzyć get or create category.
+
+64
+00:04:18,000 --> 00:04:20,000
+My potrzebujemy mieć tylko i wyłącznie nazwę.
+
+65
+00:04:20,000 --> 00:04:26,000
+Więc ja sobie wyobrażam, że ta metoda będzie pobierała kategorie na podstawie nazwy,
+
+66
+00:04:26,000 --> 00:04:30,000
+bądź też jeżeli tej kategorii nie ma, to będzie po prostu ją tworzyła.
+
+67
+00:04:30,000 --> 00:04:34,000
+I za każdym razem powinna zwracać nam id tej kategorii.
+
+68
+00:04:34,000 --> 00:04:36,000
+Ok? Widzę błąd.
+
+69
+00:04:36,000 --> 00:04:39,000
+Tutaj powinno być jeszcze name, które powinno być tekstem.
+
+70
+00:04:39,000 --> 00:04:42,000
+Zaraz usunę ten mój budgetDB i wykonam to raz jeszcze,
+
+71
+00:04:42,000 --> 00:04:45,000
+bo widzę, że taki błąd zrobiłem.
+
+72
+00:04:45,000 --> 00:04:47,000
+Delete anyway.
+
+73
+00:04:47,000 --> 00:04:49,000
+Tu musi być name w tej mojej tabeli items.
+
+74
+00:04:49,000 --> 00:04:52,000
+I tego name'a mi też tutaj zabrakło.
+
+75
+00:04:52,000 --> 00:04:55,000
+Właśnie coś miałem, coś z liczeniem mi nie wychodziło.
+
+76
+00:04:55,000 --> 00:04:58,000
+Czyli dodaję jeszcze jeden znak zapytania, przecinek
+
+77
+00:04:58,000 --> 00:05:02,000
+i tu będzie name przekazany jako pierwsza wartość.
+
+78
+00:05:02,000 --> 00:05:04,000
+O tak.
+
+79
+00:05:04,000 --> 00:05:07,000
+Możemy też sobie oczywiście dopisać nasze typy.
+
+80
+00:05:07,000 --> 00:05:09,000
+To jest string.
+
+81
+00:05:09,000 --> 00:05:11,000
+Tu na chwilę obecną wszystko jest stringami.
+
+82
+00:05:11,000 --> 00:05:13,000
+Poza value, które będzie floatem.
+
+83
+00:05:13,000 --> 00:05:18,000
+No i wtedy uzupełniamy tę naszą metodę get or create category.
+
+84
+00:05:18,000 --> 00:05:23,000
+Po pierwsze powinniśmy spróbować pobrać sobie kategorię na podstawie jej nazwy.
+
+85
+00:05:23,000 --> 00:05:25,000
+Do tego też będzie nam potrzebny kursor.
+
+86
+00:05:25,000 --> 00:05:29,000
+Czyli kopiuję, wklejam.
+
+87
+00:05:29,000 --> 00:05:31,000
+Następnie piszę tak.
+
+88
+00:05:31,000 --> 00:05:36,000
+Cursor.execute i spróbuję go pobrać.
+
+89
+00:05:36,000 --> 00:05:46,000
+Czyli select id from categories where name równa się znak zapytania.
+
+90
+00:05:46,000 --> 00:05:51,000
+Pod ten znak zapytania muszę dodać nazwę kategorii.
+
+91
+00:05:51,000 --> 00:05:54,000
+To co jest ważne to jest to, że tutaj musimy przekazać tuple.
+
+92
+00:05:54,000 --> 00:05:57,000
+Więc za tym name musi pojawić się przecinek.
+
+93
+00:05:57,000 --> 00:06:00,000
+Gdyż w ten sposób będzie to tupla jednoelementowa.
+
+94
+00:06:00,000 --> 00:06:03,000
+Jeżeli tego przecinka zabraknie to nie będzie to tupla jednoelementowa.
+
+95
+00:06:03,000 --> 00:06:05,000
+Tylko po prostu pojedyncze string.
+
+96
+00:06:05,000 --> 00:06:11,000
+Następnie jeżeli uda się nam pobrać tę wartość.
+
+97
+00:06:11,000 --> 00:06:15,000
+To możemy napisać kursor.execute.
+
+98
+00:06:16,000 --> 00:06:19,000
+I to jest kategoria wkupka fetch1.
+
+99
+00:06:19,000 --> 00:06:24,000
+I tę wartość powinniśmy sobie od razu przypisać do kategory id.
+
+100
+00:06:24,000 --> 00:06:30,000
+Tyle tylko, że istnieje taka szansa, że niestety tego naszego kategorii id nie będziemy mieli.
+
+101
+00:06:30,000 --> 00:06:33,000
+I wtedy to kategorię id tak naprawdę tu zaczekajcie.
+
+102
+00:06:33,000 --> 00:06:36,000
+Bo fetch1 on nam zwróci tuple.
+
+103
+00:06:36,000 --> 00:06:38,000
+Okej, ale on nam zwróci tuple.
+
+104
+00:06:38,000 --> 00:06:40,000
+Jeżeli mamy jednoelementową też.
+
+105
+00:06:40,000 --> 00:06:45,000
+Jeżeli to będzie, jeżeli tej wartości, jeżeli ta wartość będzie.
+
+106
+00:06:45,000 --> 00:06:48,000
+Natomiast jeżeli jej nie będzie to właśnie ten kategorię id będzie none.
+
+107
+00:06:48,000 --> 00:06:52,000
+Więc za chwilę będziemy musieli z tego kategorię id pobrać sobie jeszcze.
+
+108
+00:06:52,000 --> 00:06:54,000
+To ja mogę, że zmienię nazwę.
+
+109
+00:06:54,000 --> 00:06:56,000
+To się tego wszystko sprowadza do nazwy.
+
+110
+00:06:56,000 --> 00:06:57,000
+Użyję result.
+
+111
+00:06:57,000 --> 00:07:00,000
+I teraz if result is none.
+
+112
+00:07:00,000 --> 00:07:03,000
+To wtedy muszę stworzyć nową kategorię.
+
+113
+00:07:03,000 --> 00:07:07,000
+Czyli kursor.execute.
+
+114
+00:07:07,000 --> 00:07:11,000
+Insert into categories.
+
+115
+00:07:11,000 --> 00:07:13,000
+Value.
+
+116
+00:07:13,000 --> 00:07:16,000
+Null przecinek znak zapytania.
+
+117
+00:07:16,000 --> 00:07:23,000
+I tutaj mu przekazujemy również name w tej samej postaci jak przed momentem.
+
+118
+00:07:23,000 --> 00:07:26,000
+Dzięki temu będziemy mieli tę wartość.
+
+119
+00:07:26,000 --> 00:07:28,000
+Jak pobrać id?
+
+120
+00:07:28,000 --> 00:07:31,000
+Jest w SQLite taka funkcjonalność.
+
+121
+00:07:31,000 --> 00:07:36,000
+Ona też jest dostępna w przypadku innych baz danych.
+
+122
+00:07:36,000 --> 00:07:39,000
+A mianowicie weź mi ostatnio dodany id.
+
+123
+00:07:39,000 --> 00:07:42,000
+I wtedy możemy sobie to przepisać do kategorii id.
+
+124
+00:07:42,000 --> 00:07:45,000
+Kategorii id równa się kursor.
+
+125
+00:07:45,000 --> 00:07:49,000
+Zerkam do dokumentacji.
+
+126
+00:07:49,000 --> 00:07:50,000
+To jest kursor.
+
+127
+00:07:50,000 --> 00:07:51,000
+Tak.
+
+128
+00:07:51,000 --> 00:07:56,000
+Kursor.lastrowid.
+
+129
+00:07:56,000 --> 00:07:59,000
+W ten sposób on nam przypisze tę wartość.
+
+130
+00:07:59,000 --> 00:08:01,000
+Jeżeli natomiast nie jest znanym.
+
+131
+00:08:01,000 --> 00:08:04,000
+To nasza kategoria id.
+
+132
+00:08:04,000 --> 00:08:10,000
+To jest result od 0.
+
+133
+00:08:10,000 --> 00:08:13,000
+I w ten sposób będziemy mieli kategorię id.
+
+134
+00:08:13,000 --> 00:08:16,000
+Możemy jeszcze, właściwie powinniśmy jeszcze tutaj to zakomitować.
+
+135
+00:08:16,000 --> 00:08:18,000
+Czyli connection.
+
+136
+00:08:18,000 --> 00:08:20,000
+self.connection.
+
+137
+00:08:24,000 --> 00:08:25,000
+commit.
+
+138
+00:08:25,000 --> 00:08:30,000
+I wtedy robimy return kategory id.
+
+139
+00:08:30,000 --> 00:08:34,000
+W ten sposób będziemy mieli nasze dane pobrane.
+
+140
+00:08:34,000 --> 00:08:36,000
+Zastanawiam się czy coś jeszcze powinno być tutaj zrobione.
+
+141
+00:08:36,000 --> 00:08:38,000
+Ale wydaje mi się, że nie.
+
+142
+00:08:38,000 --> 00:08:42,000
+Więc tylko to co zrobię to podmienię sobie tą kategorię id.
+
+143
+00:08:42,000 --> 00:08:43,000
+W tym miejscu.
+
+144
+00:08:43,000 --> 00:08:48,000
+Czyli wykonam get self.getorcreatekategory.
+
+145
+00:08:48,000 --> 00:08:52,000
+I przekażę tutaj nazwę tej kategorii.
+
+146
+00:08:52,000 --> 00:08:55,000
+No i nie pozostaje nam nic innego jak tylko sprawdzić.
+
+147
+00:08:55,000 --> 00:08:58,000
+Czy uda nam się dodać ten nowy item.
+
+148
+00:08:58,000 --> 00:09:00,000
+Tu niestety dochodzimy do czegoś takiego.
+
+149
+00:09:00,000 --> 00:09:05,000
+Gdzie ten potencjalny błąd, który może nam się pokazać.
+
+150
+00:09:05,000 --> 00:09:07,000
+Pojawi się dopiero za kilka chwil.
+
+151
+00:09:07,000 --> 00:09:09,000
+Kiedy wywołamy sobie ten kod.
+
+152
+00:09:09,000 --> 00:09:11,000
+Natomiast musimy się z tym liczyć.
+
+153
+00:09:11,000 --> 00:09:13,000
+I pewnie jakieś błędy się pokażą.
+
+154
+00:09:13,000 --> 00:09:14,000
+Które będziemy musieli sobie naprawić.
+
+155
+00:09:14,000 --> 00:09:16,000
+Ale jesteśmy programistami.
+
+156
+00:09:16,000 --> 00:09:18,000
+Za to nam płacą można powiedzieć.
+
+157
+00:09:18,000 --> 00:09:20,000
+Wracamy więc do application.
+
+158
+00:09:20,000 --> 00:09:26,000
+W naszym application brakuje nam tego naszego repozytorium.
+
+159
+00:09:26,000 --> 00:09:29,000
+Więc to co powinienem teraz zrobić.
+
+160
+00:09:29,000 --> 00:09:32,000
+To powinienem stworzyć sobie nowe repozytorium.
+
+161
+00:09:32,000 --> 00:09:34,000
+I przypisać do niego connection.
+
+162
+00:09:34,000 --> 00:09:35,000
+Czyli to database.
+
+163
+00:09:35,000 --> 00:09:37,000
+Czyli repository.
+
+164
+00:09:37,000 --> 00:09:40,000
+Równa się repository.
+
+165
+00:09:40,000 --> 00:09:43,000
+W nawiasie database.
+
+166
+00:09:43,000 --> 00:09:49,000
+I moje repozytorium przekazuję do application.
+
+167
+00:09:49,000 --> 00:09:55,000
+W tym momencie będę mógł korzystać z tej klasy.
+
+168
+00:09:55,000 --> 00:09:58,000
+I dodawać moje wpisy.
+
+169
+00:09:58,000 --> 00:10:02,000
+Więc skoro repozytorium zostało przekazane do application.
+
+170
+00:10:02,000 --> 00:10:04,000
+To ja mogę wrócić sobie.
+
+171
+00:10:04,000 --> 00:10:05,000
+Mam nadzieję z powodzeniem do application.
+
+172
+00:10:05,000 --> 00:10:07,000
+I tutaj je odebrać.
+
+173
+00:10:07,000 --> 00:10:12,000
+Mogę też zaznaczyć, że to jest repository.
+
+174
+00:10:12,000 --> 00:10:15,000
+Oczywiście PyCharm nie będzie wiedział co to jest.
+
+175
+00:10:15,000 --> 00:10:17,000
+Dopóki tego nie zaimportuje.
+
+176
+00:10:17,000 --> 00:10:19,000
+Więc...
+
+177
+00:10:19,000 --> 00:10:20,000
+Aha, dobra.
+
+178
+00:10:20,000 --> 00:10:22,000
+Mógłbym to zaimportować z main.
+
+179
+00:10:22,000 --> 00:10:24,000
+Ale za chwilę to przeniosę do osobnego pliku.
+
+180
+00:10:24,000 --> 00:10:26,000
+Więc nie będę mu tego typu dopisywał.
+
+181
+00:10:26,000 --> 00:10:31,000
+Bo już za moment to nasze repository znajdzie się też w pliku repository.
+
+182
+00:10:31,000 --> 00:10:35,000
+Więc tutaj zostawiam go sobie jako repository.
+
+183
+00:10:35,000 --> 00:10:36,000
+No i mogę go wykorzystać.
+
+184
+00:10:37,000 --> 00:10:41,000
+Czyli tutaj mamy self repository.
+
+185
+00:10:41,000 --> 00:10:44,000
+Równa się repository.
+
+186
+00:10:44,000 --> 00:10:49,000
+I w tym miejscu zajmę się dodawaniem nowego przychodu.
+
+187
+00:10:49,000 --> 00:10:55,000
+Gdyż dodanie nowego przychodu nie wymaga tak naprawdę żadnego tam razy minus jeden czy coś takiego.
+
+188
+00:10:55,000 --> 00:10:59,000
+Self repository.addItem.
+
+189
+00:10:59,000 --> 00:11:04,000
+No i tu niestety musimy mu to przekazać w tej samej kolejności w jakiej jest to w repozytorium.
+
+190
+00:11:04,000 --> 00:11:06,000
+Czyli name, kategory, date i value.
+
+191
+00:11:06,000 --> 00:11:10,000
+Tak się składa, że w tej samej kolejności dostaliśmy te dane tu.
+
+192
+00:11:10,000 --> 00:11:14,000
+Więc nic nie stoi na przeszkodzie, żeby wykonać to o tak.
+
+193
+00:11:14,000 --> 00:11:18,000
+Natomiast jeżeli będziemy chcieli dodać expense.
+
+194
+00:11:18,000 --> 00:11:23,000
+To powinniśmy dodać value razy minus jeden.
+
+195
+00:11:23,000 --> 00:11:29,000
+I to jest moment, w którym możemy sprawdzić, czy udaje nam się dodać przychód i wydatek.
+
+196
+00:11:29,000 --> 00:11:33,000
+Jeżeli pojawią się błędy, to w kolejnym filmie tymi błędami się zajmiemy.
+
+197
+00:11:33,000 --> 00:11:34,000
+Czyli w terminalu.
+
+198
+00:11:34,000 --> 00:11:35,000
+A jak nie będzie błędów, to nie będzie konieczności.
+
+199
+00:11:35,000 --> 00:11:37,000
+Jeżeli nie będzie błędów, to nie będzie kolejnego filmu.
+
+200
+00:11:37,000 --> 00:11:44,000
+W terminalu wykonuje addIncome name a kategory b z jakąś tam datą i z jakimś value.
+
+201
+00:11:44,000 --> 00:11:46,000
+Oho, nie ma błędu.
+
+202
+00:11:46,000 --> 00:11:55,000
+Więc możemy się spodziewać, że do naszego budżetu dodał się nowy wydatek.
+
+203
+00:11:55,000 --> 00:11:57,000
+Sprawdzimy to w kolejnym filmie.
+
+204
+00:11:57,000 --> 00:12:03,000
+Jeżeli tak będzie, no to nie pozostaje nam nic innego, jak tylko przenieść repozytorium do osobnego pliku.
+
+205
+00:12:03,000 --> 00:12:04,000
+Do zobaczenia.

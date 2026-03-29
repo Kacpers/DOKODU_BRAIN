@@ -1,0 +1,1271 @@
+1
+00:00:00,000 --> 00:00:02,180
+stworzy sobie funkcję, którą nazwę
+
+2
+00:00:02,180 --> 00:00:03,260
+triangle area,
+
+3
+00:00:04,259 --> 00:00:05,320
+czyli pole trójkąta.
+
+4
+00:00:05,759 --> 00:00:06,940
+Taka funkcja zazwyczaj
+
+5
+00:00:06,940 --> 00:00:10,060
+opiera się na jakiejś podstawie,
+
+6
+00:00:10,500 --> 00:00:11,720
+niech to ma wartość a
+
+7
+00:00:11,720 --> 00:00:13,220
+i jakiejś wysokości,
+
+8
+00:00:13,839 --> 00:00:16,240
+niech to będzie h.
+
+9
+00:00:16,980 --> 00:00:18,080
+W tym momencie, jeżeli
+
+10
+00:00:18,080 --> 00:00:20,120
+chcesz zwrócić pole trójkąta,
+
+11
+00:00:20,120 --> 00:00:21,559
+to wykonujesz return
+
+12
+00:00:21,559 --> 00:00:24,219
+a razy h przez 2.
+
+13
+00:00:24,900 --> 00:00:25,900
+Dzięki temu,
+
+14
+00:00:26,280 --> 00:00:28,320
+że dodaliśmy sobie też te wartości domyślne
+
+15
+00:00:28,320 --> 00:00:29,980
+i dzięki temu, że wiemy, że
+
+16
+00:00:29,980 --> 00:00:32,140
+możemy posługiwać się argumentami
+
+17
+00:00:32,140 --> 00:00:34,280
+pozycyjnymi, możemy wywołać
+
+18
+00:00:34,280 --> 00:00:35,579
+to w sposób następujący.
+
+19
+00:00:36,520 --> 00:00:37,460
+Triangle area
+
+20
+00:00:37,460 --> 00:00:39,200
+napisać 2 i 5.
+
+21
+00:00:40,140 --> 00:00:42,240
+Możemy napisać triangle area
+
+22
+00:00:42,240 --> 00:00:44,140
+2 i h
+
+23
+00:00:44,140 --> 00:00:45,200
+równa się 5.
+
+24
+00:00:45,980 --> 00:00:48,359
+Oba te zapisy są jak najbardziej prawidłowe.
+
+25
+00:00:48,579 --> 00:00:50,820
+Możemy napisać triangle area
+
+26
+00:00:50,820 --> 00:00:52,400
+a równa się 2,
+
+27
+00:00:52,659 --> 00:00:53,939
+h równa się 5
+
+28
+00:00:53,939 --> 00:00:56,359
+oraz możemy zrobić dokładnie to samo,
+
+29
+00:00:57,359 --> 00:00:58,079
+tylko, że
+
+30
+00:00:58,079 --> 00:00:59,960
+odwrotnie, po prostu zamienić
+
+31
+00:00:59,979 --> 00:01:00,879
+tę kolejność.
+
+32
+00:01:01,379 --> 00:01:02,799
+To też się bardzo często przydaje,
+
+33
+00:01:03,140 --> 00:01:05,000
+szczególnie jeżeli tych argumentów jest wiele
+
+34
+00:01:05,000 --> 00:01:07,599
+i nie chcemy się nimi przejmować.
+
+35
+00:01:07,739 --> 00:01:08,799
+To wtedy jak najbardziej
+
+36
+00:01:08,799 --> 00:01:10,819
+takie rozwiązanie też nam
+
+37
+00:01:10,819 --> 00:01:13,459
+będzie ułatwiało.
+
+38
+00:01:14,099 --> 00:01:14,979
+Wypadałoby to jeszcze
+
+39
+00:01:14,979 --> 00:01:15,899
+printować wszędzie.
+
+40
+00:01:18,299 --> 00:01:19,359
+Jeżeli chcielibyśmy
+
+41
+00:01:19,359 --> 00:01:20,219
+zobaczyć wyniki,
+
+42
+00:01:23,319 --> 00:01:25,000
+więc raz, dwa, trzy dodaję
+
+43
+00:01:25,000 --> 00:01:27,159
+printy i zaraz zobaczymy, że wszędzie
+
+44
+00:01:27,159 --> 00:01:28,560
+dokładnie są te same wyniki
+
+45
+00:01:28,560 --> 00:01:29,959
+i kod na nas wrzadny.
+
+46
+00:01:29,980 --> 00:01:31,980
+W każdym razie,
+
+47
+00:01:31,980 --> 00:01:32,980
+jeżeli mamy w sobie
+
+48
+00:01:32,980 --> 00:01:33,980
+takie rozwiązanie,
+
+49
+00:01:33,980 --> 00:01:34,820
+to możemy
+
+50
+00:01:34,820 --> 00:01:35,980
+w ogóle
+
+51
+00:01:35,980 --> 00:01:36,980
+wziąć
+
+52
+00:01:36,980 --> 00:01:37,980
+do głowy
+
+53
+00:01:37,980 --> 00:01:38,980
+i wziąć
+
+54
+00:01:38,980 --> 00:01:39,980
+do głowy
+
+55
+00:01:39,980 --> 00:01:40,980
+ten
+
+56
+00:01:40,980 --> 00:01:41,980
+wniosek.
+
+57
+00:01:41,980 --> 00:01:42,980
+I tak
+
+58
+00:01:42,980 --> 00:01:43,980
+w każdym razie
+
+59
+00:01:43,980 --> 00:01:44,980
+możemy
+
+60
+00:01:44,980 --> 00:01:45,980
+wziąć
+
+61
+00:01:45,980 --> 00:01:46,980
+do głowy
+
+62
+00:01:46,980 --> 00:01:47,980
+ten
+
+63
+00:01:47,980 --> 00:01:48,980
+wniosek
+
+64
+00:01:48,980 --> 00:01:49,980
+i wziąć
+
+65
+00:01:49,980 --> 00:01:50,980
+ten
+
+66
+00:01:50,980 --> 00:01:51,980
+wniosek
+
+67
+00:01:51,980 --> 00:01:52,980
+i wziąć
+
+68
+00:01:52,980 --> 00:01:53,980
+ten
+
+69
+00:01:53,980 --> 00:01:54,980
+wniosek
+
+70
+00:01:54,980 --> 00:01:55,980
+i wziąć
+
+71
+00:01:55,980 --> 00:01:56,980
+ten
+
+72
+00:01:56,980 --> 00:01:57,980
+wniosek
+
+73
+00:01:57,980 --> 00:01:58,980
+i wziąć
+
+74
+00:01:58,980 --> 00:01:59,980
+ten wniosek.
+
+75
+00:01:59,980 --> 00:02:00,980
+Czyli
+
+76
+00:02:00,980 --> 00:02:01,980
+use capital letters
+
+77
+00:02:01,980 --> 00:02:02,980
+z małych liter.
+
+78
+00:02:02,980 --> 00:02:03,980
+Możemy sobie po prostu
+
+79
+00:02:03,980 --> 00:02:04,980
+stworzyć
+
+80
+00:02:04,980 --> 00:02:05,980
+zamiast use
+
+81
+00:02:05,980 --> 00:02:06,980
+czyli
+
+82
+00:02:06,980 --> 00:02:07,980
+z
+
+83
+00:02:07,980 --> 00:02:08,980
+może
+
+84
+00:02:08,980 --> 00:02:09,980
+zróbmy
+
+85
+00:02:09,980 --> 00:02:10,980
+nie capital letters
+
+86
+00:02:10,980 --> 00:02:11,980
+tylko upper letters
+
+87
+00:02:11,980 --> 00:02:12,980
+lower
+
+88
+00:02:12,980 --> 00:02:13,980
+numbers
+
+89
+00:02:13,980 --> 00:02:14,980
+no i specials.
+
+90
+00:02:14,980 --> 00:02:15,980
+I chcielibyśmy,
+
+91
+00:02:15,980 --> 00:02:16,980
+żeby hasło
+
+92
+00:02:16,980 --> 00:02:17,980
+było jakiejś
+
+93
+00:02:17,980 --> 00:02:18,980
+konkretnej długości.
+
+94
+00:02:18,980 --> 00:02:19,980
+Możemy
+
+95
+00:02:19,980 --> 00:02:20,980
+więc sobie dorzucić
+
+96
+00:02:20,980 --> 00:02:21,980
+na
+
+97
+00:02:21,980 --> 00:02:22,980
+na
+
+98
+00:02:22,980 --> 00:02:23,980
+na
+
+99
+00:02:23,980 --> 00:02:24,980
+na
+
+100
+00:02:24,980 --> 00:02:25,980
+na
+
+101
+00:02:25,980 --> 00:02:26,980
+na
+
+102
+00:02:26,979 --> 00:02:28,979
+na
+
+103
+00:02:28,979 --> 00:02:29,979
+na
+
+104
+00:02:29,979 --> 00:02:30,979
+na
+
+105
+00:02:30,979 --> 00:02:31,979
+na
+
+106
+00:02:31,979 --> 00:02:32,979
+na
+
+107
+00:02:32,979 --> 00:02:33,979
+na
+
+108
+00:02:33,979 --> 00:02:34,979
+na
+
+109
+00:02:34,979 --> 00:02:35,979
+na
+
+110
+00:02:35,979 --> 00:02:36,979
+na
+
+111
+00:02:36,979 --> 00:02:37,979
+i
+
+112
+00:02:37,979 --> 00:02:38,979
+i
+
+113
+00:02:38,979 --> 00:02:40,979
+z
+
+114
+00:02:40,979 --> 00:02:41,979
+m
+
+115
+00:02:41,979 --> 00:02:42,979
+a
+
+116
+00:02:42,979 --> 00:02:43,979
+a
+
+117
+00:02:43,979 --> 00:02:44,979
+i
+
+118
+00:02:44,979 --> 00:02:46,979
+ı
+
+119
+00:02:46,979 --> 00:02:47,979
+e
+
+120
+00:02:47,979 --> 00:02:48,979
+a
+
+121
+00:02:48,979 --> 00:02:49,979
+z
+
+122
+00:02:49,979 --> 00:02:50,979
+k
+
+123
+00:02:50,979 --> 00:02:51,979
+u
+
+124
+00:02:51,979 --> 00:02:52,979
+a
+
+125
+00:02:52,979 --> 00:02:53,979
+ı
+
+126
+00:02:53,979 --> 00:02:54,979
+r
+
+127
+00:02:54,979 --> 00:02:55,979
+o
+
+128
+00:02:55,979 --> 00:02:59,159
+które z tych przełączek zostały ustawione na true, a które nie.
+
+129
+00:02:59,519 --> 00:03:03,079
+Mogę więc zrobić sobie taką zmienną jak characters,
+
+130
+00:03:03,859 --> 00:03:07,859
+równa się i tutaj sobie przyporządkować upper letters, lower letters,
+
+131
+00:03:08,560 --> 00:03:10,479
+numbers oraz specials.
+
+132
+00:03:11,000 --> 00:03:12,719
+I żeby teraz odpowiedzieć na pytanie,
+
+133
+00:03:13,739 --> 00:03:17,939
+na ile grup będę musiał dzielić te moje wyrażenie,
+
+134
+00:03:18,479 --> 00:03:20,379
+mogę skorzystać z polecenia sum
+
+135
+00:03:20,379 --> 00:03:28,219
+i sobie to wyrażenie, ten characters wyprintować wtedy.
+
+136
+00:03:29,620 --> 00:03:32,759
+True jest interpretowane tak samo jak prawda,
+
+137
+00:03:33,159 --> 00:03:35,639
+więc jeżeli wykonam generate password
+
+138
+00:03:35,639 --> 00:03:38,159
+i podam mu, że length to jest 10
+
+139
+00:03:38,159 --> 00:03:40,479
+i interesuje mnie tylko upper letters,
+
+140
+00:03:41,240 --> 00:03:43,900
+to w wyniku dostanę 1.
+
+141
+00:03:45,840 --> 00:03:48,000
+W wyniku dostaję 4, ok?
+
+142
+00:03:48,000 --> 00:03:50,159
+Z tego względu, że wszystkie te wartości,
+
+143
+00:03:50,379 --> 00:03:52,379
+mam ustawione na true.
+
+144
+00:03:52,379 --> 00:03:54,379
+Jeżeli natomiast nie chciałbym ich
+
+145
+00:03:54,379 --> 00:03:58,379
+i wtedy chciałbym, żeby one tylko były i wyłącznie wielkie litery,
+
+146
+00:03:58,379 --> 00:04:00,379
+no to wtedy zamieniam to sobie na false
+
+147
+00:04:00,379 --> 00:04:02,379
+i w tym momencie wszędzie na false
+
+148
+00:04:02,379 --> 00:04:04,379
+i w tym momencie tylko tam, gdzie podam na true,
+
+149
+00:04:04,379 --> 00:04:06,379
+to jak widać dostaję jedną grupę.
+
+150
+00:04:06,379 --> 00:04:08,379
+Czyli wtedy wiem,
+
+151
+00:04:08,379 --> 00:04:12,379
+że będę potrzebował podzielić sobie length na 1,
+
+152
+00:04:12,379 --> 00:04:16,379
+bo jeżeli miałbym na przykład upper letters i lower letters,
+
+153
+00:04:16,379 --> 00:04:18,379
+to w tym momencie,
+
+154
+00:04:20,379 --> 00:04:22,379
+to wtedy dzieliłbym to sobie na 2,
+
+155
+00:04:22,379 --> 00:04:24,379
+widzisz?
+
+156
+00:04:24,379 --> 00:04:26,379
+Więc wiem, że mogę z wielkich liter,
+
+157
+00:04:26,379 --> 00:04:32,379
+czy z małych liter, muszę wskazać length podzielony na tą ilość.
+
+158
+00:04:32,379 --> 00:04:34,379
+Jak więc to zrobić?
+
+159
+00:04:34,379 --> 00:04:36,379
+Żeby to wykonać,
+
+160
+00:04:36,379 --> 00:04:38,379
+będziemy potrzebowali zaimportować sobie
+
+161
+00:04:38,379 --> 00:04:44,379
+ASCII lower case, ASCII upper case,
+
+162
+00:04:44,379 --> 00:04:48,379
+numbers to wiadomo weźmiemy z range'a,
+
+163
+00:04:48,379 --> 00:04:52,379
+no a special characters stworzymy sobie jakąś swoją własną,
+
+164
+00:04:52,379 --> 00:04:54,379
+swój własny string.
+
+165
+00:04:54,379 --> 00:04:56,379
+Możemy od tego zacząć.
+
+166
+00:04:58,379 --> 00:05:02,379
+Zakładam, że te wartości są wystarczające jako znaki specjalne.
+
+167
+00:05:02,379 --> 00:05:04,379
+I w ten sposób,
+
+168
+00:05:04,379 --> 00:05:06,379
+jeżeli ktoś podał mi upper letters,
+
+169
+00:05:06,379 --> 00:05:10,379
+no to ja będę mógł do tego mojego stringa dodawać
+
+170
+00:05:10,379 --> 00:05:12,379
+tyle znaków, ile potrzebuję.
+
+171
+00:05:12,379 --> 00:05:16,379
+Czyli potrzebuję mieć jeszcze password,
+
+172
+00:05:16,379 --> 00:05:18,379
+jako pusty string,
+
+173
+00:05:18,379 --> 00:05:20,379
+i lecę z ifami.
+
+174
+00:05:20,379 --> 00:05:22,379
+Jeżeli ktoś zaznaczył upper letters,
+
+175
+00:05:22,379 --> 00:05:24,379
+to wtedy z naszych wielkich liter,
+
+176
+00:05:24,379 --> 00:05:26,379
+musimy pobrać jakieś losowe znaki.
+
+177
+00:05:26,379 --> 00:05:28,379
+Żeby to zrobić,
+
+178
+00:05:28,379 --> 00:05:30,379
+możemy sobie z random'a
+
+179
+00:05:30,379 --> 00:05:32,379
+zaimportować sample.
+
+180
+00:05:32,379 --> 00:05:34,379
+Cały czas, zwróć uwagę na to,
+
+181
+00:05:34,379 --> 00:05:36,379
+że posługuję się wiedzą,
+
+182
+00:05:36,379 --> 00:05:38,379
+którą już mamy.
+
+183
+00:05:38,379 --> 00:05:40,379
+Więc mam nadzieję, że to co piszę,
+
+184
+00:05:40,379 --> 00:05:42,379
+może nie napisałbyś tego sam,
+
+185
+00:05:42,379 --> 00:05:44,379
+natomiast kiedy to piszę,
+
+186
+00:05:44,379 --> 00:05:46,379
+to wszystko jest dla ciebie zrozumiałe.
+
+187
+00:05:46,379 --> 00:05:48,379
+I nasz sample będzie potrzebował pobierać,
+
+188
+00:05:48,379 --> 00:05:50,379
+sobie ASCII UPPERCASE.
+
+189
+00:05:50,379 --> 00:05:52,379
+No i ilość będzie odpowiadała długości,
+
+190
+00:05:52,379 --> 00:06:00,379
+podzielonej przez sumę naszych znaków.
+
+191
+00:06:00,379 --> 00:06:02,379
+To nie będzie zawsze zwracało idealnej wartości,
+
+192
+00:06:02,379 --> 00:06:04,379
+no bo nie zawsze uda się podzielić nam,
+
+193
+00:06:04,379 --> 00:06:06,379
+powiedzmy,
+
+194
+00:06:06,379 --> 00:06:08,379
+liczbę length przez konkretną ilość.
+
+195
+00:06:08,379 --> 00:06:10,379
+Ale no,
+
+196
+00:06:10,379 --> 00:06:12,379
+jak hasło będzie dłuższe,
+
+197
+00:06:12,379 --> 00:06:14,379
+to mam nadzieję,
+
+198
+00:06:14,379 --> 00:06:16,379
+że nic się nie stanie.
+
+199
+00:06:16,379 --> 00:06:18,379
+I też tutaj nie chodzi mi o to,
+
+200
+00:06:18,379 --> 00:06:20,379
+żebyśmy bardzo mocno skupiali się
+
+201
+00:06:20,379 --> 00:06:22,379
+na implementacji tego,
+
+202
+00:06:22,379 --> 00:06:24,379
+co właśnie na tym,
+
+203
+00:06:24,379 --> 00:06:26,379
+żeby pokazać ci, jak to będzie działało,
+
+204
+00:06:26,379 --> 00:06:28,379
+że kiedy wywołuję sobie odpowiednie argumenty,
+
+205
+00:06:28,379 --> 00:06:30,379
+pozostałe zostawiając puste,
+
+206
+00:06:30,379 --> 00:06:32,379
+to będzie to działało.
+
+207
+00:06:32,379 --> 00:06:34,379
+Prosiliście bardzo o to, żeby
+
+208
+00:06:34,379 --> 00:06:36,379
+podczas wykonywania zadań
+
+209
+00:06:36,379 --> 00:06:38,379
+było jak najwięcej takich życiowych przykładów,
+
+210
+00:06:38,379 --> 00:06:40,379
+więc generowanie hasła, myślę,
+
+211
+00:06:40,379 --> 00:06:42,379
+że jest jak najbardziej życiowym przykładem.
+
+212
+00:06:42,379 --> 00:06:44,379
+No i do mojego hasła
+
+213
+00:06:44,379 --> 00:06:46,379
+mogę wtedy sobie dodać
+
+214
+00:06:46,379 --> 00:06:48,379
+połączony wynik sample.
+
+215
+00:06:48,379 --> 00:06:50,379
+Dlaczego połączony wynik sample?
+
+216
+00:06:50,379 --> 00:06:52,379
+Ponieważ sample zwraca listę wartości,
+
+217
+00:06:52,379 --> 00:06:54,379
+no i dlatego musi być to sample.
+
+218
+00:06:54,379 --> 00:06:56,379
+No i dlatego musi być to sample.
+
+219
+00:06:56,379 --> 00:06:58,379
+To samo wykonam z lower case,
+
+220
+00:06:58,379 --> 00:07:00,379
+to samo wykonam z lower case,
+
+221
+00:07:00,379 --> 00:07:02,379
+czyli if lower letters,
+
+222
+00:07:02,379 --> 00:07:04,379
+to wtedy będę potrzebował
+
+223
+00:07:04,379 --> 00:07:06,379
+wykonać sobie tutaj ascii lower case.
+
+224
+00:07:06,379 --> 00:07:08,379
+wykonać sobie tutaj ascii lower case.
+
+225
+00:07:08,379 --> 00:07:10,379
+Jeżeli specials,
+
+226
+00:07:10,379 --> 00:07:12,379
+Jeżeli specials,
+
+227
+00:07:12,379 --> 00:07:14,379
+Jeżeli specials,
+
+228
+00:07:14,379 --> 00:07:16,379
+Jeżeli specials,
+
+229
+00:07:16,379 --> 00:07:18,379
+Jeżeli specials,
+
+230
+00:07:18,379 --> 00:07:20,379
+Jeżeli specials,
+
+231
+00:07:20,379 --> 00:07:22,379
+do hasła muszę to doklejać,
+
+232
+00:07:22,379 --> 00:07:24,379
+czyli plus równe się.
+
+233
+00:07:24,379 --> 00:07:26,379
+Jeżeli specials,
+
+234
+00:07:26,379 --> 00:07:28,379
+to muszę sobie wybierać coś ze specials.
+
+235
+00:07:28,379 --> 00:07:30,379
+to muszę sobie wybierać coś ze specials.
+
+236
+00:07:30,379 --> 00:07:32,379
+No i zostanie nam jeszcze
+
+237
+00:07:32,379 --> 00:07:34,379
+nasz range,
+
+238
+00:07:34,379 --> 00:07:36,379
+czyli if number,
+
+239
+00:07:36,379 --> 00:07:38,379
+czyli if number,
+
+240
+00:07:38,379 --> 00:07:40,379
+to wtedy do hasła musimy sobie dokleić
+
+241
+00:07:40,379 --> 00:07:42,379
+to wtedy do hasła musimy sobie dokleić
+
+242
+00:07:42,379 --> 00:07:44,379
+nie specials, tylko range
+
+243
+00:07:44,379 --> 00:07:46,379
+od 0 do 9
+
+244
+00:07:46,379 --> 00:07:48,379
+w takiej ilości.
+
+245
+00:07:48,379 --> 00:07:50,379
+Robimy print password
+
+246
+00:07:50,379 --> 00:07:52,379
+Robimy print password
+
+247
+00:07:52,379 --> 00:07:54,379
+i sprawdzamy co zepsułem.
+
+248
+00:07:54,379 --> 00:07:56,379
+Hurra jest błąd, już się bałem, że to działa.
+
+249
+00:07:56,379 --> 00:07:58,379
+i sprawdzamy co zepsułem.
+
+250
+00:07:58,379 --> 00:08:00,379
+Unsupported operand type for plus, int and string.
+
+251
+00:08:00,379 --> 00:08:02,379
+Unsupported operand type for plus, int and string.
+
+252
+00:08:02,379 --> 00:08:04,379
+Błąd znalazłem, to co zrobiłem źle,
+
+253
+00:08:04,379 --> 00:08:06,379
+to tutaj napisałem specials
+
+254
+00:08:06,379 --> 00:08:08,379
+i w ten sposób nadpisałem sobie zmienną specials,
+
+255
+00:08:08,379 --> 00:08:10,379
+która znajdowała się powyżej,
+
+256
+00:08:10,379 --> 00:08:12,379
+więc zmieniłem tę nazwę na specialchars,
+
+257
+00:08:12,379 --> 00:08:14,379
+co wymaga ode mnie tego,
+
+258
+00:08:14,379 --> 00:08:16,379
+żebym w tym miejscu, kiedy szukam,
+
+259
+00:08:16,379 --> 00:08:18,379
+sprawdzam czy special zostało podane,
+
+260
+00:08:18,379 --> 00:08:20,379
+też zmienił to sobie na specialchars.
+
+261
+00:08:20,379 --> 00:08:22,379
+I zobacz co się teraz stało.
+
+262
+00:08:22,379 --> 00:08:24,379
+Szukam tylko i wyłącznie 10 znaków
+
+263
+00:08:24,379 --> 00:08:26,379
+z wielkimi literami i z małymi literami.
+
+264
+00:08:26,379 --> 00:08:28,379
+Wykonuję strzałkę do góry Enter
+
+265
+00:08:28,379 --> 00:08:30,379
+Wykonuję strzałkę do góry Enter
+
+266
+00:08:30,379 --> 00:08:32,379
+i mam 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+267
+00:08:32,379 --> 00:08:34,379
+i mam 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+268
+00:08:34,379 --> 00:08:36,379
+czyli mam 10 znaków.
+
+269
+00:08:36,379 --> 00:08:38,379
+Problem pojawi się wtedy, kiedy będę chciał
+
+270
+00:08:38,379 --> 00:08:40,379
+jeszcze do tego dołożyć trzecią grupę.
+
+271
+00:08:40,379 --> 00:08:42,379
+On nie zrobi tego dobrze z tego względu,
+
+272
+00:08:42,379 --> 00:08:44,379
+że ilość się nie będzie zgadzała,
+
+273
+00:08:44,379 --> 00:08:46,379
+a druga rzecz, jeżeli robimy joina,
+
+274
+00:08:46,379 --> 00:08:48,379
+to musimy to robić na tekście, a nie na liczbach.
+
+275
+00:08:48,379 --> 00:08:50,379
+Czyli mogę sobie wprowadzić po prostu ten tekst
+
+276
+00:08:50,379 --> 00:08:52,379
+na chwilę obecną tak.
+
+277
+00:08:52,379 --> 00:08:54,379
+Nie chcę zamieniać wyników range'a
+
+278
+00:08:54,379 --> 00:08:56,379
+z tego względu, że to wymagałoby
+
+279
+00:08:56,379 --> 00:08:58,379
+też wprowadzenia do lambda functions,
+
+280
+00:08:58,379 --> 00:09:00,379
+a to dopiero w przyszłości.
+
+281
+00:09:00,379 --> 00:09:02,379
+Ale zobacz, w momencie,
+
+282
+00:09:02,379 --> 00:09:04,379
+w którym zamieniłem to sobie na string
+
+283
+00:09:04,379 --> 00:09:06,379
+i wywołałem ten program raz jeszcze,
+
+284
+00:09:06,379 --> 00:09:12,379
+dostaję 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 znaków.
+
+285
+00:09:12,379 --> 00:09:14,379
+Chyba tu jest 11.
+
+286
+00:09:14,379 --> 00:09:16,379
+W każdym razie hasło się generuje.
+
+287
+00:09:16,379 --> 00:09:18,379
+No niestety 11 na 3 się nie dzieli,
+
+288
+00:09:18,379 --> 00:09:20,379
+więc trzeba byłoby po prostu,
+
+289
+00:09:20,379 --> 00:09:22,379
+czy 10 na 3 się nie dzieli,
+
+290
+00:09:22,379 --> 00:09:24,379
+więc trzeba byłoby po prostu tutaj
+
+291
+00:09:24,379 --> 00:09:26,379
+albo dobrać odpowiednią długość,
+
+292
+00:09:26,379 --> 00:09:28,379
+albo zdecydować co ma być.
+
+293
+00:09:28,379 --> 00:09:30,379
+Ale jak widać wszystkie te 3 rzeczy,
+
+294
+00:09:30,379 --> 00:09:32,379
+które miały być są.
+
+295
+00:09:32,379 --> 00:09:34,379
+Więc wystarczyłoby odjąć.
+
+296
+00:09:34,379 --> 00:09:36,379
+No i jedna rzecz, która jeszcze powinna być zrobiona,
+
+297
+00:09:36,379 --> 00:09:38,379
+to jest return password.
+
+298
+00:09:38,379 --> 00:09:40,379
+I żeby było jeszcze ładniej,
+
+299
+00:09:40,379 --> 00:09:42,379
+można by to hasło sobie jakoś poszuflować,
+
+300
+00:09:42,379 --> 00:09:44,379
+żeby było bardziej losowe.
+
+301
+00:09:44,379 --> 00:09:46,379
+Ale dzięki temu jak widać,
+
+302
+00:09:46,379 --> 00:09:48,379
+stworzyliśmy bardzo przyjemną funkcję,
+
+303
+00:09:48,379 --> 00:09:50,379
+do której przekazujemy to, co nas interesuje
+
+304
+00:09:50,379 --> 00:09:52,379
+i ona nam generuje zupełnie losowe hasło,
+
+305
+00:09:52,379 --> 00:09:54,379
+pseudolosowe, prawo pamiętam,
+
+306
+00:09:54,379 --> 00:09:56,379
+pseudolosowe hasło,
+
+307
+00:09:56,379 --> 00:09:58,379
+zawierające określone informacje.
+
+308
+00:09:58,379 --> 00:10:00,379
+Mam nadzieję, że przykład się podobał.
+
+309
+00:10:00,379 --> 00:10:02,379
+Jeżeli się podobał, napisz na Discordzie.
+
+310
+00:10:02,379 --> 00:10:04,379
+Jak nie, to też napisz na Discordzie.
+
+311
+00:10:04,379 --> 00:10:06,379
+Szukam takich rozwiązań też,
+
+312
+00:10:06,379 --> 00:10:08,379
+które są w miarę proste,
+
+313
+00:10:08,379 --> 00:10:10,379
+ale pokazują to życie,
+
+314
+00:10:10,379 --> 00:10:12,379
+którym zajmuję się na co dzień,
+
+315
+00:10:12,379 --> 00:10:14,379
+bo tego typu kod napisałbym na co dzień.
+
+316
+00:10:14,379 --> 00:10:16,379
+I mam nadzieję, że jest to pożyteczny przykład.
+
+317
+00:10:16,379 --> 00:10:18,379
+Jeżeli jest, czy nie jest,
+
+318
+00:10:18,379 --> 00:10:20,379
+zapraszam dalej. Do zobaczenia.

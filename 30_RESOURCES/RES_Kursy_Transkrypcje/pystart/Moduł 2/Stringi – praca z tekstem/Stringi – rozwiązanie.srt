@@ -1,0 +1,587 @@
+1
+00:00:00,000 --> 00:00:05,480
+No to co? Kodujemy. Poproś użytkownika o podanie imienia.
+
+2
+00:00:05,660 --> 00:00:10,060
+No to first name równa się input jak masz na imię.
+
+3
+00:00:12,919 --> 00:00:17,480
+W zależności od jego ostatniej litery wyświetl witam panią lub witam pana.
+
+4
+00:00:17,480 --> 00:00:30,640
+Czyli if first name ends with a no to wtedy print witam panią else.
+
+5
+00:00:32,859 --> 00:00:33,980
+Witam pana.
+
+6
+00:00:34,420 --> 00:00:37,140
+Jeżeli chodzi o ifa to myślę, że powtórka jest niepotrzebna.
+
+7
+00:00:37,539 --> 00:00:43,460
+Jedyna rzecz, która jest tą nowością to jest właśnie wyrażenie to first name ends with.
+
+8
+00:00:43,460 --> 00:00:47,460
+No i analogicznie tak jak przypominam można byłoby też zrobić first.
+
+9
+00:00:47,479 --> 00:00:50,199
+Name od minus jeden też by zadziałało.
+
+10
+00:00:50,919 --> 00:00:53,519
+Napisz program generujący bardzo silne hasła.
+
+11
+00:00:53,959 --> 00:00:57,780
+No to potrzebujemy mieć hasło password równa się input.
+
+12
+00:00:59,099 --> 00:01:01,780
+Podaj mi hasło do wzmocnienia.
+
+13
+00:01:04,060 --> 00:01:10,979
+I teraz chcemy zamienić w tym naszym przypadku każdą literę a na małpę oraz każdą literę s na procent.
+
+14
+00:01:10,979 --> 00:01:15,420
+Ja już to pokazywałem w konsoli, ale nie pokazałem jednej bardzo ważnej rzeczy.
+
+15
+00:01:15,519 --> 00:01:16,979
+A mianowicie, że kiedy wykonujemy pas.
+
+16
+00:01:17,480 --> 00:01:19,980
+Word kropka replays.
+
+17
+00:01:20,980 --> 00:01:22,980
+I zamieniamy sobie a na małpę.
+
+18
+00:01:23,579 --> 00:01:29,780
+To on nam nie zmienia wyrażenia password, bo jak pamiętacie stringi są niemutowalne.
+
+19
+00:01:30,180 --> 00:01:32,680
+Zatem to, co musimy zrobić, to musimy powiedzieć.
+
+20
+00:01:32,680 --> 00:01:34,480
+Słuchaj, Python jest sprawa.
+
+21
+00:01:34,880 --> 00:01:37,080
+Zamień mi te rzeczy i wynik.
+
+22
+00:01:37,080 --> 00:01:42,080
+Przypisz mi do nowej zmiennej o nazwie password i to będzie zupełnie inny obiekt.
+
+23
+00:01:42,080 --> 00:01:46,080
+Zupełnie inny string niż ten, o którym rozmawialiśmy tutaj na początku.
+
+24
+00:01:46,280 --> 00:01:47,060
+Ale mówię.
+
+25
+00:01:47,060 --> 00:01:49,560
+Na początku zupełnie nie trzeba się tym też przejmować.
+
+26
+00:01:49,859 --> 00:01:51,859
+No i druga rzecz to samo.
+
+27
+00:01:53,260 --> 00:01:59,060
+Trzeba wykonać dla s, które to s chcielibyśmy wymienić na dolary.
+
+28
+00:01:59,460 --> 00:02:09,159
+I tutaj ktoś może powiedzieć Kacper, a jak to zadziała, jeżeli będą małe litery czy duże litery, bo wielkie litery nie zamienią nam się, bo my zamieniamy tylko małe tutaj i tutaj.
+
+29
+00:02:09,460 --> 00:02:10,659
+Bardzo słuszna uwaga.
+
+30
+00:02:10,759 --> 00:02:11,759
+Dlatego też zachęcam.
+
+31
+00:02:11,759 --> 00:02:16,659
+Można to zrobić uniwersalnie i najpierw wykonać lower replace.
+
+32
+00:02:17,060 --> 00:02:18,659
+Lower replace.
+
+33
+00:02:18,860 --> 00:02:29,460
+Nie wiem, czy każdy z was o tym w tym momencie pomyślał, ale jeżeli nie, no to informuję, że można też zrobić to tak i teraz zobacz, kiedy wywołam Python spacja 5 zadania stringi.
+
+34
+00:02:29,759 --> 00:02:32,860
+Podaj mi hasło do wzmocnienia szczerzuja.
+
+35
+00:02:34,759 --> 00:02:36,259
+O nie wiem, czy szczerze tak się pisze.
+
+36
+00:02:36,460 --> 00:02:38,159
+Na braku mi printa jeszcze tylko.
+
+37
+00:02:39,360 --> 00:02:40,560
+Miało być tak pięknie.
+
+38
+00:02:40,960 --> 00:02:42,159
+Wrócę do szczerzui.
+
+39
+00:02:43,360 --> 00:02:46,860
+To zobacz zarówno tutaj mam wielką literę zamieniła mi się na s.
+
+40
+00:02:47,060 --> 00:02:49,759
+To wezmę jeszcze jakąś małą snake case.
+
+41
+00:02:49,960 --> 00:02:52,259
+Dobre hasło w sumie ma nawet znak specjalny.
+
+42
+00:02:53,060 --> 00:02:55,159
+To zobacz wszystko się ładnie po zamieniało.
+
+43
+00:02:55,159 --> 00:02:59,259
+Niezależnie od tego, czy używamy małych, czy używamy wielkich liter.
+
+44
+00:03:00,360 --> 00:03:05,259
+To nam w jednym i drugim przypadku wielkiej małej litery też zamienił takie łączenie.
+
+45
+00:03:05,960 --> 00:03:13,259
+Metod nazywa się chaining na chainingiem, więc jak tak, jeżeli chcemy to spolszczyć, jak najbardziej też można to robić.
+
+46
+00:03:13,860 --> 00:03:15,259
+Dobra, to idziemy dalej.
+
+47
+00:03:15,259 --> 00:03:16,259
+A propos lower.
+
+48
+00:03:17,060 --> 00:03:21,060
+Możemy teraz zliczyć, ile razy wystąpił pies w naszym zdaniu.
+
+49
+00:03:21,360 --> 00:03:22,659
+No to zróbmy sobie zdanie.
+
+50
+00:03:22,960 --> 00:03:26,259
+Możemy sobie więc napisać sentence równa się.
+
+51
+00:03:26,560 --> 00:03:28,560
+No i potrzebujemy mieć nasz tekst.
+
+52
+00:03:28,560 --> 00:03:30,860
+No to sobie go kopiuje wklejam.
+
+53
+00:03:31,159 --> 00:03:33,360
+Ty możesz użyć dowolnego tekstu średnich niepotrzebne.
+
+54
+00:03:33,659 --> 00:03:34,860
+Ty możesz użyć dowolnego tekstu.
+
+55
+00:03:34,860 --> 00:03:42,060
+Ja ci tylko podpowiedziałem, żeby użyć na przykład takiego i teraz zliczyć będziemy chcieli słowo pies, więc pierwsze to muszę zrobić.
+
+56
+00:03:42,060 --> 00:03:45,460
+To muszę wykonać sentence kropka lower.
+
+57
+00:03:45,759 --> 00:03:46,759
+Mówiłem o tym na końcu.
+
+58
+00:03:47,060 --> 00:03:50,560
+Jeżeli nie będziemy zamieniali go na małe litery, to trzeba byłoby liczyć.
+
+59
+00:03:51,860 --> 00:03:56,360
+Psa z wielkiej psa z małej i potem dodawać te liczby do siebie, a tak można to zrobić.
+
+60
+00:03:56,360 --> 00:04:04,560
+Myślę dużo prościej, czyli sentence kropka lower i teraz trzeba będzie policzyć, więc na sentence kropka lower wykonujemy count.
+
+61
+00:04:05,560 --> 00:04:06,159
+Pies.
+
+62
+00:04:07,259 --> 00:04:10,960
+No i możemy zrobić jakiś counter równa się i napisać print.
+
+63
+00:04:12,360 --> 00:04:14,460
+Pies wystąpił w zdaniu.
+
+64
+00:04:17,060 --> 00:04:18,060
+Zrobimy sobie f.
+
+65
+00:04:20,060 --> 00:04:20,959
+Counter.
+
+66
+00:04:22,060 --> 00:04:22,759
+Razy.
+
+67
+00:04:23,160 --> 00:04:24,060
+Sprawdźmy to.
+
+68
+00:04:24,259 --> 00:04:26,560
+Zakomentuje sobie ten fragment dotyczący password.
+
+69
+00:04:26,560 --> 00:04:34,560
+Przypominam, że w większości programów, w których pewnie piszesz, da się zakomentować robiąc, ściskając klawisz control i ten klawisz, na którym jest znak zapytania.
+
+70
+00:04:34,560 --> 00:04:36,660
+Tam jest symbol slasha.
+
+71
+00:04:36,959 --> 00:04:39,360
+To zakomentuje nam ten kawałek.
+
+72
+00:04:39,660 --> 00:04:41,360
+Zobacz strzała do góry enter.
+
+73
+00:04:42,560 --> 00:04:44,959
+Pies wystąpił w zdaniu dwa razy działa.
+
+74
+00:04:45,660 --> 00:04:46,360
+Idziemy dalej.
+
+75
+00:04:47,060 --> 00:04:48,360
+Zobaczmy, co nam ostatnie zadanie.
+
+76
+00:04:48,959 --> 00:04:57,360
+Poszukaj innych funkcji niż upper i lower i spróbuj ze zdania 12 kg bla bla bla bla policzyć, ile łącznie ważyły zakupione produkty.
+
+77
+00:04:57,660 --> 00:04:58,259
+No to co?
+
+78
+00:04:58,360 --> 00:04:59,959
+Trochę trzeba będzie pokombinować.
+
+79
+00:05:00,759 --> 00:05:04,259
+Tutaj też dajcie koniecznie znać na Discordzie, jak to zadanie wam się podobało.
+
+80
+00:05:04,360 --> 00:05:06,560
+Sentence równa się.
+
+81
+00:05:07,360 --> 00:05:10,160
+Jak będziecie pisali na Discordzie, to będę wiedział, że rozwiązujecie.
+
+82
+00:05:10,459 --> 00:05:14,660
+Jak okaże się, że przestaniecie pisać, to ja też przestanę nagrywać, bo nie będzie miał kto oglądać.
+
+83
+00:05:14,660 --> 00:05:15,160
+Nie?
+
+84
+00:05:15,160 --> 00:05:15,660
+Ok.
+
+85
+00:05:15,660 --> 00:05:16,959
+Czyli sentence równa się.
+
+86
+00:05:16,959 --> 00:05:17,959
+Mamy wartości liczbowe.
+
+87
+00:05:17,959 --> 00:05:22,859
+I teraz to, co możemy wykonać, to możemy rozbić sobie te nasze wartości liczbowe po spacjach.
+
+88
+00:05:23,159 --> 00:05:27,459
+Czyli robimy sentence kropka split i tutaj przekazujemy mu spację.
+
+89
+00:05:27,759 --> 00:05:29,259
+I po tym możemy sobie już iterować.
+
+90
+00:05:29,259 --> 00:05:35,060
+Czyli na przykład for word in w ten sposób.
+
+91
+00:05:35,459 --> 00:05:40,759
+Jeżeli sobie wykonamy print word, no to wówczas dostaniemy wszystkie te wyrażenia.
+
+92
+00:05:40,759 --> 00:05:44,359
+Zobacz 12 kg jabłek i wszystkie te rzeczy wypisał.
+
+93
+00:05:44,659 --> 00:05:46,859
+I teraz będziemy chcieli te wartości do siebie dodawać.
+
+94
+00:05:46,860 --> 00:05:49,160
+Ale tylko wartości, które przypominają liczby.
+
+95
+00:05:49,560 --> 00:05:53,360
+Czyli musimy sprawdzić sobie, czy ten tekst wygląda jak liczba.
+
+96
+00:05:53,860 --> 00:05:54,460
+Pamiętasz?
+
+97
+00:05:54,460 --> 00:05:56,660
+Mieliśmy do tego metodę is numeric.
+
+98
+00:05:56,860 --> 00:06:02,660
+Możemy więc po word dopisać przecinek word kropka is numeric.
+
+99
+00:06:02,960 --> 00:06:08,860
+I w ten sposób zobacz, on nam dopisze do każdego z tych wyrażeń, czy przypomina mu on liczbę.
+
+100
+00:06:09,160 --> 00:06:14,259
+12 przypomina kilogramów, nie przypomina jabłek, nie przypomina 10, znowu przypomina.
+
+101
+00:06:14,560 --> 00:06:16,759
+Czyli teraz wiemy, że jeżeli...
+
+102
+00:06:16,860 --> 00:06:20,259
+Jeżeli będziemy mieli liczbę, to będziemy chcieli ją wyświetlić.
+
+103
+00:06:20,660 --> 00:06:27,759
+To możemy dorzucić if word kropka is numeric znak zapytania nie tylko nawiasy i dwukropek.
+
+104
+00:06:28,060 --> 00:06:30,460
+I wtedy printujemy sobie word.
+
+105
+00:06:30,460 --> 00:06:31,960
+Jeżeli wtedy to wyświetlimy.
+
+106
+00:06:33,060 --> 00:06:35,360
+Bardzo proszę, mamy 12, 10, 20.
+
+107
+00:06:35,759 --> 00:06:37,460
+I teraz pamiętaj o dwóch rzeczach.
+
+108
+00:06:37,759 --> 00:06:38,660
+Rzecz pierwsza.
+
+109
+00:06:38,960 --> 00:06:42,460
+Każde z tych słów to jest tekst.
+
+110
+00:06:42,860 --> 00:06:46,560
+Jeżeli będziemy teksty do siebie dodawali, to tekst plus tekst to jest tekst położony.
+
+111
+00:06:46,860 --> 00:06:47,860
+Czy dostalibyśmy...
+
+112
+00:06:48,060 --> 00:06:50,259
+Ojej, trudna liczba.
+
+113
+00:06:50,460 --> 00:06:52,660
+120 tysięcy...
+
+114
+00:06:52,860 --> 00:06:55,060
+Zostalibyśmy taką liczbę, o tak.
+
+115
+00:06:55,259 --> 00:06:57,259
+Połączoną, tak ci to pokażę.
+
+116
+00:06:57,460 --> 00:07:02,460
+Czyli 1, 2, 3, 4, 5, 120, 120 byśmy dostali.
+
+117
+00:07:02,660 --> 00:07:07,460
+A my nie chcemy 121 tysięcy 20 kilogramów, tylko chcemy dodać te wartości do siebie.
+
+118
+00:07:07,660 --> 00:07:14,060
+Dlatego bardzo ważną rzeczą jest pamiętanie o tym, że musimy mieć te wartości zamienione na integer.
+
+119
+00:07:15,060 --> 00:07:16,660
+I teraz do czego je dodać?
+
+120
+00:07:16,860 --> 00:07:22,460
+No bo jak sobie tutaj zrobię jakąś zmienną suma, równa się, no to on mi będzie za każdym razem tą sumę nadpisywał.
+
+121
+00:07:22,660 --> 00:07:32,060
+Więc musimy, zanim w ogóle wejdziemy do tej pętli, stworzyć sobie taką wartość rozpoczynającą, która ma wartość suma równa się 0.
+
+122
+00:07:32,259 --> 00:07:37,660
+I wtedy możemy sobie sprawdzić, czy to słowo jest numeryczne.
+
+123
+00:07:37,860 --> 00:07:42,660
+Jeżeli jest, to naszą sumę możemy sobie zwiększyć o wartość tego słowa.
+
+124
+00:07:42,860 --> 00:07:46,660
+Czyli to, co było wcześniej, plus nowa wartość.
+
+125
+00:07:46,860 --> 00:07:52,660
+Czyli nasza suma równa się suma plus wartość ze słowa.
+
+126
+00:07:52,860 --> 00:07:58,860
+Jeżeli zrobimy sobie strzałkę do góry Enter, jeszcze tylko sobie wyświetlimy gdzieś tą sumę i zmienimy może nazwę.
+
+127
+00:07:59,060 --> 00:08:04,860
+Bo tutaj, jeżeli wszystko robimy in English, then we should name it in English too.
+
+128
+00:08:05,060 --> 00:08:08,860
+So możemy sobie wpisać total równa się coś tam, coś tam.
+
+129
+00:08:09,060 --> 00:08:10,860
+I wtedy wyświetlimy ten total.
+
+130
+00:08:11,060 --> 00:08:15,660
+Łączna waga produktów wynosi.
+
+131
+00:08:15,660 --> 00:08:18,860
+Możemy z F-ką.
+
+132
+00:08:19,060 --> 00:08:21,660
+Total kilogramów.
+
+133
+00:08:21,860 --> 00:08:25,660
+Tutaj już możemy nie używać tej spacji, bo tu chodzi tylko i wyłącznie o to, żeby wyświetlić to ładnie.
+
+134
+00:08:25,860 --> 00:08:31,540
+Więc zobacz strzałka do góry Enter i mamy łączna waga produktów wynosi 42 kilogramy.
+
+135
+00:08:31,740 --> 00:08:34,580
+Ten zapis, tę linię można jeszcze uprościć.
+
+136
+00:08:34,779 --> 00:08:40,460
+Z tego względu, że kiedy wykonujemy total równa się total plus int word, to to można zapisać krócej.
+
+137
+00:08:40,660 --> 00:08:42,460
+To też Ci pokażę.
+
+138
+00:08:43,580 --> 00:08:45,460
+Jako total plus równa się
+
+139
+00:08:45,659 --> 00:08:47,659
+uczymy int word.
+
+140
+00:08:47,860 --> 00:08:50,459
+I te linie oznaczają dokładnie to samo.
+
+141
+00:08:50,659 --> 00:08:52,659
+Są tylko taką formą uproszczenia.
+
+142
+00:08:52,860 --> 00:08:56,939
+Mówiąc szczerze, na początku pamiętam, że jak się uczyłem programować, to ten zapis w ogóle mi się nie podobał.
+
+143
+00:08:57,139 --> 00:09:00,579
+Wszędzie używałem tego, więc jeżeli z tym się czujesz lepiej, nie przejmuj się.
+
+144
+00:09:00,579 --> 00:09:02,059
+Jak najbardziej możesz go używać.
+
+145
+00:09:02,259 --> 00:09:06,379
+A jak kiedyś poczujesz się pewniej, to możesz spokojnie pójść w tę stronę.
+
+146
+00:09:06,579 --> 00:09:08,379
+I to byłoby na tyle, jeżeli chodzi o te lekcje.
+
+147
+00:09:08,579 --> 00:09:10,139
+Zapraszam do pracy domowej.

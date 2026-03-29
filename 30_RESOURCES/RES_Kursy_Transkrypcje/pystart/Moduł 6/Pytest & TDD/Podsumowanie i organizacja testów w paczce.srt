@@ -1,0 +1,695 @@
+1
+00:00:00,100 --> 00:00:03,419
+Pokażmy sobie jeszcze jedną niezwykle bardzo ważną rzecz.
+
+2
+00:00:03,879 --> 00:00:04,400
+O co chodzi?
+
+3
+00:00:04,879 --> 00:00:08,500
+Chodzi o to, że w momencie, w którym przygotowujemy plik setup.py
+
+4
+00:00:08,500 --> 00:00:10,939
+i przygotowujemy sobie paczkę,
+
+5
+00:00:11,300 --> 00:00:13,040
+chcielibyśmy też w tej parcie mieć testy.
+
+6
+00:00:13,259 --> 00:00:16,039
+No i pytanie, jak to wszystko poukładać, żeby to miało ręce i nogi?
+
+7
+00:00:16,160 --> 00:00:18,379
+Czyli gdzie te testy mają się znaleźć?
+
+8
+00:00:18,820 --> 00:00:22,300
+No bo do tej pory najczęściej, jak pracowaliśmy z testami,
+
+9
+00:00:22,719 --> 00:00:24,500
+to były one po prostu w tym samym pliku.
+
+10
+00:00:25,000 --> 00:00:26,859
+A w tej lekcji chciałbym pokazać Ci,
+
+11
+00:00:26,859 --> 00:00:30,439
+jak zorganizować pliki w Twojej aplikacji,
+
+12
+00:00:30,519 --> 00:00:34,460
+czy też jak zorganizować położenie testów w Twojej paczce,
+
+13
+00:00:34,939 --> 00:00:37,259
+żeby wszystko obyło się bez bólu.
+
+14
+00:00:37,640 --> 00:00:40,519
+Zobacz, podsumujmy też sobie te rzeczy, o których sobie mówiliśmy.
+
+15
+00:00:41,060 --> 00:00:44,340
+Mówiliśmy o tym, że najwygodniej jest tworzyć sobie te paczki,
+
+16
+00:00:44,439 --> 00:00:45,480
+żeby organizować pracę.
+
+17
+00:00:46,100 --> 00:00:49,359
+Bardzo dobrym pomysłem jest umieszczenie też wszystkich Twoich plików
+
+18
+00:00:49,359 --> 00:00:50,320
+w osobnej paczce.
+
+19
+00:00:50,799 --> 00:00:53,820
+Ja już tutaj wygenerowałem sobie i uruchomiłem testy,
+
+20
+00:00:53,820 --> 00:00:55,899
+i stworzyłem lista.
+
+21
+00:00:55,899 --> 00:00:59,219
+Ja pousuwam te pliki tak, żebyśmy zrobili to wszystko raz i jeszcze razem.
+
+22
+00:00:59,699 --> 00:01:02,179
+Czyli zobacz, mam paczkę, którą nazwałem mypackage.
+
+23
+00:01:02,339 --> 00:01:05,299
+To jest jakby jedna główna paczka, która znajduje się w projekcie.
+
+24
+00:01:05,859 --> 00:01:07,640
+Obok tej paczki mam pliczek setup.py.
+
+25
+00:01:08,799 --> 00:01:10,680
+To, co jest niezwykle ważne, to jest to,
+
+26
+00:01:11,159 --> 00:01:15,560
+że te pliki właściwie znajdują się na tej samej linii, co msvenv.
+
+27
+00:01:15,980 --> 00:01:16,840
+Dlaczego to jest ważne?
+
+28
+00:01:16,980 --> 00:01:19,219
+Bo później łatwiej będzie nam to importować,
+
+29
+00:01:19,299 --> 00:01:21,019
+bo kiedy importujemy sobie dane,
+
+30
+00:01:21,500 --> 00:01:24,079
+zawsze te importy, te dane, które wymieniamy po kropkach,
+
+31
+00:01:24,079 --> 00:01:25,859
+podajemy względem miejsca,
+
+32
+00:01:25,900 --> 00:01:27,500
+w którym znajduje się msvenv.
+
+33
+00:01:28,060 --> 00:01:29,160
+Czyli mam mypackage.
+
+34
+00:01:29,640 --> 00:01:31,580
+Obok mypackage mam plik setup.py.
+
+35
+00:01:32,560 --> 00:01:34,640
+Na razie skupmy się na zawartości tej paczki.
+
+36
+00:01:35,060 --> 00:01:37,520
+Wewnątrz paczki posiadam nowy pakiet,
+
+37
+00:01:37,620 --> 00:01:38,680
+który nazywa się tests.
+
+38
+00:01:39,200 --> 00:01:41,060
+I do tego pakietu będę umieszczał,
+
+39
+00:01:41,080 --> 00:01:43,780
+w tym pakiecie będę umieszczał wszystkie moje testy,
+
+40
+00:01:43,840 --> 00:01:44,900
+podzielone na moduły.
+
+41
+00:01:45,400 --> 00:01:46,140
+I teraz zobacz.
+
+42
+00:01:46,420 --> 00:01:50,560
+Mam taką sytuację, że mam mymodule jako moduł.
+
+43
+00:01:50,740 --> 00:01:52,800
+Plik init wynika z tego, że to jest mypackage.
+
+44
+00:01:52,800 --> 00:01:55,800
+I wewnątrz pliku mymodule posiadam po prostu dwie formy.
+
+45
+00:01:55,900 --> 00:01:57,240
+Jedną funkcję, czytam jedną funkcję,
+
+46
+00:01:57,320 --> 00:01:59,460
+say hello, name, string.
+
+47
+00:01:59,580 --> 00:02:01,240
+Tych funkcji mogę mieć dowolną ilość.
+
+48
+00:02:01,780 --> 00:02:04,400
+I teraz, kiedy będę chciał testować sobie ten mój kod,
+
+49
+00:02:04,500 --> 00:02:07,380
+będę chciał też testować go w sposób jakiś uporządkowany.
+
+50
+00:02:07,840 --> 00:02:10,620
+Czyli skoro stworzyłem sobie plik o nazwie mymodule,
+
+51
+00:02:10,840 --> 00:02:13,219
+moduł o nazwie mymodule, w nim mam funkcję,
+
+52
+00:02:13,700 --> 00:02:16,879
+to mógłbym chcieć umieszczać testy gdzieś obok,
+
+53
+00:02:17,340 --> 00:02:18,860
+pod tą samą nazwą.
+
+54
+00:02:19,159 --> 00:02:19,800
+Dlaczego to robię?
+
+55
+00:02:19,860 --> 00:02:21,200
+Zrobię to z dwóch względów.
+
+56
+00:02:21,200 --> 00:02:23,520
+W momencie, w którym przygotowałem sobie testy,
+
+57
+00:02:24,560 --> 00:02:25,879
+to często tych testów jest bardzo,
+
+58
+00:02:25,900 --> 00:02:26,260
+bardzo dużo.
+
+59
+00:02:26,879 --> 00:02:28,680
+Czasem testów jest więcej niż kodu,
+
+60
+00:02:28,760 --> 00:02:31,900
+czyli kod testów jest większy niż sam kod aplikacji właściwej.
+
+61
+00:02:32,800 --> 00:02:34,099
+I teraz to prowadzi do tego,
+
+62
+00:02:34,219 --> 00:02:36,719
+że kiedy dajemy taką paczkę użytkownikowi,
+
+63
+00:02:37,060 --> 00:02:39,099
+nie chcielibyśmy, żeby po internecie fruwało
+
+64
+00:02:39,099 --> 00:02:42,140
+mnóstwo dodatkowych, niepotrzebnych mu tak naprawdę danych.
+
+65
+00:02:42,620 --> 00:02:44,140
+Bo ktoś, kto instaluje paczkę,
+
+66
+00:02:44,500 --> 00:02:47,040
+nie będzie jej nigdy rozwijał w swoim projekcie.
+
+67
+00:02:47,540 --> 00:02:49,280
+Będzie tylko i wyłącznie ją aktualizował.
+
+68
+00:02:49,939 --> 00:02:53,000
+Więc naszym zadaniem, jako twórcy takiej paczki,
+
+69
+00:02:53,000 --> 00:02:55,300
+jest stworzenie jej w ten sposób,
+
+70
+00:02:55,300 --> 00:02:57,100
+żeby nie zawierała ona testów.
+
+71
+00:02:57,460 --> 00:02:59,600
+Ale przecież testy znajdują się tutaj.
+
+72
+00:02:59,800 --> 00:03:01,880
+Stworzyliśmy sobie osobny moduł nawet dla nich.
+
+73
+00:03:02,380 --> 00:03:03,400
+Co zatem możemy zrobić?
+
+74
+00:03:03,880 --> 00:03:05,800
+Możemy w pliku setup.py powiedzieć,
+
+75
+00:03:05,920 --> 00:03:08,939
+słuchaj, ja nie chcę mieć w ogóle tych testów.
+
+76
+00:03:09,060 --> 00:03:11,360
+Chcę, żebyś te testy usunął mi z paczki.
+
+77
+00:03:11,700 --> 00:03:13,200
+I to też zrobimy sobie w tej lekcji.
+
+78
+00:03:13,880 --> 00:03:15,460
+Natomiast jak wyglądają moje testy?
+
+79
+00:03:15,840 --> 00:03:18,280
+W moim katalogu tests mam osobny plik.
+
+80
+00:03:18,420 --> 00:03:19,820
+I to, co jest ważne, to jest to,
+
+81
+00:03:19,900 --> 00:03:21,720
+że ten plik zaczyna się znowu od test,
+
+82
+00:03:21,800 --> 00:03:22,840
+podkreślenie my module.
+
+83
+00:03:22,840 --> 00:03:24,580
+Czyli dwie rzeczy są ważne.
+
+84
+00:03:25,300 --> 00:03:29,060
+Po pierwsze, żeby twój pakiet z testami nazywał się tests.
+
+85
+00:03:29,180 --> 00:03:31,900
+A po drugie, żeby twój moduł z testami
+
+86
+00:03:31,900 --> 00:03:33,140
+zaczynał się od słowa test,
+
+87
+00:03:33,219 --> 00:03:35,000
+od słowa test z podkreśleniem.
+
+88
+00:03:35,600 --> 00:03:38,260
+W ten sposób ta nazwa, reszta nazwy jest już nieistotna,
+
+89
+00:03:38,380 --> 00:03:40,520
+ale skoro wiadomo, że mam moduł o nazwie my module,
+
+90
+00:03:40,920 --> 00:03:42,520
+no to nazwa testu test my module
+
+91
+00:03:42,520 --> 00:03:44,520
+nasuwa od razu, co w tym miejscu testuję.
+
+92
+00:03:45,120 --> 00:03:47,280
+No i w tym teście my module mam po prostu test,
+
+93
+00:03:47,540 --> 00:03:50,100
+w którym sprawdzam, czy moja metoda say hello,
+
+94
+00:03:50,300 --> 00:03:52,740
+moja funkcja say hello działa poprawnie.
+
+95
+00:03:52,740 --> 00:03:54,960
+I zwróć uwagę, że u góry,
+
+96
+00:03:54,960 --> 00:03:56,820
+to ja muszę tę funkcję sobie zaimportować.
+
+97
+00:03:57,180 --> 00:04:00,060
+Czyli po to zrobiliśmy sobie tę naszą paczkę
+
+98
+00:04:00,060 --> 00:04:01,840
+wewnątrz osobnego projektu,
+
+99
+00:04:02,020 --> 00:04:04,260
+żeby później też w tych testach móc bardzo łatwo
+
+100
+00:04:04,260 --> 00:04:08,340
+zaimportować sobie my package, my module import say hello.
+
+101
+00:04:08,700 --> 00:04:10,780
+W ten sposób, kiedy sobie to zaimportujemy,
+
+102
+00:04:11,280 --> 00:04:13,700
+możemy poniżej w ramach testu
+
+103
+00:04:13,700 --> 00:04:16,360
+sprawdzić, czy wszystko dobrze nam działa,
+
+104
+00:04:16,480 --> 00:04:18,400
+czy wszystko tutaj jest po prostu uporządkowane
+
+105
+00:04:18,400 --> 00:04:19,879
+i wszystko jest poprawne.
+
+106
+00:04:20,500 --> 00:04:24,000
+W tym samym teście nie ma nic zaskakującego,
+
+107
+00:04:24,319 --> 00:04:24,879
+skoro wykonaliśmy,
+
+108
+00:04:24,959 --> 00:04:28,859
+że wykonałem my module return hello name z wykszyknikiem.
+
+109
+00:04:28,859 --> 00:04:30,159
+Zwróć uwagę na ten wykszyknik.
+
+110
+00:04:30,519 --> 00:04:33,459
+A tutaj sprawdziłem i tego wykszyknika nie ma.
+
+111
+00:04:33,759 --> 00:04:36,159
+No to za chwilę moje testy powinny mi się wysypać.
+
+112
+00:04:36,359 --> 00:04:39,240
+No i faktycznie tak będzie, ale nic nie szkodzi.
+
+113
+00:04:39,399 --> 00:04:41,560
+Jesteśmy programistami, naprawimy sobie ten błąd.
+
+114
+00:04:42,199 --> 00:04:45,199
+Zobacz, tutaj mam już uruchomiony ten mój projekt.
+
+115
+00:04:45,199 --> 00:04:48,919
+Nazwałem go testy osobno i teraz chcę uruchomić testy.
+
+116
+00:04:49,479 --> 00:04:51,159
+W momencie, w którym uruchamialiśmy testy,
+
+117
+00:04:51,159 --> 00:04:54,479
+wykonywaliśmy python spatia minus mpy test spatia,
+
+118
+00:04:54,480 --> 00:04:58,080
+nazwa pliku, w którym znajdowały się funkcje odpowiedzialne za testy.
+
+119
+00:04:58,600 --> 00:05:01,439
+W momencie, w którym mamy już testy przygotowane,
+
+120
+00:05:01,879 --> 00:05:03,480
+mamy nowy pakiet z testami,
+
+121
+00:05:03,879 --> 00:05:05,879
+wystarczy, że wywołamy sobie coś takiego,
+
+122
+00:05:05,879 --> 00:05:08,879
+czyli python minus mpy test my package.
+
+123
+00:05:09,160 --> 00:05:11,759
+I kiedy zrobię enter, on po prostu będzie mi przeszukiwał
+
+124
+00:05:11,759 --> 00:05:15,160
+my package pod kątem nowej paczki o nazwie tests.
+
+125
+00:05:15,480 --> 00:05:18,800
+Jeżeli wewnątrz tej paczki znajdzie się właśnie nowy test,
+
+126
+00:05:18,800 --> 00:05:20,000
+no to po prostu go odpali.
+
+127
+00:05:20,400 --> 00:05:21,640
+I zobacz, wciskam enter.
+
+128
+00:05:22,240 --> 00:05:23,160
+No i co się okazało?
+
+129
+00:05:23,160 --> 00:05:23,759
+Okazało się,
+
+130
+00:05:23,759 --> 00:05:26,759
+że spodziewałem się hello kacper z wykrzyknikiem,
+
+131
+00:05:26,759 --> 00:05:29,000
+dostałem, czy też spodziewałem się hello kacper,
+
+132
+00:05:29,000 --> 00:05:30,560
+bo w teście jest błąd w tym przypadku,
+
+133
+00:05:31,360 --> 00:05:34,159
+bez wykrzyknika, a zostało zwrócone z wykrzyknikiem.
+
+134
+00:05:34,560 --> 00:05:39,279
+Więc tutaj dorzucam wykrzyknik, zapisuję, uruchamiam raz jeszcze.
+
+135
+00:05:39,560 --> 00:05:42,480
+Zobacz też, że wprost pytest nas poinformował,
+
+136
+00:05:42,480 --> 00:05:44,680
+w którym miejscu te testy muszą się znaleźć.
+
+137
+00:05:45,240 --> 00:05:46,039
+Robię enter.
+
+138
+00:05:46,879 --> 00:05:50,039
+No i one passed, czyli test już przeszedł.
+
+139
+00:05:50,279 --> 00:05:53,719
+W ten sposób możemy organizować naszą pracę, organizować nasze testy.
+
+140
+00:05:53,759 --> 00:05:58,599
+Ale jak to się stało, że te testy, czy też, czy to się w ogóle stało,
+
+141
+00:05:58,599 --> 00:06:01,399
+że te testy nie są widoczne w naszej paczce?
+
+142
+00:06:01,839 --> 00:06:03,599
+Ja też to ci pokażę.
+
+143
+00:06:04,039 --> 00:06:07,399
+Mam już plik setup.py, no i ten plik wygląda następująco.
+
+144
+00:06:08,240 --> 00:06:12,399
+To, co teraz wykonam, to zrobię python, minus m, nie minus m,
+
+145
+00:06:12,399 --> 00:06:20,560
+python, spacja setup.py, s dist, czyli to polecenie, które generuje mi paczkę.
+
+146
+00:06:21,159 --> 00:06:23,360
+Nie będę tej paczki instalował już nigdzie indziej, ale zobacz,
+
+147
+00:06:23,360 --> 00:06:27,040
+że na liście plików, które tutaj wyszły, testów nie ma.
+
+148
+00:06:27,560 --> 00:06:32,120
+On wykrył, utworzył tamte informacje paczkowe, skopiował setup.py,
+
+149
+00:06:32,439 --> 00:06:37,120
+skopiował odpowiednie rzeczy, natomiast nie skopiował nam tutaj tego katalogu tests.
+
+150
+00:06:37,600 --> 00:06:39,040
+Dlaczego to się tak wydarzyło?
+
+151
+00:06:39,400 --> 00:06:42,040
+Z tego względu, że nasz setup.py wygląda tak.
+
+152
+00:06:42,199 --> 00:06:46,720
+Myśmy sobie tutaj opisali name, version, description, long i tak dalej, i tak dalej.
+
+153
+00:06:47,080 --> 00:06:49,840
+Natomiast istotne jest to, co było w packages.
+
+154
+00:06:50,360 --> 00:06:53,319
+Jeżeli w packages byłoby samo tests, tak samo, jak
+
+155
+00:06:53,360 --> 00:06:57,080
+pokazywałem ci to wcześniej, że tylko samo test sobie wpisywaliśmy,
+
+156
+00:06:57,280 --> 00:07:00,520
+to wówczas odnosiłoby się to do katalogu tests,
+
+157
+00:07:00,720 --> 00:07:03,439
+który znajduje się na tej samej wysokości, co my package.
+
+158
+00:07:03,639 --> 00:07:09,280
+Natomiast jeżeli my mamy taką sytuację, że testy są wewnątrz paczki, a to jest raczej
+
+159
+00:07:09,480 --> 00:07:15,400
+lepsze po prostu, no to wtedy musimy wrzucić gwiazdkę z przodu, czyli gwiazdka.tests.
+
+160
+00:07:15,600 --> 00:07:21,360
+I to spowoduje, że zarówno nie będzie łykał nam, paczka nie będzie nam zawierała katalogu tests,
+
+161
+00:07:21,360 --> 00:07:26,759
+który byłby w głównym tym katalogu, w katalogu naszej paczki oraz jeżeli testy
+
+162
+00:07:26,960 --> 00:07:30,879
+mielibyśmy w środku, to też nie będą one uruchamiane.
+
+163
+00:07:31,080 --> 00:07:33,920
+I właśnie w ten sposób możemy dystrybuować
+
+164
+00:07:34,120 --> 00:07:39,160
+nasze paczkę i nie zawierać testów w środku.
+
+165
+00:07:39,360 --> 00:07:43,040
+Mam nadzieję, że w ten sposób przećwiczyliśmy sobie raz jeszcze parę rzeczy.
+
+166
+00:07:43,240 --> 00:07:47,960
+Też chciałem, żeby ten film był formą takiego podsumowania, w którym mówimy sobie
+
+167
+00:07:48,160 --> 00:07:51,080
+wiele zarówno o importach, bo importy były w teście.
+
+168
+00:07:51,360 --> 00:07:56,720
+Zobacz po pierwsze, po drugie mówimy sobie również o testach.
+
+169
+00:07:56,920 --> 00:07:58,400
+No i po trzecie o tym tests.
+
+170
+00:07:58,600 --> 00:08:02,920
+Ten plik, czyli ten testy osobno, ten cały ten projekt bez katalogu MS-Wenv
+
+171
+00:08:03,120 --> 00:08:07,680
+i bez tych rzeczy, które nie są potrzebne, będzie zawarty też pod tym filmem.
+
+172
+00:08:07,879 --> 00:08:11,680
+Więc jeżeli masz ochotę, możesz go sobie pobrać i spróbować też to wykonać u siebie
+
+173
+00:08:11,879 --> 00:08:15,920
+albo porównać, jak to jest stworzone u mnie, a jak to jest stworzone u Ciebie.
+
+174
+00:08:16,120 --> 00:08:18,000
+Bardzo dziękuję i zapraszam dalej.

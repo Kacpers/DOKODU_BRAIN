@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:07,320
+No i w zadaniu trzecim jesteśmy poproszeni o to, żeby przygotować klasę przechowującą samochód.
+
+2
+00:00:07,780 --> 00:00:13,839
+I ten nasz samochód ma mieć swoją nazwę, cenę oraz prędkość maksymalną.
+
+3
+00:00:14,359 --> 00:00:21,199
+No i to co zrobiłem, to po prostu przypisałem sobie te trzy właściwości, te trzy zmienne do trzech właściwości i tyle, nic więcej.
+
+4
+00:00:21,920 --> 00:00:27,600
+Następnie stworzyłem sobie pustą listę, no bo założyłem, że te moje samochody muszę gdzieś przechowywać,
+
+5
+00:00:27,600 --> 00:00:32,460
+więc skoro chcę sobie stworzyć pięć samochodów, no to lista będzie jak najbardziej okej.
+
+6
+00:00:33,719 --> 00:00:38,859
+Wykonałem pętlę for, w której nie interesuje mnie indeks, po prostu chcę stworzyć pięć samochodów.
+
+7
+00:00:40,000 --> 00:00:45,600
+Dzięki temu mogę wykonać cars append i mogę tutaj po prostu dodać sobie nowy samochód.
+
+8
+00:00:46,840 --> 00:00:53,460
+Czyli input podaj nazwę, float input podaj cenę i float input podaj prędkość maksymalną.
+
+9
+00:00:53,680 --> 00:00:57,460
+Skoro moje samochody, czyli moje obiekty wskoczyły mi do listy,
+
+10
+00:00:57,600 --> 00:01:02,760
+no to nic nie stoi na przeszkodzie, żeby po tej liście się poiterować, przeiterować.
+
+11
+00:01:03,140 --> 00:01:12,799
+Czyli wykonałem for car in cars, print, car name, car price i prędkość maksymalną car max speed.
+
+12
+00:01:13,260 --> 00:01:16,299
+I w ten oto sposób wszystkie te dane mi się wyświetliły.
+
+13
+00:01:16,840 --> 00:01:22,859
+Ogólnie rzecz biorąc przechowywanie obiektów w liście jest to coś, co dzieje się bardzo często.
+
+14
+00:01:22,859 --> 00:01:26,500
+Jeżeli pobierasz dane gdzieś z bazy danych, czy przechowujesz dane,
+
+15
+00:01:26,500 --> 00:01:30,640
+jakoś sobie je przygotowujesz do tego, żeby później móc je poobrabiać,
+
+16
+00:01:31,040 --> 00:01:32,780
+to obiekty są niezwykle wygodne.
+
+17
+00:01:33,180 --> 00:01:36,500
+Mówiliśmy sobie o tym już moment temu, że kiedy pracowaliśmy ze słownikami,
+
+18
+00:01:36,599 --> 00:01:38,760
+tak naprawdę mieliśmy tę nierelacyjność.
+
+19
+00:01:39,180 --> 00:01:43,099
+Czyli nie mieliśmy pewności, czy nasz słownik będzie posiadał wszystkie pola,
+
+20
+00:01:43,439 --> 00:01:44,760
+takie jakie sobie założyliśmy.
+
+21
+00:01:44,859 --> 00:01:47,019
+Czy możemy zrobić słownik, kropka, wartość.
+
+22
+00:01:47,379 --> 00:01:50,740
+Oczywiście jest od tego odskocznia.
+
+23
+00:01:50,740 --> 00:01:54,240
+Można korzystać z metody get i podawać wartość domyślną,
+
+24
+00:01:54,420 --> 00:01:55,879
+no ale nie zawsze jest to wygodne.
+
+25
+00:01:55,879 --> 00:01:58,679
+Natomiast tutaj, kiedy pracujemy z obiektem,
+
+26
+00:01:58,679 --> 00:02:01,179
+my tę relacyjność mamy zawsze zapewnioną.
+
+27
+00:02:01,179 --> 00:02:07,519
+Czyli każdy samochód zawsze będzie miał podaną nazwę, cenę i prędkość maksymalną.
+
+28
+00:02:07,519 --> 00:02:12,919
+Dzięki temu bardzo wygodnie możemy dodawać sobie te samochody do listy,
+
+29
+00:02:12,919 --> 00:02:15,400
+a później też z tej listy pobierać.
+
+30
+00:02:15,400 --> 00:02:18,840
+Tylko pamiętajcie o tym, że zawsze, kiedy pobieramy sobie właściwość,
+
+31
+00:02:18,840 --> 00:02:21,759
+czy wywołujemy metodę, musimy użyć kropki.
+
+32
+00:02:21,759 --> 00:02:25,680
+Metody będą miały nawiasy, a właściwości po prostu nie.
+
+33
+00:02:25,680 --> 00:02:27,480
+Po prostu będą właściwościami.
+
+34
+00:02:27,480 --> 00:02:28,480
+No to co?
+
+35
+00:02:28,480 --> 00:02:30,480
+Chodźcie dalej.

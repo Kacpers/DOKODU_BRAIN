@@ -1,0 +1,431 @@
+1
+00:00:00,580 --> 00:00:11,179
+No to co? Zaczynamy kolejny moduł, ale przyszedł też czas na to, żebyśmy porozmawiali sobie o czymś niezwykle ważnym, co zdecydowanie zmieni Twój warsztat pracy z kodem.
+
+2
+00:00:11,560 --> 00:00:18,559
+Bo do tej pory, jeżeli coś nie działało, to najczęściej robiliśmy print, czyli gdzieś pauza, gdzieś coś się zepsuło, no to print.
+
+3
+00:00:18,960 --> 00:00:27,960
+Nie wiem, co się stało dalej, no to print. I takich printów było w naszym kodzie bardzo, bardzo, bardzo dużo i jest to coś, z czego chciałbym, żebyśmy się powoli zaczęli leczyć.
+
+4
+00:00:27,960 --> 00:00:36,060
+W sensie ja wiem, że te printy są wygodne, te printy są szybkie, te printy nie wymagają żadnej dodatkowej konfiguracji, tylko print, bach, enter, bach, wszystko działa.
+
+5
+00:00:36,380 --> 00:00:46,980
+Natomiast dzisiaj zajmiemy się debagowaniem kodu. Debagowanie kodu, czyli tak jakbyśmy, jak dodajemy sobie printy w różnych miejscach, to my je dodajemy po to, żeby sprawdzić,
+
+6
+00:00:46,980 --> 00:00:54,560
+jaki stan mają poszczególne zmienne, jakie wartości przechowują poszczególne zmienne w poszczególnych miejscach programu.
+
+7
+00:00:54,880 --> 00:00:57,760
+Tylko zawsze wtedy, kiedy sobie coś printujemy, to później trudno jest porzędzić.
+
+8
+00:00:57,759 --> 00:01:05,719
+Skąd ten print jest od tej linii, czy od tej linii, a co sobie dopisze jeszcze przed czymś tam, albo po czymś tam. I chodzi o to, żeby teraz sobie to ułatwić.
+
+9
+00:01:06,340 --> 00:01:17,039
+I do tego właśnie pomaga, w tym właśnie pomaga nam debagowanie kodu. Czyli debagowanie kodu będzie pozwalało na to, żeby każdy program, który robimy podczas tych zajęć, podczas Twojego życia w przyszłości,
+
+10
+00:01:17,459 --> 00:01:24,620
+można było w dowolnym momencie zatrzymać, powiedzieć, ej, tutaj zrób stop i pokaż mi, co tam w Tobie siedzi. To jest pierwsza rzecz.
+
+11
+00:01:24,840 --> 00:01:27,340
+Druga rzecz, która jest świetna w debagowaniu, to jest też to.
+
+12
+00:01:27,760 --> 00:01:37,020
+Że kiedy debagujesz, możesz też wywoływać dodatkowe polecenia. Na przykład, hmm, ciekawe co by było, gdybym dodał taką i taką metodę, albo gdybym spróbował zrobić to i to.
+
+13
+00:01:37,460 --> 00:01:48,000
+Dzięki temu możesz też na bieżąco pewne rzeczy sobie lepiej sprawdzać, niż za pomocą po prostu tego, niż za każdym razem edytować kod. To jest druga rzecz, albo już trzecia.
+
+14
+00:01:48,000 --> 00:01:55,280
+I czwarta rzecz, która też jest niezwykle wygodna, jest taka, że możemy sami decydować na jakich, gdzie chcemy, żeby ten nasz debuger szedł.
+
+15
+00:01:55,540 --> 00:01:56,520
+On zawsze idzie w dół.
+
+16
+00:01:57,760 --> 00:02:09,020
+On zawsze idzie w stronę zakończenia programu, bo program jest od góry do dołu, ale my możemy zdecydować, ej, wejdź mi do takiej funkcji, albo nie wchodź mi do tej funkcji, albo pokaż mi, co się w tej funkcji znajduje.
+
+17
+00:02:09,099 --> 00:02:15,060
+Po prostu możemy dzięki temu dużo bardziej panować nad tym przebiegiem programu i sobie go podglądać.
+
+18
+00:02:15,640 --> 00:02:24,319
+Panować nad przebiegiem programu zabrzmiało jakby w życiu takim codziennym, też kiedy uruchamia nam program użytkownik, też ten debuger był potrzebny.
+
+19
+00:02:24,420 --> 00:02:25,060
+O nie, nie, nie, nie.
+
+20
+00:02:25,340 --> 00:02:27,460
+To jest tylko i wyłącznie narzędzie deweloperskie, które wykorzystujemy.
+
+21
+00:02:27,759 --> 00:02:34,319
+Wykorzystujemy tylko wtedy, kiedy dewelopujemy, coś nam nie działa, albo kiedy chcielibyśmy dowiedzieć się, dlaczego nam działa.
+
+22
+00:02:34,719 --> 00:02:37,859
+To są takie dwie sytuacje, gdzie debugowanie nam się bardzo przyda.
+
+23
+00:02:38,319 --> 00:02:42,340
+Więc tak jak napisałem, staramy się zrozumieć, dlaczego działa lub znaleźć błąd w kodzie.
+
+24
+00:02:42,340 --> 00:02:49,319
+Po drugie, przechodzimy wiersz po wierszu po programie lub od punktu zatrzymania breakpointu do punktu zatrzymania o breakpointach za chwilę.
+
+25
+00:02:49,659 --> 00:02:56,959
+I po trzecie, możemy wywoływać również własne dodatkowe komendy czy też polecenia, aby zmienić działanie programu lub wykonać coś dodatkowego.
+
+26
+00:02:57,759 --> 00:03:04,759
+No i właśnie, tutaj jeżeli chodzi o debugowanie czy o szukanie błędów w kodzie, taką podstawową metodą jest robienie printów.
+
+27
+00:03:04,859 --> 00:03:07,419
+Ale jeżeli coś nie działa, to jest też metoda gumowej kaczuszki.
+
+28
+00:03:07,939 --> 00:03:13,759
+Trochę się śmieję, a trochę mówię poważnie, ponieważ metoda gumowej kaczuszki to jest nieformalny sposób debugowania kodu.
+
+29
+00:03:14,199 --> 00:03:20,680
+Metoda polega na tym, że programista próbując znaleźć błędy w kodzie, trzyma w pobliżu gumową kaczuszkę lub inny przedmiot nieożywiony.
+
+30
+00:03:20,979 --> 00:03:27,680
+Linia po linii programista tłumaczy kaczuszce lub temu innemu przedmiotowi nieożywionemu funkcję każdego swojego segmentu.
+
+31
+00:03:27,759 --> 00:03:31,060
+Kodów podczas sprawdzania powinny wyjść na jaw błędy stworzonej aplikacji.
+
+32
+00:03:31,539 --> 00:03:35,719
+Czyli my tak naprawdę przechodzimy sobie przez program linia po linii.
+
+33
+00:03:36,079 --> 00:03:39,419
+Możemy sobie wziąć wtedy jakąś kaczuszkę, tu kurczę nic nie mam, mam konia.
+
+34
+00:03:39,799 --> 00:03:45,060
+Wziąć sobie takiego konia i tłumaczyć mu poszczególne zagadnienia, które się dzieją w naszym programie.
+
+35
+00:03:45,419 --> 00:03:54,419
+No i dzięki temu łatwiej nam będzie znaleźć błąd, ponieważ wyjdzie na jaw, że coś co wydawało nam się, że jest już z naszej głowy pokryte kodem, tak naprawdę nie jest.
+
+36
+00:03:54,419 --> 00:03:57,739
+I debugowanie wraz z taką metodą gumowej kaczuszki może nam bardzo...
+
+37
+00:03:57,759 --> 00:03:59,459
+bardzo się przydać.
+
+38
+00:03:59,719 --> 00:04:04,620
+Tutaj jak widzicie jest Wikipedia, to nie jest żadna non-sopedia, jest to prawdziwa Wikipedia, metoda gumowej kaczuszki.
+
+39
+00:04:04,899 --> 00:04:07,739
+Polecam, tam jest jeszcze trochę tekstu poniżej do przeczytania.
+
+40
+00:04:08,979 --> 00:04:11,899
+Okej, więc tak, możemy używać printów.
+
+41
+00:04:12,459 --> 00:04:14,739
+Jest to jednak mało wygodne, o tym sobie powiedzieliśmy.
+
+42
+00:04:15,259 --> 00:04:16,620
+Możemy też używać debagera.
+
+43
+00:04:17,079 --> 00:04:22,699
+Ogólnie rzecz biorąc, jeżeli korzystamy czy też debagujemy kod, robimy to po to, żeby znaleźć błędy logiczne.
+
+44
+00:04:22,699 --> 00:04:27,459
+Czyli dlaczego nie wszedł mi do tego ifa, albo dlaczego wszedł zbyt dużo razy.
+
+45
+00:04:27,759 --> 00:04:30,779
+A po drugie, też dzięki temu możemy przechwytywać wyjątki.
+
+46
+00:04:30,879 --> 00:04:36,659
+Czyli na przykład, jeżeli leci jakiś wyjątek, czyli taki błąd, który chcielibyśmy w jakiś sposób obsłużyć.
+
+47
+00:04:36,779 --> 00:04:37,920
+Czasem tak się zdarzało, prawda?
+
+48
+00:04:38,360 --> 00:04:40,579
+Że widzieliśmy gdzieś, nie możesz dzielić przez zero.
+
+49
+00:04:40,779 --> 00:04:44,079
+Albo pojawiał się błąd mówiący o tym, że jest type error.
+
+50
+00:04:44,500 --> 00:04:51,800
+I tego typu błędy my możemy właśnie też przechwytywać, albo sprawdzać, dlaczego ten program, ten błąd zaszedł w takim, a nie innym miejscu.
+
+51
+00:04:52,279 --> 00:04:57,360
+Po prostu przed wystąpieniem tego błędu robimy sobie pauzę, ten breakpoint, o tym za moment.
+
+52
+00:04:57,759 --> 00:05:02,620
+No i dzięki temu możemy podejrzeć, a, czyli to dlatego, że tutaj były takie i takie wartości.
+
+53
+00:05:03,099 --> 00:05:07,819
+I wtedy niestety nie można iść do góry, cofać się w przebiegu programu i sprawdzać tego.
+
+54
+00:05:07,819 --> 00:05:12,779
+Ale można pójść i program raz jeszcze, dodając więcej takich stopów, w których będziemy sobie podglądali.
+
+55
+00:05:13,139 --> 00:05:14,439
+Wszystko za moment pokażę.
+
+56
+00:05:15,159 --> 00:05:20,500
+Więc tak naprawdę zaczynamy zawsze takie debagowanie od tego, żeby dołożyć sobie te breakpointy.
+
+57
+00:05:20,879 --> 00:05:27,099
+I możliwe, że kiedy już wykonywałeś projekty do tej pory, czy te nasze małe jakieś fragmenty kodu,
+
+58
+00:05:27,100 --> 00:05:33,700
+to zdarzało Ci się gdzieś kliknąć właśnie po lewej stronie obok tych cyfarek reprezentujących numer wiersza.
+
+59
+00:05:34,160 --> 00:05:39,300
+I wtedy pojawiały się te czerwone kropki mówiące o tym, że tutaj coś ma się zadziać, coś ma się zatrzymać.
+
+60
+00:05:39,640 --> 00:05:41,939
+Wtedy cały wiersz zaznaczał się na czerwono.
+
+61
+00:05:42,340 --> 00:05:43,400
+I to jest właśnie breakpoint.
+
+62
+00:05:43,820 --> 00:05:49,379
+Czyli w momencie, w którym za chwilę uruchomimy sobie taki program, nasz program w tym miejscu się zatrzyma.
+
+63
+00:05:50,600 --> 00:05:52,220
+Co musimy zrobić w następnej kolejności?
+
+64
+00:05:52,780 --> 00:05:53,780
+Kliknąć w żuka.
+
+65
+00:05:53,780 --> 00:05:56,920
+To moi kursanci ci zajęć takich.
+
+66
+00:05:57,100 --> 00:06:00,240
+Na żywo zawsze się śmieją, że to jest naduść żuka.
+
+67
+00:06:00,420 --> 00:06:03,140
+Że to trzeba kliknąć w tego żuka, kliknąć w tego buga.
+
+68
+00:06:03,520 --> 00:06:05,660
+No i dzięki temu nasz program się uruchomi.
+
+69
+00:06:06,220 --> 00:06:10,840
+To uruchomienie jest tożsame z uruchomieniem python.py.
+
+70
+00:06:11,240 --> 00:06:13,780
+Czyli z takim zwykłym uruchomieniem programu.
+
+71
+00:06:14,060 --> 00:06:18,080
+I w tym momencie program zatrzyma mi się na pierwszej kropce.
+
+72
+00:06:18,680 --> 00:06:19,760
+Jak puścić go dalej?
+
+73
+00:06:20,180 --> 00:06:21,160
+O tym już za moment.
+
+74
+00:06:21,420 --> 00:06:27,000
+Ponieważ na dole, kiedy u góry zrobiliśmy te breakpointy, nadusiliśmy żuka,
+
+75
+00:06:27,100 --> 00:06:29,100
+to na dole pojawia się taka właśnie ramka.
+
+76
+00:06:29,660 --> 00:06:34,240
+I w tej ramce mamy możliwość sterowania przebiegiem naszego programu.
+
+77
+00:06:34,240 --> 00:06:39,740
+Do sterowania służą te linie, które są tutaj, te polecenia, które są tutaj zupełnie po lewej stronie.
+
+78
+00:06:39,740 --> 00:06:45,439
+Natomiast to, co jest po prawej, to jest to, co w naszym programie w danym momencie siedzi.
+
+79
+00:06:45,439 --> 00:06:49,160
+Więc jak widzisz, tu wyświetlają się wszystkie zmienne oraz ich wartości.
+
+80
+00:06:49,160 --> 00:06:55,520
+Po prostu w tym miejscu, gdzie zatrzymał się mój program, mamy zmienną o nazwie sentence, która zawiera taki tekst.
+
+81
+00:06:55,520 --> 00:06:57,060
+Python to wspaniały język.
+
+82
+00:06:57,060 --> 00:06:59,500
+To język szybki i wydajny.
+
+83
+00:06:59,500 --> 00:07:06,399
+Natomiast poniżej mam zmienną words, która jest informacją, mam informację też, że jest to lista, która ma 10 elementów.
+
+84
+00:07:06,399 --> 00:07:08,980
+I te elementy właśnie tak wyglądają.
+
+85
+00:07:08,980 --> 00:07:16,639
+Dzięki temu ja mogę zobaczyć, aha, a ja się spodziewałem, że tutaj nie będzie czegoś, nie wiem, przecinek się nie pokaże gdzieś, a się pokazał.
+
+86
+00:07:16,639 --> 00:07:22,060
+No to już wiem, że w tym miejscu mogę szukać błędu albo mogę stwierdzić, no do tego miejsca wszystko działa okej.
+
+87
+00:07:22,060 --> 00:07:23,620
+Ciekawe, co się wydarzy dalej.
+
+88
+00:07:24,620 --> 00:07:26,660
+I tu przechodzimy sobie właśnie do tej wiedzy.
+
+89
+00:07:26,660 --> 00:07:36,000
+Jak sterować przebiegiem takiego programu, gdyż za sterowanie tym programem odpowiadają właśnie te polecenia po lewej oraz te u góry.
+
+90
+00:07:36,439 --> 00:07:37,000
+Po lewej.
+
+91
+00:07:37,420 --> 00:07:44,560
+Jeżeli chodzi o to, co jest po lewej stronie, to na początek powiedzmy sobie o tym zielonym playu, czy też play pauzie.
+
+92
+00:07:45,000 --> 00:07:46,780
+Jest to przejście do kolejnego breakpointa.
+
+93
+00:07:46,780 --> 00:07:54,580
+Jeżeli w twoim programie jest więcej breakpointów i już sobie je wcześniej przygotowałeś, przygotowałaś i wiesz, że chcesz przechodzić od jednego do drugiego,
+
+94
+00:07:54,579 --> 00:08:00,579
+to właśnie ten play z tą krechą pionową to jest metoda do tego, żeby przechodzić, skakać od jednego do drugiego.
+
+95
+00:08:01,579 --> 00:08:08,860
+Natomiast czasem zdarza się, że dochodzimy sobie do breakpointa i nagle, a okej, to teraz ja tutaj chciałbym się nad tym lepiej zastanowić.
+
+96
+00:08:09,019 --> 00:08:16,419
+Przejść powoli sobie po tych liniach, bo do tego momentu wszystko było okej, ale czuję, że tutaj już zaczyna się coś mieszać.
+
+97
+00:08:16,860 --> 00:08:20,979
+I teraz nie ma sensu dodawać sobie breakpointa linia po linii, to byłoby uciążliwe.
+
+98
+00:08:20,979 --> 00:08:23,979
+Zamiast tego mamy te przyciski, które są w tym miejscu.
+
+99
+00:08:24,579 --> 00:08:26,579
+Step over oraz step into.
+
+100
+00:08:26,579 --> 00:08:34,579
+W ogóle jak spojrzysz, najedziesz na te przyciski, bo zaraz będziemy sobie robili też demo, to zobaczysz, że tam są skróty klawiszowe i wygodniej też jest korzystać ze skrótów,
+
+101
+00:08:34,579 --> 00:08:36,579
+natomiast zawsze też warto wiedzieć, gdzie są guziki.
+
+102
+00:08:36,579 --> 00:08:41,579
+Więc step into to jest przejście do kolejnej linii, nie wchodzi do funkcji.
+
+103
+00:08:41,579 --> 00:08:50,579
+Mimo tego, że jest into, to może się wydawać, że on wejdzie do funkcji, ale on nie wchodzi do funkcji, on po prostu będzie przechodził sobie niżej, niżej, niżej, niżej.
+
+104
+00:08:50,579 --> 00:08:53,579
+Natomiast step over to jest przejście do kolejnej linii kodu.
+
+105
+00:08:53,580 --> 00:08:55,580
+I tutaj on wchodzi do funkcji.
+
+106
+00:08:55,580 --> 00:09:09,580
+Czyli on wtedy to, za pomocą tych przycisków możesz przechodzić sobie albo po prostu w ramach tego, co widzisz, linia po linii, albo możesz wejść do środka i zobaczyć, co się znajduje w środku tej linii kodu.
+
+107
+00:09:09,580 --> 00:09:16,580
+No to co? Myślę, że możemy sobie to zaprezentować na prostym przykładzie i pokazać sobie, czym się te przyciski różnią i jak się to uruchamia.
+
+108
+00:09:16,580 --> 00:09:17,580
+Chodźcie.

@@ -1,0 +1,339 @@
+1
+00:00:00,000 --> 00:00:02,819
+Zacząłem od tego, że wykonałem from os import walk.
+
+2
+00:00:03,100 --> 00:00:11,679
+Ja mam już taki katalog, który nazywa się source i w tym katalogu mam te moje pliki.
+
+3
+00:00:12,339 --> 00:00:15,259
+Czyli będę chciał przeszukiwać właśnie ten katalog.
+
+4
+00:00:15,259 --> 00:00:24,379
+Jak pamiętacie to co mi zwraca walk to jest ścieżka, katalogi, pliki i to wszystko jest zwracane.
+
+5
+00:00:24,600 --> 00:00:29,480
+Czyli from path dirs files in walk source, robię dwukropek
+
+6
+00:00:29,480 --> 00:00:34,640
+i wtedy jeżeli chciałbym wyświetlić sobie wszystkie pliki znajdujące się w tej ścieżce
+
+7
+00:00:34,640 --> 00:00:38,179
+wystarczy, że wyprintuję sobie po prostu files.
+
+8
+00:00:38,620 --> 00:00:43,880
+Zobacz, czyli python domowe 2 i mam a, b, c.
+
+9
+00:00:43,880 --> 00:00:47,340
+Gdzie znajdują się te pliki? Oczywiście w tym katalogu.
+
+10
+00:00:47,659 --> 00:00:55,640
+Mogę sobie wyświetlić zarówno path, jak i mogę sobie wyświetlić dirs, żeby mieć pewność co mi jest potrzebne.
+
+11
+00:00:55,780 --> 00:00:58,700
+Zobacz, w tym momencie dirs jest puste.
+
+12
+00:00:58,700 --> 00:01:01,620
+No a path to jest ten katalog.
+
+13
+00:01:02,520 --> 00:01:09,579
+Czyli tak naprawdę mój filename, każdy jeden, to będzie filename równa się path
+
+14
+00:01:09,579 --> 00:01:20,760
+połączone slashem, bo tutaj nie mam slasha, z files.
+
+15
+00:01:21,040 --> 00:01:23,020
+Czyli tak naprawdę z pojedynczym plikiem.
+
+16
+00:01:23,520 --> 00:01:25,340
+Czyli tu muszę zapisać file.
+
+17
+00:01:25,340 --> 00:01:28,680
+Skąd się bierze file? For file in files.
+
+18
+00:01:28,700 --> 00:01:30,700
+To jest dwukropek.
+
+19
+00:01:30,700 --> 00:01:35,420
+I wtedy będę miał tutaj wszystkie moje pliki ładnie wypisane.
+
+20
+00:01:35,420 --> 00:01:40,579
+A skoro będą ładnie wypisane, to będę mógł też je otworzyć, żeby pobrać z nich zawartość.
+
+21
+00:01:40,579 --> 00:01:43,000
+Coś mi tu nie pasuje, nie zamknąłem apostrofu.
+
+22
+00:01:43,000 --> 00:01:47,460
+Robię raz jeszcze strzałka do góry enter i mam ścieżki do moich plików.
+
+23
+00:01:47,460 --> 00:01:55,020
+To co będę chciał teraz zrobić, to będę chciał każdy z tych plików otworzyć i jego zawartość dodać do scalonego.
+
+24
+00:01:55,020 --> 00:01:58,320
+Tylko, że dodawanie do tego scalonego, myślę, że warto byłoby już,
+
+25
+00:01:58,319 --> 00:02:04,559
+dodawać każdorazowo, podczas tego jakby otwierając pojedyncze pliki i dodając je.
+
+26
+00:02:04,559 --> 00:02:10,759
+Nie będę tworzył takiej jakby jednej zbiorczej zawartości, tylko każdy jeden plik będę po kolei dodawał.
+
+27
+00:02:10,759 --> 00:02:14,159
+Niemniej, to scalone muszę mieć otwarte.
+
+28
+00:02:14,159 --> 00:02:23,159
+Żeby to scalone mieć otwarte, mogę sobie tutaj napisać with open scalone txt.
+
+29
+00:02:23,159 --> 00:02:28,159
+Może być to w, z tego względu, że w ramach jednego otwarcia cały czas będę realizował te zapisy.
+
+30
+00:02:28,319 --> 00:02:33,359
+Czyli with open scalone txt.w.s.output.
+
+31
+00:02:33,359 --> 00:02:34,560
+Dwu kropek.
+
+32
+00:02:34,560 --> 00:02:36,759
+Ten mój kod wtedy mogę sobie wciąć.
+
+33
+00:02:36,759 --> 00:02:44,159
+I te pliki pojedyncze będę potrzebował otwierać, odczytywać i wrzucać je bezpośrednio do scalonych.
+
+34
+00:02:44,159 --> 00:02:53,199
+Czyli w tym miejscu będę potrzebował wykonać with open file name.
+
+35
+00:02:53,199 --> 00:02:55,079
+As source file.
+
+36
+00:02:55,079 --> 00:02:57,479
+Czytam as source po prostu.
+
+37
+00:02:57,479 --> 00:03:02,479
+Następnie otwarcie tego pliku to będzie source.readlines.
+
+38
+00:03:02,479 --> 00:03:05,359
+Tak, żeby mieć od razu wszystkie te linie.
+
+39
+00:03:05,359 --> 00:03:10,560
+No i te linie będę chciał bezpośrednio zapisać do mojego outputu.
+
+40
+00:03:10,560 --> 00:03:14,879
+Czyli output.write.
+
+41
+00:03:14,879 --> 00:03:22,159
+No i połączone znakiem nowego wiersza.
+
+42
+00:03:22,159 --> 00:03:24,919
+Linie z mojego źródła.
+
+43
+00:03:24,919 --> 00:03:26,159
+To czego tutaj jeszcze mi brakuje.
+
+44
+00:03:26,159 --> 00:03:27,399
+To brakuje mi oczywiście znaków.
+
+45
+00:03:27,479 --> 00:03:28,479
+Znaku końca linii.
+
+46
+00:03:28,479 --> 00:03:32,479
+Który na końcu każdego pliku na wszelki wypadek powinienem umieścić.
+
+47
+00:03:32,479 --> 00:03:34,479
+Ale pozwólcie, że najpierw sobie to przetestuję.
+
+48
+00:03:34,479 --> 00:03:35,479
+Zobaczę czy to działa.
+
+49
+00:03:35,479 --> 00:03:37,479
+Strzałka do góry enter.
+
+50
+00:03:37,479 --> 00:03:38,479
+Nic mi się nie pokazało.
+
+51
+00:03:38,479 --> 00:03:41,479
+Otwórzmy plik scalony i zobaczmy co się w nim znajduje.
+
+52
+00:03:41,479 --> 00:03:43,479
+No i jak widać wszystko jest ok.
+
+53
+00:03:43,479 --> 00:03:45,479
+Bo w moim pliku A znajdowały się litery A.
+
+54
+00:03:45,479 --> 00:03:46,479
+W B znajdowały się litery B.
+
+55
+00:03:46,479 --> 00:03:47,479
+A w C znajdowały się litery C.
+
+56
+00:03:47,479 --> 00:03:49,479
+Czyli cała zawartość jest ok.
+
+57
+00:03:49,479 --> 00:03:52,479
+To czego brakuje to ten znak końca wiersza na końcu.
+
+58
+00:03:52,479 --> 00:03:54,479
+Więc sobie go dorzucę.
+
+59
+00:03:54,479 --> 00:03:55,479
+Output.write.
+
+60
+00:03:55,479 --> 00:03:59,479
+I po prostu tutaj sobie wstawię znak nowego wiersza.
+
+61
+00:03:59,479 --> 00:04:01,479
+I za każdym razem wszystko będzie ok.
+
+62
+00:04:01,479 --> 00:04:03,479
+Ja nie przetwarzam tego.
+
+63
+00:04:03,479 --> 00:04:07,479
+Nie tworzę sobie jakiejś nowej zmiennej zawierającej całej tej zawartości.
+
+64
+00:04:07,479 --> 00:04:12,479
+Tylko po prostu za każdym razem na nowo sobie tę zawartość dodaję.
+
+65
+00:04:12,479 --> 00:04:13,479
+Tu jest W.
+
+66
+00:04:13,479 --> 00:04:15,479
+Ale to W utworzyłoby nowy plik.
+
+67
+00:04:15,479 --> 00:04:17,480
+Nie w ramach tej pętli.
+
+68
+00:04:17,480 --> 00:04:19,480
+Tylko w momencie w którym bym go zamknął.
+
+69
+00:04:19,480 --> 00:04:21,480
+I byłbym gdzieś już tutaj.
+
+70
+00:04:21,480 --> 00:04:22,480
+Po jego zamknięciu.
+
+71
+00:04:22,480 --> 00:04:23,480
+Jeżeli tego nie zrobiłem.
+
+72
+00:04:23,480 --> 00:04:25,480
+No to wszystko dalej działa.
+
+73
+00:04:25,480 --> 00:04:26,480
+Prawidłowo.
+
+74
+00:04:26,480 --> 00:04:27,480
+Ważna uwaga.
+
+75
+00:04:27,480 --> 00:04:29,480
+To co jeszcze wypadałoby zrobić.
+
+76
+00:04:29,480 --> 00:04:31,480
+To warto byłoby sprawdzić czy na pewno są to pliki txt.
+
+77
+00:04:31,480 --> 00:04:36,480
+Czyli if file ends with txt.
+
+78
+00:04:36,480 --> 00:04:37,480
+Dwukropek.
+
+79
+00:04:37,480 --> 00:04:40,480
+I dopiero wtedy wykonujemy na nim te operacje.
+
+80
+00:04:40,480 --> 00:04:41,480
+O tym zapomniałem.
+
+81
+00:04:41,480 --> 00:04:43,480
+Więc od razu jeszcze Wam pokazuję.
+
+82
+00:04:43,480 --> 00:04:46,480
+Bo za chwilę w tym naszym źródle pojawi się też trochę innych plików.
+
+83
+00:04:46,480 --> 00:04:48,480
+Ale to już w zadaniu trzecim.
+
+84
+00:04:48,480 --> 00:04:49,480
+Kolejnym.
+
+85
+00:04:49,480 --> 00:04:50,480
+Chodźcie.

@@ -1,0 +1,247 @@
+1
+00:00:00,000 --> 00:00:03,899
+I teraz jeżeli mamy omówić sobie poszczególne litery, to je omówmy.
+
+2
+00:00:04,000 --> 00:00:06,540
+Czyli licząc się oczywiście z MVC.
+
+3
+00:00:07,259 --> 00:00:12,019
+Widok. Widok to jest warstwa prezentacji, czyli ta warstwa, którą widzi użytkownik.
+
+4
+00:00:12,500 --> 00:00:17,740
+To jest też bardzo często ta warstwa, którą nazywana jest w dużej mierze frontendem,
+
+5
+00:00:17,740 --> 00:00:24,179
+natomiast zadaniem backend dewelopera jest i tak stworzenie jakiejś podstawowej tej warstwy.
+
+6
+00:00:24,699 --> 00:00:28,719
+W widoku możemy też zwracać po prostu w odpowiedzi plik JSON,
+
+7
+00:00:28,719 --> 00:00:31,820
+jeżeli robimy restowe API, takie z jakiego korzystaliśmy,
+
+8
+00:00:32,359 --> 00:00:37,060
+albo zwracamy HTML, CSS i JS, które mi już zajmuje się frontend deweloper.
+
+9
+00:00:38,039 --> 00:00:42,039
+No właśnie, czyli w przypadku strony internetowych www jest to HTML, CSS i JS.
+
+10
+00:00:42,039 --> 00:00:47,379
+W przypadku interfejsów graficznych jest to klasa konfigurująca położenie guzików, kontrolek,
+
+11
+00:00:47,439 --> 00:00:49,780
+przypinająca akcje do poszczególnych puli przycisków.
+
+12
+00:00:50,159 --> 00:00:52,799
+Czyli po prostu to, co odpowiada za budowę interfejsu.
+
+13
+00:00:52,899 --> 00:00:58,480
+Czyli na przykład w TK Interze moglibyśmy sobie stworzyć taki przykładowy widok dla aplikacji desktopowej.
+
+14
+00:00:58,719 --> 00:01:04,640
+No i jeżeli chodzi o wygląd elementów, czyli opis tego, że coś ma mieć obramowanie,
+
+15
+00:01:04,739 --> 00:01:07,780
+coś ma mieć jakiś kolor, coś ma mieć jakiś konkretny krój czcionki,
+
+16
+00:01:08,200 --> 00:01:12,420
+to wszystkie tego typu rzeczy znajdują się także w widoku.
+
+17
+00:01:14,219 --> 00:01:19,900
+Model. Tutaj wspominałem, jest to warstwa odpowiedzialna za odwzorowywanie warstwy danych.
+
+18
+00:01:20,159 --> 00:01:22,640
+Model danych po prostu, na którym operuje aplikacja.
+
+19
+00:01:23,319 --> 00:01:26,579
+Jest to warstwa, która też odwzorowuje logikę biznesową aplikacji,
+
+20
+00:01:26,579 --> 00:01:28,579
+czyli powiązania pomiędzy poszczególnymi...
+
+21
+00:01:28,719 --> 00:01:30,719
+elementami danych.
+
+22
+00:01:31,219 --> 00:01:36,159
+Czyli zakładając, że nawet jeżeli w naszych danych mielibyśmy produkty oraz kategorie,
+
+23
+00:01:36,319 --> 00:01:42,359
+jednakże nasza aplikacja nie korzystałaby z bazy danych tylko na przykład z jakiegoś API,
+
+24
+00:01:42,680 --> 00:01:49,039
+to i tak warto byłoby stworzyć taką warstwę modelu, która by ilustrowała te nasze dane, na których pracujemy.
+
+25
+00:01:49,599 --> 00:01:55,599
+No i w jego wkład wchodzą klasy mapujące wiersze z bazy danych do postaci obiektów.
+
+26
+00:01:56,000 --> 00:01:58,680
+Czyli w momencie, w którym pracujemy z plikiem,
+
+27
+00:01:58,719 --> 00:02:00,219
+czyli pracujemy z bazą danych,
+
+28
+00:02:00,480 --> 00:02:03,599
+to znacznie wygodniej będzie nam się pracowało z konkretną klasą.
+
+29
+00:02:04,039 --> 00:02:09,919
+I teraz model to jest właśnie taka warstwa, która będzie zamieniała nam poszczególne wiersze z pliku,
+
+30
+00:02:09,919 --> 00:02:14,000
+czy wiersze z bazy danych na konkretne obiekty.
+
+31
+00:02:14,300 --> 00:02:19,539
+Oraz w drugą stronę, kiedy będziemy chcieli obiekt zapisać do bazy danych,
+
+32
+00:02:19,539 --> 00:02:22,240
+będziemy potrzebowali zamienić go na coś innego.
+
+33
+00:02:22,659 --> 00:02:28,319
+I ta warstwa, tym elementem modelu jest coś, co nazywa się ORM, czyli Object Relation Mapper.
+
+34
+00:02:28,719 --> 00:02:30,840
+O ORM-ach nie chcę dużo więcej mówić.
+
+35
+00:02:31,099 --> 00:02:38,340
+Warto tylko wiedzieć, że najpopularniejszym ORM-em, który znajduje się w Pythonie, to jest SQL Alchemy.
+
+36
+00:02:38,539 --> 00:02:40,479
+Ale są też inne, na przykład Pony ORM.
+
+37
+00:02:40,840 --> 00:02:44,780
+To są takie narzędzia, których możesz używać, jeżeli planujesz większą aplikację.
+
+38
+00:02:44,879 --> 00:02:48,240
+Natomiast na takim podstawowym poziomie nie są one potrzebne.
+
+39
+00:02:48,240 --> 00:02:50,300
+No i ostatnia warstwa to Controller.
+
+40
+00:02:50,439 --> 00:02:55,879
+Controller to często budzi takie zastanowienie, bo brzmi to tak, jakby miało być tego bardzo dużo.
+
+41
+00:02:56,400 --> 00:02:58,680
+I tak, tutaj można byłoby powiedzieć o różnie.
+
+42
+00:02:58,719 --> 00:03:05,479
+O różnych podejściach, które służą do tego, żeby tę warstwę kontrolera porozdzielać jeszcze na inne podwarstwy.
+
+43
+00:03:05,620 --> 00:03:08,639
+Natomiast ogólnie rzecz biorąc, wszystko to staje się kontrolerem.
+
+44
+00:03:09,139 --> 00:03:11,419
+I kontroler odbiera żądania od użytkownika.
+
+45
+00:03:11,419 --> 00:03:18,300
+Czyli jeżeli wchodzisz na stronę, klikasz w jakiś przycisk, odpala się jakaś strona internetowa, odpala się jakiś adres,
+
+46
+00:03:18,680 --> 00:03:21,219
+to kontroler jest tym, co odbierze twoje żądanie.
+
+47
+00:03:21,680 --> 00:03:24,639
+Po drugie, sprawdza poprawność, czy te dane są OK.
+
+48
+00:03:24,840 --> 00:03:28,500
+Czyli czy nasz request, to nasze zapytanie, zawiera wszystkie dane,
+
+49
+00:03:28,719 --> 00:03:30,000
+które powinien zawierać.
+
+50
+00:03:30,400 --> 00:03:36,900
+Następnie może też kontroler sprawdzać, kontrolować, czy użytkownik ma uprawnienia do tego, żeby otworzyć dany zasób.
+
+51
+00:03:36,900 --> 00:03:43,860
+Na przykład, jeżeli ktoś próbuje usunąć jakiś post, a usuwać posty może tylko administrator lub autor tych postów,
+
+52
+00:03:44,219 --> 00:03:47,079
+no to kontroler może być taką warstwą, która też to zweryfikuje.
+
+53
+00:03:48,139 --> 00:03:53,360
+No i też poprzez tę warstwę właśnie, model komunikuje się z bazą danych i pobiera nam potrzebne dane.
+
+54
+00:03:53,759 --> 00:03:56,900
+Czyli zakładamy, że ktoś wchodzi sobie na stronę, gdzie są produkty z jakiejś kategorii,
+
+55
+00:03:56,900 --> 00:04:03,200
+kontroler wówczas musi wywołać model produktu i powiedzieć mu,
+
+56
+00:04:03,200 --> 00:04:06,840
+słuchaj, model produktu potrzebuje wszystkie produkty z tej kategorii,
+
+57
+00:04:06,840 --> 00:04:11,460
+model odpowie wtedy konkretnymi produktami, no i kontroler to przedstawi.
+
+58
+00:04:11,460 --> 00:04:13,460
+Zaraz zresztą zobaczysz.
+
+59
+00:04:13,460 --> 00:04:15,960
+No i kontroler też odpowiada za przygotowanie odpowiedzi.
+
+60
+00:04:15,960 --> 00:04:21,060
+Czyli w momencie, w którym już otrzyma takie dane, no to zależnie od tego, czy użytkownik pytał o JSON-a,
+
+61
+00:04:21,060 --> 00:04:26,579
+czy użytkownik pytał o jakiś inny format, no to kontroler powinien ten wynik,
+
+62
+00:04:26,899 --> 00:04:28,899
+załatwić, w cudzysłowie.

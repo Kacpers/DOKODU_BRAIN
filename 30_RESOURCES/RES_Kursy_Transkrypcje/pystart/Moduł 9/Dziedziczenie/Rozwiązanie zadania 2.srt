@@ -1,0 +1,403 @@
+1
+00:00:00,000 --> 00:00:07,020
+Natomiast jeżeli chodzi o zadanie drugie, to chcemy przygotować klasę employee, która będzie w initie odbierała imię, nazwisko oraz stawkę godzinową.
+
+2
+00:00:07,019 --> 00:00:31,920
+Czyli class employee, def init, first name jako string, last name jako string, hourly rate jako float, stawka godzinowa.
+
+3
+00:00:31,920 --> 00:00:34,679
+No i teraz te rzeczy musimy sobie poprzepisywać.
+
+4
+00:00:34,820 --> 00:00:36,920
+Czyli first name to jest first.
+
+5
+00:00:37,020 --> 00:00:39,260
+First name, self, last name.
+
+6
+00:00:41,320 --> 00:00:43,200
+Self, last name.
+
+7
+00:00:44,820 --> 00:00:46,720
+To jest last name.
+
+8
+00:00:47,560 --> 00:00:50,060
+Self, hourly rate.
+
+9
+00:00:50,260 --> 00:00:52,780
+To jest hourly rate.
+
+10
+00:00:53,780 --> 00:00:54,880
+OK, to mamy.
+
+11
+00:00:55,400 --> 00:00:57,079
+I teraz skoro to mamy, to idziemy dalej.
+
+12
+00:00:57,079 --> 00:01:02,200
+Będziemy chcieli, żeby tutaj była możliwość też rozliczenia tego wynagrodzenia.
+
+13
+00:01:02,680 --> 00:01:05,040
+Czyli add time możemy sobie zrobić.
+
+14
+00:01:05,040 --> 00:01:11,200
+No bo on ma jakiś czas, przez który będzie mógł pracować tylko ten nasz pracownik.
+
+15
+00:01:11,540 --> 00:01:15,040
+Czyli self time plus równa się time.
+
+16
+00:01:16,020 --> 00:01:17,540
+Możemy go przyjąć we floatach.
+
+17
+00:01:18,060 --> 00:01:20,600
+Możemy napisać time in hours, żeby było wiadomo.
+
+18
+00:01:24,700 --> 00:01:25,860
+Coś w ten sposób.
+
+19
+00:01:26,520 --> 00:01:28,820
+No i wtedy def get salary.
+
+20
+00:01:30,800 --> 00:01:32,800
+Self return.
+
+21
+00:01:32,800 --> 00:01:32,840
+Self return.
+
+22
+00:01:33,840 --> 00:01:34,800
+Self time.
+
+23
+00:01:35,040 --> 00:01:39,040
+Self time razy self hourly rate.
+
+24
+00:01:39,040 --> 00:01:42,040
+Na pewno wartość zwracana, wtedy to będzie float.
+
+25
+00:01:42,040 --> 00:01:44,040
+Co ci się tu nie podoba?
+
+26
+00:01:44,040 --> 00:01:46,040
+Brakuje ci nowej linii na koniec.
+
+27
+00:01:46,040 --> 00:01:48,040
+Nie ma sprawy, dajemy mu nową linię.
+
+28
+00:01:48,040 --> 00:01:51,040
+I do tego potrzebujemy teraz mieć jeszcze klasę manager.
+
+29
+00:01:51,040 --> 00:01:55,040
+Czyli class manager.
+
+30
+00:01:55,040 --> 00:01:58,040
+Nasza klasa manager też jest pracownikiem.
+
+31
+00:01:58,040 --> 00:02:03,040
+I o naszej klasie manager wiemy, że na pewno będzie musiała mieć bonus.
+
+32
+00:02:03,040 --> 00:02:05,040
+I ten bonus będzie zmieniany.
+
+33
+00:02:05,040 --> 00:02:08,040
+Czyli czy też może być dodawany na przykład.
+
+34
+00:02:08,040 --> 00:02:10,040
+Czyli powinniśmy zrobić sobie selfa.
+
+35
+00:02:10,040 --> 00:02:20,040
+Ten self musi odbierać te same dane, które odbiera nasz init pracownika.
+
+36
+00:02:20,040 --> 00:02:25,040
+Natomiast robimy to tylko po to, żeby wywołać ten init.
+
+37
+00:02:25,040 --> 00:02:29,040
+Przekazując mu wszystkie te informacje, które są powyżej.
+
+38
+00:02:29,040 --> 00:02:32,040
+Czyli first name, last name, hourly rate i tak dalej.
+
+39
+00:02:32,040 --> 00:02:34,040
+A do tego.
+
+40
+00:02:34,039 --> 00:02:38,039
+Chcielibyśmy jeszcze dorzucić sobie bonus.
+
+41
+00:02:38,039 --> 00:02:40,039
+Tu oczywiście bez tych typów.
+
+42
+00:02:43,039 --> 00:02:49,039
+A do tego chcielibyśmy jeszcze dorzucić dodatkowo bonus, który musi być też floatem.
+
+43
+00:02:49,039 --> 00:02:51,039
+I my tego bonusu nie przekazujemy już tutaj.
+
+44
+00:02:51,039 --> 00:02:55,039
+Tylko przypisujemy go jako osobną wartość.
+
+45
+00:02:55,039 --> 00:02:58,039
+Chociaż czekajcie, bonus miał być osobną metodą add bonus.
+
+46
+00:02:58,039 --> 00:03:02,039
+Więc możemy tu go nie dawać, ale tutaj go założyć, że jest i ma wartość 0.
+
+47
+00:03:02,039 --> 00:03:05,039
+W tym momencie employee nie ma dostępu do tego bonusa.
+
+48
+00:03:05,039 --> 00:03:09,039
+No ale ML Manager jak najbardziej taki dostęp ma.
+
+49
+00:03:09,039 --> 00:03:11,039
+Skoro ma, to możemy zrobić dwie rzeczy.
+
+50
+00:03:11,039 --> 00:03:14,039
+Po pierwsze stworzyć sobie metodę add bonus.
+
+51
+00:03:14,039 --> 00:03:20,039
+Bonus miał być initem, czyli możemy sobie go tutaj przekazać intem.
+
+52
+00:03:20,039 --> 00:03:23,039
+Więc możemy go tutaj przekazać, określić jako int.
+
+53
+00:03:23,039 --> 00:03:26,039
+Czyli self bonus plus równa się bonus.
+
+54
+00:03:26,039 --> 00:03:31,039
+A druga rzecz, którą moglibyśmy zrobić, to moglibyśmy nadpisać metodę get salary.
+
+55
+00:03:31,039 --> 00:03:33,039
+Bo ona powinna działać inaczej.
+
+56
+00:03:33,039 --> 00:03:40,039
+To co powinna robić metoda get salary, to tak naprawdę powinna zwracać podwojony czas.
+
+57
+00:03:40,039 --> 00:03:45,039
+Skoro ma zwracać podwojony czas, to tak naprawdę możemy podwoić sobie wynik get salary.
+
+58
+00:03:45,039 --> 00:03:53,039
+Czyli return dwa razy self, i tu nie mogę zrobić self, tylko super get salary.
+
+59
+00:03:53,039 --> 00:03:58,039
+Plus te nasze wszystkie bonusy zebrane.
+
+60
+00:03:58,039 --> 00:04:05,039
+I nie pozostaje wtedy nic innego jak tylko to sprawdzić.
+
+61
+00:04:05,039 --> 00:04:07,039
+Więc robimy sobie test.
+
+62
+00:04:07,039 --> 00:04:10,039
+Test employee.
+
+63
+00:04:10,039 --> 00:04:17,039
+No i test manager.
+
+64
+00:04:17,039 --> 00:04:19,039
+Jak sprawdzić pracownika? No musimy go sobie stworzyć.
+
+65
+00:04:19,039 --> 00:04:23,039
+Czyli employee równa się employee.
+
+66
+00:04:23,039 --> 00:04:26,039
+Standardowo może być Jan Kowalski.
+
+67
+00:04:26,040 --> 00:04:34,040
+Nasz Jan Kowalski ma jeszcze mieć stawkę godzinową, niech ma 30 złotych za godzinę.
+
+68
+00:04:34,040 --> 00:04:41,040
+Przepracował add time 100 godzin.
+
+69
+00:04:41,040 --> 00:04:47,040
+Więc employee.pay salary, czyli get salary.
+
+70
+00:04:47,040 --> 00:04:51,040
+To powinno być 30 razy 100.
+
+71
+00:04:51,040 --> 00:04:54,040
+Tu jeszcze jedną rzecz można byłoby zrobić.
+
+72
+00:04:54,040 --> 00:04:55,040
+A mianowicie to get salary.
+
+73
+00:04:55,040 --> 00:04:58,040
+Mogłoby resetować nam czas.
+
+74
+00:04:58,040 --> 00:05:05,040
+No bo w tym momencie za każdym razem kiedy get salary jest wywoływane, tak naprawdę ten nasz czas się nie zeruje.
+
+75
+00:05:05,040 --> 00:05:06,040
+A to raczej błąd.
+
+76
+00:05:06,040 --> 00:05:09,040
+Więc moglibyśmy zrobić sobie zmienną salary.
+
+77
+00:05:09,040 --> 00:05:16,040
+Self time równa się zero return salary.
+
+78
+00:05:16,040 --> 00:05:18,040
+Coś takiego zrobić.
+
+79
+00:05:18,040 --> 00:05:22,040
+No i tak naprawdę to byłoby na tyle.
+
+80
+00:05:22,040 --> 00:05:23,040
+Pod względem employee.
+
+81
+00:05:23,040 --> 00:05:27,040
+Natomiast nasz pracownik drugi to jest manager.
+
+82
+00:05:27,040 --> 00:05:32,040
+Ten sam, bo to Jan Kowalski awansował.
+
+83
+00:05:32,040 --> 00:05:37,040
+Podniosło mu się do 40, ale i tak dostaje podwójnie, pamiętajmy.
+
+84
+00:05:37,040 --> 00:05:40,040
+Zarejestrujemy mu 100 godzin.
+
+85
+00:05:40,040 --> 00:05:43,040
+Czyli manager.
+
+86
+00:05:43,040 --> 00:05:48,040
+I manager add bonus 500 złotych.
+
+87
+00:05:48,040 --> 00:05:51,040
+W tym momencie jeżeli wykonamy manager.
+
+88
+00:05:51,040 --> 00:05:57,040
+.pay get salary.
+
+89
+00:05:57,040 --> 00:06:06,040
+No to powinniśmy otrzymać 40 razy 100 razy 2 plus 500.
+
+90
+00:06:06,040 --> 00:06:09,040
+Sprawdzamy czy testy nam zadziałały.
+
+91
+00:06:09,040 --> 00:06:12,040
+To test passed to warnings.
+
+92
+00:06:12,040 --> 00:06:14,040
+Co za warnings.
+
+93
+00:06:14,040 --> 00:06:19,040
+Dostajemy błąd, że expected none, but dziedziczenie test employee return true.
+
+94
+00:06:19,040 --> 00:06:20,040
+Which will be.
+
+95
+00:06:20,040 --> 00:06:22,040
+No bo.
+
+96
+00:06:22,040 --> 00:06:25,040
+Assert, a nie return.
+
+97
+00:06:25,040 --> 00:06:30,040
+Testy muszą mieć assert, a nie returna.
+
+98
+00:06:30,040 --> 00:06:33,040
+I teraz warningi zniknęły, a dwa testy przeszły.
+
+99
+00:06:33,040 --> 00:06:34,040
+Doskonale.
+
+100
+00:06:34,040 --> 00:06:38,040
+Bardzo dziękuję i zapraszam was do wyjątkowych wyjątków.
+
+101
+00:06:38,040 --> 00:06:39,040
+Chodźcie.

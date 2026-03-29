@@ -1,0 +1,399 @@
+1
+00:00:00,480 --> 00:00:03,879
+Kolejną rzeczą, którą bardzo chcę Ci pokazać jest slicing.
+
+2
+00:00:04,440 --> 00:00:08,519
+Slicing pozwala na to, żeby wycinać sobie fragmenty kolekcji.
+
+3
+00:00:09,160 --> 00:00:12,460
+I możemy też to zastosować właśnie do tupli, czyli do krotek.
+
+4
+00:00:13,099 --> 00:00:15,839
+Co oznacza, że jeżeli... bo tupla to krotka, pamiętajcie.
+
+5
+00:00:16,379 --> 00:00:19,000
+Czyli to oznacza, że możemy użyć dwukropka.
+
+6
+00:00:19,240 --> 00:00:21,980
+Pamiętasz ten dwukropek? Pokazywałem go w pierwszej pracy domowej.
+
+7
+00:00:22,339 --> 00:00:25,460
+I ten dwukropek będzie Ci też bardzo przypominał range'a.
+
+8
+00:00:25,660 --> 00:00:26,859
+To skojarzenie jest super.
+
+9
+00:00:26,859 --> 00:00:29,280
+Jeżeli Ty je masz, to je zostaw.
+
+10
+00:00:29,280 --> 00:00:31,120
+Ale przejdźmy do szczegółów.
+
+11
+00:00:31,240 --> 00:00:33,939
+Zobacz, wywołanie tego dwukropka wygląda tak.
+
+12
+00:00:34,420 --> 00:00:37,760
+Używamy nazwy zmiennej przechowującej tuple.
+
+13
+00:00:38,539 --> 00:00:40,859
+Następnie używamy nawiasów kwadratowych,
+
+14
+00:00:41,740 --> 00:00:44,320
+tak jak gdybyśmy chcieli wskazać po prostu jeden element.
+
+15
+00:00:44,840 --> 00:00:47,920
+Na przykład zerowy, pierwszy, drugi. Robiliśmy to.
+
+16
+00:00:48,560 --> 00:00:53,240
+Ale później po tym jednej wartości możesz napisać dwukropek
+
+17
+00:00:53,240 --> 00:00:54,859
+i przekazać też wartość końcową.
+
+18
+00:00:54,859 --> 00:00:57,439
+I to działa tak samo jak w range'u.
+
+19
+00:00:57,500 --> 00:00:59,260
+Czyli jeżeli mam listę imion,
+
+20
+00:00:59,280 --> 00:01:02,280
+i na przykład odwołam się od 0 do 2,
+
+21
+00:01:02,280 --> 00:01:06,280
+to on mi wtedy pobierze 0 i 1, czyli te dwa indeksy mi pobierze.
+
+22
+00:01:06,280 --> 00:01:08,280
+Bo to jest początek i koniec.
+
+23
+00:01:08,280 --> 00:01:10,280
+I mogę też dopisać krok.
+
+24
+00:01:10,280 --> 00:01:14,280
+W ten sposób będę mógł też określić, co którą wartość chcę pobierać.
+
+25
+00:01:14,280 --> 00:01:19,280
+Czyli na przykład 0, 52, 2
+
+26
+00:01:19,280 --> 00:01:23,280
+pobierze mi wszystkie elementy tupli, które są parzyste,
+
+27
+00:01:23,280 --> 00:01:28,280
+na parzystych indeksach, bo 0, 2, 4, 6, 8, do 50.
+
+28
+00:01:28,280 --> 00:01:33,280
+Żeby to dobrze zobrazować, stworzyłem sobie taką tuplę z owocami.
+
+29
+00:01:33,280 --> 00:01:35,280
+Znowu nazwałem ją fruits.
+
+30
+00:01:35,280 --> 00:01:40,280
+No i mam tutaj mango, czyli mam mango, brzoskwinie, lemonkę,
+
+31
+00:01:40,280 --> 00:01:44,280
+grejpfruta, jabłko, banana i wiśnie.
+
+32
+00:01:44,280 --> 00:01:50,280
+I teraz, jeżeli wywołam fruit od 0, to on mi wówczas zwróci element,
+
+33
+00:01:50,280 --> 00:01:55,280
+który znajduje się na pierwszym miejscu, czyli mango, czyli na zerowym indeksie.
+
+34
+00:01:55,280 --> 00:02:00,280
+Jeżeli wykonam fruits od 0, 2, 3, to pamiętaj,
+
+35
+00:02:00,280 --> 00:02:03,280
+początek, dwukropek, koniec.
+
+36
+00:02:03,280 --> 00:02:05,280
+Koniec się nie zawiera.
+
+37
+00:02:05,280 --> 00:02:08,280
+Ogólnie myślę, że jeżeli robisz notatki, a do tego serdecznie zachęcam,
+
+38
+00:02:08,280 --> 00:02:12,280
+to ten poprzedni slajd warto byłoby sobie do tych notatek założyć.
+
+39
+00:02:12,280 --> 00:02:15,280
+On nam się często będzie przydał.
+
+40
+00:02:15,280 --> 00:02:16,280
+Wracamy.
+
+41
+00:02:16,280 --> 00:02:19,280
+Fruits od 0, 2, 3.
+
+42
+00:02:19,280 --> 00:02:22,280
+On spowoduje, że pobiorą nam się tylko trzy pierwsze elementy.
+
+43
+00:02:22,280 --> 00:02:23,280
+Dlaczego?
+
+44
+00:02:23,280 --> 00:02:29,280
+Bo mamy z 0 do 3, ale 3 się nie uwzględnia, więc tak naprawdę 0, 1, 2.
+
+45
+00:02:29,280 --> 00:02:30,280
+Czujesz to?
+
+46
+00:02:30,280 --> 00:02:34,280
+0, 1, 2, no bo jest 3 po prawej stronie.
+
+47
+00:02:34,280 --> 00:02:37,280
+I pokazało nam się wtedy mango, peach oraz lemon.
+
+48
+00:02:37,280 --> 00:02:41,280
+To jest notabene to samo, co gdybyś zrobił dwukropek, 3.
+
+49
+00:02:41,280 --> 00:02:47,280
+Jeżeli wartość jest niepodana, ta początkowa, no to domyślnie jest to 0 od samego początku.
+
+50
+00:02:47,280 --> 00:02:50,280
+Tak jak było w randomie.
+
+51
+00:02:50,280 --> 00:02:53,280
+W ten sposób możemy pobrać właśnie trzy elementy.
+
+52
+00:02:53,280 --> 00:03:01,280
+Jeżeli chcemy przesunąć to pobieranie o 1 w prawo, to musisz pamiętać o tym, że wtedy trzeba dopisać jedynkę jako element początkowy.
+
+53
+00:03:01,280 --> 00:03:08,280
+Czyli fruits od 1, dwukropek i uwaga, ta jedynka też doszła do tego drugiego elementu, do czterech.
+
+54
+00:03:08,280 --> 00:03:14,280
+Czyli wtedy pobierzemy sobie element znajdujący się na pierwszej pozycji, drugiej, trzeciej oraz czwartej.
+
+55
+00:03:14,280 --> 00:03:18,280
+Ale przez to, że czwarta się nie uwzględnia, to tylko będą znowu trzy elementy.
+
+56
+00:03:18,280 --> 00:03:20,280
+Pierwszy, drugi i trzeci.
+
+57
+00:03:20,280 --> 00:03:22,280
+Czyli peach, lemon i grapefruit.
+
+58
+00:03:22,280 --> 00:03:25,280
+Dokładnie tak jak widzisz poniżej.
+
+59
+00:03:25,280 --> 00:03:31,280
+Od razu powiem, że ten slicing, jak ja się go uczyłem, to musiałem na moment wszystko wyłączyć.
+
+60
+00:03:31,280 --> 00:03:37,280
+Przestać słuchać tego człowieka, który gdzieś mi to tłumaczył, czy tej książki, kiedy to czytałem, czy siebie, jak to sobie analizowałem.
+
+61
+00:03:37,280 --> 00:03:40,280
+I po prostu przykład po przykładzie to przeanalizować.
+
+62
+00:03:40,280 --> 00:03:46,280
+Czyli fruits od 1 do 4 wyświetlił mi peach, lemon oraz grapefruit. Wszystko ok.
+
+63
+00:03:46,280 --> 00:03:48,280
+Idę niżej.
+
+64
+00:03:48,280 --> 00:03:50,280
+I mówiliśmy sobie o tym, że ten trzeci element, który jest maksymalnie po prawej, to jest ten element, który jest na trzeciej pozycji.
+
+65
+00:03:50,280 --> 00:03:52,280
+Czyli ten element, który jest na maksymalnie po prawej.
+
+66
+00:03:52,280 --> 00:03:54,280
+To jest step, czyli krok.
+
+67
+00:03:54,280 --> 00:03:56,280
+O tyle elementów będę chciał przeskoczyć.
+
+68
+00:03:56,280 --> 00:04:02,280
+Tutaj też warto wspomnieć o tym, że jeżeli druga wartość po dwukropku jest ominięta, to wtedy liczy od początku do końca.
+
+69
+00:04:02,280 --> 00:04:05,280
+I przykład widzisz właśnie w linii tutaj kolejnej.
+
+70
+00:04:05,280 --> 00:04:15,280
+A mianowicie wykonując fruits 2.2.2 spowodujesz, że będzie pobierał Ci od początku do końca co drugi element.
+
+71
+00:04:15,280 --> 00:04:18,279
+Czyli mango, peach ominął.
+
+72
+00:04:18,279 --> 00:04:20,279
+Lemon, grapefruit ominął.
+
+73
+00:04:20,279 --> 00:04:22,279
+Apple, banana pominął.
+
+74
+00:04:22,279 --> 00:04:24,279
+Cherry.
+
+75
+00:04:24,279 --> 00:04:28,279
+Czyli pobrał sobie te poszczególne elementy, przeomijając je po jednym.
+
+76
+00:04:28,279 --> 00:04:30,279
+No i jeszcze jedna rzecz.
+
+77
+00:04:30,279 --> 00:04:34,279
+Tutaj wspominaliśmy sobie o tym, że minus to jest zawsze od końca.
+
+78
+00:04:34,279 --> 00:04:37,279
+Pokazałem to w przykładzie tam w pracy domowej.
+
+79
+00:04:37,279 --> 00:04:39,279
+I o tym jeszcze sobie oczywiście powiemy.
+
+80
+00:04:39,279 --> 00:04:45,279
+Natomiast tu jeżeli ten krok jest ujemny, to wtedy wartości są właśnie pobierane od końca.
+
+81
+00:04:45,279 --> 00:04:46,279
+Zobacz.
+
+82
+00:04:46,279 --> 00:04:49,279
+Zrobiłem fruit od 2.2.-1.
+
+83
+00:04:49,279 --> 00:04:50,279
+I w efekcie dostałem cherry, banana, apple, grapefruit.
+
+84
+00:04:50,279 --> 00:04:51,279
+I w efekcie dostałem cherry, banana, apple, grapefruit.
+
+85
+00:04:51,279 --> 00:04:53,279
+Lemon, peach, mango.
+
+86
+00:04:53,279 --> 00:04:58,279
+Czyli wszystkie elementy, tylko że od końca.
+
+87
+00:04:58,279 --> 00:05:02,279
+Tutaj ja serdecznie zachęcam do tego, żeby stworzyć sobie taką tuplę.
+
+88
+00:05:02,279 --> 00:05:04,279
+I się tak nią pobawić, wiesz.
+
+89
+00:05:04,279 --> 00:05:06,279
+A jak wezmę 0,5?
+
+90
+00:05:06,279 --> 00:05:08,279
+A jak wezmę 0,5?
+
+91
+00:05:08,279 --> 00:05:10,279
+I tak dalej, i tak dalej.
+
+92
+00:05:10,279 --> 00:05:13,279
+Tu można spokojnie sobie stworzyć taką tuplę.
+
+93
+00:05:13,279 --> 00:05:15,279
+Powpisywać różne wartości.
+
+94
+00:05:15,279 --> 00:05:16,279
+Warto być ciekawym.
+
+95
+00:05:16,279 --> 00:05:17,279
+Jak to powiedział pan Steve Jobs.
+
+96
+00:05:17,279 --> 00:05:19,279
+Stay hungry, stay foolish.
+
+97
+00:05:19,279 --> 00:05:22,279
+To zachęcam do tego, żeby to stay hungry.
+
+98
+00:05:22,279 --> 00:05:23,279
+Ok?
+
+99
+00:05:23,279 --> 00:05:24,279
+Lecimy dalej.
+
+100
+00:05:24,279 --> 00:05:26,279
+Kolejna rzecz przed nami to ćwiczenie.

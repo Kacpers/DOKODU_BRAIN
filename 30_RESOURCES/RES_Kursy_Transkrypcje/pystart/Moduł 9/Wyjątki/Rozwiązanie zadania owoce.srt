@@ -1,0 +1,171 @@
+1
+00:00:00,000 --> 00:00:07,240
+Natomiast jeżeli chodzi o owoce, no to zadanie jest podobne, tylko że chcemy wyrzucić wyjątek, jeżeli owoc jest już na liście.
+
+2
+00:00:07,240 --> 00:00:13,300
+Czyli potrzebujemy mieć jakąś zmienną fruits i chcemy pytać użytkownika o nazwę 10 owoców.
+
+3
+00:00:13,439 --> 00:00:20,320
+Czyli for podkreślenie in range 10 dwukropek.
+
+4
+00:00:20,960 --> 00:00:27,240
+Fruit równa się input, podaj nazwę owoca dwukropek.
+
+5
+00:00:27,239 --> 00:00:32,420
+I teraz jeżeli owoc znajduje się na liście, to wyrzucamy też value error.
+
+6
+00:00:32,640 --> 00:00:47,219
+Czyli if fruit in fruits dwukropek, rice value error, owoc już był wymieniony.
+
+7
+00:00:47,219 --> 00:00:56,219
+I teraz jeżeli chcielibyśmy tutaj dodać to, no to możemy fruits append fruit.
+
+8
+00:00:57,240 --> 00:01:08,760
+W tym momencie, jeżeli wyrzucimy ten wyjątek, no to on nam wyświetli go jako niezłapany, więc musimy go sobie w dobry sposób obsłużyć, w dobry sposób złapać.
+
+9
+00:01:08,820 --> 00:01:25,820
+Tyle tylko, że jeżeli złapiemy go sobie i na przykład zrobilibyśmy tak, try accept value error, to to by powodowało, że on by nam łapał ten wyjątek, potrafiłby go obsłużyć, natomiast i tak próbowałby go dodać ten owoc.
+
+10
+00:01:25,820 --> 00:01:26,820
+Więc my musimy załatwić.
+
+11
+00:01:27,239 --> 00:01:30,839
+I my musimy założyć, że to też musi być w ramach tego.
+
+12
+00:01:31,140 --> 00:01:39,280
+I podczas pracy z wyjątkami, ta umiejętność znajdowania tego fragmentu, który ma być ujęty w ramach try accept jest niezwykle ważna.
+
+13
+00:01:39,759 --> 00:01:45,219
+Więc w tym momencie print error i tu możemy sobie dorzucić s error.
+
+14
+00:01:45,739 --> 00:01:46,939
+I zobaczmy co się wtedy stanie.
+
+15
+00:01:48,939 --> 00:01:49,659
+Python.
+
+16
+00:01:49,659 --> 00:01:53,739
+I zrobimy sobie owoce py.
+
+17
+00:01:54,739 --> 00:01:55,579
+Banan.
+
+18
+00:01:57,239 --> 00:02:04,439
+I jeżeli raz jeszcze wpiszę banana, to już dostanę informację, owoc już był wymieniony.
+
+19
+00:02:04,979 --> 00:02:14,019
+To spowoduje, oczywiście z racji tego, że używamy fora, to to spowoduje, że w tym momencie on nam tego fora zliczy, tak?
+
+20
+00:02:14,079 --> 00:02:22,120
+On przejdzie przez ten owoc i potraktuje go w taki sposób, jakby mimo tego, że banan został podany drugi raz, no to i tak będzie on zliczany.
+
+21
+00:02:22,120 --> 00:02:27,120
+Jeżeli chcielibyśmy go nie zliczać, to wtedy trzeba byłoby zmienić tą nadpędy.
+
+22
+00:02:27,240 --> 00:02:28,640
+Czyli odmienić tą nadpętę na pętlę while.
+
+23
+00:02:28,960 --> 00:02:31,460
+Więc taka jest różnica, musimy o tym pamiętać.
+
+24
+00:02:32,100 --> 00:02:45,760
+Czyli while dopóki długość owoców, tej listy z owocami jest mniejsza od 10, dwukropek, tak długo wykonuj to pytanie.
+
+25
+00:02:45,760 --> 00:02:49,520
+I w tym momencie już będę musiał mu podać 10 owoców.
+
+26
+00:02:49,740 --> 00:02:55,620
+Czyli banan, apple, mango, kiwi.
+
+27
+00:02:56,580 --> 00:02:56,760
+Co jest?
+
+28
+00:02:57,240 --> 00:03:05,060
+Jeszcze peach, pineapple, pear i inne owoce.
+
+29
+00:03:06,820 --> 00:03:09,000
+Jak podam mu raz jeszcze, to już mango było.
+
+30
+00:03:09,200 --> 00:03:10,740
+Myślimy, jakie jeszcze owoce znamy?
+
+31
+00:03:11,180 --> 00:03:14,160
+Taka wychodzi nam z tego dodatkowa nauka języka angielskiego, nie?
+
+32
+00:03:14,560 --> 00:03:15,000
+Okej?
+
+33
+00:03:15,280 --> 00:03:18,980
+Po cięciu skorzystałem z jakiejś listy w internecie, żeby też się nie wygłupiać.
+
+34
+00:03:19,379 --> 00:03:20,760
+Jak widać jest ich 10.
+
+35
+00:03:20,760 --> 00:03:22,640
+Nie wiem, czy awokado traktować jako...
+
+36
+00:03:22,640 --> 00:03:23,180
+Nieważne.
+
+37
+00:03:23,480 --> 00:03:24,060
+Jest okej.
+
+38
+00:03:24,320 --> 00:03:24,620
+Działa.
+
+39
+00:03:25,240 --> 00:03:26,600
+Wyjątek też zadziałał.
+
+40
+00:03:26,599 --> 00:03:27,379
+Jest obsłużony.
+
+41
+00:03:27,479 --> 00:03:34,419
+Oczywiście, jeżeli byłby na zewnątrz try-except tego while'a, no to pierwszy owoc błędny już by nam to zakończył.
+
+42
+00:03:34,479 --> 00:03:38,099
+I to jest właśnie ta różnica, na której mi niezwykle zależy, żebyśmy ją rozumieli.
+
+43
+00:03:38,620 --> 00:03:39,099
+Idziemy dalej.

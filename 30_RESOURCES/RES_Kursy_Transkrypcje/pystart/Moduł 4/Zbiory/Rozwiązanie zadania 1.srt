@@ -1,0 +1,311 @@
+1
+00:00:00,000 --> 00:00:04,379
+No to co? Mamy do zrobienia taki projekt, taką małą grę.
+
+2
+00:00:04,799 --> 00:00:09,140
+W grze komputerowej gracz może zdobywać różne przedmioty, które są przechowywane w zbiorze.
+
+3
+00:00:09,580 --> 00:00:12,660
+Czyli gracz będzie przechowywał te przedmioty w zbiorze.
+
+4
+00:00:13,179 --> 00:00:16,500
+Napisz funkcję, która sprawdzi czy gracz posiada już określony przedmiot
+
+5
+00:00:16,500 --> 00:00:19,600
+i co się stanie, gdy drugi raz dodasz ten sam przedmiot, produkt.
+
+6
+00:00:20,019 --> 00:00:25,379
+Czyli mamy taką sytuację, że są jakieś przedmioty gracza, czyli player items.
+
+7
+00:00:27,219 --> 00:00:28,379
+I to ma być pusty zbiór.
+
+8
+00:00:28,379 --> 00:00:31,320
+Przypominam, pusty zbiór zawsze za pomocą set.
+
+9
+00:00:31,919 --> 00:00:36,320
+Następnie będziemy chcieli przejść sobie przez jakąś pętlę 10 razy,
+
+10
+00:00:36,399 --> 00:00:41,159
+tam określoną liczbę razy i sprawdzić i dodać jakiś przedmiot do tego zbioru.
+
+11
+00:00:41,340 --> 00:00:45,439
+Czyli for znak podkreślenia in range 10.
+
+12
+00:00:46,120 --> 00:00:53,039
+No i tutaj moglibyśmy teraz użytkownika zapytać, co chcesz dodać do swojego zasobnika.
+
+13
+00:00:53,039 --> 00:00:58,039
+Natomiast jeżeli wiemy, że te przedmioty są konkretne,
+
+14
+00:00:58,380 --> 00:01:01,840
+no to moglibyśmy na przykład sobie stworzyć jakąś listę przedmiotów,
+
+15
+00:01:02,300 --> 00:01:05,820
+czyli items, ogólnie rzecz biorąc, taką listę rzeczy, które są w grze.
+
+16
+00:01:06,280 --> 00:01:10,980
+Czemu listę? Ponieważ będę chciał za chwilę wybierać losowy element z tej listy,
+
+17
+00:01:11,400 --> 00:01:14,159
+a z seta losowego elementu nie da się pobrać.
+
+18
+00:01:14,599 --> 00:01:21,340
+Czyli items, no niech to będzie latarka, linka, kluczyk,
+
+19
+00:01:21,400 --> 00:01:24,159
+jakieś tam losowe przedmioty, które w grze można znaleźć.
+
+20
+00:01:24,159 --> 00:01:26,719
+To jeszcze można znaleźć jakąś broń, niech to będzie miecz,
+
+21
+00:01:26,719 --> 00:01:30,379
+niech będzie jeszcze jakaś tam, nie wiem, wskazówka.
+
+22
+00:01:31,379 --> 00:01:38,379
+I teraz, żeby wybrać losowy element, potrzebujemy from random import choice wykonać.
+
+23
+00:01:38,379 --> 00:01:42,379
+I w ten sposób, żeby pobrać sobie ten losowy przedmiot,
+
+24
+00:01:42,379 --> 00:01:47,379
+możemy napisać item równa się choice od items.
+
+25
+00:01:47,379 --> 00:01:55,379
+Na chwilę obecną powinno nam się wyświetlić 10 losowych przedmiotów pochodzących z tej naszej listy items.
+
+26
+00:01:55,379 --> 00:01:56,420
+I teraz możemy sobie wybrać losowy element, który jest w grze.
+
+27
+00:01:56,420 --> 00:01:56,439
+I teraz możemy sobie wybrać losowy element, który jest w grze.
+
+28
+00:01:56,439 --> 00:01:56,519
+I teraz możemy sobie wybrać losowy element, który jest w grze.
+
+29
+00:01:56,519 --> 00:01:56,539
+I teraz możemy sobie wybrać losowy element, który jest w grze.
+
+30
+00:01:56,540 --> 00:01:58,900
+I możemy sobie te przedmioty po prostu wyświetlić.
+
+31
+00:01:59,000 --> 00:02:03,800
+Czyli print znalazłem item.
+
+32
+00:02:05,240 --> 00:02:09,620
+Teraz, jeżeli to sobie odpalę, czyli zrobię python zbiory zadanie,
+
+33
+00:02:10,040 --> 00:02:15,680
+no to mi się pokazuje, właśnie znalazłem wskazówka, znalazłem linka, znalazłem kluczyk.
+
+34
+00:02:15,780 --> 00:02:16,540
+I widzicie, nie?
+
+35
+00:02:17,099 --> 00:02:20,280
+I teraz, jeżeli to udało się zrobić, to możemy sobie sprawdzić,
+
+36
+00:02:20,280 --> 00:02:24,960
+co się stanie, jeżeli spróbujemy dodawać te elementy do zbioru.
+
+37
+00:02:25,400 --> 00:02:26,280
+Czyli zamiast wykonywać...
+
+38
+00:02:26,539 --> 00:02:33,620
+Zamiast wykonywać znalazłem item, będziemy chcieli napisać if item in player items,
+
+39
+00:02:33,879 --> 00:02:40,180
+dwukropek, to wtedy wypisz komunikat, ten przedmiot już zebrałem.
+
+40
+00:02:43,359 --> 00:02:47,699
+I tak czy siak, możemy nawet zrobić najpierw znalazłem, żeby miało to sens.
+
+41
+00:02:47,780 --> 00:02:50,199
+Znalazłem przedmiot, potem ten przedmiot już zebrałem.
+
+42
+00:02:50,680 --> 00:02:54,159
+I wtedy możemy dodać sobie ten przedmiot do naszego zasobnika,
+
+43
+00:02:54,159 --> 00:02:56,159
+czyli player items.item.
+
+44
+00:02:56,539 --> 00:02:59,280
+Add, bo to jest zbiór, item.
+
+45
+00:03:00,819 --> 00:03:06,620
+I na koniec powinniśmy wypisać wszystkie te przedmioty, czyli print player items.
+
+46
+00:03:07,299 --> 00:03:10,739
+I wtedy stanie się rzecz, o której sobie już mówiliśmy przy okazji zbiorów,
+
+47
+00:03:10,819 --> 00:03:15,539
+a mianowicie wywołanie tego kodu spowoduje, zobaczcie, że pojawi nam się...
+
+48
+00:03:15,539 --> 00:03:18,000
+Może zrobię więcej miejsca, odpalę teraz jeszcze.
+
+49
+00:03:18,259 --> 00:03:19,560
+O, pojawi nam się tak.
+
+50
+00:03:19,639 --> 00:03:22,680
+Znalazłem latarka, znalazłem miecz, znalazłem wskazówka, kluczyk, kluczyk.
+
+51
+00:03:22,680 --> 00:03:26,419
+Ten przedmiot już zebrałem, no bo to był kluczyk.
+
+52
+00:03:26,539 --> 00:03:27,939
+Drugi raz się pokazał, nie?
+
+53
+00:03:28,060 --> 00:03:29,859
+Potem pojawiła się linka, znowu kluczyk.
+
+54
+00:03:29,959 --> 00:03:34,479
+I tak 10 razy przechodził nam przez te różne przedmioty.
+
+55
+00:03:35,079 --> 00:03:38,340
+Natomiast w momencie, w którym zakończył się nam nasz ten przebieg,
+
+56
+00:03:38,780 --> 00:03:42,099
+to pojawiło nam się miecz, linka, kluczyk, wskazówka i latarka.
+
+57
+00:03:42,280 --> 00:03:44,859
+Czyli tak naprawdę chyba wszystkie przedmioty udało się zebrać, co?
+
+58
+00:03:45,620 --> 00:03:47,399
+Raz, dwa, trzy, cztery, pięć.
+
+59
+00:03:47,539 --> 00:03:49,019
+Jeden, dwa, trzy, cztery, pięć.
+
+60
+00:03:49,079 --> 00:03:52,099
+Wychodzi na to, że wszystkie przedmioty ten nasz gracz zebrał.
+
+61
+00:03:52,099 --> 00:03:56,500
+Natomiast mimo tego, że zebrałem na przykład dwie linki,
+
+62
+00:03:56,539 --> 00:03:59,879
+czy dwa kluczyki, to i tak przechowuję tylko jeden,
+
+63
+00:04:00,139 --> 00:04:03,719
+z tego względu, że zbiór nie uwzględnia żadnych duplikatów.
+
+64
+00:04:04,799 --> 00:04:08,959
+Po prostu kolejne wartości nie są do tego zbioru dodawane.
+
+65
+00:04:09,500 --> 00:04:11,319
+Jak tak patrzę na tę grę, to sobie przypomniałem,
+
+66
+00:04:11,459 --> 00:04:13,500
+jak kiedyś grałem w Maddy tak zwane.
+
+67
+00:04:13,620 --> 00:04:16,920
+Kto nie wie, czym jest Maddy, proponuję wpisać Mood w Google
+
+68
+00:04:16,920 --> 00:04:19,279
+i nazwę na to Mood Arcadia.
+
+69
+00:04:19,819 --> 00:04:22,639
+Ja grałem w taką grę, która nazywała się Wad Gern wtedy.
+
+70
+00:04:22,939 --> 00:04:25,199
+To była gra w takim świecie Wiedźmina.
+
+71
+00:04:25,199 --> 00:04:26,519
+I właśnie cała gra wyposażyła się w to,
+
+72
+00:04:26,519 --> 00:04:27,500
+że wyglądała w ten sposób.
+
+73
+00:04:27,919 --> 00:04:29,620
+Znalazłem kluczyk. Czy chcesz go wziąć?
+
+74
+00:04:30,060 --> 00:04:32,659
+Wciśnij tak albo nie, żeby go wziąć, albo żeby go nie wziąć.
+
+75
+00:04:32,979 --> 00:04:35,539
+Więc w ten sposób właśnie to nam grało.
+
+76
+00:04:36,060 --> 00:04:39,199
+Dobra, nie przedłużam opowieściami, skrypty.
+
+77
+00:04:39,339 --> 00:04:41,359
+Przechodzimy do zadania drugiego.
+
+78
+00:04:41,659 --> 00:04:42,000
+Chodźcie.

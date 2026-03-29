@@ -1,0 +1,487 @@
+1
+00:00:00,000 --> 00:00:04,839
+No i nadszedł bardzo ważny moment naszego kursu, ponieważ wchodzimy sobie w temat funkcji.
+
+2
+00:00:05,500 --> 00:00:09,980
+Czym są funkcje, do czego służą, jak się je deklaruje, to wszystko już teraz.
+
+3
+00:00:10,439 --> 00:00:15,380
+Generalnie jeżeli chodzi o funkcje, to mówi się o tym, że funkcje pomagają uporządkować kod
+
+4
+00:00:15,380 --> 00:00:20,359
+i staje się tak dlatego, że poszczególne bloki kodu, fragmenty, dostają swoje nazwy.
+
+5
+00:00:21,019 --> 00:00:24,719
+To ma też szereg innych konsekwencji i innych zalet, ale generalnie chodzi o to,
+
+6
+00:00:24,719 --> 00:00:29,859
+że jeżeli masz fragment kodu, który służy do czegoś, to możesz nadać mu jakąś nazwę.
+
+7
+00:00:29,859 --> 00:00:33,780
+Na przykład ten fragment liczy wynagrodzenie, ten fragment liczy podatki,
+
+8
+00:00:33,899 --> 00:00:38,379
+ten fragment oblicza należną kwotę, ten fragment coś dodaje do bazy danych,
+
+9
+00:00:38,480 --> 00:00:42,980
+ten fragment pracuje z plikiem, czyli nazywamy sobie poszczególne czynności,
+
+10
+00:00:43,140 --> 00:00:45,719
+które dzieją się w poszczególnych kawałkach kodu.
+
+11
+00:00:46,340 --> 00:00:50,179
+Dzięki temu unikamy też powtórzeń i kod staje się reużywalny.
+
+12
+00:00:50,260 --> 00:00:51,760
+Co to znaczy, że unikamy powtórzeń?
+
+13
+00:00:51,760 --> 00:00:58,000
+To znaczy, że jeżeli sobie powiem, ten kawałek kodu odpowiada za dopisywanie czegoś do pliku tekstowego
+
+14
+00:00:58,000 --> 00:00:59,760
+czy pracę z plikiem tekstowym.
+
+15
+00:00:59,859 --> 00:01:01,659
+Czy wykonywanie jakiejś operacji.
+
+16
+00:01:01,659 --> 00:01:05,359
+To kiedy ponownie będę chciał wykonać taką samą operację,
+
+17
+00:01:05,359 --> 00:01:10,280
+nie będę musiał ponownie wstawiać tego kodu niżej, tylko mogę powiedzieć,
+
+18
+00:01:10,280 --> 00:01:15,239
+a miałem taki fragment kodu, który za to odpowiadał, wykorzystam go tutaj.
+
+19
+00:01:15,239 --> 00:01:20,700
+Czyli posłużę się tą nazwą, przekażę do niego określone dane, a on mi się wykona.
+
+20
+00:01:20,700 --> 00:01:23,099
+Z funkcjami jest trochę tak jak w matematyce.
+
+21
+00:01:23,099 --> 00:01:29,420
+Jeżeli używamy sinusa, cosinusa, tangensa, cotangensa, to dopiero gdzieś tam na dalszym etapie nauki
+
+22
+00:01:29,420 --> 00:01:34,420
+dowiadujemy się, jak te funkcje działają i dlaczego zwracają takie, a nie inne wyniki.
+
+23
+00:01:34,420 --> 00:01:39,260
+Natomiast w przypadku programowania też jest bardzo podobnie i też o tym mówię,
+
+24
+00:01:39,260 --> 00:01:43,740
+że jeżeli chodzi o unikanie tych powtórzeń, o nazywanie tych bloków, to też jest to duża zaleta,
+
+25
+00:01:43,740 --> 00:01:48,180
+że kiedy taki fragment kodu jest nazwany, to ja nie muszę nawet się zastanawiać, co w nim jest.
+
+26
+00:01:48,180 --> 00:01:55,700
+Wiem tylko, że on działa, wykonuje swoją rolę, wykonuje to, co ma robić, więc wszystko jest piękne i kolorowe.
+
+27
+00:01:55,700 --> 00:01:58,420
+Dlatego też funkcje są bardzo wartościowe.
+
+28
+00:01:58,420 --> 00:01:58,920
+Po trzecie.
+
+29
+00:01:58,920 --> 00:01:59,219
+Możemy wspomnieć, że w przypadku programowania,
+
+30
+00:01:59,219 --> 00:01:59,320
+Możemy wspomnieć, że w przypadku programowania,
+
+31
+00:01:59,320 --> 00:01:59,400
+Możemy wspomnieć, że w przypadku programowania,
+
+32
+00:01:59,400 --> 00:02:01,000
+można spółdzielić kod między projektami.
+
+33
+00:02:01,300 --> 00:02:05,340
+Czyli jeżeli przygotujesz sobie takie funkcje, możesz te funkcje zapisać w jakimś pliku
+
+34
+00:02:05,340 --> 00:02:11,439
+i potem, to co też pokażemy sobie w tym module, łatwo można takie funkcje przenieść z pliku do pliku,
+
+35
+00:02:11,599 --> 00:02:15,520
+z projektu do projektu, bez potrzeby kopiowania i wklejania całej funkcji.
+
+36
+00:02:16,040 --> 00:02:20,099
+Dzięki temu, jeżeli ta funkcja zyska jakąś poprawkę, coś w niej naprawisz, rozszerzysz,
+
+37
+00:02:20,400 --> 00:02:24,020
+no to między tymi projektami też będzie ta zmiana widoczna.
+
+38
+00:02:24,640 --> 00:02:25,599
+Dobrze zrozumiałeś.
+
+39
+00:02:25,599 --> 00:02:29,020
+Czyli może być tak, że masz jeden projekt, w którym jest dla klienta,
+
+40
+00:02:29,400 --> 00:02:33,140
+a drugi projekt dla klienta B, trzeci projekt dla klienta C.
+
+41
+00:02:33,599 --> 00:02:38,780
+W każdym z tych projektów potrzebujesz zbioru funkcji dotyczących, nie wiem, finansów, właśnie jak wspomniałem.
+
+42
+00:02:39,340 --> 00:02:46,300
+Więc możesz zrobić tak, żeby zmiana, którą zrobisz, była propagowana do wszystkich projektów.
+
+43
+00:02:47,400 --> 00:02:49,939
+Kolejna rzecz, to trudniej wejść sobie w drogę w zespole.
+
+44
+00:02:50,360 --> 00:02:53,980
+Może się wydawać, że jest to śmieszne, ale jednak jest to bardzo irytujące,
+
+45
+00:02:53,980 --> 00:02:59,240
+kiedy okazuje się, że twój kod przestaje działać, dlatego że ktoś coś dodał i nagle,
+
+46
+00:02:59,240 --> 00:03:04,860
+jakaś zmienna, której do tej pory używałeś, zyskała inną wartość i wszystko zaczęło się sypać.
+
+47
+00:03:05,159 --> 00:03:08,939
+Jest to sytuacja, której bardzo dawno nie miałem, właśnie dlatego, że używam funkcji,
+
+48
+00:03:08,939 --> 00:03:11,780
+używam też obiektów, o których sobie jeszcze w przyszłości porozmawiamy
+
+49
+00:03:11,780 --> 00:03:17,660
+i dzięki temu nasz kod jest zamknięty w jakiejś nazwie, zamknięty też w jakichś plikach,
+
+50
+00:03:18,000 --> 00:03:20,379
+no i dzięki temu trudniej wejść sobie w drogę.
+
+51
+00:03:21,180 --> 00:03:25,240
+Oczywiście tutaj trzeba bardzo uważać na nazwy i o tych nazwach też zaraz porozmawiamy,
+
+52
+00:03:25,240 --> 00:03:29,020
+bo nazwy naszych funkcji nie mogą być takie same jak nazwy funkcji w Pythonie
+
+53
+00:03:29,240 --> 00:03:30,240
+oraz nazwy zmiennych.
+
+54
+00:03:31,040 --> 00:03:33,540
+Kod staje się możliwy do automatycznego testowania.
+
+55
+00:03:33,540 --> 00:03:34,840
+To też jest bardzo wygodne.
+
+56
+00:03:35,540 --> 00:03:41,240
+Wyobraź sobie sytuację, o której mówiliśmy, czyli nazwałeś fragment kodu w jakiś konkretny sposób.
+
+57
+00:03:41,240 --> 00:03:46,439
+Wiesz, że ten kod ma swoją nazwę, wiesz, że kiedy przekażesz do niego takie wartości,
+
+58
+00:03:46,439 --> 00:03:48,040
+to powinieneś dostać taki wynik.
+
+59
+00:03:48,439 --> 00:03:52,240
+I teraz mogłoby się okazać, że w momencie, w którym napiszesz taki kod,
+
+60
+00:03:52,740 --> 00:03:55,240
+przekazujesz te wartości, dostajesz wynik, wszystko działa,
+
+61
+00:03:55,540 --> 00:03:58,340
+ale po jakimś czasie klient przychodzi do ciebie z jakimś wymaganiem,
+
+62
+00:03:58,340 --> 00:03:59,840
+coś musisz zmienić w tym kodzie.
+
+63
+00:04:00,340 --> 00:04:03,240
+I teraz chciałbyś mieć pewność, czy chciałabyś mieć pewność,
+
+64
+00:04:03,240 --> 00:04:07,039
+że to, co udało się zrobić wcześniej, będzie dalej działało.
+
+65
+00:04:07,140 --> 00:04:11,840
+Czyli mimo tej zmiany ta funkcjonalność, która już działała, będzie nadal działała.
+
+66
+00:04:12,240 --> 00:04:15,340
+I tu też wejdziemy sobie już niedługo w temat testów,
+
+67
+00:04:15,640 --> 00:04:18,439
+gdzie napiszemy sobie takie testy, które będą właśnie sprawdzały,
+
+68
+00:04:18,639 --> 00:04:22,139
+czy nasze funkcje działają dobrze i zwracają odpowiednie wyniki.
+
+69
+00:04:22,740 --> 00:04:23,639
+No i ostatnia rzecz.
+
+70
+00:04:24,639 --> 00:04:28,139
+A propos tego, o czym mówiłem, że fragment kodu może być wydzielony do funkcji,
+
+71
+00:04:28,339 --> 00:04:32,299
+czy też piszesz kod już myśląc, mając w głowie ten podział na funkcje,
+
+72
+00:04:32,859 --> 00:04:36,439
+staraj się zawsze robić tak, żeby funkcja robiła tylko jedną rzecz.
+
+73
+00:04:36,899 --> 00:04:39,459
+Czyli jeżeli masz funkcję, która operuje na pliku,
+
+74
+00:04:39,679 --> 00:04:41,779
+to niech ona operuje na tym pliku i niech coś zapisuje.
+
+75
+00:04:42,239 --> 00:04:44,239
+Ale jeżeli chciałbyś pójść o krok wyżej,
+
+76
+00:04:44,719 --> 00:04:47,739
+czy chcielibyście pójść o krok wyżej i na przykład zrobić kod,
+
+77
+00:04:48,219 --> 00:04:53,359
+przygotować program, który będzie generował jakiś plik z jakąś konkretną zawartością
+
+78
+00:04:53,359 --> 00:04:55,639
+i żeby ten plik stworzyć, trzeba byłoby coś policzyć,
+
+79
+00:04:55,639 --> 00:04:58,159
+to zamykanie całego tego kodu w jednej funkcji,
+
+80
+00:04:58,339 --> 00:04:58,799
+błędem.
+
+81
+00:04:59,239 --> 00:05:03,439
+Powinniśmy starać się porozdzielać ten kod na mniejsze funkcje,
+
+82
+00:05:03,819 --> 00:05:06,279
+tak żeby też mniejsze funkcje można byłoby wykorzystywać.
+
+83
+00:05:06,739 --> 00:05:07,179
+Przykład.
+
+84
+00:05:07,679 --> 00:05:10,679
+Wyobraź sobie, że masz policzyć wynagrodzenie pracowników,
+
+85
+00:05:10,779 --> 00:05:13,179
+czyli pracownicy mają liczbę godzin, stawkę za godzinę,
+
+86
+00:05:13,259 --> 00:05:14,819
+jakieś warunki dotyczące premii
+
+87
+00:05:14,819 --> 00:05:18,500
+i później masz zapisać ten wynik w pliku jakimś excelowym.
+
+88
+00:05:19,559 --> 00:05:22,939
+Jeżeli cały ten kod zostanie zamknięty w jednej funkcji,
+
+89
+00:05:22,939 --> 00:05:26,179
+no to zamkniesz się na różne możliwości.
+
+90
+00:05:26,359 --> 00:05:27,239
+Jakie te możliwości?
+
+91
+00:05:27,739 --> 00:05:28,219
+Wyobraź sobie,
+
+92
+00:05:28,219 --> 00:05:28,319
+że ten kod jest zamknięty w jednej funkcji,
+
+93
+00:05:28,319 --> 00:05:30,279
+to potrzebujesz tego samego obliczenia,
+
+94
+00:05:30,639 --> 00:05:34,459
+te same warunki dotyczące wyliczania tego wynagrodzenia
+
+95
+00:05:34,459 --> 00:05:36,560
+gdzieś pokazać użytkownikowi na stronie.
+
+96
+00:05:37,159 --> 00:05:40,699
+No to skoro tamten kod odpowiada za zapisywanie do pliku
+
+97
+00:05:40,699 --> 00:05:43,639
+oraz obliczanie tego pracownika,
+
+98
+00:05:44,159 --> 00:05:47,480
+a teraz przygotowujesz kod, który ma wyświetlać te dane same na stronie,
+
+99
+00:05:47,980 --> 00:05:50,399
+no to musiałbyś powtórzyć dużą część kodu
+
+100
+00:05:50,399 --> 00:05:52,219
+zawartą w jednej funkcji.
+
+101
+00:05:52,219 --> 00:05:56,079
+Więc dużo prościej jest po prostu ten kod wydzielić jeszcze do osobnej,
+
+102
+00:05:56,620 --> 00:05:58,199
+mieć funkcję, która jedna oblicza
+
+103
+00:05:58,199 --> 00:05:59,740
+wylicza pensję pracownika,
+
+104
+00:06:00,060 --> 00:06:01,719
+druga tworzy plik tam CSV,
+
+105
+00:06:01,959 --> 00:06:03,979
+czy tam jakiś inny i zapisuje do niego zawartość,
+
+106
+00:06:04,439 --> 00:06:08,319
+trzecia korzysta z funkcji tej pierwszej,
+
+107
+00:06:08,519 --> 00:06:11,899
+tak jak te dwie funkcje korzystają z tej u góry
+
+108
+00:06:11,899 --> 00:06:13,980
+i ona wyświetla te dane na stronie.
+
+109
+00:06:14,539 --> 00:06:17,120
+I tak tworzy się takie drzewko różnych funkcji.
+
+110
+00:06:17,659 --> 00:06:19,079
+I zwróć uwagę, że w twoim kodzie,
+
+111
+00:06:19,159 --> 00:06:20,300
+który do tej pory pisałeś,
+
+112
+00:06:20,379 --> 00:06:21,560
+też już było wiele funkcji.
+
+113
+00:06:21,659 --> 00:06:23,500
+Była funkcja sum, była funkcja len,
+
+114
+00:06:23,500 --> 00:06:26,560
+była funkcja print,
+
+115
+00:06:26,879 --> 00:06:28,120
+była funkcja input,
+
+116
+00:06:28,199 --> 00:06:29,699
+tych funkcji było naprawdę dużo.
+
+117
+00:06:30,740 --> 00:06:32,659
+Często też tutaj tworząc funkcję
+
+118
+00:06:32,659 --> 00:06:34,219
+będziesz korzystał nadal z tych funkcji.
+
+119
+00:06:34,319 --> 00:06:36,060
+Czyli tak naprawdę nie ma problemu,
+
+120
+00:06:36,159 --> 00:06:38,000
+żeby wykorzystywać funkcje w funkcjach,
+
+121
+00:06:38,439 --> 00:06:41,300
+po prostu dzięki temu czyniąc twój kod lepszym,
+
+122
+00:06:41,879 --> 00:06:44,399
+bardziej czytelnym i lepiej poukładanym.

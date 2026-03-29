@@ -1,0 +1,255 @@
+1
+00:00:00,000 --> 00:00:11,359
+Odpowiedzialność zazwyczaj oznacza, że ktoś jest odpowiedzialny za coś. Odpowiedzialny, czyli podejmuje się czegoś i to realizuje.
+
+2
+00:00:11,359 --> 00:00:36,600
+I w programowaniu jest dokładnie tak samo. Czyli w momencie, w którym tworzymy sobie na przykład fakturę i chcielibyśmy stworzyć obiekt faktury, no to moglibyśmy tak naprawdę od razu stworzyć sobie, tak jak wspominałem wcześniej, nazwisko wystawcy, nazwa firmy wystawcy, adres wystawcy i dużo takich właściwości.
+
+3
+00:00:36,600 --> 00:00:38,980
+I lecieć z tym po prostu hen, hen, hen, hen, hen.
+
+4
+00:00:39,480 --> 00:00:40,600
+Okazałoby się, że na całej fakturze mielibyśmy...
+
+5
+00:00:41,359 --> 00:00:49,340
+No po prostu z pięćdziesiąt, może sto właściwości i wszystko byłoby bardzo przez to zaciemnione.
+
+6
+00:00:50,000 --> 00:00:57,100
+Więc żeby osiągnąć stan, w którym ten kod będzie czytelniejszy, warto byłoby zacząć sobie to dzielić.
+
+7
+00:00:57,359 --> 00:01:09,879
+Na przykład, tak jak wspominałem, zamiast robić mnóstwo pól, mnóstwo właściwości odpowiedzialnych za wystawcę i odbiorcę, lepiej byłoby stworzyć sobie obiekt.
+
+8
+00:01:10,379 --> 00:01:11,060
+I...
+
+9
+00:01:11,060 --> 00:01:15,760
+Odpowiedzieć, że to ma być klasa wystawcy, to ma być klasa odbiorcy.
+
+10
+00:01:16,680 --> 00:01:27,219
+Lepiej byłoby stworzyć sobie odpowiednią właściwość, nazwać ją items, żeby wiedzieć, że na tej fakturze mają być odpowiednie elementy.
+
+11
+00:01:27,219 --> 00:01:38,260
+I żeby to items też nie było słownikiem, tylko też było jakąś klasą, czyli obiektem, na przykład reprezentującym nazwę.
+
+12
+00:01:39,400 --> 00:01:41,040
+I tu mamy kwestię scen.
+
+13
+00:01:41,060 --> 00:01:59,060
+No bo cena może być pomniejszona o rabat, może być zwykła cena, możemy mieć cenę brutto, cenę netto, czyli jeszcze możemy mieć stawkę VAT, czyli ta komórka z ceną też mogłaby być kolejnym osobnym obiektem.
+
+14
+00:01:59,060 --> 00:02:05,079
+I jeżeli tak sobie o tym pomyślimy, to mniej więcej możemy sobie wymodelować coś.
+
+15
+00:02:05,200 --> 00:02:08,300
+Oczywiście możemy też przesadzić, nie warto aż tak bardzo przesadzać.
+
+16
+00:02:08,439 --> 00:02:11,060
+Potem zawsze może na część kodu z refaktorową.
+
+17
+00:02:11,060 --> 00:02:13,560
+I dorzucić sobie nowy obiekt w jakimś miejscu.
+
+18
+00:02:14,099 --> 00:02:20,180
+Nie warto robić tak zwanego przedwczesnego, przedwczesnej optymalizacji, nie wiadomo ile obiektów tworzyć.
+
+19
+00:02:20,560 --> 00:02:22,379
+Starajmy się po prostu pisać kod czytelniej.
+
+20
+00:02:23,159 --> 00:02:37,740
+Natomiast, jeżeli okaże się, że będziemy później chcieli dodać jakąś metodę, to też warto się zastanowić, gdzie taka metoda powinna być.
+
+21
+00:02:37,740 --> 00:02:41,000
+I czy może te metody mogą się jakoś ze sobą łączyć.
+
+22
+00:02:41,060 --> 00:02:42,060
+O co chodzi?
+
+23
+00:02:42,060 --> 00:02:53,060
+Dla przykładu, jeżeli wracamy do faktury, no to cena netto i VAT mogą powodować, że ten obiekt będzie miał pełnię wiedzy o tym, jak policzyć cenę brutto.
+
+24
+00:02:53,060 --> 00:02:54,060
+Prawda?
+
+25
+00:02:54,060 --> 00:02:57,560
+Więc warto byłoby to zepchnąć tam na sam dół i zrobić to tam.
+
+26
+00:02:57,560 --> 00:03:06,060
+Jeżeli już mamy konkretny wiersz, który na przykład reprezentuje cenę oraz ilość sztuk, to możemy zawsze w tym miejscu sobie to przemnożyć.
+
+27
+00:03:06,060 --> 00:03:08,060
+I mieć taki subtotal.
+
+28
+00:03:08,060 --> 00:03:10,060
+Czyli każdy wiersz mógłby liczyć tylko i wyłącznie te subtotale.
+
+29
+00:03:10,060 --> 00:03:11,060
+I mieć taki subtotal. Czyli każdy wiersz mógłby liczyć tylko i wyłącznie te subtotale.
+
+30
+00:03:11,060 --> 00:03:16,060
+Czyli na cenie mielibyśmy metodę służącą do przeliczenia wartości brutto.
+
+31
+00:03:16,060 --> 00:03:22,060
+Natomiast na tym wierszu mielibyśmy metodę przeliczącą ilość razy cena brutto.
+
+32
+00:03:22,060 --> 00:03:33,060
+A później na tym obiekcie, który by reprezentował całą tę naszą tabelkę z elementami, czy też na liście, czyli już na fakturze, kiedy mielibyśmy te konkretne wiersze,
+
+33
+00:03:33,060 --> 00:03:40,060
+to tam moglibyśmy zrobić metodę, która by po prostu przeszła po tych wierszach, dla każdego jednego wiersza wywołała tę metodę.
+
+34
+00:03:40,060 --> 00:03:51,060
+I zawsze kiedy tworzymy oprogramowanie, warto się zastanowić nad tą odpowiedzialnością.
+
+35
+00:03:51,060 --> 00:04:02,060
+Czyli gdzie powinna być zaimplementowana dana metoda w taki sposób, żeby się nie okazało, że w fakturze będziemy mieli tych metod bardzo dużo.
+
+36
+00:04:02,060 --> 00:04:09,060
+I że jeżeli korzystamy z tych jeszcze pozostałych obiektów, to że my bardzo mocno wiążemy się z nimi.
+
+37
+00:04:09,060 --> 00:04:20,060
+Uzależniamy się od nich. My powinniśmy pisać kod w taki sposób, żeby jeżeli można wykorzystać część kodu tego, który mógłby być zawarty w takim wierszu faktury,
+
+38
+00:04:20,060 --> 00:04:24,060
+to właśnie żeby on tam się znalazł. Tak samo oczywiście w koszyku.
+
+39
+00:04:24,060 --> 00:04:36,060
+Często, jeżeli na przykład mamy jakąś klasę reprezentującą formularz rejestracyjny, no to też przypada, mówię o stronach internetowych, to też często zastanawiamy się,
+
+40
+00:04:36,060 --> 00:04:37,060
+czy tam powinno być to połączone z innymi stronami.
+
+41
+00:04:37,060 --> 00:04:38,060
+No to też przypada, mówię o stronach internetowych, to też często zastanawiamy się, czy tam powinno być to połączone z innymi stronami.
+
+42
+00:04:38,060 --> 00:04:45,060
+Czy tam powinno być to połączenie z bazą danych i to odpowiedzialnością formularza jest zapisywanie tych informacji.
+
+43
+00:04:45,060 --> 00:04:47,060
+Moim zdaniem nie.
+
+44
+00:04:47,060 --> 00:04:58,060
+Moim zdaniem formularz rejestracyjny powinien tylko i wyłącznie się wyświetlić, powinien mieć jakieś pola, ewentualnie powinna w nim się znaleźć walidacja, czyli sprawdzenie poprawności.
+
+45
+00:04:58,060 --> 00:05:06,060
+Czy wszystkie te dane są ok, ale są też takie narzędzia, które od razu składają, przenoszą tą odpowiedzialność za sprawdzenie,
+
+46
+00:05:06,060 --> 00:05:15,060
+czy formularz został poprawnie wypełniony na request, czyli na to zapytanie, które wysyła nam użytkownik, czyli jeszcze w inne miejsce.
+
+47
+00:05:15,060 --> 00:05:21,060
+Oczywiście tu wchodzimy już w bardziej zaawansowane aspekty, ale pokazuje ci, że kiedy programujemy obiektowo,
+
+48
+00:05:21,060 --> 00:05:28,060
+bardzo często musimy się zatrzymać, zastanowić i najpierw dobrze to przemyśleć, zanim zaczniemy klepać kod.
+
+49
+00:05:28,060 --> 00:05:35,060
+Wracając do tego formularza, często jeżeli chcemy, jeżeli zrobimy tą walidację, czyli sprawdzimy poprawność, będziemy chcieli zrejestrować,
+
+50
+00:05:35,060 --> 00:05:43,060
+będziemy chcieli zapisać ten formularz. I tu też różne miejsca, różne klasy mogłyby być odpowiedzialne za zapisanie go.
+
+51
+00:05:43,060 --> 00:05:50,060
+Odpowiedzialnością formularza nie jest raczej zapisywanie tych danych do bazy danych.
+
+52
+00:05:50,060 --> 00:05:57,060
+Częściej tworzy się na przykład jakieś serwisy, usługi, które mają po prostu odebrać te dane i wrzucić je do bazy danych.
+
+53
+00:05:57,060 --> 00:06:05,060
+Kodując w ten sposób będziemy mieli dużo klas, to prawda, ale klasy będą wyspecjalizowane,
+
+54
+00:06:05,060 --> 00:06:11,060
+i dzięki temu nasza aplikacja będzie dużo łatwiejsza w utrzymaniu.
+
+55
+00:06:11,060 --> 00:06:18,060
+Więc mimo tego, że weszliśmy też w kilka takich bardziej zaawansowanych tematów, ale nie weszliśmy w nie bardzo głęboko,
+
+56
+00:06:18,060 --> 00:06:26,060
+chciałem Ci tylko naświetlić ten temat, żebyś wiedział, że kiedy tworzysz taką aplikację, to tego typu problemy to są problemy wszystkich programistów.
+
+57
+00:06:26,060 --> 00:06:32,060
+Gdzie ja mam to dać? Czy to może być tam? Czy lepiej tu? Czy może to przeniosę? A może to jeszcze inaczej?
+
+58
+00:06:32,060 --> 00:06:34,060
+To jest jak najbardziej standardowe działanie.
+
+59
+00:06:34,060 --> 00:06:41,060
+I tu jeszcze jedna mała uwaga. Robiliśmy wcześniej podział projektu na moduły.
+
+60
+00:06:41,060 --> 00:06:47,060
+Jeżeli tworzysz klasy, to klasy mogą też znajdować się w plikach. Możesz mieć kilka klas w jednym pliku.
+
+61
+00:06:47,060 --> 00:06:53,060
+Niektórzy wyznają taką zasadę, że wolą mieć każdą klasę w osobnym pliku.
+
+62
+00:06:53,060 --> 00:06:59,060
+I później klasy importujesz tak samo jak funkcje, tylko pamiętaj o tym, że nazwy klas zawsze są zapisywane z wielkich liter.
+
+63
+00:06:59,060 --> 00:07:03,060
+Czyli FROM coś tam, FROM MODELS, IMPORT.
+
+64
+00:07:03,060 --> 00:07:08,060
+I wtedy możesz sobie bez problemu tworzyć obiekt takiej klasy.

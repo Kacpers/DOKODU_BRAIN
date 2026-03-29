@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:07,679
+W zadaniu trzecim mamy stworzyć słownik zawierający informacje o swoich ulubionych filmach, tytuł, reżyser, rok produkcji, resztę lata produkcji.
+
+2
+00:00:07,679 --> 00:00:17,179
+Zobaczcie, mamy dane poprawne i teraz chcielibyśmy z tych naszych, czy z tych moich ulubionych filmów, też to wybrałem filmy wszechczasów,
+
+3
+00:00:17,780 --> 00:00:23,539
+wybrać sobie, usunąć tylko te, które zostały wyreżyserowane przez Stevena Spielberga.
+
+4
+00:00:23,539 --> 00:00:30,480
+Czyli potrzebujemy tak naprawdę stworzyć sobie nową listę, czyli new films, czy new movies.
+
+5
+00:00:31,059 --> 00:00:36,060
+Równa się lista. For movie in movies.
+
+6
+00:00:37,259 --> 00:00:43,840
+I teraz skoro jest to lista, no to wiemy, że tutaj mamy po prostu słownik zawierający poszczególne elementy.
+
+7
+00:00:44,340 --> 00:00:49,939
+I nas będzie interesowało sprawdzenie, czy ten konkretny film wyreżyserował Steven Spielberg.
+
+8
+00:00:49,939 --> 00:00:51,799
+Jeżeli tak, no to możemy sprawdzić.
+
+9
+00:00:52,320 --> 00:00:53,239
+Że jak to sprawdzić?
+
+10
+00:00:53,240 --> 00:00:57,420
+Możemy sobie najpierw wyświetlić movie od director.
+
+11
+00:00:58,320 --> 00:01:04,700
+I wtedy jak to zrobię i wywołam, to okaże się, że on mi ładnie wyświetli wszystkich reżyserów, którzy się tutaj pokazali.
+
+12
+00:01:05,320 --> 00:01:08,500
+Widzicie? Mamy Coppola, Darabonta, Spielberga.
+
+13
+00:01:08,780 --> 00:01:09,659
+Czyli wszystko ładnie jest.
+
+14
+00:01:10,219 --> 00:01:20,000
+I teraz, żeby sprawdzić sobie tego reżysera, no to możemy założyć if movie od director nie równa się.
+
+15
+00:01:20,000 --> 00:01:23,020
+No i potrzebujemy tego naszego, czego chcemy usunąć.
+
+16
+00:01:23,019 --> 00:01:23,959
+Czyli Spielberga.
+
+17
+00:01:25,579 --> 00:01:26,379
+Dwukropek.
+
+18
+00:01:26,500 --> 00:01:27,199
+Print movie.
+
+19
+00:01:27,579 --> 00:01:33,739
+I w tym momencie on mi wyświetli wszystkie filmy, za wyjątkiem tych, które wyreżyserował Spielberg.
+
+20
+00:01:34,000 --> 00:01:39,659
+Więc teraz, jeżeli będę chciał je dodać, no to mogę wykonać new movies.append.
+
+21
+00:01:39,919 --> 00:01:43,060
+Bo to jest lista słowniku, więc tutaj będzie lista.
+
+22
+00:01:43,640 --> 00:01:44,759
+New movies append.
+
+23
+00:01:45,039 --> 00:01:47,140
+I wskazuję mu movie.
+
+24
+00:01:47,140 --> 00:01:52,140
+Print new movies.
+
+25
+00:01:53,019 --> 00:02:00,259
+O i mam nową listę słowników bez tych filmów, które wyreżyserował pan Spielberg.
+
+26
+00:02:00,659 --> 00:02:02,159
+Czy mogę zrobić to jeszcze inaczej?
+
+27
+00:02:02,479 --> 00:02:03,239
+Wydaje mi się, że nie.
+
+28
+00:02:03,579 --> 00:02:06,959
+Można byłoby jeszcze użyć na przykład list comprehension.
+
+29
+00:02:07,399 --> 00:02:12,780
+Natomiast to nie leży jakby w temacie naszego kursu, więc nie będę tego teraz robił.
+
+30
+00:02:12,780 --> 00:02:19,460
+Ale kto ma ochotę gdzieś na live, można nagranie z live obejrzeć i tam list comprehension pokazywałem.
+
+31
+00:02:19,939 --> 00:02:22,300
+To co? Bardzo dziękuję i lecimy dalej.

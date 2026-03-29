@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:07,320
+I jeżeli chodzi o pracę z filesystemem, to mam dla Ciebie jeszcze jedną wskazówkę, która bardzo Ci się przyda w życiu.
+
+2
+00:00:08,339 --> 00:00:17,039
+Często, kiedy pracujemy z Pythonem, zależy nam na tym, żeby mieć możliwość tworzenia katalogów, sprawdzania, czy pliki istnieją.
+
+3
+00:00:17,460 --> 00:00:19,120
+Tego typu rzeczy chcemy wykonywać.
+
+4
+00:00:19,580 --> 00:00:27,080
+I żeby tego typu rzeczy wykonywać, możemy z modułu OS skorzystać z dwóch takich bardzo przydatnych metod.
+
+5
+00:00:27,080 --> 00:00:29,679
+Pierwsza metoda OSPathExists.
+
+6
+00:00:30,000 --> 00:00:34,100
+Jej zadaniem jest to, że ona sprawdzi, czy istnieje taki plik lub folder.
+
+7
+00:00:34,480 --> 00:00:40,039
+I teraz zobacz, if not OSPathExists i tu mu przekazujemy ścieżkę.
+
+8
+00:00:40,640 --> 00:00:46,260
+On wtedy będzie starał się tę ścieżkę znaleźć względem katalogu, w którym obecnie się znajdujemy.
+
+9
+00:00:46,679 --> 00:00:51,600
+Czyli jeżeli taka ścieżka jest, bądź nie jest, no to on wejdzie do tego ifa, bądź nie wejdzie.
+
+10
+00:00:52,140 --> 00:00:57,980
+Natomiast druga z funkcji, czyli OSMakeDeers, to jest funkcja, która tworzy nam katalogi.
+
+11
+00:00:58,120 --> 00:00:59,920
+Ale ona jest piękna nie tylko dlatego,
+
+12
+00:01:00,000 --> 00:01:03,679
+że tworzy nam katalog wtedy, kiedy ten katalog nie istnieje,
+
+13
+00:01:04,040 --> 00:01:08,099
+ale jej zadaniem jest również wchodzenie głębiej, głębiej, głębiej i głębiej
+
+14
+00:01:08,099 --> 00:01:13,099
+i tworzenie wszystkich brakujących katalogów w tym łańcuchu, można powiedzieć.
+
+15
+00:01:13,519 --> 00:01:17,960
+Czyli w momencie, w którym mam taką ścieżkę target directory is inside,
+
+16
+00:01:18,379 --> 00:01:24,920
+to najpierw OSPathExists sprawdzi mi, czy w tej ścieżce znajdują mi się wszystkie moje katalogi,
+
+17
+00:01:24,920 --> 00:01:29,039
+a jeżeli się nie znajdują, bo na przykład nie będę miał inside,
+
+18
+00:01:29,280 --> 00:01:29,920
+tylko target,
+
+19
+00:01:30,000 --> 00:01:31,319
+target directory is,
+
+20
+00:01:31,319 --> 00:01:34,239
+no to wówczas on mi stworzy taką ścieżkę.
+
+21
+00:01:34,760 --> 00:01:37,760
+Wszystkie po prostu te brakujące rzeczy uzupełni.
+
+22
+00:01:38,040 --> 00:01:41,280
+Niezwykle wygodna sprawa i przydaje się na przykład wtedy,
+
+23
+00:01:41,280 --> 00:01:44,640
+jeżeli chcemy przeskalowane obrazki umieścić w innym katalogu.
+
+24
+00:01:45,120 --> 00:01:46,400
+Tak tylko w nadmienię.
+
+25
+00:01:46,680 --> 00:01:47,180
+To co?
+
+26
+00:01:47,439 --> 00:01:48,120
+Chodźmy dalej.

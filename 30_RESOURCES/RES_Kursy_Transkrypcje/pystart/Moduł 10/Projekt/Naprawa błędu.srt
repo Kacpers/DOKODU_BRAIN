@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:09,740
+Jeszcze w formie takiego tylko uzupełnienia, zobaczcie, mam categories 1b, items 1a, 1 z podaną tutaj amount i z podaną datą.
+
+2
+00:00:10,220 --> 00:00:14,080
+Kolejność widzę, że jest odwrócona, więc nie stoi nic tutaj, żaden problem.
+
+3
+00:00:14,620 --> 00:00:16,740
+Wystarczy, że sobie znajdziemy tę przyczynę.
+
+4
+00:00:16,740 --> 00:00:20,460
+Czyli zobaczcie, tu mamy name, kategory, date i value.
+
+5
+00:00:23,240 --> 00:00:24,940
+Name, kategory, date i value.
+
+6
+00:00:25,100 --> 00:00:27,060
+OK, to jest add income.
+
+7
+00:00:27,839 --> 00:00:29,420
+Name, kategory, date i value.
+
+8
+00:00:29,420 --> 00:00:30,900
+Name, kategory, date i value.
+
+9
+00:00:32,359 --> 00:00:35,620
+Wygląda na to, że tutaj wszystko jest OK, czyli tu musi być źle.
+
+10
+00:00:36,280 --> 00:00:38,020
+Name, kategory, date i value.
+
+11
+00:00:38,400 --> 00:00:40,240
+Name, kategory, date i value.
+
+12
+00:00:40,920 --> 00:00:44,760
+Hmm, gdzieś jest błąd, gdzieś zamieniliśmy kolejność.
+
+13
+00:00:45,799 --> 00:00:46,540
+Kolejność czego?
+
+14
+00:00:47,840 --> 00:00:49,540
+Kolejność amount i date.
+
+15
+00:00:50,920 --> 00:00:54,980
+Czyli tu jest, tu po prostu jest inna kolejność w bazie danych,
+
+16
+00:00:54,980 --> 00:00:57,500
+więc ja po prostu zamienię sobie date.
+
+17
+00:00:59,420 --> 00:01:03,500
+Z value miejscami, bo to jest tylko i wyłącznie kwestia bazy danych.
+
+18
+00:01:03,780 --> 00:01:08,840
+I to powinno wystarczyć do tego, żeby dane były przechowywane poprawnie.
+
+19
+00:01:10,019 --> 00:01:12,240
+OK, i w kolejnym filmie lecimy dalej.

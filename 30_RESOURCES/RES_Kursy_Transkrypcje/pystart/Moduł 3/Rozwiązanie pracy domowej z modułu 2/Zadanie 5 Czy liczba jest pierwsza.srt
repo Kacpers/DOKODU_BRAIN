@@ -1,0 +1,843 @@
+1
+00:00:00,600 --> 00:00:08,419
+W zadaniu piątym chcemy zapytać użytkownika o liczbę i w wyniku wyświetlić informację, czy liczba jest liczbą pierwszą.
+
+2
+00:00:08,859 --> 00:00:17,039
+Liczba pierwsza to jest taka liczba, która nie posiada żadnego innego dzielnika poza wartością 1 i tą liczbą, czyli na przykład 7.
+
+3
+00:00:17,500 --> 00:00:22,500
+7 nie dzieli się przez nic innego jak tylko przez 1 i 7, więc jest to liczba pierwsza.
+
+4
+00:00:23,120 --> 00:00:28,719
+Więc jeżeli będziemy chcieli szukać, sprawdzać czy liczba jest pierwsza, to musimy szukać dzielników.
+
+5
+00:00:28,719 --> 00:00:38,420
+Ja wiem, że mówmy w matematyce są też inne metody, już nawet ktoś mi kiedyś w jakimś komentarzu napisał, że można byłoby tutaj zastosować ciekawsze metody, bardziej zaawansowane.
+
+6
+00:00:38,840 --> 00:00:42,700
+Więc jeżeli masz ochotę poszukać takich metod, to serdecznie cię do tego zachęcam.
+
+7
+00:00:43,259 --> 00:00:46,399
+Natomiast w naszym zadaniu będziemy szukali po prostu dzielników.
+
+8
+00:00:46,739 --> 00:00:52,299
+I tutaj, żeby to wykonać, będziemy sprawdzali czy liczba dzieli się przez 2, przez 3, przez 4.
+
+9
+00:00:52,299 --> 00:00:57,739
+I na przykład jeżeli sobie wybierzemy liczbę 111 i chcielibyśmy odpowiedzieć na pytanie, czy ta liczba jest pierwsza,
+
+10
+00:00:57,740 --> 00:01:02,140
+to nie musimy szukać dzielników aż do 111, prawda?
+
+11
+00:01:02,660 --> 00:01:05,159
+No bo 7 nie podzieli się przez 6 ani przez 5.
+
+12
+00:01:05,740 --> 00:01:08,420
+Tak samo 10 nie podzieli się przez 9 ani przez 8.
+
+13
+00:01:08,879 --> 00:01:12,099
+Więc można zakończyć sprawdzanie dużo szybciej.
+
+14
+00:01:12,420 --> 00:01:20,840
+I tutaj bardzo często osoby kombinują, że będzie to więc połowa, no bo skoro 10 dzieli się przez 5, no to znaczy, że wszystko jest w porządku.
+
+15
+00:01:21,180 --> 00:01:25,980
+Ale 10 dzieli się też już wcześniej przez 2, co sprawia, że nie jest liczbą pierwszą.
+
+16
+00:01:25,980 --> 00:01:27,719
+Więc możliwe, że jest jakaś wartość.
+
+17
+00:01:27,719 --> 00:01:34,359
+Wartość niższa niż połowa, do której jeżeli nie znajdziemy dzielnika, to znaczy, że liczba pierwszą jest.
+
+18
+00:01:34,780 --> 00:01:37,299
+I tą wartością jest pierwiastek z liczby.
+
+19
+00:01:37,659 --> 00:01:41,939
+Kto sobie poszukał i znalazł ten pierwiastek, czy pamiętał gdzieś jakieś moje inne rozwiązanie, to super.
+
+20
+00:01:42,359 --> 00:01:46,939
+Kto nie wykorzystał połowa albo dzielił dalej, ma okazję teraz zoptymalizować program.
+
+21
+00:01:47,420 --> 00:01:51,060
+I od razu Wam powiem, że programiści bardzo często refakturują swój kod.
+
+22
+00:01:51,140 --> 00:01:56,319
+Czyli właśnie, o kurczę, mogę coś usprawnić, albo przyśniło mi się rozwiązanie, jak mogę napisać coś szybciej.
+
+23
+00:01:56,319 --> 00:01:57,319
+I w ten sposób bardzo często.
+
+24
+00:01:57,719 --> 00:02:02,379
+Bardzo jest to popularne, że po prostu siadamy i poprawiamy nasz kod.
+
+25
+00:02:02,459 --> 00:02:06,900
+Albo ktoś nam zwraca uwagę, słuchaj Kacper, ale ten kod nie działa do końca dobrze dla takich i takich wartości.
+
+26
+00:02:07,299 --> 00:02:11,800
+Wtedy też możemy poprawić sobie działanie naszego kodu, właśnie refakturując go.
+
+27
+00:02:11,879 --> 00:02:12,919
+Tak się ten czynność nazywa.
+
+28
+00:02:13,280 --> 00:02:14,939
+To oczywiście jest kolejna kalka językowa.
+
+29
+00:02:15,060 --> 00:02:16,280
+Zobacz, tu jest przycisk refaktor.
+
+30
+00:02:16,599 --> 00:02:17,599
+On też do tego służy.
+
+31
+00:02:18,579 --> 00:02:19,579
+Ale okej.
+
+32
+00:02:19,919 --> 00:02:24,259
+Nie o narzędziu, tylko o języku, który w sumie też jest narzędziem.
+
+33
+00:02:24,539 --> 00:02:26,000
+Więc pytamy użytkownika o liczbę.
+
+34
+00:02:26,000 --> 00:02:30,639
+Ja zanim zapytam użytkownika o liczbę, po prostu stworzę sobie taką liczbę samodzielnie.
+
+35
+00:02:30,719 --> 00:02:31,979
+Niech to będzie liczba 47.
+
+36
+00:02:32,699 --> 00:02:35,340
+I będę chciał sprawdzać, czy ta liczba jest pierwsza.
+
+37
+00:02:35,860 --> 00:02:40,060
+Powiedzieliśmy sobie o tym, że musimy szukać dzielników do pierwiastka z liczby.
+
+38
+00:02:40,500 --> 00:02:42,060
+Więc przyda nam się jeszcze pierwiastek.
+
+39
+00:02:42,439 --> 00:02:47,420
+Jak pamiętasz, żeby policzyć pierwiastek, możemy albo podnieść liczbę do potęgi jednej i drugiej,
+
+40
+00:02:47,920 --> 00:02:52,780
+albo z biblioteki matematycznej zaimportować SQRT.
+
+41
+00:02:52,780 --> 00:02:55,780
+I w ten sposób, jeżeli sobie wyprintujemy SQRT,
+
+42
+00:02:56,000 --> 00:02:58,319
+to jest dla naszego number,
+
+43
+00:02:58,960 --> 00:03:03,039
+no to on nam wtedy ładnie wyświetli informację, czy jest to liczba pierwsza, czy też nie jest.
+
+44
+00:03:03,159 --> 00:03:04,659
+Zobacz, robię Python 5.
+
+45
+00:03:05,159 --> 00:03:09,280
+No i mam informację, że pierwiastkiem tej liczby jest 685.
+
+46
+00:03:10,080 --> 00:03:15,420
+Jak będę chciał szukać dzielników, to nie mogę szukać dzielników do 6,8,
+
+47
+00:03:15,639 --> 00:03:18,300
+bo ja muszę bazować tylko na liczbach całkowitych.
+
+48
+00:03:18,680 --> 00:03:23,039
+I tutaj, jeżeli poszedłeś w połowę, no to wiesz, że możesz pewnie sobie coś zaokrąglić.
+
+49
+00:03:23,039 --> 00:03:24,759
+Można to zamienić na flora.
+
+50
+00:03:24,759 --> 00:03:27,079
+Wtedy usuwa nam się ta część dziesiętna.
+
+51
+00:03:27,399 --> 00:03:28,519
+Pokazywaliśmy to sobie.
+
+52
+00:03:29,019 --> 00:03:33,340
+Natomiast, jeżeli chcesz zapisać coś, zaokrąglić sobie wartość do góry,
+
+53
+00:03:33,699 --> 00:03:37,159
+to można skorzystać z takiej funkcji, która nazywa się seal.
+
+54
+00:03:37,459 --> 00:03:39,539
+Tutaj łatwo skojarzyć.
+
+55
+00:03:40,280 --> 00:03:43,159
+Seal to jest skrót od sufit po angielsku, czyli ceiling.
+
+56
+00:03:43,699 --> 00:03:45,859
+Czyli sufit jest na górze, więc ceiling.
+
+57
+00:03:46,379 --> 00:03:48,560
+Natomiast podłoga jest na dole.
+
+58
+00:03:50,159 --> 00:03:51,819
+I podłoga po angielsku to jest floor.
+
+59
+00:03:51,819 --> 00:03:54,759
+I tutaj też mamy funkcję, która nazywa się ceiling.
+
+60
+00:03:54,759 --> 00:03:57,259
+Tutaj nazywa się floor, żeby coś zaokrąglić w dół.
+
+61
+00:03:57,259 --> 00:03:59,259
+My chcemy zaokrąglić w górę.
+
+62
+00:03:59,259 --> 00:04:02,560
+Mogłeś tych funkcji nie znać, ale mogłeś na przykład wrzucić to sobie na inta,
+
+63
+00:04:02,560 --> 00:04:05,859
+zamienić na integer, podając wokół jeszcze int.
+
+64
+00:04:05,859 --> 00:04:07,859
+No i to też by zadziałało.
+
+65
+00:04:07,859 --> 00:04:10,659
+Więc w moim przypadku, żeby policzyć ten pierwiastek,
+
+66
+00:04:10,659 --> 00:04:12,659
+ja będę chciał zaokrąglić go sobie do góry.
+
+67
+00:04:14,659 --> 00:04:16,659
+OK, robię strzałkę do góry Enter.
+
+68
+00:04:16,659 --> 00:04:18,659
+I wyświetliło mi się 7.
+
+69
+00:04:18,659 --> 00:04:20,659
+Czy 7 to jest dobra liczba?
+
+70
+00:04:20,659 --> 00:04:22,659
+Nie do końca. Dlaczego? Zobacz.
+
+71
+00:04:22,660 --> 00:04:26,660
+Jeżeli będę chciał sprawdzić, czy 49 jest liczbą pierwszą,
+
+72
+00:04:26,660 --> 00:04:28,660
+no to sprawdzę, czy dzieli się przez 2.
+
+73
+00:04:28,660 --> 00:04:30,660
+Nie. Przez 3 nie. I tak sobie dojdę aż do 7.
+
+74
+00:04:30,660 --> 00:04:32,660
+Pytanie, czy dojdę do tych 7.
+
+75
+00:04:32,660 --> 00:04:35,660
+Zwróć uwagę na to, że kiedy uruchomię ten program,
+
+76
+00:04:35,660 --> 00:04:38,660
+on mi dokładnie wyświetli liczbę 7.
+
+77
+00:04:38,660 --> 00:04:41,660
+Jak pamiętasz, w range'u, kiedy robimy sobie range'a,
+
+78
+00:04:41,660 --> 00:04:45,660
+ta liczba, do której chcemy dojść, ona się nie zawiera w tym range'u.
+
+79
+00:04:45,660 --> 00:04:50,660
+Więc my musimy do tej naszej operacji dopisać plus 1.
+
+80
+00:04:50,660 --> 00:04:52,660
+I wtedy
+
+81
+00:04:52,660 --> 00:04:57,660
+będziemy mogli sprawdzić 2, 3, 4, 5, 6 i 7.
+
+82
+00:04:57,660 --> 00:05:01,660
+Bo tak naprawdę naszym tym krokiem, tą naszą wartością końcową
+
+83
+00:05:01,660 --> 00:05:03,660
+będzie wartość 8.
+
+84
+00:05:03,660 --> 00:05:06,660
+Czyli tak naprawdę, jeżeli będziemy chcieli sprawdzić,
+
+85
+00:05:06,660 --> 00:05:09,660
+czy 48 czy też 47 to są liczby pierwsze,
+
+86
+00:05:09,660 --> 00:05:13,660
+to będziemy musieli szukać dzielników w zakresie
+
+87
+00:05:13,660 --> 00:05:18,660
+od 2 do właśnie tej wartości.
+
+88
+00:05:18,660 --> 00:05:22,660
+Czyli for jakiś tam divider.
+
+89
+00:05:22,660 --> 00:05:26,660
+In range, dwukropek, print div.
+
+90
+00:05:26,660 --> 00:05:29,660
+Jeżeli ja to teraz sobie wywołam,
+
+91
+00:05:29,660 --> 00:05:32,660
+to okaże się, że mam błąd,
+
+92
+00:05:32,660 --> 00:05:35,660
+bo dodałem o jeden nawias za dużo.
+
+93
+00:05:35,660 --> 00:05:38,660
+Zobacz, unmatched, nawias zamykający.
+
+94
+00:05:38,660 --> 00:05:40,660
+Czyli Python mi tutaj powiedział,
+
+95
+00:05:40,660 --> 00:05:43,660
+Kacper, otworzyłeś mniej nawiasów, niż zamknąłeś.
+
+96
+00:05:43,660 --> 00:05:45,660
+On nie ma pary.
+
+97
+00:05:45,660 --> 00:05:47,660
+Więc jak nie ma pary, to musimy go sobie usunąć.
+
+98
+00:05:47,660 --> 00:05:50,660
+I wtedy zobacz, wyświetlił mi wartości 2, 4, 5, 6, 7.
+
+99
+00:05:50,660 --> 00:05:53,660
+I teraz powiedzieliśmy sobie, że liczba jest pierwsza,
+
+100
+00:05:53,660 --> 00:05:55,660
+wtedy, kiedy nie ma dzielnika.
+
+101
+00:05:55,660 --> 00:05:58,660
+Żeby sprawdzić, czy coś jest dzielnikiem,
+
+102
+00:05:58,660 --> 00:06:00,660
+trzeba wykorzystać resztę z dzielenia.
+
+103
+00:06:00,660 --> 00:06:03,660
+Więc mogę sobie tutaj zrobić przecinek
+
+104
+00:06:03,660 --> 00:06:08,660
+i napisać number modulo div.
+
+105
+00:06:08,660 --> 00:06:14,660
+I w tym momencie widzę, że w dwójce mam jedynkę,
+
+106
+00:06:14,660 --> 00:06:17,660
+w trójce mam dwójkę, w czwórce mam trójkę,
+
+107
+00:06:17,660 --> 00:06:19,660
+bo zawsze mam jakąś resztę z dzielenia.
+
+108
+00:06:19,660 --> 00:06:22,660
+Czyli wiem, że moja wartość 47 jest liczbą pierwszą,
+
+109
+00:06:22,660 --> 00:06:26,660
+bo nie mam tutaj żadnej reszty z dzielenia, która byłaby równa 0.
+
+110
+00:06:26,660 --> 00:06:30,660
+Jeżeli wziąłbym liczbę 49, która dzieli się na przykład przez 7,
+
+111
+00:06:30,660 --> 00:06:33,660
+no to zobacz, dostaję w siódemce 0.
+
+112
+00:06:33,660 --> 00:06:36,660
+I to mi mówi o tym, że już nie ma mowy o tym,
+
+113
+00:06:36,660 --> 00:06:41,660
+żeby to była liczba pierwsza, bo dzieli się przez 7 bez reszty.
+
+114
+00:06:41,660 --> 00:06:45,660
+Zatem musimy sobie zrobić takie coś, co sprawdzi,
+
+115
+00:06:45,660 --> 00:06:48,660
+czy ta liczba jest liczbą pierwszą,
+
+116
+00:06:48,660 --> 00:06:51,660
+czy dzieli nam się przez number modulo div,
+
+117
+00:06:51,660 --> 00:06:52,660
+czyli 0.
+
+118
+00:06:52,660 --> 00:06:59,660
+Tu akurat mamy ten przywilej, że on nam na samym końcu znalazł to 0.
+
+119
+00:06:59,660 --> 00:07:02,660
+Jeżeli natomiast byśmy znaleźli dzielnik szybciej,
+
+120
+00:07:02,660 --> 00:07:06,660
+bo na przykład wzięlibyśmy wartość 50,
+
+121
+00:07:06,660 --> 00:07:10,660
+to zobacz, 50 dzieli nam się już przez 2 i przez 5.
+
+122
+00:07:10,660 --> 00:07:15,660
+Czyli ja nie mogę jakby nadpisywać tej wartości za każdym razem,
+
+123
+00:07:15,660 --> 00:07:18,660
+tylko ja muszę sprawdzać, jeżeli nastąpi 0,
+
+124
+00:07:18,660 --> 00:07:20,660
+to już wtedy muszę powiedzieć, dobra stop,
+
+125
+00:07:20,660 --> 00:07:22,660
+przerywamy pętlę, znalazłem 0.
+
+126
+00:07:22,660 --> 00:07:25,660
+Stąd też wykonamy sobie rzecz następującą,
+
+127
+00:07:25,660 --> 00:07:31,660
+a mianowicie zrobimy if number modulo div równa się 0,
+
+128
+00:07:31,660 --> 00:07:36,660
+czyli jeżeli liczba modulo div równa się 0,
+
+129
+00:07:36,660 --> 00:07:43,660
+to wtedy możemy napisać print, to nie jest liczba pierwsza.
+
+130
+00:07:43,660 --> 00:07:46,660
+Ale zobacz, to nie jest do końca nasze rozwiązanie,
+
+131
+00:07:46,660 --> 00:07:50,660
+bo w ten sposób przy 50 pojawi nam się 2 razy, to nie jest liczba pierwsza.
+
+132
+00:07:50,660 --> 00:07:56,660
+Jeżeli zrobimy 29, to nie pokaże nam się ani razu.
+
+133
+00:07:56,660 --> 00:07:59,660
+Czyli my tak naprawdę tu chcielibyśmy mieć,
+
+134
+00:07:59,660 --> 00:08:02,660
+jak ustawić sobie jakąś wartość, która na koniec,
+
+135
+00:08:02,660 --> 00:08:05,660
+kiedy ta pętla nam się skończy, powie nam,
+
+136
+00:08:05,660 --> 00:08:07,660
+czy to jest liczba pierwsza, czy nie jest.
+
+137
+00:08:07,660 --> 00:08:13,660
+Więc ja na dzień dobry zrobię sobie założenie is prime,
+
+138
+00:08:13,660 --> 00:08:15,660
+to jest po angielsku pierwsza,
+
+139
+00:08:15,660 --> 00:08:19,660
+równa się, no i przyjmę, że ta liczba jest pierwsza.
+
+140
+00:08:19,660 --> 00:08:24,660
+Natomiast jeżeli znajdę dzielnik, to mogę powiedzieć, że nie jest pierwsza.
+
+141
+00:08:24,660 --> 00:08:28,660
+Dlaczego to zrobiłem w ten sposób?
+
+142
+00:08:28,660 --> 00:08:30,660
+Bo zobacz, wróćmy sobie tutaj.
+
+143
+00:08:30,660 --> 00:08:36,660
+Jeżeli ja bym dzielił sobie naszą liczbę 29 przez 2
+
+144
+00:08:36,660 --> 00:08:40,660
+i dostałbym 0, i bym założył, że is prime równa się false,
+
+145
+00:08:40,660 --> 00:08:44,660
+a wtedy w else bym robił, że is prime równa się true,
+
+146
+00:08:44,659 --> 00:08:48,659
+to to by oznaczało, że on by w tym momencie ustawił,
+
+147
+00:08:48,659 --> 00:08:50,659
+dobra, jest pierwsza, nie, nie, jednak nie, znaczy nie jest pierwsza,
+
+148
+00:08:50,659 --> 00:08:52,659
+dobra, jednak jest, dobra, jest pierwsza,
+
+149
+00:08:52,659 --> 00:08:54,659
+miałem rację, nie, sorry, jednak nie jest.
+
+150
+00:08:54,659 --> 00:08:57,659
+I tak byśmy musieli sobie przechodzić za każdym razem tę wartość zmieniać.
+
+151
+00:08:57,659 --> 00:09:02,659
+Natomiast tutaj jest taka sytuacja, że jeżeli znajdziesz chociaż jeden dzielnik,
+
+152
+00:09:02,659 --> 00:09:05,659
+to od razu już koniec, koniec i bomba, kto nie zdążył, ten trąba,
+
+153
+00:09:05,659 --> 00:09:07,659
+nie jest to liczba pierwsza.
+
+154
+00:09:07,659 --> 00:09:11,659
+Więc ja tutaj nie robię else, tylko zakładam, że w tym miejscu to już jest koniec,
+
+155
+00:09:11,659 --> 00:09:13,659
+nie mamy o czym rozmawiać, jest, to jest liczba pierwsza.
+
+156
+00:09:14,659 --> 00:09:16,659
+Więc, czy nie jest liczba pierwsza.
+
+157
+00:09:16,659 --> 00:09:19,659
+Więc możemy napisać na koniec za tym if, za tym forem ifa,
+
+158
+00:09:19,659 --> 00:09:23,659
+który jest znowu przesunięty do lewej strony
+
+159
+00:09:23,659 --> 00:09:28,659
+i możemy sobie napisać if is prime, dwukropek,
+
+160
+00:09:28,659 --> 00:09:31,659
+tutaj ominąłem takie wyrażenie równa się, równa się true,
+
+161
+00:09:31,659 --> 00:09:35,659
+z tego względu, że ja tak naprawdę nie muszę tego pisać,
+
+162
+00:09:35,659 --> 00:09:39,659
+bo jeżeli jest true, no to jest true i wejdę do środka.
+
+163
+00:09:39,659 --> 00:09:43,659
+Print, liczba jest pierwsza.
+
+164
+00:09:44,659 --> 00:09:50,659
+else, print, liczba nie jest pierwsza.
+
+165
+00:09:50,659 --> 00:09:58,659
+Ok, i patrz, jeżeli teraz sobie to wywołamy, to 29 jest pierwsza.
+
+166
+00:09:58,659 --> 00:10:02,659
+111 nie jest pierwsza.
+
+167
+00:10:02,659 --> 00:10:06,659
+No bo 111 też pewnie gdzieś się tam nam przez coś podzieliło.
+
+168
+00:10:06,659 --> 00:10:11,659
+Więc w ten sposób możemy wpisywać sobie różne wartości, nawet takie większe.
+
+169
+00:10:11,659 --> 00:10:12,659
+Tu się kończy na dwójkę, więc nie ma o czym gadać, ale widzicie,
+
+170
+00:10:12,659 --> 00:10:13,659
+tu się kończy na dwójkę, więc nie ma o czym gadać, ale widzicie,
+
+171
+00:10:13,659 --> 00:10:15,659
+o co chodzi.
+
+172
+00:10:15,659 --> 00:10:18,659
+Tylko, że jest taka sytuacja, że przy długich liczbach,
+
+173
+00:10:18,659 --> 00:10:21,659
+jeżeli ta liczba miałaby dużo, dużo, dużo tutaj miejsc,
+
+174
+00:10:21,659 --> 00:10:25,659
+on by nam chwilę myślał, by tak myślał, szukam tych dzielników, szukam,
+
+175
+00:10:25,659 --> 00:10:29,659
+nawet jak znalazłem jakiś dzielnik, to i tak muszę iść dalej, dalej, dalej, dalej.
+
+176
+00:10:29,659 --> 00:10:32,659
+A myśmy sobie powiedzieli, według tej naszej tabelki,
+
+177
+00:10:32,659 --> 00:10:36,659
+że jeżeli znajdziesz pierwszy dzielnik już przy dwójce, to koniec.
+
+178
+00:10:36,659 --> 00:10:39,659
+To już dalej nie sprawdzaj, bo znaczy, że już po ptokach, tak?
+
+179
+00:10:39,659 --> 00:10:41,659
+Liczba pierwsza nie jest.
+
+180
+00:10:41,659 --> 00:10:46,659
+I można to zrobić w naszym programie w bardzo łatwy sposób.
+
+181
+00:10:46,659 --> 00:10:50,659
+Można sobie za tym isPrime dopisać taką funkcję, takie wyrażenie,
+
+182
+00:10:50,659 --> 00:10:52,659
+które nazywa się break.
+
+183
+00:10:52,659 --> 00:10:56,659
+I break powoduje, że od razu wychodzimy z pętli.
+
+184
+00:10:56,659 --> 00:10:58,659
+Ta pętla po prostu przestaje się wykonywać.
+
+185
+00:10:58,659 --> 00:11:02,659
+W tym konkretnym miejscu, w którym na nie, na to trafimy.
+
+186
+00:11:02,659 --> 00:11:05,659
+Jeżeli napiszesz kiedyś program, który działa zbyt długo,
+
+187
+00:11:05,659 --> 00:11:08,659
+to skrótem ctrl c możesz go sobie śmiało w dowolnym momencie zamknąć.
+
+188
+00:11:08,659 --> 00:11:11,659
+Ja raz jeszcze sobie zrobię to samo,
+
+189
+00:11:11,659 --> 00:11:14,659
+tylko zobacz, tutaj podam dwójkę na końcu.
+
+190
+00:11:14,659 --> 00:11:16,659
+Na razie usunę breaka.
+
+191
+00:11:16,659 --> 00:11:20,659
+I zobacz, on teraz będzie myślał, myślał, myślał i myślał,
+
+192
+00:11:20,659 --> 00:11:22,659
+czy jest pierwsza, czy nie jest.
+
+193
+00:11:22,659 --> 00:11:26,659
+No bo on od tej dwójki do tego pierwiastka, trochę tej musi sobie pokombinować, nie?
+
+194
+00:11:26,659 --> 00:11:32,659
+Natomiast jeżeli ja mu bym tę liczbę, ten, w tym przypadku bym napisał mu tutaj breaka,
+
+195
+00:11:32,659 --> 00:11:37,659
+to wystarczy mu, że on znajdzie ten dzielnik w postaci dwójki,
+
+196
+00:11:37,659 --> 00:11:39,659
+żeby już dalej nie przechodzić.
+
+197
+00:11:39,659 --> 00:11:41,659
+Zobacz.
+
+198
+00:11:41,659 --> 00:11:45,659
+O, zapomniałem, że nie wpisuję.
+
+199
+00:11:45,659 --> 00:11:49,659
+Zrobiłem strzałkę do góry enter i od razu wyświetlił mi informację, że nie jest pierwsza,
+
+200
+00:11:49,659 --> 00:11:53,659
+bo ten break już na pierwszym przebiegu pętli się zatrzymał.
+
+201
+00:11:53,659 --> 00:11:56,659
+Nie było potrzebne sprawdzanie pozostałych wartości.
+
+202
+00:11:56,659 --> 00:11:59,659
+Więc bardzo często takiego breaka możemy sobie zasadzić wtedy,
+
+203
+00:11:59,659 --> 00:12:01,659
+kiedy wiemy, że chcemy już wyjść z tej pętli,
+
+204
+00:12:01,659 --> 00:12:05,659
+mieć wszystko z głowy i wszystko ma ładnie nam funkcjonować dalej.
+
+205
+00:12:05,659 --> 00:12:08,659
+Okej, wydaje mi się, że zadanie mamy za sobą.
+
+206
+00:12:08,659 --> 00:12:10,659
+Można powiedzieć, że jest zhakowane.
+
+207
+00:12:10,659 --> 00:12:17,659
+Oczywiście tylko dla ścisłości, żeby nikt mi nie zarzucił, że tego nie zrobiłem.
+
+208
+00:12:17,659 --> 00:12:19,659
+Tutaj mogę odebrać liczbę.
+
+209
+00:12:19,659 --> 00:12:22,659
+I dzięki temu możemy sobie wpisać jakąś wartość
+
+210
+00:12:22,659 --> 00:12:26,659
+i dowiedzieć się, że ta liczba pierwsza nie jest.
+
+211
+00:12:26,659 --> 00:12:28,659
+Zapraszam do kolejnego zadania.

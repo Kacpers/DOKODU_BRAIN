@@ -1,0 +1,395 @@
+1
+00:00:00,300 --> 00:00:04,020
+Zacznijmy sobie od tego, jaka jest w ogóle konstrukcja pętli while.
+
+2
+00:00:04,440 --> 00:00:07,500
+Na początek słowo kluczowe while.
+
+3
+00:00:07,700 --> 00:00:12,280
+To słowo jest zarezerwowane, nie możesz tworzyć zmiennej nazywającej się while.
+
+4
+00:00:12,880 --> 00:00:15,820
+Następnie za słowem while znajduje się warunek.
+
+5
+00:00:16,100 --> 00:00:17,699
+Pamiętasz? Jest brudno.
+
+6
+00:00:18,339 --> 00:00:24,060
+I warunek tutaj może wykorzystywać dowolne operatory logiczne, jakie znasz.
+
+7
+00:00:24,440 --> 00:00:27,800
+Czyli mniejszy, większy, równy, nierówny.
+
+8
+00:00:27,800 --> 00:00:31,140
+Wszystkie te wyrażenia mogą być tutaj wykorzystywane.
+
+9
+00:00:31,719 --> 00:00:32,960
+Czyli while warunek.
+
+10
+00:00:33,420 --> 00:00:38,460
+Następnie znowu mamy wcięcie i wszystkie te instrukcje, które będą wewnątrz while'a,
+
+11
+00:00:38,600 --> 00:00:44,120
+one będą właśnie zapętlone, dopóki ten while się nie zakończy.
+
+12
+00:00:44,620 --> 00:00:50,040
+A while się nie zakończy tak długo, jak długo ten warunek, który sobie tutaj napisaliśmy, jest prawdziwy.
+
+13
+00:00:50,620 --> 00:00:54,219
+Tutaj jeszcze jedna rzecz, która w przypadku while'a bardzo się przydaje.
+
+14
+00:00:54,380 --> 00:00:55,320
+Control C.
+
+15
+00:00:55,519 --> 00:00:57,719
+Control C jest to skrót klawiszowy, który zaznaczył,
+
+16
+00:00:57,799 --> 00:00:59,899
+zatrzymuje działanie naszego programu.
+
+17
+00:01:00,199 --> 00:01:05,399
+W tym momencie pojawić się komunikat o błędzie, keyboard interrupt, tym się zupełnie nie przejmuj.
+
+18
+00:01:05,799 --> 00:01:10,219
+Ważne jest to, że udało ci się zatrzymać program bez potrzeby wyłączania terminala,
+
+19
+00:01:10,259 --> 00:01:11,739
+czy restartowania komputera.
+
+20
+00:01:12,219 --> 00:01:14,099
+Więc Control C zawsze pomaga.
+
+21
+00:01:14,739 --> 00:01:18,120
+Dobra, natomiast to, co sobie tutaj pokazaliśmy, to jest taki pseudocode.
+
+22
+00:01:18,420 --> 00:01:21,159
+Jak to wygląda w takim bardziej rzeczywistym przykładzie?
+
+23
+00:01:21,859 --> 00:01:25,759
+To, co zrobiłem teraz na ekranie, to jest troszkę rzecz nieładna.
+
+24
+00:01:25,759 --> 00:01:26,620
+Dlaczego nieładna?
+
+25
+00:01:26,620 --> 00:01:30,020
+Z tego względu, że tak naprawdę zrobiłem pętlę while,
+
+26
+00:01:30,500 --> 00:01:33,120
+za pomocą pętli while napisałem pętlę for tutaj.
+
+27
+00:01:33,240 --> 00:01:37,520
+Czyli jakby zrobiłem coś, do czego powinienem użyć pętli for.
+
+28
+00:01:38,020 --> 00:01:41,880
+Natomiast na tym przykładzie chcę ci właśnie pokazać różnicę między tymi pętlami,
+
+29
+00:01:41,939 --> 00:01:43,480
+na przykładzie czegoś, co już znasz.
+
+30
+00:01:44,080 --> 00:01:47,980
+I zobacz, mamy taką sytuację, że zmienna counter ma wartość 0,
+
+31
+00:01:48,120 --> 00:01:49,920
+czyli jakiś licznik ma wartość 0.
+
+32
+00:01:50,580 --> 00:01:53,600
+Dopóki counter jest mniejszy lub równy od 10,
+
+33
+00:01:53,600 --> 00:01:56,600
+to wykonuj pętlę while.
+
+34
+00:01:56,620 --> 00:02:00,560
+Co spowoduje, że on będzie sprawdził mi w tym momencie,
+
+35
+00:02:00,700 --> 00:02:02,980
+czy ten counter jest mniejszy lub równy 10,
+
+36
+00:02:03,359 --> 00:02:05,320
+0 jest mniejszy lub równy od 10,
+
+37
+00:02:05,800 --> 00:02:07,920
+więc wyświetli mi ten counter,
+
+38
+00:02:08,219 --> 00:02:11,439
+a następnie wykona instrukcję counter plus równa się 1.
+
+39
+00:02:11,920 --> 00:02:14,939
+Czyli moja zmienna counter zwiększy się o 1.
+
+40
+00:02:15,800 --> 00:02:17,759
+Po tym, po wykonaniu tej instrukcji,
+
+41
+00:02:17,840 --> 00:02:20,939
+on znowu wróci do tego testu logicznego, do tego sprawdzenia.
+
+42
+00:02:21,860 --> 00:02:23,659
+Mój counter będzie już równy 1.
+
+43
+00:02:23,659 --> 00:02:26,340
+Czy 1 jest mniejszy lub równy od 10? Jest.
+
+44
+00:02:26,340 --> 00:02:29,620
+Więc znowu wykona się to, co jest poniżej.
+
+45
+00:02:30,219 --> 00:02:31,259
+I dojdzie aż do 9.
+
+46
+00:02:31,939 --> 00:02:35,219
+Więc sprawdzi, czy 9 jest mniejszy lub równy od 10.
+
+47
+00:02:35,539 --> 00:02:37,120
+Jest zwiększy o 1.
+
+48
+00:02:37,259 --> 00:02:40,080
+Czy 10 jest mniejszy lub równy od 10? Jest.
+
+49
+00:02:40,180 --> 00:02:41,240
+Zwiększy o 1.
+
+50
+00:02:41,640 --> 00:02:44,840
+Czy 11 jest większy lub równy od 10? Jest.
+
+51
+00:02:44,960 --> 00:02:47,020
+Mniejszy lub równy od 10? Nie jest.
+
+52
+00:02:47,400 --> 00:02:50,240
+Więc dla 11 już wyjdzie na zewnątrz,
+
+53
+00:02:50,240 --> 00:02:54,400
+czyli wyświetli nam wartości tak naprawdę od 0 do 10.
+
+54
+00:02:54,780 --> 00:02:56,020
+Natomiast na koniec,
+
+55
+00:02:56,020 --> 00:02:59,020
+zmienna counter będzie miała wartość 11,
+
+56
+00:02:59,340 --> 00:03:02,120
+gdyż musieliśmy doprowadzić do tego stanu,
+
+57
+00:03:02,280 --> 00:03:06,400
+w którym ta zmienna przekroczyła ten nasz próg
+
+58
+00:03:06,400 --> 00:03:10,160
+i ta wartość przestała mieć znaczenie.
+
+59
+00:03:11,740 --> 00:03:14,719
+Tak naprawdę możemy rozkminić właśnie jeszcze sytuację,
+
+60
+00:03:14,820 --> 00:03:19,360
+co by się stało, jeżeli nie dodalibyśmy tego counter plus równa się 1.
+
+61
+00:03:19,879 --> 00:03:23,340
+I tu serdecznie zachęcam Cię do tego, żeby spróbować to zrobić.
+
+62
+00:03:23,340 --> 00:03:25,379
+To nie ma co się tego obawiać.
+
+63
+00:03:26,020 --> 00:03:28,260
+Zobacz, co się stanie.
+
+64
+00:03:28,740 --> 00:03:32,780
+Tak naprawdę będzie wypisywał Ci bardzo szybko wartości kolejne.
+
+65
+00:03:33,280 --> 00:03:35,080
+No i wtedy, jeżeli chcesz zatrzymać go,
+
+66
+00:03:35,180 --> 00:03:38,420
+możesz zawsze to zrobić za pomocą skrótu klawiszowego ctrl-c,
+
+67
+00:03:38,920 --> 00:03:42,240
+który to skrót zatrzyma zupełnie działanie while'a.
+
+68
+00:03:43,120 --> 00:03:45,520
+Natomiast te przykłady, które sobie tutaj pokazaliśmy,
+
+69
+00:03:45,680 --> 00:03:49,540
+one bardzo mocno nie pokazują tego while'a.
+
+70
+00:03:49,540 --> 00:03:52,840
+One bardziej pokazują, jak wykorzystać te pętle do zastosowania,
+
+71
+00:03:53,320 --> 00:03:55,180
+którym powinna być pętla for.
+
+72
+00:03:55,640 --> 00:03:55,939
+Więc,
+
+73
+00:03:55,939 --> 00:03:59,539
+powiedzmy sobie o tym jednym szczególnym przypadku,
+
+74
+00:03:59,539 --> 00:04:03,240
+a mianowicie, co daje nam pętla while chodząca w nieskończoność.
+
+75
+00:04:03,240 --> 00:04:07,939
+No bo czasem tak się zdarza, że na przykład w kodzie programu pojawia się while true.
+
+76
+00:04:07,939 --> 00:04:10,639
+I to może jest taka ciekawostka,
+
+77
+00:04:10,639 --> 00:04:13,740
+może z drugiej strony jest też to, do czego Tobie ta pętla się przyda.
+
+78
+00:04:13,740 --> 00:04:17,939
+Czasem zdarza się, że potrzebujemy mieć jakiś program, który działa cały czas w tle.
+
+79
+00:04:17,939 --> 00:04:20,939
+On ma w tle cały czas wykonywać jakieś czynności.
+
+80
+00:04:20,939 --> 00:04:25,699
+Na przykład nasłuchiwać na to, czy pojawił się jakiś plik w jakimś katalogu,
+
+81
+00:04:25,699 --> 00:04:32,199
+czy na przykład ktoś nawiązał połączenie z naszym programem jakimś na zewnątrz,
+
+82
+00:04:32,199 --> 00:04:36,699
+lub pojawiła się jakakolwiek inna czynność, która miała spowodować,
+
+83
+00:04:36,699 --> 00:04:38,699
+że ta pętla miała się zakończyć.
+
+84
+00:04:38,699 --> 00:04:42,699
+Czasem while true, czy taka jakaś while w nieskończoność,
+
+85
+00:04:42,699 --> 00:04:46,699
+przydaje nam się też wtedy, jeżeli mamy coś wykonywać w jakimś interwale czasowym.
+
+86
+00:04:46,699 --> 00:04:51,199
+Na przykład wiemy, że co 10 minut jakaś rzecz ma się wykonać.
+
+87
+00:04:51,199 --> 00:04:55,319
+Wtedy możemy zrobić pętlę while i dodatkowo z biblioteki time,
+
+88
+00:04:55,319 --> 00:05:00,819
+czyli from time, zaimportować sleep i sleep właśnie usypia program na chwilę.
+
+89
+00:05:00,819 --> 00:05:03,819
+Ten while wtedy nie będzie się wykonywał tak bardzo szybko,
+
+90
+00:05:03,819 --> 00:05:10,319
+tylko na przykład uśpimy go na minutę i co minutę będziemy chcieli wykonywać jakąś czynność.
+
+91
+00:05:10,319 --> 00:05:15,819
+To prowadzi już do takich pierwszych zadań, które mogą nam pomóc w jakiejś wstępnej automatyzacji.
+
+92
+00:05:15,819 --> 00:05:20,819
+Coś sobie sprawdzać pocztę i w zależności od tego, czy się coś pokaże na tej poczcie, czy nie,
+
+93
+00:05:20,819 --> 00:05:23,319
+to wykonać jakąś czynność.
+
+94
+00:05:23,319 --> 00:05:28,319
+No i też często jest tak, że czasem chcemy programy przerywać w inny sposób.
+
+95
+00:05:28,319 --> 00:05:32,319
+Czyli na przykład nie chcemy ich przerywać, żeby same się kończyły,
+
+96
+00:05:32,319 --> 00:05:35,319
+tylko mamy jakiś przycisk zamykający albo jakiś skrót klawiszowy,
+
+97
+00:05:35,319 --> 00:05:38,319
+albo chcemy na przykład, żeby program dopiero zakończył się wtedy,
+
+98
+00:05:38,319 --> 00:05:41,319
+kiedy jakieś zdarzenie będzie miało miejsce.
+
+99
+00:05:41,319 --> 00:05:46,819
+W takich dwóch przypadkach while true również ma swoje bardzo dobre zastosowanie.

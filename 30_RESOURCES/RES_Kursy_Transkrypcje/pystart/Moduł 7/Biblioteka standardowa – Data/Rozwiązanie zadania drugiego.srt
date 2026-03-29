@@ -1,0 +1,687 @@
+1
+00:00:00,000 --> 00:00:07,440
+Dobra, no to co? Stworzyliśmy sobie pliczek z zlecenia py i musimy odebrać teraz od użytkownika dwie daty.
+
+2
+00:00:07,960 --> 00:00:14,780
+Czyli data rozpoczęcia, niech to będzie jakiś date start, to jest input podaj datę rozpoczęcia.
+
+3
+00:00:16,059 --> 00:00:24,100
+No i możemy się też umówić na ddmmyy, czy też rok, rok, rok, rok, jak po polsku.
+
+4
+00:00:24,100 --> 00:00:31,040
+Date end to będzie data zakończenia.
+
+5
+00:00:33,300 --> 00:00:37,579
+Z racji tego, że te dwa inputy odbierają string tak naprawdę od użytkownika,
+
+6
+00:00:38,079 --> 00:00:49,579
+to moglibyśmy zrobić from datetime import datetime, a następnie napisać datetime.strptime, bo parse time.
+
+7
+00:00:49,579 --> 00:00:53,020
+Pierwszy argument to jest nasza data wyrażona w stringu,
+
+8
+00:00:53,020 --> 00:00:59,700
+drugim argumentem jest ten wygląd, więc możemy sobie zrobić o tak.
+
+9
+00:01:00,100 --> 00:01:06,640
+No i tę samą zmianę zastosuję niżej, dzięki temu od razu będę miał dwa obiekty daty i czasu
+
+10
+00:01:06,640 --> 00:01:09,579
+i wszystko będzie ładniej wyglądało.
+
+11
+00:01:10,159 --> 00:01:15,640
+Okej, to skoro już mamy początek i koniec, no to teraz wypadałoby zapytać go jeszcze o dniówkę.
+
+12
+00:01:15,640 --> 00:01:22,640
+Czyli możemy go zapytać o rate, równa się input, ile zarabia.
+
+13
+00:01:23,019 --> 00:01:27,019
+Zapytaj, co robisz dziennie, czy tam podaj stawkę dzienną.
+
+14
+00:01:27,019 --> 00:01:36,019
+I wtedy, żeby policzyć różnicę między dwiema datami, możemy sobie stworzyć zmienną difference, równa się date end minus date start.
+
+15
+00:01:36,019 --> 00:01:40,019
+I na tym difference mamy to, co się nazywa days.
+
+16
+00:01:40,019 --> 00:01:43,019
+Tu jak widać mamy też days, seconds, microseconds.
+
+17
+00:01:43,019 --> 00:01:45,019
+Nas interesuje days.
+
+18
+00:01:45,019 --> 00:01:49,019
+No i będziemy chcieli przemnożyć days razy rate.
+
+19
+00:01:49,019 --> 00:01:52,019
+I to będzie jego tam jakiś salary, czy też możemy tak to nazwać.
+
+20
+00:01:52,019 --> 00:01:53,019
+No i będziemy chcieli przemnożyć days razy rate. I to będzie jego tam jakiś salary, czy też możemy tak to nazwać.
+
+21
+00:01:53,019 --> 00:01:54,019
+Print.
+
+22
+00:01:54,019 --> 00:01:57,019
+Zarobiłeś. Też do wypłaty.
+
+23
+00:01:57,019 --> 00:02:03,019
+Jeżeli to jest do string, tutaj możemy sobie to zrobić z fko, pln.
+
+24
+00:02:03,019 --> 00:02:06,019
+Jeżeli to jest do string, tutaj możemy sobie to zrobić z fko, pln.
+
+25
+00:02:06,019 --> 00:02:08,019
+I sprawdzamy punkt pierwszy.
+
+26
+00:02:08,019 --> 00:02:11,019
+Python. Spacja. Zlecenie. Py
+
+27
+00:02:11,019 --> 00:02:15,019
+Data rozpoczęcia. Undop거든 listopad 2020
+
+28
+00:02:15,019 --> 00:02:18,019
+11 listopada 2020
+
+29
+00:02:18,019 --> 00:02:19,019
+Ile zarabiasz dziennie?
+
+30
+00:02:19,019 --> 00:02:21,019
+100
+
+31
+00:02:21,019 --> 00:02:22,479
+No i do wypłaty.
+
+32
+00:02:22,479 --> 00:02:23,019
+No i do wypłaty.
+
+33
+00:02:23,020 --> 00:02:25,000
+100, 100. Dlaczego tak wyszło?
+
+34
+00:02:25,439 --> 00:02:26,320
+Wyszło tak dlatego,
+
+35
+00:02:27,659 --> 00:02:28,920
+że ten
+
+36
+00:02:28,920 --> 00:02:31,000
+rate, on jest tutaj
+
+37
+00:02:31,000 --> 00:02:32,980
+policzony jako string, a my musimy
+
+38
+00:02:32,980 --> 00:02:34,900
+go zamienić na float. Jak go
+
+39
+00:02:34,900 --> 00:02:36,420
+zamienimy, no to będziemy mieli
+
+40
+00:02:36,420 --> 00:02:38,980
+wtedy 100 razy 100, 100 razy
+
+41
+00:02:38,980 --> 00:02:40,680
+2 i będzie wszystko ok.
+
+42
+00:02:41,939 --> 00:02:43,060
+09, 11,
+
+43
+00:02:43,219 --> 00:02:45,060
+2020, 11,
+
+44
+00:02:45,060 --> 00:02:46,260
+11, 2020,
+
+45
+00:02:46,980 --> 00:02:49,280
+100 i mamy 200.
+
+46
+00:02:49,680 --> 00:02:50,740
+Czyli zadziałało.
+
+47
+00:02:50,740 --> 00:02:52,659
+Pod punkt drugi chcielibyśmy
+
+48
+00:02:52,659 --> 00:02:54,360
+wyświetlić za pomocą pętli
+
+49
+00:02:54,360 --> 00:02:56,420
+wszystkie dni pomiędzy dwiema datami
+
+50
+00:02:56,420 --> 00:02:58,760
+z poprzedniego zadania. Jak to zrobić?
+
+51
+00:02:59,159 --> 00:02:59,800
+Tak naprawdę
+
+52
+00:02:59,800 --> 00:03:01,879
+powinniśmy
+
+53
+00:03:01,879 --> 00:03:03,820
+w tym momencie
+
+54
+00:03:03,820 --> 00:03:06,280
+przyjąć, że ta nasza data
+
+55
+00:03:06,280 --> 00:03:08,420
+początkowa to jest jakaś data,
+
+56
+00:03:08,520 --> 00:03:10,360
+do której będziemy chcieli dodawać
+
+57
+00:03:10,360 --> 00:03:12,740
+jeden dzień, dopóki
+
+58
+00:03:12,740 --> 00:03:14,580
+nie napotkamy daty
+
+59
+00:03:14,580 --> 00:03:16,160
+zakończenia. Czyli
+
+60
+00:03:16,160 --> 00:03:18,980
+while date start
+
+61
+00:03:18,980 --> 00:03:20,200
+jest mniejsze
+
+62
+00:03:20,199 --> 00:03:22,959
+lub równe date end.
+
+63
+00:03:24,159 --> 00:03:24,859
+To jest
+
+64
+00:03:24,859 --> 00:03:26,159
+ta informacja dla nas.
+
+65
+00:03:26,759 --> 00:03:28,939
+Następnie będziemy potrzebowali
+
+66
+00:03:28,939 --> 00:03:30,739
+wyświetlić sobie
+
+67
+00:03:30,739 --> 00:03:32,280
+to date start, czyli print
+
+68
+00:03:32,280 --> 00:03:34,739
+date start, a
+
+69
+00:03:34,739 --> 00:03:37,000
+następnie będziemy chcieli zwiększać
+
+70
+00:03:37,000 --> 00:03:38,319
+ten date start o 1.
+
+71
+00:03:38,859 --> 00:03:40,879
+W tym celu potrzebujemy mieć ten div też,
+
+72
+00:03:40,879 --> 00:03:41,939
+czyli time delta.
+
+73
+00:03:42,899 --> 00:03:44,179
+No i możemy wykonać
+
+74
+00:03:44,179 --> 00:03:46,939
+date start plus
+
+75
+00:03:46,939 --> 00:03:48,519
+równa się
+
+76
+00:03:48,519 --> 00:03:50,000
+time delta,
+
+77
+00:03:50,199 --> 00:03:52,879
+z uwzględnieniem, że
+
+78
+00:03:52,879 --> 00:03:54,339
+days jest
+
+79
+00:03:54,339 --> 00:03:56,959
+1. W tym momencie,
+
+80
+00:03:57,399 --> 00:03:58,539
+jeżeli to sobie wykonamy
+
+81
+00:03:58,539 --> 00:04:01,079
+i podamy mu jeszcze raz te daty,
+
+82
+00:04:01,119 --> 00:04:02,560
+niech będzie 11.2020
+
+83
+00:04:02,560 --> 00:04:05,119
+i niech będzie 11.15.
+
+84
+00:04:05,519 --> 00:04:06,679
+11.2020
+
+85
+00:04:06,679 --> 00:04:08,719
+ile zarabiasz dziennie?
+
+86
+00:04:08,879 --> 00:04:10,199
+300 niech będzie. O!
+
+87
+00:04:10,620 --> 00:04:11,899
+I zobacz, były od
+
+88
+00:04:11,899 --> 00:04:14,939
+9. Jeszcze raz piszę do 11.
+
+89
+00:04:20,199 --> 00:04:23,479
+I mam 9.10.11.
+
+90
+00:04:23,800 --> 00:04:26,680
+Czyli dokładnie wszystkie te dni mi się tutaj wyświetliły.
+
+91
+00:04:27,019 --> 00:04:28,479
+One co prawda też się wyświetliły
+
+92
+00:04:28,479 --> 00:04:30,420
+z godzinami, minutami, sekundami.
+
+93
+00:04:30,819 --> 00:04:32,839
+Jeżeli godzin, minut i sekund nie chcemy,
+
+94
+00:04:32,939 --> 00:04:34,319
+no to już wiesz jak to zrobić.
+
+95
+00:04:34,699 --> 00:04:35,819
+str.f time
+
+96
+00:04:35,819 --> 00:04:39,919
+no i procent d, procent m,
+
+97
+00:04:39,919 --> 00:04:40,639
+procent y.
+
+98
+00:04:41,519 --> 00:04:43,060
+Wielki y, bo chcemy cały
+
+99
+00:04:43,060 --> 00:04:45,860
+ten. Ok. Przyda nam się
+
+100
+00:04:45,860 --> 00:04:46,579
+jeszcze procent a.
+
+101
+00:04:47,740 --> 00:04:50,079
+Z tego względu, że my będziemy chcieli,
+
+102
+00:04:50,079 --> 00:04:52,399
+sprawdzić, czy może ten dzień,
+
+103
+00:04:52,899 --> 00:04:53,919
+kiedy ktoś pracuje,
+
+104
+00:04:54,219 --> 00:04:56,159
+to jest sobota albo niedziela.
+
+105
+00:04:56,680 --> 00:04:58,079
+Możemy do tego wykorzystać
+
+106
+00:04:58,680 --> 00:05:00,000
+po prostu sprawdzenie.
+
+107
+00:05:00,579 --> 00:05:01,219
+Pobrać sobie
+
+108
+00:05:01,219 --> 00:05:04,240
+date start strf time
+
+109
+00:05:04,240 --> 00:05:04,899
+od a.
+
+110
+00:05:09,039 --> 00:05:09,979
+I jeżeli
+
+111
+00:05:09,979 --> 00:05:12,299
+małe a to było sad i soon.
+
+112
+00:05:12,639 --> 00:05:13,740
+Czyli jeżeli
+
+113
+00:05:13,740 --> 00:05:16,180
+date start
+
+114
+00:05:16,180 --> 00:05:18,339
+strf time procent a
+
+115
+00:05:18,339 --> 00:05:20,019
+równa,
+
+116
+00:05:20,079 --> 00:05:20,800
+równa się,
+
+117
+00:05:20,800 --> 00:05:23,519
+równa się sad
+
+118
+00:05:23,519 --> 00:05:25,579
+or.
+
+119
+00:05:25,759 --> 00:05:27,000
+Albo możemy zrobić in
+
+120
+00:05:27,000 --> 00:05:30,079
+sad
+
+121
+00:05:30,079 --> 00:05:33,339
+soon.
+
+122
+00:05:34,560 --> 00:05:35,919
+To wtedy chcemy
+
+123
+00:05:35,919 --> 00:05:37,120
+liczyć podwójnie za te dni.
+
+124
+00:05:37,659 --> 00:05:39,979
+Tutaj nasze salary tak naprawdę jest
+
+125
+00:05:39,979 --> 00:05:41,979
+już policzone jako dni,
+
+126
+00:05:42,519 --> 00:05:43,899
+ale my możemy po prostu za każdą
+
+127
+00:05:43,899 --> 00:05:45,839
+sobotę i za niedzielę dodać jeszcze jedną
+
+128
+00:05:45,839 --> 00:05:47,819
+pensję ekstra. Czyli wtedy będzie
+
+129
+00:05:47,819 --> 00:05:49,959
+salary plus równa się
+
+130
+00:05:49,959 --> 00:05:50,719
+rate.
+
+131
+00:05:52,099 --> 00:05:52,919
+I w tym momencie
+
+132
+00:05:52,919 --> 00:05:55,519
+do wypłaty jest na samym końcu.
+
+133
+00:05:56,199 --> 00:05:57,199
+Zrobię to raz jeszcze.
+
+134
+00:05:58,159 --> 00:05:59,859
+Idę do pracy, tylko zrobię sobie więcej
+
+135
+00:05:59,859 --> 00:06:01,399
+miejsca, żeby trochę popracować.
+
+136
+00:06:01,899 --> 00:06:03,279
+10 grudnia
+
+137
+00:06:03,279 --> 00:06:05,279
+2023 roku.
+
+138
+00:06:06,000 --> 00:06:08,159
+No i pracuję do 15 grudnia
+
+139
+00:06:08,159 --> 00:06:09,919
+2023 roku.
+
+140
+00:06:10,560 --> 00:06:11,439
+Ile zarabiam dziennie?
+
+141
+00:06:11,519 --> 00:06:13,779
+250. O i zobaczcie.
+
+142
+00:06:14,719 --> 00:06:15,679
+Raz, dwa,
+
+143
+00:06:15,679 --> 00:06:17,759
+trzy, cztery, pięć, sześć.
+
+144
+00:06:18,120 --> 00:06:19,879
+Czyli 250 razy 6.
+
+145
+00:06:19,959 --> 00:06:22,199
+Tu jest sad i soon
+
+146
+00:06:22,199 --> 00:06:24,039
+wielką literą, a ja napisałem pewnie
+
+147
+00:06:24,039 --> 00:06:25,919
+małą, co? Nie, dobrze napisałem sad
+
+148
+00:06:25,919 --> 00:06:27,979
+i soon. Tu jest jeszcze jeden błąd, bo
+
+149
+00:06:27,979 --> 00:06:30,159
+jeżeli pracujemy od tam drugiego
+
+150
+00:06:30,159 --> 00:06:32,199
+do trzeciego, to on nam policzy tylko jeden,
+
+151
+00:06:32,279 --> 00:06:33,779
+bo tylko jeden dzień jest różnicy.
+
+152
+00:06:34,199 --> 00:06:36,179
+Więc my musimy sobie do tej ilości dni
+
+153
+00:06:36,179 --> 00:06:37,479
+dodać jeden.
+
+154
+00:06:38,299 --> 00:06:39,879
+Jak dodamy do ilości dni
+
+155
+00:06:39,879 --> 00:06:41,740
+jeden, to już wszystko będzie ok
+
+156
+00:06:41,740 --> 00:06:43,560
+i będziemy mieli prawidłowy
+
+157
+00:06:43,560 --> 00:06:44,419
+wynik.
+
+158
+00:06:46,719 --> 00:06:48,019
+Zobacz, odpalę to
+
+159
+00:06:48,019 --> 00:06:49,939
+sobie raz jeszcze. No i mu powiem,
+
+160
+00:06:49,959 --> 00:06:52,199
+że powiedzmy pracuję od 10.10.
+
+161
+00:06:52,519 --> 00:06:53,120
+2010
+
+162
+00:06:53,120 --> 00:06:55,519
+do 15.10.
+
+163
+00:06:55,699 --> 00:06:57,959
+2010. Zarabiam złotówkę
+
+164
+00:06:57,959 --> 00:06:59,399
+dziennie, żeby było prościej liczyć.
+
+165
+00:06:59,859 --> 00:07:02,060
+I w ten sposób mam 1, 2, 3,
+
+166
+00:07:02,180 --> 00:07:03,500
+4, 5, 6.
+
+167
+00:07:05,359 --> 00:07:05,879
+To jest
+
+168
+00:07:05,879 --> 00:07:08,199
+do wypłaty przed bonusem,
+
+169
+00:07:08,279 --> 00:07:10,060
+a po bonusie mam 7, bo trafiła mi się
+
+170
+00:07:10,060 --> 00:07:11,399
+jedna niedziela.
+
+171
+00:07:12,179 --> 00:07:13,539
+Wszystko działa. Dzięki
+
+172
+00:07:13,539 --> 00:07:14,659
+i chodźcie dalej.

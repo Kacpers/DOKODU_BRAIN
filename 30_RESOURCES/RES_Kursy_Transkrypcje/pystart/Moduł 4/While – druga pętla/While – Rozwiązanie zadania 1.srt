@@ -1,0 +1,235 @@
+1
+00:00:00,700 --> 00:00:02,379
+No to co? Wszyscy do kodu.
+
+2
+00:00:02,980 --> 00:00:06,320
+Zapytaj użytkownika o 10 liczb dodatnich, czyli while
+
+3
+00:00:06,320 --> 00:00:09,740
+i tak naprawdę my będziemy chcieli pytać użytkownika
+
+4
+00:00:09,740 --> 00:00:13,259
+dopóki nie poda nam tych 10 liczb, czyli musimy mieć jakąś
+
+5
+00:00:13,259 --> 00:00:16,980
+zmienną, która będzie przechowywała ten nasz wynik.
+
+6
+00:00:17,280 --> 00:00:19,260
+Możemy przyporządkować sobie, że to będzie lista.
+
+7
+00:00:19,960 --> 00:00:22,900
+My chcemy, żeby ta lista składała się z 10 liczb,
+
+8
+00:00:23,000 --> 00:00:26,019
+czyli dopóki ilość tych elementów naszych
+
+9
+00:00:26,019 --> 00:00:29,000
+jest mniejsza
+
+10
+00:00:29,000 --> 00:00:31,420
+niż 10, to
+
+11
+00:00:31,420 --> 00:00:34,619
+odbieramy od użytkownika te wartości.
+
+12
+00:00:35,219 --> 00:00:37,480
+Czyli musimy od użytkownika najpierw coś odebrać,
+
+13
+00:00:37,740 --> 00:00:40,899
+zamienić to na integer. Możemy więc sobie stworzyć zmienną
+
+14
+00:00:40,899 --> 00:00:42,899
+value równa się int input
+
+15
+00:00:42,899 --> 00:00:45,120
+podaj liczbę dodatnią.
+
+16
+00:00:47,820 --> 00:00:50,840
+Jeżeli value jest
+
+17
+00:00:50,840 --> 00:00:53,799
+większe od zera, no to wtedy
+
+18
+00:00:53,799 --> 00:00:57,260
+output append value.
+
+19
+00:00:57,679 --> 00:00:58,980
+Ważne jest to, żeby też pamiętać,
+
+20
+00:00:58,979 --> 00:01:02,959
+żeby zamieniać sobie tą liczbę na integer, bo bez tego nic nam się nie uda.
+
+21
+00:01:03,539 --> 00:01:06,179
+Jeżeli poda nam liczbę ujemną, nie będzie zliczana.
+
+22
+00:01:06,679 --> 00:01:08,519
+No i wyświetl największą i najmniejszą liczbę.
+
+23
+00:01:08,920 --> 00:01:12,979
+Czyli print output
+
+24
+00:01:12,979 --> 00:01:16,479
+print max output
+
+25
+00:01:16,479 --> 00:01:22,479
+print min output.
+
+26
+00:01:23,099 --> 00:01:25,759
+W ten sposób będziemy mieli tylko 10 liczb.
+
+27
+00:01:25,759 --> 00:01:28,920
+No bo się upewniamy tutaj, że pytamy,
+
+28
+00:01:28,980 --> 00:01:32,540
+czy tak długo jest mniejsze niż 10.
+
+29
+00:01:33,280 --> 00:01:36,600
+Jak będzie równe 10, no to też teoretycznie moglibyśmy zapytać.
+
+30
+00:01:36,600 --> 00:01:40,159
+Więc mniejsze lub równe warto byłoby tutaj zrobić.
+
+31
+00:01:40,300 --> 00:01:43,300
+Pobieramy value, sprawdzamy czy value jest większe od zera.
+
+32
+00:01:43,300 --> 00:01:45,560
+Jeżeli tak, to dodajemy.
+
+33
+00:01:45,560 --> 00:01:48,480
+Dodatnich? No zero jest niedodatnie.
+
+34
+00:01:48,480 --> 00:01:50,820
+No to lecimy. Python
+
+35
+00:01:50,820 --> 00:01:53,540
+spacja while 1 py.
+
+36
+00:01:53,540 --> 00:01:56,480
+Podaj liczbę dodatnią. Uwaga, liczymy razem.
+
+37
+00:01:56,480 --> 00:02:03,480
+1, 2, 3, 4, 5, 6, 7, 8, 9,
+
+38
+00:02:03,480 --> 00:02:09,480
+3 nie liczą się, 10.
+
+39
+00:02:09,480 --> 00:02:13,480
+Ach. Czyli wziął o jedną wartość więcej.
+
+40
+00:02:13,480 --> 00:02:16,480
+Dlaczego o jedną wartość więcej? Przecież jest 1.
+
+41
+00:02:16,480 --> 00:02:19,480
+Ach, bo mniejsze lub równe 10? Nie, no powinno być ok.
+
+42
+00:02:19,480 --> 00:02:24,480
+Ok, dla 10 nie powinien już wchodzić do środka.
+
+43
+00:02:24,480 --> 00:02:24,819
+Tu mój błąd z tym równym.
+
+44
+00:02:24,819 --> 00:02:25,560
+Tu mój błąd z tym równym.
+
+45
+00:02:25,560 --> 00:02:26,020
+Tu mój błąd z tym równym.
+
+46
+00:02:26,020 --> 00:02:29,020
+Zawsze się denerwuję, czy podam mu dobrą wartość.
+
+47
+00:02:29,020 --> 00:02:30,020
+Zawsze się denerwuję, czy podam mu dobrą wartość.
+
+48
+00:02:30,020 --> 00:02:35,020
+Zawsze się denerwuję, czy podam mu dobrą wartość.
+
+49
+00:02:35,020 --> 00:02:38,020
+I stąd też ta równość.
+
+50
+00:02:38,020 --> 00:02:41,020
+Często zapominam o tym znaku równa się, więc teraz z marszu dodałem.
+
+51
+00:02:41,020 --> 00:02:44,020
+Ale widzicie, prosiliście o to, żebym nie wycinał błędów.
+
+52
+00:02:44,020 --> 00:02:47,020
+Zresztą ostatnio dostałem parę miłych komentarzy w tej kwestii, więc bardzo dziękuję.
+
+53
+00:02:47,020 --> 00:02:54,020
+Mam takie, jakbym gdzieś długo nad czymś siedział, to pewnie bym to wyciął i tylko bym wam powiedział, co zrobiłem źle.
+
+54
+00:02:54,020 --> 00:02:55,020
+Natomiast tu, jak widać, udało się też.
+
+55
+00:02:55,020 --> 00:02:57,020
+Udało się ten błąd naprawić dosyć szybko.
+
+56
+00:02:57,020 --> 00:02:59,020
+Sprawdziłem w ten sposób.
+
+57
+00:02:59,020 --> 00:03:01,020
+Jakbym sobie nie poradził, skorzystałbym z debugera.
+
+58
+00:03:01,020 --> 00:03:03,020
+Było na początku tej lekcji.
+
+59
+00:03:03,020 --> 00:03:05,020
+To co? Czas na zadanie drugie.

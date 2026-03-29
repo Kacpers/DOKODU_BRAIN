@@ -1,0 +1,231 @@
+1
+00:00:00,000 --> 00:00:03,879
+No i mamy przed sobą zadanie, żeby przećwiczyć enkapsulowanie.
+
+2
+00:00:04,400 --> 00:00:08,320
+Natomiast od razu zaznaczam, że to zadanie jest bardzo podobne do zadań z kompozycji,
+
+3
+00:00:08,439 --> 00:00:13,140
+bo tak naprawdę enkapsulacja jest czymś, co może nam pomóc przy okazji kompozycji,
+
+4
+00:00:13,259 --> 00:00:15,660
+czyli składania tych naszych obiektów.
+
+5
+00:00:16,199 --> 00:00:19,219
+Najpierw je przeczytam, a później jeszcze dwa słowa sobie je omówimy.
+
+6
+00:00:19,740 --> 00:00:22,580
+Przygotuj program, który będzie przechowywał listę zakupów.
+
+7
+00:00:22,580 --> 00:00:27,859
+Każdy wpis jest osobnym obiektem klasy list item.
+
+8
+00:00:27,859 --> 00:00:32,000
+Jeśli dany produkt znajduje się już na liście, nie powinien być dodany drugi raz.
+
+9
+00:00:32,500 --> 00:00:35,320
+Zamiast tego powinna być zwiększona jego ilość.
+
+10
+00:00:35,579 --> 00:00:38,200
+Produkty do zakupienia przechowuj w zmiennej prywatnej.
+
+11
+00:00:38,759 --> 00:00:42,060
+Obiekt klasy list musi posiadać następujące metody.
+
+12
+00:00:42,719 --> 00:00:46,079
+Add item, przyjmującej product i quantity.
+
+13
+00:00:46,679 --> 00:00:48,539
+Remove item, product quantity.
+
+14
+00:00:49,000 --> 00:00:51,179
+List items, po prostu zwracający list.
+
+15
+00:00:51,640 --> 00:00:55,939
+Calculate total cost, liczący łączną wartość.
+
+16
+00:00:55,939 --> 00:01:00,599
+Każdy obiekt klasy product posiada cenę oraz nazwę.
+
+17
+00:01:00,960 --> 00:01:03,839
+Czyli produkty wiadomo, mamy chleb za 3 zł,
+
+18
+00:01:04,299 --> 00:01:08,439
+czy za 6, masło za 8 czy za 10 itd.
+
+19
+00:01:08,560 --> 00:01:09,519
+Mamy różne produkty.
+
+20
+00:01:10,420 --> 00:01:13,519
+Następnie będziemy chcieli te produkty dodawać do koszyka.
+
+21
+00:01:14,140 --> 00:01:17,299
+Tylko jeżeli chodzi o ilość produktów w koszyku,
+
+22
+00:01:17,799 --> 00:01:19,400
+to tak naprawdę można byłoby powiedzieć,
+
+23
+00:01:19,519 --> 00:01:22,039
+że koszyk odpowiada za przechowywanie tych informacji.
+
+24
+00:01:22,659 --> 00:01:25,140
+Jeżeli dodajemy sobie nowe produkty,
+
+25
+00:01:25,140 --> 00:01:29,460
+to w koszyku wiemy, ile tych produktów jest łącznie.
+
+26
+00:01:29,879 --> 00:01:31,859
+A my byśmy chcieli sobie to trochę ułatwić
+
+27
+00:01:31,859 --> 00:01:35,040
+i między koszykiem a produktem mieć jeszcze jeden obiekt,
+
+28
+00:01:35,379 --> 00:01:39,120
+który będzie tylko i wyłącznie reprezentował pojedynczy wiersz w koszyku.
+
+29
+00:01:39,219 --> 00:01:40,939
+Jeżeli sobie wyobrazimy sklep internetowy,
+
+30
+00:01:41,019 --> 00:01:42,599
+to sklep internetowy tak właśnie wygląda.
+
+31
+00:01:42,740 --> 00:01:47,460
+Koszyk to jest całe to miejsce, gdzie są przechowywane te produkty.
+
+32
+00:01:48,060 --> 00:01:50,640
+Natomiast w tym koszyku każdy pojedynczy wiersz
+
+33
+00:01:50,640 --> 00:01:52,799
+reprezentuje zawsze produkt, który mamy,
+
+34
+00:01:52,799 --> 00:01:54,879
+a w koszyku ilość tych produktów.
+
+35
+00:01:55,140 --> 00:01:58,540
+No i często ten pojedynczy wiersz też mówi nam,
+
+36
+00:01:58,700 --> 00:02:00,260
+ile ten wiersz kosztuje.
+
+37
+00:02:01,200 --> 00:02:04,400
+Natomiast w koszyku na samym dole jest na przykład wypisana
+
+38
+00:02:04,400 --> 00:02:07,140
+łączna ilość produktów i łączna wartość produktów.
+
+39
+00:02:07,579 --> 00:02:08,960
+I coś takiego chcielibyśmy zrobić.
+
+40
+00:02:09,379 --> 00:02:11,979
+Czyli koszyk będzie miał tylko i wyłącznie zmienną,
+
+41
+00:02:12,080 --> 00:02:13,759
+która będzie nazywała się products.
+
+42
+00:02:14,240 --> 00:02:17,639
+Za pomocą metod add item, remove item i list items
+
+43
+00:02:17,639 --> 00:02:20,659
+będziemy mogli sobie dodawać, odejmować albo wylistowywać
+
+44
+00:02:20,659 --> 00:02:21,960
+wszystkie produkty w koszyku.
+
+45
+00:02:22,819 --> 00:02:24,759
+List item to będzie klasyka,
+
+46
+00:02:25,139 --> 00:02:27,239
+pomiędzy koszykiem a produktem.
+
+47
+00:02:27,719 --> 00:02:29,459
+Natomiast produkt wiadomo.
+
+48
+00:02:30,379 --> 00:02:32,519
+To co? Zróbmy to.
+
+49
+00:02:33,479 --> 00:02:35,759
+Spróbujmy też wykorzystać symbol podkreślenia
+
+50
+00:02:35,759 --> 00:02:37,919
+wszędzie tam, gdzie można będzie go dodać.
+
+51
+00:02:38,059 --> 00:02:40,179
+Tak, żeby te produkty nie były dostępne.
+
+52
+00:02:40,519 --> 00:02:43,819
+I na przykład, jeżeli będziemy potrzebowali gdzieś szukania produktów,
+
+53
+00:02:44,219 --> 00:02:46,779
+to też, żeby to szukanie produktów też nie było
+
+54
+00:02:46,779 --> 00:02:50,319
+jako metoda dostępne na zewnątrz.
+
+55
+00:02:50,319 --> 00:02:51,479
+Ale nie uprzedzajmy faktów.
+
+56
+00:02:51,819 --> 00:02:53,399
+To takie zadanie też na główkowanie.
+
+57
+00:02:53,739 --> 00:02:55,119
+Więc mam nadzieję, że się spodobało.
+
+58
+00:02:55,139 --> 00:02:56,619
+Do roboty.

@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:06,400
+W zadaniu pierwszym mamy pytać użytkownika o nazwy produktów tak długo, aż nie napisze słowa koniec.
+
+2
+00:00:06,960 --> 00:00:14,200
+Zapisz wówczas do pliku o nazwie według wzoru, w ten sposób, tylko unikatowe nazwy wprowadzanych przez niego produktów.
+
+3
+00:00:14,200 --> 00:00:21,500
+Czyli na pewno potrzebujemy mieć products i ten nasz products to musi być set.
+
+4
+00:00:21,500 --> 00:00:31,660
+I teraz w ramach naszego while'a, oczywiście bez nawiasu, moglibyśmy napisać while true i wtedy robić go w nieskończoność.
+
+5
+00:00:31,800 --> 00:00:36,519
+Natomiast jeżeli nazwa produktu to jest koniec, no to wtedy zakańczać.
+
+6
+00:00:36,519 --> 00:00:50,820
+Natomiast możemy też skorzystać z walrus operatora, czyli while product name dwukropek równa się input, podaj nazwę produktu.
+
+7
+00:00:51,500 --> 00:00:55,939
+I tak długo, jak długo ta nazwa to nie jest słowo koniec.
+
+8
+00:00:56,719 --> 00:01:04,799
+Czyli to sobie biorę w nawias, nie równa się, koniec dwukropek i wtedy zobacz print product name.
+
+9
+00:01:04,799 --> 00:01:15,480
+Jeżeli teraz ten program wykonam, czy zrobię python domowe 1py, podaj nazwę produktu a, koniec, czyli wszystko zadziałało, nie wyświetlił mi tej nazwy.
+
+10
+00:01:15,659 --> 00:01:17,859
+Czyli ten fragment mamy za sobą.
+
+11
+00:01:18,400 --> 00:01:21,299
+Następnie będziemy chcieli dodawać nazwy tych produktów.
+
+12
+00:01:21,500 --> 00:01:29,420
+Do tego naszego zbioru, czyli products, add, product name.
+
+13
+00:01:30,000 --> 00:01:41,519
+Dzięki temu będziemy mieli nazwy produktów i jedyne co nam zostanie do zrobienia, to zapisanie tego do pliku o nazwie dzień, dzień, dzień, dzień, dzień, miesiąc, miesiąc, rok, rok, rok, rok.
+
+14
+00:01:41,519 --> 00:01:46,099
+Żeby to wykonać, potrzebujemy zrobić from datetime, import datetime.
+
+15
+00:01:46,420 --> 00:01:51,480
+No i potrzebowalibyśmy mieć jakąś tam zmienną today, równa się datetime.
+
+16
+00:01:51,500 --> 00:01:53,500
+Now.
+
+17
+00:01:53,500 --> 00:02:02,420
+I ten nasz datetime now możemy sobie sformatować, czyli możemy sobie stworzyć zmienną file name, równa się today, string format time.
+
+18
+00:02:02,859 --> 00:02:10,520
+I my będziemy chcieli to sformatować w taki sposób, żeby on nam wyświetlał dzień, miesiąc i rok, czyli procent d, procent m i procent wielkie y.
+
+19
+00:02:11,360 --> 00:02:15,740
+Procent d, procent m i procent wielkie y.
+
+20
+00:02:15,740 --> 00:02:21,300
+No i to ma być nazwa .txt, więc to .txt warto byłoby też sobie tutaj gdzieś.
+
+21
+00:02:21,500 --> 00:02:25,620
+Dołożyć, czyli plus kropka txt.
+
+22
+00:02:26,020 --> 00:02:32,500
+I teraz with open file name, s file, dwukropek.
+
+23
+00:02:33,439 --> 00:02:35,500
+I chcemy zapisać wszystkie te nazwy.
+
+24
+00:02:36,020 --> 00:02:42,280
+Czyli tutaj jeszcze warto zaznaczyć, że to chcemy zapisywać jako w, bo jeżeli takiego pliku nie ma, to ma go tworzyć.
+
+25
+00:02:42,659 --> 00:02:44,860
+I wtedy file kropka write.
+
+26
+00:02:45,259 --> 00:02:48,840
+No i będziemy potrzebowali połączyć nasze produkty znakiem końca wiersza.
+
+27
+00:02:48,840 --> 00:02:51,479
+Czyli znak końca wiersza.
+
+28
+00:02:51,500 --> 00:02:55,419
+Kropka join product.
+
+29
+00:02:56,539 --> 00:02:58,199
+I gotowe.

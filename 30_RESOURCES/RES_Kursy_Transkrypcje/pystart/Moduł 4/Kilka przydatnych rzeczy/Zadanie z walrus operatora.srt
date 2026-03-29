@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:02,319
+I zadanie do wykonania wygląda następująco.
+
+2
+00:00:02,859 --> 00:00:07,500
+Napisz program, który pobiera od użytkownika liczby całkowite i wyświetla ich sumę.
+
+3
+00:00:08,040 --> 00:00:13,759
+Pętla while powinna działać tak długo, jak długo użytkownik wprowadzi liczbę różną od zera.
+
+4
+00:00:14,359 --> 00:00:15,919
+Możesz użyć walut operatora.
+
+5
+00:00:15,919 --> 00:00:21,400
+W warunku pętli while, aby sprawdzić, czy użytkownik wprowadził liczbę różną od zera.
+
+6
+00:00:22,339 --> 00:00:24,920
+No i cóż, myślę, że zadanie jest zrozumiałe.
+
+7
+00:00:25,719 --> 00:00:28,060
+Poniżej masz przykład też, jak może ono działać.
+
+8
+00:00:28,059 --> 00:00:36,519
+To, że nie pojawia się żadne pytanie wynika po prostu z faktu, że napisałem właśnie int, input i nie wprowadziłem niczego do środka.
+
+9
+00:00:37,039 --> 00:00:42,320
+No i mam 1, 2, 3, 4, 5, 0, więc suma liczb wynosi 15.
+
+10
+00:00:42,320 --> 00:00:46,039
+Widzimy się w rozwiązaniu. Chodźcie.

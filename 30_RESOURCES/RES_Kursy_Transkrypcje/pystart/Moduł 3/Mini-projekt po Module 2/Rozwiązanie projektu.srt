@@ -1,0 +1,667 @@
+1
+00:00:00,000 --> 00:00:04,459
+No to co? Najpierw musimy zapytać o to, ile mamy ścian do pomalowania.
+
+2
+00:00:04,600 --> 00:00:12,599
+No to jakaś tam zmienna walls równa się int input, ile jest ścian do pomalowania.
+
+3
+00:00:14,120 --> 00:00:18,859
+W tym momencie ktoś nam odpowie 3, 4, 10.
+
+4
+00:00:19,559 --> 00:00:27,240
+Kolejną rzeczą, którą będziemy musieli zrobić, no to będziemy potrzebowali przejść sobie po tych ścianach i zapytać o ich wymiary.
+
+5
+00:00:27,239 --> 00:00:34,960
+Więc for i ta pierwsza zmienna, która będzie w tym forze mogłaby nie być nam potrzebna,
+
+6
+00:00:35,000 --> 00:00:39,579
+no bo tak naprawdę my chcemy zapytać określoną liczbę razy o wysokość i szerokość,
+
+7
+00:00:39,859 --> 00:00:42,359
+ale ten numer możemy też wykorzystać w pytaniu.
+
+8
+00:00:42,619 --> 00:00:48,399
+Na przykład podaj mi wysokość ściany numer 1, albo podaj mi szerokość ściany numer 1.
+
+9
+00:00:48,899 --> 00:00:53,920
+Więc for counter, in, range, no i walls.
+
+10
+00:00:54,219 --> 00:00:56,879
+Tak naprawdę tutaj nie musimy mu wskazywać.
+
+11
+00:00:57,240 --> 00:01:01,660
+Od 1 do walls plus 1, no bo my sobie tą jedynkę dodamy za chwilę w pytaniu.
+
+12
+00:01:02,660 --> 00:01:06,280
+Musimy teraz zapytać o dwie rzeczy, o szerokość i o wysokość ściany.
+
+13
+00:01:06,780 --> 00:01:13,079
+Ja na razie nie będę traktował tych pytań, nie będę zamieniał tych odpowiedzi na floaty, czy też na intedgery,
+
+14
+00:01:13,079 --> 00:01:18,240
+z tego względu, że będziemy musieli się przygotować na to, że ktoś może nam nie podawać tej szerokości.
+
+15
+00:01:18,840 --> 00:01:26,780
+Czyli with równa się input i input też może mieć f z przodu i możemy sobie w tej f napisać,
+
+16
+00:01:27,239 --> 00:01:32,780
+podaj mi szerokość ściany numer, po numerze nie stawiamy kropki,
+
+17
+00:01:33,259 --> 00:01:39,140
+więc dokładamy sobie tutaj counter plus 1, no bo nie chcemy mieć podaj mi szerokość ściany numer 0,
+
+18
+00:01:39,140 --> 00:01:42,099
+tylko ściany numer 1, raczej tak ludzie będą woleli.
+
+19
+00:01:42,619 --> 00:01:45,840
+Można byłoby jeszcze napisać, że chodzi o to, że ta wysokość ma być w metrach,
+
+20
+00:01:45,959 --> 00:01:48,579
+czy szerokość ma być w metrach, czy wysokość ma być w metrach,
+
+21
+00:01:48,959 --> 00:01:52,879
+ale tutaj myślę, że można byłoby na górze napisać,
+
+22
+00:01:52,959 --> 00:01:56,679
+wszystkie wartości podajemy w centymetrach, czy wszystkie wartości podajemy w metrach.
+
+23
+00:01:57,239 --> 00:02:06,099
+Print, wszystkie wartości podawaj w metrach, na przykład 3,20, o w ten sposób.
+
+24
+00:02:07,280 --> 00:02:12,759
+Dobra, i w tym momencie, jeżeli my sobie ten program odpalimy, ja ten plik nazwałem projekt,
+
+25
+00:02:13,280 --> 00:02:17,840
+no to dostaniemy pytanie, ile jest ścian do pomalowania, 3, podaj mi szerokość ściany numer 1,
+
+26
+00:02:18,139 --> 00:02:22,500
+3 metry, wysokość, o napisałem high, dobra, zaraz to zmienimy,
+
+27
+00:02:23,039 --> 00:02:26,759
+no i tak mogę sobie podawać 3 ściany po 3,2 metry, jak widać wszystko ładnie mi się,
+
+28
+00:02:26,759 --> 00:02:30,359
+wyświetliło, to będzie wysokość, dobra.
+
+29
+00:02:30,879 --> 00:02:37,039
+Natomiast teraz rzecz kolejna, to może się okazać, że ktoś nie poda nam tej wysokości,
+
+30
+00:02:37,519 --> 00:02:39,459
+więc my tutaj powinniśmy się na to przygotować.
+
+31
+00:02:39,599 --> 00:02:41,560
+Dlaczego ja tego nie wpisałem tej floata?
+
+32
+00:02:41,819 --> 00:02:44,979
+Bo jeżeli ja wpisałbym float, a wartość byłaby pusta,
+
+33
+00:02:45,500 --> 00:02:48,639
+to on w tym momencie, kiedy próbujemy zamienić pustą wartość na float,
+
+34
+00:02:48,799 --> 00:02:52,959
+wyświetli nam błąd, więc my chcemy się przed tym przestrzec i sprawdzić,
+
+35
+00:02:53,060 --> 00:02:53,939
+czy wartość nie jest pusta.
+
+36
+00:02:54,599 --> 00:02:56,739
+Zatem możemy sobie najpierw stworzyć jakąś,
+
+37
+00:02:56,759 --> 00:03:00,819
+taką zmienną domyślną, niech to będzie previous high
+
+38
+00:03:00,819 --> 00:03:05,799
+i załóżmy, że standardowo ściany są gdzieś na 3 metrach wysokości,
+
+39
+00:03:06,319 --> 00:03:07,840
+że taka jest wysokość ściany.
+
+40
+00:03:08,359 --> 00:03:13,219
+Więc jeżeli teraz ktoś tam nie podał, czyli if high równa się jest puste,
+
+41
+00:03:14,099 --> 00:03:19,459
+no to wtedy chcielibyśmy przyjąć, że ta wysokość to jest poprzednia wysokość,
+
+42
+00:03:20,039 --> 00:03:24,120
+czyli high równa się previous high.
+
+43
+00:03:24,319 --> 00:03:25,719
+Możemy to zrobić tak.
+
+44
+00:03:26,759 --> 00:03:33,399
+Jeżeli ktoś nam podał, no to wtedy tę naszą wysokość chcemy zamienić na float.
+
+45
+00:03:33,879 --> 00:03:37,379
+I tę samą czynność musimy wykonać z naszą szerokością.
+
+46
+00:03:37,840 --> 00:03:39,679
+Szerokość zawsze będzie musiała być podana,
+
+47
+00:03:40,099 --> 00:03:44,899
+więc tutaj uwzględniamy to sobie i zamieniamy to sobie na float.
+
+48
+00:03:45,579 --> 00:03:49,659
+Zobacz, jeżeli teraz będziemy chcieli policzyć pole tej ściany,
+
+49
+00:03:49,659 --> 00:03:56,599
+no to można sobie zawsze wyświetlić print wysokość razy szerokość i sprawdzić to.
+
+50
+00:03:56,759 --> 00:04:00,479
+Te wyrażenia były zaznaczone na żółto, bo właśnie wcześniej nigdy nie były wykorzystane,
+
+51
+00:04:00,939 --> 00:04:03,759
+a teraz kiedy je wykorzystałem, czyli wyświetliłem sobie ten iloczyn,
+
+52
+00:04:03,840 --> 00:04:04,799
+wszystko już powinno być ok.
+
+53
+00:04:05,539 --> 00:04:08,719
+Sprawdzamy, czyli pierwsza ściana, załóżmy mam dwie ściany,
+
+54
+00:04:08,979 --> 00:04:12,399
+2x2, 4 i 3x3, 9.
+
+55
+00:04:12,979 --> 00:04:15,259
+A co się stanie, jeżeli nie podam wysokości?
+
+56
+00:04:15,840 --> 00:04:19,680
+Dwie ściany, szerokość 3, wysokość pusta,
+
+57
+00:04:20,039 --> 00:04:23,319
+zobacz, 3x3, czyli przemnożył mi to razy te 3 metry.
+
+58
+00:04:23,319 --> 00:04:26,639
+I 2, to też zadziała.
+
+59
+00:04:26,759 --> 00:04:32,399
+Natomiast jeżeli ktoś nam przedstawi wysokość,
+
+60
+00:04:32,399 --> 00:04:34,759
+czyli ustawi jakąś wysokość konkretną,
+
+61
+00:04:34,759 --> 00:04:37,079
+to my też powinniśmy nadpisać tą poprzednią.
+
+62
+00:04:37,079 --> 00:04:42,079
+Czyli w tym miejscu powinniśmy też napisać, że previousHigh równa się wysokość.
+
+63
+00:04:42,079 --> 00:04:45,079
+Tu chodzi o to, że jeżeli ktoś poda, że jego pomieszczenie ma 4 metry
+
+64
+00:04:45,079 --> 00:04:50,079
+i za kolejnym razem wysokości, i za kolejnym razem pominie podanie tej wysokości,
+
+65
+00:04:50,079 --> 00:04:54,079
+no to wtedy musimy nadpisać tę wartość, previousHigh,
+
+66
+00:04:54,079 --> 00:04:56,699
+tą wartością, która została przedstawiona przez,
+
+67
+00:04:56,699 --> 00:04:57,699
+użytkownika.
+
+68
+00:04:57,699 --> 00:05:00,699
+No i tu ładnie policzyliśmy sobie area,
+
+69
+00:05:00,699 --> 00:05:02,699
+natomiast, czyli pole.
+
+70
+00:05:02,699 --> 00:05:06,699
+Natomiast w momencie, w którym będziemy chcieli malować kilka ścian,
+
+71
+00:05:06,699 --> 00:05:09,699
+to nic użytkownikowi nie da, że mu tylko wyświetlimy
+
+72
+00:05:09,699 --> 00:05:12,699
+tą, obszar pojedynczej ściany.
+
+73
+00:05:12,699 --> 00:05:15,699
+My powinniśmy zrobić jeszcze drugą rzecz, a mianowicie
+
+74
+00:05:15,699 --> 00:05:17,699
+zwiększać mu gdzieś to pole.
+
+75
+00:05:17,699 --> 00:05:21,699
+Czyli tak naprawdę to, co tutaj się wypisało, powinno być gdzieś dodane do jakiegoś area,
+
+76
+00:05:21,699 --> 00:05:24,699
+do jakiejś łącznej takiej wielkości.
+
+77
+00:05:24,699 --> 00:05:26,699
+Możemy więc sobie stworzyć zmienną totalarea,
+
+78
+00:05:26,699 --> 00:05:30,699
+no i na starcie, zanim zaczniemy jeszcze cokolwiek obliczać,
+
+79
+00:05:30,699 --> 00:05:32,699
+ta wartość jest równa zero.
+
+80
+00:05:32,699 --> 00:05:34,699
+Ja sobie na chwilę ukryję ten terminal, żeby on nie przeszkadzał,
+
+81
+00:05:34,699 --> 00:05:37,699
+i zobacz, mamy wtedy tak, pytanie o ściany,
+
+82
+00:05:37,699 --> 00:05:42,699
+założenie tych wartości początkowych, czyli poprzedniej wysokości i totalarea,
+
+83
+00:05:42,699 --> 00:05:46,699
+później jest nasz kod, w ramach którego wykonujemy różne czynności,
+
+84
+00:05:46,699 --> 00:05:50,699
+no i ten high razy width powinniśmy uwzględnić w totalarea,
+
+85
+00:05:50,699 --> 00:05:54,699
+czyli totalarea plus równa się,
+
+86
+00:05:54,699 --> 00:05:57,699
+high razy width.
+
+87
+00:05:57,699 --> 00:06:01,699
+I w ten sposób będziemy wiedzieli, jaka jest łączna powierzchnia do zamalowania.
+
+88
+00:06:01,699 --> 00:06:03,699
+Możemy to wypisać, print,
+
+89
+00:06:03,699 --> 00:06:10,699
+łączna powierzchnia do zamalowania wynosi,
+
+90
+00:06:10,699 --> 00:06:14,699
+no i tutaj potrzebujemy mieć totalarea.
+
+91
+00:06:14,699 --> 00:06:18,699
+Jeżeli wtedy teraz ten kod sobie uruchomimy,
+
+92
+00:06:18,699 --> 00:06:20,699
+ścian do pomalowania dwie,
+
+93
+00:06:20,699 --> 00:06:22,699
+niech będzie trzy na trzy i dwa na dwa,
+
+94
+00:06:22,699 --> 00:06:25,699
+czyli trzy na trzy, dwa na dwa,
+
+95
+00:06:25,699 --> 00:06:28,699
+no i wyszło, że trzynaście, no bo trzy razy trzy to dziewięć,
+
+96
+00:06:28,699 --> 00:06:31,699
+dwa razy dwa to cztery, dziewięć plus cztery to trzynaście, wszystko się zgadza.
+
+97
+00:06:31,699 --> 00:06:35,699
+I zostanie nam rzecz następna, a mianowicie teraz trzeba będzie policzyć,
+
+98
+00:06:35,699 --> 00:06:40,699
+ile łącznie musimy pomalować, wykorzystać gruntu,
+
+99
+00:06:40,699 --> 00:06:43,699
+a ile łącznie potrzebujemy wykorzystać farby.
+
+100
+00:06:43,699 --> 00:06:47,699
+Grunt możemy nazwać base, a farbę możemy nazwać paint.
+
+101
+00:06:47,699 --> 00:06:49,699
+Czyli my musimy wiedzieć, ile warstw.
+
+102
+00:06:49,699 --> 00:06:51,699
+No to layers,
+
+103
+00:06:51,699 --> 00:06:55,699
+layers of base równa się int,
+
+104
+00:06:55,699 --> 00:06:57,699
+to zawsze będzie wartość całkowita.
+
+105
+00:06:57,699 --> 00:07:04,699
+Ile warstw gruntu położysz,
+
+106
+00:07:07,699 --> 00:07:09,699
+czy też może po prostu liczba warstw gruntu,
+
+107
+00:07:09,699 --> 00:07:14,699
+może tak to ilość warstw gruntu, ilość warstw gruntu, dwukropek.
+
+108
+00:07:17,699 --> 00:07:20,699
+No i layers of paint,
+
+109
+00:07:21,699 --> 00:07:24,699
+ilość warstw farby.
+
+110
+00:07:25,699 --> 00:07:28,699
+W ten sposób dowiemy się, ile mamy położyć gruntu,
+
+111
+00:07:28,699 --> 00:07:30,699
+ile mamy położyć farby.
+
+112
+00:07:30,699 --> 00:07:34,699
+Następnie powinniśmy policzyć, ile potrzebujemy tych litrów,
+
+113
+00:07:34,699 --> 00:07:37,699
+czyli liters of base.
+
+114
+00:07:37,699 --> 00:07:42,699
+I teraz litry to będzie ta wartość, którą mamy jako pole,
+
+115
+00:07:42,699 --> 00:07:49,699
+przemnożona razy ilość warstw, no bo jeżeli mamy załóżmy ściany, nie wiem, 10 metrów,
+
+116
+00:07:49,699 --> 00:07:54,699
+a chcemy położyć dwie warstwy, no to zakładamy, że potrzebujemy gruntu na 20 metrów.
+
+117
+00:07:54,699 --> 00:07:59,699
+Tak, dobrze, wiem, że z kolejną warstwą pewnie ilość będzie mniejsza,
+
+118
+00:07:59,699 --> 00:08:01,699
+ale tym się na razie nie przejmujemy.
+
+119
+00:08:01,699 --> 00:08:04,699
+Liczymy sobie po prostu, tak wiecie, matematycznie tylko i wyłącznie,
+
+120
+00:08:04,699 --> 00:08:07,699
+bez doświadczenia malarskiego.
+
+121
+00:08:07,699 --> 00:08:15,699
+Więc liters of base będziemy potrzebowali przeliczyć sobie layers of base razy total area.
+
+122
+00:08:15,699 --> 00:08:17,699
+I teraz rzecz kolejna, która powinna się stać,
+
+123
+00:08:17,699 --> 00:08:22,699
+to powinniśmy to sobie podzielić przez tą wydajność.
+
+124
+00:08:22,699 --> 00:08:26,699
+Wydajność gruntu to było 1 litr na 5 metrów,
+
+125
+00:08:26,699 --> 00:08:31,699
+czyli tę wartość, którą mamy, musimy sobie podzielić przez 5.
+
+126
+00:08:31,699 --> 00:08:34,700
+Ten nawias w sumie nie jest nam potrzebny, zaraz powiem, dlaczego go dodałem.
+
+127
+00:08:34,700 --> 00:08:42,700
+I tak samo będzie z liters of paint, równa się layers of paint razy total area
+
+128
+00:08:42,700 --> 00:08:44,700
+podzielone przez 13.
+
+129
+00:08:44,700 --> 00:08:46,700
+Tu akurat wyszło, że 1 litr to jest 1 litr.
+
+130
+00:08:46,700 --> 00:08:47,700
+Tu akurat wyszło, że 1 litr to jest 1 litr.
+
+131
+00:08:47,700 --> 00:08:48,700
+Tu akurat wyszło, że 1 litr to jest 1 litr.
+
+132
+00:08:48,700 --> 00:08:50,700
+Nie, nie, 13 metrów to jest 1 litr.
+
+133
+00:08:50,700 --> 00:08:52,700
+Nie, nie, 13 metrów to jest 1 litr.
+
+134
+00:08:52,700 --> 00:08:54,700
+Ok. I teraz, jeżeli tak mamy ułożone zadania, to po co te nawiasy?
+
+135
+00:08:54,700 --> 00:08:56,700
+Ok. I teraz, jeżeli tak mamy ułożone zadania, to po co te nawiasy?
+
+136
+00:08:56,700 --> 00:08:59,700
+No bo jeżeli okaże się, że potrzebujemy 2,5 litra,
+
+137
+00:08:59,700 --> 00:09:04,700
+a wartość powinniśmy przekazać wtedy w litrach, bo raczej w 3 litry na przykład napisać,
+
+138
+00:09:04,700 --> 00:09:07,700
+no to wtedy warto byłoby sobie to zawsze zaokrąglić do góry.
+
+139
+00:09:07,700 --> 00:09:13,700
+No i w temacie malowania będziemy wciąż, ponieważ to, co jest na górze do pomalowania, to jest sufit,
+
+140
+00:09:13,700 --> 00:09:17,700
+a to, co na dole jest do pomalowania, co się chyba nie zdarza często, to podłoga.
+
+141
+00:09:17,700 --> 00:09:22,700
+I teraz, jeżeli chcemy zaokrąglić coś do góry, to wtedy używamy funkcji seal,
+
+142
+00:09:22,700 --> 00:09:26,700
+a jeżeli chcemy coś zaokrąglić w dół, to używamy funkcji flow.
+
+143
+00:09:26,700 --> 00:09:32,700
+Więc możemy sobie pójść tutaj do góry znowu i napisać from math import seal.
+
+144
+00:09:32,700 --> 00:09:41,700
+I teraz, jeżeli wykonamy from math import seal, to załadujemy sobie właśnie do naszego Pythona funkcję zaokrąglającą te nasze obliczenia do góry.
+
+145
+00:09:41,700 --> 00:09:43,700
+I dzięki temu możemy wywołać,
+
+146
+00:09:43,700 --> 00:09:47,700
+bo wywołać seal tutaj i seal tutaj.
+
+147
+00:09:47,700 --> 00:09:52,700
+Jeżeli nie skorzystałbyś z tej funkcji, to wtedy by się pokazało, że potrzebujesz 2,5 litra farby,
+
+148
+00:09:52,700 --> 00:09:57,700
+to też byłoby okej, no bo też można byłoby użytkownikowi taką wartość sprzedać.
+
+149
+00:09:57,700 --> 00:10:02,700
+No i oczywiście trzeba by jeszcze powiadomić, co udało nam się wyliczyć, do czego udało nam się dojść.
+
+150
+00:10:02,700 --> 00:10:11,700
+Potrzebujesz litrów gruntu dwukropek liters of base.
+
+151
+00:10:11,700 --> 00:10:12,700
+No i potrzebujesz litrów gruntu dwukropek liters of base.
+
+152
+00:10:12,700 --> 00:10:21,700
+No i potrzebujesz litrów farby dwukropek liters of paint.
+
+153
+00:10:21,700 --> 00:10:26,700
+W ten sposób, jeżeli to sobie wywołamy, to możemy już teraz sprawdzić, czy wszystko nam zadziała.
+
+154
+00:10:26,700 --> 00:10:31,700
+Uwaga, wchodzę sobie do terminala, który sobie zamknąłem, wywołuję projekt.
+
+155
+00:10:31,700 --> 00:10:33,700
+Ściany do pomalowania mam trzy.
+
+156
+00:10:33,700 --> 00:10:36,700
+Dwa na dwa, trzy na trzy i cztery na cztery.
+
+157
+00:10:36,700 --> 00:10:40,700
+Warstw gruntu dwie i warstw farby dwie.
+
+158
+00:10:40,700 --> 00:10:45,700
+No i wyszło, że potrzebuję litrów gruntu dwanaście i litrów farby pięć.
+
+159
+00:10:45,700 --> 00:10:48,700
+Hmm, czy to jest możliwe?
+
+160
+00:10:48,700 --> 00:10:50,700
+Grunt ma mniejszą wydajność, tak?
+
+161
+00:10:50,700 --> 00:10:58,700
+Czyli na, sprawdźmy jeszcze zadanie, wydajność gruntu na pięć metrów kwadratowych jeden litr, na trzynaście metrów kwadratowych jeden litr.
+
+162
+00:10:58,700 --> 00:11:01,700
+Tak, czyli grunt ma mniejszą wydajność, czyli wychodzi na to, że się zgadza.
+
+163
+00:11:01,700 --> 00:11:04,700
+Więcej gruntu potrzebujemy i farby.
+
+164
+00:11:04,700 --> 00:11:08,700
+W razie czego, jeżeli te wartości byłyby nieprawidłowe, możecie śmiało je sobie jeszcze poprzeliczać i sprawdzić, czy wszystko się zgadza.
+
+165
+00:11:08,700 --> 00:11:19,700
+No, ale jeżeli mamy do pomalowania łączną powierzchnię trzydzieści metrów, no to litr pokrywa trzynaście, no to faktycznie wychodziłoby, że potrzebujemy trzy litry.
+
+166
+00:11:19,700 --> 00:11:25,700
+Więc, ale jeszcze dwa razy, no to trzy litry, no to tak gdzieś mniej więcej wydaje mi się, że jest okej.
+
+167
+00:11:25,700 --> 00:11:28,700
+To co? Chodźmy dalej, pouczymy się.

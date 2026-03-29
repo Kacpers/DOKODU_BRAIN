@@ -1,0 +1,143 @@
+1
+00:00:00,000 --> 00:00:06,980
+Ponownie skorzystam z interpretera, gdyż w zupełności będzie mi on wystarczający z tego interaktywnego środowiska.
+
+2
+00:00:07,600 --> 00:00:12,700
+Więc jak stworzyć tuple jednoelementową z przecinkiem?
+
+3
+00:00:12,700 --> 00:00:20,980
+Pokazuję. Jeżeli sobie stworzę zmienną animal, równa się i tutaj chcieliśmy zrobić sobie owcę,
+
+4
+00:00:20,980 --> 00:00:32,159
+albo animal2 równa się owca z przecinkiem, to zobacz co się stanie, kiedy napiszę animal, pojawi mi się owca.
+
+5
+00:00:32,520 --> 00:00:36,480
+Jak napiszę animal2, to pojawi mi się owca w nawiasach.
+
+6
+00:00:36,480 --> 00:00:43,880
+W tym pierwszym przypadku nawias mi zniknął, nie mam też przecinka, więc może się wydawać, że mała różnica.
+
+7
+00:00:44,000 --> 00:00:47,320
+Natomiast w drugim przypadku te dwie rzeczy doszły. Jaka jest różnica?
+
+8
+00:00:47,439 --> 00:00:49,460
+Różnica jest taka, że jak zrobię animal od zera,
+
+9
+00:00:49,460 --> 00:00:51,460
+to pojawi się o.
+
+10
+00:00:51,460 --> 00:00:55,460
+Trochę sobie teraz wybiegamy do przodu, bo o stringach jeszcze nie rozmawialiśmy, ale zobacz, pojawi się literka o.
+
+11
+00:00:55,460 --> 00:01:00,460
+Natomiast jeżeli wykonam animal2 od zera, to pojawi mi się owca.
+
+12
+00:01:00,460 --> 00:01:03,460
+No bo to pierwsze to jest string, to jest tekst.
+
+13
+00:01:03,460 --> 00:01:07,460
+Ja sobie mogę też z niego pobierać poszczególne znaki, ale o tym porozmawiamy w przyszłości.
+
+14
+00:01:07,460 --> 00:01:14,460
+Natomiast to drugie to jest tupla, więc mogę pobierać sobie poszczególne elementy, właśnie odnosząc się do ich indeksów.
+
+15
+00:01:14,460 --> 00:01:19,460
+Dodatkowo, jeżeli chcielibyśmy sprawdzić, możemy zawsze to zrobić wykonując type o.
+
+16
+00:01:19,459 --> 00:01:22,459
+Widzisz, pojawił się str, bo to jest string.
+
+17
+00:01:22,459 --> 00:01:29,459
+Natomiast jeżeli wykonamy type od animal2, to pojawi nam się wtedy class tuple.
+
+18
+00:01:29,459 --> 00:01:31,459
+W ten sposób wiemy, że jest to tupla.
+
+19
+00:01:31,459 --> 00:01:35,459
+Ok, lecimy do podpunktu drugiego.
+
+20
+00:01:35,459 --> 00:01:38,459
+W podpunkcie drugim chcemy stworzyć tuplę zawierającą nazwy pięciu owoców.
+
+21
+00:01:38,459 --> 00:01:48,459
+No to fruits równa się lemon, orange, kiwi, mango.
+
+22
+00:01:49,459 --> 00:01:51,459
+Pitch. Udało się.
+
+23
+00:01:51,459 --> 00:01:53,459
+Zawsze się boję jak wymyślam nazwy.
+
+24
+00:01:53,459 --> 00:01:55,459
+Fruits. Mamy.
+
+25
+00:01:55,459 --> 00:02:05,459
+I teraz, jeżeli chcielibyśmy pobrać sobie nazwę pierwszego, trzeciego i piątego elementu, korzystając z jednego printa, no to robimy print fruits.
+
+26
+00:02:05,459 --> 00:02:09,459
+I pamiętamy, pierwszy ma indeks zerowy.
+
+27
+00:02:09,459 --> 00:02:11,459
+Przecinek.
+
+28
+00:02:11,459 --> 00:02:14,459
+Drugi, trzeci, czyli 0, 1, 2.
+
+29
+00:02:14,459 --> 00:02:15,459
+Bo chce kiwi.
+
+30
+00:02:15,459 --> 00:02:17,459
+Fruits od 2.
+
+31
+00:02:17,460 --> 00:02:26,460
+No i następnie pitch, czyli fruits od 0, 1, 2, 3, 4.
+
+32
+00:02:26,460 --> 00:02:30,460
+Tak naprawdę, mogłem dodać 2 do poprzedniego wyrażenia.
+
+33
+00:02:30,460 --> 00:02:34,460
+I zobacz, pokazało się. Lemon, kiwi oraz pitch.
+
+34
+00:02:34,460 --> 00:02:41,460
+To pokażę Ci dopiero w przyszłości, ale może Cię trochę tym zainteresuje, że jak napiszesz fruits od minus 1, to też pokaże Ci się pitch.
+
+35
+00:02:41,460 --> 00:02:44,460
+Ale o tym porozmawiamy sobie już za chwilę w slicingu.
+
+36
+00:02:44,460 --> 00:02:45,460
+Chodźcie.

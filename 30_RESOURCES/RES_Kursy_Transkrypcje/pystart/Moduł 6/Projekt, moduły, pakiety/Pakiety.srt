@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:18,640
+No dobra, jeszcze jeden dalej, ale najpierw powiedzmy sobie czym jest pakiet. Zdarza się tak, że tak samo jak zwiększa nam się ilość funkcji w naszych modułach, tak samo może się okazać, że zwiększa nam się też ilość modułów i wtedy stwierdzimy, warto byłoby sobie coś posprzątać.
+
+2
+00:00:18,640 --> 00:00:36,939
+Mam tyle różnych modułów dotyczących studentów, nauczycieli, kogoś tam jeszcze, może warto byłoby te moduły upakować w folderze o nazwie school, a obok mam psy, koty i inne zwierzęta, to może warto byłoby stworzyć ten moduł animals i w nim mieć to zawarte.
+
+3
+00:00:36,939 --> 00:00:44,040
+I właśnie do tego służą pakiety i pakiet pozwala nam na to, żeby organizować moduły. Jak się tworzy pakiet?
+
+4
+00:00:44,540 --> 00:00:48,620
+Jeżeli chodzi o działanie dla Pythona wystarczy, że będzie to zwykły kawałek.
+
+5
+00:00:48,640 --> 00:00:59,200
+W środku tego katalogu musi być jeden pusty plik Pythonowy, w nim może się coś znaleźć, ale tym się zupełnie teraz nie przejmujemy, o nazwie podkreślenie, podkreślenie, init, podkreślenie, podkreślenie.
+
+6
+00:00:59,679 --> 00:01:04,280
+Ta nazwa jest wymagana, czyli ta nazwa musi być dokładnie taka i to będzie pakiet.
+
+7
+00:01:04,760 --> 00:01:12,640
+Natomiast w Pycharmie, jeżeli klikasz sobie prawym przyciskiem myszy, to tam jest opcja Python package i to jest dokładnie to samo co Python, co pakiet.
+
+8
+00:01:12,960 --> 00:01:17,819
+Dlatego też często ludzie nazywają sformułowanie paczka, bo to jest paczka Pythonowa.
+
+9
+00:01:17,960 --> 00:01:18,640
+Natomiast dokładnie...
+
+10
+00:01:18,640 --> 00:01:22,640
+Tytuł tłumaczenie polskie to jest pakiet i powinno się używać słowa pakiet, a nie paczka.
+
+11
+00:01:23,819 --> 00:01:26,799
+Po drugie, za pomocą pakietów możemy tworzyć hierarchię.
+
+12
+00:01:26,799 --> 00:01:42,340
+Czyli jeżeli chcesz mieć zwierzęta, a potem wewnątrz tych zwierząt będziesz chcieć mieć zwierzęta pływające i latające, to możesz sobie wewnątrz pakietu animals stworzyć kolejny pakiet flying i swimming i running, czy coś takiego, nie?
+
+13
+00:01:42,840 --> 00:01:47,799
+Jeżeli będziesz mieć school i wewnątrz school będziesz chciał mieć pracowników, studentów.
+
+14
+00:01:48,640 --> 00:01:54,599
+Studentów i kogoś tam jeszcze, to też możesz stworzyć sobie management, workers i students, tak?
+
+15
+00:01:54,659 --> 00:01:56,000
+Czyli można tworzyć kolejne pakiety.
+
+16
+00:01:56,599 --> 00:01:58,040
+Można też oczywiście mieć moduły.
+
+17
+00:01:59,140 --> 00:02:09,719
+I to wszystko będzie później bardzo ważne podczas importowania, bo jak będziemy importowali, czy będziemy pobierali sobie określone funkcje z określonych pakietów, to ta hierarchia będzie niezwykle ważna.
+
+18
+00:02:09,960 --> 00:02:11,439
+Ale o tym powiemy sobie już za moment.
+
+19
+00:02:11,439 --> 00:02:18,300
+No i to o czym wspomniałem na samym początku, czyli pakiety pozwalają na grupowanie modułów, czyli ogólnie wprowadzają taką hierarchię.
+
+20
+00:02:18,639 --> 00:02:19,919
+W naszym projekcie.
+
+21
+00:02:21,000 --> 00:02:23,319
+I na tym etapie chciałem powiedzieć jeszcze jedną rzecz.
+
+22
+00:02:23,899 --> 00:02:40,839
+Zauważyłem taką sytuację, że kiedy ludzie dowiadują się do czego służą pakiety i moduły, to trochę się nimi zachłystują i okazuje się, że nagle tworzymy sobie mnóstwo pakietów, mnóstwo modułów i w każdym module mamy nawet po jednej funkcji, bo to przecież możemy to sobie tworzyć i to jest bardzo fajne.
+
+23
+00:02:41,439 --> 00:02:42,539
+To nie jest złe.
+
+24
+00:02:43,179 --> 00:02:44,039
+Znaczy, ok.
+
+25
+00:02:44,359 --> 00:02:46,459
+Jest to coś, nad czym warto byłoby zapanować.
+
+26
+00:02:46,459 --> 00:02:48,459
+I doświadczenie nauczyło mnie tego.
+
+27
+00:02:48,639 --> 00:02:50,639
+Że najpierw zaczynam pisać kod w jednym pliku.
+
+28
+00:02:50,639 --> 00:02:56,639
+Jeżeli widzę, że ten plik mi się rozrasta, to staram się tworzyć obok moduły.
+
+29
+00:02:56,639 --> 00:03:01,639
+Jeżeli widzę, że ilość modułów mi się rozrasta, staram się tworzyć pakiety i upakować ten kod do tych pakietów.
+
+30
+00:03:01,639 --> 00:03:03,639
+Te moduły przenosi do pakietów.
+
+31
+00:03:03,639 --> 00:03:05,639
+I w ten sposób rozwijam mój projekt.
+
+32
+00:03:05,639 --> 00:03:13,639
+Czyli trochę ja to nazywam takim przezpączkowanie, tak jak niektóre rośliny się rozwijają przez pączkowanie, tak i mój projekt rozwija się zawsze przez pączkowanie.
+
+33
+00:03:13,639 --> 00:03:17,639
+Czyli wydzielam sobie już napisany kod do poszczególnych modułów czy pakietów.
+
+34
+00:03:17,639 --> 00:03:18,639
+I później rozwijam.
+
+35
+00:03:18,639 --> 00:03:22,639
+I oczywiście kiedy coś dopisuję, już dopisuję w tych konkretnych miejscach.
+
+36
+00:03:22,639 --> 00:03:28,639
+Robienie tego odwrotnie, czyli najpierw jaką strukturę może mieć mój projekt i tworzenie sobie mnóstwa pakietów,
+
+37
+00:03:28,639 --> 00:03:32,639
+bardzo często będzie prowadziło do tego, że będziesz mieć pojedyncze pliki, które będą praktycznie puste.
+
+38
+00:03:32,639 --> 00:03:36,639
+Warto nad tym panować i robić to odwrotnie.
+
+39
+00:03:36,639 --> 00:03:37,639
+To tylko taka mała...

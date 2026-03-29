@@ -1,0 +1,1003 @@
+1
+00:00:00,000 --> 00:00:03,260
+W takim razie rozwiązujemy nasz projekt.
+
+2
+00:00:03,419 --> 00:00:05,060
+Będziemy potrzebowali mieć jakiś PESEL.
+
+3
+00:00:05,179 --> 00:00:08,259
+Ja sobie stąd stworzę po prostu zmienną PESEL,
+
+4
+00:00:08,380 --> 00:00:12,500
+przypiszę do niej jeden z tych PESELi, które już tutaj otrzymaliśmy.
+
+5
+00:00:12,640 --> 00:00:13,460
+To jest pierwsza rzecz.
+
+6
+00:00:13,599 --> 00:00:17,760
+Po drugie będę potrzebował ten PESEL sprawdzić, czy jego długość jest odpowiednia.
+
+7
+00:00:18,160 --> 00:00:24,960
+Czyli jeżeli długość PESELu jest mniejsza,
+
+8
+00:00:24,960 --> 00:00:26,719
+czy też nie równa się po prostu 11,
+
+9
+00:00:26,719 --> 00:00:33,460
+to wówczas print nieprawidłowy PESEL.
+
+10
+00:00:33,659 --> 00:00:36,280
+Już w kolejnym module pokażę Ci, jak tworzyć funkcję,
+
+11
+00:00:36,439 --> 00:00:38,700
+gdzie ten kod będzie mógł być dużo bardziej uporządkowany.
+
+12
+00:00:38,859 --> 00:00:43,039
+Ale na chwilę obecną możemy sobie poradzić po prostu w ten sposób.
+
+13
+00:00:43,659 --> 00:00:45,679
+Natomiast ta druga rzecz jest taka,
+
+14
+00:00:45,799 --> 00:00:47,960
+że my potrzebujemy mieć jakąś zmienną,
+
+15
+00:00:48,039 --> 00:00:50,679
+możemy ją sobie nazwać control, równa się.
+
+16
+00:00:51,159 --> 00:00:53,859
+Tak naprawdę tej zmiennej nie będziemy nigdy zmieniali.
+
+17
+00:00:53,859 --> 00:00:55,719
+Ona będzie zawsze miała tę samą wartość,
+
+18
+00:00:55,719 --> 00:01:03,719
+więc można też użyć po prostu tekstu z nazwy zmiennej zapisanej wielkimi literami.
+
+19
+00:01:03,719 --> 00:01:07,719
+Wtedy to jest taki sygnał, że ta zmienna nie zmienia swojej wartości.
+
+20
+00:01:07,719 --> 00:01:10,719
+I teraz przypiszę poszczególne cyfry,
+
+21
+00:01:10,719 --> 00:01:18,219
+czyli 1379, 1379, 131.
+
+22
+00:01:18,219 --> 00:01:24,719
+Następnie będę potrzebował iterować po tych dwóch stringach zzipowanych,
+
+23
+00:01:24,719 --> 00:01:25,659
+czyli w formie,
+
+24
+00:01:25,659 --> 00:01:26,299
+for,
+
+25
+00:01:26,739 --> 00:01:27,299
+pesel,
+
+26
+00:01:27,479 --> 00:01:28,340
+charakter,
+
+27
+00:01:28,560 --> 00:01:29,099
+karakter,
+
+28
+00:01:29,560 --> 00:01:30,179
+przecinek,
+
+29
+00:01:30,420 --> 00:01:31,019
+control,
+
+30
+00:01:32,859 --> 00:01:33,539
+karakter,
+
+31
+00:01:34,060 --> 00:01:34,379
+in,
+
+32
+00:01:34,859 --> 00:01:35,319
+zip,
+
+33
+00:01:36,979 --> 00:01:37,519
+pesel,
+
+34
+00:01:37,659 --> 00:01:38,379
+przecinek,
+
+35
+00:01:38,959 --> 00:01:39,599
+control.
+
+36
+00:01:40,620 --> 00:01:42,939
+Control oczywiście zapisane wielką literą.
+
+37
+00:01:44,199 --> 00:01:44,579
+Print,
+
+38
+00:01:45,140 --> 00:01:45,699
+pesel,
+
+39
+00:01:48,699 --> 00:01:49,179
+control.
+
+40
+00:01:49,179 --> 00:01:50,780
+Jak zrobimy to zadanie,
+
+41
+00:01:50,900 --> 00:01:54,000
+to możemy wtedy też odebrać ten pesel od użytkownika.
+
+42
+00:01:54,539 --> 00:01:55,259
+Wykonuję,
+
+43
+00:01:55,659 --> 00:01:56,159
+Python,
+
+44
+00:01:56,159 --> 00:01:56,840
+Spacja,
+
+45
+00:01:56,840 --> 00:01:57,340
+Projekt,
+
+46
+00:01:57,340 --> 00:01:57,840
+py.
+
+47
+00:01:57,840 --> 00:02:01,340
+I jak widzisz, ładnie mi się wtedy to uzupełniło.
+
+48
+00:02:01,340 --> 00:02:03,539
+W dwóch kolumnach mam poszczególne cyfry,
+
+49
+00:02:03,539 --> 00:02:07,539
+czyli 9193, 9193.
+
+50
+00:02:07,539 --> 00:02:11,039
+Ważna informacja, typ tych danych to string.
+
+51
+00:02:11,039 --> 00:02:14,039
+Mnożenie stringa razy stringa da nam w wyniku,
+
+52
+00:02:14,039 --> 00:02:17,039
+no błąd, nie zadziała to.
+
+53
+00:02:17,039 --> 00:02:21,039
+Dlatego też musimy zamienić jedną i drugą cyfrę na integer.
+
+54
+00:02:21,039 --> 00:02:23,039
+Czyli integer,
+
+55
+00:02:25,659 --> 00:02:27,659
+integer.
+
+56
+00:02:27,659 --> 00:02:31,659
+I w ten oto sposób będziemy mieli iloczyny.
+
+57
+00:02:31,659 --> 00:02:34,659
+Iloczyny musimy sobie zsumować.
+
+58
+00:02:34,659 --> 00:02:37,659
+Żeby wykonać sumę tych dwóch iloczynów,
+
+59
+00:02:37,659 --> 00:02:39,659
+potrzebujemy mieć znowu jakąś zmienną,
+
+60
+00:02:39,659 --> 00:02:41,659
+control sum,
+
+61
+00:02:41,659 --> 00:02:43,659
+równa się 0.
+
+62
+00:02:43,659 --> 00:02:47,659
+No bo na początku ta zmienna nie będzie miała swojej wartości.
+
+63
+00:02:47,659 --> 00:02:50,159
+I teraz będziemy chcieli tę wartość zwiększać,
+
+64
+00:02:50,159 --> 00:02:53,159
+dodając te wartości.
+
+65
+00:02:53,159 --> 00:02:55,039
+Czyli control sum,
+
+66
+00:02:55,039 --> 00:02:57,039
+plus,
+
+67
+00:02:57,039 --> 00:02:59,039
+równa się,
+
+68
+00:02:59,039 --> 00:03:02,039
+integer, pesel, car, razy integer, control, car.
+
+69
+00:03:02,039 --> 00:03:05,039
+Usuwam znak ten zamykający.
+
+70
+00:03:05,039 --> 00:03:09,039
+No i mogę sobie control sum już wyświetlić.
+
+71
+00:03:09,039 --> 00:03:11,039
+Jeżeli zrobię strzałkę do góry, enter,
+
+72
+00:03:11,039 --> 00:03:13,039
+okaże się, że wyświetli mi się cyfra 110,
+
+73
+00:03:13,039 --> 00:03:15,039
+co oznacza, że to jest poprawny pesel,
+
+74
+00:03:15,039 --> 00:03:17,039
+bo jego ostatnią cyfrą jest 0.
+
+75
+00:03:17,039 --> 00:03:19,039
+Żeby się o tym przekonać,
+
+76
+00:03:19,039 --> 00:03:23,039
+mogę wykonać po prostu if i napisać control sum,
+
+77
+00:03:23,039 --> 00:03:29,039
+modulo 10, równa się 0,
+
+78
+00:03:29,039 --> 00:03:34,039
+to wtedy print pesel jest poprawny.
+
+79
+00:03:34,039 --> 00:03:38,039
+Możemy zamienić wielkość liter,
+
+80
+00:03:38,039 --> 00:03:40,039
+tak żeby wszędzie były to wielkie litery.
+
+81
+00:03:40,039 --> 00:03:45,039
+W przeciwnym wypadku print pesel jest nieprawidłowy.
+
+82
+00:03:45,039 --> 00:03:49,039
+Uruchamiam to robiąc strzałkę do góry, enter,
+
+83
+00:03:49,039 --> 00:03:51,039
+no i dostaję pesel jest poprawny.
+
+84
+00:03:51,039 --> 00:03:54,039
+Co zrobić, żeby zmienić ten pesel?
+
+85
+00:03:54,039 --> 00:03:57,039
+No oczywiście potrzebuję tutaj użyć input,
+
+86
+00:03:57,039 --> 00:04:01,039
+podaj twój numer pesel.
+
+87
+00:04:01,039 --> 00:04:04,039
+Ciekawe czy, znaczy ciekawe,
+
+88
+00:04:04,039 --> 00:04:06,039
+ja bym chyba nie podał takiemu skryptowi
+
+89
+00:04:06,039 --> 00:04:08,039
+numeru pesel swojego.
+
+90
+00:04:08,039 --> 00:04:10,039
+Ok, nieprawidłowy pesel.
+
+91
+00:04:10,039 --> 00:04:12,039
+Raz, dwa, trzy, cztery, pięć, sześć, siedem, osiem,
+
+92
+00:04:12,039 --> 00:04:14,039
+dziewięć, dziesięć, jedenaście.
+
+93
+00:04:14,039 --> 00:04:16,039
+Też nieprawidłowy pesel.
+
+94
+00:04:16,039 --> 00:04:18,039
+A jeżeli podamy inny pesel,
+
+95
+00:04:18,039 --> 00:04:20,039
+który jest podany też jako prawidłowy,
+
+96
+00:04:21,040 --> 00:04:25,040
+to wyjdzie komunikat, że pesel jest poprawny.
+
+97
+00:04:25,040 --> 00:04:28,040
+I tak stworzyliśmy sobie taki mały mechanizm.
+
+98
+00:04:28,040 --> 00:04:30,040
+Jeszcze jedną rzecz mogę Ci pokazać
+
+99
+00:04:30,040 --> 00:04:31,040
+w ramach takiego bonusu,
+
+100
+00:04:31,040 --> 00:04:33,040
+a mianowicie czasem zdarza się,
+
+101
+00:04:33,040 --> 00:04:36,040
+że chcemy uruchomić coś wpisując python projekt,
+
+102
+00:04:36,040 --> 00:04:40,040
+spacja i tutaj podać mu jakiś ten numer pesel.
+
+103
+00:04:40,040 --> 00:04:43,040
+Żeby coś takiego osiągnąć,
+
+104
+00:04:43,040 --> 00:04:49,040
+możemy dorzucić from sys import argv,
+
+105
+00:04:49,040 --> 00:04:51,040
+kiedyś do tego jeszcze przejdziemy.
+
+106
+00:04:51,040 --> 00:04:53,040
+To Ci obiecuję.
+
+107
+00:04:53,040 --> 00:04:57,040
+if argv od 1,
+
+108
+00:04:57,040 --> 00:05:03,040
+czy też jeżeli długość len od argv równa się 2.
+
+109
+00:05:03,040 --> 00:05:05,040
+Dlaczego 2?
+
+110
+00:05:05,040 --> 00:05:07,040
+Z tego względu, że argv to jest tupla
+
+111
+00:05:07,040 --> 00:05:09,040
+i ta tupla przyjmuje wszystko to,
+
+112
+00:05:09,040 --> 00:05:11,040
+co umieszczamy za słowem python.
+
+113
+00:05:11,040 --> 00:05:13,040
+Czyli jeżeli zrobię coś takiego,
+
+114
+00:05:13,040 --> 00:05:15,040
+to argv od 0 to będzie projekt,
+
+115
+00:05:15,040 --> 00:05:17,040
+argv od 1 to będzie ten pesel.
+
+116
+00:05:17,040 --> 00:05:19,040
+Czyli długość tego w tym przypadku to jest 2.
+
+117
+00:05:19,040 --> 00:05:21,040
+Czyli jeżeli len od argv równa się 2,
+
+118
+00:05:21,040 --> 00:05:23,040
+to wtedy pesel równa się argv od 1.
+
+119
+00:05:23,040 --> 00:05:25,040
+Bo na początku mam 0,
+
+120
+00:05:25,040 --> 00:05:27,040
+później mam 1.
+
+121
+00:05:27,040 --> 00:05:29,040
+W przeciwnym wypadku pesel to jest input.
+
+122
+00:05:29,040 --> 00:05:31,040
+I zobacz w tym momencie można też uruchamiać
+
+123
+00:05:31,040 --> 00:05:33,040
+ten program przekazując pesel w linii poleceń.
+
+124
+00:05:33,040 --> 00:05:35,040
+Jeżeli podamy poprawny pesel
+
+125
+00:05:35,040 --> 00:05:37,040
+i wywołamy sobie raz jeszcze ten program
+
+126
+00:05:37,040 --> 00:05:39,040
+z tym poprawnym peselem wklejonym,
+
+127
+00:05:39,040 --> 00:05:41,040
+to tutaj będzie ten program
+
+128
+00:05:41,040 --> 00:05:43,040
+wkazany w program.
+
+129
+00:05:43,040 --> 00:05:45,040
+I tutaj możemy też uruchomić
+
+130
+00:05:45,040 --> 00:05:47,040
+ten program wkazując pesel w linii poleceń.
+
+131
+00:05:47,040 --> 00:05:49,040
+Z tym poprawnym peselem wklejonym
+
+132
+00:05:49,040 --> 00:05:51,040
+tutaj w linii poleceń,
+
+133
+00:05:51,040 --> 00:05:53,040
+to też dostaniemy informację,
+
+134
+00:05:53,040 --> 00:05:55,040
+że pesel jest poprawny.
+
+135
+00:05:55,040 --> 00:05:57,040
+Nie pozostało nic innego jak tylko znaleźć jakąś bazę peseli
+
+136
+00:05:57,040 --> 00:05:59,040
+i przeszukać wszystkie pod kątem tego,
+
+137
+00:05:59,040 --> 00:06:01,040
+żeby sprawdzić czy pesel jest prawidłowy.
+
+138
+00:06:01,040 --> 00:06:03,040
+A skoro wiemy,
+
+139
+00:06:03,040 --> 00:06:05,040
+że pesel jest prawidłowy,
+
+140
+00:06:05,040 --> 00:06:07,040
+to możemy zrobić jeszcze jedną rzecz,
+
+141
+00:06:07,040 --> 00:06:09,040
+a mianowicie wyciągnąć poszczególne cyfry
+
+142
+00:06:09,040 --> 00:06:11,040
+z tego peselu
+
+143
+00:06:11,040 --> 00:06:13,040
+i stworzyć datę urodzenia.
+
+144
+00:06:13,040 --> 00:06:15,040
+Czyli skoro pesel jest poprawny,
+
+145
+00:06:15,040 --> 00:06:17,040
+to znowu zastosuję ten taki myk,
+
+146
+00:06:17,040 --> 00:06:19,040
+który służy do tego, żeby
+
+147
+00:06:19,040 --> 00:06:21,040
+uciekł od ELSA.
+
+148
+00:06:21,040 --> 00:06:23,040
+To jest to, o czym mówiłem Ci dzisiaj
+
+149
+00:06:23,040 --> 00:06:25,040
+w tym module, że raczej staramy się
+
+150
+00:06:25,040 --> 00:06:27,040
+nie używać ELSA,
+
+151
+00:06:27,040 --> 00:06:29,040
+jeżeli mamy taką możliwość.
+
+152
+00:06:29,040 --> 00:06:31,040
+Ze względu na to,
+
+153
+00:06:31,040 --> 00:06:33,040
+że kod wtedy będzie
+
+154
+00:06:33,040 --> 00:06:35,040
+dużo bardziej czytelny.
+
+155
+00:06:35,040 --> 00:06:37,040
+I wyciągnę sobie teraz
+
+156
+00:06:37,040 --> 00:06:39,040
+datę urodzenia
+
+157
+00:06:39,040 --> 00:06:41,040
+z tego peselu.
+
+158
+00:06:41,040 --> 00:06:43,040
+Czyli będę potrzebował mieć dzień,
+
+159
+00:06:43,040 --> 00:06:45,040
+miesiąc
+
+160
+00:06:45,040 --> 00:06:47,040
+i rok.
+
+161
+00:06:47,040 --> 00:06:49,040
+Od miesiąca, bo tak naprawdę
+
+162
+00:06:49,040 --> 00:06:51,040
+ten miesiąc w tym przypadku będzie kluczowy.
+
+163
+00:06:51,040 --> 00:06:53,040
+Gdzie miesiąc to jest string,
+
+164
+00:06:53,040 --> 00:06:55,040
+day to jest string i year to jest string.
+
+165
+00:06:57,040 --> 00:06:59,040
+Jak to pobrać?
+
+166
+00:06:59,040 --> 00:07:01,040
+Przypominam o slicingu.
+
+167
+00:07:01,040 --> 00:07:03,040
+Czyli skoro nasz pesel jest tekstem,
+
+168
+00:07:03,040 --> 00:07:05,040
+to będziemy chcieli pobrać
+
+169
+00:07:05,040 --> 00:07:07,040
+na zerowym indeksie jest jedynka.
+
+170
+00:07:07,040 --> 00:07:09,040
+Przepraszam, nie tutaj.
+
+171
+00:07:09,040 --> 00:07:11,040
+Chociaż można też na tym.
+
+172
+00:07:11,040 --> 00:07:13,040
+Na pierwszym indeksie jest trójka,
+
+173
+00:07:13,040 --> 00:07:15,040
+czyli mnie będzie interesowało
+
+174
+00:07:15,040 --> 00:07:17,040
+pobrać dwie.
+
+175
+00:07:17,040 --> 00:07:19,040
+Czyli tak naprawdę
+
+176
+00:07:19,040 --> 00:07:21,040
+drugiej do piątej.
+
+177
+00:07:21,040 --> 00:07:23,040
+Jeżeli napiszę 2.5
+
+178
+00:07:23,040 --> 00:07:25,040
+print month string
+
+179
+00:07:25,040 --> 00:07:27,040
+to powinienem dostać
+
+180
+00:07:27,040 --> 00:07:29,040
+miesiąc, jeżeli nic nie zepsułem.
+
+181
+00:07:29,040 --> 00:07:31,040
+Czyli 0,1 w tym przypadku.
+
+182
+00:07:31,040 --> 00:07:33,040
+O, 0,1,0.
+
+183
+00:07:33,040 --> 00:07:35,040
+2 do 4 oczywiście.
+
+184
+00:07:35,040 --> 00:07:37,040
+Bo ja pomyślałem,
+
+185
+00:07:37,040 --> 00:07:39,040
+indeksujemy od zera przecież,
+
+186
+00:07:39,040 --> 00:07:41,040
+więc musi być tak.
+
+187
+00:07:41,040 --> 00:07:43,040
+I to co mogę sobie teraz z tym zrobić,
+
+188
+00:07:43,040 --> 00:07:45,040
+to mogę też zamienić
+
+189
+00:07:45,040 --> 00:07:47,040
+to na integer
+
+190
+00:07:47,040 --> 00:07:49,040
+i wtedy powinna być już tylko jedynka.
+
+191
+00:07:49,040 --> 00:07:51,040
+Będę miał styczeń. Świetnie.
+
+192
+00:07:51,040 --> 00:07:53,040
+Dlaczego ten miesiąc jest taki ważny?
+
+193
+00:07:53,040 --> 00:07:55,040
+Bo jeżeli ktoś urodził się
+
+194
+00:07:55,040 --> 00:07:57,040
+po roku 2000,
+
+195
+00:07:57,040 --> 00:07:59,040
+to wówczas
+
+196
+00:07:59,040 --> 00:08:01,040
+o,
+
+197
+00:08:01,040 --> 00:08:03,040
+miesiąc jest 21.
+
+198
+00:08:03,040 --> 00:08:05,040
+I tutaj musimy się nad przed tym zabezpieczyć.
+
+199
+00:08:05,040 --> 00:08:07,040
+Bo jeżeli
+
+200
+00:08:09,040 --> 00:08:11,040
+zmienna miesiąca
+
+201
+00:08:11,040 --> 00:08:13,040
+jest większa niż 12,
+
+202
+00:08:13,040 --> 00:08:15,040
+tak naprawdę
+
+203
+00:08:15,040 --> 00:08:17,040
+to po pierwsze
+
+204
+00:08:17,040 --> 00:08:19,040
+musimy od miesiąca odjąć
+
+205
+00:08:19,040 --> 00:08:21,040
+20,
+
+206
+00:08:21,040 --> 00:08:23,040
+a po drugie
+
+207
+00:08:23,040 --> 00:08:25,040
+do roku
+
+208
+00:08:25,040 --> 00:08:27,040
+będziemy musieli dodać 2000.
+
+209
+00:08:29,040 --> 00:08:31,040
+W przeciwnym wypadku
+
+210
+00:08:31,040 --> 00:08:33,039
+do roku będziemy chcieli dodać
+
+211
+00:08:33,039 --> 00:08:35,039
+1900. A skąd ten rok?
+
+212
+00:08:35,039 --> 00:08:37,039
+Rok
+
+213
+00:08:37,039 --> 00:08:39,039
+to są oczywiście dwie pierwsze cyfry.
+
+214
+00:08:41,039 --> 00:08:43,039
+Czyli 03.
+
+215
+00:08:43,039 --> 00:08:45,039
+0,1,2 do 3.
+
+216
+00:08:45,039 --> 00:08:47,039
+Możemy sobie też to wyświetlić, żeby sprawdzić.
+
+217
+00:08:47,039 --> 00:08:49,039
+Albo debugerem.
+
+218
+00:08:49,039 --> 00:08:51,039
+Nawet byłoby ładniej, nie?
+
+219
+00:08:51,039 --> 00:08:53,039
+Znowu za dużo napisałem.
+
+220
+00:08:53,039 --> 00:08:55,039
+Coś mam
+
+221
+00:08:55,039 --> 00:08:57,039
+z tą ilością.
+
+222
+00:08:57,039 --> 00:08:59,039
+Ok.
+
+223
+00:08:59,039 --> 00:09:01,039
+Czyli będziemy mieli rok
+
+224
+00:09:01,039 --> 00:09:03,039
+i zostanie nam jeszcze dzień.
+
+225
+00:09:03,039 --> 00:09:05,039
+No to dnia spróbuję nie zepsuć.
+
+226
+00:09:07,039 --> 00:09:09,039
+Dzień to będzie od 4 do 6.
+
+227
+00:09:11,039 --> 00:09:13,039
+Do 6.
+
+228
+00:09:13,039 --> 00:09:15,039
+Teraz się boję, że coś źle napisałem.
+
+229
+00:09:15,039 --> 00:09:17,039
+Bo muszą być nawiasy kwadratowe.
+
+230
+00:09:17,039 --> 00:09:19,039
+I możemy sobie wyświetlić
+
+231
+00:09:19,039 --> 00:09:21,039
+dzień, miesiąc, rok.
+
+232
+00:09:25,039 --> 00:09:27,039
+Najprościej z f będzie.
+
+233
+00:09:27,039 --> 00:09:29,039
+Dzień
+
+234
+00:09:31,039 --> 00:09:33,039
+miesiąc
+
+235
+00:09:35,039 --> 00:09:37,039
+rok.
+
+236
+00:09:37,039 --> 00:09:39,039
+O jest.
+
+237
+00:09:39,039 --> 00:09:41,039
+01.01.2018
+
+238
+00:09:41,039 --> 00:09:43,039
+Działa.
+
+239
+00:09:43,039 --> 00:09:45,039
+To jeszcze małe wskazówki.
+
+240
+00:09:45,039 --> 00:09:47,039
+Wprowadzenie za dwa moduły.
+
+241
+00:09:47,039 --> 00:09:49,039
+Będziemy poznawali typ taki specjalny.
+
+242
+00:09:49,039 --> 00:09:51,039
+Data i czas.
+
+243
+00:09:51,039 --> 00:09:53,039
+Który pozwala robić różne operacje na dacie i czasie.
+
+244
+00:09:53,039 --> 00:09:55,039
+Więc jeżeli teraz się trochę frustruje, że potraktowałem
+
+245
+00:09:55,039 --> 00:09:57,039
+datę i czas jako string.
+
+246
+00:09:57,039 --> 00:09:59,039
+I może formatowanie nie jest takie jakie chciałbyś, żeby było.
+
+247
+00:09:59,039 --> 00:10:01,039
+To nic się nie bój.
+
+248
+00:10:01,039 --> 00:10:03,039
+W przyszłości pokażemy sobie jak pracować z datą i z czasem.
+
+249
+00:10:03,039 --> 00:10:05,039
+A ode mnie na chwilę obecną to wszystko.
+
+250
+00:10:05,039 --> 00:10:07,039
+Zapraszam do pracy domowej.
+
+251
+00:10:07,039 --> 00:10:09,039
+Cześć.

@@ -1,7 +1,7 @@
 <template>
   <div class="branch-canvas">
     <!-- Root node -->
-    <div class="branch-root">
+    <div class="branch-root" :class="{ 'anim-root': animated }">
       <div class="branch-node root-node">
         <div class="node-icon-wrap root">
           <Icon :icon="source.icon" :width="30" :height="30" />
@@ -14,7 +14,7 @@
     <!-- Horizontal lines + branches -->
     <div class="branch-spread">
       <!-- Top connector line across all branches -->
-      <div class="spread-bar"></div>
+      <div class="spread-bar" :class="{ 'anim-bar': animated }"></div>
 
       <div class="branches">
         <div v-for="(branch, i) in branches" :key="i" class="branch-item">
@@ -22,7 +22,8 @@
           <div class="drop-line"></div>
 
           <!-- Branch node -->
-          <div class="branch-node leaf-node" :class="branch.variant || 'default'">
+          <div class="branch-node leaf-node" :class="[branch.variant || 'default', { 'anim-branch': animated }]"
+               :style="animated ? { animationDelay: (600 + i * 300) + 'ms' } : {}">
             <div class="node-icon-wrap" :class="branch.variant || 'default'">
               <Icon :icon="branch.icon" :width="28" :height="28" />
             </div>
@@ -31,7 +32,8 @@
           </div>
 
           <!-- Result tag -->
-          <div v-if="branch.result" class="result-tag" :class="branch.variant || 'default'">
+          <div v-if="branch.result" class="result-tag" :class="[branch.variant || 'default', { 'anim-result': animated }]"
+               :style="animated ? { animationDelay: (750 + i * 300) + 'ms' } : {}">
             {{ branch.result }}
           </div>
         </div>
@@ -51,6 +53,10 @@ defineProps({
   branches: {
     type: Array,
     default: () => []
+  },
+  animated: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -191,4 +197,54 @@ defineProps({
 }
 .result-tag.trigger { background: rgba(249,115,22,0.4); }
 .result-tag.action  { background: rgba(59,130,246,0.3); }
+
+/* ── STAGGERED ANIMATION ── */
+@keyframes branchNodeAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes barExpand {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes resultFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anim-root {
+  opacity: 0;
+  animation: branchNodeAppear 0.4s ease-out forwards;
+}
+
+.anim-bar {
+  width: 0%;
+  animation: barExpand 0.4s ease-out 300ms forwards;
+}
+
+.anim-branch {
+  opacity: 0;
+  animation: branchNodeAppear 0.4s ease-out forwards;
+}
+
+.anim-result {
+  opacity: 0;
+  animation: resultFadeIn 0.3s ease-out forwards;
+}
 </style>

@@ -1,0 +1,155 @@
+1
+00:00:00,000 --> 00:00:17,179
+Tak trochę żartem powiedziałem, że to jest najbardziej obiektowy sposób zdobywania pieniędzy, zdobywania funduszy, no ale tak, dziedziczenie można byłoby powiedzieć, że tak jest. Natomiast w przypadku tym finansowym dziedziczenie jest czymś trochę innym, zupełnie czymś innym niż w przypadku obiektowości.
+
+2
+00:00:17,179 --> 00:00:28,859
+W przypadku obiektowości bardziej musielibyśmy rozpatrywać dziedziczenie na zasadzie, że odziedziczyłem pewne cechy po moich rodzicach albo dałem pewne cechy moim dzieciom. To jest to dziedziczenie.
+
+3
+00:00:29,539 --> 00:00:43,760
+I dziedziczenie określamy też, trochę możemy rozumieć w kategoriach takich, jak się mówiło, że ktoś ma pochodzenie szlacheckie albo pochodzenie mieszczańskie, czy tam jakieś pochodzenie, bo w tym przypadku to dziedziczenie, ten aspekt też jest istotny.
+
+4
+00:00:43,760 --> 00:00:47,060
+Ale okej, jak to wszystko wygląda w kodzie? Zobacz.
+
+5
+00:00:48,000 --> 00:00:51,519
+Załóżmy, że mamy coś, co możemy nazwać pojazdami.
+
+6
+00:00:51,840 --> 00:01:03,739
+Jeżeli komuś powiem z Was, wyobraź sobie jakiś pojazd i opisz mi go, no to jedna osoba powie, no ja sobie wyobrażam motor, inna powie, ja sobie wyobrażam samochód, a inna powie, ja sobie wyobrażam łódź podwodną.
+
+7
+00:01:04,299 --> 00:01:10,920
+No i wydaje mi się, że każda z tych rzeczy jest takim pojazdem.
+
+8
+00:01:11,260 --> 00:01:16,920
+Natomiast jeżeli to sobie trochę zawęzimy, to mogę powiedzieć, hej, pokaż, wyobraź mi, wyobraź mi pojazd.
+
+9
+00:01:17,180 --> 00:01:18,760
+Wyobraź sobie, opowiedz mi o jakimś samochodzie.
+
+10
+00:01:19,100 --> 00:01:27,100
+No i w tym momencie ktoś może powiedzieć, ja sobie wyobrażam busa T4, a ktoś inny może powiedzieć, a ja sobie wyobrażam jakąś Porsche Carea.
+
+11
+00:01:27,680 --> 00:01:30,080
+I to też w końcu są cały czas samochody.
+
+12
+00:01:30,160 --> 00:01:32,100
+A ktoś jeszcze powie, ja sobie wyobrażam Teslę.
+
+13
+00:01:32,560 --> 00:01:37,300
+Okej, a teraz wyobraź sobie jakiś pojazd, który jest samochodem i jest spalinowy.
+
+14
+00:01:37,300 --> 00:01:45,300
+I znowu w ten sposób zawężamy w pewien sposób ten wybór, to wyobrażenie.
+
+15
+00:01:45,840 --> 00:01:47,160
+I cały czas rozmawiamy o jakichś grubościach.
+
+16
+00:01:47,180 --> 00:01:53,380
+I dziedziczenie też pozwala nam na to, żeby właśnie w ten sposób określać nasze obiekty.
+
+17
+00:01:53,800 --> 00:01:55,900
+Czy nasze obiekty pochodzą od jakichś obiektów?
+
+18
+00:01:56,200 --> 00:02:00,240
+Dzięki temu też możemy za pomocą tego pochodzenia je określać.
+
+19
+00:02:00,680 --> 00:02:05,180
+Na przykład do tej funkcji może być dopasowany tylko jakiś pojazd.
+
+20
+00:02:06,140 --> 00:02:12,800
+To znaczy, że możemy do niej przekazać samochód, elektryczny, spalinowy, motor czy łódź.
+
+21
+00:02:13,120 --> 00:02:14,360
+To jest jedna rzecz.
+
+22
+00:02:14,360 --> 00:02:15,439
+Druga rzecz.
+
+23
+00:02:15,439 --> 00:02:20,439
+Możemy sobie powiedzieć, że na pewno każdy samochód potrafi jeździć.
+
+24
+00:02:20,439 --> 00:02:24,439
+Czyli w momencie, w którym mamy, czy też każdy pojazd potrafi jeździć.
+
+25
+00:02:24,439 --> 00:02:28,439
+W momencie, w którym mamy pojazd, mogę sobie zrobić w środku metodę jedź.
+
+26
+00:02:28,439 --> 00:02:32,439
+I wtedy, jeżeli stworzę samochód, który będzie dziedziczył po pojeździe,
+
+27
+00:02:32,439 --> 00:02:37,439
+to on też na pewno taką metodę jedź będzie miał zaimplementowaną.
+
+28
+00:02:37,439 --> 00:02:44,439
+I to też jest dosyć ciekawe, że w ten sposób my możemy przenosić metody z tych obiektów,
+
+29
+00:02:44,439 --> 00:02:46,439
+po których dziedziczymy.
+
+30
+00:02:46,439 --> 00:02:53,439
+Czyli w momencie, w którym pojazd miałby metodę jedź, samochód miałby metodę skręcaj, ruszaj, hamuj i coś jeszcze,
+
+31
+00:02:53,439 --> 00:02:59,439
+to pojazd spalinowy miałby metody wszystkie te, które mają pojazdy i samochody.
+
+32
+00:02:59,439 --> 00:03:06,439
+Czyli my w ten sposób dziedzicząc możemy definiować metody wyżej i później korzystać z nich niżej.
+
+33
+00:03:06,439 --> 00:03:08,439
+Taka jest generalnie idea dziedziczenia.
+
+34
+00:03:08,439 --> 00:03:12,439
+Czyli po pierwsze określamy to pochodzenie za pomocą tych naszych obiektów,
+
+35
+00:03:12,439 --> 00:03:14,439
+a po drugie możemy z tego pochodzenia,
+
+36
+00:03:14,439 --> 00:03:18,439
+możemy określić też metody i właściwości, które nasze obiekty mają posiadać.
+
+37
+00:03:18,439 --> 00:03:21,439
+I z racji tego, że to dziedziczenie będzie się odbywało zawsze w dół,
+
+38
+00:03:21,439 --> 00:03:25,439
+no to te obiekty będą te metody i właściwości posiadały.
+
+39
+00:03:25,439 --> 00:03:29,439
+Tyle słowem teorii. Przejdźmy do praktyki.

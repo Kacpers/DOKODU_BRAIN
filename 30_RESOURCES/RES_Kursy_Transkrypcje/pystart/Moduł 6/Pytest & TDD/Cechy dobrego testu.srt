@@ -1,0 +1,355 @@
+1
+00:00:00,000 --> 00:00:04,259
+No i teraz, jeżeli chcemy sobie powiedzieć, czym tak naprawdę jest test,
+
+2
+00:00:04,679 --> 00:00:06,679
+to musimy przejść przez te trzy rzeczy.
+
+3
+00:00:07,259 --> 00:00:09,679
+Po pierwsze, test jest to zwykła funkcja,
+
+4
+00:00:10,240 --> 00:00:12,640
+ale ta funkcja, żeby PyTest ją uruchomił,
+
+5
+00:00:12,740 --> 00:00:14,939
+musi zaczynać się od słowa test z podkreśleniem.
+
+6
+00:00:15,620 --> 00:00:18,740
+Czyli na przykład masz funkcję sum,
+
+7
+00:00:20,000 --> 00:00:23,859
+sum list załóżmy tą, która powtarza się w naszym kodzie na razie najczęściej,
+
+8
+00:00:24,260 --> 00:00:28,019
+więc można sobie stworzyć test o nazwie test podkreślenie sum list.
+
+9
+00:00:28,019 --> 00:00:32,380
+Ten test musi mieć nazwę taką, żeby łatwo Ci było go później znaleźć
+
+10
+00:00:32,380 --> 00:00:33,960
+i stwierdzić, co ten test robi.
+
+11
+00:00:34,460 --> 00:00:37,899
+Jeżeli na przykład chcesz sprawdzić, czy listy sumują się poprawnie,
+
+12
+00:00:38,019 --> 00:00:40,460
+możesz zrobić test sum list correctly.
+
+13
+00:00:40,700 --> 00:00:43,480
+Jeżeli chcesz sprawdzić, czy w określonych przypadkach
+
+14
+00:00:43,480 --> 00:00:46,620
+te listy nie sumują się dobrze,
+
+15
+00:00:46,719 --> 00:00:50,320
+bo na przykład jeżeli listy mają różną długość,
+
+16
+00:00:50,399 --> 00:00:52,700
+to chciałbyś, żeby to zostało też jakoś obsłużone,
+
+17
+00:00:52,799 --> 00:00:54,500
+została zwrócona pusta lista,
+
+18
+00:00:54,500 --> 00:00:56,179
+to możesz wtedy zrobić test.
+
+19
+00:00:56,500 --> 00:00:57,859
+Test, what happened?
+
+20
+00:00:58,020 --> 00:01:01,460
+If lists have different size, czy coś takiego.
+
+21
+00:01:01,920 --> 00:01:04,620
+Więc często te testy mają długie nazwy,
+
+22
+00:01:04,719 --> 00:01:07,460
+właśnie rozdzielane tymi podkreśleniami.
+
+23
+00:01:07,900 --> 00:01:10,719
+Chodzi o to, żeby łatwo było znaleźć ten konkretny test
+
+24
+00:01:10,719 --> 00:01:13,079
+i żeby było wiadomo, który test się wysypał.
+
+25
+00:01:13,579 --> 00:01:16,560
+Po drugie, testy zabierają kod napisany w Pythonie.
+
+26
+00:01:17,040 --> 00:01:19,000
+To jest ciekawe, ale jak mówię o testach,
+
+27
+00:01:19,079 --> 00:01:20,879
+to często osobom się wydaje, że kurczę,
+
+28
+00:01:20,879 --> 00:01:23,960
+to jest jak pewnie jakiś inny język albo jakieś inne coś.
+
+29
+00:01:24,420 --> 00:01:25,280
+Nie, zdecydowanie nie.
+
+30
+00:01:25,359 --> 00:01:27,040
+To jest po prostu kod w Pythonowy
+
+31
+00:01:27,040 --> 00:01:29,700
+i ten kod za moment też sobie pokażemy.
+
+32
+00:01:29,820 --> 00:01:31,580
+Musimy po prostu wejść w ten temat powolutku.
+
+33
+00:01:32,200 --> 00:01:35,360
+I po trzecie, dobry test składa się z takich trzech części.
+
+34
+00:01:35,780 --> 00:01:37,780
+Jak myślimy o teście, warto jest mieć w głowie
+
+35
+00:01:37,780 --> 00:01:40,080
+takie trzy właśnie bloki tego testu,
+
+36
+00:01:40,420 --> 00:01:42,840
+bo dzięki temu łatwiej będzie nam go ułożyć sobie
+
+37
+00:01:42,840 --> 00:01:45,180
+i wyobrazić sobie, co tak naprawdę testujemy.
+
+38
+00:01:45,900 --> 00:01:47,480
+Given, when, then.
+
+39
+00:01:47,980 --> 00:01:48,960
+Znowu ten angielski.
+
+40
+00:01:49,040 --> 00:01:49,860
+Nie da się po polsku?
+
+41
+00:01:50,420 --> 00:01:51,219
+Bardzo proszę.
+
+42
+00:01:51,660 --> 00:01:53,200
+Given to jest to, co mam.
+
+43
+00:01:54,219 --> 00:01:56,320
+Czyli dla określonych danych.
+
+44
+00:01:56,319 --> 00:01:58,179
+Tak jakbyśmy chcieli sobie przedstawić,
+
+45
+00:01:58,279 --> 00:02:00,879
+że to jest sytuacja zastana,
+
+46
+00:02:01,119 --> 00:02:02,859
+to jest właśnie to, co znajduje się w given.
+
+47
+00:02:03,579 --> 00:02:06,019
+When to jest akcja, która się dzieje.
+
+48
+00:02:06,280 --> 00:02:08,419
+Czyli mam to i to.
+
+49
+00:02:08,759 --> 00:02:10,340
+Kiedy dzieje się to,
+
+50
+00:02:11,039 --> 00:02:13,219
+then to wtedy powinno stać się to.
+
+51
+00:02:13,379 --> 00:02:14,139
+Czyli taki wynik.
+
+52
+00:02:14,620 --> 00:02:15,099
+Czyli co?
+
+53
+00:02:15,459 --> 00:02:16,459
+Weźmy sobie jakiś przykład.
+
+54
+00:02:17,280 --> 00:02:19,579
+Na dworze jest zimno, ja nie mam czapki.
+
+55
+00:02:19,939 --> 00:02:21,079
+To jest sytuacja zastana.
+
+56
+00:02:21,599 --> 00:02:22,699
+Po prostu tak jest.
+
+57
+00:02:22,699 --> 00:02:26,240
+Po drugie, wychodzę z domu na dwie godziny.
+
+58
+00:02:26,319 --> 00:02:29,019
+Czyli sytuacja, która się wydarzyła,
+
+59
+00:02:29,180 --> 00:02:31,659
+kiedy na dworze było zimno, a ja nie miałem czapki.
+
+60
+00:02:32,180 --> 00:02:34,180
+No i możemy się spodziewać dwóch rezultatów.
+
+61
+00:02:34,419 --> 00:02:35,299
+Pierwszy rezultat.
+
+62
+00:02:35,900 --> 00:02:37,359
+Następnego dnia boli mnie głowa.
+
+63
+00:02:37,739 --> 00:02:39,299
+Albo następnego dnia jestem chory.
+
+64
+00:02:39,500 --> 00:02:40,799
+Lub też nic się nie stało.
+
+65
+00:02:41,620 --> 00:02:42,819
+Zakładając naszą funkcję,
+
+66
+00:02:42,900 --> 00:02:44,859
+zakładamy, że zawsze, kiedy na dworze jest zimno,
+
+67
+00:02:44,919 --> 00:02:46,620
+ja nie mam czapki i wychodzę z domu na dwie godziny,
+
+68
+00:02:46,740 --> 00:02:49,180
+to zawsze wynikiem powinno być to, że jestem chory.
+
+69
+00:02:49,799 --> 00:02:50,919
+Nigdy nie może być tak,
+
+70
+00:02:50,919 --> 00:02:51,740
+jeżeli to jest funkcja,
+
+71
+00:02:52,139 --> 00:02:54,680
+że dla tych dwóch argumentów wejściowych będziemy mieli
+
+72
+00:02:54,680 --> 00:02:56,120
+raz prawdę, a raz funkcję.
+
+73
+00:02:56,319 --> 00:02:58,780
+Falsz. Takiego kodu nie da się przetestować.
+
+74
+00:02:59,139 --> 00:03:01,060
+Po prostu zawsze musi być tak samo.
+
+75
+00:03:01,639 --> 00:03:02,979
+Jeżeli nie jest tak samo,
+
+76
+00:03:03,099 --> 00:03:04,719
+to znaczy, że nasza funkcja powinna przyjąć
+
+77
+00:03:04,719 --> 00:03:05,479
+trzeci argument.
+
+78
+00:03:06,579 --> 00:03:09,180
+Na przykład, nie wiem, poziom mojej odporności.
+
+79
+00:03:09,879 --> 00:03:11,419
+Jak jest mniejsze niż jakaś wartość,
+
+80
+00:03:11,500 --> 00:03:13,840
+to zachoruje. Jak nie, to nie zachoruje.
+
+81
+00:03:14,359 --> 00:03:15,159
+Więc zawsze
+
+82
+00:03:15,159 --> 00:03:16,479
+wszystkie te zmienne
+
+83
+00:03:16,479 --> 00:03:18,159
+muszą być określone w teście.
+
+84
+00:03:18,159 --> 00:03:20,280
+Wszystkie te wartości muszą być określone w teście.
+
+85
+00:03:20,799 --> 00:03:22,159
+I dla określonego stanu zastanego,
+
+86
+00:03:23,039 --> 00:03:24,579
+kiedy dzieje się jakaś czynność,
+
+87
+00:03:24,959 --> 00:03:26,139
+powinniśmy zawsze
+
+88
+00:03:26,139 --> 00:03:27,519
+otrzymywać ten sam wynik.
+
+89
+00:03:27,919 --> 00:03:30,139
+W ten sposób możemy właśnie skonstruować test.

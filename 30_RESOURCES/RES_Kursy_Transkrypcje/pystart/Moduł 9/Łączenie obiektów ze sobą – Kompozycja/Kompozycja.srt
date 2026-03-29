@@ -1,0 +1,407 @@
+1
+00:00:00,000 --> 00:00:06,160
+Czyli na tym etapie powinniśmy wiedzieć, że mamy obiekty, żeby stworzyć własny obiekt.
+
+2
+00:00:06,280 --> 00:00:11,540
+Potrzebujemy mieć klasę i wtedy w initie możemy przekazywać właściwości,
+
+3
+00:00:12,160 --> 00:00:18,440
+natomiast mamy też możliwość, żeby obiekt posiadał jakieś swoje metody i też je definiujemy w klasie.
+
+4
+00:00:19,000 --> 00:00:22,339
+Te wszystkie rzeczy powinny być dla ciebie mniej więcej jasne.
+
+5
+00:00:22,339 --> 00:00:26,780
+Może nie jeszcze czujesz się z nimi bardzo pewnie, ale powinny już być dla ciebie jasne.
+
+6
+00:00:26,780 --> 00:00:30,780
+I teraz wejdźmy sobie o trochę głębiej.
+
+7
+00:00:31,539 --> 00:00:34,179
+Możemy wziąć na przykład samochód.
+
+8
+00:00:34,740 --> 00:00:37,780
+Jeżeli mówiliśmy sobie o tym, że samochód może być obiektem,
+
+9
+00:00:38,460 --> 00:00:42,520
+no to wiemy, że potrzebujemy klasę, żeby taki samochód skonstruować.
+
+10
+00:00:43,520 --> 00:00:46,240
+Jakie właściwości moglibyśmy zdefiniować?
+
+11
+00:00:46,420 --> 00:00:53,359
+Na przykład ilość kół, powiedzmy, ilość pasażerów, prędkość maksymalna, przebieg.
+
+12
+00:00:54,159 --> 00:00:56,740
+Moglibyśmy napisać rodzaj tego samochodu.
+
+13
+00:00:56,780 --> 00:01:00,280
+Czy to jest jakiś SUV, hatchback czy jakieś inne tego typu informacje.
+
+14
+00:01:01,079 --> 00:01:05,420
+Natomiast jeżeli zeszlibyśmy na poziom takiej mechaniki,
+
+15
+00:01:05,920 --> 00:01:10,159
+no to okazałoby się, że nasz samochód ma załóżmy jakiś układ, który służy do skręcania.
+
+16
+00:01:10,500 --> 00:01:12,379
+Kierownica w lewo, kierownica w prawo, wiadomo.
+
+17
+00:01:13,140 --> 00:01:17,299
+Mamy na przykład skrzynię biegów, która jest bardzo złożonym tworem,
+
+18
+00:01:17,299 --> 00:01:19,599
+no bo mamy rodzaje tych skrzyń biegów.
+
+19
+00:01:19,799 --> 00:01:23,240
+Może być jakaś tam skrzynia sportowa, skrzynia terenowa, skrzynia jakaś tam.
+
+20
+00:01:23,799 --> 00:01:24,500
+To jest jedna rzecz.
+
+21
+00:01:24,819 --> 00:01:26,740
+A druga rzecz, mamy też właściwe,
+
+22
+00:01:26,780 --> 00:01:35,920
+że metody podnieść bieg, obniżyć bieg, w sensie użyć wyższy, wrzucić niższy bieg, tak?
+
+23
+00:01:36,540 --> 00:01:38,120
+Moglibyśmy też wybrać konkretny.
+
+24
+00:01:38,680 --> 00:01:43,659
+Każdy bieg też tak naprawdę ma właściwości, no bo może mieć właściwość,
+
+25
+00:01:43,659 --> 00:01:46,240
+czy jest do przodu, czy jest do tyłu, powiedzmy, tak?
+
+26
+00:01:46,340 --> 00:01:48,819
+Czy ma taką przekładnię, czy taką przekładnię.
+
+27
+00:01:49,319 --> 00:01:51,900
+Czyli okazuje się, że w takim tworze, jakim jest samochód,
+
+28
+00:01:52,359 --> 00:01:55,939
+mamy inny twór, jakim może być właśnie skrzynia biegów
+
+29
+00:01:55,939 --> 00:01:58,179
+i to wszystko możemy ze sobą łączyć.
+
+30
+00:01:58,679 --> 00:02:02,679
+I teraz, jak rozmawialiśmy sobie o samochodach właśnie wcześniej,
+
+31
+00:02:03,039 --> 00:02:05,060
+to robiliśmy listę samochodów.
+
+32
+00:02:06,120 --> 00:02:10,379
+I wyobraź sobie klasę, która będzie miała właściwość,
+
+33
+00:02:11,199 --> 00:02:15,860
+która będzie listą i ta lista będzie właśnie zawierała obiekty.
+
+34
+00:02:16,919 --> 00:02:17,860
+Albo inaczej.
+
+35
+00:02:18,419 --> 00:02:21,699
+Wyobraź sobie klasę, która jest książką, która ma autora.
+
+36
+00:02:21,699 --> 00:02:25,240
+I zamiast pisać autor first name, autor last name,
+
+37
+00:02:25,939 --> 00:02:27,939
+bieg, autor coś tam, autor coś tam,
+
+38
+00:02:28,400 --> 00:02:31,939
+możemy po prostu przechowywać w zmiennej autor
+
+39
+00:02:31,939 --> 00:02:36,079
+cały obiekt reprezentujący informacje o autorze.
+
+40
+00:02:36,919 --> 00:02:41,599
+Czyli my obiekty możemy ze sobą bardzo ładnie w ten sposób łączyć.
+
+41
+00:02:42,079 --> 00:02:45,060
+Jeżeli wyobrazimy sobie na przykład sklep internetowy,
+
+42
+00:02:45,560 --> 00:02:48,319
+to okaże się, że w sklepie internetowym mamy kategorie.
+
+43
+00:02:48,560 --> 00:02:50,219
+W kategoriach mamy produkty.
+
+44
+00:02:50,219 --> 00:02:52,079
+W produktach mamy ceny.
+
+45
+00:02:52,199 --> 00:02:55,560
+Cena może mieć rabat, cenę netto, cenę brutto, coś tam jeszcze.
+
+46
+00:02:55,939 --> 00:02:58,939
+To wszystko, jak tak byśmy sobie rozrysowali,
+
+47
+00:02:59,479 --> 00:03:03,500
+notabene język służący do rozrysowywania wszystkich tych rzeczy nazywa się UML,
+
+48
+00:03:04,039 --> 00:03:05,539
+to jest, czy UML,
+
+49
+00:03:05,879 --> 00:03:10,819
+to jest, to jak najbardziej możemy całą taką aplikację naszą dowolną
+
+50
+00:03:10,819 --> 00:03:13,780
+w ten sposób sobie właśnie wymodelować.
+
+51
+00:03:14,479 --> 00:03:15,819
+Inny przykład, faktura.
+
+52
+00:03:16,180 --> 00:03:18,340
+Robimy aplikację służącą do wystawiania faktur.
+
+53
+00:03:18,340 --> 00:03:23,079
+Na fakturze zawsze mamy kontrahenta i tego wystawiającego.
+
+54
+00:03:23,680 --> 00:03:25,740
+Może się okazać, że nasz system pozwala na przechowywanie,
+
+55
+00:03:25,939 --> 00:03:28,439
+wielu kontrahentów, wielu wystawiających.
+
+56
+00:03:28,439 --> 00:03:30,939
+Później mamy pozycję na fakturze,
+
+57
+00:03:30,939 --> 00:03:34,939
+bo mamy tą tabelkę taką, wiesz, gdzie jest nazwa, tam PKWi,
+
+58
+00:03:34,939 --> 00:03:40,740
+te wszystkie te dane, cena netto, stawka VATu, wartość brutto i tak dalej, i tak dalej.
+
+59
+00:03:40,740 --> 00:03:43,939
+To wszystko to są też, to też mogą być obiekty.
+
+60
+00:03:43,939 --> 00:03:49,240
+I my tak możemy komponować naszą aplikację z wielu różnych obiektów.
+
+61
+00:03:49,240 --> 00:03:50,840
+Jaką ma to przewagę?
+
+62
+00:03:50,840 --> 00:03:54,599
+Na przykład taką, że jeżeli ten kontrahent widnieje na fakturze,
+
+63
+00:03:54,599 --> 00:03:57,099
+a dodatkowo widnieje na jakimś zamówieniu,
+
+64
+00:03:57,099 --> 00:04:00,099
+to możemy w dwóch miejscach używać tego samego obiektu.
+
+65
+00:04:00,099 --> 00:04:03,099
+Dzięki czemu nasza aplikacja nie powiela danych,
+
+66
+00:04:03,099 --> 00:04:07,599
+bo cały czas odwołujemy się do tego jednego konkretnego kontrahenta.
+
+67
+00:04:07,599 --> 00:04:13,099
+Czyli dzięki temu nasz system po prostu jest szybszy, działa wydajniej.
+
+68
+00:04:13,099 --> 00:04:16,100
+Mniej informacji się w sobie powtarza.
+
+69
+00:04:16,100 --> 00:04:19,600
+I też łatwiej jest nam wymodelować taki system,
+
+70
+00:04:19,600 --> 00:04:23,100
+jeżeli potrafimy sobie wyobrazić, co się z czym łączy,
+
+71
+00:04:23,100 --> 00:04:24,100
+a nie korzystać z tego, co się łączy.
+
+72
+00:04:24,600 --> 00:04:29,100
+Nie korzystamy z wielu funkcji, takich porozrzucanych po projekcie.
+
+73
+00:04:29,100 --> 00:04:34,100
+Więc możemy sobie powiedzieć, że warto łączyć ze sobą obiekty,
+
+74
+00:04:34,100 --> 00:04:36,100
+czyli warto korzystać z kompozycji.
+
+75
+00:04:36,100 --> 00:04:42,100
+Bo dzięki temu, dzięki takim klasom, aplikacja jest podzielona logicznie
+
+76
+00:04:42,100 --> 00:04:44,600
+na poszczególne segmenty.
+
+77
+00:04:44,600 --> 00:04:48,100
+No bo w ten sposób widzimy, że na fakturze są takie i takie dane,
+
+78
+00:04:48,100 --> 00:04:53,100
+takie i takie pozycje, takie i takie obiekty nam tę fakturę tworzą.
+
+79
+00:04:53,100 --> 00:04:54,100
+Po drugie.
+
+80
+00:04:54,600 --> 00:04:59,260
+wiedzieć, że każdy ten obiekt jest wyspecjalizowany, ma jakąś swoją własną
+
+81
+00:04:59,260 --> 00:05:03,060
+czynność. O odpowiedzialności jeszcze za moment będziemy rozmawiali, ale mniej
+
+82
+00:05:03,060 --> 00:05:08,480
+więcej o to chodzi. Po trzecie, nie musimy się martwić o powtarzające się nazwy
+
+83
+00:05:08,480 --> 00:05:12,360
+funkcji. Nie wiem, czy zwróciliście na to uwagę, ale kiedy tworzę klasę, to ja nie
+
+84
+00:05:12,360 --> 00:05:17,700
+dodaję w klasie żadnych prefiksów w funkcjach. Nie robię autor, first name,
+
+85
+00:05:17,800 --> 00:05:22,320
+autor, last name, tylko skoro wiem, że to jest obiekt autor, to mogę po prostu w
+
+86
+00:05:22,319 --> 00:05:26,180
+środku robić first name, last name. Jeżeli to będzie imię, nazwisko autora,
+
+87
+00:05:26,300 --> 00:05:32,060
+imię, nazwisko studenta, to nie ma problemu, bo zarówno metody, jak i właściwości
+
+88
+00:05:32,060 --> 00:05:37,860
+w różnych klasach mogą nazywać się tak samo, ponieważ klasa zamyka ten kontekst,
+
+89
+00:05:37,860 --> 00:05:43,139
+na jakim w danym momencie pracujemy. No i kolejna rzecz, już chyba ostatnia taka,
+
+90
+00:05:43,480 --> 00:05:47,199
+dlaczego warto to zapisywać w ten sposób i też tym samym, dlaczego warto
+
+91
+00:05:47,199 --> 00:05:51,879
+programować obiektowo. W ten sposób lepiej odwzorowujemy rzeczywistość, czyli
+
+92
+00:05:51,879 --> 00:05:56,740
+lepiej, łatwiej jest nam wyobrazić sobie taką aplikację, jeżeli widzimy z jakich
+
+93
+00:05:56,740 --> 00:06:01,120
+konkretnych elementów ona się składa. Ja bardzo często zanim zacznę programować,
+
+94
+00:06:01,219 --> 00:06:05,639
+biorę sobie kartkę, długopis i rozpisuję sobie wszystkie obiekty, jakie biorą udział
+
+95
+00:06:05,639 --> 00:06:10,500
+w danym zagadnieniu, zapisuję sobie, gdzie się łączą, czasem wpadam na pomysł,
+
+96
+00:06:10,600 --> 00:06:14,259
+jak to połączyć ze sobą jeszcze ciekawiej. Wiem, że to nie jest temat na teraz,
+
+97
+00:06:14,399 --> 00:06:18,560
+ale takie połączenia też obiektów znajdziesz w temacie wzorców projektowych.
+
+98
+00:06:18,719 --> 00:06:21,860
+Jeżeli masz taki zbiór notatek, w którym zapisujesz sobie,
+
+99
+00:06:21,860 --> 00:06:25,639
+żeby te maty na kiedyś, to wzorce projektowe, czyli design patterns,
+
+100
+00:06:25,780 --> 00:06:30,220
+to jest temat jak najbardziej do przerobienia, jak już opanujesz obiektowość.
+
+101
+00:06:31,600 --> 00:06:37,379
+Okej, więc obiekty ze sobą się łączą i w tych lekcjach teraz chwilę będziemy
+
+102
+00:06:37,379 --> 00:06:38,400
+jeszcze o tym rozmawiali.

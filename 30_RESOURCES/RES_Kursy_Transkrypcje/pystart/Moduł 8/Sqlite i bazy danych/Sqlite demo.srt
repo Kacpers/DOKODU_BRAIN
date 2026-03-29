@@ -1,0 +1,803 @@
+1
+00:00:00,000 --> 00:00:13,480
+No to co, pokazaliśmy sobie wiedzę dotyczącą SQL-a, wypadałoby teraz to wszystko złożyć w jedną całość, stworzyć taką mini aplikację, żeby później w ramach zadania do ćwiczeń oraz zadania domowego móc to sobie przećwiczyć.
+
+2
+00:00:13,859 --> 00:00:22,420
+Więc to od czego zacznę to będzie import SQLite 3. To jest pierwsza rzecz, która będzie mi niezwykle potrzebna, gdyż bez tego tak naprawdę nie jestem w stanie zrobić później nic.
+
+3
+00:00:22,420 --> 00:00:31,800
+Następnie będę potrzebował mieć kod, który będzie tworzył mi moją bazę danych. Możemy się umówić, że wykorzystamy tę bazę danych dotyczącą książek.
+
+4
+00:00:32,000 --> 00:00:45,240
+Pierwsze od czego muszę zacząć to stworzyć sobie połączenie, czyli with SQLite 3.connect, możemy to sobie nazwać books.dbsconnection, dwukropek.
+
+5
+00:00:45,240 --> 00:00:51,020
+I teraz na tym naszym connection będziemy potrzebowali stworzyć sobie nową bazę danych.
+
+6
+00:00:52,420 --> 00:01:00,420
+Czyli jak pamiętacie mieliśmy to zapytanie create table books. Ja sobie też otworzyłem notatki, żeby później nic mi nie umknęło.
+
+7
+00:01:00,540 --> 00:01:11,879
+Czyli SQL równa się i będę chciał napisać tekst, który będzie miał być zapisany w wielu wierszach, więc potrzebuję zrobić sobie trzy apostrofy.
+
+8
+00:01:11,879 --> 00:01:15,980
+Create table books.
+
+9
+00:01:16,200 --> 00:01:21,879
+Następnie jest otwarty nawias, nawias zamknięty i w ramach tych nawiasów wprowadzamy...
+
+10
+00:01:22,420 --> 00:01:28,420
+...kolumny, które nas interesują. Czyli tak naprawdę będzie to kolumna bookid, title oraz autor.
+
+11
+00:01:28,420 --> 00:01:38,420
+Czyli bookid, tak jak rozmawialiśmy ma być to integer, ma być kluczem głównym i ma się zwiększać o jeden.
+
+12
+00:01:38,420 --> 00:01:49,420
+Następnie title jako tytuł książki. Jak widzicie cały czas idę tym torem, w którym wielkość liter określa mi też tę część, która pochodzi z SQL.
+
+13
+00:01:49,420 --> 00:01:52,420
+Natomiast małe litery to jest to, co sam wymyśliłem.
+
+14
+00:01:52,420 --> 00:01:54,420
+I jeszcze mamy autora.
+
+15
+00:01:54,420 --> 00:02:01,420
+Czyli mamy w ten sposób przygotowane zapytanie tworzące naszą tabelę.
+
+16
+00:02:01,420 --> 00:02:03,420
+Teraz to zapytanie będziemy chcieli wykonać.
+
+17
+00:02:03,420 --> 00:02:08,420
+Żeby to zapytanie wykonać będziemy potrzebowali pobrać sobie kursor z naszego connection.
+
+18
+00:02:08,420 --> 00:02:17,420
+Kursor, jak pamiętacie, to jest ten obiekt, który służy do wykonywania zapytania.
+
+19
+00:02:17,420 --> 00:02:21,420
+Czyli kursor to jest connection.kursor.
+
+20
+00:02:21,419 --> 00:02:30,419
+Następnie wykonuję kursor.execute, bo execute to jest metoda wykonująca zapytanie.
+
+21
+00:02:30,419 --> 00:02:39,419
+I te wszystkie zapytania, które służą do tego, żeby coś tworzyć, żeby z czymś pracować, potrzebują mieć commit.
+
+22
+00:02:39,419 --> 00:02:43,419
+Czyli tworzyć tabelę albo tworzyć rekord.
+
+23
+00:02:43,419 --> 00:02:48,419
+Więc robię connection.commit.
+
+24
+00:02:48,419 --> 00:02:53,419
+I ten kod powinien stworzyć mi tabelę booksdb.
+
+25
+00:02:53,419 --> 00:03:00,419
+Jeżeli ja go teraz sobie wykonam, czyli wykonam python, spacja i SQLite demo,
+
+26
+00:03:00,419 --> 00:03:03,419
+no to nic mi się tutaj nie pokazało.
+
+27
+00:03:03,419 --> 00:03:09,419
+Natomiast jeżeli teraz podejrzę sobie listę katalogów, to okaże się, że taką bazę danych mam.
+
+28
+00:03:09,419 --> 00:03:12,419
+I zobaczcie, booksdb tutaj jest dostępny.
+
+29
+00:03:12,419 --> 00:03:14,419
+To jest jedna rzecz.
+
+30
+00:03:14,419 --> 00:03:16,419
+Druga rzecz jest taka, że ja muszę się jakoś do niej podłączyć.
+
+31
+00:03:16,419 --> 00:03:17,419
+W tym miejscu, jeżeli kliknę sobie na tabelę booksdb, to mam tutaj listę katalogów.
+
+32
+00:03:17,419 --> 00:03:18,419
+I zobaczcie, booksdb tutaj jest dostępny.
+
+33
+00:03:18,419 --> 00:03:19,419
+I zobaczcie, booksdb tutaj jest dostępny.
+
+34
+00:03:19,419 --> 00:03:20,419
+I zobaczcie, booksdb tutaj jest dostępny.
+
+35
+00:03:20,419 --> 00:03:25,419
+O, to z racji tego, że nie mam w tej chwili włączonej wersji professional, tylko mam wersję community,
+
+36
+00:03:25,419 --> 00:03:30,419
+jak widać, nie otworzyła mi się ta baza danych, nie otworzyło mi się to połączenie.
+
+37
+00:03:30,419 --> 00:03:31,419
+Co muszę zatem zrobić?
+
+38
+00:03:31,419 --> 00:03:33,419
+Skorzystam z DBivera.
+
+39
+00:03:33,419 --> 00:03:36,419
+Czyli DBiver to jest to narzędzie, o którym Wam wspominałem w prezentacji,
+
+40
+00:03:36,419 --> 00:03:41,419
+do którego też instalacji zachęcam Was serdecznie, bo jest to narzędzie, które się bardzo przyda.
+
+41
+00:03:41,419 --> 00:03:47,419
+Szczególnie jeżeli będziecie w przyszłości korzystali z kursu skumaj bazy, tam też to narzędzie jest przeze mnie wykorzystywane.
+
+42
+00:03:47,419 --> 00:03:53,419
+Nie trzeba mieć tej wersji pro, wystarczy nam wersja community, więc widzimy się już za moment w DBiverze.
+
+43
+00:03:53,419 --> 00:03:56,419
+I po zainstalowaniu DBivera powinno Wam się pokazać takie okno.
+
+44
+00:03:56,419 --> 00:04:00,419
+Tu oczywiście macie, już nie będziecie mieli tych połączeń, które mam ja,
+
+45
+00:04:00,419 --> 00:04:06,419
+natomiast jak najbardziej można będzie to połączenie sobie tutaj nowe dodać, właśnie do naszej bazy SQLite.
+
+46
+00:04:06,419 --> 00:04:12,419
+W tym celu klikamy na ten taki symbol, który tutaj się wyświetlił z kontaktem i z plusem.
+
+47
+00:04:12,419 --> 00:04:16,419
+Następnie z listy dostępnych baz wybieramy SQLite.
+
+48
+00:04:16,419 --> 00:04:17,419
+Następnie z listy dostępnych baz wybieramy SQLite.
+
+49
+00:04:17,420 --> 00:04:21,420
+Robimy next i powinniśmy mu wskazać ścieżkę.
+
+50
+00:04:21,420 --> 00:04:29,420
+Ścieżka, którą tu zaraz zobaczycie, to jest ta ścieżka do tego pliku books.db, którą mam w moim PyCharmie.
+
+51
+00:04:29,420 --> 00:04:31,420
+Więc ja tę ścieżkę sobie skopiuję.
+
+52
+00:04:31,420 --> 00:04:33,420
+Jak to najwygodniej skopiować?
+
+53
+00:04:33,420 --> 00:04:44,420
+Kliknąć prawym na books.db, wybrać copy path reference, następnie wybrać absolute path i wtedy wkleić sobie tę ścieżkę w DBiverze.
+
+54
+00:04:44,420 --> 00:04:46,420
+Teraz robimy finish.
+
+55
+00:04:46,420 --> 00:04:53,420
+Jeżeli to jest pierwsza instalacja DBivera, to jeszcze to co się wydarzy, to on pobierze Wam sterownik do połączenia się z SQLitem.
+
+56
+00:04:53,420 --> 00:05:00,420
+Natomiast jeżeli już wcześniej korzystaliście z tej bazy danych, no to nie będzie tego komunikatu, tak jak u mnie.
+
+57
+00:05:00,420 --> 00:05:04,420
+No i wtedy możemy sobie rozwinąć to nasze utworzone połączenie.
+
+58
+00:05:04,420 --> 00:05:08,420
+O, czyli jednak okazało się, że SQLite tutaj nie miałem.
+
+59
+00:05:08,420 --> 00:05:14,420
+Albo w tej wersji rozwijałem sobie tables i jak widać pojawiła mi się już tabela books.
+
+60
+00:05:14,420 --> 00:05:20,420
+Tabela ta jest pusta, natomiast jak kliknąłem na nią dwa razy, to widzę, że ma kolumny book id, title oraz autor.
+
+61
+00:05:20,420 --> 00:05:24,420
+Czyli wszystko jest w porządku, mogę śmiało korzystać z mojego połączenia.
+
+62
+00:05:24,420 --> 00:05:27,420
+Jest jedna rzecz, o której musimy wiedzieć.
+
+63
+00:05:27,420 --> 00:05:32,420
+To, co tutaj sobie wykonaliśmy w tym momencie, będzie się wykonywało za każdym razem.
+
+64
+00:05:32,420 --> 00:05:36,420
+Czyli on za każdym razem będzie próbował stworzyć tabelę books.
+
+65
+00:05:36,420 --> 00:05:38,420
+Jak widać pojawił się błąd.
+
+66
+00:05:38,420 --> 00:05:40,420
+Table books already exists.
+
+67
+00:05:40,420 --> 00:05:42,420
+Żeby z tym błędem się uporać, wystarczy zrobić sobie jedną malutką rzecz.
+
+68
+00:05:42,420 --> 00:05:44,420
+Żeby z tym błędem się uporać, wystarczy zrobić sobie jedną malutką rzecz.
+
+69
+00:05:44,420 --> 00:05:46,420
+Mianowicie tak.
+
+70
+00:05:46,420 --> 00:05:53,420
+Po pierwsze wykonamy rzecz następującą, a mianowicie stworzymy sobie funkcję setup.
+
+71
+00:05:53,420 --> 00:05:59,420
+I do tej funkcji wpakujemy ten nasz kod tworzący to nasze połączenie.
+
+72
+00:05:59,420 --> 00:06:01,420
+To jest pierwsza rzecz.
+
+73
+00:06:01,420 --> 00:06:12,420
+A druga rzecz. Będziemy chcieli uruchamiać tę funkcję tylko wtedy, jeżeli ktoś uruchomi nasz program w stylu python sqlite demo setup.
+
+74
+00:06:12,420 --> 00:06:14,420
+To będzie informacja dla nas, że taka tabela ma się uruchomić.
+
+75
+00:06:14,420 --> 00:06:16,420
+To będzie informacja dla nas, że taka tabela ma się uruchomić.
+
+76
+00:06:16,420 --> 00:06:21,420
+Stąd też możemy sobie dorzucić from sys import rgv.
+
+77
+00:06:21,420 --> 00:06:26,420
+I wtedy dopisać sobie if len rgv.
+
+78
+00:06:26,420 --> 00:06:29,420
+Czyli jeżeli długość, ilość tych argumentów jest.
+
+79
+00:06:29,420 --> 00:06:35,420
+Bo jeden to jest nazwa polecenia, a dwa to będzie nasz setup.
+
+80
+00:06:35,420 --> 00:06:38,420
+Czyli jeżeli długość jest równa 2.
+
+81
+00:06:38,420 --> 00:06:40,420
+I rgv od 1 to jest setup.
+
+82
+00:06:40,420 --> 00:06:42,420
+I rgv od 1 to jest setup.
+
+83
+00:06:42,420 --> 00:06:49,420
+I rgv od 1 to jest setup.
+
+84
+00:06:49,420 --> 00:06:51,420
+I zobaczcie co się teraz stanie.
+
+85
+00:06:51,420 --> 00:06:54,420
+Jeżeli wywołam raz jeszcze sqlite demo to on mi nie pokaże nic.
+
+86
+00:06:54,420 --> 00:07:01,420
+Natomiast, jeżeli wywołałbym je z poleceniem setup, no to dostanę komunikat table.books already exist.
+
+87
+00:07:01,420 --> 00:07:03,420
+No bo ten komunikat właśnie mi mówi o tym, że ta tabela już istnieje.
+
+88
+00:07:03,420 --> 00:07:05,420
+No bo ten komunikat właśnie mi mówi o tym, że ta tabela już istnieje.
+
+89
+00:07:05,420 --> 00:07:07,420
+Żeby mieć porządek możemy tę funkcję sobie zwinąć.
+
+90
+00:07:07,420 --> 00:07:09,420
+Można byłoby ją też przenieść do osobnego modułu.
+
+91
+00:07:09,420 --> 00:07:11,420
+Można byłoby ją też przenieść do osobnego modułu.
+
+92
+00:07:11,420 --> 00:07:13,240
+zrobić, więc nie będę tego w tym momencie
+
+93
+00:07:13,240 --> 00:07:15,500
+pokazywał, po prostu zostanę przy takiej
+
+94
+00:07:15,500 --> 00:07:16,819
+konwencji. Ok.
+
+95
+00:07:17,960 --> 00:07:18,520
+Natomiast
+
+96
+00:07:18,520 --> 00:07:21,540
+nasza baza musi też zostać
+
+97
+00:07:21,540 --> 00:07:22,800
+czymś uzupełniona.
+
+98
+00:07:23,400 --> 00:07:25,340
+Podczas tej rozmowy, podczas tego
+
+99
+00:07:25,340 --> 00:07:27,400
+dema chciałbym Ci pokazać, jak po prostu
+
+100
+00:07:27,400 --> 00:07:29,360
+wyświetlić listę książek oraz
+
+101
+00:07:29,360 --> 00:07:31,240
+zapytać o książkę, którą chcesz dodać
+
+102
+00:07:31,240 --> 00:07:33,360
+i tę książkę, którą użytkownik wpisze
+
+103
+00:07:33,360 --> 00:07:35,660
+od razu załadujemy do bazy danych.
+
+104
+00:07:35,980 --> 00:07:37,259
+Czyli poniżej będę
+
+105
+00:07:37,259 --> 00:07:39,520
+z powrotem potrzebował mieć połączenie do bazy
+
+106
+00:07:39,519 --> 00:07:41,399
+danych. Z tego względu, że to połączenie,
+
+107
+00:07:41,500 --> 00:07:43,639
+czy to connection, ono przestało istnieć
+
+108
+00:07:43,639 --> 00:07:45,419
+już w tym momencie. Ja znowu je
+
+109
+00:07:45,419 --> 00:07:47,359
+potrzebuję, więc mogę sobie to
+
+110
+00:07:47,359 --> 00:07:49,359
+skopiować, wkleić
+
+111
+00:07:49,359 --> 00:07:51,399
+sobie tutaj, jakby w tym głównym
+
+112
+00:07:51,399 --> 00:07:53,560
+przebiegu programu i teraz
+
+113
+00:07:53,560 --> 00:07:55,379
+będę chciał wykonać polecenie, które
+
+114
+00:07:55,379 --> 00:07:57,779
+będzie miało na celu pobranie książek,
+
+115
+00:07:58,240 --> 00:07:59,799
+po drugie zapytać użytkownika
+
+116
+00:07:59,799 --> 00:08:01,259
+o to, jaką książkę chcę dodać
+
+117
+00:08:01,259 --> 00:08:03,500
+i tę książkę zapisać.
+
+118
+00:08:04,240 --> 00:08:04,959
+Stąd też
+
+119
+00:08:04,959 --> 00:08:07,019
+możemy napisać sobie
+
+120
+00:08:07,019 --> 00:08:09,019
+kursor
+
+121
+00:08:09,019 --> 00:08:11,180
+równa się connection
+
+122
+00:08:11,180 --> 00:08:12,459
+kropka kursor
+
+123
+00:08:12,459 --> 00:08:15,579
+i wykonamy na kursorze
+
+124
+00:08:15,579 --> 00:08:16,959
+następującą funkcję.
+
+125
+00:08:20,500 --> 00:08:21,299
+Kursor
+
+126
+00:08:21,299 --> 00:08:22,500
+kropka execute
+
+127
+00:08:22,500 --> 00:08:25,139
+i będziemy chcieli najpierw pobrać
+
+128
+00:08:25,139 --> 00:08:27,339
+książki, czyli select
+
+129
+00:08:27,339 --> 00:08:29,120
+możemy wymienić
+
+130
+00:08:29,120 --> 00:08:31,159
+nazwy kolumn, czyli book id, title oraz
+
+131
+00:08:31,159 --> 00:08:31,620
+autor
+
+132
+00:08:31,620 --> 00:08:36,639
+from
+
+133
+00:08:36,639 --> 00:08:38,799
+books. Tak się
+
+134
+00:08:38,799 --> 00:08:40,959
+nazywa nasza tabela, stąd też wybieramy
+
+135
+00:08:40,959 --> 00:08:42,339
+taką nazwę.
+
+136
+00:08:42,959 --> 00:08:44,959
+Na tym, co zwróci nam kursor execute
+
+137
+00:08:44,959 --> 00:08:47,139
+możemy już sobie iterować,
+
+138
+00:08:47,240 --> 00:08:48,679
+więc możemy napisać
+
+139
+00:08:48,679 --> 00:08:49,759
+for book
+
+140
+00:08:49,759 --> 00:08:52,699
+in kursor
+
+141
+00:08:52,699 --> 00:08:54,539
+execute books print
+
+142
+00:08:54,539 --> 00:08:57,099
+book i tutaj po prostu sobie wyświetlimy
+
+143
+00:08:57,099 --> 00:08:58,779
+te książki. One będą miały postać
+
+144
+00:08:58,779 --> 00:09:01,019
+tupli, czyli będą to tuple,
+
+145
+00:09:01,099 --> 00:09:02,819
+które będą miały book id, title oraz
+
+146
+00:09:02,819 --> 00:09:04,959
+autor. Następnie chcemy zapytać
+
+147
+00:09:04,959 --> 00:09:06,919
+użytkownika o dane, czyli o title
+
+148
+00:09:06,919 --> 00:09:08,599
+oraz o autor, czyli
+
+149
+00:09:08,600 --> 00:09:10,120
+title równa się input
+
+150
+00:09:10,120 --> 00:09:12,000
+podaj tytuł
+
+151
+00:09:12,000 --> 00:09:14,920
+autor równa się input
+
+152
+00:09:14,920 --> 00:09:16,879
+podaj imię i
+
+153
+00:09:16,879 --> 00:09:17,860
+nazwisko autora
+
+154
+00:09:17,860 --> 00:09:22,980
+no i następnie będziemy chcieli wykonać
+
+155
+00:09:22,980 --> 00:09:24,879
+zapytanie dodające nową
+
+156
+00:09:24,879 --> 00:09:26,840
+książkę. Ponownie będę potrzebował
+
+157
+00:09:26,840 --> 00:09:28,920
+mieć do tego kursor, czyli kursor
+
+158
+00:09:28,920 --> 00:09:30,300
+kropka execute
+
+159
+00:09:30,300 --> 00:09:32,860
+insert into
+
+160
+00:09:32,860 --> 00:09:34,300
+books
+
+161
+00:09:34,300 --> 00:09:36,800
+będę mu podawał tylko title i autora
+
+162
+00:09:36,800 --> 00:09:38,519
+values
+
+163
+00:09:38,600 --> 00:09:40,920
+i tu jak pamiętacie były te znaki zapytania,
+
+164
+00:09:41,580 --> 00:09:42,500
+które następnie
+
+165
+00:09:42,500 --> 00:09:44,920
+w tupli zamieniamy na konkretne
+
+166
+00:09:44,920 --> 00:09:46,820
+wartości, czyli możemy sobie tutaj,
+
+167
+00:09:46,940 --> 00:09:48,680
+żeby było ładniej wprowadzić enter,
+
+168
+00:09:49,040 --> 00:09:50,720
+tutaj wprowadzić sobie enter,
+
+169
+00:09:50,920 --> 00:09:52,840
+tu wprowadzić sobie enter i tutaj
+
+170
+00:09:52,840 --> 00:09:54,700
+przekazać mu konkretne wartości, czyli
+
+171
+00:09:54,700 --> 00:09:56,960
+nasze title oraz autor.
+
+172
+00:09:57,639 --> 00:09:58,800
+To co ważne, to po
+
+173
+00:09:58,800 --> 00:10:00,680
+wykonaniu takiego zapytania musimy też
+
+174
+00:10:00,680 --> 00:10:02,420
+zrobić commit, czyli
+
+175
+00:10:02,420 --> 00:10:03,660
+connection kropka
+
+176
+00:10:03,660 --> 00:10:06,680
+commit. Jeżeli wszystko poszło
+
+177
+00:10:06,680 --> 00:10:08,440
+zgodnie z planem, to kiedy
+
+178
+00:10:08,440 --> 00:10:10,160
+teraz wywołasz sobie SQLite
+
+179
+00:10:10,160 --> 00:10:12,480
+demo, no to nie pokaże się nic, bo
+
+180
+00:10:12,480 --> 00:10:14,320
+nie mamy jeszcze żadnych książek, ale
+
+181
+00:10:14,320 --> 00:10:16,680
+można mu podać tytuł. Niech to będzie tytuł
+
+182
+00:10:16,680 --> 00:10:17,580
+Potop
+
+183
+00:10:17,580 --> 00:10:20,380
+Henryk Sienkiewicz.
+
+184
+00:10:21,600 --> 00:10:22,420
+Nic się nie
+
+185
+00:10:22,420 --> 00:10:24,320
+pokazało. Raz jeszcze odpalam
+
+186
+00:10:24,320 --> 00:10:26,440
+mój program i zobacz, mam już
+
+187
+00:10:26,440 --> 00:10:28,100
+Potop, mam Henryka Sienkiewicza.
+
+188
+00:10:28,660 --> 00:10:30,080
+To może oznaczać również to
+
+189
+00:10:30,080 --> 00:10:31,540
+i miejmy nadzieję, że to oznacza,
+
+190
+00:10:32,420 --> 00:10:34,240
+że w naszym DBWerze, kiedy klikniesz w
+
+191
+00:10:34,240 --> 00:10:36,420
+data, również zobaczysz
+
+192
+00:10:36,420 --> 00:10:37,140
+tę książkę.
+
+193
+00:10:37,140 --> 00:10:37,180
+Dziękuję.
+
+194
+00:10:38,440 --> 00:10:40,300
+Temu stworzyliśmy sobie taki mechanizm,
+
+195
+00:10:40,640 --> 00:10:42,320
+który pozwala już na zarządzanie tymi
+
+196
+00:10:42,320 --> 00:10:44,540
+książkami, dodawanie nich, odejmowanie,
+
+197
+00:10:44,940 --> 00:10:47,020
+no i możemy po prostu działać,
+
+198
+00:10:47,180 --> 00:10:48,540
+pracować z bazą danych.
+
+199
+00:10:49,240 --> 00:10:50,640
+Dziękuję i zapraszam
+
+200
+00:10:50,640 --> 00:10:52,480
+do zadania, w którym to
+
+201
+00:10:52,480 --> 00:10:53,240
+przy sobie przećwiczymy.

@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:05,160
+W tym zadaniu mamy przygotować program, który zamieni stopnie w Celsjuszach na stopnie w Fahrenheitach.
+
+2
+00:00:05,160 --> 00:00:13,040
+Ja sobie już przygotowałem taki wzór, że temperatura w Fahrenheitach to jest temperatura w Celsjuszach razy 9 piątych plus 32.
+
+3
+00:00:13,480 --> 00:00:16,339
+Czyli musimy zapytać użytkownika o temperaturę.
+
+4
+00:00:17,960 --> 00:00:27,960
+Temperaturę, temperature, równa się input, podaj wartość w stopniach Celsjusza.
+
+5
+00:00:30,000 --> 00:00:30,920
+Dwukropek.
+
+6
+00:00:31,179 --> 00:00:39,340
+Jeżeli wiemy, że będziemy chcieli to zamienić sobie później na liczbę i operować na tym jak na liczbie, no to warto sobie to od razu też przekonwertować na float.
+
+7
+00:00:39,700 --> 00:00:46,859
+W dzisiejszym module zobaczysz co zrobić, żeby nie pojawiał się ten brzydki błąd mówiący o tym, że ktoś wpisuje tekst i pojawia się błąd.
+
+8
+00:00:47,260 --> 00:00:49,679
+Będziemy rozmawiali o tym jak sprawdzić czy string jest liczbą.
+
+9
+00:00:50,400 --> 00:00:55,320
+Następnie musimy policzyć tę temperaturę w Fahrenheitach.
+
+10
+00:00:55,320 --> 00:00:58,920
+Czyli to będzie jakaś temperatura w C, natomiast temperature w F.
+
+11
+00:00:59,320 --> 00:00:59,820
+To się będzie równoważyć.
+
+12
+00:01:00,000 --> 00:01:11,480
+Jeżeli bym się porównało temperature w C, to zwróć uwagę też na to, że przy długich nazwach zmiennych, kiedy wprowadzam nazwę tej zmiennej i dostaję ją w podpowiedzi, mogę albo wybrać tab albo enter.
+
+13
+00:01:11,900 --> 00:01:14,439
+Jedno i drugie spowoduje, że uzupełni mi się ta nazwa.
+
+14
+00:01:14,540 --> 00:01:15,879
+Nie trzeba jej w całości wpisywać.
+
+15
+00:01:16,539 --> 00:01:20,079
+Razy 9 piątych plus 32.
+
+16
+00:01:20,079 --> 00:01:22,079
+Print.
+
+17
+00:01:23,180 --> 00:01:28,079
+Temperatura w Fahrenheitach wynosi...
+
+18
+00:01:30,000 --> 00:01:32,000
+No i temperatura w F.
+
+19
+00:01:32,000 --> 00:01:34,000
+Zapisuję.
+
+20
+00:01:34,000 --> 00:01:44,540
+Tutaj przez to, że dodałem wzmienną w nawiasach chlamorowych, on mi z przodu dodał F, to spowodowało, że mogę łączyć ze sobą string i wartość.
+
+21
+00:01:44,540 --> 00:01:50,039
+Teraz żeby to uruchomić muszę wykonać Python, spacja 1, temperaturę py.
+
+22
+00:01:50,039 --> 00:01:51,039
+Enter.
+
+23
+00:01:51,039 --> 00:01:53,039
+Podaj wartość w stopniach Celsjusza.
+
+24
+00:01:53,039 --> 00:01:55,039
+No weźmy jakąś zdrową osobę, 366.
+
+25
+00:01:55,039 --> 00:01:59,039
+Temperatura w Fahrenheitach wynosi 97,88.
+
+26
+00:01:59,039 --> 00:01:59,539
+Temperatura w Fahrenheitach wynosi 97,88.
+
+27
+00:01:59,540 --> 00:02:00,040
+Temperatura w Fahrenheitach wynosi 97,88.
+
+28
+00:02:00,040 --> 00:02:06,540
+Tutaj jeszcze dodam, że jeżeli chcemy to ładnie sformatować, to możemy napisać dwukropek, kropka 2F.
+
+29
+00:02:06,540 --> 00:02:09,540
+I w ten sposób będziemy mieli dwa miejsca dziesiętne.
+
+30
+00:02:09,540 --> 00:02:10,540
+Zobacz.
+
+31
+00:02:10,540 --> 00:02:15,540
+O i wyświetliło się 97,88.
+
+32
+00:02:15,540 --> 00:02:17,540
+I w tym zadaniu byłoby to na tyle.
+
+33
+00:02:17,540 --> 00:02:18,540
+Bardzo dziękuję.
+
+34
+00:02:18,540 --> 00:02:19,540
+Zapraszam do kolejnych filmów.

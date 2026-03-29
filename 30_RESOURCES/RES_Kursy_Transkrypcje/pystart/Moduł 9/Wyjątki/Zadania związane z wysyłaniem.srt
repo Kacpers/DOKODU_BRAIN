@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:02,080
+A zadanie to wygląda następująco.
+
+2
+00:00:02,720 --> 00:00:06,400
+Zapytaj użytkownika o dowolny tekst, który użytkownik chciałby odwrócić,
+
+3
+00:00:06,520 --> 00:00:08,500
+czyli wyświetlić odwrotnie.
+
+4
+00:00:09,040 --> 00:00:13,640
+Jeśli użytkownik poda pusty string, powinien zostać zwrócony wyjątek.
+
+5
+00:00:14,240 --> 00:00:15,880
+To jest pierwsze zadanie.
+
+6
+00:00:16,480 --> 00:00:20,440
+Możesz wówczas po prostu nie wyświetlać tego komunikatu o błędzie,
+
+7
+00:00:20,440 --> 00:00:23,160
+tylko wyświetlić komunikat, że ten tekst jest pusty.
+
+8
+00:00:23,640 --> 00:00:27,000
+Należy wtedy samodzielnie sprawdzić ten tekst, czy jest pusty.
+
+9
+00:00:27,000 --> 00:00:30,039
+Jeżeli jest, to wyrzucić wyjątek i najlepiej go też od razu obsłużyć.
+
+10
+00:00:30,519 --> 00:00:32,159
+ValueError będzie tutaj właściwy.
+
+11
+00:00:32,740 --> 00:00:37,480
+Natomiast w drugim zadaniu chcemy pytać użytkownika o nazwę 10 owoców.
+
+12
+00:00:37,899 --> 00:00:41,980
+Jeżeli dany owoc znajduje się już na liście, to powinien zostać wyrzucony wyjątek
+
+13
+00:00:41,980 --> 00:00:44,439
+i program powinien, uwaga, przestać pytać.
+
+14
+00:00:44,840 --> 00:00:47,420
+Czyli jeżeli użytkownik już poda nam wartość, która była,
+
+15
+00:00:47,420 --> 00:00:49,500
+to też może być podany valueError.
+
+16
+00:00:49,900 --> 00:00:52,200
+No i wtedy kończymy pytanie.
+
+17
+00:00:53,260 --> 00:00:54,980
+No to co? Do roboty!

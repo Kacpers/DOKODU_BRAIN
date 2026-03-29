@@ -1,0 +1,227 @@
+1
+00:00:00,000 --> 00:00:01,800
+No to co? Kodujemy.
+
+2
+00:00:02,359 --> 00:00:04,400
+Ja pewnie część tego przyspieszę,
+
+3
+00:00:04,500 --> 00:00:07,700
+no bo tutaj będę miał dużo kopiowania, wklejania, czy też przepisywania,
+
+4
+00:00:08,099 --> 00:00:10,300
+no ale ważne jest to, żeby struktura była okej.
+
+5
+00:00:10,400 --> 00:00:13,359
+Więc pierwszą osobę zrobimy sobie razem.
+
+6
+00:00:14,019 --> 00:00:16,300
+People, czy tam workers,
+
+7
+00:00:16,559 --> 00:00:20,160
+z tego względu, że zawsze jeżeli przechowujemy listę,
+
+8
+00:00:20,480 --> 00:00:22,100
+no to chcemy przechowywać listę,
+
+9
+00:00:22,160 --> 00:00:24,839
+to zawsze ta zmienna powinna być w liczbie mnogiej.
+
+10
+00:00:25,359 --> 00:00:27,699
+Następnie robię sobie słownik, no i lecę.
+
+11
+00:00:27,699 --> 00:00:31,419
+Id, jeden, job title,
+
+12
+00:00:32,420 --> 00:00:34,939
+będę szedł zgodnie z tymi nazwami kolumn,
+
+13
+00:00:35,039 --> 00:00:36,939
+które są. Junior developer,
+
+14
+00:00:38,519 --> 00:00:41,000
+name, John,
+
+15
+00:00:42,600 --> 00:00:45,980
+programming language,
+
+16
+00:00:46,899 --> 00:00:48,700
+tutaj mogłoby być programming languages,
+
+17
+00:00:49,399 --> 00:00:51,379
+z racji tego, że jest to więcej języków,
+
+18
+00:00:51,500 --> 00:00:53,399
+no i lista to będzie Python.
+
+19
+00:00:53,980 --> 00:00:55,560
+Tu też taka ciekawostka,
+
+20
+00:00:55,560 --> 00:00:57,560
+z racji tego, że język,
+
+21
+00:00:57,700 --> 00:01:00,380
+ja w przyszłości będę chciał do programming language
+
+22
+00:01:00,380 --> 00:01:02,500
+dopisać sobie więcej języków,
+
+23
+00:01:02,600 --> 00:01:05,680
+to i tak od razu tutaj zawarłem też listę.
+
+24
+00:01:06,040 --> 00:01:07,079
+Listę jednoelementową.
+
+25
+00:01:07,560 --> 00:01:10,520
+Powinniśmy starać się dbać o to,
+
+26
+00:01:10,600 --> 00:01:12,359
+żeby jeżeli robimy listę słowników,
+
+27
+00:01:12,719 --> 00:01:15,079
+to żeby każdy nasz słownik miał tę samą strukturę.
+
+28
+00:01:15,359 --> 00:01:17,700
+Nie używamy tutaj czegoś takiego jak programming language,
+
+29
+00:01:17,800 --> 00:01:19,219
+a w przyszłości programming languages,
+
+30
+00:01:19,879 --> 00:01:21,900
+czy też lista w tym miejscu,
+
+31
+00:01:21,939 --> 00:01:22,640
+a w przyszłości,
+
+32
+00:01:23,140 --> 00:01:25,180
+to string, a w przyszłości lista.
+
+33
+00:01:25,520 --> 00:01:27,680
+Raczej dbamy o to, żeby zawsze mieć,
+
+34
+00:01:27,700 --> 00:01:29,240
+tę samą strukturę,
+
+35
+00:01:29,240 --> 00:01:30,980
+bo po prostu to nam w przyszłości ułatwi,
+
+36
+00:01:31,320 --> 00:01:33,879
+i będziemy mogli przechodzić po tym za pomocą pętli.
+
+37
+00:01:34,400 --> 00:01:37,280
+Jeżeli byśmy nie mieli tej sytuacji,
+
+38
+00:01:37,719 --> 00:01:41,060
+czyli nie mielibyśmy tej samej struktury,
+
+39
+00:01:41,379 --> 00:01:43,939
+no to przechodzenie za pomocą pętli też byłoby utrudnione,
+
+40
+00:01:44,260 --> 00:01:47,000
+bo trzeba byłoby za każdym razem sprawdzać sobie,
+
+41
+00:01:47,000 --> 00:01:49,980
+jakie typy mamy w tych naszych danych,
+
+42
+00:01:50,500 --> 00:01:55,719
+czy też jak ogólnie ta nasza struktura wygląda.
+
+43
+00:01:55,980 --> 00:01:57,400
+Więc ja tak sobie opowiadając,
+
+44
+00:01:57,400 --> 00:01:59,400
+już zrobiłem trzecią osobę robię,
+
+45
+00:02:00,400 --> 00:02:03,280
+no i analogicznie powinniśmy zrobić też pozostałe.
+
+46
+00:02:03,700 --> 00:02:06,380
+Więc myślę, że jeżeli wiesz już jaka jest struktura,
+
+47
+00:02:06,840 --> 00:02:08,280
+to po prostu możemy się umówić,
+
+48
+00:02:08,400 --> 00:02:10,400
+że zobaczymy się za chwilę,
+
+49
+00:02:11,020 --> 00:02:12,219
+gdy ja już będę miał,
+
+50
+00:02:12,599 --> 00:02:14,379
+a tu w sumie dopisać mogę na końcu,
+
+51
+00:02:14,860 --> 00:02:17,920
+gdy ja już wszystkie te osoby będę miał zrealizowane.
+
+52
+00:02:18,620 --> 00:02:19,920
+Więc życzę Ci powodzenia,
+
+53
+00:02:20,680 --> 00:02:22,780
+mam nadzieję, że wszystko będzie zrozumiałe,
+
+54
+00:02:23,140 --> 00:02:25,360
+i w kolejnym zadaniu będzie też już wiele ciekawiej,
+
+55
+00:02:25,360 --> 00:02:26,980
+gdyż będziemy skupiali się na,
+
+56
+00:02:27,400 --> 00:02:28,740
+mapowaniu tych danych.
+
+57
+00:02:29,260 --> 00:02:29,740
+Do zobaczenia.

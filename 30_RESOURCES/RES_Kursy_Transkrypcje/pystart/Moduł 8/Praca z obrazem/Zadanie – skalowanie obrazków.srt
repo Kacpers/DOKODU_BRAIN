@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:15,460
+No i przed nami zadanie następujące. Rozbuduj program z poprzedniego zadania w taki sposób, aby obok folderu Fotos pojawił się nowy folder, na przykład Resized, odtwarzający całą pozostałą ścieżkę do przeskalowanych plików.
+
+2
+00:00:15,460 --> 00:00:31,080
+To jest trochę może nie do końca jasne, więc pokazuję, zobacz. Mamy taką sytuację, że jest PyStart Code, Fotos, Sample, Leaves i tam jakieś zdjęcie. I teraz chcielibyśmy, że kiedy mamy taką właśnie ścieżkę, to żeby ta nowa ścieżka wyglądała tak.
+
+3
+00:00:31,080 --> 00:00:41,219
+PyStart Code, Resized, czyli tu mamy nowy katalog i w środku już jest cała ścieżka taka jaka była. Fotos, Sample, Leaves i tak dalej.
+
+4
+00:00:41,760 --> 00:00:45,400
+I chcemy, żeby tepto był oczywiście przeskalowany obraz.
+
+5
+00:00:45,460 --> 00:00:51,679
+Do tego wymiaru, który sobie podaliśmy, czyli na przykład 300x300, czy jakiegokolwiek innego, jaki sobie założysz.
+
+6
+00:00:52,140 --> 00:01:04,760
+Zadanie kolejne, trochę takie trudniejsze, ale mam nadzieję, że wyzwanie Ci się spodoba i zdecydowanie będzie to też projekt, który później będziesz mógł pokazać komuś, pochwalić się nim, czy też używać dla siebie.
+
+7
+00:01:04,760 --> 00:01:13,400
+Ja często skaluję obrazki i często mam tutaj właśnie ten sam problem, dlatego właśnie mam taki program, żeby umożliwić sobie łatwą pracę z obrazami.
+
+8
+00:01:13,719 --> 00:01:15,400
+No to co? Do dzieła.
+
+9
+00:01:15,459 --> 00:01:17,459
+Dzięki.

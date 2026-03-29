@@ -1,0 +1,775 @@
+1
+00:00:00,000 --> 00:00:03,480
+Myślę, że śmiało można powiedzieć, że teraz to dopiero się zacznie.
+
+2
+00:00:03,919 --> 00:00:05,320
+Dlaczego teraz dopiero się zacznie?
+
+3
+00:00:05,400 --> 00:00:10,099
+Z tego względu, że wielką siłą Pythona z jednej strony jest to,
+
+4
+00:00:10,179 --> 00:00:13,720
+że jest to wygodny język, przyjazny, sympatyczny,
+
+5
+00:00:14,300 --> 00:00:17,859
+wygodnie się w nim pisze, ten kod wygląda bardzo estetycznie,
+
+6
+00:00:17,859 --> 00:00:24,080
+ale z drugiej strony siłą pod Pythona jest też mnogość jego wykorzystania,
+
+7
+00:00:24,519 --> 00:00:27,719
+czyli wiele sposobów, na które można go użyć.
+
+8
+00:00:27,719 --> 00:00:32,920
+Pokazaliśmy sobie poprzednio, jak doinstalować jakąś paczkę zewnętrzną.
+
+9
+00:00:33,359 --> 00:00:35,840
+Natomiast to nie jest koniec,
+
+10
+00:00:36,000 --> 00:00:40,600
+bo tak naprawdę doinstalowywanie paczek zewnętrznych to jest jedna rzecz,
+
+11
+00:00:40,780 --> 00:00:44,039
+ale Python ma też ogromną siłę w sobie.
+
+12
+00:00:44,039 --> 00:00:47,579
+I tym tematem zajmiemy się najpierw.
+
+13
+00:00:47,640 --> 00:00:50,140
+Czyli zanim zaczniemy sobie coś doinstalowywać z zewnątrz,
+
+14
+00:00:50,579 --> 00:00:56,299
+pokażę Ci, jakie rzeczy w Pythonie znajdują się już wtedy, kiedy go instalujesz.
+
+15
+00:00:56,299 --> 00:00:58,299
+Przetwarzanie tekstów.
+
+16
+00:00:58,299 --> 00:01:01,299
+O tym sobie już trochę mówiliśmy, że mamy jakieś funkcje,
+
+17
+00:01:01,299 --> 00:01:06,299
+służące do rozbijania stringów, wybierania słów, szukania,
+
+18
+00:01:06,299 --> 00:01:09,299
+wyrażeń regularnych, tego naprawdę jest bardzo dużo.
+
+19
+00:01:09,299 --> 00:01:10,299
+Data i czas.
+
+20
+00:01:10,299 --> 00:01:13,299
+Tu będziemy pracowali z datą i z czasem w ten sposób,
+
+21
+00:01:13,299 --> 00:01:16,299
+że będziemy na przykład zwykły string przetwarzali sobie na datę,
+
+22
+00:01:16,299 --> 00:01:19,299
+albo datę przetwarzali na string.
+
+23
+00:01:19,299 --> 00:01:22,299
+To, co sobie również zrobimy, to będziemy zmieniali tę datę,
+
+24
+00:01:22,299 --> 00:01:26,299
+na przykład dodając dni albo odejmując dni od daty.
+
+25
+00:01:26,299 --> 00:01:31,299
+Dzięki czemu uda nam się spowodować, że te daty będą nam właśnie chodziły.
+
+26
+00:01:31,299 --> 00:01:34,299
+Po trzecie, obsługa plików.
+
+27
+00:01:34,299 --> 00:01:40,299
+Zawsze, kiedy korzystamy z aplikacji, mamy potrzebę zapisać gdzieś stan jej.
+
+28
+00:01:40,299 --> 00:01:43,299
+Na przykład dodaliśmy jakiś budżet domowy,
+
+29
+00:01:43,299 --> 00:01:46,299
+no i ten budżet domowy powinien być zapisany we wnętrzu aplikacji,
+
+30
+00:01:46,299 --> 00:01:50,299
+tak, żeby później przy ponownym jej uruchomieniu można było z tego budżetu czerpać
+
+31
+00:01:50,299 --> 00:01:55,299
+i tylko go na przykład zmieniać, czy modyfikować, czy pobierać z niego informacje.
+
+32
+00:01:56,299 --> 00:02:00,299
+Kolejna rzecz, która znajduje się w Pythonie, to kryptografia.
+
+33
+00:02:00,299 --> 00:02:06,299
+Jeżeli potrzebowałbyś szyfrować, odszyfrowywać, to wszystkie te rzeczy już w Pythonie są też zawarte.
+
+34
+00:02:06,299 --> 00:02:08,300
+Co mamy jeszcze? Idziemy na lewo.
+
+35
+00:02:08,300 --> 00:02:13,300
+TK Inter. TK Inter to jest taki, można powiedzieć, dodatek do tego kursu,
+
+36
+00:02:13,300 --> 00:02:18,300
+bo Python raczej nie jest takim językiem, w którym tworzy się piękne aplikacje okienkowe.
+
+37
+00:02:18,300 --> 00:02:20,300
+On raczej do tego nie służy.
+
+38
+00:02:20,300 --> 00:02:24,300
+Ale czasem, kiedy stworzysz sobie taką aplikację, na przykład tą do budżetu domowego,
+
+39
+00:02:24,300 --> 00:02:29,300
+może się okazać, że ktoś z Twoich bliskich nie będzie chciał używać terminala,
+
+40
+00:02:29,300 --> 00:02:31,300
+tylko będzie chciał właśnie móc sobie poklikać.
+
+41
+00:02:31,300 --> 00:02:37,300
+To wówczas za pomocą TK Intera możesz stworzyć dla niego taki interfejs okienkowy, normalny,
+
+42
+00:02:37,300 --> 00:02:40,300
+który pokaże się na ekranie, żeby można było klikać w poszczególne rzeczy,
+
+43
+00:02:40,300 --> 00:02:43,300
+uzupełniać treści i dodawać sobie nowe wydatki.
+
+44
+00:02:43,300 --> 00:02:46,300
+Wszystko to oczywiście może być zapisywane w bazie danych.
+
+45
+00:02:46,300 --> 00:02:52,300
+I nie trzeba instalować żadnych zewnętrznych baz, typu MySQL, Postgres.
+
+46
+00:02:52,300 --> 00:02:54,300
+Obsługi takich baz danych uczymy się w Pythonie.
+
+47
+00:02:54,300 --> 00:02:56,300
+Uczymy się na szkoleniu SqlMyBazy.
+
+48
+00:02:56,300 --> 00:02:59,300
+Natomiast tutaj zajmujemy się SQLite'em.
+
+49
+00:02:59,300 --> 00:03:03,300
+SQLite będzie wymagał też drobnej znajomości SQL'a,
+
+50
+00:03:03,300 --> 00:03:07,300
+ale tym się nie przejmuj, pokażemy sobie to w formie też trochę takich zaklęć.
+
+51
+00:03:07,300 --> 00:03:09,300
+Ja też trochę tego SQL'a będę tłumaczył,
+
+52
+00:03:09,300 --> 00:03:12,300
+ale piękne jest to, że ta baza jest już zawarta w Pythonie.
+
+53
+00:03:12,300 --> 00:03:14,300
+Tak naprawdę nie trzeba niczego doinstalowywać,
+
+54
+00:03:14,300 --> 00:03:18,300
+wystarczy wykonać parę instrukcji, które Ci w tym module pokażę
+
+55
+00:03:18,300 --> 00:03:21,300
+i cała ta baza będzie stała przed Tobą otworem.
+
+56
+00:03:21,300 --> 00:03:23,300
+Liczby i matematyka.
+
+57
+00:03:23,300 --> 00:03:27,300
+Już widzieliśmy, że możemy sobie pobierać wartość bezwzględną,
+
+58
+00:03:27,300 --> 00:03:29,300
+pobierać wartość liczby pi,
+
+59
+00:03:29,300 --> 00:03:32,300
+można podnosić coś do potęgi, można liczyć pierwiastek.
+
+60
+00:03:32,300 --> 00:03:34,300
+Tego naprawdę jest bardzo, bardzo dużo.
+
+61
+00:03:34,300 --> 00:03:37,300
+Ja myślę, że wszystkich funkcji matematycznych do Pythona nie ogarniam,
+
+62
+00:03:37,300 --> 00:03:39,300
+bo nigdy ich aż tak bardzo nie potrzebowałem,
+
+63
+00:03:39,300 --> 00:03:43,300
+ale ci, którzy potrzebują, mówią, że dużo w nim jest.
+
+64
+00:03:43,300 --> 00:03:45,300
+Dalej mamy turtle.
+
+65
+00:03:45,300 --> 00:03:48,300
+Jeżeli chodzi o turtle, to możesz kojarzyć go z żółwiem,
+
+66
+00:03:48,300 --> 00:03:51,300
+a żółw może Cię kojarzyć z takim językiem jak logo.
+
+67
+00:03:51,300 --> 00:03:52,300
+Język logo to był taki żółw, gdzie się pisało, że to jest żółw, który jest w tym module.
+
+68
+00:03:52,300 --> 00:03:55,300
+To był taki żółw, gdzie się pisało naprzód 100 i on szedł do góry 100.
+
+69
+00:03:55,300 --> 00:03:58,300
+PW 90 obracał się w prawo 90.
+
+70
+00:03:58,300 --> 00:04:00,300
+Przynajmniej takie logo ja znałem.
+
+71
+00:04:00,300 --> 00:04:03,300
+Turtle to jest właśnie taki żółw,
+
+72
+00:04:03,300 --> 00:04:06,300
+za pomocą którego możemy rysować coś na ekranie,
+
+73
+00:04:06,300 --> 00:04:10,300
+przesuwając go sobie w różne miejsca i robiąc tego typu rzeczy.
+
+74
+00:04:10,300 --> 00:04:14,300
+On też jest zawarty od razu w Pythonie.
+
+75
+00:04:14,300 --> 00:04:16,300
+Nie trzeba niczego zainstalowywać.
+
+76
+00:04:16,300 --> 00:04:20,300
+Logowanie. Tutaj nie mam na myśli autentykacji, wiesz, formularz logowania,
+
+77
+00:04:20,300 --> 00:04:22,300
+tylko logowanie zdarzeń.
+
+78
+00:04:22,300 --> 00:04:25,300
+Na przykład jeżeli chciałbyś w pliku tekstowym wyświetlać komunikaty,
+
+79
+00:04:25,300 --> 00:04:29,300
+na przykład, że pobrano takie kursy walut,
+
+80
+00:04:29,300 --> 00:04:34,300
+albo data, która wystąpiła jest taka i taka.
+
+81
+00:04:34,300 --> 00:04:37,300
+Czyli coś, co potem będziemy mogli zerknąć sobie do takiego pliku,
+
+82
+00:04:37,300 --> 00:04:40,300
+zobaczyć dlaczego błąd wystąpił na przykład,
+
+83
+00:04:40,300 --> 00:04:43,300
+bo ktoś podał jakieś dane i próbował się zalogować wielokrotnie
+
+84
+00:04:43,300 --> 00:04:45,300
+i wtedy w tym pliku można zerknąć.
+
+85
+00:04:45,300 --> 00:04:47,300
+Aha, kiedy nie siedziałem przy komputerze,
+
+86
+00:04:47,300 --> 00:04:49,300
+to ktoś próbował mi zmajstrować coś przy moim programie.
+
+87
+00:04:49,300 --> 00:04:51,300
+To tego typu logowanie, ono też jest wbudowane w Python,
+
+88
+00:04:51,300 --> 00:04:56,300
+od razu wyświetla nam się data, godzina, rodzaj błędu oraz jego treść.
+
+89
+00:04:56,300 --> 00:04:58,300
+Dalej mamy system.
+
+90
+00:04:58,300 --> 00:05:03,300
+I tutaj, jeżeli chodzi o system, mam na myśli wykonywanie poleceń systemowych.
+
+91
+00:05:03,300 --> 00:05:05,300
+Można to robić w Pythonie bez problemu.
+
+92
+00:05:05,300 --> 00:05:10,300
+Na przykład, jeżeli wiesz, że masz gotowy już program typu ping
+
+93
+00:05:10,300 --> 00:05:15,300
+i chcesz wykorzystać ten program i pingować jakąś konkretną maszynę,
+
+94
+00:05:15,300 --> 00:05:17,300
+to za pomocą Pythona możesz to zrobić bardzo łatwo,
+
+95
+00:05:17,300 --> 00:05:19,300
+wykonując po prostu,
+
+96
+00:05:19,300 --> 00:05:23,300
+za pomocą tych narzędzi do operacji na systemie,
+
+97
+00:05:23,300 --> 00:05:25,300
+poszczególne polecenia.
+
+98
+00:05:25,300 --> 00:05:27,300
+System to również praca z file systemem,
+
+99
+00:05:27,300 --> 00:05:31,300
+czyli listowanie plików, pobieranie tej listy,
+
+100
+00:05:31,300 --> 00:05:34,300
+przetwarzanie tych plików w poszczególnych katalogach.
+
+101
+00:05:34,300 --> 00:05:38,300
+Naprawdę bardzo, bardzo dużo rzeczy ten system oferuje.
+
+102
+00:05:38,300 --> 00:05:41,300
+Narzędzia sieciowe tutaj też w Pythonie są.
+
+103
+00:05:41,300 --> 00:05:43,300
+Tu się nie będziemy nad tym zagłębiali,
+
+104
+00:05:43,300 --> 00:05:45,300
+ale jeżeli ktoś jest adminem czy sieciowcem,
+
+105
+00:05:45,300 --> 00:05:47,300
+to na pewno tutaj znajdzie też sporo rzeczy dla siebie.
+
+106
+00:05:47,300 --> 00:05:49,300
+No i debugowanie, testowanie.
+
+107
+00:05:49,300 --> 00:05:51,300
+Z jednej strony jest PyTest,
+
+108
+00:05:51,300 --> 00:05:53,300
+z drugiej strony jest świetna, duża biblioteka UnitTest,
+
+109
+00:05:53,300 --> 00:05:55,300
+która też pozwala na pewne rzeczy
+
+110
+00:05:55,300 --> 00:05:57,300
+i też często jest przydatna w momencie,
+
+111
+00:05:57,300 --> 00:05:59,300
+w którym zajmujemy się testowaniem.
+
+112
+00:05:59,300 --> 00:06:02,300
+I tak naprawdę wszystko to, co widzisz teraz na ekranie,
+
+113
+00:06:02,300 --> 00:06:04,300
+jest częścią Pythona.
+
+114
+00:06:04,300 --> 00:06:06,300
+Wszystko to jest wbudowane w niego
+
+115
+00:06:06,300 --> 00:06:08,300
+i bez potrzeby instalowania dodatkowych rzeczy,
+
+116
+00:06:08,300 --> 00:06:10,300
+chyba, że jesteś użytkownikiem Linuxa,
+
+117
+00:06:10,300 --> 00:06:12,300
+o tym za moment,
+
+118
+00:06:12,300 --> 00:06:15,300
+będziesz miał te rzeczy zainstalowane w Pythonie
+
+119
+00:06:15,300 --> 00:06:17,300
+i będziesz mógł z niego korzystać.
+
+120
+00:06:17,300 --> 00:06:19,300
+Dlaczego mówię o użytkownikach Linuxa?
+
+121
+00:06:19,300 --> 00:06:21,300
+Bo na przykład, kiedy korzystam z Ubuntu,
+
+122
+00:06:21,300 --> 00:06:25,300
+tam muszę czasem wykonać np. apt-get install python3-tkinter,
+
+123
+00:06:25,300 --> 00:06:27,300
+żeby ten TKinter działał,
+
+124
+00:06:27,300 --> 00:06:29,300
+natomiast na Windowsie, kiedy instalujesz Pythona,
+
+125
+00:06:29,300 --> 00:06:32,300
+to wszystkie te rzeczy instalują się razem z nim.
+
+126
+00:06:32,300 --> 00:06:34,300
+Więc tak naprawdę biblioteka standardowa,
+
+127
+00:06:34,300 --> 00:06:36,300
+tutaj skojarzenie bibliotek,
+
+128
+00:06:36,300 --> 00:06:38,300
+i zobacz, jak ona jest wielka,
+
+129
+00:06:38,300 --> 00:06:40,300
+jest zupełnie nieprzesadzone,
+
+130
+00:06:40,300 --> 00:06:42,300
+jest przeogromna.
+
+131
+00:06:42,300 --> 00:06:44,300
+Jeżeli masz ochotę zobaczyć, co w niej siedzi,
+
+132
+00:06:44,300 --> 00:06:46,300
+poznać poszczególne funkcje,
+
+133
+00:06:46,300 --> 00:06:48,300
+dowiedzieć się, z jakimi argumentami
+
+134
+00:06:48,300 --> 00:06:50,300
+te funkcje trzeba odpalać,
+
+135
+00:06:50,300 --> 00:06:52,300
+no to oczywiście z pomocą przychodzi Ci Google,
+
+136
+00:06:52,300 --> 00:06:54,300
+ale zamiast skorzystać z Google'a,
+
+137
+00:06:54,300 --> 00:06:56,300
+możesz też skorzystać z dokumentacji.
+
+138
+00:06:56,300 --> 00:07:00,300
+Mówi się o tym, że jeżeli nie ma czegoś w dokumentacji,
+
+139
+00:07:00,300 --> 00:07:02,300
+to po prostu to nie istnieje.
+
+140
+00:07:02,300 --> 00:07:04,300
+Dokumentacja do Pythona jest całkiem sympatyczna,
+
+141
+00:07:04,300 --> 00:07:08,300
+znajduje się pod adresem docs.python3.org.
+
+142
+00:07:08,300 --> 00:07:12,300
+i tam znajdziesz całą dokumentację,
+
+143
+00:07:12,300 --> 00:07:14,300
+cały opis wszystkich tych funkcji,
+
+144
+00:07:14,300 --> 00:07:16,300
+wszystkich modułów, które w Pythonie się
+
+145
+00:07:16,300 --> 00:07:18,300
+znajdują.
+
+146
+00:07:18,300 --> 00:07:20,300
+Więc z jednej strony podczas tego kursu
+
+147
+00:07:20,300 --> 00:07:22,300
+będziemy bazowali na wiedzy zgromadzonej na slajdach,
+
+148
+00:07:22,300 --> 00:07:24,300
+zgromadzonej w mojej głowie,
+
+149
+00:07:24,300 --> 00:07:26,300
+którą będę starał się Ci przekazać,
+
+150
+00:07:26,300 --> 00:07:28,300
+ale z drugiej strony pamiętaj też o tym,
+
+151
+00:07:28,300 --> 00:07:30,300
+że zawsze jest Google i zawsze jest dokumentacja.
+
+152
+00:07:30,300 --> 00:07:32,300
+Zawsze można też na to zerknąć.
+
+153
+00:07:32,300 --> 00:07:34,300
+Korzystanie z dokumentacji ma też tę jedną zaletę,
+
+154
+00:07:34,300 --> 00:07:36,300
+że kiedy szukasz czegoś,
+
+155
+00:07:36,300 --> 00:07:38,300
+to przeglądasz wiele innych funkcji.
+
+156
+00:07:38,300 --> 00:07:40,300
+Naprawdę ja się tak uczyłem,
+
+157
+00:07:40,300 --> 00:07:42,300
+że starałem się zawsze szukać w dokumentacji
+
+158
+00:07:42,300 --> 00:07:44,300
+i wtedy wiedziałem, że jak szukam jakiejś funkcji
+
+159
+00:07:44,300 --> 00:07:46,300
+to jest arcus sinus.
+
+160
+00:07:46,300 --> 00:07:48,300
+No to po drodze jeszcze zaatakował mnie
+
+161
+00:07:48,300 --> 00:07:50,300
+gdzieś tam arcus sinus,
+
+162
+00:07:50,300 --> 00:07:52,300
+bo A.
+
+163
+00:07:52,300 --> 00:07:54,300
+Zobaczyłem, że gdzieś niżej jest tangens.
+
+164
+00:07:54,300 --> 00:07:56,300
+Trochę więcej po prostu tych rzeczy też poznałem
+
+165
+00:07:56,300 --> 00:07:58,300
+i dzięki temu też więcej rzeczy się nauczyłem
+
+166
+00:07:58,300 --> 00:08:00,300
+i pamiętałem, że takie funkcje są.
+
+167
+00:08:00,300 --> 00:08:02,300
+Bardzo często jestem pytany
+
+168
+00:08:02,300 --> 00:08:04,300
+Kacper, jak Ty to robisz, że Ty to wszystko pamiętasz?
+
+169
+00:08:04,300 --> 00:08:06,300
+Czy to jest tak, że Ty masz mnóstwo kartek
+
+170
+00:08:06,300 --> 00:08:08,300
+przed sobą i z tych kartek korzystasz?
+
+171
+00:08:08,300 --> 00:08:10,300
+Nie, tak naprawdę jestem robotem
+
+172
+00:08:10,300 --> 00:08:12,300
+i wszystko mam w głowie.
+
+173
+00:08:12,300 --> 00:08:14,300
+Nie, to też nie jest prawda.
+
+174
+00:08:14,300 --> 00:08:16,300
+Śledzę te funkcje,
+
+175
+00:08:16,300 --> 00:08:18,300
+pamiętam, że one tak się nazywają
+
+176
+00:08:18,300 --> 00:08:20,300
+i dzięki temu mogę
+
+177
+00:08:20,300 --> 00:08:22,300
+je wyszukać, mogę sprawdzić
+
+178
+00:08:22,300 --> 00:08:24,300
+jakie argumenty przyjmują.
+
+179
+00:08:24,300 --> 00:08:26,300
+Nigdy nie starałem się zapamiętać funkcji
+
+180
+00:08:26,300 --> 00:08:28,300
+i ich deklaracji na pamięć
+
+181
+00:08:28,300 --> 00:08:30,300
+czy też w ogóle żadnego fragmentu języka.
+
+182
+00:08:30,300 --> 00:08:32,299
+Nigdy nie siedziałem i nie uczyłem się
+
+183
+00:08:32,299 --> 00:08:34,299
+wiecie, def, nazwa, nawias,
+
+184
+00:08:34,299 --> 00:08:36,299
+dwukropek, wcięć.
+
+185
+00:08:36,299 --> 00:08:38,299
+Nigdy tak nie robiłem.
+
+186
+00:08:38,299 --> 00:08:40,299
+Tylko i wyłącznie zawsze zerkam sobie
+
+187
+00:08:40,299 --> 00:08:42,299
+na kod, który już napisałem wyżej
+
+188
+00:08:42,299 --> 00:08:44,299
+albo sprawdzam kod w innym programie
+
+189
+00:08:44,299 --> 00:08:46,299
+albo po prostu zerkam do dokumentacji
+
+190
+00:08:46,299 --> 00:08:48,299
+bo często to jest najszybsze
+
+191
+00:08:48,299 --> 00:08:50,299
+i tak najłatwiej jest się uczyć.
+
+192
+00:08:50,299 --> 00:08:52,299
+No to co?
+
+193
+00:08:52,299 --> 00:08:54,299
+Idziemy do pierwszego tematu,
+
+194
+00:08:54,299 --> 00:08:56,299
+a będzie nim data i czas.

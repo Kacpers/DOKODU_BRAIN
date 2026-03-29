@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:02,540
+to bardzo często chcielibyśmy móc go instalować.
+
+2
+00:00:02,940 --> 00:00:07,919
+I żeby taki pakiet zainstalować, najwygodniej byłoby go zainstalować za pomocą pipa.
+
+3
+00:00:08,359 --> 00:00:11,820
+No ale przecież nie będziemy chcieli jeszcze, ale możemy,
+
+4
+00:00:12,259 --> 00:00:16,600
+przenieść takiego pakietu sobie gdzieś do repozytorium pipi.org,
+
+5
+00:00:16,699 --> 00:00:18,699
+tak jak rozmawialiśmy o zależnościach.
+
+6
+00:00:19,179 --> 00:00:20,420
+Można zrobić coś prostszego.
+
+7
+00:00:20,420 --> 00:00:25,859
+Można stworzyć sobie tak by paczkę instalacyjną, zrobić z naszego pakietu.
+
+8
+00:00:25,859 --> 00:00:31,539
+To spowoduje, że ten kod, który stworzyliśmy zostanie jakby zzipowany w cudzysłowie,
+
+9
+00:00:31,640 --> 00:00:33,240
+bo to jest trochę inny sposób kompresji.
+
+10
+00:00:33,799 --> 00:00:36,980
+Zostanie stworzona kompresja po prostu .tar.gz
+
+11
+00:00:36,980 --> 00:00:40,679
+i później pip potrafi też instalować takie pakiety.
+
+12
+00:00:40,939 --> 00:00:45,560
+Czyli można wykonać pip install i nazwa tej paczki, czy tam ścieżka do paczki
+
+13
+00:00:45,560 --> 00:00:50,560
+i wtedy ta paczka zostanie zainstalowana tak jakby była częścią naszego programu.
+
+14
+00:00:51,620 --> 00:00:55,000
+Ona nie będzie znajdowała się obok tych naszych,
+
+15
+00:00:55,859 --> 00:00:58,159
+naszego kodu, czy tak jak jest teraz ona widoczna.
+
+16
+00:00:58,159 --> 00:01:01,359
+Zobaczcie tutaj moduł jeden, moduł drugi, moduł trzeci i tak dalej.
+
+17
+00:01:01,359 --> 00:01:02,159
+Jej tutaj nie będzie.
+
+18
+00:01:02,159 --> 00:01:03,859
+Ona będzie w odrobinę innym miejscu.
+
+19
+00:01:04,159 --> 00:01:07,060
+Ona powinna wpakować nam się do MS-Wenwa.
+
+20
+00:01:07,859 --> 00:01:11,260
+I tutaj do katalogu lib powinna nam być dostępna.
+
+21
+00:01:11,560 --> 00:01:15,659
+I to, co jest wymagane, żeby stworzyć sobie taką paczkę.
+
+22
+00:01:16,359 --> 00:01:20,659
+To jest plik setup.py i w kolejnym filmie pokażę ci, jak taki plik,
+
+23
+00:01:20,659 --> 00:01:24,159
+chociaż już go widzisz, możesz go przepisywać, jak taki plik stworzyć,
+
+24
+00:01:24,359 --> 00:01:25,659
+w którym miejscu on powinien się znaleźć.
+
+25
+00:01:25,859 --> 00:01:30,560
+Oraz jakie będą konsekwencje utworzenia takiego pliku.
+
+26
+00:01:30,859 --> 00:01:32,359
+No bo tak chcielibyśmy móc robić.
+
+27
+00:01:32,359 --> 00:01:36,060
+Nie żeby kopiować ten kod za każdym razem, tylko żeby móc go sobie instalować.
+
+28
+00:01:36,260 --> 00:01:42,159
+Też żeby pip mógł zarządzać wersją tego i żeby na przykład łatwiej nam się z tym pracowało.
+
+29
+00:01:42,460 --> 00:01:42,859
+To co?
+
+30
+00:01:43,060 --> 00:01:47,260
+Zapraszam cię do kolejnego filmu, gdzie opowiem ci o tym, czym jest plik setup.py.

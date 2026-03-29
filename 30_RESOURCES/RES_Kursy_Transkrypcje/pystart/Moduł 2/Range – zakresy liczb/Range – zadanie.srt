@@ -1,0 +1,27 @@
+1
+00:00:00,000 --> 00:00:21,980
+No i tutaj mam dla Ciebie kilka zadań do nabrania wprawy. Możesz robić to w PyCharmie i zwracać poszczególne wartości, natomiast nie ma też problemu jeżeli włączysz sobie po prostu CMD, czyli ten terminal linuxowy, czy też włączysz sobie terminal w PyCharmie, wszystkie rozwiązania są jak najbardziej w porządku i wpiszesz słowo Python.
+
+2
+00:00:21,980 --> 00:00:38,320
+Pamiętasz? Robiliśmy to w pierwszej lekcji. Wtedy ten Python się uruchomi i będzie można w nim wykonywać te zadania. No i w ten sposób te zadania właśnie chcielibyśmy sobie przejść i sprawdzić czy dobrze zrozumieliśmy się w zakresie tego range'a.
+
+3
+00:00:38,879 --> 00:00:47,939
+Czyli korzystając z tupple od range utwórz zakres liczb od 99 do 110. Czy chcemy zobaczyć zarówno 99 jak i 110?
+
+4
+00:00:48,840 --> 00:00:51,939
+Po drugie zakres liczb parzystych od 100 do 100.
+
+5
+00:00:51,979 --> 00:00:56,000
+Po drugie zakres liczb parzystych od 100 do 140. Gdzie 100 i 140 mają się wyświetlić.
+
+6
+00:00:56,519 --> 00:01:04,620
+No i po trzecie wszystkie liczby podzielne przez 3 od 3 do 33. Czyli właśnie 3, 6, 9 i tak dalej i tak dalej.
+
+7
+00:01:05,219 --> 00:01:09,959
+No to co? 3 minuty dla każdego i widzimy się za moment w rozwiązaniu. Do zobaczenia.

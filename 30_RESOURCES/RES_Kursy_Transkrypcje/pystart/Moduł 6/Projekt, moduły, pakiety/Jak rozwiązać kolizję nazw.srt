@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:04,299
+A co jeżeli mamy ten problem, czyli pojawia nam się te dwie nazwy,
+
+2
+00:00:04,459 --> 00:00:08,519
+które są bardzo podobne, wtedy możemy zrobić sobie rzecz prostszą,
+
+3
+00:00:08,620 --> 00:00:10,859
+a mianowicie zobacz, tutaj jest sytuacja taka,
+
+4
+00:00:11,140 --> 00:00:15,740
+from http api animals import create tiger create elephant, prawda?
+
+5
+00:00:16,339 --> 00:00:20,400
+Natomiast żeby nie wymieniać wszystkich tych wartości po przecinkach,
+
+6
+00:00:21,379 --> 00:00:23,900
+można zrobić drugą rzecz, a mianowicie napisać
+
+7
+00:00:23,900 --> 00:00:27,600
+from http api import animals, czyli jak pamiętasz,
+
+8
+00:00:27,600 --> 00:00:31,660
+ja po prostu sobie przeniosłem tą jedną rzecz tutaj na prawo,
+
+9
+00:00:31,800 --> 00:00:36,039
+czyli wykonałem from http api import animals i wtedy każdą funkcję,
+
+10
+00:00:36,219 --> 00:00:40,320
+która znajduje się wewnątrz tego modułu, muszę poprzedzić tym animals,
+
+11
+00:00:40,719 --> 00:00:43,400
+czyli wykonuję animals kropka create elephant.
+
+12
+00:00:44,380 --> 00:00:47,620
+Jeszcze jest opcja taka, że można byłoby pominąć w ogóle
+
+13
+00:00:47,620 --> 00:00:52,600
+to sformułowanie from http api, jeżeli to byłoby w tym samym katalogu,
+
+14
+00:00:53,380 --> 00:00:56,180
+mielibyśmy na przykład import http, to można byłoby też tak zrobić,
+
+15
+00:00:56,180 --> 00:00:57,560
+wtedy trzeba byłoby za każdym razem,
+
+16
+00:00:57,600 --> 00:01:02,740
+pisać http.api.create animals.create elephant,
+
+17
+00:01:02,859 --> 00:01:05,460
+no ale to byłoby strasznie dużo tych kropek do wymieniania,
+
+18
+00:01:05,840 --> 00:01:07,859
+więc łatwo byłoby się pogubić, tego raczej się nie robi,
+
+19
+00:01:08,460 --> 00:01:11,519
+no i są też osoby, które robią gwiazdkę wymieniają,
+
+20
+00:01:11,620 --> 00:01:16,159
+czyli from http api.animals import gwiazdka, ale tak nie robimy.
+
+21
+00:01:16,460 --> 00:01:20,200
+To zdecydowanie nie jest dobry sposób, o tym też sobie jeszcze będziemy rozmawiali.

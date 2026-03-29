@@ -1,0 +1,227 @@
+1
+00:00:00,000 --> 00:00:04,080
+No i tutaj znowu chciałbym pokazać Ci jeszcze trzy takie przykłady bardziej życiowe,
+
+2
+00:00:04,540 --> 00:00:06,960
+dotyczące tych naszych argumentów domyślnych.
+
+3
+00:00:07,419 --> 00:00:11,720
+Dla przykładu możemy sobie stworzyć funkcję, którą możemy nazwać power, też getPower.
+
+4
+00:00:12,919 --> 00:00:15,099
+Czyli policz mi potęgę.
+
+5
+00:00:15,599 --> 00:00:18,820
+No i potęga zawsze ma podstawę i ma wykładnik.
+
+6
+00:00:20,400 --> 00:00:25,740
+Jeżeli byśmy chcieli, to możemy założyć, że domyślnie wykładnik będzie miał wartość na przykład 2
+
+7
+00:00:25,739 --> 00:00:35,719
+i wtedy będę miał zawsze możliwość wykonania hey, print, getPower od czterech,
+
+8
+00:00:36,299 --> 00:00:39,079
+albo podnieś mi do trzeciej potęgi.
+
+9
+00:00:40,219 --> 00:00:44,759
+I zobacz, wykonuję ten kod i dostaję 16 i 64.
+
+10
+00:00:44,759 --> 00:00:50,039
+No dobra, innym przykładem kodu, który moglibyśmy sobie też omówić, tutaj pokazać,
+
+11
+00:00:50,140 --> 00:00:54,099
+też który wykorzystuje argumenty domyślne, może być na przykład sprawdzenie,
+
+12
+00:00:54,239 --> 00:00:55,719
+czy nasz wyraz jest palindromy.
+
+13
+00:00:55,740 --> 00:00:57,460
+Robiliśmy to, pamiętasz?
+
+14
+00:00:57,560 --> 00:01:00,719
+Palindrom to jest taki wyraz, który od lewej do prawej czyta się zupełnie tak samo.
+
+15
+00:01:01,420 --> 00:01:05,159
+Możemy więc sobie stworzyć funkcję, którą nazwiemy isPalindrom.
+
+16
+00:01:06,159 --> 00:01:10,920
+Ona będzie przyjmowała jako jeden argument jakiś tekst, sprawdzający, czy jest palindromem.
+
+17
+00:01:11,299 --> 00:01:15,939
+No i palindrom mógłby przyjmować, mógłby uwzględniać spacje, a mógłby ich nie uwzględniać.
+
+18
+00:01:15,980 --> 00:01:22,980
+Czyli na przykład ignoreSpaces i ta wartość mogłaby być domyślnie ustawiona na true.
+
+19
+00:01:22,980 --> 00:01:25,719
+W ten sposób, jeżeli miałby ignorować,
+
+20
+00:01:25,739 --> 00:01:32,739
+no to moglibyśmy zamienić spacje tak naprawdę na nic i połączyć sobie ten nasz tekst
+
+21
+00:01:32,739 --> 00:01:34,739
+i wtedy dopiero sprawdzić, czy jest palindromem.
+
+22
+00:01:34,739 --> 00:01:35,739
+A jeżeli nie, to nie.
+
+23
+00:01:35,739 --> 00:01:46,739
+Czyli if ignoreSpaces, then text równa się text.replace, spacje wymień mi na nic.
+
+24
+00:01:46,739 --> 00:01:55,259
+I wtedy będziemy po prostu chcieli sobie zwrócić sprawdzenie, czy tekst jest tym samym, co tekst odwrócony.
+
+25
+00:01:55,260 --> 00:01:59,260
+No bo ten drugi zapis powoduje, że odwracamy sobie tekst.
+
+26
+00:01:59,260 --> 00:02:04,260
+No i wtedy będziemy wiedzieli, że on albo sprawdzi nam te spacje, albo nie.
+
+27
+00:02:04,260 --> 00:02:07,260
+Przykład SenkaCans.
+
+28
+00:02:07,260 --> 00:02:14,259
+print isPalindrome senka cans
+
+29
+00:02:14,259 --> 00:02:19,259
+Jeżeli ja uruchomię ten program argumenty funkcji, tak, argumenty funkcji,
+
+30
+00:02:19,259 --> 00:02:23,259
+i będę miał ustawioną opcję ignoreSpaces na true,
+
+31
+00:02:23,259 --> 00:02:24,259
+to to spowoduje, zobaczmy, że...
+
+32
+00:02:24,259 --> 00:02:28,259
+On mi tutaj usunął po prostu te spacje.
+
+33
+00:02:28,259 --> 00:02:32,259
+Natomiast jeżeli zmieniłbym sobie tę opcję na false,
+
+34
+00:02:32,259 --> 00:02:35,259
+no to w ten sposób dostanę też false.
+
+35
+00:02:35,259 --> 00:02:42,259
+Czyli po prostu zweryfikuje mi to, czy jest to prawidłowy palindrom, zakładając takie argumenty, czy nie.
+
+36
+00:02:42,259 --> 00:02:46,259
+Inny przykład.
+
+37
+00:02:46,259 --> 00:02:48,259
+Myślę, że już taki ostatni.
+
+38
+00:02:48,259 --> 00:02:54,259
+Możemy wziąć sobie chociażby to, co robiliśmy dzisiaj, dzisiaj nie, ale w poprzedniej pracy domowej.
+
+39
+00:02:54,259 --> 00:02:57,259
+Czyli zamianę tam jednostek.
+
+40
+00:02:57,259 --> 00:03:05,259
+Na przykład moglibyśmy sobie stworzyć taką funkcję, która by zamieniała nam celsjus to fahrenheit.
+
+41
+00:03:05,259 --> 00:03:10,259
+No i potrzebujemy jakąś wartość w celsjuszach.
+
+42
+00:03:10,259 --> 00:03:14,259
+Możemy przyjąć, że domyślnie jest to 0.
+
+43
+00:03:14,259 --> 00:03:22,259
+No i wtedy, żeby to zamienić, musimy zamienić celsjusze razy 9 piątych plus 32.
+
+44
+00:03:22,259 --> 00:03:29,259
+Jeżeli nie podamy wartości żadnej, no to przyjmie, że wartość domyślna to 0.
+
+45
+00:03:29,259 --> 00:03:36,259
+Czyli wystarczy, że zrobię print celsjus to fahrenheit i dostanę 32.
+
+46
+00:03:36,259 --> 00:03:40,259
+No bo 0 razy 9 piątych plus 32 to 32.
+
+47
+00:03:40,259 --> 00:03:45,259
+A jeżeli zrobię 1 stopień, no to już dostanę 33,8.
+
+48
+00:03:45,259 --> 00:03:48,259
+I tak możemy wykorzystywać wartości domyślne.
+
+49
+00:03:48,259 --> 00:03:51,259
+Wszędzie tam, gdzie wiesz, że będziesz chciał pomijać wartości.
+
+50
+00:03:51,259 --> 00:03:57,259
+I będziesz chciał, żeby te wartości miały jakąś, nawet jeżeli pominiesz, żeby te zmienne miały swoją wartość.
+
+51
+00:03:57,259 --> 00:04:00,259
+No to wtedy muszą być tam podane wartości domyślne.
+
+52
+00:04:00,259 --> 00:04:03,259
+Bez wartości domyślnych nie da się pomijać zmiennych.
+
+53
+00:04:03,259 --> 00:04:06,259
+Po prostu zawsze trzeba każdą wartość podać.
+
+54
+00:04:06,259 --> 00:04:10,259
+Bo te argumenty nazywamy argumentami pozycyjnymi.
+
+55
+00:04:10,259 --> 00:04:12,259
+Ale o tym dowiemy się już niedługo.
+
+56
+00:04:12,259 --> 00:04:14,259
+A najpierw mam dla Ciebie zadanie.
+
+57
+00:04:14,259 --> 00:04:17,259
+Chodź, pokażę Ci, co dla Ciebie przygotowałem.

@@ -1,0 +1,87 @@
+1
+00:00:00,360 --> 00:00:03,740
+Porozmawialiśmy o czasie, o planowaniu, to teraz porozmawiajmy o tych literkach.
+
+2
+00:00:03,820 --> 00:00:06,879
+Czyli MVC to jest model, widok i kontroler.
+
+3
+00:00:07,000 --> 00:00:10,240
+Mówiliśmy sobie już wstępnie za jakie rzeczy one odpowiadają,
+
+4
+00:00:10,320 --> 00:00:12,300
+za chwilę sobie ten temat jeszcze rozszerzymy.
+
+5
+00:00:12,759 --> 00:00:16,260
+Natomiast w tym momencie chciałem Cię uprzedzić, że jest w Django,
+
+6
+00:00:16,460 --> 00:00:18,760
+szczególnie, czyli w takim frameworku Pythonowym,
+
+7
+00:00:19,320 --> 00:00:23,019
+inny wykorzystywany wzorzec, który nazywa się MVT.
+
+8
+00:00:24,080 --> 00:00:26,940
+I w tym przypadku to jest model, widok i template.
+
+9
+00:00:27,900 --> 00:00:29,120
+Czym one się różnią?
+
+10
+00:00:30,000 --> 00:00:31,500
+Tłumaczenie jest proste.
+
+11
+00:00:31,500 --> 00:00:36,480
+Model to model, widok w MVC to jest template w MVT,
+
+12
+00:00:36,880 --> 00:00:38,700
+a kontroler to jest widok.
+
+13
+00:00:38,880 --> 00:00:41,000
+Czyli tak jakby one nam się zamieniają miejscami.
+
+14
+00:00:41,600 --> 00:00:44,500
+I nie chcę Ci mieszać tym, więc nie będę o tym więcej mówił.
+
+15
+00:00:44,780 --> 00:00:47,799
+Mówię to tylko i wyłącznie dlatego, że jeżeli przesiadasz się
+
+16
+00:00:47,799 --> 00:00:51,100
+z jakiegoś innego języka programowania na przykład,
+
+17
+00:00:51,359 --> 00:00:54,019
+albo zobaczysz gdzieś w przyszłości Django,
+
+18
+00:00:54,439 --> 00:00:56,799
+to ta różnica jest znaczna.
+
+19
+00:00:57,340 --> 00:00:59,260
+No i po prostu polega na tym, że MVC,
+
+20
+00:00:59,259 --> 00:01:02,259
+to jest takie standardowe, to jest w Django MVT
+
+21
+00:01:02,259 --> 00:01:05,900
+i w tym momencie kontrolerem jest widok, a widokiem jest template.
+
+22
+00:01:06,340 --> 00:01:07,900
+OK? Model to zawsze model.

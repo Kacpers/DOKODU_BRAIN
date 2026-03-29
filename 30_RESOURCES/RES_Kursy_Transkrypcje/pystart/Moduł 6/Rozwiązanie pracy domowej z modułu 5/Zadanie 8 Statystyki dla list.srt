@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:03,300
+Te zadania celowo są tak wymieszane, żeby były trochę trudniejsze, trochę łatwiejsze,
+
+2
+00:00:03,379 --> 00:00:07,299
+też dlatego, że tak mi się wydaje, że lepiej jest, więcej satysfakcji jest,
+
+3
+00:00:07,419 --> 00:00:12,720
+jeżeli ma się najpierw trochę, trzeba się pogłówkować, a później trzeba się trochę wysilić.
+
+4
+00:00:12,720 --> 00:00:17,420
+I tak w tym zadaniu odrobinę trzeba się będzie wysilić, ale też nie jakoś bardzo dużo.
+
+5
+00:00:18,019 --> 00:00:24,060
+Czyli będziemy chcieli pobrać sobie get list statistics, czy tam stats po prostu.
+
+6
+00:00:24,620 --> 00:00:29,260
+Argumentem będzie jakaś lista. Możemy ją nazwać my list, jako list,
+
+7
+00:00:29,260 --> 00:00:31,740
+zwracać będziemy natomiast słownik.
+
+8
+00:00:33,679 --> 00:00:37,820
+Będziemy chcieli, bo będziemy mogli tak naprawdę od razu też sobie ten słownik zwrócić.
+
+9
+00:00:37,820 --> 00:00:47,880
+Wystarczy, że wypiszemy sobie potrzebne nam klucze, czyli total, min, max i min.
+
+10
+00:00:49,579 --> 00:00:54,380
+Wartość maksymalną i minimalną od razu sobie policzę, czyli max z my list.
+
+11
+00:00:59,259 --> 00:01:03,000
+Szkoda, że zacząłem od końca, przez to mam trochę utrudnione,
+
+12
+00:01:03,099 --> 00:01:09,859
+bo to jakby się czepia w tych wyliczeń, ale jak mu zrobię tak, to zaraz będzie zadowolony.
+
+13
+00:01:09,859 --> 00:01:15,500
+I teraz min będzie wymagało policzenia też total, a total to jest ilość elementów.
+
+14
+00:01:15,959 --> 00:01:22,759
+Czyli total równa się len my list. Od razu mogę ten total sobie tutaj wtedy przenieść.
+
+15
+00:01:24,060 --> 00:01:29,239
+Natomiast min to jest suma elementów listy podzielona przez ich,
+
+16
+00:01:29,260 --> 00:01:30,600
+czyli przez total.
+
+17
+00:01:31,520 --> 00:01:35,900
+Celowo stworzyłem osobną zmienną, bo nie chciałem doprowadzić do sytuacji,
+
+18
+00:01:36,000 --> 00:01:41,260
+w której będę ponownie musiał sprawdzać wielkość listy.
+
+19
+00:01:41,620 --> 00:01:45,719
+To nie jest czynność, która zajmuje dużo czasu, ale warto być przygotowanym na to
+
+20
+00:01:45,719 --> 00:01:47,260
+i po prostu takich sytuacji unikać.
+
+21
+00:01:47,860 --> 00:01:49,020
+I ponownie mamy funkcję.
+
+22
+00:01:49,560 --> 00:01:53,939
+No i zobacz, jeżeli sobie wywołam getListStats i sobie przekażemy jakieś wartości,
+
+23
+00:01:55,560 --> 00:01:59,060
+tylko muszę uzupełnić te, gdzie się śpieszyłem i dodałem,
+
+24
+00:01:59,260 --> 00:02:02,359
+dwa przecinki obok siebie, coś tam sobie powpisuję,
+
+25
+00:02:03,359 --> 00:02:07,960
+to wówczas powinny wyświetlić się ładnie nam wszystkie statystyki.
+
+26
+00:02:07,960 --> 00:02:09,259
+Print.
+
+27
+00:02:14,460 --> 00:02:19,159
+Mhm, zobacz, 15 wartości, oto średnia, oto max, oto min.
+
+28
+00:02:19,560 --> 00:02:20,659
+Wszystko działa.

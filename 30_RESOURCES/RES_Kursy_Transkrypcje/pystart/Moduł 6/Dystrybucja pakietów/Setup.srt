@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:01,179
+To co? To rozwiązujemy.
+
+2
+00:00:01,500 --> 00:00:04,780
+Ja od razu powiem, że część tego rozwiązania zrobiłem poza kamerą,
+
+3
+00:00:04,820 --> 00:00:09,099
+no bo pisanie z Wami tych wszystkich opisów, myślę, że nie byłoby najbardziej pasjonujące,
+
+4
+00:00:09,099 --> 00:00:12,140
+bo tak naprawdę przepisałem sobie te rzeczy, które były wcześniej.
+
+5
+00:00:12,620 --> 00:00:16,879
+No i zobaczcie, mam u góry oczywiście from setup tools, import setup i find packages.
+
+6
+00:00:17,179 --> 00:00:20,400
+Następnie mam tą całą definicję tego setupu, która była.
+
+7
+00:00:21,019 --> 00:00:22,719
+No i później ten setup chciałem wywołać.
+
+8
+00:00:22,900 --> 00:00:26,379
+Tutaj jednej informacji zabrakło, trzeba było gdzieś ją doczytać sobie ewentualnie,
+
+9
+00:00:26,379 --> 00:00:33,780
+że żeby wykonać polecenie python-setup-py-sdist, trzeba byłoby najpierw wejść do katalogu PyStart.
+
+10
+00:00:34,019 --> 00:00:37,840
+Więc wykonałem cd pystart, na szczęście nie cd projekt,
+
+11
+00:00:38,259 --> 00:00:44,359
+następnie python-setup-py-sdist, no i to mi wykonało taki zbiór różnych poleceń,
+
+12
+00:00:44,439 --> 00:00:50,120
+w których to poleceniach zostało, jeszcze dostałem informację, że nie mam pliku readme,
+
+13
+00:00:50,239 --> 00:00:53,299
+no ale trudno, ten plik readme warto byłoby też tutaj dorzucić.
+
+14
+00:00:53,299 --> 00:00:56,299
+No i mamy pystart, pystart, pystart, wszystkie tez.
+
+15
+00:00:56,380 --> 00:01:02,679
+Te rzeczy się tutaj odnalazły, plus w creating dist, widzę, że nazwał mi go pystart001,
+
+16
+00:01:03,140 --> 00:01:07,340
+czyli wszystko tak naprawdę zadziałało i gdzieś tu jeszcze była informacja,
+
+17
+00:01:07,460 --> 00:01:12,200
+że znalazł moje te pakiety, o właśnie, zobaczcie, pystart001 calculations
+
+18
+00:01:12,200 --> 00:01:16,420
+i tutaj w środku te wszystkie te informacje calculations są.
+
+19
+00:01:16,960 --> 00:01:22,140
+No i cóż, jeszcze jest utils, nie pozostaje mi nic innego, jak tylko teraz skopiować ten katalog,
+
+20
+00:01:22,140 --> 00:01:26,020
+ten plik właściwie, który znajduje się w katalogu dist,
+
+21
+00:01:26,379 --> 00:01:30,640
+pystart001 targi z i spróbować go gdzieś zainstalować.

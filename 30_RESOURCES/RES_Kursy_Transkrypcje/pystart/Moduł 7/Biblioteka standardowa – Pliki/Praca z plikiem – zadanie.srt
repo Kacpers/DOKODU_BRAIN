@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:04,060
+Tak jak mówiłem, przyszedł czas, żeby poćwiczyć, zrobić sobie taki mały sprawdzian.
+
+2
+00:00:04,540 --> 00:00:05,879
+Zadanie wygląda następująco.
+
+3
+00:00:06,040 --> 00:00:11,820
+Plik CSV, czy też CSV, to jest plik, w którym kolumny rozdzielone są średnikami.
+
+4
+00:00:12,019 --> 00:00:13,500
+Dodam, że mogą być też to przecinki.
+
+5
+00:00:14,140 --> 00:00:16,920
+Możesz je odczytać za pomocą funkcji split.
+
+6
+00:00:17,420 --> 00:00:21,660
+W pliku transakcje TXT wybierz tylko te, które mają dodatnią wartość
+
+7
+00:00:21,660 --> 00:00:24,240
+i zapisz je do osobnego pliku o nazwie przychody TXT.
+
+8
+00:00:24,960 --> 00:00:29,460
+Plik transakcji TXT znajdziesz pod tym filmem.
+
+9
+00:00:29,460 --> 00:00:32,560
+Napisz program, który otworzy plik przychody TXT,
+
+10
+00:00:32,740 --> 00:00:34,120
+czyli ten, który utworzyliśmy,
+
+11
+00:00:34,660 --> 00:00:39,020
+odczyta wartości zapisane w kolejnych wierszach i wyświetli ich sumę.
+
+12
+00:00:39,100 --> 00:00:44,039
+Czyli chcemy dowiedzieć się, jaka jest suma wartości z tych transakcji.
+
+13
+00:00:44,640 --> 00:00:47,120
+OK. No i musimy sobie powiedzieć jeszcze jedną ważną rzecz.
+
+14
+00:00:47,659 --> 00:00:49,880
+Na tym etapie warto byłoby o niej wspomnieć.
+
+15
+00:00:50,439 --> 00:00:55,060
+W Pythonie jest osobny taki moduł, który służy do odczytywania plików CSV.
+
+16
+00:00:56,000 --> 00:00:59,359
+On jest fajny z tego względu, że pliki CSV
+
+17
+00:00:59,359 --> 00:00:59,439
+mają w tym etapie odpowiednie wartości.
+
+18
+00:00:59,439 --> 00:00:59,460
+W tym etapie warto byłoby o niej wspomnieć.
+
+19
+00:00:59,460 --> 00:01:01,179
+Pliki CSV mają też często cudzysłów,
+
+20
+00:01:01,560 --> 00:01:06,019
+w miejscach, gdzie mamy tekst na przykład, mają też liczby
+
+21
+00:01:06,019 --> 00:01:08,379
+i on potrafi te wartości odczytywać.
+
+22
+00:01:08,540 --> 00:01:11,239
+Natomiast na tym etapie nie polecam Wam go stosować.
+
+23
+00:01:11,420 --> 00:01:13,060
+Dopiero uczymy się odczytywać pliki,
+
+24
+00:01:13,460 --> 00:01:17,760
+więc gdzieś w przyszłości o tym parserze CSV sobie jeszcze powiemy.
+
+25
+00:01:18,260 --> 00:01:22,060
+Na chwilę obecną traktujcie te pliki jako zwykły plik tekstowy
+
+26
+00:01:22,060 --> 00:01:24,299
+i tak jak pokazaliśmy sobie poprzednio w DEM-ie,
+
+27
+00:01:24,700 --> 00:01:27,599
+po prostu splitujcie go po średnikach.
+
+28
+00:01:27,599 --> 00:01:28,520
+No to co?
+
+29
+00:01:28,519 --> 00:01:31,519
+Do kodu, a później do rozwiązania.

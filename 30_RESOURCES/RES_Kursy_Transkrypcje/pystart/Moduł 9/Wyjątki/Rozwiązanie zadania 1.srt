@@ -1,0 +1,235 @@
+1
+00:00:00,000 --> 00:00:05,400
+No dobra, jeżeli chodzi o pierwszy przypadek, to potrzebujemy mieć jakąś listę.
+
+2
+00:00:05,600 --> 00:00:06,719
+Niech to będzie values.
+
+3
+00:00:06,940 --> 00:00:16,480
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+
+4
+00:00:17,559 --> 00:00:18,740
+Mam 10 wartości.
+
+5
+00:00:19,359 --> 00:00:23,179
+Następnie będę chciał wykonać kod, w którym zapytam użytkownika o to,
+
+6
+00:00:23,280 --> 00:00:25,080
+którą wartość chciałby zobaczyć.
+
+7
+00:00:25,079 --> 00:00:32,259
+Czyli input, którą z wartości chcesz zobaczyć.
+
+8
+00:00:32,780 --> 00:00:36,759
+I teraz zwracamy uwagę na to, że jeżeli użytkownik odbiera nam tę wartość,
+
+9
+00:00:36,859 --> 00:00:38,560
+to koniecznie musimy rzucić to na int.
+
+10
+00:00:38,960 --> 00:00:42,039
+I skoro indeksy zaczynają się od zera, to nasi użytkownicy nie wiem,
+
+11
+00:00:42,119 --> 00:00:45,079
+czy będą tacy mądrzy, ale powinniśmy wtedy wiedzieć,
+
+12
+00:00:45,320 --> 00:00:47,019
+że on nam poda tę wartość od zera.
+
+13
+00:00:47,799 --> 00:00:49,719
+Więc ok, index równe się.
+
+14
+00:00:50,379 --> 00:00:53,799
+No i wtedy print values od index.
+
+15
+00:00:53,799 --> 00:00:54,820
+I zobacz.
+
+16
+00:00:55,079 --> 00:00:57,899
+Że w tym momencie, kiedy napiszę print values od index,
+
+17
+00:00:58,079 --> 00:01:01,640
+mogę napisać python wyjątki py,
+
+18
+00:01:01,939 --> 00:01:03,259
+którą z wartości chcę zobaczyć,
+
+19
+00:01:03,359 --> 00:01:08,700
+trzecią, 33, jakąś wysoko, index error.
+
+20
+00:01:08,819 --> 00:01:12,480
+Widzisz, w tym miejscu jest informacja, jaki wyjątek będziemy chcieli łapać.
+
+21
+00:01:13,000 --> 00:01:15,900
+Skoro chcę łapać index error, to cały mój kod,
+
+22
+00:01:16,019 --> 00:01:18,620
+który jest podejrzany o ten wyjątek,
+
+23
+00:01:19,120 --> 00:01:21,019
+mogę umieścić w bloku try.
+
+24
+00:01:21,019 --> 00:01:24,079
+Tak naprawdę ten blok try nie musi zaczynać się tutaj,
+
+25
+00:01:24,079 --> 00:01:25,579
+może zacząć się tu,
+
+26
+00:01:25,579 --> 00:01:29,079
+bo tylko ten fragment jest potencjalnie niebezpieczny.
+
+27
+00:01:29,079 --> 00:01:32,579
+Żaden inny nie musi być opakowany.
+
+28
+00:01:32,579 --> 00:01:35,579
+Accept index error.
+
+29
+00:01:35,579 --> 00:01:37,579
+Print.
+
+30
+00:01:37,579 --> 00:01:39,579
+Taka wartość nie istnieje.
+
+31
+00:01:39,579 --> 00:01:44,079
+I to, co jest ważne, to jest to, że właśnie my za pomocą tego try i accept
+
+32
+00:01:44,079 --> 00:01:49,579
+powinniśmy umieścić ten fragment kodu, który chcemy okiełznać.
+
+33
+00:01:49,579 --> 00:01:53,079
+Musisz mieć na uwadze też to, jak daleko ten kod powinien być,
+
+34
+00:01:53,079 --> 00:01:56,079
+umieszczony w try.
+
+35
+00:01:56,079 --> 00:01:59,079
+Jeżeli pod spodem miałbym cokolwiek jeszcze,
+
+36
+00:01:59,079 --> 00:02:01,079
+co dotyczyłoby tego values od index,
+
+37
+00:02:01,079 --> 00:02:03,079
+to to również powinno znaleźć się w try.
+
+38
+00:02:03,079 --> 00:02:05,079
+Bo kod, który umieścimy tutaj,
+
+39
+00:02:05,079 --> 00:02:07,079
+print tutaj,
+
+40
+00:02:07,079 --> 00:02:10,079
+to jest kod, który normalnie nam się wykona.
+
+41
+00:02:10,079 --> 00:02:13,079
+Tylko, że on nam się wykona już za tym tryem i acceptem.
+
+42
+00:02:13,079 --> 00:02:15,079
+Więc trzeba mieć na uwadze to tak,
+
+43
+00:02:15,079 --> 00:02:19,079
+żeby na uwadze to, że trzeba ten kod zorganizować w taki sposób,
+
+44
+00:02:19,079 --> 00:02:22,079
+żeby on nam pozwalał na wykonanie się,
+
+45
+00:02:22,080 --> 00:02:25,080
+niezależnie od tego, czy try, czy accept się pojawi.
+
+46
+00:02:25,080 --> 00:02:29,080
+I w tym momencie zobacz, jeżeli wykonam python, strzałka do góry, enter,
+
+47
+00:02:29,080 --> 00:02:33,080
+trzecią wartość mam, drugą wartość mam, wysoką jakąś,
+
+48
+00:02:33,080 --> 00:02:35,080
+taka wartość nie istnieje.
+
+49
+00:02:35,080 --> 00:02:38,080
+Za każdym razem zobaczyłem jednak komunikat tutaj.
+
+50
+00:02:38,080 --> 00:02:42,080
+Jeżeli ja sobie dorzucę tutaj finally,
+
+51
+00:02:42,080 --> 00:02:45,080
+to zobacz, strzałka do góry,
+
+52
+00:02:47,080 --> 00:02:49,080
+taka wartość nie istnieje.
+
+53
+00:02:49,080 --> 00:02:51,080
+I w obu przypadkach też widzę finally.
+
+54
+00:02:52,080 --> 00:02:55,080
+To jest taki kod, który też mogę dzięki temu obsłużyć,
+
+55
+00:02:55,080 --> 00:02:58,080
+wiedząc, że te rzeczy po prostu są razem.
+
+56
+00:02:58,080 --> 00:03:01,080
+Ok, to co? Przechodzimy sobie do zadania numer dwa.
+
+57
+00:03:01,080 --> 00:03:03,080
+Ja ten kod zakomentuję,
+
+58
+00:03:03,080 --> 00:03:06,080
+czyli zaznaczę go sobie, wcisnę ctrl z shift
+
+59
+00:03:08,080 --> 00:03:11,080
+i sprawdzę, jak to będzie w przypadku słownika.

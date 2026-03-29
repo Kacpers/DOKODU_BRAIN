@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:12,140
+Podczas przechodzenia przez ten temat parę razy użyłem takiego sformułowania jak zależności, czyli mówiłem, że instalujemy zależności, czy zależności pobieramy z internetu, czy zależności instalujemy w parce.
+
+2
+00:00:12,140 --> 00:00:18,859
+Czym jest zależność? Zależność to jest tak naprawdę to, od czego nasza biblioteka, nasz projekt jest zależny.
+
+3
+00:00:18,859 --> 00:00:31,140
+Może być to zarówno biblioteka jak i PyStart, bo może się okazać, że PyStart do swojego działania potrzebuje różnych bibliotek oraz może się okazać też, że nasz projekt do działania potrzebuje zależności, na przykład w postaci PyStartu.
+
+4
+00:00:32,039 --> 00:00:36,840
+Czasem zależnością mogą być też jeszcze inne biblioteki pobierane z internetu.
+
+5
+00:00:36,840 --> 00:00:43,320
+Więc tak naprawdę wszystko co instalujemy za pomocą pipa jest taką zależnością. Od tych rzeczy zależy nasz projekt.
+
+6
+00:00:44,120 --> 00:00:47,840
+Jest też taka zasada, która mówi o tym, że zależność mojej zależności jest moją zależnością.
+
+7
+00:00:48,859 --> 00:00:59,740
+Tak jak z tymi waselami było. To znaczy, że jeżeli mam taką sytuację, że używam jakiejś biblioteki, a ta biblioteka potrzebuje jakiejś innej biblioteki, to ja potrzebuję dwóch bibliotek.
+
+8
+00:00:59,740 --> 00:01:03,740
+Tej, której używa moja biblioteka i tej mojej.
+
+9
+00:01:04,239 --> 00:01:10,739
+Czyli tak naprawdę zależności to jest wszystko to, co pobieramy sobie z zewnątrz i co jest potrzebne nam do uruchomienia naszego projektu.
+
+10
+00:01:11,659 --> 00:01:16,739
+Skoro pobieramy to z zewnątrz, to bardzo ważna zasada mówi o tym, żeby zależności nie umieszczać w repozytorium.
+
+11
+00:01:17,799 --> 00:01:18,739
+Czyli jeżeli będziesz chciał pobierać...
+
+12
+00:01:18,859 --> 00:01:27,140
+Przenieść sobie swój projekt na gita, to nic co znajduje się w środowisku wirtualnym nie powinno się znaleźć w tym gicie.
+
+13
+00:01:27,680 --> 00:01:35,759
+No bo po to są te zależności stworzone, żeby móc je sobie doinstalowywać, a nie żeby je mieć po prostu w tym projekcie.
+
+14
+00:01:36,659 --> 00:01:40,400
+To jest kolejna rzecz. No i skąd wiemy, że mamy coś zainstalować?
+
+15
+00:01:40,799 --> 00:01:45,060
+Gdyż za chwilę pokażę Ci jak stworzyć sobie plik, który nazywa się requirements.
+
+16
+00:01:45,060 --> 00:01:48,719
+I w tym pliku będą właśnie wypisane wszystkie nasze zależności.
+
+17
+00:01:48,859 --> 00:01:53,719
+To będzie jakby taki przepis na to, co jest potrzebne naszemu projektowi do tego, żeby się uruchomić.
+
+18
+00:01:53,819 --> 00:01:58,200
+I w naszym przypadku my korzystamy z wirtualnego środowiska z Venva, z tej paczki.
+
+19
+00:01:58,299 --> 00:02:01,920
+Natomiast można byłoby również skorzystać z innego rozwiązania, jakim jest Poetry.
+
+20
+00:02:02,299 --> 00:02:04,200
+Tam też można określać te zależności.
+
+21
+00:02:04,319 --> 00:02:07,099
+Natomiast nas będzie interesował plik requirements.txt.
+
+22
+00:02:07,659 --> 00:02:14,060
+Natomiast dla porządku wspomniałem też o tej drugiej opcji, bo wiemy, że jest część osób na pokładzie, które używa Poetry.
+
+23
+00:02:14,060 --> 00:02:16,659
+Więc wtedy po prostu tam umieszczamy zależności.

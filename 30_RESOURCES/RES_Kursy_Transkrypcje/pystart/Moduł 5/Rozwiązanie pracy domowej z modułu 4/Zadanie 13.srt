@@ -1,0 +1,275 @@
+1
+00:00:00,000 --> 00:00:02,419
+I ostatnie zadanie tej pracy domowej brzmi
+
+2
+00:00:02,419 --> 00:00:07,540
+Przygotuj program, który będzie sprawdzał, czy dwa podane słowa są wzajemnymi anagramami.
+
+3
+00:00:07,660 --> 00:00:10,339
+Anagram to takie słowo, które ma te same litery.
+
+4
+00:00:10,880 --> 00:00:15,419
+I przyznam Ci się, że to zadanie kiedyś dostałem jako zadanie rekrutacyjne.
+
+5
+00:00:16,100 --> 00:00:20,000
+Tak normalnie siedziałem w biurze, chwilę porozmawialiśmy, no to Kasper napił taki kod.
+
+6
+00:00:22,620 --> 00:00:23,960
+Jego nie zrobiłem.
+
+7
+00:00:24,560 --> 00:00:29,039
+Jest mi strasznie głupio z tego powodu, z tego względu, że to zadanie nie jest trudne,
+
+8
+00:00:29,039 --> 00:00:33,200
+ale opowiem Ci o czym od razu sobie pomyślałem i co mi tak naprawdę zepsuło to rozwiązanie.
+
+9
+00:00:33,839 --> 00:00:35,399
+Bo pomyślałem sobie o zbiorach.
+
+10
+00:00:35,780 --> 00:00:36,679
+Akurat też tak było.
+
+11
+00:00:37,460 --> 00:00:41,399
+Na taką samą pułapkę wpadłem jak tutaj, a mianowicie w zadaniu poprzednim były zbiory.
+
+12
+00:00:41,479 --> 00:00:43,659
+Zobaczyłem to, mówię, aaa, no pewnie.
+
+13
+00:00:44,320 --> 00:00:47,500
+Słowo na zbiór, słowo na zbiór, część wspólna.
+
+14
+00:00:47,840 --> 00:00:50,739
+Jeżeli część wspólna jest taka sama jak ilość liter, no to wszystko jest okej.
+
+15
+00:00:51,579 --> 00:00:52,200
+Nie przeszło.
+
+16
+00:00:52,899 --> 00:00:55,820
+Dlaczego? No bo usuwają nam się duplikaty.
+
+17
+00:00:55,820 --> 00:00:58,560
+No to zacząłem kombinować, mówię, kurczę, co mogę zrobić?
+
+18
+00:00:59,039 --> 00:01:02,539
+I potem jeszcze problem z wielkością, gdzieś wcześniej miałem problem z wielkością liter.
+
+19
+00:01:02,679 --> 00:01:06,959
+No i tak się zapućkałem z tymi zbiorami, szukając jakiegoś rozwiązania.
+
+20
+00:01:08,319 --> 00:01:11,819
+Przyszedł pan rekruter, spojrzał na to, co robię, mówi, no dobra.
+
+21
+00:01:12,340 --> 00:01:16,079
+Widzę, że wiesz o co chodzi, ale trochę Ci się pomieszało.
+
+22
+00:01:16,200 --> 00:01:17,060
+No i tak było.
+
+23
+00:01:17,500 --> 00:01:22,180
+Więc zobacz, mam słowo pierwsze, które będzie jakimś konkretnym słowem.
+
+24
+00:01:22,180 --> 00:01:25,620
+Niech to będzie A, B, C, D, E, F, G, H, I, J, K.
+
+25
+00:01:26,379 --> 00:01:27,680
+No i zrobię słowo drugie,
+
+26
+00:01:29,040 --> 00:01:32,060
+gdzie takie samo litery miało, tylko w innej kolejności.
+
+27
+00:01:32,180 --> 00:01:36,120
+Żeby się nie pomylić, zrobię sobie po prostu wytnij w klej.
+
+28
+00:01:37,980 --> 00:01:38,860
+Wytnij w klej.
+
+29
+00:01:38,940 --> 00:01:42,680
+I sobie robię takiego szufla, ale ręcznego.
+
+30
+00:01:43,420 --> 00:01:47,900
+W ten sposób mam dwa słowa, które tak naprawdę są wzajemnymi anagramami.
+
+31
+00:01:48,400 --> 00:01:52,360
+Żeby nie zrobić tego babola, który zrobiłem też w zadaniu rekrutacyjnym,
+
+32
+00:01:52,360 --> 00:01:55,980
+dorzucę sobie jeszcze tutaj dwie litery A i jedną literę B.
+
+33
+00:01:56,540 --> 00:01:58,540
+I gdzieś sobie wstawię dwie litery C,
+
+34
+00:01:58,540 --> 00:01:59,800
+a tu jedną literę C.
+
+35
+00:02:00,100 --> 00:02:02,280
+I to, no dobra, to powinienem mieć tyle samo.
+
+36
+00:02:02,680 --> 00:02:05,180
+I to są wciąż wzajemne anagramy.
+
+37
+00:02:06,180 --> 00:02:14,780
+Natomiast, żeby to sprawdzić, tak naprawdę najprościej jest zamienić te litery wszystkie na małe
+
+38
+00:02:15,360 --> 00:02:17,560
+i posortować sobie nasze słowo.
+
+39
+00:02:17,640 --> 00:02:21,080
+Jeżeli to zrobimy, no to będziemy mieli wszystko jak najbardziej okej.
+
+40
+00:02:21,420 --> 00:02:23,980
+Tyle tylko, że sortować słów nie da się od tak.
+
+41
+00:02:23,980 --> 00:02:25,680
+Trzeba najpierw zamienić je na listę.
+
+42
+00:02:26,180 --> 00:02:27,879
+Zamienianie słowa na listy.
+
+43
+00:02:27,879 --> 00:02:28,520
+Na listę.
+
+44
+00:02:28,520 --> 00:02:31,219
+To polega na tym, że możemy na słowie po prostu użyć funkcji list.
+
+45
+00:02:31,740 --> 00:02:38,920
+Czyli tak naprawdę to, co będzie nam potrzebne, to będzie powiedzmy tam string, tam list1,
+
+46
+00:02:39,500 --> 00:02:45,060
+równa się, potrzebuje listę, czyli list w nawiasie word1
+
+47
+00:02:45,060 --> 00:02:47,840
+i to muszę sobie posortować, czyli sorted.
+
+48
+00:02:49,040 --> 00:02:51,560
+Nie pamiętam jak było w wymaganiach do tego zadania,
+
+49
+00:02:51,780 --> 00:02:54,980
+ale jeżeli chcemy, żeby nie były sprawdzana wielkość liter,
+
+50
+00:02:54,980 --> 00:02:57,840
+no to wypadałoby jeszcze sobie zapisać, użyć funkcji lower,
+
+51
+00:02:57,840 --> 00:02:59,840
+żeby nam to zadziałało.
+
+52
+00:02:59,840 --> 00:03:01,840
+No i tu oczywiście będzie list2.
+
+53
+00:03:01,840 --> 00:03:03,840
+Jak to sobie teraz wyprintujemy,
+
+54
+00:03:03,840 --> 00:03:13,840
+to będziemy mieli dwa słowa i powinniśmy mieć te słowa, jak widzisz, wyglądające dokładnie tak samo.
+
+55
+00:03:13,840 --> 00:03:18,840
+No i wtedy wystarczy zrobić print list1 równa się list2.
+
+56
+00:03:18,840 --> 00:03:22,840
+O i jest, są to dwa anagramy.
+
+57
+00:03:22,840 --> 00:03:26,920
+Rozwiązanie banalnie proste, jednakże trzeba było się chwilę nad nim zastanowić,
+
+58
+00:03:26,920 --> 00:03:27,620
+żeby wypracować.
+
+59
+00:03:27,620 --> 00:03:28,620
+Żeby je zrobić.
+
+60
+00:03:28,620 --> 00:03:34,120
+I jeżeli ktoś poszedł głową w zbiór, no to to jest taki moment, gdzie palenie mi pomagało,
+
+61
+00:03:34,120 --> 00:03:39,120
+bo zawsze można było wyjść z pokoju, czy usiąść gdzieś, pomyśleć sobie na spokojnie
+
+62
+00:03:39,120 --> 00:03:41,620
+i potem wrócić z nowymi pomysłami.
+
+63
+00:03:41,620 --> 00:03:46,120
+Tu, jeżeli się zafiksujemy na jakimś rozwiązaniu, to czasem też zdarzają się pomyłki.
+
+64
+00:03:46,120 --> 00:03:49,120
+Ja nie byłem wtedy bardzo początkujący, byłem bardziej zaawansowany nawet,
+
+65
+00:03:49,120 --> 00:03:53,120
+ale no po prostu przez to, że gdzieś się skupiłem na jakimś rozwiązaniu,
+
+66
+00:03:53,120 --> 00:03:55,120
+to wszystko poszło w taką stronę.
+
+67
+00:03:55,120 --> 00:03:57,620
+I to byłoby na tyle, jeżeli chodzi o tą pracę domową.
+
+68
+00:03:57,620 --> 00:04:02,620
+Zapraszam Cię do modułu, gdzie będziemy się uczyli nowych, fantastycznych rzeczy.
+
+69
+00:04:02,620 --> 00:04:03,620
+Chodźcie!

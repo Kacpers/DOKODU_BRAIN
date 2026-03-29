@@ -1,0 +1,483 @@
+1
+00:00:00,000 --> 00:00:02,640
+To co? Przyszedł czas na pierwsze zadanie z pracy domowej.
+
+2
+00:00:03,120 --> 00:00:05,919
+Przygotuj funkcję, która będzie odbierała argumenty w postaci.
+
+3
+00:00:06,140 --> 00:00:06,839
+Group them.
+
+4
+00:00:07,360 --> 00:00:11,620
+Wall red, tomato red, light yellow, lemon yellow, grass green.
+
+5
+00:00:11,820 --> 00:00:11,939
+Ok.
+
+6
+00:00:12,900 --> 00:00:15,679
+W odpowiedzi funkcja powinna wyświetlić w osobnych wierszach,
+
+7
+00:00:16,179 --> 00:00:18,039
+czyli rozdzielając znakiem nowego wiersza.
+
+8
+00:00:18,539 --> 00:00:19,620
+Wall is red.
+
+9
+00:00:20,640 --> 00:00:23,339
+I zwróćcie uwagę na to, że wall zamieniło nam się na wielką literę.
+
+10
+00:00:23,859 --> 00:00:27,080
+Tomato, tak samo, is red, light is yellow i tak dalej.
+
+11
+00:00:27,079 --> 00:00:30,359
+Ok. Czyli tak naprawdę już wiemy, co chcemy przetestować.
+
+12
+00:00:30,779 --> 00:00:34,920
+Pewnie, jeżeli funkcja nie dostanie żadnego argumentu nazwanego,
+
+13
+00:00:35,000 --> 00:00:36,399
+to wtedy nie powinna zwrócić nic.
+
+14
+00:00:36,780 --> 00:00:37,979
+Od tego sobie zacznę.
+
+15
+00:00:38,280 --> 00:00:43,759
+Czyli group them i może wszystkie, tym razem test, test, test, test.
+
+16
+00:00:44,219 --> 00:00:48,119
+Może tym razem wszystkie te testy umieścimy sobie w jednym teście
+
+17
+00:00:48,119 --> 00:00:49,539
+i w kilku asercjach.
+
+18
+00:00:50,320 --> 00:00:55,799
+No tak, na początek wypadałoby sobie stworzyć group them jako funkcję
+
+19
+00:00:55,799 --> 00:00:57,060
+no i powiedzieć, że funkcja jest zaznaczona.
+
+20
+00:00:57,060 --> 00:00:58,320
+Funkcja może odbierać wszystko.
+
+21
+00:00:59,780 --> 00:01:00,020
+Pas.
+
+22
+00:01:00,320 --> 00:01:03,480
+Robię to dlatego, że później nie chcę, żeby on mi podpowiadał coś innego.
+
+23
+00:01:03,640 --> 00:01:06,980
+Wolę mieć podpowiedź z dobrą funkcją, żeby nie mieć błędu.
+
+24
+00:01:07,579 --> 00:01:12,960
+I w tym momencie w test group them mogę napisać, że assert jeżeli.
+
+25
+00:01:13,280 --> 00:01:16,740
+I na początek zakładam, że group them, jeżeli nie podam mu nic,
+
+26
+00:01:17,240 --> 00:01:18,659
+powinno mi nie zwrócić nic.
+
+27
+00:01:20,460 --> 00:01:23,840
+Następnie, jeżeli podam group them,
+
+28
+00:01:24,840 --> 00:01:25,680
+Python,
+
+29
+00:01:27,060 --> 00:01:28,060
+super,
+
+30
+00:01:30,060 --> 00:01:31,500
+a co może być złe?
+
+31
+00:01:31,620 --> 00:01:32,019
+Java.
+
+32
+00:01:35,560 --> 00:01:36,700
+Almost super.
+
+33
+00:01:37,700 --> 00:01:41,299
+To wtedy powinniśmy, tutaj było z małych liter, więc możemy się tego trzymać,
+
+34
+00:01:41,780 --> 00:01:43,500
+zobaczyć następujący komunikat.
+
+35
+00:01:43,620 --> 00:01:46,200
+Po pierwsze, Python z wielkiej litery
+
+36
+00:01:46,200 --> 00:01:49,780
+i z super, tu z małej litery.
+
+37
+00:01:50,400 --> 00:01:55,260
+Teraz, następnie mamy spację i znak nowego wiersza.
+
+38
+00:01:55,260 --> 00:01:57,040
+Ja tutaj tego znaku nowego wiersza,
+
+39
+00:01:57,040 --> 00:01:59,520
+nie będę dodawał, ale nie będę dodawał spacji,
+
+40
+00:01:59,520 --> 00:02:01,240
+bo chcę, żeby po prostu to było w nowych wierszach,
+
+41
+00:02:01,240 --> 00:02:02,800
+więc ta spacja tutaj nie jest potrzebna.
+
+42
+00:02:03,200 --> 00:02:07,360
+No i Java is almost super.
+
+43
+00:02:07,920 --> 00:02:09,920
+No i potrzebujemy mieć jeszcze jeden test,
+
+44
+00:02:10,800 --> 00:02:16,040
+w którym sprawdzimy sobie, co w przypadku, w którym będziemy mieli tylko jeden wynik,
+
+45
+00:02:16,040 --> 00:02:18,040
+na przykład Python super, tylko tyle.
+
+46
+00:02:18,480 --> 00:02:22,159
+To wtedy powinniśmy tak naprawdę dostać Python is super.
+
+47
+00:02:22,159 --> 00:02:26,159
+No i tu właśnie pytanie, czy jest ten znak nowego wiersza na końcu, czy go nie ma?
+
+48
+00:02:26,159 --> 00:02:28,400
+Zgodnie z treścią zadania nie ma go na końcu,
+
+49
+00:02:28,400 --> 00:02:30,400
+on tylko rozdziela poszczególne linie,
+
+50
+00:02:30,400 --> 00:02:33,400
+ale wydaje mi się, że tutaj lepiej, żeby on był,
+
+51
+00:02:33,400 --> 00:02:35,919
+no bo jeżeli by go nie było, no to ten print,
+
+52
+00:02:35,919 --> 00:02:39,400
+nie przeszedł, to wyświetlenie tego nie przeszłoby nam do nowego wiersza, chociaż...
+
+53
+00:02:39,400 --> 00:02:40,400
+hmm...
+
+54
+00:02:41,159 --> 00:02:42,919
+Możemy to zostawić bez.
+
+55
+00:02:42,919 --> 00:02:45,639
+Zobaczymy, co się wydarzy wtedy, bo tutaj na końcu też nie ma, nie?
+
+56
+00:02:45,639 --> 00:02:47,000
+Więc konsekwentnie.
+
+57
+00:02:47,000 --> 00:02:48,000
+Okej.
+
+58
+00:02:48,000 --> 00:02:50,599
+No i w tym momencie, jak chcemy to sobie uruchomić, przetestować,
+
+59
+00:02:50,599 --> 00:02:54,919
+wykonujemy python-mpy test, spacja 1, group them.
+
+60
+00:02:54,919 --> 00:02:57,599
+Byłem w module 6, musiałem wyjść, teraz jeżeli chcemy to przetestować,
+
+61
+00:02:57,599 --> 00:03:02,359
+wykonujemy python-mpy test, spacja 1, group them py,
+
+62
+00:03:02,359 --> 00:03:05,679
+no i oczywiście dostajemy informację, że nic nam się nie udało,
+
+63
+00:03:05,679 --> 00:03:10,119
+ponieważ funkcja nie zwróciła nic, a myśmy się spodziewali pustego stringa.
+
+64
+00:03:10,119 --> 00:03:11,119
+To co wiemy?
+
+65
+00:03:11,119 --> 00:03:16,319
+Wiemy tyle, że będziemy potrzebowali na pewno mieć klucz i wartość.
+
+66
+00:03:16,319 --> 00:03:24,759
+Wiemy też, że quarks jest przysłownikiem, więc możemy sobie wykonać for key, wal,
+
+67
+00:03:24,759 --> 00:03:33,439
+value in quarks.items i w ten sposób key to będą te nasze klucze, czyli python i java,
+
+68
+00:03:33,439 --> 00:03:37,439
+a value to będzie super i almost super.
+
+69
+00:03:37,439 --> 00:03:42,280
+Możemy się o tym przekonać wykonując print key value i wtedy py test,
+
+70
+00:03:42,280 --> 00:03:46,199
+niestety on nam nie daje wprost tej informacji, zobaczcie jej tutaj nigdzie nie ma,
+
+71
+00:03:46,199 --> 00:03:52,759
+żeby ona nam się pojawiła, musimy dorzucić verbose, czyli myślnik v, v, v, to jest sposób,
+
+72
+00:03:52,759 --> 00:03:54,239
+żeby py test był bardziej gadatliwy.
+
+73
+00:03:54,759 --> 00:03:56,159
+I czy gdzieś nam to napisał?
+
+74
+00:03:56,159 --> 00:04:07,000
+Nie napisał, bo na tej asercji on się od razu wysypał, czyli ta pierwsza asercja go zatrzymała
+
+75
+00:04:07,000 --> 00:04:08,439
+i nie pokazał nam reszty.
+
+76
+00:04:08,439 --> 00:04:14,439
+Jeżeli ja bym ten kod zakomentował, o, to zobaczcie teraz, teraz coś więcej nam się powinno pokazać.
+
+77
+00:04:14,439 --> 00:04:17,279
+Jest, python jest super, widzicie?
+
+78
+00:04:17,279 --> 00:04:24,240
+Czyli kluczem faktycznie jest python, wartością faktycznie jest super, a ta linia musi być zakomentowana,
+
+79
+00:04:24,759 --> 00:04:29,399
+żeby to zobaczyć, bo inaczej on nam po prostu nie printuje niczego, nawet nie wchodzi do tego fora.
+
+80
+00:04:29,399 --> 00:04:33,120
+No to okej, to już wiemy, co chcemy skonstruować.
+
+81
+00:04:33,120 --> 00:04:41,480
+Chcemy z klucza mieć wielką literę i pozostałe litery mają być małe, czyli po key możemy zrobić kropkę
+
+82
+00:04:41,480 --> 00:04:47,319
+i przypominamy sobie, co tutaj było, to było start with, end with, było też takie coś jak upper,
+
+83
+00:04:47,319 --> 00:04:53,879
+było też takie coś jak lower i było też takie coś, idę specjalnie niżej, coś nazywało się title,
+
+84
+00:04:53,879 --> 00:04:54,759
+było też takie coś jak lower i było też takie coś, idę specjalnie niżej, coś nazywało się title,
+
+85
+00:04:54,759 --> 00:05:00,519
+i title właśnie powoduje, że pierwsza litera zamieni się na wielką, a pozostałe będą małe.
+
+86
+00:05:00,519 --> 00:05:07,800
+Czyli już wiem, że potrzebuję sobie zrobić coś takiego i pomiędzy tym potrzebuję mieć is, czyli mogę użyć sobie f,
+
+87
+00:05:07,800 --> 00:05:19,079
+key title is i następnie dorzucam słówko value i wtedy nawias też mi nie będzie potrzebny,
+
+88
+00:05:19,079 --> 00:05:24,599
+no i wtedy już mam to całe wyrażenie i teraz te wyrażenia ja muszę dodać do jakiejś listy.
+
+89
+00:05:24,759 --> 00:05:31,719
+Czyli potrzebuję sobie stworzyć jakąś zmienną output, która będzie listą, do tej listy muszę to appendować
+
+90
+00:05:31,719 --> 00:05:41,399
+i jak appenduję to do listy, no to wtedy będę miał poszczególne wiersze w osobnych elementach listy.
+
+91
+00:05:41,399 --> 00:05:53,399
+W ten sposób, tu jeszcze literowa, w ten sposób wystarczy teraz, że zwrócę to, łącząc te poszczególne wiersze, znakiem nowego wiersza, czyli wykonam return znak nowego wiersza,
+
+92
+00:05:53,399 --> 00:05:53,879
+znak nowego wiersza, czyli wykonam return znak nowego wiersza,
+
+93
+00:05:53,879 --> 00:05:57,879
+.join i to co chcę joinować to jest output.
+
+94
+00:05:57,879 --> 00:06:05,240
+W ten sposób, kiedy wykonam strzałkę do góry, zrobię enter, to już okaże się, że wszystkie te testy mi przejdą.
+
+95
+00:06:05,240 --> 00:06:11,240
+No bo tutaj mam super, python is super, tutaj nie łączę dwóch żadnych wierszy, więc na końcu tego nie mam
+
+96
+00:06:11,240 --> 00:06:16,519
+i tutaj również, kiedy mam więcej linijek, to on też mi to łączy znakiem nowego wiersza.
+
+97
+00:06:16,519 --> 00:06:23,719
+Jeżeli miałbym więcej linijek, na przykład jeszcze php jest super, każdy lubi to co zna, nie?
+
+98
+00:06:23,879 --> 00:06:29,079
+No to wtedy będziemy mieli sytuację, w której będzie php zapisane tylko tak dziwnie, bo wielka litera będzie pierwsza.
+
+99
+00:06:29,079 --> 00:06:34,680
+O, i wtedy też będziemy mieli wszystko w porządku.
+
+100
+00:06:34,680 --> 00:06:41,879
+Czyli tak naprawdę możemy mieć więcej tych elementów, które łączymy sobie znakiem nowego wiersza, ale na końcu tego nie ma.
+
+101
+00:06:41,879 --> 00:06:51,560
+Przez to, że używamy joina w tym miejscu, to kiedy lista jest pusta, czy też zawiera jeden element, to on też nam nie doklei tego znaku nowego wiersza na końcu.
+
+102
+00:06:51,560 --> 00:06:52,759
+No i użycie.
+
+103
+00:06:52,759 --> 00:06:54,759
+Jak użyć czegoś takiego?
+
+104
+00:06:54,759 --> 00:07:00,199
+Wystarczyłoby wykonać, no po prostu ten kod, który sobie zrobiliśmy tutaj.
+
+105
+00:07:00,199 --> 00:07:02,839
+Czy możemy sobie wyprintować to na przykład?
+
+106
+00:07:02,839 --> 00:07:16,039
+I kiedy sobie te dwie rzeczy wyprintuję, i wtedy uruchomię python, spacja, jeden, group them, to mi się pokaże true i true.
+
+107
+00:07:16,039 --> 00:07:17,000
+Czemu true i true?
+
+108
+00:07:17,000 --> 00:07:20,759
+Przecież ja tylko to printuję, powinno pokazać się coś innego.
+
+109
+00:07:22,759 --> 00:07:24,759
+No i teraz, jak ja mam te dwie rzeczy, to ja mam to, co mam, to ja mam to, co mam, to ja mam to, co mam.
+
+110
+00:07:24,759 --> 00:07:26,759
+I teraz, jak ja mam te dwie rzeczy, to ja mam to, co mam.
+
+111
+00:07:26,759 --> 00:07:28,759
+A, bo tutaj sprawdzam, równa się, równa się.
+
+112
+00:07:28,759 --> 00:07:32,759
+No właśnie, ja powinienem bez tego równa się, równa się wyświetlić.
+
+113
+00:07:32,759 --> 00:07:36,759
+O, i wtedy będzie okej.
+
+114
+00:07:36,759 --> 00:07:38,759
+Zobaczcie, mam. Python jest super, PHP jest super, Java jest almost super.
+
+115
+00:07:38,759 --> 00:07:40,759
+Wszystko mi się ładnie wyświetliło.
+
+116
+00:07:40,759 --> 00:07:46,759
+Natomiast, jeżeli w tym momencie uruchomię testy, no to też wszystko będzie okej.
+
+117
+00:07:46,759 --> 00:07:50,759
+Z tym, że lepiej jest, jeżeli uruchamiamy testy, to lepiej jest po prostu zamknąć te dwie rzeczy.
+
+118
+00:07:50,759 --> 00:07:52,759
+Jeśli name równa się main.
+
+119
+00:07:52,759 --> 00:07:54,759
+Tak, żeby mieć pewność, że to tylko się uruchomi wtedy, kiedy faktycznie jest potrzebne.
+
+120
+00:07:54,759 --> 00:07:56,759
+Jeżeli chodzi o to zadanie, to byłoby to na tyle.
+
+121
+00:07:56,759 --> 00:07:58,759
+Zapraszam Was do zadania numer dwa.

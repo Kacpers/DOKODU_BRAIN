@@ -1,0 +1,123 @@
+1
+00:00:00,380 --> 00:00:01,720
+Jakie ćwiczenie wykonamy?
+
+2
+00:00:02,260 --> 00:00:06,900
+W grze komputerowej gracz może zdobywać różne przedmioty, które są przechowywane w zbiorze.
+
+3
+00:00:07,400 --> 00:00:10,720
+Napisz funkcję, która sprawdzi, czy gracz posiada już określony przedmiot.
+
+4
+00:00:11,220 --> 00:00:13,679
+Co stanie się, gdy drugi raz dodasz ten sam produkt?
+
+5
+00:00:14,200 --> 00:00:20,920
+Czyli możemy sobie stworzyć jakiś zbiór, spróbować do niego dodać przedmioty.
+
+6
+00:00:21,199 --> 00:00:23,019
+Wiecie, to mogą być takie przedmioty, jak są w grach.
+
+7
+00:00:23,140 --> 00:00:28,920
+Czasem się zbiera jakieś monety, czasem się zbiera jakieś tam inne trofea, czasem zbiera się słodycze.
+
+8
+00:00:28,920 --> 00:00:31,700
+Więc możemy tego typu rzeczy sobie zbierać.
+
+9
+00:00:32,160 --> 00:00:37,219
+No i w momencie, w którym dodamy drugi raz ten sam produkt za pomocą ADA, sprawdźmy, co się wydarzy.
+
+10
+00:00:37,320 --> 00:00:41,260
+Czyli zróbmy sobie taką pętlę, która pozwala na dodanie 50 przedmiotów.
+
+11
+00:00:41,800 --> 00:00:50,820
+I w zależności od tego, co będziemy dodawali, wyświetlajmy sobie za każdym razem stan tego naszego zasobnika.
+
+12
+00:00:51,500 --> 00:00:55,260
+Natomiast w drugim zadaniu mamy odebrać od użytkownika 10 adresów e-mail,
+
+13
+00:00:55,740 --> 00:00:57,900
+sprawdzić, czy adres zawiera małpę.
+
+14
+00:00:57,899 --> 00:00:59,359
+oraz com.pl.
+
+15
+00:00:59,820 --> 00:01:01,339
+Jeśli tak, to dodać go do listy.
+
+16
+00:01:01,679 --> 00:01:07,060
+Możecie korzystać z tego endswith na przykład, żeby sprawdzić, czy adres kończy się na com lub kończy się na pl.
+
+17
+00:01:07,759 --> 00:01:09,900
+No i następnie dodajemy go do listy.
+
+18
+00:01:10,620 --> 00:01:14,340
+A na koniec zamieniamy listę na zbiór, aby usunąć wszystkie duplikaty.
+
+19
+00:01:14,879 --> 00:01:21,379
+Czyli najpierw nie używamy ADA, tylko dodajemy sobie te elementy do listy, sprawdzając, czy mają one wymaganą strukturę.
+
+20
+00:01:21,879 --> 00:01:24,420
+Jeżeli mają, to sobie dodajemy, dodajemy, dodajemy, dodajemy.
+
+21
+00:01:24,420 --> 00:01:27,819
+I na koniec przed wyświetleniem zamieniamy sobie te listy.
+
+22
+00:01:27,900 --> 00:01:28,900
+Na zbiór.
+
+23
+00:01:29,080 --> 00:01:33,380
+No i chcemy wyświetlić ilość wpisów przed usunięciem duplikatów oraz po.
+
+24
+00:01:33,740 --> 00:01:39,940
+I takie dwa zadanka oczywiście w dwóch kolejnych filmach będziesz mógł zobaczyć za chwilę na playliście.
+
+25
+00:01:40,660 --> 00:01:42,660
+A ta chwila zależy od Ciebie.
+
+26
+00:01:42,940 --> 00:01:45,420
+Bo sam najpierw musisz je rozwiązać.
+
+27
+00:01:45,780 --> 00:01:49,100
+Tu jest taka zasada, że jeżeli działamy, to trenujemy.
+
+28
+00:01:49,100 --> 00:01:51,100
+A żeby trenować, trzeba rozwiązywać samodzielnie.
+
+29
+00:01:51,100 --> 00:01:53,820
+Więc za chwilę dopiero się widzimy w rozwiązaniu.
+
+30
+00:01:54,260 --> 00:01:56,260
+I porównamy, jak komu poszło.
+
+31
+00:01:56,460 --> 00:01:57,260
+Do zobaczenia.

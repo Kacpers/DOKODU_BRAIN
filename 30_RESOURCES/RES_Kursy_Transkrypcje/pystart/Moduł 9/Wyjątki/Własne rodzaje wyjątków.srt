@@ -1,0 +1,331 @@
+1
+00:00:00,000 --> 00:00:09,099
+Ale istotą wyjątków nie jest tylko to, że możemy sobie wyrzucić ten wyjątek już wbudowany, bo np. znamy już value error.
+
+2
+00:00:09,099 --> 00:00:19,800
+To co jest najpiękniejsze to jest to, że tworząc swoje oprogramowanie możemy też tworzyć swoje własne rodzaje wyjątków, dzięki czemu łapiemy to co jest nam potrzebne i obsługujemy to w określonym miejscu.
+
+3
+00:00:19,800 --> 00:00:33,920
+Tutaj chodzi o takie sytuacje, że np. w momencie w którym mam odebrać załącznik z poczty, następnie mam go przetworzyć, a później mam wysłać zawartość tą przetworzoną na jakiś zewnętrzny serwer FTP,
+
+4
+00:00:33,920 --> 00:00:41,040
+no to dzięki temu, że mam różne typy wyjątków mogę się zachowywać w różny sposób, zależnie od tego jeżeli coś pójdzie nie tak.
+
+5
+00:00:41,480 --> 00:00:49,780
+Dla przykładu, nie udało mi się zalogować na pocztę, to od razu muszę w cało wszystkich świętych tutaj zacząć pingować z informacją,
+
+6
+00:00:49,799 --> 00:00:58,539
+o tym, że ten program nie zalogował się na pocztę, czyli albo ktoś zmienił hasło, albo serwer pocztowy padł, albo coś innego się wydarzyło.
+
+7
+00:00:58,979 --> 00:01:02,659
+Mogę oczywiście ponowić tą próbę, ale muszę wykonać określone czynności.
+
+8
+00:01:03,319 --> 00:01:14,859
+Następnie jeżeli wchodzę na tą pocztę i okazuje się, że tam jest mail, ale nie ma załącznika, to już ta ważność tego też jest bardzo wysoka, ale już jest trochę mniejsza, no bo nie jest to tego rodzaju wyjątek.
+
+9
+00:01:14,859 --> 00:01:19,620
+Wtedy np. mogę wysłać maila z informacją tylko i wyłącznie do osób.
+
+10
+00:01:19,799 --> 00:01:28,979
+Wtedy mogę wysłać maile z informacją tylko i wyłącznie do osób.
+
+11
+00:01:28,979 --> 00:01:35,879
+I wszystkie te takie dane dodatkowe, jak np. tytuł maila, data dodania i wszystkie te rzeczy też mogą znaleźć się w tym wyjątku.
+
+12
+00:01:36,019 --> 00:01:41,280
+Ponieważ dzięki temu, że dziedziczymy po wyjątku, to możemy dodawać własne pola, dodawać własne metody.
+
+13
+00:01:42,359 --> 00:01:42,859
+Co dalej?
+
+14
+00:01:43,280 --> 00:01:47,299
+Jeżeli serwer FTP nie odpowiada, no to już wiem, że to jest w 100% moja wina.
+
+15
+00:01:47,920 --> 00:01:48,979
+Mam jakiś backup przygotowany.
+
+16
+00:01:49,799 --> 00:02:19,780
+Mam jakiś backup przygotowany.
+
+17
+00:02:19,780 --> 00:02:49,759
+Mam jakiś backup przygotowany.
+
+18
+00:02:49,780 --> 00:02:51,979
+tu napisałbym tylko accept value to small,
+
+19
+00:02:52,240 --> 00:02:53,740
+to value to big byłoby niełapane.
+
+20
+00:02:54,000 --> 00:02:55,580
+Mógłbym łapać je gdzieś na zewnątrz.
+
+21
+00:02:56,060 --> 00:02:57,800
+Tutaj z racji tego, że to jest
+
+22
+00:02:57,800 --> 00:02:59,819
+PyStart i pokazuje też prostsze
+
+23
+00:02:59,819 --> 00:03:01,960
+rzeczy, takie trudniejsze, to wiadomo na PyCampie,
+
+24
+00:03:02,039 --> 00:03:03,620
+natomiast jeżeli chodzi o takie prostsze rzeczy,
+
+25
+00:03:04,099 --> 00:03:05,740
+to my wyjątki zawsze łapiemy, no tak
+
+26
+00:03:05,740 --> 00:03:08,120
+widzicie, jest code, try, accept i tak dalej.
+
+27
+00:03:08,639 --> 00:03:09,800
+Musicie mieć na uwadze to,
+
+28
+00:03:10,159 --> 00:03:11,860
+co też będziemy pewnie robili w tym projekcie
+
+29
+00:03:11,860 --> 00:03:13,620
+już niedługo, że
+
+30
+00:03:13,620 --> 00:03:15,759
+często jest tak, że kiedy mamy
+
+31
+00:03:15,759 --> 00:03:17,740
+na przykład funkcję, która wywołuje funkcję,
+
+32
+00:03:17,819 --> 00:03:19,400
+to ten wyjątek, który tam jest,
+
+33
+00:03:19,780 --> 00:03:21,699
+on leci do najbliższego try'a, w którym jest
+
+34
+00:03:21,699 --> 00:03:23,840
+obsługiwany i czasem to jest
+
+35
+00:03:23,840 --> 00:03:25,860
+wysoko, czyli jeżeli, wyobraź sobie
+
+36
+00:03:25,860 --> 00:03:27,840
+sytuację, w której jest funkcja, która wywołuje
+
+37
+00:03:27,840 --> 00:03:29,560
+funkcję, która wywołuje funkcję i teraz
+
+38
+00:03:29,560 --> 00:03:31,979
+jeżeli chcielibyśmy na przykład w tym momencie
+
+39
+00:03:31,979 --> 00:03:33,400
+wyświetlić komunikat, że
+
+40
+00:03:33,400 --> 00:03:35,719
+hasło jest zbyt mało,
+
+41
+00:03:35,780 --> 00:03:37,680
+za mało skomplikowane, to trzeba
+
+42
+00:03:37,680 --> 00:03:39,939
+byłoby z tego czegoś zwracać
+
+43
+00:03:39,939 --> 00:03:41,860
+informację, tam trzeba byłoby zwracać
+
+44
+00:03:41,860 --> 00:03:43,599
+informację, zwracać informację i to
+
+45
+00:03:43,599 --> 00:03:46,000
+przekazywanie wyników funkcji
+
+46
+00:03:46,000 --> 00:03:47,759
+wymagałoby mnóstwa ifów,
+
+47
+00:03:48,180 --> 00:03:49,599
+bo jeżeli coś tam to i coś,
+
+48
+00:03:49,599 --> 00:03:51,539
+jeżeli nie to coś tam, wyżej,
+
+49
+00:03:51,680 --> 00:03:53,479
+jeżeli coś tam to coś tam, jeżeli nie to coś tam,
+
+50
+00:03:53,840 --> 00:03:55,599
+więc ja wyrzucając wyjątek z samego
+
+51
+00:03:55,599 --> 00:03:57,560
+dołu, z samych trzewi mówiący o tym, że
+
+52
+00:03:57,560 --> 00:03:59,459
+słuchaj, ten komunik, to hasło jest
+
+53
+00:03:59,459 --> 00:04:01,459
+nieprawidłowe, mogę od razu
+
+54
+00:04:01,459 --> 00:04:03,919
+na zewnątrz sobie to obsłużyć.
+
+55
+00:04:04,299 --> 00:04:04,780
+Nie muszę
+
+56
+00:04:04,780 --> 00:04:06,560
+zwracać wartości
+
+57
+00:04:06,560 --> 00:04:09,340
+wiele razy, tylko wyjątek
+
+58
+00:04:09,340 --> 00:04:11,459
+załatwia mi sprawę i to, że
+
+59
+00:04:11,459 --> 00:04:13,759
+funkcja wywołuje funkcję, która wywołuje funkcję,
+
+60
+00:04:13,859 --> 00:04:15,340
+to jest akurat niezbyt
+
+61
+00:04:15,340 --> 00:04:17,079
+skomplikowany przykład, te dwa
+
+62
+00:04:17,079 --> 00:04:19,120
+returny można byłoby zrobić
+
+63
+00:04:19,600 --> 00:04:21,720
+tyle, natomiast często ten
+
+64
+00:04:21,720 --> 00:04:23,240
+stack, czyli ten
+
+65
+00:04:23,240 --> 00:04:25,580
+stos, który wywołuje
+
+66
+00:04:25,580 --> 00:04:27,600
+te rzeczy, jest dużo bardziej złożony,
+
+67
+00:04:28,060 --> 00:04:29,560
+a my chcielibyśmy móc ten program
+
+68
+00:04:29,560 --> 00:04:31,800
+w określonym miejscu zatrzymać i jakoś
+
+69
+00:04:31,800 --> 00:04:33,320
+nim sterować. I tutaj
+
+70
+00:04:33,320 --> 00:04:35,960
+właśnie ta obsługa wyjątków rewelacyjnie
+
+71
+00:04:35,960 --> 00:04:37,480
+nam ten problem rozwiązuje.
+
+72
+00:04:38,600 --> 00:04:39,280
+Podsumowując,
+
+73
+00:04:39,780 --> 00:04:41,620
+wyjątki służą do obsługi sytuacji, gdy
+
+74
+00:04:41,620 --> 00:04:43,840
+wystąpi błąd oraz do sterowania
+
+75
+00:04:43,840 --> 00:04:45,820
+przebiegiem programu. Po drugie,
+
+76
+00:04:46,180 --> 00:04:47,640
+różne typy błędów realizujemy
+
+77
+00:04:47,640 --> 00:04:49,000
+za pomocą dziedziczenia, czyli
+
+78
+00:04:49,600 --> 00:04:51,740
+po exception, czy też możemy dziedziczyć
+
+79
+00:04:51,740 --> 00:04:53,700
+po value error, możemy tworzyć
+
+80
+00:04:53,700 --> 00:04:55,060
+własne typy wyjątków.
+
+81
+00:04:55,560 --> 00:04:57,800
+W Pythonie jest też wiele wbudowanych typów
+
+82
+00:04:57,800 --> 00:04:59,860
+wyjątków i warto zwrócić uwagę wtedy
+
+83
+00:04:59,860 --> 00:05:02,220
+na te typy oraz na ich komunikaty.

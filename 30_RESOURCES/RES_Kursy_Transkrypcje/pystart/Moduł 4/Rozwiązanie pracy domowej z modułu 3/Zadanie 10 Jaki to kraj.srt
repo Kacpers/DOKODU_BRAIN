@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:04,240
+No to cóż, mamy zrobić jaki to kraj, czyli grę quizową.
+
+2
+00:00:04,820 --> 00:00:07,339
+Napisać program, który losuje jeden z trzech krajów,
+
+3
+00:00:07,520 --> 00:00:11,540
+na przykład Polska, Niemcy, Francja i pyta użytkownika o stolicę tego kraju.
+
+4
+00:00:11,800 --> 00:00:15,759
+Jeśli użytkownik poda prawidłową odpowiedź, program powinien wyświetlić komunikat dobrze,
+
+5
+00:00:15,880 --> 00:00:17,600
+a jeśli błędną, no to źle.
+
+6
+00:00:18,359 --> 00:00:24,920
+Czyli co? Możemy sobie wyczyścić konsolę i możemy sobie wylosować któryś z tych elementów.
+
+7
+00:00:24,920 --> 00:00:32,079
+Ale zobaczcie, skoro to jest duży słownik, to jeżeli zrobię from random import choice,
+
+8
+00:00:32,620 --> 00:00:37,160
+no bo chcę powiedzmy sobie jeden, a następnie wykonam choice od capitals,
+
+9
+00:00:38,740 --> 00:00:41,780
+mimo tego, że nigdzie tego nie zwrócę, nie przypiszę i tak dalej,
+
+10
+00:00:42,200 --> 00:00:44,140
+to i tak jest ważne to, że dostanę błądki.
+
+11
+00:00:44,260 --> 00:00:50,260
+Error 2, co oznacza, że on nie wie tak naprawdę, co ja chcę zrobić,
+
+12
+00:00:50,260 --> 00:00:54,900
+bo on nie umie zrobić randoma na czymś, co tak naprawdę nie jest listą.
+
+13
+00:00:54,920 --> 00:01:02,160
+Ale jeżeli ja chcę sobie wybrać losowy kraj, to mogę mu napisać capitals.kiss.
+
+14
+00:01:02,539 --> 00:01:06,599
+Mówiliśmy sobie o tym, że skoro mamy słownik, no to słownik posiada taką metodę kiss,
+
+15
+00:01:06,700 --> 00:01:10,939
+no i wtedy to nie zwraca nam co prawda listy, ale zwraca coś, po czym można iterować.
+
+16
+00:01:11,599 --> 00:01:15,020
+Wciąż wykonanie choice na capitals od kiss jest niemożliwe.
+
+17
+00:01:15,439 --> 00:01:20,159
+Ale jeżeli zamienimy sobie to na listę jeszcze, no to wtedy okaże się,
+
+18
+00:01:20,320 --> 00:01:22,099
+że już nie ma z tym żadnego problemu.
+
+19
+00:01:22,620 --> 00:01:24,620
+No i zobacz, możemy na przykład stworzyć sobie zmienną serwis,
+
+20
+00:01:24,620 --> 00:01:31,160
+którą selected country równa się print selected country.
+
+21
+00:01:31,400 --> 00:01:35,219
+W ten sposób, jeżeli zrobimy strzałkę do góry enter, to wybrał nam Ukrainę.
+
+22
+00:01:35,340 --> 00:01:38,320
+Strzałka do góry enter, Polskę. Strzałka do góry enter, Czechy.
+
+23
+00:01:38,400 --> 00:01:41,360
+Czyli w ten sposób dobrze nam te wartości pobiera.
+
+24
+00:01:41,900 --> 00:01:46,180
+I to jest taki sposób na to, żeby wybrać losowy element ze słownika.
+
+25
+00:01:46,580 --> 00:01:47,380
+Mój sposób taki.
+
+26
+00:01:47,380 --> 00:01:52,939
+I teraz, jeżeli chcemy wyświetlić sobie pytanie, jaka jest stolica dla tego kraju,
+
+27
+00:01:53,320 --> 00:01:54,560
+to możemy od razu pobrać.
+
+28
+00:01:54,620 --> 00:01:58,359
+Zmienną answer równa się input.
+
+29
+00:01:59,740 --> 00:02:02,439
+Jaka jest stolica kraju?
+
+30
+00:02:03,260 --> 00:02:05,100
+No i przyda nam się F zdecydowanie.
+
+31
+00:02:08,000 --> 00:02:11,379
+I ten kraj w klamerkach łapiemy jako selected country.
+
+32
+00:02:12,140 --> 00:02:15,740
+W tym momencie pojawi się właśnie pytanie, jaka jest stolica kraju Ukraina.
+
+33
+00:02:15,860 --> 00:02:17,280
+I mogę coś wpisać sobie tutaj.
+
+34
+00:02:17,280 --> 00:02:20,200
+Robię enter i on nam nic nie odpowiada.
+
+35
+00:02:20,719 --> 00:02:22,620
+Zatem będziemy mogli sprawdzić.
+
+36
+00:02:22,819 --> 00:02:24,500
+If answer.
+
+37
+00:02:24,620 --> 00:02:26,120
+Równa się.
+
+38
+00:02:26,480 --> 00:02:27,620
+Równa się.
+
+39
+00:02:28,300 --> 00:02:29,280
+Capitals.
+
+40
+00:02:30,000 --> 00:02:32,159
+Od selected country.
+
+41
+00:02:33,240 --> 00:02:34,280
+Dwukropek.
+
+42
+00:02:34,420 --> 00:02:34,819
+Print.
+
+43
+00:02:35,180 --> 00:02:36,200
+Bardzo dobrze.
+
+44
+00:02:37,580 --> 00:02:38,020
+Else.
+
+45
+00:02:38,840 --> 00:02:39,400
+Print.
+
+46
+00:02:40,240 --> 00:02:42,240
+Ojej, spróbuj jeszcze raz.
+
+47
+00:02:42,240 --> 00:02:47,640
+I w tym momencie my sobie sprawdzamy, czy to, co podał nam użytkownik,
+
+48
+00:02:47,740 --> 00:02:50,460
+to jest dokładnie to samo, co mamy zapisane w capitals,
+
+49
+00:02:50,620 --> 00:02:52,240
+więc w tym naszym słowniku.
+
+50
+00:02:53,379 --> 00:02:54,240
+Od selected country.
+
+51
+00:02:54,620 --> 00:02:57,560
+Gdzie selected country to jest właśnie to wylosowany kraj.
+
+52
+00:02:58,340 --> 00:02:59,000
+Więc spróbujemy.
+
+53
+00:02:59,099 --> 00:02:59,700
+Strzałka do góry.
+
+54
+00:02:59,800 --> 00:03:00,879
+Jaka jest stolica kraju Niemcy?
+
+55
+00:03:01,000 --> 00:03:01,360
+Berlin.
+
+56
+00:03:02,460 --> 00:03:03,240
+Bardzo dobrze.
+
+57
+00:03:03,740 --> 00:03:05,460
+Jaka jest stolica kraju Słowacja?
+
+58
+00:03:05,920 --> 00:03:07,000
+Chyba Warszawa.
+
+59
+00:03:08,360 --> 00:03:09,759
+Ojej, spróbuję jeszcze raz.
+
+60
+00:03:10,140 --> 00:03:12,900
+No i w ten sposób, jeżeli bym wpisał Bracysławę, to miałbym dobrze.
+
+61
+00:03:13,439 --> 00:03:16,900
+No bo Słowacje mają stolicę w Bracysławie.
+
+62
+00:03:17,140 --> 00:03:21,180
+Natomiast kiedy wpisałem Warszawę, to jest źle, no bo Warszawa to stolica Polski.
+
+63
+00:03:21,599 --> 00:03:23,520
+Można byłoby zawsze to rozszerzyć i zrobić.
+
+64
+00:03:23,640 --> 00:03:24,400
+Ojej, Warszawa.
+
+65
+00:03:24,620 --> 00:03:27,159
+Warszawa to stolica kraju Polska.
+
+66
+00:03:27,680 --> 00:03:28,520
+Spróbuję jeszcze raz.
+
+67
+00:03:28,920 --> 00:03:30,840
+I w ten sposób to sobie wykonać.
+
+68
+00:03:31,200 --> 00:03:32,460
+Zadanie całkiem sympatyczne.
+
+69
+00:03:32,539 --> 00:03:34,140
+Za chwilę będziemy je odrobinę ulepszali.
+
+70
+00:03:34,599 --> 00:03:37,939
+Polecam też, można zaprosić rodzinę, sprawdzić wiedzę rodzinną
+
+71
+00:03:37,939 --> 00:03:40,180
+i przy okazji pochwalić się wiedzą z Pythona.
+
+72
+00:03:40,920 --> 00:03:41,340
+Idziemy dalej.

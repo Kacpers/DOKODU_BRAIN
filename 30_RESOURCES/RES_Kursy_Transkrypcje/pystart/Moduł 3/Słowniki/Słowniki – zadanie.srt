@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:04,020
+No i skoro mówimy o ćwiczeniu, to warto to sobie teraz przećwiczyć.
+
+2
+00:00:04,540 --> 00:00:07,820
+Na początek przygotuj mały słownik języka angielskiego.
+
+3
+00:00:07,980 --> 00:00:12,060
+Pytaj użytkownika, co chce zrobić, czyli albo polski, albo angielski.
+
+4
+00:00:12,500 --> 00:00:13,720
+Obie strony tłumaczymy.
+
+5
+00:00:14,160 --> 00:00:17,580
+I wyświetlaj mu słowo przetłumaczone na język polski lub na język angielski.
+
+6
+00:00:17,980 --> 00:00:20,960
+Ja to sobie wyobrażam tak, że na dzień dobry pytam użytkownika,
+
+7
+00:00:21,559 --> 00:00:24,379
+czy chcesz tłumaczyć z angielskiego czy z polskiego.
+
+8
+00:00:24,699 --> 00:00:28,820
+Jeżeli napisze ang, to będzie z angielskiego, jeżeli z pol, to z polskiego.
+
+9
+00:00:28,820 --> 00:00:34,039
+Następnie wpisujemy na przykład słowo dog, no i wtedy pojawi mu się na ekranie pies.
+
+10
+00:00:34,179 --> 00:00:36,500
+A jeżeli wpisze słowo pies, to przetłumaczy mu się dog.
+
+11
+00:00:36,600 --> 00:00:40,600
+Oczywiście, jeżeli wcześniej wybrał odpowiednie opcje przy tłumaczeniu.
+
+12
+00:00:41,420 --> 00:00:45,780
+Tutaj przygotujmy sobie sami język, taki słownik języka angielskiego.
+
+13
+00:00:45,920 --> 00:00:47,760
+Niech on składa się z pięciu, z sześciu słów.
+
+14
+00:00:48,240 --> 00:00:51,539
+Dodatkowo pamiętaj też o tym, że jeżeli słowa nie ma w słowniku,
+
+15
+00:00:51,659 --> 00:00:53,340
+to napisz, że słowa nie ma w słowniku.
+
+16
+00:00:54,039 --> 00:00:56,400
+No i w zadaniu drugim chcemy przygotować program,
+
+17
+00:00:56,400 --> 00:00:58,799
+który odbierze od użytkownika dowolny string,
+
+18
+00:00:58,820 --> 00:01:03,640
+a następnie zwróci słowo zawierające informacje,
+
+19
+00:01:03,880 --> 00:01:05,480
+ile razy wystąpiło każde słowo.
+
+20
+00:01:05,560 --> 00:01:07,680
+Na przykład dla stringu raz, dwa, trzy,
+
+21
+00:01:08,180 --> 00:01:12,219
+powinna zwrócić się informacja raz, raz, dwa, trzy.
+
+22
+00:01:12,640 --> 00:01:15,659
+Powinna wyświetlić się informacja, że słowo raz wystąpiło dwa razy,
+
+23
+00:01:15,719 --> 00:01:16,420
+bo jest raz, raz.
+
+24
+00:01:16,859 --> 00:01:19,400
+Dwa pojawiło się raz i trzy pojawiło się raz.
+
+25
+00:01:19,840 --> 00:01:22,900
+Czyli string najpierw chcemy sobie rozbić po spacjach.
+
+26
+00:01:23,340 --> 00:01:26,659
+Następnie chcemy przechodzić po poszczególnych słowach.
+
+27
+00:01:26,659 --> 00:01:30,379
+I jeżeli któreś ze słów pojawiło się na liście,
+
+28
+00:01:30,500 --> 00:01:31,939
+no to w tym słowniku już,
+
+29
+00:01:32,280 --> 00:01:35,120
+to będziemy chcieli zwiększyć ilość słów, które mamy w słowniku,
+
+30
+00:01:35,579 --> 00:01:40,319
+a jeżeli nie, to będziemy chcieli po prostu dodać je z wartością jeden.
+
+31
+00:01:41,099 --> 00:01:44,039
+No i myślę, że dla każdego tutaj pięć minut na pierwsze,
+
+32
+00:01:44,159 --> 00:01:45,560
+pięć minut na drugie,
+
+33
+00:01:45,920 --> 00:01:48,019
+więc widzimy się mniej więcej za dziesięć minut.
+
+34
+00:01:48,359 --> 00:01:49,739
+Jeżeli będziesz potrzebować więcej czasu,
+
+35
+00:01:49,859 --> 00:01:51,579
+pamiętaj, że w każdej chwili możesz to zatrzymać
+
+36
+00:01:51,579 --> 00:01:54,000
+i zobaczymy się za dwadzieścia minut, za trzydzieści.
+
+37
+00:01:54,000 --> 00:01:55,859
+Wszystko zależy od Ciebie. Do zobaczenia.
+
+38
+00:01:56,659 --> 00:01:58,659
+Napisy by Jacek Makarewicz

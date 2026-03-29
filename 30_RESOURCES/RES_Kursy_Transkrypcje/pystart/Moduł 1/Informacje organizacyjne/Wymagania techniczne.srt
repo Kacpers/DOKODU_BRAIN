@@ -1,0 +1,239 @@
+1
+00:00:00,000 --> 00:00:05,900
+Więc podsumowując, dobrze jest mieć czas, miejsce i spokój.
+
+2
+00:00:06,440 --> 00:00:11,800
+Ale ponadto będą też przydatne tobie elementy techniczne.
+
+3
+00:00:12,400 --> 00:00:14,900
+I te elementy techniczne to jest m.in. IDE.
+
+4
+00:00:15,700 --> 00:00:20,820
+Ja wiem, że część z was dostała już ode mnie IDE w wersji professional.
+
+5
+00:00:21,460 --> 00:00:23,600
+Jeżeli go nie aktywowaliście jeszcze, to dobrze.
+
+6
+00:00:23,600 --> 00:00:25,179
+Kto je aktywował, to ok.
+
+7
+00:00:25,839 --> 00:00:28,600
+Będzie wam przepewnie potrzebne niedługo drugie, ale ok.
+
+8
+00:00:28,600 --> 00:00:30,020
+To wtedy też możecie się do mnie zwrócić.
+
+9
+00:00:30,100 --> 00:00:31,720
+Zobaczymy, co da się z tym tematem zrobić.
+
+10
+00:00:32,280 --> 00:00:38,100
+Natomiast to, co na pewno będzie nam potrzebne, to jest to IDE PyCharm Community.
+
+11
+00:00:38,740 --> 00:00:42,980
+Czyli PyCharm ogólnie rzecz biorąc, czy też IDE, jakie mamy,
+
+12
+00:00:43,359 --> 00:00:44,820
+to tam tych rozwiązań jest kilka.
+
+13
+00:00:44,920 --> 00:00:46,280
+Do tego tematu sobie jeszcze wrócimy.
+
+14
+00:00:46,840 --> 00:00:50,520
+Natomiast my tutaj i ja podczas kursu będę korzystał z PyCharma.
+
+15
+00:00:50,520 --> 00:00:54,620
+I do dyspozycji mamy wersję Community oraz wersję Professional.
+
+16
+00:00:55,020 --> 00:00:57,579
+Wersja Community to jest wersja zupełnie darmowa.
+
+17
+00:00:58,600 --> 00:01:03,380
+I do tematów podstawowych, czy tak naprawdę do samego końca kursu, nie licząc tych bonusów,
+
+18
+00:01:03,859 --> 00:01:05,680
+będzie ci w zupełności wystarczająca.
+
+19
+00:01:06,219 --> 00:01:10,680
+Więc bonus służy do tego, żeby pracować z bonusami.
+
+20
+00:01:11,280 --> 00:01:15,159
+Wersja podstawowa jest wystarczająca do tego, żeby przejść przez cały kurs.
+
+21
+00:01:15,340 --> 00:01:16,700
+I tym się zupełnie nie przejmuj.
+
+22
+00:01:17,140 --> 00:01:21,140
+Natomiast jeżeli jesteś ciekawy i chcesz zobaczyć, jak wygląda wersja ta płatna,
+
+23
+00:01:21,140 --> 00:01:23,900
+no to śmiało możesz ją sobie aktywować też szybciej.
+
+24
+00:01:24,000 --> 00:01:26,379
+Tylko zachęcam do tego, żeby zrobić to w taki sposób,
+
+25
+00:01:26,879 --> 00:01:28,579
+żeby mieć dostęp do tej wersji.
+
+26
+00:01:28,599 --> 00:01:33,500
+Wersja płatna jest wersją, w której będziemy pracowali z Django i z Pandasem.
+
+27
+00:01:33,819 --> 00:01:35,299
+Bo to naprawdę bardzo nam ułatwi życie.
+
+28
+00:01:36,119 --> 00:01:41,799
+Więc pobierz już teraz, ze strony jetbrains.com.pycharm.download wersję Community.
+
+29
+00:01:42,319 --> 00:01:45,399
+Tylko ją pobierz, zainstalujemy ją za chwilę wspólnie.
+
+30
+00:01:46,000 --> 00:01:47,439
+No i tak samo wersja Pythona.
+
+31
+00:01:47,759 --> 00:01:50,459
+Ja tutaj napisałem o wersji Pythona 3.8 lub nowszej.
+
+32
+00:01:50,539 --> 00:01:54,199
+W tej chwili, gdy nagrywam ten kurs, jest już wersja 3.11.
+
+33
+00:01:54,819 --> 00:01:57,399
+Natomiast wersja 3.8 to jest takie absolutne minimum.
+
+34
+00:01:57,399 --> 00:01:58,399
+3.10 to...
+
+35
+00:01:58,599 --> 00:01:59,099
+Super.
+
+36
+00:01:59,099 --> 00:02:00,299
+3.11 to...
+
+37
+00:02:00,799 --> 00:02:03,699
+Dobrze, ale nie jest ona nam koniecznie aż tak nowa potrzebna.
+
+38
+00:02:03,899 --> 00:02:11,799
+Bo też te rzeczy, które będziemy robili podstawowe, one bardzo będą podobne w ramach tych podstaw do tego, co spotkasz dalej.
+
+39
+00:02:12,400 --> 00:02:15,400
+Natomiast nie może być to wersja druga.
+
+40
+00:02:15,400 --> 00:02:20,799
+To jest niezwykle ważna informacja, że Python w wersji drugiej to jest coś zupełnie innego niż Python w wersji trzeciej.
+
+41
+00:02:20,799 --> 00:02:23,699
+Więc zachęcam do tego, żeby wejść na stronę python.org,
+
+42
+00:02:23,699 --> 00:02:28,120
+pobrać sobie najnowszą, stabilną wersję i również podczas tych zajęć pokażemy sobie,
+
+43
+00:02:28,120 --> 00:02:33,319
+jak ją zainstalować, jak stworzyć nowe środowisko w oparciu o tą konkretną wersję.
+
+44
+00:02:33,319 --> 00:02:34,319
+No i tyle.
+
+45
+00:02:34,319 --> 00:02:36,719
+Warto mieć też zeszyt do robienia notatek.
+
+46
+00:02:36,719 --> 00:02:37,920
+O tym już mówiłem wcześniej.
+
+47
+00:02:37,920 --> 00:02:39,319
+Czy też jakieś inne miejsce.
+
+48
+00:02:39,319 --> 00:02:40,719
+I ostatni punkt.
+
+49
+00:02:40,719 --> 00:02:46,920
+To jest taki punkt trochę na bogato, ale wiem, że on znacznie ułatwia pracę ludziom.
+
+50
+00:02:46,920 --> 00:02:53,420
+A mianowicie dla wygody polecam mieć dwa monitory, by jednocześnie kodować i oglądać, ale z jednym też dasz sobie radę.
+
+51
+00:02:53,420 --> 00:02:57,020
+Czyli jak widzisz, no ten mój film składa się z prezentacji.
+
+52
+00:02:57,020 --> 00:02:57,920
+Normalnie.
+
+53
+00:02:57,919 --> 00:03:05,719
+Za chwilę w tym miejscu też tutaj w tym miejscu będzie widoczny kod, więc będzie on mniej więcej widoczny właśnie tu.
+
+54
+00:03:05,719 --> 00:03:13,719
+Natomiast no ty też musisz mieć swoje idee otwarte, więc albo przełączaj się między pulpitami, albo sobie mnie minimalizuj i otwieraj,
+
+55
+00:03:13,719 --> 00:03:22,519
+albo no polecam mieć dwa monitory, czy też jeden monitor większy, przydzielony na pół, gdzie po jednej stronie masz mnie w formie możliwie czytelnej,
+
+56
+00:03:22,519 --> 00:03:24,519
+a po drugiej masz kod.
+
+57
+00:03:24,519 --> 00:03:26,119
+Tak jak na moim kanale na YouTubie.
+
+58
+00:03:26,119 --> 00:03:27,719
+Jeżeli ze mną pracowałeś, pracowałaś.
+
+59
+00:03:27,919 --> 00:03:32,519
+No to tutaj będzie to wyglądało bardzo podobnie, tylko że będzie bardzo mocno ustrukturyzowane.
+
+60
+00:03:32,519 --> 00:03:36,319
+Jak widzisz też bardzo dużo będę o tym, o różnych rzeczach mówił.

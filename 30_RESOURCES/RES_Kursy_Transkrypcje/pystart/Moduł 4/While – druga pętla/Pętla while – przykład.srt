@@ -1,0 +1,759 @@
+1
+00:00:00,000 --> 00:00:07,339
+No i przyszedł czas na jakiś taki trochę bardziej rzeczywisty przykład, realny przykład, gdzie taka pętla while mogłaby mieć miejsce.
+
+2
+00:00:07,339 --> 00:00:18,199
+Oczywiście te przykłady, które dałem też dotyczące oczekiwania na jakieś zdarzenie, czy ponawiania tak długo, jak długo serwer nie odpowiada, też są dobre.
+
+3
+00:00:18,480 --> 00:00:24,339
+Natomiast wykraczają poziomem poza naszą wiedzę, natomiast też chciałem Ci pokazać bardziej życiowe przykłady.
+
+4
+00:00:24,339 --> 00:00:34,420
+Więc tu pokazuję taki fragment kodu, który w 100% mieści się jakby w naszej wiedzy, no i pozwala na też użycie pętli while.
+
+5
+00:00:35,019 --> 00:00:39,320
+W tym przykładzie mamy autobus, autobus, który ma jakąś swoją pojemność.
+
+6
+00:00:39,320 --> 00:00:53,159
+No i wyobrażamy sobie, że jest taki pan siedzący w tym autobusie na dzień dobry, kasujący bilety, sprawdzający ile osób wchodzi razem, no i w momencie, w którym wchodzą te osoby razem, no to usadza je w poszczególnych miejscach,
+
+7
+00:00:53,159 --> 00:01:02,379
+a kiedy okazuje się, że pojemność autobusu została wyczerpana, no to ten pan musi powiedzieć hola hola, do widzenia, już więcej osób nie wsiada.
+
+8
+00:01:02,899 --> 00:01:08,340
+No i mamy taką sytuację, że jest jakieś bus capacity, czyli jakaś pojemność autobusu ma wartość 100.
+
+9
+00:01:09,459 --> 00:01:14,579
+Następnie poniżej mamy ilość pasażerów w autobusie ustawioną na zero.
+
+10
+00:01:15,199 --> 00:01:21,599
+Czyli tak naprawdę do momentu, do którego nie wypełnimy autobusu, nie musimy odjeżdżać, nie musimy ruszać.
+
+11
+00:01:21,599 --> 00:01:35,439
+No i w tym momencie sprawdzamy, dopóki pojemność autobusu jest większa lub równa niż ilość ludzi, którzy do niego wsiedli, no to zapytamy ile osób weszło tym razem.
+
+12
+00:01:35,679 --> 00:01:50,459
+No i ktoś, kto wchodzi może powiedzieć trzy osoby, no to okej, dodajemy sobie trzy osoby, dzięki czemu nasza ta informacja, ilość osób w autobusie zwiększa się nam o trzy, bo tu jest plus równe się.
+
+13
+00:01:50,459 --> 00:01:55,919
+Za kolejnym razem wchodzi pięć, to już mamy osiem i tak sukcesywnie ta liczba nam się zwiększa.
+
+14
+00:01:56,859 --> 00:02:06,739
+A i dodatkowo dla tych niecierpliwych cały czas pojawia się informacja, że tyle jeszcze osób musi wejść, żeby ruszył autobus.
+
+15
+00:02:07,159 --> 00:02:17,099
+Czyli jeżeli ilość osób w autobusie jest większa niż bus capacity, no to wtedy pojawia nam się informacja, że tyle osób musi wyjść, bo inaczej nie pojedziemy.
+
+16
+00:02:17,099 --> 00:02:18,719
+Tu przepraszam, powiedziałem odwrotnie.
+
+17
+00:02:20,460 --> 00:02:29,100
+To byśmy bardzo łatwo zrobić, po prostu wyświetlając komunikat print, tutaj passenger in bus, bus capacity minus passengers in bus.
+
+18
+00:02:29,540 --> 00:02:42,180
+Natomiast u nas jest jeszcze taka informacja, że jeżeli okazałoby się, że weszło zbyt dużo osób, no to też wyświetlamy komunikat, że ostatnie tyle osób musi wyjść, bo inaczej autobus nam nie ruszy po prostu.
+
+19
+00:02:42,180 --> 00:02:50,379
+I tu dochodzimy do jeszcze dwóch bardzo ważnych słówek, które też w przypadku pętli while będą miały swoje zastosowanie.
+
+20
+00:02:50,460 --> 00:02:55,439
+Pierwszym ze słówek jest continue, a drugim ze słówek jest break.
+
+21
+00:02:55,439 --> 00:03:03,080
+Czasem zdarza się, że kiedy działa nam pętla while, to my chcielibyśmy mieć możliwość przerwania jej z jakiegoś powodu.
+
+22
+00:03:03,540 --> 00:03:06,800
+Bo na przykład wszedł ktoś, kto nie powinien wsiadać do autobusu.
+
+23
+00:03:07,379 --> 00:03:08,780
+Break, pętla się kończy.
+
+24
+00:03:09,300 --> 00:03:11,860
+Czy wyszedł jakiś komunikat, tak?
+
+25
+00:03:11,939 --> 00:03:20,439
+Załóżmy, pytaj tak długo, jak długo osoba nie poda ci, nie będzie wartość tych, nie będzie ilość odpowiednia, załóżmy.
+
+26
+00:03:20,460 --> 00:03:21,360
+Licząc te osoby.
+
+27
+00:03:21,900 --> 00:03:28,560
+Natomiast, jeżeli ktoś powie, dostaniesz komunikat, dobra, już musisz jechać, to wtedy coś ma się wydarzyć, nie?
+
+28
+00:03:29,020 --> 00:03:33,140
+I właśnie wtedy moglibyśmy też użyć pętli break, czyli pętla, użyć instrukcji break.
+
+29
+00:03:33,260 --> 00:03:42,140
+Instrukcja break spowoduje, że pętla zakończy się w tym jednym konkretnym momencie i od razu przejdzie nam do kolejnej linii, która znajduje się po pętli while.
+
+30
+00:03:42,620 --> 00:03:50,180
+Natomiast continue to jest instrukcja, która będzie nam ponawiała przejście przez tą pętlę i zawsze będziemy przechodzili wtedy do kolejnej iteracji.
+
+31
+00:03:50,460 --> 00:04:02,840
+Przykład, jeżeli wiemy, że przetwarzamy na przykład pliki, które znajdują się w jakimś katalogu i widzimy, że jest to plik, chcemy przetwarzać tylko pliki tekstowe, txt.
+
+32
+00:04:03,280 --> 00:04:09,740
+Natomiast napotkaliśmy plik, który jest plikiem jpg, no to wiemy, że od razu chcemy przejść do kolejnego pliku.
+
+33
+00:04:09,840 --> 00:04:13,719
+Nie chcemy wykonywać już żadnych instrukcji, które są niżej, tylko chcę przejść do kolejnego pliku.
+
+34
+00:04:13,960 --> 00:04:15,379
+Wtedy mogę napisać continue.
+
+35
+00:04:16,180 --> 00:04:19,720
+I on wtedy będzie wiedział, że okej, od tego miejsca jakby od razu przeskakuje znowu.
+
+36
+00:04:20,459 --> 00:04:26,159
+Do pętli while przechodzi przez kolejny plik i tak kolejne pliki sobie przetwarza.
+
+37
+00:04:26,579 --> 00:04:29,519
+Czyli weź mi pierwszy plik, sprawdź czy to plik txt.
+
+38
+00:04:29,979 --> 00:04:33,439
+Jeżeli tak, to wykonuj czynność, a jeżeli to nie jest plik txt, to continue.
+
+39
+00:04:33,939 --> 00:04:36,740
+I to spowoduje, że on znowu wróci do góry i weźmie sobie kolejny plik.
+
+40
+00:04:37,819 --> 00:04:41,839
+Natomiast break kończy w tym jednym momencie.
+
+41
+00:04:42,379 --> 00:04:48,819
+Czyli zakładając, że nie wiem, za pomocą pętli while na przykład szukamy czegoś, to kiedy udało nam się to znaleźć,
+
+42
+00:04:48,819 --> 00:04:55,560
+nie musimy już czekać, aż kolejne te dane zostaną przemielone, bo już mamy to, co nas interesowało.
+
+43
+00:04:55,939 --> 00:05:05,899
+To oznacza, że możemy wykonać break i break spowoduje, że od razu ta nasza pętla przestanie iść, przestanie działać, bo break nastąpił.
+
+44
+00:05:06,180 --> 00:05:08,039
+I tutaj mamy taki przykład z while true.
+
+45
+00:05:08,459 --> 00:05:14,480
+Czyli ustawiamy sobie counter na zero, następnie robimy while true, czyli pętla teoretycznie w nieskończoność.
+
+46
+00:05:14,939 --> 00:05:15,899
+Wyświetl mi counter.
+
+47
+00:05:15,899 --> 00:05:23,159
+Czyli tak naprawdę, jeżeli na tym bym zatrzymał mój program, tylko na tej instrukcji, to miałbym wyświetlane pod sobą 0, 0, 0, 0, 0.
+
+48
+00:05:24,019 --> 00:05:26,139
+Dalej mamy counter plus równa się 1.
+
+49
+00:05:27,139 --> 00:05:31,879
+Czyli już nie wyświetla nam samych zer, tylko będzie nam wyświetlał wartości 0, 1, 2, 3, 4 i tak dalej.
+
+50
+00:05:32,859 --> 00:05:33,699
+Będą nam rosły.
+
+51
+00:05:34,279 --> 00:05:38,339
+Jednakże w tej sytuacji nigdy ta pętla by nam się nie zakończyła.
+
+52
+00:05:38,679 --> 00:05:42,039
+Więc żeby ją zakończyć, musimy gdzieś umieścić instrukcję break.
+
+53
+00:05:42,039 --> 00:05:44,519
+I można to zapisać na przykład w tej postaci.
+
+54
+00:05:45,899 --> 00:05:49,719
+10 to wtedy break, czyli wtedy zakończ działanie tej pętli.
+
+55
+00:05:50,259 --> 00:05:51,719
+I to też nam zadziała.
+
+56
+00:05:52,060 --> 00:05:57,079
+To jest co prawda niepotrzebne generowanie kodu, bo jak wiecie można byłoby ten sam kod napisać w dwóch linijkach,
+
+57
+00:05:57,539 --> 00:06:02,099
+ale też kolejny przykład na to, jak ten break gdzieś może nam się przydać.
+
+58
+00:06:03,039 --> 00:06:07,199
+Czyli wracając do naszego przypadku, jeżeli chodzi o pasażerów i autobus.
+
+59
+00:06:07,719 --> 00:06:11,659
+Mamy 100 pasażerów, 0 miejsc w autobusie, pobieramy ile osób weszło tym razem,
+
+60
+00:06:11,659 --> 00:06:15,459
+no i sprawdzamy, jeszcze dodatkowo chcemy dorzucić takie pytanie,
+
+61
+00:06:15,899 --> 00:06:19,399
+czy autobus ma już ruszyć, bo na przykład ktoś decyduje, że rusza, nie rusza.
+
+62
+00:06:19,819 --> 00:06:23,279
+I wtedy jeżeli ktoś odpowie, że jest, czyli niezależnie od tego,
+
+63
+00:06:23,279 --> 00:06:29,679
+ile osób wsiadło do autobusu i tak na jest musi on ruszyć, no to robimy jest.
+
+64
+00:06:29,779 --> 00:06:33,519
+I w tym momencie pojawia się break i pojawi się komunikat autobus rusza.
+
+65
+00:06:33,959 --> 00:06:38,519
+To, że ten przykład znajduje się w takiej prezentacji i tak nie usprawiedliwia tego,
+
+66
+00:06:38,519 --> 00:06:42,560
+żeby nie sprawdzić, jak on zadziała w twoim PyCharmie.
+
+67
+00:06:42,899 --> 00:06:45,799
+Ja od razu też mówię, że to jest screen, więc nawet przepisać by się
+
+68
+00:06:45,800 --> 00:06:47,100
+skopiować by się tego nie dało.
+
+69
+00:06:47,460 --> 00:06:52,300
+Warto sobie przepisywać, warto w pamięć mięśniową uczyć tych wszystkich różnych konstrukcji.
+
+70
+00:06:53,300 --> 00:06:57,180
+Więc tutaj serdecznie zachęcam do tego, żeby sobie też takie przykłady z Wilem robić
+
+71
+00:06:57,180 --> 00:07:01,040
+i potestować, jak on działa, dlaczego tak, a co się wydarzy, jeżeli.
+
+72
+00:07:01,560 --> 00:07:07,460
+I czasem padało tutaj pytanie na kursach stacjonarnych, co się stanie, jeżeli będzie kilka breaków.
+
+73
+00:07:08,040 --> 00:07:11,139
+Po prostu będzie kilka sytuacji, które będą przerywały nam pętlę.
+
+74
+00:07:11,500 --> 00:07:15,800
+Na przykład if should start równa się yes break, no to wtedy wiadomo, że ma się zakończyć.
+
+75
+00:07:15,800 --> 00:07:21,379
+Ale jeżeli na przykład ilość osób w autobusie była przekroczona,
+
+76
+00:07:21,379 --> 00:07:26,800
+no to też można byłoby zawsze zrobić break, żeby kolejny raz zakończyć.
+
+77
+00:07:26,800 --> 00:07:29,000
+To też tak funkcjonuje.
+
+78
+00:07:29,000 --> 00:07:32,300
+Natomiast z breakiem jest związana jeszcze jedna bardzo ważna rzecz.
+
+79
+00:07:32,300 --> 00:07:39,100
+A mianowicie, że kiedy ten break nastąpi w tym miejscu, to ten komunikat się nam nie pokaże.
+
+80
+00:07:39,100 --> 00:07:42,460
+Dlatego i co, nikt nie musiał wysiąść?
+
+81
+00:07:42,460 --> 00:07:43,300
+Dlatego też zachęcam, żeby te przykłady odpalać sobie samodzielnie, bo to jest bardzo trudne.
+
+82
+00:07:43,300 --> 00:07:43,800
+Dlatego też zachęcam, żeby te przykłady odpalać sobie samodzielnie, bo to jest bardzo trudne.
+
+83
+00:07:43,800 --> 00:07:44,379
+Dlatego też zachęcam, żeby te przykłady odpalać sobie samodzielnie, bo to jest bardzo trudne.
+
+84
+00:07:44,379 --> 00:07:46,379
+Dlatego też zachęcam, żeby te przykłady odpalać sobie samodzielnie, bo to jest bardzo trudne.
+
+85
+00:07:46,379 --> 00:07:48,379
+Bo zobaczycie wtedy, że jeżeli ten break nastąpi, to ten komunikat nie będzie wyświetlony.
+
+86
+00:07:48,379 --> 00:07:50,379
+Bo zobaczycie wtedy, że jeżeli ten break nastąpi, to ten komunikat nie będzie wyświetlony.
+
+87
+00:07:50,379 --> 00:07:58,379
+Po prostu powoduje to to, że ten komunikat print, ostatnie miejsca w autobusie, że tam musi wyjść ostatni osób, on się po prostu nie pokaże.
+
+88
+00:07:58,379 --> 00:08:00,379
+Po prostu powoduje to to, że ten komunikat print, ostatnie miejsca w autobusie, że tam musi wyjść ostatnie osób, on się po prostu nie pokaże.
+
+89
+00:08:00,379 --> 00:08:02,379
+Pokaże się od razu, autobus rusza.
+
+90
+00:08:02,379 --> 00:08:04,379
+Czyli będziemy mieli przepełniony, ruszający autobus.
+
+91
+00:08:04,379 --> 00:08:06,379
+Warto się przed tym zabezpieczyć.
+
+92
+00:08:06,379 --> 00:08:08,379
+Jak to można zrobić?
+
+93
+00:08:08,379 --> 00:08:10,379
+Chciałem pokazać taki szczególny przykład pętli while.
+
+94
+00:08:10,379 --> 00:08:12,379
+Chciałem pokazać taki szczególny przykład pętli while.
+
+95
+00:08:12,379 --> 00:08:14,379
+On trochę jest skomplikowany, ale wierzę, że też może Ci się spodobać.
+
+96
+00:08:14,379 --> 00:08:16,379
+On trochę jest skomplikowany, ale wierzę, że też może Ci się spodobać.
+
+97
+00:08:16,379 --> 00:08:18,379
+Więc pokazuję.
+
+98
+00:08:18,379 --> 00:08:20,379
+A mianowicie można w while też stworzyć sobie taką zmienną.
+
+99
+00:08:20,379 --> 00:08:22,379
+A mianowicie można w while też stworzyć sobie taką zmienną.
+
+100
+00:08:22,379 --> 00:08:24,379
+Bus can start.
+
+101
+00:08:24,379 --> 00:08:26,379
+Czyli na przykład autobus może ruszyć.
+
+102
+00:08:26,379 --> 00:08:28,379
+Taka zmienna.
+
+103
+00:08:28,379 --> 00:08:30,379
+Domyślnie ta zmienna ustawiona jest na false.
+
+104
+00:08:30,379 --> 00:08:32,379
+Dlaczego na false?
+
+105
+00:08:32,379 --> 00:08:34,379
+Z tego względu, że ja chcę, żeby Python był jak najpiękniejszy do czytania.
+
+106
+00:08:34,379 --> 00:08:36,379
+Z tego względu, że ja chcę, żeby Python był jak najpiękniejszy do czytania.
+
+107
+00:08:36,379 --> 00:08:38,379
+Więc dodałem sobie taki zapis.
+
+108
+00:08:38,379 --> 00:08:40,379
+While not bus can start.
+
+109
+00:08:40,379 --> 00:08:42,379
+Czyli dopóki nie może autobus ruszyć.
+
+110
+00:08:42,379 --> 00:08:44,379
+Jakoś tak się zrobiło w języku polskim,
+
+111
+00:08:44,379 --> 00:08:46,379
+że dopóki coś nie zostanie wykonane,
+
+112
+00:08:46,379 --> 00:08:48,379
+to idziemy, nie?
+
+113
+00:08:48,379 --> 00:08:50,379
+Raczej wydaje mi się, że tak jest częściej.
+
+114
+00:08:50,379 --> 00:08:52,379
+Bo dopóki autobus nie może ruszyć.
+
+115
+00:08:52,379 --> 00:08:54,379
+No nie wiem.
+
+116
+00:08:54,379 --> 00:08:56,379
+Wydaje mi się, że łatwiej, lepiej czyta się.
+
+117
+00:08:56,379 --> 00:08:58,379
+While not bus can start.
+
+118
+00:08:58,379 --> 00:09:00,379
+Czyli dopóki autobus nie może ruszyć.
+
+119
+00:09:00,379 --> 00:09:02,379
+No to wtedy wykonuj ten kod.
+
+120
+00:09:02,379 --> 00:09:04,379
+I wtedy jeżeli autobus może ruszyć,
+
+121
+00:09:04,379 --> 00:09:06,379
+i shoot start jest ustawiony na yes,
+
+122
+00:09:06,379 --> 00:09:08,379
+to to będzie oznaczało, że on
+
+123
+00:09:08,379 --> 00:09:10,379
+wykona te linie, które są poniżej.
+
+124
+00:09:10,379 --> 00:09:12,379
+Natomiast już do tego while'a
+
+125
+00:09:12,379 --> 00:09:14,379
+mi drugi raz nie wejdzie.
+
+126
+00:09:14,379 --> 00:09:16,379
+Ja bardzo często tej konstrukcji
+
+127
+00:09:16,379 --> 00:09:18,379
+używam, szczególnie w przypadku,
+
+128
+00:09:18,379 --> 00:09:20,379
+kiedy właśnie ponawiam jakieś połączenie,
+
+129
+00:09:20,379 --> 00:09:22,379
+albo
+
+130
+00:09:22,379 --> 00:09:24,379
+chcę coś powtórzyć określoną liczbę razy.
+
+131
+00:09:24,379 --> 00:09:26,379
+Wyobraź sobie sytuację,
+
+132
+00:09:26,379 --> 00:09:28,379
+gdzie łączę się
+
+133
+00:09:28,379 --> 00:09:30,379
+z jakąś stroną internetową
+
+134
+00:09:30,379 --> 00:09:32,379
+i ta strona na chwilę za nim ogła,
+
+135
+00:09:32,379 --> 00:09:34,379
+powiedziała mi, nie działa.
+
+136
+00:09:34,379 --> 00:09:36,379
+I wtedy to co mogę zrobić, to mogę na przykład
+
+137
+00:09:36,379 --> 00:09:38,379
+trzy razy powtórzyć.
+
+138
+00:09:38,379 --> 00:09:40,379
+Ale ja nie chcę trzy razy powtarzać.
+
+139
+00:09:40,379 --> 00:09:42,379
+Ja chcę powtarzać dopóki
+
+140
+00:09:42,379 --> 00:09:44,379
+ta strona nie zacznie odpowiadać,
+
+141
+00:09:44,379 --> 00:09:46,379
+ale maksymalnie trzy razy.
+
+142
+00:09:46,379 --> 00:09:48,379
+I to właśnie mogę osiągnąć
+
+143
+00:09:48,379 --> 00:09:50,379
+za pomocą pętli while
+
+144
+00:09:50,379 --> 00:09:52,379
+wraz z dodanym
+
+145
+00:09:52,379 --> 00:09:54,379
+takim założeniem, że w środku jest jeszcze
+
+146
+00:09:54,379 --> 00:09:56,379
+sprawdzenie,
+
+147
+00:09:56,379 --> 00:09:58,379
+ile prób powtórzenia
+
+148
+00:09:58,379 --> 00:10:00,379
+już nastąpiło. Jeżeli ta ilość
+
+149
+00:10:00,379 --> 00:10:02,379
+prób powtórzenia to trzy, no to wtedy
+
+150
+00:10:02,379 --> 00:10:04,379
+koniec. Czyli ja tak naprawdę
+
+151
+00:10:04,379 --> 00:10:06,379
+robię sobie tutaj, dopóki nie
+
+152
+00:10:06,379 --> 00:10:08,379
+działa, to ponawiam.
+
+153
+00:10:08,379 --> 00:10:10,379
+Natomiast u góry mam ilość powtórzeń
+
+154
+00:10:10,379 --> 00:10:12,379
+ustawioną na zero. Tu mam
+
+155
+00:10:12,379 --> 00:10:14,379
+ilość powtórzeń zwiększającą się.
+
+156
+00:10:14,379 --> 00:10:16,379
+Jeżeli ilość powtórzeń przekroczyła
+
+157
+00:10:16,379 --> 00:10:18,379
+jakiś mój wewnętrzny limit, który sobie
+
+158
+00:10:18,379 --> 00:10:20,379
+założyłem, to koniec. Nie powtarzam.
+
+159
+00:10:20,379 --> 00:10:22,379
+Zapisuję gdzieś błąd
+
+160
+00:10:22,379 --> 00:10:24,379
+do pliku, wysyłam sobie maila,
+
+161
+00:10:24,379 --> 00:10:26,379
+strona nie działa. Robię coś,
+
+162
+00:10:26,379 --> 00:10:28,379
+co wymaga ode mnie jakiejś dalszej interakcji
+
+163
+00:10:28,379 --> 00:10:30,379
+albo po prostu, żebym wiedział, że
+
+164
+00:10:30,379 --> 00:10:32,379
+w tej konkretnym minucie, w tym
+
+165
+00:10:32,379 --> 00:10:34,379
+konkretnym czasie ta strona nie działa.
+
+166
+00:10:34,379 --> 00:10:36,379
+Więc to też jest taki przykład, gdzie
+
+167
+00:10:36,379 --> 00:10:38,379
+pętla while doskonale się przydaje, ale taki
+
+168
+00:10:38,379 --> 00:10:40,379
+odrobinę trudniejszy. Chciałem go nim opowiedzieć,
+
+169
+00:10:40,379 --> 00:10:42,379
+bo też jakby on pokazuje
+
+170
+00:10:42,379 --> 00:10:44,379
+piękną tej pętli, do czego
+
+171
+00:10:44,379 --> 00:10:46,379
+ta pętla nam się przydaje. I niezwykle
+
+172
+00:10:46,379 --> 00:10:48,379
+ważne jest, żeby
+
+173
+00:10:48,379 --> 00:10:50,379
+nie podejmować wyboru.
+
+174
+00:10:50,379 --> 00:10:52,379
+Czyli ja kiedyś myślałem, że
+
+175
+00:10:52,379 --> 00:10:54,379
+wybiorę sobie pętlę
+
+176
+00:10:54,379 --> 00:10:56,379
+for i zawsze będę używał wszystko,
+
+177
+00:10:56,379 --> 00:10:58,379
+wszędzie pętli for. Albo
+
+178
+00:10:58,379 --> 00:11:00,379
+wybiorę sobie pętlę while i zawsze wszędzie
+
+179
+00:11:00,379 --> 00:11:02,379
+będę używał pętli while. Lepiej
+
+180
+00:11:02,379 --> 00:11:04,379
+jest zastanawiać się, czy w tym
+
+181
+00:11:04,379 --> 00:11:06,379
+konkretnym przypadku ja chcę coś powtarzać
+
+182
+00:11:06,379 --> 00:11:08,379
+za pomocą fora, czy ja chcę coś powtarzać
+
+183
+00:11:08,379 --> 00:11:10,379
+za pomocą while'a i każdorazowo
+
+184
+00:11:10,379 --> 00:11:12,379
+zmieniać ten wybór, zależnie od tego, co
+
+185
+00:11:12,379 --> 00:11:14,379
+potrzebuję.
+
+186
+00:11:14,379 --> 00:11:16,379
+Natomiast wiem, że
+
+187
+00:11:16,379 --> 00:11:18,379
+skoro znamy już fora, to łatwiej byłoby wszystko
+
+188
+00:11:18,379 --> 00:11:20,379
+robić forem. Dlatego też przyda nam się
+
+189
+00:11:20,379 --> 00:11:22,379
+trochę ćwiczeń, żeby tego while'a sobie
+
+190
+00:11:22,379 --> 00:11:24,379
+przećwiczyć. Chodźcie do zadań.

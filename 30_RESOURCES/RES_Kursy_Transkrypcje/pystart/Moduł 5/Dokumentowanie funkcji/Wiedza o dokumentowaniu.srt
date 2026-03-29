@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:08,400
+Powiedzieliśmy sobie o tym, że posiadanie funkcji daje nam też tę przewagę, że później możemy importować je sobie pomiędzy plikami.
+
+2
+00:00:08,400 --> 00:00:18,660
+W przyszłości pokażemy też sobie jak stworzyć bibliotekę, którą będzie można po prostu przenosić pomiędzy projektami, ale wszystko to wymaga dobrej dokumentacji.
+
+3
+00:00:18,660 --> 00:00:31,620
+Wyobraź sobie sytuację, że chcesz zaprogramować coś w Pythonie, korzystasz z biblioteki random i nagle okazuje się, że tak naprawdę nie masz żadnych dostępnych materiałów w internecie
+
+4
+00:00:31,899 --> 00:00:38,539
+oraz, że kiedy próbujesz wpisać sobie jakąś funkcję, otwierasz sobie ten nawias, nic ci idei nie podpowiada.
+
+5
+00:00:39,320 --> 00:00:43,200
+W tym momencie korzystanie z takiej funkcji byłoby tragiczne.
+
+6
+00:00:43,740 --> 00:00:48,460
+A bardzo często jest tak, że część tych materiałów internetowych, które gdzieś pojawiają się na stronie w postaci dokumentacji,
+
+7
+00:00:48,460 --> 00:01:00,640
+pobiera właśnie te informacje z czegoś, co nazywa się PyDoc i gdzie znajduje się opis, zarówno opis tego, co robi ta funkcja, co zwraca ta funkcja oraz jakie argumenty przyjmuje.
+
+8
+00:01:01,399 --> 00:01:10,000
+Dzisiaj poruszymy sobie temat właśnie tego, jak przechowywać dokumentację, jak taką dokumentację w ogóle tworzyć.
+
+9
+00:01:10,000 --> 00:01:18,379
+No i powiemy sobie o tym, że właśnie ta dokumentacja jest dostępna w formie czytelnego tekstu, najczęściej napisanego po angielsku, więc my też tutaj będziemy skupiali się na języku angielskim.
+
+10
+00:01:18,459 --> 00:01:31,839
+Po drugie, dzięki temu inni programiści łatwiej mogą zrozumieć, co tak naprawdę ta funkcja robi, do czego ta funkcja jest stworzona albo też czego nie robi, jakie argumenty przyjmuje, do czego te argumenty służą.
+
+11
+00:01:31,959 --> 00:01:38,759
+Po trzecie, dzięki temu możemy się właśnie komunikować z innymi programistami oraz też, to są takie notatki dla nas na przyszłość.
+
+12
+00:01:39,280 --> 00:01:45,839
+Bardzo często, kiedy tworzę jakąś funkcję, później muszę wracać do kodu, zastanawiać się, co w tej funkcji zapisałem, dlaczego ona tak działa.
+
+13
+00:01:45,839 --> 00:01:48,339
+I jeżeli dokumentuję, to jest mi zdecydowanie...
+
+14
+00:01:48,459 --> 00:01:49,000
+Zdecydowanie łatwiej.
+
+15
+00:01:49,479 --> 00:01:58,639
+I ostatnia rzecz jest też taka, że jeżeli dokumentujemy również argumenty funkcji, o tym, o co chodzi z dokumentowaniem argumentów funkcji, z opisywaniem argumentów funkcji, zaraz ci powiem,
+
+16
+00:01:59,199 --> 00:02:10,099
+to jest też taka biblioteka, która nazywa się MyPy i za pomocą tej biblioteki, która może trochę nazwą kojarzyć się ze sztuką walki, można sprawdzać, czy wartości, które przekazujesz, zawsze są okej.
+
+17
+00:02:10,099 --> 00:02:18,099
+Czy nie masz jakiejś takiej sytuacji, jaka była gdzieś tam u nas kiedyś, że do funkcji miał przychodzić integer, wchodził tam jakiś string i wszystko się nagle zaczynało...
+
+18
+00:02:18,460 --> 00:02:18,879
+Wsypać.
+
+19
+00:02:19,020 --> 00:02:21,879
+Dlatego dokumentowanie funkcji jest niezwykle istotne.

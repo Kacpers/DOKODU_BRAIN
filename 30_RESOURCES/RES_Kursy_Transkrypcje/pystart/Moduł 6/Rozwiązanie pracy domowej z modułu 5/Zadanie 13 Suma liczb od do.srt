@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:01,800
+No i w 13 mamy rekurencję.
+
+2
+00:00:01,919 --> 00:00:05,780
+Napisz funkcję, która rekurencyjnie policzy sumę wszystkich wartości od 1 do n.
+
+3
+00:00:05,980 --> 00:00:09,900
+Dla przykładu sum it dla 5 wykona 5 plus 4 plus 3 plus 2 plus 1.
+
+4
+00:00:10,240 --> 00:00:11,099
+Bez pętli.
+
+5
+00:00:11,700 --> 00:00:16,899
+Czyli stworzę sobie sum it dla jakiejś liczby, która ma być integerem.
+
+6
+00:00:17,140 --> 00:00:20,039
+Wynikiem też na pewno będzie zawsze integer.
+
+7
+00:00:20,039 --> 00:00:26,920
+I tak naprawdę to co zrobię będzie bardzo podobne do silni.
+
+8
+00:00:26,920 --> 00:00:34,420
+Czyli jeżeli number to 0 to zwróć 0.
+
+9
+00:00:34,780 --> 00:00:43,960
+W przeciwnym wypadku zwróć number plus sum it dla number minus 1.
+
+10
+00:00:43,960 --> 00:00:55,960
+I w ten sposób jeżeli sobie wykonamy sum it dla 5 powinniśmy w wyniku print.
+
+11
+00:00:56,920 --> 00:00:57,140
+Super.
+
+12
+00:00:57,280 --> 00:00:58,420
+Otrzymać wartość 15.
+
+13
+00:00:58,579 --> 00:01:00,000
+5 plus 4 to jest 9.
+
+14
+00:01:00,760 --> 00:01:02,620
+12, 14, 15.
+
+15
+00:01:02,760 --> 00:01:03,280
+Wszystko działa.
+
+16
+00:01:03,539 --> 00:01:06,920
+Bo on nam po prostu wykona najpierw sum it dla 5.
+
+17
+00:01:09,980 --> 00:01:12,019
+Czyli będzie sum it dla 5.
+
+18
+00:01:12,599 --> 00:01:15,299
+Czytam 5 plus sum it dla 4.
+
+19
+00:01:15,859 --> 00:01:23,500
+Następnie to zwróci mu 4 plus sum it dla 3.
+
+20
+00:01:24,140 --> 00:01:26,299
+To zwróci mu 3.
+
+21
+00:01:26,920 --> 00:01:31,019
+3 plus sum it dla 2.
+
+22
+00:01:31,659 --> 00:01:35,340
+To zwróci mu 2 plus sum it dla 1.
+
+23
+00:01:35,659 --> 00:01:36,680
+Już kończę, obiecuję.
+
+24
+00:01:37,240 --> 00:01:39,700
+To zwróci mu 1 plus sum it dla 0.
+
+25
+00:01:40,140 --> 00:01:42,260
+A to zwróci mu 0.
+
+26
+00:01:42,400 --> 00:01:45,659
+W ten sposób będzie 5 plus 4 plus 3 plus 2 plus 1 plus 0.
+
+27
+00:01:45,960 --> 00:01:49,599
+Tak naprawdę powinienem mówić 0 plus 1 plus 2 plus 3 plus 4 plus 5.
+
+28
+00:01:50,020 --> 00:01:53,659
+I to jest sposób w jaki zadziałała nasza rekurencja.
+
+29
+00:01:54,719 --> 00:01:55,099
+To co?
+
+30
+00:01:55,099 --> 00:01:56,460
+Idziemy do ostatniego?
+
+31
+00:01:56,459 --> 00:01:57,519
+Albo przedostatniego?
+
+32
+00:01:57,919 --> 00:01:58,459
+Jakoś tak.

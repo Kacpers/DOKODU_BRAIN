@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:02,680
+A jak to jest z tym zapisywaniem danych?
+
+2
+00:00:03,820 --> 00:00:04,419
+Tak samo.
+
+3
+00:00:04,960 --> 00:00:07,259
+With open test txt i w.
+
+4
+00:00:07,620 --> 00:00:09,439
+W, write, pamiętasz.
+
+5
+00:00:09,919 --> 00:00:12,580
+I wtedy wewnątrz naszego wyrażenia
+
+6
+00:00:12,580 --> 00:00:15,200
+zapisujemy handler.write,
+
+7
+00:00:15,679 --> 00:00:16,379
+no bo zapis,
+
+8
+00:00:16,980 --> 00:00:19,199
+i w nawiasie przekazujemy to, co chcemy zapisać.
+
+9
+00:00:19,580 --> 00:00:20,719
+Tylko no nie zawsze jest tak,
+
+10
+00:00:20,800 --> 00:00:22,600
+że chcemy zapisywać coś wiersz pod wierszem.
+
+11
+00:00:23,160 --> 00:00:25,440
+Mamy tam bodajże metodę też write lines,
+
+12
+00:00:25,560 --> 00:00:26,460
+z tego co pamiętam.
+
+13
+00:00:26,600 --> 00:00:28,060
+Proponuję wbić i sprawdzić.
+
+14
+00:00:28,059 --> 00:00:31,059
+I w momencie, w którym napiszemy handler.write,
+
+15
+00:00:32,159 --> 00:00:34,200
+to w nawiasach możemy przekazać naprawdę coś,
+
+16
+00:00:34,280 --> 00:00:36,239
+co będzie zapisywało się słowo obok słowa.
+
+17
+00:00:36,820 --> 00:00:38,100
+Więc żeby spowodować,
+
+18
+00:00:38,280 --> 00:00:40,320
+że ten wiersz nam się złamie,
+
+19
+00:00:40,700 --> 00:00:42,879
+trzeba użyć czegoś takiego jak backslash n.
+
+20
+00:00:43,299 --> 00:00:45,739
+Backslash n to jest znak nowego wiersza.
+
+21
+00:00:45,920 --> 00:00:47,920
+To on właśnie był usuwany poprzednio
+
+22
+00:00:47,920 --> 00:00:48,879
+za pomocą strip.
+
+23
+00:00:49,619 --> 00:00:51,320
+I w momencie, w którym masz w,
+
+24
+00:00:52,120 --> 00:00:54,560
+to twój plik zostanie utworzony.
+
+25
+00:00:54,939 --> 00:00:56,439
+Nowy, jeżeli by go nie było.
+
+26
+00:00:56,439 --> 00:00:58,439
+A jeżeli już by był,
+
+27
+00:00:58,439 --> 00:01:00,439
+to będzie ucięty do zerowej długości.
+
+28
+00:01:00,439 --> 00:01:02,439
+Czyli cała zawartość po prostu przestanie istnieć.
+
+29
+00:01:02,439 --> 00:01:06,439
+A jeżeli chciałbyś mieć wyrażenia jedno pod drugim,
+
+30
+00:01:06,439 --> 00:01:08,439
+to wtedy trzeba zrobić dwie rzeczy.
+
+31
+00:01:08,439 --> 00:01:10,439
+Po pierwsze otworzyć sobie plik z a.
+
+32
+00:01:10,439 --> 00:01:14,439
+I tutaj pokazałem Ci trzy osobne wyrażenia with, with, with.
+
+33
+00:01:14,439 --> 00:01:16,439
+Tak naprawdę można byłoby to zrobić w jednym.
+
+34
+00:01:16,439 --> 00:01:19,439
+No ale jeżeli chcemy, to możemy zrobić w trzech.
+
+35
+00:01:19,439 --> 00:01:22,439
+I with open test.txt, przecinek a,
+
+36
+00:01:22,439 --> 00:01:24,439
+as handler, handler.write alas,
+
+37
+00:01:24,439 --> 00:01:26,439
+powoduje, że pojawi nam się ala w pierwszym,
+
+38
+00:01:26,439 --> 00:01:28,439
+w pierwszej linii.
+
+39
+00:01:28,439 --> 00:01:30,439
+W kolejnym robię to samo, pojawi się ma.
+
+40
+00:01:30,439 --> 00:01:32,439
+I w ostatniej linii pojawi się kota
+
+41
+00:01:32,439 --> 00:01:34,439
+i zostanie jedna pusta linia na końcu,
+
+42
+00:01:34,439 --> 00:01:35,439
+którą lubimy.
+
+43
+00:01:35,439 --> 00:01:38,439
+Powinna taka jedna pusta linia na końcu każdego pliku istnieć.
+
+44
+00:01:38,439 --> 00:01:42,439
+Pamiętam, że kiedy poznałem sposoby na pracę z plikiem,
+
+45
+00:01:42,439 --> 00:01:44,439
+właśnie odczytywanie i zapisywanie,
+
+46
+00:01:44,439 --> 00:01:47,439
+to bardzo mocno zmieniło to mój światopogląd.
+
+47
+00:01:47,439 --> 00:01:49,439
+W sensie nagle tak pomyślałem,
+
+48
+00:01:49,439 --> 00:01:51,439
+ile aplikacji mogę utworzyć.
+
+49
+00:01:51,439 --> 00:01:53,439
+Już nagle mogę to, to, tamto.
+
+50
+00:01:53,439 --> 00:01:56,439
+Wypożyczalnie filmów, wypożyczalnie książek,
+
+51
+00:01:56,439 --> 00:01:58,439
+przecież mogę, naprawdę mogę zrobić wszystko.
+
+52
+00:01:58,439 --> 00:02:00,439
+No i siedziałem i pisałem, kombinowałem
+
+53
+00:02:00,439 --> 00:02:02,439
+i się bardzo dobrze przy tym bawiłem,
+
+54
+00:02:02,439 --> 00:02:04,439
+do czego też Ciebie zachęcam.

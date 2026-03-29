@@ -1,0 +1,555 @@
+1
+00:00:00,000 --> 00:00:04,000
+Ze względu na to, że moment temu robiliśmy bardzo podobne zadanie,
+
+2
+00:00:05,000 --> 00:00:06,780
+to ja tylko pewne rzeczy sobie w nim zmienię.
+
+3
+00:00:07,540 --> 00:00:10,859
+Część po prostu skopiowałem, żeby nie przedłużać, żeby nie było nudno.
+
+4
+00:00:11,339 --> 00:00:13,720
+Czyli SQLite 3 Connect zmienię sobie na To Do.
+
+5
+00:00:14,780 --> 00:00:17,240
+Create Table może być To Do's.
+
+6
+00:00:17,559 --> 00:00:19,480
+Tutaj nie musielibyście się nawet przejmować tym,
+
+7
+00:00:19,559 --> 00:00:21,980
+że nazwa tabeli byłaby taka sama, bo to jest inna baza,
+
+8
+00:00:21,980 --> 00:00:24,719
+a w ramach baz możemy mieć te same nazwy tabeli.
+
+9
+00:00:24,800 --> 00:00:27,080
+W sensie różnych baz mogą być te same nazwy tabeli.
+
+10
+00:00:27,079 --> 00:00:31,099
+I na pewno będziemy potrzebowali mieć wtedy też To Do ID,
+
+11
+00:00:31,539 --> 00:00:35,239
+jakiś title i zamiast autora będziemy potrzebowali mieć informację,
+
+12
+00:00:35,399 --> 00:00:37,079
+czy jest zrobione, czy nie jest zrobione.
+
+13
+00:00:37,339 --> 00:00:40,799
+Czyli is done, ja będę zapisywał to sobie jako integer,
+
+14
+00:00:41,359 --> 00:00:44,179
+domyślnie zapiszę wartość 0.
+
+15
+00:00:44,439 --> 00:00:46,000
+To nie zostało wcześniej powiedziane,
+
+16
+00:00:46,119 --> 00:00:48,780
+no ale jakbyś zostawił integer jako wartość 0,1,
+
+17
+00:00:48,780 --> 00:00:50,420
+no to też byłoby OK, prawda?
+
+18
+00:00:50,959 --> 00:00:54,200
+W tym momencie nasza baza powinna się tworzyć.
+
+19
+00:00:54,399 --> 00:00:56,500
+Czyli tu sobie wyczyszczę terminal, robię Python,
+
+20
+00:00:56,679 --> 00:00:57,060
+spację.
+
+21
+00:00:57,079 --> 00:00:58,019
+Zadanie To Do.
+
+22
+00:00:59,939 --> 00:01:00,579
+Enter.
+
+23
+00:01:00,839 --> 00:01:01,859
+Przepraszam, setup.
+
+24
+00:01:02,939 --> 00:01:03,420
+Enter.
+
+25
+00:01:03,939 --> 00:01:06,539
+Nie mam komunikatu o błędzie, pojawiła mi się baza To Do,
+
+26
+00:01:06,959 --> 00:01:08,879
+więc zakładam, że wszystko jest OK.
+
+27
+00:01:09,480 --> 00:01:11,400
+Następną rzeczą, którą będę chciał zrobić,
+
+28
+00:01:11,560 --> 00:01:15,099
+będzie pobranie wszystkich zrealizowanych,
+
+29
+00:01:15,219 --> 00:01:16,920
+niezrealizowanych, czyli tych zerowych,
+
+30
+00:01:17,099 --> 00:01:18,079
+zadań z bazy danych.
+
+31
+00:01:18,739 --> 00:01:21,680
+Czyli raz jeszcze sobie wkleję ten kod
+
+32
+00:01:21,680 --> 00:01:24,159
+i moje zapytanie będzie wyglądało tak.
+
+33
+00:01:25,159 --> 00:01:26,640
+Potrzebuję kursor jeszcze mieć.
+
+34
+00:01:27,079 --> 00:01:30,079
+I mogę napisać tak.
+
+35
+00:01:30,280 --> 00:01:31,280
+For To Do.
+
+36
+00:01:33,780 --> 00:01:34,280
+In.
+
+37
+00:01:34,739 --> 00:01:37,140
+I w tym in będę miał zapytanie następujące.
+
+38
+00:01:37,539 --> 00:01:38,879
+Cursor execute.
+
+39
+00:01:42,239 --> 00:01:43,640
+Select.
+
+40
+00:01:45,079 --> 00:01:48,280
+Potrzebuję tak naprawdę wszystko, więc mogę zrobić select gwiazdka.
+
+41
+00:01:48,539 --> 00:01:51,079
+From To Dos.
+
+42
+00:01:51,780 --> 00:01:55,980
+Where is done równa się 0.
+
+43
+00:01:55,980 --> 00:01:59,300
+Bo mnie interesują tylko te zadania, które nie zostały zrobione.
+
+44
+00:02:00,000 --> 00:02:00,780
+Print To Do.
+
+45
+00:02:02,620 --> 00:02:05,920
+Następnie będę chciał zapytać użytkownika, co chce zrobić.
+
+46
+00:02:06,219 --> 00:02:09,740
+Czy chce dodać nowe zadanie, czy chce zmienić zadanie,
+
+47
+00:02:10,240 --> 00:02:15,180
+czy też chce wykonać jakąś inną czynność, której nie rozumiem.
+
+48
+00:02:15,900 --> 00:02:17,199
+Czyli print.
+
+49
+00:02:18,280 --> 00:02:20,120
+Co chcesz zrobić?
+
+50
+00:02:21,400 --> 00:02:22,640
+Print 0.
+
+51
+00:02:22,640 --> 00:02:22,680
+0.
+
+52
+00:02:23,819 --> 00:02:25,599
+Dodaj nowe zadanie.
+
+53
+00:02:25,979 --> 00:02:27,979
+1.
+
+54
+00:02:29,599 --> 00:02:34,459
+Ustaw zadanie jako zrealizowane.
+
+55
+00:02:37,159 --> 00:02:39,639
+Teraz odbieram od użytkownika informację.
+
+56
+00:02:40,139 --> 00:02:42,500
+Czyli value równa się input.
+
+57
+00:02:46,280 --> 00:02:51,299
+Którą czynność chcesz wykonać.
+
+58
+00:02:52,179 --> 00:02:53,399
+I możemy napisać.
+
+59
+00:02:53,399 --> 00:02:55,759
+I value równa się 0.
+
+60
+00:02:55,979 --> 00:02:57,979
+To wówczas będziemy dodawać.
+
+61
+00:02:57,979 --> 00:02:59,979
+L i value równa się 1.
+
+62
+00:02:59,979 --> 00:03:01,979
+To będziemy coś robić.
+
+63
+00:03:01,979 --> 00:03:03,979
+else.print.
+
+64
+00:03:03,979 --> 00:03:09,979
+Dokonałeś nieprawidłowego wyboru.
+
+65
+00:03:09,979 --> 00:03:17,979
+Tutaj jeżeli sprawdzamy 0 i 1 jako intedgery, to on nam oczywiście nie zadziała, bo input zwraca nam string.
+
+66
+00:03:17,979 --> 00:03:20,979
+Więc możemy sobie to spokojnie zamienić na string.
+
+67
+00:03:20,979 --> 00:03:24,979
+Dzięki temu nie będziemy musieli się też przejmować tym, co się wydarzy więcej.
+
+68
+00:03:24,979 --> 00:03:25,979
+I teraz.
+
+69
+00:03:25,979 --> 00:03:28,979
+Jeżeli ktoś chce dodać nowe zadanie, no to pytamy go o treść.
+
+70
+00:03:28,979 --> 00:03:33,979
+Czyli title równa się input.
+
+71
+00:03:33,979 --> 00:03:36,979
+Podaj co masz do zrobienia.
+
+72
+00:03:36,979 --> 00:03:38,979
+Albo po prostu co masz do zrobienia.
+
+73
+00:03:38,979 --> 00:03:49,979
+I wtedy możemy wykonać cursor.execute.
+
+74
+00:03:49,979 --> 00:03:54,979
+C U R S O R E.
+
+75
+00:03:54,979 --> 00:03:56,979
+E G Z E C U T E .
+
+76
+00:03:56,979 --> 00:03:59,979
+Insert into to do's.
+
+77
+00:03:59,979 --> 00:04:03,979
+I mnie tak naprawdę będzie interesowało tylko title.
+
+78
+00:04:03,979 --> 00:04:06,979
+Z tego względu, że ustawiłem sobie to do id jako auto increment.
+
+79
+00:04:06,979 --> 00:04:08,979
+I z dany jako default 0.
+
+80
+00:04:08,979 --> 00:04:10,979
+Więc tylko title muszę mu wstawić.
+
+81
+00:04:10,979 --> 00:04:13,979
+I tu jest niezwykle ważna rzecz.
+
+82
+00:04:13,979 --> 00:04:16,980
+Bo jeżeli przekazujemy mu tylko jedną wartość.
+
+83
+00:04:16,980 --> 00:04:18,980
+To nie możemy zrobić tego w ten sposób.
+
+84
+00:04:18,980 --> 00:04:20,980
+Bo to nie będzie wtedy tupla.
+
+85
+00:04:20,980 --> 00:04:22,980
+To jest po prostu zwykły string.
+
+86
+00:04:22,980 --> 00:04:23,980
+Tylko, że dodany w nawiasie.
+
+87
+00:04:23,980 --> 00:04:25,980
+Żeby był tuplą.
+
+88
+00:04:25,980 --> 00:04:27,980
+Potrzebujemy tutaj dorzucić przecinek.
+
+89
+00:04:27,980 --> 00:04:32,980
+No i oczywiście potrzebujemy zrobić commit na connection.
+
+90
+00:04:32,980 --> 00:04:37,980
+Natomiast jeżeli to będzie 1.
+
+91
+00:04:37,980 --> 00:04:40,980
+No to wtedy pytamy go o id zadania, które chcesz zamienić.
+
+92
+00:04:40,980 --> 00:04:42,980
+Czyli to do id.
+
+93
+00:04:42,980 --> 00:04:44,980
+Input.
+
+94
+00:04:44,980 --> 00:04:49,980
+Podaj id zadania, które zrobiłeś.
+
+95
+00:04:49,980 --> 00:04:51,980
+I to będzie to do do's.
+
+96
+00:04:51,980 --> 00:04:57,980
+No i następnie lecimy z tym samym, z bardzo podobnym zapytaniem.
+
+97
+00:04:57,980 --> 00:05:08,980
+Cursor.execute update to do's set is done równa się 1.
+
+98
+00:05:08,980 --> 00:05:15,980
+Where to do id równa się znak zapytania.
+
+99
+00:05:15,980 --> 00:05:16,980
+Przecinek.
+
+100
+00:05:16,980 --> 00:05:20,980
+I tym razem potrzebujemy przekazać mu to do id.
+
+101
+00:05:21,980 --> 00:05:24,980
+I tak samo, skoro wykonujemy taką czynność.
+
+102
+00:05:24,980 --> 00:05:28,980
+Robimy connection commit.
+
+103
+00:05:28,980 --> 00:05:32,980
+Mógłbym to sobie teraz jeszcze podzielić na określone funkcje.
+
+104
+00:05:32,980 --> 00:05:34,980
+Te działania.
+
+105
+00:05:34,980 --> 00:05:36,980
+Ale myślę, że na chwilę obecną też jest ok.
+
+106
+00:05:36,980 --> 00:05:38,980
+Kod jest dosyć czytelny.
+
+107
+00:05:38,980 --> 00:05:40,980
+Więc tutaj zostawię to w ten sposób.
+
+108
+00:05:40,980 --> 00:05:42,980
+Czyli wywołam sobie python zadanie to do.
+
+109
+00:05:42,980 --> 00:05:44,980
+No i co?
+
+110
+00:05:44,980 --> 00:05:45,980
+Co chcesz zrobić?
+
+111
+00:05:45,980 --> 00:05:46,980
+Najpierw muszę dodać nowe zadanie.
+
+112
+00:05:46,980 --> 00:05:48,980
+Co masz do zrobienia?
+
+113
+00:05:48,980 --> 00:05:49,980
+Ugotuj obiad.
+
+114
+00:05:49,980 --> 00:05:50,980
+Ugotuj obiad.
+
+115
+00:05:51,980 --> 00:05:52,980
+Nic się nie pokazało.
+
+116
+00:05:52,980 --> 00:05:54,980
+Strzałka do góry enter.
+
+117
+00:05:54,980 --> 00:05:56,980
+Pojawił mi się obiad do ugotowania.
+
+118
+00:05:56,980 --> 00:05:57,980
+No to zrobię coś jeszcze.
+
+119
+00:05:57,980 --> 00:05:58,980
+Dodaj nowe zadanie.
+
+120
+00:05:58,980 --> 00:05:59,980
+Co masz do zrobienia?
+
+121
+00:05:59,980 --> 00:06:01,980
+Wynieś śmieci.
+
+122
+00:06:03,980 --> 00:06:04,980
+Ok.
+
+123
+00:06:04,980 --> 00:06:06,980
+Mam obiad i śmieci.
+
+124
+00:06:06,980 --> 00:06:08,980
+No to teraz obiad zrobiony.
+
+125
+00:06:08,980 --> 00:06:09,980
+Czyli jedynka.
+
+126
+00:06:09,980 --> 00:06:11,980
+Podaj id zadania, które zrobiłeś.
+
+127
+00:06:11,980 --> 00:06:12,980
+To dwa.
+
+128
+00:06:12,980 --> 00:06:13,980
+Obiad miałem zrobić.
+
+129
+00:06:13,980 --> 00:06:14,980
+To jeden.
+
+130
+00:06:14,980 --> 00:06:15,980
+Znowu nic się nie pokazało.
+
+131
+00:06:15,980 --> 00:06:16,980
+Wchodzę w to do.
+
+132
+00:06:16,980 --> 00:06:19,980
+I zobaczcie już tylko śmieci mi się tutaj zostały do zrobienia.
+
+133
+00:06:19,980 --> 00:06:20,980
+No to też je zróbmy.
+
+134
+00:06:20,980 --> 00:06:21,980
+Jeden.
+
+135
+00:06:21,980 --> 00:06:22,980
+Dwa.
+
+136
+00:06:22,980 --> 00:06:24,980
+I lista to do jest pusta.
+
+137
+00:06:24,980 --> 00:06:27,980
+Mam nadzieję, że takie zadanie Ci się spodobało.
+
+138
+00:06:27,980 --> 00:06:29,980
+Bardzo serdecznie za nie dziękuję.
+
+139
+00:06:29,980 --> 00:06:31,980
+Idziemy dalej do pracy domowej.

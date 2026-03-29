@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:07,860
+No czyli tak, mamy pytać użytkownika tak długo, jak długo nie poda nam liczby, która będzie mniejsza niż liczba poprzednia.
+
+2
+00:00:08,359 --> 00:00:10,900
+Czyli tak naprawdę potrzebujemy mieć liczby.
+
+3
+00:00:11,259 --> 00:00:16,600
+Możemy przyjąć, że będziemy chcieli mieć wszystkie liczby, ponieważ to zadanie można też rozwiązać na inny sposób,
+
+4
+00:00:16,699 --> 00:00:20,679
+a mianowicie dodając każdą kolejną liczbę i licząc średnią za każdym razem.
+
+5
+00:00:21,219 --> 00:00:25,060
+Natomiast ja tutaj zakładam, że my po prostu będziemy chcieli mieć listę wszystkich tych liczb.
+
+6
+00:00:25,179 --> 00:00:28,940
+Czyli możemy sobie zrobić zmienną values, równa się pusta lista.
+
+7
+00:00:28,940 --> 00:00:34,640
+Drugą rzeczą, którą będzie nam potrzebna, to będzie nam potrzebna liczba i poprzednia liczba.
+
+8
+00:00:35,219 --> 00:00:39,179
+Na dzień dobry nasza liczba będzie musiała być odebrana od użytkownika.
+
+9
+00:00:39,460 --> 00:00:43,859
+Tylko, że żeby tą liczbę odebrać od użytkownika, trzeba najpierw go pytać w jakiejś pętli.
+
+10
+00:00:43,939 --> 00:00:46,079
+Więc możemy sobie wykonać while true.
+
+11
+00:00:46,620 --> 00:00:51,700
+Czyli będzie to ten rodzaj pętli, w którym będziemy chcieli założyć, że tak naprawdę pytamy użytkownika w nieskończoność,
+
+12
+00:00:51,799 --> 00:00:53,920
+chyba, że poda nam niepoprawną liczbę.
+
+13
+00:00:53,920 --> 00:00:58,020
+Czyli potrzebujemy mieć jakąś zmienną value, równa się int input.
+
+14
+00:00:58,939 --> 00:01:00,759
+Podaj liczbę.
+
+15
+00:01:01,879 --> 00:01:04,620
+Poprzednia liczba też będzie nam potrzebna.
+
+16
+00:01:05,099 --> 00:01:14,120
+Bo tutaj powinniśmy zrobić sobie sprawdzenie, czy poprzednia liczba jest mniejsza niż ta obecna, mniejsza, równa.
+
+17
+00:01:14,539 --> 00:01:16,939
+Bo wtedy musimy przerwać wykonywanie programu.
+
+18
+00:01:17,379 --> 00:01:22,500
+Stąd też możemy sobie stworzyć jakąś zmienną previous value.
+
+19
+00:01:22,500 --> 00:01:25,500
+I teraz ta zmienna previous value jaką może mieć wartość?
+
+20
+00:01:25,640 --> 00:01:28,900
+Nie może mieć wartości 0, bo może się okazać, że pójdziemy z liczbami samymi.
+
+21
+00:01:28,939 --> 00:01:31,700
+Wtedy 0 byłoby największe.
+
+22
+00:01:32,200 --> 00:01:34,759
+Więc najprościej jest stworzyć zmienną bez wartości.
+
+23
+00:01:35,060 --> 00:01:40,459
+Mówiliśmy sobie już o tym, że wtedy ta zmienna powinna mieć przypisaną wartość none.
+
+24
+00:01:41,079 --> 00:01:43,060
+I wtedy, takie przykłady już były, pamiętacie?
+
+25
+00:01:43,159 --> 00:01:44,620
+Robiliśmy value is none.
+
+26
+00:01:44,879 --> 00:01:49,519
+I teraz to, co musimy zrobić, żeby w razie czego przerwać naszą pętlę w tym miejscu,
+
+27
+00:01:49,939 --> 00:01:55,319
+będzie to polegało na tym, że będziemy musieli założyć, że nasze previous value nie jest none,
+
+28
+00:01:55,319 --> 00:01:57,739
+bo ono musi mieć jakąś wartość ustawioną.
+
+29
+00:01:57,819 --> 00:01:58,379
+Czyli if.
+
+30
+00:01:58,939 --> 00:02:00,819
+Previous value is not none.
+
+31
+00:02:01,700 --> 00:02:05,799
+Czyli dzięki temu wykluczamy sobie to pierwsze uruchomienie.
+
+32
+00:02:06,780 --> 00:02:07,159
+Lub.
+
+33
+00:02:08,900 --> 00:02:10,319
+Czy lub, nie and.
+
+34
+00:02:10,620 --> 00:02:12,740
+Tak naprawdę and, czyli nie jest none'em.
+
+35
+00:02:12,979 --> 00:02:17,840
+Oraz nowa wartość musi być mniejsza lub równa od wartości.
+
+36
+00:02:17,939 --> 00:02:22,139
+Czyli value jest mniejsze lub równe od previous value.
+
+37
+00:02:22,960 --> 00:02:24,379
+Czyli mamy taki jeden test.
+
+38
+00:02:24,379 --> 00:02:26,960
+Sprawdzamy sobie, czy poprzednia wartość nie jest none'em.
+
+39
+00:02:27,060 --> 00:02:28,780
+Oraz czy wartość nie jest.
+
+40
+00:02:28,780 --> 00:02:30,719
+Czy wartość jest mniejsza lub równa od poprzedniej wartości.
+
+41
+00:02:31,340 --> 00:02:35,879
+Jeżeli tak by się wydarzyło, no to wtedy robimy break.
+
+42
+00:02:36,360 --> 00:02:40,180
+W przeciwnym wypadku chcemy naszą wartość dodawać do naszego values.
+
+43
+00:02:40,319 --> 00:02:44,379
+Czyli values append value.
+
+44
+00:02:44,680 --> 00:02:47,020
+Jest jeszcze jedna niezwykle ważna rzecz.
+
+45
+00:02:47,180 --> 00:02:53,580
+A mianowicie, kiedy już ta pętla się kończy, to przed jej zakończeniem trzeba wykonać jeszcze jedną zmianę.
+
+46
+00:02:53,580 --> 00:02:58,580
+A mianowicie ustawić, że poprzednią wartością previous value jest tak naprawdę nasze value.
+
+47
+00:02:58,780 --> 00:03:05,180
+I wtedy jeżeli sobie wypiszemy nasze values, na razie bez tej średniej, to powinno nam to grać.
+
+48
+00:03:05,180 --> 00:03:05,780
+Sprawdźmy.
+
+49
+00:03:05,780 --> 00:03:12,780
+Python while 2, 1, 2, 3, 4, 3.
+
+50
+00:03:13,680 --> 00:03:15,979
+I pokazało się tylko 1, 2, 3, 4.
+
+51
+00:03:16,280 --> 00:03:25,280
+Czyli on nam zakończył działanie pętli i nie dodał tej nowej wartości do naszej listy wtedy, kiedy ta wartość jest nieprawidłowa.
+
+52
+00:03:25,780 --> 00:03:27,219
+No i ostatnia rzecz, którą trzeba zrobić.
+
+53
+00:03:27,219 --> 00:03:28,360
+To trzeba policzyć średnio.
+
+54
+00:03:28,360 --> 00:03:35,860
+Średnią, czyli print sum na values podzielone przez len na values.
+
+55
+00:03:36,120 --> 00:03:38,940
+To było takie zadanie z cyklu pokombinuj.
+
+56
+00:03:40,740 --> 00:03:47,320
+Kto z Was pokombinował i wykorzystał tę wiedzę, to myślę, że zadziałało.
+
+57
+00:03:47,440 --> 00:03:50,040
+Natomiast trzeba było chwilę nad tym zadaniem spędzić.
+
+58
+00:03:50,540 --> 00:03:53,080
+I tu się nie dziwię, jeżeli ktoś spędził godzinę czy dwie.
+
+59
+00:03:53,080 --> 00:03:58,080
+Myślę, że taka kombinacja tutaj pod tym względem jest jak najbardziej wskazana.
+
+60
+00:03:58,360 --> 00:04:05,580
+Ale czasem w programowaniu też tak bywa, że trzeba po prostu się na moment gdzieś zatrzymać, zadbać o ciszę i pokombinować.
+
+61
+00:04:06,200 --> 00:04:09,460
+No i tak naprawdę jakby się rozpisało zadanie na kartce, to wyszłoby podobnie.
+
+62
+00:04:09,580 --> 00:04:15,700
+Jeżeli szukalibyśmy takiej sytuacji, to można byłoby sobie ten algorytm bardzo podobnie rozpisać.
+
+63
+00:04:16,139 --> 00:04:20,220
+Jedyną rzeczą, która mogłaby stanowić problem jest to previous value jako none.
+
+64
+00:04:20,400 --> 00:04:28,220
+Myślę, że jeżeli ktoś ustawił previous value jako zero, to wtedy tak naprawdę mógł się pozbyć tej sytuacji.
+
+65
+00:04:28,360 --> 00:04:37,920
+I dla liczb dodatnich, to jak najbardziej też by zadziałało.
+
+66
+00:04:38,199 --> 00:04:41,480
+Natomiast jeżeli poszlibyśmy w liczby ujemne, to już by nie działało.
+
+67
+00:04:41,900 --> 00:04:47,100
+Więc potraktujcie ten dodatek jako taki dodatek zabezpieczenie się na wypadek liczb ujemnych.
+
+68
+00:04:47,540 --> 00:04:50,400
+I bez tego też bym to zadanie ocenił na piątkę.
+
+69
+00:04:50,600 --> 00:04:54,100
+Natomiast z tym is none, oceniam to zadanie na szóstkę.
+
+70
+00:04:54,100 --> 00:04:56,840
+I przechodzimy do zadania numer trzy.
+
+71
+00:04:57,400 --> 00:04:57,939
+Do zobaczenia.
+
+72
+00:04:58,360 --> 00:04:59,360
+Dziękuję.

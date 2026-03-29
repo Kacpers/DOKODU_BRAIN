@@ -1,0 +1,267 @@
+1
+00:00:00,000 --> 00:00:02,180
+Jak zadeklarować funkcję?
+
+2
+00:00:02,620 --> 00:00:06,200
+Bo tu musimy sobie powiedzieć o tym, że kiedy przygotowujesz jakiś fragment kodu
+
+3
+00:00:06,200 --> 00:00:11,759
+i go nazywasz, to to nazwanie, to wydzielenie takiego kodu gdzieś w górę
+
+4
+00:00:11,759 --> 00:00:14,220
+nazywamy deklaracją funkcji.
+
+5
+00:00:14,720 --> 00:00:19,300
+Czyli nadanie nazwy blokowi kodu to jest deklaracja funkcji.
+
+6
+00:00:19,920 --> 00:00:23,859
+Żeby ten kod zadeklarować, potrzebujesz użyć nowego słowa kluczowego,
+
+7
+00:00:24,000 --> 00:00:26,280
+którego jeszcze do tej pory nie używaliśmy.
+
+8
+00:00:26,760 --> 00:00:27,960
+Jest to słowo kluczowe DEF.
+
+9
+00:00:27,960 --> 00:00:32,160
+Czyli najpierw jest DEF, po nim następuje nazwa funkcji,
+
+10
+00:00:32,880 --> 00:00:35,520
+nawias, o którym sobie zaraz powiemy, dwukropek,
+
+11
+00:00:35,939 --> 00:00:41,120
+no i kod odpowiedzialny za działanie tej funkcji również powinien być wtedy wcięty.
+
+12
+00:00:42,219 --> 00:00:46,200
+Po drugie, musimy wiedzieć o tym, że sama ta deklaracja
+
+13
+00:00:46,200 --> 00:00:49,019
+tak naprawdę niczego nowego nie robi.
+
+14
+00:00:49,280 --> 00:00:52,359
+Ona przedstawia nam, że w kodzie będzie taka funkcja,
+
+15
+00:00:52,620 --> 00:00:55,420
+ale nie spodziewaj się, że zobaczysz wynik tej funkcji.
+
+16
+00:00:55,420 --> 00:00:57,780
+To jest trochę tak, jak kiedy uruchamiasz program,
+
+17
+00:00:57,780 --> 00:01:00,200
+to ten program zanim się uruchomi, on się szybko uczy.
+
+18
+00:01:00,320 --> 00:01:04,159
+A, jest funkcja len, jest funkcja sam, jest funkcja tam jakaś jeszcze, print, input.
+
+19
+00:01:04,560 --> 00:01:07,680
+On poznaje te funkcje, on wie, że one gdzieś są w nim zawarte,
+
+20
+00:01:08,219 --> 00:01:12,260
+ale dopóki nie użyjesz tej funkcji, to nie zobaczysz wyniku tego kodu.
+
+21
+00:01:12,599 --> 00:01:16,040
+Czy też nie stanie się coś, co jest przedmiotem działania tej funkcji.
+
+22
+00:01:16,680 --> 00:01:17,939
+I tutaj będzie dokładnie tak samo.
+
+23
+00:01:18,859 --> 00:01:22,780
+Czyli kiedy stworzymy sobie funkcję, będziemy musieli ją jeszcze później wywołać
+
+24
+00:01:23,500 --> 00:01:26,780
+za pomocą jej nazwy, żeby ten kod nam funkcjonował.
+
+25
+00:01:27,780 --> 00:01:29,780
+Czyli najpierw jest słówko kluczowe def.
+
+26
+00:01:29,920 --> 00:01:30,820
+Zaraz zobaczysz przykład.
+
+27
+00:01:31,420 --> 00:01:33,840
+Ja wiem, że fragment kodu mówi więcej niż tysiąc słów,
+
+28
+00:01:33,939 --> 00:01:35,519
+ale tych słów trochę jeszcze musisz wysłuchać.
+
+29
+00:01:35,900 --> 00:01:39,140
+Najpierw jest słówko kluczowe def, po nim następuje nazwa.
+
+30
+00:01:39,420 --> 00:01:41,799
+Nazwa, tak jak wspomniałem, musi nazywać tę czynność.
+
+31
+00:01:42,240 --> 00:01:45,020
+Jeżeli chcesz, żeby składała się z większej liczby słów,
+
+32
+00:01:45,099 --> 00:01:47,340
+na przykład print something, do something, bla, bla, bla,
+
+33
+00:01:47,480 --> 00:01:50,780
+to musisz rozdzielać te poszczególne słowa znakiem podkreślenia
+
+34
+00:01:51,299 --> 00:01:54,719
+i też używasz samych małych liter, tak jak było z nazwami zmiennych.
+
+35
+00:01:54,719 --> 00:01:56,480
+No i ważna rzecz właśnie,
+
+36
+00:01:56,480 --> 00:01:59,359
+że funkcje nie mogą mieć takich samych nazw
+
+37
+00:01:59,359 --> 00:02:02,040
+i takich samych identyfikatorów tak naprawdę.
+
+38
+00:02:02,560 --> 00:02:04,120
+Identyfikator to jest po prostu ta nazwa,
+
+39
+00:02:04,600 --> 00:02:06,420
+jak nazwy zmiennych czy innych funkcji.
+
+40
+00:02:06,780 --> 00:02:09,060
+Bo jeżeli stworzyłbyś sobie funkcję o nazwie len,
+
+41
+00:02:09,259 --> 00:02:11,900
+albo funkcję o nazwie print, albo funkcję o nazwie input,
+
+42
+00:02:12,379 --> 00:02:14,520
+to absolutnie nie byłoby błędu.
+
+43
+00:02:14,900 --> 00:02:16,480
+Python pozwoliłby ci na to.
+
+44
+00:02:16,939 --> 00:02:21,500
+Natomiast niestety miałbyś taką konsekwencję, taki problem,
+
+45
+00:02:21,500 --> 00:02:26,460
+że po prostu kiedy chcielibyśmy użyć tej rdzennej funkcji,
+
+46
+00:02:26,479 --> 00:02:30,500
+nazwijmy, to ona już zostałaby nadpisana przez tą, którą utworzyliśmy.
+
+47
+00:02:30,899 --> 00:02:33,500
+Więc trzeba na to zwracać uwagę i czasem zdarza się,
+
+48
+00:02:33,579 --> 00:02:37,479
+że nie wiemy o tym, że na przykład jest funkcja o nazwie id,
+
+49
+00:02:37,859 --> 00:02:40,039
+a gdzieś stworzymy sobie zmienną o nazwie id.
+
+50
+00:02:40,359 --> 00:02:44,179
+I przez to w przyszłości, kiedy będzie trzeba w tym pliku wywołać funkcję id,
+
+51
+00:02:44,639 --> 00:02:47,899
+to po prostu się tego zrobić nie uda, bo ta nazwa będzie już nadpisana.
+
+52
+00:02:48,500 --> 00:02:50,959
+Trzeba na to zwracać uwagę, ale zawsze pamiętajmy,
+
+53
+00:02:50,959 --> 00:02:52,199
+że możemy zmieniać też nazwy.
+
+54
+00:02:52,560 --> 00:02:55,659
+Pokazałem Ci w poprzedniej lekcji, jak to robić za pomocą refactor rename,
+
+55
+00:02:56,060 --> 00:02:56,459
+więc i tutaj.
+
+56
+00:02:56,479 --> 00:02:58,159
+Tutaj też jest taka możliwość.
+
+57
+00:02:58,259 --> 00:03:01,139
+Jeżeli coś się stanie, to też PyCharm o tym przypomina,
+
+58
+00:03:01,479 --> 00:03:02,979
+więc z tym też nie należy się przejmować,
+
+59
+00:03:03,179 --> 00:03:05,539
+ale warto o tym wiedzieć i po prostu zawczasu,
+
+60
+00:03:05,620 --> 00:03:08,759
+jeżeli wiemy, że nie może się funkcja nazywać print,
+
+61
+00:03:08,899 --> 00:03:11,739
+albo funkcja nie może się nazywać jakoś inaczej,
+
+62
+00:03:11,799 --> 00:03:13,919
+jak nazwa naszej zmiennej, to trzeba o tym pamiętać.
+
+63
+00:03:14,379 --> 00:03:16,819
+I na slajdzie tego nie ma, ale jeszcze jedna rzecz właśnie ode mnie,
+
+64
+00:03:17,219 --> 00:03:20,299
+a mianowicie skoro funkcje mają nazywać jakąś czynność,
+
+65
+00:03:20,439 --> 00:03:22,679
+to powinniśmy używać gdzieś czasownika w tej funkcji.
+
+66
+00:03:22,679 --> 00:03:25,879
+Czyli bardziej print id, czy print dokument,
+
+67
+00:03:25,879 --> 00:03:27,900
+niż sama funkcja nazwie dokument.

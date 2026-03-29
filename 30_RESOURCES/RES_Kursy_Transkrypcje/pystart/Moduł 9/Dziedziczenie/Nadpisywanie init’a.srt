@@ -1,0 +1,391 @@
+1
+00:00:00,000 --> 00:00:06,060
+I bardzo często w tym przypadku zastanawiamy się też, jak zachowają się metody specjalne.
+
+2
+00:00:06,379 --> 00:00:09,679
+No i tu szczególnie zastanawiamy się, jak zachowa się metoda init.
+
+3
+00:00:09,859 --> 00:00:16,699
+No bo bardzo często jest tak, że jednak tę metodę sobie tworzymy i chcielibyśmy albo ją nadpisać, albo jej nie nadpisywać,
+
+4
+00:00:16,699 --> 00:00:25,719
+bo skoro tworzymy sobie rodzica i tworzymy sobie dziecko, no to ten init tak naprawdę też jest wywoływany, zakładając, że znajduje się on w rodzicu.
+
+5
+00:00:25,719 --> 00:00:33,399
+No, zobacz, mam klasę parent, w niej mam init, w nim mam print rodzic, poniżej mam klasę dziecko.
+
+6
+00:00:33,519 --> 00:00:36,200
+Załóżmy, że ma ona jakieś dodatkowe metody, ale nie ma init.
+
+7
+00:00:36,560 --> 00:00:40,239
+Co się stanie w tym momencie, jeżeli wykonamy sobie ten kod?
+
+8
+00:00:40,239 --> 00:00:51,700
+W tym momencie wykona nam się init z klasy, po której dziedziczymy, czyli wykona nam się init z klasy parent, czyli pojawi nam się informacja rodzic.
+
+9
+00:00:52,120 --> 00:00:54,859
+Co musielibyśmy zrobić, żeby ta informacja się nie pokazała?
+
+10
+00:00:54,859 --> 00:00:59,600
+Czy też, żeby nasz child mógł zrobić swojego innita?
+
+11
+00:01:00,039 --> 00:01:03,159
+No, najprościej byłoby po prostu wywołać def init.
+
+12
+00:01:03,619 --> 00:01:08,140
+Natomiast wtedy nie wywołamy innita, który pochodzi z rodzica.
+
+13
+00:01:08,500 --> 00:01:09,879
+To jest bardzo istotne.
+
+14
+00:01:10,659 --> 00:01:12,260
+Chyba, że dodamy super.
+
+15
+00:01:12,879 --> 00:01:21,280
+I wręcz jest taka zasada, że jeżeli przeciążamy, przysłaniamy, jeżeli po prostu deklarujemy init wewnątrz dziecka
+
+16
+00:01:21,280 --> 00:01:24,840
+i w ten sposób zabieramy wykonywanie init,
+
+17
+00:01:24,859 --> 00:01:31,079
+to powinien się tutaj ten super znaleźć, chyba, że świadomie nie chcemy go wywoływać.
+
+18
+00:01:31,539 --> 00:01:32,379
+Spójrz na ten przykład.
+
+19
+00:01:33,539 --> 00:01:34,599
+Mamy klasę person.
+
+20
+00:01:35,260 --> 00:01:38,159
+Każda osoba ma mieć swoje imię i nazwisko.
+
+21
+00:01:38,680 --> 00:01:46,460
+W momencie, w którym przygotowujemy imię i nazwisko, to przypisujemy sobie do zmiennej details połączenie imienia i nazwiska.
+
+22
+00:01:47,480 --> 00:01:48,239
+Jedyne co.
+
+23
+00:01:48,900 --> 00:01:51,859
+I w tym momencie, niżej, deklarujemy sobie studenta.
+
+24
+00:01:51,859 --> 00:01:54,859
+I nasz student dziedziczy po osobę.
+
+25
+00:01:54,859 --> 00:02:00,859
+Skoro dziedziczy po osobie, to powinniśmy mu też przekazać imię i nazwisko.
+
+26
+00:02:01,500 --> 00:02:06,340
+Bo jeżeli nie wykonalibyśmy, nie przekazalibyśmy tego imienia i nazwiska,
+
+27
+00:02:06,340 --> 00:02:10,080
+to najpewniej zniszczylibyśmy logikę klasy person.
+
+28
+00:02:10,080 --> 00:02:17,379
+No bo skoro klasa person obsługuje imię i nazwisko, to gdzieś tutaj w tych metodach zapewne to imię i nazwisko jest wykorzystywane.
+
+29
+00:02:17,379 --> 00:02:23,960
+Więc nie podając tych dwóch wartości, działanie tej klasy przestałoby mieć sens.
+
+30
+00:02:23,960 --> 00:02:27,159
+No bo po co ktoś odebrał te właściwości?
+
+31
+00:02:27,159 --> 00:02:29,159
+Po to, żeby je jakoś wykorzystywać.
+
+32
+00:02:29,159 --> 00:02:33,480
+Jeżeli ich nie wykorzystujemy, bo ich nie przekazaliśmy, no to znaczy, że robimy błąd.
+
+33
+00:02:33,480 --> 00:02:37,200
+I teraz poniżej tworzymy sobie drugą klasę o nazwie student.
+
+34
+00:02:37,200 --> 00:02:39,200
+Ta klasa również dziedziczy po person.
+
+35
+00:02:39,200 --> 00:02:41,200
+I zobacz.
+
+36
+00:02:41,200 --> 00:02:44,200
+init self firstName lastName semester.
+
+37
+00:02:44,200 --> 00:02:48,200
+Robimy super, gdzie przekazujemy mu firstName i lastName.
+
+38
+00:02:48,200 --> 00:02:50,600
+Czyli my w ten sposób wykonujemy metodę init z klasy person.
+
+39
+00:02:50,600 --> 00:02:52,600
+Czyli my w ten sposób wykonujemy metodę init z klasy person.
+
+40
+00:02:52,600 --> 00:02:53,600
+Czyli my w ten sposób wykonujemy metodę init z klasy person.
+
+41
+00:02:53,599 --> 00:02:55,599
+Przekazujemy imię i nazwisko.
+
+42
+00:02:55,599 --> 00:02:57,599
+Dzięki czemu ten init też się wykonuje.
+
+43
+00:02:57,599 --> 00:03:03,599
+I nasza osoba, ta nasza klasa person zaczyna posiadać imię i nazwisko.
+
+44
+00:03:03,599 --> 00:03:07,599
+Co prawda zrobiliśmy to po to, żeby móc obsłużyć właściwość semester.
+
+45
+00:03:07,599 --> 00:03:12,599
+I dzięki temu, że odebraliśmy tę właściwość tu.
+
+46
+00:03:12,599 --> 00:03:16,599
+Możemy sobie śmiało napisać self semester równa się semester.
+
+47
+00:03:16,599 --> 00:03:20,599
+Logika za tym jest taka, że jeżeli teraz tworzę sobie Jana, który jest studentem.
+
+48
+00:03:20,599 --> 00:03:22,599
+Przypisuję do niego Jan Kowalski drugi semestr.
+
+49
+00:03:22,599 --> 00:03:23,599
+Przypisuję do niego Jan Kowalski drugi semestr.
+
+50
+00:03:23,599 --> 00:03:25,599
+No to mogę wykonać jan.details.
+
+51
+00:03:25,599 --> 00:03:27,599
+No to mogę wykonać jan.details.
+
+52
+00:03:27,599 --> 00:03:29,599
+Ponieważ utworzyłem to w tym miejscu.
+
+53
+00:03:29,599 --> 00:03:31,599
+Oraz mogę wykonać jan.semester.
+
+54
+00:03:31,599 --> 00:03:33,599
+No bo będę miał tą dwójkę.
+
+55
+00:03:33,599 --> 00:03:35,599
+Jeżeli tej linii by zabrakło, ósmej linii.
+
+56
+00:03:35,599 --> 00:03:37,599
+Czyli linii, w której znajduje się super.
+
+57
+00:03:37,599 --> 00:03:39,599
+To to details nie byłoby zadeklarowane.
+
+58
+00:03:39,599 --> 00:03:41,599
+I nie miałbym do niego dostępu.
+
+59
+00:03:41,599 --> 00:03:43,599
+Więc najczęściej, nawet z tego co pamiętam to w niektórych IDE tak jest.
+
+60
+00:03:43,599 --> 00:03:45,599
+Więc najczęściej, nawet z tego co pamiętam to w niektórych IDE tak jest.
+
+61
+00:03:45,599 --> 00:03:47,599
+Więc najczęściej, nawet z tego co pamiętam to w niektórych IDE tak jest.
+
+62
+00:03:47,599 --> 00:03:49,599
+Nie wiem czy PyCharm tego nie robi.
+
+63
+00:03:49,599 --> 00:03:51,599
+Nie pamiętam w tej chwili.
+
+64
+00:03:51,599 --> 00:03:53,599
+Jest tak, że kiedy przeciążam
+
+65
+00:03:53,599 --> 00:03:55,599
+init'a, czy nadpisuję init'a
+
+66
+00:03:55,599 --> 00:03:57,599
+Jest tak, że kiedy przeciążam init'a, czy nadpisuję init'a
+
+67
+00:03:57,599 --> 00:03:59,599
+To wtedy kiedy wykonuję super z nawiasami kropka init
+
+68
+00:03:59,599 --> 00:04:01,599
+To wtedy kiedy wykonuję super z nawiasami kropka init
+
+69
+00:04:01,599 --> 00:04:03,599
+Przekazując mu first name i last name
+
+70
+00:04:03,599 --> 00:04:05,599
+To on mi wtedy, to jeżeli tego nie zrobię
+
+71
+00:04:05,599 --> 00:04:07,599
+To on mi wtedy wyświetli, że ostrzeżenie
+
+72
+00:04:07,599 --> 00:04:09,599
+Hej, warto byłoby to zrobić.
+
+73
+00:04:09,599 --> 00:04:11,599
+Wiem, że wiedza, która znajdowała się w tych lekcjach
+
+74
+00:04:11,599 --> 00:04:13,599
+dotyczących dziedziczenia
+
+75
+00:04:13,599 --> 00:04:15,599
+najłatwiejsza nie była.
+
+76
+00:04:15,599 --> 00:04:17,600
+Natomiast jest to jeden z najtrudniejszych momentów w tym kursie.
+
+77
+00:04:17,600 --> 00:04:19,600
+Natomiast jest to jeden z najtrudniejszych momentów w tym kursie.
+
+78
+00:04:19,600 --> 00:04:21,600
+I
+
+79
+00:04:21,600 --> 00:04:23,600
+wiem, że jeżeli obejrzysz sobie
+
+80
+00:04:23,600 --> 00:04:25,600
+te lekcje jeszcze parę razy, to okaże się, że to wcale
+
+81
+00:04:25,600 --> 00:04:27,600
+takie trudne nie jest.
+
+82
+00:04:27,600 --> 00:04:29,600
+Tym bardziej, że będziemy mieli też okazję przećwiczenia
+
+83
+00:04:29,600 --> 00:04:31,600
+tego, a za chwilę będzie nam to
+
+84
+00:04:31,600 --> 00:04:33,600
+niezwykle potrzebne w pokazywaniu wyjątków.
+
+85
+00:04:33,600 --> 00:04:35,600
+dlatego też
+
+86
+00:04:35,600 --> 00:04:37,600
+możesz potraktować tę wiedzę jako coś, co warto byłoby znać.
+
+87
+00:04:37,600 --> 00:04:39,600
+możesz potraktować tę wiedzę jako coś, co warto byłoby znać.
+
+88
+00:04:39,600 --> 00:04:41,600
+Nie mniej
+
+89
+00:04:41,600 --> 00:04:43,600
+warto wiedzieć też trochę więcej.
+
+90
+00:04:43,600 --> 00:04:45,600
+Bo jednak dziedziczenie cały czas w Pythonie
+
+91
+00:04:45,600 --> 00:04:47,600
+występuje.
+
+92
+00:04:47,600 --> 00:04:49,600
+No i tak jak wspominałem, cała obiektowość,
+
+93
+00:04:49,600 --> 00:04:51,600
+czy dużo, dużo więcej obiektowości też
+
+94
+00:04:51,600 --> 00:04:53,600
+znajdziesz w kursie PyCamp,
+
+95
+00:04:53,600 --> 00:04:55,600
+który może być kolejnym kursem po PyStarcie.
+
+96
+00:04:55,600 --> 00:04:57,600
+I tak jak w QMAjBazy.
+
+97
+00:04:57,600 --> 00:04:59,600
+Dziedziczenie mamy za sobą, możemy iść dalej
+
+98
+00:04:59,600 --> 00:05:01,600
+do zadań.

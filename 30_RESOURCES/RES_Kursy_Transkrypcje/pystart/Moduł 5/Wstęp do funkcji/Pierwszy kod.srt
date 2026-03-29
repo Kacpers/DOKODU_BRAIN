@@ -1,0 +1,407 @@
+1
+00:00:00,000 --> 00:00:04,500
+No i tak jak wspominałem, fragment kodu mówi więcej niż tysiąc słów.
+
+2
+00:00:05,040 --> 00:00:07,360
+Zobacz, wchodzimy w funkcję. Jak taka funkcja wygląda?
+
+3
+00:00:08,000 --> 00:00:11,359
+Najpierw jest słówko def, później jest nazwa, o tym sobie mówiliśmy.
+
+4
+00:00:11,980 --> 00:00:16,660
+Później otwieramy nawias, zamykamy nawias, jest dwukropek i wcięcie.
+
+5
+00:00:17,679 --> 00:00:20,440
+Kolejne słówko return, o nim też zaraz posłuchasz.
+
+6
+00:00:20,940 --> 00:00:22,719
+No i jakaś operacja.
+
+7
+00:00:23,820 --> 00:00:24,539
+O co tutaj chodzi?
+
+8
+00:00:24,539 --> 00:00:30,379
+Czyli kiedy tworzymy funkcję, ta funkcja, kiedy wydzielamy sobie blok kodu,
+
+9
+00:00:30,480 --> 00:00:33,399
+czy myślimy o tej funkcji, to zawsze możemy stwierdzić,
+
+10
+00:00:33,500 --> 00:00:36,200
+że ta funkcja będzie miała mieć jakieś parametry.
+
+11
+00:00:36,899 --> 00:00:40,700
+Czyli na przykład funkcja cosinus też ma jakiś parametr, jest to x.
+
+12
+00:00:41,320 --> 00:00:44,560
+Pod ten parametr możemy później podstawić jakąś wartość.
+
+13
+00:00:44,659 --> 00:00:47,099
+Czyli możemy sprawić, że funkcja będzie miała też argument,
+
+14
+00:00:47,640 --> 00:00:49,960
+czyli pod parametr podstawiamy wartość, staje się to argumentem.
+
+15
+00:00:49,960 --> 00:00:54,179
+No i możemy dla cosinusa 405 stopni zwrócić jakąś wartość, prawda?
+
+16
+00:00:54,539 --> 00:00:57,019
+No i tu jest dokładnie tak samo.
+
+17
+00:00:57,560 --> 00:01:00,500
+Kiedy tworzysz funkcję, czy jak był na przykład print,
+
+18
+00:01:00,759 --> 00:01:04,920
+przepraszam, tak wróciłem, ale był print i print też miał jakieś wartości,
+
+19
+00:01:05,000 --> 00:01:07,079
+które można było do niego przekazać, które powodowały,
+
+20
+00:01:07,200 --> 00:01:10,599
+że ta zawartość pokazywała się w konsoli.
+
+21
+00:01:11,120 --> 00:01:13,460
+I tutaj jest dokładnie, dokładnie identycznie.
+
+22
+00:01:13,560 --> 00:01:16,140
+A mianowicie, kiedy tworzysz sobie tego typu funkcję,
+
+23
+00:01:16,140 --> 00:01:20,019
+to ta funkcja musi otrzymywać parametry.
+
+24
+00:01:20,159 --> 00:01:22,719
+No i tu mamy parametr a i parametr b.
+
+25
+00:01:23,280 --> 00:01:24,159
+Te dwa parametry,
+
+26
+00:01:24,159 --> 00:01:27,939
+będą później wykorzystywane w kodzie tej funkcji.
+
+27
+00:01:28,420 --> 00:01:31,579
+Akurat tak się składa, że moja funkcja ma po prostu jedną linijkę.
+
+28
+00:01:31,700 --> 00:01:33,399
+Natomiast jeżeli chciałbym dodać ich więcej,
+
+29
+00:01:33,560 --> 00:01:35,859
+to mógłbym oczywiście ten kod rozszerzyć
+
+30
+00:01:35,859 --> 00:01:40,420
+i na koniec albo gdzieś w trakcie też może się pojawić słówko return.
+
+31
+00:01:40,979 --> 00:01:42,280
+Do czego służy słówko return?
+
+32
+00:01:42,799 --> 00:01:45,159
+Ono służy do tego, żeby funkcja zwracała nam wartość.
+
+33
+00:01:46,060 --> 00:01:49,579
+Czyli jeżeli będziemy chcieli, żeby wynik funkcji był jakoś przedstawiony,
+
+34
+00:01:50,000 --> 00:01:53,579
+to ten wynik funkcji musi się właśnie znaleźć za słówkiem return.
+
+35
+00:01:54,159 --> 00:01:56,959
+Czyli na przykład robisz sobie funkcję,
+
+36
+00:01:57,340 --> 00:02:02,259
+która będzie określała, jaka kategoria produktu ma zostać nadana.
+
+37
+00:02:02,780 --> 00:02:04,459
+No i ktoś wysyła ci produkt i mówi,
+
+38
+00:02:04,539 --> 00:02:07,099
+słuchaj, ten produkt służy do leczenia,
+
+39
+00:02:07,640 --> 00:02:11,800
+ładnie pachnie, coś tam jeszcze, coś tam jeszcze, coś tam jeszcze.
+
+40
+00:02:12,219 --> 00:02:14,900
+No i z tego już wiesz, aha, okej, to będzie jakaś tam maść.
+
+41
+00:02:15,500 --> 00:02:15,979
+Rozumiesz?
+
+42
+00:02:16,099 --> 00:02:18,979
+Czyli te parametry to są wszystkie te rzeczy,
+
+43
+00:02:19,120 --> 00:02:22,639
+które musisz wiedzieć, żeby przeprowadzić swoje tam wywiad.
+
+44
+00:02:23,159 --> 00:02:23,439
+Natomiast to, co znajduje się w tym produktie, to jest to, co masz.
+
+45
+00:02:23,439 --> 00:02:23,460
+Natomiast to, co znajdujesz w tym produktie, to jest to, co masz.
+
+46
+00:02:23,460 --> 00:02:23,519
+Natomiast to, co masz.
+
+47
+00:02:23,519 --> 00:02:23,560
+Natomiast to, co masz.
+
+48
+00:02:23,560 --> 00:02:23,620
+Natomiast to, co masz.
+
+49
+00:02:23,620 --> 00:02:23,699
+Natomiast to, co masz.
+
+50
+00:02:23,699 --> 00:02:24,759
+Natomiast to, co znajduje się po return,
+
+51
+00:02:25,019 --> 00:02:27,699
+to jest ta informacja, którą ta funkcja ma zwracać.
+
+52
+00:02:28,339 --> 00:02:30,000
+Nie wiem, dlaczego taki przykład wpadł mi do głowy,
+
+53
+00:02:30,119 --> 00:02:32,239
+ale mam nadzieję, że rozumiesz.
+
+54
+00:02:33,239 --> 00:02:35,739
+Natomiast jeżeli już zadeklarujesz tę funkcję,
+
+55
+00:02:35,839 --> 00:02:37,959
+tak jak wspomniałem, trzeba ją jeszcze wywołać.
+
+56
+00:02:38,339 --> 00:02:40,539
+I wywołanie tej funkcji znajduje się tutaj poniżej.
+
+57
+00:02:40,679 --> 00:02:43,359
+Czyli zobacz, kiedy deklarujesz funkcję,
+
+58
+00:02:43,500 --> 00:02:46,859
+umieszczasz słówko def, po czym jest nazwa funkcji,
+
+59
+00:02:47,039 --> 00:02:49,339
+parametry, pod które sobie podstawisz później wartości
+
+60
+00:02:49,339 --> 00:02:53,000
+i coś, co ta funkcja robi na koniec,
+
+61
+00:02:53,000 --> 00:02:54,840
+czy gdzieś w trakcie musi się pojawić return.
+
+62
+00:02:55,000 --> 00:02:56,860
+O tym gdzieś w trakcie też zaraz sobie powiemy.
+
+63
+00:02:57,400 --> 00:02:59,300
+I później, żeby wywołać tę funkcję,
+
+64
+00:02:59,860 --> 00:03:00,979
+ucinasz słówko def,
+
+65
+00:03:01,120 --> 00:03:03,199
+po prostu odwołujesz się do nazwy tej funkcji.
+
+66
+00:03:03,319 --> 00:03:05,000
+Mówisz, słuchajcie, chcę zrobić addNumbers,
+
+67
+00:03:05,740 --> 00:03:07,159
+przekazujesz dwie wartości.
+
+68
+00:03:07,659 --> 00:03:08,219
+Dlaczego dwie?
+
+69
+00:03:08,560 --> 00:03:11,259
+No bo pod A musisz podstawić wartość, jest to 10
+
+70
+00:03:11,259 --> 00:03:13,439
+i pod B musisz podstawić wartość, jest to 5.
+
+71
+00:03:13,920 --> 00:03:16,120
+Czyli w ten sposób na ekranie komputera
+
+72
+00:03:16,120 --> 00:03:17,680
+powinno pokazać się 15,
+
+73
+00:03:18,199 --> 00:03:20,400
+no bo skoro pod A będzie 10, pod B będzie 5,
+
+74
+00:03:20,520 --> 00:03:22,080
+no to 10 plus 5 to jest 15,
+
+75
+00:03:22,080 --> 00:03:22,879
+czyli wynikiem,
+
+76
+00:03:23,000 --> 00:03:25,439
+działania tej funkcji jest cyfra, liczba 15.
+
+77
+00:03:26,300 --> 00:03:28,539
+Jeżeli wywołam tę funkcję więcej razy
+
+78
+00:03:28,539 --> 00:03:30,460
+z różnymi innymi liczbami,
+
+79
+00:03:30,800 --> 00:03:33,840
+no to za każdym razem będę dostawał różne wyniki.
+
+80
+00:03:34,500 --> 00:03:35,979
+Gdzie ta funkcja ma się znaleźć?
+
+81
+00:03:36,099 --> 00:03:38,020
+Jak widzisz, 1, 2, 3, 4, 5.
+
+82
+00:03:38,159 --> 00:03:40,840
+Po prostu funkcje zawsze umieszczamy na górze pliku.
+
+83
+00:03:41,259 --> 00:03:45,759
+Z tym zawsze to też jeszcze mała będzie dygresja w przyszłości,
+
+84
+00:03:46,159 --> 00:03:48,080
+bo bardzo często tworzymy sobie osobne pliki
+
+85
+00:03:48,080 --> 00:03:49,500
+zawierające tylko funkcje,
+
+86
+00:03:49,500 --> 00:03:52,879
+a później w innych miejscach je importujemy
+
+87
+00:03:52,879 --> 00:03:55,620
+i używamy, tak jak było zresztą z biblioteką matematyczną.
+
+88
+00:03:55,719 --> 00:03:56,060
+Kojarzysz?
+
+89
+00:03:56,139 --> 00:03:58,900
+Tam robiliśmy from math import seal na przykład,
+
+90
+00:03:59,460 --> 00:04:03,159
+albo from random import sample.
+
+91
+00:04:03,560 --> 00:04:04,439
+Takie rzeczy robiliśmy.
+
+92
+00:04:05,460 --> 00:04:06,659
+I tu będzie dokładnie tak samo.
+
+93
+00:04:07,099 --> 00:04:08,960
+Czyli ty twoje funkcje będziesz mógł wydzielać
+
+94
+00:04:08,960 --> 00:04:11,240
+do osobnych plików i później importować tylko.
+
+95
+00:04:11,800 --> 00:04:14,139
+Ale na chwilę obecną, kiedy tak sobie pracujemy
+
+96
+00:04:14,139 --> 00:04:16,139
+i uczymy się korzystania z tych funkcji,
+
+97
+00:04:16,500 --> 00:04:19,259
+to zachęcam cię do tego, żebyś funkcję deklarował na górze,
+
+98
+00:04:19,259 --> 00:04:21,319
+a wywołanie miał na dole.
+
+99
+00:04:21,879 --> 00:04:22,259
+I to jest...
+
+100
+00:04:22,879 --> 00:04:25,699
+Kod, który jak najbardziej można już wprowadzić do IDE,
+
+101
+00:04:26,120 --> 00:04:28,740
+do PyCharma, czy do Visual Studio Code'a,
+
+102
+00:04:28,920 --> 00:04:31,899
+uruchomić i przekonać się, że pokazuje się wynik.

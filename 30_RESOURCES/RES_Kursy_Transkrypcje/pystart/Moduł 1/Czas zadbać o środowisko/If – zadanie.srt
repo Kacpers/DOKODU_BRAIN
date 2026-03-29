@@ -1,0 +1,31 @@
+1
+00:00:00,000 --> 00:00:05,259
+I w ten sposób dochodzimy sobie do pierwszych ćwiczeń dotyczących IFA.
+
+2
+00:00:06,000 --> 00:00:09,060
+A mianowicie, chcemy odebrać od użytkownika liczbę,
+
+3
+00:00:09,519 --> 00:00:12,939
+wyświetlić odpowiednią informację w zależności od tego, czy ta liczba jest parzysta.
+
+4
+00:00:13,500 --> 00:00:17,900
+To jest taka mała podpowiedź, w razie czego liczba parzysta dzieli się przez dwa bez reszty.
+
+5
+00:00:18,179 --> 00:00:23,760
+Czyli pięć nie jest liczbą parzystą, bo reszta z dzielenia pięć przez dwa to jeden.
+
+6
+00:00:24,280 --> 00:00:27,120
+Cztery jest liczbą parzystą, bo reszta z dzielenia przez dwa to zero.
+
+7
+00:00:27,120 --> 00:00:57,100
+Zadanie drugie.
+
+8
+00:00:57,119 --> 00:00:59,119
+Powodzenia.

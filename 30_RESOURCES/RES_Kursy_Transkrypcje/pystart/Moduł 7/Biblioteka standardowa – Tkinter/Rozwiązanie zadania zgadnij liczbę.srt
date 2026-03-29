@@ -1,0 +1,999 @@
+1
+00:00:00,000 --> 00:00:02,240
+To co? Kodujemy nasze zgadnie liczbę.
+
+2
+00:00:02,780 --> 00:00:07,280
+Jeżeli chodzi o zgadnie liczbę, będziemy potrzebowali najpierw zaimportować sobie TK Intera jako TK,
+
+3
+00:00:07,480 --> 00:00:10,040
+czyli import TK Inter STK.
+
+4
+00:00:10,740 --> 00:00:16,080
+Następnie będziemy potrzebowali mieć okienko, w którym musimy mieć tekst,
+
+5
+00:00:16,080 --> 00:00:17,559
+w sensie to pole tekstowe.
+
+6
+00:00:18,140 --> 00:00:22,740
+Możemy wskazać jeszcze jakąś labelkę liczba i baton.
+
+7
+00:00:23,359 --> 00:00:26,039
+Czyli tak naprawdę możemy sobie stworzyć window.
+
+8
+00:00:26,800 --> 00:00:29,320
+Idę dokładnie z tym samym kodem, który pisaliśmy wcześniej razem.
+
+9
+00:00:29,320 --> 00:00:33,000
+I następnie robimy TK.tk.
+
+10
+00:00:33,240 --> 00:00:35,980
+Na końcu by window.mainloop.
+
+11
+00:00:36,280 --> 00:00:39,299
+I to już powinno spowodować, że to nasze okno będzie utworzone.
+
+12
+00:00:39,439 --> 00:00:41,659
+Jeszcze się nie powinno, wydaje mi się, wyświetlać.
+
+13
+00:00:42,359 --> 00:00:46,460
+window.title zgadnij liczbę.
+
+14
+00:00:46,920 --> 00:00:51,560
+Do naszego okna musimy wstawić sobie labelkę pod tytułem liczba.
+
+15
+00:00:51,560 --> 00:00:55,579
+Możemy więc napisać label równa się TK.label.
+
+16
+00:00:56,400 --> 00:00:59,280
+Wprowadź liczbę.
+
+17
+00:00:59,320 --> 00:01:04,939
+Następnie musimy umieścić labelkę w oknie, czyli label.pack.
+
+18
+00:01:04,939 --> 00:01:09,819
+Tak samo wprowadzamy pole na liczbę, czyli możemy sobie stworzyć jakąś zmienną.
+
+19
+00:01:09,819 --> 00:01:13,079
+Field to jest TK.entry.
+
+20
+00:01:13,079 --> 00:01:15,819
+No i w tym TK.entry musimy mu przekazać,
+
+21
+00:01:15,819 --> 00:01:20,819
+ach label, przepraszam, label ma jeszcze informację, że to w window będzie zarejestrowane.
+
+22
+00:01:20,819 --> 00:01:26,740
+I entry nie ma takiej informacji, po prostu ma field.pack.
+
+23
+00:01:26,740 --> 00:01:29,079
+Mamy etykietę.
+
+24
+00:01:29,319 --> 00:01:30,819
+Mamy pole.
+
+25
+00:01:30,819 --> 00:01:35,319
+Jeżeli teraz to sobie wywołam, czyli wykonam python spacja zgadnij liczbę,
+
+26
+00:01:35,319 --> 00:01:37,819
+to powinienem dostać okienko.
+
+27
+00:01:37,819 --> 00:01:39,819
+String object has no attribute items.
+
+28
+00:01:39,819 --> 00:01:41,819
+Co zrobiłem nie tak?
+
+29
+00:01:41,819 --> 00:01:43,819
+Ach, tu musimy zrobić tekst.
+
+30
+00:01:43,819 --> 00:01:45,819
+O właśnie.
+
+31
+00:01:45,819 --> 00:01:51,819
+Labelki mają trochę więcej informacji i do labelek możecie też przekazywać na przykład kolor, styl tego pola.
+
+32
+00:01:51,819 --> 00:01:54,819
+Tam jest trochę więcej różnych danych.
+
+33
+00:01:54,819 --> 00:01:58,319
+I na drugim ekranie, tylko nie mogę tego przesunąć,
+
+34
+00:01:58,319 --> 00:01:59,319
+już mi się to nie podoba.
+
+35
+00:01:59,319 --> 00:02:01,319
+Ale to pole pokazało.
+
+36
+00:02:01,319 --> 00:02:03,819
+Spróbuję je teraz przesunąć, tak żebyście też je widzieli.
+
+37
+00:02:03,819 --> 00:02:05,819
+O, zobaczcie, mam pole.
+
+38
+00:02:05,819 --> 00:02:10,819
+I teraz, skoro pole mi się wyświetliło, będę potrzebować mieć jeszcze batona.
+
+39
+00:02:10,819 --> 00:02:12,819
+Batona dodajemy sobie wykonując baton.
+
+40
+00:02:12,819 --> 00:02:14,819
+Równa się TK.baton.
+
+41
+00:02:14,819 --> 00:02:16,819
+I jak pamiętacie, baton musi mieć tekst.
+
+42
+00:02:16,819 --> 00:02:18,819
+Czyli zgaduję.
+
+43
+00:02:20,819 --> 00:02:26,319
+Oraz command, czyli to co ma się wydarzyć, kiedy ten tekst zostanie przekazany.
+
+44
+00:02:26,319 --> 00:02:28,319
+Możemy się umówić, że command to będzie na przykład,
+
+45
+00:02:28,319 --> 00:02:31,319
+onPress czy onSubmit.
+
+46
+00:02:31,319 --> 00:02:33,319
+Coś takiego.
+
+47
+00:02:33,319 --> 00:02:37,319
+Oczywiście, żeby ten command obsłużyć, potrzebujemy też mieć taką funkcję.
+
+48
+00:02:37,319 --> 00:02:41,319
+I w ramach tej funkcji od razu możemy pobrać sobie wartość z naszego pola.
+
+49
+00:02:41,319 --> 00:02:43,319
+Czyli value równa się,
+
+50
+00:02:43,319 --> 00:02:47,319
+równa się field.get.
+
+51
+00:02:47,319 --> 00:02:49,319
+Możecie też wykonać print value,
+
+52
+00:02:49,319 --> 00:02:52,819
+żeby mieć pewność, czy się odpowiednia wartość pobrała.
+
+53
+00:02:52,819 --> 00:02:54,819
+Value.
+
+54
+00:02:54,819 --> 00:02:56,819
+O tak.
+
+55
+00:02:56,819 --> 00:02:58,319
+Raz jeszcze uruchamiam.
+
+56
+00:02:58,319 --> 00:03:02,319
+Raz jeszcze muszę sposobem przenieść okno na drugie.
+
+57
+00:03:02,319 --> 00:03:05,319
+O i zobaczcie, baton nam się nie pokazał.
+
+58
+00:03:05,319 --> 00:03:07,319
+A bo baton nie ma jeszcze packa.
+
+59
+00:03:07,319 --> 00:03:09,319
+No to baton.pack.
+
+60
+00:03:09,319 --> 00:03:11,319
+I to też jest bardzo ważne.
+
+61
+00:03:11,319 --> 00:03:17,319
+Zauważyłem, że często podczas kursu po zapisaniu osoby się zastanawiają, czemu to się nie pokazało, czemu nie zadziałało.
+
+62
+00:03:17,319 --> 00:03:21,319
+Zawsze trzeba zatrzymać albo klikając w krzyżyk, który znajduje się tutaj.
+
+63
+00:03:21,319 --> 00:03:23,319
+Albo po prostu zamykając ten program.
+
+64
+00:03:23,319 --> 00:03:26,319
+I odpalić raz jeszcze, żeby zobaczyć efekt.
+
+65
+00:03:26,319 --> 00:03:31,319
+No i faktycznie w tym momencie, kiedy tak to wywołałem, efekt już widać.
+
+66
+00:03:31,319 --> 00:03:33,319
+No i mam znowu sposobem.
+
+67
+00:03:33,319 --> 00:03:35,319
+Nie wiem dlaczego to okno nie chce się dać przenosić.
+
+68
+00:03:35,319 --> 00:03:36,319
+O daje się przenosić.
+
+69
+00:03:36,319 --> 00:03:37,319
+Okej.
+
+70
+00:03:37,319 --> 00:03:38,319
+Mam już też ten baton obsłużony.
+
+71
+00:03:38,319 --> 00:03:39,319
+Mogę wprowadzić liczbę.
+
+72
+00:03:39,319 --> 00:03:40,319
+Kliknę i zgaduję.
+
+73
+00:03:40,319 --> 00:03:43,319
+I ta liczba będzie się wpisywała tu.
+
+74
+00:03:43,319 --> 00:03:46,319
+Czyli zrealizowaliśmy ten proces wprowadzania danych.
+
+75
+00:03:46,319 --> 00:03:48,319
+Odbierania ich.
+
+76
+00:03:48,319 --> 00:03:53,319
+Teraz powinniśmy skupić się na tym, żeby wyświetlić tylko te komunikaty.
+
+77
+00:03:53,319 --> 00:03:55,319
+W zależności od tego, czy ktoś się zbliża, czy ktoś się oddala.
+
+78
+00:03:55,319 --> 00:03:58,319
+Do tych komunikatów potrzebujemy mieć RANDINTA.
+
+79
+00:03:58,319 --> 00:04:03,319
+Czyli FROM RANDOM IMPORT RANDINT.
+
+80
+00:04:03,319 --> 00:04:07,319
+I teraz nasza ta liczba, ta nasza zgadywana liczba.
+
+81
+00:04:07,319 --> 00:04:09,319
+Niech to będzie jakaś tam target.
+
+82
+00:04:09,319 --> 00:04:12,319
+Równa się RANDINT.
+
+83
+00:04:12,319 --> 00:04:14,319
+I możemy sobie wyświetlać od 1 do 100.
+
+84
+00:04:14,319 --> 00:04:16,319
+Z tym zgadnej liczby już robiliśmy.
+
+85
+00:04:16,319 --> 00:04:17,319
+Pamiętacie? Była taka pętla.
+
+86
+00:04:17,319 --> 00:04:19,319
+W tej pętli właśnie losowaliśmy tę liczbę.
+
+87
+00:04:19,319 --> 00:04:22,319
+No i wszystkie te dane nam się wtedy tam właśnie działy.
+
+88
+00:04:22,319 --> 00:04:24,319
+Więc można powiedzieć, że to już było.
+
+89
+00:04:24,319 --> 00:04:28,319
+Czyli mamy liczbę.
+
+90
+00:04:28,319 --> 00:04:34,319
+I teraz będę chciał, w zależności od tego, czy ktoś podał liczbę bliższą czy dalszą,
+
+91
+00:04:34,319 --> 00:04:38,319
+wyświetlać komunikat albo zimno, albo ciepło.
+
+92
+00:04:38,319 --> 00:04:41,319
+Ciepło ma się pojawiać wtedy, kiedy ktoś się zbliża.
+
+93
+00:04:41,319 --> 00:04:43,319
+Zimno wtedy, kiedy ktoś się oddala.
+
+94
+00:04:43,319 --> 00:04:47,319
+Jak stwierdzić, czy ktoś się zbliża, czy ktoś się oddala?
+
+95
+00:04:47,319 --> 00:04:52,319
+Tak naprawdę potrzebujemy mieć zadeklarowany dla całego programu jakby stan.
+
+96
+00:04:52,319 --> 00:04:53,319
+Czyli jaka liczba jest zbliżona.
+
+97
+00:04:53,319 --> 00:04:56,319
+Czyli jaka liczba była podana poprzednio.
+
+98
+00:04:56,319 --> 00:04:58,319
+Czyli PREVIOUS.
+
+99
+00:04:58,319 --> 00:05:03,319
+I tak naprawdę będzie nam potrzebna tylko ta różnica.
+
+100
+00:05:03,319 --> 00:05:04,319
+Czyli PREVIOUS DIFFERENCE.
+
+101
+00:05:04,319 --> 00:05:06,319
+Możemy sobie stworzyć zmienną.
+
+102
+00:05:08,319 --> 00:05:10,319
+Równa się.
+
+103
+00:05:10,319 --> 00:05:13,319
+I wartość domyślna to będzie NONE.
+
+104
+00:05:13,319 --> 00:05:18,319
+Czyli tak naprawdę na dzień dobry nie mamy żadnej różnicy, żadnej tej wartości.
+
+105
+00:05:18,319 --> 00:05:21,319
+Jeżeli nie mam różnicy,
+
+106
+00:05:21,319 --> 00:05:25,319
+to pierwszym razem powinno pojawić się, że ciepło, że ktoś się zbliża.
+
+107
+00:05:25,319 --> 00:05:29,319
+Czyli IF PREVIOUS DIFFERENCE IS NONE.
+
+108
+00:05:29,319 --> 00:05:30,319
+To jest pierwsza rzecz.
+
+109
+00:05:30,319 --> 00:05:31,319
+Dwukropek.
+
+110
+00:05:31,319 --> 00:05:35,319
+I teraz, żeby wyświetlić to okno, czyli ten modal,
+
+111
+00:05:35,319 --> 00:05:37,319
+musimy sobie go zaimportować.
+
+112
+00:05:37,319 --> 00:05:39,319
+Jego trzeba importować drugi raz.
+
+113
+00:05:39,319 --> 00:05:43,319
+Czyli FROM TK INTER IMPORT MESSAGE BOX.
+
+114
+00:05:43,319 --> 00:05:45,319
+I po zaimportowaniu tegoż message boxa,
+
+115
+00:05:45,319 --> 00:05:48,319
+będziemy mogli wykonać sobie tutaj informację.
+
+116
+00:05:48,319 --> 00:05:49,319
+MESSAGE BOX.SHOW.
+
+117
+00:05:49,319 --> 00:05:55,319
+Chyba INFO bardziej, bo to jest informacja po prostu, że się przybliżasz.
+
+118
+00:05:55,319 --> 00:05:57,319
+Czyli ciepło.
+
+119
+00:05:57,319 --> 00:05:59,319
+Wykrzyknik.
+
+120
+00:05:59,319 --> 00:06:01,319
+Możemy sobie to sprawdzić.
+
+121
+00:06:01,319 --> 00:06:03,319
+Czyli strzała do góry ENTER.
+
+122
+00:06:03,319 --> 00:06:06,319
+Jeżeli teraz sobie to okno tutaj przesunę
+
+123
+00:06:06,319 --> 00:06:10,319
+i wprowadzę jakąkolwiek liczbę, jakąkolwiek informację,
+
+124
+00:06:10,319 --> 00:06:13,319
+to dostaje komunikat, że jest ciepło.
+
+125
+00:06:13,319 --> 00:06:15,319
+Tu się wyświetlił.
+
+126
+00:06:15,319 --> 00:06:17,319
+Możemy sobie zrobić dwa komunikaty.
+
+127
+00:06:17,319 --> 00:06:19,319
+Czyli powiedzmy STAN.
+
+128
+00:06:19,319 --> 00:06:22,319
+Robi się cieplej.
+
+129
+00:06:22,319 --> 00:06:26,319
+Można się tym bawić w ten sposób.
+
+130
+00:06:26,319 --> 00:06:29,319
+Dzięki temu, jeżeli sobie to teraz wpiszemy,
+
+131
+00:06:29,319 --> 00:06:33,319
+to pojawi nam się tytuł i komunikat poniżej.
+
+132
+00:06:33,319 --> 00:06:37,319
+Ale my nie tylko chcemy mówić, że robi się cieplej, czy robi się zimniej,
+
+133
+00:06:37,319 --> 00:06:41,319
+tylko musimy wiedzieć, czy ktoś się właśnie przybliża, czy oddala.
+
+134
+00:06:41,319 --> 00:06:43,319
+Czyli, żeby określić, czy ktoś się przybliża, czy oddala,
+
+135
+00:06:43,319 --> 00:06:46,319
+my potrzebujemy mieć też ten difference aktualny.
+
+136
+00:06:46,319 --> 00:06:47,319
+VALUE to jest wartość, która jest przechowywana w tym miejscu.
+
+137
+00:06:47,319 --> 00:06:50,319
+I to jest wartość, która jest przechowywana jako string.
+
+138
+00:06:50,319 --> 00:06:52,319
+My musimy sobie ją zamienić na integer.
+
+139
+00:06:52,319 --> 00:06:57,319
+Następnie możemy odjąć od targetu to value
+
+140
+00:06:57,319 --> 00:06:59,319
+i policzyć jego wartość bezwzględną.
+
+141
+00:06:59,319 --> 00:07:03,319
+Żeby policzyć wartość bezwzględną, musimy użyć funkcji ABS.
+
+142
+00:07:03,319 --> 00:07:14,319
+Czyli ABS to jest wartość bezwzględna z target minus value.
+
+143
+00:07:14,319 --> 00:07:16,319
+I to jest aktualny difference.
+
+144
+00:07:17,319 --> 00:07:20,319
+I teraz, jeżeli previous difference is none,
+
+145
+00:07:20,319 --> 00:07:23,319
+or, teraz muszę się skupić,
+
+146
+00:07:23,319 --> 00:07:28,319
+difference jest mniejsze niż previous difference,
+
+147
+00:07:28,319 --> 00:07:32,319
+tak, bo jeżeli nowa różnica jest mniejsza, to robi się cieplej.
+
+148
+00:07:32,319 --> 00:07:36,319
+W przeciwnym wypadku możemy wyświetlić komunikat,
+
+149
+00:07:36,319 --> 00:07:38,319
+robi się zimniej.
+
+150
+00:07:38,319 --> 00:07:44,319
+Jednakże, żeby to policzyć, musimy jeszcze zmienić wartość tego pola previous difference.
+
+151
+00:07:44,319 --> 00:07:45,319
+Bo ono na chwilę obecną jest ustalone.
+
+152
+00:07:45,319 --> 00:07:46,319
+I teraz, jeżeli previous difference jest mniejsze niż previous difference, to robi się cieplej.
+
+153
+00:07:46,319 --> 00:07:48,319
+A w trakcie przyniesienia wartości,
+
+154
+00:07:48,319 --> 00:07:50,319
+ono jest ustawione tutaj i musimy je zmniejszać.
+
+155
+00:07:50,319 --> 00:07:52,319
+Więc żeby je zmniejszać, musimy napisać
+
+156
+00:07:52,319 --> 00:07:56,319
+previous difference równa się
+
+157
+00:07:56,319 --> 00:08:00,319
+i teraz, żeby to wykonać, musimy napisać
+
+158
+00:08:00,319 --> 00:08:03,319
+po prostu difference.
+
+159
+00:08:03,319 --> 00:08:09,319
+I tu jest taka sytuacja, że zmieniamy wartość zmiennej,
+
+160
+00:08:09,319 --> 00:08:12,319
+która to wartość jest zobaczcie
+
+161
+00:08:12,319 --> 00:08:14,319
+zaznaczona jako błąd.
+
+162
+00:08:14,319 --> 00:08:15,980
+jako błąd. I tutaj, kiedy
+
+163
+00:08:15,980 --> 00:08:18,279
+najedziemy na ten błąd, to on nam
+
+164
+00:08:18,279 --> 00:08:20,379
+powie, że słuchaj, to nie
+
+165
+00:08:20,379 --> 00:08:20,920
+jest,
+
+166
+00:08:22,379 --> 00:08:23,879
+tutaj to nie jest,
+
+167
+00:08:24,680 --> 00:08:26,040
+nie mamy takiego parametru, nie mamy
+
+168
+00:08:26,040 --> 00:08:27,639
+do tego dostępu.
+
+169
+00:08:28,079 --> 00:08:30,300
+Bo my, będąc wewnątrz funkcji,
+
+170
+00:08:30,439 --> 00:08:32,600
+możemy odwoływać się do zmiennych,
+
+171
+00:08:32,600 --> 00:08:33,899
+ale nie możemy
+
+172
+00:08:33,899 --> 00:08:35,960
+modyfikować tych zmiennych.
+
+173
+00:08:36,179 --> 00:08:38,319
+Żeby dostać taką możliwość, trzeba zrobić
+
+174
+00:08:38,319 --> 00:08:40,120
+taką małe złamanie reguły,
+
+175
+00:08:40,620 --> 00:08:42,659
+a mianowicie napisać global
+
+176
+00:08:42,659 --> 00:08:44,719
+previous difference.
+
+177
+00:08:45,079 --> 00:08:46,600
+I to będzie oznaczało, że
+
+178
+00:08:46,600 --> 00:08:48,740
+hej Python, ta zmienna previous difference
+
+179
+00:08:48,740 --> 00:08:50,100
+to jest zmienna globalna.
+
+180
+00:08:50,419 --> 00:08:51,659
+I możesz mieć do niej dostęp.
+
+181
+00:08:52,139 --> 00:08:54,360
+To nie jest bardzo rekomendowane, natomiast kiedy
+
+182
+00:08:54,360 --> 00:08:56,319
+nie mamy obiektowości, no to
+
+183
+00:08:56,319 --> 00:08:57,919
+jest to po prostu jedyne rozwiązanie.
+
+184
+00:08:58,480 --> 00:09:00,480
+I w tym momencie, jeżeli zrobię strzałkę do góry
+
+185
+00:09:00,480 --> 00:09:02,620
+enter i będę próbował
+
+186
+00:09:02,620 --> 00:09:03,740
+wprowadzać liczbę,
+
+187
+00:09:05,419 --> 00:09:06,139
+czyli wprowadzę sobie
+
+188
+00:09:06,139 --> 00:09:08,600
+33, robi się
+
+189
+00:09:08,600 --> 00:09:10,339
+cieplej, ok, spróbujmy teraz
+
+190
+00:09:10,339 --> 00:09:10,980
+34,
+
+191
+00:09:10,980 --> 00:09:11,379
+34,
+
+192
+00:09:11,379 --> 00:09:13,300
+robi się cieplej,
+
+193
+00:09:13,340 --> 00:09:14,519
+czyli wiem, że idę w górę, ok.
+
+194
+00:09:15,060 --> 00:09:16,460
+Mogę wpisać więc 60,
+
+195
+00:09:17,920 --> 00:09:19,259
+jeszcze robi się cieplej,
+
+196
+00:09:19,360 --> 00:09:20,840
+o, czyli to musi być duża wartość.
+
+197
+00:09:21,100 --> 00:09:23,240
+Spróbuję więc pójść dalej, 71,
+
+198
+00:09:24,200 --> 00:09:25,379
+czyli idę
+
+199
+00:09:25,379 --> 00:09:27,279
+w dobrą stronę. Jak byłem 60, 70,
+
+200
+00:09:27,440 --> 00:09:29,360
+teraz wezmę 80, dziesiątkami pójdę.
+
+201
+00:09:30,000 --> 00:09:30,980
+Wciąż robi się cieplej.
+
+202
+00:09:33,039 --> 00:09:34,639
+Czy to jest duża wartość?
+
+203
+00:09:35,200 --> 00:09:36,440
+Robi się zimniej przy 90.
+
+204
+00:09:37,120 --> 00:09:38,680
+Czyli 85
+
+205
+00:09:40,980 --> 00:09:42,580
+robi się cieplej. Teraz 84,
+
+206
+00:09:42,580 --> 00:09:44,980
+zobaczymy w którą stronę, robi się cieplej.
+
+207
+00:09:44,980 --> 00:09:47,080
+82 i tak będę sobie zgadywał,
+
+208
+00:09:48,980 --> 00:09:50,180
+czy to jest 81.
+
+209
+00:09:51,180 --> 00:09:53,220
+I tak naprawdę mogę sobie zgadywać w nieskończoność.
+
+210
+00:09:53,259 --> 00:09:55,379
+Dlaczego? Bo nasz program nie robi jeszcze
+
+211
+00:09:55,379 --> 00:09:57,680
+jednej rzeczy, a mianowicie difference
+
+212
+00:09:57,800 --> 00:10:00,080
+powinien tutaj nam wyświetlić informację,
+
+213
+00:10:00,080 --> 00:10:02,019
+że jak zgadniemy,
+
+214
+00:10:02,360 --> 00:10:04,519
+że jest to, że
+
+215
+00:10:04,519 --> 00:10:06,659
+dobrze trafiliśmy. Czyli jeżeli
+
+216
+00:10:06,659 --> 00:10:08,700
+difference jest zerem, to wtedy powinien
+
+217
+00:10:08,700 --> 00:10:10,860
+się pojawić komunikat, gratuluję, zgadłeś,
+
+218
+00:10:10,860 --> 00:10:12,159
+koniec programu.
+
+219
+00:10:12,759 --> 00:10:14,960
+Możemy sobie dorzucić więc to wyżej.
+
+220
+00:10:15,360 --> 00:10:17,360
+Czyli if difference
+
+221
+00:10:17,860 --> 00:10:20,060
+równa się, równa się 0,
+
+222
+00:10:20,759 --> 00:10:22,060
+to wtedy show info.
+
+223
+00:10:23,860 --> 00:10:26,360
+Gratulacje chodziło
+
+224
+00:10:26,360 --> 00:10:28,560
+o tą liczbę, czy o tę liczbę.
+
+225
+00:10:32,060 --> 00:10:33,960
+Wtedy tutaj potrzebujemy mieć elif.
+
+226
+00:10:39,159 --> 00:10:40,860
+O, no i dzięki temu będziemy
+
+227
+00:10:40,860 --> 00:10:43,560
+mieli już zgadywanie w całości.
+
+228
+00:10:43,759 --> 00:10:44,960
+Raz jeszcze spróbuję.
+
+229
+00:10:48,560 --> 00:10:50,159
+Wprowadzę sobie 30.
+
+230
+00:10:51,659 --> 00:10:52,659
+Tu zawsze robi się cieplej.
+
+231
+00:10:52,659 --> 00:10:55,360
+Pójdę o jeden w górę zimniej, czyli muszę
+
+232
+00:10:55,360 --> 00:10:58,460
+iść w dół. No to lecę w połowę 30.
+
+233
+00:10:58,659 --> 00:11:02,560
+15 zgadłem akurat udało się połowa z 30.
+
+234
+00:11:02,960 --> 00:11:05,159
+Więc tak jak widać w ten sposób możemy sobie
+
+235
+00:11:05,159 --> 00:11:07,460
+też takie zgadywanie liczby zakodować.
+
+236
+00:11:07,860 --> 00:11:10,759
+I tu brakuje nam jeszcze informacji o tym, w ilu krokach ktoś
+
+237
+00:11:10,759 --> 00:11:14,659
+zgadł, więc też potrzebujemy zrobić sobie zmienną steps,
+
+238
+00:11:14,659 --> 00:11:15,960
+która ma wartość 0.
+
+239
+00:11:16,259 --> 00:11:18,659
+Tutaj możemy sobie wykonać steps.
+
+240
+00:11:20,659 --> 00:11:22,860
+Plus równa się 1.
+
+241
+00:11:23,460 --> 00:11:26,059
+No i następne też oczywiście global steps.
+
+242
+00:11:29,460 --> 00:11:31,659
+Wydaje mi się, że można też po przecinku o tak, żeby było
+
+243
+00:11:31,659 --> 00:11:32,259
+czytelniej.
+
+244
+00:11:32,860 --> 00:11:39,659
+No i wtedy zgadłeś w krokach.
+
+245
+00:11:39,759 --> 00:11:40,659
+2 kropek.
+
+246
+00:11:40,759 --> 00:11:41,960
+Steps.
+
+247
+00:11:42,659 --> 00:11:43,860
+Przyda się nam jeszcze fka.
+
+248
+00:11:45,360 --> 00:11:46,659
+I tak naprawdę to tyle.
+
+249
+00:11:46,960 --> 00:11:49,360
+Bardzo dziękuję i zapraszam do kolejnej lekcji, w której
+
+250
+00:11:49,360 --> 00:11:50,860
+będziemy pracowali z plikami.

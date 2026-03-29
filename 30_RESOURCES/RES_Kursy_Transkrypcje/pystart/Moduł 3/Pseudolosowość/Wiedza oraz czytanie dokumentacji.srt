@@ -1,0 +1,551 @@
+1
+00:00:00,800 --> 00:00:06,960
+Mówiliśmy sobie o tym, jak porządkować, czyli jak sortować, a teraz powiemy o tym, jak zamieszać.
+
+2
+00:00:07,600 --> 00:00:12,120
+I tematem na teraz jest pseudolosowość. Pytanie pierwsze, dlaczego pseudo?
+
+3
+00:00:12,439 --> 00:00:15,640
+Po drugie, z jakiej biblioteki skorzystamy? Wszystko Ci pokażę.
+
+4
+00:00:16,140 --> 00:00:21,640
+Po trzecie, pobieramy losową liczbę z przedziału od do, no i ogólnie pobieranie losowej wartości z listy.
+
+5
+00:00:22,080 --> 00:00:27,780
+Trochę sobie na ten temat porozmawiamy, bo w ten sposób będę też starał się odrobinę przemycić Ci tutaj trochę samodzielności.
+
+6
+00:00:27,780 --> 00:00:34,620
+I żebyśmy się dobrze zrozumieli, nie chodzi mi o to, że ja nie chcę odpowiadać na pytania, bo ja chcę odpowiadać na pytania,
+
+7
+00:00:35,140 --> 00:00:41,060
+ale wiem, że w życiu każdego programisty powoli nadchodzi taki moment, że musi wyfruwać z gniazda.
+
+8
+00:00:41,460 --> 00:00:48,659
+I to wyfruwanie z gniazda w przypadku programistów polega na tym, że po prostu sami musimy pewne rzeczy odnajdywać,
+
+9
+00:00:48,780 --> 00:00:54,040
+sami musimy pewnych rzeczy szukać i o tym też sobie dzisiaj porozmawiamy, czy dzisiaj w tej lekcji.
+
+10
+00:00:54,540 --> 00:00:57,540
+Więc pierwszą rzeczą, którą chciałbym Ci pokazać jest zjawisko.
+
+11
+00:00:57,780 --> 00:01:00,120
+Informacja z jakiej biblioteki skorzystamy.
+
+12
+00:01:00,780 --> 00:01:02,679
+Biblioteka ta to będzie random.
+
+13
+00:01:02,840 --> 00:01:08,879
+Biblioteka random jest zaimplementowana wewnątrz Pythona, wystarczy ją tylko sobie zaimportować, to też za moment pokażę.
+
+14
+00:01:09,320 --> 00:01:11,740
+Dlaczego w ogóle ponownie pojawia się hasło pseudo?
+
+15
+00:01:12,280 --> 00:01:13,200
+No, sprawa jest prosta.
+
+16
+00:01:13,200 --> 00:01:20,799
+Jeżeli chcesz mówić, że coś co robisz jest w pełni losowe, to musisz mieć papier na to, że to faktycznie takie jest.
+
+17
+00:01:21,240 --> 00:01:27,599
+Więc z racji tego, że nasza biblioteka random działa na podstawie tam jakichś tam czasu, procesora, czegoś tam, nieważne,
+
+18
+00:01:27,780 --> 00:01:34,739
+ale podobno są sposoby na to, żeby przewidzieć kolejną wartość, to na przykład w ten sposób nie mógłbyś zrobić żadnej gry kasynowej,
+
+19
+00:01:35,140 --> 00:01:37,299
+bo byłoby to ryzyko, że jest to nieuczciwe.
+
+20
+00:01:37,579 --> 00:01:41,219
+Żeby zrobić grę kasynową, trzeba mieć bibliotekę, która jest lepsza niż random.
+
+21
+00:01:41,780 --> 00:01:42,740
+I ma certyfikat.
+
+22
+00:01:43,260 --> 00:01:48,879
+Jeżeli chodzi o bibliotekę random, to w ramach biblioteki random znajdziesz wiele funkcji, które mogą Ci się przydać.
+
+23
+00:01:48,879 --> 00:01:50,460
+Między innymi run range.
+
+24
+00:01:50,579 --> 00:01:57,700
+To jest funkcja, która jak widzisz, została pięknie opisana w dokumentacji, jako funkcja, która otrzymuje stop albo start stop,
+
+25
+00:01:57,780 --> 00:02:01,540
+i wtedy po prostu w wyniku dostaniesz losowy zakres.
+
+26
+00:02:02,260 --> 00:02:08,060
+Innym przykładem tego, co możesz wykorzystać, jest run int, gdzie przekazujesz wartości a, b,
+
+27
+00:02:08,479 --> 00:02:16,780
+no i wówczas dostaniesz return random integer, czyli zwraca losową liczbę n, która jest taka, że mieści się od a do b.
+
+28
+00:02:16,780 --> 00:02:20,539
+I zauważ, że może być równa a, jak i równa b.
+
+29
+00:02:21,080 --> 00:02:24,780
+No i to jest alias tak naprawdę do run range a do b plus 1.
+
+30
+00:02:25,340 --> 00:02:27,780
+Czyli jak widzisz, dokumentacja jest...
+
+31
+00:02:27,780 --> 00:02:34,240
+Jest bardzo ładnie opisana i wprost mówi Ci, jakie wartości możesz przekazywać, jakie wartości nie przekazujesz.
+
+32
+00:02:34,340 --> 00:02:38,900
+Dodatkowo run range jest też o tyle ciekawe, że mówi o tym, co jest deprecated,
+
+33
+00:02:39,060 --> 00:02:45,219
+czyli to, co zostanie uznane za przestarzałe w momencie, w którym używasz Pythona 3.10.
+
+34
+00:02:45,759 --> 00:02:48,420
+I dokumentacja jest bardzo dobrym źródłem wiedzy.
+
+35
+00:02:48,539 --> 00:02:54,300
+Zachęcam do tego, żeby do tego źródła sięgać i żeby jak najczęściej z niego korzystać.
+
+36
+00:02:54,300 --> 00:02:56,300
+I jeżeli chcesz natomiast pobrać sobie...
+
+37
+00:02:56,300 --> 00:02:57,759
+I jeżeli chcesz natomiast pobrać sobie...
+
+38
+00:02:57,780 --> 00:03:00,080
+losową wartość z tablicy,
+
+39
+00:03:00,439 --> 00:03:02,620
+no to wówczas możesz skorzystać z kilku opcji.
+
+40
+00:03:02,900 --> 00:03:04,039
+Jedna opcja to jest choice,
+
+41
+00:03:04,240 --> 00:03:07,860
+czyli return a random element from the non-empty sequence,
+
+42
+00:03:07,979 --> 00:03:10,719
+czyli przekazujesz mu jakąś listę czy też tuple,
+
+43
+00:03:11,120 --> 00:03:14,740
+a on będzie potrafił wyciągnąć sobie z tego losową wartość.
+
+44
+00:03:15,219 --> 00:03:16,719
+Inny przykład to jest shuffle.
+
+45
+00:03:16,939 --> 00:03:21,719
+Tutaj możemy po prostu posortować, ale tak wiesz, posortować także wymieszać,
+
+46
+00:03:22,159 --> 00:03:25,439
+potasować tak naprawdę naszą listę.
+
+47
+00:03:25,439 --> 00:03:27,439
+No i jeszcze mamy opcję shuffle,
+
+48
+00:03:27,780 --> 00:03:29,780
+czyli to jest to, co jest w tym samym miejscu,
+
+49
+00:03:29,780 --> 00:03:33,780
+ale tutaj możemy pobierać sobie różne losowe wartości.
+
+50
+00:03:33,780 --> 00:03:39,780
+I bardzo serdecznie polecam, żeby tutaj zrobić sobie pauzę, przeczytać te instrukcje
+
+51
+00:03:39,780 --> 00:03:44,780
+i to jest ten język angielski, który jest absolutnie minimum, jeżeli chodzi o programowanie.
+
+52
+00:03:44,780 --> 00:03:51,780
+Jeżeli chcesz być programistą, to musisz znać język angielski przynajmniej w stopniu wystarczającym zrozumienie dokumentacji technicznej.
+
+53
+00:03:51,780 --> 00:03:55,780
+I często ludzie pytają, co to znaczy zrozumienie dokumentacji technicznej.
+
+54
+00:03:55,780 --> 00:03:57,780
+To jest dokumentacja techniczna.
+
+55
+00:03:57,780 --> 00:03:59,780
+Trzeba ją rozumieć.
+
+56
+00:03:59,780 --> 00:04:00,780
+OK?
+
+57
+00:04:00,780 --> 00:04:08,780
+Jeżeli chcemy skorzystać z biblioteki random, tak jak wspomniałem, musimy sobie ją zaimportować do naszego projektu.
+
+58
+00:04:08,780 --> 00:04:14,780
+I o importach mówiliśmy raz przy okazji biblioteki math, gdzie była funkcja sqrt.
+
+59
+00:04:14,780 --> 00:04:20,779
+I mówiłem, że żeby skorzystać z funkcji sqrt, musimy wykonać from math import sqrt.
+
+60
+00:04:20,779 --> 00:04:22,779
+A, jeszcze był floor i seal.
+
+61
+00:04:22,779 --> 00:04:26,779
+Pamiętasz, jak sobie zaokrąglaliśmy wartość w dół albo w górę?
+
+62
+00:04:26,779 --> 00:04:29,779
+I tutaj jest bardzo podobnie.
+
+63
+00:04:29,779 --> 00:04:37,779
+Jeżeli chcemy sobie zaimportować jakąś funkcję, to musimy napisać from random import randint choices albo choice.
+
+64
+00:04:37,779 --> 00:04:40,779
+Choices i choice nie było, zaraz Ci pokażę.
+
+65
+00:04:40,779 --> 00:04:45,779
+Randint po prostu losuje wartość pomiędzy minimum a maksimum.
+
+66
+00:04:45,779 --> 00:04:47,779
+Pamiętasz, te liczby się zawierają.
+
+67
+00:04:47,779 --> 00:04:50,779
+Wpisałem 3 i 100, dostałem 81.
+
+68
+00:04:50,779 --> 00:04:53,779
+Choices natomiast zwraca...
+
+69
+00:04:53,779 --> 00:04:55,779
+Jeżeli chcesz dowiedzieć się, co robi choices, sprawdź.
+
+70
+00:04:55,779 --> 00:04:57,779
+Choices sprawdzi dokumentację.
+
+71
+00:04:57,779 --> 00:05:04,779
+Choices zwraca nam listę zawierającą pseudo losowe elementy.
+
+72
+00:05:04,779 --> 00:05:06,779
+Czyli w tym przypadku, jeżeli mam...
+
+73
+00:05:06,779 --> 00:05:11,779
+Tą moją sekwencją jest mango, lemon, peach i apple.
+
+74
+00:05:11,779 --> 00:05:20,779
+Czyli kolekcje potem się dzielą i te kolekcje, które mają indeksy jako klucze, to są sekwencjami.
+
+75
+00:05:20,779 --> 00:05:23,779
+I teraz, jeżeli przekazujemy taką sekwencję, to on nam zwraca losową...
+
+76
+00:05:23,779 --> 00:05:27,779
+Zwraca nam nową listę, która zawiera ten jeden losowy element.
+
+77
+00:05:27,779 --> 00:05:30,779
+W tym przypadku będzie to lemon.
+
+78
+00:05:30,779 --> 00:05:34,779
+Ale jak sprawdzisz dokumentację choices, okaże się, że można tam coś jeszcze zrobić, żeby było tych elementów więcej.
+
+79
+00:05:34,779 --> 00:05:38,779
+Natomiast jeżeli użyjesz choice, no to wtedy dostaniesz tylko jeden element.
+
+80
+00:05:38,779 --> 00:05:42,779
+Więc tutaj w wyniku jest lista, a tu w wyniku jest string.
+
+81
+00:05:42,779 --> 00:05:44,779
+Oczywiście nie musisz tego pamiętać.
+
+82
+00:05:44,779 --> 00:05:46,779
+Masz od tego dokumentację, żeby też...
+
+83
+00:05:46,779 --> 00:05:48,779
+Czy też w ogóle IDE.
+
+84
+00:05:48,779 --> 00:05:51,779
+Żeby też, kiedy wpisujesz sobie poszczególne funkcje i próbujesz ich użyć,
+
+85
+00:05:51,779 --> 00:05:52,779
+to żeby zwrócić uwagę, co to jest.
+
+86
+00:05:52,779 --> 00:05:55,779
+To żeby zwrócić uwagę, co jest tą zwracaną wartością.
+
+87
+00:05:55,779 --> 00:05:57,779
+Można sobie oczywiście to printować.
+
+88
+00:05:57,779 --> 00:05:59,779
+Albo debugować.
+
+89
+00:05:59,779 --> 00:06:01,779
+O tym już niedługo w przyszłym module.
+
+90
+00:06:01,779 --> 00:06:08,779
+Natomiast tu jak najbardziej dokumentacja też jest tym sposobem na to, żeby odświeżyć sobie wiedzę i sprawdzić, jak to działa.
+
+91
+00:06:08,779 --> 00:06:15,779
+No bo tak naprawdę to, o czym wspominałem, że podstawową umiejętnością każdego programisty jest czytanie dokumentacji.
+
+92
+00:06:15,779 --> 00:06:17,779
+Czytamy dokumentację z różnych powodów.
+
+93
+00:06:17,779 --> 00:06:18,779
+Albo naprawdę...
+
+94
+00:06:18,779 --> 00:06:20,779
+Ja tak kiedyś robiłem, że siedziałem i z nudów...
+
+95
+00:06:20,779 --> 00:06:22,779
+Czy z nudów, czy z ciekawości...
+
+96
+00:06:22,779 --> 00:06:26,779
+Przeglądałem dokumentację i zastanawiałem się, co w tej dokumentacji jest.
+
+97
+00:06:26,779 --> 00:06:27,779
+Co tam mogę znaleźć?
+
+98
+00:06:27,779 --> 00:06:29,779
+Jakie mogę znaleźć funkcje?
+
+99
+00:06:29,779 --> 00:06:36,779
+I później jak ktoś mi mówił, że słuchaj, potrzebuję takiego zadania, to ja sobie przypominałem, że była taka funkcja, która robiła coś tam, coś tam.
+
+100
+00:06:36,779 --> 00:06:40,779
+Więc pod tym względem znajomość dokumentacji też bardzo pomaga.
+
+101
+00:06:40,779 --> 00:06:41,779
+Inna sprawa...
+
+102
+00:06:41,779 --> 00:06:47,779
+No to ktoś daje ci zadania, a ty zastanawiasz się, kurczę, no chyba musi być już gotowa funkcja do czegoś takiego.
+
+103
+00:06:47,779 --> 00:06:50,779
+Po co ja liczę tę potęgę, jeżeli pewnie da się...
+
+104
+00:06:50,779 --> 00:06:51,779
+Czytam pierwiastek...
+
+105
+00:06:51,779 --> 00:06:53,779
+Skoro pewnie da się to zrobić prościej.
+
+106
+00:06:53,779 --> 00:06:55,779
+No i właśnie przeglądasz sobie dokumentację po to.
+
+107
+00:06:55,779 --> 00:07:02,779
+Czasem jest tak, że używasz dokumentacji, bo nie pamiętasz dokładnie jakie argumenty przyjmuje funkcja, czy też jaki typ zwraca.
+
+108
+00:07:02,779 --> 00:07:06,779
+To też luk do dokumentacji i zaraz wszystko jest jasne.
+
+109
+00:07:06,779 --> 00:07:09,779
+No i oczywiście ten trzeci podpunkt też się często zdarza.
+
+110
+00:07:09,779 --> 00:07:11,779
+To jest niemożliwe, że trzeba to robić tyle razy.
+
+111
+00:07:11,779 --> 00:07:13,779
+Można to na pewno zrobić prościej.
+
+112
+00:07:13,779 --> 00:07:15,779
+W dokumentacji nie znajdziesz...
+
+113
+00:07:15,779 --> 00:07:17,779
+Dokumentacja nie jest lekiem na całe zło.
+
+114
+00:07:17,779 --> 00:07:19,779
+Nie jest też nadzieją na przyszły rok.
+
+115
+00:07:19,779 --> 00:07:20,779
+Natomiast jest...
+
+116
+00:07:20,779 --> 00:07:22,779
+Gwiazdą w ciemności.
+
+117
+00:07:22,779 --> 00:07:28,779
+I możesz sobie, kiedy czegoś nie pamiętasz, możesz zawsze zerknąć do tego i to rozwiązać.
+
+118
+00:07:28,779 --> 00:07:30,779
+Pozdrawiamy panią Prońko.
+
+119
+00:07:30,779 --> 00:07:32,779
+Kto nie wie o co chodzi, to nieważne.
+
+120
+00:07:32,779 --> 00:07:34,779
+Taka piosenka kiedyś była.
+
+121
+00:07:34,779 --> 00:07:39,779
+Więc można powiedzieć, że jest takie bardzo ważne równanie, które jest równaniem każdego programisty.
+
+122
+00:07:39,779 --> 00:07:43,779
+Czyli dokumentacja plus Stack Overflow plus ty to jest nieskończona miłość.
+
+123
+00:07:43,779 --> 00:07:45,779
+Z tego względu, że dokumentacja daje ci wiedzę.
+
+124
+00:07:45,779 --> 00:07:48,779
+Stack Overflow daje ci też rozwiązania.
+
+125
+00:07:48,779 --> 00:07:49,779
+No i ty.
+
+126
+00:07:49,779 --> 00:07:51,779
+Ze który to wszystko łączysz.
+
+127
+00:07:51,779 --> 00:07:58,779
+Czyli jeżeli chodzi o Stack Overflow, to tutaj też zachęcam do tego, że jeżeli kopiujesz nawet jakieś rozwiązanie z internetów.
+
+128
+00:07:58,779 --> 00:08:01,779
+To spędź chwilę i zastanów się co to rozwiązanie robi.
+
+129
+00:08:01,779 --> 00:08:04,779
+Dlaczego działa i jakich funkcji oni tam używają.
+
+130
+00:08:04,779 --> 00:08:08,779
+I oczywiście wtedy takie sprawdzenie znajduje się w dokumentacji.
+
+131
+00:08:08,779 --> 00:08:14,779
+W świecie Pythona jest też bardzo wiele stron, które są takimi jakby kopiami dokumentacji.
+
+132
+00:08:14,779 --> 00:08:17,779
+Często zawierają też różne przykłady.
+
+133
+00:08:17,779 --> 00:08:19,779
+To nie jest problem, że korzystamy z tych stron.
+
+134
+00:08:19,779 --> 00:08:21,779
+Najczęściej jest to dobre źródło wiedzy.
+
+135
+00:08:21,779 --> 00:08:28,779
+Oczywiście najlepszym źródłem wiedzy jest ta dokumentacja, którą znajdziesz na stronie doc.python.org.
+
+136
+00:08:28,779 --> 00:08:32,779
+No i można też bardzo łatwo rozróżnić, czy coś jest stroną z dokumentacją czy nie.
+
+137
+00:08:32,779 --> 00:08:34,779
+Bo te strony pozostałe mają reklamy.
+
+138
+00:08:34,779 --> 00:08:35,779
+Dokumentacja nie ma reklam.

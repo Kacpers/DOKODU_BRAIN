@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:21,640
+No i ostatnia rzecz to jak się uczyć programowania. Jak się uczyć panie premierze? Więc tak naprawdę uczyć się programowania należy kultywując trzy rzeczy. Po pierwsze programuj, programuj. Czyli im więcej będziesz programować, tym lepiej będzie ci to programowanie wychodzić.
+
+2
+00:00:21,640 --> 00:00:32,740
+Ktoś mi kiedyś powiedział, że programowanie to jest jak nauka języka obcego. Ja na początku pomyślałem, że niemożliwe, a potem sobie pomyślałem, że jednak coś w tym jest.
+
+3
+00:00:32,740 --> 00:00:46,799
+No bo z nauką języka obcego jest podobnie. Jeżeli nie ćwiczysz tego języka, no to ciężko ci jest zacząć w nim mówić. Tak naprawdę musisz słuchać, mówić, czytać.
+
+4
+00:00:46,799 --> 00:00:51,299
+I dzięki temu im więcej tych bodźców będzie do ciebie trafiało, im więcej dostaniesz.
+
+5
+00:00:51,640 --> 00:00:55,380
+I jak się dostanie częścią twojego życia, tym szybciej zaczniesz mówić w tym języku.
+
+6
+00:00:56,039 --> 00:01:08,019
+Mówią, że nie ma lepszego sposobu na naukę angielskiego, co wyjechanie gdzieś za granicę, gdzie tylko mówią w tym języku, albo gdzie będzie trzeba się porozumieć jakoś w danym języku i po prostu w ten sposób możesz się nauczyć języka obcego.
+
+7
+00:01:08,599 --> 00:01:15,120
+I myślę, że z programowaniem pod tym względem jest tak samo. Jeżeli nie programujesz, to się programowania nie nauczysz.
+
+8
+00:01:15,120 --> 00:01:21,120
+Po drugie, w swoim tempie. Zauważyłem, że szczególnie u mnie też to tak działa, że jeżeli...
+
+9
+00:01:21,640 --> 00:01:35,019
+razem z kimś rozpoczynam naukę czegoś i ktoś radzi sobie z pewnymi rzeczami szybciej, to ja w tym momencie frustruję się i sobie myślę, kurczę, on już tak daleko, a ja tak blisko, jak to jest możliwe?
+
+10
+00:01:35,019 --> 00:01:39,000
+I na Discordzie też będziesz to widzieć, że część osób...
+
+11
+00:01:39,000 --> 00:01:41,480
+Kacper, ja już zrobiłem wszystkie zadania, masz jakieś dodatkowe?
+
+12
+00:01:41,840 --> 00:01:45,280
+To się może pojawić, szczególnie na tych pierwszych modułach, początkujących.
+
+13
+00:01:45,859 --> 00:01:51,540
+I dla mnie też to było bardzo takim wewnętrznym tym, że kiedy takie pytania się pojawiały, to myślałem, kurczę,
+
+14
+00:01:51,640 --> 00:01:54,000
+kolejny moduł musi być trudniejszy, bo to jest za słabe.
+
+15
+00:01:54,420 --> 00:01:55,359
+I to był błąd.
+
+16
+00:01:55,420 --> 00:02:00,219
+Tutaj idziemy podstawami, więc na pewno będziemy robili te rzeczy podstawowe.
+
+17
+00:02:00,780 --> 00:02:05,460
+Natomiast ważne jest to, żeby robić to w swoim tempie i tu się zupełnie nie oglądać na innych.
+
+18
+00:02:06,200 --> 00:02:13,500
+Rób małymi krokami, zobaczysz, że ta sumienność zostanie bardzo szybko wynagrodzona.
+
+19
+00:02:14,199 --> 00:02:17,580
+Natomiast to, że ktoś inny robi szybciej, niech cię nie zwodzi.
+
+20
+00:02:18,120 --> 00:02:21,620
+Tak samo mam w drugą stronę, jeżeli coś robię szybciej od innych, to też się oglądam.
+
+21
+00:02:21,639 --> 00:02:26,139
+I tu najlepiej jest w tym momencie pomóc tym osobom.
+
+22
+00:02:26,379 --> 00:02:32,879
+Jeżeli poradziłeś sobie szybciej z modułem, to spróbuj pomóc komuś rozwiązać jakiś jego problem,
+
+23
+00:02:33,019 --> 00:02:36,979
+zaproponuj mu jakieś dodatkowe zadanie, czy popracuj z innymi.
+
+24
+00:02:37,419 --> 00:02:39,659
+To jest coś, co też tobie bardzo dużo da.
+
+25
+00:02:39,939 --> 00:02:42,699
+I nie mówię teraz o Pajstartzie, bo Pajstart oczywiście tutaj ogarnę,
+
+26
+00:02:43,159 --> 00:02:51,019
+ale w życiu tak zawsze to wygląda, że jeżeli jako programista w zespole poradziłeś sobie ze swoimi zadaniami szybciej,
+
+27
+00:02:51,020 --> 00:02:55,320
+to dużo lepiej będzie to widziane i będzie to bardzo wyjątkowe, jeżeli powiesz,
+
+28
+00:02:55,520 --> 00:03:01,060
+czy komuś mogę teraz czymś pomóc, bo już mam zrobione taski, albo dajcie mi kolejne, chętnie to zrobię,
+
+29
+00:03:01,460 --> 00:03:07,480
+niż podejście takie na sadzie, no już zrobiłem, to teraz mogę sobie posiedzieć i podpoczywać.
+
+30
+00:03:08,120 --> 00:03:12,180
+I druga rzecz, niezwykle istotna, to jest praca w spokoju.
+
+31
+00:03:12,620 --> 00:03:18,420
+Tutaj tak samo jak teraz, kiedy nagrywam, mówię do ciebie te rzeczy, to raczej za ścianą jest cicho,
+
+32
+00:03:18,420 --> 00:03:21,000
+na dole jest cicho, ja jestem skupiony na tym, co chcę ci przesłać.
+
+33
+00:03:21,020 --> 00:03:24,040
+I tak samo jest z nauką programowania.
+
+34
+00:03:24,420 --> 00:03:30,980
+Nie da się uczyć programowania wtedy, kiedy co chwilę ktoś cię rozprasza, pyta, coś masz zrobić itd.
+
+35
+00:03:31,760 --> 00:03:40,719
+Warto mieć chociaż te 15 czy 30 minut, to takie minimum myślę na to, żeby usiąść w spokoju i się pouczyć.
+
+36
+00:03:41,420 --> 00:03:47,900
+Wiem z poprzednich grup i też z innych rozmów, że często osoby na przykład wstawały dużo wcześniej niż domownicy,
+
+37
+00:03:47,900 --> 00:03:49,980
+albo kładły się spać później niż domownicy.
+
+38
+00:03:51,020 --> 00:03:53,020
+I to się dzieli przy kodzie.
+
+39
+00:03:53,020 --> 00:03:59,020
+Kładzenie się spać później ma też ten problem, że jeżeli cię to wciągnie, to faktycznie pójdziesz spać o 2-3,
+
+40
+00:03:59,020 --> 00:04:03,020
+chyba że domownicy idą spać o 1, to może jeszcze później.
+
+41
+00:04:03,020 --> 00:04:10,020
+Natomiast budzenie się wcześniej wiąże się z tym, że kiedyś trzeba od tego kodu wstać, a to naprawdę, naprawdę uzależnia.
+
+42
+00:04:10,020 --> 00:04:19,019
+Wiem po sobie, tylko pozwolę sobie na taką dygresję, że jak ja się uczyłem programowania, to już, znaczy może nie było tak, że już znałem Alinkę, żonę moją,
+
+43
+00:04:19,019 --> 00:04:24,019
+tylko już jak się uczyłem jakichś tam frameworków, powiedzmy już byłem dalej, bo już programowałem, nie?
+
+44
+00:04:24,019 --> 00:04:32,019
+Czyli uczyłem się jakichś frameworków, czy narzędzi, jak mówiłem, to cały czas idzie z nami w parze, to wtedy też już znałem Alinkę.
+
+45
+00:04:32,019 --> 00:04:37,019
+No i często Alina przychodziła do mnie na przykład o 2-3 i mówiła, co ty robisz o tej godzinie?
+
+46
+00:04:37,019 --> 00:04:40,019
+Ja mówię, zobacz, zobacz, to działa.
+
+47
+00:04:40,019 --> 00:04:43,019
+I na przykład na ekranie było status OK.
+
+48
+00:04:43,019 --> 00:04:47,019
+Ona mówi, ale co ci działa? Ty po prostu napisałeś ten komunikat, tak?
+
+49
+00:04:47,019 --> 00:04:49,019
+Ja mówię, tak, napisałem.
+
+50
+00:04:49,019 --> 00:04:53,019
+Napisałem ten komunikat, ale wiesz, tam jest kolejka taka, coś tam, framework.
+
+51
+00:04:53,019 --> 00:04:55,019
+No, to uzależnia.
+
+52
+00:04:55,019 --> 00:04:58,019
+Więc życzę ci, żeby też ciebie uzależniło, bo dzięki temu stanie się to twoim hobby.
+
+53
+00:04:58,019 --> 00:05:01,019
+A później będziesz chciał uczyć innych, do czego też jak najbardziej zachęcam.
+
+54
+00:05:01,019 --> 00:05:03,019
+Idziemy dalej.

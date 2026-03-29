@@ -1,0 +1,1051 @@
+1
+00:00:00,000 --> 00:00:05,560
+Stworzyłem sobie plik operacje wykresy py no i potrzebuję zaimportować csv na początek.
+
+2
+00:00:06,919 --> 00:00:16,980
+Następnie robię reader, równa się csv.dictreader, może być dictreader, będzie nam łatwiej, któremu musimy przekazać plik.
+
+3
+00:00:17,620 --> 00:00:24,300
+Ten plik to już jest konkretna nazwa pliku, jest konkretny plik otwarty jak pamiętacie oraz potrzebujemy mieć też field names,
+
+4
+00:00:24,300 --> 00:00:41,799
+czyli with open operacje csv encoding utf8, możemy od razu też ten new line sobie ustawić, dwukropek, jeszcze s file,
+
+5
+00:00:43,320 --> 00:00:48,760
+wtedy tutaj przekazujemy mu file oraz potrzebujemy mu jeszcze przekazać columns.
+
+6
+00:00:48,760 --> 00:00:54,260
+I w naszym przypadku te kolumny będą listą pochodzącą z pliku.
+
+7
+00:00:54,299 --> 00:01:01,799
+No i oczywiście teraz możemy wykonać sobie for row in reader, dwukropek i wyprintować sobie wiersz.
+
+8
+00:01:01,799 --> 00:01:12,299
+Sprawdźmy jak nasz program działa, python operacje wykres, ok, jak widać wiersze ładnie nam się tutaj zmapowały,
+
+9
+00:01:12,299 --> 00:01:18,799
+mamy daty, rodzaje operacji, wydatki, opisy operacji no i kwoty, wszystko jest ok.
+
+10
+00:01:18,799 --> 00:01:23,239
+Z tą różnicą, że kwota jest przekazana jako string, a u nas była liczbą,
+
+11
+00:01:23,239 --> 00:01:24,200
+więc on niestety nie ma znaczenia.
+
+12
+00:01:24,200 --> 00:01:29,500
+Niestety sobie z tym nie poradził, ale typy zaraz sobie odpowiednio przygotujemy,
+
+13
+00:01:29,500 --> 00:01:33,799
+bo drugą rzeczą, którą też trzeba będzie zrobić, trzeba będzie oczywiście też sparsować datę.
+
+14
+00:01:33,799 --> 00:01:36,600
+Czyli to są takie dwie rzeczy.
+
+15
+00:01:36,600 --> 00:01:38,600
+Co będzie mi tak naprawdę potrzebne?
+
+16
+00:01:38,600 --> 00:01:46,960
+Ja nie potrzebuję wiedzieć nawet jaki jest opis tej operacji, ja potrzebuję tylko wiedzieć jakie są wydatki i jakie są kwoty.
+
+17
+00:01:46,960 --> 00:01:50,900
+I będę potrzebował do stworzenia wykresu mieć dwie informacje.
+
+18
+00:01:50,900 --> 00:01:52,500
+Jaka jest łączna wydatka.
+
+19
+00:01:52,500 --> 00:01:52,700
+Jaka jest łączna wydatka.
+
+20
+00:01:52,700 --> 00:01:54,100
+Jaka jest łączna wydatka.
+
+21
+00:01:54,099 --> 00:02:00,699
+Wartość w danym miesiącu, czyli ile zostało.
+
+22
+00:02:00,699 --> 00:02:11,599
+A po drugie będę potrzebował wiedzieć ile operacji, wydatek lub to drugie nazwaliśmy przychód,
+
+23
+00:02:11,599 --> 00:02:16,799
+nastąpiło w danym miesiącu.
+
+24
+00:02:16,799 --> 00:02:21,099
+I myślę sobie, że w takim razie, jeżeli wiem, że takie dane są mi potrzebne,
+
+25
+00:02:21,099 --> 00:02:23,099
+mógłbym umówić się z wami,
+
+26
+00:02:23,099 --> 00:02:25,099
+że będziemy mieli jakiś słownik,
+
+27
+00:02:25,099 --> 00:02:28,099
+który będzie na przykład wyglądał mniej więcej tak.
+
+28
+00:02:28,099 --> 00:02:29,599
+Ja go sobie tutaj tylko opiszę,
+
+29
+00:02:29,599 --> 00:02:36,099
+a później na podstawie tego opisu właśnie przygotujemy sobie te dane.
+
+30
+00:02:36,099 --> 00:02:40,099
+Czyli słownik miałby tutaj na przykład informację, że jest to June.
+
+31
+00:02:40,099 --> 00:02:50,599
+Tak żeby było ładnie, żeby można później też ten June wykorzystać do zrobienia tych kolumn, prawda?
+
+32
+00:02:50,599 --> 00:02:52,400
+Żeby te dane były opisane.
+
+33
+00:02:52,400 --> 00:02:54,400
+Czyli przyda nam się June.
+
+34
+00:02:54,400 --> 00:02:58,400
+Następnie przyda nam się powiedzmy sobie total.
+
+35
+00:02:58,400 --> 00:03:02,400
+I tu będzie wartość 100.
+
+36
+00:03:02,400 --> 00:03:11,400
+Income number, niech to będzie 10.
+
+37
+00:03:11,400 --> 00:03:17,400
+Income number, income quantity.
+
+38
+00:03:17,400 --> 00:03:21,400
+No i wydatek to jakiś outcome quantity 10.
+
+39
+00:03:22,400 --> 00:03:26,400
+Albo może korzystając z tej poprzedniej nazwy, nazwijmy to expense po prostu.
+
+40
+00:03:26,400 --> 00:03:28,400
+Dobra, czyli to wiemy.
+
+41
+00:03:28,400 --> 00:03:30,400
+I teraz jak to osiągnąć?
+
+42
+00:03:30,400 --> 00:03:35,400
+Przechodząc sobie po poszczególnych wierszach, będziemy musieli ten słownik budować.
+
+43
+00:03:35,400 --> 00:03:39,400
+Czyli nam będzie potrzebna na pewno jakaś taka łączna zmienna,
+
+44
+00:03:39,400 --> 00:03:42,400
+która będzie przechowywała wszystkie te informacje.
+
+45
+00:03:42,400 --> 00:03:45,400
+Możemy ją sobie nazwać operations.
+
+46
+00:03:45,400 --> 00:03:47,400
+Nie wykorzystywaliśmy tego nigdzie.
+
+47
+00:03:47,400 --> 00:03:50,400
+Czytam opery statistics może o tak.
+
+48
+00:03:50,400 --> 00:03:53,400
+O tak i to będzie pusty słownik.
+
+49
+00:03:53,400 --> 00:04:00,400
+Następnie będziemy chcieli sprawdzić, czy ten miesiąc znajdował się już,
+
+50
+00:04:00,400 --> 00:04:04,400
+czy też właściwie, czy nie znajdował się już w naszym słowniku.
+
+51
+00:04:04,400 --> 00:04:08,400
+W tym celu będę musiał sformatować sobie najpierw datę operacji.
+
+52
+00:04:08,400 --> 00:04:11,400
+Żeby teraz zamienić tę naszą datę wymienioną na konkretną,
+
+53
+00:04:11,400 --> 00:04:15,400
+znaczy konkretny string ten datowy nazwijmy go na konkretną datę.
+
+54
+00:04:15,400 --> 00:04:19,399
+Musimy sobie from datetime zaimportować datetime.
+
+55
+00:04:20,399 --> 00:04:26,399
+A następnie napisać datetime.strptime
+
+56
+00:04:26,399 --> 00:04:31,399
+i strptime przyjmuje naszą datę jako string,
+
+57
+00:04:31,399 --> 00:04:37,399
+czyli row od data po prostu.
+
+58
+00:04:37,399 --> 00:04:40,399
+I druga rzecz to jest format.
+
+59
+00:04:40,399 --> 00:04:43,399
+Nasz format to jest rok, myślnik miesiąc, myślnik dzień,
+
+60
+00:04:43,399 --> 00:04:49,399
+czyli myślnik Y, wielkie, myślnik M i myślnik D.
+
+61
+00:04:49,399 --> 00:04:56,399
+I my tę naszą datę będziemy chcieli następnie zamienić z powrotem na nazwę miesiąca.
+
+62
+00:04:56,399 --> 00:05:04,399
+Czyli print operation date, ja już sobie sprawdziłem strftime, to było procent wielkie B.
+
+63
+00:05:04,399 --> 00:05:10,399
+Jeżeli teraz to sobie wykonamy, to powinniśmy dostać no właśnie nazwy miesięcy.
+
+64
+00:05:10,399 --> 00:05:14,399
+I teraz będziemy chcieli sprawdzić, czy ta nazwa miesiąca występuje w statistics,
+
+65
+00:05:14,399 --> 00:05:17,399
+jeżeli nie to go sobie tam utworzymy.
+
+66
+00:05:17,399 --> 00:05:24,399
+Czyli if to not in statistics, dwukropek,
+
+67
+00:05:24,399 --> 00:05:30,399
+to wtedy chcielibyśmy, żeby w statistics pojawiła się ta data
+
+68
+00:05:30,399 --> 00:05:36,399
+i będziemy chcieli stworzyć sobie słownik od razu zawierający total, income quantity i expense quantity.
+
+69
+00:05:36,399 --> 00:05:44,399
+Z tego względu, że dzięki temu będziemy mieli pewność, że te wartości się pokazały,
+
+70
+00:05:44,399 --> 00:05:46,399
+będzie można później do nich dodawać coś, odejmować.
+
+71
+00:05:46,399 --> 00:05:53,399
+Po prostu no wszystko będzie, będą traktowane jako liczby i wszystko będzie wtedy łatwiej nam przeprowadzić.
+
+72
+00:05:53,399 --> 00:05:55,399
+A co mamy przeprowadzić?
+
+73
+00:05:55,399 --> 00:06:01,399
+No w zależności od tego, czy nasza operacja to jest przychód, czy wydatek,
+
+74
+00:06:01,399 --> 00:06:07,399
+czy jaka jest rodzaj operacji, to będziemy chcieli zwiększać jedną wartość albo drugą.
+
+75
+00:06:07,399 --> 00:06:12,399
+No i dodatkowo będziemy chcieli albo dodawać ją do totalu, albo odejmować ją od totalu.
+
+76
+00:06:12,399 --> 00:06:13,399
+Czyli,
+
+77
+00:06:13,399 --> 00:06:15,399
+jeżeli,
+
+78
+00:06:16,399 --> 00:06:21,399
+rodzaj operacji, czyli row od rodzaj operacji,
+
+79
+00:06:21,399 --> 00:06:23,399
+to jest
+
+80
+00:06:23,399 --> 00:06:27,399
+przychód i wydatek, czyli przychód,
+
+81
+00:06:27,399 --> 00:06:31,399
+to wtedy wykonujemy następującą rzecz.
+
+82
+00:06:31,399 --> 00:06:38,399
+W tym miejscu powinniśmy odwołać się od total
+
+83
+00:06:38,399 --> 00:06:43,399
+i wykonać plus równa się zamieniony na float row od total.
+
+84
+00:06:43,399 --> 00:06:44,399
+I wykonać plus równa się zamieniony na float row od total.
+
+85
+00:06:44,399 --> 00:06:45,399
+I wykonać plus równa się zamieniony na float row od total.
+
+86
+00:06:46,399 --> 00:06:53,399
+I wykonać plus równa się zamieniony na float row od total.
+
+87
+00:06:53,399 --> 00:07:00,399
+A druga rzecz, którą trzeba byłoby tutaj zrobić, to trzeba byłoby również zwiększyć ilość przychodów.
+
+88
+00:07:00,399 --> 00:07:05,399
+Czyli znowu, statistics od
+
+89
+00:07:05,399 --> 00:07:08,399
+I tu odwołujemy się od income quantity.
+
+90
+00:07:08,399 --> 00:07:12,399
+plus równa się 1.
+
+91
+00:07:12,399 --> 00:07:15,399
+W przeciwnym wypadku, będziemy mieli sytuację bardzo podobną,
+
+92
+00:07:15,399 --> 00:07:19,099
+podobną z tą różnicą, że total będziemy chcieli odejmować,
+
+93
+00:07:19,419 --> 00:07:22,519
+no bo to jest wartość, na jaką został zmniejszony
+
+94
+00:07:22,519 --> 00:07:24,779
+nasz ten budżet na dany miesiąc
+
+95
+00:07:24,779 --> 00:07:28,079
+oraz income quantity to będzie expense quantity
+
+96
+00:07:28,079 --> 00:07:30,899
+i będziemy chcieli go zmniejszyć.
+
+97
+00:07:31,259 --> 00:07:34,239
+W tym momencie, jeżeli sobie po przejściu przez całą tą pętlę,
+
+98
+00:07:34,339 --> 00:07:37,219
+czyli w tym miejscu, gdzie kończy mi się for,
+
+99
+00:07:37,819 --> 00:07:40,060
+o tu, wyprintuję sobie statistics,
+
+100
+00:07:40,639 --> 00:07:44,060
+to powinienem zobaczyć, jaka wartość została mi na budżecie.
+
+101
+00:07:44,060 --> 00:07:47,240
+Strzała do góry, enter i widzę June,
+
+102
+00:07:47,360 --> 00:07:49,439
+czyli czerwiec, zostały mi 2000,
+
+103
+00:07:49,860 --> 00:07:52,620
+były 3 operacje przychodowe, 6 wydatków.
+
+104
+00:07:53,160 --> 00:07:56,199
+W July mieliśmy 1100 zostało, czyli mniej,
+
+105
+00:07:56,759 --> 00:07:58,899
+2 przychody i wydatków też 6.
+
+106
+00:07:59,519 --> 00:08:03,259
+Tu mamy 2020 i widzimy konkretne wartości,
+
+107
+00:08:03,360 --> 00:08:06,439
+czyli mamy czerwiec, lipiec, sierpień oraz wrzesień.
+
+108
+00:08:06,959 --> 00:08:08,800
+Wygląda dokładnie w ten sposób.
+
+109
+00:08:08,920 --> 00:08:11,920
+Tak wyglądają nasze dane, udało nam się to osiągnąć.
+
+110
+00:08:11,920 --> 00:08:13,920
+I teraz, żeby te dane przedstawić,
+
+111
+00:08:14,060 --> 00:08:16,060
+możemy je wykonać na wykresie.
+
+112
+00:08:16,160 --> 00:08:19,560
+Będziemy potrzebowali wykonać zbiór różnych operacji,
+
+113
+00:08:19,660 --> 00:08:22,660
+ale możemy go śmiało wykonywać na tym poziomie.
+
+114
+00:08:22,759 --> 00:08:24,759
+Z tego względu, że statistics było nad tym,
+
+115
+00:08:24,860 --> 00:08:26,860
+pliku już nie potrzebujemy mieć otwartego,
+
+116
+00:08:26,959 --> 00:08:28,959
+nie potrzebujemy go dłużej trzymać,
+
+117
+00:08:29,060 --> 00:08:31,060
+po prostu będziemy chcieli na statistics
+
+118
+00:08:31,160 --> 00:08:33,159
+stworzyć sobie wykresy.
+
+119
+00:08:33,259 --> 00:08:36,259
+Na początek zajmę się tym prostszym wykresem,
+
+120
+00:08:36,360 --> 00:08:39,360
+czyli będę chciał zaprezentować ilość operacji przychodowej
+
+121
+00:08:39,460 --> 00:08:42,460
+i ilość operacji wydatków.
+
+122
+00:08:42,559 --> 00:08:43,860
+W tym celu
+
+123
+00:08:43,860 --> 00:08:46,360
+potrzebuję zaimportować sobie plt,
+
+124
+00:08:46,460 --> 00:08:49,460
+czyli from, znowu instalowane wyżej.
+
+125
+00:08:51,460 --> 00:08:52,659
+To jest element konwencji.
+
+126
+00:08:52,759 --> 00:08:56,259
+Jeżeli nie zrobicie tego, to też nie będzie tragedii.
+
+127
+00:08:57,360 --> 00:08:58,860
+Przepraszam, import
+
+128
+00:09:00,860 --> 00:09:02,060
+splt.
+
+129
+00:09:02,659 --> 00:09:07,060
+W tym momencie będziemy mieli nasz plot już gotowy.
+
+130
+00:09:07,159 --> 00:09:08,360
+Plot twist.
+
+131
+00:09:08,460 --> 00:09:09,960
+I teraz, co musimy zrobić?
+
+132
+00:09:10,060 --> 00:09:13,659
+Musimy wykonać feature, przecinek, access,
+
+133
+00:09:13,659 --> 00:09:17,659
+zróbmy to, że to jest plot.subplots.
+
+134
+00:09:17,759 --> 00:09:20,159
+O tak.
+
+135
+00:09:20,259 --> 00:09:23,860
+Na naszym, nasze osie będziemy potrzebowali opisać.
+
+136
+00:09:23,959 --> 00:09:26,559
+Na dole chcielibyśmy mieć
+
+137
+00:09:26,659 --> 00:09:29,059
+nazwy naszych miesięcy.
+
+138
+00:09:29,159 --> 00:09:31,259
+Czyli, żeby pobrać sobie nazwy miesięcy,
+
+139
+00:09:31,360 --> 00:09:34,759
+będziemy potrzebowali mieć klucze pochodzące z naszego statistics.
+
+140
+00:09:34,860 --> 00:09:36,459
+No bo to są nasze klucze.
+
+141
+00:09:36,559 --> 00:09:38,860
+Może pamiętacie, była taka możliwość,
+
+142
+00:09:38,959 --> 00:09:41,159
+żeby wykonać statistics.keys,
+
+143
+00:09:41,259 --> 00:09:43,159
+bo jeżeli to jest słownik,
+
+144
+00:09:43,159 --> 00:09:44,259
+to to nam zadziała.
+
+145
+00:09:44,360 --> 00:09:46,059
+I w tym momencie on nam wyświetli
+
+146
+00:09:46,159 --> 00:09:48,259
+jun, july, august i september.
+
+147
+00:09:48,360 --> 00:09:49,759
+Z tą różnicą, że on to wyświetlił,
+
+148
+00:09:49,860 --> 00:09:51,259
+zobaczcie, jako dict.keys.
+
+149
+00:09:51,360 --> 00:09:52,959
+Ale nic nie stoi na przeszkodzie,
+
+150
+00:09:53,059 --> 00:09:54,860
+żeby to zamienić na listę.
+
+151
+00:09:54,959 --> 00:09:56,659
+I w tym momencie dostaniemy od razu
+
+152
+00:09:56,759 --> 00:09:58,959
+jun, july, august i september.
+
+153
+00:09:59,059 --> 00:10:00,559
+Czyli tak naprawdę te dane
+
+154
+00:10:00,659 --> 00:10:05,259
+będą dotyczyły naszych, tych etykiet kolumn.
+
+155
+00:10:05,360 --> 00:10:06,459
+Możemy je sobie jakoś nazwać.
+
+156
+00:10:06,559 --> 00:10:09,459
+Niech to będzie months.równa się.
+
+157
+00:10:09,559 --> 00:10:12,059
+A następnie potrzebujemy mieć wartości.
+
+158
+00:10:12,159 --> 00:10:12,959
+Wartości,
+
+159
+00:10:12,960 --> 00:10:14,660
+czyli to będą poszczególne wartości
+
+160
+00:10:14,759 --> 00:10:16,360
+pochodzące z kolumny total.
+
+161
+00:10:16,460 --> 00:10:17,860
+Czyli potrzebowalibyśmy zrobić
+
+162
+00:10:17,960 --> 00:10:20,259
+statistics.od,
+
+163
+00:10:20,360 --> 00:10:24,060
+june, od, total.
+
+164
+00:10:24,160 --> 00:10:25,460
+Do tego zrobić statistics.od,
+
+165
+00:10:25,560 --> 00:10:26,460
+july, od total,
+
+166
+00:10:26,560 --> 00:10:28,460
+statistics.od, august, od total
+
+167
+00:10:28,560 --> 00:10:29,460
+i tak dalej, i tak dalej.
+
+168
+00:10:29,560 --> 00:10:31,160
+To byłoby dosyć kłopotliwe,
+
+169
+00:10:31,259 --> 00:10:33,160
+no bo wtedy nie moglibyśmy się przygotować
+
+170
+00:10:33,259 --> 00:10:35,160
+na ilość, większą ilość miesięcy.
+
+171
+00:10:35,259 --> 00:10:38,759
+Więc skoro months to jest nasze statistics.keys,
+
+172
+00:10:38,860 --> 00:10:39,860
+to możemy wykonać
+
+173
+00:10:39,960 --> 00:10:42,759
+for month in months.
+
+174
+00:10:42,960 --> 00:10:46,360
+I żeby wtedy dobrać się do tego naszego statistics,
+
+175
+00:10:46,460 --> 00:10:49,360
+to wykonamy sobie statistics.od.
+
+176
+00:10:49,460 --> 00:10:51,860
+Można byłoby też w sumie zrobić zwykłą pętlę.
+
+177
+00:10:51,960 --> 00:10:54,759
+Teraz tak sobie myślę po statistics
+
+178
+00:10:54,860 --> 00:10:56,960
+i to też by nam zadziałało.
+
+179
+00:10:57,060 --> 00:10:59,960
+Tylko, no bo wtedy mielibyśmy też klucz i wartość.
+
+180
+00:11:00,060 --> 00:11:00,960
+Może tak będzie ładniej.
+
+181
+00:11:01,060 --> 00:11:09,360
+Czyli for month przecinek data in statistics.items.
+
+182
+00:11:09,460 --> 00:11:12,759
+I interesuje nas z data.
+
+183
+00:11:12,759 --> 00:11:16,559
+Czyli z tego, z tego data to jest nasze total
+
+184
+00:11:16,659 --> 00:11:20,159
+oraz income quantity i expense quantity.
+
+185
+00:11:20,259 --> 00:11:22,860
+Będą nas interesowały konkretne wartości total.
+
+186
+00:11:22,960 --> 00:11:25,360
+I my je musimy sobie przygotować do zwykłej listy.
+
+187
+00:11:25,460 --> 00:11:28,659
+Czyli totals równa się pusta lista
+
+188
+00:11:28,759 --> 00:11:37,559
+i totals append data od total.
+
+189
+00:11:37,659 --> 00:11:42,259
+Print months.
+
+190
+00:11:42,759 --> 00:11:44,960
+Totals.
+
+191
+00:11:45,059 --> 00:11:46,559
+Sprawdźmy czy zadziałało.
+
+192
+00:11:46,659 --> 00:11:47,960
+Ok.
+
+193
+00:11:48,059 --> 00:11:48,860
+Jak widać zadziałało.
+
+194
+00:11:48,960 --> 00:11:55,659
+Mamy June 2000, July 1100, August 2020 i September z taką wartością.
+
+195
+00:11:55,759 --> 00:11:58,159
+W tym momencie nie stoi już nam nic na przeszkodzie,
+
+196
+00:11:58,259 --> 00:12:00,860
+jak tylko stworzyć sobie taki wykres.
+
+197
+00:12:00,960 --> 00:12:05,159
+Czyli ax.bar, jeżeli ma być to wykres kolumnowy,
+
+198
+00:12:05,259 --> 00:12:12,559
+na którym będziemy chcieli mieć miesiące i totals ax.show.
+
+199
+00:12:12,759 --> 00:12:14,559
+Sprawdźmy czy to działało.
+
+200
+00:12:14,659 --> 00:12:16,659
+Pewnie wykres pokaże się na drugim ekranie.
+
+201
+00:12:16,759 --> 00:12:19,259
+I mshow.plt.show.
+
+202
+00:12:19,360 --> 00:12:23,360
+Sprawdźmy teraz.
+
+203
+00:12:23,460 --> 00:12:24,559
+O i zadziałało.
+
+204
+00:12:24,659 --> 00:12:28,860
+Czyli June ma 2000, September ma ponad 3000.
+
+205
+00:12:28,960 --> 00:12:30,159
+Czy tak faktycznie było?
+
+206
+00:12:30,259 --> 00:12:31,360
+Sprawdźmy raz jeszcze.
+
+207
+00:12:31,460 --> 00:12:32,960
+Tu był September.
+
+208
+00:12:33,059 --> 00:12:36,259
+3320.
+
+209
+00:12:36,360 --> 00:12:37,059
+Dokładnie tak.
+
+210
+00:12:37,159 --> 00:12:40,259
+Udało nam się we wrześniu najwięcej zaoszczędzić.
+
+211
+00:12:40,360 --> 00:12:42,460
+Najmniej było wydatków albo najwięcej było przychodów.
+
+212
+00:12:42,460 --> 00:12:46,460
+Bo Income Quantity było 2, a Expense Quantity było 5.
+
+213
+00:12:46,560 --> 00:12:47,960
+Więc zdecydowanie, ok.
+
+214
+00:12:48,060 --> 00:12:50,259
+Dobra, to to mamy.
+
+215
+00:12:50,360 --> 00:12:52,860
+I w takim razie powinniśmy zrobić rzecz jeszcze jedną,
+
+216
+00:12:52,960 --> 00:12:55,060
+a mianowicie ten drugi wykres z ilością operacji.
+
+217
+00:12:55,160 --> 00:12:59,360
+Ja sobie wymieniłem ten show na SaveFiga z tego względu,
+
+218
+00:12:59,460 --> 00:13:02,060
+że jeżeli robimy show, to on się w tym miejscu zatrzymuje
+
+219
+00:13:02,160 --> 00:13:03,060
+i nie chce iść dalej.
+
+220
+00:13:03,160 --> 00:13:04,259
+To jest pierwsza rzecz.
+
+221
+00:13:04,360 --> 00:13:07,259
+Druga rzecz, żeby zrobić tę ilość operacji,
+
+222
+00:13:07,360 --> 00:13:11,360
+musimy sobie zsumować tak naprawdę Income Quantity i Expense Quantity.
+
+223
+00:13:11,460 --> 00:13:12,360
+Myślałem sobie,
+
+224
+00:13:12,360 --> 00:13:17,960
+że zrobimy wykres z dwiema kolumnami jakby w jednym,
+
+225
+00:13:18,060 --> 00:13:19,360
+że wam pokażę to.
+
+226
+00:13:19,460 --> 00:13:21,460
+Jednak tam jest dosyć spora wiedza,
+
+227
+00:13:21,560 --> 00:13:22,759
+znaczy może nie spora wiedza,
+
+228
+00:13:22,860 --> 00:13:25,360
+ale trochę trzeba wiedzieć z NumPy'a i nie chcę zupełnie mieszać.
+
+229
+00:13:25,460 --> 00:13:29,159
+Więc po prostu sobie zsumuję Income Quantity i Expense Quantity.
+
+230
+00:13:29,259 --> 00:13:30,960
+A kto ma ochotę pójść o krok dalej,
+
+231
+00:13:31,060 --> 00:13:32,159
+może poszukać sposobu,
+
+232
+00:13:32,259 --> 00:13:36,759
+żeby jakby pod miesiącami pokazywały nam się te słupki 2.
+
+233
+00:13:36,860 --> 00:13:38,960
+Żeby pod każdym miesiącem były 2 słupki.
+
+234
+00:13:39,060 --> 00:13:40,159
+Natomiast ok.
+
+235
+00:13:40,259 --> 00:13:42,259
+Ja pójdę w stronę zsumowania tego.
+
+236
+00:13:42,360 --> 00:13:43,659
+Czyli żeby to zsumować,
+
+237
+00:13:43,759 --> 00:13:48,759
+potrzebuję mieć ponownie coś w stylu Total Operations czy Number of Operations.
+
+238
+00:13:48,860 --> 00:14:04,759
+No i to nasze Number of Operations musi przyjmować sumę Income'u z Expense'em.
+
+239
+00:14:04,860 --> 00:14:12,159
+Ok.
+
+240
+00:14:12,360 --> 00:14:14,759
+No i w ten sposób mogę sobie stworzyć nowy wykres.
+
+241
+00:14:14,860 --> 00:14:17,259
+W tym celu wystarczy sobie to skopiuję,
+
+242
+00:14:17,360 --> 00:14:20,759
+zmienię Totals na Number of Operations,
+
+243
+00:14:20,860 --> 00:14:23,259
+no i podsumowanie zmienię na Ilość Operacji.
+
+244
+00:14:23,360 --> 00:14:27,060
+W tym momencie, kiedy to wywołam,
+
+245
+00:14:27,159 --> 00:14:28,259
+on mi się chwilę zamyśli,
+
+246
+00:14:28,360 --> 00:14:29,659
+nie pokaże mi żadnego wykresu,
+
+247
+00:14:29,759 --> 00:14:31,460
+tylko zapisze 2 pliki graficzne.
+
+248
+00:14:31,560 --> 00:14:33,460
+Sprawdźmy, czy wykresy się pokazały.
+
+249
+00:14:33,560 --> 00:14:34,860
+Tu jeszcze jeden błąd.
+
+250
+00:14:34,960 --> 00:14:39,060
+Brakowało mi dodania raz jeszcze stworzenia wykresu.
+
+251
+00:14:39,159 --> 00:14:40,860
+I teraz wywołajmy to,
+
+252
+00:14:40,960 --> 00:14:42,159
+sprawdźmy, czy wykresy się pokazały.
+
+253
+00:14:42,360 --> 00:14:44,759
+No i zobaczcie, Ilość Operacji wygląda tak,
+
+254
+00:14:44,860 --> 00:14:46,960
+czyli najwięcej było w June, w czerwcu,
+
+255
+00:14:47,060 --> 00:14:49,060
+najmniej było w September i w August,
+
+256
+00:14:49,159 --> 00:14:51,060
+czyli we wrześniu i w sierpniu.
+
+257
+00:14:51,159 --> 00:14:52,960
+Natomiast, jeżeli chodzi o podsumowanie,
+
+258
+00:14:53,060 --> 00:14:54,960
+wygląda ono właśnie tak.
+
+259
+00:14:55,060 --> 00:14:56,159
+Czyli wykresy są.
+
+260
+00:14:56,259 --> 00:14:57,759
+Bardzo dziękuję Wam za tę lekcję
+
+261
+00:14:57,860 --> 00:15:00,659
+i chodźcie dalej, gdzie zmierzymy się z SQL-em,
+
+262
+00:15:00,759 --> 00:15:02,560
+na przykładzie SQLite'a.
+
+263
+00:15:02,659 --> 00:15:03,460
+Chodźcie.

@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:03,399
+W tym ćwiczeniu zachęcam do tego, żeby za pomocą range oraz tapu
+
+2
+00:00:03,399 --> 00:00:06,580
+stworzyć liczby, zakres liczb od 1 do 100.
+
+3
+00:00:07,060 --> 00:00:08,700
+100 ma być, czyli do 101.
+
+4
+00:00:09,880 --> 00:00:13,019
+Po drugie, wyciągnij tylko pierwsze 10 liczb.
+
+5
+00:00:13,800 --> 00:00:18,000
+Po trzecie, wyciągnij tylko ostatnie 10 liczb.
+
+6
+00:00:18,000 --> 00:00:21,240
+Pamiętaj, że minus bierze od końca.
+
+7
+00:00:21,400 --> 00:00:25,560
+Po czwarte, wyciągnij tylko z tej listy wartości nieparzyste.
+
+8
+00:00:26,620 --> 00:00:29,519
+I tutaj liczymy wartości jako 1, 3, 7, 9 itd.
+
+9
+00:00:30,000 --> 00:00:34,820
+No i ostatni podpunkt, wyciągnij z listy tylko wartości parzyste
+
+10
+00:00:34,820 --> 00:00:37,340
+w kolejności od największej do najmniejszej.
+
+11
+00:00:38,460 --> 00:00:39,179
+Nie sortuj.
+
+12
+00:00:39,859 --> 00:00:43,700
+Musimy po prostu pobrać sobie te wartości od końca.
+
+13
+00:00:44,539 --> 00:00:48,620
+Trochę takich zadań tutaj do pokombinowania, do pomyślenia.
+
+14
+00:00:49,140 --> 00:00:50,539
+Niektóre mogą być trudniejsze.
+
+15
+00:00:51,019 --> 00:00:52,700
+Jeżeli z czymś masz problem, nie przejmuj się.
+
+16
+00:00:52,799 --> 00:00:54,359
+Za chwilę pokazuję rozwiązanie.
+
+17
+00:00:54,480 --> 00:00:57,000
+Możesz wtedy zrobić sobie pauzę i to sobie przeanalizować.
+
+18
+00:00:57,000 --> 00:01:00,000
+Tak jak mówiłem, slicing nie jest rzeczą potrzebną.
+
+19
+00:01:00,000 --> 00:01:01,820
+Ona przydaje się w czasie.
+
+20
+00:01:02,299 --> 00:01:05,079
+Natomiast warto wiedzieć, że coś takiego ma miejsce
+
+21
+00:01:05,079 --> 00:01:08,620
+i że będziesz tego typu operatory widział, widziała,
+
+22
+00:01:08,719 --> 00:01:11,460
+no bo zdecydowanie z tego się korzysta.
+
+23
+00:01:12,180 --> 00:01:13,980
+Do zobaczenia w rozwiązaniu.

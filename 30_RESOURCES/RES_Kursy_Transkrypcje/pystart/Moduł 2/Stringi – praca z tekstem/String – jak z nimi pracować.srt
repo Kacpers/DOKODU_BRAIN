@@ -1,0 +1,543 @@
+1
+00:00:00,000 --> 00:00:11,080
+Stringi, czyli łańcuchy znaków. Od razu mogę powiedzieć, że tu nie będzie bardzo wielu nowości, więc nie przejmuj się, jeżeli się boisz, że o Jezu, znowu coś nowego.
+
+2
+00:00:11,080 --> 00:00:23,160
+Nie, mam nadzieję, że to będzie bardziej motywujące niż tutaj straszące. Więc nie będzie wiele nowości. Dlaczego? Po pierwsze, dlatego, że już znasz tuple, a stringi to też jest rodzaj kolekcji, więc parę rzeczy będzie wspólnych.
+
+3
+00:00:23,160 --> 00:00:40,140
+Po drugie, dlatego, że już trochę tych stringów było. Wyświetlaliśmy sobie witaj świecie, witaj imię, jakieś teksty. To właśnie były łańcuchy znaków. Więc tak naprawdę już typ znasz, wiesz, że to kolekcja, więc pewne rzeczy wiesz, no to co nowego? No, poczekaj.
+
+4
+00:00:40,320 --> 00:00:53,140
+Przede wszystkim powiedzmy sobie o tych rzeczach podstawowych. Do deklaracji używamy apostrofów, czyli jeżeli chcesz napisać jakiś string, przypisać go do zmiennej, to zawsze w apostrofy. Po drugie, do rzutowania używamy funkcji string.
+
+5
+00:00:53,159 --> 00:01:14,780
+Więc jeżeli chcesz zmienić jakąś liczbę na tekst, to używasz str, w nawiasie wpisujesz tę wartość i się zamieni. Po trzecie, jest to kolekcja indeksowana, czyli jeżeli masz string, może być to twoje imię, może być to nazwa firmy, w której pracujesz, może być to dowolna wartość, to możesz do poszczególnych liter odwoływać się poprzez indeks.
+
+6
+00:01:14,780 --> 00:01:23,140
+Czyli tak samo jak w tupli, możesz napisać na przykład imię od zera i dostaniesz pierwszą literę, albo imię od minus jeden i dostaniesz ostatnią.
+
+7
+00:01:23,159 --> 00:01:32,399
+Co ciekawe, w przypadku stringów działa też slicing, więc możesz wycinać na przykład kawałek tego wyrażenia tekstowego i pobierać sobie odpowiednie rzeczy, które cię interesują.
+
+8
+00:01:33,219 --> 00:01:43,099
+Po czwarte, stringi są niemutowalne. To znaczy, że jeżeli stworzysz sobie jakiś tekst i będziesz chciał, chciała podmienić ostatnią literę, to niestety tego się nie da zrobić.
+
+9
+00:01:43,599 --> 00:01:51,280
+Można stworzyć nowy tekst, który będzie miał tę ostatnią literę podmienioną, ale tak wybierać sobie poszczególnych liter i wymieniać je na inne znaki się nie da.
+
+10
+00:01:51,280 --> 00:01:56,620
+Są do tego metody, ale one i tak zawsze będą zwracały nam nowy tekst.
+
+11
+00:01:56,620 --> 00:02:06,500
+Z punktu widzenia programisty nie jest to duża różnica, natomiast chciałbym, żebyś wiedział, że jeżeli zrobimy sobie imię od dwa równa się z, to to nie zadziała.
+
+12
+00:02:07,640 --> 00:02:13,120
+No i ostatnia rzecz, taka trochę naturalna, ale też o tym tutaj wspomnę, że kolejność elementów jest zachowana.
+
+13
+00:02:13,259 --> 00:02:18,759
+Czyli jeżeli masz swoje imię, to nigdy Python sam z siebie nie będzie ci zmieniał kolejności liter.
+
+14
+00:02:18,759 --> 00:02:20,400
+To miłe z jego strony, prawda?
+
+15
+00:02:21,280 --> 00:02:23,020
+Więc tutaj jest kilka przykładów.
+
+16
+00:02:23,680 --> 00:02:27,640
+Zadeklarowaliśmy sobie string, napisałem name równa się pystart.
+
+17
+00:02:28,060 --> 00:02:33,300
+W ten sposób spowodowałem, że pod zmienną name przypisał mi się string o właśnie takiej wartości.
+
+18
+00:02:33,920 --> 00:02:40,879
+Co ciekawe, z racji tego, że są to stringi, to możemy na tych stringach wykonywać szereg, i tu nowe słowo, metod.
+
+19
+00:02:41,340 --> 00:02:47,060
+Czyli na obiekcie, jakim jest string, dużo teraz rzeczy takich nowych wchodzi, ale tym się nie przejmuj.
+
+20
+00:02:47,060 --> 00:02:50,439
+Po prostu wiedz o tym, że skoro jest to name, jest to string.
+
+21
+00:02:51,280 --> 00:02:53,319
+W stringach można trochę rzeczy zmieniać.
+
+22
+00:02:53,580 --> 00:02:55,379
+No bo z liczbami nie dałoby się tak zrobić, nie?
+
+23
+00:02:55,379 --> 00:02:59,759
+Na liczbach można wykonywać operacje, żeby je sumować, dodawać, zliczać, robić pewne takie rzeczy.
+
+24
+00:03:00,120 --> 00:03:04,439
+Natomiast tutaj przez to, że to jest tekst, to trochę możemy już tych operacji więcej robić.
+
+25
+00:03:05,520 --> 00:03:12,759
+I zobacz, na przykład name może mieć kropka upper i w ten sposób ten tekst zostanie zapisany tylko wielkimi literami.
+
+26
+00:03:13,219 --> 00:03:21,020
+Możesz też napisać tutaj zobacz name kropka lower i wtedy ten sam tekst zostanie zapisany tylko i wyłącznie małymi literami.
+
+27
+00:03:21,280 --> 00:03:27,719
+Co ciekawe, masz też możliwość wykonywania replace, żeby podmienić sobie część stringa na inną.
+
+28
+00:03:27,719 --> 00:03:34,080
+Na przykład pystart możesz wymienić na pywww, wymieniając słowo start na www.
+
+29
+00:03:34,080 --> 00:03:38,800
+I on wtedy również zwróci nam nowy string, w którym właśnie ta podmiana będzie widoczna.
+
+30
+00:03:38,800 --> 00:03:42,599
+Czyli w ten sposób wymienisz sobie kawałek stringa na inny.
+
+31
+00:03:42,599 --> 00:03:51,240
+Na przykład dzisiaj będzie fatalny dzień, jeżeli wykonasz replace, zamiast fatalny napiszesz wspaniały, no to...
+
+32
+00:03:51,280 --> 00:03:53,840
+Taka treść się właśnie wyświetli.
+
+33
+00:03:53,840 --> 00:04:04,199
+Tutaj zachęcam do tego, żeby wszystkimi tymi rzeczami pobawić się w środowisku zintegrowanym albo stworzyć sobie program, w którym pobawisz się, pozmieniasz trochę te znaki.
+
+34
+00:04:04,199 --> 00:04:07,800
+Myślę, że już powoli nawet zadania można sobie samemu zacząć tworzyć.
+
+35
+00:04:07,800 --> 00:04:09,800
+Oczywiście ja też zadania tutaj będę miał.
+
+36
+00:04:09,800 --> 00:04:12,800
+No i za chwilę też praca domowa, dosyć duża.
+
+37
+00:04:12,800 --> 00:04:17,360
+Dalej mamy kolejny przykład name kropka find py.
+
+38
+00:04:17,360 --> 00:04:19,399
+Find to jest taka metoda, która służy do tego, żeby zrozumieć, że coś się dzieje.
+
+39
+00:04:19,399 --> 00:04:20,399
+To jest taka metoda, która służy do tego, żeby zrozumieć, że coś się dzieje.
+
+40
+00:04:20,399 --> 00:04:21,240
+To jest taka metoda, która służy do tego, żeby zrozumieć, że coś się dzieje.
+
+41
+00:04:21,240 --> 00:04:25,680
+i znalaść określony fragment, określone wyrażenie w naszym stringu.
+
+42
+00:04:25,680 --> 00:04:30,160
+I skoro name to jest wciąż PyStart, bo ten name nie został zmieniony.
+
+43
+00:04:30,160 --> 00:04:35,720
+To jeżeli poszukam wyrażenia py, to on mi odpowie, że py zaczyna się od zerowego znaku.
+
+44
+00:04:35,720 --> 00:04:39,600
+Czyli ja wiem, że to jest od zera, bo indeksujemy zawsze od zera.
+
+45
+00:04:39,600 --> 00:04:41,280
+Mam p i y.
+
+46
+00:04:41,280 --> 00:04:44,000
+Czyli on mi po prostu to tutaj znalazł.
+
+47
+00:04:44,000 --> 00:04:47,439
+Natomiast jeżeli zapytam go, ej a powiedz mi gdzie jest start.
+
+48
+00:04:47,439 --> 00:04:50,360
+No to pamiętamy, że to jest zero, jeden
+
+49
+00:04:50,360 --> 00:04:50,600
+No to pamiętamy, że to jest zero, jeden
+
+50
+00:04:50,600 --> 00:04:51,160
+i start zero.
+
+51
+00:04:51,160 --> 00:04:51,199
+i start zero.
+
+52
+00:04:51,199 --> 00:04:51,220
+i start zero.
+
+53
+00:04:51,220 --> 00:04:51,240
+i start zero.
+
+54
+00:04:51,240 --> 00:04:54,660
+zaczyna się od dwójki, dlatego też zwrócił nam tutaj dwójkę.
+
+55
+00:04:55,620 --> 00:04:59,860
+Co ciekawe, my możemy też tuple zamieniać sobie na stringi
+
+56
+00:04:59,860 --> 00:05:01,819
+i stringi zamieniać sobie na tuple.
+
+57
+00:05:02,300 --> 00:05:05,139
+Tu akurat to jest odrobinkę inna forma,
+
+58
+00:05:05,319 --> 00:05:07,860
+to nie jest tupla, to jest lista, ale tym się nie przejmuj.
+
+59
+00:05:08,280 --> 00:05:09,540
+Ważne jest tylko dla mnie, żebyś wiedział,
+
+60
+00:05:09,600 --> 00:05:12,000
+że możemy stringi właśnie rozdzielać i łączyć.
+
+61
+00:05:12,000 --> 00:05:14,280
+O listach będziemy rozmawiali w przyszłym module.
+
+62
+00:05:14,720 --> 00:05:18,639
+Zobacz, jeżeli ja wykonam fruit równa się lemon, apple, peach oraz melon,
+
+63
+00:05:18,639 --> 00:05:24,000
+to wykonując fruit.split mam możliwość rozbicia tych elementów.
+
+64
+00:05:24,439 --> 00:05:27,719
+Tak jak mówię, tutaj się nie przejmuj tym, że nawiasy są kwadratowe.
+
+65
+00:05:28,099 --> 00:05:30,379
+Te same rzeczy, które robiliśmy do tej pory na tuplach,
+
+66
+00:05:30,519 --> 00:05:32,740
+można robić też na tym obiekcie.
+
+67
+00:05:33,099 --> 00:05:35,500
+Czyli można przechodzić po poszczególnych elementach.
+
+68
+00:05:35,759 --> 00:05:36,939
+Działa to zupełnie tak samo.
+
+69
+00:05:37,620 --> 00:05:39,139
+Analogicznie można też łączyć.
+
+70
+00:05:39,479 --> 00:05:41,860
+Jeżeli sobie stworzymy tuple, czy stworzymy sobie lista,
+
+71
+00:05:41,959 --> 00:05:44,439
+a następnie wykonamy spacja join person,
+
+72
+00:05:44,439 --> 00:05:48,599
+to on nam wówczas w odpowiedzi wyświetli złączoną osobę.
+
+73
+00:05:48,680 --> 00:05:51,439
+Czyli Zofia Naukowska wyświetlił Zofia Naukowska.
+
+74
+00:05:52,439 --> 00:05:55,740
+Co ciekawe, możesz też odpowiedzieć na pytanie,
+
+75
+00:05:56,079 --> 00:05:59,819
+ile razy jeden zwrot wystąpił w naszym stringu.
+
+76
+00:06:00,159 --> 00:06:02,060
+Zobacz, mamy taki string.
+
+77
+00:06:02,399 --> 00:06:05,039
+Programuj w Pythonie. Python to dobry wybór.
+
+78
+00:06:05,300 --> 00:06:07,439
+I teraz, jeżeli sobie wykonasz string.count
+
+79
+00:06:08,039 --> 00:06:09,439
+i w nawiasie wpiszesz Python,
+
+80
+00:06:10,439 --> 00:06:11,899
+to w odpowiedzi dostaniesz informację,
+
+81
+00:06:11,899 --> 00:06:14,959
+że Python wystąpił dokładnie dwa razy.
+
+82
+00:06:15,339 --> 00:06:17,899
+Tak samo, jeżeli napiszesz string.start,
+
+83
+00:06:18,639 --> 00:06:19,939
+startwith programuj,
+
+84
+00:06:19,939 --> 00:06:22,740
+to on wtedy będzie ci odpowiadał prawdą albo fałszem,
+
+85
+00:06:22,740 --> 00:06:27,839
+mówiąc o tym, czy wyrażenie string wystąpiło w tym,
+
+86
+00:06:27,839 --> 00:06:31,740
+czy wyrażenie programuj wystąpiło w twoim stringu
+
+87
+00:06:31,740 --> 00:06:33,839
+i czy pojawiło się na samym początku.
+
+88
+00:06:34,139 --> 00:06:37,439
+Oprócz startwith znajdziesz też endswith na przykład.
+
+89
+00:06:37,740 --> 00:06:39,639
+I tutaj też możesz używać operatora in,
+
+90
+00:06:39,639 --> 00:06:43,740
+żeby sprawdzić, czy jakiś tekst znajduje się w jakimś stringu.
+
+91
+00:06:44,039 --> 00:06:48,439
+Na przykład, jeżeli byś napisał python in string,
+
+92
+00:06:48,639 --> 00:06:49,740
+to dostałbyś prawdę.
+
+93
+00:06:49,740 --> 00:06:51,139
+Zobacz, mogę ci to pokazać.
+
+94
+00:06:51,139 --> 00:06:54,639
+Zobacz, stworzymy sobie takie jakieś wyrażenie, jakiś tekst.
+
+95
+00:06:54,639 --> 00:06:58,139
+Niech to będzie Python jest super.
+
+96
+00:07:00,139 --> 00:07:05,139
+I teraz, jeżeli zrobisz text starts with Python,
+
+97
+00:07:06,639 --> 00:07:09,139
+to dostaniesz informację, że to jest true.
+
+98
+00:07:09,139 --> 00:07:15,139
+Natomiast, jeżeli zrobisz endswith python,
+
+99
+00:07:15,139 --> 00:07:16,639
+to dostaniesz informację false.
+
+100
+00:07:16,639 --> 00:07:18,439
+Natomiast, jak najbardziej możesz napisać,
+
+101
+00:07:18,439 --> 00:07:19,439
+że to jest true.
+
+102
+00:07:19,439 --> 00:07:20,439
+I to jest super.
+
+103
+00:07:20,439 --> 00:07:23,439
+I takich metod na stringach jest bardzo dużo.
+
+104
+00:07:23,439 --> 00:07:25,939
+Nie ma sensu, od razu mówię, ich wykuwać wszystkich.
+
+105
+00:07:25,939 --> 00:07:29,439
+Warto jest po prostu, kiedy robisz zadanie, poszukać sobie,
+
+106
+00:07:29,439 --> 00:07:31,439
+hmm, ciekawe, czy jest taka metoda na stringu,
+
+107
+00:07:31,439 --> 00:07:32,439
+której mógłbym tutaj użyć.
+
+108
+00:07:32,439 --> 00:07:34,439
+I nagle się okazuje, hej, jest.
+
+109
+00:07:34,939 --> 00:07:37,939
+Inne ciekawe rzeczy jeszcze, które też tutaj ci zaproponowałem,
+
+110
+00:07:37,939 --> 00:07:40,439
+to jest isNumeric oraz isAlpha.
+
+111
+00:07:40,439 --> 00:07:43,439
+Za pomocą tego możesz sprawdzić na przykład,
+
+112
+00:07:43,439 --> 00:07:46,439
+czy ta zmienna a is numeric.
+
+113
+00:07:46,439 --> 00:07:47,439
+Yy-y.
+
+114
+00:07:48,439 --> 00:07:49,439
+I teraz.
+
+115
+00:07:51,439 --> 00:07:52,439
+Yhym.
+
+116
+00:07:52,439 --> 00:07:56,439
+Możesz też zobaczyć, czy 221 is numeric.
+
+117
+00:07:57,439 --> 00:07:58,439
+Yhym.
+
+118
+00:07:58,439 --> 00:08:01,439
+Albo czy aa is numeric.
+
+119
+00:08:01,439 --> 00:08:02,439
+False.
+
+120
+00:08:02,439 --> 00:08:05,439
+Więc w ten sposób możesz też, tak jak robimy input, prawda?
+
+121
+00:08:05,439 --> 00:08:07,439
+I w inputcie zawsze pojawia się ten problem, że hej,
+
+122
+00:08:07,439 --> 00:08:11,439
+jak wpiszę jakiś tekst, to on mi tam wyświetla ten taki brzydki błąd pythonowy.
+
+123
+00:08:11,439 --> 00:08:15,439
+Możesz to ładniej obsłużyć właśnie w ten sposób.
+
+124
+00:08:15,439 --> 00:08:17,439
+I o tych stringach troszeczkę sobie powiedzieliśmy.
+
+125
+00:08:18,439 --> 00:08:21,439
+I myślę, że przyszedł czas, żeby sobie teraz poćwiczyć pracę z nimi.
+
+126
+00:08:21,439 --> 00:08:23,439
+Zapraszam do zadań.
+
+127
+00:08:23,439 --> 00:08:37,440
+.
+
+128
+00:08:37,440 --> 00:08:38,440
+Zadań.
+
+129
+00:08:38,440 --> 00:08:39,440
+.
+
+130
+00:08:39,440 --> 00:08:40,440
+.
+
+131
+00:08:40,440 --> 00:08:41,440
+.
+
+132
+00:08:41,440 --> 00:08:42,440
+.
+
+133
+00:08:42,440 --> 00:08:43,440
+.
+
+134
+00:08:43,440 --> 00:08:44,440
+.
+
+135
+00:08:44,440 --> 00:08:45,440
+.
+
+136
+00:08:45,440 --> 00:08:46,440
+.

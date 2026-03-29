@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:03,000
+No i tu dowód, żeby to praktycznie tak samo wygląda,
+
+2
+00:00:03,120 --> 00:00:06,179
+to jeżeli importujemy sobie cokolwiek z biblioteki standardowej.
+
+3
+00:00:06,299 --> 00:00:09,179
+Zobacz, czy coś to sobie
+
+4
+00:00:09,179 --> 00:00:11,939
+zdoinstalowaliśmy. Tutaj tak samo wykonujemy
+
+5
+00:00:11,939 --> 00:00:14,560
+from math import floor albo from url
+
+6
+00:00:14,560 --> 00:00:17,800
+request import url cleanup, jakaś inna funkcja.
+
+7
+00:00:18,300 --> 00:00:20,839
+Tak naprawdę mógłbym również zrobić import math
+
+8
+00:00:20,839 --> 00:00:23,859
+i wtedy pisać math.floor za każdym razem.
+
+9
+00:00:24,400 --> 00:00:26,900
+Jeżeli coś jest w bibliotece standardowej, coś jest wbudowane
+
+10
+00:00:26,900 --> 00:00:29,219
+w Python, no to importy wyglądają dokładnie tak samo.

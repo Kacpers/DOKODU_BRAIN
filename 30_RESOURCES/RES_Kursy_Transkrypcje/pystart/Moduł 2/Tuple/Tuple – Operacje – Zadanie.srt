@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:03,660
+I ponownie mam dla Ciebie kilka zadań do nabrania wprawy.
+
+2
+00:00:04,139 --> 00:00:06,540
+Przygotuj tuple zawierającą listę imion.
+
+3
+00:00:06,820 --> 00:00:09,679
+Za każdym uruchomieniem programu pytaj użytkownika o imię.
+
+4
+00:00:10,000 --> 00:00:13,060
+Jeśli znajduje się ono na liście, wyświetl komunikat pomyślny,
+
+5
+00:00:13,460 --> 00:00:15,200
+a jeśli nie, to powiadam go o błędzie.
+
+6
+00:00:15,400 --> 00:00:17,859
+Na przykład podaj imię Alina.
+
+7
+00:00:17,859 --> 00:00:20,519
+No i pojawia się komunikat, to imię znajduje się na liście.
+
+8
+00:00:21,000 --> 00:00:25,539
+Jeżeli ktoś by podał imię Halina, to nie byłoby takiego imienia na liście,
+
+9
+00:00:25,640 --> 00:00:27,879
+więc komunikat powinien być przeczący.
+
+10
+00:00:27,879 --> 00:00:30,439
+To co? Widzimy się za 3 minuty.
+
+11
+00:00:30,820 --> 00:00:33,399
+Myślę, że to zadanie już spokojnie umieszczę w PyCharmie,
+
+12
+00:00:33,479 --> 00:00:35,439
+tak żeby można było je uruchamiać i sprawdzać.
+
+13
+00:00:36,019 --> 00:00:36,579
+Do zobaczenia.

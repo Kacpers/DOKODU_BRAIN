@@ -1,7 +1,7 @@
 ---
 type: changelog
 owner: kacper + claude
-last_updated: 2026-03-26
+last_updated: 2026-03-29
 tags: [strona, dokodu.it, changelog, web]
 ---
 
@@ -10,6 +10,31 @@ tags: [strona, dokodu.it, changelog, web]
 Logi zmian wprowadzanych na stronie przez Claude Code. Przy analizie danych (GA/GSC) zawsze sprawdź najpierw czy dana strona/sekcja nie była niedawno zmieniana.
 
 Format: `YYYY-MM-DD | ścieżka/plik | opis zmiany`
+
+---
+
+## 2026-03-29
+
+### SEO meta title & description — `/blog/wdrozenie-ai-w-firmie`
+
+**Źródło:** GSC analysis — frazy "automatyzacje dla firm" (#11.0, 132 imp.) i "automatyzacja ai" (#11.2, 208 imp.)
+**Metoda:** blog API (`--meta-title` + `--excerpt`), revalidacja ISR automatyczna
+**Brief:** `20_AREAS/AREA_Blog_SEO/Brief_Automatyzacja_Dla_Firm_2026-03-29.md`
+
+- meta title: "Automatyzacja AI w firmie - jak wdrożyć sztuczną inteligencję" → **"Automatyzacja AI dla Firm — Jak Zacząć w 2026?"** (47 zn., fraza "Automatyzacja AI" na początku)
+- meta description: "Kompletny przewodnik po wdrożeniu AI w firmie..." → **"Automatyzacja AI w firmie: które procesy wdrożyć pierwsze, ile to kosztuje i jak wybrać partnera. Sprawdź praktyczny przewodnik dla CEO i dyrektorów."** (152 zn., CTA + fraza docelowa)
+- **Uwaga:** treść artykułu nie zmieniona, tylko meta tagi. Cel: pozycja #11 → top 5–7 dla "automatyzacja ai dla firm". Efekt widoczny po 14–21 dniach w GSC.
+
+---
+
+### SEO meta title & description — 2 strony blogowe
+
+**Źródło:** GSC analysis (SEO_Meta_Fixes_2026-03-29.md) — niski CTR przy dobrych pozycjach
+**Metoda:** blog API (`--meta-title` + `--excerpt`), revalidacja ISR automatyczna
+
+- `/blog/n8n` — meta title: "N8n - co to jest? Przewodnik od zera do eksperta" → "n8n: Automatyzacja bez kodu — kompletny przewodnik"; meta desc zaktualizowany (cel: CTR z 2.4% → ~5%)
+- `/blog/python/podstawy/list-comprehension` — meta title: "List Comprehension Python – skróć kod 3x [przykłady i ćwiczenia]" → "Python List Comprehension — składnia, przykłady, pułapki"; meta desc zaktualizowany (cel: CTR z 0.2% → ~1.8%)
+- **Uwaga:** treść artykułów nie zmieniona, tylko meta tagi. Efekt widoczny po 14-21 dniach w GSC.
 
 ---
 

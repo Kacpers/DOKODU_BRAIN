@@ -1,0 +1,283 @@
+1
+00:00:00,640 --> 00:00:03,960
+Zacznę od tego, że stworzę sobie te moje tabele.
+
+2
+00:00:04,379 --> 00:00:08,740
+I to będzie zrobione tak, że jeżeli uruchomię program i on nie będzie miał tabel,
+
+3
+00:00:08,939 --> 00:00:13,160
+to wówczas je utworzy, a jeżeli tabele będą istniały, to po prostu ich nie dotknie.
+
+4
+00:00:13,919 --> 00:00:16,600
+Czyli potrzebuję dostać się jeszcze do kursora.
+
+5
+00:00:17,120 --> 00:00:22,339
+Cursor równa się database.cursor.
+
+6
+00:00:23,280 --> 00:00:27,060
+Następnie będę potrzebował na tym moim kursorze, czyli cursor,
+
+7
+00:00:27,059 --> 00:00:29,259
+wykonać następujące zapytanie.
+
+8
+00:00:29,559 --> 00:00:30,279
+Execute.
+
+9
+00:00:31,239 --> 00:00:33,960
+Ja będę miał zapytanie, które będzie miało kilka linii,
+
+10
+00:00:34,359 --> 00:00:39,420
+stąd też dorzucę sobie od razu trzy apostrofy,
+
+11
+00:00:39,920 --> 00:00:44,259
+dzięki czemu będę mógł mieć wpisy, które będą miały więcej linii.
+
+12
+00:00:44,759 --> 00:00:47,359
+I pozwólcie, że posłużę się też moimi notatkami.
+
+13
+00:00:47,359 --> 00:00:51,640
+Czyli create table if not exists.
+
+14
+00:00:51,960 --> 00:00:55,179
+Create table if not exists to jest takie sformułowanie,
+
+15
+00:00:55,359 --> 00:00:56,359
+które powoduje, że ta tabela...
+
+16
+00:00:57,060 --> 00:01:00,160
+zostanie utworzona, ale tylko wtedy, jeżeli jej nie ma.
+
+17
+00:01:00,760 --> 00:01:02,460
+I zaczynam od tabeli categories.
+
+18
+00:01:03,219 --> 00:01:06,879
+I moja tabela categories powinna posiadać następujące kolumny.
+
+19
+00:01:07,359 --> 00:01:12,200
+ID jako integer primary key oraz name, które będzie tekstem.
+
+20
+00:01:12,200 --> 00:01:18,060
+Po drugie, będę potrzebował stworzyć sobie drugą tabelę.
+
+21
+00:01:18,680 --> 00:01:19,400
+Cursor.
+
+22
+00:01:20,560 --> 00:01:21,300
+Execute.
+
+23
+00:01:22,400 --> 00:01:25,740
+Tutaj na tym etapie, z racji tego, że mamy dość uproszczony projekt,
+
+24
+00:01:25,859 --> 00:01:26,740
+jest to też PyStart,
+
+25
+00:01:26,739 --> 00:01:28,239
+no to nie będziemy robili migracji.
+
+26
+00:01:28,239 --> 00:01:30,239
+Natomiast standardowo, tak jak rozmawialiśmy,
+
+27
+00:01:30,239 --> 00:01:33,239
+taki kod powinien być zawarty w migracjach.
+
+28
+00:01:33,239 --> 00:01:38,239
+Utworzę sobie następującą... następną tabelę, która będzie miała tę samą strukturę.
+
+29
+00:01:38,239 --> 00:01:40,739
+Create table if not exists.
+
+30
+00:01:40,739 --> 00:01:43,239
+Ja tę tabelę nazwę items.
+
+31
+00:01:43,239 --> 00:01:45,239
+I struktura tej tabeli...
+
+32
+00:01:45,239 --> 00:01:47,739
+Tutaj zapomniałem, ona wzięła się zamkniętym. Zamknąłem.
+
+33
+00:01:47,739 --> 00:01:49,739
+Struktura tej tabeli powinna być następująca.
+
+34
+00:01:49,739 --> 00:01:51,739
+Też posłużę się moimi notatkami.
+
+35
+00:01:51,739 --> 00:01:53,239
+O tak.
+
+36
+00:01:53,239 --> 00:01:55,239
+Czyli powinienem mieć ID.
+
+37
+00:01:55,239 --> 00:01:56,739
+Tutaj wiecie co?
+
+38
+00:01:56,739 --> 00:02:00,239
+Możemy ten nawias zostawić tu i tu sobie uzupełnić to o tak.
+
+39
+00:02:00,239 --> 00:02:02,239
+ID jako klucz główny.
+
+40
+00:02:02,239 --> 00:02:07,239
+Category ID, które będzie się odnosiło do tej kategorii, która jest wyżej.
+
+41
+00:02:07,239 --> 00:02:11,240
+Amount jako wartość real, czyli wartość liczbowa.
+
+42
+00:02:11,240 --> 00:02:13,240
+Data jako tekst.
+
+43
+00:02:13,240 --> 00:02:19,240
+I dodatkowo zaznaczam, że moja tabela ma odnosić się do tabeli categories
+
+44
+00:02:19,240 --> 00:02:23,240
+na podstawie takiej, że kategoria ID wskazuje mi na ID.
+
+45
+00:02:23,240 --> 00:02:24,740
+To jest takie powiązanie.
+
+46
+00:02:24,740 --> 00:02:26,240
+Dzięki temu będziemy mieli pewność,
+
+47
+00:02:26,740 --> 00:02:32,240
+że jak dodajemy nowy wpis, będzie on miał kategorię ID pochodzące z tej tabeli wcześniejszej.
+
+48
+00:02:32,240 --> 00:02:36,240
+Jeżeli teraz wykonałbym sobie ten mój kod na przykład ze stats,
+
+49
+00:02:36,240 --> 00:02:38,240
+to tutaj nic się nie pokaże.
+
+50
+00:02:38,240 --> 00:02:41,240
+Natomiast w tym miejscu pojawi mi się budget DB
+
+51
+00:02:41,240 --> 00:02:44,240
+i będę miał gotową moją tabelę.
+
+52
+00:02:44,240 --> 00:02:48,240
+Jeżeli bym usunął budget DB, to ponownie ten kod by się wywołał.
+
+53
+00:02:48,240 --> 00:02:51,240
+A jak zrobię strzałkę do góry Enter, to jak widzisz nie mam błędów,
+
+54
+00:02:51,240 --> 00:02:54,240
+gdyż po prostu ta tabela istnieje.
+
+55
+00:02:54,240 --> 00:02:54,740
+No i tak jak wspomniałem w kolejnym filmie, będzie to tak, że w tym filmie będzie się wywołać.
+
+56
+00:02:54,740 --> 00:02:58,740
+Wspomniałem w kolejnym filmie będziemy chcieli się zająć tym,
+
+57
+00:02:58,740 --> 00:03:06,740
+żeby wykonać ten nasz kod odpowiedzialny za zarządzanie tymi naszymi wpisami.
+
+58
+00:03:06,740 --> 00:03:09,740
+Jedna tylko rzecz wymaga tutaj naprawy,
+
+59
+00:03:09,740 --> 00:03:13,740
+a mianowicie nie lubię mieć maina, który jest taki długi.
+
+60
+00:03:13,740 --> 00:03:18,740
+Zdecydowanie bardziej wolałbym mieć tutaj coś, co się będzie nazywało init DB,
+
+61
+00:03:18,740 --> 00:03:22,740
+co będzie wymagało obecności kursora
+
+62
+00:03:22,740 --> 00:03:24,740
+i co będzie po prostu...
+
+63
+00:03:24,740 --> 00:03:29,740
+wykonywało nam te dwie instrukcje.
+
+64
+00:03:36,740 --> 00:03:39,740
+I w ten sposób jeszcze jak sobie przeformatuję ten kod,
+
+65
+00:03:39,740 --> 00:03:43,740
+mam funkcję, którą mogę sobie zwinąć o tu,
+
+66
+00:03:43,740 --> 00:03:46,740
+dzięki czemu ten kod wygląda sympatycznie.
+
+67
+00:03:46,740 --> 00:03:47,740
+I co ci się tutaj nie podoba?
+
+68
+00:03:47,740 --> 00:03:49,740
+A kursor został ten, OK.
+
+69
+00:03:49,740 --> 00:03:53,740
+Możemy zmienić mu nazwę na DB kursor, żeby mu to nie przeszkadzało.
+
+70
+00:03:54,740 --> 00:03:57,740
+OK?
+
+71
+00:03:57,740 --> 00:04:01,740
+I tak jak mówię, w kolejnym filmie zajmiemy się tworzeniem naszego repozytorium.

@@ -1,0 +1,611 @@
+1
+00:00:00,000 --> 00:00:05,919
+W poprzednim zadaniu zapomniałem Wam się odsłonić, ale mam nadzieję, że nie było to zbyt kłopotliwe.
+
+2
+00:00:06,500 --> 00:00:10,980
+I teraz to co zrobię, to będę chciał obsłużyć sobie taką sytuację.
+
+3
+00:00:11,460 --> 00:00:17,719
+Czyli mam, chcę mieć klasę, która pozwoli mi w łatwy sposób zarządzać plikami JSON.
+
+4
+00:00:18,359 --> 00:00:20,339
+Ja Wam najpierw pokażę jak ja to sobie wyobrażam.
+
+5
+00:00:20,660 --> 00:00:27,620
+Stworzę sobie tylko jakąś klasę JSON, parser może, dwukropek, pass i tyle.
+
+6
+00:00:27,620 --> 00:00:35,700
+Ja to sobie wyobrażam tak, że jak będę chciał stworzyć sobie nowy plik i coś otworzyć, to będę mógł zrobić w ten sposób.
+
+7
+00:00:36,799 --> 00:00:43,140
+File równa się JSON parser, no i do środka przekazać jakieś data.json.
+
+8
+00:00:43,960 --> 00:00:49,719
+W momencie, w którym stworzę sobie taki file, to będę miał nadzieję, że dane są już załadowane.
+
+9
+00:00:50,200 --> 00:00:52,840
+Czyli będę mógł wykonać file.getData.
+
+10
+00:00:52,840 --> 00:00:56,840
+I to powinno zwrócić mi cały mój...
+
+11
+00:00:57,619 --> 00:00:59,619
+Całą moją zawartość, wszystkie moje dane.
+
+12
+00:01:00,679 --> 00:01:08,819
+Jeżeli będę chciał dodać nowy wiersz, ten nowy element, to będę mógł to wykonać za pomocą metody addElement.
+
+13
+00:01:09,140 --> 00:01:11,140
+I tutaj do środka przekażę mu element.
+
+14
+00:01:12,179 --> 00:01:17,799
+I to spowoduje, że do tej naszej listy zostanie ten nowy wpis dodany.
+
+15
+00:01:18,420 --> 00:01:26,239
+I tu mógłbym dorzucić też drugą metodę file.save, ale tak naprawdę myślę, że ten addElement, on powinien od razu też to save'ować.
+
+16
+00:01:26,239 --> 00:01:27,599
+I te dane od razu powinien...
+
+17
+00:01:27,620 --> 00:01:29,620
+Pokazywać.
+
+18
+00:01:29,620 --> 00:01:37,620
+Robię ten wstęp też dlatego, że jeżeli ktoś po przeczytaniu tej treści zadania nie do końca zrozumiał, co jest do zrobienia, to myślę, że taki sposób może być też pomocny.
+
+19
+00:01:37,620 --> 00:01:39,620
+Czyli, co musi się stać?
+
+20
+00:01:39,620 --> 00:01:41,620
+Potrzebuję odebrać nazwę jakiegoś pliku.
+
+21
+00:01:41,620 --> 00:01:43,620
+Czyli dev init filename.
+
+22
+00:01:43,620 --> 00:01:45,620
+I ta nazwa musi być koniecznie stringiem.
+
+23
+00:01:45,620 --> 00:01:47,620
+Następnie w środku będę chciał ten plik otworzyć.
+
+24
+00:01:47,620 --> 00:01:49,620
+Jak go otworzę, to będę chciał zawartość tego pliku przypisać sobie do jakiejś władzy.
+
+25
+00:01:49,620 --> 00:01:51,620
+I to będzie to, co ja mam tutaj.
+
+26
+00:01:51,620 --> 00:01:53,620
+I to będzie to, co ja mam tutaj.
+
+27
+00:01:53,620 --> 00:01:55,620
+I to będzie to, co ja mam tutaj.
+
+28
+00:01:55,620 --> 00:01:57,620
+Czyli, to będę chciał zawartość tego pliku przypisać sobie do jakiejś właściwości.
+
+29
+00:01:57,620 --> 00:01:59,620
+Czyli,
+
+30
+00:01:59,620 --> 00:02:01,620
+with open
+
+31
+00:02:01,620 --> 00:02:03,620
+Tutaj przekazujemy mu ten filename.
+
+32
+00:02:03,620 --> 00:02:05,620
+Tutaj przekazujemy mu ten filename.
+
+33
+00:02:05,620 --> 00:02:07,620
+As file, dwukropek.
+
+34
+00:02:07,620 --> 00:02:09,620
+No i robimy sobie...
+
+35
+00:02:09,620 --> 00:02:11,620
+No i robimy sobie...
+
+36
+00:02:11,620 --> 00:02:13,620
+No i robimy sobie...
+
+37
+00:02:13,620 --> 00:02:15,620
+No i robimy sobie...
+
+38
+00:02:15,620 --> 00:02:17,620
+No i robimy sobie...
+
+39
+00:02:17,620 --> 00:02:19,620
+No i robimy sobie...
+
+40
+00:02:19,620 --> 00:02:21,620
+No i robimy sobie...
+
+41
+00:02:21,620 --> 00:02:23,620
+No i robimy sobie...
+
+42
+00:02:23,620 --> 00:02:25,620
+działal subtunewu.
+
+43
+00:02:25,620 --> 00:02:27,620
+Jak widzicie...
+
+44
+00:02:27,620 --> 00:02:29,620
+Jak widzicie...
+
+45
+00:02:29,620 --> 00:02:31,620
+w przyadaniu jak Peki,
+
+46
+00:02:31,620 --> 00:02:33,620
+pipeiphile.
+
+47
+00:02:33,620 --> 00:02:35,620
+pich체�ygen w Androidze Caychan wyjątkowe.
+
+48
+00:02:35,620 --> 00:02:41,620
+場 alfafes y
+
+49
+00:02:41,620 --> 00:02:44,120
+Zaznaczene jestatan
+
+50
+00:02:44,120 --> 00:02:45,159
+I w tym przypadku nasz content bedzie miał byc po prostu pustą listą.
+
+51
+00:02:45,159 --> 00:02:47,159
+I w obu tych przypadkach.
+
+52
+00:02:47,159 --> 00:02:49,159
+tak tak.
+
+53
+00:02:49,159 --> 00:02:51,159
+flik zostanie otworzony.
+
+54
+00:02:51,159 --> 00:02:52,159
+że™棒tó,̄
+
+55
+00:02:52,159 --> 00:02:52,520
+poka PhD,
+
+56
+00:02:52,520 --> 00:02:52,819
+wykonania presentation file considered�
+
+57
+00:02:52,819 --> 00:02:53,159
+błąd
+
+58
+00:02:53,159 --> 00:02:53,620
+.
+
+59
+00:02:53,620 --> 00:03:00,000
+tworzyć sobie jakąś zmienną self-content, która będzie przyjmowała wartość zmiennej content.
+
+60
+00:03:00,719 --> 00:03:06,640
+Dzięki temu, jeżeli plik istnieje, to mi go otworzy i tę wartość do niego przypisze,
+
+61
+00:03:07,060 --> 00:03:11,580
+do tego contentu, a jeżeli nie istnieje, to po prostu ten plik zginie.
+
+62
+00:03:12,200 --> 00:03:16,420
+Mimo tego, że jest to kilka linijek, myślę, że trochę trzeba się nadrodzić,
+
+63
+00:03:16,520 --> 00:03:19,080
+żeby te linijki stworzyć. Dajcie znać w komentarzach.
+
+64
+00:03:19,680 --> 00:03:21,599
+Druga rzecz, którą potrzebuję, to getData.
+
+65
+00:03:21,599 --> 00:03:25,060
+W tym momencie moje getData nie będzie zbyt skomplikowane.
+
+66
+00:03:25,199 --> 00:03:29,280
+Jedyne, co będzie musiało zrobić, to wykonać return self-content.
+
+67
+00:03:30,319 --> 00:03:37,079
+Natomiast, jeżeli chodzi o ten addElement, to tutaj już trochę trzeba będzie się nagłowić,
+
+68
+00:03:37,199 --> 00:03:40,639
+ponieważ trzeba będzie ten element, ten plik mieć otwarty,
+
+69
+00:03:40,699 --> 00:03:45,780
+czyli ten content już mamy otwarty, dopisać do niego nowy wiersz w postaci tego elementu
+
+70
+00:03:45,780 --> 00:03:48,639
+i później całość zapisać, czyli przecinek element.
+
+71
+00:03:48,639 --> 00:03:51,560
+I tutaj ten element mógłby być...
+
+72
+00:03:51,599 --> 00:03:53,180
+...dowolną zawartością.
+
+73
+00:03:53,180 --> 00:03:58,359
+Jeżeli chcielibyśmy ograniczyć to tylko do osób,
+
+74
+00:03:58,359 --> 00:04:03,240
+to tutaj zdecydowanie warto byłoby zrobić coś takiego,
+
+75
+00:04:03,240 --> 00:04:06,560
+że można byłoby... dwie rzeczy.
+
+76
+00:04:06,560 --> 00:04:10,579
+Albo można byłoby tutaj wprost napisać, słuchaj, to może być tylko person
+
+77
+00:04:10,579 --> 00:04:14,280
+i my przyjmujemy tutaj tylko obiekty tego typu
+
+78
+00:04:14,280 --> 00:04:18,480
+i my wyżej sobie stworzymy klasę, która będzie to opisywała, to jest jedna opcja.
+
+79
+00:04:18,480 --> 00:04:21,319
+A opcja druga jest taka, że można byłoby stworzyć sobie...
+
+80
+00:04:21,600 --> 00:04:25,240
+...coś, co dziedziczyłoby po tym JSON parserze
+
+81
+00:04:25,240 --> 00:04:29,920
+i byłoby tylko tam person, JSON person parser czy coś takiego, nie?
+
+82
+00:04:29,920 --> 00:04:34,960
+Ja tutaj stworzę tą opcję prostszą, czyli po prostu sobie założę, że jest class person,
+
+83
+00:04:34,960 --> 00:04:39,240
+init to jest first name, last name,
+
+84
+00:04:39,240 --> 00:04:45,840
+first name to jest string, last name to jest string,
+
+85
+00:04:45,840 --> 00:04:49,760
+self first name,
+
+86
+00:04:51,600 --> 00:04:56,480
+first name, self last name,
+
+87
+00:04:56,480 --> 00:05:05,360
+to jest last name, no i wtedy mogę sobie wykonać tutaj,
+
+88
+00:05:05,360 --> 00:05:11,439
+jak już przekazałem tą osobę, to mogę w tym miejscu wykonać zamianę,
+
+89
+00:05:11,439 --> 00:05:16,400
+tak naprawdę dodanie tej osoby do, jakby zamiana tej osoby na JSON-a,
+
+90
+00:05:16,400 --> 00:05:20,960
+czyli stworzenie nowego słownika i przypisanie tego słownika do mojej listy.
+
+91
+00:05:21,600 --> 00:05:26,960
+Self content append, mogę bez problemu robić self content append,
+
+92
+00:05:26,960 --> 00:05:31,920
+z tego względu, że wiem, że to będzie lista, bo albo tu, albo tu ta lista zostanie odpowiednio stworzona
+
+93
+00:05:31,920 --> 00:05:34,879
+i do tego chcę sobie dodać nową osobę.
+
+94
+00:05:34,879 --> 00:05:38,879
+First name to jest element first name,
+
+95
+00:05:38,879 --> 00:05:44,480
+przecinek last name to jest element last name.
+
+96
+00:05:44,480 --> 00:05:48,720
+To jeszcze można byłoby uprościć, jeżeli będziecie się dalej rozwijać z Pythonem,
+
+97
+00:05:48,720 --> 00:05:50,480
+a tego wam oczywiście serdecznie życzę.
+
+98
+00:05:50,480 --> 00:05:53,840
+Też oczywiście zachęcam do uczestnictwa w pozostałych kursach.
+
+99
+00:05:53,840 --> 00:05:58,000
+To jest taka świetna biblioteka do takich rzeczy jak to, nazywa się Pydantic.
+
+100
+00:05:58,000 --> 00:06:03,040
+Mam o niej film na kanale w ogóle, więc jeżeli chcielibyście zobaczyć film o Pydanticu, to można zobaczyć.
+
+101
+00:06:03,040 --> 00:06:07,680
+I tam jest nawet na tych obiektach, które rozszerzają modele Pydanticowe,
+
+102
+00:06:07,680 --> 00:06:11,200
+jest metoda dict, która od razu za nas to by wykonała.
+
+103
+00:06:11,200 --> 00:06:14,960
+Natomiast to, co przed nami, to jeszcze zapisanie tego pliku.
+
+104
+00:06:14,960 --> 00:06:19,600
+Nie muszę się martwić tym, że ten plik nie istnieje, bo jeżeli nie istnieje, to zostanie utworzony.
+
+105
+00:06:19,600 --> 00:06:22,960
+Czyli with open file name.
+
+106
+00:06:22,960 --> 00:06:27,520
+O właśnie, file name jeszcze wypadałoby mieć, czyli self file name.
+
+107
+00:06:27,520 --> 00:06:33,600
+Powinien być tutaj, wtedy będziemy mieli with open self.file name,
+
+108
+00:06:33,600 --> 00:06:36,400
+bo musimy znać nazwę tego pliku, do którego chcemy to zapisać.
+
+109
+00:06:36,400 --> 00:06:39,439
+Interesować nas będzie oczywiście atrybut w.
+
+110
+00:06:39,439 --> 00:06:42,320
+I tutaj dump.
+
+111
+00:06:42,320 --> 00:06:49,439
+No i znowu, żebym nie nabroił, muszę sobie zerknąć, doimportować dumpa.
+
+112
+00:06:49,600 --> 00:06:56,640
+I wtedy jak doimportuję dumpa, to będę widział, że najpierw jest obiekt, no właśnie, self content,
+
+113
+00:06:56,640 --> 00:06:59,840
+a później dopiero jest plik.
+
+114
+00:06:59,840 --> 00:07:04,080
+I w ten sposób, jeżeli ten zapis sobie odkomentujemy,
+
+115
+00:07:04,080 --> 00:07:08,640
+to tego typu osoby powinno udać nam się tworzyć.
+
+116
+00:07:08,640 --> 00:07:10,640
+Wezmę sobie pierwszą z nich.
+
+117
+00:07:10,640 --> 00:07:18,720
+Wrzucę sobie, nie mogę tak wrzucić, muszę najpierw stworzyć osobę, czyli person.
+
+118
+00:07:19,600 --> 00:07:26,640
+Przeniosę to wyżej, żeby nie było tak, że tak mieszam trochę tu, trochę tu.
+
+119
+00:07:26,640 --> 00:07:36,240
+I był to, niech to będzie jayzmscalagan.
+
+120
+00:07:36,240 --> 00:07:46,240
+Ok, zaraz pojawi się pytanie, jak to zrobiłem, że tak szybko dokończyłem.
+
+121
+00:07:46,240 --> 00:07:47,600
+Ok, zaraz pojawi się pytanie, jak to zrobiłem, że tak szybko dokończyłem.
+
+122
+00:07:47,600 --> 00:07:49,600
+Ok, zaraz pojawi się pytanie, jak to zrobiłem, że tak szybko dokończyłem.
+
+123
+00:07:49,600 --> 00:07:51,600
+Ok, zaraz pojawi się pytanie, jak to zrobiłem, że tak szybko dokończyłem.
+
+124
+00:07:51,600 --> 00:07:53,600
+Ok, zaraz pojawi się pytanie, jak to zrobiłem, że tak szybko dokończyłem.
+
+125
+00:07:53,600 --> 00:07:57,600
+No i wydaje mi się, że jeżeli teraz to wykonam, to powinienem tę osobę mieć.
+
+126
+00:07:57,600 --> 00:07:59,600
+I ten plik powinien istnieć.
+
+127
+00:07:59,600 --> 00:08:03,600
+Czyli python zadanie 2py, błędu nie mam.
+
+128
+00:08:03,600 --> 00:08:07,600
+Otwieram zadanie 2, data.json, tak nazwałem.
+
+129
+00:08:07,600 --> 00:08:11,600
+Pojawił mi się jayzmscalagan, wszystko jest ok.
+
+130
+00:08:11,600 --> 00:08:15,600
+Nie mam logiki nawet, która by nie pozwoliła dwa razy dodać tej samej osoby,
+
+131
+00:08:15,600 --> 00:08:17,600
+więc strzałka do góry, enter, spowodowała, że od razu ta osoba też się tutaj drugi raz wciąż zbiera.
+
+132
+00:08:17,600 --> 00:08:19,600
+więc strzałka do góry, enter, spowodowała, że od razu ta osoba też się tutaj drugi raz wciąż zbiera.
+
+133
+00:08:19,600 --> 00:08:21,600
+To jest oczywiście logika, którą można byłoby dodatkowo zawrzeć w naszym kodzie.
+
+134
+00:08:21,600 --> 00:08:23,600
+To jest oczywiście logika, którą można byłoby dodatkowo zawrzeć w naszym kodzie.
+
+135
+00:08:23,600 --> 00:08:25,600
+Ale jak widać, taka obsługa jayzsona stała się dużo prostsza
+
+136
+00:08:25,600 --> 00:08:27,600
+Ale jak widać, taka obsługa jayzsona stała się dużo prostsza
+
+137
+00:08:27,600 --> 00:08:29,600
+I nie musimy za każdym razem pamiętać o jayson.load, dump, coś tam jeszcze.
+
+138
+00:08:29,600 --> 00:08:31,600
+I nie musimy za każdym razem pamiętać o jayzson.load, dump, coś tam jeszcze.
+
+139
+00:08:31,600 --> 00:08:33,600
+I nie musimy za każdym razem pamiętać o jayzson.load, dump, coś tam jeszcze.
+
+140
+00:08:33,600 --> 00:08:35,600
+Tylko w wygodny sposób możemy sobie taką obsługę dodać.
+
+141
+00:08:35,600 --> 00:08:37,600
+Tylko w wygodny sposób możemy sobie taką obsługę dodać.
+
+142
+00:08:37,600 --> 00:08:39,600
+Co dalej moglibyście zrobić?
+
+143
+00:08:39,600 --> 00:08:41,600
+Na przykład szukanie konkretnej osoby.
+
+144
+00:08:41,600 --> 00:08:43,600
+Tak, żeby cały obiekt mógł być zwracany na podstawie imienia albo nazwiska.
+
+145
+00:08:43,600 --> 00:08:45,600
+Tak, żeby cały obiekt mógł być zwracany na podstawie imienia albo nazwiska.
+
+146
+00:08:45,600 --> 00:08:47,600
+Albo nawet w ten sposób, file.filter, first name równa się john.
+
+147
+00:08:47,600 --> 00:08:49,600
+Albo nawet w ten sposób, file.filter, first name równa się john.
+
+148
+00:08:49,600 --> 00:08:51,600
+Albo nawet w ten sposób, file.filter, first name równa się john.
+
+149
+00:08:51,600 --> 00:08:53,600
+Nie? Moglibyśmy też tak zrobić.
+
+150
+00:08:53,600 --> 00:08:55,600
+Bo przecież wiemy, że gwiazdka kwarx odbierze nam wszystkie argumenty nienazwane.
+
+151
+00:08:55,600 --> 00:08:59,740
+gwiazdka Quarks odbierze nam wszystkie argumenty nienazwane.
+
+152
+00:09:00,220 --> 00:09:03,899
+To ja dziękuję i zapraszam do zajęć.
+
+153
+00:09:04,139 --> 00:09:06,100
+Dużo ciekawej wiedzy przed nami. Chodźcie.

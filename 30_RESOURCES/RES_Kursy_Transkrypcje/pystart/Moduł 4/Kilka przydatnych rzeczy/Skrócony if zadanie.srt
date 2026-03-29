@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:09,620
+No i jak jesteśmy w tym miejscu, wypadałoby to sobie też przetestować, bo skoro już zobaczyliśmy tego krótkiego IFA, no to żal byłoby nie skorzystać i nie zrobić jakiegoś zadania.
+
+2
+00:00:10,220 --> 00:00:15,720
+Policz wynagrodzenie zatrudnionego sprzedawcy, który zarabia 2000 zł za pomocą skróconej wersji IFA.
+
+3
+00:00:16,300 --> 00:00:20,280
+Zapytaj go o staż pracy, ilość przepracowanych godzin i ilość sprzedanych towarów.
+
+4
+00:00:20,600 --> 00:00:21,820
+I teraz mamy taką sytuację.
+
+5
+00:00:22,800 --> 00:00:28,980
+Dodatek stażowy rozliczamy tylko dla osób, które mają powyżej niż 2 lata pracy.
+
+6
+00:00:28,980 --> 00:00:32,980
+Jeżeli mają 2 lata pracy, to wtedy dajemy 10% premii.
+
+7
+00:00:33,340 --> 00:00:37,560
+Jeżeli nie mają 2 lat pracy, to dajemy wszystkim 2% premii.
+
+8
+00:00:38,219 --> 00:00:40,120
+Następnie jest premia za sprzedaż.
+
+9
+00:00:40,620 --> 00:00:45,200
+Jeżeli ktoś sprzedał więcej niż 30 sztuk, no to dostaje 25% premii.
+
+10
+00:00:45,600 --> 00:00:50,079
+Jeżeli nie sprzedał tylu sztuk, no to wtedy dostaje 0% premii.
+
+11
+00:00:51,019 --> 00:00:55,200
+Tu oczywiście jest jakby inny rodzaj tego dodatku, który będziemy chcieli uwzględniać.
+
+12
+00:00:55,200 --> 00:00:58,840
+No i ostatni przypadek, ostatnia premia.
+
+13
+00:00:59,179 --> 00:01:03,079
+To jest premia dla aktywnych, czyli premia dostaje 8%,
+
+14
+00:01:03,079 --> 00:01:07,840
+jeżeli czas pracy jest powyżej 160 godzin oraz staż pracy powyżej 1 roku.
+
+15
+00:01:08,459 --> 00:01:14,060
+No i pozostali dostają 2%, jeżeli się na ten przepis nasz nie łapią.
+
+16
+00:01:15,159 --> 00:01:20,920
+Robimy 3 dodatkowe zmienne i później te 3 dodatkowe zmienne dodajemy do tej pensji podstawowej,
+
+17
+00:01:20,920 --> 00:01:22,120
+która może się nazywać base.
+
+18
+00:01:22,620 --> 00:01:28,819
+No i w ten sposób wyświetlamy łączny dochód, łączną pensję tego naszego,
+
+19
+00:01:28,819 --> 00:01:29,819
+tego sprzedawcy.
+
+20
+00:01:29,819 --> 00:01:30,819
+To co?
+
+21
+00:01:30,819 --> 00:01:35,479
+Kilka chwil dla każdego i widzimy się za moment w rozwiązaniu.

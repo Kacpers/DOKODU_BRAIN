@@ -1,0 +1,315 @@
+1
+00:00:00,140 --> 00:00:01,439
+Cóż mogę rzec?
+
+2
+00:00:03,100 --> 00:00:05,919
+Coś się kończy, coś się zaczyna.
+
+3
+00:00:06,940 --> 00:00:09,859
+Dla ciebie PyStart zaczął się jakiś czas temu.
+
+4
+00:00:10,439 --> 00:00:13,740
+Przeszedłeś na pewno przez bardzo długą drogę, w wyniku której
+
+5
+00:00:13,740 --> 00:00:19,960
+parę razy się potknąłeś, parę razy się wkurzyłeś, parę razy chciałeś rzucić to wszystko w cholerę,
+
+6
+00:00:20,339 --> 00:00:25,760
+ale jednak oglądasz ten film, czyli mam nadzieję, że jesteś na końcu tej drogi.
+
+7
+00:00:25,760 --> 00:00:32,880
+Zawsze kiedy zdobywamy jakiś szczyt, odwracamy się i zastanawiamy się, jak drugą drogę przeszliśmy.
+
+8
+00:00:33,160 --> 00:00:36,140
+Natomiast jeżeli chodzi o edukację, jest trochę inaczej.
+
+9
+00:00:36,760 --> 00:00:41,880
+Bo tak naprawdę, kiedy dochodzimy sobie na ten szczyt, okazuje się, że już przed nami,
+
+10
+00:00:42,040 --> 00:00:50,240
+tak w naszych głowach, gdzieś rodzi się kolejna wyprawa i kolejne projekty do zrobienia,
+
+11
+00:00:50,240 --> 00:00:53,299
+kolejne pomysły, jak można tę drogę wykorzystać.
+
+12
+00:00:53,299 --> 00:01:00,539
+Czy taka wola walki o rekrutację, o zmianę swojego statusu, o zmianę swojego życia.
+
+13
+00:01:01,299 --> 00:01:07,700
+No i to, co mogę powiedzieć, to serdecznie życzę Ci tego, żeby ta droga dla Ciebie, kolejna, była jak najwspanialsza.
+
+14
+00:01:08,299 --> 00:01:15,640
+PyStart dał Ci wiedzę do tego, żeby zacząć życie z Pythonem, żeby automatyzować sobie pewne rzeczy,
+
+15
+00:01:15,640 --> 00:01:19,239
+żeby pisać skrypty rozwiązujące Twoje problemy.
+
+16
+00:01:19,700 --> 00:01:23,280
+Natomiast muszę Cię ostrzec przed jedną, niezwykle bardzo ważną rzeczą.
+
+17
+00:01:23,299 --> 00:01:26,299
+Ta wiedza jest niezwykle ulotna.
+
+18
+00:01:26,299 --> 00:01:33,299
+Jeżeli nie będziesz po PyStart'cie kodować, jeżeli po PyStart'cie nie będziesz robić projektów,
+
+19
+00:01:33,299 --> 00:01:40,299
+jeżeli po PyStart'cie nie będziesz dalej się edukować, tylko stwierdzisz, że ok, udało się, teraz robię sobie dwa miesiące przerwy,
+
+20
+00:01:40,299 --> 00:01:44,299
+to niedługo wrócisz do PyStart'u i zaczniesz go robić od podstaw.
+
+21
+00:01:44,299 --> 00:01:51,299
+Z tego względu, że wszystko to, co przekazałem, wszystkie te ćwiczenia, które robiliśmy, one miały za zadanie utrwalać Twoją wiedzę,
+
+22
+00:01:51,299 --> 00:01:53,299
+miały za zadanie powodować, że będziesz robił wszystko, co musiałeś zrobić.
+
+23
+00:01:53,299 --> 00:01:58,299
+Że będziesz żyć tym PyStart'em i że będziesz żyć Pythonem i że będziesz się cieszyć tym programowaniem.
+
+24
+00:01:58,299 --> 00:02:00,299
+Mam nadzieję, że tak było.
+
+25
+00:02:00,299 --> 00:02:05,299
+Ale jeżeli teraz zrobisz sobie długą przerwę, to ten cały czas pójdzie w niwecz.
+
+26
+00:02:05,299 --> 00:02:12,300
+Po prostu przestanie być tym Twoją siłą, stanie się czymś, co ulatuje, bo programowanie bardzo szybko ulatuje z głowy.
+
+27
+00:02:12,300 --> 00:02:21,300
+Więc jeżeli mogę dać Ci jakąś radę, to serdecznie polecam Ci albo realizację teraz jakiegoś swojego programu, swojego projektu,
+
+28
+00:02:21,300 --> 00:02:30,300
+albo, opcja numer dwa, przejdź sobie przez ten projekt, który zrobiliśmy przed momentem, spróbuj go rozbudować o swoje funkcjonalności.
+
+29
+00:02:30,300 --> 00:02:33,300
+Możesz tutaj pomyśleć o tym, żeby dodać do niego jakieś wykresy.
+
+30
+00:02:33,300 --> 00:02:37,300
+Możesz pomyśleć o tym, żeby te dane zapisywały się jeszcze gdzieś indziej.
+
+31
+00:02:37,300 --> 00:02:39,300
+Możesz generować pliki CSV.
+
+32
+00:02:39,300 --> 00:02:43,300
+Możesz te dane eksportować do Google Doc'a, do spreadsheet'ów.
+
+33
+00:02:43,300 --> 00:02:46,300
+Możesz pobierać dane ze spreadsheet'ów.
+
+34
+00:02:46,300 --> 00:02:48,300
+Możesz generować PDF'y.
+
+35
+00:02:48,300 --> 00:02:50,300
+Możesz napisać API, które będzie obsługiwało.
+
+36
+00:02:50,300 --> 00:03:02,300
+Więc życzę Ci tego, żeby teraz ten czas, który masz przed sobą, był jak najbardziej czasem wykorzystanym zgodnie z tym dalszym rozwojem,
+
+37
+00:03:02,300 --> 00:03:05,300
+a nie czasem, który tak naprawdę spowoduje, że się cofniesz.
+
+38
+00:03:05,300 --> 00:03:13,300
+Oczywiście też z tego miejsca serdecznie zachęcam Cię też do tego, żebyś dołączył do innego kursu, bo już przed Tobą jest teraz skumaj bazy,
+
+39
+00:03:13,300 --> 00:03:15,300
+PyWWW, PyCamp, PyRest.
+
+40
+00:03:15,300 --> 00:03:17,300
+Tych kursów naprawdę też jest sporo, więc możesz dalej żyć tym Pythonem i dalej,
+
+41
+00:03:17,300 --> 00:03:19,300
+więc możesz dalej żyć tym Pythonem i dalej,
+
+42
+00:03:19,300 --> 00:03:23,300
+wyznaczać sobie tę ścieżkę, natomiast na pewno musisz coś robić.
+
+43
+00:03:23,300 --> 00:03:24,300
+tribute 08.05.20xe
+
+44
+00:03:24,300 --> 00:03:25,300
+Nie możesz tego w żaden sposób przerwać.
+
+45
+00:03:25,300 --> 00:03:29,120
+も
+
+46
+00:03:29,120 --> 00:03:36,540
+Jeżeli mogę prosić, to będzie mi bardzo miło, jeżeli napiszesz gdzieś w Social mediach o tym, że udało Ci się skończyć PyStart
+
+47
+00:03:36,540 --> 00:03:42,540
+i że jesteś szczęśliwym PyStartoviczem, mam nadzieję, że szczęśliwy, który zakończył tę drogę.
+
+48
+00:03:42,540 --> 00:03:45,300
+Jeżeli możesz, oznacz mnie gdzieś w tych Social mediach.
+
+49
+00:03:45,300 --> 00:03:47,400
+Ja, na pewno, będziemy mi też miło, jak będę mógł przeczytać coś o tym Pythonie.
+
+50
+00:03:47,400 --> 00:03:48,300
+Myślę, że jestem szelik, tylko, że byłam w zamianach w ramach rozwoju Pythonu.
+
+51
+00:03:48,300 --> 00:03:49,760
+przeczytać coś o tym kursie.
+
+52
+00:03:50,240 --> 00:03:51,980
+Jeżeli będą to też jakieś gorsze rzeczy,
+
+53
+00:03:52,060 --> 00:03:54,480
+to na pewno chętnie te rzeczy poprawię.
+
+54
+00:03:55,000 --> 00:03:56,580
+Natomiast zależy mi bardzo na tym,
+
+55
+00:03:56,740 --> 00:03:58,880
+żeby ta wieść o PyStart się niosła
+
+56
+00:03:58,880 --> 00:04:02,080
+i żeby był to naprawdę jeden z lepszych kursów w Polsce,
+
+57
+00:04:02,280 --> 00:04:04,140
+jeżeli chodzi o naukę PyTona.
+
+58
+00:04:05,540 --> 00:04:07,060
+Du wielu z Was pyta też o to,
+
+59
+00:04:07,160 --> 00:04:08,880
+jak wygląda sprawa z certyfikatem.
+
+60
+00:04:09,180 --> 00:04:11,600
+Więc jeżeli chcesz certyfikat po zakończeniu PyStartu,
+
+61
+00:04:11,680 --> 00:04:13,320
+to nie ma absolutnie żadnego problemu.
+
+62
+00:04:13,700 --> 00:04:15,340
+Wystarczy, że napiszesz do mnie wiadomość,
+
+63
+00:04:15,380 --> 00:04:16,660
+a ja dla Ciebie taki certyfikat,
+
+64
+00:04:16,660 --> 00:04:18,520
+takie zaświadczenie ukończenia kursu
+
+65
+00:04:18,520 --> 00:04:20,460
+wygeneruję w PDF-ie.
+
+66
+00:04:21,320 --> 00:04:23,360
+I cóż, jedyne co mogę powiedzieć,
+
+67
+00:04:23,500 --> 00:04:24,540
+to życzę Ci powodzenia.
+
+68
+00:04:25,240 --> 00:04:27,760
+I pamiętaj, że PyStart stale się będzie rozwijał.
+
+69
+00:04:28,160 --> 00:04:29,980
+Stale będą dochodziły do niego nowe filmy.
+
+70
+00:04:30,440 --> 00:04:32,660
+Te bonusy, które są wymienione również,
+
+71
+00:04:33,400 --> 00:04:34,780
+gdzieś tu jeszcze na Ciebie czekają.
+
+72
+00:04:35,260 --> 00:04:36,660
+Więc to nie jest koniec naszej przygody,
+
+73
+00:04:37,720 --> 00:04:38,540
+naszej przeprawy,
+
+74
+00:04:38,780 --> 00:04:42,000
+no ale musimy nagrać jakieś takie zakończenie,
+
+75
+00:04:42,500 --> 00:04:46,640
+odbić ten stempel pod tym zakończonym kursem,
+
+76
+00:04:46,660 --> 00:04:51,020
+tak żeby móc iść dalej w innych tematach.
+
+77
+00:04:51,320 --> 00:04:54,980
+To bardzo dziękuję i do zobaczenia na YouTubie,
+
+78
+00:04:55,320 --> 00:04:56,760
+na kursach, na Discordzie.
+
+79
+00:04:57,260 --> 00:04:57,660
+Cześć!

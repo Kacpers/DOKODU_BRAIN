@@ -1,0 +1,699 @@
+1
+00:00:00,000 --> 00:00:01,860
+A jak z tych funkcji skorzystać?
+
+2
+00:00:02,040 --> 00:00:03,600
+Chodź, pokażę Ci. Spójrz.
+
+3
+00:00:04,000 --> 00:00:07,200
+Mam taką sytuację, że mam plik books.json
+
+4
+00:00:07,200 --> 00:00:09,620
+i w tym pliku mam title, autor, title, autor.
+
+5
+00:00:09,919 --> 00:00:12,660
+Na górze title, ogniem, mieczem, autor Henryk Sienkiewicz,
+
+6
+00:00:12,759 --> 00:00:15,259
+niżej title, zemsta, autor Aleksandr Fredro.
+
+7
+00:00:15,740 --> 00:00:18,740
+To, co będę chciał zrobić, to będę chciał odczytać ten plik JSON
+
+8
+00:00:18,740 --> 00:00:20,940
+i pokazać Ci, jak się z nim pracuje.
+
+9
+00:00:21,260 --> 00:00:24,679
+A po drugie, mam w tym pliku, który sobie utworzyłem,
+
+10
+00:00:24,740 --> 00:00:27,920
+JSON pliki w takim programie, mam nową osobę,
+
+11
+00:00:27,920 --> 00:00:30,900
+new author, Witold Kombrowicz, new title, Ferdy Durkę.
+
+12
+00:00:31,140 --> 00:00:34,179
+Czyli tak jak wspominałem, będę chciał najpierw załadować cały plik JSON
+
+13
+00:00:34,179 --> 00:00:38,040
+do zmiennej, następnie będę chciał go sobie przetworzyć,
+
+14
+00:00:38,140 --> 00:00:39,380
+wyświetlić te dane.
+
+15
+00:00:40,420 --> 00:00:43,719
+Kolejno będę chciał dorzucić do pliku nowy wpis
+
+16
+00:00:43,719 --> 00:00:45,760
+pod tytułem Witold Kombrowicz, Ferdy Durkę
+
+17
+00:00:45,760 --> 00:00:49,320
+i ostatnia rzecz, będę chciał zapisać ten plik w taki sposób,
+
+18
+00:00:49,439 --> 00:00:51,740
+żeby te dane, które są tymi danymi nowej osoby,
+
+19
+00:00:52,240 --> 00:00:53,920
+dopisały mi się na końcu tego pliku.
+
+20
+00:00:54,180 --> 00:00:55,680
+Od czego muszę zacząć?
+
+21
+00:00:55,760 --> 00:00:57,780
+Muszę zacząć od tego, żeby załadować sobie te dane.
+
+22
+00:00:57,920 --> 00:01:03,980
+Czyli with open, nazwa pliku to jest books.json,
+
+23
+00:01:04,960 --> 00:01:06,799
+do odczytu, więc mogę sobie podarować,
+
+24
+00:01:07,219 --> 00:01:09,859
+as file, dwukropek.
+
+25
+00:01:10,599 --> 00:01:13,799
+Następnie potrzebuję mieć całą zawartość tego pliku,
+
+26
+00:01:14,359 --> 00:01:17,620
+czyli muszę wykonać file.read
+
+27
+00:01:17,620 --> 00:01:21,520
+i to mi da zawartość, zobacz, jeżeli sobie to wyprintuję,
+
+28
+00:01:21,820 --> 00:01:24,920
+zresztą robiliśmy to już wcześniej, więc nie powinno być to dla ciebie zaskoczeniem,
+
+29
+00:01:24,920 --> 00:01:27,219
+że kiedy wywołam w Python JSON pliki,
+
+30
+00:01:27,920 --> 00:01:30,519
+to mi ładnie tutaj wyprintuje tę zawartość.
+
+31
+00:01:30,780 --> 00:01:35,000
+I teraz, skoro jest to string, to mógłbym użyć funkcji JSON loads,
+
+32
+00:01:35,480 --> 00:01:38,299
+to jest s, ale jeżeli nie chcę użyć tej funkcji,
+
+33
+00:01:38,439 --> 00:01:42,939
+tylko skoro mam file i chciałbym, żeby od razu został odczytany przez Python,
+
+34
+00:01:43,260 --> 00:01:47,020
+to mogę użyć tej funkcji bez s, po to, żeby móc na niej pracować.
+
+35
+00:01:47,020 --> 00:01:51,359
+W tym celu napiszę from JSON import load.
+
+36
+00:01:52,719 --> 00:01:53,820
+Load, nie loads.
+
+37
+00:01:54,460 --> 00:01:57,500
+I zobacz, nie muszę wtedy wykonywać file.read,
+
+38
+00:01:57,500 --> 00:02:02,500
+wystarczy, że zrobię print load file,
+
+39
+00:02:02,500 --> 00:02:08,500
+z tego względu, że od razu ten load otrzymuje fp, file pointer, jako argument.
+
+40
+00:02:08,500 --> 00:02:12,000
+I w tym momencie te dane mi się wyświetliły nie tak, tylko tak.
+
+41
+00:02:12,000 --> 00:02:13,000
+Jaka jest różnica?
+
+42
+00:02:13,000 --> 00:02:16,500
+Różnica jest taka, że tutaj wyświetliły się znaki końca linii, to jest string,
+
+43
+00:02:16,500 --> 00:02:21,000
+natomiast tu jest już to lista, lista składająca się z dwóch słowników.
+
+44
+00:02:21,000 --> 00:02:22,500
+Co to oznacza?
+
+45
+00:02:22,500 --> 00:02:27,259
+Oznacza to nie mniej, nie więcej, aż to, że mogę sobie teraz po tych danych po prostu przejść.
+
+46
+00:02:27,500 --> 00:02:30,500
+I mógłbym to zrobić wewnątrz tego weave'a,
+
+47
+00:02:30,500 --> 00:02:34,500
+natomiast jeżeli będę to robił wewnątrz tego weave'a, to jest takie, takie ryzyko,
+
+48
+00:02:34,500 --> 00:02:41,500
+że no po prostu za każdym razem, kiedy coś będę dorzucał, to będę zawsze sobie te wcięcia mnożył i mnożył,
+
+49
+00:02:41,500 --> 00:02:44,500
+a tego raczej wolę nie robić, stąd też zrobię sobie taką zmianę.
+
+50
+00:02:44,500 --> 00:02:56,500
+Napiszę books, równa się load na file i wtedy mogę wykonać for book in books, dwukropek, print book.
+
+51
+00:02:56,500 --> 00:03:04,500
+I zobacz, skoro my chcemy wyświetlić title oraz autor, to możemy napisać book.get title.
+
+52
+00:03:04,500 --> 00:03:09,500
+Tu już zdecydowanie polecam korzystać z geta, no bo może się okazać, że nasz jason będzie miał różną strukturę
+
+53
+00:03:09,500 --> 00:03:16,500
+i nie zawsze będzie ona taka, jak się spodziewamy, a nie chcemy dostawać błędów mówiących o tym, że nie ma takiej kolumny.
+
+54
+00:03:16,500 --> 00:03:21,500
+I w ten sposób, zobacz, wyświetlił mi się ogniem mieczem Henryk Sienkiewicz zemsta Aleksander Flendro.
+
+55
+00:03:21,500 --> 00:03:24,500
+Mogę sobie bez problemu wyświetlić oczywiście też title.
+
+56
+00:03:26,500 --> 00:03:30,500
+Czy też słowo po polsku tytuł, wszystko zależy od tego, co potrzebuje.
+
+57
+00:03:30,500 --> 00:03:33,500
+Autor, może zróbmy po polsku.
+
+58
+00:03:33,500 --> 00:03:39,500
+I jeszcze możemy sobie jakąś kreskę dorzucić pomiędzy tymi rekordami.
+
+59
+00:03:39,500 --> 00:03:43,500
+Na przykład 20 myślników.
+
+60
+00:03:43,500 --> 00:03:49,500
+Jeszcze szybkie formatowanie, strzałka do góry enter i zobacz, mam ogniem i mieczem i zemsta.
+
+61
+00:03:49,500 --> 00:03:54,500
+No i skoro mam te moje książki, to nic nie stoi na przeszkodzie, żeby dorzucić sobie nowego autora i nowy tytuł.
+
+62
+00:03:54,500 --> 00:03:55,500
+Poniżej podspokajam.
+
+63
+00:03:55,500 --> 00:03:58,500
+Poniżej, pod spodem, bo muszę mieć te książki załadowane do pliku.
+
+64
+00:03:58,500 --> 00:04:04,500
+Wykonam sobie raz jeszcze do pamięci withopenbooks.json.
+
+65
+00:04:04,500 --> 00:04:08,500
+Zwróć uwagę na to, że ten plik już mi się tutaj zamknął, więc mogę go spokojnie otworzyć drugi raz.
+
+66
+00:04:08,500 --> 00:04:12,500
+Z parametrem w, as file.
+
+67
+00:04:12,500 --> 00:04:19,500
+I tu będzie bardzo łatwo, a mianowicie dorzucimy sobie oprócz loada jeszcze dumpa.
+
+68
+00:04:19,500 --> 00:04:22,500
+I wtedy możemy wykonać dump.
+
+69
+00:04:22,500 --> 00:04:23,500
+Przekazać mu najpierw object.
+
+70
+00:04:23,500 --> 00:04:24,500
+Zobacz, najpierw jest object.
+
+71
+00:04:24,500 --> 00:04:26,500
+Później jest dopiero file pointer.
+
+72
+00:04:26,500 --> 00:04:29,500
+Naszym obiektem są nasze książki, czyli books.
+
+73
+00:04:29,500 --> 00:04:32,500
+A file pointer to jest po prostu file.
+
+74
+00:04:32,500 --> 00:04:34,500
+Co się w tym momencie zastanie?
+
+75
+00:04:34,500 --> 00:04:36,500
+Wykonam mój program.
+
+76
+00:04:36,500 --> 00:04:39,500
+File, books, books, books.
+
+77
+00:04:39,500 --> 00:04:44,500
+Oczywiście books, ale do tego books muszę dołożyć jeszcze Witolda Gombrowicza i Ferdydurkę.
+
+78
+00:04:44,500 --> 00:04:48,500
+Czyli books append, bo jest to lista.
+
+79
+00:04:48,500 --> 00:04:50,500
+I dodaję słownik.
+
+80
+00:04:50,500 --> 00:04:53,500
+Słownik musi mieć taką samą strukturę, żeby się nie pogubiło później.
+
+81
+00:04:53,500 --> 00:04:55,500
+Czyli title.
+
+82
+00:04:55,500 --> 00:04:58,500
+Tutaj po prostu przekazuję mu string.
+
+83
+00:04:58,500 --> 00:05:01,500
+W cudzysłów to da się samodzielnie.
+
+84
+00:05:01,500 --> 00:05:03,500
+New title.
+
+85
+00:05:03,500 --> 00:05:05,500
+No i autor.
+
+86
+00:05:05,500 --> 00:05:08,500
+Znowu podążam za tą strukturą.
+
+87
+00:05:08,500 --> 00:05:10,500
+Dwukropek.
+
+88
+00:05:10,500 --> 00:05:12,500
+New author.
+
+89
+00:05:12,500 --> 00:05:15,500
+I w tym momencie, jeżeli ten program sobie wywołam.
+
+90
+00:05:15,500 --> 00:05:19,500
+Nie code, tylko JSON pliki.
+
+91
+00:05:19,500 --> 00:05:20,500
+Zrobię enter.
+
+92
+00:05:20,500 --> 00:05:22,500
+To zobacz, dostaje ogniem i mieczem Henryk Sienkiewicz.
+
+93
+00:05:22,500 --> 00:05:24,500
+Zemsta Aleksandra Fredro.
+
+94
+00:05:24,500 --> 00:05:26,500
+Czyli wszystko jest idealnie.
+
+95
+00:05:26,500 --> 00:05:29,500
+Wyświetlują mi się tylko dwie pozycje.
+
+96
+00:05:29,500 --> 00:05:31,500
+Jeżeli wywołam to teraz drugi raz.
+
+97
+00:05:31,500 --> 00:05:33,500
+Dostanie się rzecz bardzo ciekawa.
+
+98
+00:05:33,500 --> 00:05:38,500
+Ponieważ ten autor i ten tytuł dodaje mi się dopiero na końcu.
+
+99
+00:05:38,500 --> 00:05:42,500
+Więc jeżeli teraz wykonam ten kod raz jeszcze.
+
+100
+00:05:42,500 --> 00:05:44,500
+To on mi się doda drugi raz.
+
+101
+00:05:44,500 --> 00:05:47,500
+Natomiast w tym miejscu, gdzie wyświetlam już będzie widoczny.
+
+102
+00:05:47,500 --> 00:05:48,500
+Dlaczego będzie widoczny?
+
+103
+00:05:48,500 --> 00:05:50,500
+Bo zobacz w pliku book.json.
+
+104
+00:05:50,500 --> 00:05:52,500
+Mamy na samym końcu.
+
+105
+00:05:52,500 --> 00:05:54,500
+Ferdy Durke Witolda Gombrowicza.
+
+106
+00:05:54,500 --> 00:05:56,500
+Przy okazji zmienił się też format tego pliku.
+
+107
+00:05:56,500 --> 00:06:00,500
+No bo JSON nie wymaga tego, żeby były tam wcięcia, nowe linie i inne tego typu rzeczy.
+
+108
+00:06:00,500 --> 00:06:03,500
+Po prostu nie są one mu zupełnie potrzebne.
+
+109
+00:06:03,500 --> 00:06:05,500
+Natomiast jeżeli będę teraz to wywoływał.
+
+110
+00:06:05,500 --> 00:06:08,500
+No to te dane będą widoczne.
+
+111
+00:06:08,500 --> 00:06:11,500
+Co mógłbym zrobić, żeby ten program był bardziej użyteczny?
+
+112
+00:06:11,500 --> 00:06:13,500
+Mogę trochę zamienić to kolejnością.
+
+113
+00:06:13,500 --> 00:06:15,500
+Czyli wyświetlanie.
+
+114
+00:06:15,500 --> 00:06:18,500
+Bo zmienna book cały czas jest tutaj dostępna.
+
+115
+00:06:18,500 --> 00:06:19,500
+Czyli wyświetlanie.
+
+116
+00:06:19,500 --> 00:06:21,500
+Możemy przenieść sobie niżej.
+
+117
+00:06:21,500 --> 00:06:23,500
+I zrobić na przykład jeszcze jedną rzecz.
+
+118
+00:06:23,500 --> 00:06:25,500
+A mianowicie o dodanie nowego autora.
+
+119
+00:06:25,500 --> 00:06:29,500
+Zapytać użytkownika w momencie, w którym otwieram mój plik.
+
+120
+00:06:29,500 --> 00:06:32,500
+Tak, żeby mógł sobie sam określić input.
+
+121
+00:06:32,500 --> 00:06:34,500
+Jaki autor.
+
+122
+00:06:34,500 --> 00:06:37,500
+No i może imię i nazwisko autora.
+
+123
+00:06:37,500 --> 00:06:39,500
+Dwukropek.
+
+124
+00:06:39,500 --> 00:06:41,500
+Oraz input.
+
+125
+00:06:41,500 --> 00:06:44,500
+Nazwa czy tam tytuł książki.
+
+126
+00:06:44,500 --> 00:06:46,500
+I tak dalej.
+
+127
+00:06:46,500 --> 00:06:47,500
+I tak dalej.
+
+128
+00:06:47,500 --> 00:06:48,500
+I tak dalej.
+
+129
+00:06:48,500 --> 00:06:49,500
+I tak dalej.
+
+130
+00:06:49,500 --> 00:06:50,500
+Ok.
+
+131
+00:06:50,500 --> 00:06:53,500
+Jeżeli teraz sobie ten program wywołam,
+
+132
+00:06:53,500 --> 00:06:55,500
+to on zadziała mi wtedy w ten sposób,
+
+133
+00:06:55,500 --> 00:06:58,500
+że najpierw zapyta mnie o imię i nazwisko autora.
+
+134
+00:06:58,500 --> 00:06:59,500
+Dlaczego tak?
+
+135
+00:06:59,500 --> 00:07:00,500
+Aaa, bo wyświetlanie.
+
+136
+00:07:00,500 --> 00:07:02,500
+Jeszcze wyświetlanie możemy przenieść też wyżej.
+
+137
+00:07:02,500 --> 00:07:04,500
+Żeby jak chcemy kogoś coś dodać,
+
+138
+00:07:04,500 --> 00:07:07,500
+to w sumie nawet można było by to zostawić tutaj.
+
+139
+00:07:07,500 --> 00:07:09,500
+Jeżeli chcemy kogoś dodać,
+
+140
+00:07:09,500 --> 00:07:13,500
+to żeby on nam najpierw wyświetlił kogo już mamy,
+
+141
+00:07:13,500 --> 00:07:15,500
+a dopiero później pozwolił na dodanie.
+
+142
+00:07:15,500 --> 00:07:16,500
+Czyli zanim ktoś wyświetlił,
+
+143
+00:07:16,500 --> 00:07:17,500
+to może nam to podpisać i podpisać.
+
+144
+00:07:17,500 --> 00:07:22,500
+wolił na dodanie. Czyli zrobię sobie ctrl c i raz jeszcze zrobię sobie strzałka do góry.
+
+145
+00:07:22,779 --> 00:07:28,139
+Enter. I zobacz, najpierw wyświetlił mi wszystkie osoby i znowu pytał imię i nazwiska autora.
+
+146
+00:07:28,139 --> 00:07:35,199
+Mogę sobie dodać Bolesław Prus, kamizelka.
+
+147
+00:07:36,699 --> 00:07:42,240
+Nic się tutaj nie wyświetliło, natomiast w książkach Bolesława Prusa kamizelka będzie.
+
+148
+00:07:42,680 --> 00:07:46,319
+Co się stało z tym ły? Nic się nie stało, to jest po prostu UTF-8.
+
+149
+00:07:46,319 --> 00:07:50,439
+Jeżeli teraz to wywołam raz jeszcze, to on mi się tutaj ładnie sformatuje.
+
+150
+00:07:50,579 --> 00:07:55,040
+Z tym nie ma żadnego problemu, od razu to kodowanie mi się zamieni.
+
+151
+00:07:55,040 --> 00:08:01,199
+Jeżeli byłby problem, pamiętaj, że możesz zawsze dodać encoding UTF-8 i wtedy też problem zniknie.
+
+152
+00:08:01,620 --> 00:08:07,699
+No i tak właśnie można pracować z tymi naszymi funkcjami i zapisywać sobie dane, odczytywać dane.
+
+153
+00:08:07,800 --> 00:08:14,439
+Jak widać jest bardzo, bardzo wygodnie. No i też bardziej elastycznie niż to, co było w przypadku plików tekstowych.
+
+154
+00:08:15,019 --> 00:08:16,039
+To na co trzeba zwrócić szczególność.
+
+155
+00:08:16,319 --> 00:08:17,699
+Zwróćcie szczególną uwagę, to są dwie rzeczy.
+
+156
+00:08:17,819 --> 00:08:26,480
+Po pierwsze, jeżeli będziesz dodawać nowe dane, to warto o tych kluczach pamiętać, by miały te same wartości, jak te, które pobierasz,
+
+157
+00:08:26,579 --> 00:08:29,399
+no bo potem niekonsekwencja prowadzi do błędów.
+
+158
+00:08:29,759 --> 00:08:36,500
+A druga rzecz, która się bardzo często zdarzała moim kursantom jest taka, że jeżeli z jakiegoś powodu twój plik books.json będzie pusty,
+
+159
+00:08:37,460 --> 00:08:41,159
+to w tym momencie, kiedy próbujesz otworzyć ten plik, pojawi się błąd.
+
+160
+00:08:41,159 --> 00:08:42,980
+Ten błąd jest trochę nieczytelny.
+
+161
+00:08:43,439 --> 00:08:44,659
+Zobacz, on mówi o czymś takim.
+
+162
+00:08:46,320 --> 00:08:53,840
+I to, co tutaj jest napisane, trochę może przerażać, bo ten komunikat nie mówi wprost, co jest nie tak.
+
+163
+00:08:54,400 --> 00:09:00,020
+Ten komunikat mówi dokładnie to, że plik pusty books.json nie jest możliwy do odczytu.
+
+164
+00:09:00,660 --> 00:09:07,040
+Plik books.json musi zawierać poprawną formę jsona, więc najprościej jest po prostu otworzyć sobie puste klamerki.
+
+165
+00:09:07,040 --> 00:09:12,760
+I w tym momencie strzałka do góry Enter spowoduje, że wszystko będzie ładnie grało i bucało.
+
+166
+00:09:12,960 --> 00:09:15,780
+Zauważyłem jeszcze jeden problem, o którym chciałem się z Wami podzielić.
+
+167
+00:09:16,320 --> 00:09:20,260
+Jeżeli mamy new author i new title wewnątrz tego weave'a,
+
+168
+00:09:20,800 --> 00:09:25,600
+to zakończenie, wykonanie ctrl-c na tym etapie powoduje, że plik books.json zostaje pusty.
+
+169
+00:09:25,840 --> 00:09:26,980
+Dlaczego on zostaje pusty?
+
+170
+00:09:27,340 --> 00:09:34,280
+On zostaje pusty z tego powodu, że my otworzyliśmy go jako w, a nie zapisaliśmy go w tym miejscu.
+
+171
+00:09:34,280 --> 00:09:40,980
+Dlatego, żeby było czyściej, proponuję serdecznie Wam to, żeby te dwa inputy znalazły się wyżej.
+
+172
+00:09:41,300 --> 00:09:45,900
+Z tego względu, że zatrzymanie programów na tym etapie nie będzie powodowało,
+
+173
+00:09:45,899 --> 00:09:51,819
+że plik books.json będzie nam się czyścił, tylko po prostu będzie tym samym, czym był wcześniej.
+
+174
+00:09:52,319 --> 00:09:54,579
+Bo do tej linijki w ogóle nie dojdzie.
+
+175
+00:09:55,079 --> 00:09:57,379
+I to tyle. Bardzo dziękuję. Chodźcie dalej.

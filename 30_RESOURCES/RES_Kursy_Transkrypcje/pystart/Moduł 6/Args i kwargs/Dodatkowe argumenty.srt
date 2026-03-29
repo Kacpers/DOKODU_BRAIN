@@ -1,0 +1,79 @@
+1
+00:00:00,000 --> 00:00:06,560
+Czy gwiazdka ARKS wyklucza możliwość dodawania innych argumentów?
+
+2
+00:00:07,280 --> 00:00:07,500
+Nie.
+
+3
+00:00:08,160 --> 00:00:14,160
+Gwiazdka ARKS oznacza, że wszystko to, co nie zostało wcześniej podane z nazwy,
+
+4
+00:00:14,200 --> 00:00:17,820
+czy też według kolejności, ma trafić do tej zmiennej.
+
+5
+00:00:18,719 --> 00:00:20,320
+Trudne zdanie. Zobacz przykład.
+
+6
+00:00:20,900 --> 00:00:22,719
+Kod mówi więcej niż tysiąc słów.
+
+7
+00:00:23,300 --> 00:00:26,100
+Gwiazdka ARKS odbierze wszystkie pozostałe argumenty nienazwane.
+
+8
+00:00:26,219 --> 00:00:28,320
+Wszystkie argumenty zostaną odebrane w postaci tupli.
+
+9
+00:00:28,320 --> 00:00:33,100
+I zobacz. Print ARKS AB gwiazdka others.
+
+10
+00:00:33,700 --> 00:00:36,460
+Poszedłem tym tropem na moment, żeby Ci pokazać,
+
+11
+00:00:36,519 --> 00:00:38,159
+że można się wyłamać z tej konwencji.
+
+12
+00:00:38,299 --> 00:00:40,780
+Też świat się nie zawali, ale lepiej tego nie robić.
+
+13
+00:00:41,420 --> 00:00:45,179
+Napisałem print ARKS A, B, gwiazdka others.
+
+14
+00:00:45,400 --> 00:00:46,299
+Co to spowodowało?
+
+15
+00:00:46,480 --> 00:00:50,780
+Spowodowało to, że pierwsza wartość, która zostanie przekazana do print ARKS,
+
+16
+00:00:51,039 --> 00:00:52,179
+zawsze wpadnie do A.
+
+17
+00:00:52,740 --> 00:00:54,740
+Druga wpadnie zawsze do B.
+
+18
+00:00:55,240 --> 00:00:57,460
+Natomiast wszystkie pozostałe trafią do others.
+
+19
+00:00:57,460 --> 00:01:02,020
+I to, co jest ważne, to to, że w others nie będziesz mieć ani A, ani B.
+
+20
+00:01:02,219 --> 00:01:04,500
+Po prostu te dwie rzeczy zostaną z tego wycięte.

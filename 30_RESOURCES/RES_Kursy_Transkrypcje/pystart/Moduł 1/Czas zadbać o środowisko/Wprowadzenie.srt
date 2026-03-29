@@ -1,0 +1,587 @@
+1
+00:00:00,620 --> 00:00:10,939
+Tak, dobrze widzisz, zaczynamy kolejną lekcję i tym razem mimo tematu czas zadbać o środowisko, nie będziemy zajmowali się ekologią.
+
+2
+00:00:11,339 --> 00:00:13,259
+A czym w takim razie?
+
+3
+00:00:13,919 --> 00:00:19,859
+Otóż, sprawa wygląda następująco, a mianowicie musimy przygotować nasze środowisko do programowania.
+
+4
+00:00:20,460 --> 00:00:22,559
+Po pierwsze, instalujemy IDE.
+
+5
+00:00:23,199 --> 00:00:27,660
+W jednym z poprzednich kroków prosiłem Cię o to, żebyś to IDE miał już ściągnięte
+
+6
+00:00:27,660 --> 00:00:32,460
+i teraz jest dobry moment, żeby dwa razy kliknąć i przejść przez proces instalacji.
+
+7
+00:00:32,960 --> 00:00:37,960
+I kiedy IDE już zainstalujesz, to powinieneś mieć je na swoim komputerze.
+
+8
+00:00:38,259 --> 00:00:47,179
+Podczas tego kursu, jeżeli chcesz, możesz też nie instalować tego IDE, tylko skorzystać z jakiegoś zastępczego narzędzia.
+
+9
+00:00:47,420 --> 00:00:48,439
+Na przykład z REPL.IT.
+
+10
+00:00:49,100 --> 00:00:55,299
+Na REPL.IT ja prowadziłem zajęcia, robiłem parę przykładów, też pokazywałem to na YouTubie.
+
+11
+00:00:55,760 --> 00:00:57,359
+Natomiast nie jest to narzędzie profesjonalne.
+
+12
+00:00:57,659 --> 00:01:02,859
+Jest to takie narzędzie, gdzie można sobie w dwie osoby poprogramować.
+
+13
+00:01:03,659 --> 00:01:04,640
+No i jest.
+
+14
+00:01:05,700 --> 00:01:07,219
+Nie używam tego komercyjnie.
+
+15
+00:01:07,359 --> 00:01:09,420
+Raczej to tylko tak, żeby Wam coś pokazać.
+
+16
+00:01:10,159 --> 00:01:12,340
+Drugie rozwiązanie to Visual Studio Code.
+
+17
+00:01:12,620 --> 00:01:16,159
+Visual Studio Code ma wielu swoich zwolenników.
+
+18
+00:01:16,719 --> 00:01:18,079
+Ja tego rozwiązania nie lubię.
+
+19
+00:01:18,159 --> 00:01:20,099
+Może nie tyle nie lubię, co nie przepadam za nim.
+
+20
+00:01:20,219 --> 00:01:25,719
+Z tego względu, że żeby pracować z Visual Studio Code, trzeba sobie zainstalować dużo różnych rozszerzeń.
+
+21
+00:01:25,719 --> 00:01:27,099
+Ja nie lubię tego robić.
+
+22
+00:01:27,099 --> 00:01:33,099
+Wolę mieć rozwiązanie, które od razu działa i do którego jestem też bardzo mocno przyzwyczajony.
+
+23
+00:01:33,599 --> 00:01:35,859
+Trzecie rozwiązanie kiedyś było mi polecane.
+
+24
+00:01:35,859 --> 00:01:38,599
+Teraz w sumie nie wiem, czy ono do końca wciąż żyje.
+
+25
+00:01:38,599 --> 00:01:40,099
+To jest Sublime Text Editor.
+
+26
+00:01:40,099 --> 00:01:43,099
+Kiedyś bardzo popularny, teraz wydaje mi się trochę mniej.
+
+27
+00:01:43,099 --> 00:01:45,099
+Bardzo popularny jest też na przykład Atom.
+
+28
+00:01:45,099 --> 00:01:47,099
+Ale to są edytory tak naprawdę.
+
+29
+00:01:47,099 --> 00:01:53,099
+Czyli trzeba, żeby z takiego edytora zrobić takie narzędzie jak Visual Studio Code czy PyCharm,
+
+30
+00:01:53,099 --> 00:01:55,099
+trzeba naprawdę bardzo się postarać.
+
+31
+00:01:55,099 --> 00:01:57,099
+I dużo rzeczy sobie trzeba wyklikać.
+
+32
+00:01:57,099 --> 00:02:00,099
+Dla mnie PyCharm jest najlepszy.
+
+33
+00:02:00,099 --> 00:02:05,099
+I tutaj wspominałem, jeżeli chodzi o pobranie PyCharma, jeżeli z jakiegoś powodu jeszcze go nie masz,
+
+34
+00:02:05,099 --> 00:02:12,099
+to przypominam, można go sobie śmiało pobrać ze strony jetbrains.com pycharm.com.
+
+35
+00:02:12,099 --> 00:02:19,099
+Wydaje mi się, że żaden inny program udostępniany przez firmę JetBrains nie ma darmowego odpowiednika.
+
+36
+00:02:19,099 --> 00:02:26,099
+Natomiast ze względu na to, że Python jest tak popularny, no to JetBrainsi zdecydowali się na to, żeby udostępnić też Wam wersję bezpłatną.
+
+37
+00:02:26,099 --> 00:02:33,099
+Jak widać, zależnie od systemu, można sobie pobrać wersję na Windowsa, Maca albo na Linuxa.
+
+38
+00:02:33,099 --> 00:02:42,099
+Wersja Professional to wersja, którą wykorzystujemy wtedy, kiedy interesuje nas korzystanie z HTML-a, JavaScriptu, SQL-a
+
+39
+00:02:42,099 --> 00:02:49,099
+oraz wtedy, kiedy chcemy stosować inne wykorzystanie Pythona, na przykład jakieś scientific, czyli jakieś naukowe.
+
+40
+00:02:49,099 --> 00:02:54,099
+Jeżeli to Cię nie interesuje, no to śmiało idź w wersję Community.
+
+41
+00:02:54,099 --> 00:02:55,099
+Natomiast tak jak wspominałem, to jest to wersja, która jest bardzo popularna.
+
+42
+00:02:55,099 --> 00:03:02,099
+Natomiast tak jak wspominałem, ta wersja Pro przyda nam się jak najbardziej do naszych tych dodatków, do tej dalszej pracy.
+
+43
+00:03:02,099 --> 00:03:11,099
+Jeżeli z jakiegoś powodu już przyzwyczaiłeś się na przykład do Visual Studio Code i wolisz używać tego rozwiązania, to ja też nie mam z tym żadnego problemu.
+
+44
+00:03:11,099 --> 00:03:15,099
+Natomiast szanujmy się nawzajem, Ty nie namawiaj mnie do Visual Studio Code.
+
+45
+00:03:15,099 --> 00:03:20,099
+Tu wszystko każdy wznosi tym, czym lubi, używa tego, co mu odpowiada.
+
+46
+00:03:20,099 --> 00:03:23,099
+Ja wolę to rozwiązanie.
+
+47
+00:03:23,099 --> 00:03:29,099
+I teraz dlaczego tak naprawdę potrzebujemy mieć wirtualne środowisko?
+
+48
+00:03:29,099 --> 00:03:31,099
+To jest trochę tak, że wyobraź sobie, że masz komputer.
+
+49
+00:03:31,099 --> 00:03:36,099
+I ten komputer chciałby być tak beztroski, jak ta pani, którą widzisz na tym obrazku.
+
+50
+00:03:36,099 --> 00:03:42,099
+I żeby być beztroskim, on nie może być obciążony milionem zależności.
+
+51
+00:03:42,099 --> 00:03:49,099
+Już temu komputerowi wystarczy fakt, że działa na Pythonie 3.8, 3.7, 3.11, 3.12 i tak dalej.
+
+52
+00:03:49,099 --> 00:03:51,099
+Tych wersji Pythona może być na komputerze zainstalowanych bardzo, bardzo dużo.
+
+53
+00:03:51,099 --> 00:03:52,099
+No i to jest to, co jest bardzo ważne.
+
+54
+00:03:52,099 --> 00:03:59,099
+No ale każdy z projektów, które będziesz od tej pory sobie powoli tworzyć, może potrzebować innej wersji Pythona.
+
+55
+00:03:59,099 --> 00:04:06,099
+Czasem potrzebujesz jakiejś biblioteki, która wymaga starszej wersji Pythona.
+
+56
+00:04:06,099 --> 00:04:10,099
+Czasem potrzebujesz jakiejś biblioteki, która potrzebuje nowszej wersji Pythona.
+
+57
+00:04:10,099 --> 00:04:12,099
+I jak sobie z tym w ogóle poradzić?
+
+58
+00:04:12,099 --> 00:04:15,099
+No właśnie, można tworzyć wirtualne środowiska.
+
+59
+00:04:15,099 --> 00:04:20,100
+I tworząc wirtualne środowisko, my zakładamy, że to środowisko ma funkcjonować na danej wersji Pythona.
+
+60
+00:04:20,100 --> 00:04:28,100
+Czyli jakby tego Pythona z twojego komputera oddelegowujesz do pracy dla danego projektu.
+
+61
+00:04:28,100 --> 00:04:32,100
+I możesz mieć kilka projektów i każdy projekt może używać innej wersji Pythona.
+
+62
+00:04:32,100 --> 00:04:35,100
+To jest bardzo wygodne, przydatne.
+
+63
+00:04:35,100 --> 00:04:39,100
+No i wyobraź sobie sytuację, że masz już taki projekt na jakiejś starszej wersji Pythona.
+
+64
+00:04:39,100 --> 00:04:45,100
+Po czym ktoś ci mówi, weź zainstaluj 3.11 na tej nowej wersji Pythona, wszystko mi dużo lepiej działa i w ogóle jest świetne.
+
+65
+00:04:45,100 --> 00:04:48,100
+Instalujesz 3.11, a nagle ten stary projekt mówi, że nie ma wersji.
+
+66
+00:04:48,100 --> 00:04:54,100
+A nagle ten stary projekt mówi, ej, ale ja teraz nie działam, nic mi tu nie działa, nic mi tu nie ma.
+
+67
+00:04:54,100 --> 00:04:56,100
+To byłoby bez sensu.
+
+68
+00:04:56,100 --> 00:05:02,100
+Dlatego też instalując nową wersję, możesz tworzyć nowe projekty na nowszych wersjach, a w starszych projektach wciąż używać starszych.
+
+69
+00:05:02,100 --> 00:05:05,100
+Czyli jakby różne wersje Pythona mogą być wykorzystywane przez różne projekty.
+
+70
+00:05:05,100 --> 00:05:07,100
+To jest pierwsza rzecz.
+
+71
+00:05:07,100 --> 00:05:10,100
+Ale druga rzecz, to to magiczne słowo zależności.
+
+72
+00:05:10,100 --> 00:05:16,100
+Nie wiem czy pamiętasz, ale wspominałem ci o tym na początku naszego kursu, że siłą Pythona jest też społeczność,
+
+73
+00:05:16,100 --> 00:05:18,100
+która też tworzy bazę zależności.
+
+74
+00:05:18,100 --> 00:05:21,100
+Jest bardzo dużo różnych, gotowych do użycia bibliotek.
+
+75
+00:05:21,100 --> 00:05:26,100
+I jeżeli zastanawiasz się nad tym, żeby ruszyć z jakimś konkretnym projektem,
+
+76
+00:05:26,100 --> 00:05:31,100
+to ja cię serdecznie zachęcam do tego, żebyś najpierw sprawdził na stronie pythi.org,
+
+77
+00:05:31,100 --> 00:05:34,100
+czy nie ma bibliotek wykonujących te czynności.
+
+78
+00:05:34,100 --> 00:05:38,100
+Bo na przykład, jeżeli teraz chciałbym robić miniaturkę zdjęcia,
+
+79
+00:05:38,100 --> 00:05:43,100
+to zainstalowałbym bibliotekę Pillow i ona by za mnie to zrobiła.
+
+80
+00:05:43,100 --> 00:05:46,100
+Nie musiałbym się zupełnie niczym przejmować.
+
+81
+00:05:46,100 --> 00:05:54,100
+Jeśli chciałbym zrobić sobie na przykład jakiś, nie wiem, stworzyć plik PDF,
+
+82
+00:05:54,100 --> 00:05:59,100
+to również mogę zainstalować bibliotekę, która zrobi mi taki plik PDF.
+
+83
+00:05:59,100 --> 00:06:03,100
+I wiele takich bibliotek jest już gotowych do tego, żeby je używać.
+
+84
+00:06:03,100 --> 00:06:07,100
+No i teraz, jeżeli wszystkie te biblioteki byłyby instalowane na twoim komputerze,
+
+85
+00:06:07,100 --> 00:06:10,100
+to mogłoby się okazać, że ten komputer byłby smutny.
+
+86
+00:06:10,100 --> 00:06:14,100
+Bo miałby bardzo dużo bibliotek, których by nie potrzebował.
+
+87
+00:06:14,100 --> 00:06:15,100
+To jest pierwsza rzecz.
+
+88
+00:06:15,100 --> 00:06:16,100
+Druga rzecz.
+
+89
+00:06:16,100 --> 00:06:20,100
+Jeżeli tworzysz taki projekt, to ty też chcesz być szczęśliwy i zależy ci też na tym,
+
+90
+00:06:20,100 --> 00:06:24,100
+żeby można było łatwo ten projekt gdzieś przenieść i uruchomić u kogoś innego,
+
+91
+00:06:24,100 --> 00:06:25,100
+na przykład na serwerze.
+
+92
+00:06:25,100 --> 00:06:33,100
+I teraz wyobraź sobie, że wszystkie zależności instalujesz tylko i wyłącznie na twoim własnym komputerze domowym.
+
+93
+00:06:33,100 --> 00:06:40,100
+W tym momencie piszesz sobie kod, przekładasz ten kod do kogoś i ten ktoś mówi
+
+94
+00:06:40,100 --> 00:06:43,100
+Kacper, mam taki błąd, wiesz, bo no module finder,
+
+95
+00:06:43,100 --> 00:06:46,100
+no module find pill.
+
+96
+00:06:46,100 --> 00:06:49,100
+A no tak, musisz zainstalować bibliotekę pillą.
+
+97
+00:06:49,100 --> 00:06:52,100
+Zrób to polecenie i się zainstaluje.
+
+98
+00:06:52,100 --> 00:06:56,100
+Kacper, mam jeszcze taki problem, no module, a tak, no sorry, jeszcze musisz to.
+
+99
+00:06:56,100 --> 00:07:00,100
+I teraz nagle się okazuje, że wszystko instalujesz na twoim komputerze,
+
+100
+00:07:00,100 --> 00:07:04,100
+przez co te biblioteki, które są, przepraszam, te projekty, które są wyżej,
+
+101
+00:07:04,100 --> 00:07:08,100
+one nie mają, nie wiedzą, co jest im potrzebne.
+
+102
+00:07:08,100 --> 00:07:11,100
+Kiedy przenosisz ten projekt na inny komputer,
+
+103
+00:07:11,100 --> 00:07:14,100
+to nagle musisz na tym komputerze też instalować wszystkie te rzeczy,
+
+104
+00:07:14,100 --> 00:07:20,100
+zamiast robić sobie takich przygotowanych po prostu paczuszek z listą zależności.
+
+105
+00:07:20,100 --> 00:07:26,100
+I to też rozwiązuje nam problem, ten problem też rozwiązuje nam wirtualne środowiska.
+
+106
+00:07:26,100 --> 00:07:32,100
+W ten sposób po prostu będziemy doinstalowywali nowe rzeczy do tych projektów i tyle.
+
+107
+00:07:32,100 --> 00:07:36,100
+I wszystko będzie działało bardzo, bardzo dobrze.
+
+108
+00:07:36,100 --> 00:07:41,100
+Okej, powiedzieliśmy sobie, jaka jest idea, która stoi za wirtualnymi środowiskami,
+
+109
+00:07:41,100 --> 00:07:45,100
+ja tylko tak ci dodam, że jeszcze jest parę takich zamienników,
+
+110
+00:07:45,100 --> 00:07:47,100
+o których gdzieś możesz też w przyszłości usłyszeć,
+
+111
+00:07:47,100 --> 00:07:50,100
+między innymi PyEnv albo Poetry.
+
+112
+00:07:50,100 --> 00:07:55,100
+To są też takie narzędzia, które tutaj pomagają nam rozwiązać ten sam problem.
+
+113
+00:07:55,100 --> 00:07:59,100
+Natomiast my będziemy tutaj korzystali z czegoś, co nazywa się Virtual Env.
+
+114
+00:07:59,100 --> 00:08:03,100
+I to jest na chwilę obecną najbardziej popularne rozwiązanie.
+
+115
+00:08:03,100 --> 00:08:04,100
+Jak to zrobić?
+
+116
+00:08:04,100 --> 00:08:07,100
+Generalnie, żeby stworzyć takie wirtualne środowisko,
+
+117
+00:08:07,100 --> 00:08:10,100
+trzeba najpierw mieć program, który służy do rozwiązania.
+
+118
+00:08:10,100 --> 00:08:13,100
+Program, który służy do robienia wirtualnych środowisk.
+
+119
+00:08:13,100 --> 00:08:18,100
+Ten program zazwyczaj, no teraz wam pokażę, że PyCharm zrobi to za nas.
+
+120
+00:08:18,100 --> 00:08:21,100
+Natomiast jeżeli instalujesz Pythona i nie chcesz korzystać z PyCharma,
+
+121
+00:08:21,100 --> 00:08:26,100
+tego darmowego też, no to będziesz musiał zrobić to, co jest po lewej stronie.
+
+122
+00:08:26,100 --> 00:08:29,100
+Czyli po pierwsze, pip install virtualenv.
+
+123
+00:08:29,100 --> 00:08:35,100
+To zainstaluje nam ten program, służący do tworzenia i zarządzania wirtualnymi środowiskami.
+
+124
+00:08:35,100 --> 00:08:38,100
+Po drugie, trzeba utworzyć to środowisko.
+
+125
+00:08:38,100 --> 00:08:46,100
+I to wykonuje się za pomocą polecenia Python-m venv env.
+
+126
+00:08:46,100 --> 00:08:48,100
+Dlaczego cokolwiek?
+
+127
+00:08:48,100 --> 00:08:53,100
+Bo Python-m to jest taki sposób uruchamiania skryptu Pythonowego,
+
+128
+00:08:53,100 --> 00:08:57,100
+który zakłada, że my uruchamiamy go jakimś konkretnym modułem.
+
+129
+00:08:57,100 --> 00:08:59,100
+Na razie potraktuj to jako zaklęcie.
+
+130
+00:08:59,100 --> 00:09:02,100
+Ty nie musisz wiedzieć, że to jest Abracadabra czy tam Alohomora.
+
+131
+00:09:02,100 --> 00:09:05,100
+Po prostu jest to takie zaklęcie, które trzeba wkleić do CMD,
+
+132
+00:09:05,100 --> 00:09:07,100
+żeby utworzyło się wirtualne środowisko.
+
+133
+00:09:08,100 --> 00:09:10,100
+I ono się wtedy utworzy pod nazwą env.
+
+134
+00:09:10,100 --> 00:09:13,100
+To jest ta nazwa, pod jaką to środowisko będzie dostępne.
+
+135
+00:09:13,100 --> 00:09:20,100
+I potem, kiedy to środowisko już masz, będziesz chcieć wejść na to środowisko.
+
+136
+00:09:20,100 --> 00:09:22,100
+Aktywować je.
+
+137
+00:09:22,100 --> 00:09:28,100
+Bo dopiero wtedy wejdziesz do tego zamkniętego projektu i będziesz na nim pracować.
+
+138
+00:09:28,100 --> 00:09:33,100
+I żeby to środowisko aktywować, należy wykonać polecenie source env scripts activate,
+
+139
+00:09:33,100 --> 00:09:36,100
+jeżeli jesteś na Linuxie.
+
+140
+00:09:36,100 --> 00:09:38,100
+Albo...
+
+141
+00:09:38,100 --> 00:09:41,100
+env scripts activate, jeżeli jesteś na Windowsie.
+
+142
+00:09:41,100 --> 00:09:45,100
+Natomiast tym również nie musisz się przejmować.
+
+143
+00:09:45,100 --> 00:09:52,100
+Jeżeli stworzysz też wirtualne środowisko, to potencjalnie, jeżeli będziesz chcieć korzystać z Visual Studio Code,
+
+144
+00:09:52,100 --> 00:09:56,100
+to on też Ci powie, hej, możliwe, że potrzebujesz kolejnego pluginu do wirtualnych środowisk.
+
+145
+00:09:56,100 --> 00:09:58,100
+Wtedy możesz go sobie doinstalować.
+
+146
+00:09:58,100 --> 00:10:06,100
+Natomiast to, czym my się zajmiemy teraz, będzie to stworzenie właśnie takiego naszego nowego projektu do pracy z PyStartem
+
+147
+00:10:06,100 --> 00:10:08,100
+za pomocą PyCharma.

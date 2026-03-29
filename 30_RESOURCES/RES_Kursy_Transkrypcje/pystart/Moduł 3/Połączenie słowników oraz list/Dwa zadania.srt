@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:05,339
+I dlatego właśnie, że przydaje się to nieustannie, mam dla Ciebie zadanie.
+
+2
+00:00:05,740 --> 00:00:09,980
+W tym zadaniu masz korzystając z list oraz słowników stworzyć taką konstrukcję,
+
+3
+00:00:10,540 --> 00:00:12,439
+która będzie przechowywała następujące dane.
+
+4
+00:00:12,740 --> 00:00:16,240
+W ołynce przyjmijmy, że ostatnia kolumna też będzie listą,
+
+5
+00:00:16,359 --> 00:00:21,719
+czyli nie traktujemy tych języków jako wartości, które mają być rozdzielone przecinkami,
+
+6
+00:00:21,820 --> 00:00:24,519
+tylko chcielibyśmy, żeby to była lista języków.
+
+7
+00:00:24,519 --> 00:00:29,100
+Czyli mamy id, job title, name i programming language.
+
+8
+00:00:29,100 --> 00:00:32,420
+I to jest zadanie, gdzie musimy zmapować sobie te dane.
+
+9
+00:00:32,820 --> 00:00:37,340
+A później, zaraz po nim, zrobimy zadanie drugie, w którym będziemy chcieli
+
+10
+00:00:37,340 --> 00:00:43,800
+przejść po tej liście i stworzyć strukturę pokazującą osoby pracujące w danych technologiach.
+
+11
+00:00:43,939 --> 00:00:47,380
+Czyli tutaj my sobie po prostu tworzymy listę z tymi osobami,
+
+12
+00:00:47,880 --> 00:00:53,160
+a następnie będziemy chcieli w kolejnym zadaniu przejść po tej liście i trochę ją zamienić.
+
+13
+00:00:53,160 --> 00:00:57,859
+To też jest bardzo przydatna umiejętność, żeby lista, która ma daną strukturę,
+
+14
+00:00:58,420 --> 00:00:59,079
+przetrkonwerowali.
+
+15
+00:00:59,100 --> 00:01:02,520
+Przetransferować do listy, która będzie wyglądała inaczej.
+
+16
+00:01:02,980 --> 00:01:07,980
+I tutaj, zobacz, tu mieliśmy technologię, na przykład Pythona, PHP, JavaScript itd.
+
+17
+00:01:08,579 --> 00:01:13,099
+Natomiast w kolejnym zadaniu chcemy do poszczególnych technologii
+
+18
+00:01:13,680 --> 00:01:18,299
+poprzypisywać poszczególne osoby, dopisując ile jest tych osób.
+
+19
+00:01:18,680 --> 00:01:23,480
+Ja czytam te zadania naraz oba, z tego względu, że za moment wykonam też oba,
+
+20
+00:01:23,740 --> 00:01:25,900
+natomiast oczywiście w dwóch osobnych filmach.
+
+21
+00:01:26,240 --> 00:01:28,400
+To co? Chwila dla Ciebie.
+
+22
+00:01:29,099 --> 00:01:30,979
+Zobaczymy się za chwilę w rozwiązaniach.
+
+23
+00:01:30,979 --> 00:01:31,979
+Do zobaczenia.

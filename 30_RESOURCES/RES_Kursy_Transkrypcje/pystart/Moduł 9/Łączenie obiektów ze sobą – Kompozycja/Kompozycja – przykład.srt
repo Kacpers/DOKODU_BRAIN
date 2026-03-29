@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:16,719
+No dobra, a jak to wygląda w kodzie? Bardzo proszę. Na przykład tak. Czyli patrz, mamy klasę library, która to jest klasa biblioteka, ale biblioteka nie taka lib, tylko taka biblioteka, w której trzymamy książki.
+
+2
+00:00:16,719 --> 00:00:31,399
+W ramach tej klasy posiadamy init, który posiada self.books i jest to pusta lista. I w ramach tego self.books mamy możliwość dodawania nowych książek do tej naszej listy.
+
+3
+00:00:31,399 --> 00:00:46,700
+I w tym celu mamy klasę book, która posiada init i możemy po prostu sobie do tego te książki dodawać. Czyli stworzyć sobie jakąś metodę add book czy coś takiego, register book i tam te książki po prostu rejestrować w tej naszej bibliotekie.
+
+4
+00:00:46,719 --> 00:01:08,879
+I tak samo nasz book może też mieć klasę author, która tutaj jest wymieniona. I ta klasa, ten obiekt właściwie może być właśnie obiektem klasy author, który może posiadać first name, last name, może posiadać też jakieś cechy autora typu epoka, w której pisał, czy roku rodzenia.
+
+5
+00:01:08,879 --> 00:01:13,659
+Natomiast oczywiście książki później mogłyby z takiego autora też korzystać.
+
+6
+00:01:14,039 --> 00:01:15,879
+Jeżeli chcielibyśmy mieć więcej autorów, no to autorzy...
+
+7
+00:01:16,719 --> 00:01:18,099
+...możliwe, że też mogliby być listą.
+
+8
+00:01:18,560 --> 00:01:20,480
+I tu też jeszcze taka ciekawa sprawa.
+
+9
+00:01:20,980 --> 00:01:25,879
+Jeżeli chcemy dodawać typy, to tu możemy zrobić dwukropek str, dwukropek str. O tym wiesz.
+
+10
+00:01:26,459 --> 00:01:32,439
+Natomiast jeżeli autor ma być autorem, to możemy zrobić dwukropek i napisać autor, podać nazwę klasy.
+
+11
+00:01:32,939 --> 00:01:35,000
+Zaraz zresztą zobaczysz slajd z tym związany.
+
+12
+00:01:35,000 --> 00:01:46,700
+Tylko w tym momencie bardzo często, kiedy tak sobie to zaplanujemy, trudno jest nam porozmawiać o tym, gdzie powinna znaleźć się konkretna metoda.
+
+13
+00:01:46,719 --> 00:01:53,719
+Czy metoda wypożycz książkę, to powinna być metoda biblioteki, czy metoda książki.
+
+14
+00:01:55,180 --> 00:02:01,439
+Czy metoda wyświetl dane, to powinna być o autorze, to powinno znaleźć się w autorze.
+
+15
+00:02:01,840 --> 00:02:08,300
+Czy na przykład wewnątrz książki powinniśmy zrobić taką logikę, taką metodę, która będzie wyświetlała dane o autorze.
+
+16
+00:02:09,159 --> 00:02:11,699
+I to jest bardzo popularny problem.
+
+17
+00:02:12,060 --> 00:02:14,300
+Gdzie umieścić daną metodę?
+
+18
+00:02:14,300 --> 00:02:15,300
+Czyli tak naprawdę...
+
+19
+00:02:16,719 --> 00:02:20,080
+W życiu codziennym jest to dyskusja o odpowiedzialności.

@@ -1,0 +1,167 @@
+1
+00:00:00,420 --> 00:00:04,160
+Dobrze, wiesz już o tym, że plik trzeba otworzyć, wiesz, że trzeba go zamknąć.
+
+2
+00:00:04,440 --> 00:00:06,879
+Porozmawiajmy więcej o tym otwieraniu tego pliku.
+
+3
+00:00:07,400 --> 00:00:09,599
+Czyli tak, mamy plik jako nazwę.
+
+4
+00:00:09,859 --> 00:00:13,980
+Wspominałem też o tym, że tam może być drugi argument przekazywany jako mode.
+
+5
+00:00:14,500 --> 00:00:16,839
+I są jeszcze dwa, buffering i encoding.
+
+6
+00:00:17,600 --> 00:00:19,600
+Buffering zostawiamy na razie.
+
+7
+00:00:19,719 --> 00:00:21,600
+Interesować nas będzie mode i encoding.
+
+8
+00:00:22,019 --> 00:00:25,460
+Mode, za moment, encoding, to jest kodowanie.
+
+9
+00:00:25,460 --> 00:00:30,320
+Czyli to, co możesz kojarzyć, że jakiś plik jest zapisany z kodowaniem UTF-8
+
+10
+00:00:30,320 --> 00:00:33,760
+albo ISO 88592, albo coś takiego.
+
+11
+00:00:34,439 --> 00:00:37,660
+I to kodowanie możesz tam dodać, ten encoding możesz dodać.
+
+12
+00:00:37,960 --> 00:00:41,160
+I w ten sposób okaże się, że polskie znaki będą działały.
+
+13
+00:00:41,600 --> 00:00:45,120
+Najczęściej encoding UTF-8 jest rozwiązaniem.
+
+14
+00:00:45,679 --> 00:00:48,439
+Natomiast mode, poniżej tabelka.
+
+15
+00:00:48,859 --> 00:00:51,960
+Tych trybów jest trochę więcej, natomiast wymieniłem tutaj dwa,
+
+16
+00:00:52,280 --> 00:00:54,480
+które będą szczególnie Ci potrzebne.
+
+17
+00:00:54,480 --> 00:00:55,439
+No dobra.
+
+18
+00:00:55,460 --> 00:00:56,460
+Trzy.
+
+19
+00:00:57,899 --> 00:00:59,660
+R, W oraz A.
+
+20
+00:01:00,079 --> 00:01:02,640
+R, tak jak wspominaliśmy, to jest odczyt.
+
+21
+00:01:03,079 --> 00:01:07,579
+R z plusem to jest odczyt i zapis, ale uwaga, wskaźnik,
+
+22
+00:01:07,700 --> 00:01:11,500
+czyli jakby wyobraź sobie, że plik jest tablicą.
+
+23
+00:01:12,319 --> 00:01:13,620
+Tablicą w szkole.
+
+24
+00:01:14,099 --> 00:01:16,939
+I na tej tablicy są różne rzeczy napisane, albo może być ona pusta.
+
+25
+00:01:17,359 --> 00:01:21,480
+Kiedy używasz R, to umieszczasz swój palec na samym początku pliku,
+
+26
+00:01:21,780 --> 00:01:24,260
+czyli tablicy, i możesz czytać z tego pliku.
+
+27
+00:01:24,480 --> 00:01:25,439
+Znaczy, to jest tablica.
+
+28
+00:01:25,459 --> 00:01:27,259
+Znak po znaku lub linia po linii.
+
+29
+00:01:28,079 --> 00:01:33,379
+R plus to jest też odczyt i zapis, ale za pomocą R plusa możesz umieścić się na początku
+
+30
+00:01:33,379 --> 00:01:35,739
+i też coś do tego pliku dopisać, do tej tablicy.
+
+31
+00:01:36,459 --> 00:01:38,799
+W to jest tylko i wyłącznie zapis.
+
+32
+00:01:38,939 --> 00:01:43,099
+Jeżeli na Twojej tablicy coś byłoby napisane, to musisz najpierw to zmazać
+
+33
+00:01:43,099 --> 00:01:45,579
+i dopiero później dodajesz nową treść.
+
+34
+00:01:46,339 --> 00:01:49,799
+W plus to jest zapis i odczyt, ale znowu ten plik jest wyczyszczony.
+
+35
+00:01:50,459 --> 00:01:53,019
+Natomiast A jest niezwykle wygodny.
+
+36
+00:01:53,019 --> 00:01:54,939
+Wtedy przydaje się wtedy, kiedy właśnie na przykład,
+
+37
+00:01:54,939 --> 00:01:57,439
+nie wiem, przechowujemy wyniki meczy, tak?
+
+38
+00:01:57,439 --> 00:02:02,439
+Czy wyniki rozgrywek jakichś i chcemy dodawać nowe wiersze na dole pliku.
+
+39
+00:02:02,439 --> 00:02:07,439
+Bo R to jest read, W to jest write, a A to jest append,
+
+40
+00:02:07,439 --> 00:02:11,439
+czyli dodawanie nowych wierszy na końcu pliku.
+
+41
+00:02:11,939 --> 00:02:15,939
+I z tymi trzema trybami, czyli R, W i A, możesz tak naprawdę zrobić wszystko,
+
+42
+00:02:15,939 --> 00:02:18,939
+co tylko potrzebujesz zrobić z plikiem.

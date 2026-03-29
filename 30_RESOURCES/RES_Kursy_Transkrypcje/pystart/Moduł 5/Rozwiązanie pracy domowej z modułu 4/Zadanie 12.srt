@@ -1,0 +1,299 @@
+1
+00:00:00,000 --> 00:00:05,480
+Dwunastka polega na tym, że chcemy odebrać od użytkownika słowa rozdzielone przecinkami,
+
+2
+00:00:05,679 --> 00:00:11,419
+czyli będzie trzeba użyć splita, a następnie wyświetlić te słowa wiersz pod wierszem,
+
+3
+00:00:11,660 --> 00:00:12,960
+ale każde tylko jeden raz.
+
+4
+00:00:13,460 --> 00:00:18,600
+I tutaj split to jest jedna rzecz, druga rzecz to są spacje, na które też musimy zwrócić uwagę.
+
+5
+00:00:18,600 --> 00:00:21,059
+Czyli najpierw stworzę sobie jakieś zdanie.
+
+6
+00:00:23,059 --> 00:00:24,600
+Nie musi być po polsku.
+
+7
+00:00:24,600 --> 00:00:30,859
+Mam nadzieję, że literówki nie zrobiłem.
+
+8
+00:00:33,300 --> 00:00:35,240
+No i napiszę dwa razy to samo.
+
+9
+00:00:40,700 --> 00:00:45,180
+To zawsze nam powtarzała pani od polskiego na lekcjach języka polskiego.
+
+10
+00:00:45,180 --> 00:00:47,320
+Kto ma ochotę sprawdzić, to zachęcam.
+
+11
+00:00:48,159 --> 00:00:50,500
+Jak zrobiłem literówkę, dajcie znać na Discordzie.
+
+12
+00:00:51,020 --> 00:00:54,180
+No i teraz, jeżeli to zrobiłem, no to będę potrzebował...
+
+13
+00:00:54,600 --> 00:00:57,780
+wykonać rozbicie po spacjach.
+
+14
+00:00:58,160 --> 00:01:01,800
+Czyli words równa się...
+
+15
+00:01:01,800 --> 00:01:03,600
+Albo od razu mogę nawet sobie po tym...
+
+16
+00:01:03,600 --> 00:01:05,200
+Words to jest pusta lista, zrobię tak.
+
+17
+00:01:05,960 --> 00:01:10,260
+For word in sentence split.
+
+18
+00:01:13,439 --> 00:01:14,599
+Po spacje...
+
+19
+00:01:14,599 --> 00:01:17,120
+A rozdzielone przecinkami to miało być przecież.
+
+20
+00:01:17,219 --> 00:01:19,480
+No właśnie, czyli powinienem tutaj więcej przecinków dorzucić.
+
+21
+00:01:22,840 --> 00:01:23,700
+O tak.
+
+22
+00:01:23,840 --> 00:01:24,260
+A w drugim przypadku...
+
+23
+00:01:24,599 --> 00:01:27,339
+Zobaczcie taką sytuację, że będzie bez spacji.
+
+24
+00:01:29,299 --> 00:01:29,780
+O.
+
+25
+00:01:30,179 --> 00:01:32,759
+I teraz powinienem to rozbijać po przecinkach.
+
+26
+00:01:33,519 --> 00:01:34,259
+I teraz...
+
+27
+00:01:34,259 --> 00:01:35,099
+Dlaczego to robię?
+
+28
+00:01:35,719 --> 00:01:39,500
+Mógłbym oczywiście od razu sobie to rozbić,
+
+29
+00:01:39,560 --> 00:01:41,219
+zamienić na zbiór, usunąć duplikaty.
+
+30
+00:01:41,299 --> 00:01:42,840
+Ale te spacje, one męczą.
+
+31
+00:01:43,319 --> 00:01:45,699
+Natomiast jest taka funkcja, która pozwala na to,
+
+32
+00:01:45,699 --> 00:01:50,299
+żeby wyczyścić spacje pokazujące się na początku i na końcu.
+
+33
+00:01:50,619 --> 00:01:52,579
+I tej funkcji tutaj będę chciał użyć.
+
+34
+00:01:52,959 --> 00:01:53,699
+Czyli words...
+
+35
+00:01:54,599 --> 00:01:57,479
+Kropka words, kropka append.
+
+36
+00:01:59,599 --> 00:02:01,319
+Word, kropka.
+
+37
+00:02:01,699 --> 00:02:03,339
+I tak teraz sobie nawet pomyślałem o tym,
+
+38
+00:02:03,419 --> 00:02:05,479
+że w sumie można byłoby to jeszcze uprościć.
+
+39
+00:02:05,819 --> 00:02:08,599
+A mianowicie od razu words zamienić na zbiór.
+
+40
+00:02:08,599 --> 00:02:11,379
+I wtedy nie trzeba byłoby zamieniać listy na zbiór.
+
+41
+00:02:11,780 --> 00:02:14,539
+Czyli tak naprawdę mielibyśmy mniej pamięci zapchanej.
+
+42
+00:02:14,900 --> 00:02:16,799
+No bo za każdym razem, kiedy nam się coś powtarza,
+
+43
+00:02:16,879 --> 00:02:18,560
+to nie dodawalibyśmy już tego,
+
+44
+00:02:18,659 --> 00:02:19,979
+bo zbiór od razu by to usuwał.
+
+45
+00:02:20,299 --> 00:02:21,900
+Więc zaraz też tę zmianę zastosuję.
+
+46
+00:02:22,400 --> 00:02:23,979
+Czyli word, kropka strip.
+
+47
+00:02:24,599 --> 00:02:26,799
+To jest funkcja, która usuwa właśnie spacje.
+
+48
+00:02:27,560 --> 00:02:28,919
+Print words.
+
+49
+00:02:30,079 --> 00:02:31,599
+I zobacz, że kiedy to wywołam...
+
+50
+00:02:33,859 --> 00:02:34,259
+O!
+
+51
+00:02:34,519 --> 00:02:37,099
+To dostanę wszystkie wyrażenia bez spacji
+
+52
+00:02:37,099 --> 00:02:39,819
+z określonymi zdaniami, które się powtarzają.
+
+53
+00:02:40,299 --> 00:02:42,340
+Od i w jednym i w drugim przypadku jest wielkie litery,
+
+54
+00:02:42,459 --> 00:02:44,359
+ale to znaczy, że raz jest wielkie, raz jest małe,
+
+55
+00:02:44,459 --> 00:02:45,560
+ale to nie jest żaden problem.
+
+56
+00:02:46,299 --> 00:02:47,439
+Dobra. I co dalej?
+
+57
+00:02:47,639 --> 00:02:48,859
+Zmieniam sobie to na zbiór.
+
+58
+00:02:49,840 --> 00:02:50,500
+Pusty zbiór.
+
+59
+00:02:52,439 --> 00:02:54,299
+To jest pusty słownik.
+
+60
+00:02:54,599 --> 00:02:55,159
+Set.
+
+61
+00:02:55,719 --> 00:02:58,280
+No i zbiór nie ma append, tylko ma add.
+
+62
+00:03:00,519 --> 00:03:01,579
+Raz, dwa, trzy.
+
+63
+00:03:02,280 --> 00:03:04,019
+Mamy zadanie zrobione.
+
+64
+00:03:04,459 --> 00:03:05,959
+Jeżeli robiłeś listę,
+
+65
+00:03:06,019 --> 00:03:08,019
+a później z listy wyciągałeś zbiór,
+
+66
+00:03:08,359 --> 00:03:09,979
+to też jest jak najbardziej w porządku.
+
+67
+00:03:10,479 --> 00:03:11,340
+Może tak być.
+
+68
+00:03:11,719 --> 00:03:13,759
+Natomiast miej na uwadze, że jeżeli tych słów
+
+69
+00:03:13,759 --> 00:03:15,500
+będziesz miał bardzo dużo, to niepotrzebnie
+
+70
+00:03:15,500 --> 00:03:17,000
+będziesz je przechowywać w tej liście.
+
+71
+00:03:17,479 --> 00:03:19,419
+Bo zbiór od razu usuwa nam
+
+72
+00:03:19,419 --> 00:03:21,459
+wszystkie duplikaty z marszu,
+
+73
+00:03:21,459 --> 00:03:23,459
+kiedy próbujemy dodać duplikat.
+
+74
+00:03:24,240 --> 00:03:24,519
+To co?
+
+75
+00:03:24,599 --> 00:03:25,799
+Trzynastka.

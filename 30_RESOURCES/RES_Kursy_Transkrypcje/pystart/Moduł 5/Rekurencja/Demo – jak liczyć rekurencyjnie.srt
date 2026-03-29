@@ -1,0 +1,267 @@
+1
+00:00:00,000 --> 00:00:03,419
+Chciałbym na przykład stworzyć sobie funkcję, która będzie nazywała się
+
+2
+00:00:03,419 --> 00:00:14,140
+po licz do, czyli count to, ten i w wyniku powinno dać 1, 2, 3, 4, 5, 10.
+
+3
+00:00:14,900 --> 00:00:15,419
+To jest plan.
+
+4
+00:00:15,960 --> 00:00:18,740
+Czyli tak naprawdę potrzebujemy stworzyć sobie funkcję,
+
+5
+00:00:18,740 --> 00:00:20,699
+która będzie się nazywała count to.
+
+6
+00:00:21,339 --> 00:00:24,420
+Będzie miała jakąś wartość początkową.
+
+7
+00:00:25,000 --> 00:00:26,219
+Raczej będzie nią 1.
+
+8
+00:00:26,219 --> 00:00:30,219
+Możemy natomiast sobie taką wartość początkową tutaj zapisać.
+
+9
+00:00:31,259 --> 00:00:33,299
+No i będzie miała jakiś limit.
+
+10
+00:00:34,879 --> 00:00:36,619
+Niech to będzie 10.
+
+11
+00:00:37,500 --> 00:00:42,899
+To, co będziemy chcieli zrobić na pewno, to będziemy chcieli wypisać start.
+
+12
+00:00:44,579 --> 00:00:49,019
+Jeżeli start będzie się równał limit,
+
+13
+00:00:51,340 --> 00:00:53,879
+to wtedy będziemy chcieli zakończyć naszą pętlę.
+
+14
+00:00:54,259 --> 00:00:56,200
+Czyli powinniśmy wykonać po prostu,
+
+15
+00:00:56,219 --> 00:00:57,140
+return.
+
+16
+00:00:57,939 --> 00:01:00,920
+Natomiast jeżeli, tu dwukropka zabrakło.
+
+17
+00:01:01,780 --> 00:01:05,219
+Natomiast jeżeli nie napotkamy na tą sytuację,
+
+18
+00:01:05,959 --> 00:01:09,900
+to będziemy chcieli zrobić count to dla kolejnej liczby.
+
+19
+00:01:10,260 --> 00:01:13,140
+Czyli return count to,
+
+20
+00:01:14,500 --> 00:01:19,379
+gdzie nasz start musi być większy o 1,
+
+21
+00:01:19,939 --> 00:01:23,379
+a nasz limit musi być taki sam, jaki jest tutaj.
+
+22
+00:01:23,379 --> 00:01:25,379
+I w tej postaci, jeżeli sobie to wyznaczymy,
+
+23
+00:01:26,219 --> 00:01:27,219
+to wyprintuję.
+
+24
+00:01:29,379 --> 00:01:33,099
+I napiszę, że start to jest, niech będzie od 1 do 10.
+
+25
+00:01:36,620 --> 00:01:37,980
+O, to zobacz.
+
+26
+00:01:37,980 --> 00:01:41,459
+Dostanę właśnie wartości od 1 do 10.
+
+27
+00:01:41,459 --> 00:01:44,219
+Tu mógłbym w sumie zrobić return limit,
+
+28
+00:01:44,219 --> 00:01:45,739
+żeby to miało sens.
+
+29
+00:01:45,739 --> 00:01:47,739
+I wtedy, jeżeli start...
+
+30
+00:01:47,739 --> 00:01:50,500
+Ach, ja już printuję tutaj,
+
+31
+00:01:50,500 --> 00:01:53,739
+więc tak naprawdę ten print tutaj nie będzie potrzebny.
+
+32
+00:01:53,739 --> 00:01:55,739
+No bo w rekurencji,
+
+33
+00:01:55,739 --> 00:01:57,739
+to pokazuje nam poszczególne przebiegi,
+
+34
+00:01:57,739 --> 00:02:01,739
+więc jak widać, wyświetlił nam wartości od 1,
+
+35
+00:02:01,739 --> 00:02:03,739
+tu akurat oczywiście przycięło mi,
+
+36
+00:02:03,739 --> 00:02:05,739
+ale o, od 1 do 10.
+
+37
+00:02:05,739 --> 00:02:09,740
+Jeżeli bym chciał zobaczyć od 60 do 65,
+
+38
+00:02:09,740 --> 00:02:11,740
+tam 4, okej, niech będzie,
+
+39
+00:02:11,740 --> 00:02:13,740
+to też zadziałało.
+
+40
+00:02:13,740 --> 00:02:15,740
+Tak właśnie działa rekurencja.
+
+41
+00:02:15,740 --> 00:02:19,740
+Czyli musi najpierw zawsze być ten if,
+
+42
+00:02:19,740 --> 00:02:23,740
+który zakończy nam to działanie rekurencyjne,
+
+43
+00:02:23,740 --> 00:02:25,740
+musi zawsze być wyświetlany,
+
+44
+00:02:25,740 --> 00:02:27,740
+czyli zakończenie,
+
+45
+00:02:27,740 --> 00:02:29,740
+jakaś tam działanie na tym, co nas interesuje,
+
+46
+00:02:29,740 --> 00:02:31,740
+albo to działanie będzie przed ifem,
+
+47
+00:02:31,740 --> 00:02:33,740
+albo za ifem,
+
+48
+00:02:33,740 --> 00:02:35,740
+zależnie od tego,
+
+49
+00:02:35,740 --> 00:02:37,740
+czy chcemy, żeby to się wykonało dla tego ostatniego razu,
+
+50
+00:02:37,740 --> 00:02:39,740
+czy się nie wykonało, tylko było zanim.
+
+51
+00:02:39,740 --> 00:02:41,740
+No i ostatnie, co musi być,
+
+52
+00:02:41,740 --> 00:02:43,740
+to musi być właśnie to działanie rekurencyjne,
+
+53
+00:02:43,740 --> 00:02:45,740
+czyli wykonanie tego konkretnego,
+
+54
+00:02:45,740 --> 00:02:47,740
+tej konkretnej funkcji,
+
+55
+00:02:47,740 --> 00:02:49,740
+w której obecnie się znajdujemy,
+
+56
+00:02:49,740 --> 00:02:51,740
+z założeniem, że wcześniej napotkamy na zakończenie.
+
+57
+00:02:51,740 --> 00:02:53,740
+Co by się stało, jakbyśmy nie napotkali?
+
+58
+00:02:53,740 --> 00:02:57,740
+Jeżeli boicie się, że komputer wybuchnie,
+
+59
+00:02:57,740 --> 00:02:59,740
+to się nie bójcie,
+
+60
+00:02:59,740 --> 00:03:01,740
+po prostu dostaniemy informację
+
+61
+00:03:01,740 --> 00:03:03,740
+recursion error, maximum recursion death
+
+62
+00:03:03,740 --> 00:03:07,740
+exceeded while calling a python object,
+
+63
+00:03:07,740 --> 00:03:11,740
+czyli po prostu ten limit został osiągnięty.
+
+64
+00:03:11,740 --> 00:03:13,740
+Czyli nasze matrioszki nie mogłyby
+
+65
+00:03:13,740 --> 00:03:15,740
+w nieskończoność się w sobie zazębiać.
+
+66
+00:03:15,740 --> 00:03:17,740
+To co?
+
+67
+00:03:17,740 --> 00:03:19,740
+Chodźcie, mam dla was zadanie.

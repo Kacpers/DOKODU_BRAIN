@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:02,240
+A zadanie to wygląda następująco.
+
+2
+00:00:02,800 --> 00:00:07,360
+Odbierz od użytkownika adres IP lub domenę, może być to na przykład pystart.pl.
+
+3
+00:00:07,820 --> 00:00:10,439
+Możecie odbierać to polecenie za pomocą inputa.
+
+4
+00:00:11,060 --> 00:00:16,480
+Następnie wykonaj polecenie systemowe ping podany adres, czyli na przykład ping pystart.pl.
+
+5
+00:00:16,480 --> 00:00:20,879
+Czyli użytkownik wprowadza nam w input domenę, a my chcemy wykonać polecenie ping.
+
+6
+00:00:21,019 --> 00:00:25,699
+I tutaj uwaga, ping pystart.pl będzie wykonywał się długo.
+
+7
+00:00:25,699 --> 00:00:33,039
+Możemy ograniczyć wykorzystywanie polecenia ping tak, żeby zapytał tylko raz i wtedy żeby zakończył.
+
+8
+00:00:33,420 --> 00:00:39,340
+Tu polecam zerknąć do helpa polecenia ping, najpierw w cmd, czyli wpisać ping myślnik myślnik help i zobaczyć.
+
+9
+00:00:39,340 --> 00:00:43,120
+Wydaje mi się, że na jednym systemie operacyjnym to było C, a na drugim to było N.
+
+10
+00:00:43,519 --> 00:00:49,420
+Tak mi się wydaje, że to były dwie różne litery w zależności od tego, czy mamy systemy linuxopochodne czy windowsa.
+
+11
+00:00:50,060 --> 00:00:52,679
+Więc ping z tą przełączką pystart.pl.
+
+12
+00:00:53,120 --> 00:00:55,679
+No i wtedy chcielibyśmy, żeby wyświetliła nam się informacja.
+
+13
+00:00:55,700 --> 00:00:58,880
+Czy adres jest dostępny albo adres jest niedostępny.
+
+14
+00:00:58,940 --> 00:01:01,640
+W zależności od tego, czy adres odpowiedział lub nie odpowiedział.
+
+15
+00:01:02,020 --> 00:01:12,099
+Tu widzicie, że kiedy wykonałem polecenie ping na windowsie, on zawiesił się i zaczął wykonywać mi pingi jeden pod drugim wyświetlając domenę.
+
+16
+00:01:12,460 --> 00:01:22,719
+Natomiast jeżeli wykonałem ping na ping pystart.no.pl, no to wtedy dostałem informację ping request could not find host, please check the name and try again.
+
+17
+00:01:22,719 --> 00:01:25,680
+Czyli w ten sposób mogę stwierdzić, że wyświetlałem.
+
+18
+00:01:25,700 --> 00:01:30,260
+I tak jak zwykle sobie komunikat adres jest niedostępny, no bo w tym momencie ten adres nie odpowiada.
+
+19
+00:01:30,680 --> 00:01:35,140
+Natomiast jeżeli adres jest dostępny, no to znaczy, że komputer jest dostępny, komputer odpowiada.
+
+20
+00:01:35,980 --> 00:01:40,299
+Tego typu rozwiązanie można byłoby też wykorzystywać po części np. do szukania wolnych domen.
+
+21
+00:01:40,439 --> 00:01:41,379
+To taka ciekawostka.
+
+22
+00:01:41,859 --> 00:01:43,820
+Był taki film na YouTubie też mojego autorstwa.
+
+23
+00:01:43,920 --> 00:01:46,040
+Jak masz ochotę, to możesz go tam znaleźć.
+
+24
+00:01:46,140 --> 00:01:49,439
+Chociaż tam to pingowanie wykonywałem odrobinę inaczej.
+
+25
+00:01:50,100 --> 00:01:50,420
+To co?
+
+26
+00:01:51,079 --> 00:01:54,020
+Chwila dla każdego i widzimy się już za moment w rozwiązaniu.

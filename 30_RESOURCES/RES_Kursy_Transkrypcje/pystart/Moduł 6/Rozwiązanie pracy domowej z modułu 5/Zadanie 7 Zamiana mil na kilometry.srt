@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:01,219
+No to lecimy dalej.
+
+2
+00:00:01,740 --> 00:00:06,339
+Mamy przygotować funkcję, której zadaniem będzie konwersja jednostek mil na kilometry
+
+3
+00:00:06,339 --> 00:00:10,419
+i drugą wykonującą konwersję kilometrów na mile,
+
+4
+00:00:10,419 --> 00:00:13,359
+czyli miles to kilometers,
+
+5
+00:00:14,060 --> 00:00:16,719
+gdzie będziemy potrzebowali mieć wartość miles,
+
+6
+00:00:17,379 --> 00:00:18,500
+wyrażoną w Integerze,
+
+7
+00:00:18,620 --> 00:00:20,920
+będziemy zwracać, czy też we floacie może,
+
+8
+00:00:21,780 --> 00:00:24,039
+nie bądźmy tacy zamknięci,
+
+9
+00:00:24,539 --> 00:00:27,219
+będziemy potrzebowali obliczyć sobie to w taki sposób,
+
+10
+00:00:27,219 --> 00:00:31,780
+że jedna mila to jest 1,60,
+
+11
+00:00:32,219 --> 00:00:33,479
+no taka wartość kilometra.
+
+12
+00:00:33,920 --> 00:00:35,920
+Czyli tę wartość musimy przemnożyć sobie,
+
+13
+00:00:35,920 --> 00:00:38,719
+żeby otrzymać kilometr, czyli return
+
+14
+00:00:38,719 --> 00:00:44,920
+no i następnie będziemy potrzebowali wykonać miles razy
+
+15
+00:00:45,659 --> 00:00:46,920
+i tą wartość.
+
+16
+00:00:50,780 --> 00:00:52,320
+Co mu się nie podoba?
+
+17
+00:00:52,659 --> 00:00:53,920
+Kropka zamiast przecinka.
+
+18
+00:00:54,620 --> 00:00:56,920
+No i tak samo def kilometers to miles,
+
+19
+00:00:57,219 --> 00:00:59,960
+gdzie miles to jest float,
+
+20
+00:01:01,280 --> 00:01:02,600
+zwracamy float,
+
+21
+00:01:03,280 --> 00:01:05,439
+wykonujemy return kilometers,
+
+22
+00:01:09,579 --> 00:01:12,340
+kilometers podzielone przez tą samą wartość.
+
+23
+00:01:12,500 --> 00:01:14,159
+To jest tak samo jak z walutami.
+
+24
+00:01:14,480 --> 00:01:17,099
+W jednych przypadkach mnożymy, w innych przypadkach dzielimy.
+
+25
+00:01:17,500 --> 00:01:18,920
+Jak najbardziej wszystko jest w porządku.
+
+26
+00:01:19,299 --> 00:01:20,920
+Możemy też to sobie sprawdzić zawsze w ten sposób,
+
+27
+00:01:21,060 --> 00:01:23,680
+czyli print miles to kilometers,
+
+28
+00:01:24,180 --> 00:01:26,299
+no i chcemy zamienić 10 mil
+
+29
+00:01:26,299 --> 00:01:26,599
+według,
+
+30
+00:01:27,219 --> 00:01:29,760
+Google'a 10 mil to jest 16 kilometrów,
+
+31
+00:01:29,819 --> 00:01:32,420
+więc Python 7 miles to kilometers,
+
+32
+00:01:32,539 --> 00:01:34,280
+16 kilometrów, wszystko się zgadza.
+
+33
+00:01:34,280 --> 00:01:35,780
+A jakbyśmy chcieli odwrotnie,
+
+34
+00:01:35,980 --> 00:01:38,120
+no to wystarczyłoby wywołać tylko drugą funkcję.

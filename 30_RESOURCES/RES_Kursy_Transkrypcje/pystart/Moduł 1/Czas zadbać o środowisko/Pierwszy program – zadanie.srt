@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:09,700
+I z tym mam związane dla Ciebie kilka zadań, a mianowicie mamy odebrać od użytkownika informacje i określone.
+
+2
+00:00:10,099 --> 00:00:21,140
+W zadaniu pierwszym chcemy zapytać użytkownika o wzrost, wagę i policzyć jego BMI, czyli masa w kilogramach podzielony przez wzrost w metrach do kwadratu.
+
+3
+00:00:21,140 --> 00:00:30,420
+Po drugie chcemy stworzyć kalkulator, który przeliczy wartości brutto z wartości netto, zakładając, że VAT ma 23%.
+
+4
+00:00:30,420 --> 00:00:38,200
+No i po trzecie, tak naprawdę możesz zrobić z tego trzy programy osobne, zapytaj użytkownika o potrzebne dane i policz pole trapezu.
+
+5
+00:00:38,620 --> 00:00:43,620
+Takie trzy zadania dla Ciebie na teraz, widzimy się już za chwilę w rozwiązaniu. Do zobaczenia.

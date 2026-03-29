@@ -40,6 +40,7 @@ Zarządzaj systemem przez skille, nie edytując plików manualnie:
 | `/brain-weekly-review` | Tygodniowy przegląd (piątek) |
 | `/brain-archive-project` | Archiwizuje projekt + retrospektywa |
 | `/brain-draft-email` | Pisze gotowy email do klienta — na podstawie profilu z BRAIN, w stylu Kacpra |
+| `/outreach` | Prospecting LinkedIn krok po kroku — pokazuje firmę, generuje DM/email, śledzi w Outreach_Tracker |
 | `/brain-remind` | Reminder z datą → jednocześnie do REMINDERS.md i Google Calendar |
 | `/pdf` | Czyta i analizuje PDF — dla umów wyciąga kluczowe klauzule (płatność, zakres, kary, logo) |
 | `/brain-new-offer` | Generuje ofertę handlową dla klienta — 2 opcje cenowe, szablon propozycji, zapis w katalogu klienta |

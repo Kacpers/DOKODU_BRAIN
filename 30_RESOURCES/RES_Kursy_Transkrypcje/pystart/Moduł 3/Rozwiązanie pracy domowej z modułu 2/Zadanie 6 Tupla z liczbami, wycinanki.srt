@@ -1,0 +1,403 @@
+1
+00:00:00,000 --> 00:00:10,419
+No i w zadaniu kolejnym mamy stworzyć tuplę zawierającą liczby podzielne przez 6 z zakresu od 12 do 1024 i odpowiedzieć na poniższe pytania.
+
+2
+00:00:10,419 --> 00:00:19,640
+No dobra, zacznijmy od tupli. Czyli możemy sobie stworzyć jakąś zmienną values równa się i chcemy na tuplę zamienić range.
+
+3
+00:00:20,280 --> 00:00:26,920
+Jeżeli ktoś to robił ręcznie to przepraszam, współczuję, nie o to mi chodziło. Zresztą chyba w treści nawet wspominałem o tym, że nie o to chodzi.
+
+4
+00:00:26,920 --> 00:00:39,320
+No i tworzymy sobie wartości od 6 do 1024, pamiętam, 1025, no bo 1024 dzieli nam się przez 6, jeżeli dobrze pamiętam.
+
+5
+00:00:40,320 --> 00:00:49,040
+Sprawdzę, Python 1024 modulo 6, 4, czyli nie dzieli się przez 6, ok. Czyli mogłem napisać 1024.
+
+6
+00:00:49,219 --> 00:00:54,840
+Na szczęście 1025 też się nie dzieli przez 6, więc wszystko w porządku, nie nabroiłem.
+
+7
+00:00:55,799 --> 00:00:56,900
+Można było napisać 1024.
+
+8
+00:00:56,920 --> 00:01:08,379
+No i podzielnych przez 6 z zakresu od 12, o właśnie, czyli od 12 do 1024, podzielne przez 6.
+
+9
+00:01:08,799 --> 00:01:13,040
+Przy okazji powiedzieliśmy sobie jakie niebezpieczeństwo na nas czyha, jeżeli coś zrobilibyśmy źle.
+
+10
+00:01:13,439 --> 00:01:15,939
+Możemy sobie te tuple zawsze wyświetlić, print values.
+
+11
+00:01:17,000 --> 00:01:25,560
+Pamiętajcie o tym, to jest niezwykle ważne, że jeżeli tworzycie sobie tuple, czy jakąkolwiek kolekcję, żeby dodawać tę literkę S,
+
+12
+00:01:25,799 --> 00:01:26,900
+wskazującą na to, że...
+
+13
+00:01:26,920 --> 00:01:29,100
+Mierzymy się z liczbą mnogą.
+
+14
+00:01:29,700 --> 00:01:30,060
+Enter.
+
+15
+00:01:30,560 --> 00:01:32,519
+No i trochę tych wartości tutaj nam weszło.
+
+16
+00:01:32,760 --> 00:01:33,280
+Bardzo dobrze.
+
+17
+00:01:34,320 --> 00:01:38,680
+Możemy więc odpowiedzieć sobie na pytanie, skoro trochę ich mamy, to ile ich mamy?
+
+18
+00:01:38,680 --> 00:01:44,540
+Ja teraz sobie będę przenosił poszczególne zadania i będę odpowiadał na nie jakby pod spodem.
+
+19
+00:01:44,740 --> 00:01:52,280
+Czyli print, ilość wartości, len, values.
+
+20
+00:01:54,799 --> 00:01:56,520
+Możemy to sobie oczywiście wyświetlić.
+
+21
+00:01:56,519 --> 00:01:57,039
+Bardzo proszę.
+
+22
+00:01:57,200 --> 00:01:58,959
+169 takich wartości mamy.
+
+23
+00:01:59,319 --> 00:01:59,539
+Ok.
+
+24
+00:02:00,239 --> 00:02:01,640
+Trzy pierwsze liczby.
+
+25
+00:02:03,119 --> 00:02:09,780
+Czyli żeby wyświetlić sobie trzy pierwsze liczby, możemy sobie zawsze zweryfikować, czy wszystko będzie ok.
+
+26
+00:02:10,379 --> 00:02:13,359
+Będziemy potrzebowali mieć 12, 18, 24.
+
+27
+00:02:14,460 --> 00:02:16,079
+Jak to było z trzema pierwszymi liczbami?
+
+28
+00:02:16,599 --> 00:02:18,359
+No sobie możemy wyprintować to oczywiście.
+
+29
+00:02:20,120 --> 00:02:22,079
+Napisać trzy pierwsze liczby.
+
+30
+00:02:22,079 --> 00:02:24,079
+I wyświetlić.
+
+31
+00:02:25,639 --> 00:02:26,359
+No i powiedzieliśmy...
+
+32
+00:02:26,520 --> 00:02:31,159
+Powiedzieli, że to będzie values od 0 do 3.
+
+33
+00:02:32,400 --> 00:02:39,320
+No bo startujemy od początku, czyli wpisujemy 0 i do trzeciej, ale trzeciej nie chcemy, czyli 0, 1, 2.
+
+34
+00:02:39,879 --> 00:02:52,800
+Tutaj prymusi, którzy szanują swój czas, mogą też usunąć stąd oczywiście 0, no bo przecież napisanie jednego znaku trwa, ale też tak jest estetycznie trochę czyściej.
+
+35
+00:02:53,520 --> 00:02:54,020
+Ok.
+
+36
+00:02:54,480 --> 00:02:55,080
+I dalej.
+
+37
+00:02:55,080 --> 00:03:01,040
+Interesować nas będą, bo trzy pierwsze liczby mamy, interesować nas będzie przedostatni element.
+
+38
+00:03:02,040 --> 00:03:14,460
+Jeżeli chcemy powiedzieć, który element jest przedostatni, no to wypadałoby sobie napisać, pamiętać o tym, że jeżeli od końca, to z minusem.
+
+39
+00:03:14,960 --> 00:03:17,820
+Czyli ostatni element to jest minus 1.
+
+40
+00:03:18,140 --> 00:03:18,680
+Zobacz.
+
+41
+00:03:19,500 --> 00:03:20,220
+1020.
+
+42
+00:03:20,220 --> 00:03:20,420
+1020.
+
+43
+00:03:20,680 --> 00:03:22,300
+Możemy sobie to sprawdzić u góry.
+
+44
+00:03:22,700 --> 00:03:24,120
+Faktycznie jest 1020.
+
+45
+00:03:24,340 --> 00:03:24,760
+O i przepraszam.
+
+46
+00:03:24,759 --> 00:03:25,560
+Akurat go zasłaniam.
+
+47
+00:03:25,639 --> 00:03:25,899
+Uwaga.
+
+48
+00:03:26,359 --> 00:03:26,719
+Aha.
+
+49
+00:03:27,139 --> 00:03:28,019
+Tak się nie schowam.
+
+50
+00:03:28,560 --> 00:03:29,659
+Chciałem się schować, ale dobra.
+
+51
+00:03:29,780 --> 00:03:30,979
+1020 to jest element.
+
+52
+00:03:31,139 --> 00:03:32,099
+Zaraz wam tego pokażę.
+
+53
+00:03:32,159 --> 00:03:32,579
+O widzicie.
+
+54
+00:03:32,679 --> 00:03:33,840
+1020 teraz jest.
+
+55
+00:03:34,459 --> 00:03:35,259
+Więc wyszło.
+
+56
+00:03:35,780 --> 00:03:40,419
+Natomiast nas interesuje przedostatni element, czyli nie ostatni, tylko przedostatni, czyli minus 2.
+
+57
+00:03:41,379 --> 00:03:43,219
+I to powinno być 1014.
+
+58
+00:03:43,459 --> 00:03:43,899
+Uwaga.
+
+59
+00:03:44,340 --> 00:03:45,120
+Mówię sprawdzam.
+
+60
+00:03:45,819 --> 00:03:47,019
+Jest 1014.
+
+61
+00:03:47,719 --> 00:03:48,000
+Hura.
+
+62
+00:03:48,000 --> 00:03:51,459
+A co szósty element licząc od czwartego?
+
+63
+00:03:52,519 --> 00:03:54,620
+Tutaj trzeba zawsze się zastanowić co.
+
+64
+00:03:54,759 --> 00:03:55,959
+Autor miał na myśli.
+
+65
+00:03:56,379 --> 00:03:59,679
+Jeżeli co szósty to znaczy, że będziemy musieli mieć krok.
+
+66
+00:04:02,000 --> 00:04:02,679
+Na 6.
+
+67
+00:04:06,139 --> 00:04:07,139
+Tak, no bo co szósty.
+
+68
+00:04:07,759 --> 00:04:10,719
+Czyli powiedzmy sobie od początku to byłby 0, 6 i tak dalej.
+
+69
+00:04:10,719 --> 00:04:11,019
+Nie.
+
+70
+00:04:12,280 --> 00:04:12,699
+Ok.
+
+71
+00:04:12,799 --> 00:04:18,599
+Tyle tylko, że nas będzie interesował element od czwartego, więc musimy się nad tym zastanowić.
+
+72
+00:04:18,719 --> 00:04:20,079
+Jeżeli ja to sobie teraz wykonam.
+
+73
+00:04:20,079 --> 00:04:24,099
+Zobaczcie to w tym momencie on mi wyświetla 12.
+
+74
+00:04:24,099 --> 00:04:24,680
+Jako pierwsze.
+
+75
+00:04:24,680 --> 00:04:25,180
+Element.
+
+76
+00:04:25,519 --> 00:04:27,340
+Pierwszy element to faktycznie jest 12.
+
+77
+00:04:27,340 --> 00:04:31,439
+Natomiast na czwartym indeksie czy na czwartej pozycji mamy wartość 30.
+
+78
+00:04:31,840 --> 00:04:37,879
+Czyli żeby teraz odwołać się do tego czwartego elementu musimy policzyć sobie indeksami 0, 1, 2, 3.
+
+79
+00:04:38,240 --> 00:04:45,240
+Czyli jeżeli chciałbym zobaczyć trzydziestkę na samym początku, no to w tym momencie muszę odwołać się tutaj do szóstki do trójki.
+
+80
+00:04:45,379 --> 00:04:47,360
+I wtedy mam faktycznie takie elementy.
+
+81
+00:04:47,840 --> 00:04:48,740
+Cóż tam było dalej?
+
+82
+00:04:49,100 --> 00:04:54,300
+Dalej mieliśmy co trzeci element licząc od końca, żeby pobrać sobie co trzeci element normalnie.
+
+83
+00:04:54,680 --> 00:04:56,360
+No to byśmy się odwołać.
+
+84
+00:04:56,360 --> 00:04:59,920
+Zrobilibyśmy sobie minus 2 kropki 2 kropki i 3.
+
+85
+00:05:00,360 --> 00:05:04,600
+Natomiast jeżeli interesuje nas od końca to będziemy musieli napisać minus 3.
+
+86
+00:05:04,800 --> 00:05:14,280
+Ponieważ zawsze jeżeli chcemy od końca no to wtedy potrzeba te wartości pobierać z minusem i mamy 1020 1002 itd.
+
+87
+00:05:14,780 --> 00:05:22,579
+No i ostatnie zadanie w tym zbiorze zadań to jest pytanie o to jak pobrać sobie średnią 10 ostatnich wartości.
+
+88
+00:05:23,000 --> 00:05:24,000
+Więc średnia 10.
+
+89
+00:05:24,000 --> 00:05:24,319
+Ostatni.
+
+90
+00:05:24,319 --> 00:05:24,639
+Wartości.
+
+91
+00:05:24,639 --> 00:05:29,240
+Wartości wymaga tego żebyśmy sobie po prostu pobrali te 10 ostatnich wartości.
+
+92
+00:05:29,680 --> 00:05:31,959
+Czyli tak naprawdę od minus 10 do końca.
+
+93
+00:05:32,439 --> 00:05:37,959
+Czyli mówimy że start to jest minus 10 do końca bez kroku.
+
+94
+00:05:38,459 --> 00:05:41,500
+No i wtedy tak naprawdę musimy sobie tylko policzyć sumę tych wartości.
+
+95
+00:05:42,759 --> 00:05:45,699
+A następnie tę sumę podzielić przez 10.
+
+96
+00:05:46,319 --> 00:05:47,099
+Alt Shift L.
+
+97
+00:05:47,219 --> 00:05:51,199
+Ctrl Alt L to jest taki skrót klawiszowy do tego żeby ładniej ten nasz kod sformatować.
+
+98
+00:05:51,199 --> 00:05:54,519
+Znajdziecie to też w kod a następnie reformat kod.
+
+99
+00:05:54,639 --> 00:06:00,800
+Jeżeli wtedy zrobię strzałkę do góry i Enter no to wydowiem się że średnia tych wartości to jest 993.
+
+100
+00:06:00,800 --> 00:06:03,680
+No i w ten sposób skoro mamy możemy jechać dalej.
+
+101
+00:06:03,680 --> 00:06:04,680
+Zapraszam.

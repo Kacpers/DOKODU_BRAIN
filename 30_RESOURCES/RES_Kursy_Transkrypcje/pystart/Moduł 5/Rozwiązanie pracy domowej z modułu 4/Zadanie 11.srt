@@ -1,0 +1,163 @@
+1
+00:00:00,000 --> 00:00:03,200
+W zadaniu jedenastym mamy zapytać użytkownika o dwa wyrażenia,
+
+2
+00:00:03,720 --> 00:00:07,480
+a następnie wyświetlić wszystkie znaki wspólne dla obu tych wyrażeń.
+
+3
+00:00:07,860 --> 00:00:10,960
+Czyli będziemy potrzebowali string zamienić sobie na zbiór.
+
+4
+00:00:11,540 --> 00:00:14,700
+Czyli jakieś tam wyrażenie jeden, możemy napisać sentence one,
+
+5
+00:00:14,700 --> 00:00:19,600
+to jest input, podaj zdanie pierwsze,
+
+6
+00:00:20,760 --> 00:00:24,080
+sentence two, podaj zdanie drugie.
+
+7
+00:00:24,420 --> 00:00:27,100
+To oczywiście nie muszą być zdania, to mogą być po prostu wyrażenia.
+
+8
+00:00:27,100 --> 00:00:30,000
+I tak naprawdę pierwsza rzecz, którą musimy zrobić,
+
+9
+00:00:30,100 --> 00:00:33,800
+to zamienić sobie te nasze oba wyrażenia na sety.
+
+10
+00:00:34,359 --> 00:00:39,219
+Czyli sentence jeden równa się set sentence jeden.
+
+11
+00:00:39,219 --> 00:00:42,380
+I jak sobie to będę chciał wyprintować,
+
+12
+00:00:43,900 --> 00:00:45,620
+to od razu okaże się,
+
+13
+00:00:47,120 --> 00:00:48,260
+ops, ops, ops, ops, 11,
+
+14
+00:00:48,939 --> 00:00:55,260
+że on mi bardzo ładnie usunie wszystkie znaki powtarzające się.
+
+15
+00:00:56,060 --> 00:00:57,079
+Tak samo wykonamy,
+
+16
+00:00:57,100 --> 00:00:59,100
+wykonam sprawę z sentence dwa.
+
+17
+00:00:59,480 --> 00:01:03,079
+Czyli sentence dwa równa się set sentence dwa.
+
+18
+00:01:03,719 --> 00:01:06,099
+Następnie muszę wtedy dla tych dwóch wyrażeń
+
+19
+00:01:06,700 --> 00:01:09,560
+zastosować wyszukiwanie znaków wspólnych.
+
+20
+00:01:09,799 --> 00:01:11,500
+Czyli możemy sobie stworzyć jakąś zmienną.
+
+21
+00:01:11,859 --> 00:01:15,540
+Commons równa się sentence jeden,
+
+22
+00:01:16,719 --> 00:01:19,480
+ampersand sentence dwa.
+
+23
+00:01:20,240 --> 00:01:23,520
+I my chcemy po prostu wyświetlić te wyrażenia.
+
+24
+00:01:23,659 --> 00:01:25,219
+Nie jest powiedziane, jaki ma być ten typ,
+
+25
+00:01:25,219 --> 00:01:26,599
+więc możemy zrobić print,
+
+26
+00:01:27,099 --> 00:01:32,359
+znaki wspólne to commons.
+
+27
+00:01:33,359 --> 00:01:34,479
+Sprawdźmy to.
+
+28
+00:01:35,819 --> 00:01:39,339
+Napiszę Kacper Alina,
+
+29
+00:01:40,919 --> 00:01:42,339
+tylko a nas łączy.
+
+30
+00:01:42,659 --> 00:01:45,039
+Jeżeli bym miał wielkość liter uwzględniał,
+
+31
+00:01:45,039 --> 00:01:46,599
+to też by tylko a było.
+
+32
+00:01:46,599 --> 00:01:49,539
+Natomiast warto byłoby też o tej wielkości liter pamiętać,
+
+33
+00:01:49,539 --> 00:01:52,780
+więc możemy sobie zawsze tu zrobić sentence jeden lower,
+
+34
+00:01:52,780 --> 00:01:55,479
+sentence dwa lower.
+
+35
+00:01:55,479 --> 00:01:56,879
+I wtedy będziemy mieli,
+
+36
+00:01:56,879 --> 00:01:59,119
+taką sytuację rozkminioną.
+
+37
+00:01:59,119 --> 00:02:01,759
+Czyli jeżeli będę miał Kacper i Alinka,
+
+38
+00:02:01,759 --> 00:02:03,399
+no to mam a i k.
+
+39
+00:02:03,399 --> 00:02:04,739
+Wszystko działa.
+
+40
+00:02:04,739 --> 00:02:05,739
+To co?
+
+41
+00:02:06,479 --> 00:02:08,099
+Idziemy do dwunastki.

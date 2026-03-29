@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:04,259
+W zadaniu drugim mam przygotować funkcję, która przefiltruje mi liczby, które są parzyste.
+
+2
+00:00:04,839 --> 00:00:07,860
+No to mogę sobie napisać filter event.
+
+3
+00:00:10,960 --> 00:00:14,500
+Czy event, jako że jest liczba mnoga, będzie ich więcej, prawda?
+
+4
+00:00:15,220 --> 00:00:23,559
+Argumentem będzie lista, czyli list jeden albo to filter, dwukropek, no i to będzie list.
+
+5
+00:00:24,000 --> 00:00:26,960
+Zwracać również będę tutaj listę.
+
+6
+00:00:26,960 --> 00:00:32,719
+Ok, następnie chcę sprawdzić, czy są to liczby parzyste.
+
+7
+00:00:33,079 --> 00:00:37,320
+Czyli ponownie będę potrzebował mieć nową listę, czyli jakąś zmienną output.
+
+8
+00:00:39,179 --> 00:00:41,719
+For element in to filter.
+
+9
+00:00:43,200 --> 00:00:51,359
+No i teraz if element modulo 2 równa się 0, dwukropek, output append element.
+
+10
+00:00:51,840 --> 00:00:55,079
+Jak widać te zadania, które sobie robimy nie są takie najtrudniejsze.
+
+11
+00:00:55,079 --> 00:00:56,939
+Bardzo pokrywają się z tym, co już dotyczyło.
+
+12
+00:00:56,960 --> 00:00:57,759
+Co już do tej pory robiliśmy.
+
+13
+00:00:58,359 --> 00:01:03,320
+Natomiast ich wielkim plusem jest to, że przy okazji sobie trenujemy tworzenie funkcji.
+
+14
+00:01:03,780 --> 00:01:09,280
+No i też robiąc trochę takie prostsze rzeczy, po prostu sobie uzupełniamy wiedzę.
+
+15
+00:01:09,799 --> 00:01:15,140
+I to nie jest zawsze tak, że zawsze moje zadania w pracy też są bardzo wymagające.
+
+16
+00:01:15,599 --> 00:01:21,280
+Często jest tak, że po prostu robię rzeczy, które mogłyby się wydawać już nudne na pewnym etapie wiedzy.
+
+17
+00:01:21,280 --> 00:01:25,560
+No bo powtarzam, formularz, dodawanie, zapisywanie i tak dalej.
+
+18
+00:01:25,700 --> 00:01:26,920
+Dużo się to nie różni od siebie.
+
+19
+00:01:26,959 --> 00:01:29,199
+Nie zawsze jest fascynująco.
+
+20
+00:01:29,199 --> 00:01:36,280
+Ale to w twojej pracy obecnej też tak pewnie jest, że nie zawsze robisz rzeczy, którymi mógłbyś się chwalić, bo są to rzeczy takie zwykłe.
+
+21
+00:01:36,280 --> 00:01:43,280
+To trochę tak jak pan elektryk ma do przekręcenia 150 gniazdek, to on też nie jest każdy kolejny dla niego coraz bardziej fascynujący.
+
+22
+00:01:43,280 --> 00:01:44,479
+Tylko po prostu je wykonuje.
+
+23
+00:01:44,479 --> 00:01:46,079
+I tutaj jest też podobnie.
+
+24
+00:01:46,079 --> 00:01:56,799
+Więc taką rutynę warto sobie gdzieś w siebie wbić i wiedzieć, że to, że robimy rzeczy podobne, bo to już robimy któryś raz kolejnie, tego typu zapis, to nie jest nic takiego.
+
+25
+00:01:56,799 --> 00:01:57,799
+Złego.
+
+26
+00:01:57,799 --> 00:02:06,000
+Bo praca też tak wygląda i dzięki temu też zapamiętujemy, że ta składnia jest właśnie taka i kiedy chcę filtrować, to robię to właśnie tak.
+
+27
+00:02:06,000 --> 00:02:13,800
+Natomiast jeżeli szukasz wyzwań, to jest coś, co wykracza poza ten kurs, ale można sobie śmiało też tutaj na to zerknąć.
+
+28
+00:02:13,800 --> 00:02:16,519
+Możesz zobaczyć list comprehension.
+
+29
+00:02:16,519 --> 00:02:20,519
+Jak za pomocą list comprehension ten kod zapisać krócej.
+
+30
+00:02:20,519 --> 00:02:23,519
+To ja dziękuję i widzimy się już niedługo.
+
+31
+00:02:23,519 --> 00:02:24,519
+Hej.

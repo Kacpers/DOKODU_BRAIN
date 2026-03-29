@@ -1,0 +1,763 @@
+1
+00:00:00,000 --> 00:00:04,719
+Za pomocą API wolne lektury mamy pobrać wszystkie dzieła konkretnego autora.
+
+2
+00:00:04,820 --> 00:00:05,700
+I teraz zobacz.
+
+3
+00:00:06,140 --> 00:00:10,400
+Mamy sytuację następującą, a mianowicie tutaj mamy API slash books
+
+4
+00:00:10,400 --> 00:00:12,480
+i to nam zwróci wszystkie utwory.
+
+5
+00:00:13,000 --> 00:00:14,620
+Wszystkie książki po prostu nam zwróci.
+
+6
+00:00:15,099 --> 00:00:18,820
+Jeżeli wejdziemy na API autors, to dostaniemy listę autorów.
+
+7
+00:00:19,260 --> 00:00:22,580
+Czyli wiemy, że books odpowiadają za książki, autors za autorów.
+
+8
+00:00:22,679 --> 00:00:23,960
+Czytamy to jest dalej w dokumentacji.
+
+9
+00:00:24,179 --> 00:00:25,560
+Trzeba umieć czytać dokumentację.
+
+10
+00:00:25,620 --> 00:00:27,719
+Tu akurat jest po polsku, to mamy ten komfort.
+
+11
+00:00:27,719 --> 00:00:31,320
+Każdy element na tych listach zawiera adres w atrybucie href,
+
+12
+00:00:31,419 --> 00:00:33,019
+pod którym można znaleźć szczegółowe dane.
+
+13
+00:00:33,159 --> 00:00:38,200
+Na przykład API books, studnia i wahadło, czy API autors, Edgar, ok.
+
+14
+00:00:38,359 --> 00:00:40,000
+Czyli wiemy jak sprawdzić konkretne dane.
+
+15
+00:00:40,579 --> 00:00:43,879
+Można też łączyć autorów, epoki, gatunki, bla, bla, bla,
+
+16
+00:00:43,960 --> 00:00:47,000
+by wybrać tylko utwory zadane na przykład API autors, Adam Mickiewicz,
+
+17
+00:00:47,060 --> 00:00:49,179
+Kainz, widzicie, slash books.
+
+18
+00:00:49,739 --> 00:00:52,320
+Czyli my widzimy, że jeżeli naprawdę zapytamy
+
+19
+00:00:52,320 --> 00:00:57,099
+API slash autor slash nazwa autora slash books,
+
+20
+00:00:57,100 --> 00:00:58,960
+to powinniśmy dostać jego książki.
+
+21
+00:00:59,439 --> 00:01:00,060
+Czy tak jest?
+
+22
+00:01:00,420 --> 00:01:01,439
+Możemy sobie to sprawdzić.
+
+23
+00:01:01,560 --> 00:01:04,980
+Otwórzmy sobie API slash books tak naprawdę najpierw,
+
+24
+00:01:05,019 --> 00:01:06,700
+czy API autors, od tego zacznijmy.
+
+25
+00:01:07,740 --> 00:01:14,219
+No i na liście API autors znajdziemy między innymi tutaj autorów takich jak Adam Asnyk.
+
+26
+00:01:14,640 --> 00:01:16,439
+Więc jeżeli ja sobie wejdę na ten adres,
+
+27
+00:01:16,540 --> 00:01:19,420
+czyli wolnelektury.pl API autors Adam Asnyk,
+
+28
+00:01:19,819 --> 00:01:22,500
+to dostanę szczegóły dotyczące Adama Asnyka.
+
+29
+00:01:22,980 --> 00:01:25,859
+Natomiast jeżeli ja sobie to złamie przez slash books,
+
+30
+00:01:25,859 --> 00:01:27,640
+to powinienem dostać jego książki.
+
+31
+00:01:27,920 --> 00:01:28,560
+Sprawdźmy to.
+
+32
+00:01:28,760 --> 00:01:32,260
+Zobaczcie, otworzyłem adres API autors Adam Asnyk books
+
+33
+00:01:32,260 --> 00:01:36,239
+i dostałem wszystkie książki, które Adam Asnyk napisał,
+
+34
+00:01:36,319 --> 00:01:38,400
+które są oczywiście dostępne w tym API.
+
+35
+00:01:38,780 --> 00:01:40,439
+My chcemy listę tych książek.
+
+36
+00:01:40,879 --> 00:01:44,280
+Czyli to, co będziemy musieli zrobić w takim razie,
+
+37
+00:01:44,379 --> 00:01:47,760
+będzie to polegało na tym, że będziemy musieli najpierw sprawdzić sobie,
+
+38
+00:01:47,879 --> 00:01:51,659
+czy pod tym imieniem i nazwiskiem znajduje się konkretny autor
+
+39
+00:01:51,659 --> 00:01:53,560
+pod adresem API autors.
+
+40
+00:01:53,560 --> 00:01:55,840
+Jeżeli się znajduje, to będziemy musieli,
+
+41
+00:01:55,859 --> 00:01:58,780
+czyli pobrać ten jego slag, czyli to jego wyrażenie
+
+42
+00:01:58,780 --> 00:02:01,760
+i następnie wykonać drugi strzał, drugie zapytanie
+
+43
+00:02:01,760 --> 00:02:04,859
+i pobrać API autors imię, nazwisko slash books.
+
+44
+00:02:05,640 --> 00:02:07,439
+No i w ten sposób pobierzemy sobie książki.
+
+45
+00:02:07,840 --> 00:02:11,400
+Myślę, że Adam Asnyk, Adam Mickiewicz to są dobre przykłady do tego,
+
+46
+00:02:11,500 --> 00:02:12,740
+żeby te dane sobie pobierać.
+
+47
+00:02:13,120 --> 00:02:15,439
+No i tak naprawdę już wiemy, co musimy zrobić.
+
+48
+00:02:15,659 --> 00:02:19,020
+Wracam sobie w takim razie do mojego IDE
+
+49
+00:02:19,020 --> 00:02:21,180
+i wykonuję import requests.
+
+50
+00:02:21,180 --> 00:02:24,180
+requests.get
+
+51
+00:02:25,860 --> 00:02:30,900
+strzał pierwszy będzie dotyczył wolne lektury API autors.
+
+52
+00:02:32,980 --> 00:02:36,140
+W ten sposób powinni pobrać mi się wszyscy autorzy.
+
+53
+00:02:36,260 --> 00:02:38,620
+Czyli możemy sobie zrobić jakąś zmienną request.
+
+54
+00:02:40,960 --> 00:02:44,080
+for author in request
+
+55
+00:02:44,080 --> 00:02:48,460
+json print author
+
+56
+00:02:48,460 --> 00:02:49,980
+Zobaczmy, czy tak działa.
+
+57
+00:02:49,980 --> 00:02:54,240
+Czyli python 7 API wolne lektury.
+
+58
+00:02:54,680 --> 00:02:55,520
+No i mam.
+
+59
+00:02:55,860 --> 00:03:00,520
+Zobaczcie, mamy pod zmienną autor, mamy słowniki, gdzie są url,
+
+60
+00:03:01,040 --> 00:03:02,320
+name oraz slagi.
+
+61
+00:03:02,860 --> 00:03:05,320
+Czyli my tak naprawdę musimy sprawdzić, czy ten
+
+62
+00:03:05,320 --> 00:03:10,120
+autor, którego zapytamy, to jest ten nasz name.
+
+63
+00:03:10,480 --> 00:03:13,240
+Jeżeli tak, to będzie nas interesował jego slag.
+
+64
+00:03:13,580 --> 00:03:15,440
+W ten sposób możemy sobie zapytać.
+
+65
+00:03:15,440 --> 00:03:17,260
+Na przykład na początek.
+
+66
+00:03:17,480 --> 00:03:18,060
+Autor
+
+67
+00:03:18,060 --> 00:03:21,680
+równa się input
+
+68
+00:03:21,680 --> 00:03:25,440
+podaj imię i nazwisko autora.
+
+69
+00:03:25,860 --> 00:03:34,920
+I teraz tu użyłem zmiennej autor, więc tutaj możemy look for autor.
+
+70
+00:03:34,920 --> 00:03:35,800
+Może coś takiego.
+
+71
+00:03:36,360 --> 00:03:40,120
+I wtedy if look for autor, tam search autor.
+
+72
+00:03:40,460 --> 00:03:41,240
+Wiecie, o co mi chodzi.
+
+73
+00:03:41,240 --> 00:03:42,840
+Równa się, równa się.
+
+74
+00:03:43,560 --> 00:03:46,660
+Autor od name.
+
+75
+00:03:47,280 --> 00:03:49,980
+No to wtedy print slag.
+
+76
+00:03:50,380 --> 00:03:52,560
+I tak naprawdę to jest wszystko to, co nas interesuje.
+
+77
+00:03:52,560 --> 00:03:53,480
+Tylko ten slag.
+
+78
+00:03:53,480 --> 00:03:55,740
+Więc w tym momencie można to uciąć i zakończyć.
+
+79
+00:03:55,740 --> 00:03:56,740
+Czyli break.
+
+80
+00:03:58,080 --> 00:04:04,600
+Sprawdźmy, czy uda nam się w ten sposób pobrać slaga dla Adama Mickiewicza albo Adama Asnyka.
+
+81
+00:04:04,600 --> 00:04:07,080
+Czyli raz jeszcze strzałka do góry, enter.
+
+82
+00:04:07,080 --> 00:04:10,080
+Adam Mickiewicz.
+
+83
+00:04:10,080 --> 00:04:12,080
+Ok.
+
+84
+00:04:12,080 --> 00:04:14,080
+Nie mamy slaga.
+
+85
+00:04:14,080 --> 00:04:16,079
+Coś jest nie tak.
+
+86
+00:04:16,079 --> 00:04:18,079
+A Adam Asnyk?
+
+87
+00:04:20,079 --> 00:04:22,079
+Też coś jest nie tak.
+
+88
+00:04:22,079 --> 00:04:23,079
+Ach, no.
+
+89
+00:04:23,079 --> 00:04:24,079
+Brawo.
+
+90
+00:04:24,079 --> 00:04:25,680
+Zrobiłem dokładnie ten sam błąd, co u mnie.
+
+91
+00:04:25,680 --> 00:04:29,680
+Ten, który zrobiłem poprzednio, jak odwoływaliśmy się do konkretnej wartości.
+
+92
+00:04:29,680 --> 00:04:31,680
+Pamiętacie?
+
+93
+00:04:31,680 --> 00:04:33,680
+Adam Asnyk.
+
+94
+00:04:33,680 --> 00:04:34,180
+Ok.
+
+95
+00:04:34,180 --> 00:04:34,680
+Mam.
+
+96
+00:04:34,680 --> 00:04:35,180
+Adam Asnyk.
+
+97
+00:04:35,180 --> 00:04:42,180
+Tak naprawdę praktycznie pewnie zazwyczaj jest tak, że imię i nazwisko to jest po prostu imię i nazwisko rozdzielone myślnikiem.
+
+98
+00:04:42,180 --> 00:04:48,180
+Ale na przykład nie można wykluczyć, że jakiś William Shakespeare czy tam jakiś inny autor nie będzie miał jeszcze środkowego imienia.
+
+99
+00:04:48,180 --> 00:04:48,680
+Nie?
+
+100
+00:04:48,680 --> 00:04:49,680
+W tym slagu.
+
+101
+00:04:49,680 --> 00:04:53,680
+Więc dużo lepiej jest bazować na API i polegać na tym, co nam tutaj on dostarczy.
+
+102
+00:04:53,680 --> 00:04:54,180
+Ok.
+
+103
+00:04:54,180 --> 00:04:55,680
+Więc skoro ten etap mamy.
+
+104
+00:04:55,680 --> 00:04:57,680
+To teraz potrzebujemy jeszcze pobierać książki.
+
+105
+00:04:57,680 --> 00:05:01,680
+Czyli możemy wykonać drugi request tak naprawdę.
+
+106
+00:05:01,680 --> 00:05:03,680
+Też to będzie get.
+
+107
+00:05:05,680 --> 00:05:08,680
+I tutaj w tym requestie moglibyśmy najpierw zrobić jeszcze taką rzecz.
+
+108
+00:05:08,680 --> 00:05:10,680
+Slag równa się none.
+
+109
+00:05:11,680 --> 00:05:14,680
+Tutaj tego slaga musimy sobie zwrócić.
+
+110
+00:05:16,680 --> 00:05:17,680
+Albo jeszcze ładniej.
+
+111
+00:05:17,680 --> 00:05:19,680
+Przecież my już potrafimy pisać funkcję.
+
+112
+00:05:19,680 --> 00:05:23,680
+Więc zdecydowanie lepiej będzie stworzyć sobie funkcję getAutorsSlag.
+
+113
+00:05:23,680 --> 00:05:25,680
+Czyli zrobimy dev.
+
+114
+00:05:25,680 --> 00:05:28,680
+getAutorsSlag.
+
+115
+00:05:28,680 --> 00:05:31,680
+Tu będzie jakaś zmienna.
+
+116
+00:05:31,680 --> 00:05:33,680
+AuthorName na przykład.
+
+117
+00:05:33,680 --> 00:05:35,680
+Która będzie stringiem.
+
+118
+00:05:35,680 --> 00:05:37,680
+Zwracać będziemy string.
+
+119
+00:05:37,680 --> 00:05:44,680
+Wtedy to zapytanie wklejamy sobie tu.
+
+120
+00:05:44,680 --> 00:05:48,680
+I zamiast robić slag równa się wykonamy return.
+
+121
+00:05:48,680 --> 00:05:50,680
+O.
+
+122
+00:05:50,680 --> 00:05:53,680
+Dzięki temu będziemy mieli dużo, dużo czyściej ten kurs.
+
+123
+00:05:53,680 --> 00:05:56,680
+Zapisany.
+
+124
+00:05:56,680 --> 00:05:58,680
+Co tu Ci się jeszcze nie podoba?
+
+125
+00:05:58,680 --> 00:06:01,680
+ShadowsNameRequestFromAutorsCope.
+
+126
+00:06:01,680 --> 00:06:02,680
+OK.
+
+127
+00:06:02,680 --> 00:06:04,680
+Możemy, bo tu jest też zmienna request.
+
+128
+00:06:04,680 --> 00:06:07,680
+Natomiast czy nam to przeszkadza?
+
+129
+00:06:07,680 --> 00:06:10,680
+Możemy to zamienić.
+
+130
+00:06:10,680 --> 00:06:11,680
+Możemy to zmienić mu nazwę.
+
+131
+00:06:11,680 --> 00:06:12,680
+Nie ma problemu.
+
+132
+00:06:12,680 --> 00:06:14,680
+AutoRequest.
+
+133
+00:06:17,680 --> 00:06:19,680
+Wy wiecie już, że to nie ma żadnego znaczenia.
+
+134
+00:06:19,680 --> 00:06:21,680
+Ale możemy, skoro on tak woli, to możemy mu też to dać.
+
+135
+00:06:21,680 --> 00:06:22,680
+OK.
+
+136
+00:06:22,680 --> 00:06:25,680
+I wtedy authors.slag.
+
+137
+00:06:25,680 --> 00:06:28,680
+To będzie równa się.
+
+138
+00:06:28,680 --> 00:06:30,680
+GetAutors.slag.
+
+139
+00:06:30,680 --> 00:06:32,680
+I tutaj lookForAutor.
+
+140
+00:06:32,680 --> 00:06:35,680
+Albo od razu możemy tutaj sobie wstawić też input.
+
+141
+00:06:35,680 --> 00:06:38,680
+Żeby nie tworzyć niepotrzebnie zmiennych.
+
+142
+00:06:38,680 --> 00:06:40,680
+Jeszcze tylko formatowanie poprawię.
+
+143
+00:06:40,680 --> 00:06:42,680
+Tak, żeby było troszeczkę czytelniej.
+
+144
+00:06:42,680 --> 00:06:43,680
+O.
+
+145
+00:06:43,680 --> 00:06:45,680
+Taki zapis mi się bardziej podoba.
+
+146
+00:06:45,680 --> 00:06:48,680
+No i dzięki temu będziemy mieli z początek już.
+
+147
+00:06:48,680 --> 00:06:51,680
+Do tego, żeby pobrać sobie książki też autora.
+
+148
+00:06:51,680 --> 00:06:55,680
+No bo wiemy, że będziemy potrzebowali zapytać wolne lektury API.
+
+149
+00:06:55,680 --> 00:06:57,680
+Authors.
+
+150
+00:06:57,680 --> 00:06:59,680
+Tutaj musi być wpisany ten slag.
+
+151
+00:06:59,680 --> 00:07:00,680
+A następnie books.
+
+152
+00:07:00,680 --> 00:07:02,680
+Czyli dorzucam sobie f.
+
+153
+00:07:02,680 --> 00:07:05,680
+Tu wstawiam authors.slag.
+
+154
+00:07:05,680 --> 00:07:08,680
+Slash books.
+
+155
+00:07:08,680 --> 00:07:10,680
+No i zabawa się powtarza.
+
+156
+00:07:10,680 --> 00:07:18,680
+Czyli for bookInRequest.json.
+
+157
+00:07:18,680 --> 00:07:20,680
+Print.
+
+158
+00:07:21,680 --> 00:07:22,680
+Book.
+
+159
+00:07:22,680 --> 00:07:25,680
+Moglibyśmy też sprawdzić czy authors.slag został podany.
+
+160
+00:07:25,680 --> 00:07:28,680
+Jeżeli nie zostałby podany to go po prostu gdzieś tam ukryć.
+
+161
+00:07:28,680 --> 00:07:29,680
+I wyświetlić komunikat.
+
+162
+00:07:29,680 --> 00:07:31,680
+Słuchaj, nie da się tego zrobić.
+
+163
+00:07:31,680 --> 00:07:34,680
+Ale myślę, że jeżeli zrobimy tak to też jest ok.
+
+164
+00:07:34,680 --> 00:07:35,680
+I zobacz.
+
+165
+00:07:35,680 --> 00:07:36,680
+Mamy książki.
+
+166
+00:07:36,680 --> 00:07:39,680
+No i te książki mają różne tutaj.
+
+167
+00:07:39,680 --> 00:07:40,680
+Dużo różnych informacji.
+
+168
+00:07:40,680 --> 00:07:42,680
+Mamy informację, że to jest wiersz.
+
+169
+00:07:42,680 --> 00:07:47,680
+Czy mamy informację, że tu jest przechowywany okładka.
+
+170
+00:07:47,680 --> 00:07:49,680
+Natomiast nas będzie interesował sam title.
+
+171
+00:07:49,680 --> 00:07:50,680
+Czyli book.
+
+172
+00:07:50,680 --> 00:07:54,680
+Możemy zrobić get title.
+
+173
+00:07:54,680 --> 00:08:05,680
+I w ten sposób powinniśmy dostać tylko i wyłącznie tytuły książek, które znajdują się w API wolne lektury.
+
+174
+00:08:05,680 --> 00:08:10,680
+Jak widać wszystko tutaj nam ładnie zadziałało.
+
+175
+00:08:10,680 --> 00:08:12,680
+Zrobimy jeszcze tą jedną rzecz.
+
+176
+00:08:12,680 --> 00:08:16,680
+A mianowicie jeżeli ktoś by wpisał Kacper Sieradziński albo cokolwiek innego.
+
+177
+00:08:16,680 --> 00:08:18,680
+No to w tym momencie dostajemy błąd.
+
+178
+00:08:18,680 --> 00:08:19,680
+Warto byłoby się przed tym zabezpieczyć.
+
+179
+00:08:19,680 --> 00:08:23,680
+Bo ten błąd wynika z tego, że outer slug jest pusty.
+
+180
+00:08:23,680 --> 00:08:26,680
+Więc można byłoby zrobić na przykład tak.
+
+181
+00:08:26,680 --> 00:08:32,680
+If outer slug is not none.
+
+182
+00:08:32,680 --> 00:08:38,680
+To wtedy wyślij to żądanie.
+
+183
+00:08:38,680 --> 00:08:42,680
+O nic się nie pokazało.
+
+184
+00:08:42,680 --> 00:08:48,680
+A jeżeli wpiszemy Adam Jasnyk to wszystko będzie działało.
+
+185
+00:08:48,679 --> 00:08:49,679
+To co?
+
+186
+00:08:49,679 --> 00:08:51,679
+Bardzo serdecznie dziękuję za tę pracę domową.
+
+187
+00:08:51,679 --> 00:08:54,679
+Mam nadzieję, że dobrze sobie przećwiczyliśmy jej zagadnienia.
+
+188
+00:08:54,679 --> 00:08:58,679
+I że otworzyliśmy sobie też trochę głowę na to jakie rzeczy z API możemy robić.
+
+189
+00:08:58,679 --> 00:09:04,679
+Zapraszam was do drugiej części pracy z biblioteką standardową oraz z bibliotekami zewnętrznymi.
+
+190
+00:09:04,679 --> 00:09:06,679
+Które będziemy sobie doinstalowywać.
+
+191
+00:09:06,679 --> 00:09:07,679
+Chodźcie.

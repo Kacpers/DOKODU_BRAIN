@@ -1,0 +1,455 @@
+1
+00:00:00,000 --> 00:00:04,000
+A w zadaniu drugim chcemy odebrać od użytkownika 10 adresów e-mail,
+
+2
+00:00:04,480 --> 00:00:07,820
+sprawdzić czy adres zawiera małpę oraz com.loop.pl,
+
+3
+00:00:07,919 --> 00:00:09,859
+czyli kończy się na com.loop.pl.
+
+4
+00:00:10,439 --> 00:00:12,259
+Jeśli tak, to dodaj adres do listy.
+
+5
+00:00:12,500 --> 00:00:15,880
+Na koniec zamień listę na zbiór, aby usunąć wszystkie duplikaty.
+
+6
+00:00:16,399 --> 00:00:19,879
+Wyświetl ilość wpisów przed usunięciem duplikatów oraz po.
+
+7
+00:00:20,120 --> 00:00:21,140
+No dobra, to lecimy.
+
+8
+00:00:21,820 --> 00:00:25,640
+For nie będę potrzebował wiedzieć, który raz pytam.
+
+9
+00:00:26,080 --> 00:00:28,519
+Mogę tą informację gdzieś sobie zawrzeć, ale nie muszę.
+
+10
+00:00:28,519 --> 00:00:31,780
+In range 10 dwukropek.
+
+11
+00:00:32,219 --> 00:00:35,159
+I teraz pytamy użytkownika o adres e-mail.
+
+12
+00:00:35,380 --> 00:00:41,980
+Czy możemy więc napisać e-mail równa się input podaj adres e-mail.
+
+13
+00:00:43,439 --> 00:00:44,359
+Dwukropek.
+
+14
+00:00:45,079 --> 00:00:51,480
+Chcemy, żeby było sprawdzone, czy adres zawiera małpę i kończy się na com.loop.pl.
+
+15
+00:00:51,480 --> 00:00:56,879
+Możemy więc napisać if e-mail.endswith.
+
+16
+00:00:58,520 --> 00:01:11,879
+W ten sposób sprawdzimy, czy nasz adres kończy się na pl.loop.com.
+
+17
+00:01:12,219 --> 00:01:15,780
+Ale dodatkowo adres zawsze musi zawierać małpę.
+
+18
+00:01:15,859 --> 00:01:17,120
+Czyli jakby mamy takie dwa warunki.
+
+19
+00:01:17,240 --> 00:01:23,640
+Po pierwsze musi mieć końcówkę com.loop.pl, a po drugie, jedną z tych dwóch,
+
+20
+00:01:23,640 --> 00:01:28,180
+a drugim warunkiem jest to, że zawsze musi zawierać ten symbol małpy.
+
+21
+00:01:28,519 --> 00:01:33,359
+Czyli żeby to osiągnąć, ja muszę pomiędzy tym orem, jednym i drugim,
+
+22
+00:01:33,439 --> 00:01:38,640
+dorzucić nawias, napisać spacja end e-mail.
+
+23
+00:01:39,479 --> 00:01:45,219
+Możemy zamiast zrobić e-mail. zrobić małpa in e-mail.
+
+24
+00:01:45,219 --> 00:01:51,219
+I w ten sposób będziemy wiedzieli, czy małpa znajduje się w tym adresie e-mail.
+
+25
+00:01:51,500 --> 00:01:54,979
+Jeżeli tak jest, to możemy sobie dodać ten nasz adres do listy.
+
+26
+00:01:55,459 --> 00:01:57,399
+Nie mamy zdefiniowanej jeszcze żadnej listy.
+
+27
+00:01:57,400 --> 00:01:59,160
+Więc jakaś lista by nam się przydała.
+
+28
+00:01:59,640 --> 00:02:03,000
+Możemy więc ponad forem, to jest bardzo ważne, żeby zrobić to ponad forem,
+
+29
+00:02:03,060 --> 00:02:05,320
+bo my chcemy jakby zanim wejdziemy do tej pętli,
+
+30
+00:02:05,780 --> 00:02:09,319
+stworzyć sobie pusty zbiornik do przechowywania tych adresów.
+
+31
+00:02:09,780 --> 00:02:13,719
+Jeżeli zrobilibyśmy to wewnątrz fora, to jakby za każdym przebiegiem pętli
+
+32
+00:02:13,719 --> 00:02:15,159
+tworzylibyśmy pusty zbiornik.
+
+33
+00:02:15,560 --> 00:02:19,740
+Czyli po zakończeniu pętli, pierwszym przebiegu pętli,
+
+34
+00:02:20,099 --> 00:02:23,159
+on by nam od razu ten zbiornik znowu w drugim przebiegu opróżnił.
+
+35
+00:02:23,159 --> 00:02:26,960
+A my chcemy, żeby on zawsze był zdefiniowany.
+
+36
+00:02:27,400 --> 00:02:29,860
+Żeby się wypełniał sukcesywnie wraz z przebiegiem pętli.
+
+37
+00:02:30,300 --> 00:02:32,480
+Dlatego też musimy to zrobić dokładnie w tym miejscu.
+
+38
+00:02:32,560 --> 00:02:35,120
+Napisać emails równa się pusta lista.
+
+39
+00:02:35,819 --> 00:02:40,420
+I skoro jest to pusta lista, to zapisujemy emails.add
+
+40
+00:02:40,420 --> 00:02:43,120
+append, bo to lista.
+
+41
+00:02:43,759 --> 00:02:45,840
+Otwieram nawias i dopisuję email.
+
+42
+00:02:47,060 --> 00:02:49,960
+W ten sposób, kiedy sobie wyprintuję emails,
+
+43
+00:02:49,960 --> 00:02:54,379
+to dostanę informacje o tych adresach, które zostały zarejestrowane.
+
+44
+00:02:54,560 --> 00:02:55,300
+Sprawdźmy to.
+
+45
+00:02:55,400 --> 00:02:56,960
+Wykonuję python spacja.
+
+46
+00:02:57,400 --> 00:02:59,560
+Zbiorę zadanie 2.
+
+47
+00:03:00,020 --> 00:03:03,099
+Drugi raz wcisnąłem tab, pokazało mi się drugie zadanie.
+
+48
+00:03:03,620 --> 00:03:03,939
+Enter.
+
+49
+00:03:04,060 --> 00:03:04,860
+Podaj adres email.
+
+50
+00:03:05,360 --> 00:03:07,040
+Kacper małpa do kodu it.
+
+51
+00:03:07,439 --> 00:03:08,379
+Podaj adres email.
+
+52
+00:03:10,099 --> 00:03:11,259
+Dwa adresy.
+
+53
+00:03:11,759 --> 00:03:13,540
+Dodam sobie raz jeszcze ten sam.
+
+54
+00:03:15,060 --> 00:03:16,280
+Coś tam jeszcze dodam.
+
+55
+00:03:17,500 --> 00:03:20,099
+No i dodam też parę adresów, które nie są adresami.
+
+56
+00:03:20,719 --> 00:03:22,800
+I zobaczcie, jedynym adresem, który zadziałał,
+
+57
+00:03:22,800 --> 00:03:23,960
+w tym momencie został dodany,
+
+58
+00:03:23,960 --> 00:03:26,680
+jest ten adres ksieradziński małpa gmail.com.
+
+59
+00:03:26,819 --> 00:03:27,159
+Dlaczego?
+
+60
+00:03:27,400 --> 00:03:31,219
+No bo kacper.małpa.it nie kończy się na pl,
+
+61
+00:03:31,219 --> 00:03:32,400
+ani nie kończy się na com.
+
+62
+00:03:32,400 --> 00:03:33,900
+Czyli wszystko jest OK.
+
+63
+00:03:33,900 --> 00:03:36,500
+Natomiast jeżeli dwa razy bym dodał adres
+
+64
+00:03:36,500 --> 00:03:38,900
+ksieradziński małpa gmail.com
+
+65
+00:03:38,900 --> 00:03:41,300
+i ksieradziński małpa gmail.com,
+
+66
+00:03:41,300 --> 00:03:47,099
+to dwa razy dostanę ten adres.
+
+67
+00:03:47,099 --> 00:03:48,700
+I teraz zabawa polega na tym,
+
+68
+00:03:48,700 --> 00:03:51,200
+że jeżeli na przykład wysyłamy do kogoś maile,
+
+69
+00:03:51,200 --> 00:03:53,400
+no to nie chcemy, żeby on dostał dwa razy ten sam email,
+
+70
+00:03:53,400 --> 00:03:54,900
+tylko dwa razy różne.
+
+71
+00:03:54,900 --> 00:03:57,200
+W tym celu musimy właśnie zweryfikować,
+
+72
+00:03:57,199 --> 00:04:00,000
+czy w naszej liście są duplikaty.
+
+73
+00:04:00,000 --> 00:04:02,199
+I najprostszy sposób na usunięcie duplikatów,
+
+74
+00:04:02,199 --> 00:04:04,199
+to właśnie zamienienie takiej listy na zbiór.
+
+75
+00:04:04,199 --> 00:04:06,699
+Możemy więc napisać tak,
+
+76
+00:04:06,699 --> 00:04:13,899
+emails równa się set emails.
+
+77
+00:04:13,899 --> 00:04:17,000
+I w ten sposób, jeżeli sobie wprowadzimy
+
+78
+00:04:17,000 --> 00:04:24,800
+dwa razy adres email, ten sam, w domenie com,
+
+79
+00:04:24,800 --> 00:04:26,099
+to w tym samym miejscu, w domenie com,
+
+80
+00:04:26,100 --> 00:04:28,100
+to wyjdzie nam tylko raz.
+
+81
+00:04:28,100 --> 00:04:32,100
+I po nawiasach klamrowych, na początku i na końcu,
+
+82
+00:04:32,100 --> 00:04:34,100
+możemy stwierdzić, że jest to zbiór.
+
+83
+00:04:34,100 --> 00:04:36,100
+W tym zadaniu prosili nas jeszcze o to,
+
+84
+00:04:36,100 --> 00:04:40,100
+żebyśmy wyświetlili ilość wpisów przed usunięciem duplikatów oraz po.
+
+85
+00:04:40,100 --> 00:04:45,100
+Stąd też powinniśmy napisać print ilość adresów
+
+86
+00:04:45,100 --> 00:04:48,100
+przed usunięciem duplikatów,
+
+87
+00:04:48,100 --> 00:04:53,100
+wynosi dwukropek, len na emails,
+
+88
+00:04:53,100 --> 00:04:54,100
+wynosi dwukropek, len na emails,
+
+89
+00:04:54,100 --> 00:04:55,100
+wynosi dwukropek, len na emails,
+
+90
+00:04:56,100 --> 00:05:01,100
+a tutaj ilość adresów po usunięciu duplikatów,
+
+91
+00:05:01,100 --> 00:05:09,100
+po usunięciu, trudny język polski, len na emails.
+
+92
+00:05:09,100 --> 00:05:12,100
+I zamiast robić tak, możemy też te maile sobie ładnie wyświetlić.
+
+93
+00:05:12,100 --> 00:05:18,100
+Czyli for email in emails, print email.
+
+94
+00:05:18,100 --> 00:05:22,100
+I zobaczcie, wpiszę teraz sobie dwa razy sieradziński gmail com,
+
+95
+00:05:22,100 --> 00:05:24,100
+raz kacper małpy do kodu,
+
+96
+00:05:24,100 --> 00:05:25,100
+raz kacper małpy do kodu,
+
+97
+00:05:25,100 --> 00:05:28,100
+niech będzie com, chociaż do kodu com nie mam,
+
+98
+00:05:28,100 --> 00:05:30,100
+niech będzie do kodu pl, tą domenę mam,
+
+99
+00:05:30,100 --> 00:05:34,100
+tylko nie mam takiego maila, nie piszcie tam, bo nic się nie stanie.
+
+100
+00:05:34,100 --> 00:05:37,100
+No i mogę sobie jeszcze dorzucić jak ten kacper małpo wppl,
+
+101
+00:05:37,100 --> 00:05:38,100
+to nie jest też mój email.
+
+102
+00:05:38,100 --> 00:05:40,100
+I zobaczymy co się stanie, uwaga.
+
+103
+00:05:40,100 --> 00:05:44,100
+No i właśnie, ilość adresów przed usunięciem duplikatów to 4,
+
+104
+00:05:44,100 --> 00:05:46,100
+ilość adresów po usunięciu duplikatów to 3.
+
+105
+00:05:46,100 --> 00:05:49,100
+W ten sposób widzimy, że mamy dwa razy ksieradzińskiego,
+
+106
+00:05:49,100 --> 00:05:52,100
+no i ten ksieradziński jeden nam właśnie odpadł,
+
+107
+00:05:52,100 --> 00:05:55,100
+no i ta kolejność, którą tu widzicie jest zupełnie inna,
+
+108
+00:05:55,100 --> 00:05:57,100
+zupełnie nie związana z kolejnością wprowadzania,
+
+109
+00:05:57,100 --> 00:06:01,100
+no bo w tych zbiorach również nie ma to znaczenia.
+
+110
+00:06:01,100 --> 00:06:05,100
+Ale usuwanie duplikatów to jest bardzo częste zastosowanie zbiorów,
+
+111
+00:06:05,100 --> 00:06:07,100
+na przykład ładujemy sobie jakieś dane z pliku tekstowego,
+
+112
+00:06:07,100 --> 00:06:11,100
+o tym już też niedługo, no i w momencie, w którym załadowaliśmy je,
+
+113
+00:06:11,100 --> 00:06:15,100
+to nagle usuwamy duplikaty za pomocą właśnie tego wyrażenia.
+
+114
+00:06:15,100 --> 00:06:20,100
+Bardzo dziękuję, zapraszam dalej do operacji na zbiorach. Chodźcie.

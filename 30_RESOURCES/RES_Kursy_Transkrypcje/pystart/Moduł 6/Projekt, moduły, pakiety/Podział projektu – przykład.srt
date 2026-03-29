@@ -1,0 +1,111 @@
+1
+00:00:00,000 --> 00:00:04,120
+No właśnie, ale dobrze byłoby mieć jakiś też przykład i zerknąć sobie jak to może wyglądać.
+
+2
+00:00:04,240 --> 00:00:09,960
+Zobacz, mamy taką sytuację, że jest sobie projekt, który nazywa się sample, czyli jakiś przykładowy projekt.
+
+3
+00:00:10,400 --> 00:00:13,120
+W ramach tego projektu mam plik, który nazywa się mainpy.
+
+4
+00:00:13,540 --> 00:00:17,100
+Ten plik zawsze jest plikiem wewnątrz projektu.
+
+5
+00:00:17,559 --> 00:00:23,400
+To jest bardzo ważna zasada i lepiej tego nie zmieniać, żeby ten plik był wewnątrz projektu,
+
+6
+00:00:23,620 --> 00:00:28,060
+z tego względu, że tak po prostu łatwiej się pracuje i tak łatwiej się pisze importy.
+
+7
+00:00:28,059 --> 00:00:31,899
+Czyli to, co ja teraz mam, jeżeli widzieliście wcześniej moje drzewo katalogów,
+
+8
+00:00:31,979 --> 00:00:37,100
+widzieliście, że ja mam w ramach projektu poszczególne moduł pierwszy, moduł drugi, moduł trzeci,
+
+9
+00:00:37,500 --> 00:00:41,359
+od tego będę musiał odejść, bo po prostu jeżeli będę robił sobie projekt,
+
+10
+00:00:41,519 --> 00:00:45,340
+to stworzę sobie nowy projekt, pusty i w nim będę trzymał takie podejście.
+
+11
+00:00:45,820 --> 00:00:50,700
+Więc lepiej jest stworzyć nowy, pusty projekt i na nim pracować od teraz,
+
+12
+00:00:51,099 --> 00:00:56,280
+a nie na bazie tych waszych folderów budować tę strukturę na nowo.
+
+13
+00:00:56,280 --> 00:00:57,980
+Po prostu to nie zadziała.
+
+14
+00:00:58,580 --> 00:01:03,120
+O tym sobie też za moment jeszcze będziemy mówili, ale wiem i to często się zdarzało na sali też,
+
+15
+00:01:03,260 --> 00:01:06,840
+kiedy prowadziłem szkolenia takie na żywo, że ludzie mając swoją strukturę,
+
+16
+00:01:06,939 --> 00:01:12,480
+dodawali teraz do niej te pakiety i okazywało się, że Python nie może znaleźć tych pakietów, tych modułów,
+
+17
+00:01:12,600 --> 00:01:16,680
+więc to jest właśnie dlatego, że my zawsze musimy zaczynać na tym samym poziomie,
+
+18
+00:01:16,760 --> 00:01:18,620
+na którym znajduje się VENV.
+
+19
+00:01:19,000 --> 00:01:23,140
+Więc zobacz, HTTP to jest pakiet, API to jest pakiet,
+
+20
+00:01:23,520 --> 00:01:25,960
+Animals, Companies i Fruits to są moduły.
+
+21
+00:01:26,579 --> 00:01:27,960
+Dlaczego wiem, że to jest pakiet?
+
+22
+00:01:28,060 --> 00:01:33,120
+No bo jest to folder, w którym znajduje się plik init.py i to też jest folder, w którym znajduje się plik init.py.
+
+23
+00:01:33,939 --> 00:01:35,280
+Trochę nieintuicyjne?
+
+24
+00:01:35,799 --> 00:01:37,480
+To dam Ci sposób jeszcze prostszy.
+
+25
+00:01:37,900 --> 00:01:40,960
+Jeżeli na folderze nie ma kropki, to nie jest to pakiet.
+
+26
+00:01:41,140 --> 00:01:43,500
+Jeżeli na folderze jest kropka, to jest to pakiet.
+
+27
+00:01:43,900 --> 00:01:47,280
+Tak można też bardzo łatwo rozpoznać, co to są pakiety.
+
+28
+00:01:47,719 --> 00:01:52,140
+A moduły to są po prostu zwykłe pliki Pythonowe z rozszerzeniem py.

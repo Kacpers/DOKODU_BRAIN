@@ -1,0 +1,231 @@
+1
+00:00:00,560 --> 00:00:05,459
+Czas rozprawić się z jedną z bardziej denerwujących mnie, przynajmniej do tej pory rzeczy.
+
+2
+00:00:05,919 --> 00:00:12,460
+A mianowicie często kiedy pisaliśmy program, trzeba byłoby zawsze go zatrzymywać, uruchamiać i na nowo wszystkie dane wprowadzać.
+
+3
+00:00:12,900 --> 00:00:19,900
+Jakże pięknie byłoby, gdyby można było na przykład część tych danych wczytać z pliku, albo zapisać do pliku, albo i wczytać i zapisać.
+
+4
+00:00:20,400 --> 00:00:21,519
+Choćby w poprzednim zadaniu.
+
+5
+00:00:21,519 --> 00:00:29,839
+Kiedy zgadliśmy liczbę po iluś krokach, moglibyśmy zapisać sobie, że o, katpert, kat po pięciu, a Alinka by przyszła i by zgadła po jednym.
+
+6
+00:00:30,640 --> 00:00:31,940
+Nie śmiejcie się, tak kiedyś było.
+
+7
+00:00:32,719 --> 00:00:40,659
+Zrobiłem taką grę, gdzie trzeba było losować pewne rzeczy, no i okazało się, że Alinka wylosowała za pierwszym razem, a ja się męczyłem i męczyłem i męczyłem.
+
+8
+00:00:40,859 --> 00:00:42,700
+No, widocznie tak to zawsze jest.
+
+9
+00:00:43,939 --> 00:00:44,380
+Nieważne.
+
+10
+00:00:44,600 --> 00:00:54,760
+Więc, jeżeli chodzi o nasze zadanie, to w naszym zadaniu będziemy otwierali plik, odczytywali go po linii i na razie pokazujemy sobie taki prostszy trochę w odczycie sposób.
+
+11
+00:00:55,500 --> 00:00:57,560
+Zwracamy uwagę na linię drugą.
+
+12
+00:00:58,060 --> 00:00:58,539
+Handler.
+
+13
+00:00:58,859 --> 00:00:59,379
+Handler to jest uruchomienie.
+
+14
+00:00:59,379 --> 00:00:59,980
+Handler to jest uruchomienie.
+
+15
+00:01:00,000 --> 00:01:01,060
+Uchwyt do pliku.
+
+16
+00:01:01,140 --> 00:01:10,200
+W momencie, w którym pracujemy z plikiem, to niezwykle ważną rzeczą jest to, żeby właśnie tworzyć taki uchwyt do niego i wszystkie dane zapisywać poprzez ten uchwyt.
+
+17
+00:01:10,700 --> 00:01:18,640
+Czyli jakby mówisz, ja wskazuję na ten plik i wszystko to, co chcesz z tym plikiem robić, musisz robić przez to wskazanie na ten plik.
+
+18
+00:01:19,319 --> 00:01:28,480
+Do zmiennej Handler przypisujemy wynik funkcji, która nazywa się open i ta funkcja będzie otrzymywała dwa argumenty.
+
+19
+00:01:28,480 --> 00:01:29,980
+Pierwszym argumentem jest ten, że to jest uruchomienie.
+
+20
+00:01:29,980 --> 00:01:30,760
+To jest nazwa pliku.
+
+21
+00:01:30,880 --> 00:01:32,579
+W tym przypadku to jest test txt.
+
+22
+00:01:33,160 --> 00:01:36,840
+Drugim argumentem jest tryb, w jakim chcemy otworzyć ten plik.
+
+23
+00:01:37,280 --> 00:01:39,340
+O tym trybie powiem Ci już więcej w przyszłości.
+
+24
+00:01:39,460 --> 00:01:47,020
+Natomiast domyślnie, pamiętasz, prawda, parametry domyślne, jest to r, czyli read, czyli odczyt.
+
+25
+00:01:47,420 --> 00:01:50,980
+Skoro otworzyliśmy sobie nasz plik, możemy coś tam w nim wyszukać.
+
+26
+00:01:50,980 --> 00:01:59,960
+I żeby wyszukać informacje, żeby pobrać informacje, czyli tak naprawdę pierwszy wiersz, możemy na tym Handlerze wykonać metodę read,
+
+27
+00:01:59,980 --> 00:02:00,820
+readline.
+
+28
+00:02:01,460 --> 00:02:04,640
+Readline odczytuje pierwszy wiersz z pliku.
+
+29
+00:02:05,159 --> 00:02:09,300
+Analogicznie readlines odczytałoby więcej linii z pliku.
+
+30
+00:02:09,819 --> 00:02:16,520
+Jeżeli wykonam printline, to wtedy wyświetlę wynik tej jednej linii, tej linii, która mi się pobrała.
+
+31
+00:02:17,259 --> 00:02:22,539
+Bardzo ważną rzeczą jest, jeżeli pracujemy z plikiem, żeby ten plik zamykać po odczycie.
+
+32
+00:02:22,539 --> 00:02:29,540
+Czyli jeżeli otworzyłeś plik, żeby coś w nim zmodyfikować, to ostatnia linia handler.clue,
+
+33
+00:02:29,979 --> 00:02:38,019
+Close jest absolutnie wymagana, bo tylko w ten sposób upewnisz się, że nic w tym pliku nie zginęło i wszystko zostało do niego zapisane.
+
+34
+00:02:38,159 --> 00:02:42,179
+Inny sposób odczytu danych z pliku to jest korzystanie z kontekst menadżera.
+
+35
+00:02:42,179 --> 00:02:50,639
+Z racji tego, że w poprzednim przykładzie trzeba było koniecznie pamiętać o tym close, to tutaj pokazuje Ci rozwiązanie, które pozwala na to, żeby o nim zapomnieć.
+
+36
+00:02:50,959 --> 00:02:57,379
+To rozwiązanie nazywane jest kontekst menadżerem i żeby to rozwiązanie zastosować trzeba użyć czegoś takiego co nazywa się with.
+
+37
+00:02:57,379 --> 00:03:06,539
+I zwróć uwagę, że konstrukcja w tym momencie odrobinę nam się zmieniła, czyli mamy with open, w nawiasach jest nazwa pliku, as handler.
+
+38
+00:03:07,120 --> 00:03:13,900
+Czyli to co wcześniej było jako handler równa się open, tutaj zostało zamienione na with open as handler.
+
+39
+00:03:14,539 --> 00:03:19,019
+Reszta pozostaje bez zmian, jeżeli chodzi o tę logikę.
+
+40
+00:03:19,419 --> 00:03:23,560
+Natomiast jest jeszcze jedna ważna sprawa, a mianowicie zobacz, że wszystko jest wcięte.
+
+41
+00:03:23,960 --> 00:03:27,359
+W momencie, w którym pracowaliśmy z ifem, z pętlami.
+
+42
+00:03:27,379 --> 00:03:30,319
+To wszystko to co było wcięte było jakby pod pętlą, prawda?
+
+43
+00:03:30,460 --> 00:03:34,099
+Czyli to co było wcięte to właśnie to powtarzało się określone ilość razy.
+
+44
+00:03:34,479 --> 00:03:39,919
+To co było pod ifem wykonywało się, jeżeli if miał prawdę.
+
+45
+00:03:40,359 --> 00:03:45,579
+Natomiast to co jest wewnątrz with dzieje się wtedy, kiedy plik jest otwarty.
+
+46
+00:03:45,680 --> 00:03:48,439
+Czyli kiedy wyjdzie, czy kiedy ten handler istnieje.
+
+47
+00:03:48,939 --> 00:03:50,319
+To jest tak zwany kontekst menadżer.
+
+48
+00:03:50,719 --> 00:03:54,460
+Kiedy wyjdziemy z tego wcięcia, to już ten plik będzie zamknięty.
+
+49
+00:03:55,120 --> 00:03:57,079
+Python zadba o to zamknięcie.
+
+50
+00:03:57,379 --> 00:03:58,139
+Po prostu za ciebie.
+
+51
+00:03:58,620 --> 00:04:04,439
+Wystarczy napisać with open w nawiasie test.txt.x handler line handler read line print line i nic więcej.
+
+52
+00:04:04,560 --> 00:04:06,439
+Plik sam się zamknął.
+
+53
+00:04:06,479 --> 00:04:08,680
+Zobacz, dla porównania masz oba te podejścia.
+
+54
+00:04:08,680 --> 00:04:13,539
+U góry podejście z handler i z close, a poniżej użycie kontekst menadżera.
+
+55
+00:04:14,159 --> 00:04:17,779
+Wydaje mi się, że to poniżej jest ładniejsze i bardziej sympatyczne, prawda?
+
+56
+00:04:18,399 --> 00:04:20,259
+No, moim zdaniem tak jest.
+
+57
+00:04:21,079 --> 00:04:22,060
+Jak jest według ciebie?
+
+58
+00:04:23,079 --> 00:04:26,019
+Zastanów się i zacznij używać raczej tego na dole.

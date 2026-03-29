@@ -1,0 +1,335 @@
+1
+00:00:00,000 --> 00:00:03,359
+Liczba palindromiczna to jest trochę taki mój fail.
+
+2
+00:00:03,919 --> 00:00:07,620
+Dlaczego? Bo jest takie stwierdzenie, które mówi o tym,
+
+3
+00:00:07,780 --> 00:00:10,439
+że każda liczba, która ma parzystą liczbę cyfr
+
+4
+00:00:10,439 --> 00:00:14,160
+i dzieli się przez 11, jest liczbą palindromiczną.
+
+5
+00:00:15,040 --> 00:00:19,260
+Liczba palindromiczna to jest taka liczba, która jest na przykład 1221.
+
+6
+00:00:19,900 --> 00:00:23,160
+I liczba 1221, jeżeli byśmy sobie odpalili Pythona,
+
+7
+00:00:23,920 --> 00:00:28,640
+ma parzystą liczbę cyfr i dzieli się przez 11 bez reszty.
+
+8
+00:00:28,640 --> 00:00:32,820
+Każdą liczbę, jaką sobie wymyślicie, która będzie miała parzystą liczbę cyfr
+
+9
+00:00:32,820 --> 00:00:36,020
+i będzie dzieliła się przez 11 bez reszty,
+
+10
+00:00:36,539 --> 00:00:38,340
+będzie liczbą palindromiczną.
+
+11
+00:00:38,880 --> 00:00:43,039
+Możemy to sobie stwierdzić, na przykład dzisiaj wyświetlając,
+
+12
+00:00:43,200 --> 00:00:45,019
+jak poznacie pętlę for w tym module,
+
+13
+00:00:45,500 --> 00:00:47,939
+i będziecie chcieli sprawdzić właśnie wszystkie liczby,
+
+14
+00:00:48,040 --> 00:00:52,400
+które są wielokrotnością 11, czy mają parzystą liczbę cyfr,
+
+15
+00:00:52,500 --> 00:00:54,060
+czy są liczbami palindromicznymi.
+
+16
+00:00:54,060 --> 00:00:57,799
+To będzie bardzo dobre sprawdzenie też dzisiaj podczas tego modułu.
+
+17
+00:00:57,799 --> 00:01:01,659
+Natomiast to nie jest zawsze tak, że liczba jest palindromiczna,
+
+18
+00:01:01,779 --> 00:01:06,239
+kiedy ma parzystą liczbę cyfr, bo przecież 131 też jest liczbą palindromiczną.
+
+19
+00:01:06,799 --> 00:01:07,859
+Dlaczego zaliczyłem fail?
+
+20
+00:01:08,179 --> 00:01:11,340
+No bo odrobinę pospieszyłem się z tym zadaniem,
+
+21
+00:01:11,700 --> 00:01:14,099
+bo też dziś, kiedy będziemy pracowali ze stringami,
+
+22
+00:01:14,179 --> 00:01:16,439
+czy też w tym module, kiedy będziemy pracowali ze stringami,
+
+23
+00:01:16,900 --> 00:01:20,840
+zobaczysz, jak właśnie można odwracać string i z nim pracować.
+
+24
+00:01:20,840 --> 00:01:26,019
+I tutaj tak naprawdę najprościej jest nie posługiwać się tą wskazówką, którą dałem,
+
+25
+00:01:26,420 --> 00:01:27,780
+tylko właśnie sprawdzić.
+
+26
+00:01:27,799 --> 00:01:32,759
+Czy odwrócona liczba jest taka sama, jak liczba czytana od prawej do lewej,
+
+27
+00:01:32,759 --> 00:01:33,640
+od lewej do prawej.
+
+28
+00:01:34,099 --> 00:01:41,000
+Czyli jeżeli mamy jakąś liczbę, zobacz, value równa się, niech to będzie 1345,
+
+29
+00:01:41,560 --> 00:01:45,560
+to jeżeli byśmy chcieli teraz ją odwrócić, to najpierw trzeba byłoby zamienić ją na string,
+
+30
+00:01:46,039 --> 00:01:51,079
+czyli value równa się string od value.
+
+31
+00:01:51,700 --> 00:01:55,560
+W tym momencie nasza liczba value stanie się stringiem, mamy uszy.
+
+32
+00:01:56,479 --> 00:01:57,679
+I żeby ją odwrócić,
+
+33
+00:01:57,799 --> 00:02:03,399
+można wykonać tak, value od 2.2.-1
+
+34
+00:02:03,399 --> 00:02:07,399
+I to jest sposób na odwrócenie z dowolnego stringa.
+
+35
+00:02:07,399 --> 00:02:13,400
+Więc tak naprawdę tutaj to, o czym mówię, to jest takie, potraktuj na razie jako takie zaklęcie.
+
+36
+00:02:13,400 --> 00:02:18,400
+Nie chcę Ci mówić, co oznaczają poszczególne miejsca, bo o tym też będziemy rozmawiali w tym module.
+
+37
+00:02:18,400 --> 00:02:25,099
+Natomiast no tutaj chciałem pójść tym takim torem, że a, parzysta liczba cyfr, czyli lenem to sprawdzimy.
+
+38
+00:02:25,099 --> 00:02:26,800
+I czy podzielna przez 11.
+
+39
+00:02:26,800 --> 00:02:27,599
+I mamy 11.
+
+40
+00:02:27,599 --> 00:02:33,599
+Sprawdzamy sprawę z głowy, ale dopiero dzisiaj, kiedy poznamy też, czy w tym module, kiedy poznamy fora,
+
+41
+00:02:33,599 --> 00:02:38,599
+to będzie można to sprawdzić, czy faktycznie wszystkie liczby, które są, to spełniają ten wymóg.
+
+42
+00:02:38,599 --> 00:02:45,599
+To taki przykład, że czasem no daję zadanie i też można sobie pogłówkować na nim, pokombinować.
+
+43
+00:02:45,599 --> 00:02:48,199
+I też znalazłem właśnie taką jego słabość.
+
+44
+00:02:48,199 --> 00:02:50,599
+Chciałem, żeby zadań było dużo i mam za swoje.
+
+45
+00:02:50,599 --> 00:02:56,599
+No ale dobra, zróbmy to tym sposobem, czyli sprawdzając, czy liczba czytana od lewej do prawej wygląda tak samo.
+
+46
+00:02:56,599 --> 00:02:58,599
+Czyli potrzebujemy mieć jakieś value.
+
+47
+00:02:58,599 --> 00:03:02,099
+Możemy je odebrać od użytkownika jako input.
+
+48
+00:03:02,099 --> 00:03:10,099
+To nie będzie trzeba w ogóle tego wtedy sprawdzać jako za pomocą z tego zamieniać na stringa.
+
+49
+00:03:10,099 --> 00:03:11,599
+Czyli podaj liczbę.
+
+50
+00:03:11,599 --> 00:03:21,099
+I wtedy, jeżeli value równa się value od dwukropek, dwukropek, minus jeden.
+
+51
+00:03:21,099 --> 00:03:25,599
+Gdzie zapamiętaj na razie, że to jest sposób na odwracanie stringa.
+
+52
+00:03:25,599 --> 00:03:29,599
+No to print liczba jest palindromiczna.
+
+53
+00:03:29,599 --> 00:03:38,599
+else print liczba nie jest palindromiczna.
+
+54
+00:03:38,599 --> 00:03:45,599
+Tu muszę sobie z tego wyjść.
+
+55
+00:03:45,599 --> 00:03:51,599
+Jeżeli teraz to odpalę i wpiszę właśnie jakąś wartość 2004 to nie będzie.
+
+56
+00:03:51,599 --> 00:03:54,599
+A jeżeli wpiszę 2004 002.
+
+57
+00:03:54,599 --> 00:03:58,599
+No to dostanę informację, że jest palindromiczna.
+
+58
+00:03:58,599 --> 00:04:01,599
+I w ten sposób możemy to zadanie sobie rozwiązać.
+
+59
+00:04:01,599 --> 00:04:04,599
+Natomiast, jeżeli miałeś z nim problem to zupełnie się tym nie przejmuj.
+
+60
+00:04:04,599 --> 00:04:09,599
+Bo jakby była taka szansa na to, żeby tego zadania nie rozwiązać.
+
+61
+00:04:09,599 --> 00:04:12,599
+Korzystając tylko i wyłącznie z tej wiedzy, którą dałem wcześniej.
+
+62
+00:04:12,599 --> 00:04:15,599
+Natomiast, jeżeli chcielibyśmy to zrobić tym drugim sposobem.
+
+63
+00:04:15,599 --> 00:04:22,600
+To mój pomysł był taki, że można zrobić len od value modulo 2 równa się 0.
+
+64
+00:04:22,600 --> 00:04:23,600
+To jest pierwszy sposób.
+
+65
+00:04:23,600 --> 00:04:25,600
+To jest pierwsza rzecz.
+
+66
+00:04:25,600 --> 00:04:28,600
+Bo musi być parzysta liczba cyfr.
+
+67
+00:04:28,600 --> 00:04:36,600
+A druga rzecz to value, czyli już teraz integer na value modulo 11 równa się 0.
+
+68
+00:04:36,600 --> 00:04:37,600
+Print.
+
+69
+00:04:37,600 --> 00:04:39,600
+No chodź.
+
+70
+00:04:39,600 --> 00:04:42,600
+Liczba jest palindromiczna.
+
+71
+00:04:42,600 --> 00:04:47,600
+I zobacz, jeżeli sobie teraz wymyślimy jakąś wartość.
+
+72
+00:04:47,600 --> 00:04:49,600
+Niech to będzie 1, 3, 3.
+
+73
+00:04:49,600 --> 00:04:51,600
+To ma 3 wartości.
+
+74
+00:04:51,600 --> 00:04:52,600
+I 3, 3, 1.
+
+75
+00:04:52,600 --> 00:04:54,600
+O!
+
+76
+00:04:54,600 --> 00:04:57,600
+To dwa razy dostajemy informację, że liczba jest palindromiczna.
+
+77
+00:04:57,600 --> 00:04:59,600
+Ma parzystą liczbę cyfr.
+
+78
+00:04:59,600 --> 00:05:01,600
+No i to jest pierwsza rzecz.
+
+79
+00:05:01,600 --> 00:05:02,600
+No i druga rzecz.
+
+80
+00:05:02,600 --> 00:05:04,600
+Dzieli się przez 11 bez reszty.
+
+81
+00:05:04,600 --> 00:05:08,600
+Więc można byłoby też tak, tym drugim sposobem to zweryfikować.
+
+82
+00:05:08,600 --> 00:05:13,600
+Natomiast, no tak jak powiedziałem, dla nieparzystej liczby cyfr niestety nam to nie zadziała.
+
+83
+00:05:13,600 --> 00:05:15,600
+Chodźmy do pola trójkąta równobocznego.
+
+84
+00:05:15,600 --> 00:05:16,600
+Do zobaczenia.

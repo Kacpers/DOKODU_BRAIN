@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:09,620
+I w tym zadaniu mamy wykorzystać wiedzę zdobytą z MatchCase'a i napisać program, który będzie przyjmował miesiąc w postaci liczby całkowitej od użytkownika,
+
+2
+00:00:09,720 --> 00:00:15,480
+na przykład 1 dla stycznia, 2 dla lutego i tak dalej i wyświetlał nazwę miesiąca odpowiadającej tej liczbie.
+
+3
+00:00:16,080 --> 00:00:19,660
+Możesz podejść do zadania korzystając z MatchCase lub użyć słownika.
+
+4
+00:00:19,660 --> 00:00:32,799
+Oczywiście jak mnie znacie, dla mnie loop będzie wymagało zrobienia jednego i drugiego, więc pokażę Wam jak zrobić to zadanie za pomocą słownika oraz jak zrobić to zadanie za pomocą MatchCase.
+
+5
+00:00:33,200 --> 00:00:36,340
+Widzimy się za chwilę w rozwiązaniu. Do zobaczenia!

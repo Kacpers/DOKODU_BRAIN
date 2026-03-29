@@ -1,0 +1,303 @@
+1
+00:00:00,000 --> 00:00:07,879
+OK, pierwszy program to wyświetlenie komunikatu Witaj Świecie. Od tego praktycznie każdy program się zaczyna.
+
+2
+00:00:08,519 --> 00:00:18,120
+Jeżeli masz tutaj pliczek main.py to możesz go sobie spokojnie usunąć, a pokażę Ci krok po kroku, jakie czynności będziemy wykonywać, żeby móc uruchomić nowy kod.
+
+3
+00:00:18,660 --> 00:00:22,660
+Przede wszystkim chciałem Ci powiedzieć, że to co jest po lewej stronie to jest Twój projekt.
+
+4
+00:00:22,660 --> 00:00:28,260
+I teraz wewnątrz tego projektu widzisz ms-venv, czy też coś co nazywa się bardzo podobnie.
+
+5
+00:00:28,539 --> 00:00:33,620
+Jest to Twoje wirtualne środowisko. Tam nie zaglądamy, na razie nie musimy.
+
+6
+00:00:34,219 --> 00:00:36,019
+Tam też nie umieszczamy żadnych plików.
+
+7
+00:00:36,480 --> 00:00:46,379
+Więc teraz, żeby stworzyć sobie nowy plik, musisz na PyStart Code kliknąć prawym, czy też na Twojej nazwie projektu kliknąć prawym, wybrać New, a następnie Python File.
+
+8
+00:00:46,960 --> 00:00:50,500
+W ten sposób pojawi Ci się pytanie, jak ma nazywać się Twój plik.
+
+9
+00:00:50,859 --> 00:00:52,640
+Ja przyjmuję taką zasadę.
+
+10
+00:00:52,659 --> 00:00:59,359
+Że chciałbym, żeby pliki nazywały się, jakby były kolejnymi liczbami, tak żeby łatwo było później wiedzieć w jakiej kolejności tworzyłem.
+
+11
+00:00:59,640 --> 00:01:05,959
+Więc rozpocznę sobie od 00 podkreślenie hello py.
+
+12
+00:01:06,679 --> 00:01:17,179
+Dodawanie tych cyfr ma też jeszcze jedną bardzo ważną zasadę, a mianowicie później zobaczysz, że czasem coś może Ci nie działać, jeżeli nieodpowiednio nazwiesz plik.
+
+13
+00:01:17,179 --> 00:01:22,459
+Nie chcesz tak głęboko teraz wchodzić w te tematy, natomiast zaznaczam, że to się może.
+
+14
+00:01:22,659 --> 00:01:23,159
+Wydarzyć.
+
+15
+00:01:24,340 --> 00:01:35,539
+Druga rzecz, a już trzecia jest też taka, że jak widzisz powiększam czcionkę, robiąc Control i kręcąc przyciskając klawisz Control i kręcąc rolltko na myszce.
+
+16
+00:01:36,039 --> 00:01:41,079
+Prawdopodobnie ta opcja u Ciebie jest wyłączona, więc pokażę Ci, jak ją włączyć.
+
+17
+00:01:41,539 --> 00:01:43,920
+W tym celu musisz kliknąć na File.
+
+18
+00:01:44,140 --> 00:01:45,939
+Następnie wybrać Settings.
+
+19
+00:01:46,840 --> 00:01:49,500
+I w lewym górnym rogu znajdziesz wyszukiwarkę.
+
+20
+00:01:49,900 --> 00:01:51,599
+W wyszukiwarce wpisz hasło.
+
+21
+00:01:52,039 --> 00:01:52,539
+Will.
+
+22
+00:01:52,659 --> 00:01:54,739
+Wy-chy-e-e-l.
+
+23
+00:01:55,119 --> 00:02:02,719
+Tak jak Wheelchair to jest krzesło, to nie krzesło, tylko wózek inwalidzki.
+
+24
+00:02:03,479 --> 00:02:09,419
+I teraz, kiedy wpiszesz Wheel, to tutaj masz Change font size with Control plus mouse wheel.
+
+25
+00:02:09,419 --> 00:02:19,639
+I to właśnie spowoduje, że będziesz mógł czy mogła kręcić kontrolem wraz z rolltką, żeby nam się to zwiększało i zmniejszało.
+
+26
+00:02:19,939 --> 00:02:21,680
+Bardzo wygodna sprawa, jeżeli się uczymy.
+
+27
+00:02:21,840 --> 00:02:22,419
+To raczej to, że...
+
+28
+00:02:22,659 --> 00:02:25,020
+Czy czcionka jest mała zniechęca niż poprawia.
+
+29
+00:02:25,740 --> 00:02:26,240
+Dobra.
+
+30
+00:02:26,539 --> 00:02:29,919
+I teraz, jeżeli chcesz pisać, no to piszesz sobie tutaj.
+
+31
+00:02:30,359 --> 00:02:32,159
+Wyświetlamy komunikat Witaj Świecie.
+
+32
+00:02:32,599 --> 00:02:37,979
+W Pythonie to, co wyświetla komunikat, to jest polecenie Print, funkcja Print.
+
+33
+00:02:37,979 --> 00:02:47,979
+Więc ja napiszę Print, otworzę nawias okrągły i w nawiasie okrągłym w apostrofach napiszę Witaj Świecie.
+
+34
+00:02:51,000 --> 00:02:52,519
+Tak się to przyjęło.
+
+35
+00:02:52,659 --> 00:02:54,280
+Po angielsku Hello World.
+
+36
+00:02:54,599 --> 00:03:01,300
+Jeżeli chcemy sobie to wyświetlić też i po angielsku, możemy poniżej napisać raz jeszcze Print Hello World.
+
+37
+00:03:01,659 --> 00:03:02,859
+Też z wychrzychnikiem.
+
+38
+00:03:03,620 --> 00:03:05,620
+Mamy więc dwie linie, które się wykonają.
+
+39
+00:03:05,620 --> 00:03:13,180
+Tak jak Ci obiecywałem, w tym momencie piszemy program, który będzie, czy też kod, który będzie interpretowany przez Pythona
+
+40
+00:03:13,180 --> 00:03:16,359
+i on będzie sobie go wykonywał linia po linii.
+
+41
+00:03:16,659 --> 00:03:20,579
+Więc teraz, żeby go uruchomić, musimy odpalić terminal na dole.
+
+42
+00:03:21,139 --> 00:03:22,539
+I znowu tak, tak, tak.
+
+43
+00:03:22,659 --> 00:03:35,000
+Wiem, bardzo często osoby, które w tym momencie oglądają i wcześniej programowały w Pythonie, zaraz powiedzą, ej, a przecież można użyć tego guzika Play, to jest dużo prostsze i tak dalej.
+
+44
+00:03:35,400 --> 00:03:47,460
+Owszem, jeżeli masz program, który jest jednym plikiem, czy też i rozwijasz go zawsze od tego samego pliku, to jak najbardziej korzystanie z tego przycisku Run może być dla Ciebie wygodne.
+
+45
+00:03:47,460 --> 00:03:51,879
+Ale my tutaj w ramach wprawiania się będziemy tworzyli bardzo dużo plików.
+
+46
+00:03:52,019 --> 00:03:52,620
+Więc ja znam.
+
+47
+00:03:52,659 --> 00:03:58,099
+Zachęcam do tego, żeby nie robić co chwilę Run, bo tam też trzeba edytować konfigurację, coś tam, coś tam.
+
+48
+00:03:58,159 --> 00:03:59,199
+Ja tego nie lubię robić po prostu.
+
+49
+00:03:59,780 --> 00:04:01,960
+Zamiast tego wolę pracować z terminalem.
+
+50
+00:04:02,500 --> 00:04:08,139
+I terminal w PyCharmie odpalamy przez View, Tool Window, Terminal, Alt F12.
+
+51
+00:04:08,939 --> 00:04:12,180
+I dzięki temu dostaniesz terminal też na dole.
+
+52
+00:04:12,419 --> 00:04:15,120
+Ale zwróć uwagę, że nie jest to zwykły terminal.
+
+53
+00:04:15,120 --> 00:04:20,519
+W tym terminalu od razu pojawiła Ci się też informacja MS-VAN w po lewej stronie.
+
+54
+00:04:21,060 --> 00:04:22,639
+I ta informacja mówi Ci o tym.
+
+55
+00:04:22,660 --> 00:04:26,380
+Że to jest już odpalone wirtualne środowisko.
+
+56
+00:04:26,840 --> 00:04:27,420
+Doskonale.
+
+57
+00:04:28,020 --> 00:04:36,060
+I teraz, żeby wykonać ten kod, musisz kliknąć sobie tutaj lewym przyciskiem myszy i wpisać polecenie Python.
+
+58
+00:04:37,240 --> 00:04:38,040
+Spacja.
+
+59
+00:04:38,440 --> 00:04:40,080
+I wcześniej robiliśmy Enter.
+
+60
+00:04:40,080 --> 00:04:43,340
+Wchodziliśmy do tego interaktywnego terminalu interaktywnej konsoli.
+
+61
+00:04:43,340 --> 00:04:44,660
+Mogliśmy wykonywać polecenia.
+
+62
+00:04:44,920 --> 00:04:45,879
+On nam odpowiadał.
+
+63
+00:04:46,180 --> 00:04:52,260
+A teraz my mu chcemy powiedzieć Python odpal mi ten plik, więc robię Python spacja zero zero.
+
+64
+00:04:52,260 --> 00:04:52,500
+Podkreślajmy.
+
+65
+00:04:52,500 --> 00:04:53,300
+Podkreślenie.
+
+66
+00:04:54,300 --> 00:04:54,600
+Hello.
+
+67
+00:04:55,120 --> 00:04:58,160
+Nie muszę wpisywać całego hello, py i tak dalej.
+
+68
+00:04:58,720 --> 00:05:04,519
+Mogę używając klawisza tab uzupełnić sobie dalsze linie.
+
+69
+00:05:05,019 --> 00:05:06,519
+Doczytałem dalszą nazwę pliku.
+
+70
+00:05:07,000 --> 00:05:07,920
+Wcisnąć Enter.
+
+71
+00:05:09,060 --> 00:05:09,540
+I mam.
+
+72
+00:05:09,920 --> 00:05:11,620
+Witaj świecie, hello world.
+
+73
+00:05:11,779 --> 00:05:14,699
+Czyli te dwie informacje wyświetliły nam się.
+
+74
+00:05:15,139 --> 00:05:17,220
+Dodatkowo wyświetlają się jedna pod drugą.
+
+75
+00:05:17,720 --> 00:05:18,339
+No to super.
+
+76
+00:05:18,819 --> 00:05:19,759
+Możemy iść dalej.

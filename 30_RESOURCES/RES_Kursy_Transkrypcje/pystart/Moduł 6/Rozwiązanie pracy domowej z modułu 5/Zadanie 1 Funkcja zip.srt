@@ -1,0 +1,175 @@
+1
+00:00:00,000 --> 00:00:01,419
+No to lecimy z pracą domową.
+
+2
+00:00:01,760 --> 00:00:03,800
+Przygotuj funkcję, która odbierze dwie listy.
+
+3
+00:00:03,919 --> 00:00:05,400
+Wynikiem powinna być nowa lista.
+
+4
+00:00:05,940 --> 00:00:10,599
+Czyli potrzebujemy stworzyć sobie funkcję addLists.
+
+5
+00:00:11,339 --> 00:00:17,219
+Ona musi otrzymywać dwie listy, czyli będzie list1, dwukropek, list.
+
+6
+00:00:17,660 --> 00:00:18,719
+I tu bardzo ważna uwaga.
+
+7
+00:00:19,179 --> 00:00:22,179
+Nie możecie nazywać zmiennej list,
+
+8
+00:00:22,660 --> 00:00:26,820
+bo zwróćcie uwagę na to, że typ, który odbieramy nazywa się list.
+
+9
+00:00:26,820 --> 00:00:28,960
+Więc jeżeli zmienna by się nazywała tak samo,
+
+10
+00:00:28,960 --> 00:00:30,280
+no to to prowadowałoby błąd.
+
+11
+00:00:30,440 --> 00:00:31,339
+Nie należy tego robić.
+
+12
+00:00:32,160 --> 00:00:35,100
+Przecinek, list2 to też list.
+
+13
+00:00:36,039 --> 00:00:38,260
+Wynikiem również będzie lista.
+
+14
+00:00:38,859 --> 00:00:42,620
+I tak jak wspominałem, że nie będę wpisywał pajdoków za każdym razem,
+
+15
+00:00:42,820 --> 00:00:44,660
+chociaż tutaj może je wygeneruję,
+
+16
+00:00:45,260 --> 00:00:47,560
+chociaż ten podstawowy, taki bez opisów,
+
+17
+00:00:47,939 --> 00:00:51,079
+no to na pewno zawsze będę starał się te typy dodawać.
+
+18
+00:00:51,159 --> 00:00:53,540
+Chyba, że będę wiedział, że te typy nie są jednoznaczne,
+
+19
+00:00:53,600 --> 00:00:54,700
+bo tak też się czasem zdarza
+
+20
+00:00:54,700 --> 00:00:57,299
+i potrzeba trochę więcej wiedzy do określenia tego typu,
+
+21
+00:00:57,740 --> 00:00:58,700
+ale o tym sobie jeszcze kiedyś porozmawiamy.
+
+22
+00:00:58,960 --> 00:01:01,679
+I teraz będziemy chcieli stworzyć nową listę,
+
+23
+00:01:01,759 --> 00:01:04,079
+która będzie sumą poszczególnych elementów.
+
+24
+00:01:04,280 --> 00:01:09,599
+No to potrzebujemy mieć output jako lista
+
+25
+00:01:09,599 --> 00:01:13,760
+i for element1, element2,
+
+26
+00:01:14,260 --> 00:01:18,560
+in zip list1, list2, dwukropek,
+
+27
+00:01:19,079 --> 00:01:26,579
+no i output append suma element1 plus element2.
+
+28
+00:01:26,579 --> 00:01:28,579
+Tu ewentualnie mogłoby to być bezpośrednio,
+
+29
+00:01:28,959 --> 00:01:31,759
+bo jak jest cyfra, to raczej tych podkreśleń ja nie dodaję,
+
+30
+00:01:31,839 --> 00:01:33,419
+po prostu jak jest tekst, to dodaję.
+
+31
+00:01:33,959 --> 00:01:36,519
+No i return output.
+
+32
+00:01:37,079 --> 00:01:38,699
+Sprawdźmy to, czy to zadziałało.
+
+33
+00:01:39,379 --> 00:01:42,379
+Print add lists 1, 2, 3.
+
+34
+00:01:42,539 --> 00:01:46,099
+Możemy sobie też tutaj śmiało zrobić trochę poprawki,
+
+35
+00:01:46,719 --> 00:01:49,500
+takie kosmetyczne, 4, 5, 6.
+
+36
+00:01:50,639 --> 00:01:54,199
+No i uwaga, python1 funkcja zadanie.
+
+37
+00:01:54,299 --> 00:01:55,479
+Widzę, że zrobiłem gdzieś błąd.
+
+38
+00:01:55,479 --> 00:01:57,419
+Tu jest append i nie mam,
+
+39
+00:01:57,420 --> 00:01:59,159
+nie mam sumy?
+
+40
+00:01:59,700 --> 00:02:01,299
+Nie, tylko wcięcie było nie takie.
+
+41
+00:02:02,500 --> 00:02:05,760
+Poprawka wcięcia w PyCharmie to jest ctrl, alt i l.
+
+42
+00:02:06,180 --> 00:02:08,099
+Bardzo łatwo i szybko można sobie poprawić.
+
+43
+00:02:08,500 --> 00:02:10,000
+Jak widać, zadziałało.
+
+44
+00:02:10,580 --> 00:02:12,560
+No to co? Zadanie drugie.

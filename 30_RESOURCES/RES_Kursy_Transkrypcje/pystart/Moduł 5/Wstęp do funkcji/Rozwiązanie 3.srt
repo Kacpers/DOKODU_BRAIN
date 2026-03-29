@@ -1,0 +1,187 @@
+1
+00:00:00,000 --> 00:00:03,140
+Natomiast w tym zadaniu chcemy sprawdzić, czy liczba jest pierwsza.
+
+2
+00:00:03,879 --> 00:00:07,940
+Czyli is prime, gdzie is to również jest czasownik.
+
+3
+00:00:08,599 --> 00:00:12,200
+Będziemy potrzebowali tutaj mieć jakąś wartość, niech to będzie jakiś number.
+
+4
+00:00:13,140 --> 00:00:15,780
+Ja polecę tym samym schematem, którym leciałem wtedy.
+
+5
+00:00:16,059 --> 00:00:17,660
+Ten schemat jak wyglądał, przypomnę.
+
+6
+00:00:18,960 --> 00:00:22,199
+For divider in range
+
+7
+00:00:22,199 --> 00:00:28,260
+od dwóch do pierwiastka kwadratowego z cyfry
+
+8
+00:00:28,260 --> 00:00:30,420
+zaokrąglonego do góry.
+
+9
+00:00:34,200 --> 00:00:37,140
+Chyba jeszcze plus jeden był na wszelkich bazach coś takiego.
+
+10
+00:00:37,880 --> 00:00:39,900
+Seal i SQLT potrzebujemy.
+
+11
+00:00:40,500 --> 00:00:44,520
+Jeżeli korzystasz z PyCharma, tak jak ja,
+
+12
+00:00:44,960 --> 00:00:47,100
+to możesz też stanąć na takiej funkcji,
+
+13
+00:00:47,100 --> 00:00:49,460
+żeby za każdym razem nie lecieć tam na górę i nie pisać.
+
+14
+00:00:49,520 --> 00:00:52,700
+Można stanąć na funkcji, której nie ma i wykonać alt enter.
+
+15
+00:00:53,000 --> 00:00:56,299
+To spowoduje, że pojawi nam się skrót import math seal.
+
+16
+00:00:56,859 --> 00:00:57,320
+Enter.
+
+17
+00:00:57,320 --> 00:00:59,140
+I na SQLT robię to samo.
+
+18
+00:00:59,280 --> 00:01:02,939
+Alt enter, import this name, SQLT from math
+
+19
+00:01:02,939 --> 00:01:04,760
+i będę miał dwie rzeczy.
+
+20
+00:01:05,239 --> 00:01:08,560
+Padła prośba, żeby pokazać trochę z takich sztuczek też PyCharmowych,
+
+21
+00:01:08,659 --> 00:01:10,540
+to pokazuję. Alt enter, bardzo lubię.
+
+22
+00:01:11,239 --> 00:01:14,120
+Jeżeli mam divider, no to sprawdzam.
+
+23
+00:01:14,319 --> 00:01:19,200
+If number modulo divider równa się zero,
+
+24
+00:01:19,379 --> 00:01:21,719
+to wtedy wykonuję return false.
+
+25
+00:01:22,260 --> 00:01:26,400
+Natomiast jeżeli nie napotkałem nigdy sytuacji, że się podzieliło,
+
+26
+00:01:26,400 --> 00:01:27,260
+to robię return false.
+
+27
+00:01:27,260 --> 00:01:27,800
+Return true.
+
+28
+00:01:29,980 --> 00:01:32,400
+No i w ten sposób mogę sobie sprawdzić,
+
+29
+00:01:32,640 --> 00:01:35,020
+na przykład szukać jakichś dzielników.
+
+30
+00:01:36,680 --> 00:01:40,180
+Szukać liczb pierwszych, czyli for n in range
+
+31
+00:01:40,180 --> 00:01:43,580
+od tysiąca do pięciu tysięcy.
+
+32
+00:01:43,860 --> 00:01:44,900
+Może pięć tysięcy za dużo.
+
+33
+00:01:45,620 --> 00:01:49,680
+Weźmy od tysiąca dziesięciu czy tysiąca stu.
+
+34
+00:01:50,640 --> 00:01:53,540
+Dobra, tysiąca dwudziestu czterech będzie okrągło.
+
+35
+00:01:54,380 --> 00:01:56,500
+I chcemy wyświetlić print n
+
+36
+00:01:56,500 --> 00:01:57,080
+i w tym momencie, że jest to, że jest to, że jest to, że jest to.
+
+37
+00:01:57,080 --> 00:01:57,180
+I w tym momencie, że jest to, że jest to, że jest to.
+
+38
+00:01:57,180 --> 00:01:57,240
+I w tym momencie, że jest to, że jest to, że jest to.
+
+39
+00:01:57,260 --> 00:01:59,579
+I z prime n.
+
+40
+00:02:00,500 --> 00:02:04,219
+Wykonujemy python, spacja, funkcję, zadanie trzy.
+
+41
+00:02:05,359 --> 00:02:07,960
+I wiemy, że te wszystkie liczby,
+
+42
+00:02:08,500 --> 00:02:10,020
+poza liczbą tysiąc dziewięć,
+
+43
+00:02:10,140 --> 00:02:12,819
+nie są liczbami pierwszymi.
+
+44
+00:02:13,480 --> 00:02:16,340
+I tak stworzyliśmy sobie już kilka pierwszych naszych funkcji.
+
+45
+00:02:17,080 --> 00:02:20,040
+A funkcje to niezwykle rozległy temat,
+
+46
+00:02:20,379 --> 00:02:21,879
+więc jeszcze dużo przed nami.
+
+47
+00:02:22,259 --> 00:02:24,020
+Zapraszam cię dalej.

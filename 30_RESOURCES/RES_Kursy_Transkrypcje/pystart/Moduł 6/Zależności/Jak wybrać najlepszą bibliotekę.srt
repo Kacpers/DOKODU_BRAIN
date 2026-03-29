@@ -1,0 +1,295 @@
+1
+00:00:00,000 --> 00:00:05,280
+A skąd brać pakiety, czy takie gotowe rzeczy to w jakimś czarnym rynku
+
+2
+00:00:05,280 --> 00:00:06,540
+dostępniacz, czy gdzie?
+
+3
+00:00:06,940 --> 00:00:08,820
+Czy sobie to koledzy programiści wysyłają?
+
+4
+00:00:09,099 --> 00:00:10,320
+Nie, czegoś takiego nie ma.
+
+5
+00:00:10,900 --> 00:00:12,859
+Jest stworzone tak zwane repozytorium.
+
+6
+00:00:12,939 --> 00:00:15,540
+I to nie jest repozytorium na GIT-cie, nie rozumiemy się w ten sposób,
+
+7
+00:00:15,540 --> 00:00:18,539
+tylko chodzimy na takie miejsce, gdzie są absolutnie wszystkie pakiety
+
+8
+00:00:19,059 --> 00:00:23,219
+i twoje też mogą tam być zawarte, które stworzyli programiści Pythona.
+
+9
+00:00:23,859 --> 00:00:27,539
+I jeżeli tworzę sobie jakiś projekt, staję przed jakimś wymaganiem,
+
+10
+00:00:27,539 --> 00:00:30,480
+co też będziemy robili już w kolejnym module,
+
+11
+00:00:30,919 --> 00:00:34,479
+to zawsze się zastanawiam, czy może ktoś zrobił już coś podobnego
+
+12
+00:00:34,479 --> 00:00:37,879
+i może po prostu mogę wykorzystać jego kod i umieścić go w swoim projekcie,
+
+13
+00:00:37,979 --> 00:00:40,179
+dzięki temu zaoszczędzić mnóstwo czasu.
+
+14
+00:00:40,820 --> 00:00:41,759
+I owszem, tak jest.
+
+15
+00:00:42,039 --> 00:00:44,620
+Wszystko to, co jest dostępne na licencji open source,
+
+16
+00:00:44,739 --> 00:00:47,379
+może być w ten sposób wykorzystywane, możesz to pobierać.
+
+17
+00:00:47,460 --> 00:00:51,239
+Tak naprawdę wydaje mi się, że praktycznie wszystko, co jest zawarte na tej stronie.
+
+18
+00:00:51,340 --> 00:00:53,420
+A tą stroną jest pypi.org.
+
+19
+00:00:53,739 --> 00:00:55,359
+Tu jest adres, pypi.org.
+
+20
+00:00:55,859 --> 00:00:56,759
+Nie zachęcam cię teraz do tego, żebyśmy instytucjonalnie,
+
+21
+00:00:57,539 --> 00:01:01,060
+zainstalowali jakieś konkretne rzeczy, tylko mówię, że coś takiego ma miejsce.
+
+22
+00:01:01,619 --> 00:01:05,620
+I wtedy, po prostu, kiedy programista przygotował jakieś rozszerzenie,
+
+23
+00:01:06,120 --> 00:01:09,900
+umieszcza je na tej stronie i ty możesz pobrać je do swojego projektu.
+
+24
+00:01:10,379 --> 00:01:13,459
+Dla przykładu, zobacz, mamy taką bibliotekę jak Requests,
+
+25
+00:01:13,579 --> 00:01:17,340
+która jest świetną biblioteką służącą do wykonywania zapytań.
+
+26
+00:01:17,460 --> 00:01:19,140
+Używałem jej wielokrotnie na moim kanale,
+
+27
+00:01:19,239 --> 00:01:21,259
+na przykład, kiedy chciałem pobrać dane pogodowe.
+
+28
+00:01:21,359 --> 00:01:23,640
+Jest taki film, gdzie pobieram dane pogodowe,
+
+29
+00:01:23,640 --> 00:01:27,259
+czy dane kursy NBPO i wyświetlam je na stronie.
+
+30
+00:01:27,540 --> 00:01:30,040
+I wtedy skorzystałem właśnie z biblioteki Requests.
+
+31
+00:01:30,140 --> 00:01:34,540
+Wysłałem zapytanie do serwera, poprosiłem o to, żeby mi odpowiedziało,
+
+32
+00:01:34,719 --> 00:01:39,300
+jakie są kursy walut i mogłem później używać ich w swoim projekcie.
+
+33
+00:01:39,900 --> 00:01:44,180
+I tutaj mamy numer wersji właśnie,
+
+34
+00:01:44,360 --> 00:01:47,620
+więc dlatego ważne jest to, żeby wersje były odpowiednio numerowane.
+
+35
+00:01:48,180 --> 00:01:51,600
+Mamy informację, kiedy ta biblioteka została wydana
+
+36
+00:01:51,600 --> 00:01:55,540
+oraz jak z tej biblioteki skorzystać.
+
+37
+00:01:55,920 --> 00:01:57,520
+I dzięki temu, mając takie trzy rzeczy,
+
+38
+00:01:57,540 --> 00:02:02,100
+ja mogę łatwo podjąć wybór, czy chcę tej biblioteki używać, czy nie chcę.
+
+39
+00:02:02,560 --> 00:02:04,460
+To, na co zwracam też uwagę, to statystyki,
+
+40
+00:02:04,540 --> 00:02:07,020
+które są tutaj delikatnie przycięte w lewym dolnym rogu,
+
+41
+00:02:07,440 --> 00:02:10,200
+ale jeżeli wejdziesz sobie na stronę pipey.org,
+
+42
+00:02:10,300 --> 00:02:12,400
+wpiszesz dowolne zagadnienie typu image,
+
+43
+00:02:12,540 --> 00:02:15,480
+to znajdziesz wszystkie biblioteki służące do obsługi obrazów.
+
+44
+00:02:15,920 --> 00:02:19,000
+No i zawsze można zerknąć właśnie, kiedy była wydana, czy nie jest zbyt stara,
+
+45
+00:02:19,520 --> 00:02:23,860
+ile ma pobrań, ile ma gwiazdek na GitHubie.
+
+46
+00:02:23,860 --> 00:02:27,300
+To są takie rzeczy, które są istotne i świadczą o tym,
+
+47
+00:02:27,300 --> 00:02:28,300
+że biblioteka jest dobra.
+
+48
+00:02:28,300 --> 00:02:31,700
+Kiedyś był taki problem, że część bibliotek była zainfekowanych.
+
+49
+00:02:31,700 --> 00:02:36,200
+To jest problem, który dotyczy wszystkich tego typu języków.
+
+50
+00:02:36,200 --> 00:02:39,500
+Niezależnie od tego, czy programujesz w Pythonie, PHP, Javascriptie,
+
+51
+00:02:39,500 --> 00:02:42,300
+czy w dowolnym innym języku, to się może wydarzyć.
+
+52
+00:02:42,300 --> 00:02:46,100
+Więc zawsze warto zerkać na to, czy biblioteka jest popularna,
+
+53
+00:02:46,100 --> 00:02:49,500
+czy ma dużo gwiazdek, czy ma dużo komentarzy
+
+54
+00:02:49,500 --> 00:02:53,300
+i czy nie zostało na GitHubie napisane czegoś o tym,
+
+55
+00:02:53,300 --> 00:02:55,900
+że są z nią jakieś poważne problemy.
+
+56
+00:02:55,900 --> 00:02:57,220
+Tam na GitHubie,
+
+57
+00:02:57,219 --> 00:02:59,620
+tu jest w ogóle link do Source,
+
+58
+00:02:59,620 --> 00:03:01,620
+w tym miejscu się znajduje Source,
+
+59
+00:03:01,620 --> 00:03:04,419
+jak klikniesz, bo tu jest Home Documentation Source,
+
+60
+00:03:04,419 --> 00:03:07,819
+jak klikniesz w Source, to tam właśnie zostaniesz przekierowany na GitHuba
+
+61
+00:03:07,819 --> 00:03:11,020
+i na tym GitHubie znajdziesz taką zakładkę jak Issues.
+
+62
+00:03:11,020 --> 00:03:13,020
+Tam można sobie kliknąć u góry i zobaczyć,
+
+63
+00:03:13,020 --> 00:03:16,419
+jakie ludzie dodali zagadnienia dotyczące tej biblioteki.
+
+64
+00:03:16,419 --> 00:03:20,419
+Czasem są to poprawki, czasem są to pomysły na dalszy rozwój,
+
+65
+00:03:20,419 --> 00:03:27,020
+czasem są to błędy, czasem są to pomysły, jak można coś zrobić.
+
+66
+00:03:27,020 --> 00:03:28,420
+Można tam też sobie zerkać.
+
+67
+00:03:28,420 --> 00:03:34,820
+Tak Ci mówię w ramach takiej zachęty, jeżeli byłoby więcej czasu na właśnie na poklikanie, poszukanie,
+
+68
+00:03:34,820 --> 00:03:36,219
+to to jest bardzo dobry pomysł też.
+
+69
+00:03:36,219 --> 00:03:40,420
+I taki no, jak już cały Facebook Wall jest przeczytany,
+
+70
+00:03:40,420 --> 00:03:42,620
+to wtedy wchodzę na GitHuba i czytam Issues.
+
+71
+00:03:42,620 --> 00:03:43,820
+Nie żartuję, śmieję się.
+
+72
+00:03:43,820 --> 00:03:45,820
+O tym jeszcze będziemy rozmawiali.
+
+73
+00:03:45,820 --> 00:03:51,620
+Na razie buduje Ci taki w głowie duży obrazek, żeby wiedział, jak wygląda praca z projektami,
+
+74
+00:03:51,620 --> 00:03:54,820
+a później będziemy ten obrazek wypełniali sobie kolorami.

@@ -1,0 +1,375 @@
+1
+00:00:00,000 --> 00:00:05,540
+Bardzo często, kiedy pracowaliśmy z plikami tekstowymi, mieliśmy do czynienia z plikami CSV.
+
+2
+00:00:06,240 --> 00:00:14,540
+Pliki CSV to CS to jest comma separated, a V to jest value, czyli comma separated values.
+
+3
+00:00:14,679 --> 00:00:18,519
+To nie jest do końca prawda, ponieważ jak wiecie, już widzieliście też takie przykłady,
+
+4
+00:00:18,600 --> 00:00:23,539
+pliki CSV bardzo często też mają separator w postaci średnika,
+
+5
+00:00:24,060 --> 00:00:28,879
+natomiast czasem zdarza się też, że mamy w plikach CSV trochę dłuższy tekst
+
+6
+00:00:28,879 --> 00:00:32,280
+i co wtedy zrobić, jak taki plik sparsować prawidłowo?
+
+7
+00:00:32,420 --> 00:00:36,879
+Przecież może się okazać, że w tym dłuższym tekście też pojawi się średnik albo przecinek,
+
+8
+00:00:37,379 --> 00:00:40,739
+a jeżeli to jest ten znak rozdzielający poszczególne kolumny,
+
+9
+00:00:41,179 --> 00:00:44,060
+no to wprowadzamy się w tak zwane maliny.
+
+10
+00:00:44,439 --> 00:00:47,019
+Jak z tych malin wyjść? Pokazuję i objaśniam.
+
+11
+00:00:47,439 --> 00:00:50,560
+Jest taki moduł, który nazywa się CSV w Pythonie
+
+12
+00:00:50,560 --> 00:00:55,480
+i ten moduł jest troszeczkę lepiej przygotowany niż taki split, którego używaliśmy do tej pory.
+
+13
+00:00:55,480 --> 00:00:57,500
+Może jest odrobinę bardziej złożony,
+
+14
+00:00:57,679 --> 00:00:58,859
+ale po to jesteśmy tu na koniec.
+
+15
+00:00:58,880 --> 00:01:04,939
+W Excelu, kiedy importowaliśmy sobie pliki CSV,
+
+16
+00:01:05,140 --> 00:01:09,460
+tam też była taka opcja, żeby kwalifikator tekstu można było określić.
+
+17
+00:01:09,540 --> 00:01:10,780
+Najczęściej był to cudzysłów.
+
+18
+00:01:11,379 --> 00:01:15,800
+No i w tym naszym narzędziu też taka możliwość właśnie jest.
+
+19
+00:01:16,219 --> 00:01:22,579
+Więc dzięki temu będziemy mieli możliwość właśnie takiego bardziej pewnego odczytywania plików CSV.
+
+20
+00:01:23,200 --> 00:01:26,180
+Ponadto będziemy mieli też możliwość tworzenia plików CSV,
+
+21
+00:01:26,500 --> 00:01:28,859
+zapisywania ich w sposób dużo, dużo bardziej prosty.
+
+22
+00:01:28,879 --> 00:01:33,699
+I jest też jeszcze jedna rzecz, o której chciałem Ci powiedzieć a propos plików CSV.
+
+23
+00:01:33,899 --> 00:01:39,359
+A mianowicie, kiedy pracujemy z plikiem CSV, który jest takimi danymi pochodzącymi na przykład właśnie z Excela,
+
+24
+00:01:39,759 --> 00:01:44,379
+to jest bardzo taka popularna sprawa, że pierwszy wiersz, czyli ten wiersz na samej górze,
+
+25
+00:01:44,759 --> 00:01:45,879
+to jest wiersz tak zwany nagłówkowy.
+
+26
+00:01:46,959 --> 00:01:54,099
+Czyli w momencie, w którym w tym wierszu ukaże nam się imię, średnik, nazwisko, średnik, wiek, średnik, numer buta, średnik, coś jeszcze,
+
+27
+00:01:54,099 --> 00:01:58,819
+a pod spodem pojawią nam się dane, no to możliwe jest bardzo to,
+
+28
+00:01:58,879 --> 00:02:02,479
+że właśnie będziemy chcieli te dane przypisywać sobie do poszczególnych kolumn.
+
+29
+00:02:02,879 --> 00:02:09,900
+O ile łatwiej byłoby wtedy pracować z takimi danymi jako z słownikiem, a nie z listą.
+
+30
+00:02:10,819 --> 00:02:14,259
+I takie rzeczy omówimy sobie właśnie tu i teraz.
+
+31
+00:02:14,919 --> 00:02:21,180
+Po pierwsze, jeżeli chodzi o odczyt pliku CSV, to jakie zmiany nas spotkają?
+
+32
+00:02:21,780 --> 00:02:27,120
+Jeżeli chodzi o to, to mamy możliwość określenia takich wartości jak delimiter oraz quote char.
+
+33
+00:02:27,120 --> 00:02:28,859
+Delimiter to jest średni.
+
+34
+00:02:28,879 --> 00:02:31,719
+W naszym przypadku to tak, tutaj tak to sobie określiliśmy.
+
+35
+00:02:31,719 --> 00:02:35,560
+Natomiast quote char to jest cudzysłów.
+
+36
+00:02:35,560 --> 00:02:38,519
+I w ten sposób, kiedy przygotujemy sobie taki plik, zobacz,
+
+37
+00:02:38,519 --> 00:02:41,919
+with opens orders CSV as CSV file,
+
+38
+00:02:41,919 --> 00:02:44,919
+reader równa się CSV kropka reader,
+
+39
+00:02:44,919 --> 00:02:49,879
+to tutaj przekazujemy mu ten uchwyt do pliku,
+
+40
+00:02:49,879 --> 00:02:52,039
+nie treść, tylko uchwyt do pliku.
+
+41
+00:02:52,039 --> 00:02:55,439
+Mówimy mu co jest delimiterem, co jest quote charrem
+
+42
+00:02:55,439 --> 00:02:58,719
+i dzięki temu możemy przechodzić sobie już po tym readerze.
+
+43
+00:02:58,719 --> 00:03:03,439
+Zwróć uwagę na to, że nie inkrementujemy, nie iterujemy właściwie bardziej,
+
+44
+00:03:03,439 --> 00:03:08,520
+nie inkrementujemy po naszym CSV file, tylko po tym readerze.
+
+45
+00:03:08,520 --> 00:03:14,280
+Reader to jest taki obiekt, który właśnie nam pozwoli odczytać ładnie nasze dane.
+
+46
+00:03:14,280 --> 00:03:20,520
+Jeżeli okazałoby się, że gdzieś w ramach cudzysłowu pojawiłby się średnik w środku,
+
+47
+00:03:20,520 --> 00:03:25,479
+to ten średnik nie będzie traktowany jako to, co ma rozbijać nasze wyrażenia,
+
+48
+00:03:25,479 --> 00:03:28,599
+tylko będzie po prostu traktowany jako zwykły znak.
+
+49
+00:03:28,599 --> 00:03:29,919
+Znak interpunkcyjny.
+
+50
+00:03:29,919 --> 00:03:33,519
+A jak wygląda taki prosty zapis do pliku CSV?
+
+51
+00:03:33,519 --> 00:03:34,960
+Bardzo proszę.
+
+52
+00:03:34,960 --> 00:03:37,759
+Znowu importujemy sobie CSV, czy CSV,
+
+53
+00:03:37,759 --> 00:03:41,000
+znowu robimy with open, przekazujemy mu mode w,
+
+54
+00:03:41,000 --> 00:03:45,439
+no i robimy writer równa się CSV writer,
+
+55
+00:03:45,439 --> 00:03:49,519
+przekazujemy mu znowu ten plik, ponownie mówimy o delimiterze, quote charach,
+
+56
+00:03:49,519 --> 00:03:52,439
+wszystko tak jak do tej pory w readerze,
+
+57
+00:03:52,439 --> 00:03:58,400
+z tą różnicą, że obiekt, który tworzymy to nie jest CSV reader, tylko CSV writer,
+
+58
+00:03:58,599 --> 00:04:03,199
+to po pierwsze, a po drugie na writer wykonujemy write row.
+
+59
+00:04:03,199 --> 00:04:08,240
+I to od razu spowoduje, że kiedy przekażemy mu listę tych naszych elementów,
+
+60
+00:04:08,240 --> 00:04:14,199
+to on sobie ogarnie tę listę i wówczas po prostu doda nam nowy wpis poniżej.
+
+61
+00:04:14,199 --> 00:04:15,799
+Bardzo wygodne podejście.
+
+62
+00:04:15,799 --> 00:04:19,079
+Jeżeli natomiast chodzi o odczyt pliku CSV,
+
+63
+00:04:19,079 --> 00:04:24,000
+no to wtedy jeżeli mamy pierwszy wiersz jako wiersz nagłówkowy,
+
+64
+00:04:24,000 --> 00:04:27,480
+to możemy posłużyć się czymś, co nazywa się dict reader.
+
+65
+00:04:27,480 --> 00:04:31,840
+I wtedy wykonujemy reader równa się CSV dict reader,
+
+66
+00:04:31,840 --> 00:04:36,080
+CSV file znowu przekazujemy, tutaj nie ma zbyt dużego zaskoczenia,
+
+67
+00:04:36,080 --> 00:04:39,600
+delimiter, quote, char i wtedy for row in reader
+
+68
+00:04:39,600 --> 00:04:44,960
+i ten row już wtedy jak widzisz jest słownikiem, a nie jest listą.
+
+69
+00:04:44,960 --> 00:04:48,800
+Dzięki temu jest dużo wygodniej się do tych danych nam dobierać.
+
+70
+00:04:48,800 --> 00:04:51,480
+Zwróć tylko uwagę na to, aby twoja,
+
+71
+00:04:51,480 --> 00:04:56,080
+twój plik faktycznie posiadał ten wiersz nagłówkowy, to jest pierwsza ważna informacja,
+
+72
+00:04:56,079 --> 00:04:58,519
+a druga bardzo ważna informacja jest taka,
+
+73
+00:04:58,519 --> 00:05:03,519
+że musisz mieć też kolumny, które mają unikatowe nazwy.
+
+74
+00:05:03,519 --> 00:05:08,319
+Jeżeli nazwa kolumny się powtórzy, to niestety, ale sprowadzimy na siebie taki mały kataklizm.
+
+75
+00:05:08,319 --> 00:05:12,079
+Analogicznie można też zapisywać dane do słownika.
+
+76
+00:05:12,079 --> 00:05:18,279
+Zobacz, mamy with open order CSV mode w new line tego,
+
+77
+00:05:18,279 --> 00:05:23,119
+to jest CSV file i w ten sposób, jeżeli wykonamy field names,
+
+78
+00:05:23,119 --> 00:05:27,919
+to potrzebujemy mieć taką listę zawierającą nazwy kolumn,
+
+79
+00:05:27,919 --> 00:05:30,519
+które tutaj biorą udział w tej zabawie.
+
+80
+00:05:30,519 --> 00:05:31,959
+To jest lista.
+
+81
+00:05:31,959 --> 00:05:36,519
+Następnie wykonujemy writer, równa się CSV dict writer,
+
+82
+00:05:36,519 --> 00:05:40,119
+gdzie przekazujemy mu ten CSV file, ten uchwyt do pliku
+
+83
+00:05:40,119 --> 00:05:45,319
+oraz field names jako nazwy pól, którymi dysponujemy.
+
+84
+00:05:45,319 --> 00:05:47,759
+Dzięki temu możemy zapisywać sobie
+
+85
+00:05:47,759 --> 00:05:49,920
+writer, row też jako słownik.
+
+86
+00:05:49,920 --> 00:05:52,879
+Wcześniej używaliśmy listy, a teraz mamy słownik,
+
+87
+00:05:52,879 --> 00:05:55,920
+gdzie kluczami tego słownika są nazwy naszych kolumn,
+
+88
+00:05:55,920 --> 00:05:59,480
+pokrywające się z tym, co mamy w zmiennej field names.
+
+89
+00:05:59,480 --> 00:06:02,039
+Natomiast wartości to są konkretne wartości.
+
+90
+00:06:02,039 --> 00:06:07,439
+I zobacz, writer, write row, first name Kacper, last name Sieradziński
+
+91
+00:06:07,439 --> 00:06:13,480
+spowoduje, że pod tymi kolumnami po prostu dopiszą nam się takie dane.
+
+92
+00:06:13,480 --> 00:06:16,800
+Niezwykle wygodny sposób, bardzo serdecznie go Wam polecam.
+
+93
+00:06:16,800 --> 00:06:17,360
+Po prostu.
+
+94
+00:06:17,360 --> 00:06:19,360
+Dzięki temu pracuje się wygodniej.

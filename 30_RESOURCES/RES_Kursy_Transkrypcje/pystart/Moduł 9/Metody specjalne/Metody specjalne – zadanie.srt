@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:02,399
+A zadanie to wygląda następująco.
+
+2
+00:00:03,120 --> 00:00:11,359
+Dany jest obiekt class length unit, czyli mamy jakąś tam wartość reprezentującą długość.
+
+3
+00:00:11,939 --> 00:00:18,000
+Ta wartość jest podana w milimetrach, więc jeżeli chcemy zamienić te milimetry na centymetry,
+
+4
+00:00:18,000 --> 00:00:20,500
+to musimy wykonać tę wartość podzieloną przez 10.
+
+5
+00:00:21,039 --> 00:00:24,560
+Jeżeli chcemy zrobić na metry, to tę wartość przez 10 i przez 100.
+
+6
+00:00:25,339 --> 00:00:29,820
+I mamy przygotować specjalne metody umożliwiające dodawanie obiektów do siebie,
+
+7
+00:00:30,120 --> 00:00:35,759
+tak żeby w wyniku był zwrócony nowy obiekt reprezentujący sumę tych długości,
+
+8
+00:00:36,380 --> 00:00:39,859
+odejmowanie ich oraz porównywanie ich ze sobą.
+
+9
+00:00:40,799 --> 00:00:42,960
+To co? Trochę trzeba będzie popisać.
+
+10
+00:00:43,039 --> 00:00:45,780
+Myślę, że podobnie jak z pudełkami.
+
+11
+00:00:45,780 --> 00:00:47,260
+Do zobaczenia.

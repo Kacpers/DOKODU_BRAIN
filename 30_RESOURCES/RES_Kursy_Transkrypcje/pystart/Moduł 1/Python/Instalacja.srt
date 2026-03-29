@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:04,000
+Czyli pobieram Python jak mówiłem wersja 3.11
+
+2
+00:00:04,000 --> 00:00:08,000
+Następnie go włączam
+
+3
+00:00:08,000 --> 00:00:12,000
+Chcę go zainstalować jako administrator więc robię uruchom
+
+4
+00:00:12,000 --> 00:00:16,000
+Tutaj z racji tego, że już miałem go zainstalowanego po prostu wybrałem opcję install
+
+5
+00:00:16,000 --> 00:00:22,000
+Natomiast te ekrany, które tutaj już widzisz możesz po prostu przeklikać jako przycisk next
+
+6
+00:00:22,000 --> 00:00:26,000
+I tu jest ta bardzo ważna informacja, żeby mieć w tym miejscu zaznaczone
+
+7
+00:00:26,000 --> 00:00:30,000
+Add Python to environment variables
+
+8
+00:00:30,000 --> 00:00:34,000
+Tu możesz te pozostałe rzeczy zaznaczyć w ramach swoich potrzeb
+
+9
+00:00:34,000 --> 00:00:38,000
+Tak naprawdę one nam nie będą jakoś szczególnie potrzebne
+
+10
+00:00:38,000 --> 00:00:42,000
+Ważniejsze jest dla nas, żeby te trzy rzeczy były tutaj zaznaczone
+
+11
+00:00:42,000 --> 00:00:46,000
+Robimy install, no i po chwili Python powinien być zainstalowany

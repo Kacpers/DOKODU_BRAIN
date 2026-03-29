@@ -15,6 +15,7 @@ css: style.css
 
 
 ---
+transition: fade
 layout: cover
 ---
 
@@ -54,6 +55,7 @@ Pokaż gotowy workflow działający na ekranie (30 sekund preview). "Tyle zbuduj
 
 
 ---
+transition: fade
 layout: two-cols-header
 ---
 
@@ -128,6 +130,7 @@ volumes:
 
 
 ---
+transition: fade
 ---
 
 # Interfejs n8n — mapa
@@ -206,6 +209,16 @@ volumes:
 </div>
 
 
+<div style="margin-top:0.8rem">
+  <div style="background:#2D3748;border-radius:8px 8px 0 0;padding:6px 12px;display:flex;align-items:center;gap:6px">
+    <div style="width:10px;height:10px;border-radius:50%;background:#EF4444"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:#22C55E"></div>
+    <span style="margin-left:8px;font-size:0.6rem;color:#94A3B8">n8n.dokodu.it</span>
+  </div>
+  <img src="/screenshots/01_canvas_pusty.png" style="max-height:280px;width:100%;object-fit:contain;border-radius:0 0 8px 8px;box-shadow:0 4px 24px rgba(0,0,0,0.35);display:block" />
+</div>
+
 <!--
 "Trzy przyciski w prawym górnym rogu to będzie twoje życie: Test — sprawdź czy działa, Save — zapisz, Activate — włącz produkcję."
 -->
@@ -240,6 +253,16 @@ volumes:
 
 </div>
 
+<div style="margin-top:0.8rem">
+  <div style="background:#2D3748;border-radius:8px 8px 0 0;padding:6px 12px;display:flex;align-items:center;gap:6px">
+    <div style="width:10px;height:10px;border-radius:50%;background:#EF4444"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:#22C55E"></div>
+    <span style="margin-left:8px;font-size:0.6rem;color:#94A3B8">n8n.dokodu.it</span>
+  </div>
+  <img src="/screenshots/02_node_library.png" style="max-height:280px;width:100%;object-fit:contain;border-radius:0 0 8px 8px;box-shadow:0 4px 24px rgba(0,0,0,0.35);display:block" />
+</div>
+
 <!--
 "Każdy node to pudełko z wejściem i wyjściem. Co wchodzi, to przetwarza, i wypluwa dalej. Jak maszynka do mielenia — wkładasz mięso, wychodzi mielone."
 -->
@@ -270,6 +293,7 @@ volumes:
 
 
 ---
+transition: fade
 ---
 
 # Triggery — kiedy workflow startuje
@@ -312,6 +336,16 @@ curl -X POST https://twoj-n8n.com/webhook/moj-webhook \
   -H "Content-Type: application/json" \
   -d '{"email":"test@test.pl","name":"Test"}'
 ```
+
+<div style="margin-top:0.8rem">
+  <div style="background:#2D3748;border-radius:8px 8px 0 0;padding:6px 12px;display:flex;align-items:center;gap:6px">
+    <div style="width:10px;height:10px;border-radius:50%;background:#EF4444"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>
+    <div style="width:10px;height:10px;border-radius:50%;background:#22C55E"></div>
+    <span style="margin-left:8px;font-size:0.6rem;color:#94A3B8">n8n.dokodu.it</span>
+  </div>
+  <img src="/screenshots/03_webhook_trigger.png" style="max-height:280px;width:100%;object-fit:contain;border-radius:0 0 8px 8px;box-shadow:0 4px 24px rgba(0,0,0,0.35);display:block" />
+</div>
 
 <!--
 "Klasyczny błąd numer jeden: testujesz na Production URL albo odwrotnie — masz Activated workflow ale używasz Test URL. Zapamiętaj: Test URL = klikasz przycisk. Prod URL = workflow jest zielony."
@@ -410,6 +444,7 @@ W Expressions: `{{ $json.data.email }}`
 
 
 ---
+transition: fade
 ---
 
 # IF Node — logika warunkowa
@@ -438,6 +473,7 @@ W Expressions: `{{ $json.data.email }}`
 
 
 ---
+transition: fade
 ---
 
 # Switch Node — wielokrotne rozgałęzienie
@@ -589,6 +625,7 @@ n8n Canvas
 
 
 ---
+transition: fade
 ---
 
 # Flow error handling — diagram
@@ -704,6 +741,7 @@ NORMALNY FLOW:          PIN DATA FLOW:
 
 
 ---
+transition: fade
 ---
 
 # Lead capture system — architektura
@@ -903,6 +941,7 @@ environment:
 
 
 ---
+transition: fade
 layout: two-cols-header
 ---
 
@@ -947,6 +986,7 @@ layout: two-cols-header
 
 
 ---
+class: layout-exercise
 ---
 
 # Zadanie domowe
@@ -993,6 +1033,7 @@ layout: two-cols-header
 
 
 ---
+class: layout-takeaway
 ---
 
 # Podsumowanie tygodnia 1
@@ -1016,3 +1057,93 @@ layout: two-cols-header
 <!--
 "To nie jest mały krok. Lead Capture jest prostym przykładem ale wzorzec — webhook, walidacja, deduplikacja, akcja, powiadomienie, error handling — zobaczysz go w każdym poważnym projekcie n8n. Gratulacje."
 -->
+
+
+---
+class: layout-exercise
+---
+
+# Ćwiczenia praktyczne
+
+Czas na praktykę! Otwórz n8n i zrób ćwiczenia samodzielnie.
+
+
+---
+class: layout-exercise
+---
+
+# Ćwiczenie 1 — ping-pong
+
+**Czas:** ok. 20 minut
+**Poziom:** Starter
+**Czego się uczysz:** Webhook Trigger, Respond to Webhook node, wyrażenia `{{ }}`, podstawowa manipulacja JSON
+
+Zbuduj workflow, który przyjmuje zapytanie HTTP z JSON-em i zwraca zmodyfikowaną odpowiedź — z dodanym polem i zamienioną wartością. Klasyczny "ping-pong" — wysyłasz, dostajesz echo z przeróbką.
+
+## Kroki
+
+<v-clicks>
+
+- Stwórz nowy workflow
+- Dodaj Webhook Trigger
+- Wyślij testowy request
+- Dodaj Set node (modyfikacja danych)
+- Dodaj Respond to Webhook node
+- Przetestuj cały flow
+
+</v-clicks>
+
+
+
+---
+class: layout-exercise
+---
+
+# Ćwiczenie 2 — lead capture system
+
+**Czas:** ok. 45 minut
+**Poziom:** Podstawowy
+**Czego się uczysz:** Pełny pipeline produkcyjny — walidacja danych, Google Sheets, Gmail, Slack, obsługa błędów, Execution Log
+
+Zbuduj kompletny system przechwytywania leadów: formularz wysyła dane → n8n waliduje → zapisuje do Google Sheets → wysyła email powitalny do leada → pinguje Slack.
+
+## Kroki
+- Webhook Trigger
+- Walidacja emaila (IF node)
+- Sprawdzenie wymaganych pól (IF node #2)
+- Normalizacja danych (Set node)
+- Zapis do Google Sheets
+- Email powitalny (Gmail node)
+- Powiadomienie Slack
+- Odpowiedź sukces (Respond to Webhook)
+- Test end-to-end
+
+## Checkpointy
+- Webhook przyjął request i widać dane w Output (zielony node)
+- IF walidacja emaila przepuściła poprawny lead gałęzią `true`
+- Wyślij lead bez emaila — powinieneś dostać odpowiedź 400
+- Wyślij lead bez `first_name` — powinieneś dostać 422
+- W Google Sheets pojawił się nowy wiersz z poprawnymi danymi
+- Na podany email przyszła wiadomość powitalna (sprawdź Spam jeśli nie ma w Inbox)
+- Na kanale Slack widać powiadomienie
+- Curl zwrócił `{"status": "ok", "message": "Lead received"}`
+
+
+---
+class: layout-exercise
+---
+
+# Zadanie domowe — filtr antyspamowy
+
+
+## Checkpointy
+
+<v-clicks>
+
+- Przyjąć email z dozwolonej domeny i zapisać do Sheets (workflow działa normalnie)
+- Odrzucić email `test@mailinator.com` z odpowiedzią HTTP 403
+- Odrzucić email `test@guerrillamail.com` z odpowiedzią HTTP 403
+- Przepuszczać wszystkie inne domeny bez zmian
+
+</v-clicks>
+

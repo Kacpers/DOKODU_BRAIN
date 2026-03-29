@@ -1,0 +1,439 @@
+1
+00:00:00,520 --> 00:00:04,660
+Zadanie piąte rozpoczyna już serię tych zadań takich trochę bardziej rozbudowanych
+
+2
+00:00:04,660 --> 00:00:07,740
+i mamy napisać program, który będzie wykonywał pętlę while,
+
+3
+00:00:07,860 --> 00:00:12,040
+która będzie pytać użytkownika o nazwę miasta oraz temperaturę w stopniach Celsjusza.
+
+4
+00:00:12,640 --> 00:00:15,179
+Program będzie przechowywał te informacje w słowniku,
+
+5
+00:00:15,339 --> 00:00:17,780
+gdzie kluczem będzie nazwa miasta, a wartością temperatura.
+
+6
+00:00:18,460 --> 00:00:23,620
+OK, i pętla będzie kontynuowana, dopóki użytkownik nie wprowadzi hasła koniec.
+
+7
+00:00:24,039 --> 00:00:25,740
+No to co, pójdziemy walorusem?
+
+8
+00:00:26,519 --> 00:00:27,160
+While.
+
+9
+00:00:27,160 --> 00:00:33,799
+No i potrzebujemy teraz mieć tak naprawdę, no tak, nazwa miasta,
+
+10
+00:00:33,939 --> 00:00:40,740
+która nie może być słowem koniec, czyli city, dwukropek, równa się input,
+
+11
+00:00:42,500 --> 00:00:46,960
+podaj nazwę miasta lub koniec, aby zakończyć.
+
+12
+00:00:48,140 --> 00:00:51,460
+I chcemy działać tak długo, jak długo to, co sobie wprowadziliśmy,
+
+13
+00:00:51,460 --> 00:00:56,500
+nie jest równe, koniec, dwukropek.
+
+14
+00:00:56,500 --> 00:00:58,799
+To da nam nazwę miasta.
+
+15
+00:00:59,200 --> 00:01:07,079
+Następnie potrzebujemy mieć temperaturę, czyli temperature równa się int input,
+
+16
+00:01:07,859 --> 00:01:14,539
+podaj temperaturę dla miasta i możemy wykorzystać te nazwy miasta z góry,
+
+17
+00:01:14,640 --> 00:01:19,060
+żeby było tak ładnie, jak ktoś pisze głogów, to podaj temperaturę dla miasta głogów.
+
+18
+00:01:19,460 --> 00:01:22,039
+Tu niestety oczywiście odmiany nie wchodzą w grę na chwilę obecną,
+
+19
+00:01:22,039 --> 00:01:25,460
+trzeba byłoby mieć jakiś słownik, który by posiadał takie odmiany,
+
+20
+00:01:25,519 --> 00:01:26,039
+albo kombinować.
+
+21
+00:01:26,500 --> 00:01:29,500
+Możemy też kombinować z końcówką fleksyjną, żeby ją zamieniać na coś innego.
+
+22
+00:01:29,500 --> 00:01:33,500
+Czyli mamy city temperature, te dwie rzeczy już są dostępne
+
+23
+00:01:33,500 --> 00:01:38,500
+i chcemy to przechowywać w słowniku, więc potrzebujemy mieć jakieś measurements.
+
+24
+00:01:39,460 --> 00:01:47,460
+Równa się, pusta lista, pusty słownik, no i measurements od city równa się temperature.
+
+25
+00:01:49,460 --> 00:01:53,460
+I na tym etapie myślę, że mogę sobie spokojnie ten kod sprawdzić, zobaczyć czy on działa.
+
+26
+00:01:53,460 --> 00:01:55,460
+Wpiszę python, nie.
+
+27
+00:01:55,460 --> 00:01:56,460
+Chuj.
+
+28
+00:01:56,500 --> 00:02:01,459
+Wpiszę python, spacja 5, while temperatura.
+
+29
+00:02:01,459 --> 00:02:11,460
+No i potrzebuję wpisać Gdynia, 3 stopnie Gdańsk, 2 stopnie Warszawa, 1 stopień, koniec.
+
+30
+00:02:13,460 --> 00:02:15,460
+No i cóż, nie wyświetliłem measurements.
+
+31
+00:02:17,460 --> 00:02:19,460
+To migiem raz jeszcze robimy to samo.
+
+32
+00:02:21,460 --> 00:02:22,460
+No to sprawdźmy.
+
+33
+00:02:22,460 --> 00:02:24,460
+Gdynia, 3.
+
+34
+00:02:24,460 --> 00:02:25,460
+Gdańsk, 3.
+
+35
+00:02:25,460 --> 00:02:27,420
+Gdańsk, 2.
+
+36
+00:02:27,420 --> 00:02:30,420
+Warszawa, 1.
+
+37
+00:02:30,420 --> 00:02:32,420
+Koniec.
+
+38
+00:02:32,420 --> 00:02:34,420
+I mamy Gdynia, Gdańsk, Warszawa.
+
+39
+00:02:34,420 --> 00:02:38,420
+Czyli słownik utworzył nam się bardzo ładnie, bardzo poprawnie.
+
+40
+00:02:38,420 --> 00:02:46,420
+Moglibyśmy też od razu zamiast dodawać tę jedną nową zmienną od razu napisać measurements od city równa się int.
+
+41
+00:02:46,420 --> 00:02:52,420
+To też wtedy jedna dodatkowa linijka po prostu nam tutaj przepadnie.
+
+42
+00:02:52,420 --> 00:02:54,420
+No i wtedy pętla będzie korzystać z tego.
+
+43
+00:02:54,419 --> 00:02:56,379
+Pętla będzie kontynuowana, to zrobiliśmy.
+
+44
+00:02:56,379 --> 00:03:04,379
+Po zakończeniu pętli program powinien wyświetlić średnią temperaturę dla wszystkich miast oraz nazwę miasta o najwyższej i najniższej temperaturze.
+
+45
+00:03:05,379 --> 00:03:09,379
+To teraz tak, jeżeli chodzi o średnią temperaturę, to to jest słownik.
+
+46
+00:03:10,379 --> 00:03:13,379
+Nie możemy więc pobierać tych wartości tak bezpośrednio.
+
+47
+00:03:13,379 --> 00:03:17,379
+Musimy odnieść się do wartości, czyli mamy klucze i wartości.
+
+48
+00:03:17,379 --> 00:03:19,379
+Czyli measurements.values.
+
+49
+00:03:20,379 --> 00:03:24,379
+Jak widać ta wiedza, którą gdzieś tam przebyliśmy już, u której się uczyliśmy.
+
+50
+00:03:24,419 --> 00:03:27,379
+W ramach słowników ona tutaj nam się cały czas powtarza.
+
+51
+00:03:27,379 --> 00:03:29,379
+I nas interesuje średnia.
+
+52
+00:03:29,379 --> 00:03:32,379
+Czyli tak naprawdę możemy policzyć sumę tych wartości.
+
+53
+00:03:33,379 --> 00:03:40,379
+No i podzielić tą sumę przez ilość tych miast.
+
+54
+00:03:40,379 --> 00:03:50,379
+Czyli average równa się print średnia temperatura wynosi.
+
+55
+00:03:54,419 --> 00:03:57,379
+Average.
+
+56
+00:03:57,379 --> 00:04:00,379
+Jak widać zadziałało.
+
+57
+00:04:00,379 --> 00:04:03,379
+No i potrzebujemy jeszcze mieć.
+
+58
+00:04:03,379 --> 00:04:04,379
+Co?
+
+59
+00:04:04,379 --> 00:04:07,379
+Jeszcze potrzebujemy mieć najwyższą, najniższą temperaturę.
+
+60
+00:04:07,379 --> 00:04:13,379
+Czyli tak naprawdę będziemy chcieli znaleźć wartość na podstawie wartości.
+
+61
+00:04:13,379 --> 00:04:15,379
+Znaleźć miasto na podstawie wartości.
+
+62
+00:04:15,379 --> 00:04:17,379
+Największa i najmniejsza.
+
+63
+00:04:17,379 --> 00:04:22,379
+No to max.measurements.values.
+
+64
+00:04:22,379 --> 00:04:24,379
+I min.measurements.values.
+
+65
+00:04:24,420 --> 00:04:29,379
+To jest minimalna i maksymalna.
+
+66
+00:04:29,379 --> 00:04:32,379
+I teraz trzeba będzie przejść po wszystkich miastach.
+
+67
+00:04:32,379 --> 00:04:35,379
+I sprawdzić, które z miast posiadają taką temperaturę.
+
+68
+00:04:35,379 --> 00:04:40,379
+Czyli highest temperature.
+
+69
+00:04:40,379 --> 00:04:43,379
+To jest jakaś lista.
+
+70
+00:04:43,379 --> 00:04:45,379
+Lowest temperature.
+
+71
+00:04:45,379 --> 00:04:48,379
+To jest jakaś lista.
+
+72
+00:04:48,379 --> 00:04:54,379
+No i for city in measurements.
+
+73
+00:04:54,379 --> 00:04:55,379
+Czy city przecinek.
+
+74
+00:04:55,379 --> 00:04:56,379
+Może zróbmy tak.
+
+75
+00:04:56,379 --> 00:05:02,379
+Temperature in measurements.values.
+
+76
+00:05:02,379 --> 00:05:08,379
+Możemy zrobić tak.
+
+77
+00:05:08,379 --> 00:05:09,379
+No i wtedy.
+
+78
+00:05:09,379 --> 00:05:22,379
+If temperature równa się maximum z measurements.values.
+
+79
+00:05:22,379 --> 00:05:23,379
+No i wtedy.
+
+80
+00:05:23,379 --> 00:05:24,379
+No i wtedy.
+
+81
+00:05:24,379 --> 00:05:31,379
+To znaczy, że temperatura w tym konkretnym mieście jest taka sama jak największa temperatura we wszystkich danych, które mamy w słowniku.
+
+82
+00:05:31,379 --> 00:05:33,379
+I wtedy możemy wykonać.
+
+83
+00:05:33,379 --> 00:05:35,379
+Highest temperature.
+
+84
+00:05:35,379 --> 00:05:38,379
+Upend city.
+
+85
+00:05:38,379 --> 00:05:42,379
+I to samo musimy zrobić dla najniższej temperatury.
+
+86
+00:05:42,379 --> 00:05:46,379
+Czyli if temperature to jest min od measurements.values.
+
+87
+00:05:46,379 --> 00:05:48,379
+To minimal.
+
+88
+00:05:48,379 --> 00:05:52,379
+To jest lowest temperature upend city.
+
+89
+00:05:52,379 --> 00:05:55,379
+No i w ten sposób będziemy mieli już też te informacje.
+
+90
+00:05:55,379 --> 00:05:58,379
+Czyli print highest temperature.
+
+91
+00:05:58,379 --> 00:06:01,379
+Print lowest temperature.
+
+92
+00:06:01,379 --> 00:06:05,379
+No i możemy sobie napisać najwyższa temperatura.
+
+93
+00:06:05,379 --> 00:06:09,379
+I najniższa temperatura.
+
+94
+00:06:09,379 --> 00:06:11,379
+Ja tu zrobię cięcie.
+
+95
+00:06:11,379 --> 00:06:17,379
+I spotkamy się za moment jak już wprowadzę tam z 6-7 miast z różnymi wartościami temperatury.
+
+96
+00:06:17,379 --> 00:06:18,379
+Szybka poprawka.
+
+97
+00:06:18,379 --> 00:06:21,379
+Tu oczywiście nie values tylko items.
+
+98
+00:06:21,379 --> 00:06:22,379
+Brawo ja.
+
+99
+00:06:22,379 --> 00:06:23,379
+Jeszcze jedno cięcie.
+
+100
+00:06:23,379 --> 00:06:24,379
+No i zobaczcie.
+
+101
+00:06:24,379 --> 00:06:29,379
+Wprowadziłem sobie Gdynię, Gdańsk, Warszawę, Zakopane, Lublin i koniec.
+
+102
+00:06:29,379 --> 00:06:31,379
+No i tu były różne temperatury.
+
+103
+00:06:31,379 --> 00:06:34,379
+Dostałem informację, że średnia temperatura 25 stopni.
+
+104
+00:06:34,379 --> 00:06:36,379
+No i najwyższa była w Gdyni w Warszawie.
+
+105
+00:06:36,379 --> 00:06:38,379
+Czyli w Gdyni 30, w Warszawie 30.
+
+106
+00:06:38,379 --> 00:06:41,379
+I najniższa w Zakopanem i w Lublinie.
+
+107
+00:06:41,379 --> 00:06:44,379
+No bo 18 i 18.
+
+108
+00:06:44,379 --> 00:06:45,379
+Skoro działa.
+
+109
+00:06:45,379 --> 00:06:48,379
+To mamy zadanie z głowy.
+
+110
+00:06:48,379 --> 00:06:50,379
+Zapraszam was do następnego.

@@ -1,0 +1,387 @@
+1
+00:00:00,000 --> 00:00:09,380
+Co to jest? Od tego musimy zacząć. To jest matrioszka. Co to jest matrioszka?
+
+2
+00:00:09,900 --> 00:00:17,559
+Nie wiem, czy młodsi widzowie, tutaj kursanci, wiedzą o co chodzi, ale kiedyś bardzo popularne w polskich domach były tego typu egzemplarze
+
+3
+00:00:17,559 --> 00:00:23,679
+i była to taka lalka, która charakteryzowała się tym, że jak się ją otworzyło, to w środku była druga lalka,
+
+4
+00:00:23,820 --> 00:00:28,560
+którą jak się otworzyło, to w środku była trzecia lalka, jak się ją otworzyło, to w środku była czwarta lalka
+
+5
+00:00:28,559 --> 00:00:33,739
+i na końcu była taka mała, już nieotwieralna. Chociaż co niektórzy pewnie próbowali ją otwierać,
+
+6
+00:00:33,780 --> 00:00:37,640
+ale ona już była robiona z pełnego drewna i otworzyć jej się nie dało.
+
+7
+00:00:37,739 --> 00:00:42,700
+Najczęściej malowane właśnie w ten sposób. Tu jeszcze widać takie przecięcie na środku,
+
+8
+00:00:42,820 --> 00:00:45,960
+które właśnie służyło do tego, żeby tę matrioszkę otworzyć.
+
+9
+00:00:45,960 --> 00:00:50,320
+W niektórych domach u mnie tak było, że w matrioszkach były przechowywane przybory do szycia.
+
+10
+00:00:50,399 --> 00:00:56,019
+Nie wiem dlaczego tak było, ale ta największa zawsze była przyborami do szycia, a te mniejsze były dalej do zabawy.
+
+11
+00:00:56,780 --> 00:00:58,259
+To jest taka forma zabawki.
+
+12
+00:00:58,560 --> 00:01:04,299
+Dlaczego o tym mówię? Ponieważ matrioszki są żywym przykładem tego, jak działa rekurencja.
+
+13
+00:01:05,420 --> 00:01:07,460
+Właśnie, tak wygląda matrioszka otworzona, jak widać.
+
+14
+00:01:07,600 --> 00:01:11,359
+Każdą można po kolei otworzyć i w środku są takie mniejsze lalki.
+
+15
+00:01:11,740 --> 00:01:14,100
+Wtedy, jak się tym bawiłem, wydawało mi się to normalne.
+
+16
+00:01:14,100 --> 00:01:15,960
+Teraz jak na to patrzę, to nawet trochę to jest upiorne.
+
+17
+00:01:16,540 --> 00:01:18,340
+I rekurencja właśnie na tym polega.
+
+18
+00:01:18,599 --> 00:01:25,879
+Czyli rekurencja to jest taka czynność, którą wykonujemy w ten sam sposób, wchodząc coraz głębiej i głębiej.
+
+19
+00:01:26,240 --> 00:01:28,500
+Czyli tak naprawdę, jakbyśmy chcieli opowiedzieć sobie,
+
+20
+00:01:28,560 --> 00:01:32,299
+jak otworzyć matrioszkę rekurencyjnie, to wyglądałoby to mniej więcej tak.
+
+21
+00:01:32,859 --> 00:01:38,060
+Otwórz przedmiot, sprawdź, czy w środku jest przedmiot, który możesz otworzyć.
+
+22
+00:01:38,299 --> 00:01:39,620
+Jeżeli tak, to otwórz przedmiot.
+
+23
+00:01:40,040 --> 00:01:41,040
+I na tym się zatrzymajmy.
+
+24
+00:01:41,460 --> 00:01:42,939
+Zobacz, jakie kroki wykonaliśmy.
+
+25
+00:01:43,719 --> 00:01:44,800
+Otwórz przedmiot.
+
+26
+00:01:46,280 --> 00:01:50,400
+Jeżeli w środku jest przedmiot, który możesz otworzyć, otwórz przedmiot.
+
+27
+00:01:51,280 --> 00:01:57,640
+Jeżeli byśmy chcieli iść dalej, to okazałoby się, że tak naprawdę tę czynność możemy wykonywać
+
+28
+00:01:57,640 --> 00:01:58,540
+dla poszczególnych osób.
+
+29
+00:01:58,560 --> 00:02:00,579
+Dla poszczególnych matrioszek, dla poszczególnych tych lalek.
+
+30
+00:02:01,700 --> 00:02:02,260
+Nadal.
+
+31
+00:02:02,719 --> 00:02:06,700
+Aż do momentu, w którym okaże się, że nie da się otworzyć przedmiotu,
+
+32
+00:02:06,740 --> 00:02:12,140
+z tego względu, że ta lalka już nie jest otwieralna, więc nie da się przedmiotu otworzyć.
+
+33
+00:02:12,520 --> 00:02:15,180
+I właśnie tak działa to w programowaniu.
+
+34
+00:02:15,800 --> 00:02:19,960
+Zawsze rekurencja jest to funkcja, która wywołuje samą siebie.
+
+35
+00:02:20,599 --> 00:02:25,580
+Czyli po prostu wewnątrz tej funkcji jest jeszcze ponowne wykonanie tej samej funkcji.
+
+36
+00:02:25,580 --> 00:02:28,140
+Natomiast zawsze musi być taki jakiś,
+
+37
+00:02:28,560 --> 00:02:33,479
+określenie, które będzie powodowało, w którym momencie ta karuzela ma się zatrzymać.
+
+38
+00:02:33,740 --> 00:02:34,159
+No właśnie.
+
+39
+00:02:34,520 --> 00:02:38,740
+I tu jest przykład tego algorytmu, dokładnie takiego samego, jak opowiedziałem,
+
+40
+00:02:38,879 --> 00:02:39,759
+tylko w formie tekstu.
+
+41
+00:02:39,819 --> 00:02:44,300
+Kto jest bardziej wzrokowy, niesłuchowy, może zobaczyć, że właśnie jest to zapętlone.
+
+42
+00:02:44,759 --> 00:02:47,520
+Czyli weź lalkę do ręki, sprawdź, czy możesz ją otworzyć, jeśli nie, to zakończ.
+
+43
+00:02:47,560 --> 00:02:50,280
+Jeśli tak, to weź lalkę do ręki, sprawdź, czy możesz ją otworzyć, jeśli nie, to zakończ.
+
+44
+00:02:50,360 --> 00:02:51,300
+I tak dalej, i tak dalej.
+
+45
+00:02:51,740 --> 00:02:53,920
+Jest to czynność, która się powiela.
+
+46
+00:02:53,920 --> 00:02:58,480
+W niektórych językach programowania, to jest taka ciekawostka, nie istnieją pętle.
+
+47
+00:02:59,080 --> 00:03:05,520
+Wszystko, co chcesz wykonywać za pomocą pętli, tak naprawdę musisz wykonywać za pomocą rekurencji.
+
+48
+00:03:06,879 --> 00:03:08,039
+Gdzie się to przydaje?
+
+49
+00:03:08,539 --> 00:03:09,920
+Szukanie pliku po nazwie.
+
+50
+00:03:10,219 --> 00:03:13,920
+Ogólnie rzecz biorąc, przeszukiwanie dysku i prace z plikami zawsze są rekurencyjne,
+
+51
+00:03:14,580 --> 00:03:18,259
+przez to, że mamy katalogi, w katalogach mogą być pliki, ale mogą być też katalogi.
+
+52
+00:03:18,620 --> 00:03:20,960
+W katalogach mogą być pliki, ale mogą być też katalogi.
+
+53
+00:03:21,599 --> 00:03:25,159
+Specjalowo to robię, żeby widać było, że faktycznie jest to rekurencyjne.
+
+54
+00:03:26,159 --> 00:03:28,480
+Indeksowanie plików, kopiowanie folderów na przykład.
+
+55
+00:03:28,560 --> 00:03:32,199
+Jeżeli kopiujemy sobie folder czy zawartością z jednego miejsca na drugie
+
+56
+00:03:32,659 --> 00:03:34,620
+i tam jest ta zawartość bardzo rozbudowana,
+
+57
+00:03:34,879 --> 00:03:39,800
+to możliwe, że zwróciliście uwagę na to, że kiedy zerkamy sobie na to miejsce docelowe,
+
+58
+00:03:40,159 --> 00:03:46,319
+to on najpierw pokazuje nam folder, potem folder, folder, folder i pierwszy plik w pierwszym folderze.
+
+59
+00:03:46,740 --> 00:03:52,699
+I on wchodzi najgłębiej, a dopiero później wychodzi i robi to dla poszczególnych katalogów.
+
+60
+00:03:53,099 --> 00:03:55,699
+I to właśnie wynika z tego, że kopiowanie jest rekurencyjne.
+
+61
+00:03:56,080 --> 00:03:58,539
+Czyli wejdź tak daleko, aż napotkasz plik i przenoś plik.
+
+62
+00:03:58,759 --> 00:04:02,159
+A jeżeli coś jest folderem, to po prostu twórz foldery w nowym miejscu.
+
+63
+00:04:03,159 --> 00:04:07,080
+Innym zadaniem rekurencyjnym jest na przykład praca z grafami.
+
+64
+00:04:07,379 --> 00:04:13,560
+My tutaj na kursie nie będziemy pracować z grafami, ale są też całe bazy grafowe, które też wymagają takiego myślenia rekurencyjnego.
+
+65
+00:04:13,960 --> 00:04:16,160
+Czyli chociażby drzewo genealogiczne.
+
+66
+00:04:16,439 --> 00:04:25,060
+Jeżeli byśmy chcieli sprawdzić, nie wiem, policzyć wszystkich potomków, to musimy zobaczyć, wejść sobie do jakiegoś tam na gałąź drzewa, zobaczyć czy ma dzieci.
+
+67
+00:04:25,060 --> 00:04:28,319
+Jeżeli tak, to je policz i sprawdź czy pierwsze z dzieci ma dzieci.
+
+68
+00:04:28,560 --> 00:04:30,420
+Jeżeli tak, to je policz i sprawdź czy pierwsze z dzieci ma dzieci.
+
+69
+00:04:30,519 --> 00:04:37,399
+Jeżeli tak, to je policz i tak dojdziemy aż do momentu, w którym ktoś nie będzie miał dzieci i znowu będziemy przechodzili przez kolejne osoby.
+
+70
+00:04:37,939 --> 00:04:45,180
+Tak samo na przykład jeżeli chcielibyście policzyć wszystkie produkty, które macie w sklepie internetowym przypięte do poszczególnego menu.
+
+71
+00:04:45,579 --> 00:04:54,500
+Menu zakładające, że mamy ogrodnicze, do trawnika, grabie i tam jakieś metalowe i dopiero wtedy grabie.
+
+72
+00:04:54,500 --> 00:04:58,019
+To też zakłada, że ilość tych kategorii może być bardzo głęboka.
+
+73
+00:04:58,560 --> 00:05:00,540
+No i też zakłada pewną rekurencję.
+
+74
+00:05:01,600 --> 00:05:04,220
+No właśnie i tu jest to o czym mówiłem.
+
+75
+00:05:05,600 --> 00:05:13,199
+Co może być rekurencyjne również, czy też co jest rekurencyjne, to na przykład jest to też liczenie silni.
+
+76
+00:05:13,540 --> 00:05:20,319
+I zobacz, tu mamy taką sytuację, że 5 silnia, no to jest 1 razy 2 razy 3 razy 4 razy 5.
+
+77
+00:05:20,759 --> 00:05:23,920
+Ja celowo odwróciłem to, żeby Ci coś pokazać.
+
+78
+00:05:24,160 --> 00:05:27,100
+4 silnia to jest 4 razy 3 razy 2 razy 1.
+
+79
+00:05:27,100 --> 00:05:29,800
+3 silnia to jest 3 razy 2 razy 1.
+
+80
+00:05:29,980 --> 00:05:31,939
+2 silnia i tak dalej i tak dalej.
+
+81
+00:05:32,360 --> 00:05:36,660
+Aż dojdziemy do tego ograniczenia, czyli 0 silnia to jest 1.
+
+82
+00:05:37,180 --> 00:05:38,180
+Dlaczego o tym mówię?
+
+83
+00:05:38,620 --> 00:05:46,760
+Ponieważ to co napisaliśmy sobie po lewej stronie możemy uprościć do takiej postaci, że 5 silnia to jest tak naprawdę 5 razy 4 silnia.
+
+84
+00:05:47,220 --> 00:05:54,180
+Bo skoro 4 razy 3 razy 2 razy 1 to jest 4 silnia, to znaczy, że 5 silnia to jest 5 razy 4 silnia.
+
+85
+00:05:54,180 --> 00:05:54,720
+Widzisz to?
+
+86
+00:05:55,220 --> 00:05:56,180
+Tak samo 4 to jest...
+
+87
+00:05:57,100 --> 00:05:59,879
+4 silnia to jest 4 razy 3 silnia.
+
+88
+00:06:00,400 --> 00:06:05,960
+I to z kolei prowadzi do takiego wzoru, bardzo proszę, żeby nikt nie mówił udowodni, bo nieudowodnię,
+
+89
+00:06:06,439 --> 00:06:15,800
+że silnia dla jakiejś litery, dla jakiejś cyfry, to jest tak naprawdę L silnia równa się L razy L minus 1 silnia.
+
+90
+00:06:16,140 --> 00:06:20,640
+I to jest zapis matematyczny, natomiast jeżeli chcielibyśmy zapisać to w formie programu,
+
+91
+00:06:20,640 --> 00:06:26,800
+to możemy się umówić, że silnia dla litery L równa się L razy silnia dla L.
+
+92
+00:06:27,100 --> 00:06:29,900
+I to jest działanie rekurencyjne.
+
+93
+00:06:30,000 --> 00:06:38,860
+Zobacz, że my uzupełniamy definicję jakiejś funkcji używając tej samej funkcji.
+
+94
+00:06:39,220 --> 00:06:41,580
+I tu zawsze musi paść pytanie, a kiedy to się kończy?
+
+95
+00:06:41,800 --> 00:06:44,540
+Dla zera, bo dla zera silnia po prostu jest to 1.
+
+96
+00:06:44,540 --> 00:06:53,600
+I teraz chciałem Ci pokazać przykład, gdzie zrobimy sobie taką pętlę for, ale za pomocą rekurencji, żebyś zobaczył jak to funkcjonuje.
+
+97
+00:06:54,420 --> 00:06:55,200
+Zapraszam do kodu.

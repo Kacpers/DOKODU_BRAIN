@@ -1,0 +1,443 @@
+1
+00:00:00,000 --> 00:00:04,000
+I wydaje mi się, że już wszystkim nam parę razy brakowało takiej możliwości,
+
+2
+00:00:04,200 --> 00:00:06,940
+jak wyświetlanie wartości jedna pod drugą.
+
+3
+00:00:07,339 --> 00:00:09,660
+Na przykład też robienia czegoś z tymi wartościami.
+
+4
+00:00:10,240 --> 00:00:12,820
+I dlatego przychodzę do Was z pętlą FOR.
+
+5
+00:00:12,820 --> 00:00:13,960
+Czym jest pętla?
+
+6
+00:00:14,460 --> 00:00:18,839
+Pętla tutaj nie należy kombinować z jakąś liną,
+
+7
+00:00:18,980 --> 00:00:21,800
+tylko pętla tutaj chodzi o to, że coś się zapętla,
+
+8
+00:00:21,920 --> 00:00:26,359
+czyli coś się powtarza określoną liczbę razy.
+
+9
+00:00:26,359 --> 00:00:28,120
+Czyli na przykład chcielibyśmy,
+
+10
+00:00:28,559 --> 00:00:30,579
+na przykład dzień świstaka się zapętlał,
+
+11
+00:00:30,660 --> 00:00:33,060
+każdy dzień zaczynał się od tego samego.
+
+12
+00:00:33,600 --> 00:00:36,679
+Czynność krojenia nożem to jest coś, co się zapętla.
+
+13
+00:00:36,679 --> 00:00:39,039
+No i dni też się czasem zapętlają,
+
+14
+00:00:39,159 --> 00:00:42,480
+jeżeli działania, które wykonujemy są do siebie podobne.
+
+15
+00:00:42,780 --> 00:00:44,079
+I tutaj jest dokładnie tak samo.
+
+16
+00:00:44,560 --> 00:00:48,739
+Jeżeli na przykład mamy taką tuplę i dla każdego elementu coś chcielibyśmy zrobić,
+
+17
+00:00:49,179 --> 00:00:51,260
+to chcielibyśmy tę czynność wykonać w pętli,
+
+18
+00:00:51,560 --> 00:00:52,379
+tak jak w fabryce.
+
+19
+00:00:52,799 --> 00:00:55,179
+Weź pierwszy element, zrób to, to, to, to, to, to, to, odłóż.
+
+20
+00:00:55,280 --> 00:00:56,340
+Weź drugi element, zrób to, to, to, to, to, to, to, odłóż.
+
+21
+00:00:56,359 --> 00:00:59,460
+I to jest taka praca w pętli.
+
+22
+00:00:59,460 --> 00:01:03,560
+I do tego służą pętle, żeby móc pewne czynności zapętlać
+
+23
+00:01:03,560 --> 00:01:06,459
+i wykonywać je albo skończoną ilość razy,
+
+24
+00:01:06,560 --> 00:01:08,859
+czyli powiedzmy zróbmy 10 razy to i to,
+
+25
+00:01:09,420 --> 00:01:12,519
+albo żeby pracować dopóki coś się nie wydarzy.
+
+26
+00:01:13,120 --> 00:01:15,780
+Czyli na przykład idź do żony i zapytaj,
+
+27
+00:01:15,840 --> 00:01:17,780
+czy jest obiad, dopóki tego obiadu nie będzie.
+
+28
+00:01:18,039 --> 00:01:18,560
+Załóżmy.
+
+29
+00:01:20,560 --> 00:01:23,319
+Ktoś mnie zaraz się pewnie obraził, jak usłyszał ten przykład.
+
+30
+00:01:23,680 --> 00:01:25,200
+Dlaczego mąż nie mógł gotować?
+
+31
+00:01:25,200 --> 00:01:26,299
+No dobra, to idź do męża.
+
+32
+00:01:26,519 --> 00:01:27,260
+Może być tak samo.
+
+33
+00:01:27,799 --> 00:01:28,260
+Idziemy dalej.
+
+34
+00:01:29,179 --> 00:01:30,079
+Do tego służy pętla.
+
+35
+00:01:30,620 --> 00:01:31,379
+Czym jest indeks?
+
+36
+00:01:31,500 --> 00:01:32,439
+O tym sobie już mówiliśmy.
+
+37
+00:01:32,579 --> 00:01:35,239
+Czyli jak mamy tuple, to tupla ma elementy.
+
+38
+00:01:35,459 --> 00:01:37,560
+Elementy znajdują się na poszczególnych indeksach.
+
+39
+00:01:37,900 --> 00:01:41,099
+To będzie nam potrzebne, ale raz jeszcze wypadałoby to sobie powtórzyć.
+
+40
+00:01:41,640 --> 00:01:42,120
+No właśnie.
+
+41
+00:01:42,299 --> 00:01:44,180
+I trzecia i czwarta rzecz, o których sobie powiemy,
+
+42
+00:01:44,439 --> 00:01:46,000
+to kiedy pętla się kończy.
+
+43
+00:01:46,460 --> 00:01:48,319
+No i przy okazji powiemy sobie, czym jest break
+
+44
+00:01:48,319 --> 00:01:52,099
+oraz o tym, że możemy też iść dalej za pomocą continue.
+
+45
+00:01:52,739 --> 00:01:55,799
+Pętla for, jeżeli chodzi o przechodzenie,
+
+46
+00:01:55,799 --> 00:01:59,000
+na przykład po naszych owocach, wygląda następująco.
+
+47
+00:01:59,799 --> 00:02:04,299
+Czyli zapisujemy sobie for fruit in fruits print fruit.
+
+48
+00:02:04,599 --> 00:02:07,799
+I to będzie oznaczało, że on będzie miał przejść po wszystkich owocach
+
+49
+00:02:08,359 --> 00:02:10,240
+i wypisać pojedyncze te owoce.
+
+50
+00:02:10,479 --> 00:02:12,780
+W tym przypadku, jak widzicie, jeden pod drugim.
+
+51
+00:02:13,500 --> 00:02:16,300
+Czyli for to jest słowo kluczowe,
+
+52
+00:02:16,419 --> 00:02:18,099
+które musi się wystąpić w naszym kodzie.
+
+53
+00:02:18,699 --> 00:02:20,659
+Następnie jest zmienna fruit,
+
+54
+00:02:21,039 --> 00:02:24,539
+która będzie przechowywała pojedynczy element z naszej pętli.
+
+55
+00:02:25,079 --> 00:02:25,780
+Następnie jest zmienna fruit, która będzie przechowywała pojedynczy element z naszej pętli.
+
+56
+00:02:25,780 --> 00:02:27,240
+Następnie jest kolejny operator in
+
+57
+00:02:27,240 --> 00:02:31,259
+i jest nasza kolekcja, czyli fruits.
+
+58
+00:02:31,659 --> 00:02:36,219
+I to będzie oznaczało, że on ma dla każdego jednego elementu z tej tupli
+
+59
+00:02:36,219 --> 00:02:39,139
+przypisywać ją do zmiennej fruit
+
+60
+00:02:39,139 --> 00:02:42,599
+i następnie każdy ten jeden owoc po prostu wypisywać.
+
+61
+00:02:43,180 --> 00:02:44,599
+Tutaj zwróć uwagę na dwie rzeczy.
+
+62
+00:02:44,780 --> 00:02:47,060
+Po pierwsze, pojawia nam się dwukropek.
+
+63
+00:02:47,439 --> 00:02:50,879
+Dwukropek powoduje, że wszystko to, co będzie poniżej tego dwukropka
+
+64
+00:02:50,879 --> 00:02:54,180
+i będzie wcięte, to wcięcie, które tutaj jest, jest niezwykle istotne,
+
+65
+00:02:54,180 --> 00:02:56,219
+będzie właśnie nam się powtarzało.
+
+66
+00:02:56,780 --> 00:02:59,939
+Jeżeli tego wcięcia zabraknie, czy tego przesunięcia zabraknie,
+
+67
+00:03:00,319 --> 00:03:01,800
+to w tym momencie, tak samo jak w ifie,
+
+68
+00:03:02,159 --> 00:03:04,319
+w tym momencie ten kod nie będzie zapętlony.
+
+69
+00:03:04,840 --> 00:03:06,080
+Ale to jest niezwykle ważna rzecz.
+
+70
+00:03:06,200 --> 00:03:08,860
+Tak samo jak w ifie robiłeś to za pomocą tabulatora,
+
+71
+00:03:08,900 --> 00:03:11,780
+czy też czterech spacji, tak samo możesz to zrobić też tu
+
+72
+00:03:11,780 --> 00:03:14,379
+i o tym po prostu trzeba pamiętać.
+
+73
+00:03:14,879 --> 00:03:18,580
+I wtedy, jeżeli mamy taką tuplę z owocami, czy kolekcję z owocami,
+
+74
+00:03:19,000 --> 00:03:21,680
+ładnie te wszystkie elementy nam się wyświetlą.
+
+75
+00:03:21,680 --> 00:03:23,960
+Po czym jeszcze możemy iterować?
+
+76
+00:03:24,180 --> 00:03:27,180
+Poza iterowaniem po tupli, możemy też iterować po range'u.
+
+77
+00:03:27,480 --> 00:03:30,460
+I tak jak range'a do tej pory musieliśmy zamieniać na tuplę,
+
+78
+00:03:30,540 --> 00:03:32,939
+żeby go wyświetlić, tak kiedy iterujemy po nim,
+
+79
+00:03:33,300 --> 00:03:35,340
+to już takiej konieczności nie ma.
+
+80
+00:03:36,000 --> 00:03:39,080
+Jeżeli nasza tupla jest przygotowana,
+
+81
+00:03:39,580 --> 00:03:42,960
+to możemy też mieć dostęp zarówno do indeksu, jak i do elementów.
+
+82
+00:03:43,219 --> 00:03:44,020
+Czasem tak się zdarza.
+
+83
+00:03:44,120 --> 00:03:48,700
+Zobacz, masz owoce, czy masz wyniki jakichś tam zawodników
+
+84
+00:03:48,700 --> 00:03:50,439
+i mamy ich poszczególne miejsca
+
+85
+00:03:50,439 --> 00:03:54,120
+i chcielibyśmy ich wyświetlić razem z tym, że miejsce pierwsze zajął,
+
+86
+00:03:54,120 --> 00:03:55,379
+a miejsce drugie zajął ten,
+
+87
+00:03:55,379 --> 00:03:59,680
+to wówczas właśnie można posłużyć się taką konstrukcją,
+
+88
+00:03:59,680 --> 00:04:01,300
+gdzie jest enumerate
+
+89
+00:04:01,300 --> 00:04:04,640
+i wtedy to, co wykonamy w enumeracie, w tej tupli wpiszemy,
+
+90
+00:04:04,640 --> 00:04:08,020
+to spowoduje, że on nam po prostu będzie pozwolił na dostęp
+
+91
+00:04:08,020 --> 00:04:10,439
+nie tylko do elementu, ale też do indeksu i do elementu.
+
+92
+00:04:10,439 --> 00:04:11,939
+Inny przykład.
+
+93
+00:04:11,939 --> 00:04:16,800
+Możemy przechodzić po tupli w odwrotnej kolejności za pomocą reversed.
+
+94
+00:04:16,800 --> 00:04:20,639
+Reversed, jak sama nazwa wskazuje, odwróć, tak, od końca.
+
+95
+00:04:20,639 --> 00:04:23,939
+I to spowoduje, że on będzie te poszczególne elementy,
+
+96
+00:04:23,939 --> 00:04:26,339
+naszej tupli zbierał po prostu od końca.
+
+97
+00:04:26,339 --> 00:04:29,439
+Sorted, no to wiadomo, jeżeli coś sortujemy,
+
+98
+00:04:29,439 --> 00:04:32,819
+to możemy po prostu przechodzić od razu po posortowanej tupli,
+
+99
+00:04:32,819 --> 00:04:35,579
+no i możemy to połączyć,
+
+100
+00:04:35,579 --> 00:04:37,800
+jeżeli chcielibyście posortować to od końca,
+
+101
+00:04:37,800 --> 00:04:40,699
+to można wykonać reversed na sorted na tupli,
+
+102
+00:04:40,699 --> 00:04:43,000
+albo można od razu zrobić sorted na tupla,
+
+103
+00:04:43,000 --> 00:04:45,199
+z tym reversed równa się true.
+
+104
+00:04:45,199 --> 00:04:47,779
+Myśmy już to robili przy okazji sortowania, wam pokazywałem,
+
+105
+00:04:47,779 --> 00:04:49,420
+ale warto tutaj sobie to powtórzyć,
+
+106
+00:04:49,420 --> 00:04:53,379
+żeby wiedzieć, że tak też można po tych elementach przechodzić.
+
+107
+00:04:53,379 --> 00:04:55,879
+I skoro wiemy, jaka jest konstrukcja fora,
+
+108
+00:04:55,879 --> 00:05:00,579
+to możemy popróbować i zrobić sobie też kilka z nim związanych zadań.
+
+109
+00:05:00,579 --> 00:05:03,579
+To też notabene polecam zapisać sobie do notatek,
+
+110
+00:05:03,579 --> 00:05:05,259
+bo będzie nam się to przydawało.
+
+111
+00:05:05,259 --> 00:05:06,259
+Chodźcie do zadań.

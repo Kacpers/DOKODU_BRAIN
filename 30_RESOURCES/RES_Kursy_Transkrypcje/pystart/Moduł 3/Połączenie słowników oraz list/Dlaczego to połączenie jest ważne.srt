@@ -1,0 +1,195 @@
+1
+00:00:00,000 --> 00:00:05,860
+No i w ten sposób możemy przejść sobie do kolejnego tematu, jakim jest połączenie list ze słownikami.
+
+2
+00:00:06,219 --> 00:00:16,399
+No bo w jaki sposób lista dała nam wolność, dała nam możliwość dodawania kolejnych elementów do siebie, zarządzania nią, sortowania i pewnych takich rzeczy,
+
+3
+00:00:16,940 --> 00:00:22,420
+a słownik dał nam z kolei tę możliwość, że można było nazywać sobie poszczególne kolumny.
+
+4
+00:00:22,420 --> 00:00:30,080
+I teraz przychodzi taka rozterka, czy w takim razie można to jakoś połączyć, czy można sprawić, że listy będą połączone ze słownikami.
+
+5
+00:00:30,620 --> 00:00:34,820
+Na przykład stworzyć sobie listę słowników albo słownik, który będzie zawierał listę.
+
+6
+00:00:35,320 --> 00:00:37,320
+I odpowiedź brzmi można.
+
+7
+00:00:38,380 --> 00:00:43,260
+Mianowicie, jeżeli tworzymy sobie listy, no to mamy na przykład wiersze z bazy danych.
+
+8
+00:00:43,740 --> 00:00:46,540
+Pobieramy sobie bardzo dużo elementów i one stanowią listę.
+
+9
+00:00:46,540 --> 00:00:52,000
+Natomiast te elementy, które już pochodzą z bazy danych, mogą być słownikami.
+
+10
+00:00:52,420 --> 00:00:53,719
+Inny przykład to dane z pliku.
+
+11
+00:00:54,020 --> 00:00:57,400
+Kiedy odbieram sobie wartości z pliku, no to wtedy używam samych list, prawda?
+
+12
+00:00:57,560 --> 00:01:00,359
+No bo każda pojedyncza linia będzie elementem listy.
+
+13
+00:01:00,859 --> 00:01:05,400
+Natomiast jeżeli chodzi o słowniki, no to właśnie wiersz w bazie danych może być takim słownikiem,
+
+14
+00:01:05,740 --> 00:01:08,079
+czy też dane w pliku, które właśnie mają kolumny CSV.
+
+15
+00:01:08,520 --> 00:01:11,099
+Tam już potrzebujemy nazywać poszczególne wartości.
+
+16
+00:01:11,099 --> 00:01:15,920
+I bardzo często, kiedy będziemy sobie konstruować, przechowywać nasze dane,
+
+17
+00:01:16,000 --> 00:01:19,680
+będziemy właśnie łączyli te dwa zastosowania ze sobą.
+
+18
+00:01:20,079 --> 00:01:21,859
+Na przykład wyobraźmy sobie klasę.
+
+19
+00:01:21,859 --> 00:01:24,159
+Klasa to są uczniowie, no to lista.
+
+20
+00:01:24,640 --> 00:01:27,239
+Każdy uczeń ma różne wartości.
+
+21
+00:01:27,439 --> 00:01:29,280
+Tam imię, nazwisko, płeć i tak dalej.
+
+22
+00:01:29,400 --> 00:01:31,140
+To może być wyjazd zatem słownik.
+
+23
+00:01:31,739 --> 00:01:33,799
+Każdy uczeń ma też oceny.
+
+24
+00:01:34,079 --> 00:01:35,599
+Oceny znowu mogą być listą.
+
+25
+00:01:35,760 --> 00:01:41,039
+Ale jeżeli byśmy chcieli sobie oceny pogrupować pod względem matematyka, język polski,
+
+26
+00:01:41,159 --> 00:01:43,039
+chemia, geografia, historia, coś tam jeszcze,
+
+27
+00:01:43,539 --> 00:01:45,900
+to wtedy już moglibyśmy mieć oceny jako słownik,
+
+28
+00:01:46,159 --> 00:01:49,019
+gdzie poszczególne przedmioty byłyby listą.
+
+29
+00:01:49,019 --> 00:01:51,519
+I tak łączyć ze sobą możemy dane.
+
+30
+00:01:51,859 --> 00:01:53,359
+Trzeba to zawsze mieć w wyobraźni.
+
+31
+00:01:53,359 --> 00:01:56,659
+Nawet sobie można w ramach takiego ćwiczenia na sucho zastanowić się,
+
+32
+00:01:56,659 --> 00:01:59,159
+co tutaj w moim życiu jest.
+
+33
+00:01:59,159 --> 00:02:00,159
+Samochód.
+
+34
+00:02:00,159 --> 00:02:02,659
+O, samochód, no to mam dwa samochody.
+
+35
+00:02:02,659 --> 00:02:03,859
+To niech będzie to lista.
+
+36
+00:02:03,859 --> 00:02:07,159
+No bo nie może zrobić ich tuplą, bo kiedyś jeszcze może dodałem kolejne,
+
+37
+00:02:07,159 --> 00:02:09,159
+albo któryś będę chciał usunąć, wymienić.
+
+38
+00:02:09,159 --> 00:02:12,560
+Samochód ma ilość tam pasażerów.
+
+39
+00:02:12,560 --> 00:02:13,860
+Pasażerowie też są listą.
+
+40
+00:02:13,860 --> 00:02:15,860
+Ale znowu pasażerowie mają swoje cechy,
+
+41
+00:02:15,860 --> 00:02:17,860
+więc łatwiej byłoby posługiwać się tutaj słownikiem.
+
+42
+00:02:17,860 --> 00:02:21,199
+I takie mapowanie aplikacji na listy i słowniki
+
+43
+00:02:21,199 --> 00:02:22,699
+jest bardzo powszechne.
+
+44
+00:02:22,699 --> 00:02:25,199
+W przyszłości w jednym z ostatnich modułów dowiesz się,
+
+45
+00:02:25,199 --> 00:02:28,199
+że mamy jeszcze coś takiego jak obiekty.
+
+46
+00:02:28,199 --> 00:02:30,699
+I listy i słowniki też są obiektami,
+
+47
+00:02:30,699 --> 00:02:33,699
+ale na ten temat porozmawiamy sobie jeszcze w przyszłości.
+
+48
+00:02:33,699 --> 00:02:36,699
+Więc jeżeli chodzi o pytanie, gdzie to się przyda,
+
+49
+00:02:36,699 --> 00:02:38,699
+to przydaje się nieustannie.

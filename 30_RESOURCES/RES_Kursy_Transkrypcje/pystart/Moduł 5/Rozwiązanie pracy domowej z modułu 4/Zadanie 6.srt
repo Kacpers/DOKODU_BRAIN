@@ -1,0 +1,263 @@
+1
+00:00:00,500 --> 00:00:02,859
+No dobra, to lecimy z zadaniem szóstym.
+
+2
+00:00:03,399 --> 00:00:06,799
+Pytaj użytkownika o imiona, dopóki nie napisze koniec.
+
+3
+00:00:06,900 --> 00:00:09,320
+Czyli ten początek będzie tak naprawdę identyczny.
+
+4
+00:00:10,140 --> 00:00:10,980
+Czasem pisze pas.
+
+5
+00:00:11,240 --> 00:00:14,220
+Ten pas to jest taka instrukcja, która tak naprawdę nic nie oznacza.
+
+6
+00:00:14,720 --> 00:00:17,839
+Ona tylko i wyłącznie mówi Pythonowi, że coś się tutaj znajdzie,
+
+7
+00:00:18,260 --> 00:00:19,760
+ale jeszcze o tym nie rozmawiajmy.
+
+8
+00:00:20,660 --> 00:00:23,780
+Bo jeżeli tej instrukcji nie będzie, no to wtedy to jest błąd.
+
+9
+00:00:23,879 --> 00:00:25,600
+A jeżeli jest pas, to ona sobie może być.
+
+10
+00:00:25,839 --> 00:00:29,940
+I teraz pytaj użytkownika o imiona, dopóki nie napiszesz koniec.
+
+11
+00:00:30,000 --> 00:00:30,440
+To już mamy.
+
+12
+00:00:30,879 --> 00:00:33,820
+Program powinien wyświetlić słownik prezentujący imiona
+
+13
+00:00:33,820 --> 00:00:36,679
+wraz z ilością ich wystąpień oraz unikatową listę.
+
+14
+00:00:36,799 --> 00:00:40,920
+Czyli tak naprawdę będziemy chcieli zrobić, że jeżeli nie ma imienia,
+
+15
+00:00:41,100 --> 00:00:44,120
+to wtedy ustaw wartość 0.
+
+16
+00:00:45,019 --> 00:00:48,460
+Albo pobrać sobie po prostu wartość, korzystając z getta,
+
+17
+00:00:48,920 --> 00:00:52,340
+zakładając, że 0 to wartość domyślna i dodać do niej 1.
+
+18
+00:00:52,500 --> 00:00:53,500
+Tak chyba będzie ładniej.
+
+19
+00:00:53,500 --> 00:00:57,859
+Czyli najpierw powinniśmy sobie zrobić coś, co się może nazywać name statistics.
+
+20
+00:01:00,000 --> 00:01:03,359
+Pusty słownik.
+
+21
+00:01:04,000 --> 00:01:12,219
+No i wtedy counter równa się name statistics.get od name.
+
+22
+00:01:13,540 --> 00:01:14,200
+To mamy.
+
+23
+00:01:15,040 --> 00:01:17,079
+W domyślnie ma być to wartość 0.
+
+24
+00:01:18,319 --> 00:01:20,539
+Jeżeli natomiast pobierzemy sobie tę liczbę,
+
+25
+00:01:20,659 --> 00:01:22,340
+to możemy ją dodać do naszego słownika,
+
+26
+00:01:22,340 --> 00:01:24,539
+czy też ustawić ją w naszym słowniku.
+
+27
+00:01:24,680 --> 00:01:29,400
+Czyli name statistics od counter, nie od counter, od name.
+
+28
+00:01:30,000 --> 00:01:34,519
+Równa się counter plus 1.
+
+29
+00:01:34,739 --> 00:01:39,000
+No bo skoro dane imię wystąpiło kolejny raz, to musimy sobie zwiększyć o 1.
+
+30
+00:01:39,620 --> 00:01:40,079
+Co dalej?
+
+31
+00:01:40,579 --> 00:01:46,120
+Następnie chcielibyśmy wyświetlić słownik prezentujący imiona wraz z ilością ich wystąpień
+
+32
+00:01:46,120 --> 00:01:48,859
+oraz unikatową listę imion posortowaną alfabetycznie.
+
+33
+00:01:49,620 --> 00:01:50,099
+No to co?
+
+34
+00:01:50,099 --> 00:01:56,840
+Jeżeli chodzi o wyświetlenie, no to potrzebujemy wykonać sobie for name,
+
+35
+00:01:57,039 --> 00:01:58,519
+przecinek, counter.
+
+36
+00:02:00,000 --> 00:02:01,060
+Counter nie możemy zrobić.
+
+37
+00:02:01,219 --> 00:02:04,000
+Name, przecinek, occurrences,
+
+38
+00:02:05,299 --> 00:02:10,800
+in name statistics, kropka, items, dwukropek,
+
+39
+00:02:11,479 --> 00:02:13,439
+print name occurrences.
+
+40
+00:02:14,120 --> 00:02:16,860
+Jeżeli chcemy sobie te imiona posortować jeszcze alfabetycznie,
+
+41
+00:02:17,300 --> 00:02:20,300
+to najpierw myślałem, że można byłoby użyć tutaj gdzieś zbioru,
+
+42
+00:02:20,300 --> 00:02:24,080
+żeby usunąć duplikaty, natomiast już klucze same nie mają w sobie duplikatów.
+
+43
+00:02:24,520 --> 00:02:29,080
+Więc wystarczy te klucze pobrać, zamienić na,
+
+44
+00:02:30,000 --> 00:02:32,000
+listę i posortować.
+
+45
+00:02:32,000 --> 00:02:34,000
+Czyli print.
+
+46
+00:02:34,000 --> 00:02:38,000
+Żeby pobrać sobie klucze, potrzebujemy wykonać name statistics, kropka, keys.
+
+47
+00:02:38,000 --> 00:02:43,000
+Jeżeli chcemy je zamienić na listę, to musimy wykonać list,
+
+48
+00:02:43,000 --> 00:02:46,000
+ale żeby posortować, użyjemy funkcji sorted.
+
+49
+00:02:46,000 --> 00:02:50,000
+I teraz zastanawiam się, czy posortowanie w ten sposób zadziała.
+
+50
+00:02:50,000 --> 00:02:56,000
+Sprawdźmy, bo nie wiem, czy to co pobierze nam name statistics od keys,
+
+51
+00:02:56,000 --> 00:02:57,000
+pozwala na sortowanie.
+
+52
+00:02:57,000 --> 00:02:59,000
+Jeżeli nie, to tylko dorzucę listę w środku.
+
+53
+00:02:59,000 --> 00:02:59,420
+No i?
+
+54
+00:02:59,419 --> 00:03:02,419
+I będę miał działający program.
+
+55
+00:03:02,419 --> 00:03:09,419
+Czyli python, python nie, python, spacja, sześć while imiona.
+
+56
+00:03:09,419 --> 00:03:10,419
+No i potrzebujemy mieć imię.
+
+57
+00:03:10,419 --> 00:03:16,419
+Niech to będzie Alina, Alina, Alina.
+
+58
+00:03:16,419 --> 00:03:18,419
+No i jeden Kacper.
+
+59
+00:03:18,419 --> 00:03:19,419
+Koniec.
+
+60
+00:03:19,419 --> 00:03:23,419
+No i mamy, Aliny były trzy, Kacper był jeden.
+
+61
+00:03:23,419 --> 00:03:27,419
+Posortować też się udało, więc zadanie wykonano.
+
+62
+00:03:27,419 --> 00:03:29,399
+Zapraszam do zadania kolejnego.
+
+63
+00:03:29,419 --> 00:03:30,659
+Na podstawie eşty�emन
+
+64
+00:03:30,699 --> 00:03:32,139
+Dalej znajdziecie.
+
+65
+00:03:32,419 --> 00:03:33,419
+Mam wyauf Ein PF Grace.
+
+66
+00:03:34,419 --> 00:03:55,239
+Przyszlaッś z

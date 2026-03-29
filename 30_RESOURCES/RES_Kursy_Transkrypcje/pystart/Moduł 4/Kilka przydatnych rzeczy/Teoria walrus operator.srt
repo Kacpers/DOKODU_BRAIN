@@ -1,0 +1,631 @@
+1
+00:00:00,000 --> 00:00:03,320
+Z Pythonem tym razem zajmujemy się Morsem.
+
+2
+00:00:03,760 --> 00:00:04,879
+Dlaczego Morsem?
+
+3
+00:00:05,520 --> 00:00:07,839
+No, wystarczy spojrzeć na tę emotkę, tak?
+
+4
+00:00:07,940 --> 00:00:12,179
+Czyli dwukropek i znak równości wygląda zupełnie jak Mors.
+
+5
+00:00:12,359 --> 00:00:15,540
+Przy okazji Walrus to też po angielsku jest Mors.
+
+6
+00:00:15,860 --> 00:00:18,859
+Więc cóż, uczymy się też czegoś dodatkowego.
+
+7
+00:00:19,580 --> 00:00:24,480
+Ważne jest to, że Walrus Operator dostał się do Pythona dopiero w wersji 3.9.
+
+8
+00:00:25,060 --> 00:00:26,760
+Wydaje mi się, że w wersji 3.8.alpha.
+
+9
+00:00:26,760 --> 00:00:30,100
+No, gdzieś tam, gdzieś w tych okolicach on się nam pojawił,
+
+10
+00:00:30,200 --> 00:00:34,600
+więc jeżeli Twój interpreter jest starszy, no to trzeba na to zwrócić uwagę.
+
+11
+00:00:35,400 --> 00:00:37,240
+Wersja bez Walrus Operatora.
+
+12
+00:00:37,300 --> 00:00:39,880
+Co jest, jeżeli Walrus Operatora nie mamy?
+
+13
+00:00:40,600 --> 00:00:43,439
+Jeżeli chcemy przypisać sobie wartość do zmiennej,
+
+14
+00:00:43,439 --> 00:00:48,160
+no to jak najbardziej możemy to zrobić wykonując linijkę a równa się 3.
+
+15
+00:00:48,380 --> 00:00:51,439
+No i wykonanie tej linii spowoduje, że zmienna a zostanie zadeklarowana
+
+16
+00:00:51,980 --> 00:00:53,520
+i dostanie wartość 3.
+
+17
+00:00:53,780 --> 00:00:56,740
+Jeżeli będziemy chcieli wtedy sobie wyświetlić wartość tej zmiennej,
+
+18
+00:00:56,759 --> 00:01:00,759
+wystarczy napisać a, no i wartość zmiennej będzie widoczna.
+
+19
+00:01:00,759 --> 00:01:04,759
+Natomiast, korzystanie z Walrus Operatora pozwala nam na to,
+
+20
+00:01:04,759 --> 00:01:07,759
+żeby od razu nie tylko przypisać sobie wartość do tej zmiennej,
+
+21
+00:01:07,759 --> 00:01:10,759
+ale też jakby od razu tę wartość zwrócić,
+
+22
+00:01:10,759 --> 00:01:12,759
+czyli jakby móc ją później obsługiwać.
+
+23
+00:01:12,759 --> 00:01:14,759
+Zobacz, mam taką sytuację, gdzie w nawiasie,
+
+24
+00:01:14,759 --> 00:01:16,759
+ten nawias tu jest bardzo potrzebny,
+
+25
+00:01:16,759 --> 00:01:18,759
+ponieważ my wykonujemy jakąś operację w środku
+
+26
+00:01:18,759 --> 00:01:22,759
+i w tym nawiasie wykonałem a dwukropek równa się 3
+
+27
+00:01:22,759 --> 00:01:24,759
+i to spowodowało dwie rzeczy.
+
+28
+00:01:24,759 --> 00:01:26,759
+Po pierwsze, zmienna a równa się 3,
+
+29
+00:01:26,760 --> 00:01:28,760
+ta wartość 3 mi się wyświetliła,
+
+30
+00:01:28,760 --> 00:01:30,760
+czyli mam ją na ekranie,
+
+31
+00:01:30,760 --> 00:01:32,760
+a po drugie, jeżeli odwołuję się do a,
+
+32
+00:01:32,760 --> 00:01:35,760
+no to też pokazuje mi się wartość 3.
+
+33
+00:01:35,760 --> 00:01:39,760
+To zastosowanie ma tylko za zadanie pokazać Ci,
+
+34
+00:01:39,760 --> 00:01:41,760
+do czego ten Walrus służy,
+
+35
+00:01:41,760 --> 00:01:44,760
+natomiast takie bardziej życiowe przypadki,
+
+36
+00:01:44,760 --> 00:01:46,760
+to jest jak zawsze skracanie naszego kodu,
+
+37
+00:01:46,760 --> 00:01:49,760
+sprawienie, żeby ten kod wyglądał krócej,
+
+38
+00:01:49,760 --> 00:01:51,760
+nie zawsze przejrzyściej.
+
+39
+00:01:51,760 --> 00:01:53,760
+Dlaczego nie zawsze przejrzyściej?
+
+40
+00:01:53,760 --> 00:01:55,760
+Zobaczcie te przykłady.
+
+41
+00:01:55,760 --> 00:01:59,760
+Tu mamy taką sytuację, że jest zmienna i ustawiona na 0,
+
+42
+00:01:59,760 --> 00:02:02,760
+tak długo jak długo 0 jest mniejsze od 10,
+
+43
+00:02:02,760 --> 00:02:05,760
+czy wartość zmiennej i jest mniejsza niż 10,
+
+44
+00:02:05,760 --> 00:02:08,759
+wyświetlaj i zwiększaj i o 1.
+
+45
+00:02:08,759 --> 00:02:10,759
+Sprawa prosta, prawda?
+
+46
+00:02:10,759 --> 00:02:12,759
+Dojdziemy sobie do dziesiątki,
+
+47
+00:02:12,759 --> 00:02:14,759
+dziesiątka się nam nie wyświetli,
+
+48
+00:02:14,759 --> 00:02:16,759
+tylko i będzie miała wartość 10 na koniec.
+
+49
+00:02:16,759 --> 00:02:18,759
+Ale jest to trochę denerwujące,
+
+50
+00:02:18,759 --> 00:02:20,759
+że kiedy używamy tego while'a,
+
+51
+00:02:20,759 --> 00:02:22,759
+zawsze trzeba wykonywać tutaj te operacje
+
+52
+00:02:22,759 --> 00:02:24,759
+i odwoływać się do tego i plus równe się,
+
+53
+00:02:24,759 --> 00:02:26,759
+czasem można o tym zapomnieć
+
+54
+00:02:26,759 --> 00:02:28,759
+i wtedy ctrl c.
+
+55
+00:02:28,759 --> 00:02:31,759
+Natomiast jeżeli chcemy skorzystać z valrus operatora,
+
+56
+00:02:31,759 --> 00:02:33,759
+możemy zapisać while i w nawiasie
+
+57
+00:02:33,759 --> 00:02:36,759
+napiszemy i dwukropek równa się i plus 1
+
+58
+00:02:36,759 --> 00:02:38,759
+i to spowoduje dwie rzeczy.
+
+59
+00:02:38,759 --> 00:02:40,759
+Po pierwsze, że do zmiennej i
+
+60
+00:02:40,759 --> 00:02:42,759
+przypisze nam się wartość i plus 1
+
+61
+00:02:42,759 --> 00:02:44,759
+oraz jak pamiętasz nawias powodował,
+
+62
+00:02:44,759 --> 00:02:47,759
+że jakby ta wartość wychodziła na zewnątrz, prawda?
+
+63
+00:02:47,759 --> 00:02:50,759
+Czy on w ten sposób porówna sobie od razu
+
+64
+00:02:50,759 --> 00:02:52,759
+wartość tej zmiennej?
+
+65
+00:02:52,759 --> 00:02:54,759
+Powinien się to zrobić,
+
+66
+00:02:54,759 --> 00:02:56,759
+że w oparciu o tę wartość
+
+67
+00:02:56,759 --> 00:02:58,759
+zmienną się o 1,
+
+68
+00:02:58,759 --> 00:03:00,759
+sprawdzi czy jest ona mniejsza niż 10
+
+69
+00:03:00,759 --> 00:03:02,759
+i wyświetli i.
+
+70
+00:03:02,759 --> 00:03:04,759
+Ja wolę chyba jednak górny zapis.
+
+71
+00:03:04,759 --> 00:03:06,759
+Możliwe, że do valrusa się na tyle dużo nie przyzwyczaiłem,
+
+72
+00:03:06,759 --> 00:03:08,759
+żeby z niego korzystać,
+
+73
+00:03:08,759 --> 00:03:10,759
+ale no może Tobie się spodoba
+
+74
+00:03:10,759 --> 00:03:12,759
+i będziesz chcieć z niego korzystać częściej niż ja.
+
+75
+00:03:12,759 --> 00:03:14,759
+Natomiast jeżeli chodzi o pętlę while,
+
+76
+00:03:14,759 --> 00:03:16,759
+to nie jest to jedyny przypadek.
+
+77
+00:03:16,759 --> 00:03:18,759
+Możemy też korzystać z valrus operatora
+
+78
+00:03:18,759 --> 00:03:20,759
+na przykład wtedy, kiedy używamy ifa.
+
+79
+00:03:20,759 --> 00:03:22,759
+Ponownie odbieramy sobie jakąś wartość,
+
+80
+00:03:22,759 --> 00:03:24,759
+jakąś wartość,
+
+81
+00:03:24,759 --> 00:03:26,759
+odbieramy ją do zmiennej n,
+
+82
+00:03:26,759 --> 00:03:28,759
+zamieniamy ją na integer,
+
+83
+00:03:28,759 --> 00:03:30,759
+następnie sprawdzamy czy wartość n modulu 2 jest,
+
+84
+00:03:30,759 --> 00:03:32,759
+czyli nasza liczba jest parzysta
+
+85
+00:03:32,759 --> 00:03:34,759
+i wyświetlamy odpowiedni komunikat.
+
+86
+00:03:34,759 --> 00:03:36,759
+Natomiast poniżej mamy sytuację
+
+87
+00:03:36,759 --> 00:03:38,759
+z valrus operatorem.
+
+88
+00:03:38,759 --> 00:03:40,759
+Czyli tak naprawdę ta pierwsza linia,
+
+89
+00:03:40,759 --> 00:03:42,759
+którą mamy tutaj,
+
+90
+00:03:42,759 --> 00:03:44,759
+n równa się int input,
+
+91
+00:03:44,759 --> 00:03:46,759
+nie jest nam do niczego potrzebna.
+
+92
+00:03:46,759 --> 00:03:48,759
+Zamiast tego możemy napisać if
+
+93
+00:03:48,759 --> 00:03:50,759
+i w nawiasie napisać
+
+94
+00:03:50,759 --> 00:03:52,759
+n valrus int input
+
+95
+00:03:52,759 --> 00:03:54,759
+i w nawiasie napisać
+
+96
+00:03:54,759 --> 00:03:56,759
+n.
+
+97
+00:03:56,759 --> 00:03:58,759
+Widzisz?
+
+98
+00:03:58,759 --> 00:04:00,759
+I tutaj ten nawias jest zamknięty.
+
+99
+00:04:00,759 --> 00:04:02,759
+Czyli to spowoduje,
+
+100
+00:04:02,759 --> 00:04:04,759
+że najpierw użytkownik zostanie zapytany
+
+101
+00:04:04,759 --> 00:04:06,759
+tak naprawdę, może będzie mógł coś wpisać,
+
+102
+00:04:06,759 --> 00:04:08,759
+następnie ta wartość zostanie zamieniona
+
+103
+00:04:08,759 --> 00:04:10,759
+na integer,
+
+104
+00:04:10,759 --> 00:04:12,759
+następnie ta wartość zostanie przypisana
+
+105
+00:04:12,759 --> 00:04:14,759
+do zmiennej n,
+
+106
+00:04:14,759 --> 00:04:16,759
+to jest pierwsza rzecz,
+
+107
+00:04:16,759 --> 00:04:18,759
+a druga rzecz to ta wartość wyjdzie nam na zewnątrz
+
+108
+00:04:18,759 --> 00:04:20,759
+tego naszego nawiasu,
+
+109
+00:04:20,759 --> 00:04:22,759
+no i powiedzmy, że jest to wartość 4,
+
+110
+00:04:22,759 --> 00:04:24,759
+więc wyświetli się liczba n jest parzysta.
+
+111
+00:04:24,759 --> 00:04:26,759
+Czyli ta linia jest tylko i wyłącznie po to,
+
+112
+00:04:26,759 --> 00:04:28,759
+abyśmy mogli pozbyć się
+
+113
+00:04:28,759 --> 00:04:30,759
+takiego właśnie wyciągnięcia n powyżej,
+
+114
+00:04:30,759 --> 00:04:32,759
+no i dzięki temu
+
+115
+00:04:32,759 --> 00:04:34,759
+będziemy mieli ładniejszy zapis,
+
+116
+00:04:34,759 --> 00:04:36,759
+może trochę krótszy na pewno,
+
+117
+00:04:36,759 --> 00:04:38,759
+no i dzięki temu,
+
+118
+00:04:38,759 --> 00:04:40,759
+trzeba byłoby policzyć znaki,
+
+119
+00:04:40,759 --> 00:04:42,759
+ale wiecie o co chodzi,
+
+120
+00:04:42,759 --> 00:04:44,759
+ilość linii jak tu jest istotna,
+
+121
+00:04:44,759 --> 00:04:46,759
+no i po drugie liczba n jest parzysta.
+
+122
+00:04:46,759 --> 00:04:48,759
+Trochę tak jest,
+
+123
+00:04:48,759 --> 00:04:50,759
+w świecie programowania ludzie lubią
+
+124
+00:04:50,759 --> 00:04:52,759
+te krótkie zapisy,
+
+125
+00:04:52,759 --> 00:04:54,759
+jeżeli szukasz zadań,
+
+126
+00:04:54,759 --> 00:04:56,759
+gdzie będzie można się uczyć Pythona,
+
+127
+00:04:56,759 --> 00:04:58,759
+czy też trenować Pythona,
+
+128
+00:04:58,759 --> 00:05:00,759
+to jest świetna strona,
+
+129
+00:05:00,759 --> 00:05:02,759
+nazywa się codewars.com
+
+130
+00:05:02,759 --> 00:05:04,759
+i tam jest bardzo dużo różnych zadań,
+
+131
+00:05:04,759 --> 00:05:06,759
+nawet mamy swój własny team do kodu,
+
+132
+00:05:06,759 --> 00:05:08,759
+i w ramach tej strony
+
+133
+00:05:08,759 --> 00:05:10,759
+możesz wykonywać zadania,
+
+134
+00:05:10,759 --> 00:05:12,759
+i potem kiedy już wykonasz zadanie,
+
+135
+00:05:12,759 --> 00:05:14,759
+rozwiążesz je,
+
+136
+00:05:14,759 --> 00:05:16,759
+wszystkie testy przejdą,
+
+137
+00:05:16,759 --> 00:05:18,759
+czyli okaże się,
+
+138
+00:05:18,759 --> 00:05:20,759
+że wszystkie te przykładowe dane zadań,
+
+139
+00:05:20,759 --> 00:05:22,759
+które zadziałały,
+
+140
+00:05:22,759 --> 00:05:24,759
+to możesz też obejrzeć rozwiązania
+
+141
+00:05:24,759 --> 00:05:26,759
+innych użytkowników,
+
+142
+00:05:26,759 --> 00:05:28,759
+i to jest bardzo ciekawe,
+
+143
+00:05:28,759 --> 00:05:30,759
+że kiedy piszesz taki kod, taki długi,
+
+144
+00:05:30,759 --> 00:05:32,759
+to później okazuje się,
+
+145
+00:05:32,759 --> 00:05:34,759
+że rozwiązania innych użytkowników
+
+146
+00:05:34,759 --> 00:05:36,759
+są na przykład na dwie linijki,
+
+147
+00:05:36,759 --> 00:05:38,759
+albo nawet na jedną,
+
+148
+00:05:38,759 --> 00:05:40,759
+i znowu, nie zawsze są one czytelne,
+
+149
+00:05:40,759 --> 00:05:42,759
+ale są one krótsze,
+
+150
+00:05:42,759 --> 00:05:44,759
+a ludzie lubią taki wyścig
+
+151
+00:05:44,759 --> 00:05:46,759
+właśnie pod kątem tego,
+
+152
+00:05:46,759 --> 00:05:48,759
+żeby jak najmniej tych linijek
+
+153
+00:05:48,759 --> 00:05:50,759
+trzeba było zapełnić.
+
+154
+00:05:50,759 --> 00:05:52,759
+I tak jak już powiedziałeś,
+
+155
+00:05:52,759 --> 00:05:54,759
+z czym się mierzy,
+
+156
+00:05:54,759 --> 00:05:56,759
+z czym się trzeba mierzyć używając go,
+
+157
+00:05:56,759 --> 00:05:58,759
+więc zapraszam Cię na małe ćwiczenie.
+
+158
+00:05:58,759 --> 00:06:00,759
+Do zobaczenia.

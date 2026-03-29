@@ -1,0 +1,163 @@
+1
+00:00:00,660 --> 00:00:03,540
+Weryfikacja numeru PESEL wygląda następująco.
+
+2
+00:00:03,879 --> 00:00:08,460
+Chcemy napisać program, który sprawdzi, czy podanym przez użytkownika numer PESEL jest prawidłowy.
+
+3
+00:00:08,900 --> 00:00:14,919
+Aby policzyć sumę kontrolną, należy kolejne cyfry numeru PESEL mnożyć w następujący sposób.
+
+4
+00:00:15,599 --> 00:00:26,980
+Cyfra 12345678911 oznacza, że nasz PESEL, każdy PESEL ma 11 znaków.
+
+5
+00:00:26,980 --> 00:00:32,420
+Więc to jest jedna rzecz, którą też można byłoby sprawdzić, żeby określić, czy PESEL jest prawidłowy.
+
+6
+00:00:33,039 --> 00:00:42,520
+Rzecz druga wygląda następująco, że każda z tych cyfr z tego PESEL-u musi zostać przemnożona przez taką sumę kontrolną, przez mnożnik.
+
+7
+00:00:43,079 --> 00:00:50,600
+I wtedy te kolejne mnożniki to są 13791379131.
+
+8
+00:00:50,600 --> 00:00:56,900
+Czyli pierwszą cyfrę PESEL-u mnożymy razy 1, drugą cyfrę PESEL-u mnożymy razy 3, trzecią cyfrę razy 7.
+
+9
+00:00:56,979 --> 00:01:00,899
+I tak kolejne cyfry mnożymy sobie przez kolejne wartości.
+
+10
+00:01:01,879 --> 00:01:12,939
+W momencie, w którym wykonamy takie mnożenia, to później należy sumować, czyli wykonać sumę wszystkich tych iloczynów, na które składa się nasz PESEL.
+
+11
+00:01:12,939 --> 00:01:21,500
+Czyli 1 razy 1, przepraszam, 1, no zakładając, że ktoś się urodził w roku 2011, to byłoby w porządku, tak?
+
+12
+00:01:21,599 --> 00:01:22,159
+Czyli 1, 1.
+
+13
+00:01:22,840 --> 00:01:26,939
+Czyli dodajemy sobie, mnożymy sobie najpierw, załóżmy, że mamy 11.
+
+14
+00:01:26,980 --> 00:01:35,820
+18, 21, to mnożymy sobie 1 razy 1, plus 8 razy 3, plus 2 razy 7 i tak dalej.
+
+15
+00:01:35,920 --> 00:01:37,040
+Te wartości sobie dodajemy.
+
+16
+00:01:37,659 --> 00:01:42,560
+I teraz, jeżeli zsumujemy te liczby, to ostatnia cyfra musi być zerem.
+
+17
+00:01:42,859 --> 00:01:45,540
+Jeżeli jest zerem, to znaczy, że PESEL jest poprawny.
+
+18
+00:01:46,120 --> 00:01:50,859
+Tu poniżej macie dwa przykładowe numery PESEL, które pochodzą z generatora PESEL-i.
+
+19
+00:01:50,859 --> 00:01:55,500
+Nie jest to PESEL żadnego z uczestników, nie jest to też PESEL nikogo, kogo znam.
+
+20
+00:01:55,500 --> 00:01:59,019
+Mam nadzieję, że też nie jest żaden z was, czy z naszych PESEL-i.
+
+21
+00:01:59,519 --> 00:02:06,219
+W pierwszym przypadku mamy osobę bardzo charakterystyczną, znaczy taką dla osób urodzonych przed rokiem 2000,
+
+22
+00:02:06,900 --> 00:02:11,020
+ponieważ urodziła się ona w 2018 roku, w styczniu.
+
+23
+00:02:11,340 --> 00:02:12,039
+Dlaczego to wiem?
+
+24
+00:02:12,920 --> 00:02:18,780
+Bo jeżeli miesiące są większe niż 20, to znaczy, że jest to rok po roku 2000.
+
+25
+00:02:19,360 --> 00:02:21,960
+Czyli 2018, 01, 01.
+
+26
+00:02:22,259 --> 00:02:24,879
+Czyli urodziła się 1 stycznia tego roku.
+
+27
+00:02:25,500 --> 00:02:27,199
+Ale potem mamy dalsze cyfry.
+
+28
+00:02:27,719 --> 00:02:33,080
+Natomiast tutaj mamy osobę, która urodziła się w 1999, też 1 stycznia.
+
+29
+00:02:33,979 --> 00:02:37,659
+Okej, no i tak naprawdę to jest zadanie na teraz.
+
+30
+00:02:38,120 --> 00:02:42,520
+Więc dla każdego chwila przerwy, siadamy, kombinujemy.
+
+31
+00:02:43,099 --> 00:02:48,379
+Można przejść się po domu, zabrać numery PESEL, albo jak je znacie, to po prostu je sobie gdzieś zapisać
+
+32
+00:02:48,379 --> 00:02:50,639
+i sprawdzić, czy wartości są prawidłowe.
+
+33
+00:02:50,639 --> 00:02:54,199
+Czyli po pierwsze, sprawdzamy, czy długość PESEL-u jest okej.
+
+34
+00:02:54,620 --> 00:02:55,159
+Po drugie.
+
+35
+00:02:55,159 --> 00:02:55,759
+Po trzecie.
+
+36
+00:02:55,759 --> 00:02:59,000
+Wykonujemy tą czynność z zipem i mnożymy sobie poszczególne rzeczy.
+
+37
+00:02:59,639 --> 00:03:00,299
+A po trzecie.
+
+38
+00:03:01,479 --> 00:03:05,079
+Sprawdzamy, czy suma tych iloczynów kończy się na 0.
+
+39
+00:03:05,500 --> 00:03:08,659
+Można sprawdzać, czy kończy się na 0, albo można robić modulo 10.
+
+40
+00:03:09,019 --> 00:03:10,740
+To oba te rozwiązania są okej.
+
+41
+00:03:11,120 --> 00:03:12,780
+Nie przedłużam, chodźcie do kodu.

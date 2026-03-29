@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:02,100
+Więc raz jeszcze, jak to zaimportować?
+
+2
+00:00:02,200 --> 00:00:03,100
+Zobacz, trzy przykłady.
+
+3
+00:00:03,520 --> 00:00:06,339
+Zakładając, że mamy mainpy pakiet summodule,
+
+4
+00:00:06,440 --> 00:00:08,560
+w środku jest funkcja sumfunction i wend,
+
+5
+00:00:08,740 --> 00:00:11,120
+no to robimy from pakiet import summodule
+
+6
+00:00:11,120 --> 00:00:13,160
+i wtedy summodule.sumfunction,
+
+7
+00:00:13,339 --> 00:00:14,240
+no bo tak jest w środku,
+
+8
+00:00:14,540 --> 00:00:17,760
+albo robimy from pakiet.summodule import sumfunction
+
+9
+00:00:17,760 --> 00:00:19,059
+i wykonujemy sumfunction,
+
+10
+00:00:19,559 --> 00:00:22,059
+albo opcja trzecia, ale tej opcji nie robimy,
+
+11
+00:00:22,519 --> 00:00:25,900
+from pakiet.summodule import gwiazdka i sumfunction.
+
+12
+00:00:25,900 --> 00:00:28,580
+Czyli skoro stworzyliśmy sobie moduł o nazwie PyStart,
+
+13
+00:00:28,579 --> 00:00:30,000
+to moglibyśmy teraz z tego modułu,
+
+14
+00:00:30,119 --> 00:00:32,559
+korzystając z tych metod, sobie coś poimportować.

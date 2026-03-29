@@ -1,0 +1,247 @@
+1
+00:00:00,000 --> 00:00:03,060
+To, co widzisz, jest to tak zwana piramida testów.
+
+2
+00:00:03,260 --> 00:00:06,360
+Piramida testów zakłada, że jest to piramida,
+
+3
+00:00:06,500 --> 00:00:08,019
+czyli na dole mamy podstawę.
+
+4
+00:00:08,500 --> 00:00:11,080
+Podstawa jest to coś, co jest stabilne, solidne,
+
+5
+00:00:11,540 --> 00:00:14,060
+powoduje, że piramida się nie przewróci, nie obali
+
+6
+00:00:14,060 --> 00:00:18,019
+oraz, że jest tego najwięcej u podstaw.
+
+7
+00:00:18,460 --> 00:00:20,059
+Im wyżej, tym jest mniej.
+
+8
+00:00:20,660 --> 00:00:23,280
+Nie oznacza to, że te rzeczy, które są wyżej, są mniej potrzebne,
+
+9
+00:00:23,280 --> 00:00:25,400
+ale ważniejsze jest to, żeby mieć super...
+
+10
+00:00:25,400 --> 00:00:28,300
+Dobra, nie będę szedł w tematy budowlane, ale wiecie, o co mi chodzi.
+
+11
+00:00:28,300 --> 00:00:32,620
+I piramida testów zakłada, że na samym dole są testy jednostkowe,
+
+12
+00:00:32,759 --> 00:00:35,719
+czyli testujemy sobie funkcje, sprawdzamy, czy nasze funkcje
+
+13
+00:00:35,719 --> 00:00:37,399
+zwracają odpowiednie dane.
+
+14
+00:00:38,060 --> 00:00:41,179
+Jest taki gif dotyczący sprawdzania jednostkowego,
+
+15
+00:00:41,340 --> 00:00:46,040
+że jeżeli sprawdzamy zasówkę, to wiemy, że zasówka się przesuwa.
+
+16
+00:00:46,600 --> 00:00:50,560
+Jeżeli mamy kłódkę, to wiemy, że kłódka się zamyka,
+
+17
+00:00:51,019 --> 00:00:54,100
+ale jeżeli ktoś założy skobel, przesunie zasówkę,
+
+18
+00:00:54,200 --> 00:00:56,179
+a tak naprawdę futryna będzie dziurawa,
+
+19
+00:00:56,179 --> 00:00:58,179
+a mimo tego, że futryna będzie otwierała drzwi zamykające,
+
+20
+00:00:58,299 --> 00:01:01,299
+no to te drzwi i tak się otworzą.
+
+21
+00:01:01,739 --> 00:01:06,599
+Ponieważ poza testami jednostkowymi, gdzie sprawdzamy sobie właśnie zasówkę, skobel i coś jeszcze,
+
+22
+00:01:07,099 --> 00:01:09,399
+powinniśmy jeszcze sprawdzać testy integracyjne,
+
+23
+00:01:09,539 --> 00:01:13,140
+czyli czy nasze funkcje ze sobą dobrze współgrają.
+
+24
+00:01:13,759 --> 00:01:16,179
+I testów jednostkowych jest bardzo dużo, są na dole.
+
+25
+00:01:16,299 --> 00:01:20,319
+Praktycznie każda funkcja powinna być sprawdzona dla każdej różnej pary argumentów.
+
+26
+00:01:20,799 --> 00:01:22,900
+Wyżej mamy testy integracyjne, gdzie sprawdzamy,
+
+27
+00:01:22,900 --> 00:01:26,060
+czy te funkcje ze sobą dobrze współgrają i dobrze działają.
+
+28
+00:01:26,439 --> 00:01:27,739
+Tych testów jest już trochę mniej,
+
+29
+00:01:28,299 --> 00:01:30,539
+zazwyczaj trochę większych części.
+
+30
+00:01:30,799 --> 00:01:33,140
+No i na samej górze mamy tak zwane testy end-to-end,
+
+31
+00:01:33,140 --> 00:01:35,299
+czyli testy funkcjonalne, które zakładają,
+
+32
+00:01:35,500 --> 00:01:38,200
+że testujemy cały jeden przebieg programu.
+
+33
+00:01:39,000 --> 00:01:40,700
+Czyli w teście jednostkowym sprawdziłbym,
+
+34
+00:01:40,700 --> 00:01:43,700
+czy funkcja dla takiej pary wywołała odpowiedni wynik.
+
+35
+00:01:43,700 --> 00:01:48,299
+W teście integracyjnym, czy udało mi się stworzyć plik z fakturą.
+
+36
+00:01:48,299 --> 00:01:50,500
+A w teście end-to-end sprawdziłbym,
+
+37
+00:01:50,500 --> 00:01:53,099
+czy formularz, do którego wprowadzam dane,
+
+38
+00:01:53,299 --> 00:01:55,099
+powoduje, że wywołał mi się ten kod,
+
+39
+00:01:55,099 --> 00:01:57,299
+który miał się wywołać dotyczący tworzenia faktury
+
+40
+00:01:57,500 --> 00:01:58,239
+i czy w wyniku zostało, że ten kod, który miał się wywołać dotyczący tworzenia faktury,
+
+41
+00:01:58,239 --> 00:02:01,640
+została utworzona faktura, która została wysłana na jakiś e-mail.
+
+42
+00:02:01,640 --> 00:02:03,839
+To wszystko oczywiście wymaga od nas tego,
+
+43
+00:02:03,839 --> 00:02:06,339
+żebyśmy też tworzyli środowiska testowe całe,
+
+44
+00:02:06,339 --> 00:02:09,340
+żeby ten e-mail nie szedł do fizycznego klienta,
+
+45
+00:02:09,340 --> 00:02:11,840
+o en si ci zi ni, pozdrowienia,
+
+46
+00:02:11,840 --> 00:02:15,639
+tylko żeby poszedł do,
+
+47
+00:02:15,639 --> 00:02:18,439
+na tym środowisku testowym został wykonany
+
+48
+00:02:18,439 --> 00:02:20,840
+i żeby tester mógł sprawdzić, czy to działa dobrze.
+
+49
+00:02:20,840 --> 00:02:22,039
+Powiedziałem o testerze.
+
+50
+00:02:22,039 --> 00:02:24,340
+Czy to oznacza, że tester pisze wszystkie te testy?
+
+51
+00:02:24,340 --> 00:02:25,639
+Nie.
+
+52
+00:02:25,639 --> 00:02:27,439
+Testy jednostkowe zdecydowanie pisze programisty.
+
+53
+00:02:27,439 --> 00:02:32,439
+Dlatego wraz z PyTestem my się skupimy przede wszystkim na tym aspekcie,
+
+54
+00:02:32,439 --> 00:02:34,439
+żebyście wiedzieli, jak się pisze testy jednostkowe.
+
+55
+00:02:34,439 --> 00:02:37,439
+Testy integracyjne też raczej pisze programista,
+
+56
+00:02:37,439 --> 00:02:41,439
+natomiast w zespołach, w których byłem, testy end-to-end pisał już tester.
+
+57
+00:02:41,439 --> 00:02:47,439
+Ale tak jak mówiłem, testowaniem takim testerskim nie będziemy się teraz zajmowali.
+
+58
+00:02:47,439 --> 00:02:49,439
+Jeżeli macie chęć, to wiem, że na Discordzie jest sporo osób,
+
+59
+00:02:49,439 --> 00:02:51,439
+które zajmują się testerstwem.
+
+60
+00:02:51,439 --> 00:02:53,439
+Na pewno też chętnie albo mnie tutaj gdzieś sprostują,
+
+61
+00:02:53,439 --> 00:02:56,639
+albo też na jakiś temat się tutaj wypowiedzą.
+
+62
+00:02:56,639 --> 00:02:59,639
+Zachęcam do tego, żeby porozmawiać o tym.

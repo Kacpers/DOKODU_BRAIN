@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:04,000
+No to cóż, stajemy przed takim zadaniem, że chcemy odebrać od użytkownika tekst.
+
+2
+00:00:04,120 --> 00:00:08,919
+No to potrzebujemy zmienną tekst, równa się input, podaj tekst.
+
+3
+00:00:09,080 --> 00:00:15,200
+Jeżeli będziemy chcieli ten tekst odwrócić, to tak naprawdę to, co printujemy, to printujemy odwrócony tekst.
+
+4
+00:00:15,780 --> 00:00:21,719
+Efekt tego będzie taki, że jeżeli wywołamy sobie ten program i użytkownik przekaże nam jakiś tekst,
+
+5
+00:00:22,719 --> 00:00:25,820
+to my mu wyświetlimy ten sam tekst w SPAC.
+
+6
+00:00:25,820 --> 00:00:30,560
+Natomiast naszym zadaniem jest to, że jeżeli użytkownik poda nam pusty tekst,
+
+7
+00:00:30,660 --> 00:00:32,820
+to powinniśmy wyrzucić wyjątek valueError.
+
+8
+00:00:33,179 --> 00:00:38,600
+Czyli if tekst równa się, jest pusty, można byłoby też to sprawdzić,
+
+9
+00:00:38,759 --> 00:00:42,600
+nie sprawdzając czy jest pusty, tylko czy jego długość jest równa 0,
+
+10
+00:00:43,359 --> 00:00:47,879
+no to wówczas wyświetl wyjątek, czyli rise valueError,
+
+11
+00:00:48,939 --> 00:00:51,920
+tekst nie może być pusty.
+
+12
+00:00:51,920 --> 00:00:55,120
+Jeżeli teraz to sobie wywołamy i podamy tekst,
+
+13
+00:00:55,820 --> 00:00:58,480
+a la Makota, to się odwróci w SPAC,
+
+14
+00:00:58,539 --> 00:01:01,780
+a jak podamy mu pusty tekst, to dostaniemy valueError.
+
+15
+00:01:02,000 --> 00:01:03,679
+Możemy więc to sobie obsłużyć.
+
+16
+00:01:04,379 --> 00:01:05,280
+Gdzie to obsługujemy?
+
+17
+00:01:05,799 --> 00:01:07,519
+No, input jest OK.
+
+18
+00:01:08,319 --> 00:01:08,920
+Try.
+
+19
+00:01:10,219 --> 00:01:13,840
+I na pewno nie chcemy, żeby też ten nasz tekst się odwracał, jeżeli jest pusty.
+
+20
+00:01:14,819 --> 00:01:16,900
+Więc nie catch tylko, nie ten język.
+
+21
+00:01:17,000 --> 00:01:18,379
+Accept valueError.
+
+22
+00:01:18,960 --> 00:01:19,960
+S message.
+
+23
+00:01:19,960 --> 00:01:24,200
+Print message.
+
+24
+00:01:24,560 --> 00:01:25,539
+Strzała do góry.
+
+25
+00:01:25,819 --> 00:01:26,319
+Enter.
+
+26
+00:01:26,319 --> 00:01:26,819
+Pusty tekst.
+
+27
+00:01:26,819 --> 00:01:28,819
+Dostajemy ładnie obsłużony wyjątek.
+
+28
+00:01:28,819 --> 00:01:30,819
+Tekst nie może być pusty.
+
+29
+00:01:30,819 --> 00:01:31,819
+To co?
+
+30
+00:01:31,819 --> 00:01:32,819
+Chodźmy do owoców.

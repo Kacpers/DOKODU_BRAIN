@@ -1,0 +1,91 @@
+1
+00:00:00,000 --> 00:00:02,200
+Zobacz, chciałem Ci to pokazać.
+
+2
+00:00:02,640 --> 00:00:06,600
+Stwórzmy sobie funkcję, niech ona nie ma żadnej specjalnej logiki,
+
+3
+00:00:06,719 --> 00:00:10,960
+po prostu pokażemy sobie jak te dane przychodzą i gdzie są przechowywane.
+
+4
+00:00:11,560 --> 00:00:16,800
+No i dorzucę sobie tutaj argument a, b, przecinek gwiazdka,
+
+5
+00:00:17,940 --> 00:00:21,059
+args, przecinek gwiazdka, gwiazdka, kwargs.
+
+6
+00:00:21,059 --> 00:00:23,379
+I wszystko sobie tylko i wyłącznie wyprintuję.
+
+7
+00:00:23,900 --> 00:00:28,679
+I teraz jeżeli sobie to wywołam, przekażę mu 2 i 3,
+
+8
+00:00:28,679 --> 00:00:32,679
+mogę też, żeby było ładniej, dorzucić sobie tutaj nazwy tych zmiennych,
+
+9
+00:00:33,299 --> 00:00:37,460
+tak żeby było wprost widać, bo print to umienie, rozmawialiśmy przed chwilą,
+
+10
+00:00:37,899 --> 00:00:39,519
+z czego to się bierze.
+
+11
+00:00:40,079 --> 00:00:43,700
+O, i teraz kiedy to wywołam, czy na przykład python args, kwargs,
+
+12
+00:00:44,140 --> 00:00:49,840
+to zobacz, a to jest 2, b to jest 3, args jest puste, kwargs jest puste.
+
+13
+00:00:50,579 --> 00:00:53,460
+Jeżeli teraz będę dokładał sobie nowe rzeczy do tego,
+
+14
+00:00:53,460 --> 00:00:58,659
+to okaże się, że te pozostałe elementy,
+
+15
+00:00:58,679 --> 00:01:05,680
+2, 3 zostały w a i b, natomiast 5, 6, 7 i 89 wpadły mi do args.
+
+16
+00:01:05,680 --> 00:01:10,680
+A tu zrobiłem inny przykład, zobacz, do tego samego dopisałem sobie jeszcze x i y,
+
+17
+00:01:10,680 --> 00:01:13,680
+do x przypisałem 7 do y 89.
+
+18
+00:01:13,680 --> 00:01:15,680
+Co wtedy się stanie?
+
+19
+00:01:15,680 --> 00:01:23,680
+Jeżeli to sobie wykonam, to okaże się, że mój x i y wpadną mi do x, tutaj do kwargs, 7 i 9.
+
+20
+00:01:23,680 --> 00:01:25,680
+I tak właśnie działa args i kwargs.
+
+21
+00:01:25,680 --> 00:01:27,680
+To co? Przećwiczymy sobie?
+
+22
+00:01:27,680 --> 00:01:28,680
+No i tak.
+
+23
+00:01:28,680 --> 00:01:29,680
+Chodź do zadania.

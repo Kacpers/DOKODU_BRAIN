@@ -1,0 +1,751 @@
+1
+00:00:00,000 --> 00:00:02,620
+Dobrze, porozmawiajmy sobie zatem o listach.
+
+2
+00:00:02,879 --> 00:00:06,620
+Ja wielokrotnie, nie wiem czy zwróciliście na to uwagę, kiedy mówiłem o tuplach,
+
+3
+00:00:07,040 --> 00:00:10,160
+gdzieś zdarzało mi się przejęzyczyć mówiąc o listach.
+
+4
+00:00:10,279 --> 00:00:11,019
+Dlaczego tak jest?
+
+5
+00:00:11,560 --> 00:00:14,300
+Trochę jest tak, że listy to są takie trochę lepsze tuple.
+
+6
+00:00:14,660 --> 00:00:19,480
+Ja tak naprawdę z tupli jako takich bardzo dużo nie korzystam.
+
+7
+00:00:20,000 --> 00:00:24,379
+Ja często odbieram dane, które są w tuplach, zwracam dane, które są w tuplach.
+
+8
+00:00:24,780 --> 00:00:27,000
+Czasem jak sobie coś deklaruję, to tworzę tuple.
+
+9
+00:00:27,000 --> 00:00:30,339
+Natomiast z listami pracuje się dużo wygodniej.
+
+10
+00:00:30,660 --> 00:00:34,060
+Z tego względu, że przede wszystkim możemy wartości zmieniać,
+
+11
+00:00:34,159 --> 00:00:38,019
+możemy do wartości się odwoływać i możemy z wartościami pracować po prostu wygodniej.
+
+12
+00:00:38,579 --> 00:00:42,700
+Dlatego ja napisałem, że listy to są takie troszkę lepsze tuple.
+
+13
+00:00:43,200 --> 00:00:47,900
+I w tej lekcji, w tej części porozmawiamy sobie właśnie o tym,
+
+14
+00:00:48,000 --> 00:00:52,879
+dlaczego są lepsze i jakie są między nimi różnice.
+
+15
+00:00:54,280 --> 00:00:56,879
+Tych kolekcji w Pythonie, takich jak tuple, listy,
+
+16
+00:00:57,000 --> 00:01:00,000
+stringi jest też trochę więcej, więc tak jak wspomniałem na początku,
+
+17
+00:01:00,100 --> 00:01:03,240
+kiedy zaczynaliśmy to można łatwo się będzie w tym pomylić.
+
+18
+00:01:03,359 --> 00:01:06,780
+Dlatego też będę starał się zawsze mówić Wam o poszczególnych różnicach.
+
+19
+00:01:07,359 --> 00:01:10,939
+Zaczynamy sobie od tego, od tego stałego takiego naszego przebiegu
+
+20
+00:01:10,939 --> 00:01:12,579
+przez cechy dobrej listy.
+
+21
+00:01:12,700 --> 00:01:16,379
+Tak jak mieliśmy cechy dobrej tupli, tak porozmawiajmy sobie o cechach dobrej listy.
+
+22
+00:01:16,859 --> 00:01:21,260
+Przede wszystkim, jeżeli chcesz stworzyć sobie nową listę,
+
+23
+00:01:21,640 --> 00:01:23,680
+to używasz nawiasów kwadratowych.
+
+24
+00:01:23,680 --> 00:01:26,480
+Czyli w przypadku tupli były to nawiasy okrągłe,
+
+25
+00:01:27,000 --> 00:01:27,760
+a było pomijać.
+
+26
+00:01:28,019 --> 00:01:31,620
+W przypadku listy zawsze są to nawiasy kwadratowe.
+
+27
+00:01:31,840 --> 00:01:35,260
+No i zobacz, bo stworzyłem sobie listę fruits, znowu owoce,
+
+28
+00:01:35,780 --> 00:01:38,780
+mango, peach, lemon i tak dalej i mam nawiasy kwadratowe.
+
+29
+00:01:39,040 --> 00:01:43,319
+Wtedy jak odwołuję się do fruits, on mi też wyświetla je w nawiasach kwadratowych.
+
+30
+00:01:43,760 --> 00:01:47,240
+Jeżeli ktoś śledził bacznie, to mogliście zauważyć,
+
+31
+00:01:47,359 --> 00:01:50,060
+że już nawiasy kwadratowe gdzieś nam się wcześniej pojawiły
+
+32
+00:01:50,060 --> 00:01:52,579
+no i to właśnie była lista, ale ja o tym nic nie mówiłem,
+
+33
+00:01:52,579 --> 00:01:54,240
+bo też nie chciałem mieszać.
+
+34
+00:01:54,560 --> 00:01:56,480
+Ok, chodźmy dalej.
+
+35
+00:01:57,000 --> 00:02:02,760
+Po drugie, do rzutowania, czy do zamiany typu używamy funkcji o nazwie list.
+
+36
+00:02:02,760 --> 00:02:06,760
+Czyli na przykład, zobacz, stworzyłem sobie tuplę, nazwałem ją values,
+
+37
+00:02:06,760 --> 00:02:08,759
+użyłem nawiasu okrągłego,
+
+38
+00:02:08,759 --> 00:02:10,759
+1, 2, 3, 7, 8, 9
+
+39
+00:02:10,759 --> 00:02:14,759
+i teraz kiedy chcę zamienić te tuple na listę,
+
+40
+00:02:14,759 --> 00:02:19,240
+to używam funkcji list i w wyniku dostaję właśnie 1, 2, 3, 7, 8, 9.
+
+41
+00:02:19,240 --> 00:02:23,240
+Tak samo będzie, jeżeli będziemy potrzebowali zamienić range na listę.
+
+42
+00:02:23,240 --> 00:02:26,979
+Również możecie użyć funkcji list, no i w ten sposób ten range,
+
+43
+00:02:26,979 --> 00:02:28,979
+na listę nam się ładnie zamieni
+
+44
+00:02:28,979 --> 00:02:30,979
+i będzie z nim można robić wszystko to, co z listą.
+
+45
+00:02:30,979 --> 00:02:32,979
+No i nawiązując do tego, że wszystko jest obiektem,
+
+46
+00:02:32,979 --> 00:02:36,979
+będzie to obiekt klasy list, a nie obiekt klasy...
+
+47
+00:02:36,979 --> 00:02:38,979
+Nieważne.
+
+48
+00:02:38,979 --> 00:02:40,979
+Idziemy dalej.
+
+49
+00:02:40,979 --> 00:02:44,979
+Kolejna rzecz, o której warto byłoby sobie powiedzieć,
+
+50
+00:02:44,979 --> 00:02:48,979
+jest taka, że lista tak samo jak i tupla są indeksowane.
+
+51
+00:02:48,979 --> 00:02:50,979
+Czyli na razie, jak widzicie, różnica jedna jest taka, że z nawiasami,
+
+52
+00:02:50,979 --> 00:02:52,979
+druga to rodzaj funkcji, to list, a nie tuple,
+
+53
+00:02:52,979 --> 00:02:54,979
+no i trzecia, tutaj różnicy nie ma, jest indeksacja,
+
+54
+00:02:54,979 --> 00:02:58,979
+a mianowicie odwołujemy się do tych wartości po 0, minus 1,
+
+55
+00:02:58,979 --> 00:03:02,979
+i tak samo działa też slicing, czyli to wycinanie.
+
+56
+00:03:02,979 --> 00:03:06,979
+Zobacz, wpisałem 0, wpisałem minus 1, obie te wartości mi się wyświetliły,
+
+57
+00:03:06,979 --> 00:03:08,979
+trzy filmy są na ekranie.
+
+58
+00:03:08,979 --> 00:03:14,979
+Natomiast to, co jest różnicą, jest to, że jest to kolekcja, która jest mutowalna,
+
+59
+00:03:14,979 --> 00:03:18,979
+czyli bez problemu można będzie usuwać wartości z tej kolekcji,
+
+60
+00:03:18,979 --> 00:03:22,979
+dodawać wartości do tej kolekcji, zmieniać wartości, itp. itd.
+
+61
+00:03:22,979 --> 00:03:24,979
+O tym też zaraz zrobię w kolejnych odcinkach.
+
+62
+00:03:24,979 --> 00:03:26,979
+Zaraz z wszystkim porozmawiamy.
+
+63
+00:03:26,979 --> 00:03:28,979
+No i ostatnia rzecz, kolejność jest zachowana.
+
+64
+00:03:28,979 --> 00:03:32,979
+To jeszcze nie jest ta kolekcja, gdzie kolejność nam się będzie mieszała,
+
+65
+00:03:32,979 --> 00:03:34,979
+natomiast tutaj, jeżeli pracujemy z listami,
+
+66
+00:03:34,979 --> 00:03:38,979
+to musimy mieć na uwadze to, że jest ta kolejność zachowana.
+
+67
+00:03:38,979 --> 00:03:40,979
+Co dalej?
+
+68
+00:03:40,979 --> 00:03:42,979
+Dalej chciałem porozmawiać z Tobą o mutowalności,
+
+69
+00:03:42,979 --> 00:03:44,979
+czyli o tej zmienialności.
+
+70
+00:03:44,979 --> 00:03:48,979
+Zobacz, wróciłem sobie do tej listy, którą zadeklarowałem na początku,
+
+71
+00:03:48,979 --> 00:03:50,979
+nazwałem ją BUKS.
+
+72
+00:03:50,979 --> 00:03:52,979
+Mamy ogniem i mieczem, w pustyni i w puszczy i pan Wołodyjowski.
+
+73
+00:03:52,979 --> 00:03:54,979
+Następnie wykonałem BUKS od 0,
+
+74
+00:03:54,979 --> 00:03:56,979
+która równa się QOVADIS,
+
+75
+00:03:56,979 --> 00:03:58,979
+a następnie BUKS od minus 1 równa się Janko Muzykant.
+
+76
+00:03:58,979 --> 00:04:02,979
+Czyli mamy nowe pozycje pana Henryka Sienkiewicza.
+
+77
+00:04:02,979 --> 00:04:04,979
+No i w efekcie, kiedy sobie to wyświetlamy,
+
+78
+00:04:04,979 --> 00:04:08,979
+dostajemy QOVADIS w pustyni i w puszczy, Janko Muzykant.
+
+79
+00:04:08,979 --> 00:04:12,979
+Czyli on nam zamienił zerową wartość z ogniem i mieczem na QOVADIS,
+
+80
+00:04:12,979 --> 00:04:18,980
+a ostatnią z pana Wołodyjowskiego na Janko Muzykanta.
+
+81
+00:04:18,980 --> 00:04:20,980
+Jeżeli natomiast chodzi o dodawanie,
+
+82
+00:04:20,980 --> 00:04:22,980
+to tutaj jest nowa metoda,
+
+83
+00:04:22,980 --> 00:04:24,980
+nazywa się ona KWOVADIS.
+
+84
+00:04:24,980 --> 00:04:26,980
+KWOVADIS to jest metoda,
+
+85
+00:04:26,980 --> 00:04:28,980
+która jest dodana w pustyni i w puszczy.
+
+86
+00:04:28,980 --> 00:04:30,980
+I tutaj jest to metoda,
+
+87
+00:04:30,980 --> 00:04:32,980
+która jest dodana w pustyni i w puszczy,
+
+88
+00:04:32,980 --> 00:04:34,980
+a następnie jest dodana w pustyni i w puszczy,
+
+89
+00:04:34,980 --> 00:04:36,980
+a następnie jest dodana w pustyni i w puszczy.
+
+90
+00:04:36,980 --> 00:04:38,980
+I tutaj jest dodana metoda,
+
+91
+00:04:38,980 --> 00:04:40,980
+która jest dodana w pustyni i w puszczy.
+
+92
+00:04:40,980 --> 00:04:42,980
+I tak jak na stringu można było zrobić kropka
+
+93
+00:04:42,980 --> 00:04:44,980
+i zamienić string na małe litery,
+
+94
+00:04:44,980 --> 00:04:46,980
+na wielkie i coś tam jeszcze w nim poszukać,
+
+95
+00:04:46,980 --> 00:04:48,980
+tak samo tak tutaj mamy BUKS.APPEND
+
+96
+00:04:48,980 --> 00:04:50,980
+i to jest metoda,
+
+97
+00:04:50,980 --> 00:04:52,980
+która doda nam nowy wpis na końcu tej listy.
+
+98
+00:04:52,980 --> 00:04:54,980
+Czyli zobacz, kiedy dodałem sobie latarnika,
+
+99
+00:04:54,980 --> 00:04:56,980
+czy Janko Muzykant i latarnik,
+
+100
+00:04:56,980 --> 00:04:58,980
+czy już mam cztery elementy.
+
+101
+00:04:58,980 --> 00:05:00,980
+Mógłbym oczywiście użyć Lena i sprawdzić,
+
+102
+00:05:00,980 --> 00:05:02,980
+ile jest tych elementów, natomiast mogę też
+
+103
+00:05:02,980 --> 00:05:04,980
+sprawdzić, czy latarnik znajduje się w książkach
+
+104
+00:05:04,980 --> 00:05:06,980
+za pomocą wyrażenia latarnik in BUKS.
+
+105
+00:05:06,980 --> 00:05:08,980
+za pomocą wyrażenia latarnik in BUKS.
+
+106
+00:05:08,980 --> 00:05:10,980
+I też dostanę wtedy informację, że jest to prawda.
+
+107
+00:05:10,980 --> 00:05:12,980
+Czyli różnica względem tupli jest taka,
+
+108
+00:05:12,980 --> 00:05:14,980
+Czyli różnica względem tupli jest taka,
+
+109
+00:05:14,980 --> 00:05:16,980
+że tutaj mamy prawie można powiedzieć wolną amerykankę.
+
+110
+00:05:16,980 --> 00:05:18,980
+Można dodawać rzeczy,
+
+111
+00:05:18,980 --> 00:05:20,980
+podmieniać rzeczy,
+
+112
+00:05:20,980 --> 00:05:22,980
+pracować z tymi rzeczami na więcej sposobów.
+
+113
+00:05:22,980 --> 00:05:24,980
+Dlatego też ja preferuję korzystanie z tego,
+
+114
+00:05:24,980 --> 00:05:26,980
+bo nigdy nie wiem, co mnie jeszcze będzie czekało w przyszłości.
+
+115
+00:05:26,980 --> 00:05:28,980
+bo nigdy nie wiem, co mnie jeszcze będzie czekało w przyszłości.
+
+116
+00:05:28,980 --> 00:05:30,980
+Najczęściej to dodawanie za pomocą appenda mi się przydaje.
+
+117
+00:05:30,980 --> 00:05:32,980
+Najczęściej to dodawanie za pomocą appenda mi się przydaje.
+
+118
+00:05:32,980 --> 00:05:34,980
+Bo do tej pory, jak chcieliśmy coś dodawać,
+
+119
+00:05:34,980 --> 00:05:36,980
+to tak naprawdę się nie dało.
+
+120
+00:05:36,980 --> 00:05:38,980
+Trzeba było zawsze pracować ze stringiem,
+
+121
+00:05:38,980 --> 00:05:40,980
+przez co na przykład wykorzystanie tych funkcji jak split,
+
+122
+00:05:40,980 --> 00:05:42,980
+które w odpowiedzi daje listę,
+
+123
+00:05:42,980 --> 00:05:44,980
+ale nieważne, i join,
+
+124
+00:05:44,980 --> 00:05:46,980
+było trochę utrudnione.
+
+125
+00:05:46,980 --> 00:05:48,980
+Split metod i nie funkcji.
+
+126
+00:05:50,980 --> 00:05:52,980
+Jeżeli chodzi o usuwanie wartości,
+
+127
+00:05:52,980 --> 00:05:54,980
+Jeżeli chodzi o usuwanie wartości,
+
+128
+00:05:54,980 --> 00:05:56,980
+to tutaj można na dwa sposoby.
+
+129
+00:05:56,980 --> 00:05:58,980
+No bo z listy możemy albo usuwać coś mówiąc
+
+130
+00:05:58,980 --> 00:06:00,980
+pierwsza wartość out,
+
+131
+00:06:00,980 --> 00:06:02,980
+czy trzecia wartość out,
+
+132
+00:06:02,980 --> 00:06:04,980
+albo możemy powiedzieć, Janko muzykant, do widzenia.
+
+133
+00:06:04,980 --> 00:06:06,980
+I tutaj mamy znowu owoce,
+
+134
+00:06:06,980 --> 00:06:08,980
+mango, peach, lemon, grey fruit, itd.
+
+135
+00:06:08,980 --> 00:06:10,980
+i chcemy usunąć sobie mango.
+
+136
+00:06:10,980 --> 00:06:12,980
+Więc wykonujemy fruit.remove
+
+137
+00:06:12,980 --> 00:06:14,980
+w nawiasie podajemy mango
+
+138
+00:06:14,980 --> 00:06:16,980
+i w efekcie mango powinno nam z tej listy zniknąć.
+
+139
+00:06:16,980 --> 00:06:18,980
+i w efekcie mango powinno nam z tej listy zniknąć.
+
+140
+00:06:18,980 --> 00:06:20,980
+Efekt widzicie na załączonym obrazku.
+
+141
+00:06:20,980 --> 00:06:22,980
+Fruit zawiera tylko i wyłącznie peach, lemon, grey fruit, apple, banana i cherry.
+
+142
+00:06:22,980 --> 00:06:24,980
+Fruit zawiera tylko i wyłącznie peach, lemon, grey fruit, apple, banana i cherry.
+
+143
+00:06:24,980 --> 00:06:26,980
+Zachęcam was do tego, żebyście koniecznie tworzyli taką
+
+144
+00:06:26,980 --> 00:06:28,980
+wielką listę z owocami.
+
+145
+00:06:28,980 --> 00:06:30,980
+Natomiast jeżeli macie chęć, to zarówno to co było
+
+146
+00:06:30,980 --> 00:06:32,980
+na poprzednim slajdzie, jak i na tym slajdzie,
+
+147
+00:06:32,980 --> 00:06:34,980
+to zachęcam do tego, żebyście otworzyli
+
+148
+00:06:34,980 --> 00:06:36,980
+sobie interaktywne środowisko i razem
+
+149
+00:06:36,980 --> 00:06:38,980
+ze mną spróbowali sobie te elementy
+
+150
+00:06:38,980 --> 00:06:40,980
+wykonać, no bo
+
+151
+00:06:40,980 --> 00:06:42,980
+bazowanie na tym, no tak w sumie wszystko rozumiem, nie ma problemu,
+
+152
+00:06:42,980 --> 00:06:44,980
+nie jest dobrym pomysłem.
+
+153
+00:06:44,980 --> 00:06:46,980
+Lepiej jest to wpisać, spróbować
+
+154
+00:06:46,980 --> 00:06:48,980
+to sobie uruchomić, zobaczyć czy działa.
+
+155
+00:06:48,980 --> 00:06:50,980
+Po to są te snippety,
+
+156
+00:06:50,980 --> 00:06:52,980
+te fragmenty kodu, żeby je testować.
+
+157
+00:06:52,980 --> 00:06:54,980
+I inny przykład, to ułatwiać,
+
+158
+00:06:54,980 --> 00:06:56,980
+usuwanie na podstawie wartości. Tutaj wchodzi
+
+159
+00:06:56,980 --> 00:06:58,980
+nam taka nowa rzecz, zobaczcie, pojawiło się
+
+160
+00:06:58,980 --> 00:07:00,980
+del czy też deal,
+
+161
+00:07:00,980 --> 00:07:02,980
+bo to jest delete, więc deal
+
+162
+00:07:02,980 --> 00:07:04,980
+po spacji, fruits
+
+163
+00:07:04,980 --> 00:07:06,980
+od 1, usunie nam pitch.
+
+164
+00:07:06,980 --> 00:07:08,980
+No i jest mango, lemon, grey fruit, apple,
+
+165
+00:07:08,980 --> 00:07:10,980
+banana i cherry. Czyli udało nam się
+
+166
+00:07:10,980 --> 00:07:12,980
+usunąć tę wartość z listy.
+
+167
+00:07:12,980 --> 00:07:14,980
+Czyli podsumowując,
+
+168
+00:07:14,980 --> 00:07:16,980
+rzutujemy zawsze
+
+169
+00:07:16,980 --> 00:07:18,980
+za pomocą funkcji list, jeżeli
+
+170
+00:07:18,980 --> 00:07:20,980
+deklarujemy to zawsze używamy nawiasów
+
+171
+00:07:20,980 --> 00:07:22,980
+kwadratowych, to napisałem można, ale
+
+172
+00:07:22,980 --> 00:07:24,980
+no nie ma innej możliwości. Używamy nawiasów kwadratowych,
+
+173
+00:07:24,980 --> 00:07:26,980
+indeksujemy
+
+174
+00:07:26,980 --> 00:07:28,980
+za pomocą numerów, to jest bardzo istotne.
+
+175
+00:07:28,980 --> 00:07:30,980
+Będziemy o tym mówili niedługo, że
+
+176
+00:07:30,980 --> 00:07:32,980
+nie zawsze muszą być to numery, ale nie w listach.
+
+177
+00:07:32,980 --> 00:07:34,980
+W listach zawsze są to numery, czyli
+
+178
+00:07:34,980 --> 00:07:36,980
+0, 1, 2, minus 1 itd.
+
+179
+00:07:36,980 --> 00:07:38,980
+Jest to mutowalna
+
+180
+00:07:38,980 --> 00:07:40,980
+kolekcja, czyli możemy sobie
+
+181
+00:07:40,980 --> 00:07:42,980
+zamieniać, usuwać,
+
+182
+00:07:42,980 --> 00:07:44,980
+dokładać, dużo rzeczy robić.
+
+183
+00:07:44,980 --> 00:07:46,980
+No i kolejność jest zachowana,
+
+184
+00:07:46,980 --> 00:07:48,980
+co oznacza, że jeżeli tworzymy sobie coś
+
+185
+00:07:48,980 --> 00:07:50,980
+na zerowym indeksie,
+
+186
+00:07:50,980 --> 00:07:52,980
+to zawsze to na tym zerowym indeksie
+
+187
+00:07:52,980 --> 00:07:54,980
+będzie się znajdowało.
+
+188
+00:07:56,980 --> 00:07:58,980
+Idziemy dalej.

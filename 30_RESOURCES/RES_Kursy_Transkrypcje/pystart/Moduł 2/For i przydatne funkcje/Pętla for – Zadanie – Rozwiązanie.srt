@@ -1,0 +1,919 @@
+1
+00:00:00,000 --> 00:00:04,839
+No to co? Nie śpimy, lecimy, a właściwie nie lecimy, tylko rozwiązujemy.
+
+2
+00:00:05,360 --> 00:00:09,560
+Z podanej tupli liczb wyświetl te, które są podzielne przez 4 i które są podzielne przez 5.
+
+3
+00:00:09,560 --> 00:00:19,280
+Czyli potrzebuję mieć jakiś values, mogę sobie stworzyć tuple, przypisać do niej liczby 20, 21, 15, 18, 35, 42
+
+4
+00:00:19,280 --> 00:00:23,859
+i tak mogę sobie jeszcze wymyślać dużo różnych wartości.
+
+5
+00:00:24,359 --> 00:00:26,699
+I teraz będę chciał przejść przez te wartości.
+
+6
+00:00:26,699 --> 00:00:31,419
+I pierwsze co zrobię, to ja sobie po prostu te wartości wyświetlę jedna pod drugą.
+
+7
+00:00:31,899 --> 00:00:39,980
+W tym celu muszę napisać for value in values, dwukropek, czyli korzystam z tej pętli for.
+
+8
+00:00:40,060 --> 00:00:46,899
+I tak jak wam opowiadałem, tak jak opowiadałem ci, mówiłem o tym, że value to jest taka zmienna, która będzie przechowywała pojedynczą wartość,
+
+9
+00:00:47,299 --> 00:00:53,000
+natomiast values w tym przypadku to jest właśnie to, po czym będziemy chcieli iterować, po czym będziemy chcieli przechodzić.
+
+10
+00:00:53,000 --> 00:00:56,679
+Jeżeli chcę więc wyświetlić pojedynczą wartość, muszę tutaj w środku napisać,
+
+11
+00:00:56,700 --> 00:01:05,079
+print value, zapisuję i wtedy jeżeli będę chciał to uruchomić, mogę sobie napisać python 4 zadania for
+
+12
+00:01:05,079 --> 00:01:08,379
+i pojawią mi się wszystkie te wartości.
+
+13
+00:01:08,740 --> 00:01:13,700
+Jak widzisz wyświetliły się jedna pod drugą, 20, 21, 15, 18, wszystko gra.
+
+14
+00:01:14,340 --> 00:01:18,659
+Ok, i teraz będę chciał wyświetlić tylko te, które są podzielne przez 4 i przez 5.
+
+15
+00:01:19,000 --> 00:01:24,659
+Czyli w środku, w ramach tego fora, ja muszę umieścić ten fragment kodu, który będzie sprawdzał,
+
+16
+00:01:24,659 --> 00:01:26,620
+tak jakbym chciał to zrobić dla jednej wartości.
+
+17
+00:01:26,700 --> 00:01:29,460
+Tylko muszę użyć po prostu tej zmiennej value.
+
+18
+00:01:29,460 --> 00:01:36,700
+Czyli tak samo jak do tej pory wykonywalibyśmy ten sam kod, sprawdzając czy jedna wartość jest podzielna przez 4 lub przez 5,
+
+19
+00:01:36,700 --> 00:01:41,460
+to tu musimy zrobić dokładnie to samo, tylko ten kod umieścić wewnątrz pętli.
+
+20
+00:01:41,460 --> 00:01:45,200
+I to spowoduje, że python będzie przechodził przez poszczególne wartości.
+
+21
+00:01:45,200 --> 00:01:50,859
+I jeżeli ta wartość jest podzielna przez 4 lub jest podzielna przez 5, to nam ją wyświetli.
+
+22
+00:01:50,859 --> 00:01:56,540
+Jeżeli, czyli if, if value modulo 4,
+
+23
+00:01:56,540 --> 00:02:02,540
+czyli równa się 0, z tego względu, że podzielność, to jak już mówiliśmy sobie, to że dzieli się bez reszty,
+
+24
+00:02:02,540 --> 00:02:08,540
+lub, ponieważ mnie nie interesują wartości podzielne i przez 4 i przez 5, tylko takie albo takie,
+
+25
+00:02:08,540 --> 00:02:13,040
+równa się 0, no to wtedy print value.
+
+26
+00:02:13,040 --> 00:02:19,540
+I w ten sposób, jeżeli zrobię jeszcze raz strzałkę do góry i enter, no to zobaczę tylko 20, 15 i 35.
+
+27
+00:02:19,540 --> 00:02:23,040
+Czyli faktycznie wartości, które dzielą się przez 4, dzielą się przez 5.
+
+28
+00:02:23,040 --> 00:02:25,540
+No bo mamy 20 dzieli się przez 4 i przez 5.
+
+29
+00:02:25,540 --> 00:02:26,340
+No bo mamy 20 dzieli się przez 4 i przez 5.
+
+30
+00:02:26,340 --> 00:02:27,340
+No bo mamy 20 dzieli się przez 4 i przez 5.
+
+31
+00:02:27,340 --> 00:02:28,340
+No bo mamy 20 dzieli się przez 4 i przez 5.
+
+32
+00:02:28,340 --> 00:02:29,340
+No bo mamy 20 dzieli się przez 4 i przez 5.
+
+33
+00:02:29,340 --> 00:02:31,340
+15 dzieli się przez 5, to jest 3 i 35 dzieli się przez 5, to jest 7.
+
+34
+00:02:31,340 --> 00:02:39,340
+Możemy więc przejść na tym poziomie, matematyka jest bardzo potrzebna programistom, na dużo wyższym, nie wiem czy jest potrzebna.
+
+35
+00:02:39,340 --> 00:02:40,340
+Idziemy dalej.
+
+36
+00:02:40,340 --> 00:02:45,340
+Z podanej listy imion o różnej długości wyświetl tylko te, które są dłuższe niż 5 znaków.
+
+37
+00:02:45,340 --> 00:02:49,340
+No to potrzebujemy mieć jakąś zmienną names i musimy sobie przygotować.
+
+38
+00:02:49,340 --> 00:02:52,340
+Oczywiście tutaj nie będziemy praktykowali listy, będziemy praktykowali tuple.
+
+39
+00:02:52,340 --> 00:02:55,340
+Ja tak napisałem skrótem myślowym, miałem na myśli tuple.
+
+40
+00:02:55,340 --> 00:02:57,340
+Wypisuję sobie imiona.
+
+41
+00:02:57,340 --> 00:03:12,340
+Aleksander, Wojciech, Małgorzata, coś krótszego, Ala, Alicja, ale wiecie o co mi chodzi, prawda?
+
+42
+00:03:12,340 --> 00:03:16,340
+I możemy dorzucić sobie jeszcze kogoś jednego, niech to będzie Zbyszek.
+
+43
+00:03:16,340 --> 00:03:22,340
+I teraz, jeżeli będziemy chcieli znowu przejść po tych imionach, to nasz kod będzie wyglądał tak samo jak na górze.
+
+44
+00:03:22,340 --> 00:03:24,340
+Więc jak widzisz, to jest tak.
+
+45
+00:03:24,340 --> 00:03:25,340
+Zobaczmy.
+
+46
+00:03:25,340 --> 00:03:33,340
+Że jeżeli nauczysz się pewnego takiego wzoru, pętla for name i names, to później będziesz mógł aplikować go do wielu różnych zastosowań.
+
+47
+00:03:33,340 --> 00:03:35,340
+I to jest niezwykle wygodne.
+
+48
+00:03:35,340 --> 00:03:44,340
+I to właśnie jest taki sposób na to, że większość tego kodu, który piszemy, on jest takimi gotowymi wzorami, które gdzieś mamy w głowie.
+
+49
+00:03:44,340 --> 00:03:46,340
+Mam tuple, chcę wyświetlić elementy, ok.
+
+50
+00:03:46,340 --> 00:03:48,340
+Tupla nazywa się names, for name i names.
+
+51
+00:03:48,340 --> 00:03:49,340
+I tyle.
+
+52
+00:03:49,340 --> 00:03:51,340
+Żeby wyświetlić print name.
+
+53
+00:03:51,340 --> 00:03:53,340
+Sprawdźmy to.
+
+54
+00:03:53,340 --> 00:03:54,340
+Strzała do góry.
+
+55
+00:03:54,340 --> 00:03:55,340
+Strzała do góry, enter.
+
+56
+00:03:55,340 --> 00:03:56,340
+I mam.
+
+57
+00:03:56,340 --> 00:03:58,340
+Jak widzisz, są tu wszystkie imiona.
+
+58
+00:03:58,340 --> 00:04:06,340
+Jeżeli chcemy sobie dorzucić jakiś separator, jakieś rozdzielenie, to można byłoby zrobić tutaj dodatkowy print na przykład.
+
+59
+00:04:06,340 --> 00:04:11,340
+W ten sposób pojawi nam się wolna przestrzeń pomiędzy naszymi rozwiązaniami.
+
+60
+00:04:11,340 --> 00:04:13,340
+Albo można byłoby napisać sobie trochę kresek.
+
+61
+00:04:13,340 --> 00:04:17,340
+Jak będziemy mieli stringi, to też pokażę Ci, jak można to uprościć.
+
+62
+00:04:17,340 --> 00:04:19,340
+Ale jak widzisz, są wyświetlone imiona.
+
+63
+00:04:19,340 --> 00:04:23,340
+I teraz znowu w ramach tego kodu, tej pętli, będziemy chcieli zastosować ten fragment.
+
+64
+00:04:23,339 --> 00:04:27,339
+I robić to tak, dla jednej osoby.
+
+65
+00:04:27,339 --> 00:04:31,339
+Jakby to było, wiedząc o tym, że on później wykona ten sam kod dla innych.
+
+66
+00:04:31,339 --> 00:04:34,339
+Czyli chcemy wyświetlić imię oczywiście.
+
+67
+00:04:34,339 --> 00:04:37,339
+Ale my je tylko chcemy wyświetlić pod pewnym warunkiem.
+
+68
+00:04:37,339 --> 00:04:40,339
+Warunkiem jest to, że długość musi być większa niż 5.
+
+69
+00:04:40,339 --> 00:04:47,339
+Czyli jeżeli długość imienia jest większa niż 5, to wyświetl mi to imię.
+
+70
+00:04:47,339 --> 00:04:49,339
+Strzała do góry, enter.
+
+71
+00:04:49,339 --> 00:04:50,339
+No i mamy część tych imion.
+
+72
+00:04:50,339 --> 00:04:51,339
+Prawie wszystkie.
+
+73
+00:04:51,339 --> 00:04:53,339
+Ala nam się gdzieś tutaj zgubiła.
+
+74
+00:04:53,339 --> 00:04:55,339
+Alicja została.
+
+75
+00:04:55,339 --> 00:04:59,339
+Natomiast, jeżeli byśmy wybrali sobie jeszcze jakieś inne krótkie imię.
+
+76
+00:04:59,339 --> 00:05:02,339
+Iga, to zobacz, imię Iga też się na tej liście nam nie pokaże.
+
+77
+00:05:02,339 --> 00:05:06,339
+No bo tylko interesują nas tutaj imiona dłuższe niż 5.
+
+78
+00:05:06,339 --> 00:05:09,339
+Oczywiście, jeżeli chcesz zmienić tę wartość, to możesz ją całodzielnie zmieniać.
+
+79
+00:05:09,339 --> 00:05:11,339
+Na przykład odwrócić mniejsze niż 5.
+
+80
+00:05:11,339 --> 00:05:13,339
+Wtedy będą imiona mniejsze niż 5.
+
+81
+00:05:13,339 --> 00:05:15,339
+Takie zabawy są jak najbardziej dobre.
+
+82
+00:05:15,339 --> 00:05:19,339
+Im więcej takich zabaw, tym lepiej jest się, tym przyjemniej jest się uczyć.
+
+83
+00:05:19,339 --> 00:05:21,339
+Zachęcam.
+
+84
+00:05:21,339 --> 00:05:24,339
+No i przechodzimy sobie do najtrudniejszego z tych zadań.
+
+85
+00:05:24,339 --> 00:05:29,339
+A mianowicie umieszczając pętlę for w drugiej pętli for, wyświetl trójkąt jak na przykładzie.
+
+86
+00:05:29,339 --> 00:05:31,339
+I tutaj zobacz.
+
+87
+00:05:31,339 --> 00:05:38,339
+My tak naprawdę najpierw wyświetlamy sobie 4 wartości, później 3, później 2, a później 1.
+
+88
+00:05:38,339 --> 00:05:40,339
+Więc ja sobie to rozbiję na kroki.
+
+89
+00:05:40,339 --> 00:05:44,339
+I krok pierwszy, który będę chciał zrobić, taki podpunkt 3a.
+
+90
+00:05:44,339 --> 00:05:49,339
+Jeżeli ktoś poległ na tym zadaniu, to zachęcam do tego, żeby w tym miejscu też robić pauzę sobie po prostu.
+
+91
+00:05:49,339 --> 00:05:50,339
+I robić to razem ze mną.
+
+92
+00:05:50,339 --> 00:05:52,339
+W tych poszczególnych etapach.
+
+93
+00:05:52,339 --> 00:06:02,339
+Więc krok pierwszy, który będę chciał osiągnąć, to będę chciał napisać 4, 3, 2, 1.
+
+94
+00:06:02,339 --> 00:06:04,339
+To można zrobić na kilka sposobów.
+
+95
+00:06:04,339 --> 00:06:06,339
+Tutaj uwaga, spoiler alert.
+
+96
+00:06:06,339 --> 00:06:08,339
+Kto chce robić pauzę, robi pauzę.
+
+97
+00:06:08,339 --> 00:06:12,339
+Kto chce posłuchać jakich sposobów, to słucha.
+
+98
+00:06:12,339 --> 00:06:18,339
+Jeden sposób jest taki, że można użyć range'a i później poszczególne wartości odejmować sobie od tego range'a.
+
+99
+00:06:18,339 --> 00:06:19,339
+Nie?
+
+100
+00:06:19,339 --> 00:06:27,339
+Jeżeli nasz range, nasz zakres będzie miał długość 4, to my możemy od tej długości odjąć tę wartość, którą w danym momencie przetwarzamy.
+
+101
+00:06:27,339 --> 00:06:30,339
+Czyli na przykład jeżeli idziemy 1, 2, 3, 4, tak?
+
+102
+00:06:30,339 --> 00:06:38,339
+To możemy sobie odejmując po prostu długość 4, minus 0, później 4, minus 3, 4, minus 2, 4, minus 1.
+
+103
+00:06:38,339 --> 00:06:41,339
+Dojść do tego, że wyświetlą nam się wartości 4, 3, 2, 1.
+
+104
+00:06:41,339 --> 00:06:43,339
+To jest jedna opcja.
+
+105
+00:06:43,339 --> 00:06:48,339
+Druga opcja jest taka, że możemy po prostu odwrócić sobie range'a.
+
+106
+00:06:48,339 --> 00:06:51,339
+Było reverse, pamiętasz? Możemy zrobić sort i reversed.
+
+107
+00:06:51,339 --> 00:06:53,339
+I w ten sposób, czy też samego reverse'a.
+
+108
+00:06:53,339 --> 00:06:58,339
+I w ten sposób nasz range się po prostu odwróci i będziemy mieli wartości 4, 3, 2, 1.
+
+109
+00:06:58,339 --> 00:07:01,339
+I trzecia opcja to chyba udałoby nam się też wpisać krok ujemny.
+
+110
+00:07:01,339 --> 00:07:04,339
+Ale ja skorzystam z jednej z tych, które wymyśliłem.
+
+111
+00:07:04,339 --> 00:07:07,339
+Jeżeli ktoś ma ochotę zrobić to inaczej, to też jak najbardziej zachęcam.
+
+112
+00:07:07,339 --> 00:07:14,339
+Czyli for i ta liczba będzie mi potrzebna za chwilę, więc ja sobie ją jakoś nazwę.
+
+113
+00:07:14,339 --> 00:07:16,339
+Niech ona się nazywa counter, jako taki licznik.
+
+114
+00:07:16,339 --> 00:07:17,339
+In range.
+
+115
+00:07:18,339 --> 00:07:23,339
+Ja potrzebuję wartości od 1 do 4, więc wpisuję 1, 5.
+
+116
+00:07:23,339 --> 00:07:28,339
+Ja je potrzebuję odwrócone, więc ja muszę tutaj dorzucić reversed.
+
+117
+00:07:29,339 --> 00:07:32,339
+Oj, oj, oj, coś mi nabroiłem.
+
+118
+00:07:32,339 --> 00:07:33,339
+Print counter.
+
+119
+00:07:33,339 --> 00:07:38,339
+I zobacz, w ten sposób spowoduje, że na ekranie wyświetli mi się 4, 3, 2, 1.
+
+120
+00:07:38,339 --> 00:07:45,339
+Czyli tak naprawdę będziemy mieli tutaj 4, 3, 2 i 1.
+
+121
+00:07:45,339 --> 00:07:47,339
+Czujesz już do czego zmierzam?
+
+122
+00:07:47,339 --> 00:07:54,339
+Do tego, że mogę sobie, jeżeli zmienna counter przyjmuje wartości właśnie 4, 3, 2, 1,
+
+123
+00:07:54,339 --> 00:08:02,339
+to ja mogę zrobić sobie tutaj fora, w ramach którego będę wyświetlać wartości kolejne obok siebie.
+
+124
+00:08:02,339 --> 00:08:07,339
+I w tym celu wykorzystamy sobie for.
+
+125
+00:08:07,339 --> 00:08:15,339
+I tutaj należy wykonać jakąś zmienną, jakiś zmienny użyć, która będzie nową zmienną.
+
+126
+00:08:15,339 --> 00:08:19,339
+Niech będzie tą zmienną counter, bo tej nie możemy użyć, ale potrzebujemy mieć jakąś liczbę.
+
+127
+00:08:19,339 --> 00:08:22,339
+Niech to będzie digit in.
+
+128
+00:08:22,339 --> 00:08:28,339
+I tutaj znowu potrzebujemy użyć tego naszego range'a, czyli range.
+
+129
+00:08:28,339 --> 00:08:29,339
+I teraz sobie wyobrażamy.
+
+130
+00:08:29,339 --> 00:08:32,339
+Musimy sobie zawsze na chwilę się teraz zatrzymać i sobie wyobrazić.
+
+131
+00:08:32,339 --> 00:08:35,339
+Na początek ten counter ma wartość 4.
+
+132
+00:08:35,339 --> 00:08:39,339
+Ja chcę wyświetlić liczby 1, 2, 3, 4.
+
+133
+00:08:39,339 --> 00:08:43,339
+Czyli w moim range'u muszę zacząć zawsze od jedynki, bo zawsze będę zaczynał od jedynki.
+
+134
+00:08:43,339 --> 00:08:44,339
+Ale...
+
+135
+00:08:44,340 --> 00:08:51,340
+Będę chciał wyświetlać tyle wartości, żeby być od jedynki do tej wartości counter.
+
+136
+00:08:51,340 --> 00:08:53,340
+Bo jak jestem w pierwszym rzędzie, to jest to 4.
+
+137
+00:08:53,340 --> 00:08:54,340
+W drugim rzędzie 3.
+
+138
+00:08:54,340 --> 00:08:56,340
+W trzecim rzędzie 2.
+
+139
+00:08:56,340 --> 00:08:58,340
+Więc w naszym przypadku to będzie counter.
+
+140
+00:08:58,340 --> 00:08:59,340
+Ale jeszcze jedna rzecz.
+
+141
+00:08:59,340 --> 00:09:04,340
+Pamiętam o tym, że jeżeli wartość counter będzie miała wartość, liczba będzie równa 4,
+
+142
+00:09:04,340 --> 00:09:10,340
+to to nie spowoduje, że on mi wyświetli tutaj te wartości obok siebie.
+
+143
+00:09:10,340 --> 00:09:13,340
+Wartości do 4, tylko wartości do 3.
+
+144
+00:09:13,340 --> 00:09:15,340
+Więc ja muszę mu tutaj dodać 1.
+
+145
+00:09:15,340 --> 00:09:18,340
+I w ten sposób...
+
+146
+00:09:18,340 --> 00:09:23,340
+To zadanie jest trudniejsze, o tym mówiłem, ale możecie też czasem spodziewać się takich zadań z gwiazdką,
+
+147
+00:09:23,340 --> 00:09:26,340
+gdzie trzeba będzie trochę dłużej sobie pogłówkować.
+
+148
+00:09:26,340 --> 00:09:29,340
+Ale wciąż myślę, że to zadanie nie jest trudne.
+
+149
+00:09:29,340 --> 00:09:32,340
+I w tym momencie, jeżeli zrobimy strzałkę do góry i Enter,
+
+150
+00:09:32,340 --> 00:09:34,340
+to zobaczymy to, co następuje.
+
+151
+00:09:34,340 --> 00:09:35,340
+Zobaczcie.
+
+152
+00:09:35,340 --> 00:09:37,340
+On nam wyświetla wciąż ten counter.
+
+153
+00:09:37,340 --> 00:09:39,340
+Bo musimy sobie na to spojrzeć, nie?
+
+154
+00:09:39,340 --> 00:09:40,340
+I zobacz.
+
+155
+00:09:40,340 --> 00:09:41,340
+On mi wyświetli najpierw 4.
+
+156
+00:09:41,340 --> 00:09:43,340
+No bo dostaje 4 wartości w rzędzie.
+
+157
+00:09:43,340 --> 00:09:45,340
+Ta 4, która tutaj się pokazuje,
+
+158
+00:09:45,340 --> 00:09:47,340
+ona wynika z tego countera.
+
+159
+00:09:47,340 --> 00:09:50,340
+My go wyświetlać za chwilę nie będziemy potrzebowali w ogóle,
+
+160
+00:09:50,340 --> 00:09:52,340
+no bo tutaj nie mamy tych wartości nigdzie.
+
+161
+00:09:52,340 --> 00:09:55,340
+Tylko to jest ten licznik ograniczający nam, ile wartości ma się wyświetlić.
+
+162
+00:09:55,340 --> 00:09:58,340
+A dalej mam kolejne wartości.
+
+163
+00:09:58,340 --> 00:10:00,340
+1, 2, 3, 4.
+
+164
+00:10:00,340 --> 00:10:01,340
+Nie?
+
+165
+00:10:01,340 --> 00:10:03,340
+Później po 1, 2, 3, 4.
+
+166
+00:10:03,340 --> 00:10:07,340
+Muszę to wyświetlić teraz jeszcze, tylko jak będę miał pełniejszy terminal, bo tutaj coś się leguje.
+
+167
+00:10:07,340 --> 00:10:10,340
+O, zobacz. Mam 4, 4.
+
+168
+00:10:10,340 --> 00:10:11,340
+1, 2, 3, 4.
+
+169
+00:10:11,340 --> 00:10:13,340
+Później pojawia mi się wartość 3.
+
+170
+00:10:13,340 --> 00:10:15,340
+I to jest ten sam counter, który był wcześniej.
+
+171
+00:10:15,340 --> 00:10:17,340
+On tutaj nam trochę to może pomylić.
+
+172
+00:10:17,340 --> 00:10:18,340
+Ale jest 1, 2, 3.
+
+173
+00:10:18,340 --> 00:10:21,340
+Potem jest 2, 1, 2 i 1, i 1.
+
+174
+00:10:21,340 --> 00:10:23,340
+Czyli tak naprawdę te wartości, które są tu,
+
+175
+00:10:23,340 --> 00:10:29,340
+one idealnie odwzorowują nam to, co jest wyświetlone w naszym trójkącie.
+
+176
+00:10:29,340 --> 00:10:31,340
+Z tą różnicą, że nie są rozdzielone spacjami,
+
+177
+00:10:31,340 --> 00:10:34,340
+a są rozdzielone znakiem nowego wiersza.
+
+178
+00:10:34,340 --> 00:10:36,340
+To też zaraz pokażę, jak możemy naprawić.
+
+179
+00:10:36,340 --> 00:10:39,340
+Natomiast druga rzecz, która jest do zrobienia, to jest taka,
+
+180
+00:10:39,340 --> 00:10:42,340
+że tutaj te wartości nam się zmniejszają każdorazowo.
+
+181
+00:10:42,340 --> 00:10:44,340
+I to jest jak najbardziej OK.
+
+182
+00:10:44,340 --> 00:10:47,340
+Czyli wiemy już, że ten counter nam nie będzie potrzebny w wyświetlaniu.
+
+183
+00:10:47,340 --> 00:10:51,340
+On był tylko potrzebny, żeby wykonać treść zadania po kolei.
+
+184
+00:10:51,340 --> 00:10:54,340
+I druga rzecz, która jest nam potrzebna, to jest ta,
+
+185
+00:10:54,340 --> 00:10:56,340
+że teraz ten digit, który nam się wyświetla,
+
+186
+00:10:56,340 --> 00:10:59,340
+ma być nie rozdzielony znakiem nowego wiersza,
+
+187
+00:10:59,340 --> 00:11:01,340
+tylko mają być te wartości obok siebie.
+
+188
+00:11:01,340 --> 00:11:03,340
+Ja już jakiś czas temu też o tym mówiłem,
+
+189
+00:11:03,340 --> 00:11:06,340
+że jeżeli chodzi o wyświetlanie wartości obok siebie,
+
+190
+00:11:06,340 --> 00:11:09,340
+to w printcie można byłoby dorzucić te wartości
+
+191
+00:11:09,340 --> 00:11:11,340
+w ten sposób.
+
+192
+00:11:11,340 --> 00:11:14,340
+Ale to jest trochę kłopotliwe, bo my w kolejnych przebiegach pętli
+
+193
+00:11:14,340 --> 00:11:16,340
+nie wiemy, jaką ta wartość ma mieć liczbę.
+
+194
+00:11:16,340 --> 00:11:20,340
+I więc zachęcam do tego, żeby obok digit napisać przecinek,
+
+195
+00:11:20,340 --> 00:11:26,340
+zrobić separator, przepraszam, zrobić end i napisać spację.
+
+196
+00:11:26,340 --> 00:11:31,340
+I to spowoduje ten end, jeżeli, to jest, mówię, zadanie też takie z gwiazdką,
+
+197
+00:11:31,340 --> 00:11:35,340
+więc jeżeli masz ochotę, zachęcam do tego, żeby nie tylko bazować
+
+198
+00:11:35,340 --> 00:11:39,340
+na wiedzy z kursu, tylko czasem sobie odrobinę poszukać informacji w internecie,
+
+199
+00:11:39,340 --> 00:11:43,340
+natomiast jestem przekonany, że to, jeżeli byście pytali Google'a
+
+200
+00:11:43,340 --> 00:11:47,340
+Python, jak wyświetlić wartości printa obok siebie,
+
+201
+00:11:47,340 --> 00:11:49,340
+to on by wam właśnie zaproponował to rozwiązanie,
+
+202
+00:11:49,340 --> 00:11:51,340
+czyli end równa się spacja.
+
+203
+00:11:51,340 --> 00:11:55,340
+I to spowoduje, że wartości będą się wyświetlały nam obok siebie
+
+204
+00:11:55,340 --> 00:12:00,340
+z jedną małą różnicą, bo wszystkie wartości będą się wyświetlały obok siebie.
+
+205
+00:12:00,340 --> 00:12:06,340
+Czyli dostaniemy 1, 2, 3, 4, 1, 2, 3, 1, 2, 1, cały czas obok siebie.
+
+206
+00:12:06,340 --> 00:12:09,340
+Więc my musimy zrobić jeszcze jedną rzecz,
+
+207
+00:12:09,340 --> 00:12:14,340
+a mianowicie wiedzieć, w którym momencie chcemy złamać wiersz.
+
+208
+00:12:14,340 --> 00:12:17,340
+I my chcemy, żeby tutaj ten wiersz nam się złamał, tutaj się złamał
+
+209
+00:12:17,340 --> 00:12:20,340
+i tutaj się złamał. Czyli tak naprawdę ta pętla,
+
+210
+00:12:20,340 --> 00:12:23,340
+ona wyświetla nam te wartości obok siebie.
+
+211
+00:12:23,340 --> 00:12:27,340
+Moim zdaniem, skoro wyświetlimy wszystkie wartości obok siebie,
+
+212
+00:12:27,340 --> 00:12:31,340
+pojedynczy wiersz, no to wtedy chcemy złamać ten wiersz.
+
+213
+00:12:31,340 --> 00:12:37,340
+I żeby to osiągnąć, można napisać print i zrobić tutaj albo sobie spację,
+
+214
+00:12:37,340 --> 00:12:39,340
+albo po prostu pusty print.
+
+215
+00:12:39,340 --> 00:12:41,340
+I tak samo, jak zrobiliśmy przed chwilą tu powyżej,
+
+216
+00:12:41,340 --> 00:12:44,340
+żeby rozdzielić sobie to znakiem nowego wiersza.
+
+217
+00:12:44,340 --> 00:12:48,340
+I zobacz, w tym momencie robię strzałkę do góry Enter i mam trójkąt.
+
+218
+00:12:50,340 --> 00:12:54,340
+I mam trójkąt, dokładnie taki, jak był w rozwiązaniu.
+
+219
+00:12:54,340 --> 00:12:57,340
+Dajcie znać, czy takie zadania Wam się podobają,
+
+220
+00:12:57,340 --> 00:13:00,340
+czy chcecie dostawać więcej takich zadań z gwiazdką.
+
+221
+00:13:00,340 --> 00:13:03,340
+Ja postaram się też wówczas tak to zaktualizować,
+
+222
+00:13:03,340 --> 00:13:07,340
+żeby trochę więcej tych zadań z gwiazdką jeszcze tutaj się pojawiło.
+
+223
+00:13:07,340 --> 00:13:09,340
+Chociaż to zadanie oznaczone w ten sposób nie było,
+
+224
+00:13:09,340 --> 00:13:12,340
+ale mam nadzieję, że zabawa była przednia.
+
+225
+00:13:12,340 --> 00:13:16,340
+Nie zawsze wszystko jest bardzo proste, czasem trzeba trochę pogłówkować,
+
+226
+00:13:16,340 --> 00:13:22,340
+ale mam nadzieję, że bawiliście się dobrze i rozwiązaliście to zadanie pomyślnie.
+
+227
+00:13:22,340 --> 00:13:24,340
+Bardzo dziękuję za tę lekcję.
+
+228
+00:13:24,340 --> 00:13:25,340
+Zapraszam do kolejnej.
+
+229
+00:13:25,340 --> 00:13:27,340
+Tam zajmiemy się stringami.
+
+230
+00:13:27,340 --> 00:13:28,340
+Do zobaczenia.

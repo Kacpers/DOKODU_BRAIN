@@ -1,0 +1,319 @@
+1
+00:00:00,000 --> 00:00:07,540
+No dobrze, ale skoro wiemy jak już łapać wyjątki, warto byłoby wiedzieć jak je rzucać albo podnosić właściwie.
+
+2
+00:00:08,140 --> 00:00:18,080
+Dlaczego mówię o rzucaniu? Z tego względu, że w niektórych językach programowania wyjątki się rzuca, jest through i jest catch, złap.
+
+3
+00:00:18,519 --> 00:00:22,519
+Natomiast w przypadku Pythona jest inaczej, bo mamy rise i accept.
+
+4
+00:00:22,519 --> 00:00:28,519
+Rise, czyli podnieść wyjątek, tak bardziej prawniczo, natomiast accept, czyli za wyjątkiem mówmy, tak?
+
+5
+00:00:28,519 --> 00:00:36,019
+Więc jeżeli chcielibyśmy na przykład sprawić, żeby jeżeli liczba jest podzielna przez 5, to żeby nie można było czegoś zrobić,
+
+6
+00:00:36,439 --> 00:00:41,079
+to wówczas możemy wykonać value równa się int, w nawiasie input podaj liczbę.
+
+7
+00:00:41,659 --> 00:00:51,000
+Jeżeli value modulo 5 równa się 0, jeżeli nie równa się 0, to wtedy zwróć wyjątek, liczba nie jest podzielna przez 5.
+
+8
+00:00:51,000 --> 00:00:56,859
+I tu jest rise exception. Rise oznacza, że zostanie podniesiony wyjątek.
+
+9
+00:00:57,120 --> 00:00:58,439
+Exception to jest klasa.
+
+10
+00:00:58,520 --> 00:00:59,580
+Klasa podstawowa taka.
+
+11
+00:01:00,100 --> 00:01:05,880
+No bo jeżeli pamiętacie dziedziczenie, to w dziedziczeniu mówiliśmy o tym, że mamy powiedzmy sobie vehicle i poniżej mamy base k.
+
+12
+00:01:06,380 --> 00:01:07,180
+I tu jest tak samo.
+
+13
+00:01:07,400 --> 00:01:14,420
+Mamy exception, poniżej jest powiedzmy value error i tak właśnie to działa, że value error dziedziczy po exception.
+
+14
+00:01:14,579 --> 00:01:20,780
+Więc jeżeli chcielibyśmy określić, że tym wyjątkiem, który nas interesuje w tej chwili będzie value error, a nie exception,
+
+15
+00:01:21,340 --> 00:01:23,719
+to można byłoby napisać rise value error.
+
+16
+00:01:24,240 --> 00:01:26,500
+I wtedy tak samo jak podczas łapania.
+
+17
+00:01:26,500 --> 00:01:34,879
+W momencie, w którym łapiemy accept value error, to on nam wejdzie w momencie, w którym będziemy mieli value error.
+
+18
+00:01:35,180 --> 00:01:42,799
+Natomiast jeżeli napisalibyście accept exception, czyli podalibyście tę nazwę klasy, to wtedy łapalibyście absolutnie wszystkie wyjątki.
+
+19
+00:01:43,780 --> 00:01:49,539
+Bo kiedy łapiemy wyjątek, to jakby liczy się to drzewko, według którego te wyjątki są zorganizowane.
+
+20
+00:01:49,980 --> 00:01:52,319
+I łapiąc exception łapiemy tak naprawdę wszystko.
+
+21
+00:01:52,319 --> 00:01:55,420
+Nie możemy później łapać tego drugi raz w inny sposób.
+
+22
+00:01:55,620 --> 00:01:56,319
+Po prostu ten wyjątek...
+
+23
+00:01:56,500 --> 00:01:57,439
+Wyjątek się nam złapał.
+
+24
+00:01:57,819 --> 00:02:00,840
+Więc łapanie wyjątka o nazwie exception jest trochę zbyt szerokie.
+
+25
+00:02:00,939 --> 00:02:01,519
+Jest to broad.
+
+26
+00:02:01,700 --> 00:02:02,900
+Taki błąd się pojawia w IDE.
+
+27
+00:02:03,540 --> 00:02:05,799
+Natomiast to jest temat już na inną rozmowę.
+
+28
+00:02:05,879 --> 00:02:09,719
+To, co jest ważne, to to, że kiedy podajecie value i próbujecie go złapać,
+
+29
+00:02:10,159 --> 00:02:15,920
+to następnie, jeżeli nie jest podzielny przez 5, to zwracacie komunikat, liczba nie jest podzielna przez 5,
+
+30
+00:02:16,300 --> 00:02:17,539
+to ten komunikat się pojawi.
+
+31
+00:02:17,599 --> 00:02:20,960
+Zobaczcie, exception, liczba nie jest podzielna przez 5.
+
+32
+00:02:20,960 --> 00:02:23,960
+Tak możemy wysłać wyjątek samodzielnie.
+
+33
+00:02:24,780 --> 00:02:26,300
+Bez potrzeby wysyłania go.
+
+34
+00:02:26,500 --> 00:02:30,439
+Jest to, że coś się nie podzieliło przez 0, czy się nie sformatowało.
+
+35
+00:02:31,759 --> 00:02:36,199
+No i wówczas, gdzie wtedy możemy dodać try i accept?
+
+36
+00:02:36,699 --> 00:02:43,979
+No bo jeżeli mamy kod, który wygląda tak, while true i w środku dodalibyśmy try i accept,
+
+37
+00:02:44,280 --> 00:02:49,900
+to inna byłaby logika niż jeżeli try i accept byłyby umieszczone na zewnątrz while'a.
+
+38
+00:02:49,900 --> 00:02:52,240
+Dlatego warto się nad tym zastanowić.
+
+39
+00:02:52,659 --> 00:02:55,900
+Jeżeli zrobimy to według pierwszego podejścia, czyli while true,
+
+40
+00:02:56,500 --> 00:02:57,659
+będzie try i accept,
+
+41
+00:02:58,120 --> 00:03:02,680
+to to spowoduje, że on nas będzie pytał cały czas dalej.
+
+42
+00:03:02,879 --> 00:03:04,180
+Nie przerwiemy tego pytania.
+
+43
+00:03:04,740 --> 00:03:07,599
+Czyli while true, try i accept,
+
+44
+00:03:07,740 --> 00:03:10,900
+spowoduje, że wyświetli nam komunikat, liczba nie jest podzielna przez 5.
+
+45
+00:03:11,020 --> 00:03:13,840
+Tutaj on go tylko zwróci, czyli nie wyświetli tej liczby.
+
+46
+00:03:13,979 --> 00:03:17,180
+Pójdzie do tego miejsca, wyświetli tutaj ten komunikat.
+
+47
+00:03:17,740 --> 00:03:20,360
+Natomiast jeżeli zrobilibyśmy odwrotne podejście,
+
+48
+00:03:20,360 --> 00:03:24,379
+czyli mielibyśmy try i accept, a w środku byłby while,
+
+49
+00:03:24,800 --> 00:03:26,300
+to wtedy w tym drugim podejściu,
+
+50
+00:03:26,300 --> 00:03:27,580
+ta konstrukcja będzie inna.
+
+51
+00:03:27,920 --> 00:03:30,680
+To znaczy ona spowoduje, że wyświetli nam się komunikat,
+
+52
+00:03:30,800 --> 00:03:32,420
+liczba nie jest podzielna przez 5,
+
+53
+00:03:32,540 --> 00:03:35,800
+ale zobaczcie, on już jest na zewnątrz while'a, widzimy,
+
+54
+00:03:36,360 --> 00:03:40,380
+co spowoduje, że on już kolejny raz nie zapyta użytkownika o liczbę.
+
+55
+00:03:40,760 --> 00:03:42,000
+I to jest bardzo ważna różnica.
+
+56
+00:03:43,060 --> 00:03:45,600
+Musicie wiedzieć, że jeżeli występuje wyjątek,
+
+57
+00:03:45,740 --> 00:03:49,780
+to można powiedzieć, że Python leci od razu do najbliższego accepta,
+
+58
+00:03:49,780 --> 00:03:52,240
+w którym ten wyjątek może być obsłużony.
+
+59
+00:03:52,680 --> 00:03:55,300
+Jeżeli takiego wyjątku nie ma, to wtedy dostajemy ten błąd,
+
+60
+00:03:55,340 --> 00:03:56,280
+unhandled accept.
+
+61
+00:03:56,300 --> 00:03:56,540
+To jest bardzo ważne, bo to jest w tym przypadku najlepszy,
+
+62
+00:03:56,600 --> 00:03:59,260
+tak jak zawsze widzieliście, kiedy pojawił się index error,
+
+63
+00:03:59,460 --> 00:04:02,320
+czy key error, czy jakikolwiek inny błąd.
+
+64
+00:04:02,760 --> 00:04:04,560
+Natomiast jeżeli jest gdzieś on obsłużony,
+
+65
+00:04:04,660 --> 00:04:06,939
+to on sobie leci do góry, do góry, do góry, aż go znajdzie.
+
+66
+00:04:07,320 --> 00:04:08,640
+To jest bardzo wygodne też.
+
+67
+00:04:09,120 --> 00:04:12,600
+I dzięki temu możemy też w odpowiedni sposób reagować,
+
+68
+00:04:12,800 --> 00:04:15,600
+zależnie od tego, jak chcielibyśmy dany błąd obsłużyć.
+
+69
+00:04:16,019 --> 00:04:18,900
+Bo czasem mogłoby być tak, że chcielibyśmy dalej użytkownika pytać,
+
+70
+00:04:18,980 --> 00:04:21,300
+tylko wyświetlić mu informację i tyle, i dalej go pytamy,
+
+71
+00:04:21,699 --> 00:04:22,639
+bo jesteśmy w while'u.
+
+72
+00:04:22,639 --> 00:04:25,180
+Natomiast w tym przypadku już go nigdy nie zapytamy,
+
+73
+00:04:25,180 --> 00:04:26,459
+bo wyszliśmy z tego while'a.
+
+74
+00:04:27,019 --> 00:04:28,819
+Chyba, że do niego w jakiś sposób wrócimy.
+
+75
+00:04:29,040 --> 00:04:30,220
+I tutaj powtórzę się.
+
+76
+00:04:30,639 --> 00:04:33,040
+Myślę, że po raz kolejny dojrzeliśmy do tego,
+
+77
+00:04:33,180 --> 00:04:34,439
+żeby sobie to przećwiczyć.
+
+78
+00:04:34,759 --> 00:04:37,439
+Dlatego zachęcam Was, żebyśmy przeszli do zadania,
+
+79
+00:04:37,620 --> 00:04:39,840
+gdzie będziemy mogli obsłużyć wyjątek
+
+80
+00:04:39,840 --> 00:04:41,180
+i wysłać go samodzielnie.

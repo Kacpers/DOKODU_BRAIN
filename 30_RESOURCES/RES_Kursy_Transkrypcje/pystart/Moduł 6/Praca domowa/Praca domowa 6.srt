@@ -1,0 +1,263 @@
+1
+00:00:00,000 --> 00:00:10,160
+A pracy domowej na dziś nie ma dużo, natomiast są to zadania, które chciałbym, żebyście wykonywali w skupieniu i żebyście koniecznie robili je wraz z testami.
+
+2
+00:00:10,740 --> 00:00:14,400
+A no tam, gdzie trzeba zrobić paczkę, no to po prostu robimy paczkę.
+
+3
+00:00:14,500 --> 00:00:21,219
+Tutaj nie kombinujemy, natomiast jeżeli są funkcje, to funkcja musi mieć zawsze testy, bo tylko w ten sposób możemy wiedzieć, że działa.
+
+4
+00:00:21,219 --> 00:00:32,640
+No i zachęcam też do tego, żeby zacząć wykonywać to zadanie w taki sposób, żeby najpierw test nie przechodził, a dopiero później przechodził, bo tylko w ten sposób mamy pewność, że zadziałało.
+
+5
+00:00:32,960 --> 00:00:36,820
+Najgorsze są te testy, które wiecie, przechodzą, a tak naprawdę nic nie sprawdzają.
+
+6
+00:00:37,539 --> 00:00:40,179
+Przygotuj funkcję, która będzie odbierała argumenty w postaci.
+
+7
+00:00:40,579 --> 00:00:41,200
+Group them.
+
+8
+00:00:41,519 --> 00:00:46,399
+Wall, red, tomato, red, light, yellow, lemon, yellow i grass, green.
+
+9
+00:00:46,399 --> 00:00:49,659
+I w odpowiedzi funkcja powinna wyświetlić w osobnych wierszach.
+
+10
+00:00:49,739 --> 00:00:51,200
+Wall is red, tomato is red.
+
+11
+00:00:51,219 --> 00:00:53,280
+Red, light is yellow i tak dalej.
+
+12
+00:00:54,000 --> 00:00:58,019
+W zadaniu drugim chcemy przygotować pakiet finances posiadający moduły.
+
+13
+00:00:58,179 --> 00:00:59,579
+Budget oraz e-commerce.
+
+14
+00:01:00,119 --> 00:01:03,100
+Finances posiada funkcję calculate expenses.
+
+15
+00:01:03,579 --> 00:01:07,259
+Expenses to jest lista, czyli tak naprawdę chcemy tylko dodać elementy tej listy.
+
+16
+00:01:07,759 --> 00:01:08,900
+Sumująca listę wydatków.
+
+17
+00:01:09,219 --> 00:01:12,900
+Oraz calculate monthly budget, total income, total expenses.
+
+18
+00:01:12,900 --> 00:01:16,799
+Gdzie tutaj będziemy chcieli odjąć od siebie income od expenses.
+
+19
+00:01:16,920 --> 00:01:19,019
+Tak, żeby dowiedzieć się ile nam zostało.
+
+20
+00:01:19,400 --> 00:01:21,200
+Gdzie income i expenses będą po prostu dysponować.
+
+21
+00:01:21,219 --> 00:01:22,780
+Czy dwoma integerami, czy też floatami.
+
+22
+00:01:23,700 --> 00:01:28,579
+E-commerce natomiast ma posiadać funkcję calculate brutto oraz calculate netto.
+
+23
+00:01:28,640 --> 00:01:30,599
+Z wartością VAT domyślną 0,23.
+
+24
+00:01:31,260 --> 00:01:33,560
+A także funkcję calculate rabat.
+
+25
+00:01:33,980 --> 00:01:36,700
+Rabat, no to można byłoby zrobić calculate discount.
+
+26
+00:01:36,900 --> 00:01:38,859
+Byłoby zdecydowanie bardziej in English.
+
+27
+00:01:39,319 --> 00:01:42,000
+Która otrzyma listę rabatów na plac 0,1, 0,2, 0,3.
+
+28
+00:01:42,299 --> 00:01:44,920
+I będzie potrafiła je odjąć jako wartości procentowe.
+
+29
+00:01:45,280 --> 00:01:48,219
+Czyli musimy każdą kolejną wartość przemnożyć przez sumę.
+
+30
+00:01:48,780 --> 00:01:49,859
+Tą ile zostało.
+
+31
+00:01:49,859 --> 00:01:50,859
+I następnie.
+
+32
+00:01:51,219 --> 00:01:57,280
+I tutaj musimy koniecznie pamiętać o tym, żeby później też zrobić z tego paczkę instalacyjną.
+
+33
+00:01:57,359 --> 00:01:59,539
+Taką, którą będzie można zainstalować w innym projekcie.
+
+34
+00:01:59,620 --> 00:02:03,280
+I na przykład wykorzystać do liczenia jakiegoś domowego budżetu.
+
+35
+00:02:03,620 --> 00:02:04,579
+To są dwa zadania.
+
+36
+00:02:04,700 --> 00:02:06,060
+Przed nami jeszcze trzy.
+
+37
+00:02:06,719 --> 00:02:10,340
+Przygotuj funkcję, która zliczy ilość wystąpień jednego słowa w tekście.
+
+38
+00:02:10,419 --> 00:02:12,939
+Na przykład count word, Python i Python.
+
+39
+00:02:13,360 --> 00:02:15,520
+Dla słowa Python będzie zwróci dwa.
+
+40
+00:02:15,659 --> 00:02:17,900
+Ponieważ w tym tekście są dwa Pythony.
+
+41
+00:02:17,900 --> 00:02:21,180
+Jeżeli będzie zero, no to powinno to być zero.
+
+42
+00:02:21,219 --> 00:02:25,219
+Jeżeli chcesz, to możesz też dorzucić dodatkowy kwark z informacją o tym,
+
+43
+00:02:25,219 --> 00:02:27,219
+czy zbierać pod uwagę wielkość liter.
+
+44
+00:02:28,219 --> 00:02:32,219
+W zadaniu drugim na tej stronie mamy wykorzystać kod napisany poprzednio
+
+45
+00:02:32,219 --> 00:02:35,219
+do przygotowania funkcji weryfikującej numer PESEL.
+
+46
+00:02:35,219 --> 00:02:37,219
+No i funkcja powinna zwracać true albo false.
+
+47
+00:02:37,219 --> 00:02:41,219
+W zależności od tego, czy PESEL jest prawidłowy, czy też nie jest.
+
+48
+00:02:41,219 --> 00:02:42,719
+No i ostatnie zadanie.
+
+49
+00:02:42,719 --> 00:02:45,719
+Chcemy przygotować funkcję, która będzie właściwie dwie funkcje,
+
+50
+00:02:45,719 --> 00:02:49,219
+które będą liczyły BMI na podstawie argumentów.
+
+51
+00:02:49,219 --> 00:02:50,719
+Wzrost oraz waga.
+
+52
+00:02:50,719 --> 00:02:53,719
+Nie wiem dlaczego zawsze wychodzi mi, że jestem za niski.
+
+53
+00:02:53,719 --> 00:02:57,719
+BMI to jest masa wyrażona w kilogramach, podzielona przez wzrost w metrach,
+
+54
+00:02:57,719 --> 00:02:59,719
+podniesione do kwadratu.
+
+55
+00:02:59,719 --> 00:03:04,719
+No i druga funkcja powinna na podstawie wartości tej, którą przekazujemy BMI,
+
+56
+00:03:04,719 --> 00:03:08,719
+opisywać wynik za pomocą albo wygładzenie, albo skrajna otyłość.
+
+57
+00:03:08,719 --> 00:03:12,719
+No i te wartości pośrednie też powinniśmy tutaj brać pod uwagę.
+
+58
+00:03:12,719 --> 00:03:13,719
+To co?
+
+59
+00:03:13,719 --> 00:03:16,719
+Przypominam o tym, żeby obie te funkcje były przetestowane
+
+60
+00:03:16,719 --> 00:03:18,719
+i widzimy się już za moment.
+
+61
+00:03:18,719 --> 00:03:20,719
+Właściwie to już za chwilę.
+
+62
+00:03:20,719 --> 00:03:25,719
+Za tydzień, czy za niedługo w rozwiązaniu tej pracy domowej.
+
+63
+00:03:25,719 --> 00:03:26,719
+No to co?
+
+64
+00:03:26,719 --> 00:03:29,719
+Życzę przyjemnego rozwiązywania i do zobaczenia.
+
+65
+00:03:29,719 --> 00:03:33,719
+A jakby zadań było mało, to napiszcie na Discordzie, może coś się jeszcze znajdzie.
+
+66
+00:03:33,719 --> 00:03:34,719
+Pa pa!

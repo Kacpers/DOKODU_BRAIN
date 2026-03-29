@@ -1,0 +1,991 @@
+1
+00:00:00,000 --> 00:00:01,980
+To co? Przed nami kolejne zadanie.
+
+2
+00:00:02,480 --> 00:00:06,120
+Zaczynamy sobie od tego, że stworzę sobie najpierw jakąś zmienną nazwę, ją tekst
+
+3
+00:00:06,120 --> 00:00:08,759
+i to jest ten tekst, który będę chciał szyfrować.
+
+4
+00:00:09,179 --> 00:00:13,160
+Z racji tego, że tutaj będę wykonywał kilka czynności, to chcę zacząć sobie od tego
+
+5
+00:00:13,160 --> 00:00:16,199
+i najpierw ten kod sobie, ten tekst sobie przygotuję,
+
+6
+00:00:16,699 --> 00:00:20,080
+a dopiero później go będę pobierał od użytkownika.
+
+7
+00:00:20,300 --> 00:00:22,339
+Nie chcę po prostu za każdym razem wpisywać tego samego.
+
+8
+00:00:22,859 --> 00:00:27,179
+Oczywiście tekstem do szyfrowania będzie tekst Witaj Świecie
+
+9
+00:00:27,179 --> 00:00:30,600
+i z racji tego, że wiem, że ten tekst odbieram od użytkownika,
+
+10
+00:00:30,759 --> 00:00:32,859
+to od razu też zamienię go sobie na wielkie litery,
+
+11
+00:00:33,460 --> 00:00:38,079
+żeby uniknąć problemu z małymi i wielkimi literami.
+
+12
+00:00:38,380 --> 00:00:42,299
+Wolałbym, żeby zawsze ten tekst był zrozumiały dla jednej i dla drugiej strony,
+
+13
+00:00:42,299 --> 00:00:45,299
+więc po prostu, żeby był zawsze zapisany wielkimi literami,
+
+14
+00:00:45,719 --> 00:00:49,739
+bo kod małej litery jest inny niż kod dużej litery.
+
+15
+00:00:50,480 --> 00:00:53,679
+Kolejna rzecz, którą muszę zrobić, to muszę przechodzić sobie po tym tekście
+
+16
+00:00:53,679 --> 00:00:57,140
+litera po literze, czyli for char, car,
+
+17
+00:00:57,179 --> 00:00:59,759
+in text, dwukropek.
+
+18
+00:01:00,780 --> 00:01:04,420
+W wyrażeniu Hello World jest spacja.
+
+19
+00:01:05,019 --> 00:01:07,180
+W tym naszym tekście też może być więcej spacji,
+
+20
+00:01:07,280 --> 00:01:11,500
+więc chciałbym sprawić, żeby te spacje tutaj nie miały znaczenia.
+
+21
+00:01:12,120 --> 00:01:16,099
+Czyli będę chciał sprawdzić, czy ten znak, przez który przechodzę, to litera,
+
+22
+00:01:16,760 --> 00:01:23,379
+czyli if car.is, i tutaj jest coś takiego jak is alfa,
+
+23
+00:01:23,379 --> 00:01:26,340
+czyli jest to dwa, dwukropek,
+
+24
+00:01:27,180 --> 00:01:29,680
+no to print car.
+
+25
+00:01:29,680 --> 00:01:31,680
+Jeżeli teraz to sobie wywołam,
+
+26
+00:01:31,680 --> 00:01:34,680
+Python 9, stringi, Cesar,
+
+27
+00:01:34,680 --> 00:01:38,680
+no to okaże się, że on mi ładnie zamienił i wyświetlił wszystkie hell.
+
+28
+00:01:38,680 --> 00:01:42,680
+To r wynika z tego, że mi się konsola zepsuła.
+
+29
+00:01:42,680 --> 00:01:45,680
+Jak to sobie przesunę wyżej, zobaczcie, o, to mam wszystko okej.
+
+30
+00:01:45,680 --> 00:01:48,680
+Hello World. Wszystko jest fantastycznie.
+
+31
+00:01:48,680 --> 00:01:56,680
+Rzecz kolejna jest taka, że będę musiał teraz zamienić sobie każdą tą literę na cyfry.
+
+32
+00:01:56,680 --> 00:02:01,180
+Czyli będę korzystał z tych dwóch funkcji, ord i chr.
+
+33
+00:02:01,180 --> 00:02:06,180
+Chr służy do tego, żeby cyfry zamieniać na litery, natomiast ord zamienia na cyfry.
+
+34
+00:02:06,180 --> 00:02:10,180
+Czyli, jeżeli chciałbym widzieć zarówno litery, jak i wartość liczbową,
+
+35
+00:02:10,180 --> 00:02:15,180
+to mogę sobie dorzucić przecinek, ord od znaku.
+
+36
+00:02:15,180 --> 00:02:19,680
+Strzała do góry, enter, no i zobacz, wszystko mi się ładnie wyświetliło.
+
+37
+00:02:19,680 --> 00:02:23,680
+Każdy znak ma odpowiadającą mu cyfrę.
+
+38
+00:02:23,680 --> 00:02:26,180
+I teraz do tego, ja będę chciał dołożyć,
+
+39
+00:02:26,680 --> 00:02:29,680
+bo ja najpierw szyfruję, potem będę odszyfrowywał,
+
+40
+00:02:29,680 --> 00:02:32,680
+będę chciał dołożyć liczbę 3.
+
+41
+00:02:32,680 --> 00:02:34,680
+Bo tak się umawialiśmy.
+
+42
+00:02:34,680 --> 00:02:38,680
+Czyli mogę sobie przyjąć, że mam jakiś tam secret,
+
+43
+00:02:38,680 --> 00:02:41,680
+i ten secret jest równy 3.
+
+44
+00:02:41,680 --> 00:02:44,680
+I w tym momencie moja nowa litera tak naprawdę,
+
+45
+00:02:44,680 --> 00:02:49,680
+czyli moje tam cifred letter, czy może secret letter,
+
+46
+00:02:49,680 --> 00:02:53,680
+właśnie to secret chr, niech będzie, równa się,
+
+47
+00:02:53,680 --> 00:02:55,680
+ord od chr,
+
+48
+00:02:56,680 --> 00:02:59,680
+plus secret.
+
+49
+00:02:59,680 --> 00:03:03,680
+I skoro chciałbym przechowywać już secret chr,
+
+50
+00:03:03,680 --> 00:03:08,680
+to teraz muszę zamienić tę liczbę, tę liczbę, nie, ten znak,
+
+51
+00:03:08,680 --> 00:03:12,680
+na odpowiednik już literowy, znakowy.
+
+52
+00:03:12,680 --> 00:03:16,680
+Czyli z powrotem wracam do wyrażenia chr,
+
+53
+00:03:16,680 --> 00:03:19,680
+otwieram nawias, zamykam nawias.
+
+54
+00:03:19,680 --> 00:03:24,680
+To spowoduje, że on mi doda do cyfry 3,
+
+55
+00:03:24,680 --> 00:03:27,680
+czyli przesunie mi tę moją literę o 3 znaki,
+
+56
+00:03:27,680 --> 00:03:30,680
+i z powrotem zamieni mi ją na znak.
+
+57
+00:03:30,680 --> 00:03:33,680
+I teraz, jeżeli chciałbym zobaczyć ten nowy znak,
+
+58
+00:03:33,680 --> 00:03:35,680
+to mogę sobie zawsze wyświetlić ten chr,
+
+59
+00:03:35,680 --> 00:03:38,680
+oraz wyświetlić secret chr.
+
+60
+00:03:38,680 --> 00:03:42,680
+Strzała do góry, enter, i zobaczcie,
+
+61
+00:03:42,680 --> 00:03:44,680
+litera D zamieniła się na G.
+
+62
+00:03:44,680 --> 00:03:45,680
+Dlaczego?
+
+63
+00:03:45,680 --> 00:03:46,680
+Czy znam alfabet?
+
+64
+00:03:46,680 --> 00:03:48,680
+E, F, G, tak?
+
+65
+00:03:48,680 --> 00:03:50,680
+Mamy 3 znaki dalej, jest litera G,
+
+66
+00:03:50,680 --> 00:03:52,680
+czyli o tyle znaków udało nam się przesunąć,
+
+67
+00:03:52,680 --> 00:03:55,680
+nasze wyrażenie.
+
+68
+00:03:55,680 --> 00:03:58,680
+Natomiast, ma to też swój minus.
+
+69
+00:03:58,680 --> 00:04:02,680
+Jeżeli będziemy mieli literę Z na przykład,
+
+70
+00:04:02,680 --> 00:04:06,680
+gdzie litera Z ma, liczmy, numer 90,
+
+71
+00:04:06,680 --> 00:04:08,680
+tak, odpowiada jej cyfra 90,
+
+72
+00:04:08,680 --> 00:04:13,680
+cyfr A, litera A ma numer 65.
+
+73
+00:04:13,680 --> 00:04:15,680
+I teraz, to co chcielibyśmy zrobić,
+
+74
+00:04:15,680 --> 00:04:18,680
+to chcielibyśmy przesunąć sobie to 90,
+
+75
+00:04:18,680 --> 00:04:20,680
+tak naprawdę na 68.
+
+76
+00:04:20,680 --> 00:04:22,680
+Jak sobie z tym poradzić?
+
+77
+00:04:22,680 --> 00:04:24,680
+Generalnie, żeby sobie z tym poradzić,
+
+78
+00:04:24,680 --> 00:04:26,680
+sposobów jest kilka.
+
+79
+00:04:26,680 --> 00:04:29,680
+Sposób pierwszy jest taki, że moglibyśmy zapisać IFA,
+
+80
+00:04:29,680 --> 00:04:33,680
+i za pomocą IFA sprawdzać, czy nasza cyfra wychodzi poza skalę,
+
+81
+00:04:33,680 --> 00:04:35,680
+i jeżeli wychodzi poza skalę, to dowiedziecie,
+
+82
+00:04:35,680 --> 00:04:37,680
+o ile wychodzi poza skalę,
+
+83
+00:04:37,680 --> 00:04:41,680
+i te cyfry, tę wartość dodać do A.
+
+84
+00:04:41,680 --> 00:04:43,680
+To byłoby jedno rozwiązanie.
+
+85
+00:04:43,680 --> 00:04:46,680
+Natomiast to rozwiązanie nie będzie rozwiązaniem najpiękniejszym.
+
+86
+00:04:46,680 --> 00:04:50,680
+Więc będziemy chcieli sobie trochę to rozwiązanie uładnić.
+
+87
+00:04:50,680 --> 00:04:51,680
+Czyli tak naprawdę,
+
+88
+00:04:51,680 --> 00:04:55,680
+ORD plus SECRET, jeżeli dodajemy do Z,
+
+89
+00:04:55,680 --> 00:05:00,680
+daje nam wartość, która już wychodzi nam poza skalę.
+
+90
+00:05:00,680 --> 00:05:03,680
+Więc to, co możemy zrobić, to możemy odjąć sobie od tego
+
+91
+00:05:03,680 --> 00:05:06,680
+położenie litery A.
+
+92
+00:05:06,680 --> 00:05:09,680
+Jeżeli odejmiemy położenie litery A,
+
+93
+00:05:09,680 --> 00:05:13,680
+no to wtedy będziemy dostawali jakby informację od zera,
+
+94
+00:05:13,680 --> 00:05:16,680
+którą cyfrę w danym momencie alfabetu przetwarzamy.
+
+95
+00:05:16,680 --> 00:05:19,680
+Jeżeli będzie to cyfra już po przesunięciu.
+
+96
+00:05:19,680 --> 00:05:22,680
+Jeżeli to będzie była litera A,
+
+97
+00:05:22,680 --> 00:05:26,680
+to dostaniemy po prostu trójkę, bo będzie to wartość C.
+
+98
+00:05:26,680 --> 00:05:28,680
+Jeżeli była to litera Z,
+
+99
+00:05:28,680 --> 00:05:32,680
+to w tym momencie dostaniemy też odpowiednią wartość,
+
+100
+00:05:32,680 --> 00:05:35,680
+która będzie wskazywała nam na tą literę A.
+
+101
+00:05:35,680 --> 00:05:37,680
+OK.
+
+102
+00:05:37,680 --> 00:05:39,680
+Kolejna rzecz, którą należy zrobić,
+
+103
+00:05:39,680 --> 00:05:44,680
+to musimy podzielić to sobie modulo przez 26.
+
+104
+00:05:44,680 --> 00:05:48,680
+Z tego względu, że nasz alfabet ma 26 znaków,
+
+105
+00:05:48,680 --> 00:05:51,680
+i od A do Z jest dokładnie 26.
+
+106
+00:05:51,680 --> 00:05:53,680
+Jeżeli wykonamy modulo 26,
+
+107
+00:05:53,680 --> 00:05:55,680
+to zakładając, że będziemy mieli 3,
+
+108
+00:05:55,680 --> 00:05:57,680
+to dostaniemy 3,
+
+109
+00:05:57,680 --> 00:06:00,680
+a jeżeli będziemy mieli 29,
+
+110
+00:06:00,680 --> 00:06:02,680
+to dostaniemy i tak 3.
+
+111
+00:06:02,680 --> 00:06:04,680
+Czyli on nam zawsze zwróci resztę z dzielenia,
+
+112
+00:06:04,680 --> 00:06:08,680
+i dzięki temu, jeżeli z jakiegoś powodu byśmy przekraczali jeszcze wartość 26,
+
+113
+00:06:08,680 --> 00:06:13,680
+no to będziemy mieli odpowiednie tylko i wyłącznie tą wartość 3.
+
+114
+00:06:13,680 --> 00:06:17,680
+I teraz musimy dodać raz jeszcze ord od A,
+
+115
+00:06:17,680 --> 00:06:19,680
+i to jest taki uniwersalny sposób na to,
+
+116
+00:06:19,680 --> 00:06:22,680
+żeby znaleźć odpowiedź sobie na pytanie,
+
+117
+00:06:22,680 --> 00:06:24,680
+jaka jest ta nasza właściwa litera.
+
+118
+00:06:24,680 --> 00:06:26,680
+I to, co należałoby zrobić,
+
+119
+00:06:26,680 --> 00:06:28,680
+to ten CHR, o jeszcze ten nawias zamykający,
+
+120
+00:06:28,680 --> 00:06:30,680
+on się musi zamykać na samym końcu.
+
+121
+00:06:30,680 --> 00:06:31,680
+O tak.
+
+122
+00:06:31,680 --> 00:06:35,680
+I w ten sposób będziemy zawsze mieli dobrą literę,
+
+123
+00:06:35,680 --> 00:06:38,680
+bo on najpierw dodaje sobie to przesunięcie,
+
+124
+00:06:38,680 --> 00:06:42,680
+następnie odejmujemy literę A,
+
+125
+00:06:42,680 --> 00:06:44,680
+tu jeszcze zerkam, czy na pewno nie zrobiliśmy nigdzie gafy,
+
+126
+00:06:44,680 --> 00:06:46,680
+bo widzę, że nawiasy tu gdzieś powinny być nie tak,
+
+127
+00:06:46,680 --> 00:06:54,680
+bo tak naprawdę z tego powinniśmy sobie policzyć tę resztę z dzielenia,
+
+128
+00:06:54,680 --> 00:06:58,680
+i wtedy będziemy mieli resztę z dzielenia 26 plus ord od A.
+
+129
+00:06:58,680 --> 00:07:00,680
+Okej, i to powinno działać.
+
+130
+00:07:00,680 --> 00:07:02,680
+Czyli do litery Z załóżmy, dodajemy sobie 3,
+
+131
+00:07:02,680 --> 00:07:04,680
+dostajemy tam coś poza skalą,
+
+132
+00:07:04,680 --> 00:07:08,680
+następnie odejmujemy A, co spowoduje, że będziemy mieli cyfrę 3.
+
+133
+00:07:08,680 --> 00:07:10,680
+Natomiast jeżeli byśmy byli dalej,
+
+134
+00:07:10,680 --> 00:07:12,680
+to i tak sobie zabezpieczamy przed tym,
+
+135
+00:07:12,680 --> 00:07:16,680
+robimy to modulo 26, żeby na dalsze jakieś sytuacje też nie mieć z tym problemu,
+
+136
+00:07:16,680 --> 00:07:20,680
+no i dodajemy A, żeby cofnąć to przesunięcie,
+
+137
+00:07:20,680 --> 00:07:22,680
+które zrobiliśmy sobie tu.
+
+138
+00:07:22,680 --> 00:07:26,680
+No i tak naprawdę, jeżeli teraz wyprintujemy sobie nasz specjalny znak,
+
+139
+00:07:26,680 --> 00:07:28,680
+nasz secret character,
+
+140
+00:07:28,680 --> 00:07:30,680
+czyli uruchomimy sobie terminal,
+
+141
+00:07:30,680 --> 00:07:32,680
+i sobie to uruchomimy,
+
+142
+00:07:32,680 --> 00:07:34,680
+no to dostaniemy zamiast hello world,
+
+143
+00:07:34,680 --> 00:07:36,680
+pojawi nam się coś takiego.
+
+144
+00:07:36,680 --> 00:07:38,680
+I teraz zasada będzie polegała na tym,
+
+145
+00:07:38,680 --> 00:07:44,680
+że ten nasz sekretny znak będziemy musieli dopisać do naszego nowego tekstu.
+
+146
+00:07:44,680 --> 00:07:50,680
+Czyli encrypted text równa się,
+
+147
+00:07:50,680 --> 00:07:52,680
+chociaż to jest, no encrypted, okej, to się zgadza.
+
+148
+00:07:52,680 --> 00:07:54,680
+To jest pusty string.
+
+149
+00:07:56,680 --> 00:07:58,680
+To, co mogę zrobić,
+
+150
+00:07:58,680 --> 00:08:00,680
+to tak naprawdę mogę modyfikować mój znak.
+
+151
+00:08:00,680 --> 00:08:02,680
+Robię to tylko i wyłącznie dlatego,
+
+152
+00:08:02,680 --> 00:08:04,680
+żeby później tu, w tym miejscu,
+
+153
+00:08:04,680 --> 00:08:06,680
+móc zawsze każdy znak dodawać.
+
+154
+00:08:06,680 --> 00:08:08,680
+Bo jeżeli znak jest alfanumeryczny, to go dodaję,
+
+155
+00:08:08,680 --> 00:08:10,680
+a jeżeli znak jest spacją,
+
+156
+00:08:10,680 --> 00:08:12,680
+czy jakimś innym znakiem, cyfrą,
+
+157
+00:08:12,680 --> 00:08:14,680
+to go też przerzucam.
+
+158
+00:08:14,680 --> 00:08:18,680
+Czyli encrypted text plus równa się znak.
+
+159
+00:08:18,680 --> 00:08:20,680
+Print encrypted text.
+
+160
+00:08:22,680 --> 00:08:24,680
+W ten sposób powinniśmy dostać zawsze
+
+161
+00:08:24,680 --> 00:08:26,680
+ten nasz hello world
+
+162
+00:08:26,680 --> 00:08:28,680
+przesunięty o trzy znaki w prawo.
+
+163
+00:08:30,680 --> 00:08:32,680
+A co będziemy musieli zrobić, żeby
+
+164
+00:08:32,680 --> 00:08:34,680
+w drugą stronę go odszyfrować?
+
+165
+00:08:36,680 --> 00:08:38,680
+Będziemy musieli odjąć tekst.
+
+166
+00:08:38,680 --> 00:08:40,680
+Zobacz, zrobię minus secret
+
+167
+00:08:40,680 --> 00:08:42,680
+i teraz jeżeli spróbuję to sobie,
+
+168
+00:08:42,680 --> 00:08:44,680
+jeżeli to sobie wywołam
+
+169
+00:08:44,679 --> 00:08:46,679
+i ten tekst będzie tym tekstem,
+
+170
+00:08:46,679 --> 00:08:48,679
+który będę chciał zamienić,
+
+171
+00:08:48,679 --> 00:08:50,679
+o w ten sposób,
+
+172
+00:08:50,679 --> 00:08:52,679
+no to wówczas dostanę hello world.
+
+173
+00:08:52,679 --> 00:08:54,679
+Jak widać w jedną i w drugą stronę zadziałało.
+
+174
+00:08:54,679 --> 00:08:56,679
+Oczywiście to nie jest to rozwiązanie,
+
+175
+00:08:56,679 --> 00:08:58,679
+które chcielibyśmy osiągnąć.
+
+176
+00:08:58,679 --> 00:09:00,679
+Chcielibyśmy mieć ten tekst,
+
+177
+00:09:00,679 --> 00:09:02,679
+który można byłoby odbierać od użytkownika.
+
+178
+00:09:02,679 --> 00:09:04,679
+Czyli możemy napisać input,
+
+179
+00:09:04,679 --> 00:09:06,679
+podaj mi tekst do przetworzenia,
+
+180
+00:09:06,679 --> 00:09:08,679
+i tutaj mamy ten tekst.
+
+181
+00:09:08,679 --> 00:09:10,679
+I teraz możemy odbierać ten tekst
+
+182
+00:09:10,679 --> 00:09:12,679
+i odbierać od użytkownika.
+
+183
+00:09:12,679 --> 00:09:14,679
+Podajemy tekst do przetworzenia.
+
+184
+00:09:14,679 --> 00:09:16,679
+No i następnie wszystko tak naprawdę
+
+185
+00:09:16,679 --> 00:09:18,679
+zależy od tego,
+
+186
+00:09:18,679 --> 00:09:20,679
+czy my chcemy sobie ten tekst
+
+187
+00:09:20,679 --> 00:09:22,679
+szyfrować, czy odszyfrowywać.
+
+188
+00:09:22,679 --> 00:09:24,679
+Więc ja jeszcze muszę zapytać
+
+189
+00:09:24,679 --> 00:09:26,679
+o drugą rzecz,
+
+190
+00:09:26,679 --> 00:09:28,679
+czyli action input,
+
+191
+00:09:28,679 --> 00:09:30,679
+jeden odszyfruj,
+
+192
+00:09:30,679 --> 00:09:32,679
+dwa zaszyfruj.
+
+193
+00:09:38,679 --> 00:09:40,679
+I użycie tutaj match case'a
+
+194
+00:09:40,679 --> 00:09:42,679
+może też być rozwiązaniem,
+
+195
+00:09:42,679 --> 00:09:44,679
+natomiast to jest prosty if,
+
+196
+00:09:44,679 --> 00:09:46,679
+ale może albo prostym ifem,
+
+197
+00:09:46,679 --> 00:09:48,679
+albo bez prostego ifa,
+
+198
+00:09:48,679 --> 00:09:50,679
+to zależy od tego jak nam wygodniej.
+
+199
+00:09:50,679 --> 00:09:52,679
+Ja myślę, że pójdę w kierunku ifa.
+
+200
+00:09:52,679 --> 00:09:54,679
+Warto wiedzieć, że mamy też,
+
+201
+00:09:54,679 --> 00:09:56,679
+to nie jest tak, że pokazałem wam match case
+
+202
+00:09:56,679 --> 00:09:58,679
+i teraz tylko i wyłącznie musimy robić match case zawsze,
+
+203
+00:09:58,679 --> 00:10:04,679
+tylko możemy sobie zawsze też zrobić to w ten sposób.
+
+204
+00:10:04,679 --> 00:10:06,679
+Czyli ort będzie odejmował,
+
+205
+00:10:12,679 --> 00:10:14,679
+tu będziemy dodawali,
+
+206
+00:10:18,679 --> 00:10:20,679
+no a w przeciwnym wypadku tak naprawdę
+
+207
+00:10:20,679 --> 00:10:22,679
+nie wiadomo co chcemy zrobić.
+
+208
+00:10:22,679 --> 00:10:24,679
+Okej, no to sprawdzamy.
+
+209
+00:10:24,679 --> 00:10:26,679
+Czyli wywołam sobie mój program,
+
+210
+00:10:26,679 --> 00:10:28,679
+podaj mi tekst do przetworzenia,
+
+211
+00:10:28,679 --> 00:10:30,679
+kacper, zaszyfruj,
+
+212
+00:10:30,679 --> 00:10:32,679
+wychodzi coś takiego,
+
+213
+00:10:32,679 --> 00:10:34,679
+ndf shu,
+
+214
+00:10:34,679 --> 00:10:36,679
+shu mi się z czymś kojarzy,
+
+215
+00:10:36,679 --> 00:10:38,679
+ndf shu,
+
+216
+00:10:38,679 --> 00:10:40,679
+tylko zapisywane w inny sposób,
+
+217
+00:10:40,679 --> 00:10:42,679
+ndf shu, tylko zapisywane w inny sposób,
+
+218
+00:10:42,679 --> 00:10:44,679
+to jest
+
+219
+00:10:44,679 --> 00:10:46,679
+jeden, czemu się pokazało jeden?
+
+220
+00:10:46,679 --> 00:10:48,679
+czemu się pokazało jeden?
+
+221
+00:10:48,679 --> 00:10:50,679
+Czy coś zrobiłem nie tak?
+
+222
+00:10:50,679 --> 00:10:52,679
+Raz jeszcze sprawdzam.
+
+223
+00:10:52,679 --> 00:10:54,679
+A odwrotnie mnie zrobiłem,
+
+224
+00:10:54,679 --> 00:10:56,679
+tekst do przetworzenia to jest ndf shu,
+
+225
+00:10:56,679 --> 00:10:58,679
+a tu chcę go odszyfrować,
+
+226
+00:10:58,679 --> 00:11:00,679
+wyszedł kacper.
+
+227
+00:11:00,679 --> 00:11:02,679
+Czyli wszystko gra tak jak powinno.
+
+228
+00:11:02,679 --> 00:11:04,679
+Cyfry i wszystkie inne znaki po prostu nam się dodają,
+
+229
+00:11:04,679 --> 00:11:06,679
+no i w ten sposób zhakowaliśmy sobie też
+
+230
+00:11:06,679 --> 00:11:08,679
+szyfr Cezara.
+
+231
+00:11:08,679 --> 00:11:10,679
+Największa trudność znajdowała się tu.
+
+232
+00:11:10,679 --> 00:11:12,679
+Ja to rozwiązanie kiedyś znalazłem, wcześniej,
+
+233
+00:11:12,679 --> 00:11:14,679
+zacznę od początku,
+
+234
+00:11:14,679 --> 00:11:16,679
+wcześniej robiłem to najczęściej za pomocą ifa
+
+235
+00:11:16,679 --> 00:11:18,679
+i szukałem tej wartości, o ile mam przesuwać,
+
+236
+00:11:18,679 --> 00:11:20,679
+a to kiedyś znalazłem na stack overflow
+
+237
+00:11:20,679 --> 00:11:22,679
+tego typu rozwiązanie,
+
+238
+00:11:22,679 --> 00:11:24,679
+gdzieś sobie zanotowałem,
+
+239
+00:11:24,679 --> 00:11:26,679
+no i po kilku kursach po prostu zapamiętałem,
+
+240
+00:11:26,679 --> 00:11:28,679
+że to mniej więcej taka jest struktura.
+
+241
+00:11:28,679 --> 00:11:30,679
+Mam to w moich notatkach,
+
+242
+00:11:30,679 --> 00:11:32,679
+więc was też zachęcam do tego, żebyście to dodali,
+
+243
+00:11:32,679 --> 00:11:34,679
+bo ciekawostka,
+
+244
+00:11:34,679 --> 00:11:36,679
+szyfr Cezara czasem pokazuje się w zadaniach rekrutacyjnych.
+
+245
+00:11:36,679 --> 00:11:38,679
+Czy ktoś kojarzy te funkcje
+
+246
+00:11:38,679 --> 00:11:40,679
+i mniej więcej potrafi je odpowiednio zastosować.
+
+247
+00:11:40,679 --> 00:11:42,679
+No i zacznę od tego,
+
+248
+00:11:42,679 --> 00:11:44,679
+zadanie zhakowane, zapraszam dalej.

@@ -1,0 +1,307 @@
+1
+00:00:00,800 --> 00:00:06,100
+No i tutaj analogicznie. Stworzyłem sobie słownik już, który zawiera te kraje.
+
+2
+00:00:06,219 --> 00:00:09,820
+Mam Polskę, Warszawę i Polski. Mam Albanię, Tirannę i Albański.
+
+3
+00:00:10,259 --> 00:00:12,500
+Więc jak widać tych elementów mam kilka.
+
+4
+00:00:13,019 --> 00:00:17,859
+Mam też na przykład Bośnię i Hercegowinę, która też jest ciekawa, bo ta językiem jest bośniacki, chorwacki i serbski.
+
+5
+00:00:17,940 --> 00:00:19,179
+Ale tym się teraz nie przejmujemy.
+
+6
+00:00:19,760 --> 00:00:21,160
+Przynajmniej tak jest według internetu.
+
+7
+00:00:21,780 --> 00:00:25,620
+Napisz program, który stworzy słownik zawierający informacje o twoich ulubionych krajach.
+
+8
+00:00:25,620 --> 00:00:28,440
+Tak to jest. Następnie dodać do słownika nowy kraj.
+
+9
+00:00:28,539 --> 00:00:30,720
+Wyświetl cały słownik po dodaniu nowego elementu.
+
+10
+00:00:31,179 --> 00:00:33,420
+No to będziemy potrzebowali dodać sobie nowy element.
+
+11
+00:00:33,620 --> 00:00:39,460
+Czyli na przykład country równa się input.
+
+12
+00:00:39,780 --> 00:00:41,740
+Podaj nazwę kraju.
+
+13
+00:00:45,179 --> 00:00:48,799
+Capital input. Podaj stolicę tego kraju.
+
+14
+00:00:48,799 --> 00:00:54,400
+No i languages.
+
+15
+00:00:55,619 --> 00:01:02,000
+Podaj używany język czy podaj oficjalny język.
+
+16
+00:01:06,000 --> 00:01:07,159
+Tego kraju.
+
+17
+00:01:07,719 --> 00:01:10,219
+No i w ten sposób dostaniemy te trzy wartości.
+
+18
+00:01:10,700 --> 00:01:14,280
+No i chcemy przejść sobie po tym, tak żeby ładnie to wyświetlić później.
+
+19
+00:01:14,780 --> 00:01:16,239
+Jak dodać te trzy wartości?
+
+20
+00:01:16,239 --> 00:01:19,340
+No musimy wykonać countries.append.
+
+21
+00:01:19,979 --> 00:01:22,060
+No bo to jest nasza lista słowników.
+
+22
+00:01:22,599 --> 00:01:23,879
+I dodajemy sobie po prostu.
+
+23
+00:01:25,099 --> 00:01:25,599
+Country.
+
+24
+00:01:25,620 --> 00:01:26,540
+To jest country.
+
+25
+00:01:28,280 --> 00:01:28,719
+Capital.
+
+26
+00:01:31,180 --> 00:01:32,359
+To jest capital.
+
+27
+00:01:33,800 --> 00:01:34,680
+No i language.
+
+28
+00:01:36,740 --> 00:01:37,900
+To jest languages.
+
+29
+00:01:38,500 --> 00:01:39,620
+Może languages zostawmy.
+
+30
+00:01:39,700 --> 00:01:42,719
+Czy official language. Zróbmy tak samo, żeby ta struktura była identyczna.
+
+31
+00:01:43,200 --> 00:01:45,540
+Tak naprawdę te inputy mógłbym też dać tutaj.
+
+32
+00:01:46,020 --> 00:01:47,480
+To nie ma żadnego problemu z tym.
+
+33
+00:01:47,719 --> 00:01:50,740
+To też jeżeli się uczymy możemy też sobie tak pokombinować.
+
+34
+00:01:50,840 --> 00:01:52,860
+I tym razem zrobić trochę inaczej niż do tej pory.
+
+35
+00:01:52,860 --> 00:01:55,460
+On najpierw wtedy będzie wykonywał te operacje,
+
+36
+00:01:55,620 --> 00:01:57,960
+które są w środku, a dopiero później to co jest na zewnątrz,
+
+37
+00:01:57,960 --> 00:02:00,620
+dopiero później wykona nam ten append.
+
+38
+00:02:00,620 --> 00:02:01,620
+OK?
+
+39
+00:02:01,620 --> 00:02:05,540
+On tu się czepiał do mnie, że mógłbym od razu to dodać,
+
+40
+00:02:05,540 --> 00:02:07,380
+zamiast robić append to zrazu to dodać,
+
+41
+00:02:07,380 --> 00:02:09,379
+więc mu dodałem printa jednego pośrodku,
+
+42
+00:02:09,379 --> 00:02:10,580
+żeby na mnie nie krzyczał.
+
+43
+00:02:10,580 --> 00:02:14,920
+I teraz jeżeli chcemy wyświetlić sobie te kraje,
+
+44
+00:02:14,920 --> 00:02:17,000
+już za pomocą drugiej pętli for,
+
+45
+00:02:17,000 --> 00:02:18,740
+no to możemy to zrobić też bez problemu.
+
+46
+00:02:18,740 --> 00:02:23,379
+Czyli tak for country in countries.
+
+47
+00:02:23,379 --> 00:02:28,180
+A następnie żeby nie wyświetlać print country od country,
+
+48
+00:02:28,180 --> 00:02:31,180
+print country od capital, print country od official language,
+
+49
+00:02:31,180 --> 00:02:46,879
+to możemy napisać for column przecinek value in country kropka items print column value.
+
+50
+00:02:46,879 --> 00:02:50,079
+I skoro chcemy na przykład jeszcze tam nie wiem, w kropek jakiś dołożyć,
+
+51
+00:02:50,079 --> 00:02:51,379
+czy coś sobie poformatować,
+
+52
+00:02:51,379 --> 00:02:53,379
+no to możemy zrobić z f-ką również,
+
+53
+00:02:53,379 --> 00:02:54,379
+też ten zapis.
+
+54
+00:02:54,379 --> 00:03:01,379
+No i napisać column dwukropek spacja value.
+
+55
+00:03:01,379 --> 00:03:02,379
+Można zrobić coś takiego.
+
+56
+00:03:02,379 --> 00:03:06,879
+Jeżeli poszczególne te kolumny i wiersze chcemy też jakoś rozdzielić,
+
+57
+00:03:06,879 --> 00:03:08,379
+zawsze można zrobić sobie tutaj print.
+
+58
+00:03:08,379 --> 00:03:13,879
+Trzy kreski powtórzone 10 razy powinny załatwić sprawę.
+
+59
+00:03:13,879 --> 00:03:15,879
+I zobacz co się w tym momencie stanie,
+
+60
+00:03:15,879 --> 00:03:16,879
+jeżeli to sobie wywołam,
+
+61
+00:03:16,879 --> 00:03:20,379
+czyli python, o to jest piątka.
+
+62
+00:03:20,379 --> 00:03:22,379
+Piątka nam gdzieś uciekła.
+
+63
+00:03:22,379 --> 00:03:23,180
+To zrobiłem szóstkę,
+
+64
+00:03:23,180 --> 00:03:24,180
+zaraz do piątki wrócimy.
+
+65
+00:03:24,180 --> 00:03:27,680
+No to mamy wszystkie te wartości wymienione.
+
+66
+00:03:27,680 --> 00:03:29,180
+Jak tylko dodam sobie ten kraj,
+
+67
+00:03:29,180 --> 00:03:30,680
+dodam sobie Maroko.
+
+68
+00:03:30,680 --> 00:03:33,180
+Stolicą jest rabat,
+
+69
+00:03:33,180 --> 00:03:35,180
+a język francuski arabski.
+
+70
+00:03:35,180 --> 00:03:36,180
+No to OK.
+
+71
+00:03:36,180 --> 00:03:38,180
+Enter.
+
+72
+00:03:38,180 --> 00:03:39,180
+No i mam.
+
+73
+00:03:39,180 --> 00:03:44,180
+Wszystko mi się ładnie tutaj sformatowało.
+
+74
+00:03:44,180 --> 00:03:46,180
+W międzyczasie zapomniałem o piąteczce,
+
+75
+00:03:46,180 --> 00:03:47,680
+więc wy tego nie zobaczycie,
+
+76
+00:03:47,680 --> 00:03:49,680
+bo piąteczkę pewnie widzieliście przed chwilą,
+
+77
+00:03:49,680 --> 00:03:52,180
+a ja tymczasem wracam do piąteczki.

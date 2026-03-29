@@ -1,0 +1,183 @@
+1
+00:00:00,000 --> 00:00:20,839
+No to co? Chodźmy dalej. Teraz porozmawiamy sobie o tym, co możemy wstawiać w te nawiasy. No bo na chwilę obecną mówiliśmy sobie o tym, że tam możemy umieszczać jakieś zmienne tak naprawdę. Nazywaliśmy je parametrami. Można było pod te parametry podstawiać konkretne wartości i to były wtedy argumenty naszych funkcji.
+
+2
+00:00:20,839 --> 00:00:33,240
+No i mówiliśmy sobie o tym, że są one dostępne tylko wewnątrz funkcji. To są takie kilka informacji, o których sobie już powiedzieliśmy. Ale to nie wszystko. Chodźmy dalej.
+
+3
+00:00:33,240 --> 00:00:44,960
+Co jeszcze możemy o tych parametrach sobie powiedzieć? A mianowicie, że nasze wartości mogą mieć też wartości domyślne. I to jest argument domyślny mojej funkcji.
+
+4
+00:00:44,960 --> 00:00:50,799
+Czyli jeżeli tworzę sobie taką funkcję jak calculateRectangleArea, czyli podjęcie.
+
+5
+00:00:50,840 --> 00:00:59,000
+I jeśli policz mi pole prostokąta, no to wiem, że pole prostokąta to jest a razy b. Żeby policzyć pole prostokąta a razy b, potrzebuję mieć te dwie wartości.
+
+6
+00:00:59,160 --> 00:01:10,620
+Ale czasem użytkownik mógłby stwierdzić, że nie będzie podawał tej drugiej wartości. Tak jak było, pamiętasz, w projekcie pierwszym, który wykonaliśmy dotyczącym malarza pokojowego.
+
+7
+00:01:10,620 --> 00:01:17,740
+Tam też była taka sytuacja, że była wysokość. I ta wysokość była jakaś stała ustalona na konkretną wartość. Czasem tak się zdarza po prostu.
+
+8
+00:01:18,280 --> 00:01:20,300
+I tu mamy dokładnie tą samą sytuację.
+
+9
+00:01:20,299 --> 00:01:31,879
+Czyli jest a i b, gdzie a ma wartość 10 i b ma wartość 10. Co nam to daje? Daje nam to to, że możemy wywoływać sobie te funkcje przekazując tylko niektóre wartości.
+
+10
+00:01:31,879 --> 00:01:46,039
+Jeżeli napiszemy calculateRectangleArea i wywołam to z wartością 20, to będę miał 400. Ponieważ jako pierwszy występuje a. Czyli a równa się 20, b równa się 20.
+
+11
+00:01:46,620 --> 00:01:49,700
+Dlatego, że a zostało zdefiniowane tu.
+
+12
+00:01:50,299 --> 00:01:51,420
+A b zostało zdefiniowane tu.
+
+13
+00:01:52,319 --> 00:01:54,719
+Mogę też przekazać sobie te dwie wartości.
+
+14
+00:01:54,959 --> 00:02:00,239
+Wtedy każda z nich będzie nadpisywała tą wartość, która została określona jako domyślna.
+
+15
+00:02:00,840 --> 00:02:03,079
+Czyli 20 razy 100 to będzie 2000.
+
+16
+00:02:04,379 --> 00:02:05,379
+No i ostatnia opcja.
+
+17
+00:02:05,840 --> 00:02:06,819
+Mogę nie podać nic.
+
+18
+00:02:06,819 --> 00:02:17,280
+Bo jeżeli wiem, że mam wartości domyślne 10 i 20, no to mogę je obie odpuścić i wtedy on mi po prostu wyświetli iloczyn 10 razy 20, czyli 200.
+
+19
+00:02:17,879 --> 00:02:18,400
+Przykład?
+
+20
+00:02:19,139 --> 00:02:19,780
+Na przykład.
+
+21
+00:02:20,300 --> 00:02:31,320
+Jeżeli używaliśmy printa, to w princie można było nie podawać, tam była jeszcze taka inna sytuacja, o niej też za chwilę, ale można było nie podawać czegoś takiego jak sep albo nie podawać czegoś takiego jak end.
+
+22
+00:02:31,320 --> 00:02:38,820
+I on wiedział, że separator to zawsze będzie spacja, czyli to co rozdzielało poszczególne wartości, które chcesz printować, to zawsze było rozdzielane spacją.
+
+23
+00:02:39,280 --> 00:02:47,820
+Natomiast na końcu printa zawsze występował znak nowego wiersza, który przenosił kolejny print czy kolejne wyświetlenie jakiejś informacji do kolejnego wiersza.
+
+24
+00:02:48,600 --> 00:02:50,220
+I to są wartości właśnie domyślne.
+
+25
+00:02:50,300 --> 00:02:57,660
+Dlatego tak się działo, bo w wartościach domyślnych takie dane były ustawione, co nie oznacza, że nie możemy ich nadpisać.
+
+26
+00:02:58,040 --> 00:03:03,840
+To też zobaczysz jak to zadeklarować po stronie funkcji, bo od strony wykorzystania już to robiliśmy.
+
+27
+00:03:04,080 --> 00:03:12,500
+Weźmy teraz na tapet inny przykład, a mianowicie mamy dev send email i mamy tutaj recipient, content i sender.
+
+28
+00:03:13,220 --> 00:03:18,500
+Czyli na przykład mam funkcję wysyłającą maila, a tego typu rzeczy robimy na przykład na PyCampie.
+
+29
+00:03:20,300 --> 00:03:26,939
+Jest określony nadawca, treść i odbiorca, odbiorca, treść i wysyłający.
+
+30
+00:03:27,260 --> 00:03:30,240
+No i wysyłający może być domyślnie Kacper do kodu IT.
+
+31
+00:03:31,020 --> 00:03:32,920
+Mamy inny przykład, dodaj użytkownika.
+
+32
+00:03:33,880 --> 00:03:37,320
+Żeby zapisać użytkownika, potrzebuje znać jego login i hasło.
+
+33
+00:03:37,920 --> 00:03:38,680
+No i jeszcze role.
+
+34
+00:03:39,120 --> 00:03:44,180
+Może mieć rolę użytkownik, może mieć rolę admin, w zależności od tego jaką ma rolę, daje mu różne uprawnienia.
+
+35
+00:03:44,180 --> 00:03:47,700
+Więc domyślnie zakładam, że dodaję użytkownika z rolą admin.
+
+36
+00:03:48,439 --> 00:03:50,180
+Nie jest zbyt bezpieczny, ale działa.
+
+37
+00:03:51,200 --> 00:03:53,160
+No i trzeci przypadek, send notification.
+
+38
+00:03:53,520 --> 00:03:57,800
+Czyli na przykład chcielibyśmy wysłać powiadomienie, bo coś się zdarzyło.
+
+39
+00:03:58,300 --> 00:04:03,620
+Ktoś zalogował się na konto, długo się nie logował, albo kończy się jakaś ważność czegoś.
+
+40
+00:04:04,000 --> 00:04:06,180
+No to wtedy można wysłać właśnie takie powiadomienie.
+
+41
+00:04:06,620 --> 00:04:11,180
+No i można określić typ powiadomienia, czy ma być to alert, notyfikacja, informacja, czy błąd.
+
+42
+00:04:13,640 --> 00:04:16,259
+Rodzaj drogi, którą ma zostać to powiadomienie wysłane.
+
+43
+00:04:16,780 --> 00:04:20,180
+Czy ma być to e-mail, czy ma być to wysłanie na jakieś usługę rastową.
+
+44
+00:04:20,300 --> 00:04:23,300
+Czy ma być to na przykład poinformowanie na jakimś Discordzie.
+
+45
+00:04:23,939 --> 00:04:29,720
+No i kiedy, czyli na przykład możemy to opóźnić, żeby to powiadomienie zostało wysłane za godzinę, albo dokładnie w tej chwili.
+
+46
+00:04:30,939 --> 00:04:34,699
+Takie rzeczy też można określać sobie w naszych argumentach funkcji.

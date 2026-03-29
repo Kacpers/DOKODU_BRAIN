@@ -1,0 +1,319 @@
+1
+00:00:00,000 --> 00:00:02,200
+Mamy zadanie, przyszedł czas na rozwiązanie.
+
+2
+00:00:02,419 --> 00:00:03,580
+Najpierw stworzymy sobie listę.
+
+3
+00:00:03,680 --> 00:00:04,940
+Ja sobie stworzę jakąś zmienną.
+
+4
+00:00:05,179 --> 00:00:12,280
+Bans, równa się, no niech to będzie Metallica, Red Hot, czyli Peppers, Kult.
+
+5
+00:00:14,580 --> 00:00:15,919
+Trzy nazwy zespołów? Są.
+
+6
+00:00:16,879 --> 00:00:17,839
+Sprawdźmy, czy działa.
+
+7
+00:00:18,280 --> 00:00:18,580
+Działa.
+
+8
+00:00:18,960 --> 00:00:19,359
+Okej.
+
+9
+00:00:20,320 --> 00:00:24,960
+Wymień pierwszy element na inny zespół, czyli Bans od zera.
+
+10
+00:00:24,960 --> 00:00:27,839
+No i możemy sobie tutaj wpisać coś innego.
+
+11
+00:00:27,839 --> 00:00:27,859
+No.
+
+12
+00:00:28,820 --> 00:00:30,980
+Co tam sobie wpiszemy? Niech to będzie Chazes.
+
+13
+00:00:31,420 --> 00:00:33,479
+Taki zespół, chyba z trójmiasta nawet.
+
+14
+00:00:33,679 --> 00:00:34,000
+Bans.
+
+15
+00:00:34,240 --> 00:00:36,899
+No i mamy Chazes, Red Hot, czyli Peppers i Kult.
+
+16
+00:00:37,060 --> 00:00:38,060
+Czyli się udało wymienić.
+
+17
+00:00:38,159 --> 00:00:38,600
+Idziemy dalej.
+
+18
+00:00:39,560 --> 00:00:40,799
+Usuń pierwszy element.
+
+19
+00:00:41,140 --> 00:00:43,000
+No to możemy zaużyć remove.
+
+20
+00:00:43,420 --> 00:00:48,320
+Bans.removeChazes.
+
+21
+00:00:49,500 --> 00:00:50,000
+Bans.
+
+22
+00:00:50,120 --> 00:00:52,200
+No i mamy Red Hot, czyli Peppers i Kult zostali.
+
+23
+00:00:52,420 --> 00:00:52,840
+Okej.
+
+24
+00:00:52,840 --> 00:00:56,600
+Teraz korzystając z append, dodaj oba zespoły na koniec.
+
+25
+00:00:56,719 --> 00:00:57,620
+Czyli Bans.
+
+26
+00:00:57,840 --> 00:00:59,380
+Kropka append.
+
+27
+00:00:59,880 --> 00:01:01,160
+Metallica.
+
+28
+00:01:02,060 --> 00:01:03,860
+No i Bans.append.
+
+29
+00:01:04,460 --> 00:01:06,020
+Chazes.
+
+30
+00:01:08,240 --> 00:01:09,040
+Sprawdźmy.
+
+31
+00:01:09,300 --> 00:01:11,920
+Mamy oba zespoły na końcu.
+
+32
+00:01:12,380 --> 00:01:13,460
+Co tam jeszcze zostało?
+
+33
+00:01:13,960 --> 00:01:16,480
+Sprawdź, czy dowolny zespoły znajduje się na liście.
+
+34
+00:01:16,560 --> 00:01:17,659
+No to Metallica.
+
+35
+00:01:19,620 --> 00:01:20,820
+In Bans.
+
+36
+00:01:20,840 --> 00:01:21,900
+I tutaj ciekawostka.
+
+37
+00:01:22,240 --> 00:01:25,180
+Jeżeli zamienię literę na małą, to on mi powie false.
+
+38
+00:01:25,200 --> 00:01:26,840
+To też zwróćcie na to uwagę.
+
+39
+00:01:27,060 --> 00:01:27,800
+To jest bardzo ważne.
+
+40
+00:01:27,799 --> 00:01:29,799
+To jest bardzo ważna informacja.
+
+41
+00:01:29,799 --> 00:01:31,799
+Usuń ostatni zespół z listy.
+
+42
+00:01:31,799 --> 00:01:34,799
+No to możemy zrobić delete.
+
+43
+00:01:34,799 --> 00:01:37,799
+Bans od minus jeden.
+
+44
+00:01:37,799 --> 00:01:41,799
+Chazes nam przepadł.
+
+45
+00:01:41,799 --> 00:01:44,799
+No i wyświetl wszystkie zespoły.
+
+46
+00:01:44,799 --> 00:01:46,799
+No to wyświetliłem.
+
+47
+00:01:46,799 --> 00:01:47,799
+Zrobiłem Bans.
+
+48
+00:01:47,799 --> 00:01:50,799
+I teraz co się stanie, gdy na listę zamienisz dowolny napis?
+
+49
+00:01:50,799 --> 00:01:54,799
+Na przykład stworzymy sobie zmienną instrument.
+
+50
+00:01:54,799 --> 00:01:56,799
+Nazwiemy ją gitara.
+
+51
+00:01:56,799 --> 00:02:03,799
+Jeżeli wykonamy list na instrument, to zobacz, on sprawi,
+
+52
+00:02:03,799 --> 00:02:09,800
+sprawi, powoduje, że wyświetli nam się lista, gdzie każdy znak będzie osobnym elementem listy.
+
+53
+00:02:09,800 --> 00:02:13,800
+Nie będzie to jakoś dla nas szczególnie przydatne, bo ze stringiem można było robić podobne rzeczy,
+
+54
+00:02:13,800 --> 00:02:15,800
+ale tu można na przykład podmieniać.
+
+55
+00:02:15,800 --> 00:02:18,800
+Na przykład, jeżeli byśmy sobie to przypisali do jakiejś zmiennej,
+
+56
+00:02:18,800 --> 00:02:20,800
+niech to będzie raz jeszcze instrument,
+
+57
+00:02:20,800 --> 00:02:25,800
+no to wtedy możemy wymienić instrument od minus jeden równa się z.
+
+58
+00:02:25,800 --> 00:02:28,800
+Z oczywiście jako string.
+
+59
+00:02:28,800 --> 00:02:30,800
+No i wtedy instrument.
+
+60
+00:02:30,800 --> 00:02:33,800
+Instrument.
+
+61
+00:02:33,800 --> 00:02:35,800
+Jest guitars.
+
+62
+00:02:35,800 --> 00:02:39,800
+I mogę sobie wtedy też to spróbować zamienić na string.
+
+63
+00:02:39,800 --> 00:02:42,800
+O i wyszło w ogóle coś takiego.
+
+64
+00:02:42,800 --> 00:02:43,800
+Nie zamienił.
+
+65
+00:02:43,800 --> 00:02:47,800
+Żeby zamienić sobie listę na stringa, trzeba byłoby użyć joina.
+
+66
+00:02:47,800 --> 00:02:51,800
+Czyli nic, join instrument.
+
+67
+00:02:51,800 --> 00:02:52,800
+To tak przy okazji pokazuje ci różnicę pomiędzy tymi dwoma instrumentami.
+
+68
+00:02:52,800 --> 00:02:53,800
+To tak przy okazji pokazuje ci różnicę pomiędzy tymi dwoma instrumentami.
+
+69
+00:02:53,800 --> 00:02:54,800
+To tak przy okazji pokazuje ci różnicę pomiędzy tymi dwoma instrumentami.
+
+70
+00:02:54,800 --> 00:02:56,800
+To tak przy okazji pokazuje ci różnicę pomiędzy tymi dwoma instrumentami.
+
+71
+00:02:56,800 --> 00:02:58,800
+Bo kiedyś może ci się to przydać.
+
+72
+00:02:58,800 --> 00:03:00,800
+Czasem w rekrutacjach pytają o takie rzeczy.
+
+73
+00:03:00,800 --> 00:03:02,800
+Czyli jak zamienić listę na string,
+
+74
+00:03:02,800 --> 00:03:05,800
+to pamiętajcie, że string na instrument spowoduje coś takiego,
+
+75
+00:03:05,800 --> 00:03:08,800
+a jeżeli chcemy zrobić po prostu ten sam wyraz,
+
+76
+00:03:08,800 --> 00:03:10,800
+to musimy użyć joina.
+
+77
+00:03:10,800 --> 00:03:12,800
+Taka jest różnica.
+
+78
+00:03:12,800 --> 00:03:16,800
+To nie było w treści, ale warto zawsze dlatego oglądać też moje rozwiązania,
+
+79
+00:03:16,800 --> 00:03:18,800
+bo czasem coś jeszcze dodatkowego przemycę.
+
+80
+00:03:18,800 --> 00:03:20,800
+No to super. Chodźmy dalej.

@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:04,980
+I przechodzimy do naszego projektu. W naszym projekcie będziemy zarządzać budżetem domowym.
+
+2
+00:00:05,500 --> 00:00:11,279
+W ramach tej aplikacji będziemy mogli dodawać, jak widzisz, wydatki albo dodawać przychody.
+
+3
+00:00:11,820 --> 00:00:19,559
+Wydatki i przychody będą mogły być dodawane z takimi argumentami jak name, czyli jakaś nazwa, bo powiedzmy, nie wiem, kupiłem bułki.
+
+4
+00:00:19,559 --> 00:00:28,939
+Kategoria, bo na przykład jakaś kategoria typu spożywcze, jakaś data, no bo data i czas, w którymś momencie doszło do takiego zakupu.
+
+5
+00:00:29,399 --> 00:00:35,140
+I value jako wartość, no bo każdy taki zakup czy przychód będzie miał swoją wartość.
+
+6
+00:00:35,780 --> 00:00:40,539
+Następnie, jeżeli będziesz chciał, to będzie też taka możliwość jak usuwanie.
+
+7
+00:00:40,739 --> 00:00:45,879
+Usuwanie zarówno wydatku, jak i przychodu, bo każdy wydatek i przychód będzie miał swoje ID.
+
+8
+00:00:45,879 --> 00:00:48,859
+Kiedy wywołamy sobie list, to on nam wypisze.
+
+9
+00:00:48,859 --> 00:00:58,939
+Wszystkie wydatki i przychody można będzie więc wówczas usunąć sobie konkretny wpis, wykonując po prostu delete i przekazując ID tego elementu, który chcemy usunąć.
+
+10
+00:00:59,420 --> 00:01:02,320
+Następnie jest też możliwość wykonania polecenia stats.
+
+11
+00:01:02,519 --> 00:01:09,500
+Polecenie stats będzie miało podsumować przychód i wydatki w ramach konkretnego miesiąca.
+
+12
+00:01:09,500 --> 00:01:17,659
+Czyli na przykład, jeżeli dodamy sobie 5 wydatków z zeszłego miesiąca, 5 wydatków z tego miesiąca i dodatkowo 2 przychody z każdego,
+
+13
+00:01:17,659 --> 00:01:22,859
+to powinniśmy zobaczyć w danym miesiącu, ile jest wydatków, ile jest przychodów.
+
+14
+00:01:22,859 --> 00:01:30,539
+Tutaj w tym projekcie nie będzie zadań, będziemy po prostu sobie wspólnie w formule takiego live codingu wykonywali ten projekt.
+
+15
+00:01:30,539 --> 00:01:32,060
+Co jeszcze jest?
+
+16
+00:01:32,060 --> 00:01:40,219
+Kolejną rzeczą, która się tutaj znajduje jest, a właśnie to list wspomniany wcześniej, który po prostu nam wypisuje te informacje.
+
+17
+00:01:40,219 --> 00:01:44,699
+Jak widzisz, wszystko to, co zrobiłem, oparłem na ArcParse.
+
+18
+00:01:44,699 --> 00:01:46,299
+I tutaj w ramach tego ArcParse'a,
+
+19
+00:01:46,299 --> 00:01:50,939
+mam dla Ciebie też kilka ciekawostek, które wdrożyliśmy do naszego projektu.
+
+20
+00:01:50,939 --> 00:01:58,379
+I co ważne, cały projekt będzie też wykonany obiektowo, więc i tu zobaczysz też parę sztuczek dotyczących programowania obiektowego.
+
+21
+00:01:58,379 --> 00:02:00,859
+To co? Myślę, że nie przedłużam.
+
+22
+00:02:00,859 --> 00:02:05,500
+Wstęp jest Ci już znany. Możemy przejść do kodu. Zapraszam.

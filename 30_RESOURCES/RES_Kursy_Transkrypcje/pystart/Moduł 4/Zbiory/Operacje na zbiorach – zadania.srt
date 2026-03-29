@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:01,900
+No to do przećwiczenia mamy trzy zadania.
+
+2
+00:00:02,060 --> 00:00:05,679
+Po pierwsze mamy przygotować zbiór liczb podzielnych przez 3
+
+3
+00:00:05,679 --> 00:00:08,019
+oraz zbiór liczb podzielnych przez 5,
+
+4
+00:00:08,160 --> 00:00:10,519
+a następnie znaleźć część wspólną obu zbiorów.
+
+5
+00:00:11,019 --> 00:00:13,380
+Możemy się umówić, że tych liczb podzielnych szukamy
+
+6
+00:00:13,380 --> 00:00:15,860
+powiedzmy sobie w zakresie od 0 do 100
+
+7
+00:00:15,860 --> 00:00:19,379
+i po prostu szukamy wielokrotności 3, 6, 9 itd.
+
+8
+00:00:19,920 --> 00:00:20,980
+No i tak samo dla piątki.
+
+9
+00:00:21,460 --> 00:00:24,760
+I później chcemy znaleźć część wspólną, czyli chociażby 15,
+
+10
+00:00:24,900 --> 00:00:27,500
+bo 15 dzieli się i przez 3 i przez 5 albo 45.
+
+11
+00:00:27,500 --> 00:00:32,140
+Po drugie, na podstawie dwóch słów przygotuj zbiór znaków,
+
+12
+00:00:32,259 --> 00:00:33,500
+które nie są dla nich wspólne.
+
+13
+00:00:34,119 --> 00:00:36,600
+Czyli jeżeli jedno słowo to mama, a drugie słowo to tata,
+
+14
+00:00:37,000 --> 00:00:39,200
+to chcielibyśmy dostać mt albo tm.
+
+15
+00:00:39,960 --> 00:00:43,340
+I po trzecie, masz zbiór uczniów chodzących do klasy
+
+16
+00:00:43,340 --> 00:00:45,280
+oraz zbiór tych, którzy jadą na wycieczkę.
+
+17
+00:00:45,400 --> 00:00:47,400
+Przygotuj zbiór uczniów, którzy zostają w szkole.
+
+18
+00:00:47,920 --> 00:00:51,019
+I tu zwróćcie uwagę, że elementami naszego zbioru są tuple
+
+19
+00:00:51,019 --> 00:00:52,879
+i to zupełnie niczemu nie przeszkadza.
+
+20
+00:00:53,299 --> 00:00:55,320
+Z racji tego, że te tuple mają te same wartości,
+
+21
+00:00:55,320 --> 00:00:57,359
+to można spokojnie odejmować je,
+
+22
+00:00:57,359 --> 00:00:59,839
+czy od siebie, czy też szukać części wspólnych
+
+23
+00:00:59,839 --> 00:01:01,359
+i to również zadziała.
+
+24
+00:01:01,759 --> 00:01:04,379
+Też dobre zadanie na sprawdzenie czegoś może nie nowego,
+
+25
+00:01:04,539 --> 00:01:05,640
+ale dla innych danych.
+
+26
+00:01:06,120 --> 00:01:07,939
+To co? Do roboty.

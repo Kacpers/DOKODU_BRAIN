@@ -1,0 +1,375 @@
+1
+00:00:00,000 --> 00:00:03,359
+No i mamy to. Utworzyłem sobie nowy projekt, nazwałem go Brand New.
+
+2
+00:00:03,859 --> 00:00:07,560
+Następnie skopiowałem do niego PyStart 001 targ.z
+
+3
+00:00:07,560 --> 00:00:09,859
+i w momencie, w którym wykonałem sobie polecenie
+
+4
+00:00:09,859 --> 00:00:13,000
+pip install PyStart 001 targ.z
+
+5
+00:00:13,000 --> 00:00:17,059
+dostałem informację, że zainstalowały mi się nowe biblioteki.
+
+6
+00:00:17,740 --> 00:00:18,820
+Nowe rozszerzenia.
+
+7
+00:00:19,219 --> 00:00:20,900
+Skąd o tym wiem, jak to sprawdzić?
+
+8
+00:00:20,900 --> 00:00:24,900
+Mogę otworzyć sobie ms-venv, mogę otworzyć sobie scripts.
+
+9
+00:00:25,839 --> 00:00:27,900
+Jeżeli otworzę sobie lib,
+
+10
+00:00:27,899 --> 00:00:31,500
+to mogę zauważyć, że w środku znajduje się
+
+11
+00:00:31,500 --> 00:00:34,299
+calculations oraz znajduje się utils.
+
+12
+00:00:34,719 --> 00:00:36,399
+Czyli tak naprawdę, jeżeli byśmy chcieli,
+
+13
+00:00:36,799 --> 00:00:40,039
+żeby te dwie rzeczy były wpakowane do pakietu o nazwie PyStart,
+
+14
+00:00:40,420 --> 00:00:43,159
+to należałoby jeszcze jeden taki pakiet sobie wcześniej utworzyć.
+
+15
+00:00:43,280 --> 00:00:45,899
+Czyli byłby setup.py i PyStart obok.
+
+16
+00:00:46,259 --> 00:00:48,759
+Myśmy tego nie zrobili, dla nas to i tak żaden problem.
+
+17
+00:00:48,759 --> 00:00:51,759
+Możemy śmiało skorzystać z tych naszych bibliotek.
+
+18
+00:00:53,000 --> 00:00:55,500
+W tym celu będziemy potrzebowali mieć nowy plik
+
+19
+00:00:55,500 --> 00:00:57,859
+o nazwie main.py. Dlaczego taka nazwa już sobie
+
+20
+00:00:57,859 --> 00:00:58,859
+nie rozmawialiśmy?
+
+21
+00:00:59,579 --> 00:01:02,420
+Od razu do środka dorzucę sobie
+
+22
+00:01:02,420 --> 00:01:03,420
+if name
+
+23
+00:01:03,719 --> 00:01:05,480
+równa się main.
+
+24
+00:01:07,500 --> 00:01:09,859
+To też jest wygodne z tego względu, że od razu zobacz,
+
+25
+00:01:09,859 --> 00:01:12,659
+tutaj pojawił się przycisk plus, dzięki czemu możemy sobie
+
+26
+00:01:12,659 --> 00:01:15,819
+bardzo wygodnie odebrać od użytkownika informacje.
+
+27
+00:01:15,819 --> 00:01:18,980
+No i list jeden to jest input.
+
+28
+00:01:19,879 --> 00:01:22,460
+Podaj wartości
+
+29
+00:01:22,460 --> 00:01:24,659
+rozdzielone przecinkami.
+
+30
+00:01:24,659 --> 00:01:32,060
+List dwa, input, podaj wartości rozdzielone przecinkami.
+
+31
+00:01:32,700 --> 00:01:34,759
+No i teraz będziemy chcieli
+
+32
+00:01:34,759 --> 00:01:37,439
+zsumować te listy, ale najpierw trzeba
+
+33
+00:01:37,439 --> 00:01:40,340
+każdą z tych list zamienić na
+
+34
+00:01:40,340 --> 00:01:43,280
+ładniejszą formę. No bo my mamy
+
+35
+00:01:43,280 --> 00:01:46,519
+w from utils import
+
+36
+00:01:46,519 --> 00:01:49,340
+list, czy nawet
+
+37
+00:01:49,340 --> 00:01:51,120
+from utils.lists
+
+38
+00:01:51,120 --> 00:01:54,620
+import add lists, mamy coś
+
+39
+00:01:54,620 --> 00:01:57,660
+takiego, będziemy chcieli z tego skorzystać, ale to wymaga,
+
+40
+00:01:57,660 --> 00:02:00,800
+żeby elementy naszych list były liczbami. Elementy naszych
+
+41
+00:02:00,800 --> 00:02:03,980
+list liczbami nie są, tylko są stringami, ponieważ kiedy sobie je
+
+42
+00:02:03,980 --> 00:02:07,460
+rozbiję, czyli values jeden
+
+43
+00:02:07,460 --> 00:02:10,300
+równa się
+
+44
+00:02:10,300 --> 00:02:12,700
+list jeden kropka split
+
+45
+00:02:13,180 --> 00:02:16,400
+po przecinku, no to to samo będę musiał zrobić
+
+46
+00:02:16,400 --> 00:02:19,300
+dla values dwa, czyli okazuje się, że mój
+
+47
+00:02:19,300 --> 00:02:22,300
+tutaj tekst się powtarza, więc żeby mi się nie powtarzał,
+
+48
+00:02:22,300 --> 00:02:24,620
+to możemy sobie zrobić parse,
+
+49
+00:02:24,620 --> 00:02:27,980
+parse values.
+
+50
+00:02:29,060 --> 00:02:31,840
+No i nasza funkcja będzie odbierała string jako
+
+51
+00:02:31,840 --> 00:02:34,259
+wartości, niech to będzie
+
+52
+00:02:34,259 --> 00:02:37,319
+string values jako string,
+
+53
+00:02:38,000 --> 00:02:41,099
+możemy też dorzucić argument pomocniczy jako separator,
+
+54
+00:02:42,439 --> 00:02:43,819
+no i wiemy, że zazwyczaj domyślnie
+
+55
+00:02:43,819 --> 00:02:46,560
+będzie to przecinek, możemy wtedy zrobić strzałkę
+
+56
+00:02:46,560 --> 00:02:49,719
+i napisać, że będzie on zwracał nam listę.
+
+57
+00:02:50,460 --> 00:02:52,879
+Listę wciąż stringów
+
+58
+00:02:52,879 --> 00:02:54,599
+albo listę, którą my mamy,
+
+59
+00:02:54,620 --> 00:02:57,120
+ale nie mamy listę integerów od razu, więc
+
+60
+00:02:57,460 --> 00:03:00,200
+chcemy teraz to rozbić, czyli list
+
+61
+00:03:00,200 --> 00:03:02,920
+string values kropka split
+
+62
+00:03:02,920 --> 00:03:04,819
+wybieramy separator
+
+63
+00:03:06,759 --> 00:03:10,020
+i możemy to od razu nazwać parse integers, może tak.
+
+64
+00:03:13,140 --> 00:03:16,080
+I wtedy będziemy chcieli iterować, czyli przechodzić
+
+65
+00:03:16,080 --> 00:03:18,980
+sobie po tym, co wyszło nam z tego rozbicia,
+
+66
+00:03:18,980 --> 00:03:21,939
+czyli for element in
+
+67
+00:03:21,939 --> 00:03:24,620
+string values split, no i
+
+68
+00:03:24,620 --> 00:03:27,240
+element zamieniony na integer będziemy chcieli
+
+69
+00:03:27,240 --> 00:03:30,219
+przypisywać sobie do jakiejś listy i ją później zwracać.
+
+70
+00:03:30,219 --> 00:03:33,719
+Czyli list, list to może nie, output
+
+71
+00:03:34,780 --> 00:03:37,620
+to jest lista, output append
+
+72
+00:03:37,620 --> 00:03:40,500
+int element, czyli dodajemy
+
+73
+00:03:40,500 --> 00:03:43,439
+sobie do listy zamienione na intedgery
+
+74
+00:03:43,439 --> 00:03:46,920
+wartości, no i następnie wykonujemy return
+
+75
+00:03:47,120 --> 00:03:50,060
+i co? I co? I co? I co?
+
+76
+00:03:50,060 --> 00:03:51,060
+Return
+
+77
+00:03:51,860 --> 00:03:52,860
+output.
+
+78
+00:03:54,620 --> 00:04:02,800
+Pokazałem też wcześniej parę innych podejściach, można zrobić podobne zadanie, bo mieliśmy już tego typu problem wcześniej, w każdym razie
+
+79
+00:04:02,800 --> 00:04:07,680
+w naszym przypadku jest tak, że od razu, kiedy odbieramy list jeden, możemy skorzystać
+
+80
+00:04:07,680 --> 00:04:10,060
+z parse integers
+
+81
+00:04:11,900 --> 00:04:16,280
+od użytkownika i tak samo możemy zrobić z listy 2.
+
+82
+00:04:16,280 --> 00:04:24,280
+Dzięki temu od razu będziemy mieli konkretne użycie tych naszych funkcji, no i też kod będzie wyglądał trochę sympatyczniej.
+
+83
+00:04:24,279 --> 00:04:29,159
+Następnie możemy wykorzystać nową zmienną, zrobić sobie total
+
+84
+00:04:29,159 --> 00:04:38,039
+równa się, add lists i przekazać mu list 1, list 2, no i wypisać print total.
+
+85
+00:04:38,039 --> 00:04:44,039
+Dzięki temu nasz kod wygląda dużo ładniej, dużo sympatyczniej niż wyglądał wcześniej.
+
+86
+00:04:44,039 --> 00:04:49,959
+Sprawdźmy czy teraz też się to tak ładnie zachowa, czyli wykonam python mainpy
+
+87
+00:04:49,959 --> 00:04:52,959
+2, 3, 4, 5, enter
+
+88
+00:04:52,959 --> 00:04:56,459
+6, 7, 8, 9, enter
+
+89
+00:04:56,459 --> 00:05:01,459
+i zobacz mam 8, 10, 12, 14, czyli ładnie mi to zadziałało.
+
+90
+00:05:01,459 --> 00:05:08,459
+Od razu użyłem też moich funkcji, tutaj taka drobna zmiana kosmetyczna, można też zapisywać to w ten sposób, dzięki temu też
+
+91
+00:05:08,459 --> 00:05:15,959
+nie zastanawiamy się nad tym, gdzie się te nawiasy pojawiły, gdzie się pogubiły, warto zawsze coś takiego też sobie
+
+92
+00:05:15,959 --> 00:05:22,500
+dorzucić, no i oczywiście typy tutaj jeżeli nie były dodane, to też warto jak najbardziej te typy mieć
+
+93
+00:05:22,959 --> 00:05:23,959
+na zadeklarowane.
+
+94
+00:05:23,959 --> 00:05:27,959
+I co? To byłoby na tyle. Dzięki, do zobaczenia, chodźcie dalej.

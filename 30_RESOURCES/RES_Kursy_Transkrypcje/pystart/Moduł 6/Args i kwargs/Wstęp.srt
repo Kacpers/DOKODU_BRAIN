@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:04,360
+Moduł, który przed nami również będzie poświęcony w bardzo dużej mierze funkcjom.
+
+2
+00:00:04,560 --> 00:00:09,599
+Będziemy pracowali sobie na funkcjach i tu jeszcze jedno uzupełnienie, jeżeli chodzi o argumenty.
+
+3
+00:00:09,599 --> 00:00:17,260
+W zeszłym tygodniu już tak nie chciałem mieszać, ale być może czytając czyjś kod albo oglądając jakieś inne zadania,
+
+4
+00:00:17,760 --> 00:00:22,559
+zetknąłeś się z czymś takim jak gwiazdka args albo gwiazdka gwiazdka kwargs.
+
+5
+00:00:23,100 --> 00:00:27,420
+I takie dwa wyrażenia chciałbym z tobą teraz poruszyć i opowiedzieć do czego one służą.
+
+6
+00:00:27,420 --> 00:00:34,679
+Więc czasem w życiu każdego programisty przychodzi taki moment, gdzie potrzebujemy sobie odebrać wszystko, co nam dają.
+
+7
+00:00:35,200 --> 00:00:41,179
+Na przykład funkcja print. Nie wiem czy zwróciliłeś uwagę na to, że kiedy wywołujemy funkcję print,
+
+8
+00:00:41,320 --> 00:00:47,200
+to podajemy dużo różnych rzeczy po przecinkach, a i tak później możemy dorzucić end albo sep.
+
+9
+00:00:47,880 --> 00:00:54,460
+I to wszystko działa. Skąd Python wie, że te rzeczy, które podajemy mu od tak jako argumenty pozycyjne,
+
+10
+00:00:54,460 --> 00:00:57,380
+to są jakieś inne, a to co mu podajemy jako argumenty pozycyjne,
+
+11
+00:00:57,420 --> 00:00:59,460
+to są jakieś inne, a to co mu podajemy jako argumenty kluczowe, to jest coś innego.
+
+12
+00:00:59,960 --> 00:01:02,940
+No właśnie, tutaj rozwiązanie jest właśnie args i kwargs.
+
+13
+00:01:03,440 --> 00:01:10,560
+No i właśnie, jeżeli taką sytuację mamy, to pokażę ci jak to wykorzystać, jak z tym sobie poradzić
+
+14
+00:01:10,560 --> 00:01:12,579
+oraz oczywiście pokażę ci też kilka przykładów.
+
+15
+00:01:13,299 --> 00:01:17,939
+Nazwy args i kwargs są opcjonalne, ale Python to jest język konwencji.
+
+16
+00:01:18,400 --> 00:01:23,040
+Bardzo często tutaj zakładamy sobie pewne rzeczy, trzymamy się pewnych reguł,
+
+17
+00:01:23,040 --> 00:01:26,020
+tylko dlatego, że ktoś powiedział nam, że tak trzeba.
+
+18
+00:01:26,200 --> 00:01:27,040
+Chociażby znak podkreślenia.
+
+19
+00:01:27,420 --> 00:01:29,920
+Który oznacza, że to jest nic, tak?
+
+20
+00:01:29,920 --> 00:01:33,920
+Jeżeli robimy sobie pętlę, czy coś wypakowujemy, używamy czasem tego znaku podkreślenia.
+
+21
+00:01:33,920 --> 00:01:40,560
+No to nie jest coś, co jest wbudowane w Pythona, tylko taka umowa, że jak jest podkreślenie, to znaczy, że tego nie będę używał.
+
+22
+00:01:40,560 --> 00:01:42,560
+Tak naprawdę jest to zwykła zmienna.
+
+23
+00:01:42,560 --> 00:01:44,560
+I tak samo jest z nazwami args i kwargs.
+
+24
+00:01:44,560 --> 00:01:48,240
+Z racji tego, że są umowne, możesz je wymienić na cokolwiek chcesz.
+
+25
+00:01:48,240 --> 00:01:53,659
+Ale z racji tego, że wszędzie w kodzie używają args i kwargs, to i ja będę tych nazw używał.

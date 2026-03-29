@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,379
+Ok, no i trzy zadania do przetestowania.
+
+2
+00:00:03,680 --> 00:00:08,359
+Oczywiście potem jak już zrobisz zadania, to obejrzyj rozwiązanie.
+
+3
+00:00:08,859 --> 00:00:11,660
+Każde zadanie będzie rozwiązane w osobnym filmie.
+
+4
+00:00:12,339 --> 00:00:15,700
+Po pierwsze, przygotuj funkcję o nazwie word counter.
+
+5
+00:00:16,039 --> 00:00:21,179
+Powinna jako argument odbierać dowolny tekst i zwracać ilość słów, z których ten tekst się składa.
+
+6
+00:00:21,780 --> 00:00:26,000
+Nie chcemy tego słownikować, chcemy tylko odpowiedzieć, że tych słów jest 30.
+
+7
+00:00:26,000 --> 00:00:55,980
+Zadanie drugie.
+
+8
+00:00:56,000 --> 00:01:00,700
+Te liczby pierwszej, taki ten wysiłkowy, gdzie szukaliśmy do pierwiastka, napisali kiedyś,
+
+9
+00:01:01,079 --> 00:01:06,700
+więc możesz spróbować wykorzystać tę metodę, którą pokazałem Ci przed chwilą w demonstracji
+
+10
+00:01:06,700 --> 00:01:10,219
+i zrobić to zadanie też w podobny sposób.
+
+11
+00:01:10,879 --> 00:01:12,500
+To co? Do dzieła!

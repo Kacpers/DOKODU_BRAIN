@@ -1,0 +1,599 @@
+1
+00:00:00,000 --> 00:00:04,419
+W zadaniu czwartym tworzymy bankomat, który ma przechowywać nasz stan konta.
+
+2
+00:00:04,820 --> 00:00:09,320
+Zakładamy, że każdy użytkownik ma ten sam stan konta i się nie logujemy w żaden sposób.
+
+3
+00:00:09,880 --> 00:00:11,060
+Stan konta będzie się zmieniał.
+
+4
+00:00:11,060 --> 00:00:18,219
+Możemy więc przyjąć, że stan konta, może jednak po polsku, niech to będzie account, może money in bank, o tak,
+
+5
+00:00:20,859 --> 00:00:22,920
+równa się okrągłe zero.
+
+6
+00:00:23,580 --> 00:00:28,080
+Następnie będziemy chcieli wykonać while'a i pytać użytkownika, co chce zrobić.
+
+7
+00:00:28,079 --> 00:00:35,359
+Czy chce dodać coś do konta, czy chce wypłacić z konta, czy może chce sprawdzić stan.
+
+8
+00:00:35,979 --> 00:00:39,719
+Więc zrobimy while i tutaj też moglibyśmy zrobić while true.
+
+9
+00:00:40,119 --> 00:00:42,879
+Możemy też zrobić sobie zakończenie.
+
+10
+00:00:43,399 --> 00:00:50,480
+While true był w poprzednim zadaniu, więc żeby tutaj zrobić coś innego, możemy zrobić coś takiego should I work,
+
+11
+00:00:50,980 --> 00:00:57,799
+równa się true, no i wtedy should I work, czyli while should I work, dopóki powinienem pracować.
+
+12
+00:00:58,079 --> 00:01:04,039
+No to powinienem wyświetlać komunikat print, co chcesz zrobić.
+
+13
+00:01:04,039 --> 00:01:25,039
+Print 1 wypłata, print 2 wpłata, print 3 sprawdzenie stanu konta.
+
+14
+00:01:25,039 --> 00:01:27,920
+No i?
+
+15
+00:01:28,079 --> 00:01:38,679
+Jakieś pytanie, czyli answer równa się input, którą operację wybierasz.
+
+16
+00:01:40,039 --> 00:01:44,539
+W tym momencie w zależności od tego, jaka jest wartość tej zmiennej answer,
+
+17
+00:01:44,680 --> 00:01:50,180
+będziemy chcieli albo dodać pieniądze, albo odjąć pieniądze, albo sprawdzić stan konta.
+
+18
+00:01:50,180 --> 00:01:56,219
+Więc możemy zrobić albo ify, albo możemy wykonać matcha.
+
+19
+00:01:56,700 --> 00:01:57,459
+Czyli match.
+
+20
+00:01:58,079 --> 00:01:59,679
+Answer.
+
+21
+00:02:00,539 --> 00:02:02,159
+Case 1.
+
+22
+00:02:03,319 --> 00:02:17,000
+No i tutaj należałoby zapytać użytkownika o wartość, czyli value równa się int, input, ile pieniędzy chcesz wypłacić.
+
+23
+00:02:19,759 --> 00:02:24,219
+Użytkownik nam odpowie, po czym my możemy wykonać money in bank.
+
+24
+00:02:25,419 --> 00:02:27,259
+Minus równa się.
+
+25
+00:02:28,080 --> 00:02:28,760
+Value.
+
+26
+00:02:29,560 --> 00:02:30,540
+Case 2.
+
+27
+00:02:31,800 --> 00:02:34,000
+Znowu, ile pieniędzy chcesz wpłacić.
+
+28
+00:02:35,300 --> 00:02:38,300
+Ile pieniędzy chcesz wpłacić.
+
+29
+00:02:39,620 --> 00:02:41,980
+Niby jedna literka, jednak zupełnie inne znaczenie.
+
+30
+00:02:42,920 --> 00:02:45,520
+No i wtedy money in bank plus równa się value.
+
+31
+00:02:47,080 --> 00:02:48,380
+No i case 3.
+
+32
+00:02:49,480 --> 00:02:49,939
+Print.
+
+33
+00:02:49,939 --> 00:02:52,980
+Print stan konta wynosi.
+
+34
+00:02:58,080 --> 00:03:00,719
+Money in the bank.
+
+35
+00:03:01,000 --> 00:03:02,780
+Money in the bank w sumie powinno być.
+
+36
+00:03:03,160 --> 00:03:05,200
+To pokażę Ci jeszcze jedną taką przydatną sprawę.
+
+37
+00:03:05,280 --> 00:03:10,160
+Co zrobić, jeżeli mamy tyle razy powymienioną jedną zmienną i chcielibyśmy łatwo ją zamienić.
+
+38
+00:03:10,720 --> 00:03:13,840
+Możemy stanąć sobie na takiej zmiennej w dowolnym miejscu.
+
+39
+00:03:14,420 --> 00:03:15,760
+Następnie wybrać code.
+
+40
+00:03:16,400 --> 00:03:18,500
+Przepraszam, refactor i rename.
+
+41
+00:03:18,500 --> 00:03:22,820
+I wtedy jeżeli zmienimy money in bank na money in the bank.
+
+42
+00:03:24,020 --> 00:03:25,540
+I wybierzemy refactor.
+
+43
+00:03:26,000 --> 00:03:28,000
+To on wtedy zastąpi wszystkie te wyrażenia.
+
+44
+00:03:28,080 --> 00:03:31,760
+Gdzie było money in bank na money in the bank.
+
+45
+00:03:32,200 --> 00:03:34,500
+Dodatkowo on sprawdza też czy jest to na pewno zmienna.
+
+46
+00:03:34,660 --> 00:03:35,940
+Czy nie jest to jakaś wartość użyta.
+
+47
+00:03:36,020 --> 00:03:38,240
+I czy na pewno ta zmienna jest tutaj używana.
+
+48
+00:03:38,780 --> 00:03:40,860
+Jeżeli jest, no to wszystko nam ładnie zadziałało.
+
+49
+00:03:40,920 --> 00:03:42,060
+I mamy money in the bank.
+
+50
+00:03:42,480 --> 00:03:43,880
+Mamy też wartość wyświetloną.
+
+51
+00:03:44,180 --> 00:03:48,280
+No i nie pozostaje nam nic innego jak tylko wywołać ten program i sprawdzić czy działa.
+
+52
+00:03:48,740 --> 00:03:49,160
+No i jak?
+
+53
+00:03:49,180 --> 00:03:51,280
+Jak weźmiemy wpłatę najpierw.
+
+54
+00:03:51,700 --> 00:03:53,080
+I wpłacimy sobie o.
+
+55
+00:03:53,080 --> 00:03:53,120
+O.
+
+56
+00:03:57,000 --> 00:03:58,060
+Znowu typy.
+
+57
+00:03:58,080 --> 00:03:59,320
+Kacper.
+
+58
+00:03:59,680 --> 00:04:00,340
+Jak możesz.
+
+59
+00:04:00,440 --> 00:04:01,020
+Ile można.
+
+60
+00:04:01,500 --> 00:04:02,740
+Te same błędy powtarzać.
+
+61
+00:04:03,240 --> 00:04:04,240
+Strzałka do góry enter.
+
+62
+00:04:04,920 --> 00:04:05,500
+Wpłata.
+
+63
+00:04:06,000 --> 00:04:06,380
+100.
+
+64
+00:04:07,439 --> 00:04:08,880
+Sprawdzenie stanu konta.
+
+65
+00:04:11,460 --> 00:04:12,939
+O, biorę trójeczka.
+
+66
+00:04:13,060 --> 00:04:13,540
+Nie pokazuje.
+
+67
+00:04:13,700 --> 00:04:15,120
+A, bo pokazuje mi to wyżej.
+
+68
+00:04:15,580 --> 00:04:16,080
+I ucieka.
+
+69
+00:04:16,480 --> 00:04:17,680
+Znowu ten input by się przydał.
+
+70
+00:04:17,800 --> 00:04:18,860
+Stan konta wynosi 100.
+
+71
+00:04:18,980 --> 00:04:19,180
+Ok.
+
+72
+00:04:19,660 --> 00:04:20,759
+To wpłaćmy raz jeszcze.
+
+73
+00:04:21,300 --> 00:04:22,300
+Tu 32 zrobiłem.
+
+74
+00:04:22,340 --> 00:04:23,620
+Wpłaćmy raz jeszcze 200 zł.
+
+75
+00:04:24,280 --> 00:04:25,580
+Sprawdzenie stanu konta.
+
+76
+00:04:25,699 --> 00:04:26,759
+Stan konta wynosi 300.
+
+77
+00:04:26,759 --> 00:04:27,020
+Ok.
+
+78
+00:04:28,079 --> 00:04:29,039
+Wypłata 300 zł.
+
+79
+00:04:30,219 --> 00:04:30,779
+Wypłaciliśmy.
+
+80
+00:04:30,979 --> 00:04:32,120
+Sprawdzamy stan konta.
+
+81
+00:04:32,439 --> 00:04:32,979
+Zero.
+
+82
+00:04:33,379 --> 00:04:35,359
+W naszym przypadku możemy też pójść na debet.
+
+83
+00:04:35,459 --> 00:04:37,359
+Jeżeli zrobimy sobie wypłatę 400 zł.
+
+84
+00:04:38,060 --> 00:04:41,839
+No to wtedy sprawdzenie stanu konta wyświetli nam też zero.
+
+85
+00:04:43,300 --> 00:04:43,939
+Dlaczego tak?
+
+86
+00:04:44,259 --> 00:04:45,019
+Raz jeszcze zrobię.
+
+87
+00:04:45,120 --> 00:04:45,719
+Wypłatę.
+
+88
+00:04:47,079 --> 00:04:47,919
+300 zł.
+
+89
+00:04:49,779 --> 00:04:51,079
+Sprawdzam stan konta.
+
+90
+00:04:51,399 --> 00:04:52,519
+I jest minus 300 zł.
+
+91
+00:04:52,680 --> 00:04:53,120
+Wszystko działa.
+
+92
+00:04:53,219 --> 00:04:55,259
+Coś musiałem poprzednio zrobić nie tak.
+
+93
+00:04:55,560 --> 00:04:56,779
+Trochę brakuje tego inputa.
+
+94
+00:04:56,779 --> 00:04:57,779
+Który mógłby się pokazywać.
+
+95
+00:04:58,079 --> 00:04:59,359
+Po każdym.
+
+96
+00:04:59,879 --> 00:05:00,879
+Każdej operacji.
+
+97
+00:05:01,459 --> 00:05:02,459
+Tak żeby był on.
+
+98
+00:05:03,039 --> 00:05:04,159
+Tu musi być cięty.
+
+99
+00:05:04,259 --> 00:05:05,099
+Tak żeby było widać.
+
+100
+00:05:05,319 --> 00:05:07,339
+Że ta linia się wyświetliła.
+
+101
+00:05:07,740 --> 00:05:08,399
+A tak to myślę.
+
+102
+00:05:08,579 --> 00:05:09,399
+Że jest ok.
+
+103
+00:05:09,959 --> 00:05:10,599
+I rzecz którą.
+
+104
+00:05:10,979 --> 00:05:12,039
+Jeszcze chciałem wam powiedzieć.
+
+105
+00:05:12,180 --> 00:05:13,360
+W ramach tego zadania.
+
+106
+00:05:13,539 --> 00:05:13,939
+To jest to.
+
+107
+00:05:14,039 --> 00:05:14,860
+Że do bankomatu.
+
+108
+00:05:14,939 --> 00:05:16,159
+Jeszcze niedługo wrócimy.
+
+109
+00:05:16,620 --> 00:05:17,639
+Jak będziemy pracowali.
+
+110
+00:05:17,719 --> 00:05:18,599
+Czy w ogóle do takich.
+
+111
+00:05:18,680 --> 00:05:19,519
+Tego typu zadań.
+
+112
+00:05:19,579 --> 00:05:20,659
+Jak będziemy pracowali.
+
+113
+00:05:21,039 --> 00:05:22,039
+Z JSONem.
+
+114
+00:05:22,099 --> 00:05:23,319
+I będziemy pracowali z plikami.
+
+115
+00:05:23,740 --> 00:05:24,560
+Bo na chwilę obecną.
+
+116
+00:05:24,659 --> 00:05:25,560
+Pewnym minusem.
+
+117
+00:05:25,639 --> 00:05:26,539
+Tego naszego rozwiązania.
+
+118
+00:05:26,539 --> 00:05:26,979
+Jest to.
+
+119
+00:05:27,079 --> 00:05:27,519
+Że jeżeli ja.
+
+120
+00:05:27,519 --> 00:05:28,479
+Teraz wpłacę sobie.
+
+121
+00:05:28,620 --> 00:05:29,359
+Tysiąc złotych.
+
+122
+00:05:29,740 --> 00:05:30,979
+Po czym zatrzymam program.
+
+123
+00:05:31,159 --> 00:05:32,139
+Uruchomię go raz jeszcze.
+
+124
+00:05:32,620 --> 00:05:33,560
+To ten tysiąc złotych.
+
+125
+00:05:33,639 --> 00:05:34,639
+Mi gdzieś wyparował.
+
+126
+00:05:34,759 --> 00:05:35,519
+Gdzieś został.
+
+127
+00:05:35,599 --> 00:05:36,759
+W tej kieszeni bankomatu.
+
+128
+00:05:36,879 --> 00:05:37,180
+Natomiast.
+
+129
+00:05:37,579 --> 00:05:38,399
+Nie jest on.
+
+130
+00:05:38,519 --> 00:05:39,479
+Widoczny na moim koncie.
+
+131
+00:05:39,919 --> 00:05:41,120
+I kiedy będziemy wykonywali.
+
+132
+00:05:41,240 --> 00:05:42,240
+Operacje na plikach.
+
+133
+00:05:42,379 --> 00:05:42,919
+I pracę.
+
+134
+00:05:42,979 --> 00:05:43,819
+Ogólnie z różnymi.
+
+135
+00:05:43,959 --> 00:05:44,919
+Takimi typami danych.
+
+136
+00:05:45,319 --> 00:05:45,839
+To zobaczycie.
+
+137
+00:05:45,899 --> 00:05:46,779
+Jak można zrobić.
+
+138
+00:05:46,899 --> 00:05:47,759
+Jak można sprawić.
+
+139
+00:05:48,139 --> 00:05:48,759
+Żeby takie dane.
+
+140
+00:05:48,939 --> 00:05:49,759
+Były przechowywane.
+
+141
+00:05:50,039 --> 00:05:50,680
+I żeby pomiędzy.
+
+142
+00:05:50,959 --> 00:05:51,419
+Wyłączeniem.
+
+143
+00:05:51,500 --> 00:05:52,299
+A włączeniem.
+
+144
+00:05:52,979 --> 00:05:53,419
+Programu.
+
+145
+00:05:53,740 --> 00:05:54,639
+Te dane nie były.
+
+146
+00:05:55,479 --> 00:05:56,479
+Nie przepadały.
+
+147
+00:05:56,979 --> 00:05:57,079
+Ok.
+
+148
+00:05:57,819 --> 00:05:58,219
+To co.
+
+149
+00:05:58,719 --> 00:05:59,339
+Lecimy dalej.
+
+150
+00:05:59,719 --> 00:06:00,319
+Do zobaczenia.

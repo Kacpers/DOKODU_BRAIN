@@ -1,0 +1,275 @@
+1
+00:00:00,000 --> 00:00:04,919
+No to tak, na samym początku pytanie jak długo mamy pytać.
+
+2
+00:00:05,020 --> 00:00:12,080
+No mamy pytać aż nie wprowadzi zera, czyli tak naprawdę albo pytamy go raz i drugi raz, albo robimy while true.
+
+3
+00:00:13,019 --> 00:00:20,379
+Czyli while true value równa się input, na zewnątrz jeszcze int.
+
+4
+00:00:22,640 --> 00:00:24,260
+No i mamy nawiasy.
+
+5
+00:00:24,719 --> 00:00:25,839
+Będziemy mieli wtedy value.
+
+6
+00:00:25,839 --> 00:00:33,399
+I value równa się 0, dwukropek.
+
+7
+00:00:34,640 --> 00:00:38,120
+No i możemy wtedy zakończyć pętlę, czyli break.
+
+8
+00:00:38,799 --> 00:00:42,960
+Jeżeli natomiast nie jest równy 0, no to potrzebujemy mieć sumę.
+
+9
+00:00:43,299 --> 00:00:45,519
+Czyli jakaś zmienna total równa się 0.
+
+10
+00:00:46,060 --> 00:00:52,579
+Celowo nie używam tutaj zmiennej sum, no bo jak wiesz, mamy taką funkcję jak sum.
+
+11
+00:00:52,579 --> 00:00:55,579
+Więc używanie zmiennej o takiej samej nazwie jak sum.
+
+12
+00:00:55,840 --> 00:00:58,300
+Jak nazwa funkcji nie jest dobrym pomysłem.
+
+13
+00:00:58,500 --> 00:01:02,560
+Będziemy o tym jeszcze sobie mówili już niedługo, kiedy będziemy wprowadzali własne funkcje.
+
+14
+00:01:03,240 --> 00:01:06,240
+Więc if value równa się 0, then break to mamy.
+
+15
+00:01:06,700 --> 00:01:09,280
+No i oczywiście powinniśmy jeszcze zwiększać sobie to total.
+
+16
+00:01:09,800 --> 00:01:15,780
+Możemy zwiększać o dowolną wartość, czyli total plus równa się value.
+
+17
+00:01:16,379 --> 00:01:19,700
+Z racji tego, że nie muszę liczyć średniej, tylko jest to suma,
+
+18
+00:01:19,700 --> 00:01:23,100
+no to jeżeli nawet użytkownik wpisze 0, to to 0 mogę też sobie dodać.
+
+19
+00:01:23,480 --> 00:01:25,120
+Mógłbym też tę linijkę przenieść tu.
+
+20
+00:01:25,120 --> 00:01:27,780
+No i wtedy nie miałbym tej rozterki.
+
+21
+00:01:28,540 --> 00:01:30,000
+I w tym momencie robię print.
+
+22
+00:01:31,079 --> 00:01:37,439
+Suma liczb wynosi total.
+
+23
+00:01:37,880 --> 00:01:39,040
+Zabrakło fstringa.
+
+24
+00:01:39,420 --> 00:01:39,980
+Dorzucam.
+
+25
+00:01:40,540 --> 00:01:41,280
+No i wywołuję.
+
+26
+00:01:42,000 --> 00:01:44,780
+Python valjus operator zadanie.
+
+27
+00:01:45,439 --> 00:01:49,100
+1, 2, 3, 4, 5, 0, 15.
+
+28
+00:01:49,300 --> 00:01:49,820
+Zadziałało.
+
+29
+00:01:50,360 --> 00:01:53,880
+Jak zapisać teraz ten kod, tak żeby użyć valjus operatora?
+
+30
+00:01:53,880 --> 00:01:55,040
+Przede wszystkim.
+
+31
+00:01:55,040 --> 00:01:57,200
+Będę potrzebował to wyrażenie.
+
+32
+00:01:58,020 --> 00:01:59,960
+Właściwie to wyrażenie całe.
+
+33
+00:02:00,640 --> 00:02:02,000
+Przenieść sobie do while'a.
+
+34
+00:02:02,480 --> 00:02:06,320
+Wiem, że lubicie porównywać sobie ten kod,
+
+35
+00:02:06,780 --> 00:02:10,939
+więc żeby nie zginął, zrobimy sobie tutaj po prostu komentarz
+
+36
+00:02:10,939 --> 00:02:12,759
+i zapiszemy ten kod raz jeszcze.
+
+37
+00:02:13,460 --> 00:02:15,020
+Tutaj będę częściowo sobie kopiował.
+
+38
+00:02:15,740 --> 00:02:17,300
+Czyli potrzebuję to wyrażenie.
+
+39
+00:02:19,379 --> 00:02:21,600
+Ja bym chciał, żeby do zmiennej value
+
+40
+00:02:21,600 --> 00:02:24,259
+przypisana była wartość int input,
+
+41
+00:02:24,259 --> 00:02:25,759
+ale żeby była też zwrócona.
+
+42
+00:02:25,759 --> 00:02:28,259
+Więc dorzucam sobie tutaj dwóch kropek,
+
+43
+00:02:28,259 --> 00:02:33,560
+a następnie wszystko opatulam nawiasem.
+
+44
+00:02:33,560 --> 00:02:39,359
+Po wykonaniu tego, ja chcę, żeby while wykonywał mi się tak długo,
+
+45
+00:02:39,359 --> 00:02:43,859
+jak długo to, co zostanie przypisane do value nie jest zerem.
+
+46
+00:02:43,859 --> 00:02:46,959
+Czyli nie równa się 0.
+
+47
+00:02:46,959 --> 00:02:48,459
+Dwóch kropek.
+
+48
+00:02:48,459 --> 00:02:50,459
+Przydałaby mi się jeszcze zmienna total.
+
+49
+00:02:50,459 --> 00:02:52,340
+Czyli total równa się 0.
+
+50
+00:02:52,340 --> 00:02:53,099
+Total.
+
+51
+00:02:53,099 --> 00:02:53,739
+Total.
+
+52
+00:02:53,739 --> 00:02:54,239
+Total.
+
+53
+00:02:54,240 --> 00:02:56,240
+Total plus równa się value.
+
+54
+00:02:57,900 --> 00:02:58,900
+Total.
+
+55
+00:03:00,900 --> 00:03:02,159
+Zróbmy teraz jeszcze.
+
+56
+00:03:03,400 --> 00:03:06,240
+1, 2, 3, 4, 5, 0.
+
+57
+00:03:07,140 --> 00:03:07,820
+15.
+
+58
+00:03:08,540 --> 00:03:10,180
+Wygląda na to, że zadziałało.
+
+59
+00:03:10,420 --> 00:03:11,640
+Użyłem values operatora.
+
+60
+00:03:12,000 --> 00:03:15,300
+Jak widzisz, w tym przypadku bardzo skróciliśmy nasz kod
+
+61
+00:03:15,300 --> 00:03:17,960
+względem tego, który jest zapisany powyżej.
+
+62
+00:03:18,580 --> 00:03:22,960
+No ale czasem i tak się zdarza, że można skrócić.
+
+63
+00:03:22,960 --> 00:03:24,219
+Właśnie korzystając z takich.
+
+64
+00:03:24,240 --> 00:03:25,240
+Nowości.
+
+65
+00:03:25,240 --> 00:03:26,800
+To tyle z mojej strony.
+
+66
+00:03:26,800 --> 00:03:27,900
+Zapraszam cię dalej.
+
+67
+00:03:27,900 --> 00:03:28,740
+Do zobaczenia.
+
+68
+00:03:28,740 --> 00:03:30,740
+Jeszcze trochę o skracaniu porozmawiamy.
+
+69
+00:03:30,740 --> 00:03:31,740
+Chodźcie.

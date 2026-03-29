@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:08,540
+Tu oczywiście zadanie miało dotyczyć nie dni tygodnia, tylko miesięcy, więc zrobiłem szybkie czary-mary, hokus-pokus, już zakodowałem to poza kadrem,
+
+2
+00:00:09,019 --> 00:00:15,380
+tylko chciałem pokazać, że w związku z miesiącami jest praktycznie identycznie, czyli po prostu musimy sobie odebrać miesiąc,
+
+3
+00:00:15,540 --> 00:00:23,679
+zamienić sobie, poprosić użytkownika o podanie numeru miesiąca i następnie w zależności od tego, jaką cyfrę poda nam użytkownik,
+
+4
+00:00:23,679 --> 00:00:27,339
+będziemy przypisywali do tej zmiennej tekstowej odpowiednią wartość.
+
+5
+00:00:27,339 --> 00:00:34,500
+No i wtedy jeżeli jest 1 to styczeń, jeżeli jest 12 to grudzień, a jak podał coś innego, no to wtedy wyświetlamy informację,
+
+6
+00:00:34,600 --> 00:00:43,000
+że nie ma takiego miesiąca, robimy quit i no i wtedy podany miesiąc to no i wtedy jest month-text.
+
+7
+00:00:43,500 --> 00:00:49,219
+Czyli konstrukcja raz jeszcze jest taka, że mamy match ze zmienną, którą chcemy powiedzmy sobie testować,
+
+8
+00:00:49,679 --> 00:00:54,600
+następnie jest case, za którym następuje wartość, którą będziemy chcieli przyrównywać
+
+9
+00:00:54,600 --> 00:00:57,320
+i później jest to, co ma się stać w momencie, w którym...
+
+10
+00:00:57,340 --> 00:01:03,480
+Ta zmienna ma taką wartość, a jeżeli nie, to ta zmienna ma taką wartość i wtedy sprawdza,
+
+11
+00:01:03,480 --> 00:01:07,280
+przypisuje tę konkretną, tę konkretna rzecz, się dzieje.
+
+12
+00:01:07,280 --> 00:01:12,740
+To tylko w formie takiego uzupełnienia, bo słusznie została mi zwrócona uwaga, że zrobiłem coś innego niż miałem,
+
+13
+00:01:12,740 --> 00:01:15,200
+po prostu z rozpędu, przepraszam.
+
+14
+00:01:15,200 --> 00:01:16,540
+Chodźcie dalej.

@@ -1,0 +1,355 @@
+1
+00:00:00,000 --> 00:00:02,839
+No i w końcu dochodzimy do modułu, na który wszyscy czekaliśmy.
+
+2
+00:00:03,020 --> 00:00:05,080
+W końcu będziemy mogli usiąść do kodu.
+
+3
+00:00:05,520 --> 00:00:08,140
+Może nie takiego jeszcze w PyCharmie, ale sobie już coś pokodujemy
+
+4
+00:00:08,140 --> 00:00:11,160
+i pierwsze rzeczy będę mógł Wam w ten sposób pokazać.
+
+5
+00:00:11,460 --> 00:00:12,200
+Od czego zaczniemy?
+
+6
+00:00:12,640 --> 00:00:16,440
+Zaczniemy od tego, że będziemy potrzebowali uruchomić sobie Pythona.
+
+7
+00:00:16,559 --> 00:00:20,559
+Czyli po zainstalowaniu tak naprawdę możesz uruchomić następnie CMD,
+
+8
+00:00:20,559 --> 00:00:27,940
+jeżeli korzystasz z Linuxa, albo możesz wybrać dowolną inną konsolę,
+
+9
+00:00:27,940 --> 00:00:29,859
+jeżeli korzystasz z innych systemów operacyjnych.
+
+10
+00:00:30,359 --> 00:00:33,179
+No i w tym systemie powinieneś móc wpisać słowo Python.
+
+11
+00:00:33,719 --> 00:00:36,500
+I to powinno spowodować, że Python Ci się odpali.
+
+12
+00:00:36,840 --> 00:00:39,460
+Tu akurat widzisz, pracuję na Pythonie w wersji 3.8.8,
+
+13
+00:00:39,620 --> 00:00:43,359
+ale tak jak wspominałem wcześniej, nie ma to absolutnie żadnego problemu.
+
+14
+00:00:43,800 --> 00:00:48,200
+Na tym etapie spokojnie ta wersja będzie nas zadowalać, będzie nam wystarczała.
+
+15
+00:00:48,540 --> 00:00:55,560
+I teraz tak, my w tym okienku możemy wprowadzać poszczególne instrukcje
+
+16
+00:00:55,560 --> 00:00:57,640
+i każda z tych instrukcji, tak jak powiedziałem,
+
+17
+00:00:57,640 --> 00:00:59,780
+na bieżąco będzie interpretowana.
+
+18
+00:01:00,079 --> 00:01:03,000
+Jak spojrzysz sobie na te operatory, które widzisz pod spodem,
+
+19
+00:01:03,079 --> 00:01:06,460
+no to pojawią się na przykład informacje takie, że mamy operatory matematyczne
+
+20
+00:01:06,460 --> 00:01:11,819
+oraz operatory tutaj takie jak suma, minus, mnożenie, dzielenie.
+
+21
+00:01:12,319 --> 00:01:14,879
+Mamy też część całkowitą z dzielenia, czyli dwa slashe,
+
+22
+00:01:15,379 --> 00:01:20,560
+procent, czyli modulo, reszta z dzielenia, no i dwie gwiazdki, czyli potęgowanie.
+
+23
+00:01:21,060 --> 00:01:25,939
+To oznacza, że jeżeli sobie wprowadzimy jakąś pierwszą, jakieś pierwsze obliczenie,
+
+24
+00:01:25,939 --> 00:01:27,519
+na przykład dwa.
+
+25
+00:01:27,640 --> 00:01:31,320
+Dodać dwa, no to w wyniku dostaniemy cztery.
+
+26
+00:01:31,739 --> 00:01:35,120
+W ten sposób można sobie przetestować zupełnie dowolny z tych operatorów.
+
+27
+00:01:35,319 --> 00:01:38,480
+Na przykład trzy razy osiem, dwadzieścia cztery.
+
+28
+00:01:38,920 --> 00:01:41,799
+Widzisz, każda linia, którą kodu, którą wprowadzasz,
+
+29
+00:01:42,120 --> 00:01:45,099
+od razu powoduje, że pojawia się wynik.
+
+30
+00:01:45,260 --> 00:01:46,700
+Cztery, dwadzieścia cztery, wszystko jest okej.
+
+31
+00:01:46,939 --> 00:01:50,379
+Powiedzmy sobie zatem o innych operatorach też, które się tutaj znajdują.
+
+32
+00:01:50,560 --> 00:01:55,420
+Innych może niż te, które znasz z Excela, czyli innych niż te.
+
+33
+00:01:55,420 --> 00:01:58,780
+Tu mamy na przykład część całkowitą z dzielenia.
+
+34
+00:01:58,980 --> 00:01:59,780
+Jak to zrobić?
+
+35
+00:01:59,980 --> 00:02:04,740
+Chociażby wykonując pięć, kreska, kreska, dwa, dostaniesz w wyniku dwa.
+
+36
+00:02:04,939 --> 00:02:05,859
+Dlaczego tak jest?
+
+37
+00:02:06,060 --> 00:02:10,300
+Bo dwa razy dwa to cztery, czyli pięć dzielone na dwa to dwa, reszta jeden.
+
+38
+00:02:10,500 --> 00:02:16,539
+I za pomocą tych dwóch slashe dostaniesz właśnie tą część całkowitą z tego dzielenia,
+
+39
+00:02:16,740 --> 00:02:17,500
+czyli dwa.
+
+40
+00:02:17,699 --> 00:02:23,400
+Jeżeli natomiast chciałbyś dowiedzieć się, że pięć dzielone na dwa to dwa, reszta jeden,
+
+41
+00:02:23,599 --> 00:02:25,199
+to należy wykonać pięć procent,
+
+42
+00:02:25,419 --> 00:02:29,819
+dwa i wtedy dostaniesz właśnie tę część, która pozostała, czyli tzw.
+
+43
+00:02:30,019 --> 00:02:31,139
+resztę, jeden.
+
+44
+00:02:31,339 --> 00:02:35,459
+Czyli możemy sobie powiedzieć, że pięć dzielone na dwa tak naprawdę to jest dwa i pół.
+
+45
+00:02:35,659 --> 00:02:40,500
+Natomiast pięć całkowito liczbowo dzielone przez dwa to jest dwa, reszta jeden.
+
+46
+00:02:40,699 --> 00:02:43,179
+Dokładnie w ten sposób tak to funkcjonuje.
+
+47
+00:02:43,379 --> 00:02:46,619
+Warto zwrócić uwagę na jeszcze jedną rzecz, a mianowicie kiedy dodajesz do siebie
+
+48
+00:02:46,819 --> 00:02:51,979
+liczby, czy kiedy mnożysz liczby, zawsze dostajesz liczby całkowite.
+
+49
+00:02:52,179 --> 00:02:54,779
+Natomiast jeżeli podzielisz liczbę
+
+50
+00:02:55,419 --> 00:03:00,059
+na drugą liczbę, to dostaniesz ułamek i ten ułamek, ta wartość dziesiętna pojawi się
+
+51
+00:03:00,259 --> 00:03:06,019
+nawet wtedy, jeżeli tak naprawdę wydawać by się mogło, że powinna być wynikiem wartość całkowita.
+
+52
+00:03:06,219 --> 00:03:09,899
+To jest bardzo ciekawa zasada, do której też jeszcze sobie w tym momencie może nie
+
+53
+00:03:10,099 --> 00:03:13,060
+wrócimy, ale w przyszłości sobie do niej jeszcze wrócimy.
+
+54
+00:03:13,259 --> 00:03:18,459
+OK, czyli część całkowitą z dzielenia pokazaliśmy sobie, resztę z dzielenia również
+
+55
+00:03:18,659 --> 00:03:24,219
+pokazaliśmy. Pokażmy sobie jeszcze potęgowanie, czyli pięć do potęgi drugiej.
+
+56
+00:03:24,419 --> 00:03:25,419
+Można zapisać w ten sposób.
+
+57
+00:03:25,619 --> 00:03:30,179
+I jest to 25. 3 do potęgi trzeciej.
+
+58
+00:03:30,379 --> 00:03:33,219
+3 razy 3 to 9 razy 3 to 27.
+
+59
+00:03:33,419 --> 00:03:35,779
+Wszystko nam się tutaj pięknie zgadza.
+
+60
+00:03:35,979 --> 00:03:40,219
+I skoro wiesz, że potęgowanie robi się w ten sposób, to możesz też policzyć pierwiastek,
+
+61
+00:03:40,419 --> 00:03:46,339
+gdyż pierwiastek to jest tak naprawdę podniesiona wartość do potęgi 1 przez
+
+62
+00:03:46,539 --> 00:03:50,219
+stopień tego pierwiastka i w ten sposób też dostaniesz 3.
+
+63
+00:03:50,419 --> 00:03:55,219
+I zwróć uwagę znowu, że tutaj też pokazała nam się wartość zmiennoprzecinkowa.
+
+64
+00:03:55,619 --> 00:03:58,619
+To jest ważne. W przyszłości będzie to dla ciebie bardzo istotne.
+
+65
+00:03:58,819 --> 00:04:00,819
+I tutaj chciałem pokazać jeszcze jedną rzecz.
+
+66
+00:04:01,019 --> 00:04:02,699
+Czasem się to przydaje, jeżeli np.
+
+67
+00:04:02,899 --> 00:04:06,060
+chcesz stworzyć taką linię, która nic nie robi, np.
+
+68
+00:04:06,259 --> 00:04:09,259
+która ma być opisem jakichś twoich zmagań.
+
+69
+00:04:09,459 --> 00:04:15,819
+Natomiast tu i tak, kiedy zamkniemy to okno, ten kod, który napisaliśmy po prostu zniknie.
+
+70
+00:04:16,019 --> 00:04:21,099
+Ten to interaktywne środowisko to jest takie miejsce na próbowanie, miejsce na to, żeby
+
+71
+00:04:21,300 --> 00:04:24,219
+sobie pewne rzeczy wywoływać, sprawdzać, używać ich.
+
+72
+00:04:24,220 --> 00:04:28,220
+Natomiast za chwilę pokażę ci jak pisać programy wsadowe, które właśnie będą
+
+73
+00:04:28,420 --> 00:04:33,260
+wykonywane w całości. Natomiast jeżeli chciałbyś coś sobie napisać, co nie będzie
+
+74
+00:04:33,460 --> 00:04:38,460
+miało żadnego zastosowania, można dodać komentarz za pomocą hasza.
+
+75
+00:04:38,660 --> 00:04:43,020
+Jeżeli wprowadzę hash, to mogę za tym haszem napisać dowolną rzecz,
+
+76
+00:04:43,220 --> 00:04:47,260
+bo ten hash powoduje, że wartość ta nie jest wykonywana.
+
+77
+00:04:47,460 --> 00:04:54,220
+Programiści bardzo często w tym miejscu zapisują sobie jakieś notatki, informacje o tym, że tu wymaga to jeszcze
+
+78
+00:04:54,420 --> 00:04:57,540
+jakiegoś udoskonalenia, tutaj trzeba coś jeszcze dopisać.
+
+79
+00:04:57,740 --> 00:05:01,900
+Tego typu rzeczy właśnie zapisujemy w komentarzach lub też informacje dla innych
+
+80
+00:05:02,100 --> 00:05:09,020
+deweloperów, które miałyby być pomocne. Natomiast raczej w komentarzach nie zapisujemy sensu kodu,
+
+81
+00:05:09,220 --> 00:05:13,020
+no bo kod powinien być tak napisany, żeby czytał się jak książka.
+
+82
+00:05:13,220 --> 00:05:16,180
+A Python jest akurat doskonałym tego przykładem.
+
+83
+00:05:16,380 --> 00:05:18,620
+Natomiast jeżeli chodzi o kurs, to nic nie
+
+84
+00:05:18,820 --> 00:05:23,620
+stoi na przeszkodzie i nikt nie zwróci ci uwagi, jeżeli będziesz zapisywać sobie dowolne jakieś
+
+85
+00:05:24,420 --> 00:05:26,060
+notatki, które są tylko i wyłącznie dla ciebie.
+
+86
+00:05:26,260 --> 00:05:28,340
+Także później trzeba było sprawdzać, że np.
+
+87
+00:05:28,540 --> 00:05:32,140
+piąta linia w jakimś miejscu to jest zeszyt z notatkami.
+
+88
+00:05:32,340 --> 00:05:34,460
+Bez sensu, lepiej to robić w komentarzach.
+
+89
+00:05:34,660 --> 00:05:38,580
+OK. I na ten moment mam dla ciebie małe zadanie.

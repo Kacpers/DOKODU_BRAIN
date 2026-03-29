@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:16,800
+Ok, jak pracować na dacie? No to jak pewnie się domyślasz, datę możemy sobie przesuwać w jedną i w drugą stronę. Możemy dodawać dni, odejmować dni, dostać jutro, dostać wczoraj, czy za tydzień. I żeby to wykonać trzeba utworzyć konkretny obiekt reprezentujący datę.
+
+2
+00:00:16,800 --> 00:00:31,060
+Zobacz, from datetime import date, czyli zaimportowałem sobie znowu to samo co poprzednio, tylko że poprzednio robiliśmy date.today. Natomiast tu chciałbym się dowiedzieć na jaki dzień przypadają moje urodziny w tym roku.
+
+3
+00:00:31,060 --> 00:00:43,280
+Ja się urodziłem 9 listopada, w tym celu muszę dowiedzieć się jaki dzisiaj jest rok, więc wykonałem today równa się date today. I okazało się, że kiedy robię print today on wyświetla mi ten format.
+
+4
+00:00:43,640 --> 00:00:46,760
+Możemy zrobić strftime, żeby zmienić ten format.
+
+5
+00:00:46,799 --> 00:01:02,039
+Ale można zrobić coś jeszcze. Patrz, wykonałem today.year, pobierzemy tylko rok z dzisiejszej daty. Wykonamy today.month, pobierzemy tylko miesiąc, a jeżeli wykonamy today.day, to dostaniemy tylko i wyłącznie dzień z dzisiejszej daty.
+
+6
+00:01:03,199 --> 00:01:09,439
+Dzięki temu możemy się dowiedzieć, że dzisiaj jest styczeń. To jest today, day. Co dalej?
+
+7
+00:01:09,620 --> 00:01:16,719
+Dalej mamy sytuację taką, że możemy sobie stworzyć z tego nową datę. Jak to stworzyć nową datę? Zobacz.
+
+8
+00:01:16,799 --> 00:01:23,259
+Zamiast robić today na date, ja wykonałem po prostu ten sam date i dodałem nawias.
+
+9
+00:01:23,739 --> 00:01:33,819
+Co oznacza, że w Pythonie trochę to się robi, może trochę pokićkane, trochę pomieszane, ale można to samo, na czym później robi się .today, zrobić też z tego jakby funkcję.
+
+10
+00:01:33,819 --> 00:01:45,640
+I zobacz, dorzucam today.year, 11.9, dzięki czemu skoro mamy rok, nie wiem, 25, to on nam wstawia tutaj 25, czy tam 2025.
+
+11
+00:01:45,640 --> 00:01:48,340
+Jest wcześniej, a może później, nieważne.
+
+12
+00:01:48,820 --> 00:01:52,540
+Następnie jest miesiąc, a następnie jest dzień.
+
+13
+00:01:53,000 --> 00:02:05,359
+I w ten sposób dostaniemy taką samą datę, jak gdybyśmy zrobili today, bo today to jest dzisiejsza data, a day to jest jakaś data określona z tego samego roku, w którym znajdujemy się teraz.
+
+14
+00:02:05,960 --> 00:02:14,979
+Jeżeli chciałbym to sformatować, no to mogę znowu zrobić day.strftime, bo to zwróciło nam dokładnie to samo, co zwróciło nam today.
+
+15
+00:02:14,979 --> 00:02:25,359
+I wykonując strftime mogę napisać %d%m%y, sformatuję tę datę, no i w ten sposób dostanę moje urodziny w tym roku wypadają w takim dniu.
+
+16
+00:02:25,620 --> 00:02:30,560
+Jeżeli do tego dorzucę sobie jeszcze %a, no to dowiem się w jakim dniu tygodnia wypadają moje urodziny.
+
+17
+00:02:31,000 --> 00:02:35,399
+No i można się przygotować jak to piątek, albo trochę się zmartwić, jeżeli to poniedziałek.
+
+18
+00:02:35,399 --> 00:02:42,919
+Na szczęście, taka ciekawostka dla Was, każdy z nas ma urodziny praktycznie w taką samą ilość dni.
+
+19
+00:02:44,979 --> 00:02:45,979
+Współczesnych po sobie.
+
+20
+00:02:45,979 --> 00:02:50,979
+Bo jeżeli ktoś się urodził w czwartek, to w kolejnym roku ma urodziny w piątek, potem w kolejnym roku ma urodziny w sobotę.
+
+21
+00:02:50,979 --> 00:02:58,979
+Chyba, że gdzieś tam będzie rok przestępny, to wtedy jeszcze, jeśli nam się to przesunie, ale zazwyczaj co roku mamy urodziny o jeden dzień później.
+
+22
+00:02:59,979 --> 00:03:01,979
+Co jeszcze możemy zrobić?
+
+23
+00:03:01,979 --> 00:03:04,979
+Daty możemy ze sobą też porównywać.
+
+24
+00:03:04,979 --> 00:03:09,979
+Na przykład możemy się dowiedzieć, czy data urodzenia wystąpiła czyjaś wcześniej, czy później.
+
+25
+00:03:09,979 --> 00:03:12,979
+Wystarczy, że posiadamy obiekt daty.
+
+26
+00:03:12,979 --> 00:03:13,979
+Spójrz.
+
+27
+00:03:14,979 --> 00:03:21,979
+Urodziny porówna się date today, następnie stworzyłem sobie birthday, gdzie mam day today year 11 z 9.
+
+28
+00:03:21,979 --> 00:03:31,979
+I wtedy mogę wykonać, jeżeli urodziny były później niż dziś, mogę to sobie porównać, to wtedy mogę obliczyć ile dni temu, czy też ile dni zostało do urodzin.
+
+29
+00:03:31,979 --> 00:03:36,979
+Bo jeżeli urodziny są większe niż data dzisiejsza, to znaczy, że one są w przyszłości.
+
+30
+00:03:36,979 --> 00:03:42,979
+Pamiętaj o tym, że każda data to jest ten Unix Epoch, czyli ilość dni, które minęło od epoki.
+
+31
+00:03:42,979 --> 00:03:51,979
+Jeżeli to sobie wbijemy do głowy, to wówczas okaże się, że to jest całkiem logiczne, że im data późniejsza, tym liczba jest większa, tym będzie większa od daty wcześniejszej.
+
+32
+00:03:51,979 --> 00:03:57,979
+Czyli wczoraj jest mniejsze niż dzisiaj, a jutro jest większe niż dzisiaj.
+
+33
+00:03:57,979 --> 00:04:06,979
+Dzięki temu, jeżeli birthday jest większe niż today, to znaczy, że moje urodziny dopiero będą w przyszłości i ja mogę napisać, że twoje urodziny dopiero będą.
+
+34
+00:04:06,979 --> 00:04:08,979
+Else twoje urodziny już były.
+
+35
+00:04:08,979 --> 00:04:10,979
+I teraz, żeby dowiedzieć się ile dni temu albo za ile dni, wystarczy, że urodziny są już później.
+
+36
+00:04:10,979 --> 00:04:11,979
+I teraz, żeby dowiedzieć się ile dni temu albo za ile dni, wystarczy, że moje urodziny dopiero będą w przyszłości.
+
+37
+00:04:11,979 --> 00:04:18,980
+I teraz, żeby dowiedzieć się ile dni temu albo za ile dni, wystarczy, że urodziny do tej urodziny do normalej nie są Tonight
+
+38
+00:04:18,980 --> 00:04:21,980
+To co jest zwracane, czyli Div, to jest kolejny obiekt.
+
+39
+00:04:21,980 --> 00:04:24,980
+O obiektach jeszcze w przyszłości sobie powiedzmy.
+
+40
+00:04:24,980 --> 00:04:31,980
+związki ze strimem
+
+41
+00:04:31,980 --> 00:04:33,980
+czyli znowu dat Ο
+
+42
+00:04:33,980 --> 00:04:35,980
+czyli znowu dat Vanc
+
+43
+00:04:35,980 --> 00:04:37,980
+czyli znowu datazed
+
+44
+00:04:37,980 --> 00:04:39,980
+jest takie喝
+
+45
+00:04:39,980 --> 00:04:41,599
+llev
+
+46
+00:04:41,599 --> 00:04:41,980
+zie
+
+47
+00:04:41,980 --> 00:04:44,060
+jest też różnica pomiędzy datami.
+
+48
+00:04:44,640 --> 00:04:46,400
+Dzięki temu można na przykład dowiedzieć się,
+
+49
+00:04:46,580 --> 00:04:48,879
+ile dni temu była jakaś data.
+
+50
+00:04:49,900 --> 00:04:52,000
+W tym celu robię, zobacz, div.days,
+
+51
+00:04:52,220 --> 00:04:54,600
+div.days, no i on mi wprost powie,
+
+52
+00:04:55,180 --> 00:04:57,120
+ile dni różnią te dwie daty.
+
+53
+00:04:57,280 --> 00:05:00,460
+I myślę, że dobrze byłoby to sobie trochę przećwiczyć.
+
+54
+00:05:00,600 --> 00:05:01,700
+Więc chodźmy do zadań.

@@ -1,0 +1,199 @@
+1
+00:00:00,900 --> 00:00:03,500
+Okej, więc idziemy dalej do match case.
+
+2
+00:00:03,859 --> 00:00:16,260
+Match case może wam przypominać troszeczkę polecenie switch, jeżeli programujecie w innych językach, a jeżeli nie, to się tym zdaniem w ogóle nie przejmujcie, tylko porozmawiajmy o tym, czym właściwie match case jest.
+
+3
+00:00:16,260 --> 00:00:33,840
+Jeżeli pracowaliśmy z ifami, to bardzo denerwującym było dla nas najczęściej to, że trzeba było dla nawet pojedynczych takich jakichś wyrażeń zawsze robić tego ifa, elifa, elifa, elifa, elifa i tych elifów mogło być dużo, po czym pojawiał się else i można było obsłużyć dane wyrażenie.
+
+4
+00:00:33,840 --> 00:00:44,299
+I match case pozwala nam na to, żeby obsłużyć elementy wartości zmiennej, w ramach której wartości chcielibyśmy zdecydować o tym, co ma się w tym programie stać.
+
+5
+00:00:45,100 --> 00:00:45,880
+Mówi się o tym, że
+
+6
+00:00:46,259 --> 00:00:50,479
+program mówi więcej niż 1000 słów, więc zobaczcie poniższy przykład.
+
+7
+00:00:51,359 --> 00:00:54,539
+Mam sytuację taką, że mam zmienną x o wartości 10.
+
+8
+00:00:55,099 --> 00:01:06,680
+I teraz, jeżeli chciałbym dla wartości 0, 1, 2, 3, 4, 5 robić ify, wykonywać różne czynności, no to musiałbym najczęściej zrobić jakiegoś tam elifa, elifa, elifa, elifa.
+
+9
+00:01:06,680 --> 00:01:14,700
+Natomiast tu, jeżeli używam match case'a, to mogę wykonać match x dwukropek, case 0, print x jest równe 0.
+
+10
+00:01:15,180 --> 00:01:16,039
+Case 10.
+
+11
+00:01:16,260 --> 00:01:16,820
+Lub 20.
+
+12
+00:01:17,480 --> 00:01:19,380
+Print x jest równe 10 lub 20.
+
+13
+00:01:19,960 --> 00:01:20,719
+Case 30.
+
+14
+00:01:20,900 --> 00:01:22,060
+Print x jest równe 30.
+
+15
+00:01:22,280 --> 00:01:27,780
+I case, znak podkreślenia, print x nie jest równe żadnej z powyższych wartości.
+
+16
+00:01:27,780 --> 00:01:34,980
+I to oznacza, że jeżeli nasze x jest równe 10, to na ekranie zobaczymy komunikat x jest równe 10 lub 20.
+
+17
+00:01:35,420 --> 00:01:40,120
+Jeżeli zmienilibyśmy wartość na 30, to zobaczylibyśmy komunikat x jest równe 30.
+
+18
+00:01:40,760 --> 00:01:46,060
+Natomiast jeżeli chcielibyśmy zobaczyć dowolny komunikat, to wystarczyłoby dać inną wartość niż 10.
+
+19
+00:01:46,260 --> 00:01:52,020
+Jeśli z 20, 30 lub 0, to by nam się pokazało, że x nie jest równe żadnej z powyższych wartości.
+
+20
+00:01:52,500 --> 00:01:59,480
+Dzięki temu ładnie możemy zarządzać tym, co ma się stać, kiedy x ma konkretną wartość.
+
+21
+00:02:00,460 --> 00:02:04,200
+Tutaj pokazuję Wam jeszcze inny przykład związany z tuplami.
+
+22
+00:02:04,760 --> 00:02:08,480
+Ten przykład z x jest dosyć taki prosty, dosyć sklarowny.
+
+23
+00:02:08,879 --> 00:02:12,020
+Spójrzmy na to, do czego też match case może być wykorzystywany.
+
+24
+00:02:12,020 --> 00:02:15,879
+Na przykład mam taką tuplę, w której określiłem osobę.
+
+25
+00:02:16,259 --> 00:02:17,439
+Jestem jako Jan Kowalski.
+
+26
+00:02:18,000 --> 00:02:19,179
+No i match person.
+
+27
+00:02:19,840 --> 00:02:25,620
+Jeżeli osoba ma na imię John Doe, no to ma się pokazać komunikat cześć John Doe.
+
+28
+00:02:26,199 --> 00:02:30,679
+Jeżeli będzie Jan o jakimś nazwisku, to ma się pokazać cześć Janie o nazwisku last name.
+
+29
+00:02:31,179 --> 00:02:36,459
+Jeżeli będzie Kowalski o jakimś imieniu, pozdrawiam wszystkich Kowalskich i o Tobie też myślę,
+
+30
+00:02:36,979 --> 00:02:41,399
+to wtedy pojawi nam się cześć kolego Kowalski o imieniu first name.
+
+31
+00:02:41,399 --> 00:02:44,560
+Czyli w ten sposób on nam ładnie to tutaj obsłuży.
+
+32
+00:02:44,560 --> 00:02:47,360
+I w tym przypadku on wyświetliłby nam ten pierwszy przypadek.
+
+33
+00:02:47,680 --> 00:02:54,080
+Natomiast tu jak widać można byłoby też łapać wszystkie osoby o nazwisku Kowalski albo dowolne dwie wartości.
+
+34
+00:02:54,539 --> 00:03:00,680
+Czyli w przypadku match case'a możemy nie tylko porównywać sobie wartości z konkretnymi zmiennymi,
+
+35
+00:03:01,020 --> 00:03:02,840
+ale możemy też porównywać sobie tuple.
+
+36
+00:03:03,300 --> 00:03:07,699
+I tutaj nie musimy dopasowywać wszystkich wartości tej tupli, wszystkich elementów tej tupli.
+
+37
+00:03:08,159 --> 00:03:11,400
+Wystarczy, że dopasuje nam się jeden i wszystko będzie grało.
+
+38
+00:03:11,400 --> 00:03:14,400
+To oczywiście zakłada, że wystarczy, że dopasujemy.
+
+39
+00:03:14,560 --> 00:03:16,719
+I dopasuje nam się ten pierwszy element.
+
+40
+00:03:16,900 --> 00:03:22,520
+Natomiast zawsze jest tak, że jeżeli idziemy przez matcha i pierwsza wartość nam pasuje,
+
+41
+00:03:22,939 --> 00:03:27,060
+jedno dopasowanie znajduje, no to dalej już nie przechodzi.
+
+42
+00:03:27,259 --> 00:03:30,539
+Tylko na pierwszym tym dopasowaniu się zatrzymuje, wyświetla komunikat i leci dalej.
+
+43
+00:03:30,960 --> 00:03:35,120
+Czyli jeżeli tutaj byłyby jakieś linie dalej, no to on by spokojnie się do nich właśnie dopasował.
+
+44
+00:03:35,340 --> 00:03:38,780
+I wydaje mi się, że match case nie wymaga więcej wiedzy.
+
+45
+00:03:38,780 --> 00:03:41,400
+Natomiast na pewno wymaga więcej wprawy.
+
+46
+00:03:41,819 --> 00:03:43,580
+Więc tu zróbcie sobie notatkę.
+
+47
+00:03:43,680 --> 00:03:44,539
+Zostawcie sobie.
+
+48
+00:03:44,560 --> 00:03:47,900
+Skryny albo po prostu zerknijcie na tą prezentację.
+
+49
+00:03:48,280 --> 00:03:52,080
+I zachęcam was do tego, żebyśmy zrobili wspólnie zadanie na match case.
+
+50
+00:03:52,520 --> 00:03:53,120
+Chodźcie.

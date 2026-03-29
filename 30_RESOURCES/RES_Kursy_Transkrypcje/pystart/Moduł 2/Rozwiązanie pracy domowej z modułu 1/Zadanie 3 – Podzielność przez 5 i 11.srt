@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:03,600
+W tym ćwiczeniu mamy napisać program, który wyświetli informację,
+
+2
+00:00:03,720 --> 00:00:09,660
+czy liczba podana przez użytkownika jest podzielna przez 5, 11 lub przez 5 i 11.
+
+3
+00:00:10,040 --> 00:00:14,660
+W tym zadaniu jest mały haczyk, gdyż jeżeli odbierzemy sobie liczbę od użytkownika,
+
+4
+00:00:14,880 --> 00:00:17,140
+no to z góry wiemy, że musi być to jakiś value, prawda?
+
+5
+00:00:17,300 --> 00:00:19,440
+Podaj liczbę, jakiś integer.
+
+6
+00:00:20,519 --> 00:00:23,839
+I wtedy, jeżeli sprawdzimy najpierw, czy jest podzielna przez 5,
+
+7
+00:00:24,120 --> 00:00:25,719
+później, czy jest podzielna przez 11,
+
+8
+00:00:25,719 --> 00:00:29,460
+a dopiero na koniec sprawdzimy, czy może jest podzielna przez 5 i 11,
+
+9
+00:00:29,460 --> 00:00:33,219
+to niestety dostaniemy błąd, znaczy zadanie nie będzie działało,
+
+10
+00:00:33,539 --> 00:00:35,759
+bo tak naprawdę nigdy nie wyświetli się komunikat,
+
+11
+00:00:35,960 --> 00:00:38,420
+że liczba jest podzielna zarówno przez 5, jak i przez 11.
+
+12
+00:00:39,140 --> 00:00:41,399
+Zatem, żeby to zadanie wykonać poprawnie,
+
+13
+00:00:41,539 --> 00:00:45,679
+trzeba najpierw sprawdzić, czy nasza liczba jest podzielna przez 5 i 11.
+
+14
+00:00:48,900 --> 00:00:53,859
+I oczywiście value modulo 5 równa się 0, value modulo 11 równa się 0.
+
+15
+00:00:53,859 --> 00:00:58,840
+Jeżeli tak jest, to możesz śmiało wypisać liczba jest podzielna
+
+16
+00:00:58,840 --> 00:00:59,439
+przez 5 i 11.
+
+17
+00:00:59,460 --> 00:01:07,540
+W przeciwnym razie, trzeba sprawdzić, czy value modulo 5 równa się 0.
+
+18
+00:01:07,540 --> 00:01:11,740
+I wtedy wypisać print liczba jest podzielna przez 5.
+
+19
+00:01:16,740 --> 00:01:25,379
+I dokładnie to samo zrobić, sprawdzając, czy liczba jest podzielna przez 11.
+
+20
+00:01:25,379 --> 00:01:29,299
+Czyli elif value modulo 11 równa się 0.
+
+21
+00:01:29,299 --> 00:01:29,319
+I dokładnie to samo zrobić, sprawdzając, czy liczba jest podzielna przez 11.
+
+22
+00:01:29,319 --> 00:01:29,420
+I dokładnie to samo zrobić, sprawdzając, czy liczba jest podzielna przez 11.
+
+23
+00:01:29,459 --> 00:01:35,459
+Print liczba jest podzielna przez 11.
+
+24
+00:01:38,459 --> 00:01:42,439
+Else liczba nie dzieli się ani przez 5, ani przez 11.
+
+25
+00:01:49,819 --> 00:01:51,899
+Ok. No i sprawdźmy to.
+
+26
+00:01:52,379 --> 00:01:59,319
+Python 3.55 działa 5, działa 11.
+
+27
+00:01:59,319 --> 00:01:59,439
+Ok. No i sprawdźmy to.
+
+28
+00:01:59,439 --> 00:02:01,439
+Python 3.55 działa 5, działa 11.
+
+29
+00:02:01,439 --> 00:02:03,439
+Ok. No i sprawdźmy to.
+
+30
+00:02:03,439 --> 00:02:05,140
+Czyli wszystko jest ok.
+
+31
+00:02:05,140 --> 00:02:07,340
+Zapraszam do kolejnego ćwiczenia.
+
+32
+00:02:07,340 --> 00:02:07,379
+Zapraszam do kolejnego ćwiczenia.

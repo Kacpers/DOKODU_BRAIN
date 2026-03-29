@@ -1,0 +1,363 @@
+1
+00:00:00,000 --> 00:00:03,960
+Jak widzieliście, Pillow już zainstalowałem wcześniej,
+
+2
+00:00:04,480 --> 00:00:06,719
+więc tak naprawdę to, co teraz będę musiał zrobić,
+
+3
+00:00:06,820 --> 00:00:09,359
+to będę musiał zaimportować sobie odpowiednie rzeczy
+
+4
+00:00:09,359 --> 00:00:12,380
+i z tego obrazu zrobić zdjęcie,
+
+5
+00:00:13,000 --> 00:00:15,359
+czyli z tej ścieżki zrobić zdjęcie.
+
+6
+00:00:16,039 --> 00:00:17,460
+Czyli idę sobie tutaj,
+
+7
+00:00:18,160 --> 00:00:20,640
+from Pill, import image.
+
+8
+00:00:21,120 --> 00:00:23,120
+Zasada jest taka, o niej sobie jeszcze nie rozmawialiśmy,
+
+9
+00:00:23,219 --> 00:00:25,339
+ale jeżeli importujemy rzeczy,
+
+10
+00:00:25,339 --> 00:00:29,100
+to najpierw importujemy to, co jest zainstalowane,
+
+11
+00:00:29,100 --> 00:00:32,240
+później importujemy to, co jest z systemu,
+
+12
+00:00:32,460 --> 00:00:34,179
+a na koniec importujemy nasze rzeczy.
+
+13
+00:00:34,780 --> 00:00:37,100
+Więc dlatego też na samej górze będzie
+
+14
+00:00:37,100 --> 00:00:40,640
+from Pill, import image.
+
+15
+00:00:41,020 --> 00:00:43,320
+Z tego względu, że jest to linia,
+
+16
+00:00:43,420 --> 00:00:46,020
+która pochodzi z biblioteki Pill,
+
+17
+00:00:46,100 --> 00:00:49,560
+którą zainstalowałem, więc powinna być wyżej.
+
+18
+00:00:49,900 --> 00:00:53,000
+Później mam system, a na samym końcu będę miał
+
+19
+00:00:53,000 --> 00:00:55,359
+te rzeczy, które gdzieś tam sam sobie stworzę.
+
+20
+00:00:56,060 --> 00:00:57,320
+Okej, idę dalej.
+
+21
+00:00:57,320 --> 00:01:00,320
+Tu się jakaś spacja zapamiętała, od razu ją usuwam.
+
+22
+00:01:00,320 --> 00:01:03,320
+Następnie, skoro zrobiłem sobie taką ścieżkę,
+
+23
+00:01:03,320 --> 00:01:06,319
+to mogę tę samą ścieżkę wykorzystać do tego,
+
+24
+00:01:06,319 --> 00:01:09,319
+żeby otworzyć obrazek.
+
+25
+00:01:09,319 --> 00:01:12,319
+Czyli, tak naprawdę mogę też użyć absoluta w tym miejscu.
+
+26
+00:01:12,319 --> 00:01:15,319
+Czyli w tym miejscu sobie wykonam im
+
+27
+00:01:15,319 --> 00:01:18,319
+równa się image open
+
+28
+00:01:18,319 --> 00:01:21,319
+i przekażę mu po prostu link do absoluta.
+
+29
+00:01:21,319 --> 00:01:24,319
+Następnie potrzebuję mieć thumbnail.
+
+30
+00:01:25,319 --> 00:01:26,760
+Czyli thumbnail,
+
+31
+00:01:26,760 --> 00:01:30,760
+thumbnail, równa się i m.resize.
+
+32
+00:01:30,760 --> 00:01:32,760
+No i tam było 300 na 300,
+
+33
+00:01:32,760 --> 00:01:35,760
+możemy przyjąć ten sam wymiar.
+
+34
+00:01:35,760 --> 00:01:38,760
+No i ostatnia rzecz to jest thumbnail save.
+
+35
+00:01:39,760 --> 00:01:42,760
+I ten thumbnail save powinien mieć tak naprawdę
+
+36
+00:01:42,760 --> 00:01:45,760
+tę samą ścieżkę z tą różnicą,
+
+37
+00:01:45,760 --> 00:01:48,760
+że ścieżka ta powinna mieć z przodu
+
+38
+00:01:48,760 --> 00:01:51,760
+resized, to jest pierwsza rzecz,
+
+39
+00:01:51,760 --> 00:01:55,760
+a druga rzecz, jeżeli ona nie istnieje, to powinniśmy ją sobie wtedy utworzyć.
+
+40
+00:01:55,760 --> 00:01:58,760
+Nas będzie interesował path tak naprawdę,
+
+41
+00:01:58,760 --> 00:02:01,760
+photo nie będzie nas interesowało,
+
+42
+00:02:01,760 --> 00:02:04,760
+więc zanim wykonam save, wykonam taką rzecz.
+
+43
+00:02:04,760 --> 00:02:07,760
+Import OS, tu już zrobiłem import OS
+
+44
+00:02:07,760 --> 00:02:10,759
+i my oprócz walka będziemy potrzebowali mieć jeszcze path oraz make dirs.
+
+45
+00:02:10,759 --> 00:02:13,759
+I teraz,
+
+46
+00:02:13,759 --> 00:02:16,759
+jeżeli chodzi o path, to path będzie służył do tego,
+
+47
+00:02:16,759 --> 00:02:19,759
+żeby sprawdzić czy istnieje.
+
+48
+00:02:19,759 --> 00:02:22,759
+Czyli if not path exists.
+
+49
+00:02:22,759 --> 00:02:25,759
+Resized.
+
+50
+00:02:28,759 --> 00:02:31,759
+To jest nazwa własna.
+
+51
+00:02:31,759 --> 00:02:34,759
+Następnie musi być ukośnik i później ścieżka.
+
+52
+00:02:34,759 --> 00:02:37,759
+Więc jeżeli nie istnieje,
+
+53
+00:02:37,759 --> 00:02:40,759
+to wówczas make dirs i utwórz mi właśnie
+
+54
+00:02:40,759 --> 00:02:43,759
+dokładnie taką samą ścieżkę.
+
+55
+00:02:45,759 --> 00:02:48,759
+I wtedy możemy śmiało sobie zapisać
+
+56
+00:02:48,759 --> 00:02:51,759
+ten nasz obrazek pod taką ścieżką,
+
+57
+00:02:51,759 --> 00:02:56,759
+z tą różnicą, że z przodu musi się to resized właśnie pokazać.
+
+58
+00:02:56,759 --> 00:02:57,759
+OK?
+
+59
+00:02:57,759 --> 00:03:00,759
+No i w tym momencie wszystko powinno nam zagrać.
+
+60
+00:03:00,759 --> 00:03:01,759
+Sprawdźmy to.
+
+61
+00:03:01,759 --> 00:03:03,759
+Strzałka do góry, enter.
+
+62
+00:03:03,759 --> 00:03:05,759
+O hura, mamy błąd.
+
+63
+00:03:05,759 --> 00:03:08,759
+Już bałem się, że zadziała wszystko od razu od strzała.
+
+64
+00:03:08,759 --> 00:03:09,759
+To byłoby znudne.
+
+65
+00:03:09,759 --> 00:03:11,759
+Co tutaj za błąd?
+
+66
+00:03:12,759 --> 00:03:17,759
+If not path exists, string object has no attribute exists.
+
+67
+00:03:17,759 --> 00:03:19,759
+Ach, już wiem czemu ten błąd się pokazał.
+
+68
+00:03:19,759 --> 00:03:20,759
+Zobacz.
+
+69
+00:03:20,759 --> 00:03:21,759
+To jest dosyć popularny.
+
+70
+00:03:21,759 --> 00:03:22,759
+Dlaczego go zrobiłem?
+
+71
+00:03:22,759 --> 00:03:25,759
+Tu jest path exists, tu mam zmienną path
+
+72
+00:03:25,759 --> 00:03:27,759
+i ja importuję też path.
+
+73
+00:03:27,759 --> 00:03:30,759
+Jeżeli importuję path, to tak naprawdę ta zmienna
+
+74
+00:03:30,759 --> 00:03:35,759
+ona mi nadpisała tę funkcję i nie mogę z niej skorzystać.
+
+75
+00:03:35,759 --> 00:03:37,759
+Więc powinienem zrobić zmianę.
+
+76
+00:03:37,759 --> 00:03:40,759
+Photo path, bardzo się cieszę, że ten błąd się pokazał,
+
+77
+00:03:40,759 --> 00:03:45,759
+bo jest to bardzo popularna sytuacja w przypadku moich kursantów.
+
+78
+00:03:45,759 --> 00:03:48,759
+I zmieniam sobie wszędzie to na photo path,
+
+79
+00:03:48,759 --> 00:03:53,759
+a tam gdzie path jest tym systemowym, no to po prostu musi zostać.
+
+80
+00:03:53,759 --> 00:03:55,759
+Zapisuję i sprawdzam raz jeszcze.
+
+81
+00:03:55,759 --> 00:03:57,759
+Myślał, myślał i wymyślił.
+
+82
+00:03:57,759 --> 00:03:58,759
+Co wymyślił?
+
+83
+00:03:58,759 --> 00:03:59,759
+Sprawdźmy to.
+
+84
+00:03:59,759 --> 00:04:06,759
+Czyli potrzebuję otworzyć sobie PyStart Code, Resize, Photos
+
+85
+00:04:06,759 --> 00:04:07,759
+i mam obrazki.
+
+86
+00:04:07,759 --> 00:04:08,759
+Czy obrazki są małe?
+
+87
+00:04:08,759 --> 00:04:12,759
+Tak, zdecydowanie ten obrazek wygląda jakby był mały,
+
+88
+00:04:12,759 --> 00:04:15,759
+miał wymiar mniej więcej 300x300.
+
+89
+00:04:15,759 --> 00:04:17,759
+Zobaczcie, tu mamy też obrazy typu kod.
+
+90
+00:04:17,759 --> 00:04:21,759
+I ten kod też ma taki wymiar.
+
+91
+00:04:21,759 --> 00:04:26,759
+Czyli wszystko nam ładnie zadziałało.

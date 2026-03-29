@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:15,179
+O importach jeszcze będziemy rozmawiali, natomiast to co musisz wiedzieć, jeżeli chodzi o importowanie Twoich funkcji z pakietów, to jest to, że zawsze, tak jak wspominałem, zaczynamy od tego katalogu VENV, od tego miejsca, gdzie znajduje się katalog VENV.
+
+2
+00:00:15,179 --> 00:00:31,640
+Czyli zobacz, mam main i ten main znajduje się na tym samym poziomie, na którym znajduje się HTTP, więc jeżeli chciałbym zaimportować sobie funkcję CREATE TIGER, która znajduje się w animals, to muszę przejść przez HTTP, API, animals i w środku jest CREATE TIGER.
+
+3
+00:00:31,640 --> 00:00:39,799
+I taki najprostszy sposób zaimportowania tego jest taki FROM HTTP, API, animals, IMPORT CREATE TIGER.
+
+4
+00:00:40,039 --> 00:00:44,640
+Jeżeli chcę zaimportować dwie rzeczy, to mogę wykonać IMPORT CREATE TIGER, CREATE TIGER.
+
+5
+00:00:45,179 --> 00:00:51,479
+Czyli mogę po przecinku wymieniać sobie te funkcje, które będę chciał importować.
+
+6
+00:00:52,560 --> 00:01:06,180
+Tu bardzo ważna zasada jest taka, że jeżeli teraz w jakimś innym module miałbyś funkcję CREATE TIGER, CREATE ELEPHANT, no to to sprowadziłoby Cię na to, że miałbyś tak naprawdę dwie funkcje o tej samej nazwie w tym samym pliku, main.py.
+
+7
+00:01:06,680 --> 00:01:12,240
+Warto na to zwrócić uwagę i w późniejszym etapie kursu też pokażę Ci, jak temu zapobiec.
+
+8
+00:01:12,240 --> 00:01:14,240
+I to, co proponuję zrobić, to stwórz sobie nowy...
+
+9
+00:01:15,180 --> 00:01:17,180
+właśnie teraz projekt.
+
+10
+00:01:17,180 --> 00:01:19,180
+Spróbuj utworzyć sobie kilka pakietów, kilka modułów.
+
+11
+00:01:19,180 --> 00:01:21,180
+Zaraz też będę miał z tym związane dla Ciebie zadanie.
+
+12
+00:01:21,180 --> 00:01:23,180
+I zobacz, jak te funkcje się importują.

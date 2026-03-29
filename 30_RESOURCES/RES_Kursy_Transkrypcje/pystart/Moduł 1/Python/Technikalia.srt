@@ -1,0 +1,379 @@
+1
+00:00:00,000 --> 00:00:02,040
+Dobra, czas na trochę technikaliów.
+
+2
+00:00:02,439 --> 00:00:05,620
+Generalnie Python jest językiem interpretowanym.
+
+3
+00:00:05,719 --> 00:00:08,599
+To oznacza, że każda linijka, którą wykonasz,
+
+4
+00:00:09,099 --> 00:00:12,000
+którą napiszesz tak naprawdę, będzie się wykonywała osobno.
+
+5
+00:00:13,000 --> 00:00:14,640
+Za chwilę pokażę Ci, jak wygląda coś,
+
+6
+00:00:14,720 --> 00:00:16,559
+co nazywa się interaktywne środowisko,
+
+7
+00:00:16,660 --> 00:00:18,600
+gdzie możesz tak naprawdę wpisywać polecenia
+
+8
+00:00:18,600 --> 00:00:21,219
+i na bieżąco dostawać odpowiedzi z tych poleceń.
+
+9
+00:00:21,280 --> 00:00:24,560
+No bo te odpowiedzi właśnie będą na bieżąco interpretowane.
+
+10
+00:00:25,100 --> 00:00:26,620
+Czyli najpierw Ty coś piszesz,
+
+11
+00:00:26,879 --> 00:00:29,039
+później interpreter bierze sobie tę linijkę,
+
+12
+00:00:29,039 --> 00:00:32,359
+zamienia to na kod maszynowy, który zrozumie Twój komputer
+
+13
+00:00:32,359 --> 00:00:33,740
+i wykonuje.
+
+14
+00:00:34,159 --> 00:00:36,479
+Po drugie jest to język wysokopoziomowy.
+
+15
+00:00:36,960 --> 00:00:39,399
+Są takie języki jak na przykład Assembler,
+
+16
+00:00:39,560 --> 00:00:41,859
+który jest najniżej tego procesora.
+
+17
+00:00:42,000 --> 00:00:43,939
+Są takie języki jak C, który jest gdzieś pomiędzy.
+
+18
+00:00:44,039 --> 00:00:45,099
+Są takie języki jak Python.
+
+19
+00:00:45,759 --> 00:00:49,519
+I w Pythonie jest on najbardziej wysokopoziomowy,
+
+20
+00:00:49,640 --> 00:00:53,280
+czyli jest jak najdalej, jak najwyżej od procesora.
+
+21
+00:00:53,920 --> 00:00:55,519
+To powoduje, że pewne czynności,
+
+22
+00:00:55,519 --> 00:00:58,519
+które będą się wykonywały w ramach tego Twojego programu,
+
+23
+00:00:59,039 --> 00:01:02,339
+nie będą musiały być programowane.
+
+24
+00:01:02,839 --> 00:01:04,840
+Czyli Ty będziesz mógł sobie napisać na przykład,
+
+25
+00:01:05,120 --> 00:01:07,519
+że chcesz stworzyć zmienną, przypisać do niej wartość,
+
+26
+00:01:07,900 --> 00:01:10,879
+a Python sam będzie zastanawiał się, jakiego typu jest to zmienna.
+
+27
+00:01:11,599 --> 00:01:14,039
+Spokojnie, temat zmiennych już za moment.
+
+28
+00:01:14,480 --> 00:01:16,140
+Natomiast jest to język wysokopoziomowy.
+
+29
+00:01:16,719 --> 00:01:20,719
+I trzecie, to co powoduje, że Python też zyskuje taką wielką popularność,
+
+30
+00:01:20,819 --> 00:01:22,560
+to to, że to jest język wieloplatformowy.
+
+31
+00:01:22,840 --> 00:01:26,819
+To nie jest do końca tak, ale jesteśmy bardzo blisko tego,
+
+32
+00:01:27,319 --> 00:01:28,920
+że każdy program napisany w Pythonie,
+
+33
+00:01:29,040 --> 00:01:31,340
+na każdym systemie zadziała tak samo.
+
+34
+00:01:32,140 --> 00:01:34,340
+Tak naprawdę, jeżeli chodzi o takie prostsze programy,
+
+35
+00:01:34,440 --> 00:01:35,640
+to dokładnie tak będzie.
+
+36
+00:01:35,940 --> 00:01:39,140
+Natomiast jeżeli Twój program miałby wykonywać jakieś polecenie
+
+37
+00:01:39,340 --> 00:01:40,540
+wewnątrz systemu,
+
+38
+00:01:40,740 --> 00:01:44,940
+na przykład chciałbyś przeanalizować wszystkie pliki,
+
+39
+00:01:45,040 --> 00:01:47,640
+posortować je pod względem rozszerzeń,
+
+40
+00:01:47,940 --> 00:01:52,040
+to jak najbardziej te programy będą mogły być uruchamiane wszędzie tak samo.
+
+41
+00:01:52,540 --> 00:01:56,140
+Ale na przykład, jeżeli bardzo chciałbyś uruchomić pewne rzeczy dotyczące sieci,
+
+42
+00:01:56,340 --> 00:01:58,440
+czyli na przykład połączyć,
+
+43
+00:01:59,040 --> 00:02:03,940
+program, który będzie się łączył z jakimś innym programem po drugiej stronie
+
+44
+00:02:04,040 --> 00:02:06,740
+i będzie wykonywał po sieci niektóre czynności,
+
+45
+00:02:06,940 --> 00:02:09,939
+to tutaj już może się okazać napotkacz na trudności.
+
+46
+00:02:10,840 --> 00:02:12,840
+Ale to nie jest też coś, czego nie da się przeskoczyć,
+
+47
+00:02:13,140 --> 00:02:14,939
+bo można po prostu przewidzieć to
+
+48
+00:02:15,040 --> 00:02:18,240
+i przygotować różne rozwiązania dla różnych systemów.
+
+49
+00:02:18,540 --> 00:02:22,240
+Natomiast mówi się o tym, że Python jest językiem wieloplatformowym,
+
+50
+00:02:22,439 --> 00:02:26,340
+można go uruchamiać zarówno na Windowsie, jak i na Linuxie, jak i na Macu.
+
+51
+00:02:26,540 --> 00:02:28,340
+Tak jak powiedziałem, są pewne różnice,
+
+52
+00:02:28,340 --> 00:02:31,039
+ale na chwilę obecną zupełnie się nimi nie przejmuj.
+
+53
+00:02:31,240 --> 00:02:33,640
+Wszystkie programy, które napiszesz, niezależnie od tego,
+
+54
+00:02:33,740 --> 00:02:37,340
+na jakiej platformie będziesz je uruchamiać, będą działały.
+
+55
+00:02:37,539 --> 00:02:40,539
+To, co jest niezwykle ważne w przypadku Pythona, to to,
+
+56
+00:02:40,640 --> 00:02:44,340
+że żeby uruchomić program, potrzebujesz mieć zainstalowanego Pythona.
+
+57
+00:02:44,539 --> 00:02:48,539
+Czyli kodem wynikowym w Pythonie nie jest stworzenie pliku .exe,
+
+58
+00:02:48,640 --> 00:02:51,539
+takiego pliku, który wiesz, możesz dwa razy kliknąć, on ci się uruchomi.
+
+59
+00:02:51,740 --> 00:02:56,740
+Musisz mieć Pythona w każdym miejscu, żeby tego Pythona móc uruchomić.
+
+60
+00:02:56,840 --> 00:02:58,140
+To akurat nie jest zbyt trudne,
+
+61
+00:02:58,139 --> 00:03:00,539
+nie jest zbyt dużym problemem, bo Python jest zainstalowany
+
+62
+00:03:00,739 --> 00:03:03,539
+na większości serwerów, chociażby na Linuxach.
+
+63
+00:03:03,739 --> 00:03:08,239
+Jest już on po prostu zawarty i możesz po prostu wykonywać te polecenia.
+
+64
+00:03:08,439 --> 00:03:12,439
+Natomiast jeżeli chciałbyś uruchomić kod na Windowsie, to to polecenie Python,
+
+65
+00:03:12,639 --> 00:03:16,539
+ten program Python musi być zainstalowany na wszystkich tych komputerach.
+
+66
+00:03:16,739 --> 00:03:19,139
+Jest możliwe stworzenie też .exe,
+
+67
+00:03:19,339 --> 00:03:23,639
+natomiast nie jest to jakby takie domyślne zachowanie Pythona.
+
+68
+00:03:23,839 --> 00:03:27,839
+Raczej tworzysz sobie plik, plik, tak zwany program wsadowy, który ma
+
+69
+00:03:27,840 --> 00:03:32,439
+rozszerzenie py, w nim zawierasz wszystkie instrukcje i później, jeżeli chcesz
+
+70
+00:03:32,640 --> 00:03:35,740
+uruchomić ten program na innym komputerze, wywołujesz polecenie Python,
+
+71
+00:03:35,939 --> 00:03:40,340
+spacja, nazwa programu, .py i uwierz mi, to nie jest żaden problem.
+
+72
+00:03:40,539 --> 00:03:43,939
+Jeżeli natomiast wiesz, że będziesz potrzebować instalować te programy
+
+73
+00:03:44,140 --> 00:03:46,939
+gdzieś na różnych komputerach, no to wtedy oczywiście idź w stronę tych
+
+74
+00:03:47,140 --> 00:03:51,740
+egzeków, ale uwierz mi, nie jest to bardzo częste podejście.
+
+75
+00:03:51,939 --> 00:03:53,640
+No i cóż, to byłoby na tyle.
+
+76
+00:03:53,840 --> 00:03:57,240
+Myślę, że możemy powoli iść w stronę swojego pierwszego programu.
+
+77
+00:03:57,240 --> 00:04:01,040
+Tyle, że do tego potrzebujemy drugiej rzeczy, bo jedna rzecz, o której
+
+78
+00:04:01,240 --> 00:04:05,040
+wspominałem, to zainstaluj, może nie zainstaluj, a pobierz sobie już PyCharma
+
+79
+00:04:05,240 --> 00:04:09,240
+w wersji Community, natomiast druga rzecz, która będzie ci potrzebna, to właśnie
+
+80
+00:04:09,439 --> 00:04:13,939
+będzie to interpreter i interpreter można pobrać ze strony python.org.
+
+81
+00:04:14,140 --> 00:04:18,439
+Czyli tak naprawdę, na moment się ukryłem, musisz pobrać plik instalacyjny i zależnie
+
+82
+00:04:18,639 --> 00:04:22,139
+od systemu operacyjnego, instalujesz go zgodnie z instrukcjami wyświetlanymi
+
+83
+00:04:22,340 --> 00:04:25,439
+na ekranie, to już możesz spokojnie pójść z instalacją.
+
+84
+00:04:25,639 --> 00:04:27,040
+No i wtedy uruchom go.
+
+85
+00:04:27,240 --> 00:04:32,040
+Najlepiej z poziomu konsoli, czyli pod Windowsem cmd, pod Linuxem po prostu
+
+86
+00:04:32,240 --> 00:04:36,639
+uruchom sobie twój terminal, wykonaj polecenie Python, no i wtedy powinieneś
+
+87
+00:04:36,840 --> 00:04:41,439
+zobaczyć już ten interaktywne środowisko, w którym za moment się już zobaczymy.
+
+88
+00:04:41,639 --> 00:04:44,740
+Mniej więcej tak to właśnie powinno wyglądać.
+
+89
+00:04:44,939 --> 00:04:48,540
+Jeżeli chodzi o instalację, instalacja jest bardzo prosta, po prostu klikasz
+
+90
+00:04:48,740 --> 00:04:51,439
+przycisk next pod Windowsem, jest tylko jedna prośba.
+
+91
+00:04:51,639 --> 00:04:57,040
+Tam będzie taki checkbox do zaznaczenia, że chcesz, żeby Python był dodany do path,
+
+92
+00:04:57,240 --> 00:05:01,040
+add Python to global variables, coś takiego.
+
+93
+00:05:01,240 --> 00:05:05,439
+Zaraz pokażę ci, jak wygląda instalacja u mnie, Pythona, tak w przyspieszonym tempie,
+
+94
+00:05:05,639 --> 00:05:09,639
+żebyś też mógł w razie czegoś na tym wzorować, ale jak chcesz sam, to spokojnie,
+
+95
+00:05:09,840 --> 00:05:14,439
+nie ma problemu. Widzimy się już na moment w interaktywnym środowisku.

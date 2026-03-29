@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:06,339
+No cóż, i skoro pokazaliśmy sobie jakie możemy inne operacje wykonywać na listach, to też sobie je przećwiczmy.
+
+2
+00:00:06,879 --> 00:00:13,019
+Po prawej stronie tutaj mam dla Was kilka podpowiedzi, jakich funkcji będziemy musieli użyć, żeby takie zadania zrealizować.
+
+3
+00:00:13,140 --> 00:00:19,219
+Mamy więc split. Funkcja split to jest ta funkcja, która pozwalała na zamianę tekstu do postaci listy.
+
+4
+00:00:20,019 --> 00:00:26,320
+Max to jest funkcja, która wynajduje w kolekcji największą wartość, a min wynajduje najmniejszą wartość.
+
+5
+00:00:26,320 --> 00:00:33,039
+Len służy do znalezienia długości danego tekstu czy listy, po prostu długości kolekcji,
+
+6
+00:00:33,539 --> 00:00:39,719
+a sort w tym przypadku z reverse true służy do tego, żeby posortować sobie coś od największej do najmniejszej wartości.
+
+7
+00:00:40,299 --> 00:00:45,939
+Więc w zadaniu pierwszym mamy napisać program, który zliczy słowa oraz znaki w podanym przez użytkownika zdaniu.
+
+8
+00:00:46,900 --> 00:00:55,060
+Czyli najpierw chcemy sobie to zdanie rozbić na wyrazy i później powiedzieć ile tych wyrazów jest.
+
+9
+00:00:55,060 --> 00:01:00,900
+No i jeżeli chodzi o zliczanie znaków, no to po prostu będziemy chcieli zliczać ile znaków jest w tekście.
+
+10
+00:01:01,200 --> 00:01:10,140
+W zadaniu drugim chcemy napisać program, w którym zapytasz użytkownika o pięć liczb, no i dodatkowo każdą z tych liczb chcemy dodawać do listy.
+
+11
+00:01:10,620 --> 00:01:17,719
+Natomiast w podpunkcie drugim zwracamy najmniejszy, największy element oraz średnią arytmetyczną wszystkich wprowadzonych liczb.
+
+12
+00:01:17,719 --> 00:01:23,540
+Czyli w przypadku tupli nie mogliśmy tego robić, że kiedy wykonywaliśmy pętlę,
+
+13
+00:01:25,060 --> 00:01:27,060
+to możemy dodawać tych elementów do tupli.
+
+14
+00:01:27,060 --> 00:01:32,060
+Tutaj mamy append, więc możemy kiedy użytkownika pytamy, dodawać te wartości do tej listy,
+
+15
+00:01:32,060 --> 00:01:36,060
+a później odpowiedzieć na pytanie właśnie jakie są największe, najmniejsze wartości.
+
+16
+00:01:36,060 --> 00:01:38,060
+No i zadanie trzecie.
+
+17
+00:01:38,060 --> 00:01:44,060
+Napisz program, w którym odbierzesz od użytkownika imiona oraz nazwiska rozdzielone przecinkami.
+
+18
+00:01:44,060 --> 00:01:50,060
+W odpowiedzi powinny wyświetlić się poprawnie zapisane imiona bez powtórzeń, posortowane w kolejności od Z do A.
+
+19
+00:01:50,060 --> 00:01:54,060
+Czyli jeżeli mamy Adama Mickiewicza, Adama Asnyka i Zbigniewa Nienackiego,
+
+20
+00:01:54,060 --> 00:02:00,060
+to kiedy odbieramy te dane od użytkownika, musimy sobie to rozbić po spacjach,
+
+21
+00:02:00,060 --> 00:02:05,060
+następnie przejść po tej liście, utworzyć nową, ale bez powtórzeń,
+
+22
+00:02:05,060 --> 00:02:09,060
+no i posortować te dane tak, żeby Zbigniew był pierwszy, a później Adam.
+
+23
+00:02:09,060 --> 00:02:15,060
+Tu jest kilka operacji, które trzeba będzie wykonywać po kolei, więc myślę, że zadanie takie trochę trudniejsze,
+
+24
+00:02:15,060 --> 00:02:19,060
+ale dajcie sobie czas na spokojnie, je zróbcie, poćwiczcie, pokombinujcie.
+
+25
+00:02:19,060 --> 00:02:23,060
+Tu o to chodzi, żeby trochę się pobawić i to nie muszą być zadania na 3 sekundy,
+
+26
+00:02:23,060 --> 00:02:29,060
+czy na 30 sekund, tylko czasy mogą być nawet takie na 15 minut.
+
+27
+00:02:29,060 --> 00:02:32,060
+Rozwiązania już niedługo, do zobaczenia.

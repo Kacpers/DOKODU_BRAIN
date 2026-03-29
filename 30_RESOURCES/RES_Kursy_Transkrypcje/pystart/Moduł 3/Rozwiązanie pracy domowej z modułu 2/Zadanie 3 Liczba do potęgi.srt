@@ -1,0 +1,275 @@
+1
+00:00:00,000 --> 00:00:02,379
+No i dochodzimy sobie do zadania trzeciego.
+
+2
+00:00:02,459 --> 00:00:04,820
+W tym zadaniu mamy odebrać od użytkownika liczbę,
+
+3
+00:00:05,259 --> 00:00:10,000
+a następnie wyświetlić tę liczbę podniesioną do potęgi drugiej, trzeciej, czwartej oraz piątej.
+
+4
+00:00:10,120 --> 00:00:11,000
+Użyć pętli for.
+
+5
+00:00:11,939 --> 00:00:14,439
+Dobra, na czym polega liczenie potęgi?
+
+6
+00:00:14,640 --> 00:00:15,759
+Tak sobie tylko przypomnijmy.
+
+7
+00:00:16,460 --> 00:00:20,080
+3 do potęgi drugiej równa się 3 razy 3 razy 3.
+
+8
+00:00:20,679 --> 00:00:21,400
+3 razy 3.
+
+9
+00:00:21,400 --> 00:00:26,679
+Czyli jeżeli chcemy podnieść 3 do potęgi drugiej, to musimy pomnożyć sobie 2 razy 3 razy 3.
+
+10
+00:00:26,679 --> 00:00:32,399
+Analogicznie 3 do potęgi trzeciej, o którym moment temu już myślałem, to jest 3 razy 3 razy 3.
+
+11
+00:00:33,420 --> 00:00:43,640
+Czyli tak naprawdę moglibyśmy sobie powiedzieć, że 3 do potęgi trzeciej to jest 3 do potęgi drugiej razy 3.
+
+12
+00:00:44,219 --> 00:00:48,899
+Czyli wynik tego poprzedniego działania zawsze musimy mnożyć razy 3.
+
+13
+00:00:49,219 --> 00:00:51,780
+Co musimy zrobić, żeby to osiągnąć?
+
+14
+00:00:51,879 --> 00:00:55,899
+Przede wszystkim musimy zastanowić się nad tym, ile razy będziemy chcieli mnożyć tę liczbę,
+
+15
+00:00:56,679 --> 00:00:58,759
+przez tę potęgę.
+
+16
+00:00:59,320 --> 00:01:04,200
+Oni nas tutaj proszą o to, żebyśmy podnieśli to do drugiej, trzeciej, czwartej razy do piątej.
+
+17
+00:01:04,620 --> 00:01:08,299
+Czyli będziemy chcieli to podnosić najpierw raz do drugiej, drugi raz do trzeciej,
+
+18
+00:01:08,359 --> 00:01:11,159
+trzeci raz do czwartej, czwarty raz do piątej, czyli 4 razy.
+
+19
+00:01:11,640 --> 00:01:16,840
+Czyli tak naprawdę, jeżeli mamy użyć pętli for, to w naszym zadaniu będziemy potrzebowali napisać tak.
+
+20
+00:01:16,840 --> 00:01:22,319
+For i możemy sobie stworzyć jakąś zmienną power in range.
+
+21
+00:01:22,900 --> 00:01:26,659
+No i my potrzebujemy 4 razy, więc możemy sobie napisać 4.
+
+22
+00:01:26,680 --> 00:01:28,500
+Ale co podnosimy do tej potęgi?
+
+23
+00:01:28,600 --> 00:01:29,980
+No potrzebujemy mieć jakąś liczbę.
+
+24
+00:01:30,220 --> 00:01:37,700
+Czyli możemy sobie stworzyć jakąś zmienną number, równa się integer, input, podaj liczbę.
+
+25
+00:01:39,160 --> 00:01:39,380
+Ok.
+
+26
+00:01:39,660 --> 00:01:48,160
+I teraz, jak pamiętacie to, co było przed chwilą, czyli 3d razy 3 i 3 razy 3 razy 3,
+
+27
+00:01:48,320 --> 00:01:51,580
+które mogliśmy też zapisać jako tak naprawdę 9 razy 3,
+
+28
+00:01:52,219 --> 00:01:55,460
+to to za każdym razem będziemy potrzebowali mnożyć razy 3.
+
+29
+00:01:55,459 --> 00:02:00,219
+Jeżeli więc coś bym zrobił z tym moim numberem, to ten number mi zniknie.
+
+30
+00:02:00,219 --> 00:02:05,579
+Ja potrzebuję, jeżeli bym ten number chciał zwiększać teraz tutaj, to ten number mi zniknie.
+
+31
+00:02:05,579 --> 00:02:11,680
+Ja nie mogę go tej zmiennej modyfikować, bo zawsze będę musiał wykorzystywać ją w obliczeniach.
+
+32
+00:02:11,680 --> 00:02:15,180
+Stąd też stworzę sobie jakąś zmienną nazwę ją result.
+
+33
+00:02:15,180 --> 00:02:21,240
+Result równa się i przypiszę sobie do niej wartość number.
+
+34
+00:02:21,240 --> 00:02:24,979
+I teraz to, co będę chciał robić w mojej pętli, to będę chciał zmienić,
+
+35
+00:02:24,979 --> 00:02:28,500
+zmieniać ten result, mnożąc go przez tą liczbę.
+
+36
+00:02:29,179 --> 00:02:35,439
+I cała zabawa będzie polegała na tym, że będę chciał po prostu wykonać tę czynność tyle razy,
+
+37
+00:02:35,439 --> 00:02:40,840
+ile mam tutaj to podnieść do potęgi, czyli do drugiej, trzeciej, czwartej oraz do piątej.
+
+38
+00:02:41,139 --> 00:02:44,879
+Bo za pierwszym razem on mi policzy do drugiej, za drugim razem do trzeciej,
+
+39
+00:02:44,939 --> 00:02:49,379
+za czwartym razem do czwartej, za trzecim razem do czwartej i za czwartym razem do piątej.
+
+40
+00:02:50,239 --> 00:02:53,039
+Możemy to sobie sprawdzić wykonując print.
+
+41
+00:02:53,739 --> 00:02:54,959
+No i na przykład, jeżeli chcemy to zrobić, to możemy to zrobić,
+
+42
+00:02:54,979 --> 00:03:00,479
+jeżeli chcemy teraz napisać, że liczba podniesiona do potęgi takiej wynosi tyle,
+
+43
+00:03:00,899 --> 00:03:09,979
+to możemy napisać liczba number podniesiona do potęgi...
+
+44
+00:03:10,599 --> 00:03:13,199
+I tutaj brakuje nam informacji o tej potędze, teoretycznie.
+
+45
+00:03:13,759 --> 00:03:18,379
+No bo my mamy ten power jako ten taki licznik i możemy go użyć,
+
+46
+00:03:18,639 --> 00:03:22,679
+ale trzeba będzie go zwiększyć, bo power będzie miał wartości 0, 1, 2, 3.
+
+47
+00:03:22,679 --> 00:03:23,679
+A my byśmy chcieli dostać...
+
+48
+00:03:24,979 --> 00:03:26,979
+2, 3, 4, 5, czyli trzeba go zwiększyć o 2.
+
+49
+00:03:27,679 --> 00:03:32,079
+Power plus 2 wynosi...
+
+50
+00:03:32,079 --> 00:03:35,959
+I za pomocą naszego obliczenia po prostu wyświetlimy sobie result.
+
+51
+00:03:36,419 --> 00:03:40,139
+Dla sprawdzenia można też napisać result podniesiony do potęgi.
+
+52
+00:03:40,599 --> 00:03:45,519
+I tutaj musimy też podnieść go do potęgi tej power plus 2, czyli power plus 2.
+
+53
+00:03:46,000 --> 00:03:50,620
+W ten sposób będziemy mieli sprawdzenie, czy na pewno dobrze udało nam się policzyć potęgę.
+
+54
+00:03:50,620 --> 00:03:53,620
+Jeżeli ja teraz to sobie wykonam...
+
+55
+00:03:54,979 --> 00:04:05,159
+Czyli zrobię python, spacja, 3py, no to okaże się, że mam podać liczbę.
+
+56
+00:04:05,379 --> 00:04:06,500
+Niech to będzie liczba 4.
+
+57
+00:04:07,399 --> 00:04:10,679
+No i mam 4 podniesione do potęgi 2 wynosi 16.
+
+58
+00:04:11,019 --> 00:04:14,120
+A, no to jest oczywiście błąd, tu nie będzie result, tylko ten number.
+
+59
+00:04:15,679 --> 00:04:21,579
+Ok, i wtedy jak to sobie wykonamy raz jeszcze, 4, no to okaże się, że wyniki mamy poprawne.
+
+60
+00:04:21,579 --> 00:04:22,839
+I to byłoby na tyle.
+
+61
+00:04:23,199 --> 00:04:24,699
+Tutaj trochę było kombinacji takich.
+
+62
+00:04:24,699 --> 00:04:28,699
+Trzeba wykombinować to, żeby w tym miejscu wiedzieć, żeby tę liczbę sobie przypisać.
+
+63
+00:04:29,339 --> 00:04:32,800
+Żeby nie zrobić babola i nie mnożyć jakiejś innej liczby.
+
+64
+00:04:33,099 --> 00:04:38,480
+Oraz druga rzecz, że tutaj kiedy mamy range, to tak naprawdę ten range może być wartością 4.
+
+65
+00:04:38,480 --> 00:04:42,180
+My nie musimy tutaj kombinować nic z tymi wartościami 2, 3, 4 oraz 5.
+
+66
+00:04:42,419 --> 00:04:47,579
+Bo tak naprawdę to są tylko liczby, które reprezentują ilość razy, przez które chcemy przechodzić przez pętlę.
+
+67
+00:04:47,800 --> 00:04:50,339
+A ten range tak naprawdę może być taki.
+
+68
+00:04:50,579 --> 00:04:51,620
+I to byłoby na tyle.
+
+69
+00:04:51,740 --> 00:04:53,740
+Zapraszam Was do kolejnego filmu.

@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:17,539
+No to zobacz, zrobiłem sobie taką sytuację, że nagrałem sobie, znaczy nagrałem, stworzyłem sobie już wcześniej ten kod dotyczący naszej pracy domowej, dodałem breakpoint czwartej linii i tak naprawdę teraz kiedy kliknę żuka stop and rerun, to wówczas on mi pokaże, że mam taką zmienną.
+
+2
+00:00:17,539 --> 00:00:30,359
+I to jest teraz bardzo ważne, żebyśmy zrozumieli się dobrze, a mianowicie w tym momencie ta zmienna nie została jeszcze zadeklarowana. Ona tak naprawdę będzie zadeklarowana dopiero w linii trzynastej, czternastej, kiedy zakończy nam się ten wiersz.
+
+3
+00:00:30,500 --> 00:00:39,219
+Więc ja sobie mogę albo dodać drugi breakpoint, nie ma z tym problemu, żeby kiedy debugowanie działa dodawać nowe breakpointy, albo mogę kliknąć sobie tutaj na step into.
+
+4
+00:00:39,799 --> 00:00:47,359
+I kiedy klikam na step into, to po pierwsze w tym miejscu widzę, że mam taką zmienną, prawda, a po drugie tutaj też zawsze mogę sobie ją podejrzeć.
+
+5
+00:00:47,539 --> 00:00:57,740
+I to rozwinąć. Tylko nie bardzo mam jak powiększyć, no ale myślę, że na tym nagraniu to widać, że tu jest po prostu zmienna movie zawierająca te moje poszczególne wiersze.
+
+6
+00:00:58,320 --> 00:01:05,239
+I teraz, żebym mógł sobie podejrzeć ten każdy z tych wierszy, też mogę zawsze sobie to rozwinąć i tutaj dokładnie widzę, co jest w środku.
+
+7
+00:01:05,319 --> 00:01:13,180
+To jest genialne, nie muszę na princie tego szukać, podglądać, tylko mogę sobie po prostu to tutaj otwierać, klikać i wszystko jest od razu widoczne.
+
+8
+00:01:13,180 --> 00:01:17,519
+Po drugie, mogę też przechodzić sobie niżej. Ja najczęściej używam tego step into.
+
+9
+00:01:17,540 --> 00:01:26,140
+Zobacz, teraz wykonam raz step into, okaże się, że new movies to jest pusta lista. Idę dalej i teraz for movie in movies.
+
+10
+00:01:26,360 --> 00:01:38,400
+Z racji tego, że moja pętla for przechodzi po każdym z tych filmów i do zmiennej movie przypisuje mi pierwszy z filmów, to zobacz, faktycznie mam tutaj Ojca Chrzestnego, no i Dekka Coppola jest reżyserem, nie?
+
+11
+00:01:39,219 --> 00:01:43,540
+Widzę też, że Steven Spielberg nie jest. To widzę logicznie rzecz biorąc.
+
+12
+00:01:43,960 --> 00:01:47,400
+Więc kiedy zrobię sobie step into, okaże się, że ja wejdę do środka.
+
+13
+00:01:47,540 --> 00:01:51,860
+Będziem z reżyserem i po prostu wraca mi do kolejnego przebiegu pętli for.
+
+14
+00:01:52,360 --> 00:02:00,680
+I w ten sposób możemy sobie pięknie przechodzić przez poszczególne te osoby i cały czas zwrócić uwagę na to, że zmienna new movies nam narasta.
+
+15
+00:02:01,200 --> 00:02:08,540
+Więc kiedy tutaj sobie klikniemy w new movies na dole, to od razu będzie widać, że jest Ojciec Chrzestny i Skazanie na Showstrunk.
+
+16
+00:02:09,140 --> 00:02:13,360
+Poniżej mamy już Szeregowiec Ryan, którego wyreżyserował Spielberg.
+
+17
+00:02:13,360 --> 00:02:17,080
+I teraz już zobacz, ten Szeregowiec Ryan załadował mi się do zmiennej movie.
+
+18
+00:02:17,539 --> 00:02:23,439
+Jeżeli więc znowu sobie kliknę strzałkę na dół, to teraz sprawdzi mi, czy reżyserem jest Steven Spielberg.
+
+19
+00:02:23,599 --> 00:02:27,519
+Zrobię strzałkę na dół i skoro nie jest...
+
+20
+00:02:27,519 --> 00:02:29,079
+Aha, Obywatel Kane jeszcze tutaj jest.
+
+21
+00:02:29,280 --> 00:02:31,579
+Okej, Obywatel Kane, czy on już mi zszedł niżej?
+
+22
+00:02:32,019 --> 00:02:37,959
+Ominął mi Szeregowiec Ryan, no bo tak naprawdę faktycznie on nie powinien tutaj w ogóle do środka wchodzić, czyli pominął ten film.
+
+23
+00:02:37,959 --> 00:02:44,699
+I widzę to też po tym, że new movies, ta zmienna, nie ma jeszcze tego trzeciego filmu.
+
+24
+00:02:45,060 --> 00:02:46,959
+Ale jak sobie wcisnąłem raz jeszcze...
+
+25
+00:02:47,539 --> 00:02:52,900
+...to już ten trzeci film mi wskoczył, ale Szeregowiec Ryan Spielberga został tutaj ominięty.
+
+26
+00:02:53,739 --> 00:03:01,799
+Więc to jest jeden z takich bardzo fajnych przykładów, gdzie nawet w pętli widzimy, czy on nam wchodzi do kodu, czy nam nie wchodzi.
+
+27
+00:03:02,000 --> 00:03:04,099
+Czy nam po prostu to działa poprawnie, czy niepoprawnie.
+
+28
+00:03:04,299 --> 00:03:12,379
+Jeżeli teraz chcemy przejść do końca programu, to możemy wcisnąć ten przycisk, który spowoduje, że pójdziemy dalej, a skoro nie mamy żadnego breakpointa,
+
+29
+00:03:12,780 --> 00:03:16,579
+to on nam się po prostu tutaj zakończy i wyświetli nam odpowiednie informacje.
+
+30
+00:03:17,539 --> 00:03:21,539
+Mogłoby wcisnąć też pauzę, no i w ten sposób program nam się zatrzyma.
+
+31
+00:03:22,419 --> 00:03:23,639
+Co jeszcze możemy tutaj zrobić?
+
+32
+00:03:24,199 --> 00:03:25,639
+Zobacz, odpalimy sobie inny przykład.
+
+33
+00:03:26,219 --> 00:03:32,019
+W tym zadaniu dodałem sobie breakpoint przed ifem, natomiast za answer.
+
+34
+00:03:32,019 --> 00:03:37,180
+I to, że tutaj mam input powoduje, że on i tak mnie pyta, jaka jest stolica kraju Polska.
+
+35
+00:03:37,500 --> 00:03:39,019
+Ja mu mogę odpisać Warszawa.
+
+36
+00:03:40,919 --> 00:03:47,060
+Zobacz, w tym momencie od razu, z racji tego, że wpisałem tą wartość, on mi zatrzymał się na breakpointie i powiedział,
+
+37
+00:03:47,539 --> 00:03:52,239
+że stolicą kraju selected country jest Warszawa, czyli Polska Warszawa.
+
+38
+00:03:52,759 --> 00:03:57,039
+Robię play, no i wszystko okej, wyświetliła mi się informacja bardzo dobrze.
+
+39
+00:03:57,539 --> 00:04:04,180
+A teraz uruchomię ten program raz jeszcze, dostanę pytanie, jaka jest stolica kraju Albania i wpiszę sobie Poznań.
+
+40
+00:04:04,879 --> 00:04:06,120
+Pozdrawiam wszystkich z Poznania.
+
+41
+00:04:06,120 --> 00:04:13,319
+W tym momencie on wszedł mi do tego miejsca i oczywiście powinien wyświetlić komunikat o jej spróbu jeszcze raz.
+
+42
+00:04:13,739 --> 00:04:16,139
+Ale ja mogę też sobie coś zmienić w tym momencie.
+
+43
+00:04:16,920 --> 00:04:17,120
+Jeżeli spojrzymy...
+
+44
+00:04:17,540 --> 00:04:20,300
+Czyli że to Albania ma stolicę w Tiranie, prawda?
+
+45
+00:04:20,540 --> 00:04:21,460
+Albania ma Tirana.
+
+46
+00:04:21,900 --> 00:04:25,540
+Więc żeby zmienić teraz zmienną answer, wystarczy, że kliknę tutaj na ten kalkulatorek.
+
+47
+00:04:26,240 --> 00:04:28,620
+Ja to nazywam kalkulatorkiem, to jest evaluate expression.
+
+48
+00:04:29,220 --> 00:04:32,160
+I mogę mu napisać dowolną rzecz, tutaj dowolną linijkę.
+
+49
+00:04:32,580 --> 00:04:34,540
+Ona jakby wykona mi się przed moim breakpointem.
+
+50
+00:04:35,720 --> 00:04:41,280
+Jeżeli więc napiszę answer równa się Tirana i zrobię evaluate,
+
+51
+00:04:41,960 --> 00:04:45,900
+to w tym momencie on będzie wiedział, że zmienna została zadeklarowana.
+
+52
+00:04:45,899 --> 00:04:49,739
+I w tym momencie zobacz, że moje answer już ma wartość Tirana.
+
+53
+00:04:50,279 --> 00:04:55,359
+I wtedy, kiedy wejdę dalej, pójdę sobie piętro niżej, to wyświetli mi komunikat bardzo dobrze.
+
+54
+00:04:55,899 --> 00:05:00,599
+Czyli dzięki temu kalkulatorowi my możemy też wykonywać różnego rodzaju polecenia.
+
+55
+00:05:00,719 --> 00:05:06,479
+To mogą być albo zwykłe obliczenia, możemy sobie wyświetlać wartości poszczególnych zmiennych.
+
+56
+00:05:07,779 --> 00:05:12,259
+Możemy sobie na przykład coś tutaj jeszcze zmodyfikować, typu answer lower.
+
+57
+00:05:12,719 --> 00:05:14,659
+Wszystkie tego typu rzeczy to możemy wykonywać.
+
+58
+00:05:14,659 --> 00:05:15,739
+Dzięki temu możemy też jakby...
+
+59
+00:05:15,899 --> 00:05:21,719
+W trakcie działania programu reagować na jego działanie i pobierać sobie poszczególne rzeczy.
+
+60
+00:05:22,039 --> 00:05:23,539
+Bo wszystkie zmienne są dostępne.
+
+61
+00:05:23,639 --> 00:05:24,799
+Zobacz, capitals na przykład.
+
+62
+00:05:25,000 --> 00:05:31,939
+Jeżeli zrobię capitals od Rumunia powiedzmy, to od razu wyświetlił Bukareszt.
+
+63
+00:05:32,319 --> 00:05:35,899
+Więc ładnie na tym etapie można też modyfikować nasz program,
+
+64
+00:05:36,019 --> 00:05:39,659
+tak jakbyśmy za każdym razem uruchamiali go z innymi ustawieniami.
+
+65
+00:05:40,079 --> 00:05:44,319
+No i co więcej, to co jest najpiękniejsze, to można właśnie dodawać sobie te breakpointy
+
+66
+00:05:44,319 --> 00:05:45,879
+i przechodzić za pomocą tych programów.
+
+67
+00:05:45,879 --> 00:05:47,839
+I po prostu po tym naszym kodzie.
+
+68
+00:05:48,000 --> 00:05:52,819
+To jest niezwykle wygodne zagadnienie, niezwykle wygodne jest debugowanie kodu w ten sposób.
+
+69
+00:05:52,959 --> 00:05:58,620
+Więc polecam Ci, żebyś teraz uruchomił sobie ten debugger za pomocą wciśnięcia żuka
+
+70
+00:05:58,620 --> 00:06:04,259
+oraz dodawania tych naszych breakpointów i obejrzał sobie jak kod zachowuje się,
+
+71
+00:06:04,420 --> 00:06:06,339
+kiedy go właśnie w ten sposób wykonujesz.
+
+72
+00:06:06,719 --> 00:06:08,540
+To co? Do dzieła!

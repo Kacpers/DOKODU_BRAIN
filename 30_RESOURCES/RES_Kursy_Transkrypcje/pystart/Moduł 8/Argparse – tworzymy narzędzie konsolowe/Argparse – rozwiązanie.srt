@@ -1,0 +1,243 @@
+1
+00:00:00,000 --> 00:00:03,419
+No to co? Import arg parse.
+
+2
+00:00:05,360 --> 00:00:07,719
+Możemy sobie zrobić parser
+
+3
+00:00:07,719 --> 00:00:11,120
+równa się arg parse kropka argument parser
+
+4
+00:00:11,120 --> 00:00:13,480
+no i przekażmy mu te dane.
+
+5
+00:00:13,919 --> 00:00:17,480
+Docelowo możemy sobie wyobrazić, że będzie to taki
+
+6
+00:00:17,480 --> 00:00:20,660
+skrypt, który będzie potrafił zmniejszać nasze obrazki.
+
+7
+00:00:21,100 --> 00:00:22,559
+Czyli przyda nam się program
+
+8
+00:00:22,559 --> 00:00:26,600
+to jest może image resizer
+
+9
+00:00:26,600 --> 00:00:29,699
+ten bulk resizer
+
+10
+00:00:29,699 --> 00:00:33,019
+description
+
+11
+00:00:33,019 --> 00:00:37,100
+it can resize all images
+
+12
+00:00:37,100 --> 00:00:39,100
+in specific directory
+
+13
+00:00:39,100 --> 00:00:43,960
+epilog
+
+14
+00:00:43,960 --> 00:00:50,519
+tu każdy może wpisać siebie. Śmiało.
+
+15
+00:00:51,019 --> 00:00:53,280
+Jesteśmy programistami. Parser
+
+16
+00:00:53,280 --> 00:00:58,140
+parse args i to jest arguments.
+
+17
+00:00:58,140 --> 00:01:02,200
+To ja robię zawsze taką kolejność, bo nie chcę później o tym zapomnieć.
+
+18
+00:01:02,560 --> 00:01:05,460
+I teraz pomiędzy będę dodawał wszystkie te argumenty.
+
+19
+00:01:05,760 --> 00:01:06,960
+A cóż to są za argumenty?
+
+20
+00:01:07,239 --> 00:01:10,000
+Path, czyli potrzebuję parser
+
+21
+00:01:10,000 --> 00:01:12,739
+add argument
+
+22
+00:01:12,739 --> 00:01:15,859
+path i co my tam mamy?
+
+23
+00:01:16,159 --> 00:01:18,219
+Po prostu string. No to możemy dorzucić type
+
+24
+00:01:18,219 --> 00:01:19,680
+string
+
+25
+00:01:19,680 --> 00:01:25,939
+bez apostrofów.
+
+26
+00:01:25,939 --> 00:01:27,659
+Path. Po drugie
+
+27
+00:01:28,140 --> 00:01:32,239
+chcielibyśmy mieć target. No to analogicznie target.
+
+28
+00:01:32,239 --> 00:01:35,040
+Po trzecie chcielibyśmy mieć with
+
+29
+00:01:36,939 --> 00:01:40,359
+i to może być argument, który jest niewymagany.
+
+30
+00:01:40,359 --> 00:01:43,099
+Możemy mu dorzucić type integer
+
+31
+00:01:44,019 --> 00:01:46,319
+default 300
+
+32
+00:01:46,319 --> 00:01:48,040
+i analogicznie high.
+
+33
+00:01:51,040 --> 00:01:56,599
+Dobra i zobacz co się teraz stanie, kiedy wywołam python arg parse nie demo.
+
+34
+00:01:56,599 --> 00:01:59,099
+To jest to co widziałeś na slajdzie.
+
+35
+00:01:59,099 --> 00:02:00,899
+arg parse zadanie.
+
+36
+00:02:00,899 --> 00:02:02,500
+I w ten sposób zobaczymy.
+
+37
+00:02:02,500 --> 00:02:04,699
+image bulk resizer error.
+
+38
+00:02:04,699 --> 00:02:06,199
+The following argument are required.
+
+39
+00:02:06,199 --> 00:02:07,699
+Path, target, with i high.
+
+40
+00:02:07,699 --> 00:02:10,699
+With i high nie muszą być wymagane.
+
+41
+00:02:10,699 --> 00:02:14,199
+Więc dodajemy te dwa myślniki z przodu.
+
+42
+00:02:14,199 --> 00:02:17,500
+No i dzięki temu widzimy, że tylko with i high są niewymagane,
+
+43
+00:02:17,500 --> 00:02:20,000
+a path i target są wymagane.
+
+44
+00:02:20,000 --> 00:02:22,199
+Dzięki temu możemy sobie wyprintować.
+
+45
+00:02:22,199 --> 00:02:24,599
+print arguments path.
+
+46
+00:02:24,599 --> 00:02:26,000
+Możemy dorzucić zawsze
+
+47
+00:02:26,599 --> 00:02:30,000
+informacje, żeby było widać co było przekazane.
+
+48
+00:02:30,000 --> 00:02:32,000
+target
+
+49
+00:02:35,000 --> 00:02:38,000
+target with
+
+50
+00:02:42,000 --> 00:02:44,000
+with no i high.
+
+51
+00:02:50,000 --> 00:02:52,000
+Ok. No i sprawdźmy.
+
+52
+00:02:52,000 --> 00:02:53,599
+Wywołałem tak, dostałem helpa.
+
+53
+00:02:53,599 --> 00:02:55,199
+Mogę też oczywiście zrobić minus h.
+
+54
+00:02:55,199 --> 00:02:56,500
+Dostanę helpa.
+
+55
+00:02:56,500 --> 00:02:58,900
+Zastanawiam się, że jestem autorem tego programu.
+
+56
+00:02:58,900 --> 00:03:09,400
+Jak zrobię o tak i podam mu with 500 high 500 path to src i target.
+
+57
+00:03:09,400 --> 00:03:12,900
+To dostanę path to src, target to target 500 500.
+
+58
+00:03:12,900 --> 00:03:18,500
+A jeżeli nie podam mu with i high, no to od razu dostanę 300 i 300.
+
+59
+00:03:18,500 --> 00:03:20,000
+Działa.
+
+60
+00:03:20,000 --> 00:03:23,900
+Jeżeli u ciebie też zadziałało to serdecznie gratuluję i chodź dalej.
+
+61
+00:03:23,900 --> 00:03:25,400
+Zobacz co dla ciebie jeszcze przygotowałem.

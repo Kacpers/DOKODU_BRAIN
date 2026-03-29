@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:07,440
+Jak to mówią, praktyka czyni mistrza, więc mam dla Ciebie też kilka zadań, żeby to sobie przepraktykować, przećwiczyć.
+
+2
+00:00:08,019 --> 00:00:15,939
+Po pierwsze, zapamiętajcie, żeby zrobić to w interaktywnym środowisku Pythona, czyli wystarczy wpisać Python i tam tak, żeby na bieżąco móc widzieć wyniki.
+
+3
+00:00:16,559 --> 00:00:19,699
+Stwórz listę zawierającą trzy nazwy zespołów, których słuchasz.
+
+4
+00:00:20,059 --> 00:00:26,160
+Może być to coś też ze świata aktualnego, nie muszą być to jakieś niszowe zespoły.
+
+5
+00:00:26,160 --> 00:00:33,420
+Po drugie, wymień pierwszy element na inny zespół, czyli chcemy element na zerowym indeksie wymienić na jakiś inny.
+
+6
+00:00:33,920 --> 00:00:36,700
+Po kolejne, trzecie, usuń pierwszy element.
+
+7
+00:00:37,380 --> 00:00:47,760
+Korzystając z append, dodaj oba zespoły na sam koniec, czyli skoro podmieniliśmy sobie jakiś zespół na inny, a następnie go usunęliśmy, no to teraz chcemy dwa elementy na końcu dodać.
+
+8
+00:00:48,439 --> 00:00:55,219
+Następnie, sprawdź czy dowolny z zespołów znajduje się na liście, spróbuj zrobić to samo z zespołem, którego na tej liście nie ma.
+
+9
+00:00:55,659 --> 00:00:56,140
+Usuń.
+
+10
+00:00:56,159 --> 00:00:57,579
+Usuń ostatni zespół z listy.
+
+11
+00:00:57,839 --> 00:01:02,079
+Można to robić na dwa sposoby, przypominam, albo po pozycji, albo po nazwie.
+
+12
+00:01:02,199 --> 00:01:06,700
+Tutaj możecie sobie oba te zastosowania sprawdzić.
+
+13
+00:01:07,299 --> 00:01:09,500
+No i ostatnie, wyświetl wszystkie zespoły.
+
+14
+00:01:10,099 --> 00:01:13,099
+I jeszcze mam jeden taki podpunkt, całkiem ciekawy.
+
+15
+00:01:13,239 --> 00:01:16,859
+Zobacz co się stanie, gdy na listę zamienisz dowolny napis.
+
+16
+00:01:17,479 --> 00:01:22,500
+No i tutaj chwila dla każdego, żeby się pobawić, potrenować i widzimy się za chwilę w rozwiązaniu.
+
+17
+00:01:23,060 --> 00:01:23,379
+Cześć.

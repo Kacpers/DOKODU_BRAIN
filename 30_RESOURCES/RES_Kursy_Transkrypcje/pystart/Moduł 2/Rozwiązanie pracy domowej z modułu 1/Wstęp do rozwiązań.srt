@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:03,260
+Cześć, spotykamy się dzisiaj tutaj, żeby rozwiązać pracę domową.
+
+2
+00:00:03,359 --> 00:00:06,620
+To jest praca domowa z pierwszego modułu, więc jeżeli go jeszcze nie widziałeś,
+
+3
+00:00:06,679 --> 00:00:08,580
+to koniecznie od niego zacznij.
+
+4
+00:00:09,240 --> 00:00:11,980
+Do wykonania mamy tak naprawdę 11 zadań.
+
+5
+00:00:12,300 --> 00:00:15,800
+Każde zadanie będzie umiejscowione w osobnym filmie.
+
+6
+00:00:16,260 --> 00:00:21,500
+Natomiast nawet jeżeli wydaje Ci się, że jest ono banalnie proste albo jest proste,
+
+7
+00:00:21,800 --> 00:00:26,280
+to i tak zachęcam, żeby chociaż obejrzeć ostatnie kilka klatek tego filmu
+
+8
+00:00:26,280 --> 00:00:31,340
+i porównać, czy to rozwiązanie, które ja stworzyłem, jest takie samo jak to, które masz Ty.
+
+9
+00:00:31,800 --> 00:00:35,760
+Jeżeli tak jest, no to świetnie, natomiast ja zawsze podczas rozwiązywania takich zadań
+
+10
+00:00:35,760 --> 00:00:40,859
+staram się też przemycić trochę wiedzy, więc jeżeli masz chwilę, to obejrzyj to zadanie w całości.
+
+11
+00:00:41,480 --> 00:00:43,439
+Zapraszam do pierwszego rozwiązania.
+
+12
+00:00:43,760 --> 00:00:45,299
+Zajmijmy się temperaturą.

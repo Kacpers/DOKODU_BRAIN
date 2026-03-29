@@ -1,0 +1,267 @@
+1
+00:00:00,000 --> 00:00:01,159
+No i ostatnie zadanie.
+
+2
+00:00:01,679 --> 00:00:04,060
+Pin może składać się wyłącznie z czterech cyfr.
+
+3
+00:00:04,280 --> 00:00:07,480
+Napisz funkcję, która zwróci prawdę lub fałsz w zależności od tego,
+
+4
+00:00:07,660 --> 00:00:09,179
+czy wymaganie jest spełnione.
+
+5
+00:00:09,800 --> 00:00:12,439
+Czyli def validate pin.
+
+6
+00:00:13,200 --> 00:00:16,320
+Pierwsza rzecz, którą musimy sobie odebrać, to na pewno pin.
+
+7
+00:00:16,640 --> 00:00:17,960
+Myślę, że będzie on stringiem.
+
+8
+00:00:18,940 --> 00:00:20,719
+To, co będziemy zwracali, to będzie ból.
+
+9
+00:00:21,120 --> 00:00:22,019
+Prawda albo fałsz.
+
+10
+00:00:22,900 --> 00:00:24,660
+To, co należy zrobić w pierwszej kolejności,
+
+11
+00:00:24,660 --> 00:00:29,760
+to sprawdzić, czy długość nie równa się cztery.
+
+12
+00:00:30,440 --> 00:00:32,679
+Czy długość pinu nie równa się cztery.
+
+13
+00:00:33,240 --> 00:00:35,000
+Jeżeli długość pinu nie równa się cztery,
+
+14
+00:00:35,119 --> 00:00:37,560
+to z góry możemy założyć, że pin jest fałszywy
+
+15
+00:00:37,560 --> 00:00:40,700
+i zwrócić fałsz, czyli nie jest prawidłowy.
+
+16
+00:00:41,780 --> 00:00:43,799
+Kolejne wymaganie to jest takie,
+
+17
+00:00:44,299 --> 00:00:47,000
+że musi się składać wyłącznie z czterech cyfr.
+
+18
+00:00:47,519 --> 00:00:50,359
+Czyli możemy sobie sprawdzić,
+
+19
+00:00:50,359 --> 00:00:56,780
+czy któraś ze znaków nie jest cyfrą.
+
+20
+00:00:57,359 --> 00:00:59,820
+Czyli for char in pin
+
+21
+00:00:59,820 --> 00:01:04,859
+if char is.
+
+22
+00:01:05,340 --> 00:01:07,500
+I teraz tak, no możemy mieć różne tutaj symbole,
+
+23
+00:01:07,599 --> 00:01:09,960
+ale tak naprawdę is digit nas interesuje i to jest ok.
+
+24
+00:01:10,540 --> 00:01:12,359
+Natomiast jeżeli to jest litera,
+
+25
+00:01:12,879 --> 00:01:15,140
+no to wtedy też return false.
+
+26
+00:01:16,939 --> 00:01:19,840
+W przeciwnym wypadku return true.
+
+27
+00:01:20,299 --> 00:01:22,140
+Dlaczego tu nie ma nigdzie else'ów?
+
+28
+00:01:22,140 --> 00:01:25,680
+Dlatego, że jeżeli zakodowaliśmy program nasz w ten sposób,
+
+29
+00:01:25,799 --> 00:01:28,980
+używając funkcji, no to return od razu kończy.
+
+30
+00:01:28,980 --> 00:01:30,359
+Po prostu nie ma dyskusji.
+
+31
+00:01:30,439 --> 00:01:33,000
+Tak jakbyście powiedzieli, że jeżeli coś się wydarzy,
+
+32
+00:01:33,060 --> 00:01:34,740
+to w ogóle nie trzeba niczego dalej sprawdzać,
+
+33
+00:01:34,840 --> 00:01:36,780
+bo nie wiem, praca jest skopiowana,
+
+34
+00:01:36,939 --> 00:01:38,500
+więc nie ma sensu jej sprawdzać,
+
+35
+00:01:38,600 --> 00:01:42,780
+bo nie wiem, program ten do szukania plagiatów
+
+36
+00:01:42,780 --> 00:01:43,900
+stwierdził, że to jest plagiat.
+
+37
+00:01:44,020 --> 00:01:45,859
+No to czytanie tej pracy w tym momencie załóżmy,
+
+38
+00:01:45,960 --> 00:01:48,960
+że nie ma sensu, no bo od razu jest to jedynka.
+
+39
+00:01:49,420 --> 00:01:50,080
+I tu jest tak samo.
+
+40
+00:01:50,520 --> 00:01:52,340
+Jeżeli nie ma czterech cyfr, to koniec.
+
+41
+00:01:52,420 --> 00:01:53,020
+Return false.
+
+42
+00:01:53,260 --> 00:01:54,780
+Jeżeli któraś z cyfr jest,
+
+43
+00:01:54,980 --> 00:01:57,460
+któryś ze znaków jest literą, no to też koniec.
+
+44
+00:01:57,659 --> 00:01:58,960
+Albo możemy zrobić,
+
+45
+00:01:58,980 --> 00:02:02,719
+if not is digit.
+
+46
+00:02:04,000 --> 00:02:05,380
+Wtedy będzie nawet lepiej,
+
+47
+00:02:05,740 --> 00:02:06,900
+bo jeżeli mielibyśmy sytuację,
+
+48
+00:02:06,980 --> 00:02:07,980
+że ktoś miałby taki pin,
+
+49
+00:02:09,460 --> 00:02:11,800
+to też, no nie są to cyfry,
+
+50
+00:02:11,939 --> 00:02:12,980
+a nie są to też litery.
+
+51
+00:02:13,520 --> 00:02:14,580
+No i możemy sobie sprawdzić.
+
+52
+00:02:15,300 --> 00:02:18,620
+Print validate pin 1, 2, 3, 4.
+
+53
+00:02:19,140 --> 00:02:20,560
+On miał być przekazywany jako string.
+
+54
+00:02:20,960 --> 00:02:21,620
+Dlaczego string?
+
+55
+00:02:21,740 --> 00:02:24,120
+No bo jeżeli ktoś chciałby na przykład przekazać 0034,
+
+56
+00:02:24,560 --> 00:02:27,680
+no to w tym momencie ta wartość nie byłaby prawidłowa.
+
+57
+00:02:28,979 --> 00:02:30,979
+Możemy sobie też potestować takie rzeczy.
+
+58
+00:02:31,060 --> 00:02:36,419
+A propos testowania, już niedługo o testowaniu porozmawiamy.
+
+59
+00:02:36,519 --> 00:02:39,219
+No i te wspomniane jakieś inne konstrukcje.
+
+60
+00:02:39,319 --> 00:02:41,939
+Czyli powinienem dostać true, true, false, false, false.
+
+61
+00:02:42,039 --> 00:02:42,639
+Sprawdzamy.
+
+62
+00:02:42,739 --> 00:02:46,839
+Python 14 sprawdź pin, false, false.
+
+63
+00:02:46,939 --> 00:02:48,439
+Widzę na końcu, odpalę raz jeszcze.
+
+64
+00:02:48,539 --> 00:02:50,039
+True, true, false, false, false.
+
+65
+00:02:50,139 --> 00:02:51,859
+Czyli wszystko zadziałało.
+
+66
+00:02:51,959 --> 00:02:54,159
+I to byłoby na tyle, jeżeli chodzi o pracę domową.
+
+67
+00:02:54,259 --> 00:02:56,060
+Zapraszam do kolejnego modułu.

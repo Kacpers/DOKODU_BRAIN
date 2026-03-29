@@ -1,0 +1,823 @@
+1
+00:00:00,260 --> 00:00:06,540
+Zaczniemy sobie w ogóle od tego, o co chodzi z tymi bazami danych, dlaczego warto to znać i dlaczego warto z tego korzystać.
+
+2
+00:00:06,940 --> 00:00:12,599
+Jeżeli chodzi o pliki tekstowe, no to widzieliśmy pewne korzyści z nich wynikające, prawda?
+
+3
+00:00:12,820 --> 00:00:20,400
+No możemy przechowywać informacje, możemy je sobie później pobierać, możemy je przetwarzać, możemy kasować, dużo bardzo rzeczy możemy.
+
+4
+00:00:21,480 --> 00:00:23,660
+Natomiast pewnych rzeczy nie mogliśmy.
+
+5
+00:00:23,660 --> 00:00:34,659
+Chociażby wtedy, kiedy chcieliśmy przechować więcej danych, bardziej złożone dane, okazywało się wtedy, że sposób przechowywania w pliku tekstowym nie jest dla nas wystarczający.
+
+6
+00:00:35,880 --> 00:00:38,700
+Poszliśmy więc poziom wyżej, w kierunku JSON-a.
+
+7
+00:00:39,179 --> 00:00:41,879
+I teraz, czy znaczy, że pliki tekstowe są bez sensu? Nie.
+
+8
+00:00:42,200 --> 00:00:52,200
+Po prostu mają pewne zastosowania, pewne ograniczenia i my musimy wiedzieć o tym, jakie są te zalety i wady, żeby móc podjąć wybór, że chcemy pracować z plikami tekstowymi albo z JSON-em.
+
+9
+00:00:52,200 --> 00:01:05,180
+Gdyż JSON z jednej strony dał nam taką możliwość, że dostaliśmy korzyść w postaci przechowywania bardziej złożonych rzeczy, ale też dostaliśmy pewien minus, a mianowicie, że trzeba było ten plik wczytywać w całości do pamięci.
+
+10
+00:01:05,659 --> 00:01:15,280
+Czyli do bardziej złożonych jak najbardziej tak, natomiast do takich zastosowań, w których będziemy mieli dużo tych danych, no to już trochę nie.
+
+11
+00:01:16,379 --> 00:01:19,740
+Oba te zastosowania mają jednak jedną podstawową wadę.
+
+12
+00:01:19,739 --> 00:01:27,859
+A mianowicie, jeżeli chcielibyśmy usunąć z nich jakiś konkretny element, no to takie wynajdywanie tych elementów jest trochę kłopotliwe.
+
+13
+00:01:28,119 --> 00:01:36,639
+Bo w pliku tekstowym przetwarzamy sobie wiersz po wierszu, wyszukujemy ten wiersz, który nam przeszkadza i wtedy go usuwamy.
+
+14
+00:01:37,099 --> 00:01:41,759
+Usuwamy po prostu nie tworząc w nowym zestawieniu, nie dodając go.
+
+15
+00:01:41,759 --> 00:01:45,340
+W przypadku JSON-a bardzo postępujemy podobnie.
+
+16
+00:01:45,459 --> 00:01:48,759
+Po prostu usuwamy go z pamięci, z naszego konkretnego...
+
+17
+00:01:49,739 --> 00:01:56,739
+...z naszego znanego tam słownika czy z listy, a następnie cały ten twór zmodyfikowany wrzucamy do pliku tam JSON-owego.
+
+18
+00:01:56,739 --> 00:01:59,140
+Więc wróćmy, czym jest baza danych.
+
+19
+00:01:59,140 --> 00:02:05,579
+Baza danych jest to taki... taka aplikacja, która pozwala na przechowywanie danych.
+
+20
+00:02:05,579 --> 00:02:13,060
+Czyli my wysyłamy do tej aplikacji dane, dzięki czemu będziemy mogli też później na tych danych wykonywać bardzo wygodną obróbkę.
+
+21
+00:02:13,060 --> 00:02:18,120
+W przypadku, ogólnie rzecz biorąc, baz danych, na pewno słyszałeś o takich bazach jak PostgreSQL, SQLite, ...
+
+22
+00:02:18,120 --> 00:02:18,859
+...na pewno słyszałeś o takich bazach jak PostgreSQL, SQLite, ...
+
+23
+00:02:18,859 --> 00:02:19,359
+...na pewno słyszałeś o takich bazach jak PostgreSQL, SQLite, ...
+
+24
+00:02:19,360 --> 00:02:25,440
+...mySQL i innych tego typu, one wszystkie mają wyrażenie SQL na końcu.
+
+25
+00:02:25,440 --> 00:02:27,040
+Co to wyrażenie oznacza?
+
+26
+00:02:27,040 --> 00:02:33,040
+To wyrażenie oznacza, że SQL to jest język budowania zapytań do takich baz.
+
+27
+00:02:33,040 --> 00:02:39,240
+Co sprawia, że jeżeli będziemy chcieli na przykład pobrać sobie konkretny rekord czy usunąć konkretny rekord, ...
+
+28
+00:02:39,240 --> 00:02:45,680
+...to za pomocą takiego dodatkowego języka, nie chcę mówić programowania, bo tak naprawdę to jest po prostu sposób budowania zapytań, ...
+
+29
+00:02:45,680 --> 00:02:48,480
+...uda nam się takie operacje wykonywać.
+
+30
+00:02:48,480 --> 00:02:48,980
+...uda nam się takie operacje wykonywać.
+
+31
+00:02:48,979 --> 00:02:55,659
+I teraz te bazy PostgreSQL, mySQL, SQLite i inne z SQLem, MSSQL czy Oracle, ...
+
+32
+00:02:55,659 --> 00:02:59,560
+...one wszystkie są bazami danych, które wykorzystują tego SQLa, ...
+
+33
+00:02:59,560 --> 00:03:03,539
+...natomiast w każdej z tych baz ten SQL będzie wyglądał odrobinę inaczej.
+
+34
+00:03:03,959 --> 00:03:09,259
+To jest trochę tak jak angielski i brytyjski, czyli będziesz widział dużo podobieństw, ...
+
+35
+00:03:09,259 --> 00:03:13,620
+...natomiast raz na jakiś czas może się okazać, że jedno słówko się różni, jedno słówko jest czymś innym.
+
+36
+00:03:14,120 --> 00:03:18,959
+I do tej układanki nie włączam Oraclea, do tej układanki włączam tylko i wyłącznie mySQLa, ...
+
+37
+00:03:18,979 --> 00:03:24,259
+...SQLite i Postgresa, to są trzy bazy, z którymi pracuję na co dzień i wiem, że tak po prostu jest.
+
+38
+00:03:24,259 --> 00:03:27,259
+Tych pozostałych SQLowych baz w życiu nie dotykałem.
+
+39
+00:03:27,259 --> 00:03:32,459
+Ok, czyli wyjaśniliśmy sobie czym jest SQL, a teraz troszeczkę takiej nomenklatury.
+
+40
+00:03:32,459 --> 00:03:39,339
+No bo często będziemy mówili o takich elementach jak baza, tabela, rekord, kolumna.
+
+41
+00:03:39,339 --> 00:03:44,859
+I warto byłoby, żebyśmy zanim zaczniemy o tym rozmawiać, wiedzieli czym te poszczególne polecenia są.
+
+42
+00:03:44,859 --> 00:03:48,459
+Szczególnie jeżeli mamy sobie wytłumaczyć czym jest relacyjność bazy danych.
+
+43
+00:03:48,979 --> 00:03:51,539
+Jak to sobie można wytłumaczyć najprościej?
+
+44
+00:03:51,539 --> 00:03:56,219
+Najprościej jest spojrzeć na bazę danych jak na plik Excela.
+
+45
+00:03:56,219 --> 00:04:03,500
+I stosując takie analogie będziemy opowiadali sobie o poszczególnych tych poleceniach, tych wyrażeniach.
+
+46
+00:04:03,500 --> 00:04:06,019
+Zaczynam od początku. Baza danych.
+
+47
+00:04:06,019 --> 00:04:08,739
+Baza danych w świecie Excela to jest po prostu plik.
+
+48
+00:04:08,739 --> 00:04:15,539
+Czyli w momencie, w którym masz projekt twój, to najczęściej będziesz ten projekt odbierać na jednej bazie danych.
+
+49
+00:04:15,539 --> 00:04:18,539
+Oczywiście bardziej złożone projekty mogą korzystać z wielu baz.
+
+50
+00:04:18,980 --> 00:04:21,420
+Natomiast przyjmijmy, że baza to jest projekt.
+
+51
+00:04:21,420 --> 00:04:23,540
+I często baza nazywa się tak jak projekt.
+
+52
+00:04:23,540 --> 00:04:31,460
+Załóżmy robię sklep internetowy i wtedy mam jedną bazę danych nazywam ją shop albo jakkolwiek inaczej.
+
+53
+00:04:31,460 --> 00:04:32,980
+To już wiemy.
+
+54
+00:04:32,980 --> 00:04:34,620
+Nic więcej nie musisz wiedzieć.
+
+55
+00:04:34,620 --> 00:04:35,900
+Wchodzimy sobie głębiej.
+
+56
+00:04:35,900 --> 00:04:38,100
+W Excelu mamy arkusze.
+
+57
+00:04:38,100 --> 00:04:39,939
+Czyli te takie zakładki, które są na dole.
+
+58
+00:04:39,939 --> 00:04:41,740
+Sheets po angielsku.
+
+59
+00:04:41,740 --> 00:04:44,780
+I w bazie danych tę rolę pełnią tabele.
+
+60
+00:04:44,780 --> 00:04:48,780
+Czyli baza danych to jest to taki jakby duży worek.
+
+61
+00:04:48,779 --> 00:04:51,379
+W tym worku będziemy mieli tabele.
+
+62
+00:04:51,379 --> 00:04:56,819
+Tabele reprezentują poszczególne dane, które przechowujemy w naszej bazie.
+
+63
+00:04:56,819 --> 00:04:58,699
+Na przykład mamy studentów.
+
+64
+00:04:58,699 --> 00:05:01,139
+No to potrzebujemy mieć tabele students.
+
+65
+00:05:01,139 --> 00:05:05,819
+Nasi studenci są na jakiś przedmiotach, więc potrzebujemy mieć tabele subjects.
+
+66
+00:05:05,819 --> 00:05:07,779
+Nasi studenci dostają jakieś oceny.
+
+67
+00:05:07,779 --> 00:05:10,219
+Potrzebujemy mieć tabele notes itd.
+
+68
+00:05:10,219 --> 00:05:13,939
+Przechowujemy sobie różne tabele w tej naszej bazie danych.
+
+69
+00:05:13,939 --> 00:05:18,579
+Tak samo jak w pliku Excelowym mamy przychody, wydatki czy coś tam innego.
+
+70
+00:05:18,779 --> 00:05:22,659
+Czasem zdarza się w pliku Excelowym, że mamy bardzo dużo wierszy.
+
+71
+00:05:22,659 --> 00:05:25,979
+I dzielimy na przykład te wiersze właśnie na podstawie miesięcy.
+
+72
+00:05:25,979 --> 00:05:31,699
+W bazie danych też mógłbyś tak zrobić, ale są też inne mechanizmy takie jak np. partycjonowanie,
+
+73
+00:05:31,699 --> 00:05:34,379
+o których rozmawiamy na kursie z KumajBazy.
+
+74
+00:05:34,379 --> 00:05:36,579
+Ale tutaj nie będzie nam to zupełnie potrzebne.
+
+75
+00:05:36,579 --> 00:05:37,979
+Ok.
+
+76
+00:05:37,979 --> 00:05:42,779
+I wtedy w ramach tych tabel, czyli w ramach tych arkuszy mamy kolumny.
+
+77
+00:05:42,779 --> 00:05:43,379
+Prawda?
+
+78
+00:05:43,379 --> 00:05:46,779
+Czyli mamy, określamy sobie id, first name, last name czy też id, imię, nazwisko.
+
+79
+00:05:46,779 --> 00:05:47,379
+I wtedy w ramach tych tabel, czyli w ramach tych arkuszy mamy kolumny. Prawda?
+
+80
+00:05:47,379 --> 00:05:47,779
+Czyli mamy, określamy sobie id, first name, last name czy też id, imię, nazwisko.
+
+81
+00:05:48,779 --> 00:05:51,779
+I tak określamy sobie wiersz nagłówkowy.
+
+82
+00:05:51,779 --> 00:05:53,379
+No i tak samo jest w SQLu.
+
+83
+00:05:53,379 --> 00:05:56,779
+Kolumna w Excelu to kolumna w SQLu.
+
+84
+00:05:56,779 --> 00:06:03,379
+Z tą różnicą, że w SQLu od razu określamy też typy dla naszych kolumn i tych typów nie możemy zmieniać.
+
+85
+00:06:03,379 --> 00:06:08,179
+Bo jeżeli na przykład założymy, że w danej kolumnie chcemy mieć tekst, tylko i wyłącznie,
+
+86
+00:06:08,179 --> 00:06:13,779
+a wstawimy tam datę, no to SQL nam pozwoli, bo data może być też zwykłym tekstem, nie?
+
+87
+00:06:13,779 --> 00:06:18,579
+Ale to później będzie powodowało, że nie będziemy mogli na przykład wykonywać żadnych operacji
+
+88
+00:06:18,579 --> 00:06:22,579
+na datach, no bo typ tej kolumny jest inny niż powinien być.
+
+89
+00:06:22,579 --> 00:06:24,979
+Ok, to jest bardzo ważne.
+
+90
+00:06:24,979 --> 00:06:30,379
+No i wtedy mamy rekordy, czyli tak naprawdę wiersze w naszej tabeli.
+
+91
+00:06:30,379 --> 00:06:38,779
+Jeżeli mamy kolumny, no to każdy pojedynczy wiersz, każda pojedyncza informacja, to jest właśnie rekord.
+
+92
+00:06:38,779 --> 00:06:41,779
+No to nomenklaturę mamy za sobą.
+
+93
+00:06:41,779 --> 00:06:48,579
+I teraz dochodzimy do pierwszego punktu, który mówi o tym, że baza danych SQLite to baza relacyjna.
+
+94
+00:06:48,579 --> 00:06:53,979
+I na rozmowach rekrutacyjnych to zdarzyło mi się chyba za trzy razy, że ktoś mnie zapytał,
+
+95
+00:06:53,979 --> 00:06:58,779
+co to znaczy, że baza danych SQL czy tam MySQL czy Postgres jest relacyjna.
+
+96
+00:06:58,779 --> 00:07:00,979
+I to jest pytanie podchwytliwe.
+
+97
+00:07:00,979 --> 00:07:08,779
+Bo niektórzy uważają, że relacja to jest to samo, co po angielsku relation, a tutaj chodzi o coś zupełnie innego.
+
+98
+00:07:08,779 --> 00:07:09,579
+Już Ci tłumaczę.
+
+99
+00:07:09,579 --> 00:07:10,979
+Wyobraź sobie Excela.
+
+100
+00:07:10,979 --> 00:07:14,579
+I teraz, kiedy masz Excela, no to masz w nim też wiersze.
+
+101
+00:07:14,579 --> 00:07:16,579
+I masz zawsze pewność, że każdy z tych wierszy, który masz w tym wierszu, to jest wiersz, który masz w tym wierszu.
+
+102
+00:07:16,579 --> 00:07:17,579
+I masz zawsze pewność, że każdy z tych wierszy, który masz w tym wierszu, to jest wiersza.
+
+103
+00:07:17,579 --> 00:07:20,579
+I masz zawsze pewność, że każdy z tych wierszy, będzie miał określoną liczbę kolumn podanych.
+
+104
+00:07:20,579 --> 00:07:25,579
+I teraz możesz powiedzieć, no nie, no mogę zostawić wartość pustą.
+
+105
+00:07:26,579 --> 00:07:29,579
+Ale w przypadku baz danych wartość pusta to jest 0.
+
+106
+00:07:30,579 --> 00:07:34,579
+Czyli nawet jeżeli masz takiego studenta, który, załóżmy, nie ma jeszcze oceny żadnej, czy też nie ma jakiejś średniej, powiedzmy.
+
+107
+00:07:37,079 --> 00:07:38,079
+Bo ta średnia nie istnieje.
+
+108
+00:07:38,079 --> 00:07:39,579
+To on ją ma.
+
+109
+00:07:40,579 --> 00:07:41,579
+Tylko, że ona ma wartość 0, czyli jest po prostu pusta.
+
+110
+00:07:41,579 --> 00:07:45,079
+Ale jeżeli spróbowałbyś odwołać się do tego studenta i pobrać mu tą wartość,
+
+111
+00:07:45,579 --> 00:07:47,240
+ja bym narzek miał ale nie ngad проization.
+
+112
+00:07:47,579 --> 00:07:56,719
+to mówiąc o świecie Pythonowym nie dostaniesz takiego key error, czyli że klucza nie ma w słowniku, tylko po prostu dostaniesz informację o tym, że ta wartość jest pusta.
+
+113
+00:07:57,740 --> 00:08:05,979
+I to jest niezwykle ważne. Ta relacja to jest właśnie relacja pomiędzy w wierszu, że każdy wiersz zawsze będzie miał wszystkie kolumny.
+
+114
+00:08:05,980 --> 00:08:18,379
+Tylko tak Ci nadmienię, że są też bazy danych nierelacyjne, zwane też NoSQL, gdzie te bazy danych nierelacyjne oznaczają, że właśnie nie mamy tej konstrukcji,
+
+115
+00:08:18,819 --> 00:08:21,939
+czyli nie mamy pewności, że wszystkie nasze dane są podane.
+
+116
+00:08:22,300 --> 00:08:32,259
+Przykład, robiliśmy to moment temu, JSON. JSON jest przykładem do zupełnego braku relacji, czyli jeżeli miałbyś listę słowników,
+
+117
+00:08:32,259 --> 00:08:35,259
+to nie masz nigdy pewności, czy każdy z tych Twoich...
+
+118
+00:08:35,980 --> 00:08:41,980
+obiektów, w świecie nierelacyjnym nazywamy je dokumentami, będzie miał podane wszystkie kolumny.
+
+119
+00:08:42,500 --> 00:08:46,500
+Tak właśnie działa sprawa z bazami danych nierelacyjnymi.
+
+120
+00:08:46,860 --> 00:08:51,420
+Ale o tym porozmawiamy sobie innym razem, to zupełnie nas w tej chwili nie dotyczy.
+
+121
+00:08:51,860 --> 00:08:56,820
+Nas dotyczy SQLite. SQLite jako narzędzie, które pozwala na przechowywanie danych.
+
+122
+00:08:57,019 --> 00:08:59,940
+No i właśnie, gdzie te dane są przechowywane?
+
+123
+00:09:00,300 --> 00:09:05,460
+Bo w przypadku takiej bazy, jaką jest na przykład Postgres albo MySQL,
+
+124
+00:09:05,980 --> 00:09:08,420
+te dane przechowywane są, mówmy, gdzieś.
+
+125
+00:09:08,620 --> 00:09:14,139
+To znaczy, żeby mieć taką bazę, musimy zainstalować specjalny program na naszym komputerze,
+
+126
+00:09:14,340 --> 00:09:20,300
+czy też użyć jakiegoś programu, który jest na serwerze i podłączyć się do bazy danych.
+
+127
+00:09:20,500 --> 00:09:24,860
+I wtedy, kiedy zapisujemy sobie nasze dane, to one gdzieś tam w odmętach tego serwera,
+
+128
+00:09:25,060 --> 00:09:28,500
+w jakichś tam katalogach, var, lib, coś tam, gdzieś one tam siedzą.
+
+129
+00:09:28,700 --> 00:09:34,100
+My tam nigdy nie zaglądamy, bo mamy inne sposoby do tego, żeby połączyć się z tą bazą i te dane wyciągać.
+
+130
+00:09:34,300 --> 00:09:35,899
+Struktura plików nas zupełnie nie interesuje.
+
+131
+00:09:36,019 --> 00:09:41,699
+Natomiast w przypadku SQLite mamy tę przewagę, że jeżeli pracujemy z bazą danych,
+
+132
+00:09:41,899 --> 00:09:43,259
+to może być ona w dwóch miejscach.
+
+133
+00:09:43,459 --> 00:09:48,220
+Pierwsze miejsce to jest plik, czyli kiedy stworzymy sobie takie połączenie z bazą danych,
+
+134
+00:09:48,419 --> 00:09:52,459
+to zobaczysz, że od razu baza danych, nasza, pokaże nam się w pliku.
+
+135
+00:09:52,659 --> 00:09:55,419
+Będzie na przykład twójprojekt.db.
+
+136
+00:09:55,620 --> 00:09:59,340
+I to znaczy, że ty masz plik, który reprezentuje twoją bazę danych.
+
+137
+00:09:59,539 --> 00:10:02,740
+Dzięki temu ta baza jest bardzo łatwa w przenoszeniu, bo wystarczy ten plik sobie
+
+138
+00:10:02,939 --> 00:10:05,460
+gdzieś przenieść w inne miejsce i od razu można się do niego
+
+139
+00:10:05,899 --> 00:10:11,579
+dostać. Bardzo często w SQLite jest wykorzystywane właśnie do tworzenia
+
+140
+00:10:11,779 --> 00:10:14,419
+takich aplikacji, które mają działać np. u klienta.
+
+141
+00:10:14,620 --> 00:10:17,860
+Czyli przenosimy sobie bazę danych, chcemy, żeby wszystko było dostępne.
+
+142
+00:10:18,059 --> 00:10:21,459
+Niektóre aplikacje szyfrują też tą bazę danych.
+
+143
+00:10:21,539 --> 00:10:24,939
+My tego też nie będziemy tutaj poruszali, bo to jakby nie jest sednem naszego
+
+144
+00:10:25,139 --> 00:10:29,659
+projektu, ale chciałbym, żebyś to wiedział, że kiedy korzystamy z takiej bazy danych, to
+
+145
+00:10:29,860 --> 00:10:35,019
+można ją sobie zawsze zaszyfrować, dzięki czemu nie można będzie z niej wyciągnąć danych.
+
+146
+00:10:35,019 --> 00:10:37,299
+To jest dosyć przydatna sprawa.
+
+147
+00:10:37,500 --> 00:10:41,139
+Wyobraź sobie, że masz jakieś dane słownikowe, jakieś takie, no słownikowe mam
+
+148
+00:10:41,340 --> 00:10:46,379
+na myśli, chociażby przygotowałeś słownik polsko-hebrajski i potrzebujesz teraz
+
+149
+00:10:46,579 --> 00:10:50,659
+dać użytkownikowi możliwość wyświetlania tych poszczególnych słówek.
+
+150
+00:10:50,860 --> 00:10:53,860
+Taki słownik nie jest bardzo popularny, nie znajdziesz go wszędzie w sieci.
+
+151
+00:10:54,059 --> 00:10:57,899
+Nie można go tak sobie, tak mi się wydaje, nie można go tak sobie zbudować
+
+152
+00:10:58,100 --> 00:11:01,419
+skąd, tylko trzeba było spędzić dużo czasu, żeby przygotować wszystkie słówka
+
+153
+00:11:01,620 --> 00:11:04,500
+polskie, odpowiedniki tłumaczeniami
+
+154
+00:11:05,019 --> 00:11:07,699
+prywatnie i spędziłeś nad tym bardzo dużo czasu.
+
+155
+00:11:07,899 --> 00:11:10,059
+Ktoś, kto dostanie Twój program, mógłby
+
+156
+00:11:10,059 --> 00:11:13,539
+bardzo łatwo skopiować sobie Twoją bazę danych i gdzieś ją wykorzystać w swoich
+
+157
+00:11:13,740 --> 00:11:17,500
+zastosowaniach, więc żeby zabezpieczyć tę bazę, po prostu ją szyfrujesz.
+
+158
+00:11:17,699 --> 00:11:19,019
+Dlatego się szyfruje.
+
+159
+00:11:19,220 --> 00:11:22,220
+I to jest jedna opcja, że baza danych może być przechowywana w pliku.
+
+160
+00:11:22,419 --> 00:11:26,860
+Natomiast opcja numer dwa to jest przechowywanie bazy danych w pamięci.
+
+161
+00:11:27,059 --> 00:11:28,379
+Do czegoś to przydaje.
+
+162
+00:11:28,579 --> 00:11:32,899
+Czasem operujemy na dużych zbiorach danych, a interesuje nas tylko wynik.
+
+163
+00:11:33,100 --> 00:11:34,699
+Załóżmy.
+
+164
+00:11:35,019 --> 00:11:36,939
+Napiszesz, piszesz robota, który chodzi po
+
+165
+00:11:37,139 --> 00:11:41,059
+stronach internetowych i z tych stron internetowych pobiera produkty.
+
+166
+00:11:41,259 --> 00:11:45,539
+Finalnie chcesz wiedzieć, ile produktów jest w każdej kategorii.
+
+167
+00:11:45,740 --> 00:11:47,019
+Musisz mieć robota.
+
+168
+00:11:47,220 --> 00:11:50,620
+Załóżmy jeszcze o danym tytule czy jakieś różne statystyki chcesz zrobić.
+
+169
+00:11:50,819 --> 00:11:54,100
+Więc musisz mieć robota, który będzie chodził po tych stronach.
+
+170
+00:11:54,299 --> 00:11:56,699
+Ten robot gdzieś musi wpakować te dane.
+
+171
+00:11:56,899 --> 00:11:59,860
+Później z tego miejsca musisz te dane wyciągać.
+
+172
+00:12:00,059 --> 00:12:03,539
+Ale kiedy uruchomisz ten program po raz drugi, to tak naprawdę to poprzednie
+
+173
+00:12:03,539 --> 00:12:05,620
+wywołanie nie będzie do niczego potrzebne.
+
+174
+00:12:05,819 --> 00:12:09,699
+Natomiast będziesz chcieć mieć taką możliwość, żeby łatwo sobie wyciągać
+
+175
+00:12:09,899 --> 00:12:13,339
+poszczególne dane, sortować, filtrować i robić inne tego typu rzeczy.
+
+176
+00:12:13,539 --> 00:12:16,620
+Wtedy baza danych w pamięci bardzo ci się przyda.
+
+177
+00:12:16,819 --> 00:12:18,419
+Czyli przy każdym uruchomieniu programu on
+
+178
+00:12:18,620 --> 00:12:20,740
+będzie na nowo budował ją sobie gdzieś w pamięci.
+
+179
+00:12:20,939 --> 00:12:23,740
+Na nowo będzie uzupełniał ją danymi.
+
+180
+00:12:23,939 --> 00:12:27,899
+Później na bazie tego, co zgromadził, będzie robił różne swoje obliczenia i
+
+181
+00:12:28,099 --> 00:12:32,899
+dopiero wtedy będzie ci ją przedstawiał wyniki i za kolejnym razem już nie będziesz
+
+182
+00:12:33,539 --> 00:12:36,299
+w bazarze danych, wtedy możesz przechowywać dane w pamięci.
+
+183
+00:12:36,500 --> 00:12:37,699
+Co jeszcze?
+
+184
+00:12:37,899 --> 00:12:40,099
+Potrzebujemy mieć specjalny program, który
+
+185
+00:12:40,299 --> 00:12:44,299
+będzie pozwolił nam na dostanie się do tej bazy danych.
+
+186
+00:12:44,500 --> 00:12:48,579
+PyCharm ma taką funkcjonalność, ale z tego co pamiętam dopiero w wersji
+
+187
+00:12:48,779 --> 00:12:53,819
+Professional można kliknąć dwa razy lewym na bazę i ta baza nam się otwiera.
+
+188
+00:12:54,019 --> 00:12:58,299
+Visual Studio Code chyba też coś ma, ale pewnie jak w świecie Visual Studio Code
+
+189
+00:12:58,500 --> 00:13:01,899
+trzeba coś sobie zainstalować, żeby móc tę bazę otworzyć.
+
+190
+00:13:02,099 --> 00:13:02,899
+Dlatego też
+
+191
+00:13:03,539 --> 00:13:09,379
+mamy z czystym sercem, szczerze, taki program, który nazywa się DBeaver.
+
+192
+00:13:09,579 --> 00:13:12,980
+DBeaver to jest program, który instalujemy szybko, skutecznie.
+
+193
+00:13:13,179 --> 00:13:17,659
+Jak go zainstalujemy, to będziemy mieli możliwość połączenia się do dowolnej bazy
+
+194
+00:13:17,860 --> 00:13:20,539
+danych, bo ten program po prostu do tego służy.
+
+195
+00:13:20,740 --> 00:13:23,539
+To jest taki multi-client bazodanowy.
+
+196
+00:13:23,740 --> 00:13:27,179
+Do każdej bazy relacyjnej możesz się za
+
+197
+00:13:27,379 --> 00:13:30,939
+pomocą jego podłączyć i wyciągać sobie różne informacje z niej.
+
+198
+00:13:31,139 --> 00:13:33,500
+Ja też będę korzystał z DBeavera podczas naszych zajęć.
+
+199
+00:13:33,699 --> 00:13:38,659
+No właśnie, o tym, że do pobierania, zapisywania danych używamy języka zapytań,
+
+200
+00:13:38,860 --> 00:13:40,699
+jakim jest SQL, już sobie powiedzieliśmy.
+
+201
+00:13:40,899 --> 00:13:46,099
+No i ostatnia informacja bardzo przyjemna jest taka, że jeżeli chcesz podłączyć się
+
+202
+00:13:46,299 --> 00:13:49,419
+do innej bazy danych, najczęściej musisz sobie coś zainstalować.
+
+203
+00:13:49,620 --> 00:13:54,419
+Natomiast w przypadku SQLite nie tylko nie musisz wstawiać żadnej bazy danych jako
+
+204
+00:13:54,620 --> 00:13:59,939
+tego fizycznego programu, ale też obsługa tej bazy danych jest bezpośrednio zawarta
+
+205
+00:14:00,139 --> 00:14:03,139
+w Pythonie. Wystarczy, że wykonasz import SQLite,
+
+206
+00:14:03,539 --> 00:14:08,500
+w jakim pliku ta baza ma się znaleźć i voila, wszystko będzie dalej funkcjonowało.

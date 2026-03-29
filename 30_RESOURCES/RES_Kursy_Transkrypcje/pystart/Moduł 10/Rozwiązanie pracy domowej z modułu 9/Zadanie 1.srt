@@ -1,0 +1,1111 @@
+1
+00:00:00,000 --> 00:00:02,419
+Przystępujemy do rozwiązywania pracy domowej.
+
+2
+00:00:02,859 --> 00:00:05,540
+Na początek mamy stworzyć klasę BaseEmployee,
+
+3
+00:00:05,820 --> 00:00:09,419
+umożliwiającą przechowywanie imienia, nazwiska oraz daty zatrudnienia.
+
+4
+00:00:09,540 --> 00:00:12,939
+No to class BaseEmployee,
+
+5
+00:00:14,380 --> 00:00:18,320
+dwukropek, wiemy, że będziemy potrzebowali init'a,
+
+6
+00:00:18,940 --> 00:00:21,859
+no i tu ma być imię jako string,
+
+7
+00:00:22,240 --> 00:00:25,359
+nazwisko jako string
+
+8
+00:00:25,359 --> 00:00:27,219
+i data zatrudnienia, czyli employment,
+
+9
+00:00:27,219 --> 00:00:29,960
+date jako datetime.
+
+10
+00:00:30,000 --> 00:00:33,719
+DateTime oczywiście musimy sobie doimportować,
+
+11
+00:00:33,820 --> 00:00:36,219
+czyli from datetime import datetime,
+
+12
+00:00:37,359 --> 00:00:39,299
+czy też date może będzie lepiej tak,
+
+13
+00:00:40,380 --> 00:00:41,460
+no bo po co nam datetime.
+
+14
+00:00:42,280 --> 00:00:46,600
+Wiemy też o tym, że jeżeli użytkownik poda datę późniejszą niż data dzisiejsza
+
+15
+00:00:46,600 --> 00:00:49,460
+lub wskazującą na czas pracy dłuższy niż 50 lat,
+
+16
+00:00:49,939 --> 00:00:52,340
+to wyrzuć wyjątek invalid date of employment.
+
+17
+00:00:52,679 --> 00:00:55,219
+Czyli tak, wiemy, że potrzebujemy wyjątek,
+
+18
+00:00:55,219 --> 00:00:56,799
+od razu ja go sobie stworzę.
+
+19
+00:01:00,000 --> 00:01:06,000
+I ten wyjątek musicie dziczyć po exception.
+
+20
+00:01:07,680 --> 00:01:10,480
+A druga rzecz, to musimy sprawdzić,
+
+21
+00:01:10,480 --> 00:01:14,180
+czy data jest, ta data jest późniejsza niż data dzisiejsza
+
+22
+00:01:14,319 --> 00:01:17,140
+oraz czy pracuje więcej niż 50 lat.
+
+23
+00:01:17,140 --> 00:01:19,439
+Czyli tak, jeżeli chodzi o datę dzisiejszą,
+
+24
+00:01:19,439 --> 00:01:22,379
+no to będziemy potrzebowali jednak też tego datetime.
+
+25
+00:01:22,379 --> 00:01:26,180
+No i na datetime mamy today.
+
+26
+00:01:28,120 --> 00:01:29,859
+Możemy sobie stworzyć osobną zmienną.
+
+27
+00:01:29,859 --> 00:01:36,000
+I teraz, jeżeli employment date jest większy niż data dzisiejsza,
+
+28
+00:01:36,000 --> 00:01:37,539
+to jest jedna rzecz,
+
+29
+00:01:37,539 --> 00:01:43,439
+or, bo w obu tych przypadkach będziemy chcieli mu zwrócić wyjątek,
+
+30
+00:01:43,439 --> 00:01:45,039
+employment time
+
+31
+00:01:48,319 --> 00:01:53,340
+jest większy niż 50, było powiedziane tam, tak?
+
+32
+00:01:53,340 --> 00:01:53,840
+OK.
+
+33
+00:01:53,840 --> 00:01:59,539
+I teraz będziemy potrzebowali znać różnicę w latach pomiędzy tą datą,
+
+34
+00:01:59,540 --> 00:02:01,540
+a tą datą.
+
+35
+00:02:01,540 --> 00:02:03,540
+I ten nasz employment time,
+
+36
+00:02:03,540 --> 00:02:07,540
+to będzie różnica pomiędzy tymi dwiema datami, jeżeli chodzi o lata.
+
+37
+00:02:07,540 --> 00:02:12,540
+Czyli today.year minus employment date.year.
+
+38
+00:02:12,540 --> 00:02:15,540
+I jeżeli nastąpi taka sytuacja jak ta,
+
+39
+00:02:15,540 --> 00:02:19,540
+no to chcielibyśmy podnieść wyjątek,
+
+40
+00:02:19,540 --> 00:02:22,540
+invalid date of employment.
+
+41
+00:02:22,540 --> 00:02:25,540
+I tutaj w obu tych przypadkach ja po prostu napiszę komunikat,
+
+42
+00:02:25,540 --> 00:02:27,540
+data zatrudnienia
+
+43
+00:02:27,540 --> 00:02:29,540
+jest niewyjątkowa.
+
+44
+00:02:29,539 --> 00:02:31,539
+Nieprawidłowa.
+
+45
+00:02:31,539 --> 00:02:34,539
+Możemy to sobie oczywiście sprawdzić.
+
+46
+00:02:34,539 --> 00:02:38,539
+Możemy sobie utworzyć kogoś, kto będzie pracował od,
+
+47
+00:02:38,539 --> 00:02:40,539
+za rok czy za dwa lata.
+
+48
+00:02:40,539 --> 00:02:42,539
+Czyli employee
+
+49
+00:02:42,539 --> 00:02:45,539
+równa się base employee,
+
+50
+00:02:45,539 --> 00:02:48,539
+first name a, b
+
+51
+00:02:48,539 --> 00:02:51,539
+i tutaj będzie date.
+
+52
+00:02:51,539 --> 00:02:57,539
+Rok, miesiąc, dzień, czyli 2025, załóżmy, 11, 12.
+
+53
+00:02:57,539 --> 00:02:59,539
+To powinno nam zwrócić wyjątek.
+
+54
+00:02:59,539 --> 00:03:02,539
+Który nie jest przechwycony teraz w żaden sposób.
+
+55
+00:03:02,539 --> 00:03:05,539
+Jeszcze mamy date time and date date date.
+
+56
+00:03:05,539 --> 00:03:07,539
+Tutaj porównujemy sobie.
+
+57
+00:03:07,539 --> 00:03:09,539
+My sobie porównujemy to tutaj.
+
+58
+00:03:09,539 --> 00:03:14,539
+Więc tak naprawdę moglibyśmy w tym miejscu zamienić to jeszcze na datę.
+
+59
+00:03:14,539 --> 00:03:21,539
+O i zobaczcie, wtedy dostajemy data zatrudnienia jest nieprawidłowa.
+
+60
+00:03:21,539 --> 00:03:24,539
+Dokładnie ten komunikat, który miał się pokazać się pokazał.
+
+61
+00:03:24,539 --> 00:03:27,539
+Jeżeli natomiast przesuniemy go trochę w czasie.
+
+62
+00:03:27,539 --> 00:03:28,539
+I tutaj.
+
+63
+00:03:28,539 --> 00:03:30,539
+To błędu nie ma.
+
+64
+00:03:30,539 --> 00:03:32,539
+A jak przesuniemy go zza nad to.
+
+65
+00:03:32,539 --> 00:03:35,539
+Bo na przykład zatrudnimy go w 1990.
+
+66
+00:03:35,539 --> 00:03:37,539
+Dobra to jeszcze by się udało.
+
+67
+00:03:37,539 --> 00:03:38,539
+W 1920.
+
+68
+00:03:38,539 --> 00:03:43,539
+O to też dostaniemy informację, że data zatrudnienia jest nieprawidłowa.
+
+69
+00:03:43,539 --> 00:03:46,539
+Czyli tę część mamy po prostu zrobioną.
+
+70
+00:03:46,539 --> 00:03:47,539
+Co tam jest dalej?
+
+71
+00:03:47,539 --> 00:03:52,539
+Dodaj metody specjalne umożliwiające sortowanie względem długości zatrudnienia.
+
+72
+00:03:52,539 --> 00:03:57,539
+Żeby zrobić sortowanie względem długości zatrudnienia będziemy potrzebowali mieć takich pracowników dwóch.
+
+73
+00:03:58,539 --> 00:04:00,539
+Weźmy ich wszystkich.
+
+74
+00:04:00,539 --> 00:04:05,539
+Zatrudnimy w 2000 roku.
+
+75
+00:04:05,539 --> 00:04:07,539
+Niech będzie 13.
+
+76
+00:04:07,539 --> 00:04:09,539
+Tu będzie AA.
+
+77
+00:04:09,539 --> 00:04:11,539
+Tu będzie BB.
+
+78
+00:04:11,539 --> 00:04:14,539
+I tu go zrobimy CC.
+
+79
+00:04:14,539 --> 00:04:19,539
+Możemy ich zatrudniać miesiąc po miesiącu.
+
+80
+00:04:19,539 --> 00:04:24,539
+Przez to będziemy z góry widzieli kto kiedy był zatrudniony.
+
+81
+00:04:24,539 --> 00:04:26,539
+Potrzebujemy mieć MPL1, MPL2 i MPL3.
+
+82
+00:04:26,540 --> 00:04:31,540
+No i oczywiście przydałaby nam się jakaś lista employees.
+
+83
+00:04:31,540 --> 00:04:41,540
+Żeby nie został posądzony to jakiś Schachermacher.
+
+84
+00:04:41,540 --> 00:04:45,540
+Zrobimy sobie listę taką o taką.
+
+85
+00:04:45,540 --> 00:04:50,540
+I teraz żeby tę listę posortować powinniśmy wykonać employees.sort.
+
+86
+00:04:50,540 --> 00:04:54,540
+Jeżeli ja sobie to wypiszę.
+
+87
+00:04:54,540 --> 00:04:55,540
+No to oczywiście.
+
+88
+00:04:55,540 --> 00:04:58,540
+On mi wtedy pokaże błąd.
+
+89
+00:04:58,540 --> 00:04:59,540
+Mówiący o tym.
+
+90
+00:04:59,540 --> 00:05:01,540
+Ach tu jeszcze jest no tak.
+
+91
+00:05:01,540 --> 00:05:04,540
+Dobra brawo Kacper.
+
+92
+00:05:04,540 --> 00:05:07,540
+To może miesiąc po miesiącu weźmy od dziesiątki.
+
+93
+00:05:07,540 --> 00:05:13,540
+Nie ma 13 miesiąca z tego wynikał błąd.
+
+94
+00:05:13,540 --> 00:05:15,540
+Jeżeli ktoś nie zauważył to z tego wynika błąd.
+
+95
+00:05:15,540 --> 00:05:17,540
+No właśnie zobaczcie type error.
+
+96
+00:05:17,540 --> 00:05:21,540
+Ten znaczek nie jest supported between te instancje.
+
+97
+00:05:21,540 --> 00:05:23,540
+Więc wykonamy sobie def.
+
+98
+00:05:23,540 --> 00:05:25,540
+I zrobimy l.
+
+99
+00:05:25,540 --> 00:05:27,540
+Czyli less than.
+
+100
+00:05:27,540 --> 00:05:30,540
+I tak naprawdę jeżeli porównujemy.
+
+101
+00:05:30,540 --> 00:05:34,540
+Wykonujemy less than to porównujemy tak naprawdę.
+
+102
+00:05:34,540 --> 00:05:36,540
+Daty zatrudnienia ze sobą.
+
+103
+00:05:36,540 --> 00:05:39,540
+Czyli self employment date.
+
+104
+00:05:39,540 --> 00:05:45,540
+Nie przypisałem ich do właściwości.
+
+105
+00:05:45,540 --> 00:05:47,540
+Więc zdecydowanie warto byłoby to zrobić.
+
+106
+00:05:47,540 --> 00:05:49,540
+Zdecydowanie warto byłoby to zrobić.
+
+107
+00:05:49,540 --> 00:05:51,540
+Zdecydowanie warto byłoby to zrobić.
+
+108
+00:05:51,540 --> 00:05:53,540
+Zdecydowanie warto byłoby to zrobić.
+
+109
+00:05:53,540 --> 00:05:55,540
+Zdecydowanie warto byłoby to zrobić.
+
+110
+00:05:55,540 --> 00:05:57,540
+Zdecydowanie warto byłoby to zrobić.
+
+111
+00:05:57,540 --> 00:05:59,540
+Ok.
+
+112
+00:05:59,540 --> 00:06:01,540
+I teraz mogę sobie to porównać.
+
+113
+00:06:01,540 --> 00:06:04,540
+Czy self employment date jest mniejsze niż.
+
+114
+00:06:04,540 --> 00:06:06,540
+Bo to jest less than.
+
+115
+00:06:06,540 --> 00:06:08,540
+Other employment date.
+
+116
+00:06:08,540 --> 00:06:11,540
+Oczywiście jakbym sobie to zatypował.
+
+117
+00:06:11,540 --> 00:06:14,540
+Ok to on tutaj nie chce żebym to zatypował.
+
+118
+00:06:14,540 --> 00:06:16,540
+Ale nie ważne.
+
+119
+00:06:16,540 --> 00:06:18,540
+Ale w tym momencie.
+
+120
+00:06:18,540 --> 00:06:20,540
+Strzała do góry enter.
+
+121
+00:06:20,540 --> 00:06:21,540
+I to jest ok.
+
+122
+00:06:21,540 --> 00:06:24,240
+strzała do góry enter i już to się tutaj
+
+123
+00:06:24,240 --> 00:06:26,280
+pokazało, co prawda ja nie wiem w jakiej kolejności
+
+124
+00:06:26,280 --> 00:06:28,020
+się pokazało, ale przecież
+
+125
+00:06:28,020 --> 00:06:29,900
+z tym też sobie potrafimy poradzić
+
+126
+00:06:29,900 --> 00:06:32,060
+repr, no bo str
+
+127
+00:06:32,060 --> 00:06:33,720
+w tym przypadku nie ma zastosowania
+
+128
+00:06:33,720 --> 00:06:36,500
+no i zwracamy sobie first name
+
+129
+00:06:36,500 --> 00:06:38,280
+połączony
+
+130
+00:06:38,280 --> 00:06:39,120
+na przykład z last name
+
+131
+00:06:48,360 --> 00:06:49,500
+o tak
+
+132
+00:06:49,500 --> 00:06:52,100
+i w tym momencie strzała do góry enter
+
+133
+00:06:52,100 --> 00:06:53,920
+coś jeszcze zrobiłem nie tak
+
+134
+00:06:53,920 --> 00:06:55,759
+zapomniałem o zamknięciu apostrofu
+
+135
+00:06:55,759 --> 00:06:58,279
+i w tym momencie robimy strzały do góry enter
+
+136
+00:06:58,279 --> 00:07:00,519
+i zobaczcie mamy aabbcc
+
+137
+00:07:00,519 --> 00:07:02,360
+jeżeli sobie będziemy chcieli
+
+138
+00:07:02,360 --> 00:07:04,199
+odwrócić to wtedy, czyli w sort
+
+139
+00:07:04,199 --> 00:07:06,680
+zrobimy reverse true
+
+140
+00:07:06,680 --> 00:07:08,500
+to wszystko powinno być ok
+
+141
+00:07:08,500 --> 00:07:10,660
+no bo po prostu on odwraca to sortowanie
+
+142
+00:07:10,660 --> 00:07:12,680
+wystarczy zaimplementować tylko i wyłącznie
+
+143
+00:07:12,680 --> 00:07:15,079
+jeden operator, żeby to zadziałało
+
+144
+00:07:15,079 --> 00:07:16,259
+i tym sposobem
+
+145
+00:07:16,259 --> 00:07:18,480
+tę część mamy wykonaną
+
+146
+00:07:18,480 --> 00:07:20,240
+następnie chcemy utworzyć w klasie
+
+147
+00:07:20,240 --> 00:07:21,060
+base employee
+
+148
+00:07:21,060 --> 00:07:24,500
+metodę get employment time
+
+149
+00:07:24,500 --> 00:07:26,759
+metoda powinna każdorazowo zwrócić
+
+150
+00:07:26,759 --> 00:07:28,560
+ile dni pracuje dany pracownik
+
+151
+00:07:28,560 --> 00:07:30,780
+od początku, no to w base employee
+
+152
+00:07:30,780 --> 00:07:31,960
+dorzucamy sobie też
+
+153
+00:07:31,960 --> 00:07:36,759
+w sumie lepiej, żeby metody specjalne były wyżej
+
+154
+00:07:36,759 --> 00:07:39,960
+get employment
+
+155
+00:07:39,960 --> 00:07:43,000
+time
+
+156
+00:07:43,000 --> 00:07:44,900
+i my będziemy chcieli
+
+157
+00:07:44,900 --> 00:07:46,700
+te różnice podać w datach
+
+158
+00:07:46,700 --> 00:07:48,460
+w dniach, czyli
+
+159
+00:07:48,459 --> 00:07:50,459
+możemy sobie zrobić difference najpierw
+
+160
+00:07:50,459 --> 00:07:52,459
+równa się
+
+161
+00:07:52,459 --> 00:07:54,459
+i tutaj będę chciał odjąć
+
+162
+00:07:54,459 --> 00:07:56,459
+datę dzisiejszą
+
+163
+00:07:56,459 --> 00:07:58,459
+od tej daty
+
+164
+00:07:58,459 --> 00:08:00,459
+tak naprawdę to mogę wykorzystać to
+
+165
+00:08:00,459 --> 00:08:02,459
+i zrobić return
+
+166
+00:08:02,459 --> 00:08:04,459
+to będzie self.employmentDate
+
+167
+00:08:04,459 --> 00:08:06,459
+year
+
+168
+00:08:06,459 --> 00:08:08,459
+return employmentTime.day
+
+169
+00:08:08,459 --> 00:08:10,459
+return employmentTime.day
+
+170
+00:08:10,459 --> 00:08:12,459
+return employmentTime.day
+
+171
+00:08:12,459 --> 00:08:14,459
+return employmentTime.day
+
+172
+00:08:14,459 --> 00:08:16,459
+coś mu z tym days się nie podoba
+
+173
+00:08:16,459 --> 00:08:18,459
+coś mu z tym days się nie podoba
+
+174
+00:08:18,459 --> 00:08:20,459
+to powinno być przecież ok
+
+175
+00:08:20,459 --> 00:08:22,459
+skoro odejmujemy
+
+176
+00:08:22,459 --> 00:08:24,459
+ach bo tutaj lata od siebie odejmuje
+
+177
+00:08:24,459 --> 00:08:26,459
+czyli nie lata tylko today
+
+178
+00:08:26,459 --> 00:08:28,459
+today-employmentDate
+
+179
+00:08:28,459 --> 00:08:30,459
+i teraz today zwraca mi
+
+180
+00:08:30,459 --> 00:08:32,460
+datetime a mnie interesuje tylko data
+
+181
+00:08:32,460 --> 00:08:34,460
+więc muszę zrobić tak
+
+182
+00:08:34,460 --> 00:08:36,460
+i wtedy .days
+
+183
+00:08:36,460 --> 00:08:38,460
+today date już było wyżej
+
+184
+00:08:38,460 --> 00:08:40,460
+today date już było wyżej
+
+185
+00:08:40,460 --> 00:08:42,460
+budzimy się budzimy
+
+186
+00:08:42,460 --> 00:08:44,460
+ok
+
+187
+00:08:44,460 --> 00:08:46,460
+i tu już powinniśmy mieć to zrobione
+
+188
+00:08:46,460 --> 00:08:48,460
+możemy to zweryfikować
+
+189
+00:08:48,460 --> 00:08:50,460
+i widzimy się za chwilę
+
+190
+00:08:50,460 --> 00:08:52,460
+ok i mnie to jak najbardziej już teraz zadziałało
+
+191
+00:08:52,460 --> 00:08:54,460
+z tą różnicą że to oczywiście date już był wyżej
+
+192
+00:08:54,460 --> 00:08:56,460
+dlatego też no jak się kopiuje i wkleja takie są błędy
+
+193
+00:08:56,460 --> 00:08:58,460
+dlatego nie zachęcam do kopiowania i wklejania
+
+194
+00:08:58,460 --> 00:09:00,460
+lepiej jest pisać od nowa
+
+195
+00:09:00,460 --> 00:09:02,460
+i zostanie nam wtedy jeszcze
+
+196
+00:09:02,460 --> 00:09:04,460
+i zostanie nam wtedy jeszcze
+
+197
+00:09:04,460 --> 00:09:06,460
+podpunkt trzeci
+
+198
+00:09:06,460 --> 00:09:08,460
+utwórz klasę employee która będzie dziedziczyła
+
+199
+00:09:08,460 --> 00:09:10,460
+po klasie base employee
+
+200
+00:09:10,460 --> 00:09:12,460
+klasa ta powinna posiadać stawkę godzinową
+
+201
+00:09:12,460 --> 00:09:14,460
+oraz wymiar etatu
+
+202
+00:09:14,460 --> 00:09:16,460
+czyli ilość godzin w której będzie się dziedziczyła po klasie base employee
+
+203
+00:09:16,460 --> 00:09:18,460
+i wartość premii
+
+204
+00:09:18,460 --> 00:09:20,460
+ok
+
+205
+00:09:20,460 --> 00:09:22,460
+czyli możemy sobie na początek stworzyć taki init
+
+206
+00:09:22,460 --> 00:09:24,460
+czyli class
+
+207
+00:09:26,460 --> 00:09:28,460
+employee
+
+208
+00:09:28,460 --> 00:09:30,460
+nasza klasa employee musi oczywiście też dziedziczyć tutaj po base employee
+
+209
+00:09:30,460 --> 00:09:32,460
+jeżeli wtedy robimy metodę init
+
+210
+00:09:32,460 --> 00:09:34,460
+to w initie i tak musimy zapytać
+
+211
+00:09:34,460 --> 00:09:36,460
+o first name last name
+
+212
+00:09:36,460 --> 00:09:38,460
+i o datę zatrudnienia
+
+213
+00:09:38,460 --> 00:09:40,460
+to nie jest tak że coś się tutaj zmienia
+
+214
+00:09:40,460 --> 00:09:42,460
+nie czuję jak rymuje
+
+215
+00:09:42,460 --> 00:09:44,460
+a do tego musimy też
+
+216
+00:09:44,460 --> 00:09:46,460
+dołożyć jeszcze te pozostałe wartości
+
+217
+00:09:46,460 --> 00:09:48,460
+a tymi wartościami będą
+
+218
+00:09:48,460 --> 00:09:50,460
+stawka godzinowa
+
+219
+00:09:50,460 --> 00:09:52,460
+czyli jakiś tam z hourly rate
+
+220
+00:09:52,460 --> 00:09:54,460
+jako float
+
+221
+00:09:54,460 --> 00:09:56,460
+po drugie będzie wymiar etatu
+
+222
+00:09:56,460 --> 00:09:58,460
+czyli number of hours
+
+223
+00:09:58,460 --> 00:10:00,460
+jako integer
+
+224
+00:10:00,460 --> 00:10:02,460
+i ostatnia rzecz
+
+225
+00:10:02,460 --> 00:10:04,460
+wymiar etatu
+
+226
+00:10:04,460 --> 00:10:06,460
+wartość premii
+
+227
+00:10:06,460 --> 00:10:08,460
+czyli jakiś bonus
+
+228
+00:10:08,460 --> 00:10:10,460
+i ostatnia rzecz
+
+229
+00:10:10,460 --> 00:10:12,460
+wymiar etatu
+
+230
+00:10:12,460 --> 00:10:14,460
+wartość premii
+
+231
+00:10:14,460 --> 00:10:16,460
+ten bonus też będzie raczej integerem
+
+232
+00:10:16,460 --> 00:10:18,460
+i przypisze mu od razu wartość 0
+
+233
+00:10:18,460 --> 00:10:20,460
+żeby to było jasne
+
+234
+00:10:20,460 --> 00:10:22,460
+że on taką ma wartość
+
+235
+00:10:22,460 --> 00:10:24,460
+i teraz jeżeli chodzi o first name last name i employment
+
+236
+00:10:24,460 --> 00:10:26,460
+no to tak naprawdę wystarczy
+
+237
+00:10:26,460 --> 00:10:28,460
+że wywołamy sobie super
+
+238
+00:10:28,460 --> 00:10:30,460
+i my mu tutaj przekażemy
+
+239
+00:10:30,460 --> 00:10:32,460
+first name last name
+
+240
+00:10:32,460 --> 00:10:34,460
+i employment date
+
+241
+00:10:34,460 --> 00:10:36,460
+a to co poniżej to musimy
+
+242
+00:10:36,460 --> 00:10:38,460
+przypisać hourly rate
+
+243
+00:10:42,460 --> 00:10:44,460
+number of hours
+
+244
+00:10:44,460 --> 00:10:46,460
+i bonus
+
+245
+00:10:50,460 --> 00:10:52,460
+tutaj mógłbym zrobić
+
+246
+00:10:52,460 --> 00:10:54,460
+trochę małą zmianę żeby nie było problemu
+
+247
+00:10:54,460 --> 00:10:56,460
+że się nam te nie mieści nam się linia
+
+248
+00:10:56,460 --> 00:10:58,460
+to można byłoby to zrobić
+
+249
+00:10:58,460 --> 00:11:00,460
+o w ten sposób
+
+250
+00:11:00,460 --> 00:11:02,460
+i też będzie ok
+
+251
+00:11:02,460 --> 00:11:04,460
+może mniej czytelnie
+
+252
+00:11:04,460 --> 00:11:06,460
+ale jak najbardziej można też
+
+253
+00:11:06,460 --> 00:11:08,460
+taki zapis zastosować
+
+254
+00:11:08,460 --> 00:11:10,460
+i co nam zostanie
+
+255
+00:11:10,460 --> 00:11:12,460
+oraz wartość premii
+
+256
+00:11:12,460 --> 00:11:14,460
+przygotuj metodę wyliczającą wartość jego wynagrodzenia
+
+257
+00:11:14,460 --> 00:11:16,460
+czyli self get salary
+
+258
+00:11:16,460 --> 00:11:18,460
+return
+
+259
+00:11:18,460 --> 00:11:20,460
+hourly self.hourly rate
+
+260
+00:11:20,460 --> 00:11:22,460
+razy self.number of hours
+
+261
+00:11:22,460 --> 00:11:24,460
+plus self.bonus
+
+262
+00:11:24,460 --> 00:11:26,460
+plus self.bonus
+
+263
+00:11:26,460 --> 00:11:28,460
+plus self.bonus
+
+264
+00:11:28,460 --> 00:11:30,460
+plus self.bonus
+
+265
+00:11:30,460 --> 00:11:32,460
+plus self.bonus
+
+266
+00:11:32,460 --> 00:11:34,460
+plus self.bonus
+
+267
+00:11:34,460 --> 00:11:36,460
+i tak naprawdę jeżeli chodzi o pracę domową
+
+268
+00:11:36,460 --> 00:11:38,460
+o tę część pracy domowej
+
+269
+00:11:38,460 --> 00:11:40,460
+to byłoby to na tyle
+
+270
+00:11:40,460 --> 00:11:42,460
+stworzyliśmy sobie odpowiednie obiekty
+
+271
+00:11:42,460 --> 00:11:44,460
+zrobiliśmy sobie jedno takie zbiórki
+
+272
+00:11:44,460 --> 00:11:46,460
+zbiórcze zadanie w którym sprawdzamy
+
+273
+00:11:46,460 --> 00:11:48,460
+absolutnie całą wiedzę dotyczącą
+
+274
+00:11:48,460 --> 00:11:50,460
+tej części obiektowej
+
+275
+00:11:50,460 --> 00:11:52,460
+ale myślę że takie no
+
+276
+00:11:52,460 --> 00:11:54,460
+dosyć obfite
+
+277
+00:11:54,460 --> 00:11:56,460
+i chyba ciekawe
+
+278
+00:11:56,460 --> 00:11:58,460
+to co zapraszam do zadania drugiego

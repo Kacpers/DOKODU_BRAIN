@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:02,500
+No i nie pozostaje mi nic innego, jak tylko zachęcić Cię do tego,
+
+2
+00:00:02,600 --> 00:00:06,540
+żebyś wykonał przedstawione polecenia, a następnie w pliku main.py,
+
+3
+00:00:06,900 --> 00:00:10,179
+żeby napisać kod, który odbierze od użytkownika dwa stringi
+
+4
+00:00:10,179 --> 00:00:15,019
+w postaci cyfr rozdzielonych przecinkami i zwróci nową listę zawierającą sumy.
+
+5
+00:00:15,519 --> 00:00:20,519
+No i robiliśmy to już wiele razy, ale tym razem mamy gotową bibliotekę PyStart,
+
+6
+00:00:20,519 --> 00:00:24,440
+w której mamy funkcję do tego, więc można byłoby tę funkcję wykorzystać.
+
+7
+00:00:24,519 --> 00:00:27,839
+A jeżeli jakiejś innej funkcji by Ci brakowało, to możesz zawsze,
+
+8
+00:00:27,839 --> 00:00:31,320
+że albo przenieś ją sobie do osobnej biblioteki i sobie ją doinstalować,
+
+9
+00:00:31,600 --> 00:00:34,240
+albo możesz wzbogacić bibliotekę PyStart o tę funkcję,
+
+10
+00:00:34,679 --> 00:00:38,439
+jeżeli to jest taki Twój przybornik, Twoja skrzynka z narzędziami,
+
+11
+00:00:38,939 --> 00:00:43,100
+albo możesz zrobić trzecią rzecz i po prostu napisać tę funkcję w Twoim projekcie.
+
+12
+00:00:43,620 --> 00:00:46,100
+Chwila dla każdego, widzimy się już za moment w rozwiązaniu.
+
+13
+00:00:46,379 --> 00:00:46,820
+Do zobaczenia!

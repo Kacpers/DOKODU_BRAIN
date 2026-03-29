@@ -1,0 +1,607 @@
+1
+00:00:00,300 --> 00:00:02,760
+Kolejne zadanie nazwałem Word Jumble.
+
+2
+00:00:03,000 --> 00:00:07,799
+I chodzi tutaj o to, że mamy napisać program, który losuje słowo z listy i miesza jego literki.
+
+3
+00:00:08,419 --> 00:00:10,400
+Użytkownik ma odgadnąć, jakie to słowo.
+
+4
+00:00:10,720 --> 00:00:16,219
+Program powinien sprawdzić, czy użytkownik odpowiedział prawidłowo
+
+5
+00:00:16,219 --> 00:00:18,460
+i powinien wyświetlić odpowiedni komunikat.
+
+6
+00:00:18,960 --> 00:00:23,300
+Chcemy pozwolić też użytkownikowi, żeby mógł zgadnąć trzy razy.
+
+7
+00:00:23,660 --> 00:00:25,240
+W myśl zasady do trzech razy sztuka.
+
+8
+00:00:25,480 --> 00:00:27,140
+Podpowiedź, no i to są podpowiedzi.
+
+9
+00:00:27,140 --> 00:00:28,699
+No porazimy sobie bez nich już.
+
+10
+00:00:28,699 --> 00:00:30,699
+Ja mam takie wrażenie.
+
+11
+00:00:31,179 --> 00:00:33,240
+Tak naprawdę przeczytałem je chwilę przed rozwiązaniem.
+
+12
+00:00:33,799 --> 00:00:36,340
+No i po drugie przykład, jak to ma wyglądać.
+
+13
+00:00:36,420 --> 00:00:37,780
+Czyli słowo do odgadnięcia.
+
+14
+00:00:37,979 --> 00:00:38,939
+T, no, ch, py.
+
+15
+00:00:39,399 --> 00:00:40,399
+Czy wiesz, jakie to słowo?
+
+16
+00:00:40,740 --> 00:00:41,140
+Python.
+
+17
+00:00:41,600 --> 00:00:42,519
+Tak, o to chodziło.
+
+18
+00:00:42,600 --> 00:00:43,700
+Zgadłeś za pierwszym razem.
+
+19
+00:00:44,079 --> 00:00:44,359
+To co?
+
+20
+00:00:44,480 --> 00:00:47,460
+Przydałaby nam się jakaś lista do tego, żeby móc pracować z tymi słowami.
+
+21
+00:00:47,539 --> 00:00:48,620
+No to znowu chwila magii.
+
+22
+00:00:49,560 --> 00:00:52,560
+No dobra, czyli mamy trzy przykładowe,
+
+23
+00:00:52,560 --> 00:00:57,280
+znaczy jedną listę zawierającą tam sześć czy siedem przykładowych słów.
+
+24
+00:00:57,539 --> 00:00:58,579
+I teraz będziemy chcieli,
+
+25
+00:00:58,700 --> 00:01:01,500
+wylosować z listy jedno słowo.
+
+26
+00:01:01,900 --> 00:01:04,200
+Czyli from random import choice.
+
+27
+00:01:08,100 --> 00:01:15,599
+Następnie możemy sobie zrobić zmienną word równa się choice words.
+
+28
+00:01:17,600 --> 00:01:18,600
+Print word.
+
+29
+00:01:19,400 --> 00:01:21,200
+Na razie sobie to tylko wyprintujemy.
+
+30
+00:01:22,400 --> 00:01:25,100
+Co by się upewnić, że dobrze nam pobrał te słowo.
+
+31
+00:01:25,300 --> 00:01:26,400
+No i mamy wulkan.
+
+32
+00:01:26,500 --> 00:01:28,200
+Za każdym razem będzie inne.
+
+33
+00:01:28,219 --> 00:01:28,700
+No i.
+
+34
+00:01:28,799 --> 00:01:33,799
+No może mogłoby się powtórzyć, ale to wynika z tego, że dwa razy wylosowanym słowem byłoby to konkretne.
+
+35
+00:01:34,400 --> 00:01:34,799
+Ok.
+
+36
+00:01:35,299 --> 00:01:41,700
+Dalej będziemy potrzebowali pomieszać nasze litery, żeby pomieszać nasze litery.
+
+37
+00:01:41,799 --> 00:01:51,700
+From random potrzebujemy zaimportować sobie jeszcze shuffle i wtedy, żeby te litery nasze po pomieszać, będziemy musieli mieszać listę.
+
+38
+00:01:52,200 --> 00:01:54,600
+Czyli zamieniam sobie moje słowo na listę.
+
+39
+00:01:54,700 --> 00:01:58,300
+Zobacz w tym momencie, jak to wezmę strzałkę do góry enter to mam.
+
+40
+00:01:58,700 --> 00:02:03,000
+Teraz wykonam shuffle i wtedy nie dostajemy nic.
+
+41
+00:02:03,100 --> 00:02:04,299
+Dlaczego nie dostaliśmy nic?
+
+42
+00:02:04,299 --> 00:02:09,099
+Z tego względu, że shuffle on nam zmienia tę oryginalną listę.
+
+43
+00:02:09,500 --> 00:02:12,000
+Czyli tak naprawdę powinniśmy sobie zrobić zmienną.
+
+44
+00:02:12,000 --> 00:02:15,199
+Możemy zamiast let word nazwać to letters.
+
+45
+00:02:15,699 --> 00:02:25,199
+No i powiedzieć słuchaj, ja chcę mieć listę litery z naszego słowa listę liter naszego słowa.
+
+46
+00:02:25,599 --> 00:02:27,099
+Jak sobie to wtedy wyprintuje.
+
+47
+00:02:28,699 --> 00:02:32,199
+No to okaże się, że te litery mi się tutaj pokażą.
+
+48
+00:02:32,500 --> 00:02:33,099
+Hmm.
+
+49
+00:02:33,099 --> 00:02:33,500
+Ok.
+
+50
+00:02:33,599 --> 00:02:34,199
+Tu jest.
+
+51
+00:02:34,699 --> 00:02:37,599
+Nie mam tej tej zmiennej i jest ok.
+
+52
+00:02:37,699 --> 00:02:49,199
+Mam litery szpital widzisz i teraz, żeby polon pomieszać sobie te litery wykonuję właśnie shuffle na letters i w tym momencie moje litery będą pomieszane.
+
+53
+00:02:49,299 --> 00:02:50,500
+Jest tu orzeł.
+
+54
+00:02:51,099 --> 00:02:55,000
+Tylko, że ten orzeł jak widać jest pomieszany, więc ale działa nie ok.
+
+55
+00:02:55,399 --> 00:02:58,500
+I teraz będziemy chcieli zapytać słowo do odgadnięcia.
+
+56
+00:02:58,500 --> 00:03:00,199
+To dwukropek.
+
+57
+00:03:00,300 --> 00:03:01,800
+No i wyświetlić to słowo.
+
+58
+00:03:02,500 --> 00:03:07,800
+Żeby to słowo wyświetli, to musimy połączyć sobie te nasze litery, czyli będziemy potrzebowali.
+
+59
+00:03:08,599 --> 00:03:14,900
+W tym miejscu połączyć to sobie, a łączymy to za pomocą join na letters.
+
+60
+00:03:16,300 --> 00:03:19,000
+Nie tutaj, nie tutaj tutaj.
+
+61
+00:03:22,599 --> 00:03:25,099
+Bo tu nie mogę tego zrobić.
+
+62
+00:03:25,099 --> 00:03:27,900
+Muszę to zrobić dopiero w tym miejscu po.
+
+63
+00:03:27,900 --> 00:03:30,800
+Pomieszaniu tych liter i dostanę.
+
+64
+00:03:31,300 --> 00:03:32,500
+Si paddles.
+
+65
+00:03:32,900 --> 00:03:35,099
+Co to za słowo i to jest mi potrzebne.
+
+66
+00:03:35,099 --> 00:03:41,000
+Będzie mi potrzebne do tego, żeby właśnie wyświetlić użytkownikowi to pytanie słowo do odgadnięcia to więc mogę napisać.
+
+67
+00:03:41,700 --> 00:03:43,800
+Słowo do odgadnięcia.
+
+68
+00:03:45,700 --> 00:03:46,300
+To.
+
+69
+00:03:49,000 --> 00:03:57,200
+I tutaj napisać mu to słowo w ten sposób za każdym razem będzie się pojawiało słowo do odgadnięcia to no i coś takiego mi się pokazuje.
+
+70
+00:03:57,199 --> 00:04:01,500
+No i teraz musimy odgadnąć, więc potrzebujemy zapytać użytkownika.
+
+71
+00:04:01,500 --> 00:04:06,000
+Czy wiesz jakie to słowo no to możemy sobie napisać input czyli answer.
+
+72
+00:04:07,000 --> 00:04:11,500
+Równa się input czy wiesz jakie to słowo.
+
+73
+00:04:13,199 --> 00:04:26,500
+W tym momencie po wyświetleniu takiego zapytania użytkownik właśnie ma pytanie zobaczcie czy wiesz jakie to słowo super chcemy napisać sprawdzić czy wiemy jakie to słowo tylko że zabraliśmy sobie te możliwości.
+
+74
+00:04:26,500 --> 00:04:27,099
+Z tego.
+
+75
+00:04:27,100 --> 00:04:39,100
+Względu, że list choice na words spowodowało, że już nie mamy tego nie wiemy jakie słowo było wstępnie wybrane więc tutaj należałoby jednak zrobić taką zmienną jak selected word.
+
+76
+00:04:42,700 --> 00:04:55,700
+Użyć tej zmiennej i wtedy będziemy mogli sobie sprawdzić czy answer to jest to nasze wybrane słowo jeżeli tak to print brawo zgadłeś.
+
+77
+00:04:56,800 --> 00:04:56,900
+Natomiast.
+
+78
+00:04:57,100 --> 00:04:58,900
+W przeciwnym wypadku print.
+
+79
+00:05:00,100 --> 00:05:02,700
+Spróbuj jeszcze raz.
+
+80
+00:05:04,500 --> 00:05:09,400
+I teraz jeżeli ja sobie to zatrzymam kontrol c i wywołam raz jeszcze.
+
+81
+00:05:10,100 --> 00:05:14,900
+A pksom może chodziło o pasomk.
+
+82
+00:05:15,800 --> 00:05:19,300
+Spróbuj jeszcze raz nie wyświetliło się dobre słowo no nic.
+
+83
+00:05:20,000 --> 00:05:26,400
+Co to było a to był kompas okej no to raz jeszcze to samo ale mam szczęście kompas brawo.
+
+84
+00:05:26,400 --> 00:05:26,800
+Zgadłeś.
+
+85
+00:05:26,800 --> 00:05:31,300
+Natomiast my chcieliśmy zapytać użytkownika 3 razy o to słowo.
+
+86
+00:05:31,300 --> 00:05:36,800
+Czyli tak naprawdę to pytanie answer input musi pokazać się 3 razy.
+
+87
+00:05:36,800 --> 00:05:38,699
+Jeżeli 3 razy no to for.
+
+88
+00:05:38,699 --> 00:05:40,199
+For.
+
+89
+00:05:40,199 --> 00:05:44,900
+Możemy sobie zrobić n czy try.
+
+90
+00:05:44,900 --> 00:05:47,199
+Try jest słowem zarezerwowanym.
+
+91
+00:05:47,199 --> 00:05:49,100
+For number of tries.
+
+92
+00:05:49,100 --> 00:05:54,900
+In range.
+
+93
+00:05:54,900 --> 00:05:55,000
+Try.
+
+94
+00:05:55,000 --> 00:05:55,100
+Try.
+
+95
+00:05:55,100 --> 00:05:55,199
+Try.
+
+96
+00:05:55,199 --> 00:05:55,300
+Try.
+
+97
+00:05:55,300 --> 00:05:55,400
+Try.
+
+98
+00:05:55,400 --> 00:05:55,500
+Try.
+
+99
+00:05:55,500 --> 00:05:55,600
+Try.
+
+100
+00:05:55,600 --> 00:05:55,699
+Try.
+
+101
+00:05:55,699 --> 00:05:55,800
+Try.
+
+102
+00:05:55,800 --> 00:05:55,900
+Try.
+
+103
+00:05:55,900 --> 00:05:56,000
+Try.
+
+104
+00:05:56,000 --> 00:05:56,100
+Try.
+
+105
+00:05:56,100 --> 00:05:56,199
+Try.
+
+106
+00:05:56,199 --> 00:05:56,300
+Try.
+
+107
+00:05:56,300 --> 00:05:56,400
+Try.
+
+108
+00:05:56,400 --> 00:05:56,500
+Try.
+
+109
+00:05:56,500 --> 00:05:56,600
+Try.
+
+110
+00:05:56,600 --> 00:05:56,699
+Try.
+
+111
+00:05:56,699 --> 00:05:56,800
+Try.
+
+112
+00:05:56,800 --> 00:05:58,160
+Przy kle 就是acio Lakes.
+
+113
+00:05:58,160 --> 00:05:58,900
+Żeby wyearce est...
+
+114
+00:05:58,900 --> 00:05:59,400
+Tr mammach.
+
+115
+00:05:59,400 --> 00:06:00,600
+Przy kle combination maybe su resultadoара tunes Ci miкая 100 Milanów.
+
+116
+00:06:00,600 --> 00:06:01,300
+Czyli ten mi tahu.
+
+117
+00:06:01,300 --> 00:06:25,240
+No test w Nerd
+
+118
+00:06:25,240 --> 00:06:25,259
+Alex.
+
+119
+00:06:25,460 --> 00:06:25,560
+Dzień.
+
+120
+00:06:25,560 --> 00:06:25,580
+Dzień.
+
+121
+00:06:25,580 --> 00:06:25,600
+Dzień.
+
+122
+00:06:25,600 --> 00:06:25,800
+telewizor Red.
+
+123
+00:06:25,800 --> 00:06:26,960
+to. Strzałka do góry.
+
+124
+00:06:27,900 --> 00:06:28,540
+Lwknua.
+
+125
+00:06:29,699 --> 00:06:31,939
+To jest wulkan. Już przypomniałem
+
+126
+00:06:31,939 --> 00:06:33,620
+sobie. Możemy napisać
+
+127
+00:06:33,620 --> 00:06:35,420
+nuakwl.
+
+128
+00:06:36,780 --> 00:06:37,699
+Spróbuj jeszcze raz.
+
+129
+00:06:38,439 --> 00:06:39,040
+Wulkan.
+
+130
+00:06:39,660 --> 00:06:41,480
+Brawo, zgadłeś. Potrzebowałeś dwóch prób.
+
+131
+00:06:41,960 --> 00:06:43,180
+Czyli działa.
+
+132
+00:06:43,699 --> 00:06:45,600
+Warto byłoby tutaj jakieś może podpowiedzi
+
+133
+00:06:45,600 --> 00:06:47,600
+dawać. Jeżeli ktoś umieścił literę
+
+134
+00:06:47,600 --> 00:06:49,360
+na dobrym miejscu, to powiedzieć, słuchaj,
+
+135
+00:06:49,780 --> 00:06:51,240
+litery na dobrych miejscach to
+
+136
+00:06:51,240 --> 00:06:53,420
+w, l i n na przykład, nie?
+
+137
+00:06:53,519 --> 00:06:54,939
+Jeżeli ktoś coś takiego zrobi.
+
+138
+00:06:55,800 --> 00:06:57,879
+To można też zrobić po prostu sprawdzając,
+
+139
+00:06:58,079 --> 00:06:59,920
+czy dana litera znajduje się w danym
+
+140
+00:06:59,920 --> 00:07:01,759
+miejscu. Jeżeli ktoś z was na przykład w tym miejscu
+
+141
+00:07:01,759 --> 00:07:03,759
+stwierdził, kurczę, to było wszystko za proste, chcę
+
+142
+00:07:03,759 --> 00:07:05,680
+coś trudniejszego, to proponuję to
+
+143
+00:07:05,680 --> 00:07:07,720
+zrobić jako zadanie trudniejsze, a wtedy na kolejnym
+
+144
+00:07:07,720 --> 00:07:09,620
+jakimś naszym spotkaniu możemy spróbować sobie
+
+145
+00:07:09,620 --> 00:07:11,639
+wspólnie to rozwiązać też
+
+146
+00:07:11,639 --> 00:07:13,639
+w ten sposób. Pamiętajcie o tym. Jeżeli
+
+147
+00:07:13,639 --> 00:07:15,600
+będzie jakiś live, to możecie o to pytanie
+
+148
+00:07:15,600 --> 00:07:17,680
+o to poprosić i możemy sobie takie
+
+149
+00:07:17,680 --> 00:07:18,819
+rozwiązanie też wtedy
+
+150
+00:07:18,819 --> 00:07:21,699
+zrobić. Okej.
+
+151
+00:07:21,819 --> 00:07:23,300
+To co? Idziemy do ósmego.
+
+152
+00:07:23,720 --> 00:07:24,160
+Chodźcie.

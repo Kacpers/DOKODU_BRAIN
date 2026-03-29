@@ -1,0 +1,47 @@
+1
+00:00:00,000 --> 00:00:04,620
+No to co? W pierwszym zadaniu potrzebujemy mieć liczby podzielne przez 3 oraz liczby podzielne przez 5.
+
+2
+00:00:04,620 --> 00:00:15,700
+Czyli div by 3 to jest set na range 0, 100, 3.
+
+3
+00:00:15,860 --> 00:00:22,660
+Chociaż tak naprawdę to będzie 3, 103, no bo nas interesują liczby od 3, 6, 9, prawda?
+
+4
+00:00:22,780 --> 00:00:29,519
+I tak dalej. Więc robimy sobie python, operacje, zbiory, 1 i mam ten zbiór.
+
+5
+00:00:29,519 --> 00:00:32,799
+Następnie potrzebuję dokładnie to samo, ale z piątką.
+
+6
+00:00:32,799 --> 00:00:40,480
+Użyłem więc skrótu klawiszowego ctrl D, żeby zduplikować sobie linię i zmieniam wartość od piątki do 100 co 5
+
+7
+00:00:40,480 --> 00:00:47,100
+i mogę sobie wtedy te wartości też wyświetlić oczywiście, tak żebym widział jeden zbiór i drugi.
+
+8
+00:00:47,659 --> 00:00:51,600
+Spodziewam się, że tych liczb będzie troszeczkę mniej, no i jak najbardziej też tak jest.
+
+9
+00:00:51,760 --> 00:00:59,439
+No i część wspólna tych zbiorów, czyli ampersand div by 5, ampersand div by 3, strzała do góry enter,
+
+10
+00:00:59,520 --> 00:01:03,460
+i mam 75, 45, 15, 90, 60 i 90.
+
+11
+00:01:03,720 --> 00:01:07,420
+Istotnie wszystkie te liczby dzielą się zarówno przez 3, jak i przez 5.
+
+12
+00:01:08,000 --> 00:01:09,960
+Idziemy do zadania drugiego.

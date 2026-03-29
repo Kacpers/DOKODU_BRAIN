@@ -1,0 +1,307 @@
+1
+00:00:00,000 --> 00:00:05,820
+No i wchodzimy w temat TDD, czyli Test Driven Development, czyli pisania testów.
+
+2
+00:00:06,799 --> 00:00:12,480
+Strasznie to brzmi, brzmi jak coś, co będzie strasznie zaawansowane, bardzo skomplikowane,
+
+3
+00:00:13,000 --> 00:00:17,940
+ale uwierz mi, przejdziemy sobie przez to krok po kroku i zobaczysz, że nie jest wcale takie trudne.
+
+4
+00:00:17,940 --> 00:00:22,120
+Na początek zastanówmy się nad tym, dlaczego właściwie należy to robić.
+
+5
+00:00:22,640 --> 00:00:25,039
+I do tego potrzebujemy sobie coś przypomnieć.
+
+6
+00:00:25,039 --> 00:00:31,939
+Mówiliśmy o tym, że funkcja zawsze zwraca tą samą wartość, jeśli jest wywoływana z tymi samymi argumentami.
+
+7
+00:00:32,939 --> 00:00:39,159
+Pamiętasz? Czyli mam funkcję, do której przekazuję 2 i 4 i w wyniku dostaję 6.
+
+8
+00:00:39,920 --> 00:00:44,299
+Jeżeli funkcja ma mnożyć, to dostaję 8.
+
+9
+00:00:44,579 --> 00:00:47,320
+Jak ma robić coś innego, dostaję minus 2 i tak dalej.
+
+10
+00:00:47,659 --> 00:00:54,500
+Czyli zawsze, kiedy tworzymy sobie funkcję i wywołujemy ją z argumentami określonymi, powinna dawać ten sam rezultat.
+
+11
+00:00:55,039 --> 00:00:57,039
+Ok? To jest pierwsza rzecz.
+
+12
+00:00:57,039 --> 00:01:06,039
+Druga rzecz, o której możemy sobie powiedzieć, to znaczy, że potrafimy powiedzieć, przewidzieć tak naprawdę, kiedy funkcja działa dobrze oraz kiedy działa źle.
+
+13
+00:01:06,039 --> 00:01:12,039
+Czyli jeżeli wiem, że dla 2 i 4 miała dać wynik 6, a daje mi 15, to coś jest nie tak.
+
+14
+00:01:12,039 --> 00:01:15,039
+Jeżeli natomiast wiem, że daje wynik 6, to jest ok.
+
+15
+00:01:15,039 --> 00:01:21,039
+Czasem zdarza się, że kiedy wchodzę w temat funkcji, okazuje się, że mam w tej funkcji jakiegoś ifa.
+
+16
+00:01:21,039 --> 00:01:23,039
+I jeżeli pokazuję 2 i 4 oraz 15, to jest ok.
+
+17
+00:01:23,039 --> 00:01:25,039
+I jeżeli pokazuję 2 i 4 oraz 15, to jest ok.
+
+18
+00:01:25,040 --> 00:01:31,040
+I jeżeli pokazuję 2 i 4 oraz dodaj, to ma dać wynik 6, a jak zrobię 2 i 4 i pomnóż, to ma dać wynik 8.
+
+19
+00:01:31,040 --> 00:01:41,040
+Czyli mogę założyć, że ta funkcja może zwracać 2 różne wyniki, w zależności od trzeciego argumentu, czy pierwszego. Wszystko jedno.
+
+20
+00:01:41,040 --> 00:01:45,040
+Ważne jest to, albo na przykład, jeszcze jeden przykład, oceny.
+
+21
+00:01:45,040 --> 00:01:51,040
+Jeżeli dam ocenę 4,75 to dostaję taki wynik. Jeżeli dam 4,74 to dostaję inny wynik.
+
+22
+00:01:51,040 --> 00:01:53,040
+Czyli czasem jest też tak, że w naszych funkcjach łatwo jest znaleźć te wartości graniczne, określone.
+
+23
+00:01:53,040 --> 00:01:55,040
+Czyli czasem jest też tak, że w naszych funkcjach łatwo jest znaleźć te wartości graniczne, określone.
+
+24
+00:01:55,040 --> 00:01:59,040
+O których możemy sobie powiedzieć, że tu może pojawić się jakiś błąd.
+
+25
+00:01:59,040 --> 00:02:05,040
+I teraz naszym zadaniem jest zastanowienie się, jakie są wymagania odnośnie tej funkcji.
+
+26
+00:02:05,040 --> 00:02:09,040
+Co ta funkcja powinna zwracać w momencie, w którym wszystko jest dobrze.
+
+27
+00:02:09,040 --> 00:02:13,040
+Oraz co ta funkcja powinna zwracać w czasie, w którym coś dzieje się źle.
+
+28
+00:02:13,040 --> 00:02:21,040
+Bo jeżeli mamy takie informacje, to tak naprawdę to, że dzieje się źle w momencie, w którym podamy nieporawidłowe dane, to też jest dobrze.
+
+29
+00:02:21,040 --> 00:02:23,040
+Bo my przewidzieliśmy też ten incydent.
+
+30
+00:02:23,040 --> 00:02:25,040
+Bo my przewidzieliśmy też ten incydent.
+
+31
+00:02:25,039 --> 00:02:29,039
+I to, że ten kod powinien zwrócić jakiś błąd, albo wyświetlić jakiś komunikat o błędzie.
+
+32
+00:02:29,039 --> 00:02:33,039
+I wszystkie takie informacje właśnie dotyczą testowania.
+
+33
+00:02:33,039 --> 00:02:39,039
+Tak naprawdę, wiedząc o tym, że potrafimy przewidzieć, kiedy funkcja działa dobrze oraz kiedy działa źle,
+
+34
+00:02:39,039 --> 00:02:43,039
+to robiliśmy taką czynność, że uruchamialiśmy nasz program.
+
+35
+00:02:43,039 --> 00:02:49,039
+Czyli kończyłem projekt, mówiłem zobaczcie teraz robię strzałka do góry Enter, okazuje się, że dla takich i takich danych wyjdzie to i to.
+
+36
+00:02:49,039 --> 00:02:51,039
+Dla takich i takich danych wyjdzie to i to.
+
+37
+00:02:51,039 --> 00:02:53,039
+I za każdym razem, może prawie za każdym razem, wychodziło nam na to, że sprawdzaliśmy program z tego kodu.
+
+38
+00:02:53,039 --> 00:02:57,039
+Wejdźmy zobaczyć, czy w końcu udało nam się sprawdzić, czy funkcja będzie układać i jeśli nie, on heard.
+
+39
+00:02:57,039 --> 00:03:01,399
+Na ambitne jest to, że będziemy mieć Erica od sehen traktujemy na nowoj rejakcji na pewnoúcar л demais Was czyli
+
+40
+00:03:01,399 --> 00:03:03,399
+No bo jeżeli stworzyłem sobie funkcję i teraz ją sprawdziłem i działa. No to super.
+
+41
+00:03:03,399 --> 00:03:06,239
+One które z uporządkiwałam że przede wszystkim RVa nowoczesne i powinno pojedyncze 100%.
+
+42
+00:03:06,239 --> 00:03:10,239
+No bo jeżeli stworzyłem sobie funkcję i teraz ją sprawdziłem i działa. No to super.
+
+43
+00:03:10,239 --> 00:03:12,239
+Drogi raz sprawdziłem dla coś zmieniłem w tym kodzie drugi raz sprawdziłem funkcję, wszystko działa OK i dalej.
+
+44
+00:03:12,239 --> 00:03:14,239
+No to świetnie, ale mogłoby się okazać, że na przykład nie sprawdzę jakiegoś jednego testu, jednego sposobu jednej pary argumen.
+
+45
+00:03:14,240 --> 00:03:15,620
+sprawdzę jakiegoś jednego
+
+46
+00:03:15,620 --> 00:03:18,180
+testu, jednego sposobu, jednej
+
+47
+00:03:18,180 --> 00:03:20,060
+pary argumentów, bo zwyczajnie
+
+48
+00:03:20,060 --> 00:03:22,000
+w świecie o tym zapomnę, a ten,
+
+49
+00:03:22,900 --> 00:03:24,219
+ta para argumentów może być
+
+50
+00:03:24,219 --> 00:03:26,439
+właśnie kluczowa dla mojego działania programu.
+
+51
+00:03:26,879 --> 00:03:28,219
+Więc tutaj ważne
+
+52
+00:03:28,219 --> 00:03:30,000
+jest to, żeby nie robić tych testów,
+
+53
+00:03:30,120 --> 00:03:31,920
+tych sprawdzeń za każdym razem ręcznie,
+
+54
+00:03:32,320 --> 00:03:34,120
+tylko żeby tutaj zawierzyć
+
+55
+00:03:34,120 --> 00:03:35,820
+automatowi, pajtestowi
+
+56
+00:03:35,820 --> 00:03:37,480
+oraz sobie,
+
+57
+00:03:38,020 --> 00:03:40,340
+napisać mu w tym teście,
+
+58
+00:03:40,820 --> 00:03:42,219
+jakie dane muszą być
+
+59
+00:03:42,219 --> 00:03:44,259
+przyjęte wtedy, jaki musi być wynik
+
+60
+00:03:44,259 --> 00:03:46,259
+i dzięki temu będziemy mieli pewność,
+
+61
+00:03:46,340 --> 00:03:47,939
+że nasz kod działa po prostu
+
+62
+00:03:47,939 --> 00:03:49,919
+dobrze. No właśnie,
+
+63
+00:03:50,159 --> 00:03:52,340
+więc może dałoby się sprawdzać
+
+64
+00:03:52,340 --> 00:03:54,139
+to wszystko automatycznie. No i tutaj
+
+65
+00:03:54,139 --> 00:03:56,020
+jak najbardziej jest taka
+
+66
+00:03:56,020 --> 00:03:58,240
+możliwość. To jeżeli wykorzystujemy
+
+67
+00:03:58,240 --> 00:04:00,079
+pajtest, to nasze testy
+
+68
+00:04:00,079 --> 00:04:01,979
+mogą być sprawdzane
+
+69
+00:04:01,979 --> 00:04:04,020
+automatycznie i w tym module
+
+70
+00:04:04,020 --> 00:04:06,099
+powiemy sobie też jak to zrobić, żeby nie
+
+71
+00:04:06,099 --> 00:04:08,079
+trzeba było tego sprawdzać ręcznie, tylko żeby jednym
+
+72
+00:04:08,079 --> 00:04:10,099
+poleceniem wywoływały nam się wszystkie testy
+
+73
+00:04:10,099 --> 00:04:12,039
+i sprawdzały czy kod działa.
+
+74
+00:04:12,219 --> 00:04:14,280
+Ale zanim do tego przejdziemy,
+
+75
+00:04:14,699 --> 00:04:16,000
+warto byłoby sobie porozmawiać o tym,
+
+76
+00:04:16,100 --> 00:04:18,000
+jakie rodzaje testów w aplikacjach
+
+77
+00:04:18,000 --> 00:04:19,060
+mogą się znajdować.

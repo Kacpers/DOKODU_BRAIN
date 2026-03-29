@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:06,400
+W zadaniu siódmym mamy przygotować tuple przechowującą imię, nazwisko oraz wiek osoby, następnie wyświetlić te dane w postaci.
+
+2
+00:00:06,879 --> 00:00:16,820
+No to tak naprawdę potrzebujemy stworzyć sobie jakąś zmienną, możemy ją nazwać person, możemy napisać, że to jest John Smith, który ma na przykład 40 lat.
+
+3
+00:00:17,339 --> 00:00:25,980
+I teraz, jeżeli chcemy sobie te dane wyświetlić, to pamiętamy o tym, że wyświetlanie elementów tupli polega na tym, że odwołujemy się do indeksów tej tupli.
+
+4
+00:00:25,980 --> 00:00:38,000
+Czyli, i pamiętamy oczywiście o tym, że tutaj indeksacja również zaczyna się od zera, więc możemy sobie zapisać imię, dwukropek, person od zera.
+
+5
+00:00:38,679 --> 00:00:44,519
+Pamiętamy oczywiście o tym, żeby tutaj dorzucić f-kę z przodu, jeżeli będziemy chcieli wyświetlić sobie te informacje.
+
+6
+00:00:45,120 --> 00:00:51,040
+Następnie dorzucamy nazwisko i nazwisko to będzie person od 1.
+
+7
+00:00:51,040 --> 00:00:54,040
+No i zostanie nam jeszcze wiek.
+
+8
+00:00:54,039 --> 00:00:58,019
+No i tutaj oczywiście będzie to person od 2.
+
+9
+00:00:58,320 --> 00:01:04,780
+Jeżeli w ten sposób sobie ten kod odpalimy, to powinniśmy zobaczyć wszystko dokładnie w takiej postaci, w jakiej sobie założyliśmy.
+
+10
+00:01:05,280 --> 00:01:13,019
+A w drugiej tupli mamy sprawę trochę bardziej skomplikowaną, ponieważ chcielibyśmy zadeklarować tuplę w postaci takiej,
+
+11
+00:01:13,019 --> 00:01:20,599
+a następnie przechodząc po elementach tej tupli, za pomocą for wyświetlić sobie takie obliczenia.
+
+12
+00:01:21,140 --> 00:01:24,019
+I tu nie możemy od razu powiem użyć joinu.
+
+13
+00:01:24,040 --> 00:01:30,460
+I łączyć sobie tych wyrażeń z tego względu, że to są intedgery, a join służy tylko do stringów.
+
+14
+00:01:31,180 --> 00:01:37,480
+Co więcej, jeżeli byśmy sobie zamienili te wyrażenia na stringi, to wtedy też mielibyśmy problem z tym, żeby sam wykorzystać na tym.
+
+15
+00:01:38,420 --> 00:01:46,040
+Dlatego to co zrobię, to napiszę for calculation in calculations, dwukropek.
+
+16
+00:01:47,300 --> 00:01:51,180
+No i teraz wykonam sobie print i wyświetlę.
+
+17
+00:01:51,180 --> 00:01:53,940
+Chcę napisać 1 plus 2 plus 3.
+
+18
+00:01:54,040 --> 00:02:02,320
+Czyli muszę wiedzieć o tym, że skoro pod calculation wpadnie mi ta tupla, to znaczy, że jedynka wskoczy mi do zmiennej calculation od zera.
+
+19
+00:02:02,820 --> 00:02:14,300
+Stąd też mogę napisać calculation od zera plus calculation od 1 plus calculation od 2.
+
+20
+00:02:14,980 --> 00:02:15,920
+Równa się.
+
+21
+00:02:17,099 --> 00:02:18,780
+No i tutaj muszę wstawić sobie obliczenie.
+
+22
+00:02:18,780 --> 00:02:21,740
+Nie wiem czy pamiętacie, ale powtórzmy to sobie obliczenia.
+
+23
+00:02:21,860 --> 00:02:23,780
+Bez problemu możemy też wstawiać wręcz.
+
+24
+00:02:24,039 --> 00:02:26,419
+W ramach tych nawiasów klamrowych, czyli będzie to sum.
+
+25
+00:02:26,840 --> 00:02:34,879
+I teraz uwaga, nie odwołuję się do calculations, tylko odwołam się do calculation, ponieważ ja chciałbym zsumować te trzy elementy.
+
+26
+00:02:35,599 --> 00:02:36,919
+Zobaczcie co się wówczas wydarzy.
+
+27
+00:02:37,439 --> 00:02:39,959
+O, i mam 1 plus 2 plus 3 równa się 6.
+
+28
+00:02:40,379 --> 00:02:43,180
+4 plus 5 plus 6 równa się 15 i tak dalej.
+
+29
+00:02:43,259 --> 00:02:44,719
+Wszystkie wartości mi się podsumowały.
+
+30
+00:02:44,719 --> 00:02:53,659
+Żeby jeszcze dostać taką ładną linię pomiędzy tymi obliczeniami, mogę sobie napisać print i jakieś trzy kreski przemnożyć.
+
+31
+00:02:54,039 --> 00:02:55,039
+I tak dalej.
+
+32
+00:02:55,039 --> 00:02:56,039
+Zabrałem później 20 razy.
+
+33
+00:02:56,039 --> 00:03:00,039
+Dostanę wtedy 90 kresek o oddzielających te dwa podpunkty.
+
+34
+00:03:00,039 --> 00:03:01,539
+Myślę, że to zadanie nie było trudne.
+
+35
+00:03:01,539 --> 00:03:05,599
+Trzeba było tylko pomyśleć nad tym jak się odwołać do poszczególnych elementów.
+
+36
+00:03:05,599 --> 00:03:07,399
+Mam nadzieję, że Wam się to udało.
+
+37
+00:03:07,399 --> 00:03:10,759
+Zachęcam Was do tego, żebyście napisali na Discordzie jak Wam to poszło.
+
+38
+00:03:10,759 --> 00:03:13,099
+A my idziemy do zadania ósmego.

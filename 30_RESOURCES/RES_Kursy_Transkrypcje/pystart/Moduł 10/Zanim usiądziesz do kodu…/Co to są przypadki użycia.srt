@@ -1,0 +1,331 @@
+1
+00:00:00,000 --> 00:00:11,679
+I teraz kiedy już wiemy, chociaż mniej więcej, jaki problem jest przed nami, oczywiście jeden projekt to może być bardzo dużo takich problemów, im więcej ich wymodelujesz, tym lepiej.
+
+2
+00:00:12,120 --> 00:00:20,379
+Natomiast jeżeli już wzięliśmy sobie taką jedną kartkę z jednym problemem, to możemy się zastanowić nad tym, jak to teraz ładnie zaplanować.
+
+3
+00:00:20,379 --> 00:00:41,480
+No bo skoro wiem, że na przykład mój klient chce przechowywać te CV, skoro wiem, że mój klient potrzebuje wiedzieć, jakie są inne ceny produktów, skoro wiem, że mój klient szuka jakiegoś konkretnego rozwiązania, to mogę zastanowić się nad tym, gdzie będę przechowywać te dane.
+
+4
+00:00:41,480 --> 00:00:46,159
+Dlatego warto się zastanowić nad tym, wypisać sobie wszystkie te elementy.
+
+5
+00:00:46,539 --> 00:00:50,359
+Niektórzy tutaj posługują się tymi żółtymi karteczkami, niektórzy używają...
+
+6
+00:00:50,380 --> 00:00:57,740
+Niektórzy używają takich narzędzi, gdzie można sobie też planować takie luźno porozkładane rzeczy, inni używają kartki długopisu.
+
+7
+00:00:58,260 --> 00:01:01,140
+No i rozpisujemy sobie tak naprawdę wszystko to, co przetwarzamy.
+
+8
+00:01:01,560 --> 00:01:03,260
+Czyli wiemy, że przetwarzamy produkty.
+
+9
+00:01:04,280 --> 00:01:06,379
+Wiemy, że przetwarzamy kategorie produktów.
+
+10
+00:01:07,379 --> 00:01:09,400
+Wiemy, że przetwarzamy ceny.
+
+11
+00:01:09,879 --> 00:01:12,280
+Wiemy, że każdy produkt może mieć jakieś warianty.
+
+12
+00:01:12,420 --> 00:01:15,560
+Wiemy, że każdy produkt może mieć właśnie wielkość, powiedzmy.
+
+13
+00:01:15,740 --> 00:01:17,359
+Wiemy, że ma różne atrybuty.
+
+14
+00:01:17,460 --> 00:01:20,359
+Wiemy, że może być w różnych sklepach.
+
+15
+00:01:20,379 --> 00:01:23,119
+Więc wiemy, że mamy też te sklepy.
+
+16
+00:01:23,599 --> 00:01:28,739
+I wtedy jak sobie przygotujemy dla każdego tego elementu, który wymieniłem taką jedną karteczkę,
+
+17
+00:01:29,159 --> 00:01:36,379
+to mniej więcej jesteśmy w stanie ogarnąć, ocenić, jakie tak naprawdę te elementy będą musiały w tym projekcie się znajdować.
+
+18
+00:01:37,419 --> 00:01:42,500
+Jak już sobie wypiszemy te elementy, to potem możemy pod każdym elementem zacząć wypisywać pola.
+
+19
+00:01:42,780 --> 00:01:49,859
+Czyli skoro wiem, że sklep interesuje mnie tylko i wyłącznie pod kątem tego, że chcę wiedzieć pod jaką stroną internetową ten sklep się znajduje,
+
+20
+00:01:49,859 --> 00:01:52,359
+mówię o tej konkurencji tego mojego klienta,
+
+21
+00:01:52,359 --> 00:02:00,280
+czy też wiem, że odnośnie sklepu potrzebowałbym też wiedzieć, kiedy ostatnio mój robot na stronie tego sklepu był,
+
+22
+00:02:00,280 --> 00:02:03,480
+no to mogę sobie też te dane zaplanować.
+
+23
+00:02:03,480 --> 00:02:09,479
+Wchodzę na produkt i rozmawiam z klientem, czy na podstawie tej analizy wymagań wiem,
+
+24
+00:02:09,479 --> 00:02:14,280
+że klienta interesuje nazwa produktu, link do produktu i cena.
+
+25
+00:02:14,280 --> 00:02:17,979
+Bardzo często interesował ich też opis.
+
+26
+00:02:17,979 --> 00:02:18,920
+Dlaczego?
+
+27
+00:02:18,919 --> 00:02:27,419
+No to akurat często związało się z branżą budowlaną i tam nazwy produktów nie zawsze były wprost powiedziane,
+
+28
+00:02:27,419 --> 00:02:31,419
+czasem były trochę takie mylące.
+
+29
+00:02:31,419 --> 00:02:37,419
+Nie chcę tutaj wchodzić w szczegóły, ale że coś nie było do końca czym i na podstawie opisu mogli stwierdzić,
+
+30
+00:02:37,419 --> 00:02:39,419
+że na pewno jest ten sam produkt.
+
+31
+00:02:39,419 --> 00:02:46,419
+Bo nazwy były bardzo podobne, ale opis był istotny, więc oni też chcieli zobaczyć te opisy tych produktów.
+
+32
+00:02:46,419 --> 00:02:48,419
+No bo jeżeli gdzieś się okaże nagle, że jedna z tych produktów jest bardzo podobna,
+
+33
+00:02:48,419 --> 00:02:48,919
+No bo jeżeli gdzieś się okaże nagle, że jedna z tych produktów jest bardzo podobna,
+
+34
+00:02:48,919 --> 00:02:51,919
+że jedna sztuka kosztuje złotówkę, a u Ciebie w sklepie kosztuje 100 złotych,
+
+35
+00:02:51,919 --> 00:02:57,419
+to może się okazać, że na podstawie opisu to nie jest tak, że masz coś bardzo drogo albo bardzo tanio,
+
+36
+00:02:57,419 --> 00:03:00,419
+tylko coś innego jest na tej karcie produktu.
+
+37
+00:03:00,419 --> 00:03:03,919
+Więc wszystkie te takie dane musimy sobie rozpisać.
+
+38
+00:03:03,919 --> 00:03:07,919
+Dodatkowo planujemy wszelkie powiązania pomiędzy naszymi danymi.
+
+39
+00:03:07,919 --> 00:03:12,419
+Na przykład mówiłem o tym, że sklep ma kategorie, kategorie mają produkty,
+
+40
+00:03:12,419 --> 00:03:18,419
+to wszystko warto byłoby sobie zaplanować, po prostu rozpisać na stronie i strzałkami
+
+41
+00:03:18,419 --> 00:03:22,419
+poprzekierowywać te rzeczy do siebie, połączyć je ze sobą.
+
+42
+00:03:22,419 --> 00:03:27,419
+Później to będzie Ci niezwykle potrzebne do tego, żeby zaplanować bazę danych,
+
+43
+00:03:27,419 --> 00:03:29,419
+która będzie miała przechowywać te informacje.
+
+44
+00:03:29,419 --> 00:03:33,419
+Stąd też takie połączenia są również niezwykle istotne.
+
+45
+00:03:33,419 --> 00:03:37,419
+Czyli na przykład sklep, produkt, sklep, produkt.
+
+46
+00:03:37,419 --> 00:03:40,919
+Czyli już widzę, że produkty też muszę ze sobą jakoś wiązać.
+
+47
+00:03:40,919 --> 00:03:42,919
+Mogę też między nimi gdzieś zrobić sobie strzałkę.
+
+48
+00:03:42,919 --> 00:03:47,919
+Nie musisz wpisywać konkretnych danych, ale staraj się myśleć o tym jakby o takich
+
+49
+00:03:47,919 --> 00:03:49,919
+różnych przepływach, które masz.
+
+50
+00:03:49,919 --> 00:03:53,919
+Nasz projekt, który będziemy tutaj wykonywali, tak jak wspomniałem, to będzie budżet domowy.
+
+51
+00:03:53,919 --> 00:04:00,919
+Budżet domowy może mieć osoby, które te pieniądze wydają, osoby, które te pieniądze zarabiają,
+
+52
+00:04:00,919 --> 00:04:04,919
+kategorie, które dotyczą wydatków i przychodów.
+
+53
+00:04:04,919 --> 00:04:08,919
+Każda kategoria może być kategorią przychodową i wydatkową.
+
+54
+00:04:08,919 --> 00:04:15,919
+Możemy mieć kategorie też w ogóle tych produktów, które, no to w sumie tak to już było,
+
+55
+00:04:15,919 --> 00:04:16,919
+ale ten produkt, który też jest w tym budżecie, to jest też kategoria, która jest w tym budżecie.
+
+56
+00:04:17,920 --> 00:04:22,920
+Ta rzecz, którą kupujemy czy zarabiamy, to też jest coś, co będzie miało jakieś swoje pola.
+
+57
+00:04:22,920 --> 00:04:27,920
+Możemy też określić cykliczność, no bo niektóre wydatki będą się działy cyklicznie i tp. itd.
+
+58
+00:04:27,920 --> 00:04:30,920
+Jak widzicie, no jest tego całkiem sporo.
+
+59
+00:04:30,920 --> 00:04:35,920
+Oczywiście, jeżeli mamy na przykład też takie elementy jak użytkownik, bo chcemy użytkownika autentykować,
+
+60
+00:04:35,920 --> 00:04:40,920
+czyli loginem, hasłem, to też trzeba trochę o tym wiedzieć i też trzeba te rzeczy po prostu sobie tutaj przygotować.
+
+61
+00:04:47,920 --> 00:04:52,920
+No tak,enda zapytan magneticzna.
+
+62
+00:04:52,920 --> 00:04:57,920
+Jeszcze jó attic.
+
+63
+00:04:57,920 --> 00:05:12,639
+Przypomnę, palabra
+
+64
+00:05:17,920 --> 00:05:19,920
+Dziękuję.
+
+65
+00:05:47,920 --> 00:05:49,920
+Dziękuję.
+
+66
+00:06:17,920 --> 00:06:19,920
+Dziękuję.
+
+67
+00:06:47,920 --> 00:06:49,920
+Dziękuję.
+
+68
+00:07:17,920 --> 00:07:19,920
+Dziękuję.
+
+69
+00:07:47,920 --> 00:07:49,920
+Dziękuję.
+
+70
+00:08:17,920 --> 00:08:19,920
+Dziękuję.
+
+71
+00:08:47,919 --> 00:08:49,919
+Dziękuję.
+
+72
+00:09:17,919 --> 00:09:19,919
+Dziękuję.
+
+73
+00:09:47,919 --> 00:09:49,919
+Dziękuję.
+
+74
+00:10:17,919 --> 00:10:19,919
+Dziękuję.
+
+75
+00:10:47,919 --> 00:10:49,919
+Dziękuję.
+
+76
+00:11:17,919 --> 00:11:19,919
+Dziękuję.
+
+77
+00:11:47,919 --> 00:11:49,919
+Dziękuję.
+
+78
+00:12:17,919 --> 00:12:19,919
+Dziękuję.
+
+79
+00:12:47,919 --> 00:12:49,919
+Dziękuję.
+
+80
+00:13:17,919 --> 00:13:19,919
+Dziękuję.
+
+81
+00:13:47,919 --> 00:13:49,919
+Dziękuję.
+
+82
+00:14:17,919 --> 00:14:19,919
+Dziękuję.
+
+83
+00:14:47,919 --> 00:14:49,919
+Dziękuję.

@@ -1,0 +1,507 @@
+1
+00:00:00,000 --> 00:00:04,080
+Przyszedł czas na to, żeby porozmawiać sobie o zmiennych.
+
+2
+00:00:04,080 --> 00:00:13,700
+Czyli tak naprawdę, kiedy masz liczby, czy masz tekst, o tym za chwilę, możesz wykonywać na tych wartościach różne operacje.
+
+3
+00:00:14,220 --> 00:00:21,760
+W naszym czarnym okienku, w naszym środowisku interaktywnym wykonywaliśmy takie operacje jak np. 2x2 czy 3x3.
+
+4
+00:00:22,339 --> 00:00:26,900
+Natomiast w programie wykonywanie tego typu operacji byłoby trochę skomplikowane.
+
+5
+00:00:26,899 --> 00:00:34,799
+Byłoby dosyć męczące, bo nie o to chodzi, żeby za każdym razem otwierać ten program i wszystkie te wartości sobie za każdym razem podmieniać.
+
+6
+00:00:35,259 --> 00:00:37,539
+Po to jesteśmy programistami, żeby tworzyć zmienne.
+
+7
+00:00:38,079 --> 00:00:45,759
+Zmienna to jest taka nazwa, której możemy używać i do której to nazwy możemy przypisać sobie naszą wartość.
+
+8
+00:00:45,759 --> 00:00:51,759
+I w ten sposób, jeżeli np. do zmiennej A przypiszesz wartość 3, a do zmiennej B przypiszesz wartość 4,
+
+9
+00:00:52,299 --> 00:00:56,219
+to później za każdym razem, kiedy będziesz chciał się odwołać do tej trójki,
+
+10
+00:00:56,219 --> 00:00:58,219
+wystarczy użyć literki A.
+
+11
+00:00:58,219 --> 00:01:01,719
+A kiedy będziesz chciał się odwołać do 4, to użyjesz literki B.
+
+12
+00:01:01,719 --> 00:01:10,519
+Więc zmienna tak naprawdę to jest taka nazwa, która przechowuje, dlatego ja często używam takiego porównania, że zmienna to jest takie pudełko na wartość
+
+13
+00:01:10,519 --> 00:01:13,219
+i ona przechowuje nam właśnie wartość.
+
+14
+00:01:13,219 --> 00:01:20,219
+Tak naprawdę pod spodem jest trochę inaczej, bo ta zmienna to jest takie coś, co wskazuje na miejsce w pamięci, gdzie przechowana jest ta wartość,
+
+15
+00:01:20,219 --> 00:01:22,219
+ale tym się zupełnie teraz nie przejmujmy.
+
+16
+00:01:22,219 --> 00:01:24,219
+To jest pierwsza rzecz.
+
+17
+00:01:24,219 --> 00:01:25,219
+Druga rzecz.
+
+18
+00:01:25,219 --> 00:01:32,219
+Żeby zadeklarować zmienną w Pythonie, co zaraz zresztą zobaczysz, musisz wykonać nazwa zmiennej równa się wartość.
+
+19
+00:01:32,219 --> 00:01:38,219
+Czyli tak naprawdę do jakiejś zmiennej przypisujesz od razu konkretną wartość.
+
+20
+00:01:38,219 --> 00:01:41,219
+I na chwilę obecną poznaliśmy dwa rodzaje wartości.
+
+21
+00:01:41,219 --> 00:01:48,219
+Pierwszy rodzaj wartości to były liczby bez miejsc po przecinku, a drugi to były liczby z miejscami po przecinku.
+
+22
+00:01:48,219 --> 00:01:54,219
+I to jest bardzo ważne, o tym Ci mówiłem, ponieważ w Pythonie będziemy mieli więcej różnych rodzajów,
+
+23
+00:01:54,219 --> 00:01:58,219
+ale tu już dla tych liczb to są dwa różne rodzaje.
+
+24
+00:01:58,219 --> 00:02:01,219
+Liczby całkowite i liczby zmiennoprzecinkowe.
+
+25
+00:02:01,219 --> 00:02:07,219
+Jeżeli chodzi o nazywanie zmiennych, to tak jak umawialiśmy się, będziemy starali się, może na prezentacji tego nie będzie,
+
+26
+00:02:07,219 --> 00:02:12,219
+ale będziemy się starali, żeby nazwy zmiennych zawsze były nazywane po angielsku
+
+27
+00:02:12,219 --> 00:02:20,219
+i będziemy je nazywali tak, żeby odnosiły się do tego, co się pod tymi zmiennymi znajduje.
+
+28
+00:02:20,219 --> 00:02:22,219
+Jeżeli nazwa zmiennej składa się z dwóch wyrazów, czy też z większej liczby wyrazów, to będzie to zmienny.
+
+29
+00:02:22,219 --> 00:02:23,219
+Jeżeli nazwa zmiennej składa się z dwóch wyrazów, czy też z większej liczby wyrazów, to będzie to zmienny.
+
+30
+00:02:23,219 --> 00:02:25,219
+Jeżeli nazwa zmiennej składa się z dwóch wyrazów, czy też z większej liczby wyrazów,
+
+31
+00:02:25,219 --> 00:02:32,219
+to w Pythonie używamy tak zwanego snake case'a, czyli łączymy te wyrazy ze sobą za pomocą symbolu podłogi.
+
+32
+00:02:32,219 --> 00:02:43,219
+Raczej na używanie tak zwanego camel case'a, czyli za każdym razem nowe słowo zaczyna się od wielkiej litery, tutaj nie jest stosowany.
+
+33
+00:02:43,219 --> 00:02:45,219
+Tutaj nie jest stosowany.
+
+34
+00:02:45,219 --> 00:02:48,219
+I co to znaczy, że zmienna ma swój typ?
+
+35
+00:02:48,219 --> 00:02:49,219
+I co to znaczy, że zmienna ma swój typ?
+
+36
+00:02:49,219 --> 00:02:51,219
+Już sobie o tym powiedzieliśmy, że mamy liczby całkowite, liczby zmiennoprzecinkowe.
+
+37
+00:02:51,219 --> 00:02:52,219
+Już sobie o tym powiedzieliśmy, że mamy liczby całkowite, liczby zmiennoprzecinkowe.
+
+38
+00:02:52,219 --> 00:02:56,520
+Chwilę zobaczysz parę innych typów i w momencie, w którym deklarujemy zmienną,
+
+39
+00:02:56,620 --> 00:03:00,879
+czyli mówimy Pythonowi, słuchaj, to jest zmienna wiek, ona ma mieć wartość 40,
+
+40
+00:03:00,879 --> 00:03:06,120
+to my deklarujemy tą zmienną, czyli mówimy przed Pythonem,
+
+41
+00:03:06,180 --> 00:03:10,159
+że słuchaj, deklaruję, że to jest ta zmienna i w tym momencie nie tylko
+
+42
+00:03:10,159 --> 00:03:13,579
+przypisujemy do zmiennej wartość, ale też na podstawie tej wartości
+
+43
+00:03:13,579 --> 00:03:17,139
+Python będzie zgadywał, jaki jest typ tej zmiennej.
+
+44
+00:03:17,539 --> 00:03:20,060
+Zobacz. Zmienna.
+
+45
+00:03:20,060 --> 00:03:24,920
+Mamy takiego pana. Ten pan, rzecz ciekawa, też został wygenerowany
+
+46
+00:03:24,920 --> 00:03:28,939
+na pomocą strony thispersondoesnotexist.com.
+
+47
+00:03:28,939 --> 00:03:34,020
+Jak wejdziesz na tą stronę, zobaczysz, że możesz sobie odświeżać różne osoby
+
+48
+00:03:34,020 --> 00:03:38,840
+i każda z tych osób nie istnieje. One zostały stworzone przez sztuczną inteligencję,
+
+49
+00:03:38,939 --> 00:03:44,640
+po prostu zostały wzięte oczy z innych zdjęć, okulary z innych, uszy z innych
+
+50
+00:03:44,640 --> 00:03:48,819
+i każdy element twarzy został połączony tak, żeby powstała nam osoba,
+
+51
+00:03:48,939 --> 00:03:50,039
+której tak naprawdę nie ma.
+
+52
+00:03:50,060 --> 00:03:52,439
+No ale wygląda dosyć wiarygodnie.
+
+53
+00:03:52,960 --> 00:03:55,680
+W każdym razie wyobraźmy sobie, że ten pan to Steve.
+
+54
+00:03:56,080 --> 00:04:01,080
+Dlatego też napisałem, że name równa się Steve.
+
+55
+00:04:01,580 --> 00:04:06,500
+Jeżeli chcemy przypisać wartość, która jest tekstem do zmiennej,
+
+56
+00:04:06,920 --> 00:04:08,560
+to używamy apostrofów.
+
+57
+00:04:08,980 --> 00:04:12,180
+Tutaj raczej będziemy się starali właśnie używać zawsze apostrofu.
+
+58
+00:04:12,340 --> 00:04:15,280
+Jeżeli w środku będzie wówczas cudzysłów, to nie będzie problemu.
+
+59
+00:04:15,659 --> 00:04:18,899
+Jeżeli w apostrofie będzie apostrof, to wtedy ten apostrof w środku
+
+60
+00:04:18,899 --> 00:04:19,899
+trzeba poprzedzić backspace.
+
+61
+00:04:20,060 --> 00:04:22,879
+Ale to jeszcze na to przyjdzie czas.
+
+62
+00:04:23,319 --> 00:04:25,740
+Więc zobacz, name równa się Steve.
+
+63
+00:04:26,120 --> 00:04:29,040
+W ten sposób stworzyłem zmienną opisującą Steve'a,
+
+64
+00:04:29,439 --> 00:04:32,120
+określającą, że jego imię właśnie takie jest.
+
+65
+00:04:32,680 --> 00:04:35,620
+Po drugie, nationality to American.
+
+66
+00:04:36,240 --> 00:04:41,060
+Czyli ja określiłem, że ten pan, Steve, jest narodowości amerykańskiej.
+
+67
+00:04:41,540 --> 00:04:47,620
+I oba te wyrażenia mają typ string, czyli są po prostu łańcuchem znaków, tekstem.
+
+68
+00:04:47,620 --> 00:04:52,399
+Nasz Steve dodatkowo ma 69 lat.
+
+69
+00:04:52,500 --> 00:04:54,100
+Jakiś czas temu przeszedł na emeryturę.
+
+70
+00:04:54,500 --> 00:04:57,500
+Więc stworzyłem sobie trzecią zmienną, nazwałem ją age
+
+71
+00:04:57,500 --> 00:04:59,660
+i przypisałem mu wartość 69.
+
+72
+00:05:00,379 --> 00:05:05,579
+W ten sposób poznajemy kolejny typ danych, jakim jest integer.
+
+73
+00:05:06,680 --> 00:05:10,860
+Nasz Steve ma 180,3 cm wzrostu.
+
+74
+00:05:11,280 --> 00:05:13,980
+Jest to już kolejny typ danych, który już wcześniej poznaliśmy.
+
+75
+00:05:14,280 --> 00:05:15,300
+Tym razem jest to float.
+
+76
+00:05:15,300 --> 00:05:17,300
+I float to będą zawsze wartości,
+
+77
+00:05:17,620 --> 00:05:19,620
+wartości zmiennoprzecinkowe.
+
+78
+00:05:20,060 --> 00:05:22,060
+Dodatkowo Steve jest żonaty.
+
+79
+00:05:22,060 --> 00:05:24,060
+Ten nasz wymyślony Steve.
+
+80
+00:05:24,060 --> 00:05:27,060
+Więc isMarried ma wartość true.
+
+81
+00:05:27,720 --> 00:05:29,819
+I ta wartość z kolei to jest bool.
+
+82
+00:05:30,379 --> 00:05:32,379
+Bool to jest skrót od boolin.
+
+83
+00:05:32,780 --> 00:05:34,780
+Natomiast tutaj używamy typu boolowskiego,
+
+84
+00:05:34,780 --> 00:05:37,379
+po prostu przechowują wartości prawda, fałsz.
+
+85
+00:05:37,860 --> 00:05:41,860
+Zwróć szczególną uwagę, że true, tak samo jak i false,
+
+86
+00:05:41,860 --> 00:05:43,860
+jest zapisane z wielkiej litery.
+
+87
+00:05:43,860 --> 00:05:46,860
+W przypadku Pythona jest to bardzo ważna sprawa.
+
+88
+00:05:47,620 --> 00:05:49,620
+I zawsze musi być zapisywane z wielkiej litery.
+
+89
+00:05:49,620 --> 00:05:53,620
+Czyli mamy Steve'a, Ameryka na, który ma 69 lat,
+
+90
+00:05:53,620 --> 00:05:57,620
+180,3 cm wzrostu i jest żonaty.
+
+91
+00:05:57,620 --> 00:06:00,620
+I tak za pomocą zmiennych możemy deklarować sobie
+
+92
+00:06:00,620 --> 00:06:02,620
+tak naprawdę stan naszego programu.
+
+93
+00:06:02,620 --> 00:06:06,620
+Mówiąc, że mamy tam jakieś liczby, które reprezentują,
+
+94
+00:06:06,620 --> 00:06:11,620
+nie wiem, wartość podatku, wartość dochodu, przebieg samochodu.
+
+95
+00:06:11,620 --> 00:06:14,620
+Wszystko to zawsze będzie przechowywane w zmiennych.
+
+96
+00:06:14,620 --> 00:06:16,620
+Możemy mieć stringi, które będą zawierały w tym programie,
+
+97
+00:06:16,620 --> 00:06:19,620
+które będą zawierały takie wartości jak właśnie imię, nazwisko,
+
+98
+00:06:19,620 --> 00:06:22,620
+adres e-mail, inne tego typu dane.
+
+99
+00:06:22,620 --> 00:06:25,620
+Wartości logiczne, które mogą dotyczyć takich informacji jak
+
+100
+00:06:25,620 --> 00:06:28,620
+czy jest administratorem, czy nie jest administratorem,
+
+101
+00:06:28,620 --> 00:06:30,620
+czy konto jest aktywne, czy nie jest aktywne,
+
+102
+00:06:30,620 --> 00:06:33,620
+czy może coś wykonać, czy nie może czegoś wykonać.
+
+103
+00:06:33,620 --> 00:06:34,620
+Tego typu dane.
+
+104
+00:06:34,620 --> 00:06:36,620
+Albo czy liczba jest parzysta, czy nieparzysta.
+
+105
+00:06:36,620 --> 00:06:37,620
+OK?
+
+106
+00:06:37,620 --> 00:06:41,620
+I teraz, tak jak wspominałem, jeżeli chodzi o nazwy zmiennych,
+
+107
+00:06:41,620 --> 00:06:43,620
+to raz jeszcze sobie to powtórzmy.
+
+108
+00:06:43,620 --> 00:06:45,620
+Zawsze używamy podkreślenia,
+
+109
+00:06:46,620 --> 00:06:49,620
+jeżeli składa się nazwa z większej liczby słów.
+
+110
+00:06:49,620 --> 00:06:52,620
+Po drugie, nazwa ta musi być zrozumiała dla wszystkich.
+
+111
+00:06:52,620 --> 00:06:55,620
+Jest taka świetna książka, nazywa się Czysty kod.
+
+112
+00:06:55,620 --> 00:06:58,620
+Napisał ją Robert C. Martin, czyli Uncle Bob.
+
+113
+00:06:58,620 --> 00:07:02,620
+I on w tej książce właśnie mówi, że jeżeli używamy zmiennych,
+
+114
+00:07:02,620 --> 00:07:04,620
+no to powinny być one zrozumiałe dla wszystkich.
+
+115
+00:07:04,620 --> 00:07:08,620
+Dodatkowo powinny pochodzić od rzeczowników.
+
+116
+00:07:08,620 --> 00:07:10,620
+Tak po prostu się przyjęło.
+
+117
+00:07:10,620 --> 00:07:13,620
+Jeżeli natomiast przechowujemy coś więcej niż pojedyncze liczby,
+
+118
+00:07:13,620 --> 00:07:16,620
+ale o tych kolekcjach powiemy sobie w przyszłości,
+
+119
+00:07:16,620 --> 00:07:18,620
+to wtedy powinny być w liczbie mnogiej.
+
+120
+00:07:18,620 --> 00:07:20,620
+Natomiast te zmienne, które do tej pory poznałeś,
+
+121
+00:07:20,620 --> 00:07:22,620
+powinny być zapisane w liczbie pojedynczej.
+
+122
+00:07:22,620 --> 00:07:25,620
+No i adekwatne do wartości.
+
+123
+00:07:25,620 --> 00:07:31,620
+Nie staramy się unikać, nie staramy się używać takich zmiennych jak A1, B1, CDE itd.
+
+124
+00:07:31,620 --> 00:07:35,620
+Po prostu przez to nasz program będzie trudniejszy do zrozumienia.
+
+125
+00:07:35,620 --> 00:07:38,620
+No i też nie warto stosować bardzo długich zmiennych,
+
+126
+00:07:38,620 --> 00:07:43,620
+chociaż programy potrafią to wtedy ładnie i tak nam podpowiadać,
+
+127
+00:07:43,620 --> 00:07:45,620
+ale po co to robić?

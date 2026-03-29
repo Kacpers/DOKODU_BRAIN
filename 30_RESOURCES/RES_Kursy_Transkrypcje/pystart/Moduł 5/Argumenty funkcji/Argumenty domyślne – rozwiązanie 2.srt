@@ -1,0 +1,59 @@
+1
+00:00:00,000 --> 00:00:02,359
+No i w zadaniu drugim chcielibyśmy zrobić sobie funkcję,
+
+2
+00:00:02,500 --> 00:00:04,679
+która będzie po prostu przyjmowała dwa argumenty,
+
+3
+00:00:04,759 --> 00:00:06,580
+gdzie drugi będzie miał wartość domyślną 2
+
+4
+00:00:06,580 --> 00:00:10,259
+i wynikiem ma być iloczyn tych dwóch wartości.
+
+5
+00:00:10,259 --> 00:00:20,080
+Czyli def multiply number 1, number 2,
+
+6
+00:00:21,080 --> 00:00:29,160
+wartość 2, dwukropek return number 1 razy number 2.
+
+7
+00:00:30,000 --> 00:00:32,840
+To tyle. Proste rozwiązanie.
+
+8
+00:00:33,159 --> 00:00:35,359
+Raz, dwa, trzy. Nic w nim trudnego nie ma.
+
+9
+00:00:35,740 --> 00:00:37,960
+Tak naprawdę musimy sobie teraz tylko wywołać.
+
+10
+00:00:37,960 --> 00:00:42,019
+Czyli print multiply 2.
+
+11
+00:00:42,719 --> 00:00:44,700
+Jak to zostawimy, to będziemy mieli 4,
+
+12
+00:00:45,079 --> 00:00:48,859
+a jak wpiszemy 6 i 3, to powinniśmy mieć 18.
+
+13
+00:00:49,140 --> 00:00:49,740
+Sprawdzam.
+
+14
+00:00:52,799 --> 00:00:55,299
+4 i 18. Wszystko gra.
+
+15
+00:00:55,799 --> 00:00:57,280
+Dzięki i chodźcie dalej.

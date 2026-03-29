@@ -1,0 +1,471 @@
+1
+00:00:00,000 --> 00:00:02,200
+Czyli mamy napisać program, który stworzy słownik,
+
+2
+00:00:02,300 --> 00:00:04,299
+zawierając informacje o Twoich ulubionych zwierzętach,
+
+3
+00:00:04,379 --> 00:00:05,459
+nazwa zwierzęcia, ilość nóg.
+
+4
+00:00:05,820 --> 00:00:08,060
+Następnie znajdź zwierzę, które ma najwięcej nóg
+
+5
+00:00:08,060 --> 00:00:09,620
+i wyświetl jego nazwę i ilość nóg.
+
+6
+00:00:09,720 --> 00:00:10,800
+Podpowiedź nie sortuj słownika.
+
+7
+00:00:10,900 --> 00:00:11,839
+No to mamy, zobaczcie.
+
+8
+00:00:12,320 --> 00:00:15,419
+Stworzyłem sobie słownik pies, kot, krowa, świnia, kurczak
+
+9
+00:00:15,419 --> 00:00:18,519
+i tu mam różne ilości tych nóg.
+
+10
+00:00:18,940 --> 00:00:22,500
+Jeżeli miałbym napisać program, który stworzy mi taki słownik,
+
+11
+00:00:22,960 --> 00:00:25,219
+no to też mógłbym to jak najbardziej sobie wykonać.
+
+12
+00:00:26,359 --> 00:00:28,240
+Czyli wtedy by to wyglądało tak.
+
+13
+00:00:28,239 --> 00:00:32,060
+Ja za chwilę będę używał tego słownika, który napisałem,
+
+14
+00:00:32,140 --> 00:00:36,479
+ale załóżmy, jeżeli chcielibyśmy tworzyć na przykład z pięciu zwierząt,
+
+15
+00:00:36,799 --> 00:00:38,659
+no to można byłoby zrobić dokładnie tak samo.
+
+16
+00:00:38,820 --> 00:00:40,619
+Animals to jest pusty słownik.
+
+17
+00:00:41,739 --> 00:00:48,459
+For znak podkreślenia in range, żeby zapytał pięć razy.
+
+18
+00:00:48,459 --> 00:00:50,399
+No i wtedy input.
+
+19
+00:00:53,239 --> 00:00:55,280
+Podaj nazwę zwierzęcia.
+
+20
+00:00:58,240 --> 00:01:01,300
+To będzie jakiś tam name.
+
+21
+00:01:03,000 --> 00:01:05,700
+Number of legs.
+
+22
+00:01:09,120 --> 00:01:10,920
+Ile ma nóg.
+
+23
+00:01:13,540 --> 00:01:21,740
+No i wtedy animals od name równa się number of legs.
+
+24
+00:01:22,439 --> 00:01:22,980
+Print.
+
+25
+00:01:24,900 --> 00:01:25,879
+Animals.
+
+26
+00:01:25,879 --> 00:01:25,960
+Animals.
+
+27
+00:01:25,959 --> 00:01:30,199
+I w ten sposób, jeżeli sobie to wywołamy, czyli wykonam python,
+
+28
+00:01:31,039 --> 00:01:33,239
+spacja, cztery, ilość nóg,
+
+29
+00:01:33,639 --> 00:01:35,139
+no to mogę podać nazwę zwierzęcia.
+
+30
+00:01:35,259 --> 00:01:41,519
+Pies, cztery, kot, cztery, konik polny, cztery.
+
+31
+00:01:42,000 --> 00:01:42,699
+Co tam jeszcze mamy?
+
+32
+00:01:42,879 --> 00:01:44,259
+Pająka, który ma osiem.
+
+33
+00:01:47,579 --> 00:01:51,019
+Osiem, mrówka, sześć.
+
+34
+00:01:51,719 --> 00:01:54,339
+No i dostałem dokładnie taki sam słownik.
+
+35
+00:01:54,339 --> 00:01:55,919
+Więc ja ten słownik,
+
+36
+00:01:55,920 --> 00:01:56,659
+już mam.
+
+37
+00:01:57,420 --> 00:01:59,879
+Jeżeli chciałbym go tworzyć, to bym go stworzył w ten sposób.
+
+38
+00:02:00,040 --> 00:02:02,879
+A jak go mam, to tworzyć go nie muszę.
+
+39
+00:02:03,299 --> 00:02:07,560
+Natomiast muszę zrobić inną rzecz, a mianowicie mam znaleźć zwierzę,
+
+40
+00:02:07,640 --> 00:02:10,500
+które ma najwięcej nóg, wyświetlić jego nazwę, ilość nóg.
+
+41
+00:02:10,580 --> 00:02:11,960
+Czyli mamy pająka w ten sposób.
+
+42
+00:02:12,759 --> 00:02:16,080
+Pierwsza rzecz, którą sobie zrobię, to sprawdzę tak naprawdę,
+
+43
+00:02:16,340 --> 00:02:18,500
+ile nóg, a to jest najwięcej.
+
+44
+00:02:19,000 --> 00:02:21,500
+Więc potrzebuję sobie stworzyć jakąś nazwę.
+
+45
+00:02:23,400 --> 00:02:24,980
+Maximum number of legs.
+
+46
+00:02:25,919 --> 00:02:32,000
+No i zakładam na dzień dobry zero.
+
+47
+00:02:32,799 --> 00:02:33,299
+Idę dalej.
+
+48
+00:02:33,879 --> 00:02:38,039
+For animal in animals.
+
+49
+00:02:38,679 --> 00:02:43,199
+Czyli muszę sobie przejść po wszystkich tych zwierzętach, które w danym momencie mam.
+
+50
+00:02:43,560 --> 00:02:47,759
+I będę chciał sprawdzić, czy to jest to zwierzę, które ma najwięcej nóg.
+
+51
+00:02:48,299 --> 00:02:53,879
+Czyli będę chciał sprawdzić, czy animals od animal.
+
+52
+00:02:53,879 --> 00:02:54,099
+Zobaczmy.
+
+53
+00:02:54,099 --> 00:02:54,159
+Zobaczmy.
+
+54
+00:02:54,159 --> 00:02:54,219
+Zobaczmy.
+
+55
+00:02:54,219 --> 00:02:54,299
+Zobaczmy.
+
+56
+00:02:54,299 --> 00:02:54,359
+Zobaczmy.
+
+57
+00:02:54,359 --> 00:02:54,419
+Zobaczmy.
+
+58
+00:02:54,419 --> 00:02:54,519
+Zobaczmy.
+
+59
+00:02:54,519 --> 00:02:54,619
+Zobaczmy.
+
+60
+00:02:54,619 --> 00:02:54,679
+Zobaczmy.
+
+61
+00:02:54,679 --> 00:02:54,739
+Zobaczmy.
+
+62
+00:02:54,739 --> 00:02:54,799
+Zobaczmy.
+
+63
+00:02:54,799 --> 00:02:54,859
+Zobaczmy.
+
+64
+00:02:54,859 --> 00:02:54,899
+Zobaczmy.
+
+65
+00:02:54,899 --> 00:02:55,000
+Zobaczmy.
+
+66
+00:02:55,000 --> 00:02:55,079
+Zobaczmy.
+
+67
+00:02:55,079 --> 00:02:55,139
+Zobaczmy.
+
+68
+00:02:55,139 --> 00:02:55,219
+Zobaczmy.
+
+69
+00:02:55,219 --> 00:02:55,259
+Zobaczmy.
+
+70
+00:02:55,259 --> 00:02:55,319
+Zobaczmy.
+
+71
+00:02:55,319 --> 00:02:55,379
+Zobaczmy.
+
+72
+00:02:55,379 --> 00:02:55,400
+Zobaczmy.
+
+73
+00:02:55,400 --> 00:02:55,419
+Zobaczmy.
+
+74
+00:02:55,419 --> 00:02:55,479
+Zobaczmy.
+
+75
+00:02:55,479 --> 00:02:55,500
+Zobaczmy.
+
+76
+00:02:55,500 --> 00:02:55,539
+Zobaczmy.
+
+77
+00:02:55,539 --> 00:02:55,560
+Zobaczmy.
+
+78
+00:02:55,560 --> 00:02:55,579
+Zobaczmy.
+
+79
+00:02:55,579 --> 00:02:55,819
+Zobaczmy.
+
+80
+00:02:55,819 --> 00:02:55,859
+Zobaczmy.
+
+81
+00:02:55,859 --> 00:02:55,879
+Zobaczmy.
+
+82
+00:02:55,879 --> 00:02:55,900
+Zobaczmy.
+
+83
+00:02:55,900 --> 00:02:56,079
+Zobaczmy.
+
+84
+00:02:56,079 --> 00:02:56,199
+Zobaczmy.
+
+85
+00:02:56,199 --> 00:02:56,259
+Zobaczmy.
+
+86
+00:02:56,259 --> 00:02:56,299
+Zobaczmy.
+
+87
+00:02:56,299 --> 00:03:01,459
+Jest większe od maximum number of legs.
+
+88
+00:03:03,219 --> 00:03:09,120
+Jeżeli któreś zwierzę będzie miało więcej nóg, niż ta największa liczba nóg,
+
+89
+00:03:09,120 --> 00:03:15,240
+no to wtedy mogę przypisać informację, że największa liczba nóg to jest właśnie
+
+90
+00:03:15,240 --> 00:03:19,759
+ta liczba, którą ma to zwierzę, czyli animals od animal.
+
+91
+00:03:22,699 --> 00:03:25,139
+I w ten sposób, jeżeli ja to sobie wyprintuję,
+
+92
+00:03:25,319 --> 00:03:31,519
+to on mi ładnie tutaj poda, że najwięcej nóg to jest 8.
+
+93
+00:03:31,879 --> 00:03:36,519
+Bo on po prostu przechodzi po kolei po tych nogach, po tych zwierzętach
+
+94
+00:03:36,519 --> 00:03:40,639
+i sprawdza, które z nich ma najwięcej nóg, a jeżeli ma 8, no to super.
+
+95
+00:03:41,519 --> 00:03:44,979
+To można byłoby zrobić jeszcze odrobinę lepiej, bo może by się okazało,
+
+96
+00:03:45,139 --> 00:03:49,680
+że gdzieś któreś zwierzę, z nogami to się nie uda, ale z innymi danymi
+
+97
+00:03:49,680 --> 00:03:52,919
+mogłoby tak być, że któreś zwierzę ma mniej niż 0 nóg.
+
+98
+00:03:52,919 --> 00:03:55,039
+I wtedy można też zrobić tak,
+
+99
+00:03:55,039 --> 00:04:02,359
+że przypisać sobie tutaj wartość none i wtedy sprawdzić if maximum number of legs is none or
+
+100
+00:04:02,359 --> 00:04:08,899
+i wtedy zabezpieczymy się przed tym, żeby wartością nie musiało być,
+
+101
+00:04:09,919 --> 00:04:12,659
+żeby nie szukać wartości mniejszych od tej wartości, która jest podana.
+
+102
+00:04:13,259 --> 00:04:18,439
+Bo none to jest nic, a or działa w ten sposób, że jeżeli pierwsza część ora
+
+103
+00:04:18,439 --> 00:04:21,839
+zostanie spełniona, to druga już nie będzie spełniana.
+
+104
+00:04:21,839 --> 00:04:24,639
+Więc dzięki temu po prostu za pierwszym razem, kiedy,
+
+105
+00:04:25,040 --> 00:04:28,640
+będzie to none, to przypisze nam psa o ilości kończyn 4,
+
+106
+00:04:28,640 --> 00:04:32,040
+ale w jednym i w drugim przypadku dostajemy w wyniku, jak widać, 8.
+
+107
+00:04:32,040 --> 00:04:36,040
+No i teraz należałoby tylko znaleźć to zwierzę, które ma tyle nóg,
+
+108
+00:04:36,040 --> 00:04:39,040
+czyli for animal in animals,
+
+109
+00:04:40,040 --> 00:04:47,540
+if animals od animal równa się maximum number of legs,
+
+110
+00:04:47,540 --> 00:04:54,140
+no to print animal i animals od animal.
+
+111
+00:04:55,040 --> 00:04:59,939
+Jeżeli wiemy, że może być więcej takich zwierząt, no to możemy nie robić breaka,
+
+112
+00:04:59,939 --> 00:05:04,640
+no i wtedy jak zrobimy strzałkę do góry i enter, to pojawi nam się pająk i 8 sztuk.
+
+113
+00:05:04,640 --> 00:05:09,340
+Wyobraźmy sobie, że mamy jeszcze jakieś zwierzę tutaj, niech to będzie jakiś tam, nie wiem,
+
+114
+00:05:11,040 --> 00:05:18,340
+super zwierzak, który też będzie miał 8 nóg i w tym momencie pojawi nam się zarówno pająk,
+
+115
+00:05:18,340 --> 00:05:21,540
+jak i super zwierzak, które mają tych nóg najwięcej.
+
+116
+00:05:21,939 --> 00:05:24,840
+Innym sposobem oczywiście może być posortowanie tego słownika, natomiast,
+
+117
+00:05:25,040 --> 00:05:29,040
+w ten sposób też, jak widać, udało nam się to zrobić.
+
+118
+00:05:29,040 --> 00:05:33,040
+Jesteśmy prawie, że w połowie naszej pracy domowej, więc chodźmy dalej.

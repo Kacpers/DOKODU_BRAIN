@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:01,820
+I zadanie wygląda następująco.
+
+2
+00:00:02,319 --> 00:00:08,240
+Korzystając ze zdobytej wiedzy napisz funkcję liczącą silnie dla podanej przez użytkownika w argumencie liczby.
+
+3
+00:00:08,660 --> 00:00:11,960
+Czyli l silnia równa się l razy l minus 1 silnia.
+
+4
+00:00:12,419 --> 00:00:20,519
+Czyli pamiętaj o tym, że jeżeli l będzie równe 0 to wtedy zwróć 1, a w przeciwnym wypadku zwróć silnie dla l minus 1.
+
+5
+00:00:21,740 --> 00:00:23,160
+Czekam na rozwiązanie.

@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:05,980
+A druga rzecz, którą mamy zrobić, to mamy napisać program, który wylosuje liczbę z przedziału od 1 do 100,
+
+2
+00:00:06,440 --> 00:00:10,120
+a następnie korzystając z biblioteki MAF, wypisze kwadrat i pierwiastek kwadratowy.
+
+3
+00:00:10,700 --> 00:00:11,500
+No to lecimy.
+
+4
+00:00:12,179 --> 00:00:15,140
+From MAF import sqrt.
+
+5
+00:00:15,660 --> 00:00:20,960
+Jeżeli chodzi natomiast o kwadrat, no to jest to pow.
+
+6
+00:00:22,179 --> 00:00:25,560
+Następnie potrzebujemy mieć jakąś liczbę, którą musimy sobie wylosować.
+
+7
+00:00:25,559 --> 00:00:32,539
+Czyli number równa się from random import randint.
+
+8
+00:00:33,939 --> 00:00:40,159
+I musimy sobie wylosować wartość od 1 do 100.
+
+9
+00:00:41,959 --> 00:00:45,879
+Następnie będziemy potrzebowali mieć pierwiastek i kwadrat.
+
+10
+00:00:45,879 --> 00:00:55,140
+Czyli number pow równa się number pow na number do potęgi drugiej.
+
+11
+00:00:55,560 --> 00:01:01,580
+Natomiast pierwiastek to będzie number sqrt równa się sqrt na number.
+
+12
+00:01:03,219 --> 00:01:07,859
+I jeżeli spróbujemy to sobie wypisać, to możemy wypisać wszystkie trzy wartości.
+
+13
+00:01:07,859 --> 00:01:20,900
+Czyli liczba to, pierwiastek to, no i potęga, czy też kwadrat to.
+
+14
+00:01:23,939 --> 00:01:25,439
+Oczywiście pierwiastek to.
+
+15
+00:01:25,560 --> 00:01:26,420
+Number sqrt.
+
+16
+00:01:29,420 --> 00:01:31,439
+A potęga to number pow.
+
+17
+00:01:32,260 --> 00:01:37,020
+Jeżeli wówczas wykonamy sobie to zadanie, czyli pseudolos 2, dostaniemy.
+
+18
+00:01:37,180 --> 00:01:42,180
+Liczba to 30, pierwiastek to 5, coś tam, kwadrat to 9.
+
+19
+00:01:42,180 --> 00:01:48,140
+Natomiast zadanie polegało na tym, żeby zaokrąglić sobie ten pierwiastek kwadratowy jeszcze w dół i w górę.
+
+20
+00:01:48,560 --> 00:01:52,840
+Czyli z MAF-a będziemy potrzebowali mieć jeszcze floor i seal.
+
+21
+00:01:53,340 --> 00:01:55,439
+I wtedy pierwiastek to możemy zrobić.
+
+22
+00:01:55,560 --> 00:01:55,840
+Tak.
+
+23
+00:01:56,640 --> 00:02:01,340
+Floor number sqrt i seal number sqrt.
+
+24
+00:02:01,340 --> 00:02:07,900
+I w ten sposób dostaniemy, o akurat 64 wyszło, to jest 888.
+
+25
+00:02:08,840 --> 00:02:14,300
+Natomiast jak zrobimy raz jeszcze, o, no to 58 to wychodzi tyle, czyli 7 i 8.
+
+26
+00:02:15,039 --> 00:02:15,620
+Gotowe.
+
+27
+00:02:16,259 --> 00:02:21,780
+Korzystanie z funkcji zawartych w bibliotece standardowej to jest przeogromna moc Pythona.
+
+28
+00:02:22,240 --> 00:02:24,939
+Więc zachęcam Cię do tego, żebyś, no jak masz chwilę,
+
+29
+00:02:25,319 --> 00:02:25,340
+poprzedzaj.
+
+30
+00:02:25,560 --> 00:02:30,800
+Przeglądał sobie te funkcje i starał się zawsze używać funkcji, bo po prostu w ten sposób jest łatwiej.
+
+31
+00:02:31,500 --> 00:02:32,060
+Chodźcie dalej.

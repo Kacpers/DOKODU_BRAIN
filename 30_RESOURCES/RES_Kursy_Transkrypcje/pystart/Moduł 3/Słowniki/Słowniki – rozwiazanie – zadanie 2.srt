@@ -1,0 +1,531 @@
+1
+00:00:00,000 --> 00:00:03,080
+No i drugie zadanie powinno zwrócić informację,
+
+2
+00:00:03,379 --> 00:00:05,900
+ile razy wystąpiło w zdaniu dane słowo,
+
+3
+00:00:06,379 --> 00:00:08,880
+czyli na przykład w tym zdaniu raz, raz, dwa, trzy
+
+4
+00:00:08,880 --> 00:00:11,359
+powinno nam się pokazać, że dwa razy wystąpiło raz.
+
+5
+00:00:11,880 --> 00:00:15,880
+Robimy to zadanie w taki sposób, żeby jeżeli mamy sytuację taką,
+
+6
+00:00:16,100 --> 00:00:17,820
+że są różne wielkość liter,
+
+7
+00:00:18,260 --> 00:00:19,920
+to żeby nie było to słowo zliczane,
+
+8
+00:00:20,359 --> 00:00:22,660
+znaczy żeby było zliczane osobno.
+
+9
+00:00:23,260 --> 00:00:24,760
+Możemy więc sobie stworzyć jakieś zdanie,
+
+10
+00:00:24,760 --> 00:00:27,560
+sentence i wracamy do tego naszego ulubionego.
+
+11
+00:00:28,120 --> 00:00:29,760
+Python to wspaniały język,
+
+12
+00:00:30,000 --> 00:00:35,380
+Python jest szybki i wydajny.
+
+13
+00:00:39,880 --> 00:00:44,100
+Python to jest język szybki i wydajny.
+
+14
+00:00:44,740 --> 00:00:48,379
+Robię to celowo, żeby dwa razy powtórzyło nam się słowo Python
+
+15
+00:00:48,379 --> 00:00:50,820
+i dwa razy powtórzyło nam się słowo język,
+
+16
+00:00:51,159 --> 00:00:53,799
+no i parę epitetów też tutaj się znalazło.
+
+17
+00:00:54,060 --> 00:00:56,240
+Ok, od czego musimy sobie zacząć?
+
+18
+00:00:56,579 --> 00:00:57,939
+Tak naprawdę musimy zacząć od tego,
+
+19
+00:00:58,079 --> 00:00:59,799
+żeby rozbić to wyrażenie na słowo.
+
+20
+00:01:00,000 --> 00:01:01,759
+To już robiliśmy wiele razy,
+
+21
+00:01:02,039 --> 00:01:04,019
+znaczy może wiele to nie, ale kilka razy,
+
+22
+00:01:04,319 --> 00:01:07,620
+więc sentence.split i używamy spacji.
+
+23
+00:01:07,840 --> 00:01:11,159
+Będziemy rozbijali sobie to wyrażenie po spacji.
+
+24
+00:01:11,700 --> 00:01:15,260
+Tutaj mamy tą sytuację, że jest krop, przecinek,
+
+25
+00:01:15,519 --> 00:01:17,980
+ja na razie ten przecinek sobie się go pozbędę,
+
+26
+00:01:18,400 --> 00:01:21,159
+w razie czego jeżeli chcesz zrobić to zadanie też samodzielnie,
+
+27
+00:01:21,299 --> 00:01:22,740
+razem z przecinkami i z kropkami,
+
+28
+00:01:22,859 --> 00:01:24,700
+to najpierw można byłoby przejść po literach
+
+29
+00:01:24,700 --> 00:01:27,200
+i te przecinki i kropki wszystkie usunąć.
+
+30
+00:01:27,200 --> 00:01:29,640
+Robiliśmy to już w poprzednim przykładzie,
+
+31
+00:01:29,640 --> 00:01:32,640
+w poprzednim module,
+
+32
+00:01:32,640 --> 00:01:34,939
+więc zachęcam cię, czy w poprzednich lekcjach,
+
+33
+00:01:35,040 --> 00:01:36,480
+może tak powiedzmy sobie bezpieczniej,
+
+34
+00:01:36,799 --> 00:01:38,620
+więc zachęcam cię do tego, żeby nie wracać tam,
+
+35
+00:01:38,760 --> 00:01:40,540
+tylko żeby napisać to raz jeszcze.
+
+36
+00:01:41,540 --> 00:01:45,019
+Ok, więc teraz odebraliśmy do użytkownika dowolny string
+
+37
+00:01:45,019 --> 00:01:46,280
+i teraz chcemy dowiedzieć się,
+
+38
+00:01:46,500 --> 00:01:49,340
+ile razy każde słowo wystąpiło w tym słowniku.
+
+39
+00:01:50,060 --> 00:01:53,879
+Czyli zrobię to na początek bez korzystania z getta i setta,
+
+40
+00:01:54,319 --> 00:01:56,000
+z updata, a później pokażę wam,
+
+41
+00:01:56,079 --> 00:01:58,140
+jak zrobić to skorzystając z getta i z updata,
+
+42
+00:01:58,140 --> 00:01:58,960
+tak żeby było trochę,
+
+43
+00:01:59,640 --> 00:02:00,540
+mniej pisania.
+
+44
+00:02:01,180 --> 00:02:05,359
+Czyli for word in words.
+
+45
+00:02:05,620 --> 00:02:06,659
+To jest pierwsza rzecz.
+
+46
+00:02:07,340 --> 00:02:08,199
+Print word.
+
+47
+00:02:08,740 --> 00:02:10,639
+Myślę, że spodziewamy się, jaki będzie wynik.
+
+48
+00:02:11,180 --> 00:02:13,639
+Jeżeli sobie to wykonam, zliczam słowa,
+
+49
+00:02:14,060 --> 00:02:16,139
+to pojawi mi się po prostu tutaj wiele razy,
+
+50
+00:02:16,219 --> 00:02:18,539
+wiele razy pokażą mi się wszystkie słowa.
+
+51
+00:02:18,900 --> 00:02:19,680
+Od góry do dołu.
+
+52
+00:02:20,500 --> 00:02:20,939
+Idę dalej.
+
+53
+00:02:21,479 --> 00:02:22,780
+Kolejna rzecz, którą muszę zrobić,
+
+54
+00:02:23,139 --> 00:02:25,840
+to muszę w tym moim zadaniu
+
+55
+00:02:26,620 --> 00:02:29,500
+sprawdzić, czy słowo znajduje się już w jakimś słowniku,
+
+56
+00:02:29,500 --> 00:02:30,000
+które mam.
+
+57
+00:02:30,539 --> 00:02:32,620
+Mogę więc stworzyć sobie taką zmienną,
+
+58
+00:02:32,740 --> 00:02:33,979
+nazwę ją word counter,
+
+59
+00:02:34,460 --> 00:02:37,340
+równa się i tutaj stworzę sobie pusty słownik.
+
+60
+00:02:38,039 --> 00:02:44,840
+I wtedy, jeżeli word nie znajduje się w word counterze,
+
+61
+00:02:45,699 --> 00:02:50,199
+to mogę stworzyć z wartością 0.
+
+62
+00:02:50,639 --> 00:02:56,580
+Czyli word counter od word plus równa się 1.
+
+63
+00:02:56,580 --> 00:02:58,020
+W tym momencie,
+
+64
+00:02:58,379 --> 00:02:59,479
+co ja zrobię?
+
+65
+00:02:59,500 --> 00:03:00,500
+Równa się 0.
+
+66
+00:03:01,659 --> 00:03:03,979
+W tym momencie ja nie będę musiał dodawać elsa.
+
+67
+00:03:04,139 --> 00:03:05,500
+Po prostu z góry sobie zakładam,
+
+68
+00:03:05,500 --> 00:03:07,379
+że jeżeli to słowo jeszcze nie występowało,
+
+69
+00:03:07,379 --> 00:03:08,460
+jeszcze go nie zliczałem,
+
+70
+00:03:08,740 --> 00:03:11,939
+to tworzę jakby dla niego miejsce i przypisuję mu wartość 0.
+
+71
+00:03:12,259 --> 00:03:13,840
+Robię to po to, żeby nie robić elsa,
+
+72
+00:03:14,080 --> 00:03:15,539
+bo to, o czym mówiłem ci przy ifach,
+
+73
+00:03:15,539 --> 00:03:17,620
+że jeżeli robimy bardzo dużo ifów z elsami,
+
+74
+00:03:17,900 --> 00:03:22,060
+to później najczęściej gdzieś zaczynamy robić sobie takie całe drzewko różnych decyzji
+
+75
+00:03:22,340 --> 00:03:24,379
+i się w tym drzewku można bardzo łatwo pogubić.
+
+76
+00:03:24,699 --> 00:03:27,780
+Dlatego też zrobiłem if word not in word counter,
+
+77
+00:03:27,860 --> 00:03:29,060
+word counter od word,
+
+78
+00:03:29,060 --> 00:03:30,060
+równa się 0,
+
+79
+00:03:30,259 --> 00:03:31,860
+a następnie mogę wykonać
+
+80
+00:03:31,860 --> 00:03:38,420
+word podkreślenie counter od word plus równa się 1.
+
+81
+00:03:38,699 --> 00:03:41,140
+Dlaczego tego wyrażenia nie mogłem zrobić wcześniej?
+
+82
+00:03:41,500 --> 00:03:48,099
+Gdyż jeżeli wykonuję sobie word counter równa się word równa się plus równa się 1,
+
+83
+00:03:48,420 --> 00:03:49,699
+to to jest linijka, która oznacza,
+
+84
+00:03:49,699 --> 00:03:54,020
+że ja wykonuję word counter równa się word counter od word plus 1,
+
+85
+00:03:54,460 --> 00:03:59,020
+a ta zmienna bez tego, co jest wyżej wcześniej nie była nigdy,
+
+86
+00:03:59,020 --> 00:03:59,620
+ustawiona.
+
+87
+00:03:59,820 --> 00:04:03,620
+Więc jeżeli ja spróbuję to zrobić, a tej zmiennej nie ustawię sobie tutaj,
+
+88
+00:04:04,020 --> 00:04:05,420
+nie przypiszę jej wartości 0,
+
+89
+00:04:05,700 --> 00:04:08,860
+to skutkiem tego będzie informacja, że on nie wie, co to jest za klucz.
+
+90
+00:04:09,500 --> 00:04:14,060
+Można byłoby więc tutaj użyć metody get i pobrać sobie ten word,
+
+91
+00:04:14,060 --> 00:04:17,540
+przypisując wartość 0, ale wtedy tego będziemy mogli się pozbyć.
+
+92
+00:04:17,860 --> 00:04:19,699
+Ale to usprawnienie zrobimy sobie za chwilę.
+
+93
+00:04:20,579 --> 00:04:23,060
+No i wtedy jeżeli wypiszemy sobie word counter,
+
+94
+00:04:24,939 --> 00:04:28,180
+no to możemy zrobić python spacja zliczam słowa.
+
+95
+00:04:29,019 --> 00:04:32,019
+No i mamy python dwa razy, to też pojawiło się dwa razy.
+
+96
+00:04:32,699 --> 00:04:36,339
+Wspaniały język, szybki, wydajny język też pojawił nam się dwa razy.
+
+97
+00:04:36,779 --> 00:04:40,379
+Jeżeli chciałbyś wyświetlić te wyrażenia posortowane po wartości,
+
+98
+00:04:40,379 --> 00:04:43,180
+to teraz nie pokażę, jak to zrobić.
+
+99
+00:04:43,459 --> 00:04:44,939
+Pokażemy to sobie gdzieś w przyszłości,
+
+100
+00:04:44,939 --> 00:04:48,019
+natomiast na chwilę obecną w zupełności, jak widzisz, wszystko działa.
+
+101
+00:04:48,459 --> 00:04:50,500
+I teraz jeżeli chcielibyśmy,
+
+102
+00:04:52,180 --> 00:04:55,379
+to można potraktować jako zadanie na szóstkę, żeby posortować to po ilości.
+
+103
+00:04:55,779 --> 00:04:58,819
+I teraz jeżeli chcielibyśmy sobie trochę ten kod jeszcze uprawiać,
+
+104
+00:04:59,019 --> 00:05:00,019
+to można go poprawić.
+
+105
+00:05:00,019 --> 00:05:05,019
+No to tak jak wspomniałem, można byłoby zamiast pisać word counter plus word,
+
+106
+00:05:05,019 --> 00:05:08,019
+napisać word counter get word
+
+107
+00:05:12,779 --> 00:05:14,779
+i domyślnie przypisać mu wartość zero.
+
+108
+00:05:14,779 --> 00:05:18,779
+W tym momencie ten kod mogę usunąć.
+
+109
+00:05:19,779 --> 00:05:23,500
+No i okaże się, że mój zapis troszeczkę będzie uproszczony.
+
+110
+00:05:23,500 --> 00:05:26,500
+Jak widać wynik wciąż mamy OK.
+
+111
+00:05:27,099 --> 00:05:28,099
+Natomiast,
+
+112
+00:05:28,100 --> 00:05:30,100
+można to jeszcze bardziej uprościć,
+
+113
+00:05:30,100 --> 00:05:34,100
+bo jak pamiętasz, mamy też coś takiego, co nazywało się update.
+
+114
+00:05:34,100 --> 00:05:38,100
+Więc jeżeli wykonamy word counter kropka update,
+
+115
+00:05:38,100 --> 00:05:41,100
+to będziemy mogli zrobić word counter od update
+
+116
+00:05:41,100 --> 00:05:43,100
+i on musi przyjmować słownik, nie?
+
+117
+00:05:43,100 --> 00:05:46,100
+I to, co mu przekażemy, będziemy nadpisywali.
+
+118
+00:05:46,100 --> 00:05:48,100
+Czyli word counter kropka update
+
+119
+00:05:48,100 --> 00:05:52,100
+i w tym słowniku wstawiamy sobie word, bo to jest nasz klucz.
+
+120
+00:05:52,100 --> 00:05:56,100
+Natomiast wartością będzie dokładnie to.
+
+121
+00:05:56,100 --> 00:05:58,100
+Czy to nam uprościło?
+
+122
+00:05:58,100 --> 00:06:04,100
+Nie wiem, ale tak też powinno nam to zadziałać.
+
+123
+00:06:04,100 --> 00:06:06,100
+Więc macie tak naprawdę dwie opcje do wyboru.
+
+124
+00:06:06,100 --> 00:06:08,100
+Albo tą, albo tą.
+
+125
+00:06:08,100 --> 00:06:11,100
+W tym przypadku nie korzystamy z update'a.
+
+126
+00:06:11,100 --> 00:06:13,100
+W tym przypadku korzystamy z update'a.
+
+127
+00:06:13,100 --> 00:06:16,100
+Obie działają, więc decyzję zostawiam po waszej stronie,
+
+128
+00:06:16,100 --> 00:06:17,100
+która wam się bardziej podoba.
+
+129
+00:06:17,100 --> 00:06:19,100
+Ale dzięki temu też można się trochę więcej pouczyć,
+
+130
+00:06:19,100 --> 00:06:23,100
+więc kilka takich innych rozwiązań też sobie przy okazji pokazaliśmy.
+
+131
+00:06:23,100 --> 00:06:26,100
+Jeżeli udało ci się napisać jeszcze prostsze rozwiązanie,
+
+132
+00:06:26,100 --> 00:06:28,100
+to też koniecznie daj znać w komentarzu.
+
+133
+00:06:28,100 --> 00:06:30,100
+Do zobaczenia.

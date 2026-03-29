@@ -1,0 +1,327 @@
+1
+00:00:00,000 --> 00:00:04,780
+Dobrze, to zaczniemy sobie od tego, jak pracować z projektem, czy też w ogóle jak ten projekt zrobić.
+
+2
+00:00:05,259 --> 00:00:10,720
+Projekt to będzie takie większe zadanie, które każdy może potraktować zupełnie jak zadanie,
+
+3
+00:00:10,820 --> 00:00:16,620
+chociaż nie ma tego symbolu mówiącego stop, ale jeżeli masz ochotę zrobić ten projekt samodzielnie,
+
+4
+00:00:16,719 --> 00:00:20,780
+to moim zdaniem masz wszystkie umiejętności do tego, żeby go zrealizować.
+
+5
+00:00:21,300 --> 00:00:24,600
+Oczywiście w kolejnym filmie znajdziesz też moje rozwiązanie,
+
+6
+00:00:24,600 --> 00:00:30,460
+natomiast takie podsumowanie wszystkich umiejętności to właśnie w tym projekcie powinno być zawarte.
+
+7
+00:00:30,920 --> 00:00:35,880
+Bardzo często tutaj zwracacie mi uwagę na to, że te nasze zadania są troszkę odrealnione.
+
+8
+00:00:36,100 --> 00:00:40,680
+Może nie odrealnione, ale programista rzadko kiedy będzie sprawdzał, czy liczba jest pierwsza,
+
+9
+00:00:40,799 --> 00:00:42,520
+albo będzie rzadko kiedy szukał dzielników.
+
+10
+00:00:43,040 --> 00:00:48,900
+To są takie wprawki, żeby usystematyzować sobie wiedzę i poćwiczyć.
+
+11
+00:00:48,900 --> 00:00:53,500
+Natomiast oczywiście taki pełen projekt, czy kiedy wykonuje większą aplikację,
+
+12
+00:00:53,500 --> 00:00:55,780
+to raczej takich rzeczy nie pisze.
+
+13
+00:00:56,280 --> 00:01:00,159
+Natomiast to, co pisze, to bardzo często są właśnie jakieś działania,
+
+14
+00:01:00,280 --> 00:01:05,900
+które odbieram od użytkownika, albo jakieś obliczenia oparte na takich rzeczywistych przykładach.
+
+15
+00:01:06,280 --> 00:01:08,340
+I taki przykład właśnie mamy w naszym projekcie.
+
+16
+00:01:08,840 --> 00:01:14,500
+Może nigdy w życiu, tak przyznam się, nie pisałem projektu, który miałby wesprzeć pracę malarza,
+
+17
+00:01:14,579 --> 00:01:17,240
+no ale w tym przypadku może się tak zdarzyć.
+
+18
+00:01:17,659 --> 00:01:19,920
+Sam bardzo często pamiętam, że miałem takie problemy,
+
+19
+00:01:19,920 --> 00:01:21,920
+że najpierw mierzyłem miarką wszystkie te ściany,
+
+20
+00:01:23,500 --> 00:01:27,500
+od C do C, szukając określonych farb,
+
+21
+00:01:27,500 --> 00:01:29,500
+no i często się okazywało, że farby zabrakło.
+
+22
+00:01:29,500 --> 00:01:33,500
+Więc w tym właśnie projekcie będziemy chcieli rozwiązać ten problem.
+
+23
+00:01:33,500 --> 00:01:36,500
+W pracy malarza jest wiele trudności,
+
+24
+00:01:36,500 --> 00:01:40,500
+a najgorsze jest zapamiętanie i obliczenie tych wszystkich danych.
+
+25
+00:01:40,500 --> 00:01:44,500
+Dlatego stwórzmy narzędzie, które wspomoże pracę każdego majstra.
+
+26
+00:01:44,500 --> 00:01:48,500
+I zobaczcie, na dzień dobry pytamy, ile jest ścian do pomalowania.
+
+27
+00:01:48,500 --> 00:01:50,500
+Odpowiedź brzmi 3.
+
+28
+00:01:50,500 --> 00:01:53,319
+Jeśli chcesz przyjąć poprzednią wysoką,
+
+29
+00:01:53,319 --> 00:01:55,319
+to wciśnij Enter.
+
+30
+00:01:55,319 --> 00:01:58,319
+Tu chodzi o to, że kiedy będziemy podawali wymiary tych ścian,
+
+31
+00:01:58,319 --> 00:02:00,319
+no to będziemy musieli podać szerokość i wysokość.
+
+32
+00:02:00,319 --> 00:02:03,319
+Zakładamy, że wszystkie ściany są prostokątne.
+
+33
+00:02:03,319 --> 00:02:06,319
+Więc często, myślę, że prawie zawsze,
+
+34
+00:02:06,319 --> 00:02:09,319
+jeżeli malujemy te same ściany w pokojach,
+
+35
+00:02:09,319 --> 00:02:12,319
+no to wysokość jest taka sama.
+
+36
+00:02:12,319 --> 00:02:14,319
+Więc my tutaj się przygotowujemy też na to,
+
+37
+00:02:14,319 --> 00:02:16,319
+jeżeli ktoś poda nam jedną wysokość,
+
+38
+00:02:16,319 --> 00:02:18,319
+i to będą powiedzmy, nie wiem, 2,5 metra,
+
+39
+00:02:18,319 --> 00:02:20,319
+i zrobi Enter, to później każda kolejna ściana,
+
+40
+00:02:20,319 --> 00:02:23,319
+jeżeli nie nadpiszemy tej wartości, powinna mieć właśnie taką wysokość.
+
+41
+00:02:23,319 --> 00:02:26,319
+Możemy też się umówić, że standardowo tam będzie, nie wiem,
+
+42
+00:02:26,319 --> 00:02:29,319
+3,20 ściana, czy jakakolwiek tam wysokość sobie przyjmiemy,
+
+43
+00:02:29,319 --> 00:02:32,319
+że jeżeli ktoś nie podałby za pierwszym razem tej wysokości,
+
+44
+00:02:32,319 --> 00:02:34,319
+to i tak byłby to Enter.
+
+45
+00:02:34,319 --> 00:02:36,319
+To byłaby ta wartość domyślna.
+
+46
+00:02:36,319 --> 00:02:38,319
+No i zobaczcie. Napisaliśmy, że 3 ściany są do pomalowania,
+
+47
+00:02:38,319 --> 00:02:40,319
+no to szerokość pierwszej ściany to 2,
+
+48
+00:02:40,319 --> 00:02:42,319
+wysokość to 4.
+
+49
+00:02:42,319 --> 00:02:46,319
+Szerokość to 3, wysokość to nie podana, czyli też 4.
+
+50
+00:02:46,319 --> 00:02:49,319
+Czyli jakaś kamienica. I to taka dosyć wąska, ale wysoka.
+
+51
+00:02:49,319 --> 00:02:52,319
+No i dalej mamy trzecia ściana ma 2 metry,
+
+52
+00:02:52,319 --> 00:02:54,319
+i wysokość też jest 4 metry.
+
+53
+00:02:54,319 --> 00:02:57,319
+No i łącznie wyszło, że do pomalowania są 24 metry.
+
+54
+00:02:57,319 --> 00:03:00,319
+Ale oczywiście może się okazać,
+
+55
+00:03:00,319 --> 00:03:05,319
+że różną mamy jakby potrzebę nakładania warstw farby,
+
+56
+00:03:05,319 --> 00:03:07,319
+bo farba może być bardziej gęsta, albo mniej gęsta,
+
+57
+00:03:07,319 --> 00:03:09,319
+no i tak samo z gruntem.
+
+58
+00:03:09,319 --> 00:03:11,319
+Natomiast ja nie jestem od tego, żeby teraz Was uczyć,
+
+59
+00:03:11,319 --> 00:03:14,319
+ile razy poszczególnymi warstwami powinniśmy malować,
+
+60
+00:03:14,319 --> 00:03:16,319
+więc przyjmujemy, że zawsze użytkownik musi nam podać,
+
+61
+00:03:16,319 --> 00:03:18,319
+ile warstw gruntu, ile warstw farby.
+
+62
+00:03:18,319 --> 00:03:20,319
+No i w ten sposób dostaniemy informację,
+
+63
+00:03:20,319 --> 00:03:22,319
+że jeżeli do pomalowania są 24 metry,
+
+64
+00:03:22,319 --> 00:03:26,319
+no i warstw gruntu są 2 i warstw farby są 3,
+
+65
+00:03:26,319 --> 00:03:30,319
+no to potrzebujemy 10 litrów gruntu i 6 litrów farby.
+
+66
+00:03:30,319 --> 00:03:34,319
+I tu zobaczcie, mamy te dane, zostały policzone na podstawie,
+
+67
+00:03:34,319 --> 00:03:36,319
+tam jakieś dane, które znalazłem w internecie,
+
+68
+00:03:36,319 --> 00:03:39,319
+w poradnikach mówiących o tym, że 5 metrów kwadratowych
+
+69
+00:03:39,319 --> 00:03:42,319
+to jest 1 litr gruntu, no i 13 metrów kwadratowych
+
+70
+00:03:42,319 --> 00:03:44,319
+to jest 1 litr farby.
+
+71
+00:03:44,319 --> 00:03:47,319
+Czyli tak naprawdę najpierw liczymy sobie powierzchnię,
+
+72
+00:03:47,319 --> 00:03:50,319
+a później będziemy chcieli policzyć sobie,
+
+73
+00:03:50,319 --> 00:03:52,319
+jaka to będzie wartość gruntu.
+
+74
+00:03:52,319 --> 00:03:55,319
+Ile potrzebujemy po prostu litrów.
+
+75
+00:03:55,319 --> 00:03:58,319
+Nie dzielimy tego na poszczególne już tam kubełki,
+
+76
+00:03:58,319 --> 00:04:01,319
+czy inne takie rzeczy, to już każdy może sobie zrobić samodzielnie w sklepie,
+
+77
+00:04:01,319 --> 00:04:03,319
+ale warto wiedzieć, ile litrów potrzebuje.
+
+78
+00:04:03,319 --> 00:04:07,319
+To co? Zachęcam was do tego, żeby spróbować zmierzyć się
+
+79
+00:04:07,319 --> 00:04:09,319
+najpierw z tym zadaniem samodzielnie, z tym projektem,
+
+80
+00:04:09,319 --> 00:04:12,319
+a później przejść do mojego rozwiązania
+
+81
+00:04:12,319 --> 00:04:15,319
+i porównać, czy wyszło nam podobnie.
+
+82
+00:04:15,319 --> 00:04:17,319
+Do zobaczenia.

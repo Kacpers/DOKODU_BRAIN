@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:03,220
+Mam dla Ciebie jeszcze jedno zadanie, żeby to sobie dobrze przećwiczyć,
+
+2
+00:00:03,540 --> 00:00:07,379
+a mianowicie napisz funkcję, która przyjmie jeden argument pozycyjny,
+
+3
+00:00:07,700 --> 00:00:10,339
+niech to będzie tekst, i dwa argumenty nazwane,
+
+4
+00:00:10,580 --> 00:00:16,000
+delimiter oraz repeat, z domyślnymi wartościami przecinek oraz jeden.
+
+5
+00:00:16,559 --> 00:00:19,980
+Czyli delimiter ma być przecinkiem, a jeden to jest repeat.
+
+6
+00:00:20,440 --> 00:00:24,400
+Funkcja powinna zwracać tekst powtórzony odpowiednią liczbę razy
+
+7
+00:00:24,400 --> 00:00:26,339
+i rozdzielony podanym delimiterem.
+
+8
+00:00:26,339 --> 00:00:30,960
+Czyli zobacz, na przykład ala makota po prostu wyświetli ala makota,
+
+9
+00:00:31,460 --> 00:00:34,840
+natomiast python, python, python zostanie wyświetlony wtedy,
+
+10
+00:00:35,019 --> 00:00:40,759
+kiedy ktoś wywoła sobie repeat python, delimiter średnik, repeat trzy razy.
+
+11
+00:00:41,120 --> 00:00:44,820
+Czyli musimy tak naprawdę tę wartość sobie zwielokrotnić,
+
+12
+00:00:45,200 --> 00:00:49,120
+następnie połączyć za pomocą średnika.
+
+13
+00:00:49,740 --> 00:00:51,500
+No to co? Do roboty.

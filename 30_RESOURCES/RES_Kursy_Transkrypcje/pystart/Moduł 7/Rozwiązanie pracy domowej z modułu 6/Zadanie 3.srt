@@ -1,0 +1,299 @@
+1
+00:00:00,000 --> 00:00:04,139
+To co po krótkiej przerwie możemy zrobić sobie z powrotem zadanie trzecie.
+
+2
+00:00:04,660 --> 00:00:06,660
+Po krótkiej przerwie oczywiście na robienie paczek.
+
+3
+00:00:07,160 --> 00:00:10,919
+Więc przygotuj funkcję, która zliczy ilość wystąpień jednego słowa w tekście,
+
+4
+00:00:11,000 --> 00:00:13,380
+na przykład Python i Python dla Pythona da wynik 2.
+
+5
+00:00:13,859 --> 00:00:17,160
+Czyli potrzebujemy zacząć sobie od testu.
+
+6
+00:00:17,580 --> 00:00:21,080
+Możemy nazwać go test word count.
+
+7
+00:00:21,960 --> 00:00:26,000
+Będę chciał sprawdzić co się stanie, jeżeli nie będzie tego słowa.
+
+8
+00:00:26,000 --> 00:00:30,800
+Jeżeli będzie to słowo, ale będzie tutaj inna wielkość liter.
+
+9
+00:00:31,440 --> 00:00:36,920
+Oraz w momencie, w którym po prostu będzie istniało ze dwa razy.
+
+10
+00:00:37,380 --> 00:00:44,400
+Więc mogę wykorzystać ten fragment i sprawdzić co się stanie,
+
+11
+00:00:44,939 --> 00:00:50,659
+jeżeli spróbuję wykorzystać Python oraz Python i będę szukał wyrażenia Python.
+
+12
+00:00:51,320 --> 00:00:52,579
+Wtedy powinienem dostać 2.
+
+13
+00:00:52,939 --> 00:00:53,840
+To jest pierwszy test.
+
+14
+00:00:53,840 --> 00:00:55,980
+W drugim teście mogę sprawdzić,
+
+15
+00:00:56,000 --> 00:00:59,119
+co się stanie, jeżeli będę szukał Pythona z małych liter.
+
+16
+00:00:59,500 --> 00:01:00,320
+No i tu pytanie.
+
+17
+00:01:00,439 --> 00:01:02,359
+Moglibyśmy założyć, że będzie 2.
+
+18
+00:01:02,560 --> 00:01:04,159
+Moglibyśmy założyć, że będzie 0.
+
+19
+00:01:04,219 --> 00:01:06,719
+Tak naprawdę nie zostało to nigdzie określone.
+
+20
+00:01:06,920 --> 00:01:08,420
+Ja zakładam, że będzie to 0.
+
+21
+00:01:08,599 --> 00:01:11,420
+Jak zinterpretowałeś zadanie, to takie zrobiłeś.
+
+22
+00:01:11,460 --> 00:01:11,960
+Jest OK.
+
+23
+00:01:12,760 --> 00:01:18,799
+W momencie, w którym mam jednego Pythona i jednego małego Pythona, a szukam małego,
+
+24
+00:01:18,960 --> 00:01:20,359
+to wtedy powinienem mieć jeden.
+
+25
+00:01:22,180 --> 00:01:25,599
+No i to samo powinno być wtedy, kiedy zupełnie nie mam takiego słowa,
+
+26
+00:01:25,599 --> 00:01:25,980
+bo mam
+
+27
+00:01:26,000 --> 00:01:27,879
+Java i PHP.
+
+28
+00:01:29,879 --> 00:01:31,319
+Szukam Pythona.
+
+29
+00:01:31,840 --> 00:01:33,680
+Też powinienem dostać 0.
+
+30
+00:01:34,000 --> 00:01:34,840
+To są moje testy.
+
+31
+00:01:35,280 --> 00:01:40,519
+Czas przejść do implementacji, czyli wiem już, jak się moja funkcja ma nazywać.
+
+32
+00:01:40,840 --> 00:01:42,400
+Count Word.
+
+33
+00:01:42,840 --> 00:01:49,000
+Wiem, że będę potrzebował mieć tekst oraz to, czego szukam w PHP.
+
+34
+00:01:49,359 --> 00:01:52,079
+Taka mała dygresja jest taka funkcja, która też służy do szukania.
+
+35
+00:01:52,439 --> 00:01:54,120
+I ona ma dwa argumenty.
+
+36
+00:01:54,519 --> 00:01:55,840
+Również dwa parametry.
+
+37
+00:01:56,000 --> 00:01:58,400
+To, w czym szukasz i to, czego szukasz.
+
+38
+00:01:58,780 --> 00:02:00,239
+I one się bardzo ładnie nazywają.
+
+39
+00:02:00,719 --> 00:02:02,280
+Haystack oraz Needle.
+
+40
+00:02:02,859 --> 00:02:04,460
+Haystack to jest oczywiście stóg siana.
+
+41
+00:02:04,819 --> 00:02:06,159
+Czyli to, gdzie szukamy.
+
+42
+00:02:06,280 --> 00:02:07,519
+A czego szukamy w stogu siana?
+
+43
+00:02:08,020 --> 00:02:08,580
+Igły.
+
+44
+00:02:09,159 --> 00:02:13,139
+Więc właśnie dlatego tak też nazwę te moje dwa argumenty.
+
+45
+00:02:13,699 --> 00:02:18,379
+I teraz, żeby stwierdzić, czy to słowo występuje w tym zdaniu,
+
+46
+00:02:18,819 --> 00:02:22,400
+będę potrzebował najpierw rozbić sobie moje zdanie po spacjach.
+
+47
+00:02:22,400 --> 00:02:25,400
+Czyli forward in haystack.
+
+48
+00:02:26,000 --> 00:02:29,240
+Tak, kropka split po spacji, dwóch kropek.
+
+49
+00:02:30,819 --> 00:02:34,120
+Jeżeli słowo to jest moja igła,
+
+50
+00:02:34,960 --> 00:02:37,919
+no to wtedy powinienem jakiś counter zwiększać o jeden.
+
+51
+00:02:42,319 --> 00:02:45,199
+W przeciwnym wypadku, czy też w przeciwnym wypadku nie robię nic.
+
+52
+00:02:45,620 --> 00:02:48,840
+No i na koniec wyrównane jest to potworem.
+
+53
+00:02:49,159 --> 00:02:51,319
+Zwracam counter.
+
+54
+00:02:51,960 --> 00:02:55,819
+Jeżeli wywołam teraz python-mpy test 3,
+
+55
+00:02:55,819 --> 00:03:00,739
+no to dostaję informację, że ten mój jeden test przeszedł.
+
+56
+00:03:00,819 --> 00:03:01,620
+Tak właśnie by było.
+
+57
+00:03:02,199 --> 00:03:06,579
+Jeżeli chcielibyście sprawdzać wielkość liter pod kątem małej, wielkiej
+
+58
+00:03:06,579 --> 00:03:08,799
+i zawsze to akceptować,
+
+59
+00:03:09,239 --> 00:03:11,400
+to najprościej byłoby tutaj zamienić to na lower,
+
+60
+00:03:11,519 --> 00:03:12,419
+tu zmienić to na lower.
+
+61
+00:03:12,939 --> 00:03:14,759
+Natomiast w tym momencie musimy mieć na uwadze,
+
+62
+00:03:14,879 --> 00:03:16,299
+że on policzy to razy dwa.
+
+63
+00:03:16,639 --> 00:03:17,379
+Dlaczego razy dwa?
+
+64
+00:03:17,379 --> 00:03:20,959
+No bo tutaj python jest zapisany małymi literami,
+
+65
+00:03:21,120 --> 00:03:22,159
+zostało zwrócone zero.
+
+66
+00:03:22,340 --> 00:03:24,280
+I tutaj też python zapisany jest małymi literami,
+
+67
+00:03:24,780 --> 00:03:25,799
+zostało zwrócone jeden.
+
+68
+00:03:25,819 --> 00:03:28,699
+A to byłyby, tutaj mielibyśmy inne wyniki, nie?
+
+69
+00:03:29,060 --> 00:03:31,620
+Z tego właśnie względu te dwa testy nie przeszły.
+
+70
+00:03:31,759 --> 00:03:33,219
+Pierwszy, na którym się wysypał, to jest ten,
+
+71
+00:03:33,400 --> 00:03:36,680
+ale ten drugi poniżej też byłby problematyczny.
+
+72
+00:03:37,739 --> 00:03:39,879
+Ja za drugie zadanie, za trzecie zadanie dziękuję.
+
+73
+00:03:40,400 --> 00:03:42,019
+Zapraszam Was do czwartego.
+
+74
+00:03:55,819 --> 00:03:57,819
+Nie zapomnijcie zasubskrybować oraz zafollowować mnie na Facebooku!
+
+75
+00:04:25,819 --> 00:04:27,819
+Napisy by Jacek Makarewicz

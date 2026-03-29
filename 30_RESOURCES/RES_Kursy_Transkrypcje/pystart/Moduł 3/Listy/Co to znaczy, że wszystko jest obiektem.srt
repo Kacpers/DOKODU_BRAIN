@@ -1,0 +1,443 @@
+1
+00:00:00,420 --> 00:00:03,879
+Trudne to sformułowanie, co? Wszystko jest obiektem.
+
+2
+00:00:04,299 --> 00:00:07,320
+Co to sformułowanie w ogóle oznacza? O co z tym chodzi?
+
+3
+00:00:07,740 --> 00:00:09,939
+Więc myślę, że możemy sobie dwa słowa o tym powiedzieć,
+
+4
+00:00:10,099 --> 00:00:12,900
+tak żeby mniej więcej to zrozumieć, ponieważ wiem,
+
+5
+00:00:13,280 --> 00:00:15,339
+że na tym etapie pojawiają się często takie pytania.
+
+6
+00:00:15,460 --> 00:00:21,219
+Kacper, a czemu czasem jest tak, że robisz sorted na czymś,
+
+7
+00:00:21,679 --> 00:00:26,820
+a czasem robisz na przykład jakieś wyrażenie kropka lower?
+
+8
+00:00:26,820 --> 00:00:32,820
+Z czego wynika fakt, że na niektórych wartościach,
+
+9
+00:00:33,579 --> 00:00:36,640
+na niektórych zmiennych używa się funkcji,
+
+10
+00:00:37,140 --> 00:00:40,579
+a czasem po zmiennych używa się kropki.
+
+11
+00:00:41,200 --> 00:00:42,960
+I tu właśnie dochodzimy sobie do czegoś takiego,
+
+12
+00:00:43,100 --> 00:00:44,960
+że wszystko w Pythonie jest obiektem.
+
+13
+00:00:45,519 --> 00:00:47,560
+Trochę trudne sformułowanie, ale zobacz.
+
+14
+00:00:47,879 --> 00:00:51,060
+Jeżeli ja sobie stworzę zmienną a i przypiszę do niej jakąś wartość,
+
+15
+00:00:52,159 --> 00:00:54,980
+stworzę sobie zmienną b i przypiszę sobie do niej jakąś wartość,
+
+16
+00:00:54,980 --> 00:00:56,799
+no to oczywiście te dwie wartości,
+
+17
+00:00:56,820 --> 00:00:57,880
+mi się wyświetlą, prawda?
+
+18
+00:00:58,240 --> 00:00:59,520
+Jakbym chciał je wyświetlić.
+
+19
+00:01:00,000 --> 00:01:01,780
+Natomiast ja tutaj dorzucę jeszcze jedną rzecz.
+
+20
+00:01:01,880 --> 00:01:07,739
+Zrobię type od a i zrobię print type od b.
+
+21
+00:01:08,900 --> 00:01:11,079
+Jeżeli to sobie wyświetlimy, czyli zrobimy Python,
+
+22
+00:01:11,239 --> 00:01:12,739
+spacja, wszystko jest obiektem,
+
+23
+00:01:13,200 --> 00:01:14,819
+to okaże się, że tu pojawi nam się informacja,
+
+24
+00:01:15,500 --> 00:01:20,140
+że a to jest coś klasy integer, a to jest coś klasy string.
+
+25
+00:01:20,700 --> 00:01:24,019
+O obiektach więcej będziemy sobie mówili na końcu tego kursu,
+
+26
+00:01:24,019 --> 00:01:26,140
+ale chciałbym, żebyś już na tym etapie wiedział,
+
+27
+00:01:26,819 --> 00:01:29,119
+że każda zmiana, którą tworzymy w Pythonie,
+
+28
+00:01:29,459 --> 00:01:31,299
+tak naprawdę jest obiektem.
+
+29
+00:01:31,379 --> 00:01:34,559
+Obiektem jakiejś klasy, czyli jest powiedzmy czymś sobie.
+
+30
+00:01:34,799 --> 00:01:37,519
+Nie chcę na razie wchodzić dokładnie w ten temat,
+
+31
+00:01:37,659 --> 00:01:39,339
+ale klasa to jest jakby taka foremka,
+
+32
+00:01:39,419 --> 00:01:42,199
+z której później można tworzyć różnego rodzaju obiekty.
+
+33
+00:01:42,299 --> 00:01:44,859
+No i tak samo, bo tak właśnie mamy w Pythonie
+
+34
+00:01:44,859 --> 00:01:47,659
+stworzoną klasę integer, stworzoną klasę string
+
+35
+00:01:47,659 --> 00:01:51,239
+i każda wartość, którą do tej pory sobie poznawaliśmy,
+
+36
+00:01:51,239 --> 00:01:56,179
+była zawsze obiektem jakiejś klasy.
+
+37
+00:01:56,819 --> 00:01:59,719
+Dzięki temu my wiemy, że niektóre obiekty możemy do siebie,
+
+38
+00:01:59,719 --> 00:02:02,579
+niektóre te zmienne możemy do siebie dodawać,
+
+39
+00:02:02,579 --> 00:02:04,819
+niektóre możemy od siebie odejmować
+
+40
+00:02:04,819 --> 00:02:07,219
+i na przykład możemy dodawać do siebie listy.
+
+41
+00:02:07,219 --> 00:02:10,819
+Z listami czy z tuplami, o listach dzisiaj już będzie więcej,
+
+42
+00:02:10,819 --> 00:02:12,620
+też jest taka sama sytuacja.
+
+43
+00:02:12,620 --> 00:02:14,019
+Zobacz, zrobiliśmy sobie tuple
+
+44
+00:02:15,019 --> 00:02:18,620
+i my na tej tupli też możemy wykonać type od e
+
+45
+00:02:18,620 --> 00:02:21,620
+i on nam też wtedy napisze, że jest to tuple.
+
+46
+00:02:21,620 --> 00:02:25,019
+I teraz co nam to daje, że jest to jakiś obiekt?
+
+47
+00:02:25,019 --> 00:02:26,459
+Pierwsza rzecz, którą nam,
+
+48
+00:02:26,460 --> 00:02:30,860
+którą mamy jest taka, że my na tych obiektach,
+
+49
+00:02:30,860 --> 00:02:33,260
+na różnych obiektach możemy wykonywać różne operacje.
+
+50
+00:02:33,260 --> 00:02:37,260
+Natomiast druga rzecz jest taka, że każdy z tych obiektów ma swoje metody
+
+51
+00:02:37,260 --> 00:02:40,260
+i metodą obiektu są to te rzeczy, które wymieniamy po kropce.
+
+52
+00:02:40,260 --> 00:02:43,659
+Tutaj przy okazji hello mówiliśmy sobie o tym,
+
+53
+00:02:43,659 --> 00:02:47,260
+że możemy zrobić b, kropka, no i mamy lower, split,
+
+54
+00:02:47,260 --> 00:02:49,860
+starts with, is alfa, is numeric i tak dalej, nie?
+
+55
+00:02:49,860 --> 00:02:53,460
+Czyli z racji tego, że to jest string, że to jest łańcuch znaków,
+
+56
+00:02:53,460 --> 00:02:56,260
+to na tym łańcuchu znaków można wykonać szereg,
+
+57
+00:02:56,460 --> 00:02:58,659
+metod, szereg czynności.
+
+58
+00:02:58,659 --> 00:03:02,659
+Jeżeli coś jest int, tutaj też kropka, możemy parę rzeczy zrobić.
+
+59
+00:03:02,659 --> 00:03:05,860
+Widzicie? Coś tutaj jest też wypisane.
+
+60
+00:03:05,860 --> 00:03:08,260
+Tak samo będzie z wartością logiczną, tylko że zobaczcie,
+
+61
+00:03:08,260 --> 00:03:11,260
+że z wartością logiczną jest tego już coraz mniej.
+
+62
+00:03:11,260 --> 00:03:15,659
+Najwięcej będzie ze stringiem, no i też dużo będzie w przypadku tych typów,
+
+63
+00:03:15,659 --> 00:03:19,260
+gdzie mamy kolekcje, mamy count, index i tak dalej, i tak dalej.
+
+64
+00:03:19,260 --> 00:03:24,260
+Więc to właśnie są obiekty i my na tych obiektach możemy wykonywać metody.
+
+65
+00:03:24,260 --> 00:03:26,360
+Więc nie dziwcie się, że czasem będziemy robili,
+
+66
+00:03:26,360 --> 00:03:31,160
+sobie po jakiejś zmiennej kropkę i będziemy odnosili się do czegoś,
+
+67
+00:03:31,160 --> 00:03:33,360
+bo to jest bardzo istotne, że tak można robić.
+
+68
+00:03:33,360 --> 00:03:38,960
+Druga rzecz wiąże się trochę z tym, jak obiekty przechowywane są w pamięci.
+
+69
+00:03:38,960 --> 00:03:45,360
+Czyli musisz sobie wyobrazić, że program komputerowy, jeżeli tworzysz zmienną,
+
+70
+00:03:45,360 --> 00:03:52,360
+to on gdzieś sobie tę wartość zapisuje, natomiast ta nazwa w przypadku Pythona
+
+71
+00:03:52,360 --> 00:03:56,160
+tylko i wyłącznie wskazuje ci na to miejsce, że to jest tam zapisane.
+
+72
+00:03:56,159 --> 00:03:58,960
+Wyobraź sobie magazyn albo inaczej parking.
+
+73
+00:03:58,960 --> 00:04:02,960
+I teraz masz parking, w którym jest bardzo dużo różnych samochodów.
+
+74
+00:04:02,960 --> 00:04:07,960
+I kiedy jest zmienna, to ta zmienna to jest tylko i wyłącznie takie zapamiętanie,
+
+75
+00:04:07,960 --> 00:04:10,960
+że twój samochód stoi w tamtym konkretnym miejscu.
+
+76
+00:04:10,960 --> 00:04:13,960
+I to jest bardzo wygodne, bo jeżeli później będziesz chciał komuś powiedzieć,
+
+77
+00:04:13,960 --> 00:04:18,959
+że weź mój samochód, to nie będziesz musiał jakby przekazywać całego tego samochodu,
+
+78
+00:04:18,959 --> 00:04:20,959
+tylko będziesz mógł powiedzieć, no idź pod miejsce to i to
+
+79
+00:04:20,959 --> 00:04:23,959
+i będziesz mógł go sobie wtedy stamtąd zabrać.
+
+80
+00:04:23,959 --> 00:04:24,959
+Wyobraź sobie, o ile jest łatwiej komuś przekazywać, że to jest tamto miejsce, to jest tamto miejsce.
+
+81
+00:04:24,959 --> 00:04:26,959
+Wyobraź sobie, o ile jest łatwiej komuś przekazywać,
+
+82
+00:04:26,959 --> 00:04:32,959
+tylko wskazaniu, że to jest w takim miejscu, a nie oddawaniem mu całego samochodu.
+
+83
+00:04:32,959 --> 00:04:35,959
+I tak w przypadku obiektów będzie tak samo.
+
+84
+00:04:35,959 --> 00:04:38,959
+My będziemy tutaj bardzo też dużo rozmawiali o tej wydajności,
+
+85
+00:04:38,959 --> 00:04:41,959
+o tym, żeby pracować, programować właśnie wydajnie.
+
+86
+00:04:41,959 --> 00:04:46,959
+I to też programowanie to obiektowe, które tutaj w Pythonie uskuteczniamy,
+
+87
+00:04:46,959 --> 00:04:50,959
+też właśnie do tego się odnosi, też do tej wydajności.
+
+88
+00:04:50,959 --> 00:04:53,959
+Zobaczycie dzisiaj między innymi różnice pomiędzy sort a sorted.
+
+89
+00:04:53,959 --> 00:04:54,959
+Zobaczycie dzisiaj między innymi różnice pomiędzy sort a sorted.
+
+90
+00:04:54,959 --> 00:04:57,959
+I do tej pory używaliśmy sort, natomiast dzisiaj pokażę Ci jeszcze sort
+
+91
+00:04:57,959 --> 00:05:00,959
+i w ogóle różnice pomiędzy tymi dwiema metodami.
+
+92
+00:05:00,959 --> 00:05:03,959
+I w ten sposób też będziemy sobie właśnie rozmawiali a propos obiektów.
+
+93
+00:05:03,959 --> 00:05:07,959
+Więc nie przejmuj się, że tutaj gdzieś raz na jakiś czas pojawi się hasło obiekt.
+
+94
+00:05:07,959 --> 00:05:10,959
+Chciałbym, żebyś wiedział, że w Pythonie tak naprawdę wszystko jest obiektem.
+
+95
+00:05:10,959 --> 00:05:13,959
+I dzięki temu programuje nam się lepiej.
+
+96
+00:05:13,959 --> 00:05:18,959
+I z tego też wynika fakt, że czasem gdzieś pojawiają nam się właśnie funkcje tego typu,
+
+97
+00:05:18,959 --> 00:05:22,959
+a czasem robimy sobie coś po kropeczce, tak jak było lower i upper.
+
+98
+00:05:22,959 --> 00:05:23,959
+Po części, póki co, traktujemy się na to, że w tym miejscu,
+
+99
+00:05:23,959 --> 00:05:25,959
+że niektóre rzeczy się przekazuje jako funkcje,
+
+100
+00:05:25,959 --> 00:05:27,959
+a na niektórych wykonuje się właśnie metody,
+
+101
+00:05:27,959 --> 00:05:29,959
+czyli to działanie jest kropką.
+
+102
+00:05:29,959 --> 00:05:31,959
+Po prostu tak jest.
+
+103
+00:05:31,959 --> 00:05:33,959
+Nie trzeba tego jakoś szczególnie rozumieć,
+
+104
+00:05:33,959 --> 00:05:35,959
+ale dla tych, którzy bardzo chcieliby to zrozumieć
+
+105
+00:05:35,959 --> 00:05:37,959
+i dowiedzieć się jaka jest różnica między tym,
+
+106
+00:05:37,959 --> 00:05:40,959
+no to właśnie też będziemy sobie dzisiaj o tym rozmawiali.
+
+107
+00:05:40,959 --> 00:05:42,959
+No to co? Nie przedłużam.
+
+108
+00:05:42,959 --> 00:05:44,959
+Zapraszam do zadań.
+
+109
+00:05:44,959 --> 00:05:45,959
+Do zobaczenia.
+
+110
+00:05:45,959 --> 00:05:46,959
+Czy też do wiedzy.
+
+111
+00:05:46,959 --> 00:05:47,959
+Do zobaczenia.

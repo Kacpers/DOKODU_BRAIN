@@ -1,0 +1,327 @@
+1
+00:00:00,000 --> 00:00:03,359
+Okej, to możemy sobie zacząć. Ja już ten kod przepisałem.
+
+2
+00:00:03,580 --> 00:00:06,879
+Jedyną rzeczą, którą dodam jako pierwszą będzie metoda str,
+
+3
+00:00:07,660 --> 00:00:11,380
+która będzie miała zwracać wartość value w milimetrach,
+
+4
+00:00:11,500 --> 00:00:13,900
+czyli return self value.
+
+5
+00:00:13,900 --> 00:00:18,199
+To nie było treścią zadania, ale po prostu tak będzie łatwiej,
+
+6
+00:00:18,679 --> 00:00:21,179
+jeżeli będziemy prezentowali sobie te informacje.
+
+7
+00:00:23,440 --> 00:00:29,039
+O, właśnie tak. I teraz patrz, jeżeli wykonam print na V1 i print na V2,
+
+8
+00:00:30,000 --> 00:00:38,539
+to on mi w tym momencie powie, że to jest 300 i 750 milimetrów.
+
+9
+00:00:39,259 --> 00:00:42,600
+I my mamy zrobić rzecz następującą, a mianowicie wykonać dodawanie.
+
+10
+00:00:44,200 --> 00:00:47,640
+Czyli V3 równa się V1 plus V2.
+
+11
+00:00:48,280 --> 00:00:52,579
+Print V3. Na chwilę obecną, jeżeli to wywołam, dostaję błąd.
+
+12
+00:00:52,960 --> 00:00:55,120
+Nie mam operatora dla dodawania.
+
+13
+00:00:55,620 --> 00:00:59,400
+To musimy go sobie dodać, czyli dev add.
+
+14
+00:01:00,000 --> 00:01:06,879
+Chcemy, żeby wynikiem była nowa wartość, czyli nowe length unit,
+
+15
+00:01:07,379 --> 00:01:14,780
+reprezentujące value, którym będzie self value plus other value.
+
+16
+00:01:15,340 --> 00:01:17,900
+I analogicznie chcielibyśmy zrobić z odejmowaniem,
+
+17
+00:01:19,260 --> 00:01:21,039
+więc zróbmy to za jednym zamachem.
+
+18
+00:01:21,680 --> 00:01:23,539
+Odejmowanie to jest sub.
+
+19
+00:01:23,539 --> 00:01:25,539
+Ojej.
+
+20
+00:01:27,099 --> 00:01:29,560
+Skąd sub? Od substract.
+
+21
+00:01:30,000 --> 00:01:32,000
+I wtedy plus i minus.
+
+22
+00:01:32,000 --> 00:01:34,000
+To jedyne co widzę.
+
+23
+00:01:34,000 --> 00:01:36,000
+Strzałka do góry, enter.
+
+24
+00:01:36,000 --> 00:01:38,000
+I mam. 300, 750, 1050.
+
+25
+00:01:38,000 --> 00:01:46,000
+A jeżeli odejmę V4 równa się V2 minus V1.
+
+26
+00:01:46,000 --> 00:01:50,000
+Print V4.
+
+27
+00:01:50,000 --> 00:01:56,000
+No to wtedy dostaję 450, bo 750 minus 300, no to jest właśnie tyle.
+
+28
+00:01:56,000 --> 00:01:58,000
+Co się stanie, jeżeli zrobię tak?
+
+29
+00:01:58,000 --> 00:02:00,000
+Też mi to nie da.
+
+30
+00:02:00,000 --> 00:02:02,000
+Nie mam pojęcia, jak mi to zadziała.
+
+31
+00:02:02,000 --> 00:02:06,000
+Tylko od razu wyświetlę ten obiekt, więc tak naprawdę robienie czegoś takiego w ten sposób jest bez sensu,
+
+32
+00:02:06,000 --> 00:02:10,000
+no bo po to zwracamy to w postaci obiektu, żeby nam to zadziałało.
+
+33
+00:02:10,000 --> 00:02:12,000
+I tak samo będzie z porównywaniem.
+
+34
+00:02:12,000 --> 00:02:18,000
+Jeżeli chcemy porównać te dwie wartości do siebie, no to zakładamy, że ma zwrócić tyle samo,
+
+35
+00:02:18,000 --> 00:02:22,000
+jeżeli obie wartości mają ten, obie te value są takie same,
+
+36
+00:02:22,000 --> 00:02:26,000
+czyli self value równa się other value.
+
+37
+00:02:26,000 --> 00:02:28,000
+I zobaczcie.
+
+38
+00:02:28,000 --> 00:02:38,000
+Jeżeli w tym momencie ja sobie wykonam, jeszcze dorzucę sobie V3, które będzie równe długością V1, coś takiego.
+
+39
+00:02:38,000 --> 00:02:44,000
+To jeżeli wykonam V1 równa się V3, to wtedy dostanę true.
+
+40
+00:02:44,000 --> 00:02:50,000
+Co ciekawe, jeżeli zrobimy w ten sposób, to dostaniemy false.
+
+41
+00:02:50,000 --> 00:02:54,000
+Mimo tego, że nie zaimplementowalibyśmy not equal.
+
+42
+00:02:54,000 --> 00:02:56,000
+I to będzie oznaczało, że on po prostu umie zaprzeczyć.
+
+43
+00:02:56,000 --> 00:02:58,000
+Czemu?
+
+44
+00:02:58,000 --> 00:03:00,000
+Bo to jest równe.
+
+45
+00:03:00,000 --> 00:03:02,000
+Dlaczego o tym mówię?
+
+46
+00:03:02,000 --> 00:03:06,000
+Mówię o tym dlatego, że jeżeli wyprintujemy sobie V1 jest mniejsze niż V2,
+
+47
+00:03:06,000 --> 00:03:12,000
+to okaże się, że dostaniemy błąd, że to nie jest zaimplementowane w tym miejscu.
+
+48
+00:03:12,000 --> 00:03:16,000
+Więc jeżeli ja sobie zaimplementuję greater than,
+
+49
+00:03:16,000 --> 00:03:24,000
+i to ma też porównywać value, tylko greater than jest w tę stronę,
+
+50
+00:03:24,000 --> 00:03:26,000
+i to ma też porównywać value, tylko greater than jest w tę stronę,
+
+51
+00:03:26,000 --> 00:03:30,000
+to już dostanę true.
+
+52
+00:03:30,000 --> 00:03:34,000
+A co ciekawe, jeżeli pójdę w drugą stronę,
+
+53
+00:03:34,000 --> 00:03:38,000
+to też mi to zadziała, dostanę false.
+
+54
+00:03:38,000 --> 00:03:40,000
+I jeżeli zrobię tak,
+
+55
+00:03:40,000 --> 00:03:42,000
+to akurat to mi nie zadziała,
+
+56
+00:03:42,000 --> 00:03:44,000
+bo jest
+
+57
+00:03:44,000 --> 00:03:48,000
+ln gt hy, zapomniałem, ale dobra.
+
+58
+00:03:48,000 --> 00:03:50,000
+To to mi już nie zadziała,
+
+59
+00:03:50,000 --> 00:03:54,000
+czyli do mniejszej lub równej on nie zadziała z porównaniem i z większością,
+
+60
+00:03:54,000 --> 00:03:56,000
+to trzeba byłoby sobie dopisać własnoręcznie.
+
+61
+00:03:56,000 --> 00:03:58,000
+Czyli tutaj,
+
+62
+00:03:58,000 --> 00:04:00,000
+tak jak mamy eq gt,
+
+63
+00:04:00,000 --> 00:04:02,000
+to trzeba byłoby zrobić gte,
+
+64
+00:04:02,000 --> 00:04:04,000
+nie gte, tylko ge po prostu.
+
+65
+00:04:04,000 --> 00:04:06,000
+nie gte, tylko ge po prostu.
+
+66
+00:04:06,000 --> 00:04:08,000
+I wtedy będziemy mieli greater than or equal,
+
+67
+00:04:08,000 --> 00:04:10,000
+i le to jest less than or equal.
+
+68
+00:04:10,000 --> 00:04:12,000
+i le to jest less than or equal.
+
+69
+00:04:12,000 --> 00:04:14,000
+Natomiast tak samo jak poprzednio,
+
+70
+00:04:14,000 --> 00:04:16,000
+nie musimy tego implementować,
+
+71
+00:04:16,000 --> 00:04:18,000
+wystarczy, że sobie zaimplementowaliśmy w jedną stronę,
+
+72
+00:04:18,000 --> 00:04:20,000
+a w drugą zadziała po prostu siłą rzeczy.
+
+73
+00:04:20,000 --> 00:04:22,000
+No i dzięki temu wszystko, co chcieliśmy zrobiliśmy.
+
+74
+00:04:22,000 --> 00:04:24,000
+No i dzięki temu wszystko, co chcieliśmy zrobiliśmy.
+
+75
+00:04:24,000 --> 00:04:26,000
+Mnożenie to jest mól,
+
+76
+00:04:26,000 --> 00:04:28,000
+jeżeli byście potrzebowali.
+
+77
+00:04:28,000 --> 00:04:30,000
+Każda inna operacja też jest w ten sposób opisana.
+
+78
+00:04:30,000 --> 00:04:32,000
+Każda inna operacja też jest w ten sposób opisana.
+
+79
+00:04:32,000 --> 00:04:34,000
+Każda inna operacja też jest w ten sposób opisana.
+
+80
+00:04:34,000 --> 00:04:36,000
+Można się bawić, można szaleć.
+
+81
+00:04:36,000 --> 00:04:38,000
+To co? Chodźmy dalej, szaleć gdzie indziej.
+
+82
+00:04:38,000 --> 00:04:40,000
+To co? Chodźmy dalej, szaleć gdzie indziej.

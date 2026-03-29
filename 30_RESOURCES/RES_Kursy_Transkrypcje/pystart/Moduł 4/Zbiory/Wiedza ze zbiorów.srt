@@ -1,0 +1,375 @@
+1
+00:00:00,980 --> 00:00:05,360
+Każdy, kto chodzi do szkoły podstawowej pamięta, że pojawiły się tam zbiory.
+
+2
+00:00:05,600 --> 00:00:10,679
+I tam były właśnie zbiory, gdzie były to takie kółka narysowane, w nich się wpisywały różne wartości.
+
+3
+00:00:10,779 --> 00:00:16,620
+Na przykład były zbiory liczb parzystych, zbiory liczb nieparzystych, zbiory kwadratów, zbiory jakichś figur itd.
+
+4
+00:00:16,620 --> 00:00:23,559
+I zbiory są kolejnym typem, kolejną kolekcją, jaką poznajemy w Pythonie.
+
+5
+00:00:23,559 --> 00:00:30,199
+Czyli mieliśmy tuple, mieliśmy listy, mieliśmy słowniki, a teraz przyszedł czas na zbiory.
+
+6
+00:00:30,339 --> 00:00:31,619
+Dlatego napisałem czas na zbiory.
+
+7
+00:00:32,820 --> 00:00:35,700
+I te zbiory mają szereg cech.
+
+8
+00:00:36,100 --> 00:00:39,119
+Czyli możemy między zbiorami zrobić sobie na przykład operacje.
+
+9
+00:00:39,119 --> 00:00:45,859
+Tak jak widzicie na załączonym obrazku, wśród tych zbiorów mamy na przykład jakieś czerwone obiekty.
+
+10
+00:00:45,980 --> 00:00:48,219
+Więc moglibyśmy zrobić, albo na przykład zwierzęta.
+
+11
+00:00:48,299 --> 00:00:51,200
+Moglibyśmy zrobić zbiór zwierząt, zbiór czerwonych obiektów itd.
+
+12
+00:00:52,000 --> 00:00:53,539
+I to jest też ciekawe.
+
+13
+00:00:53,660 --> 00:00:56,900
+Że na zbiorach możemy wykonywać szczegółowe operacje.
+
+14
+00:00:57,320 --> 00:01:03,040
+Tak jak listy tylko można do siebie dodawać, tak na zbiorach można na przykład wyszukiwać część wspólną zbiorów,
+
+15
+00:01:03,120 --> 00:01:04,359
+albo różnicę zbiorów.
+
+16
+00:01:04,540 --> 00:01:06,340
+Trochę jest więcej po prostu operacji.
+
+17
+00:01:06,340 --> 00:01:13,159
+Z takich istotnych rzeczy ponadto, to jest też to, że zbiory są nieuporządkowane.
+
+18
+00:01:13,500 --> 00:01:17,460
+Czyli kiedy stworzysz sobie zbiór, to nie możesz się do niego przywiązywać.
+
+19
+00:01:17,579 --> 00:01:21,260
+Nie możesz zakładać, że ten zbiór zawsze będzie miał taką samą konstrukcję.
+
+20
+00:01:21,260 --> 00:01:26,260
+Za każdym razem, kiedy będziesz do niego się odwoływać, albo będziesz coś do niego dodawać,
+
+21
+00:01:26,260 --> 00:01:29,660
+może się okazać, że kolejność elementów się zmieni.
+
+22
+00:01:29,660 --> 00:01:31,660
+To jest niezwykle ważna informacja.
+
+23
+00:01:31,660 --> 00:01:36,460
+No i to o czym wspominałem, czyli możemy wykonywać sumę zbiorów, czyli zbiory można do siebie dodawać.
+
+24
+00:01:36,460 --> 00:01:39,260
+Można robić różnicę, można robić część wspólną.
+
+25
+00:01:39,260 --> 00:01:41,260
+Jeszcze jest różnica symetryczna.
+
+26
+00:01:41,260 --> 00:01:48,760
+To są tylko i wyłącznie takie wartości, takie cechy, jakie możemy powiedzieć sobie, takie operacje, jakie możemy wykonywać na zbiorach.
+
+27
+00:01:48,760 --> 00:01:50,260
+Jeżeli chodzi o deklaracje, to używamy takich zbiórek, które są bardzo popularne.
+
+28
+00:01:50,260 --> 00:01:51,219
+Jeżeli chodzi o deklaracje, to używamy takich zbiórek, które są bardzo popularne.
+
+29
+00:01:51,219 --> 00:01:53,719
+Wish beispielsweise vidéo orworky Rule.
+
+30
+00:01:53,719 --> 00:01:55,840
+Next video there.
+
+31
+00:01:55,840 --> 00:01:58,060
+absorbed a lot using open text Давайте docs.
+
+32
+00:01:58,060 --> 00:01:59,659
+Więc grandiwą그 tekst, który akurat nie jest łatwo wszczepić.
+
+33
+00:01:59,659 --> 00:02:01,879
+Jest to ogromnie Cristo, to jest tak naprawdę aż warto.
+
+34
+00:02:01,879 --> 00:02:05,299
+W przypadku listijka żywiliśmy na zebraniu dwóch kwadratowych tekstów çocuków,
+
+35
+00:02:05,299 --> 00:02:09,180
+w przypadku słownika też używaliśmy nawiasów klamrowych,
+
+36
+00:02:09,180 --> 00:02:11,180
+dlatego, wróć kay Из comparуч .
+
+37
+00:02:11,180 --> 00:02:13,800
+Dlatego też zwróć uwagę na jedn parade компьют甜ty czy babki bar必l увältление missing jeszcze heterogenu,
+
+38
+00:02:13,800 --> 00:02:18,740
+które pojawiają się na zebraniu celistycznych.
+
+39
+00:02:18,740 --> 00:02:20,199
+Świat dul Vernor jest bardzo ważny.
+
+40
+00:02:20,199 --> 00:02:21,219
+Ale czasami beginia powstaje, kiedy myotes ocz martialnie się rozpimy na Mutterkan,
+
+41
+00:02:21,219 --> 00:02:23,599
+który ma po prostu jakby wymienione wartości obok siebie.
+
+42
+00:02:24,120 --> 00:02:27,080
+Czyli na przykład friends to jest Adam, Kajetan, Kamil i Tomek.
+
+43
+00:02:27,580 --> 00:02:32,020
+Ale do przechowywania znajomych zbiór nie jest najlepszym pomysłem.
+
+44
+00:02:32,379 --> 00:02:34,259
+Dlaczego? Zaraz się o tym przekonamy.
+
+45
+00:02:34,659 --> 00:02:37,780
+Druga rzecz związana z tworzeniem zbioru to jest zamiana.
+
+46
+00:02:38,180 --> 00:02:41,020
+Zamiana tupli albo zamiana listy na zbiór.
+
+47
+00:02:41,020 --> 00:02:45,699
+Jak najbardziej można to robić i wykonuje się to za pomocą polecenia set.
+
+48
+00:02:46,099 --> 00:02:50,439
+Czyli set od friends to zamieni nam listę na zbiór.
+
+49
+00:02:50,439 --> 00:02:55,020
+Tu też ważna sprawa, że za pomocą set tworzymy również sobie pusty zbiór.
+
+50
+00:02:55,520 --> 00:03:02,359
+Jeżeli zrobimy same nawiasy klamrowe to on nam w tym momencie wyświetli, stworzy pusty słownik.
+
+51
+00:03:02,620 --> 00:03:05,120
+Natomiast pusty zbiór to jest set z nawiasami.
+
+52
+00:03:05,919 --> 00:03:08,319
+To o czym mówiłem wcześniej, czyli kolejność nie jest zachowana.
+
+53
+00:03:08,319 --> 00:03:12,919
+Zobacz, mam zbiór jakiś tam przykładowy z osobami.
+
+54
+00:03:13,360 --> 00:03:17,419
+Raz jeszcze sobie ten zbiór jakby zamieniłem na zbiór, wyświetliły mi się imiona.
+
+55
+00:03:17,919 --> 00:03:20,379
+Raz jeszcze zamieniłem na zbiór, znowu wyświetliły się te imiona.
+
+56
+00:03:20,439 --> 00:03:23,639
+I kolejność za każdym razem jest inna.
+
+57
+00:03:24,000 --> 00:03:29,159
+Kolejna sprawa związana ze zbiorami jest taka, że nowe elementy dodajemy za pomocą funkcji add.
+
+58
+00:03:29,719 --> 00:03:30,439
+Wracamy.
+
+59
+00:03:31,159 --> 00:03:34,879
+Tuple nie miały możliwości dodawania nowych elementów.
+
+60
+00:03:35,759 --> 00:03:38,639
+Słowniki mają taką możliwość.
+
+61
+00:03:38,800 --> 00:03:43,819
+Można dodawać nowe elementy poprzez update albo po prostu przypisywać klucz równa się wartość.
+
+62
+00:03:44,340 --> 00:03:46,939
+Jeżeli to jest nowy element to po prostu go sobie deklarujemy.
+
+63
+00:03:48,159 --> 00:03:48,719
+Listy.
+
+64
+00:03:48,719 --> 00:03:49,900
+Nowe elementy.
+
+65
+00:03:50,439 --> 00:03:51,340
+Z pomocą append.
+
+66
+00:03:51,979 --> 00:03:56,219
+Tam była taka, jest taka metoda i ona dodaje nam właśnie nowe elementy z końca.
+
+67
+00:03:56,719 --> 00:03:59,079
+Natomiast w zbiorach używamy add.
+
+68
+00:03:59,520 --> 00:04:01,599
+Czyli mam zbiór friends.
+
+69
+00:04:01,800 --> 00:04:03,919
+Znowu jest Adam Kajetan, Kamil Tomek.
+
+70
+00:04:04,379 --> 00:04:06,520
+Robię friends.add Michał.
+
+71
+00:04:06,879 --> 00:04:08,879
+No i Michał nie doda mi się na końcu.
+
+72
+00:04:09,159 --> 00:04:10,759
+Michał doda mi się gdziekolwiek.
+
+73
+00:04:10,979 --> 00:04:11,500
+Gdzie bądź.
+
+74
+00:04:11,840 --> 00:04:15,240
+On może się dodać na końcu, może się dodać na początku, może się dodać gdzieś w środku.
+
+75
+00:04:15,620 --> 00:04:18,360
+Po prostu gdzieś zostanie dodany do tego zbioru.
+
+76
+00:04:18,360 --> 00:04:20,040
+O zbiorach.
+
+77
+00:04:20,439 --> 00:04:26,939
+Chciałbym oczywiście powiedzieć też to, że możemy sprawdzać wielkość tego zbioru za pomocą funkcji len.
+
+78
+00:04:27,719 --> 00:04:29,000
+Wracając do zbioru.
+
+79
+00:04:29,040 --> 00:04:32,939
+Jeszcze jest jedna bardzo ważna cecha, a mianowicie w zbiorach nie ma duplikatów.
+
+80
+00:04:33,339 --> 00:04:43,740
+Dlatego mówiłem o tym, że przechowywanie znajomych w zbiorze nie jest najlepszym pomysłem, bo jeżeli chcielibyśmy dodać sobie Michała, a już mielibyśmy Michała, to ten nowy Michał nam by się nie dodał.
+
+81
+00:04:44,259 --> 00:04:46,120
+Tak samo jest z każdym innym imieniem.
+
+82
+00:04:46,959 --> 00:04:50,360
+Więc tutaj niezwykle ważną informacją jest to, żeby właśnie uważać.
+
+83
+00:04:50,360 --> 00:04:58,160
+Na to, bo jeżeli zamienisz sobie listę na zbiór i nagle zgubisz wszystkie duplikaty, to już tych duplikatów w żaden sposób nie odzyskasz.
+
+84
+00:04:58,699 --> 00:04:59,900
+Zobacz, tu jest przykład.
+
+85
+00:05:00,259 --> 00:05:02,240
+Mam jakieś zespoły, których lubię słuchać.
+
+86
+00:05:03,240 --> 00:05:04,699
+Metallica i Nirvana.
+
+87
+00:05:05,120 --> 00:05:14,420
+I teraz, kiedy próbuję na tym na tej zmiennej band wywołać kolejny raz ad nirvana, ad nirvana, to za każdym razem i tak nic się mi nie dodaje.
+
+88
+00:05:14,540 --> 00:05:17,759
+Bands wciąż zawieram tylko Metallica oraz Nirvana.
+
+89
+00:05:18,120 --> 00:05:19,939
+Tą pierwszą, która była dodana.
+
+90
+00:05:20,360 --> 00:05:27,939
+To jest też ważne, że te wartości nigdy nie będą nam się podmieniać, ale zawsze będą zostawiać tą pierwszą, która została i tyle.
+
+91
+00:05:30,240 --> 00:05:38,139
+No i oczywiście ostatnia zasada pracy ze zbiorami jest taka, że jeżeli używamy zbiorów, to możemy używać dodatkowych operatorów.
+
+92
+00:05:38,639 --> 00:05:40,540
+Więc myślę, że sporo tej wiedzy było.
+
+93
+00:05:41,080 --> 00:05:43,100
+Warto byłoby to sobie teraz przećwiczyć.
+
+94
+00:05:43,400 --> 00:05:44,759
+To co? Chodźcie do zadania.

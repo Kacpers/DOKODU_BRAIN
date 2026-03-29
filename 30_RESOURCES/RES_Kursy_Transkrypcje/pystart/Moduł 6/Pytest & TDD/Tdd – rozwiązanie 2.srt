@@ -1,0 +1,527 @@
+1
+00:00:00,000 --> 00:00:04,280
+Po drugim chcemy przygotować funkcję, która zwróci listę wszystkich liczb z zakresu od n do m,
+
+2
+00:00:04,400 --> 00:00:05,740
+które będą podzielone przez liczbę z.
+
+3
+00:00:06,140 --> 00:00:08,160
+Czyli takie trochę podobne do tego, co mamy.
+
+4
+00:00:08,820 --> 00:00:12,019
+Zwracamy listę, czyli wiemy, że będziemy musieli mieć listę.
+
+5
+00:00:12,099 --> 00:00:14,679
+Tutaj też pokażę Ci jedną taką bardzo sympatyczną rzecz.
+
+6
+00:00:15,620 --> 00:00:18,359
+Czyli test, najpierw funkcję sobie zróbmy.
+
+7
+00:00:19,940 --> 00:00:21,440
+Niech się nazywa getDevisors.
+
+8
+00:00:22,900 --> 00:00:26,260
+Od n do m, z.
+
+9
+00:00:26,260 --> 00:00:28,039
+Możemy przyjąć, że tak będziemy mieli.
+
+10
+00:00:28,660 --> 00:00:29,800
+Gdzie n to jest integer.
+
+11
+00:00:30,000 --> 00:00:33,299
+M to jest integer, z to jest integer.
+
+12
+00:00:34,200 --> 00:00:35,780
+A co? Pas.
+
+13
+00:00:36,840 --> 00:00:38,299
+Test getDevisors.
+
+14
+00:00:40,659 --> 00:00:44,079
+I tutaj jak znowu znam programistów,
+
+15
+00:00:44,439 --> 00:00:50,000
+to sprawdziłbym sytuację, co jeżeli n dzieli się przez z i m dzieli się przez z.
+
+16
+00:00:50,480 --> 00:00:51,620
+Bo to jest istotne.
+
+17
+00:00:51,960 --> 00:00:54,379
+Czy n i m będą zawarte w tej liście?
+
+18
+00:00:54,379 --> 00:00:56,140
+To jest ważna sprawa.
+
+19
+00:00:56,700 --> 00:00:58,780
+No i druga rzecz, czy to w ogóle będzie lista?
+
+20
+00:00:58,780 --> 00:01:00,780
+Jak to sprawdzić, czy to w ogóle będzie lista?
+
+21
+00:01:00,780 --> 00:01:02,780
+To jest ten bonus, o którym mówiłem, że pokażę.
+
+22
+00:01:02,780 --> 00:01:06,780
+Czyli tak naprawdę możemy sobie wywołać getDevisors.
+
+23
+00:01:08,780 --> 00:01:10,280
+n, m i z.
+
+24
+00:01:10,280 --> 00:01:17,280
+No to dwa, pięć, a niech będzie dwa, dziesięć, dwa.
+
+25
+00:01:18,780 --> 00:01:27,020
+I teraz, żeby sprawdzić, czy to jest lista, można napisać isInstance, przecinek list.
+
+26
+00:01:27,020 --> 00:01:28,740
+I to jest taki sposób, żeby sprawdzić,
+
+27
+00:01:28,739 --> 00:01:30,239
+czy to jest lista.
+
+28
+00:01:30,239 --> 00:01:34,739
+Jeżeli będzie to listą, no to dostaniemy true, jeżeli nie będzie to listą, dostaniemy false.
+
+29
+00:01:34,739 --> 00:01:38,239
+assert i teraz sprawdzamy getDevisors.
+
+30
+00:01:38,739 --> 00:01:42,239
+Możemy zrobić to samo, od dwójki do dziesiątki dwójkę.
+
+31
+00:01:42,239 --> 00:01:49,739
+Chcielibyśmy dostać listę, która będzie zawierała dwa, cztery, sześć, osiem i dziesięć.
+
+32
+00:01:50,739 --> 00:01:55,239
+No i nie ma jeszcze informacji, co jeżeli nie będzie takich liczb,
+
+33
+00:01:55,239 --> 00:01:57,739
+no to wtedy zakładam, że lista powinna być pusta.
+
+34
+00:01:57,739 --> 00:01:58,739
+Czyli assert.
+
+35
+00:01:58,739 --> 00:02:03,739
+getDevisors od dwójki do dziesiątki trzydzieści.
+
+36
+00:02:03,739 --> 00:02:06,239
+No to wtedy powinna być to pusta lista.
+
+37
+00:02:06,239 --> 00:02:10,740
+No i sprawdzamy, dlaczego zrobiłem te wartości graniczne, dodałem.
+
+38
+00:02:10,740 --> 00:02:12,240
+Dlaczego się o tym upewniam?
+
+39
+00:02:12,240 --> 00:02:15,240
+Z tego względu, że wiem, że za chwilę się range pojawi.
+
+40
+00:02:15,240 --> 00:02:23,740
+Czyli for, nazwijmy to tak samo, testDevisor inRange od n do m plus jeden.
+
+41
+00:02:23,740 --> 00:02:28,240
+I tak naprawdę my możemy od razu to z potraktować jako krok.
+
+42
+00:02:28,740 --> 00:02:30,240
+Tak mi się wydaje.
+
+43
+00:02:30,240 --> 00:02:32,740
+Możemy też to sobie sprawdzić raz jeszcze.
+
+44
+00:02:32,740 --> 00:02:34,240
+Przypominam, dlaczego tak jest.
+
+45
+00:02:34,240 --> 00:02:39,240
+I też przy okazji sprawdzam, żeby się upewnić, że zadania nie skieprzczę.
+
+46
+00:02:39,240 --> 00:02:44,240
+Jeżeli sobie na listę zamieniam range'a, który jest od dwójki do dziesiątki co dwa,
+
+47
+00:02:44,240 --> 00:02:49,240
+czy też do jedenastki co dwa, no to dostaję dwa, cztery, sześć, osiem, dziesięć.
+
+48
+00:02:49,240 --> 00:02:55,740
+Czyli jak widać, on mi zawierze, będzie zabierał tą dwójkę i będzie zabierał też dziesiątkę.
+
+49
+00:02:55,740 --> 00:02:57,740
+Czyli dzięki temu tak naprawdę dostaniemy wszystkie te wartości.
+
+50
+00:02:57,740 --> 00:03:01,740
+I czy trzeba będzie coś jeszcze robić?
+
+51
+00:03:01,740 --> 00:03:14,740
+Tak naprawdę moglibyśmy nie robić żadnego fora, tylko zwrócić sobie listę zamienioną na range.
+
+52
+00:03:14,740 --> 00:03:15,740
+Tak mi się wydaje.
+
+53
+00:03:15,740 --> 00:03:18,740
+A po to mamy testy, żeby to po prostu sprawdzić.
+
+54
+00:03:18,740 --> 00:03:23,740
+Czyli wykonam python-m pytest tdd2 py.
+
+55
+00:03:23,740 --> 00:03:25,740
+Okej, coś nie zadziałało.
+
+56
+00:03:25,740 --> 00:03:26,740
+Zobaczmy.
+
+57
+00:03:26,740 --> 00:03:28,740
+Asert dwójka, a dostałem nic.
+
+58
+00:03:28,740 --> 00:03:36,740
+Czyli tutaj, a właśnie, kiedy mam dwa, dziesięć, trzydzieści, to on i tak mi sprawdzi i tak weźmie tą dwójkę jako pierwszą.
+
+59
+00:03:36,740 --> 00:03:38,740
+Czyli to był zły pomysł.
+
+60
+00:03:38,740 --> 00:03:42,740
+Ale dobrze, że mamy testy, no bo w ten sposób też mamy te informacje.
+
+61
+00:03:42,740 --> 00:03:45,740
+Tutaj jak wartości są prawidłowe, to jest okej.
+
+62
+00:03:45,740 --> 00:03:50,740
+Natomiast zawsze, kiedy będziemy mieli krok trzydzieści, to tę pierwszą wartość będziemy mieli zwróconą.
+
+63
+00:03:50,740 --> 00:03:54,740
+Czyli tak naprawdę moglibyśmy, zamiast robić fora,
+
+64
+00:03:54,740 --> 00:03:57,740
+to można byłoby zrobić coś takiego.
+
+65
+00:03:57,740 --> 00:04:04,740
+Divisors, czy też może powiedzmy, zróbmy sobie range values po prostu.
+
+66
+00:04:04,740 --> 00:04:08,740
+I teraz return.
+
+67
+00:04:08,740 --> 00:04:11,740
+Czy ja chcę od razu robić return? Chyba nie.
+
+68
+00:04:11,740 --> 00:04:15,740
+If, jeżeli ilość elementów równa się jeden,
+
+69
+00:04:15,740 --> 00:04:21,740
+to wtedy możemy sprawdzić, czy ten pierwszy dzieli się przez z.
+
+70
+00:04:21,740 --> 00:04:22,740
+Czyli return.
+
+71
+00:04:22,740 --> 00:04:32,740
+Lista z n, jeżeli n modulo z równa się zero.
+
+72
+00:04:32,740 --> 00:04:36,740
+Tutaj możemy zrobić mniejsze lub równe jeden.
+
+73
+00:04:36,740 --> 00:04:39,740
+Chociaż to zawsze będzie równe jeden wtedy.
+
+74
+00:04:39,740 --> 00:04:43,740
+W przeciwnym wypadku, zwróć pustą listę.
+
+75
+00:04:43,740 --> 00:04:49,740
+A tu else, będziemy chcieli chyba zawsze zwracać values, tak mi się wydaje.
+
+76
+00:04:49,740 --> 00:04:51,740
+Że jeżeli mamy więcej elementów, no to wiemy, że,
+
+77
+00:04:51,740 --> 00:04:53,740
+będzie to ta wartość.
+
+78
+00:04:53,740 --> 00:04:56,740
+Tylko zaczekajcie, jest jeszcze jedna rzecz ważna do wzięcia pod uwagę.
+
+79
+00:04:56,740 --> 00:04:58,740
+A mianowicie, podzielne przez dwa.
+
+80
+00:04:58,740 --> 00:05:02,740
+Czyli tak naprawdę, jeżeli byśmy, jest jeszcze jeden test,
+
+81
+00:05:02,740 --> 00:05:06,740
+którego nie przewidziałem i on chyba psuje mi to rozwiązanie,
+
+82
+00:05:06,740 --> 00:05:08,740
+które zawarłem przed chwilą.
+
+83
+00:05:08,740 --> 00:05:13,740
+A mianowicie, weźmy sobie pierwszą liczbę, która będzie trójka.
+
+84
+00:05:13,740 --> 00:05:16,740
+Ostatnią liczbę weźmy dwanaście.
+
+85
+00:05:16,740 --> 00:05:20,740
+I niech to będzie liczba, która nie dzieli się przez trójkę.
+
+86
+00:05:21,740 --> 00:05:26,740
+O, jak zrobię tak, to powinienem wtedy dostać,
+
+87
+00:05:26,740 --> 00:05:28,740
+trójka nie, ale czwórka.
+
+88
+00:05:28,740 --> 00:05:32,740
+No bo dwanaście dzieli się przez cztery, dwanaście dzieli się przez sześć,
+
+89
+00:05:32,740 --> 00:05:34,740
+i dwanaście dzieli się przez dwanaście.
+
+90
+00:05:34,740 --> 00:05:37,740
+I wydaje mi się, tutaj też to zadanie w tym momencie, no właśnie.
+
+91
+00:05:37,740 --> 00:05:40,740
+Tu też to zadanie się popsuje.
+
+92
+00:05:40,740 --> 00:05:43,740
+Bo wtedy on robi zupełnie to inaczej. Okej.
+
+93
+00:05:43,740 --> 00:05:45,740
+Czyli to był zły pomysł.
+
+94
+00:05:45,740 --> 00:05:47,740
+Ale dobrze, że udało się to sprawdzić.
+
+95
+00:05:47,740 --> 00:05:50,740
+W ten sposób się z tego wycofuję.
+
+96
+00:05:51,740 --> 00:05:54,740
+Sposobem się nie uda.
+
+97
+00:05:54,740 --> 00:05:57,740
+I tak naprawdę w ten sposób też się nie uda.
+
+98
+00:05:57,740 --> 00:06:02,740
+Czyli for test divisor in range.
+
+99
+00:06:02,740 --> 00:06:07,740
+O, ale cieszę się, że udało się to pokazać, bo też dzięki temu mamy esencję tych testów.
+
+100
+00:06:07,740 --> 00:06:12,740
+I właśnie widzimy, że łatwo można sprawdzić, czy nasze wartości działają.
+
+101
+00:06:12,740 --> 00:06:14,740
+I dosyć szybko można też to sprawdzić.
+
+102
+00:06:14,740 --> 00:06:17,740
+Czyli for test divisor in range właśnie taki.
+
+103
+00:06:17,740 --> 00:06:20,740
+No i divisors, pusta lista.
+
+104
+00:06:21,740 --> 00:06:26,740
+Test divisor to nie.
+
+105
+00:06:26,740 --> 00:06:29,740
+Test divisor to nie jest. To będzie nasze value.
+
+106
+00:06:29,740 --> 00:06:32,740
+I to też będzie values.
+
+107
+00:06:32,740 --> 00:06:41,740
+I value modulo z równa się zero, to values append z.
+
+108
+00:06:41,740 --> 00:06:43,740
+Tak to powinno wyglądać.
+
+109
+00:06:43,740 --> 00:06:46,740
+No i wtedy return values.
+
+110
+00:06:46,740 --> 00:06:48,740
+Zobaczmy, czy teraz nasze testy przechodzą.
+
+111
+00:06:48,740 --> 00:06:50,740
+Bo powinny przechodzić.
+
+112
+00:06:50,740 --> 00:06:52,740
+Jeszcze coś nie tak.
+
+113
+00:06:52,740 --> 00:06:54,740
+2, 2, 2, 2, 2, 2, 2.
+
+114
+00:06:54,740 --> 00:06:56,740
+O, append z.
+
+115
+00:06:56,740 --> 00:06:58,740
+Nie, powinienem append value dodawać.
+
+116
+00:06:58,740 --> 00:07:02,740
+Mhm.
+
+117
+00:07:02,740 --> 00:07:06,740
+4, 6, 8, 10, 12.
+
+118
+00:07:06,740 --> 00:07:08,740
+4, 6, 8, 10, 12.
+
+119
+00:07:08,740 --> 00:07:10,740
+Zapomniałem o ósemce i o dziesiątce.
+
+120
+00:07:10,740 --> 00:07:12,740
+No pewnie.
+
+121
+00:07:12,740 --> 00:07:18,740
+To akurat wina.
+
+122
+00:07:18,740 --> 00:07:20,740
+Wina, wina, wina.
+
+123
+00:07:20,740 --> 00:07:24,740
+Że za szybko zakodowałem.
+
+124
+00:07:24,740 --> 00:07:26,740
+Nie pomyślałem.
+
+125
+00:07:26,740 --> 00:07:28,740
+Wina w teście.
+
+126
+00:07:28,740 --> 00:07:30,740
+O, a teraz zadziałało.
+
+127
+00:07:30,740 --> 00:07:32,740
+No i faktycznie wszystko się zgadza.
+
+128
+00:07:32,740 --> 00:07:38,740
+Jak widać do testów warto też podchodzić trochę z, może nie z dystansem, ale zastanawiać się nad nimi dobrze.
+
+129
+00:07:38,740 --> 00:07:40,740
+Jak się gada i się pisze, to czasem się robi błędy.
+
+130
+00:07:40,740 --> 00:07:46,740
+Ale znowu myślę, że skóry mi uratowały, bo gdybym ich nie miał, to pewnie bym część rzeczy już tak puścił.
+
+131
+00:07:46,740 --> 00:07:48,740
+Dobra. To co?
+
+132
+00:07:48,740 --> 00:07:50,740
+Trójka.

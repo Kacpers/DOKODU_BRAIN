@@ -1,0 +1,587 @@
+1
+00:00:00,000 --> 00:00:01,439
+Zadanie czwarte już jest trudniejsze.
+
+2
+00:00:01,580 --> 00:00:04,960
+Mamy przygotować funkcję, która zliczy ilość znaków w tekście
+
+3
+00:00:04,960 --> 00:00:07,179
+zawierających się wewnątrz nawiasów okrągłych.
+
+4
+00:00:07,299 --> 00:00:09,160
+Nawiasy mogą występować w tekście wielokrotnie,
+
+5
+00:00:09,640 --> 00:00:11,099
+nigdy nie będą się w sobie zawierać.
+
+6
+00:00:11,419 --> 00:00:14,500
+Czyli mamy taką sytuację, że mamy wyrażenie,
+
+7
+00:00:14,759 --> 00:00:16,280
+ja to wyrażenie już tam zapisywałem,
+
+8
+00:00:16,399 --> 00:00:18,260
+ale powtórzę, Ala ma kota.
+
+9
+00:00:18,879 --> 00:00:21,620
+Jeżeli kota zapiszemy w nawiasach,
+
+10
+00:00:22,000 --> 00:00:23,859
+no to wtedy wynikiem powinno być cztery,
+
+11
+00:00:23,859 --> 00:00:25,199
+ale weźmy z wielkiej litery.
+
+12
+00:00:25,679 --> 00:00:28,859
+Następnie, jeżeli byśmy mieli dwa nawiasy,
+
+13
+00:00:30,000 --> 00:00:34,539
+w ten sposób, to wtedy wynikiem powinno być cztery plus trzy,
+
+14
+00:00:36,060 --> 00:00:37,619
+czyli siedem.
+
+15
+00:00:38,460 --> 00:00:39,519
+Jak to zadanie zrobić?
+
+16
+00:00:40,019 --> 00:00:43,100
+Przede wszystkim potrzebujemy sobie stworzyć nazwę funkcji.
+
+17
+00:00:43,219 --> 00:00:44,679
+No ja myślę, że zrobimy count,
+
+18
+00:00:45,439 --> 00:00:49,280
+charts, in, between braces,
+
+19
+00:00:51,600 --> 00:00:52,560
+between braces,
+
+20
+00:00:52,679 --> 00:00:53,299
+albo between,
+
+21
+00:00:53,620 --> 00:00:56,939
+może po prostu tak.
+
+22
+00:00:57,439 --> 00:00:59,280
+I teraz będziemy potrzebowali mieć wyrażenie,
+
+23
+00:01:00,000 --> 00:01:01,640
+czyli string jakiś,
+
+24
+00:01:02,000 --> 00:01:04,439
+czy jakiś tekst, może ładniej będzie tak to nazwać.
+
+25
+00:01:05,340 --> 00:01:08,760
+Będziemy potrzebowali mieć char określany jako start,
+
+26
+00:01:09,439 --> 00:01:10,719
+to na pewno będzie string
+
+27
+00:01:10,719 --> 00:01:13,599
+i domyślnie był to nawias okrągły.
+
+28
+00:01:13,980 --> 00:01:16,680
+No i char end też jest to string
+
+29
+00:01:16,680 --> 00:01:22,519
+i domyślnie może być to nawias zamykający okrągły dwukropek.
+
+30
+00:01:23,019 --> 00:01:26,560
+I teraz będę potrzebował przechodzić znak po znaku,
+
+31
+00:01:26,560 --> 00:01:29,079
+bo zobaczcie, jeżeli mielibyśmy to zrobić sobie
+
+32
+00:01:29,079 --> 00:01:29,939
+rozsądkowo,
+
+33
+00:01:29,939 --> 00:01:32,620
+rozsądnie, no to można byłoby albo robić to w ten sposób,
+
+34
+00:01:33,060 --> 00:01:36,739
+żeby znaleźć pozycję nawiasu i znaleźć pozycję nawiasu zamykającego
+
+35
+00:01:36,739 --> 00:01:39,700
+i tylko i wyłącznie odjąć wartości od siebie
+
+36
+00:01:39,700 --> 00:01:41,379
+i to też by zadziałało.
+
+37
+00:01:41,780 --> 00:01:45,719
+Natomiast problem byłby wtedy, żebyśmy chcieli znaleźć kolejną pozycję
+
+38
+00:01:45,719 --> 00:01:46,959
+nawiasu otwierającego.
+
+39
+00:01:47,599 --> 00:01:50,060
+Jeżeli jest jeden nawias, to wszystko zadziała.
+
+40
+00:01:50,180 --> 00:01:52,200
+Jeżeli są dwa nawiasy, to będzie już problem.
+
+41
+00:01:52,780 --> 00:01:56,579
+Bo do szukania elementów, znak, pozycji, na której znajduje się znak,
+
+42
+00:01:56,579 --> 00:01:57,439
+funkcja jest, nie?
+
+43
+00:01:58,620 --> 00:01:59,920
+Natomiast dla kolejnego,
+
+44
+00:01:59,920 --> 00:02:01,920
+już może to rodzić komplikacje,
+
+45
+00:02:01,920 --> 00:02:08,400
+więc moja propozycja jest taka, że będę przechodził sobie przez kolejne znaki
+
+46
+00:02:08,400 --> 00:02:12,400
+i będę sprawdzał, czy napotkałem nawias otwierający.
+
+47
+00:02:12,400 --> 00:02:14,400
+Jeżeli napotkałem nawias otwierający,
+
+48
+00:02:14,400 --> 00:02:17,400
+to wtedy będę wiedział, że coś powinienem w tej sytuacji zrobić
+
+49
+00:02:17,400 --> 00:02:19,400
+i nad tym będę się teraz skupiał.
+
+50
+00:02:19,400 --> 00:02:23,639
+Czyli for char in text
+
+51
+00:02:23,639 --> 00:02:29,439
+if char równa się char start dwukropek.
+
+52
+00:02:29,439 --> 00:02:31,439
+To co wtedy powinienem zrobić?
+
+53
+00:02:31,439 --> 00:02:36,439
+Tak naprawdę możemy sobie wyobrazić, że mamy jakąś funkcję, która będzie się nazywała,
+
+54
+00:02:36,439 --> 00:02:41,439
+znaczy funkcję, mamy jakąś zmienną, która będzie określała, czy mam zliczyć ten znak, czy nie mam.
+
+55
+00:02:41,439 --> 00:02:50,439
+Bo jeżeli napotkałem nawias otwierający, to znaczy, że od tego momentu powinienem rozpocząć zliczanie moich liter, moich znaków.
+
+56
+00:02:50,439 --> 00:02:56,439
+Natomiast jak napotkam na nawias zamykający, to w tym momencie powinienem zakończyć zliczanie.
+
+57
+00:02:56,439 --> 00:02:58,439
+I znowu otwierający, zaczynam zliczać, zamykam.
+
+58
+00:02:58,439 --> 00:02:59,439
+I znowu otwierający, zaczynam zliczać, zamykam.
+
+59
+00:02:59,439 --> 00:03:01,439
+I znowu otwierający, kończę zliczanie.
+
+60
+00:03:01,439 --> 00:03:06,439
+Czyli my możemy mieć taką dodatkową flagę, która będzie mówiła o tym, hej, zliczać, czy nie zliczać.
+
+61
+00:03:06,439 --> 00:03:15,439
+Więc możemy sobie stworzyć taką zmienną i możemy ją nazwać count, should I count, albo no niech tak będzie.
+
+62
+00:03:19,439 --> 00:03:21,439
+I będzie ona domyślnie ustawiona na false.
+
+63
+00:03:21,439 --> 00:03:27,439
+I wtedy, kiedy napotkam na nawias otwierający, to znaczy, że od tego momentu powinienem zacząć zliczanie.
+
+64
+00:03:27,439 --> 00:03:28,439
+Mogę więc sobie stworzyć zmienną should I count char, co to znaczy?
+
+65
+00:03:28,439 --> 00:03:31,439
+Mogę więc sobie stworzyć zmienną should I count char, co to znaczy?
+
+66
+00:03:31,439 --> 00:03:36,439
+I wtedy wiem, że takie znaki mają być zliczane.
+
+67
+00:03:36,439 --> 00:03:43,439
+Czyli będę potrzebował mieć jeszcze jakąś zmienną, niech to będzie counter, ustawioną na 0.
+
+68
+00:03:43,439 --> 00:03:50,439
+I jeżeli ta zmienna should I count char będzie ustawiona na prawdę, to powinienem zliczać.
+
+69
+00:03:50,439 --> 00:03:56,439
+Czyli if should I count char jest prawdą, czyli nie muszę dopisywać równa się true, bo to jakby jest jasne, że do if'a nie ma.
+
+70
+00:03:56,439 --> 00:03:57,439
+Czyli if should I count char jest prawdą, czyli nie muszę dopisywać równa się true, bo to jakby jest jasne, że do if'a nie ma.
+
+71
+00:03:57,439 --> 00:03:58,439
+I wtedy zliczę.
+
+72
+00:03:58,439 --> 00:04:01,060
+wchodzę wtedy, kiedy jest prawda, no to wtedy zliczam.
+
+73
+00:04:01,159 --> 00:04:03,680
+Czyli counter plus równa się 1.
+
+74
+00:04:04,319 --> 00:04:05,840
+I zobaczcie, jaka będzie teraz sytuacja.
+
+75
+00:04:06,800 --> 00:04:10,680
+Sytuacja będzie teraz taka, że kiedy napotkam na nawias otwierający,
+
+76
+00:04:11,300 --> 00:04:12,919
+od razu ustawi mi
+
+77
+00:04:12,919 --> 00:04:15,319
+should I count char na true.
+
+78
+00:04:16,040 --> 00:04:18,879
+Skoro ustawi mi na true, to zwiększy mi też
+
+79
+00:04:18,879 --> 00:04:22,279
+ten counter. Zwiększenie tego countera z kolei
+
+80
+00:04:22,279 --> 00:04:25,040
+spowoduje, że nawias otwierający też zostanie
+
+81
+00:04:25,040 --> 00:04:28,040
+policzony jako znak pomiędzy nawiasami.
+
+82
+00:04:28,439 --> 00:04:31,139
+Ja tego nie chcę. Chcę dopiero, żeby od kolejnej pętli
+
+83
+00:04:31,139 --> 00:04:34,719
+on mi to robił. Więc muszę się zastanowić nad kolejnością tych elementów.
+
+84
+00:04:35,360 --> 00:04:37,399
+Jeżeli ifa przeniosę tego wyżej,
+
+85
+00:04:37,399 --> 00:04:40,399
+to on mi nie będzie wtedy zliczał
+
+86
+00:04:41,079 --> 00:04:44,240
+nawias otwierającego, ale kolejny znak już mi zliczy.
+
+87
+00:04:44,720 --> 00:04:47,279
+Zobaczcie, jaki teraz będziemy mieli efekt, jeżeli wykonamy sobie
+
+88
+00:04:47,279 --> 00:04:49,699
+print count char between
+
+89
+00:04:49,699 --> 00:04:52,139
+no i przekażemy a la Makota
+
+90
+00:04:52,139 --> 00:04:54,100
+w ten sposób.
+
+91
+00:04:57,300 --> 00:04:58,319
+No i ten sam
+
+92
+00:04:58,319 --> 00:05:04,300
+nany będzie wytangsquarter
+
+93
+00:05:04,860 --> 00:05:28,120
+私の
+
+94
+00:05:28,319 --> 00:05:30,180
+count char ustawić na false
+
+95
+00:05:30,180 --> 00:05:31,899
+z powrotem. Więc
+
+96
+00:05:31,899 --> 00:05:33,879
+i znowu też ważna jest kolejność.
+
+97
+00:05:34,500 --> 00:05:35,719
+Jeżeli ja to ustawię tu,
+
+98
+00:05:37,560 --> 00:05:38,379
+no to on mi
+
+99
+00:05:38,379 --> 00:05:40,480
+od początku, spaliłem,
+
+100
+00:05:40,579 --> 00:05:41,560
+pisałem zacząć od początku.
+
+101
+00:05:42,159 --> 00:05:44,139
+Jeżeli ja to ustawię na końcu, zobacz,
+
+102
+00:05:44,279 --> 00:05:46,240
+czyli ustawię, że ma
+
+103
+00:05:46,240 --> 00:05:47,159
+być zliczanie
+
+104
+00:05:47,159 --> 00:05:49,500
+ustawione na false,
+
+105
+00:05:50,139 --> 00:05:52,240
+tutaj, że na podkąt na nawias zamykający,
+
+106
+00:05:52,740 --> 00:05:54,019
+to on mi i tak wcześniej
+
+107
+00:05:54,019 --> 00:05:55,839
+zliczył should I count char,
+
+108
+00:05:56,279 --> 00:05:57,659
+nie? Bo jest to ustawione na true.
+
+109
+00:05:57,660 --> 00:05:58,980
+Więc my musimy
+
+110
+00:05:58,980 --> 00:06:01,160
+spowodować, żeby ten nawias
+
+111
+00:06:01,160 --> 00:06:03,560
+już się nie liczył. Czyli tak naprawdę
+
+112
+00:06:03,560 --> 00:06:05,620
+przed tym should I count char
+
+113
+00:06:05,620 --> 00:06:07,380
+powinniśmy zmienić
+
+114
+00:06:07,380 --> 00:06:09,700
+tą zmienną
+
+115
+00:06:09,700 --> 00:06:11,640
+naszą przechowującą informację o zliczaniu
+
+116
+00:06:11,640 --> 00:06:13,660
+na false. Czyli powinno być
+
+117
+00:06:13,660 --> 00:06:15,700
+to zrobione tu na górze. Jeżeli zrobiłbym
+
+118
+00:06:15,700 --> 00:06:17,680
+to pomiędzy, to nawias zamykający
+
+119
+00:06:17,680 --> 00:06:19,560
+byłby zliczany. Tak samo, jeżeli zrobiłbym
+
+120
+00:06:19,560 --> 00:06:21,800
+to poniżej. Czyli if
+
+121
+00:06:21,800 --> 00:06:25,540
+znak jest to
+
+122
+00:06:25,540 --> 00:06:27,120
+char end
+
+123
+00:06:27,120 --> 00:06:29,319
+to wtedy
+
+124
+00:06:29,319 --> 00:06:30,680
+should I count char
+
+125
+00:06:30,680 --> 00:06:32,680
+równa się false.
+
+126
+00:06:33,699 --> 00:06:35,459
+I w ten sposób mamy sytuację, w której
+
+127
+00:06:35,459 --> 00:06:37,060
+wszystko powinno nam grać.
+
+128
+00:06:37,180 --> 00:06:39,240
+4 i 7, 4 i
+
+129
+00:06:39,240 --> 00:06:41,519
+7. To takie zadanie, które
+
+130
+00:06:41,519 --> 00:06:43,519
+często się przydaje, jeżeli coś parsujemy,
+
+131
+00:06:43,639 --> 00:06:45,280
+coś sprawdzamy, coś analizujemy,
+
+132
+00:06:45,720 --> 00:06:47,160
+to takie zadania mi się zdarzają,
+
+133
+00:06:47,340 --> 00:06:47,860
+zdarzały.
+
+134
+00:06:49,319 --> 00:06:51,280
+No, na przykład szukasz numeru telefonu,
+
+135
+00:06:51,340 --> 00:06:53,600
+chcesz sprawdzić kierunkowy i chcesz go tylko pobrać.
+
+136
+00:06:53,600 --> 00:06:55,860
+To można też używać wyrażeń regularnych,
+
+137
+00:06:55,860 --> 00:06:57,819
+to też takie rozwiązanie na szóstkę.
+
+138
+00:06:57,960 --> 00:06:59,860
+Pewnie dałoby się to zrobić wyrażeniem regularnym.
+
+139
+00:07:00,259 --> 00:07:02,280
+Natomiast ja nie jestem mistrzem wyrażeń regularnych,
+
+140
+00:07:02,360 --> 00:07:03,939
+więc na tyle, na ile je znam, to po prostu
+
+141
+00:07:03,939 --> 00:07:05,900
+sobie coś tam piszę, ale żeby
+
+142
+00:07:05,900 --> 00:07:07,680
+uczyć kogoś od podstaw takich
+
+143
+00:07:07,680 --> 00:07:09,639
+zupełnych wyrażeń regularnych, to raczej
+
+144
+00:07:09,639 --> 00:07:11,460
+raczej się nie nadaje.
+
+145
+00:07:11,900 --> 00:07:14,000
+Ok, natomiast zrobiliśmy sobie
+
+146
+00:07:14,000 --> 00:07:15,460
+nasze rozwiązanie.
+
+147
+00:07:15,900 --> 00:07:18,160
+Możemy lecieć dalej do piąteczki.

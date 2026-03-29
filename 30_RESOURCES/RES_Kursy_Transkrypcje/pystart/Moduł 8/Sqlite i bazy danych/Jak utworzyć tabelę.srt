@@ -1,0 +1,427 @@
+1
+00:00:00,000 --> 00:00:02,940
+Dobrze, zatem jaką aplikację sobie stworzymy?
+
+2
+00:00:03,140 --> 00:00:04,139
+W sumie o tym nie powiedziałem.
+
+3
+00:00:04,360 --> 00:00:07,080
+W ramach tej lekcji stworzymy sobie taką prostą aplikację,
+
+4
+00:00:07,600 --> 00:00:10,679
+która będzie służyła do tego, żeby przygotować ewidencję
+
+5
+00:00:10,679 --> 00:00:12,419
+naszej domowej biblioteczki.
+
+6
+00:00:12,780 --> 00:00:16,160
+No, naturalnie to, co będziemy przechowywali w takiej biblioteczce
+
+7
+00:00:16,160 --> 00:00:21,620
+może być to dowolna rzecz, ale będzie to rozwiązywało taki problem,
+
+8
+00:00:21,800 --> 00:00:25,019
+który możliwe, że tobie też doschwiera,
+
+9
+00:00:25,480 --> 00:00:27,820
+a mianowicie, że czasem komuś coś pożyczamy,
+
+10
+00:00:27,820 --> 00:00:30,679
+a później nie pamiętamy komu i co.
+
+11
+00:00:31,399 --> 00:00:34,140
+Ja tego problemu nie mam, ale może ty znasz kogoś,
+
+12
+00:00:34,219 --> 00:00:37,340
+kto taki problem posiada, że posiada jakąś książkę,
+
+13
+00:00:37,439 --> 00:00:40,920
+później ją komuś pożycza i zastanawia się skąd, gdzie ta książka jest.
+
+14
+00:00:41,560 --> 00:00:46,820
+No, ale cóż, ta część z pożyczeniem będzie już realizowana w innym czasie.
+
+15
+00:00:47,019 --> 00:00:50,100
+Możesz ją zrobić samodzielnie, możesz udostępnić później taki projekt
+
+16
+00:00:50,100 --> 00:00:53,840
+na swoim GitHubie i podzielić się nim z potencjalnym pracodawcą.
+
+17
+00:00:54,280 --> 00:00:57,799
+Natomiast to, czym się teraz zajmiemy, będzie to po prostu taka ewidencja,
+
+18
+00:00:57,820 --> 00:01:01,480
+czyli w ramach tej ewidencji będziemy chcieli połączyć się do bazy danych,
+
+19
+00:01:01,899 --> 00:01:05,140
+utworzyć sobie potrzebną tabelę do przechowywania takich informacji,
+
+20
+00:01:05,620 --> 00:01:08,939
+wykonać polecenie dodające konkretną książkę do naszej bazy danych
+
+21
+00:01:08,939 --> 00:01:12,920
+oraz drugie polecenie, które wylistuje nam wszystkie książki
+
+22
+00:01:12,920 --> 00:01:15,280
+znajdujące się w tabeli z książkami.
+
+23
+00:01:15,799 --> 00:01:19,799
+Jeżeli chcesz więcej pod kątem pracy z SQL-em,
+
+24
+00:01:19,939 --> 00:01:23,599
+no to zachęcam raz jeszcze do dołączenia do SkumajBazy.
+
+25
+00:01:24,060 --> 00:01:25,700
+No dobra, od czego zaczynamy?
+
+26
+00:01:25,700 --> 00:01:27,740
+Tak naprawdę, żeby zacząć,
+
+27
+00:01:27,819 --> 00:01:32,059
+potrzebujemy tylko i wyłącznie otworzyć sobie najlepiej nowy pusty projekt
+
+28
+00:01:32,059 --> 00:01:35,779
+i w nowym pustym projekcie wykonać polecenie import SQLite3.
+
+29
+00:01:36,099 --> 00:01:38,959
+A później, jeżeli chodzi o połączenie się do bazy danych,
+
+30
+00:01:39,339 --> 00:01:41,379
+to mamy dwa sposoby na połączenie się.
+
+31
+00:01:41,759 --> 00:01:45,199
+Jeden sposób to jest skorzystanie z takiej klasycznej metody,
+
+32
+00:01:45,679 --> 00:01:48,219
+a drugi sposób to jest wykorzystanie kontekst menadżera.
+
+33
+00:01:48,759 --> 00:01:51,839
+Czyli, kiedy łączymy się do bazy danych, musimy mu powiedzieć
+
+34
+00:01:51,839 --> 00:01:55,780
+słuchaj, connection to jest SQLite3.connect librarydb.
+
+35
+00:01:55,780 --> 00:01:57,780
+I on w tym momencie, on w sensie palcowy,
+
+36
+00:01:57,819 --> 00:02:02,219
+on będzie wiedział, że plik librarydb to jest plik,
+
+37
+00:02:02,219 --> 00:02:04,219
+w którym ma się ta baza znaleźć.
+
+38
+00:02:04,219 --> 00:02:06,979
+I tutaj tak samo jak w przypadku plików,
+
+39
+00:02:06,979 --> 00:02:09,539
+bardzo ważne jest też to, żeby zakończyć to połączenie.
+
+40
+00:02:09,539 --> 00:02:12,139
+Dlatego też mamy również alternatywną ścieżkę,
+
+41
+00:02:12,139 --> 00:02:14,900
+która polega na tym, że po prostu korzystamy z kontekst menadżera.
+
+42
+00:02:14,900 --> 00:02:19,939
+Czyli wybieramy sobie with SQLite3.connect librarydb as connection.
+
+43
+00:02:19,939 --> 00:02:22,979
+I ten, to connection to jest później taki uchwyt,
+
+44
+00:02:22,979 --> 00:02:27,500
+który będzie nam potrzebny do tego, żeby wykonywać różnej maści zapytania.
+
+45
+00:02:27,819 --> 00:02:29,819
+Jakie to mogą być zapytania?
+
+46
+00:02:29,819 --> 00:02:30,819
+Zobacz.
+
+47
+00:02:30,819 --> 00:02:34,819
+Na początek zapytanie tworzące naszą tabelę.
+
+48
+00:02:34,819 --> 00:02:37,819
+Skoro tworzę tabelę, no to create table.
+
+49
+00:02:37,819 --> 00:02:39,819
+Siłą rzeczy.
+
+50
+00:02:39,819 --> 00:02:41,819
+Następnie mamy books.
+
+51
+00:02:41,819 --> 00:02:43,819
+Books to jest nazwa tej tabeli.
+
+52
+00:02:43,819 --> 00:02:46,819
+Czyli wiemy, że tabela będzie miała taką nazwę.
+
+53
+00:02:46,819 --> 00:02:50,819
+Następnie mamy otwarty nawias okrągły, zamknięty nawias okrągły.
+
+54
+00:02:50,819 --> 00:02:52,819
+To są bardzo ważne nawiasy.
+
+55
+00:02:52,819 --> 00:02:55,819
+One mówią, gdzie znajduje się opis naszej tabeli.
+
+56
+00:02:55,819 --> 00:02:56,819
+I w ramach tego booku, to jest to, co mamy w tym tabeli.
+
+57
+00:02:56,819 --> 00:02:57,819
+I w ramach tego booku, to jest to, co mamy w tym tabeli.
+
+58
+00:02:57,819 --> 00:02:59,819
+W ramach tego booku, posiadamy trzy kolumny.
+
+59
+00:02:59,819 --> 00:03:06,819
+Kolumnę book id, która jest integerem, który jest kluczem głównym, który jest autoincrement.
+
+60
+00:03:06,819 --> 00:03:08,819
+Co to jest?
+
+61
+00:03:08,819 --> 00:03:10,819
+Book id, no to wiadomo nazwa naszej kolumny.
+
+62
+00:03:10,819 --> 00:03:13,819
+Nazwy kolumn raczej nie zawierają spacji.
+
+63
+00:03:13,819 --> 00:03:16,819
+Jeżeli mamy spację, wstawiamy znak podkreślenia w to miejsce.
+
+64
+00:03:16,819 --> 00:03:19,819
+Dalej integer, czyli liczba całkowita.
+
+65
+00:03:19,819 --> 00:03:23,819
+W Pythonie używaliśmy po prostu inta, natomiast tutaj używamy integer.
+
+66
+00:03:23,819 --> 00:03:26,819
+Tak jak widzisz, w programowaniu wiele rzeczy jest do siebie bardzo podobnych.
+
+67
+00:03:26,819 --> 00:03:30,819
+Czasem mamy takie właśnie różnice jak int, integer.
+
+68
+00:03:30,819 --> 00:03:32,819
+Dalej mamy primary key.
+
+69
+00:03:32,819 --> 00:03:34,819
+Primary key to jest klucz główny.
+
+70
+00:03:34,819 --> 00:03:44,819
+Czyli w momencie, w którym tworzysz tabelę, powinieneś mieć jedną taką kolumnę, która będzie reprezentowała ten rekord.
+
+71
+00:03:44,819 --> 00:03:46,819
+I ona będzie unikatowa dla każdego rekordu.
+
+72
+00:03:46,819 --> 00:03:53,819
+Czyli na przykład, jeżeli posiadałbyś użytkowników, to teoretycznie mógłbyś spowodować, że email byłby takim kluczem głównym.
+
+73
+00:03:53,819 --> 00:03:54,819
+Natomiast przyjęło się i bardzo często takie klucze są.
+
+74
+00:03:54,819 --> 00:03:55,819
+Natomiast przyjęło się i bardzo często takie klucze są.
+
+75
+00:03:55,819 --> 00:03:59,819
+I bardzo często tak jest, że kluczem głównym jest po prostu liczba.
+
+76
+00:03:59,819 --> 00:04:04,819
+Liczba rosnąca od 1 do tylu, ile mamy rekordów w bazie danych.
+
+77
+00:04:04,819 --> 00:04:06,819
+Choć to też nie zawsze.
+
+78
+00:04:06,819 --> 00:04:07,819
+Dlaczego?
+
+79
+00:04:07,819 --> 00:04:14,819
+Bo żeby nie trzeba było się troszczyć tym, żeby nie trzeba było pamiętać, że liczba musi być 1, 2, 3, 4, 5 i tak dalej,
+
+80
+00:04:14,819 --> 00:04:17,819
+to dodaje się coś, co nazywa się auto-increment.
+
+81
+00:04:17,819 --> 00:04:23,819
+I auto-increment to jest takie polecenie, takie polecenie, które powoduje,
+
+82
+00:04:23,819 --> 00:04:31,819
+że za każdym razem, kiedy dodajemy nowy rekord do tabeli, to baza będzie pamiętała, jaka jest to wartość.
+
+83
+00:04:31,819 --> 00:04:39,819
+I w momencie, w którym dodasz kolejny rekord, to on temu rekordowi doda kolejną liczbę, kolejne ID.
+
+84
+00:04:39,819 --> 00:04:45,819
+Czyli na przykład tworzymy sobie te książki, dodajemy 3 książki, kasujemy 2, dodajemy 1.
+
+85
+00:04:45,819 --> 00:04:50,819
+W tym momencie będziemy mieli tylko 2 książki w bazie danych o ID-kach 1 i 4.
+
+86
+00:04:50,819 --> 00:04:51,819
+To jest zupełnie normalne.
+
+87
+00:04:51,819 --> 00:04:52,819
+Nie musimy się starać, żeby ta auto-increment była 1.
+
+88
+00:04:52,819 --> 00:04:57,819
+Jeżeli mamy 1, 4, to też jest wszystko ok.
+
+89
+00:04:57,819 --> 00:05:01,819
+Najważniejsze, żeby kolejna książka miała 5, 6, 7, 8, coś usuwam.
+
+90
+00:05:01,819 --> 00:05:04,819
+Puste te ID-ki jak najbardziej w porządku.
+
+91
+00:05:04,819 --> 00:05:07,819
+Ważne, żeby tylko każda kolejna książka miała kolejny.
+
+92
+00:05:07,819 --> 00:05:11,819
+Ok, czyli mamy Book ID, następnie jest Title.
+
+93
+00:05:11,819 --> 00:05:13,819
+Title, no to wiadomo, tytuł książki.
+
+94
+00:05:13,819 --> 00:05:16,819
+I nasz tytuł książki to jest VAR CHAR.
+
+95
+00:05:16,819 --> 00:05:21,819
+VAR CHAR, czyli CHARACTER VARING, czyli zmienna długość kolumny.
+
+96
+00:05:21,819 --> 00:05:27,819
+Natomiast założyliśmy, że ta kolumna ma maksymalnie 100 znaków.
+
+97
+00:05:27,819 --> 00:05:32,819
+UNIQUE, czyli nie może się powtarzać ta nazwa kolumny nigdzie więcej.
+
+98
+00:05:32,819 --> 00:05:35,819
+I NOT NULL, nie może być pusta.
+
+99
+00:05:35,819 --> 00:05:39,819
+Czyli te dane musimy zawsze podawać i jak je podajemy, muszą być one unikatowe.
+
+100
+00:05:39,819 --> 00:05:44,819
+Natomiast AUTOR, jak widać, też jest VAR CHAREM na 100 znaków.
+
+101
+00:05:44,819 --> 00:05:46,819
+No i tutaj w tym przypadku powtarzać się może.
+
+102
+00:05:46,819 --> 00:05:50,819
+No bo jeżeli by się nie mógł powtarzać, to byśmy mogli mieć tylko jedną książkę Jana Brzechwy,
+
+103
+00:05:50,819 --> 00:05:52,819
+a nie moglibyśmy mieć drugiej.
+
+104
+00:05:52,819 --> 00:05:55,819
+Poniżej widzisz opis tych rzeczy.
+
+105
+00:05:55,819 --> 00:05:58,819
+Jeżeli szybciej czytasz niż ja mówię, no to bardzo proszę.
+
+106
+00:05:58,819 --> 00:05:59,819
+Jest jeszcze powtórka.
+
+107
+00:05:59,819 --> 00:06:02,819
+To oznaczają te poszczególne słówka.

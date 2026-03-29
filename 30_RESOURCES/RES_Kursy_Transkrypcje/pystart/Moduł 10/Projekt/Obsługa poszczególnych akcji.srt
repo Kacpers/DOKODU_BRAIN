@@ -1,0 +1,675 @@
+1
+00:00:00,000 --> 00:00:04,160
+Skoro wszystkie informacje dotyczące parsera mamy już za sobą,
+
+2
+00:00:04,679 --> 00:00:07,660
+to możemy po prostu stąd go wyrzucić.
+
+3
+00:00:08,040 --> 00:00:10,759
+Wyrzucić nie w taki sposób, że go usuniemy oczywiście,
+
+4
+00:00:11,300 --> 00:00:15,560
+tylko otwieramy sobie projekt, klikamy prawym na PyStart Project,
+
+5
+00:00:15,820 --> 00:00:18,960
+wybieramy Python File, no i nazywamy go sobie parser.
+
+6
+00:00:20,219 --> 00:00:25,760
+Następnie naszą klasę oraz te dwa importy, które ta klasa wykorzystuje,
+
+7
+00:00:26,260 --> 00:00:27,320
+przenoszę do parsera.
+
+8
+00:00:27,320 --> 00:00:31,420
+Czyli korzystając z metody, chciałem powiedzieć, kopiego paste'a,
+
+9
+00:00:31,440 --> 00:00:37,600
+tu nie jest copy paste, tylko cut and paste, wycinam sobie cały ten kod,
+
+10
+00:00:38,299 --> 00:00:40,219
+przenoszę go następnie do parsera.
+
+11
+00:00:40,960 --> 00:00:44,179
+Oczywiście, jeżeli przeniosłem go wraz z tymi importami,
+
+12
+00:00:44,700 --> 00:00:46,219
+nie powinienem mieć żadnego błędu.
+
+13
+00:00:46,820 --> 00:00:51,340
+W tym momencie mogę zamknąć plik parser, a tutaj powinienem sobie zaimportować.
+
+14
+00:00:51,659 --> 00:00:56,079
+Czyli from parser, import parser.
+
+15
+00:00:56,079 --> 00:01:05,239
+Dzięki temu nie mam już żadnego błędu, jest super, mam parser wykonany
+
+16
+00:01:05,239 --> 00:01:08,640
+i mogę przystąpić do realizowania mojego zadania.
+
+17
+00:01:09,259 --> 00:01:15,120
+W tym celu stworzę sobie nową klasę i nazwę tę klasę Application.
+
+18
+00:01:15,739 --> 00:01:17,939
+Co ma się dziać w mojej klasie Application?
+
+19
+00:01:18,219 --> 00:01:22,980
+Przede wszystkim będę potrzebował wykonywać określone czynności
+
+20
+00:01:22,980 --> 00:01:25,980
+w zależności od tego, jaką wartość.
+
+21
+00:01:26,079 --> 00:01:28,079
+Ktoś ma argument action.
+
+22
+00:01:28,079 --> 00:01:32,079
+Tak jak widzieliście, w momencie, w którym wywoływaliśmy sobie ten kod,
+
+23
+00:01:32,079 --> 00:01:39,079
+on nam tutaj zwracał ten parser w postaci tych naszych argumentów.
+
+24
+00:01:39,079 --> 00:01:44,579
+Czyli był argument action, był argument stats, list i tak dalej.
+
+25
+00:01:44,579 --> 00:01:49,579
+Zatem będę chciał sprawić, że w momencie, w którym ktoś będzie wywoływał
+
+26
+00:01:49,579 --> 00:01:56,079
+ten nasz program w ten sposób, będzie się dział kod odpowiedzialny za dodanie
+
+27
+00:01:56,079 --> 00:01:59,579
+nowego argumentu, dodanie nowego wpisu.
+
+28
+00:02:00,579 --> 00:02:06,079
+Do tego będę potrzebował mieć te argumenty.
+
+29
+00:02:06,079 --> 00:02:13,079
+Czyli tutaj stworzę sobie mój init i w tym initie dołożę arguments.
+
+30
+00:02:14,079 --> 00:02:19,579
+To, co zwraca mi moje arguments, zrobię na moment pas, żeby wam pokazać.
+
+31
+00:02:22,079 --> 00:02:24,079
+To jest jeszcze value.
+
+32
+00:02:26,080 --> 00:02:30,080
+To jest coś, co jest tak zwanym namespace'em,
+
+33
+00:02:30,080 --> 00:02:32,580
+a ten namespace pochodzi z argparsa.
+
+34
+00:02:32,580 --> 00:02:37,580
+Więc żeby sobie to otypować, możemy bez problemu napisać właśnie w ten sposób.
+
+35
+00:02:37,580 --> 00:02:40,580
+I ja to sobie przypiszę do zmiennej arguments,
+
+36
+00:02:40,580 --> 00:02:45,580
+czyli self arguments równa się arguments.
+
+37
+00:02:46,580 --> 00:02:51,080
+Następną rzeczą, którą będę chciał zrobić, będzie uruchomienie tej mojej aplikacji.
+
+38
+00:02:51,080 --> 00:02:54,080
+Czyli stworzenie jakiejś metody typu run,
+
+39
+00:02:54,080 --> 00:02:56,080
+czy też main może, żeby zachować.
+
+40
+00:02:56,080 --> 00:02:58,080
+Tę nomenklaturę pythonową.
+
+41
+00:02:58,080 --> 00:03:02,080
+I tu w zależności od tego, jakie dane będą przekazane,
+
+42
+00:03:02,080 --> 00:03:04,080
+będę chciał zadziałać.
+
+43
+00:03:04,080 --> 00:03:08,080
+Więc ja sobie po prostu wyprintuję w tym miejscu self arguments.
+
+44
+00:03:08,080 --> 00:03:10,080
+Jaki to będzie miało skutek?
+
+45
+00:03:10,080 --> 00:03:14,080
+Na chwilę obecną żaden, no bo musimy stworzyć naszą aplikację.
+
+46
+00:03:14,080 --> 00:03:17,080
+Czyli tak naprawdę parser równa się parser,
+
+47
+00:03:18,080 --> 00:03:24,080
+main równa się application,
+
+48
+00:03:24,080 --> 00:03:26,080
+i do tego main'a,
+
+49
+00:03:26,080 --> 00:03:30,080
+będę potrzebował przekazać parser parsargs.
+
+50
+00:03:35,080 --> 00:03:41,080
+Następnie na main'ie muszę po prostu wywołać metodę main.
+
+51
+00:03:41,080 --> 00:03:43,080
+Robię strzały do góry enter.
+
+52
+00:03:43,080 --> 00:03:46,080
+I efektem powinien być tak naprawdę brak efektu.
+
+53
+00:03:46,080 --> 00:03:51,080
+Natomiast cały ten mój kod został przekazany już do main'a.
+
+54
+00:03:51,080 --> 00:03:53,080
+Rzeczy, które powinienem teraz sprawdzić,
+
+55
+00:03:53,080 --> 00:03:55,080
+to jeżeli wykonam add expense,
+
+56
+00:03:55,080 --> 00:03:57,080
+to już wiemy co się stanie.
+
+57
+00:03:57,080 --> 00:04:00,080
+Natomiast co się stanie, jeżeli wykonam na przykład list?
+
+58
+00:04:00,080 --> 00:04:02,080
+W tym momencie pokazał mi się błąd,
+
+59
+00:04:02,080 --> 00:04:05,080
+gdyż w kodzie wcześniej miałem literówkę.
+
+60
+00:04:05,080 --> 00:04:10,080
+Tutaj wszędzie tam, gdzie było stats oraz list,
+
+61
+00:04:10,080 --> 00:04:12,080
+powinienem również mieć action group.
+
+62
+00:04:12,080 --> 00:04:16,080
+Ja miałem parser, więc wymieniłem ten parser na action group.
+
+63
+00:04:16,080 --> 00:04:19,080
+I w tym momencie wszystko mi dalej, wszystko mi zadziałało.
+
+64
+00:04:19,080 --> 00:04:23,080
+Czyli jeżeli wywołam sobie list, to dostaję action list.
+
+65
+00:04:23,080 --> 00:04:25,080
+Moje poszczególne dane,
+
+66
+00:04:25,079 --> 00:04:26,079
+są puste.
+
+67
+00:04:26,079 --> 00:04:30,079
+Czyli tak naprawdę tym, co będziemy chcieli zrobić w ramach naszego main'a,
+
+68
+00:04:30,079 --> 00:04:33,079
+to będziemy chcieli zadziałać w zależności od tego,
+
+69
+00:04:33,079 --> 00:04:35,079
+jaką wartość ma nasze action.
+
+70
+00:04:35,079 --> 00:04:38,079
+Jesteśmy po PyStart'cie, więc wiemy, że w tym momencie
+
+71
+00:04:38,079 --> 00:04:42,079
+na podstawie tego naszego action moglibyśmy wykonać ify.
+
+72
+00:04:42,079 --> 00:04:46,079
+Natomiast dużo ładniej byłoby, jeżeli użyjemy match case'a.
+
+73
+00:04:46,079 --> 00:04:54,079
+Czyli match self arguments kropka action.
+
+74
+00:04:55,079 --> 00:04:59,079
+Dwa kropek.
+
+75
+00:04:59,079 --> 00:05:04,079
+Następnie, jeżeli nasza wartość to będzie list,
+
+76
+00:05:04,079 --> 00:05:07,079
+to wtedy chcemy wykonać coś.
+
+77
+00:05:07,079 --> 00:05:12,079
+Na razie nie będę mówił co, więc po prostu sobie tutaj stawię trzy kropeczki.
+
+78
+00:05:12,079 --> 00:05:18,079
+Druga opcja jest taka, że nasz case może mieć wartość stats.
+
+79
+00:05:18,079 --> 00:05:21,079
+Więc możemy dorzucić stats.
+
+80
+00:05:21,079 --> 00:05:24,079
+Dwa kropek i trzy kropeczki.
+
+81
+00:05:25,079 --> 00:05:28,079
+Kolejna opcja, która może się zadziać, jest taka,
+
+82
+00:05:28,079 --> 00:05:36,079
+że nasz, skoro mamy tutaj list stats,
+
+83
+00:05:36,079 --> 00:05:42,079
+mamy delete, wtedy też trzy kropeczki.
+
+84
+00:05:42,079 --> 00:05:44,079
+No i jeszcze mamy te nasze dwie opcje,
+
+85
+00:05:44,079 --> 00:05:48,079
+czyli add income i add expense.
+
+86
+00:05:48,079 --> 00:05:53,079
+Czyli add income
+
+87
+00:05:53,079 --> 00:05:54,079
+i add expense.
+
+88
+00:05:55,079 --> 00:06:02,079
+I w zależności od tego, jaka czynność została wykonana,
+
+89
+00:06:02,079 --> 00:06:06,079
+ja będę potrzebował wykonać odpowiednią akcję.
+
+90
+00:06:06,079 --> 00:06:09,079
+List ma mi po prostu listować wydatki.
+
+91
+00:06:09,079 --> 00:06:12,079
+Więc ja sobie stworzę taką metodę pod spodem.
+
+92
+00:06:12,079 --> 00:06:16,079
+Nazwę ją dev list.
+
+93
+00:06:16,079 --> 00:06:20,079
+No i wykonam print lista wydatków.
+
+94
+00:06:20,079 --> 00:06:24,079
+Mogę tę metodę wtedy wykorzystać w tym miejscu, czyli self list.
+
+95
+00:06:25,079 --> 00:06:28,079
+Opcja numer dwa to jest stats.
+
+96
+00:06:28,079 --> 00:06:30,079
+Zrobię dokładnie tak samo.
+
+97
+00:06:30,079 --> 00:06:31,079
+Czyli dev.
+
+98
+00:06:31,079 --> 00:06:36,079
+On tutaj mi krzyczy, że mógłbym zamienić tę metodę na metodę statyczną.
+
+99
+00:06:36,079 --> 00:06:38,079
+My się tym zupełnie nie przejmujemy,
+
+100
+00:06:38,079 --> 00:06:40,079
+gdyż później jakby będzie to nieprawdą.
+
+101
+00:06:40,079 --> 00:06:42,079
+Czyli statystyki.
+
+102
+00:06:44,079 --> 00:06:48,079
+Oczywiście też powinienem tutaj dołożyć self.stats.
+
+103
+00:06:48,079 --> 00:06:51,079
+Co mam zrobić na wypadek deleta?
+
+104
+00:06:51,079 --> 00:06:53,079
+No oczywiście self delete.
+
+105
+00:06:53,079 --> 00:06:59,079
+Z tym, że w delete powinna się wtedy znaleźć informacja pod tytułem, jaki id chcemy usunąć.
+
+106
+00:06:59,079 --> 00:07:06,079
+Więc możemy wykonać self.arguments.id.
+
+107
+00:07:06,079 --> 00:07:12,079
+Gdyż jeżeli usuwamy, to jest to skonstruowane tak, że id musi się pokazać.
+
+108
+00:07:12,079 --> 00:07:16,079
+Czyli dev delete.
+
+109
+00:07:16,079 --> 00:07:22,079
+I oprócz selfa potrzebujemy jeszcze id, które będzie zawsze integerem.
+
+110
+00:07:22,079 --> 00:07:25,079
+I w tym print usuwam.
+
+111
+00:07:26,079 --> 00:07:28,079
+Następnie add income.
+
+112
+00:07:28,079 --> 00:07:32,079
+W przypadku add income będzie trochę więcej rzeczy do zrobienia.
+
+113
+00:07:34,079 --> 00:07:40,079
+Bo add income będzie odbierało name, category, date oraz value.
+
+114
+00:07:40,079 --> 00:07:42,079
+Muszę wszystkie te wartości tutaj przekazać.
+
+115
+00:07:42,079 --> 00:07:45,079
+Zrobię sobie zatem enter i je przekażę.
+
+116
+00:07:45,079 --> 00:07:48,079
+self.arguments.name
+
+117
+00:07:48,079 --> 00:07:52,079
+self.arguments.category
+
+118
+00:07:52,079 --> 00:07:57,079
+self.arguments.date
+
+119
+00:07:57,079 --> 00:08:01,079
+i self.arguments.value
+
+120
+00:08:01,079 --> 00:08:05,079
+Na chwilę obecną moje date jest stringiem.
+
+121
+00:08:05,079 --> 00:08:07,079
+Też powinienem o tym pamiętać.
+
+122
+00:08:07,079 --> 00:08:11,079
+Oczywiście add income zaraz zaimplementuję.
+
+123
+00:08:11,079 --> 00:08:16,079
+Natomiast z racji tego, że add income i add expense wygląda dokładnie tak samo.
+
+124
+00:08:16,079 --> 00:08:19,079
+Jedyne co różni to jest różnica w metodzie.
+
+125
+00:08:19,079 --> 00:08:21,079
+To tutaj możemy to sobie.
+
+126
+00:08:22,079 --> 00:08:24,079
+Po prostu przekazać.
+
+127
+00:08:24,079 --> 00:08:26,079
+Następnie zjeżdżam na dół.
+
+128
+00:08:26,079 --> 00:08:28,079
+I wykonuję add expense.
+
+129
+00:08:28,079 --> 00:08:34,079
+I tutaj powinienem wykonać name, category, date i value.
+
+130
+00:08:34,079 --> 00:08:40,079
+Czyli przecinek name, category, date i value.
+
+131
+00:08:40,079 --> 00:08:43,079
+Dodaję wydatek.
+
+132
+00:08:43,079 --> 00:08:47,079
+No i dev add income.
+
+133
+00:08:47,079 --> 00:08:50,079
+name, category.
+
+134
+00:08:50,080 --> 00:08:57,080
+category, date, value.
+
+135
+00:08:57,080 --> 00:09:02,080
+Dodaję przychód.
+
+136
+00:09:02,080 --> 00:09:04,080
+Te dane wszystkie tutaj są przekazane.
+
+137
+00:09:04,080 --> 00:09:06,080
+Tutaj też jest ok.
+
+138
+00:09:06,080 --> 00:09:10,080
+Więc już na chwilę obecną nasz program powinien podążać za tym co chcemy zrobić.
+
+139
+00:09:10,080 --> 00:09:13,080
+Wywołam sobie raz jeszcze add expense.
+
+140
+00:09:13,080 --> 00:09:15,080
+I zobacz, pokazał mi się komunikat.
+
+141
+00:09:15,080 --> 00:09:17,080
+Dodaję wydatek.
+
+142
+00:09:17,080 --> 00:09:21,080
+Jeżeli zrobię raz jeszcze strzałkę do góry i zmienię add expense na add income.
+
+143
+00:09:21,080 --> 00:09:25,080
+To pokaże mi się informacja dodaję przychód.
+
+144
+00:09:25,080 --> 00:09:28,080
+No i w ten sposób w zależności od tego co zrobię.
+
+145
+00:09:28,080 --> 00:09:30,080
+Jeżeli wywołam sobie stats.
+
+146
+00:09:30,080 --> 00:09:33,080
+To pokażą mi się statystyki.
+
+147
+00:09:33,080 --> 00:09:37,080
+I poszczególne części naszej aplikacji będą działały.
+
+148
+00:09:37,080 --> 00:09:40,080
+To co zrobiliśmy tutaj to jest taki kontroler jakby.
+
+149
+00:09:40,080 --> 00:09:42,080
+Do tej naszej aplikacji.
+
+150
+00:09:42,080 --> 00:09:46,080
+Który ma kontrolować jakie czynności zostały wykonane.
+
+151
+00:09:46,080 --> 00:09:51,080
+I jaki fragment kodu powinien wówczas zostać wykonany.
+
+152
+00:09:51,080 --> 00:09:54,080
+Kolejna rzecz, którą za moment będziemy potrzebowali.
+
+153
+00:09:54,080 --> 00:10:00,080
+Będzie to kod odpowiedzialny za realizację poszczególnych czynności.
+
+154
+00:10:00,080 --> 00:10:03,080
+Oczywiście zaczniemy od add income i add expense.
+
+155
+00:10:03,080 --> 00:10:05,080
+Mój pomysł jest taki.
+
+156
+00:10:05,080 --> 00:10:07,080
+Że po prostu z racji tego, że nie mamy tutaj typu.
+
+157
+00:10:07,080 --> 00:10:09,080
+Nie przekazujemy tego typu nigdzie.
+
+158
+00:10:09,080 --> 00:10:13,080
+To możemy po prostu przyjąć, że jeżeli coś jest przychodem.
+
+159
+00:10:13,080 --> 00:10:15,080
+To będzie wyrażone jako wartość dodatnia.
+
+160
+00:10:15,080 --> 00:10:17,080
+Jeżeli coś jest kosztem.
+
+161
+00:10:17,080 --> 00:10:19,080
+Będzie wyrażone jako wartość ujemna.
+
+162
+00:10:19,080 --> 00:10:21,080
+Dzięki temu łatwiej nam później będzie.
+
+163
+00:10:21,080 --> 00:10:25,080
+Sumować poszczególne wartości w ramach tych miesięcy.
+
+164
+00:10:25,080 --> 00:10:28,080
+No bo jeżeli dodajemy do siebie wartości dodatnie ujemne.
+
+165
+00:10:28,080 --> 00:10:31,080
+To ujemne się w wyniku matematycznych działań.
+
+166
+00:10:31,080 --> 00:10:34,080
+Po prostu będą od siebie odejmowały.
+
+167
+00:10:34,080 --> 00:10:36,080
+Więc już za moment.
+
+168
+00:10:36,080 --> 00:10:39,080
+Zajmiemy się tym fragmentem.
+
+169
+00:10:39,080 --> 00:10:40,080
+Chodźcie dalej.

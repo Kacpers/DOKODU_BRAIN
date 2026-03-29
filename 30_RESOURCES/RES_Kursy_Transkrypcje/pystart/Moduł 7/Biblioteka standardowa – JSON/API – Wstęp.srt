@@ -1,0 +1,763 @@
+1
+00:00:00,520 --> 00:00:08,560
+Kiedy zaczynaliśmy tę lekcję, wspominałem Ci o tym, że będziemy też rozmawiali o JSON-ie jako o temacie powiązanym z web API, czy też w ogóle z API.
+
+2
+00:00:09,400 --> 00:00:14,460
+O co tutaj chodzi? Powiemy o tym sobie już za moment, natomiast najpierw zacznijmy od tego, czym jest API.
+
+3
+00:00:15,240 --> 00:00:19,400
+Na slajdzie widzisz takie wytłumaczenie, że API to jest Application Programming Interface.
+
+4
+00:00:19,539 --> 00:00:22,339
+I skupmy się na tym wytłumaczeniu od samego końca.
+
+5
+00:00:23,219 --> 00:00:25,039
+Interface. Czym jest interfejs?
+
+6
+00:00:25,039 --> 00:00:36,019
+Tak naprawdę domofon jest interfejsem, który służy do tego, żeby wykonując jakieś sekwencje na nim, albo otwierać drzwi, albo komunikować się z jakimś konkretnym lokalem.
+
+7
+00:00:36,299 --> 00:00:41,799
+Czy to oznacza, że domofon sam z siebie gdzieś dzwoni? Nie, on się jakimś tam kablem, są jakieś mechanizmy pod spodem,
+
+8
+00:00:42,179 --> 00:00:51,159
+którymi my za pomocą po prostu cyfr wyświetlanych, czy też innej jakiejś formatki dostępnej dla nas, dzwonimy, czy też otwieramy sobie drzwi.
+
+9
+00:00:51,659 --> 00:00:54,719
+Takim interfejsem może być też, nie wiem,
+
+10
+00:00:55,039 --> 00:01:03,640
+deska rozdzielcza, bo on też nas o czymś informuje, też mamy jakieś guziki, którymi możemy sterować, kierownicę, którą pozwalamy na to, żeby koła naszego samochodu skręcały.
+
+11
+00:01:03,960 --> 00:01:10,680
+My się nie zastanawiamy nawet za bardzo na tym, co jest pod spodem, tylko ważne jest dla nas to, że za pomocą pewnego interfejsu
+
+12
+00:01:10,680 --> 00:01:17,379
+my komunikujemy się albo z jakimś urządzeniem, albo z kimś po drugiej stronie, albo poprzez urządzenie z kimś po drugiej stronie
+
+13
+00:01:17,379 --> 00:01:20,460
+i dzięki temu następuje pewna zgodność.
+
+14
+00:01:20,460 --> 00:01:24,280
+Czyli możemy powiedzieć, że ten interfejs to jest taki sposób komunikacji,
+
+15
+00:01:25,040 --> 00:01:27,840
+w pewien sposób ustandaryzowany dla jednej i dla drugiej strony,
+
+16
+00:01:28,280 --> 00:01:33,460
+gdzie mamy świadomość, że kiedy wywołamy jakąś czynność, to po drugiej stronie nastąpi jakaś reakcja.
+
+17
+00:01:34,180 --> 00:01:37,180
+Czym zatem jest Application Programming Interface?
+
+18
+00:01:37,620 --> 00:01:44,400
+Oznacza to to, że my ze sobą możemy rozmawiać, możemy też korzystać z różnych interfejsów,
+
+19
+00:01:44,400 --> 00:01:51,900
+natomiast Application Programming Interface oznacza to, że my możemy stworzyć jako programiści program,
+
+20
+00:01:52,520 --> 00:01:55,020
+który za pomocą takiego interfejsu będzie mógł wybrać,
+
+21
+00:01:55,040 --> 00:01:57,600
+wywoływać różne czynności po drugiej stronie.
+
+22
+00:01:57,600 --> 00:02:03,580
+Zobacz, mamy stronę internetową, mamy taką pocztę jak Gmail czy pocztę dowolną inną,
+
+23
+00:02:03,580 --> 00:02:09,760
+tam są przyciski, utwórz, uzupełniamy sobie poszczególne pola, wyszli, mail się wysyła.
+
+24
+00:02:09,760 --> 00:02:15,620
+Mamy jakieś serwisy społecznościowe, gdzie klikając w poszczególne miejsca możemy dodawać sobie np. nowych znajomych,
+
+25
+00:02:15,620 --> 00:02:18,460
+czy też komunikować się z nimi, lajkować zdjęcia itd.
+
+26
+00:02:18,460 --> 00:02:24,379
+Mamy sklepy internetowe, gdzie za pomocą przycisków możemy dodawać coś do koszyka i kupować.
+
+27
+00:02:25,039 --> 00:02:29,280
+To nie są interfejsy, które mogą być programowalne.
+
+28
+00:02:29,280 --> 00:02:35,319
+Oczywiście za pomocą takich bibliotek jak np. PyAutoGUI moglibyśmy na podstawie wyglądu przycisku,
+
+29
+00:02:35,319 --> 00:02:36,560
+takie rzeczy na PyCampie,
+
+30
+00:02:36,560 --> 00:02:41,599
+moglibyśmy na podstawie wyglądu przycisku klikać w poszczególne miejsca na stronie,
+
+31
+00:02:41,599 --> 00:02:48,079
+natomiast tutaj nie o to chodzi, bo my tak naprawdę robiąc tego typu rzeczy tylko symulujemy pracę użytkownika.
+
+32
+00:02:48,079 --> 00:02:52,680
+My tworzymy programy, które udają to, że są użytkownikami.
+
+33
+00:02:52,680 --> 00:02:54,759
+Natomiast kiedy korzystamy z API,
+
+34
+00:02:54,759 --> 00:03:01,439
+to tak naprawdę jest to stworzony interfejs do tego, żeby program inny mógł z tego korzystać.
+
+35
+00:03:01,439 --> 00:03:06,000
+Bez potrzeby takiego wymyślania sobie kliknij w ten guzik,
+
+36
+00:03:06,000 --> 00:03:11,000
+potem się przesuń o 14 pikseli w prawo, o 20 pikseli w dół i w to miejsce coś wpisz,
+
+37
+00:03:11,000 --> 00:03:19,639
+tylko po prostu na zasadzie takiej, że my mu wysyłamy zapytanie i na to zapytanie otrzymujemy odpowiedź.
+
+38
+00:03:19,639 --> 00:03:22,359
+Do czego w ogóle takie API służą?
+
+39
+00:03:22,359 --> 00:03:24,199
+Przykładów może być całe mnóstwo.
+
+40
+00:03:24,199 --> 00:03:29,439
+Wszystko to, co tak naprawdę robisz za pomocą właśnie klikania w przyciski,
+
+41
+00:03:29,439 --> 00:03:33,239
+można byłoby robić za pomocą API, jeżeli takie API by istniało.
+
+42
+00:03:33,239 --> 00:03:37,199
+I na przykład, jeżeli chodzi o Google, to Google ma bardzo dużo różnych API.
+
+43
+00:03:37,199 --> 00:03:38,799
+Zobacz, jest sobie tłumacz.
+
+44
+00:03:38,799 --> 00:03:43,719
+Tłumacz pozwala na to, żeby wprowadzić jakiś tekst i przetłumaczyć ten tekst na inny język.
+
+45
+00:03:43,719 --> 00:03:44,759
+Wszystko OK.
+
+46
+00:03:44,759 --> 00:03:51,319
+Natomiast w momencie, w którym trzeba byłoby przetłumaczyć mnóstwo różnych wystąpień na cztery różne języki,
+
+47
+00:03:51,319 --> 00:03:52,319
+to trzeba byłoby...
+
+48
+00:03:52,319 --> 00:04:02,719
+Bo mielibyśmy to na przykład w Excelu, to trzeba byłoby każdą tą jedną wartość skopiować, wkleić do tłumacza, przetłumacz, skopiować wkleić tłumaczenie i tak powtarzać te czynności.
+
+49
+00:04:02,719 --> 00:04:10,400
+O ile prościej byłoby, gdyby można było po prostu wysłać każdą pojedynczą wartość, odebrać poszczególne tłumaczenia i wrzucić je do tego Excela za pomocą programu.
+
+50
+00:04:10,400 --> 00:04:17,920
+To oczywiście mogłoby chwilę trwać, ale moglibyśmy wtedy iść na kawę, zrobić coś innego, program by sobie te czynności wykonywał w tle.
+
+51
+00:04:17,920 --> 00:04:21,600
+Czasem serwisy posiadają wiedzę, której my nie mamy.
+
+52
+00:04:21,600 --> 00:04:25,879
+Na przykład Google wie, jak długo teraz stąd jechałbym do Warszawy.
+
+53
+00:04:25,879 --> 00:04:34,240
+W kolejnym slajdzie zobaczysz film, gdzie dokładnie coś takiego robię i pokażę Ci, mogę też w tym filmie pokazać Ci właśnie, jak takiego API skorzystać.
+
+54
+00:04:34,240 --> 00:04:36,760
+I to też jest bardzo przydatne.
+
+55
+00:04:36,760 --> 00:04:41,320
+Są takie serwisy, które udostępniają swoje API na przykład do kursów walut.
+
+56
+00:04:41,320 --> 00:04:49,760
+Bank NBP taki API nam udostępnia i dzięki niemu możemy sprawdzić, jaką wartość ma dolar, jaką wartość ma frank szwajcarski, jaką wartość ma euro.
+
+57
+00:04:49,760 --> 00:04:51,160
+Mamy serwisy pogodowe.
+
+58
+00:04:51,600 --> 00:05:05,439
+Instytut Meteorologii i Gospodarki Wodnej udostępnia API, gdzie możemy sprawdzić, jaka jest temperatura, ciśnienie, wilgotność i parę innych rzeczy w różnych miejscach w naszym kraju.
+
+59
+00:05:05,439 --> 00:05:09,400
+Są też serwisy, które pozwalają sprawdzić pogodę w innych miejscach.
+
+60
+00:05:09,400 --> 00:05:12,720
+Dług publiczny, to taka ciekawostka, też są API do tego.
+
+61
+00:05:12,720 --> 00:05:16,680
+Bardzo często API będą albo bezpłatne, albo płatne.
+
+62
+00:05:16,680 --> 00:05:19,000
+Te, które zrobimy sobie tutaj, będą wszystkie bezpłatne.
+
+63
+00:05:19,000 --> 00:05:21,520
+Ale na przykład Google wprowadził takie ograniczenie.
+
+64
+00:05:21,519 --> 00:05:24,479
+Mówi, że do 200 dolarów możesz korzystać z naszych API.
+
+65
+00:05:24,479 --> 00:05:31,039
+Jeżeli przekroczy, że tę kwotę będziesz, będzie trzeba po prostu za to wykorzystanie płacić.
+
+66
+00:05:31,039 --> 00:05:37,439
+Więc tam trzeba dodać kartę i wtedy dostajemy taki specjalny klucz, który wysyłamy z każdym żądaniem i Google wtedy zapisuje.
+
+67
+00:05:37,439 --> 00:05:44,439
+Aha, czyli to Sieradziński znowu pyta mnie o to, ale jeszcze ma 50 wolnych, darmowych zapytań, to mu na to pozwalam.
+
+68
+00:05:44,439 --> 00:05:48,079
+Po 50 już zacznę go tam odrobinę kasować.
+
+69
+00:05:48,079 --> 00:05:51,159
+Więc w ten sposób też API często są zabezpieczane.
+
+70
+00:05:51,519 --> 00:05:55,240
+Często musimy się najpierw zarejestrować, żeby móc z takiego API skorzystać.
+
+71
+00:05:55,240 --> 00:06:01,839
+Bardzo często serwisy, które posiadamy udostępniają nam też API, żeby łatwiej można było się z nimi komunikować.
+
+72
+00:06:01,839 --> 00:06:06,359
+Mamy na przykład API służące do tego, żeby realizować płatności online.
+
+73
+00:06:06,359 --> 00:06:15,839
+Czyli w momencie, w którym mamy sklep internetowy i chcemy zarejestrować nową płatność, zaznaczyć, że ktoś zapłacił albo że płatność ma status oczekujący albo jakikolwiek inny,
+
+74
+00:06:15,839 --> 00:06:18,240
+to my nie musimy tego siedzieć i czekać.
+
+75
+00:06:18,240 --> 00:06:19,240
+O, ktoś chce kliknąć.
+
+76
+00:06:19,240 --> 00:06:21,240
+Dobra, wpiszmy mu, wyślijmy mu formularz.
+
+77
+00:06:21,519 --> 00:06:22,519
+Podał blika.
+
+78
+00:06:22,519 --> 00:06:25,519
+Dobra, to ja teraz tego blika gdzieś wpiszę i tak dalej.
+
+79
+00:06:25,519 --> 00:06:37,519
+Tylko te wszystkie dane po prostu przechodzą bezpośrednio do systemu płatności, a system płatności z kolei łączy się pewnie z jakimś bankiem i dzięki temu mogą te systemy ze sobą rozmawiać.
+
+80
+00:06:37,519 --> 00:06:50,519
+Bardzo często też jest tak, że kiedy zarejestrujecie się na kurs, na przykład u mnie, od razu dostajecie rolę wewnątrz systemu mailowego, że ten użytkownik już dołączył do PayStartu.
+
+81
+00:06:50,519 --> 00:06:55,519
+Dzięki temu, kiedy w przyszłości będę gdzieś wysyłał do was maila, mogę wykluczyć te osoby.
+
+82
+00:06:55,519 --> 00:07:00,519
+I to też nie jest zawsze tak, że kiedy ktoś dołączy, to ja każdą jedną osobę muszę tam przeklikiwać.
+
+83
+00:07:00,519 --> 00:07:02,519
+To dzieje się automatycznie.
+
+84
+00:07:02,519 --> 00:07:15,519
+Ale na przykład na Discordzie nie ma takiego API, które pozwala na to, żebym wiedział, jaki adres e-mail jest wykorzystywany tu i tu i żebym od razu udzielał wam rolę, więc to przydzielanie ról muszę wykonywać ręcznie.
+
+85
+00:07:15,519 --> 00:07:18,519
+Możliwe, że w przyszłości uda się to jakoś zautomatyzować.
+
+86
+00:07:18,519 --> 00:07:19,519
+Na razie jeszcze robię te rzeczy ręcznie.
+
+87
+00:07:19,519 --> 00:07:27,519
+Przy okazji, kto z was nie dołączył do Discorda, to już teraz jest ostatni moment, bo to już kurs chyli się ku końcowi.
+
+88
+00:07:27,519 --> 00:07:32,519
+Ok, czyli mamy mniej więcej pojęcie, czym jest API, jak to działa.
+
+89
+00:07:32,519 --> 00:07:37,519
+Bardzo często też, kiedy posiadamy jakąś usługę, to też chcemy stworzyć dla niej API.
+
+90
+00:07:37,519 --> 00:07:40,519
+Takie rzeczy z kolei albo na Pyreście, albo na PyWWW.
+
+91
+00:07:40,519 --> 00:07:42,519
+Dlaczego to robimy? Z dwóch powodów.
+
+92
+00:07:42,519 --> 00:07:46,519
+Czasem mamy jakieś ciekawe dane, które chcemy komuś udostępnić.
+
+93
+00:07:46,519 --> 00:07:47,519
+Załóżmy, prowadzimy jakąś firmę, która prowadzi...
+
+94
+00:07:47,519 --> 00:07:48,519
+Załóżmy, prowadzimy jakąś firmę, która prowadzi...
+
+95
+00:07:48,519 --> 00:07:55,519
+Załóżmy, prowadzimy jakąś firmę, która powiera różne informacje i wiemy, że nasi kontrahenci będą mogli być zainteresowani cenami naszych produktów,
+
+96
+00:07:55,519 --> 00:08:00,519
+więc moglibyśmy stworzyć API, żeby ich systemy mogły z tych naszych cen produktów korzystać.
+
+97
+00:08:00,519 --> 00:08:04,519
+Bo na przykład, nie wiem, sprzedajemy stal, a oni potrzebują te ceny stali.
+
+98
+00:08:04,519 --> 00:08:10,519
+Na podstawie tych cen będą swoje produkty mieli w różnych cenach.
+
+99
+00:08:10,519 --> 00:08:15,519
+Więc wtedy, korzystając z tych danych, mogą jakoś te informacje dalej przeliczać.
+
+100
+00:08:15,519 --> 00:08:16,519
+Więc my tworzymy takie API dla nich, żeby oni mogli wiedzieć,
+
+101
+00:08:16,519 --> 00:08:18,519
+Więc my tworzymy takie API dla nich, żeby oni mogli wiedzieć,
+
+102
+00:08:18,519 --> 00:08:20,120
+jakimi danymi dysponujemy.
+
+103
+00:08:21,159 --> 00:08:23,959
+Czasem jest też tak, że kiedy tworzymy strony internetowe,
+
+104
+00:08:24,060 --> 00:08:27,199
+to jest taki bardzo modny trend, który polega na tym, że jest API
+
+105
+00:08:27,199 --> 00:08:29,620
+i jest frontend.
+
+106
+00:08:30,259 --> 00:08:33,759
+API stanowi takie jakby tło, taki backend, takie zaplecze
+
+107
+00:08:33,759 --> 00:08:37,079
+i tylko wystawia poszczególne informacje,
+
+108
+00:08:37,220 --> 00:08:39,980
+które mają się pokazać na stronie internetowej,
+
+109
+00:08:40,399 --> 00:08:42,579
+natomiast ta warstwa, która prezentuje te dane,
+
+110
+00:08:42,579 --> 00:08:45,059
+jest już napisana w czymś typu React, Vue, Angular,
+
+111
+00:08:45,240 --> 00:08:47,120
+takie frameworki javascriptowe.
+
+112
+00:08:47,120 --> 00:08:50,179
+Wiem, że trochę wybiegam, ale też chciałem Ci o tym powiedzieć,
+
+113
+00:08:50,299 --> 00:08:52,740
+że takie API też często tworzy się dla takiej potrzeby,
+
+114
+00:08:53,159 --> 00:08:57,799
+natomiast my tu będziemy korzystali z trochę innych przykładów.
+
+115
+00:08:58,960 --> 00:09:02,220
+Jeżeli chcesz zobaczyć, jak korzystać z API,
+
+116
+00:09:02,620 --> 00:09:05,340
+to mam taki film na kanale, który bardzo serdecznie Ci polecam.
+
+117
+00:09:05,539 --> 00:09:07,299
+Nazwałem go Obliczamy koszt podróży,
+
+118
+00:09:07,379 --> 00:09:09,419
+kalkulator kosztu przejazdu i spalania benzyny,
+
+119
+00:09:09,419 --> 00:09:12,320
+to jest taki projekt, w którym korzystam z API Google Maps.
+
+120
+00:09:12,460 --> 00:09:14,759
+Oczywiście tam wygenerowałem sobie klucz,
+
+121
+00:09:14,799 --> 00:09:16,779
+tak, wygenerowałem sobie klucz,
+
+122
+00:09:16,779 --> 00:09:18,539
+tego klucza Wam nie pokazuję,
+
+123
+00:09:18,539 --> 00:09:22,019
+ale możecie zobaczyć, jak za pomocą jednego requestu
+
+124
+00:09:22,019 --> 00:09:24,539
+odbieram poszczególne dane.
+
+125
+00:09:24,539 --> 00:09:28,019
+Taki slajd z tego filmu, fragment tego filmu wygląda mniej więcej tak,
+
+126
+00:09:28,019 --> 00:09:29,539
+że mam jakiś adres URL,
+
+127
+00:09:29,539 --> 00:09:31,779
+który wygląda w sposób następujący.
+
+128
+00:09:31,779 --> 00:09:34,019
+Kiedy wysyłam do niego payload,
+
+129
+00:09:34,019 --> 00:09:35,779
+czyli wysyłam do niego pewne informacje,
+
+130
+00:09:35,779 --> 00:09:38,279
+że chciałbym na przykład pojechać z Placu Zbawiciela
+
+131
+00:09:38,279 --> 00:09:40,779
+do Emily Platter,
+
+132
+00:09:40,779 --> 00:09:44,620
+no to on mi może odpowiedzieć, jak długo będę jechał
+
+133
+00:09:44,620 --> 00:09:46,620
+i jaki jest czas przejazdu.
+
+134
+00:09:46,779 --> 00:09:49,439
+Zwróć uwagę na to, że payload wysyłam jako słownik,
+
+135
+00:09:49,439 --> 00:09:51,439
+natomiast odpowiedź, którą dostaję,
+
+136
+00:09:51,439 --> 00:09:52,539
+jest widoczna ona poniżej,
+
+137
+00:09:52,539 --> 00:09:54,019
+trochę ją przycinam, ale to nieważne,
+
+138
+00:09:54,019 --> 00:09:55,019
+to jest JSON,
+
+139
+00:09:55,019 --> 00:09:57,019
+czyli od razu mogę zobaczyć, że distance,
+
+140
+00:09:57,019 --> 00:09:59,539
+destination address to jest Emily Platter,
+
+141
+00:09:59,539 --> 00:10:01,539
+origin address Plac Zbawiciela,
+
+142
+00:10:01,539 --> 00:10:04,539
+elements distance to jest 1,5 km,
+
+143
+00:10:04,539 --> 00:10:06,539
+1536 metrów dokładnie,
+
+144
+00:10:06,539 --> 00:10:09,539
+będę jechał 6 minut, czyli 357 sekund
+
+145
+00:10:09,539 --> 00:10:11,539
+i status jest OK.
+
+146
+00:10:11,539 --> 00:10:13,539
+Czyli API Google na podstawie swoich danych,
+
+147
+00:10:13,539 --> 00:10:16,539
+które posiada na mapach, które z kolei,
+
+148
+00:10:16,539 --> 00:10:19,539
+te dane posiada ze wszystkich naszych smartfonów,
+
+149
+00:10:19,539 --> 00:10:21,539
+bo on to sczytuje i na podstawie tego,
+
+150
+00:10:21,539 --> 00:10:23,539
+jak wolno nasz telefon się przemieszcza
+
+151
+00:10:23,539 --> 00:10:25,539
+w ramach pewnej strefy,
+
+152
+00:10:25,539 --> 00:10:28,539
+decyduje o tym, czy są korki, czy nie ma korków,
+
+153
+00:10:28,539 --> 00:10:31,539
+to właśnie dzięki temu może też ocenić, oszacować,
+
+154
+00:10:31,539 --> 00:10:33,539
+jak długo będę jechał.
+
+155
+00:10:33,539 --> 00:10:36,539
+Gdybym sam chciał tego typu dane przetwarzać,
+
+156
+00:10:36,539 --> 00:10:39,539
+no to musiałbym mieć aplikację, która byłaby na wszystkich telefonach
+
+157
+00:10:39,539 --> 00:10:41,539
+zainstalowana, co jest praktycznie niemożliwe,
+
+158
+00:10:41,539 --> 00:10:43,539
+więc zapłacenie tego 0,5 centa,
+
+159
+00:10:43,539 --> 00:10:45,539
+czy jakiejś tam części centa za taką informację,
+
+160
+00:10:45,539 --> 00:10:48,539
+w wielu przypadkach jest bardzo przydatne.
+
+161
+00:10:48,539 --> 00:10:51,539
+Robiłem kiedyś taką aplikację dla kurierów,
+
+162
+00:10:51,539 --> 00:10:53,539
+dla firm przewozowych bardziej,
+
+163
+00:10:53,539 --> 00:10:55,539
+która polegała właśnie na tym,
+
+164
+00:10:55,539 --> 00:10:58,539
+że każdy użytkownik ze swojego domu mógł wpisać adres swojego domu,
+
+165
+00:10:58,539 --> 00:11:01,539
+adres, do którego chciałby daną paczkę wysłać,
+
+166
+00:11:01,539 --> 00:11:04,539
+no i wtedy to oczywiście było przeliczane
+
+167
+00:11:04,539 --> 00:11:07,539
+na podstawie ceny odległości,
+
+168
+00:11:07,539 --> 00:11:11,539
+ceny paliwa, czasu potrzebnego na dojechanie
+
+169
+00:11:11,539 --> 00:11:13,539
+z punktu A do punktu B,
+
+170
+00:11:13,539 --> 00:11:15,539
+no i odległości od, mówmy,
+
+171
+00:11:15,539 --> 00:11:18,539
+siedziby, skąd mógłby ten kurier wyruszyć.
+
+172
+00:11:18,539 --> 00:11:21,539
+Gdyby za każdym razem trzeba było taką wycenę
+
+173
+00:11:21,539 --> 00:11:25,539
+użytkownikowi aplikacji mobilnej dawać ręcznie,
+
+174
+00:11:25,539 --> 00:11:27,539
+no to zajęłoby to mnóstwo czasu, tak?
+
+175
+00:11:27,539 --> 00:11:31,539
+Za każdym razem, kiedy ktoś pytałby o przejazd z A do B,
+
+176
+00:11:31,539 --> 00:11:35,539
+no to matko, tam były tysiące na minutę tych zapytań,
+
+177
+00:11:35,539 --> 00:11:39,539
+więc no łatwiej byłoby wtedy skorzystać właśnie z takiego narzędzia,
+
+178
+00:11:39,539 --> 00:11:42,539
+aniżeli zatrudniać rzesze ludzi,
+
+179
+00:11:42,539 --> 00:11:45,539
+którzy będą na bieżąco sprawdzali wszystkie te,
+
+180
+00:11:45,539 --> 00:11:48,539
+ceny wysyłali osobom kalkulacje,
+
+181
+00:11:48,539 --> 00:11:49,539
+a potem oni będą mówili,
+
+182
+00:11:49,539 --> 00:11:52,539
+a w sumie to zamiast Emily Platter 13 poproszę na 18
+
+183
+00:11:52,539 --> 00:11:55,539
+i znowu wszystko trzeba na nowo byłoby sprawdzać.
+
+184
+00:11:55,539 --> 00:11:58,539
+I właśnie w tym filmie, który tutaj też podlinkowałem,
+
+185
+00:11:58,539 --> 00:11:59,539
+pokazuję jak to zrobić.
+
+186
+00:11:59,539 --> 00:12:01,539
+To jest trochę bardziej złożony przykład,
+
+187
+00:12:01,539 --> 00:12:02,539
+ale nic się nie bój,
+
+188
+00:12:02,539 --> 00:12:04,539
+bo my tutaj też pokażemy sobie,
+
+189
+00:12:04,539 --> 00:12:06,539
+jak z takiego API korzystać.
+
+190
+00:12:06,539 --> 00:12:09,539
+Już za moment zachęcam Cię do takiego małej demonstracji,
+
+191
+00:12:09,539 --> 00:12:11,539
+gdzie pokażę Ci, jak to zrobić.

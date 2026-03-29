@@ -1,0 +1,551 @@
+1
+00:00:00,000 --> 00:00:02,600
+No i tak naprawdę jedyne, co nam zostało w tym module,
+
+2
+00:00:02,680 --> 00:00:05,799
+to praca domowa, której znowu jest dużo.
+
+3
+00:00:06,339 --> 00:00:09,220
+Mam nadzieję, że i tym razem spodoba Ci się
+
+4
+00:00:09,220 --> 00:00:12,120
+i pozwoli udoskonalić Twoje umiejętności.
+
+5
+00:00:12,720 --> 00:00:15,300
+Więc po pierwsze, napisz program, który stworzy listę
+
+6
+00:00:15,300 --> 00:00:17,339
+zawierającą imiona pięciu Twoich znajomych,
+
+7
+00:00:17,440 --> 00:00:20,719
+następnie wyświetl imiona Twoich znajomych w kolejności alfabetycznej.
+
+8
+00:00:21,379 --> 00:00:24,960
+Po drugie, stwórz słownik, w którym kluczami będą nazwy owoców,
+
+9
+00:00:24,960 --> 00:00:26,300
+a wartościami ich ceny.
+
+10
+00:00:26,679 --> 00:00:29,460
+Następnie wyświetl ceny jabłek i bananów.
+
+11
+00:00:29,460 --> 00:00:33,520
+Oczywiście zakładamy, że te wartości znajdują się w tym słowniku.
+
+12
+00:00:34,000 --> 00:00:36,859
+Po trzecie, stwórz słownik zawierający informacje
+
+13
+00:00:36,859 --> 00:00:38,120
+o swoich ulubionych filmach.
+
+14
+00:00:38,280 --> 00:00:40,079
+Niech tam będzie jeden film Spielberga.
+
+15
+00:00:40,760 --> 00:00:43,240
+Musimy mieć tam tytuł, reżysera i rok produkcji.
+
+16
+00:00:43,960 --> 00:00:48,040
+Następnie usuń ze słownika filmy, których reżyserem jest Steven Spielberg.
+
+17
+00:00:48,880 --> 00:00:51,859
+Po czwarte, napisz program, który stworzy słownik
+
+18
+00:00:51,859 --> 00:00:54,340
+zawierający informacje o Twoich ulubionych zwierzętach.
+
+19
+00:00:54,719 --> 00:00:56,679
+Nazwa zwierzęcia i ilość nóg.
+
+20
+00:00:57,159 --> 00:00:59,439
+Następnie znajdź zwierzę, które ma najwięcej,
+
+21
+00:00:59,460 --> 00:01:02,219
+i wyświetl jego nazwę i ilość nóg.
+
+22
+00:01:02,460 --> 00:01:04,739
+Czyli dodajcie tam stonogę albo pająka.
+
+23
+00:01:04,859 --> 00:01:07,400
+Niech będzie coś, co ma więcej niż dwie nogi, cztery.
+
+24
+00:01:08,260 --> 00:01:10,400
+Po piąte, podobnie jak w poprzednim zadaniu,
+
+25
+00:01:10,500 --> 00:01:13,099
+napisz program, który stworzy słownik zawierający informacje
+
+26
+00:01:13,099 --> 00:01:14,780
+o Twoich ulubionych zwierzętach domowych.
+
+27
+00:01:15,019 --> 00:01:16,379
+Nazwa zwierzęcia i rasa.
+
+28
+00:01:16,980 --> 00:01:19,799
+Następnie znajdź zwierzę, które ma najdłuższą nazwę
+
+29
+00:01:19,799 --> 00:01:21,740
+i wyświetl jego nazwę i rasę.
+
+30
+00:01:22,180 --> 00:01:24,799
+W obu tych zadaniach nie mamy sortować słownika.
+
+31
+00:01:24,799 --> 00:01:27,799
+Mamy tylko wykombinować sposób, jak znaleźć to,
+
+32
+00:01:27,980 --> 00:01:29,439
+które ma najdłuższe coś,
+
+33
+00:01:29,459 --> 00:01:31,059
+i to pobrać.
+
+34
+00:01:31,659 --> 00:01:33,959
+W zadaniu szóstym natomiast mamy napisać program,
+
+35
+00:01:34,119 --> 00:01:35,919
+który stworzy słownik zawierający informacje
+
+36
+00:01:35,919 --> 00:01:37,399
+o Twoich ulubionych krajach.
+
+37
+00:01:37,599 --> 00:01:39,619
+Nazwa kraju, stolica, język urzędowy.
+
+38
+00:01:40,179 --> 00:01:42,239
+Następnie dodaj do słownika nowy kraj
+
+39
+00:01:42,239 --> 00:01:45,359
+i wyświetl cały słownik po dodaniu nowego elementu.
+
+40
+00:01:45,759 --> 00:01:47,719
+Przejdź po słowniku za pomocą drugiej pętli for
+
+41
+00:01:47,719 --> 00:01:50,280
+zamiast robić dictionary od capital.
+
+42
+00:01:50,539 --> 00:01:53,359
+Tutaj chodzi o to, że skoro mamy klucza,
+
+43
+00:01:53,359 --> 00:01:58,859
+czyli zakładam na przykład country, capital i language,
+
+44
+00:01:58,859 --> 00:02:02,739
+to zamiast wyświetlać to za pomocą dictionary od capital
+
+45
+00:02:02,739 --> 00:02:04,560
+możemy przejść po słowniku tak,
+
+46
+00:02:04,980 --> 00:02:07,459
+żeby iterować również po jego kluczach i wartościach
+
+47
+00:02:07,459 --> 00:02:10,860
+i wtedy wyświetlić sobie zawartość takiego słownika w ten sposób.
+
+48
+00:02:11,340 --> 00:02:14,460
+W zadaniu siódmym mamy już do zrobienia taki mini projekt.
+
+49
+00:02:15,060 --> 00:02:16,099
+Word jumble.
+
+50
+00:02:16,520 --> 00:02:18,780
+Napisz program, który losuje słowo z listy
+
+51
+00:02:18,780 --> 00:02:20,099
+i miesza jego literki.
+
+52
+00:02:20,639 --> 00:02:22,920
+Użytkownik ma odgadnąć, jakie to słowo.
+
+53
+00:02:23,460 --> 00:02:24,879
+Program powinien sprawdzić,
+
+54
+00:02:25,000 --> 00:02:27,960
+czy odpowiedź użytkownika jest prawidłowa
+
+55
+00:02:27,960 --> 00:02:28,840
+i wyświetlić odpowiedź.
+
+56
+00:02:28,860 --> 00:02:29,840
+Użytkownik ma odpowiedni komunikat.
+
+57
+00:02:30,300 --> 00:02:32,940
+Pozwól użytkownikowi zgadnąć tylko trzy razy.
+
+58
+00:02:33,060 --> 00:02:34,840
+W myśl zasady do trzech razy sztuka.
+
+59
+00:02:35,420 --> 00:02:37,380
+Czyli tu mamy też takie trzy podpowiedzi.
+
+60
+00:02:37,480 --> 00:02:40,260
+From random import shuffle to jest mieszanie elementów listy,
+
+61
+00:02:40,360 --> 00:02:42,100
+ale uwaga, można tylko mieszać listę.
+
+62
+00:02:42,640 --> 00:02:44,460
+Jeżeli chcemy mieszać string,
+
+63
+00:02:44,560 --> 00:02:46,180
+to musimy go najpierw na listę zamienić.
+
+64
+00:02:46,360 --> 00:02:49,480
+Możemy to zrobić za pomocą list i string w środku.
+
+65
+00:02:49,940 --> 00:02:52,820
+Natomiast później, żeby połączyć sobie te wyrażenia,
+
+66
+00:02:53,200 --> 00:02:56,100
+musimy użyć w apostrofach join,
+
+67
+00:02:56,560 --> 00:02:57,600
+no i przekazać listę.
+
+68
+00:02:57,599 --> 00:03:00,879
+Na przykład, zobacz, słowo do odgadnięcia,
+
+69
+00:03:01,139 --> 00:03:02,039
+tnochpy.
+
+70
+00:03:02,780 --> 00:03:03,819
+Czy wiesz, jakie to słowo?
+
+71
+00:03:04,120 --> 00:03:04,960
+Stawiam, że Python.
+
+72
+00:03:05,299 --> 00:03:07,840
+Tak, chodziło o to słowo, zgadłeś za pierwszym razem.
+
+73
+00:03:08,639 --> 00:03:10,199
+Czyli taką małą grę robimy.
+
+74
+00:03:10,560 --> 00:03:11,859
+Przetestujcie ją z domownikami,
+
+75
+00:03:11,939 --> 00:03:13,259
+zobaczymy, czy zgadną wasze słowa.
+
+76
+00:03:14,280 --> 00:03:15,439
+W zadaniu ósmym,
+
+77
+00:03:15,620 --> 00:03:17,039
+dinner menu generator.
+
+78
+00:03:17,699 --> 00:03:19,759
+Napisz program, który losuje po jednym daniu
+
+79
+00:03:19,759 --> 00:03:21,079
+z każdego z trzech kategorii,
+
+80
+00:03:21,159 --> 00:03:22,959
+na przykład zupa, drugie danie i deser
+
+81
+00:03:22,959 --> 00:03:24,299
+i wyświetla je na ekranie.
+
+82
+00:03:24,740 --> 00:03:27,419
+Kategorie i dania mogą być zdefiniowane jako słownik,
+
+83
+00:03:27,419 --> 00:03:29,419
+w którym każdemu kluczowi, na przykład zupa,
+
+84
+00:03:29,959 --> 00:03:31,839
+odpowiada lista z dostępnymi daniami
+
+85
+00:03:31,839 --> 00:03:33,179
+z tej kategorii.
+
+86
+00:03:33,259 --> 00:03:34,879
+Zobacz, mamy na przykład dishes,
+
+87
+00:03:35,179 --> 00:03:37,199
+zup, pomidorowa, barszcz i rosół.
+
+88
+00:03:37,519 --> 00:03:39,819
+Dinner, pulpety, schabowy, gołąbki.
+
+89
+00:03:39,939 --> 00:03:40,659
+Jestem głodny.
+
+90
+00:03:41,119 --> 00:03:42,779
+Deser, lody, kisiel, ciasto.
+
+91
+00:03:42,899 --> 00:03:45,099
+No i powinniśmy wylosować z każdej kategorii
+
+92
+00:03:45,099 --> 00:03:46,719
+coś, co będziemy się jedli.
+
+93
+00:03:46,799 --> 00:03:49,199
+Na przykład, na pierwsze danie barszcz,
+
+94
+00:03:49,339 --> 00:03:50,959
+później obiad to schabowy
+
+95
+00:03:50,959 --> 00:03:53,239
+i na deser lody.
+
+96
+00:03:54,000 --> 00:03:54,399
+Okej?
+
+97
+00:03:54,399 --> 00:03:56,119
+I w zadaniu dziewiątym
+
+98
+00:03:56,119 --> 00:03:57,399
+jesteś programistą władzącym
+
+99
+00:03:57,419 --> 00:03:59,280
+w małej firmie tworzącej gry komputerowe.
+
+100
+00:03:59,559 --> 00:04:01,019
+Twój szef poprosił Cię o stworzenie
+
+101
+00:04:01,019 --> 00:04:02,899
+prostego programu, który będzie symulował
+
+102
+00:04:02,899 --> 00:04:03,599
+grę w karty.
+
+103
+00:04:04,060 --> 00:04:05,399
+W grze będzie używana talia
+
+104
+00:04:05,399 --> 00:04:07,179
+składająca się z 52 kart.
+
+105
+00:04:07,719 --> 00:04:09,459
+Twoim zadaniem jest stworzenie listy
+
+106
+00:04:09,459 --> 00:04:11,079
+zawierającej nazwy wszystkich kart
+
+107
+00:04:11,079 --> 00:04:13,419
+oraz funkcji losuj karty z talii.
+
+108
+00:04:13,779 --> 00:04:15,039
+Tu oczywiście funkcji nie robimy,
+
+109
+00:04:15,159 --> 00:04:16,819
+tylko chcielibyśmy, żeby można było
+
+110
+00:04:16,819 --> 00:04:18,240
+wylosować kilka kart
+
+111
+00:04:18,240 --> 00:04:19,479
+i żeby się wyświetliły,
+
+112
+00:04:19,479 --> 00:04:21,959
+na przykład Damapik albo Askier.
+
+113
+00:04:22,959 --> 00:04:24,480
+Dziesiątka, jaki to kraj?
+
+114
+00:04:24,919 --> 00:04:25,639
+Gra quizowa.
+
+115
+00:04:25,939 --> 00:04:27,199
+Napisz program, który losuje
+
+116
+00:04:27,199 --> 00:04:29,300
+jeden z trzech krajów, na przykład Polska,
+
+117
+00:04:29,420 --> 00:04:31,479
+Niemcy, Francja i pyta użytkownika
+
+118
+00:04:31,479 --> 00:04:32,560
+o stolicę tego kraju.
+
+119
+00:04:33,019 --> 00:04:35,259
+Jeśli użytkownik poda prawidłową odpowiedź,
+
+120
+00:04:35,420 --> 00:04:37,199
+program powinien wyświetlić komunikat dobrze,
+
+121
+00:04:37,519 --> 00:04:39,240
+a jeśli błędną, to źle.
+
+122
+00:04:40,259 --> 00:04:41,680
+W jedenastce program powinien
+
+123
+00:04:41,680 --> 00:04:43,319
+zapytać użytkownika trzy razy,
+
+124
+00:04:43,379 --> 00:04:45,839
+po czym wyświetlić mu wynik zależny od ilości punktów.
+
+125
+00:04:46,339 --> 00:04:47,439
+Bez błędnie Ci poszło,
+
+126
+00:04:47,439 --> 00:04:49,620
+dwa, tylko jeden błąd, nieźle
+
+127
+00:04:49,620 --> 00:04:51,419
+i jeden punkt na otarcie łez,
+
+128
+00:04:51,599 --> 00:04:53,279
+zero, następnym razem pójdzie Ci lepiej.
+
+129
+00:04:53,759 --> 00:04:55,779
+Czyli chcemy wzbogacić ten program
+
+130
+00:04:55,779 --> 00:04:56,819
+z zadania dziesiątego
+
+131
+00:04:57,199 --> 00:05:00,259
+i poinformować użytkownika o to, jak mu poszło.
+
+132
+00:05:00,899 --> 00:05:01,740
+I to jest tyle,
+
+133
+00:05:02,079 --> 00:05:04,300
+jeżeli chodzi o pracę domową, którą dla Ciebie przygotowałem.
+
+134
+00:05:04,719 --> 00:05:06,420
+Zapraszam do kolejnego modułu,
+
+135
+00:05:06,579 --> 00:05:08,680
+gdzie będziemy mierzyli się z jej rozwiązaniem.
+
+136
+00:05:09,039 --> 00:05:10,740
+Ale najpierw spróbuj zrobić to samodzielnie
+
+137
+00:05:10,740 --> 00:05:12,500
+i najlepiej daj radę.
+
+138
+00:05:12,959 --> 00:05:13,560
+Do zobaczenia.

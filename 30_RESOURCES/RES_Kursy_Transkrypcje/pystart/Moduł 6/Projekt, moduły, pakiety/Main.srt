@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:08,759
+Jeszcze jedna bardzo ważna sprawa, mianowicie bardzo często w kodzie Pythonowym jest tak, że główny plik nazywa się mainpy, to jest w sumie taki zwyczaj,
+
+2
+00:00:09,200 --> 00:00:18,640
+oraz drugi zwyczaj jest taki, że w tym pliku mainpy pojawia się taki if, który może wyglądać dosyć obco, ale nie martw się, po tym slajdzie już obco wyglądać nie będzie,
+
+3
+00:00:18,740 --> 00:00:23,660
+czyli if name równa się podkreślenie main. Cóż to takiego jest?
+
+4
+00:00:23,660 --> 00:00:32,620
+Zacznijmy od tego, dlaczego mainpy, tu nie trzeba zbyt dużo tłumaczyć, po prostu tak jest, mainpy jest tym plikiem startującym nasz program,
+
+5
+00:00:33,100 --> 00:00:37,280
+jeżeli trzymasz projekt, zazwyczaj ten projekt startuje właśnie od pliku mainpy.
+
+6
+00:00:37,740 --> 00:00:47,000
+Po drugie, do tego pliku importujemy absolutnie wszystko, czyli jeżeli na przykład Twój program ma wyświetlić jakąś konsolę z jakimiś opcjami,
+
+7
+00:00:47,000 --> 00:00:52,420
+no to właśnie w tym pliku mainpy importujemy sobie wszystkie dane, no i w zależności od tego,
+
+8
+00:00:52,640 --> 00:00:53,640
+co wyświetlamy,
+
+9
+00:00:53,659 --> 00:00:57,099
+co użytkownik zrobi, stąd wykonywane są poszczególne czynności.
+
+10
+00:00:58,000 --> 00:01:02,219
+Jeżeli Twój program przyjmuje argumenty z konsoli, to też będziemy sobie pokazywali,
+
+11
+00:01:02,659 --> 00:01:07,200
+czyli na przykład jest sytuacja, że możesz uruchomić Python, spacja, nazwa programu, spacja,
+
+12
+00:01:07,599 --> 00:01:11,259
+i tam po myślnikach czy po spacjach jakieś wartości można przekazywać,
+
+13
+00:01:11,699 --> 00:01:17,679
+to również ta konfiguracja, to odbieranie tych danych z linii poleceń znajduje się w tym pliku mainpy.
+
+14
+00:01:18,060 --> 00:01:21,099
+Tak po prostu się przyjęło i tak najczęściej jest.
+
+15
+00:01:21,099 --> 00:01:22,859
+Oczywiście niektórzy robią też inaczej.
+
+16
+00:01:22,859 --> 00:01:27,859
+Robią na przykład program o nazwie sql.py i to jest ten główny nasz projekt.
+
+17
+00:01:27,859 --> 00:01:33,099
+Natomiast jeżeli mówimy o takim programie, o takim projekcie, najczęściej jest to mainpy.
+
+18
+00:01:33,099 --> 00:01:34,319
+No i druga rzecz.
+
+19
+00:01:34,319 --> 00:01:38,859
+Bardzo często w tym pliku pojawia się taka linijka if name równa się, równa się main
+
+20
+00:01:38,859 --> 00:01:45,859
+i ta linia z kolei oznacza, że my sprawdzamy, w jaki sposób nasz projekt został uruchomiony.
+
+21
+00:01:45,859 --> 00:01:51,400
+Jeżeli został uruchomiony jako Python, spacja, nazwa programu albo za pomocą przycisku play,
+
+22
+00:01:51,400 --> 00:01:52,700
+który znajduje się u góry,
+
+23
+00:01:52,859 --> 00:01:56,219
+no to wówczas program nam startuje i ten if się wykona.
+
+24
+00:01:56,219 --> 00:02:00,359
+Jeżeli na przykład użyjesz programów takich służących do formatowania kodu,
+
+25
+00:02:00,359 --> 00:02:02,359
+jest na przykład taki formater jak black,
+
+26
+00:02:02,359 --> 00:02:06,159
+albo próbujesz w inny sposób uruchomić Twój projekt,
+
+27
+00:02:06,159 --> 00:02:10,060
+na przykład uruchamiając testy, już niedługo będziemy rozmawiali o payteście,
+
+28
+00:02:10,060 --> 00:02:13,060
+no to wówczas ten if się nie wykona.
+
+29
+00:02:13,060 --> 00:02:16,360
+Więc to jest takie zabezpieczenie, które po prostu powoduje,
+
+30
+00:02:16,360 --> 00:02:20,259
+że Twój program uruchomi się tylko wtedy, kiedy faktycznie chcesz go uruchomić,
+
+31
+00:02:20,259 --> 00:02:22,860
+a nie kiedy na przykład sprawdzasz kod w poszukiwaniu błędów.
+
+32
+00:02:22,860 --> 00:02:26,360
+Ale jeżeli lubisz szczegóły i lubisz wchodzić głębiej,
+
+33
+00:02:26,360 --> 00:02:29,360
+to od razu Ci powiem, że tak, podkreślenie, podkreślenie name,
+
+34
+00:02:29,360 --> 00:02:32,360
+to jest taka specjalna zmienna, która zawiera nazwę modułu,
+
+35
+00:02:32,360 --> 00:02:36,360
+w którym ten program jest uruchomiony, czyli w jaki sposób jest ona uruchamiana.
+
+36
+00:02:36,360 --> 00:02:39,360
+Jeżeli na przykład uruchamiamy program, tak jak Ci mówiłem,
+
+37
+00:02:39,360 --> 00:02:42,360
+czyli Python, spacja, nazwa pliku, kropka py,
+
+38
+00:02:42,360 --> 00:02:45,360
+no to wtedy to name ma właśnie wartość name.
+
+39
+00:02:45,360 --> 00:02:50,860
+Natomiast jeżeli uruchamiamy to w inny sposób, no to wtedy ten name zmienia swoją wartość.
+
+40
+00:02:50,860 --> 00:02:52,860
+Chociażby wtedy, kiedy na przykład nasz program,
+
+41
+00:02:52,860 --> 00:02:57,860
+nasz program jest importowany, czyli załóżmy, masz kod,
+
+42
+00:02:57,860 --> 00:03:04,860
+Twój kod jest importowany, czyli masz from nazwa biblioteki, import nazwa programu,
+
+43
+00:03:04,860 --> 00:03:07,860
+wykonujesz coś takiego, to też ten kod, który jest pod spodem,
+
+44
+00:03:07,860 --> 00:03:09,860
+też by nam się wykonał normalnie.
+
+45
+00:03:09,860 --> 00:03:13,860
+Ale jeżeli importujesz plik, a kod, który jest pod spodem,
+
+46
+00:03:13,860 --> 00:03:16,360
+znajduje się właśnie w tym if name równa się main,
+
+47
+00:03:16,360 --> 00:03:20,860
+to wtedy ta zmienna name ma taką nazwę, jak program, do którego go importujesz.
+
+48
+00:03:20,860 --> 00:03:22,860
+Ja przez długi czas traktowałem to w ogóle,
+
+49
+00:03:22,860 --> 00:03:25,860
+takie zaklęcie, które po prostu trzeba wyrzucić do kodu
+
+50
+00:03:25,860 --> 00:03:27,860
+i w ten sposób nasz program będzie działał prawidłowo
+
+51
+00:03:27,860 --> 00:03:32,860
+i umieszczałem to zaklęcie właśnie wtedy, kiedy chciałem uruchomić program.
+
+52
+00:03:32,860 --> 00:03:36,860
+Natomiast jeżeli miałem jakieś linie kodu, które miały się wykonać,
+
+53
+00:03:36,860 --> 00:03:39,860
+niezależnie od tego, czy importuję, czy nie importuję,
+
+54
+00:03:39,860 --> 00:03:41,860
+no to tego ifa nie dodawałem.

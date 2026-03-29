@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:12,280
+Tu mam dla ciebie jeszcze jedną bardzo ważną informację, a mianowicie w momencie, w którym wyświetlasz dane i używasz printa, gdzie wartości rozdzielone są przecinkiem, to zawsze jest to spacja, prawda?
+
+2
+00:00:12,280 --> 00:00:22,379
+I takie zlepianie tych wartości, w sensie spacja rozdziela poszczególne wyrazy i takie zlepianie tych wartości w sposób estetyczny jest niezwykle w ten sposób utrudnione.
+
+3
+00:00:22,379 --> 00:00:31,239
+Dlatego też, żeby nie używać też operatora jakim jest plus, pokażę Ci jak to zrobić estetycznie, a właściwie już Ci pokazuję, bo na tym slajdzie wszystko dokładnie widzisz.
+
+4
+00:00:31,239 --> 00:00:47,799
+A mianowicie zobacz, w pierwszym przykładzie masz name z imieniem Antoni, age ustawione na 40. I teraz jeżeli chciałbyś, żeby na ekranie pojawiło się mam na imię Antoni, mam 40 lat, to musisz wykonać mam na imię i wtedy w nawiasach klamrowych wpisujesz to imię.
+
+5
+00:00:47,799 --> 00:00:52,299
+Żeby dodatkowo dopisać wiek, po prostu w nawiasach klamrowych.
+
+6
+00:00:52,380 --> 00:00:59,179
+Ale to nie uda się, jeżeli z przodu przed tym wyrażeniem nie będzie tej literki F.
+
+7
+00:00:59,179 --> 00:01:09,840
+F, ja nazywam to zawsze F-ką, to jest taki skrót tak naprawdę od formatted string i ten skrót spowoduje, że można będzie właśnie wstawić zmienne do stringa.
+
+8
+00:01:09,840 --> 00:01:21,740
+I ten formatted string pozwala również na to, żeby sobie jego odrobinę modyfikować, żeby też trochę rozbudowywać te dane, które wprowadzamy, formatować te dane, które wprowadzamy do stringa.
+
+9
+00:01:21,740 --> 00:01:22,359
+Na przykład,
+
+10
+00:01:22,359 --> 00:01:32,560
+jeżeli ktoś dostałby wynik 3,98 i tak dalej i tak dalej i chciałby wyświetlić go tylko do dwóch miejsc po przecinku, to również można to zrobić za pomocą formatted stringa.
+
+11
+00:01:32,560 --> 00:01:41,560
+Można napisać F-kę z przodu, wstawić result, a następnie po dwóch kropkach, który pełni rolę takiego modyfikatora, dopisać kropka 2F.
+
+12
+00:01:41,560 --> 00:01:47,319
+I to będzie oznaczało, że interesuje nas to decimal places, tak jakby dwa miejsca po przecinku.
+
+13
+00:01:47,319 --> 00:01:52,159
+To nie jest tak jak z zaokrąglaniem, że on później będzie uwzględniał po przecinku.
+
+14
+00:01:52,159 --> 00:01:59,479
+Po prostu tę taką wartość po prostu ją tutaj w tym miejscu wyświetli na twoją potrzebę, tak żeby właśnie tak wyglądała.
+
+15
+00:01:59,479 --> 00:02:02,899
+Odnośnie tych formatów stringów jeszcze będziemy podczas kursu rozmawiać.
+
+16
+00:02:02,899 --> 00:02:11,479
+Natomiast na początku takie podstawy myślę, że w zupełności wystarczą ci do tego też, żeby zrobić pracę domową i żeby zrobić pozostałe ćwiczenia.
+
+17
+00:02:11,479 --> 00:02:12,199
+Do zobaczenia.

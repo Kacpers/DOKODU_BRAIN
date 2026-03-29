@@ -1,0 +1,147 @@
+1
+00:00:00,000 --> 00:00:15,380
+I skoro mamy już plan mniej więcej tego, co mamy zrobić, to możemy teraz sobie ten plan przygotować. No bo use cases, o których rozmawialiśmy wcześniej, mówią nam o tym, jakie akcje będą się działy w naszym systemie, ale one same z siebie nie są jeszcze konkretnymi zadaniami.
+
+2
+00:00:15,380 --> 00:00:31,780
+Dlatego też trzeba takie zadania sobie przygotować, czyli po prostu podzielić te use cases na kroki, które trzeba wykonać, żeby móc osiągnąć to zadanie. To, czy dane zadania będzie wykonywał jeden deweloper czy inni, oczywiście zależy od tego, co tak naprawdę jest do zrobienia.
+
+3
+00:00:31,780 --> 00:00:45,359
+Natomiast bardzo często jest tak, że po prostu w ramach projektu tak zwany product owner takie kroki nam przydziela. No i na przykład, jeżeli mielibyśmy wykonać rejestrację użytkownika, moglibyśmy wymienić takie zadania jak.
+
+4
+00:00:45,380 --> 00:00:56,460
+Stworzenie modelu użytkownika. Co to jest model? Mówiliśmy o tym, że mamy bazę danych, w bazie danych znajdują się tabele i taka klasa reprezentująca pojedynczą tabelę to właśnie jest model.
+
+5
+00:00:56,960 --> 00:01:07,420
+No i w ramach takiego modelu użytkownika mamy też stworzyć klasy dla różnych innych modeli powiązanych z tym użytkownikiem, pola oraz niektóre z metod.
+
+6
+00:01:07,939 --> 00:01:15,359
+Następnie należy stworzyć migrację dotyczącą bazy danych. Tu chodzi o to, że kiedy zmieniamy coś w bazie danych, musimy mieć ślad tej dany.
+
+7
+00:01:15,379 --> 00:01:25,579
+Czyli zmieniamy coś w bazie danych, a nie w naszym repozytorium. Więc jeżeli chcemy dodać jakąś nową kolumnę, usunąć kolumnę, czy cokolwiek zmienić na bazie danych, to musimy zapisać to w kodzie.
+
+8
+00:01:25,979 --> 00:01:42,759
+I są różne narzędzia do tego, m.in. jest takie narzędzie, które nazywa się Alembic. Ono służy do tego, żeby właśnie tworzyć migrację za pomocą kodu Pythonowego i później aplikowanie tych migracji, czy uruchamianie tych migracji będzie tę naszą bazę zmieniało.
+
+9
+00:01:43,159 --> 00:01:44,739
+Tutaj taka ciekawostka.
+
+10
+00:01:45,379 --> 00:02:03,679
+One zawsze dodają kolejny krok. Czyli nawet jeżeli dodasz tabelę, potem chcesz usunąć tabela, potem stwierdzisz, o kurczę, jednak muszę ją dodać, to jeżeli ta zmiana była już opublikowana, to dodanie tabeli, to kolejnym krokiem powinno być opublikowanie drugiej zmiany usuwającej tę tabelę.
+
+11
+00:02:03,679 --> 00:02:14,000
+Jeżeli później będziesz chciał ją z kolei dodać raz jeszcze, to nie możesz cofać usunięcia, nie możesz jej usunąć, tylko musisz dodać kolejną zmianę dodającą. Rozumiemy się?
+
+12
+00:02:14,000 --> 00:02:14,019
+Rozumiemy się?
+
+13
+00:02:14,020 --> 00:02:24,020
+Czyli tutaj w ramach tych migracji zawsze dodajemy nową zmianę i nigdy nie wpływamy na historię, no bo przez to u innych deweloperów mogłoby to przestać działać.
+
+14
+00:02:24,980 --> 00:02:37,040
+Bo załóżmy, ktoś będzie już miał tę zmianę u siebie zaaplikowaną, a chodzi o to, po to, że to robimy, żeby każdy z zespołu mógł mieć taką samą wersję bazy danych i żeby mógł wspólnie na niej pracować.
+
+15
+00:02:37,200 --> 00:02:43,939
+Pamiętam takie czasy, gdzie nie używaliśmy migracji i wszystkie zmiany dotyczące bazy danych wymagały tego, żeby aplikować nowe.
+
+16
+00:02:44,020 --> 00:02:47,520
+Na nowo najlepiej cały zrzut bazy danych, wtedy wszystko przestawało działać.
+
+17
+00:02:47,880 --> 00:02:49,659
+To były złe czasy, nie wracajmy do nich.
+
+18
+00:02:50,640 --> 00:02:51,080
+Co dalej?
+
+19
+00:02:51,520 --> 00:02:58,320
+Dalej potrzebujemy stworzyć formularz rejestracji, potrzebujemy go też obsłużyć, stworzyć jakąś walidację, reguły poprawności.
+
+20
+00:02:58,320 --> 00:03:12,920
+Jeżeli każda taka reguła sprawdzająca poprawność, czyli walidator byłaby zbyt czasochłonna, nie byłoby to tylko sprawdzenie, czy pole jest, czy go nie ma, tylko na przykład weryfikator numeru PESEL, czy weryfikator NIP-u, czy czegoś takiego,
+
+21
+00:03:14,020 --> 00:03:16,020
+to myślę, że też byłoby to osobne zadanie.
+
+22
+00:03:16,020 --> 00:03:21,020
+No i następnie obsługa tego formularza, czyli zlepienie wszystkich tych fragmentów w całość.
+
+23
+00:03:21,020 --> 00:03:25,020
+I każdy z tych punktów tak naprawdę mógłby być osobnym zadaniem.
+
+24
+00:03:25,020 --> 00:03:35,020
+I mówię o tym dlatego, że często kiedy spotykam osoby, które myślą o tym, żeby być juniorem, są też one przerażone, bo myślą, że to wszystko to będzie ich jedna wielka, duża praca.
+
+25
+00:03:35,020 --> 00:03:38,020
+Natomiast nie, zdecydowanie nie.
+
+26
+00:03:38,020 --> 00:03:43,020
+Jeden z tych podpunktów to jest coś, co możesz realizować przez jakiś czas.
+
+27
+00:03:43,020 --> 00:03:44,020
+A przez jaki czas?
+
+28
+00:03:44,020 --> 00:03:46,020
+I jak ten czas oszacować?
+
+29
+00:03:46,020 --> 00:03:47,020
+Zaraz sobie powiemy.
+
+30
+00:03:47,020 --> 00:03:52,020
+To, o czym jeszcze chciałem wspomnieć, to to, że aplikacje są dzielone na warstwy.
+
+31
+00:03:52,020 --> 00:03:53,020
+Są takie trzy warstwy.
+
+32
+00:03:53,020 --> 00:03:55,020
+Model, widok i kontroler.
+
+33
+00:03:55,020 --> 00:04:04,020
+Wszystko to, co dotyczy warstwy z danych, czyli bazy danych, czy jakiegoś API, czy jakiegoś pliku, najczęściej nazywane jest modelem.
+
+34
+00:04:04,020 --> 00:04:11,020
+Wszystko to, co odpowiada za przygotowanie formularza rejestracji, czyli za warstwę, którą widzi użytkownik, nazywane jest widokiem.
+
+35
+00:04:11,020 --> 00:04:13,020
+Natomiast wszystko to, co jest pomiędzy, nazywane jest widokiem.
+
+36
+00:04:13,020 --> 00:04:19,019
+I o tych trzech warstwach też za moment sobie porozmawiamy.
+
+37
+00:04:19,019 --> 00:04:22,019
+Najpierw przejdźmy do tych tematów związanych z planowaniem.

@@ -1,0 +1,23 @@
+1
+00:00:00,000 --> 00:00:05,240
+Możemy wykonać sobie właśnie coś bardzo zbliżonego do tego, co przed chwilą Ci pokazałem.
+
+2
+00:00:05,799 --> 00:00:12,640
+Przygotuj program, który wyświetli datę Twoich następnych urodzin oraz odpowie na pytanie, ile musisz na nie zaczekać.
+
+3
+00:00:13,040 --> 00:00:19,059
+Jeśli dzień Twoich urodzin w danym roku już minął, powinna pokazać się data w roku następnym.
+
+4
+00:00:19,519 --> 00:00:22,760
+Czyli po prostu sprawdzimy sobie, kiedy masz kolejne urodziny.
+
+5
+00:00:23,260 --> 00:00:28,660
+Jeżeli już minęły, to po prostu dodaj do roku jeden i wyświetl datę urodzin w kolejnym roku.
+
+6
+00:00:28,660 --> 00:00:33,560
+To co? Chwila dla każdego i widzimy się już za moment w rozwiązaniu.

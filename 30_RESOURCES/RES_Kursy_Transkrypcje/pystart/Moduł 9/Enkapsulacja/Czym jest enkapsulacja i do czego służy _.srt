@@ -1,0 +1,1147 @@
+1
+00:00:00,000 --> 00:00:01,820
+Enkapsulacja.
+
+2
+00:00:02,459 --> 00:00:04,820
+Temat, który może brzmieć przerażająco,
+
+3
+00:00:05,219 --> 00:00:07,280
+ale wcale taki przerażający nie jest.
+
+4
+00:00:07,799 --> 00:00:10,519
+Zobaczysz, że tak naprawdę sprowadza się do jednego znaczka,
+
+5
+00:00:10,700 --> 00:00:14,400
+który będzie widniał przed nazwą zmiennej albo przed nazwą metody.
+
+6
+00:00:14,960 --> 00:00:16,760
+Natomiast, żeby ten znaczek dodać,
+
+7
+00:00:16,760 --> 00:00:18,980
+trzeba wiedzieć, dlaczego go dodać.
+
+8
+00:00:19,300 --> 00:00:22,039
+To po pierwsze. A po drugie, jeżeli go dodajemy,
+
+9
+00:00:22,440 --> 00:00:24,400
+to musimy też, jeżeli go widzimy,
+
+10
+00:00:24,519 --> 00:00:26,519
+to musimy też wiedzieć, co ten znaczek oznacza.
+
+11
+00:00:27,140 --> 00:00:29,160
+Jest to element pewnej konwencji,
+
+12
+00:00:29,160 --> 00:00:32,340
+która zakłada, że tak po prostu jest.
+
+13
+00:00:32,780 --> 00:00:34,380
+Czyli jeżeli pojawi się ten znak,
+
+14
+00:00:34,439 --> 00:00:36,619
+chodzi oczywiście o znak podkreślenia, znak podłogi,
+
+15
+00:00:37,020 --> 00:00:39,399
+przed nazwą zmiennej albo przed nazwą metody,
+
+16
+00:00:39,980 --> 00:00:42,980
+to tak naprawdę ty jako programista musisz wiedzieć,
+
+17
+00:00:43,219 --> 00:00:46,799
+że z tą zmienną albo z tą metodą coś jest na rzeczy.
+
+18
+00:00:47,280 --> 00:00:48,340
+A co, to zaraz ci powiem.
+
+19
+00:00:48,900 --> 00:00:51,359
+Natomiast ważne jest dla mnie to, żebyś wiedział,
+
+20
+00:00:51,620 --> 00:00:56,340
+żebyście wiedzieli, że jeżeli ten znak się pojawi,
+
+21
+00:00:56,340 --> 00:00:58,539
+to tak naprawdę można byłoby go zignorować.
+
+22
+00:00:58,539 --> 00:01:01,200
+Można byłoby tak samo używać takiej zmiennej
+
+23
+00:01:01,200 --> 00:01:03,460
+czy właściwości, czy metody.
+
+24
+00:01:04,019 --> 00:01:07,079
+Natomiast jednak należy na te wartości uważać.
+
+25
+00:01:07,500 --> 00:01:09,840
+Dlaczego? Już opowiadam.
+
+26
+00:01:10,420 --> 00:01:13,159
+Wyobraźmy sobie historię, gdzie pan po lewej stronie,
+
+27
+00:01:13,659 --> 00:01:17,840
+ładnie ubrany w garnitur, wraz z torbą pustą,
+
+28
+00:01:18,099 --> 00:01:20,799
+wchodzi do instytucji znajdującej się po prawej stronie,
+
+29
+00:01:21,299 --> 00:01:24,819
+no i wchodzi, skręca w prawo, potem skręca w lewo,
+
+30
+00:01:24,960 --> 00:01:26,960
+potem idzie cztery stopnie w dół,
+
+31
+00:01:26,960 --> 00:01:28,219
+potem znowu skręca w lewo.
+
+32
+00:01:28,540 --> 00:01:31,460
+Później otwiera sobie takie drzwi, które i tak zawsze są otwarte,
+
+33
+00:01:31,880 --> 00:01:33,460
+no i znajduje się w skarbcu banku.
+
+34
+00:01:33,700 --> 00:01:37,180
+Z tego skarbca po drobnym zastanowieniu stwierdza,
+
+35
+00:01:37,280 --> 00:01:39,280
+że rano jeszcze miał 100 tysięcy złotych na koncie,
+
+36
+00:01:39,380 --> 00:01:41,920
+potrzebuje akurat coś tam kupić, nie wiem, samochód, cokolwiek.
+
+37
+00:01:42,300 --> 00:01:45,439
+Więc ze skarbca z wielu milionowych stert
+
+38
+00:01:45,439 --> 00:01:47,280
+wypakowuje sobie 100 tysięcy złotych,
+
+39
+00:01:47,360 --> 00:01:50,840
+które skrupulatnie liczy i wychodzi z banku.
+
+40
+00:01:52,100 --> 00:01:54,400
+Odejmując sobie w swoim zeszyciku czy gdzieś tam,
+
+41
+00:01:54,400 --> 00:01:55,760
+bo przecież pamięta to też, prawda?
+
+42
+00:01:56,219 --> 00:01:57,360
+Te 100 tysięcy złotych.
+
+43
+00:01:57,660 --> 00:01:58,400
+Tak się nie dzieje.
+
+44
+00:01:58,540 --> 00:01:59,540
+Tak się nie dzieje.
+
+45
+00:01:59,540 --> 00:02:00,440
+W rzeczywistości.
+
+46
+00:02:01,180 --> 00:02:02,260
+Dlaczego tak się nie dzieje?
+
+47
+00:02:02,820 --> 00:02:04,840
+No bo abstrahując od zaufania,
+
+48
+00:02:05,360 --> 00:02:08,080
+czyli od tego, że ktoś mógłby po prostu wejść
+
+49
+00:02:08,080 --> 00:02:10,280
+i te pieniądze wszystkie stamtąd zabrać,
+
+50
+00:02:10,920 --> 00:02:11,939
+po prostu je ukraść,
+
+51
+00:02:12,480 --> 00:02:15,580
+my mamy też takie różne systemy,
+
+52
+00:02:15,659 --> 00:02:17,960
+w których czasem chcielibyśmy naprawdę zobaczyć sobie,
+
+53
+00:02:18,099 --> 00:02:19,659
+że w banku pojawi się informacja,
+
+54
+00:02:19,759 --> 00:02:21,400
+skoro zniknęły jakieś pieniądze,
+
+55
+00:02:21,400 --> 00:02:25,420
+no to muszą mieć one datę, godzinę, wielkość tego,
+
+56
+00:02:25,500 --> 00:02:28,100
+no bo przecież trzeba powiadomić różne instytucje o tym,
+
+57
+00:02:28,099 --> 00:02:30,460
+że ktoś zrobił większy przelew, na przykład.
+
+58
+00:02:31,379 --> 00:02:32,159
+To jest jedna rzecz.
+
+59
+00:02:32,539 --> 00:02:35,079
+Druga rzecz jest taka, że jeżeli pieniądze gdzieś faktycznie
+
+60
+00:02:35,079 --> 00:02:37,579
+okazało się finalnie, że nagle nie ma tych pieniędzy,
+
+61
+00:02:37,719 --> 00:02:40,359
+to trzeba na podstawie wszystkich operacji móc stwierdzić,
+
+62
+00:02:40,740 --> 00:02:43,419
+dlaczego tych pieniędzy nie ma, gdzie one zniknęły.
+
+63
+00:02:44,500 --> 00:02:46,939
+Kolejna rzecz, to są jakiegoś rodzaju dowody,
+
+64
+00:02:47,400 --> 00:02:48,919
+no i kolejna rzecz to jest też to,
+
+65
+00:02:49,079 --> 00:02:55,340
+że takie operacje muszą być też w różnych systemach zaindeksowane.
+
+66
+00:02:55,439 --> 00:02:57,400
+Niekoniecznie musimy powiadamiać jakiś system,
+
+67
+00:02:57,400 --> 00:03:00,099
+no ale po prostu chcemy wykonać zbiór czynności,
+
+68
+00:03:00,560 --> 00:03:04,860
+które muszą towarzyszyć temu, że te pieniądze wpłacamy na konto,
+
+69
+00:03:04,920 --> 00:03:05,920
+albo je wypłacamy.
+
+70
+00:03:06,980 --> 00:03:09,280
+I z enkapsulacją jest dokładnie tak samo.
+
+71
+00:03:09,819 --> 00:03:12,540
+Tu akurat skupiłem się na tym, że na pieniądzach,
+
+72
+00:03:12,599 --> 00:03:14,580
+ale to dotyczy wszystkiego tak naprawdę.
+
+73
+00:03:15,099 --> 00:03:19,219
+Jeżeli mam jakąś wartość i chcę zabezpieczyć ją,
+
+74
+00:03:19,420 --> 00:03:21,879
+tak żeby nie można było jej wprost zmienić,
+
+75
+00:03:22,219 --> 00:03:24,140
+to mogę właśnie skorzystać z enkapsulacji.
+
+76
+00:03:25,240 --> 00:03:27,159
+Weźmy przykład event,
+
+77
+00:03:27,400 --> 00:03:29,960
+czy tam kalendar i event.
+
+78
+00:03:30,460 --> 00:03:32,980
+Mieliśmy taką sytuację, że kalendar to była klasa,
+
+79
+00:03:33,060 --> 00:03:35,900
+która miała w środku właściwość o nazwie events.
+
+80
+00:03:36,259 --> 00:03:39,360
+Ta właściwość była słownikiem, to było parę lekcji temu.
+
+81
+00:03:39,840 --> 00:03:44,580
+I ten słownik miał taką cechę, że klucze zawsze były datą i godziną,
+
+82
+00:03:45,099 --> 00:03:47,219
+natomiast wartości to był obiekt event.
+
+83
+00:03:47,840 --> 00:03:51,300
+Ja powiedziałem, że tam zrobię taką metodę add event,
+
+84
+00:03:51,500 --> 00:03:53,200
+która będzie prowadziła do tego,
+
+85
+00:03:54,060 --> 00:03:56,900
+że programista nie będzie musiał się przejmować tym, gdzie jaki klucz,
+
+86
+00:03:56,900 --> 00:03:57,760
+czy coś tam i tak dalej,
+
+87
+00:03:58,300 --> 00:04:01,840
+tylko po prostu będziemy automatycznie, można powiedzieć z automatu,
+
+88
+00:04:02,920 --> 00:04:04,379
+tworzyli sobie taką strukturę.
+
+89
+00:04:05,360 --> 00:04:09,219
+Tak samo w drugą stronę, jeżeli chodzi o pobieranie eventów
+
+90
+00:04:09,219 --> 00:04:11,819
+dla danego dnia, czy wszystkich eventów,
+
+91
+00:04:12,159 --> 00:04:15,780
+to zrobiliśmy sobie metodę, która miała pewną logikę zaszytą,
+
+92
+00:04:15,900 --> 00:04:17,620
+służącą do pobierania tych eventów.
+
+93
+00:04:18,040 --> 00:04:21,579
+Ale przecież w wielu przypadkach
+
+94
+00:04:21,579 --> 00:04:23,560
+programista mógłby stwierdzić,
+
+95
+00:04:23,560 --> 00:04:26,000
+o tam w środku jest jakaś struktura, zawiera event,
+
+96
+00:04:26,899 --> 00:04:28,939
+może teraz te eventy dodam nowe.
+
+97
+00:04:28,939 --> 00:04:34,139
+No i stworzy sobie listę i podmieni nam ten zmienną event na swoją listę.
+
+98
+00:04:34,139 --> 00:04:37,899
+W tym momencie stwierdzi, o get event, pobiera eventy, użyje.
+
+99
+00:04:37,899 --> 00:04:40,899
+Okaże się, że get event zacznie sypać błędami.
+
+100
+00:04:40,899 --> 00:04:42,899
+O zły ten kod, coś nie działa.
+
+101
+00:04:42,899 --> 00:04:44,899
+Ale to nie zadziałało dlatego,
+
+102
+00:04:44,899 --> 00:04:48,899
+że myśmy źle zakodowali, my jako twórcy tej klasy,
+
+103
+00:04:48,899 --> 00:04:51,899
+tylko nie zadziałało dlatego, że ktoś po prostu sobie
+
+104
+00:04:51,899 --> 00:04:55,899
+bez problemu wchodził do tej właściwości i ją wywoływał.
+
+105
+00:04:55,899 --> 00:04:58,899
+Musisz wiedzieć, że czasem podobnie jest z metodami.
+
+106
+00:04:58,899 --> 00:05:02,899
+Wyobraź sobie sytuację, gdzie tworzymy,
+
+107
+00:05:02,899 --> 00:05:05,899
+znowu skorzystam z sytuacji takiej, można powiedzieć,
+
+108
+00:05:05,899 --> 00:05:08,899
+gotowego systemu jakiegoś, że przesyłamy płatność.
+
+109
+00:05:08,899 --> 00:05:13,899
+I żeby przesłać płatność, programista musi wykonać instrukcję,
+
+110
+00:05:13,899 --> 00:05:18,899
+wleje pieniądze i ta instrukcja daje mu wynik, że się udało.
+
+111
+00:05:18,899 --> 00:05:21,899
+Na to, że jest okej, albo że nie jest okej.
+
+112
+00:05:21,899 --> 00:05:23,899
+Czy bieżące saldo w banku, załóżmy.
+
+113
+00:05:23,899 --> 00:05:25,899
+Tak działają naprawdę systemy bankowe.
+
+114
+00:05:25,899 --> 00:05:27,899
+Takie, że mamy z przelewami.
+
+115
+00:05:27,899 --> 00:05:30,899
+Jeżeli ja implementuję jakiś system płatności,
+
+116
+00:05:30,899 --> 00:05:35,899
+to bardzo często dostaję już taką gotową paczkę od takiego pośrednika.
+
+117
+00:05:35,899 --> 00:05:37,899
+I ten pośrednik mówi, panie Kac, przeszedłem,
+
+118
+00:05:37,899 --> 00:05:40,899
+tam jest w dokumentacji opisane, tu jest metoda do tego,
+
+119
+00:05:40,899 --> 00:05:43,899
+żeby zarejestrować nowy przelew, tu jest metoda do tego,
+
+120
+00:05:43,899 --> 00:05:46,899
+żeby określić dane klienta.
+
+121
+00:05:46,899 --> 00:05:49,899
+I jak pan zrobi tą metodę, to po prostu ten przelew pójdzie
+
+122
+00:05:49,899 --> 00:05:51,899
+i my wtedy panu w odpowiedzi wyślemy informację,
+
+123
+00:05:51,899 --> 00:05:53,899
+czy jest okej, czy nie jest okej.
+
+124
+00:05:53,899 --> 00:05:55,899
+Ale pod spodem, jakbym zeznał, że jest okej,
+
+125
+00:05:55,899 --> 00:05:58,899
+zerknął sobie w ten kod, to by się okazało,
+
+126
+00:05:58,899 --> 00:06:01,899
+że ta transakcja z bankiem jest bardzo rozbudowana.
+
+127
+00:06:01,899 --> 00:06:05,899
+Bo najpierw jest, cześć, jestem takim systemem płatności.
+
+128
+00:06:05,899 --> 00:06:07,899
+Bank mówi, o, dzień dobry.
+
+129
+00:06:07,899 --> 00:06:09,899
+Dzień dobry, no właśnie, mam tutaj taki identyfikator,
+
+130
+00:06:09,899 --> 00:06:12,899
+proszę sprawdź, czy mogę się zalogować.
+
+131
+00:06:12,899 --> 00:06:14,899
+Za każdym razem jest osobna metoda.
+
+132
+00:06:14,899 --> 00:06:18,899
+Bank mówi, okej, faktycznie, to wszystko jest dobrze.
+
+133
+00:06:18,899 --> 00:06:20,899
+No dobrze, to chciałbym zarejestrować nową płatność.
+
+134
+00:06:20,899 --> 00:06:23,899
+Bardzo proszę, to jest numer tej transakcji.
+
+135
+00:06:23,899 --> 00:06:25,899
+Okej, do tej transakcji chciałem zrobić wpływ,
+
+136
+00:06:25,899 --> 00:06:28,899
+wpłatę. W jakiej wysokości będzie ta wpłata?
+
+137
+00:06:28,899 --> 00:06:30,899
+W wysokości takiej i takiej.
+
+138
+00:06:30,899 --> 00:06:33,899
+Bardzo proszę podać coś tam i potwierdzić jeszcze to.
+
+139
+00:06:33,899 --> 00:06:37,899
+Okej, to jest numer z SMS-a, czy tam to jest jakaś informacja.
+
+140
+00:06:37,899 --> 00:06:39,899
+O, bardzo dziękuję.
+
+141
+00:06:39,899 --> 00:06:43,899
+I ten kontakt z bankiem opiera się na wielu różnych metodach.
+
+142
+00:06:43,899 --> 00:06:47,899
+I teraz, kiedy ja jako programista spojrzałbym na wszystkie metody,
+
+143
+00:06:47,899 --> 00:06:49,899
+które są w kodzie, mógłbym się złapać za głowę
+
+144
+00:06:49,899 --> 00:06:51,899
+i mógłbym stwierdzić, rany, zanim ja zrozumiem,
+
+145
+00:06:51,899 --> 00:06:54,899
+co w tym kodzie się znajduje, miną wieki.
+
+146
+00:06:54,899 --> 00:06:56,899
+Przecież tu tych metod jest 50.
+
+147
+00:06:56,899 --> 00:06:58,899
+I ja muszę teraz to wszystko wykonać?
+
+148
+00:06:58,899 --> 00:07:00,899
+Niemożliwe. No właśnie.
+
+149
+00:07:00,899 --> 00:07:02,899
+I dlatego dostaję dokumentację, żeby móc stwierdzić,
+
+150
+00:07:02,899 --> 00:07:04,899
+które z tych metod będę chciał wywoływać.
+
+151
+00:07:04,899 --> 00:07:06,899
+I na tym właśnie polega enkapsulacja.
+
+152
+00:07:06,899 --> 00:07:09,899
+Czyli za pomocą enkapsulacji, kiedy ktoś patrzy w kod,
+
+153
+00:07:09,899 --> 00:07:12,899
+może stwierdzić, czy tej metody powinien używać,
+
+154
+00:07:12,899 --> 00:07:16,899
+czy te właściwości powinien modyfikować, czy też nie.
+
+155
+00:07:16,899 --> 00:07:19,899
+Ot, cała idea enkapsulacji.
+
+156
+00:07:19,899 --> 00:07:24,899
+Zobacz, czasem może się okazać, że taka praca w banku będzie polegała
+
+157
+00:07:24,899 --> 00:07:27,899
+na tym, że będziemy mieli konkretny interfejs
+
+158
+00:07:27,899 --> 00:07:30,899
+do korzystania z tym bankiem w postaci bankomatu.
+
+159
+00:07:30,899 --> 00:07:35,899
+Czasem będziemy mieli konkretny interfejs w postaci jakiejś tam kasy w banku.
+
+160
+00:07:35,899 --> 00:07:38,899
+A czasem tym konkretnym interfejsem będzie po prostu
+
+161
+00:07:38,899 --> 00:07:41,899
+nasz komputer i wejście na stronę internetową.
+
+162
+00:07:41,899 --> 00:07:46,899
+I enkapsulacja to jest tak naprawdę ukrywanie pól danej klasy,
+
+163
+00:07:46,899 --> 00:07:48,899
+czy też metod danej klasy.
+
+164
+00:07:48,899 --> 00:07:53,899
+I jest to sposób na to, żeby ochronić nas i innych programistów,
+
+165
+00:07:53,899 --> 00:07:56,899
+jeżeli mówimy o tych błędach, o których mówiliśmy wcześniej,
+
+166
+00:07:56,899 --> 00:08:00,899
+przed nieprzewidzianym przez nas modyfikowaniem właściwości
+
+167
+00:08:00,899 --> 00:08:02,899
+lub wywoływaniem metod.
+
+168
+00:08:02,899 --> 00:08:06,899
+Czyli jeżeli my jako programiści zakładamy, że tu jest po prostu to na metod,
+
+169
+00:08:06,899 --> 00:08:09,899
+ale ten programista, który będzie później tego używał,
+
+170
+00:08:09,899 --> 00:08:11,899
+albo my w przyszłości jak będziemy chcieli tego używać,
+
+171
+00:08:11,899 --> 00:08:14,899
+powinniśmy tylko i wyłącznie dostawać się do tej metody i do tej,
+
+172
+00:08:14,899 --> 00:08:19,899
+to musimy te pozostałe metody jakoś w cudzysłowie zabezpieczyć.
+
+173
+00:08:19,899 --> 00:08:21,899
+I enkapsulacja właśnie jest takim zabezpieczeniem.
+
+174
+00:08:21,899 --> 00:08:22,899
+Tylko to, co wspominałem wcześniej, to jest to, co jest w tym programie.
+
+175
+00:08:22,899 --> 00:08:25,899
+Tylko to, co wspominałem na początku, to jest element konwencji.
+
+176
+00:08:25,899 --> 00:08:27,899
+Jest to zabezpieczenie umowne.
+
+177
+00:08:27,899 --> 00:08:31,899
+To nie jest zabezpieczenie, które spowoduje, że jak ktoś będzie chciał,
+
+178
+00:08:31,899 --> 00:08:34,899
+to nie będzie mógł, bo będzie trzeba podać jakiś tam tajemny klucz,
+
+179
+00:08:34,899 --> 00:08:37,899
+szyfr i coś jeszcze, tylko jest to takie zabezpieczenie,
+
+180
+00:08:37,899 --> 00:08:40,899
+które spowoduje, że po prostu ktoś spojrzy na to i stwierdzi,
+
+181
+00:08:40,899 --> 00:08:42,899
+a dobra, tego miałem nie ruszać, okej, idę dalej,
+
+182
+00:08:42,899 --> 00:08:44,899
+pewnie jest jakaś inna metoda do tego.
+
+183
+00:08:44,899 --> 00:08:48,899
+I zobacz, tu mam taką sytuację, że jest metoda specjalna INIT,
+
+184
+00:08:48,899 --> 00:08:51,899
+która zakłada, że na dzień dobry mamy milion na koncie.
+
+185
+00:08:52,899 --> 00:08:57,899
+Następnie, jeżeli chcemy zrobić withdraw, czyli chcemy pobrać jakieś saldo,
+
+186
+00:08:57,899 --> 00:08:59,899
+to mówimy, ile chcemy pobrać.
+
+187
+00:08:59,899 --> 00:09:03,899
+Jeżeli mamy wystarczającą ilość, no to możemy to pobrać.
+
+188
+00:09:03,899 --> 00:09:06,899
+Jeżeli nie mamy, bo chcemy wypłacić więcej, niż mamy na koncie,
+
+189
+00:09:06,899 --> 00:09:09,899
+to zwracanym powinno być zero, bo nie wypłacimy nic.
+
+190
+00:09:09,899 --> 00:09:13,899
+No i robimy return amount, no bo zwraca nam tyle, ile udało nam się,
+
+191
+00:09:13,899 --> 00:09:16,899
+ile wypłaciliśmy tak naprawdę, jeżeli było.
+
+192
+00:09:16,899 --> 00:09:18,899
+Możemy też wpłacić pieniądze do banku.
+
+193
+00:09:18,899 --> 00:09:21,899
+No i tutaj mamy self money plus równa się amount,
+
+194
+00:09:21,899 --> 00:09:22,899
+czyli po prostu to, co mamy na koncie.
+
+195
+00:09:22,899 --> 00:09:25,899
+To po prostu zwiększy nam ilość tych pieniędzy w banku.
+
+196
+00:09:25,899 --> 00:09:28,899
+I to, co jest istotne, to na co chciałbym, żebyście zwrócili uwagę,
+
+197
+00:09:28,899 --> 00:09:32,899
+to jest to, że przed money pokazuje się symbol podkreślenia.
+
+198
+00:09:32,899 --> 00:09:36,899
+Wszędzie tam, gdzie jest money, tam mamy symbol podkreślenia.
+
+199
+00:09:36,899 --> 00:09:39,899
+I ten symbol podkreślenia mówi nam właśnie o tym,
+
+200
+00:09:39,899 --> 00:09:42,899
+że ta właściwość nie powinna być ruszana z zewnątrz.
+
+201
+00:09:42,899 --> 00:09:46,899
+Czyli jeżeli ja będę chciał stworzyć sobie obiekt klasy bank,
+
+202
+00:09:46,899 --> 00:09:51,899
+to nie powinienem nigdy zrobić, nazwę go powiedzmy ABC,
+
+203
+00:09:51,899 --> 00:09:55,899
+to nie powinienem nigdy zrobić ABC kropka podkreślenie money,
+
+204
+00:09:55,899 --> 00:09:58,899
+z tego względu, że money jest prywatne.
+
+205
+00:09:58,899 --> 00:10:01,899
+Tak się mówi, że jeżeli coś ma taką enkapsulację,
+
+206
+00:10:01,899 --> 00:10:04,899
+jeżeli enkapsulacja jest taka, to znaczy, że jest to pole prywatne
+
+207
+00:10:04,899 --> 00:10:07,899
+i nie powinienem się do niego dostawać.
+
+208
+00:10:07,899 --> 00:10:10,899
+Bo w ten sposób po prostu ktoś zaznaczył,
+
+209
+00:10:10,899 --> 00:10:14,899
+że najpewniej są jakieś metody służące do modyfikowania tego,
+
+210
+00:10:14,899 --> 00:10:17,899
+albo na przykład w ogóle nie powinienem tego modyfikować.
+
+211
+00:10:17,899 --> 00:10:19,899
+Przykład.
+
+212
+00:10:19,899 --> 00:10:20,899
+Wyobraź sobie sytuację, w której łącznie,
+
+213
+00:10:20,899 --> 00:10:23,899
+w której łączysz się w initie z bazą danych
+
+214
+00:10:23,899 --> 00:10:26,899
+i przechowujesz to połączenie w jakiejś zmiennej.
+
+215
+00:10:26,899 --> 00:10:30,899
+Następnie masz metody służące do operowania na tej bazie danych,
+
+216
+00:10:30,899 --> 00:10:32,899
+żeby było ładnie.
+
+217
+00:10:32,899 --> 00:10:35,899
+I cały czas masz nadzieję, że pracujesz z konkretnym połączeniem.
+
+218
+00:10:35,899 --> 00:10:38,899
+A w międzyczasie ktoś chciałby stwierdzić,
+
+219
+00:10:38,899 --> 00:10:41,899
+o, a teraz te zmiany wykonamy na innym połączeniu,
+
+220
+00:10:41,899 --> 00:10:44,899
+więc on Ci wprost określa self kropka podkreślenie connection,
+
+221
+00:10:44,899 --> 00:10:47,899
+równa się i podkłada inne połączenie.
+
+222
+00:10:47,899 --> 00:10:48,899
+W tym momencie wszystkie metody, które sobie przygotowali w tym momencie,
+
+223
+00:10:48,899 --> 00:10:49,899
+które sobie przygotowali w tym momencie,
+
+224
+00:10:49,899 --> 00:10:51,899
+przygotowaliśmy dni poniżej,
+
+225
+00:10:51,899 --> 00:10:53,899
+będą pracowały już z nowym połączeniem.
+
+226
+00:10:53,899 --> 00:10:55,899
+A myśmy jako programiści założyli,
+
+227
+00:10:55,899 --> 00:10:57,899
+że to ma być połączone raz
+
+228
+00:10:57,899 --> 00:10:59,899
+i nigdy nie ma być zmienione.
+
+229
+00:10:59,899 --> 00:11:02,899
+Więc właśnie do takich zastosowań też przydaje się enkapsulacja.
+
+230
+00:11:02,899 --> 00:11:04,899
+No i wtedy wiemy, że jeżeli coś ma podkreślenie,
+
+231
+00:11:04,899 --> 00:11:06,899
+nie powinniśmy tego modyfikować.
+
+232
+00:11:06,899 --> 00:11:08,899
+Jeżeli się uprzemy, to możemy.
+
+233
+00:11:08,899 --> 00:11:09,899
+W Python nam na to pozwoli.
+
+234
+00:11:09,899 --> 00:11:12,899
+Jednakże nie jest to rekomendowane i jest to raczej błąd.
+
+235
+00:11:12,899 --> 00:11:16,899
+Taki błąd, wiecie, jak przejście na czerwonym świetle przez pasy.
+
+236
+00:11:16,899 --> 00:11:18,899
+Czy w ogóle przejście bez pasy, dobra, nieważne.
+
+237
+00:11:18,899 --> 00:11:19,899
+Rozumiecie?
+
+238
+00:11:19,899 --> 00:11:20,899
+Tak się rozchodzi.
+
+239
+00:11:20,899 --> 00:11:23,899
+Więc symbol podkreślenia przed nazwą zmiennej lub metody
+
+240
+00:11:23,899 --> 00:11:26,899
+oznacza właśnie, że jest ta zmienna lub metoda prywatna.
+
+241
+00:11:26,899 --> 00:11:29,899
+PyCharm nie będzie Ci podpowiadał takich zmiennych.
+
+242
+00:11:29,899 --> 00:11:32,899
+To też jest ciekawostka, że jeżeli wprowadziłbyś,
+
+243
+00:11:32,899 --> 00:11:35,899
+wprowadzimy sobie taki kod do PyCharma
+
+244
+00:11:35,899 --> 00:11:37,899
+i spróbujemy odwołać się do money,
+
+245
+00:11:37,899 --> 00:11:38,899
+to on nie będzie tego podpowiadał.
+
+246
+00:11:38,899 --> 00:11:40,899
+Wydaje mi się, że jeżeli raz użyjemy,
+
+247
+00:11:40,899 --> 00:11:42,899
+to już później zacznie nam to podpowiadać,
+
+248
+00:11:42,899 --> 00:11:45,899
+bo uzna, że okej, widocznie on tak chce.
+
+249
+00:11:45,899 --> 00:11:48,899
+Natomiast jeżeli nie będziemy tego używali,
+
+250
+00:11:48,899 --> 00:11:50,899
+to nie powinien nam tego w ogóle podpowiadać.
+
+251
+00:11:50,899 --> 00:11:52,899
+No i właśnie nie chodzi tu o bezpieczeństwo.
+
+252
+00:11:52,899 --> 00:11:55,899
+To jest ważne, że mimo tego, że używam tych przykładów bankowych,
+
+253
+00:11:55,899 --> 00:11:59,899
+to ja nie mam na myśli tego, że to jest jakieś zabezpieczenie przed złodziejem,
+
+254
+00:11:59,899 --> 00:12:02,899
+czy zabezpieczenie przed czymkolwiek innym,
+
+255
+00:12:02,899 --> 00:12:04,899
+tylko i wyłącznie wygoda.
+
+256
+00:12:04,899 --> 00:12:07,899
+Jeżeli wiem, że tych metod mam bardzo dużo,
+
+257
+00:12:07,899 --> 00:12:10,899
+jeżeli wiem, że właściwości mam bardzo dużo,
+
+258
+00:12:10,899 --> 00:12:12,899
+to dodając sobie podkreślenie powoduje,
+
+259
+00:12:12,899 --> 00:12:15,899
+że na liście tych podpowiadanych wartości
+
+260
+00:12:15,899 --> 00:12:17,899
+będę po prostu miał ich mniej.
+
+261
+00:12:17,899 --> 00:12:19,899
+Dzięki czemu praca będzie przyjemniejsza.
+
+262
+00:12:19,899 --> 00:12:21,899
+No i właśnie, zobacz.
+
+263
+00:12:21,899 --> 00:12:25,899
+Jeżeli na przykład mielibyśmy metodę INIT,
+
+264
+00:12:25,899 --> 00:12:27,899
+gdzie rejestrujemy sobie ten amount,
+
+265
+00:12:27,899 --> 00:12:32,899
+a dodatkowo wiedzielibyśmy, że czasem może ktoś nam wpłaca pieniądze w innej walucie,
+
+266
+00:12:32,899 --> 00:12:35,899
+to możliwe, że gdzieś wewnątrz tych metod
+
+267
+00:12:35,899 --> 00:12:38,899
+przydałaby nam się metoda CONVERT TO PLN.
+
+268
+00:12:38,899 --> 00:12:41,899
+I wtedy ta CONVERT TO PLN, czy tam zamień na złotówki,
+
+269
+00:12:41,899 --> 00:12:45,899
+to byłaby wartość, to byłaby metoda, która nie byłaby po prostu podpowiadana z zewnątrz,
+
+270
+00:12:45,899 --> 00:12:47,899
+ale wewnątrz.
+
+271
+00:12:47,899 --> 00:12:50,899
+I jeżeli byśmy po prostu połączyli się z metody DEPOSIT, czy WITHDRAW,
+
+272
+00:12:50,899 --> 00:12:53,899
+moglibyśmy sobie bez problemu walutę obcą zamienić na złotówki,
+
+273
+00:12:53,899 --> 00:12:56,899
+czy też złotówki zamienić na walutę obcą,
+
+274
+00:12:56,899 --> 00:12:58,899
+zależnie od tego, co tutaj by było.
+
+275
+00:12:58,899 --> 00:13:00,899
+O to właśnie chodzi.
+
+276
+00:13:00,899 --> 00:13:03,899
+No. I tu możecie się zastanawiać, co stanie się,
+
+277
+00:13:03,899 --> 00:13:07,899
+jeżeli mimo tego stwierdzimy, że dobra, ja chcę tą wartość.
+
+278
+00:13:07,899 --> 00:13:09,899
+Ja już o tym mówiłem moment temu.
+
+279
+00:13:09,899 --> 00:13:11,899
+Python nam na to pozwoli.
+
+280
+00:13:11,899 --> 00:13:15,899
+Nie będzie to zupełnie zwracane przez Pythona jako błąd,
+
+281
+00:13:15,899 --> 00:13:17,899
+natomiast nie powinniśmy tego robić.
+
+282
+00:13:17,899 --> 00:13:22,899
+I tu zachęcam, żebyście spróbowali stworzyć sobie właśnie taką właściwość, albo metodę,
+
+283
+00:13:22,899 --> 00:13:27,899
+dodać podkreślenie i spróbować odwołać się do takiej właściwości lub metody
+
+284
+00:13:27,899 --> 00:13:29,899
+i zobaczyć, co się stanie.
+
+285
+00:13:29,899 --> 00:13:34,899
+Można to zrobić dla przykładu w tym przypadku, gdzie mieliśmy nasze eventy i kalendarz.
+
+286
+00:13:34,899 --> 00:13:36,899
+Tam to bardzo ładnie będzie pasowało.
+
+287
+00:13:36,899 --> 00:13:40,899
+No i cóż, zachęcam was, żebyśmy przeszli sobie do zadania.

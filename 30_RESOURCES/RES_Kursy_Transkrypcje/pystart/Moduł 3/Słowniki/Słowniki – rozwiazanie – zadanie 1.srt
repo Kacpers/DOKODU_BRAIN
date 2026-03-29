@@ -1,0 +1,851 @@
+1
+00:00:00,000 --> 00:00:01,760
+No to przystępuję do rozwiązywania.
+
+2
+00:00:02,280 --> 00:00:04,600
+Najpierw chcę przygotować słowniki języka angielskiego.
+
+3
+00:00:04,719 --> 00:00:05,960
+No to mogę sobie stworzyć jakieś
+
+4
+00:00:05,960 --> 00:00:08,279
+dikszynary, równa się.
+
+5
+00:00:08,740 --> 00:00:10,460
+Ja będę z angielskiego tłumaczył na polski.
+
+6
+00:00:10,599 --> 00:00:12,599
+Czyli dog to jest pies,
+
+7
+00:00:13,759 --> 00:00:15,259
+cat to jest kot,
+
+8
+00:00:17,039 --> 00:00:19,320
+cow to jest krowa,
+
+9
+00:00:19,660 --> 00:00:21,580
+cow przez o oczywiście to jest krowa,
+
+10
+00:00:22,000 --> 00:00:22,820
+no i chicken
+
+11
+00:00:22,820 --> 00:00:26,539
+to jest kurczak.
+
+12
+00:00:26,539 --> 00:00:30,679
+Ok, czyli mamy psa, kota,
+
+13
+00:00:31,100 --> 00:00:31,960
+krowę i kurczaka.
+
+14
+00:00:32,100 --> 00:00:34,640
+I teraz chcielibyśmy zapytać użytkownika,
+
+15
+00:00:34,759 --> 00:00:36,439
+czy chce tłumaczyć z polskiego na angielski,
+
+16
+00:00:36,519 --> 00:00:37,539
+czy z angielskiego na polski.
+
+17
+00:00:38,119 --> 00:00:39,879
+Czyli input
+
+18
+00:00:39,879 --> 00:00:44,480
+z jakiego języka
+
+19
+00:00:44,480 --> 00:00:45,700
+tłumaczymy.
+
+20
+00:00:47,000 --> 00:00:48,099
+Możemy mu napisać
+
+21
+00:00:48,099 --> 00:00:50,060
+język angielski do polskiego,
+
+22
+00:00:50,159 --> 00:00:50,899
+wybierz jeden,
+
+23
+00:00:52,700 --> 00:00:53,840
+polski, angielski,
+
+24
+00:00:56,539 --> 00:00:57,119
+wybierz dwa.
+
+25
+00:00:57,640 --> 00:00:59,979
+Tu chyba eng powinno być bardziej niż en.
+
+26
+00:01:02,500 --> 00:01:02,859
+Ok?
+
+27
+00:01:03,179 --> 00:01:05,840
+No i teraz od użytkownika będziemy chcieli odebrać
+
+28
+00:01:05,840 --> 00:01:06,859
+słowo do przetłumaczenia.
+
+29
+00:01:06,980 --> 00:01:07,859
+Tu oczywiście jest opcja,
+
+30
+00:01:08,019 --> 00:01:09,480
+jakieś tam option, równe się.
+
+31
+00:01:10,280 --> 00:01:12,039
+Jeżeli podałby nam inną liczbę,
+
+32
+00:01:12,079 --> 00:01:13,400
+typu trzy, cztery,
+
+33
+00:01:13,500 --> 00:01:15,120
+no to też można byłoby to obsłużyć.
+
+34
+00:01:15,599 --> 00:01:19,099
+Czyli if option not in
+
+35
+00:01:19,099 --> 00:01:20,759
+jeden, dwa,
+
+36
+00:01:21,780 --> 00:01:22,480
+no to wtedy
+
+37
+00:01:22,480 --> 00:01:25,700
+print, nie wiem co chcesz zrobić,
+
+38
+00:01:26,540 --> 00:01:29,120
+i zakończyć można to zawsze
+
+39
+00:01:29,120 --> 00:01:30,140
+instrukcją quit.
+
+40
+00:01:32,460 --> 00:01:35,200
+Tak jak zakończamy to w Pythonie,
+
+41
+00:01:35,240 --> 00:01:37,060
+w tym środowisku zintegrowanym.
+
+42
+00:01:37,060 --> 00:01:38,640
+No i w tym momencie
+
+43
+00:01:38,640 --> 00:01:41,060
+będziemy chcieli odebrać
+
+44
+00:01:41,060 --> 00:01:42,480
+od użytkownika słowo, czyli
+
+45
+00:01:42,480 --> 00:01:45,219
+word równa się input,
+
+46
+00:01:46,060 --> 00:01:47,200
+jakie słowo
+
+47
+00:01:47,200 --> 00:01:49,040
+mam przetłumaczyć.
+
+48
+00:01:51,719 --> 00:01:53,180
+Teraz on nam poda
+
+49
+00:01:53,180 --> 00:01:54,380
+to słowo. I teraz
+
+50
+00:01:54,380 --> 00:01:56,520
+sposobów na ogarnięcie tego,
+
+51
+00:01:56,540 --> 00:01:59,040
+jeżeli słowa nie ma, znowu jest kilka,
+
+52
+00:01:59,600 --> 00:02:00,840
+można byłoby pobrać sobie
+
+53
+00:02:00,840 --> 00:02:02,780
+za pomocą getta i przyjąć, że
+
+54
+00:02:02,780 --> 00:02:05,300
+jeżeli jest to wartość pusta, to wyświetlić jakiś komunikat,
+
+55
+00:02:05,719 --> 00:02:07,180
+a można też użyć operatora in.
+
+56
+00:02:07,700 --> 00:02:09,640
+Czyli tylko, żeby to zrobić,
+
+57
+00:02:09,879 --> 00:02:11,219
+musielibyśmy wiedzieć,
+
+58
+00:02:11,680 --> 00:02:12,540
+czy słowo jest
+
+59
+00:02:12,540 --> 00:02:15,259
+po angielsku, czy słowo jest po polsku.
+
+60
+00:02:15,620 --> 00:02:17,379
+Więc znowu, żeby to wykonać,
+
+61
+00:02:17,439 --> 00:02:18,560
+w zależności od tego, czy
+
+62
+00:02:18,560 --> 00:02:20,900
+znajduje się słowo w słowniku, czy nie,
+
+63
+00:02:21,319 --> 00:02:22,840
+będziemy też potrzebowali albo
+
+64
+00:02:22,840 --> 00:02:25,379
+pobrać je sobie tutaj z tego słownika
+
+65
+00:02:25,379 --> 00:02:26,520
+po lewej stronie,
+
+66
+00:02:26,539 --> 00:02:28,099
+albo z wartości po prawej stronie.
+
+67
+00:02:28,659 --> 00:02:30,359
+Czyli tak czy siak, będziemy potrzebowali
+
+68
+00:02:30,359 --> 00:02:32,280
+zrobić sobie fora, tak mi się wydaje,
+
+69
+00:02:32,439 --> 00:02:34,579
+i przejść po tym słowniku. Tak będzie najprościej.
+
+70
+00:02:35,039 --> 00:02:36,680
+Jeżeli napisaliście inne rozwiązania,
+
+71
+00:02:36,780 --> 00:02:38,539
+to nie ma problemu, rozwiązania
+
+72
+00:02:38,539 --> 00:02:40,599
+nasze mogą się różnić. To nie znaczy, że moje rozwiązanie
+
+73
+00:02:40,599 --> 00:02:42,639
+jest najlepsze. Po prostu staram się to zrobić
+
+74
+00:02:42,639 --> 00:02:44,659
+jak najczyściej. Czyli for
+
+75
+00:02:44,659 --> 00:02:47,259
+english word
+
+76
+00:02:47,259 --> 00:02:48,259
+przecinek
+
+77
+00:02:48,259 --> 00:02:49,379
+polish word
+
+78
+00:02:49,379 --> 00:02:51,979
+in
+
+79
+00:02:51,979 --> 00:02:54,799
+dictionary.items
+
+80
+00:02:54,799 --> 00:02:56,359
+W ten sposób
+
+81
+00:02:56,360 --> 00:02:58,560
+dostanę zarówno słowo angielskie, jak i słowo
+
+82
+00:02:58,560 --> 00:03:00,500
+polskie. I teraz będę
+
+83
+00:03:00,500 --> 00:03:02,680
+chciał sprawdzić, czy tym słowem,
+
+84
+00:03:02,780 --> 00:03:03,900
+które wpisał użytkownik,
+
+85
+00:03:04,440 --> 00:03:06,220
+jest odpowiednie słowo,
+
+86
+00:03:06,580 --> 00:03:07,880
+jeżeli opcja to pierwsza.
+
+87
+00:03:08,400 --> 00:03:10,180
+Czyli if option
+
+88
+00:03:10,180 --> 00:03:12,340
+równa się, równa się
+
+89
+00:03:12,340 --> 00:03:12,820
+jeden
+
+90
+00:03:12,820 --> 00:03:16,040
+and
+
+91
+00:03:16,040 --> 00:03:18,560
+jeżeli jest jeden, to z angielskiego
+
+92
+00:03:18,560 --> 00:03:20,820
+na polski. Czyli english word
+
+93
+00:03:20,820 --> 00:03:22,800
+równa się, równa się
+
+94
+00:03:22,800 --> 00:03:24,500
+word, to wtedy
+
+95
+00:03:24,500 --> 00:03:26,060
+dwukropek. No i możemy
+
+96
+00:03:26,360 --> 00:03:28,180
+wrzucić tłumaczenie print
+
+97
+00:03:28,180 --> 00:03:30,460
+tłumaczenie to
+
+98
+00:03:30,460 --> 00:03:34,500
+i teraz
+
+99
+00:03:34,500 --> 00:03:36,380
+jeżeli to było angielskie słowo, to zwracamy
+
+100
+00:03:36,380 --> 00:03:38,140
+polskie, czyli polish word.
+
+101
+00:03:38,740 --> 00:03:40,260
+W przeciwnym wypadku
+
+102
+00:03:40,260 --> 00:03:42,640
+option, jeżeli
+
+103
+00:03:42,640 --> 00:03:44,400
+była podana dwójka
+
+104
+00:03:44,400 --> 00:03:46,080
+i polskie słowo
+
+105
+00:03:46,080 --> 00:03:47,900
+to jest nasze słowo,
+
+106
+00:03:49,900 --> 00:03:50,700
+no to wtedy
+
+107
+00:03:50,700 --> 00:03:52,240
+tłumaczenie to i wyświetlamy
+
+108
+00:03:52,240 --> 00:03:52,980
+english word.
+
+109
+00:03:56,360 --> 00:03:58,240
+Tu w jednym i w drugim przypadku można
+
+110
+00:03:58,240 --> 00:04:00,100
+byłoby też zakończyć już działanie pętli,
+
+111
+00:04:00,880 --> 00:04:01,580
+czyli break
+
+112
+00:04:01,580 --> 00:04:05,200
+i break.
+
+113
+00:04:06,020 --> 00:04:07,760
+No i możemy wyświetlić sobie print.
+
+114
+00:04:08,700 --> 00:04:10,680
+Jeśli tłumaczenie
+
+115
+00:04:10,680 --> 00:04:12,680
+nie zostało
+
+116
+00:04:12,680 --> 00:04:13,480
+wyświetlone,
+
+117
+00:04:14,480 --> 00:04:15,720
+to nie znam
+
+118
+00:04:15,720 --> 00:04:17,439
+tego słowa.
+
+119
+00:04:18,199 --> 00:04:19,960
+Możemy zrobić tak, a możemy sobie
+
+120
+00:04:19,960 --> 00:04:22,520
+w forze stworzyć jakąś zmienną, też zaraz to zrobimy
+
+121
+00:04:22,520 --> 00:04:24,199
+i będziemy ustawiali, czy słowo
+
+122
+00:04:24,199 --> 00:04:26,199
+zostało podane, czy nie zostało podane.
+
+123
+00:04:26,360 --> 00:04:27,840
+Teraz zobacz.
+
+124
+00:04:28,720 --> 00:04:30,220
+Moglibyśmy też nawet ustawić sobie
+
+125
+00:04:30,220 --> 00:04:31,840
+po prostu odpowiednie słowo.
+
+126
+00:04:32,400 --> 00:04:34,220
+Wykonam python
+
+127
+00:04:34,220 --> 00:04:35,460
+słowniki py.
+
+128
+00:04:36,220 --> 00:04:38,540
+Z jakiego języka tłumaczymy? Z angielskiego na polski
+
+129
+00:04:38,540 --> 00:04:40,500
+użyj jeden. Nie wiem, co chcesz zrobić.
+
+130
+00:04:40,639 --> 00:04:42,420
+No oczywiście. Dlaczego nie wiem, co chcę
+
+131
+00:04:42,420 --> 00:04:44,580
+zrobić? Bo tutaj napisałem input,
+
+132
+00:04:44,740 --> 00:04:46,660
+który odbiera string, a tutaj porównywałem
+
+133
+00:04:46,660 --> 00:04:47,660
+to z integerami.
+
+134
+00:04:48,060 --> 00:04:49,900
+Więc powinienem sobie to zamienić na integer.
+
+135
+00:04:50,900 --> 00:04:52,120
+Wtedy odpalam to raz jeszcze
+
+136
+00:04:52,120 --> 00:04:54,100
+i no i odpowiadam, że z języka
+
+137
+00:04:54,100 --> 00:04:55,620
+angielskiego na polski.
+
+138
+00:04:55,620 --> 00:04:57,420
+Powiedz mi, co znaczy dog.
+
+139
+00:04:57,860 --> 00:04:59,399
+Tłumaczenie tego słowa to pies.
+
+140
+00:04:59,800 --> 00:05:01,519
+Okej. Ten komunikat może nie jest tutaj
+
+141
+00:05:01,519 --> 00:05:03,459
+najlepszy. Raz jeszcze sprawdzimy.
+
+142
+00:05:03,759 --> 00:05:05,579
+Dla dwójki. Powiedz mi, co to jest
+
+143
+00:05:05,579 --> 00:05:06,040
+pies.
+
+144
+00:05:07,699 --> 00:05:09,319
+Tłumaczenie psa to dog.
+
+145
+00:05:09,620 --> 00:05:10,800
+Okej. Tylko tutaj
+
+146
+00:05:10,800 --> 00:05:13,560
+ten komunikat, źle, że on się pojawia
+
+147
+00:05:13,560 --> 00:05:15,480
+za każdym razem. Można byłoby sobie
+
+148
+00:05:15,480 --> 00:05:17,000
+w takim razie stworzyć zmienną
+
+149
+00:05:17,000 --> 00:05:19,579
+translated word. Równa się
+
+150
+00:05:19,579 --> 00:05:21,500
+i pusta zmienna to jest none.
+
+151
+00:05:22,639 --> 00:05:23,340
+I wtedy zamiast
+
+152
+00:05:23,340 --> 00:05:25,459
+robić to w ten sposób, to wykonać
+
+153
+00:05:25,459 --> 00:05:27,219
+translated word równa się
+
+154
+00:05:27,219 --> 00:05:28,279
+polish word.
+
+155
+00:05:29,699 --> 00:05:31,539
+Tutaj translated word
+
+156
+00:05:31,539 --> 00:05:33,159
+równa się
+
+157
+00:05:33,159 --> 00:05:34,219
+english word.
+
+158
+00:05:35,379 --> 00:05:36,859
+I wtedy tłumaczenie
+
+159
+00:05:36,859 --> 00:05:38,959
+będziemy wyświetlali po prostu raz.
+
+160
+00:05:42,240 --> 00:05:43,120
+Tłumaczenie to
+
+161
+00:05:43,120 --> 00:05:44,959
+translated word.
+
+162
+00:05:45,219 --> 00:05:46,899
+No i możemy też sprawdzić, czy
+
+163
+00:05:46,899 --> 00:05:48,819
+zostało to słowo jakoś podane.
+
+164
+00:05:48,979 --> 00:05:51,219
+Czyli if translated word
+
+165
+00:05:51,219 --> 00:05:53,519
+is not none, to wtedy je wyświetl.
+
+166
+00:05:54,060 --> 00:05:55,339
+A w przeciwnym wypadku
+
+167
+00:05:55,339 --> 00:05:57,299
+nie znam tego słowa.
+
+168
+00:06:00,299 --> 00:06:00,979
+O.
+
+169
+00:06:01,239 --> 00:06:02,839
+To jest jedna z propozycji
+
+170
+00:06:02,839 --> 00:06:04,639
+na rozwiązanie tego zadania.
+
+171
+00:06:05,079 --> 00:06:06,879
+Zakładająca, że i tak przechodzimy sobie
+
+172
+00:06:06,879 --> 00:06:07,579
+po słowniku
+
+173
+00:06:07,579 --> 00:06:10,259
+pies.
+
+174
+00:06:10,979 --> 00:06:13,159
+Zakładająca, że i tak przechodzimy sobie po słowniku
+
+175
+00:06:13,159 --> 00:06:15,239
+i wyświetlamy poszczególne rzeczy
+
+176
+00:06:15,239 --> 00:06:15,939
+i tak ręcznie.
+
+177
+00:06:16,419 --> 00:06:19,319
+Wtedy pojawiają nam się
+
+178
+00:06:19,319 --> 00:06:20,539
+jak widzisz tutaj odpowiednie
+
+179
+00:06:20,539 --> 00:06:22,179
+sformułowania.
+
+180
+00:06:23,139 --> 00:06:25,139
+Natomiast jeżeli byśmy chcieli użyć
+
+181
+00:06:25,339 --> 00:06:27,439
+geta, no to tutaj z getem
+
+182
+00:06:27,439 --> 00:06:29,659
+będzie taki problem, że będziemy mieli
+
+183
+00:06:29,659 --> 00:06:31,619
+geta tylko i wyłącznie
+
+184
+00:06:31,619 --> 00:06:33,219
+na tych kluczach, które są tutaj
+
+185
+00:06:33,219 --> 00:06:34,719
+dog, cat, cow oraz chicken,
+
+186
+00:06:35,239 --> 00:06:36,819
+czyli get może być problematyczny.
+
+187
+00:06:37,239 --> 00:06:39,079
+Widziałem rozwiązania tego zadania, gdzie ktoś
+
+188
+00:06:39,079 --> 00:06:41,439
+sobie klonował słownik i robił ten sam słownik
+
+189
+00:06:41,439 --> 00:06:43,299
+poniżej, tylko miał polskie słowa
+
+190
+00:06:43,299 --> 00:06:45,379
+i angielskie. Natomiast no to wymaga
+
+191
+00:06:45,379 --> 00:06:46,939
+po prostu zajęcia dwóch,
+
+192
+00:06:47,559 --> 00:06:49,239
+dwa razy tyle samopamięci dla wszystkich
+
+193
+00:06:49,239 --> 00:06:51,139
+tych naszych słów. No więc też
+
+194
+00:06:51,139 --> 00:06:53,199
+może nie być to zbyt wydajne. Ale dla takiego
+
+195
+00:06:53,199 --> 00:06:55,139
+słownika, taka prosta nauka słówek, jak
+
+196
+00:06:55,139 --> 00:06:56,300
+najbardziej jest ok.
+
+197
+00:06:56,879 --> 00:06:59,079
+Tak naprawdę to zadanie jest już pierwszym
+
+198
+00:06:59,079 --> 00:07:01,120
+zadaniem, które możesz wykorzystać i pokazać
+
+199
+00:07:01,120 --> 00:07:02,779
+na przykład komuś tutaj w rodzinie.
+
+200
+00:07:03,240 --> 00:07:05,060
+Nie wiem, może masz dziecko, które się uczy słówek, może
+
+201
+00:07:05,060 --> 00:07:06,939
+sam się uczysz jakiegoś języka. Możesz
+
+202
+00:07:06,939 --> 00:07:09,099
+wykorzystać takie zadanie, dorzucić jeszcze
+
+203
+00:07:09,099 --> 00:07:10,959
+na przykład obsługę pliku tekstowego,
+
+204
+00:07:11,560 --> 00:07:13,139
+co też pokażemy sobie już niebawem.
+
+205
+00:07:13,560 --> 00:07:15,000
+No i w ten sposób ładować naprawdę
+
+206
+00:07:15,000 --> 00:07:17,019
+takie słowa z pliku i sprawdzać twoją
+
+207
+00:07:17,019 --> 00:07:18,779
+znajomość języka obcego.
+
+208
+00:07:20,120 --> 00:07:21,199
+To zadanie jest jednym
+
+209
+00:07:21,199 --> 00:07:23,060
+zadaniem, ale wyszło nam ono trochę dłuższe.
+
+210
+00:07:23,459 --> 00:07:25,060
+Drugie zrobimy sobie w kolejnym filmie, żeby
+
+211
+00:07:25,139 --> 00:07:27,219
+w razie czego można było też wrócić do tego drugiego.
+
+212
+00:07:27,639 --> 00:07:28,979
+Ale łatwo, żeby można było sobie porównać
+
+213
+00:07:28,979 --> 00:07:30,399
+te rozwiązania. Do zobaczenia.

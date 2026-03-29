@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:02,100
+A ćwiczenie jest następujące.
+
+2
+00:00:02,560 --> 00:00:04,879
+Przygotuj listę, która zawiera 10 elementów.
+
+3
+00:00:05,080 --> 00:00:09,320
+Zapytaj użytkownika o to, którą z wartości powinniśmy zwrócić.
+
+4
+00:00:09,740 --> 00:00:12,000
+Jeśli użytkownik odwoła się do wartości, która nie istnieje,
+
+5
+00:00:12,620 --> 00:00:15,460
+czyli zwraca indeks error, to wyświetl komunikat,
+
+6
+00:00:15,560 --> 00:00:17,480
+że takiej wartości po prostu na liście nie ma.
+
+7
+00:00:18,140 --> 00:00:19,780
+No i drugie zadanie.
+
+8
+00:00:20,339 --> 00:00:22,920
+Ja je zrobię na jednym rozwiązaniu, bo będą dosyć krótkie.
+
+9
+00:00:23,359 --> 00:00:25,679
+Przygotuj słownik zawierający trzy wartości.
+
+10
+00:00:25,980 --> 00:00:28,800
+Sprawdź, co się stanie, jeśli spróbujesz odwołać się do klucza,
+
+11
+00:00:28,800 --> 00:00:30,560
+który nie istnieje w tym słowniku.
+
+12
+00:00:31,060 --> 00:00:34,539
+Spróbuj obsłużyć taką sytuację, łapiąc taki wyjątek.
+
+13
+00:00:35,039 --> 00:00:35,340
+To co?
+
+14
+00:00:36,560 --> 00:00:39,399
+Chwila dla każdego i widzimy się już za moment w rozwiązaniu.

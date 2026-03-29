@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:04,200
+Jeżeli chodzi o aktualny czas, to wygląda sprawa następująco,
+
+2
+00:00:04,320 --> 00:00:09,620
+że zamiast robić fromDateTimeImportDate, możemy też zaimportować DateTime.
+
+3
+00:00:10,259 --> 00:00:12,580
+To nie jest najbardziej fortunny zapis,
+
+4
+00:00:13,040 --> 00:00:16,460
+ale skoro przed chwilą robiliśmy fromDateTimeImportDate,
+
+5
+00:00:16,559 --> 00:00:18,900
+no to już chyba rozumiesz, dlaczego jest dwa razy DateTime.
+
+6
+00:00:18,900 --> 00:00:22,420
+No bo po prostu fromDateTimeImportDateTime i tyle.
+
+7
+00:00:22,980 --> 00:00:27,000
+I my korzystając z tego DateTime możemy również stworzyć sobie kolejny obiekt,
+
+8
+00:00:27,000 --> 00:00:31,300
+z którego to obiektu możemy też wyciągać godziny i minuty i sekundy.
+
+9
+00:00:31,960 --> 00:00:33,439
+Można to zrobić następująco.
+
+10
+00:00:33,899 --> 00:00:38,579
+Jakiś event, jakieś zdarzenie równa się DateTime.now
+
+11
+00:00:38,579 --> 00:00:43,280
+i Date.today zwraca nam dzisiejszą datę,
+
+12
+00:00:43,280 --> 00:00:48,939
+a DateTime.now zwraca nam bieżącą datę i godzinę.
+
+13
+00:00:49,179 --> 00:00:55,579
+W ten sposób możemy wykorzystać hour, minute i dowiedzieć się, która jest godzina
+
+14
+00:00:55,579 --> 00:00:56,280
+oraz możemy też wykorzystać...
+
+15
+00:00:57,000 --> 00:00:59,759
+event.strftime
+
+16
+00:00:59,759 --> 00:01:02,619
+i wtedy korzystając z dwóch nowych liter,
+
+17
+00:01:02,899 --> 00:01:04,599
+wielkie H i wielkie M,
+
+18
+00:01:05,239 --> 00:01:07,900
+sformatować sobie, wyświetlić w sformatowany sposób
+
+19
+00:01:07,900 --> 00:01:10,500
+bieżącą godzinę i bieżące minutę.

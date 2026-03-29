@@ -1,0 +1,267 @@
+1
+00:00:00,000 --> 00:00:05,520
+A w zadaniu czwartym mam wykorzystać kod napisany poprzednio do przygotowanej funkcji weryfikującej numer PESEL.
+
+2
+00:00:05,759 --> 00:00:09,880
+Funkcja powinna zwracać TRUE lub FALSE w zależności od tego, czy PESEL jest prawidłowy, czy też nie.
+
+3
+00:00:10,380 --> 00:00:16,019
+Ja już ten kod napisałem sobie wcześniej, więc tak naprawdę ten, go sobie tutaj wkleiłem wcześniej.
+
+4
+00:00:16,620 --> 00:00:23,019
+Więc najpierw pozbędę się tego, co nie będzie mi potrzebne, bo tak naprawdę to wyrażenie z góry potrzebne nam nie będzie.
+
+5
+00:00:23,019 --> 00:00:26,480
+To, co jest poniżej już potrzebne będzie.
+
+6
+00:00:26,480 --> 00:00:30,519
+Wyciągane tutaj dzień, miesiąc i rok mogę też sobie stąd usunąć.
+
+7
+00:00:30,980 --> 00:00:35,159
+No i jedyne tak naprawdę, co muszę zrobić, to teraz ten fragment kodu zamknąć w funkcji.
+
+8
+00:00:35,679 --> 00:00:41,280
+Stworzę sobie funkcję, nazwę ją VERIFY PESEL.
+
+9
+00:00:41,700 --> 00:00:44,120
+Funkcja musi przyjmować jako argument właśnie PESEL.
+
+10
+00:00:45,140 --> 00:00:46,120
+Dwóch kropek.
+
+11
+00:00:47,640 --> 00:00:48,939
+To sobie wcinam.
+
+12
+00:00:48,939 --> 00:00:53,200
+To, co o PESEL-u wiemy na pewno to jest to, że może się on zaczynać od cyfry 0,
+
+13
+00:00:54,439 --> 00:00:56,439
+więc musimy go koniecznie przekazywać jako skrót.
+
+14
+00:00:56,479 --> 00:01:01,279
+No i wiemy, że nasza funkcja będzie zwracała boolean prawdę albo fałsz.
+
+15
+00:01:02,279 --> 00:01:03,579
+Mamy tutaj sumę kontrolną.
+
+16
+00:01:04,179 --> 00:01:04,979
+Mamy długość.
+
+17
+00:01:05,439 --> 00:01:09,340
+Jeżeli długość jest nieprawidłowa, to tutaj nie musimy robić nieprawidłowy PESEL.
+
+18
+00:01:09,439 --> 00:01:12,500
+Wręcz wyświetlanie komunikatów w funkcjach nie jest dobrym pomysłem.
+
+19
+00:01:13,079 --> 00:01:16,620
+Zamiast tego od razu wiemy, że będziemy zwracać fałsz.
+
+20
+00:01:17,519 --> 00:01:18,179
+Lecimy dalej.
+
+21
+00:01:18,539 --> 00:01:20,959
+Tutaj tak samo zwracamy fałsz.
+
+22
+00:01:22,640 --> 00:01:25,479
+Natomiast tutaj możemy zwrócić prawdę.
+
+23
+00:01:26,480 --> 00:01:29,840
+No i oczywiście wypadałoby też napisać testy dla naszych funkcji.
+
+24
+00:01:29,840 --> 00:01:31,380
+Napiszę dwa testy.
+
+25
+00:01:31,380 --> 00:01:33,380
+PESEL is valid.
+
+26
+00:01:33,380 --> 00:01:40,380
+I tutaj będę weryfikował czy prawdziwe PESEL-e czy dobre PESEL-e są dobre.
+
+27
+00:01:40,380 --> 00:01:42,380
+I PESEL is invalid.
+
+28
+00:01:42,380 --> 00:01:44,380
+I tu będę sprawdzał czy są nieprawidłowe.
+
+29
+00:01:44,380 --> 00:01:48,380
+Będę sprawdzał nieprawidłowość PESEL-u pod kątem też ilości znaków.
+
+30
+00:01:48,380 --> 00:01:52,380
+Więc assert verify PESEL.
+
+31
+00:01:52,380 --> 00:01:55,380
+No i 1, 2, 3, 4, 5.
+
+32
+00:01:55,380 --> 00:01:56,380
+To jest nieprawidłowość.
+
+33
+00:01:56,480 --> 00:01:58,480
+To jest niepoprawny PESEL.
+
+34
+00:01:58,480 --> 00:02:02,480
+Jeżeli chcę sprawdzić czy PESEL nie jest poprawny to nie muszę robić tak.
+
+35
+00:02:02,480 --> 00:02:08,480
+Zamiast tego wystarczy, że pamiętam o tym, że to co jest za assertem wysypie się jeżeli zwraca fałsz.
+
+36
+00:02:08,480 --> 00:02:11,480
+Więc ja bym chciał żeby to zwróciło fałsz.
+
+37
+00:02:11,480 --> 00:02:16,480
+Więc assert not false sprawi, że PESEL, że ten kod zadziała.
+
+38
+00:02:16,480 --> 00:02:24,480
+No i druga sytuacja jest też taka, że jeżeli okaże się, że nasz PESEL byłby, miałby dobrą długość, ale jego ta cyfra kontrolna byłaby nie taka.
+
+39
+00:02:24,480 --> 00:02:26,480
+I tutaj wygenerowałem sobie kilka przykładowych.
+
+40
+00:02:26,479 --> 00:02:29,479
+PESELi, więc mogę wykonać verify PESEL.
+
+41
+00:02:29,479 --> 00:02:30,479
+Jest strona.
+
+42
+00:02:30,479 --> 00:02:36,479
+Nie będę tej strony polecał, ale jeżeli wpiszecie generator PESELi to na pewno taki PESEL wygenerowany znajdziecie.
+
+43
+00:02:36,479 --> 00:02:43,479
+No i analogicznie mogę też sprawdzić czy niepoprawny będzie PESEL, który gdzieś tutaj po środku będzie miał jakąś inną cyfrę.
+
+44
+00:02:43,479 --> 00:02:47,479
+Mam nadzieję, że nie trafię, nie trafię w poprawny.
+
+45
+00:02:47,479 --> 00:02:52,479
+No tej 18 to wiadomo, że takiego miesiąca nie ma, więc z góry zakładam, że ten PESEL jest nie okej.
+
+46
+00:02:52,479 --> 00:02:54,479
+No i ponownie uruchamiamy sobie nasze testy.
+
+47
+00:02:54,479 --> 00:02:59,479
+Czyli python minus mpy test 4 funkcja PESEL.
+
+48
+00:02:59,479 --> 00:03:01,479
+No i wszystko zadziałało.
+
+49
+00:03:01,479 --> 00:03:03,479
+Dwa testy przeszły.
+
+50
+00:03:03,479 --> 00:03:05,479
+To zapraszam do piątki.
+
+51
+00:03:05,479 --> 00:03:06,479
+Policzymy sobie BMI.
+
+52
+00:03:24,479 --> 00:03:27,479
+Sprinkleamy a raz na np. około 20枚.
+
+53
+00:03:27,479 --> 00:03:29,479
+A w zeszło multiple.
+
+54
+00:03:29,479 --> 00:03:31,479
+No i zaznaczymy.
+
+55
+00:03:31,479 --> 00:03:33,579
+No
+
+56
+00:03:37,479 --> 00:03:40,479
+Zarazth hogy
+
+57
+00:03:42,479 --> 00:03:45,500
+Kranscription recht
+
+58
+00:03:45,500 --> 00:03:47,500
+ard
+
+59
+00:03:49,079 --> 00:03:51,479
+na
+
+60
+00:03:54,479 --> 00:03:56,479
+Dziękuję.
+
+61
+00:04:24,480 --> 00:04:26,480
+Dziękuję.
+
+62
+00:04:54,480 --> 00:04:56,480
+Dziękuję.
+
+63
+00:05:24,480 --> 00:05:26,480
+Dziękuję.
+
+64
+00:05:54,480 --> 00:05:56,480
+Dziękuję.
+
+65
+00:06:24,480 --> 00:06:26,480
+Dziękuję.
+
+66
+00:06:54,480 --> 00:06:56,480
+Dziękuję.
+
+67
+00:07:24,480 --> 00:07:26,480
+Dziękuję.

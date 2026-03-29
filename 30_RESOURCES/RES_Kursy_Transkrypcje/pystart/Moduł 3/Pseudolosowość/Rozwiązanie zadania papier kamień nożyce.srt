@@ -1,0 +1,423 @@
+1
+00:00:00,000 --> 00:00:02,200
+To co? Gramy w grę.
+
+2
+00:00:02,640 --> 00:00:05,320
+Robimy sobie trzy opcje tak naprawdę.
+
+3
+00:00:05,480 --> 00:00:07,759
+Mamy do dyspozycji papier, kamień albo nożyce.
+
+4
+00:00:07,919 --> 00:00:16,120
+Czyli options to jest papier, kamień, nożyce.
+
+5
+00:00:16,640 --> 00:00:19,379
+I teraz w momencie, w którym gra się rozpoczyna,
+
+6
+00:00:19,839 --> 00:00:22,679
+komputer powinien wybrać swoją opcję.
+
+7
+00:00:23,240 --> 00:00:26,920
+Czyli from random import choice.
+
+8
+00:00:26,920 --> 00:00:31,679
+W tym momencie możemy stworzyć sobie zmienną computer choice.
+
+9
+00:00:32,960 --> 00:00:34,100
+Równa się.
+
+10
+00:00:34,740 --> 00:00:38,540
+No i potrzebujemy wybrać jedną z opcji, czyli options.
+
+11
+00:00:40,120 --> 00:00:43,000
+Zobacz, jeżeli ja teraz ten kod sobie wykonam,
+
+12
+00:00:43,100 --> 00:00:47,280
+czyli zrobię python, nazwałem ten kod pseudolos1,
+
+13
+00:00:47,760 --> 00:00:50,340
+no to dostaję informację, ach nie wyprintowałem,
+
+14
+00:00:50,420 --> 00:00:51,200
+to jeszcze wyprintuję.
+
+15
+00:00:51,799 --> 00:00:54,380
+Print, computer choice.
+
+16
+00:00:54,380 --> 00:00:56,200
+I dostanę wtedy informację,
+
+17
+00:00:56,200 --> 00:01:00,460
+o właśnie papier, kamień, papier, kamień, nożyce.
+
+18
+00:01:00,580 --> 00:01:03,359
+Widzicie? Czyli zmienia nam się ta opcja.
+
+19
+00:01:03,940 --> 00:01:04,460
+Idziemy dalej.
+
+20
+00:01:04,960 --> 00:01:06,299
+Rzecz druga, którą chcemy zrobić,
+
+21
+00:01:06,400 --> 00:01:08,840
+to chcemy zapytać użytkownika, co chce zrobić.
+
+22
+00:01:09,240 --> 00:01:13,379
+Ja sobie przyjmę, że skoro te wartości mają indeksy 0, 1 i 2,
+
+23
+00:01:15,020 --> 00:01:18,260
+no to zapytam użytkownika, jaką opcję wybiera.
+
+24
+00:01:18,840 --> 00:01:20,859
+Czyli najpierw napiszę mu taką informację.
+
+25
+00:01:21,060 --> 00:01:23,100
+Print, to mogę usunąć.
+
+26
+00:01:24,240 --> 00:01:25,120
+Print.
+
+27
+00:01:26,200 --> 00:01:32,700
+Wybierz opcję, albo dostępne opcje.
+
+28
+00:01:34,900 --> 00:01:41,900
+No i robię, 1 to papier, 2 to kamień, 3 to nożyce.
+
+29
+00:01:42,400 --> 00:01:45,500
+Pójdę tą drogą, z tego względu, że będzie mi później łatwiej
+
+30
+00:01:45,600 --> 00:01:47,840
+w ten sposób to sobie na tym operować,
+
+31
+00:01:47,939 --> 00:01:52,060
+z tego względu, że jeżeli użytkownik wpisze 1,
+
+32
+00:01:52,159 --> 00:01:55,060
+to bardziej częściej użytkownik wpisze jednak 1 niż 0.
+
+33
+00:01:55,159 --> 00:01:56,140
+Stąd też,
+
+34
+00:01:56,260 --> 00:01:59,400
+możemy odebrać informację od użytkownika.
+
+35
+00:01:59,500 --> 00:02:02,299
+UserChoice
+
+36
+00:02:03,299 --> 00:02:04,299
+równa się,
+
+37
+00:02:04,799 --> 00:02:05,600
+input,
+
+38
+00:02:06,900 --> 00:02:09,199
+którą opcję wybierasz.
+
+39
+00:02:11,500 --> 00:02:16,000
+No i następnie należy zamienić tę opcję na konkretny wybór.
+
+40
+00:02:16,300 --> 00:02:18,599
+Możemy też sprawdzić, jeżeli wybrałby inną opcję,
+
+41
+00:02:18,699 --> 00:02:20,000
+to po prostu wyświetlić mu błąd.
+
+42
+00:02:20,400 --> 00:02:21,699
+Czyli if,
+
+43
+00:02:23,400 --> 00:02:25,900
+tak naprawdę to, co musimy zrobić tu, to jeszcze musimy zamienić to na
+
+44
+00:02:25,900 --> 00:02:29,099
+int i odjąć sobie 1.
+
+45
+00:02:29,200 --> 00:02:32,500
+Bo jeżeli on wpisze 1, to tak naprawdę wybiera 0.
+
+46
+00:02:32,599 --> 00:02:38,900
+Jeżeli wpisze 1, 2, to wybierze 1 i rozumiecie, o co chodzi, nie?
+
+47
+00:02:39,000 --> 00:02:44,700
+Chodzi o to, że 1 to jest papier, 2 to jest kamień, a 3 to są nożyce.
+
+48
+00:02:44,800 --> 00:02:48,700
+Czyli dlatego odejmuję sobie 1, żeby właśnie tego problemu nie mieć.
+
+49
+00:02:48,800 --> 00:02:52,900
+I teraz będę chciał sprawdzić, czy ten mój UserChoice to jest 0, 1 albo 2.
+
+50
+00:02:53,000 --> 00:02:55,800
+Czyli if UserChoice,
+
+51
+00:02:55,900 --> 00:03:00,900
+mogę sobie zrobić na przykład in 0, 1, 2.
+
+52
+00:03:01,099 --> 00:03:05,900
+Właściwie to not in, czyli jeżeli wybór użytkownika nie jest jednym z tych,
+
+53
+00:03:06,300 --> 00:03:07,400
+no to wypisz print,
+
+54
+00:03:08,099 --> 00:03:10,700
+dokonałeś nieprawidłowego
+
+55
+00:03:12,300 --> 00:03:13,700
+wyboru i kończymy
+
+56
+00:03:15,099 --> 00:03:20,599
+posługując się quitem, a w przeciwnym wypadku UserChoice równa się options
+
+57
+00:03:22,599 --> 00:03:24,099
+od UserChoice.
+
+58
+00:03:24,800 --> 00:03:25,599
+I w ten sposób
+
+59
+00:03:25,900 --> 00:03:31,500
+będziemy mieli print Użytkownik wybrał i możemy mu napisać, co wybrał.
+
+60
+00:03:34,900 --> 00:03:38,800
+Wtedy zamienimy sobie numer na konkretną wartość.
+
+61
+00:03:39,099 --> 00:03:43,400
+No i tak samo komputer wybrał, możemy napisać, co wybrał.
+
+62
+00:03:45,000 --> 00:03:46,300
+Czyli komputer wybrał
+
+63
+00:03:48,800 --> 00:03:49,800
+ComputerChoice.
+
+64
+00:03:50,200 --> 00:03:52,099
+Sprawdźmy, jak teraz zachowuje się nasz program.
+
+65
+00:03:53,099 --> 00:03:54,000
+Wybieram papier.
+
+66
+00:03:54,300 --> 00:03:55,400
+Użytkownik wybrał papier.
+
+67
+00:03:55,400 --> 00:03:56,500
+Komputer wybrał papier.
+
+68
+00:03:56,800 --> 00:03:58,500
+Ok, zmienię na nożyce.
+
+69
+00:03:59,099 --> 00:04:01,700
+Użytkownik wybrał nożyce, komputer wybrał kamień.
+
+70
+00:04:01,800 --> 00:04:07,099
+No i tak wybierając poszczególne rzeczy mam już wprost przekazane informacje.
+
+71
+00:04:07,599 --> 00:04:10,800
+Jedyną rzeczą, którą muszę zrobić, to muszę sprawdzić, kto wygrał grę.
+
+72
+00:04:11,000 --> 00:04:13,300
+Czyli zacznę od najbardziej oczywistego.
+
+73
+00:04:13,400 --> 00:04:20,300
+Jeżeli UserChoice równa się ComputerChoice, print, mamy remis.
+
+74
+00:04:23,100 --> 00:04:24,399
+W przeciwnym wypadku
+
+75
+00:04:25,399 --> 00:04:26,500
+Aleve.
+
+76
+00:04:26,599 --> 00:04:35,799
+Jeżeli UserChoice równa się papier and ComputerChoice równa się kamień.
+
+77
+00:04:35,899 --> 00:04:39,799
+Biorę to w nawias.
+
+78
+00:04:39,899 --> 00:04:42,299
+Or.
+
+79
+00:04:42,399 --> 00:04:49,500
+Skopiuję sobie te rzeczy, tę rzecz raz jeszcze, bo będę potrzebował trzy razy, nie?
+
+80
+00:04:49,599 --> 00:04:53,099
+I jako, że tutaj myślę, że to jest to, co mam na myśli, to mam to na myśli.
+
+81
+00:04:53,199 --> 00:04:54,099
+I to jest to, co mam na myśli.
+
+82
+00:04:54,199 --> 00:04:55,199
+I to jest to, co mam na myśli.
+
+83
+00:04:55,399 --> 00:04:58,799
+I jeśli mi się trochę to już nie mieści, to mogę sobie spokojnie też tutaj,
+
+84
+00:04:58,899 --> 00:05:03,399
+pomiędzy poszczególnymi tymi warunkami dorzucić Enter.
+
+85
+00:05:03,500 --> 00:05:05,299
+Pod warunkiem, że tutaj znajdzie się backslash.
+
+86
+00:05:05,399 --> 00:05:21,399
+To wtedy print wygrał gracz, a w przeciwnym wypadku print wygrał komputer.
+
+87
+00:05:21,500 --> 00:05:25,199
+I tutaj, jeżeli chodzi o wygraną gracz, to w tym wypadku, jeżeli się wygrał komputer,
+
+88
+00:05:25,199 --> 00:05:27,699
+to musimy ją szerzej rozpisać.
+
+89
+00:05:27,800 --> 00:05:29,500
+Papier wygrywa z kamieniem.
+
+90
+00:05:29,599 --> 00:05:41,699
+Nożyce wygrywają z papierem, a kamień wygrywa z nożycami.
+
+91
+00:05:41,800 --> 00:05:46,399
+W przyszłości moglibyśmy zapisać to za pomocą funkcji, byłoby trochę bardziej elegancko,
+
+92
+00:05:46,500 --> 00:05:49,199
+natomiast na chwilę obecną myślę, że tak jest OK.
+
+93
+00:05:49,300 --> 00:05:51,199
+Strzała do góry Enter.
+
+94
+00:05:51,300 --> 00:05:52,599
+Wybieram papier.
+
+95
+00:05:52,699 --> 00:05:53,599
+Mamy remis.
+
+96
+00:05:53,699 --> 00:05:54,899
+Raz jeszcze papier.
+
+97
+00:05:54,899 --> 00:05:57,500
+Wygrał gracz, bo papier wygrywa z kamieniem.
+
+98
+00:05:57,599 --> 00:05:58,899
+I raz jeszcze papier.
+
+99
+00:05:59,000 --> 00:06:01,000
+Komputer wybrał nożyce.
+
+100
+00:06:01,099 --> 00:06:02,299
+Wygrał komputer.
+
+101
+00:06:02,399 --> 00:06:05,899
+No i w ten sposób stworzyliśmy sobie grę papier-kamień-nożyce.
+
+102
+00:06:06,000 --> 00:06:08,500
+Myślę, że największą trudność mogło stanowić to.
+
+103
+00:06:08,599 --> 00:06:11,299
+Natomiast wiem, że to można zrobić też w inny sposób.
+
+104
+00:06:11,399 --> 00:06:14,500
+Jeżeli znajdziesz inne rozwiązanie, to koniecznie daj znać na Discordzie.
+
+105
+00:06:14,599 --> 00:06:16,699
+Czekam na kombinatorów.
+
+106
+00:06:16,799 --> 00:06:17,599
+Do zobaczenia.

@@ -1,0 +1,691 @@
+1
+00:00:00,000 --> 00:00:16,080
+Dobra, no i w ten sposób przeszliśmy sobie przez wszystkie informacje organizacyjne, dochodzimy do lekcji drugiej, gdzie porozmawiamy o nauce programowania. Jak to jest z tą nauką programowania, że syn mojej koleżanki już się nauczył, a ja się jeszcze nie mogę nauczyć?
+
+2
+00:00:16,079 --> 00:00:36,719
+No dobra, przejdźmy sobie do tego właśnie, jak się uczyć i co można zrobić z tym, żeby się nauczyć. Natomiast programiści to są takie osoby, które bardziej przejmują się błędami niż ostrzeżeniami, więc ja Ci opowiem o błędach, które zauważyłem i bardzo proszę, żebyś przejął się nimi i zastanowił się nad tym, co możesz z tym fantem zrobić.
+
+3
+00:00:36,899 --> 00:00:42,719
+Myślę, że błędy, które popełniamy w nauce programowania można podzielić na dwa segmenty.
+
+4
+00:00:43,579 --> 00:00:45,719
+Pierwszy segment to są takie błędy dotyczące typowo...
+
+5
+00:00:46,079 --> 00:00:50,560
+nauki programowania, czyli tego sposobu, w jaki sposób się uczysz.
+
+6
+00:00:50,960 --> 00:00:54,839
+Natomiast druga grupa to są błędy dotyczące samego programowania.
+
+7
+00:00:55,039 --> 00:01:06,840
+One oczywiście też dotyczą nauki, no bo programowanie jest nieodzownym elementem nauki programowania, ale warto wiedzieć właśnie, jak te dwa elementy do siebie podchodzą.
+
+8
+00:01:07,280 --> 00:01:09,280
+Więc zacznijmy od nauki programowania.
+
+9
+00:01:09,780 --> 00:01:15,920
+Moim zdaniem jest sześć rzeczy, których nie możesz robić w nauce programowania.
+
+10
+00:01:16,079 --> 00:01:18,079
+Po pierwsze, omijanie podstaw.
+
+11
+00:01:18,079 --> 00:01:23,079
+Spotkałem wiele osób na swojej drodze, które zaczynały kilka razy i kilka razy zdecydowały się na to, żeby nauczyć się programowania.
+
+12
+00:01:23,079 --> 00:01:31,079
+To, co było bardzo złe w przypadku tych osób, to to, że kiedy rozpoczynały drugi raz, a ten poprzedni był ileś tam miesięcy temu, to już stwierdzały, a to pamiętam, to pamiętam, to pamiętam, to pamiętam, nie będę do tego wracać.
+
+13
+00:01:31,079 --> 00:01:33,079
+To nie jest najlepsze, niż to, co się dzieje.
+
+14
+00:01:33,079 --> 00:01:35,079
+To jest to, co się dzieje.
+
+15
+00:01:35,079 --> 00:01:37,079
+To jest to, co się dzieje.
+
+16
+00:01:37,079 --> 00:01:39,079
+To jest to, co się dzieje.
+
+17
+00:01:39,079 --> 00:01:41,079
+To jest to, co się dzieje.
+
+18
+00:01:41,079 --> 00:01:43,079
+To jest to, co się dzieje.
+
+19
+00:01:43,079 --> 00:01:45,079
+To jest to, co się dzieje.
+
+20
+00:01:45,079 --> 00:01:47,079
+To nie jest najlepszy pomysł.
+
+21
+00:01:47,079 --> 00:01:58,079
+Lepiej jest przejść sobie przez te wszystkie zagadnienia szybciej, zrobić po jednym trudniejszym zadanku z każdego zagadnienia, niż zupełnie to omijać.
+
+22
+00:01:58,079 --> 00:02:11,079
+Ja wiem, no to jest żmudne, po co mam raz jeszcze robić to samo, no ale skoro w jakimś momencie się zaciąłeś, to gwarantuję Ci, że kiedy zaczniesz od tego momentu, w którym poprzednio Twoja nauka się zacięła, to nie pójdziesz dalej.
+
+23
+00:02:11,079 --> 00:02:14,079
+To znaczy, że gdzieś wcześniej te braki się pojawiły.
+
+24
+00:02:14,079 --> 00:02:15,079
+Warto to robić.
+
+25
+00:02:15,080 --> 00:02:17,080
+Warto wtedy te braki sobie po prostu nadrobić.
+
+26
+00:02:17,080 --> 00:02:32,080
+No i nie warto też, mając już wiedzę z innego języka programowania, np. nie wiem, programujesz w C++, bo używałeś go w szkole czy w Pascalu, czy w innym języku tutaj stwierdzić, ee, w Pythonie pewnie jest wszystko podobnie i przejdę od razu sobie dalej.
+
+27
+00:02:32,080 --> 00:02:34,080
+To absolutnie nie ma sensu.
+
+28
+00:02:34,080 --> 00:02:39,080
+Zresztą ten kurs głównie opiera się na podstawach, więc zachęcam Cię do tego, żeby te podstawy poznać.
+
+29
+00:02:39,080 --> 00:02:42,080
+Po drugie, za mało pracy własnej.
+
+30
+00:02:42,080 --> 00:02:44,080
+Tutaj te ćwiczenia, ta zachęta do tego, żeby ćwiczyć, to nie ma sensu.
+
+31
+00:02:44,080 --> 00:02:47,340
+tego, żeby ćwiczyć, żeby się edukować, to właśnie jest to,
+
+32
+00:02:47,460 --> 00:02:50,280
+co trzeba robić i trzeba tego robić jak najwięcej.
+
+33
+00:02:50,760 --> 00:02:53,260
+Jeżeli nie będziesz ćwiczyć, jeżeli nie będziesz robić
+
+34
+00:02:53,260 --> 00:02:56,460
+ćwiczeń, jeżeli nie będziesz praktykować, to tak naprawdę
+
+35
+00:02:56,460 --> 00:02:58,160
+nie ma sensu w ogóle zaczynać.
+
+36
+00:02:59,600 --> 00:03:02,320
+Później ty będziesz tę wiedzę,
+
+37
+00:03:02,439 --> 00:03:05,620
+którą tutaj sobie napisaliśmy, musiała wykorzystać
+
+38
+00:03:05,620 --> 00:03:08,680
+w praktyce, więc tak naprawdę, jeżeli nie będziesz mieć tej praktyki,
+
+39
+00:03:08,680 --> 00:03:11,460
+no to nie ma szans na to, żeby tę wiedzę wykorzystać,
+
+40
+00:03:11,460 --> 00:03:14,140
+bo to nie jest tylko i wyłącznie rozumienie tego,
+
+41
+00:03:14,280 --> 00:03:18,080
+co jest napisane, tylko trzeba też umieć napisać to samodzielnie.
+
+42
+00:03:18,580 --> 00:03:20,540
+Więc praca własna jest niezwykle
+
+43
+00:03:20,540 --> 00:03:23,460
+ważnym elementem. Trzeci punkt to
+
+44
+00:03:23,460 --> 00:03:26,659
+zbyt długie przerwy. I tutaj zwracam się
+
+45
+00:03:26,659 --> 00:03:29,420
+przede wszystkim do wszystkich osób, które już poznałem
+
+46
+00:03:29,420 --> 00:03:32,319
+też z poprzednich edycji, a mianowicie osób,
+
+47
+00:03:32,480 --> 00:03:35,400
+które myślą, no dobra, w tygodniu nie mam za dużo czasu,
+
+48
+00:03:35,400 --> 00:03:38,180
+usiądę do tego w weekend. Gwarantuję Ci,
+
+49
+00:03:38,520 --> 00:03:41,159
+że jeżeli będziesz się uczyć sobota, niedziela,
+
+50
+00:03:41,460 --> 00:03:44,560
+pięć dni przerwy, sobota, niedziela, pięć dni przerwy,
+
+51
+00:03:44,640 --> 00:03:47,460
+sobota, niedziela, to pół soboty zmarnujesz
+
+52
+00:03:47,460 --> 00:03:50,080
+na przypomnienie sobie tych tematów, które były wcześniej,
+
+53
+00:03:50,900 --> 00:03:53,719
+potem w niedzielę będziesz już
+
+54
+00:03:53,719 --> 00:03:56,280
+całkiem osobą biegłą, po czym
+
+55
+00:03:56,280 --> 00:03:59,060
+w poniedziałek będziesz tęsknić za programowaniem,
+
+56
+00:03:59,100 --> 00:04:02,460
+a każdy kolejny dzień będzie Cię powodował, będzie zwiększał zapomnienie.
+
+57
+00:04:02,900 --> 00:04:05,700
+Tutaj należy programować codziennie,
+
+58
+00:04:05,980 --> 00:04:08,379
+takie minimum to co drugi dzień i chociaż te
+
+59
+00:04:08,379 --> 00:04:11,159
+15-20 minut. Nie wiem, czy to jestem ja,
+
+60
+00:04:11,460 --> 00:04:14,520
+czy to są inni ludzie też, ale programowanie
+
+61
+00:04:14,520 --> 00:04:17,720
+uzależnia. Jeżeli zaczynasz programować,
+
+62
+00:04:18,199 --> 00:04:20,240
+to trudno jest czasem przestać i to jest super.
+
+63
+00:04:20,540 --> 00:04:23,400
+Więc dla mnie na przykład takie 15 minut dziennie to byłoby tak jak,
+
+64
+00:04:23,460 --> 00:04:26,280
+wiesz, zjeść pół hamburgera w maku, tak? No jednak
+
+65
+00:04:26,280 --> 00:04:29,420
+ta druga połowa też korci. I tutaj jest bardzo
+
+66
+00:04:29,420 --> 00:04:31,960
+podobnie, więc zachęcam Cię do tego, żeby programować
+
+67
+00:04:31,960 --> 00:04:35,699
+ile się da tak naprawdę każdego dnia, no bo to jest
+
+68
+00:04:35,699 --> 00:04:38,800
+no właśnie jak z tym, z próbą, nie wiem,
+
+69
+00:04:38,879 --> 00:04:41,040
+zgubienia kilogramów czy z nauką języka obcego.
+
+70
+00:04:41,459 --> 00:04:44,899
+Nie da się tego robić od strzała do strzała. Trzeba to po prostu robić cały czas,
+
+71
+00:04:44,899 --> 00:04:48,019
+a dzięki temu ta biegłość przyjdzie po prostu z czasem.
+
+72
+00:04:48,759 --> 00:04:51,159
+Po czwarte, poddawanie się.
+
+73
+00:04:51,239 --> 00:04:53,519
+Programowanie nie jest łatwe.
+
+74
+00:04:53,519 --> 00:04:56,500
+To znaczy, kiedy programujesz i kiedy zaczynasz
+
+75
+00:04:56,500 --> 00:04:59,560
+programować, coś musi się w Twojej głowie takiego stać,
+
+76
+00:04:59,560 --> 00:05:02,319
+że musisz zacząć myśleć trochę w inny sposób.
+
+77
+00:05:02,539 --> 00:05:05,079
+To jest to, z czego wiele osób się śmieje, tak?
+
+78
+00:05:05,079 --> 00:05:08,979
+Że programista to jest taka osoba, która dla niej wszystko jest takie bardzo logiczne.
+
+79
+00:05:08,979 --> 00:05:11,399
+Jeżeli coś się A, to B,
+
+80
+00:05:11,459 --> 00:05:14,959
+jeżeli B, to C i wszystko musi być takie bardzo mocno
+
+81
+00:05:14,959 --> 00:05:17,959
+ułożone, a jeżeli potem ktoś zachowuje się nielogicznie,
+
+82
+00:05:17,959 --> 00:05:21,219
+to programista się frustruje, no bo tak działają programy komputerowe.
+
+83
+00:05:21,219 --> 00:05:24,219
+Jeżeli wcześniej na przykład nie programowałeś, nie programowałaś,
+
+84
+00:05:24,219 --> 00:05:27,799
+to gwarantuję Ci, że ten sposób myślenia gdzieś Ci się w głowie utworzy
+
+85
+00:05:27,799 --> 00:05:29,120
+i zobaczysz, że
+
+86
+00:05:29,620 --> 00:05:32,879
+po prostu jest to inny sposób myślenia, który się
+
+87
+00:05:33,319 --> 00:05:35,399
+w Twojej głowie dzieje.
+
+88
+00:05:35,399 --> 00:05:37,279
+Więc nie poddawaj się,
+
+89
+00:05:37,419 --> 00:05:39,839
+idź dalej, praktykuj.
+
+90
+00:05:39,839 --> 00:05:41,299
+Jeżeli się gdzieś zatrzymasz,
+
+91
+00:05:41,300 --> 00:05:42,680
+stwierdzisz dobra, to nie dla mnie,
+
+92
+00:05:42,680 --> 00:05:46,800
+to daj sobie przerwy max jeden dzień i następnego dnia spróbuj znowu.
+
+93
+00:05:46,800 --> 00:05:50,060
+I pamiętaj o tym, że cały czas jest grupa wsparcia,
+
+94
+00:05:50,060 --> 00:05:52,300
+która jest pełna osób chętnych do pomocy,
+
+95
+00:05:52,300 --> 00:05:54,540
+pełna osób chętnych do nauki razem z Tobą.
+
+96
+00:05:54,540 --> 00:05:57,800
+I jeżeli więcej osób stanie w tym samym miejscu,
+
+97
+00:05:57,800 --> 00:06:01,800
+to taką siłą możecie po prostu przejść przez to miejsce i wspólnie się nauczyć.
+
+98
+00:06:01,800 --> 00:06:05,460
+Na Discordzie też jest dużo miejsc takich, gdzie można na przykład robić sobie live'y
+
+99
+00:06:05,460 --> 00:06:08,920
+i można na żywo współdzielić ekrany i wspólnie kodować.
+
+100
+00:06:08,920 --> 00:06:10,680
+Jeżeli będziecie robili takie inicjatywy,
+
+101
+00:06:10,680 --> 00:06:12,300
+to jest możliwe, że też się będę do nich podłączał
+
+102
+00:06:12,300 --> 00:06:15,180
+i też będę razem z Wami próbował te tematy przejść.
+
+103
+00:06:15,180 --> 00:06:17,180
+Bardzo serdecznie do tego zachęcam.
+
+104
+00:06:17,180 --> 00:06:21,180
+Po piąte, zbyt wysokie ambicje.
+
+105
+00:06:21,180 --> 00:06:25,680
+Wiem, że część z Was rozpoczyna ten kurs myśląc o tym,
+
+106
+00:06:25,680 --> 00:06:27,680
+mam taki świetny pomysł na biznes,
+
+107
+00:06:27,680 --> 00:06:32,680
+albo mam pomysł na coś, co mogę w mojej pracy zautomatyzować,
+
+108
+00:06:32,680 --> 00:06:34,680
+a od kogoś wiem, że Python może mi w tym pomóc.
+
+109
+00:06:34,680 --> 00:06:38,680
+Albo za pół roku chcę zostać programistą.
+
+110
+00:06:38,680 --> 00:06:40,680
+To są wysokie ambicje.
+
+111
+00:06:40,680 --> 00:06:42,680
+Te ambicje nie są czymś złym,
+
+112
+00:06:42,680 --> 00:06:46,680
+ale traktuj je bardziej w formie planu, w formie celu.
+
+113
+00:06:46,680 --> 00:06:48,680
+Nie staraj się tego zrobić bardzo szybko.
+
+114
+00:06:48,680 --> 00:06:53,680
+Rób spraw, żeby to było Twoją motywacją do tego, żeby programować,
+
+115
+00:06:53,680 --> 00:06:59,680
+ale nie sprawiaj, żeby to było czymś, co będziesz chcieć robić jutro, pojutrze, czy za tydzień.
+
+116
+00:06:59,680 --> 00:07:01,680
+To potrzebuje czasu.
+
+117
+00:07:01,680 --> 00:07:04,680
+I lepiej jest, jeżeli najpierw zaczniesz programować,
+
+118
+00:07:04,680 --> 00:07:07,680
+a później będziesz mieć te ambicje, niż odwrotnie.
+
+119
+00:07:07,680 --> 00:07:09,680
+Na swojej drodze spotkałem kilku młodych,
+
+120
+00:07:09,680 --> 00:07:13,680
+przyszłych programistów, którzy powiedzieli mi,
+
+121
+00:07:13,680 --> 00:07:18,680
+że ich celem jest to, żeby zajmować się, w cudzysłowie, hakerstwem.
+
+122
+00:07:18,680 --> 00:07:21,680
+Czyli nie tyle hakerstwem, co bezpieczeństwem,
+
+123
+00:07:21,680 --> 00:07:26,680
+jakimś tam włamywaniem się na serwery do firm, które się na to zgodziły,
+
+124
+00:07:26,680 --> 00:07:28,680
+że szukają podatności i tak dalej.
+
+125
+00:07:28,680 --> 00:07:30,680
+I oni mi powiedzieli, że to jest ich cel.
+
+126
+00:07:30,680 --> 00:07:33,680
+Ja mówię, okej, ale najpierw musisz nauczyć się tego, tego, tego i tamtego.
+
+127
+00:07:33,680 --> 00:07:36,680
+Nie, nie, bo ja już wiem, że na stronach są takie różne te,
+
+128
+00:07:36,680 --> 00:07:38,680
+ja chcę od razu iść tą drogą i tyle, i tyle.
+
+129
+00:07:38,680 --> 00:07:41,680
+I to nie jest dobry pomysł, uważam.
+
+130
+00:07:41,680 --> 00:07:45,680
+Jeżeli uczysz się Pythona, bo myślisz o bezpieczeństwie, to super,
+
+131
+00:07:45,680 --> 00:07:50,680
+ale żeby szukać podatności, błędów w kodzie i wykorzystywać luki,
+
+132
+00:07:50,680 --> 00:07:54,680
+musisz najpierw umieć programować, żeby umieć te luki znajdować.
+
+133
+00:07:54,680 --> 00:07:59,680
+Więc tutaj też zachęcam do tego, żeby myśleć wysoko, mierzyć wysoko,
+
+134
+00:07:59,680 --> 00:08:02,680
+ale nie w rozsądnym czasie.
+
+135
+00:08:02,680 --> 00:08:06,680
+I tymi małymi krokami do tego momentu dochodzić.
+
+136
+00:08:06,680 --> 00:08:07,680
+I ostatni podpunkt.
+
+137
+00:08:07,680 --> 00:08:11,680
+Szósty już na tej liście to brak cierpliwości do kodu.
+
+138
+00:08:11,680 --> 00:08:13,680
+Kod tego nie znosi.
+
+139
+00:08:13,680 --> 00:08:19,680
+W momencie, w którym siadasz do kodu, który jest na przykład skopiowany skądś i działa,
+
+140
+00:08:19,680 --> 00:08:22,680
+no to super, działa, mogę iść dalej.
+
+141
+00:08:22,680 --> 00:08:23,680
+To błąd.
+
+142
+00:08:23,680 --> 00:08:27,680
+Każdy fragment kodu, który skądś kopiujesz, musisz bardzo dobrze zrozumieć.
+
+143
+00:08:27,680 --> 00:08:32,680
+Metoda amerykańskiego uczonego kopiego paste'a to jest wspaniała metoda pod warunkiem,
+
+144
+00:08:32,680 --> 00:08:36,680
+że wiesz, co w tym kodzie się znajduje, wiesz, dlaczego zadziałało.
+
+145
+00:08:36,679 --> 00:08:40,679
+I jeżeli kod jest napisany w ten sposób, że nie chce ci się tego analizować,
+
+146
+00:08:40,679 --> 00:08:41,679
+to znaczy, że jest źle.
+
+147
+00:08:41,679 --> 00:08:46,679
+Trzeba go napisać raz jeszcze i spróbować sobie każdy pojedynczy ten fragment tego kodu przeanalizować,
+
+148
+00:08:46,679 --> 00:08:48,679
+zrozumieć i iść z nim dalej.
+
+149
+00:08:48,679 --> 00:08:50,679
+I tak samo, kiedy kod nie działa.
+
+150
+00:08:50,679 --> 00:08:56,679
+Jeżeli nie działa, już się frustrujesz, to daj sobie upust, w sensie zrób sobie chwilę przerwy,
+
+151
+00:08:56,679 --> 00:09:00,679
+ale później wróć do tego kodu, no i na pewno też nie ma co się denerwować.
+
+152
+00:09:00,679 --> 00:09:01,679
+To jest po prostu kod.
+
+153
+00:09:01,679 --> 00:09:04,679
+Tutaj programowanie jest bezlitośnie logiczne.
+
+154
+00:09:04,679 --> 00:09:10,679
+Jeżeli jeden jest jeden, a dwa jest dwa, to wszystko zadziała.
+
+155
+00:09:10,679 --> 00:09:13,679
+A jeżeli któraś z tych liczb będzie nie taka, no to nie zadziała.
+
+156
+00:09:13,679 --> 00:09:17,679
+I on nie będzie mówił, dobra, już szósty raz próbujesz to zrobić, to ci podpowiem,
+
+157
+00:09:17,679 --> 00:09:20,679
+tylko po prostu będzie za każdym razem nie działało.
+
+158
+00:09:20,679 --> 00:09:21,679
+Nie ma co się denerwować.
+
+159
+00:09:21,679 --> 00:09:25,679
+Warto po prostu to przeanalizować, naprawić błąd i iść dalej.
+
+160
+00:09:25,679 --> 00:09:30,679
+Zresztą część z tych problemów to są też moje problemy cały czas.
+
+161
+00:09:30,679 --> 00:09:32,679
+Ja cały czas się uczę.
+
+162
+00:09:32,679 --> 00:09:34,679
+Cały czas poznaję.
+
+163
+00:09:34,679 --> 00:09:38,679
+Nowe jakieś narzędzia, nowe języki, nowe zagadnienia.
+
+164
+00:09:38,679 --> 00:09:43,679
+Nauka programowania to jest coś, co rozpoczyna się, kiedy zdecydujesz się zostać programistą,
+
+165
+00:09:43,679 --> 00:09:46,679
+a kończy się, kiedy przestajesz nim być tak naprawdę.
+
+166
+00:09:46,679 --> 00:09:51,679
+To nie jest coś, co po prostu tobie pojawi się na początku,
+
+167
+00:09:51,679 --> 00:09:54,679
+a później będziesz wszystko robić z marszu,
+
+168
+00:09:54,679 --> 00:09:56,679
+bo cały czas będzie trzeba pracować z dokumentacją,
+
+169
+00:09:56,679 --> 00:09:58,679
+cały czas będzie trzeba analizować ten kod,
+
+170
+00:09:58,679 --> 00:10:00,679
+cały czas trzeba będzie mieć do niego cierpliwość.
+
+171
+00:10:00,679 --> 00:10:04,679
+Więc gwarantuję ci, że jeżeli wcześniej to zrozumiesz,
+
+172
+00:10:04,679 --> 00:10:06,679
+to lepiej dla twojej przyszłej kariery,
+
+173
+00:10:06,679 --> 00:10:12,679
+bo po 5, 10 czy 14 latach, jak w moim przypadku, nic się nie zmieni.

@@ -1,0 +1,527 @@
+1
+00:00:00,000 --> 00:00:02,520
+Chodźmy dalej, porozmawiajmy o tym, czym jest JSON.
+
+2
+00:00:03,260 --> 00:00:08,240
+Do tej pory pracowaliśmy z plikami tekstowymi, w których dane były ułożone w wierszach.
+
+3
+00:00:08,359 --> 00:00:15,240
+To znaczy, że kompletny jeden wiersz to była informacja pełna na temat jakiejś książki, autora, produktu, czegokolwiek.
+
+4
+00:00:15,900 --> 00:00:20,559
+W tym momencie, jeżeli chcieliśmy przechowywać więcej informacji o danym rekordzie,
+
+5
+00:00:20,559 --> 00:00:22,780
+to po prostu można powiedzieć, że szliśmy w prawo.
+
+6
+00:00:23,339 --> 00:00:28,560
+To prowadziło do tego, że jeżeli załóżmy, mielibyśmy plik dotyczący książek,
+
+7
+00:00:28,559 --> 00:00:33,579
+a w tych książkach chcielibyśmy szerzej opisać też informacje dotyczące autora,
+
+8
+00:00:34,039 --> 00:00:39,420
+to trzeba byłoby dorzucić sobie, powiedzmy, title, ilość stron, opis, streszczenie, coś tam jeszcze, coś tam jeszcze,
+
+9
+00:00:39,560 --> 00:00:43,600
+po czym przechowywać kolejny zbiór informacji, idąc cały czas w prawo,
+
+10
+00:00:43,759 --> 00:00:49,079
+autor first name, autor last name, autor wiek, autor pseudonim, autor opis, autor coś tam.
+
+11
+00:00:50,299 --> 00:00:51,060
+Robi się problem.
+
+12
+00:00:52,079 --> 00:00:56,099
+Inny sposób to na przykład wtedy, kiedy chcielibyście zrobić taki plik dotyczący autorów,
+
+13
+00:00:56,099 --> 00:00:58,500
+ale na przykład dorzucić do tego jeszcze informacje o jego dziedzinie.
+
+14
+00:00:58,560 --> 00:01:00,420
+Jak to w ogóle przechować?
+
+15
+00:01:00,700 --> 00:01:06,480
+W pliku CSV, czy tam w pliku tekstowym, jeżeli zakładamy, że są po prostu rozdzielone przecinkami czy średnikami,
+
+16
+00:01:06,879 --> 00:01:08,120
+jest to trochę kłopotliwe.
+
+17
+00:01:08,659 --> 00:01:11,520
+I rozwiązaniem tego problemu bardzo dobrym jest JSON.
+
+18
+00:01:12,100 --> 00:01:18,300
+JSON to jest taki zupełnie inny format, bardzo popularny też ze względu na to, że jest wykorzystywany w REST API.
+
+19
+00:01:18,780 --> 00:01:20,280
+Czym jest REST API, za moment Ci powiem.
+
+20
+00:01:20,859 --> 00:01:26,939
+To, co możesz zauważyć na pierwszy rzut oka, to to, że struktura tego pliku jest bardzo podobna do list i słowników.
+
+21
+00:01:26,939 --> 00:01:28,340
+Czyli faktycznie masz klamerkę.
+
+22
+00:01:28,560 --> 00:01:30,560
+Może się to kojarzyć ze słownikiem.
+
+23
+00:01:30,560 --> 00:01:34,060
+Następnie masz klucz, wartość, klucz, wartość, klucz, wartość.
+
+24
+00:01:34,060 --> 00:01:38,560
+Zwróć uwagę na to, że te klucze są umiejscowione w cudzysłowie.
+
+25
+00:01:38,560 --> 00:01:40,060
+To nie mogą być apostrofy.
+
+26
+00:01:40,060 --> 00:01:42,560
+W plikach JSON zawsze musi być to cudzysłów.
+
+27
+00:01:42,560 --> 00:01:46,060
+Ale nie martw się, pokażę Ci zaraz funkcje, które zadbają o to.
+
+28
+00:01:46,060 --> 00:01:48,060
+Nie będzie trzeba tego samodzielnie jakoś przygotowywać.
+
+29
+00:01:48,560 --> 00:01:50,060
+Następnie są wartości.
+
+30
+00:01:50,560 --> 00:01:58,060
+Standardowo, jak widać, wartości liczbowe nie posiadają cudzysłowia, natomiast te drugie stringi posiadają cudzysłów.
+
+31
+00:01:58,560 --> 00:02:00,560
+Co jeszcze możemy zauważyć?
+
+32
+00:02:00,560 --> 00:02:04,060
+Możemy zauważyć, że mamy sytuację, gdzie coś się może w sobie zagnieżdżać.
+
+33
+00:02:04,060 --> 00:02:06,060
+Zwróć uwagę na kawałek z members.
+
+34
+00:02:06,060 --> 00:02:10,060
+Tam mamy nawias kwadratowy, który mógłby wskazywać, że jest to lista.
+
+35
+00:02:10,060 --> 00:02:12,560
+Tutaj dokładnie jest to coś w tym rodzaju.
+
+36
+00:02:12,560 --> 00:02:18,060
+No i ta lista znowu zawiera słowniki, czyli znowu możemy zawierać dalsze informacje.
+
+37
+00:02:18,060 --> 00:02:22,060
+Tutaj w tym przypadku faktycznie mówienie o liście jest jak najbardziej ok.
+
+38
+00:02:22,060 --> 00:02:24,060
+Mówienie o kolekcji też jest dobre.
+
+39
+00:02:24,060 --> 00:02:26,060
+Natomiast w środku zdecydowanie są obiekty.
+
+40
+00:02:26,060 --> 00:02:28,060
+Jeżeli chcemy używać tej nomenklatury, takiej JSON-owej,
+
+41
+00:02:28,560 --> 00:02:30,560
+idziemy dalej.
+
+42
+00:02:30,560 --> 00:02:34,560
+A te rzeczy w cudzysłowie to są właściwości, niekoniecznie klucze.
+
+43
+00:02:34,560 --> 00:02:36,560
+I właściwości mają swoje wartości.
+
+44
+00:02:36,560 --> 00:02:42,560
+Jest to też, tak jak wspomniałem, format używany do przenoszenia danych pomiędzy różnymi systemami poprzez API.
+
+45
+00:02:42,560 --> 00:02:44,560
+Czym jest API?
+
+46
+00:02:44,560 --> 00:02:49,560
+Opowiem Ci na koniec tej lekcji, na koniec tego modułu poświęconego JSON-owi,
+
+47
+00:02:49,560 --> 00:02:55,560
+gdyż tam będziemy właśnie korzystali z gotowego API i pokaże Ci, jak komunikować się z taką usługą.
+
+48
+00:02:55,560 --> 00:02:57,560
+Więc to, co na razie musisz zapamiętać,
+
+49
+00:02:57,560 --> 00:02:58,560
+to to, że JSON to jest właśnie,
+
+50
+00:02:58,560 --> 00:03:00,560
+to jest taki jakby inny format,
+
+51
+00:03:00,560 --> 00:03:02,560
+trochę bardziej elastyczny,
+
+52
+00:03:02,560 --> 00:03:05,560
+pozwala na to, żeby komunikować się i pobierać dane,
+
+53
+00:03:05,560 --> 00:03:08,560
+czy też zapisywać dane zawierające więcej informacji,
+
+54
+00:03:08,560 --> 00:03:10,560
+ma też swój minus.
+
+55
+00:03:10,560 --> 00:03:13,560
+W momencie, w którym pracujemy z plikiem CSV,
+
+56
+00:03:13,560 --> 00:03:15,560
+to możemy się skupić tylko na pojedynczym wierszu
+
+57
+00:03:15,560 --> 00:03:19,560
+i to może być cały nasz świat w danym momencie,
+
+58
+00:03:19,560 --> 00:03:21,560
+na którym będziemy się skupiali,
+
+59
+00:03:21,560 --> 00:03:23,560
+tylko to nas będzie interesowało.
+
+60
+00:03:23,560 --> 00:03:27,560
+W przypadku JSON-a takie ograniczenie jest dużo bardziej skomplikowane.
+
+61
+00:03:27,560 --> 00:03:30,560
+To znaczy, kiedy chcesz odczytać plik JSON,
+
+62
+00:03:30,560 --> 00:03:33,560
+teoretycznie, są na sposoby, żeby to zrobić inaczej,
+
+63
+00:03:33,560 --> 00:03:36,560
+ale są dużo bardziej skomplikowane niż w przypadku CSV,
+
+64
+00:03:36,560 --> 00:03:39,560
+musisz załadować od razu cały plik do pamięci.
+
+65
+00:03:39,560 --> 00:03:42,560
+Więc w momencie, w którym masz bardzo dużo danych,
+
+66
+00:03:42,560 --> 00:03:46,560
+może to powodować, że będzie trochę tej pamięci trzeba zająć.
+
+67
+00:03:46,560 --> 00:03:49,560
+No i tutaj odpowiedzią też na to są bazy danych,
+
+68
+00:03:49,560 --> 00:03:52,560
+o których też sobie porozmawiamy już wkrótce.
+
+69
+00:03:52,560 --> 00:03:55,560
+Na razie skupmy się na tej wiedzy poświęconej JSON-owi.
+
+70
+00:03:55,560 --> 00:03:56,560
+Co jeszcze o JSON-ie możemy sobie powiedzieć?
+
+71
+00:03:56,560 --> 00:03:59,560
+W Pythonie są cztery funkcje,
+
+72
+00:03:59,560 --> 00:04:02,560
+które pozwalają Ci na pracę z JSON-em.
+
+73
+00:04:02,560 --> 00:04:05,560
+W zależności od tego, co chcesz zrobić z tym formatem,
+
+74
+00:04:05,560 --> 00:04:11,560
+możesz albo zamienić Twoją kolekcję, czy też listę, słownik na JSON-a,
+
+75
+00:04:11,560 --> 00:04:16,560
+albo możesz JSON-a zamienić na listy czy słowniki.
+
+76
+00:04:16,560 --> 00:04:19,560
+Oczywiście wszystko zależnie od tego, jak ten JSON wygląda,
+
+77
+00:04:19,560 --> 00:04:21,560
+zamieni się to odpowiednio.
+
+78
+00:04:21,560 --> 00:04:24,560
+Tak jak widziałeś, poprzednio te dane były takie pomieszane,
+
+79
+00:04:24,560 --> 00:04:25,560
+no i tu jest dokładnie tak samo.
+
+80
+00:04:25,560 --> 00:04:28,560
+Czyli to, co będzie miało nawias kwadratowy, zamieni nam się na listę,
+
+81
+00:04:28,560 --> 00:04:32,560
+to, co będzie miało nawias klamrowy, zamieni się po prostu na słownik.
+
+82
+00:04:32,560 --> 00:04:37,560
+I tu, wewnątrz biblioteki JSON, mamy takie cztery funkcje
+
+83
+00:04:37,560 --> 00:04:39,560
+load, loads, dump i dumps.
+
+84
+00:04:39,560 --> 00:04:42,560
+Czym się różni S i bez S?
+
+85
+00:04:42,560 --> 00:04:46,560
+Tu może się kojarzyć film Chłopaki nie płaczą,
+
+86
+00:04:46,560 --> 00:04:49,560
+natomiast to zupełnie nie jest związane z filmem Chłopaki nie płaczą,
+
+87
+00:04:49,560 --> 00:04:53,560
+choć zauważyłem, że często osoby tutaj popełniają te literówki
+
+88
+00:04:53,560 --> 00:04:54,560
+i o tym S zapominają.
+
+89
+00:04:55,560 --> 00:04:56,560
+Ale do sedna.
+
+90
+00:04:56,560 --> 00:04:58,560
+S oznacza string.
+
+91
+00:04:58,560 --> 00:05:01,560
+To znaczy, jeżeli będziesz chcieć odczytać string,
+
+92
+00:05:01,560 --> 00:05:04,560
+bo załóżmy, dane będą pochodziły gdzieś z internetu
+
+93
+00:05:04,560 --> 00:05:08,560
+i będziesz posiadał plik JSON, który będzie takim dużym plikiem
+
+94
+00:05:08,560 --> 00:05:10,560
+zapisanym w jednym długim stringu,
+
+95
+00:05:10,560 --> 00:05:13,560
+albo na przykład będzie już plik z jakiegoś powodu załadowany,
+
+96
+00:05:13,560 --> 00:05:16,560
+albo ktoś Ci ten plik skąd indą poda,
+
+97
+00:05:16,560 --> 00:05:20,560
+to wtedy używasz loads, no bo chcesz odczytać coś.
+
+98
+00:05:20,560 --> 00:05:24,560
+Load załadować, prawda? Odczytać coś wraz ze stringa.
+
+99
+00:05:24,560 --> 00:05:30,560
+Natomiast jeżeli będziesz chcieć zamienić kolekcję na format JSON,
+
+100
+00:05:30,560 --> 00:05:33,560
+no to z racji tego, że JSON to tak naprawdę jest string,
+
+101
+00:05:33,560 --> 00:05:35,560
+tylko w pewien sposób ustrukturyzowany,
+
+102
+00:05:35,560 --> 00:05:37,560
+skorzystasz z funkcji dumps,
+
+103
+00:05:37,560 --> 00:05:41,560
+no bo chcesz zamienić na string to, co masz.
+
+104
+00:05:41,560 --> 00:05:44,560
+Jeżeli natomiast będziemy chcieli pracować z plikami,
+
+105
+00:05:44,560 --> 00:05:46,560
+no to wtedy mamy load i dump.
+
+106
+00:05:46,560 --> 00:05:51,560
+Load spowoduje, że zamiast dostawać jako argument string,
+
+107
+00:05:51,560 --> 00:05:53,560
+będziesz przekazywać ten file pointer,
+
+108
+00:05:53,560 --> 00:05:57,560
+czyli to, co zwróci nam with open, bla, bla, bla.
+
+109
+00:05:57,560 --> 00:06:02,560
+Natomiast dump również będzie otrzymywać też tylko i wyłącznie to,
+
+110
+00:06:02,560 --> 00:06:05,560
+co zwróci nam funkcja open.
+
+111
+00:06:05,560 --> 00:06:09,560
+I w tym przypadku najczęściej, zdecydowanie w większości,
+
+112
+00:06:09,560 --> 00:06:11,560
+tym używanym atrybutem będzie w,
+
+113
+00:06:11,560 --> 00:06:15,560
+no bo raczej nigdy nie dopisujemy czegoś do JSON-a na końcu.
+
+114
+00:06:15,560 --> 00:06:18,560
+W tym momencie on zyskałby niepoprawny format.
+
+115
+00:06:18,560 --> 00:06:20,560
+Nie dałoby się po prostu go otworzyć,
+
+116
+00:06:20,560 --> 00:06:23,560
+bo ten JSON, jak zwrócisz uwagę na ten slajd,
+
+117
+00:06:23,560 --> 00:06:26,560
+on zawsze ma na samej górze klamerkę i kończy się klamerką.
+
+118
+00:06:26,560 --> 00:06:28,560
+Tak plik JSON musi być skonstruowany.
+
+119
+00:06:28,560 --> 00:06:30,560
+Więc dopisanie czegoś na końcu powodowałoby,
+
+120
+00:06:30,560 --> 00:06:33,560
+że tak naprawdę za klamerką pojawiłoby się coś jeszcze
+
+121
+00:06:33,560 --> 00:06:35,560
+i program nie mógłby tego pliku odczytać.
+
+122
+00:06:35,560 --> 00:06:40,560
+Dlatego też zawsze ładujemy najpierw całego JSON-a do pamięci,
+
+123
+00:06:40,560 --> 00:06:43,560
+modyfikujemy go, a potem jakby podmieniamy w tym pliku,
+
+124
+00:06:43,560 --> 00:06:47,560
+z któregośmy odczytali dane na nowo.
+
+125
+00:06:47,560 --> 00:06:51,560
+Więc dump będzie otrzymywać jakiś tam uchwyt do pliku
+
+126
+00:06:51,560 --> 00:06:54,560
+i będzie zapisywać to do pliku JSON,
+
+127
+00:06:54,560 --> 00:06:57,560
+natomiast dumps, też pracując na listach, słownikach,
+
+128
+00:06:57,560 --> 00:07:00,560
+będzie zapisywać to bezpośrednio do stringa.
+
+129
+00:07:00,560 --> 00:07:02,560
+I tak samo z load loads.
+
+130
+00:07:02,560 --> 00:07:06,560
+Load odczyta coś z pliku, a loads odczyta coś ze stringa.
+
+131
+00:07:06,560 --> 00:07:10,560
+Długa to była lekcja, mam nadzieję, że pożyteczna.
+
+132
+00:07:10,560 --> 00:07:13,560
+Zapraszam Cię dalej, gdzie sobie z tym JSON-em już popracujemy.

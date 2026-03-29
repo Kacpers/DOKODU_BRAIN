@@ -1,0 +1,587 @@
+1
+00:00:00,000 --> 00:00:01,940
+No to co? Lecimy!
+
+2
+00:00:02,540 --> 00:00:05,919
+Mamy policzyć koszt paliwa na trasie wynoszącej 150 km,
+
+3
+00:00:06,240 --> 00:00:08,919
+czyli jakiś dystans, by nam się przydał.
+
+4
+00:00:10,480 --> 00:00:12,080
+I to jest 150 km.
+
+5
+00:00:12,919 --> 00:00:16,820
+Po drugie, mamy cenę benzyny na wysokości 6 zł,
+
+6
+00:00:17,039 --> 00:00:18,719
+czyli price per liter.
+
+7
+00:00:20,320 --> 00:00:21,620
+To jest 6 zł.
+
+8
+00:00:22,140 --> 00:00:25,000
+Nasz samochód pali 6 litrów na 100 km.
+
+9
+00:00:25,600 --> 00:00:28,160
+100 km to jest jakby taka standardowa ilość, prawda?
+
+10
+00:00:28,160 --> 00:00:34,240
+Czyli to będzie consumption równa się 100 km.
+
+11
+00:00:34,780 --> 00:00:37,280
+I teraz, przepraszam, 6 litrów.
+
+12
+00:00:38,480 --> 00:00:42,280
+Jak widać, zmienne możemy nadpisywać.
+
+13
+00:00:42,500 --> 00:00:44,539
+Tutaj nie ma żadnego problemu. Sprawdźmy to.
+
+14
+00:00:44,840 --> 00:00:52,679
+Dystans 150 km, price per liter 6 zł za litr.
+
+15
+00:00:52,679 --> 00:00:57,840
+No i dodatkowo consumption to jest 6 zł.
+
+16
+00:00:58,159 --> 00:01:02,699
+I teraz, jeżeli my chcemy przejechać 150 km,
+
+17
+00:01:03,019 --> 00:01:04,939
+no to musimy policzyć dystans.
+
+18
+00:01:05,519 --> 00:01:06,259
+Razy.
+
+19
+00:01:07,659 --> 00:01:12,159
+Nasz dystans musimy przemnożyć sobie przez spalanie.
+
+20
+00:01:13,140 --> 00:01:16,159
+Czyli dystans razy consumption.
+
+21
+00:01:20,459 --> 00:01:21,459
+Razy.
+
+22
+00:01:21,739 --> 00:01:24,500
+W tym momencie dostaniemy informację,
+
+23
+00:01:24,500 --> 00:01:27,500
+że 150 km przejechał,
+
+24
+00:01:28,159 --> 00:01:30,579
+razy 6 litrów.
+
+25
+00:01:30,959 --> 00:01:34,000
+Ale to nie jest 6 litrów za 150 km,
+
+26
+00:01:34,259 --> 00:01:36,640
+tylko 6 litrów za 100 km.
+
+27
+00:01:37,219 --> 00:01:39,759
+Więc tak naprawdę my będziemy musieli tę wartość
+
+28
+00:01:39,759 --> 00:01:41,579
+teraz sobie jeszcze podzielić na 100,
+
+29
+00:01:41,819 --> 00:01:44,560
+no bo to jest spalanie na 100 km.
+
+30
+00:01:46,739 --> 00:01:47,340
+Razy.
+
+31
+00:01:47,859 --> 00:01:49,939
+No i do tego potrzebujemy jeszcze cenę benzyny,
+
+32
+00:01:50,019 --> 00:01:50,939
+czyli price per liter.
+
+33
+00:01:51,859 --> 00:01:53,420
+Bo jeżeli bym to zostawił,
+
+34
+00:01:53,420 --> 00:01:56,199
+to w tej postaci dostaję informację,
+
+35
+00:01:56,200 --> 00:01:58,700
+ile litrów spalił mój samochód.
+
+36
+00:01:59,100 --> 00:02:04,500
+No bo jeżeli bym zostawił dystans razy consumption,
+
+37
+00:02:04,799 --> 00:02:08,000
+no to tak naprawdę bym dostał bardzo dużą wartość,
+
+38
+00:02:08,000 --> 00:02:12,199
+która nie odnosiłaby się do tych 150 km,
+
+39
+00:02:12,500 --> 00:02:14,000
+tylko odnosiłaby się do...
+
+40
+00:02:15,000 --> 00:02:16,699
+No byłaby właściwie nieprawidłowa.
+
+41
+00:02:17,000 --> 00:02:19,000
+Dlatego muszę sobie to podzielić przez 100,
+
+42
+00:02:19,300 --> 00:02:21,699
+bo spalanie jest zawsze na 100 km.
+
+43
+00:02:22,000 --> 00:02:24,199
+Dzięki temu wiem, że spaliłem 9 litrów.
+
+44
+00:02:24,400 --> 00:02:26,000
+A skoro spaliłem 9 litrów,
+
+45
+00:02:26,000 --> 00:02:28,699
+to muszę sobie to przemnożyć razy price per liter.
+
+46
+00:02:29,699 --> 00:02:31,000
+I w ten sposób wyjdzie mi,
+
+47
+00:02:31,400 --> 00:02:33,099
+że koszt to 54 zł.
+
+48
+00:02:33,699 --> 00:02:36,460
+Co mogę zrobić, jeżeli cena benzyny wzrośnie,
+
+49
+00:02:37,099 --> 00:02:38,419
+że w nie zapłakać,
+
+50
+00:02:38,479 --> 00:02:40,199
+albo powiedzieć, a nie mówiłem,
+
+51
+00:02:40,740 --> 00:02:42,500
+równa się 7, załóżmy.
+
+52
+00:02:43,159 --> 00:02:46,420
+I wówczas raz jeszcze wywołujemy sobie ten sam kod
+
+53
+00:02:46,420 --> 00:02:48,979
+i dowiadujemy się, że wtedy cena benzyny,
+
+54
+00:02:49,080 --> 00:02:50,520
+to już nie będzie koszt benzyny,
+
+55
+00:02:50,580 --> 00:02:53,900
+to już nie będzie 54 zł, tylko 63 zł.
+
+56
+00:02:53,900 --> 00:02:55,900
+I tak stworzyliśmy sobie taki system,
+
+57
+00:02:56,000 --> 00:03:00,000
+taki symulator, w którym możemy zmieniać poszczególne wartości,
+
+58
+00:03:00,000 --> 00:03:02,500
+a Python później pod te wartości będzie,
+
+59
+00:03:02,500 --> 00:03:06,000
+jakby ten wzór, podstawiał te wartości zmienione
+
+60
+00:03:06,000 --> 00:03:09,500
+i będzie wyświetlał nam odpowiednią informację.
+
+61
+00:03:10,000 --> 00:03:11,000
+Idziemy dalej.
+
+62
+00:03:11,500 --> 00:03:18,000
+W zadaniu drugim mamy obliczyć obwód i pole koła o promieniu 8.
+
+63
+00:03:18,500 --> 00:03:21,000
+Czyli potrzebujemy stworzyć sobie promień.
+
+64
+00:03:21,000 --> 00:03:23,500
+Promień to jest jakiś radius.
+
+65
+00:03:26,000 --> 00:03:32,000
+Ma wartość 3,14, czyli 3,pi równa się 3,14.
+
+66
+00:03:32,500 --> 00:03:35,000
+Pamiętamy o tym, żeby używać kropki.
+
+67
+00:03:35,500 --> 00:03:39,000
+I teraz, jeżeli chcielibyśmy policzyć sobie pole koła,
+
+68
+00:03:39,000 --> 00:03:41,000
+to pole koła to jest pi r kwadrat,
+
+69
+00:03:41,000 --> 00:03:48,500
+czyli pi razy radius podniesiony do kwadratu.
+
+70
+00:03:48,500 --> 00:03:51,500
+Tutaj kolejność działań jest po naszej stronie,
+
+71
+00:03:51,500 --> 00:03:54,000
+bo tak wygląda ten wzór.
+
+72
+00:03:54,000 --> 00:03:56,000
+Natomiast, jeżeli kolejność działań miałaby być
+
+73
+00:03:56,000 --> 00:03:59,500
+inna, to nie wahaj się, możesz spokojnie tutaj dodawać nawiasy.
+
+74
+00:03:59,500 --> 00:04:01,500
+Zawsze będą to nawiasy okrągłe.
+
+75
+00:04:01,500 --> 00:04:02,500
+Enter.
+
+76
+00:04:02,500 --> 00:04:04,500
+200,96.
+
+77
+00:04:04,500 --> 00:04:08,000
+A obwód koła to jest wzór 2,pi r,
+
+78
+00:04:08,000 --> 00:04:11,000
+czyli 2 razy pi razy radius,
+
+79
+00:04:11,500 --> 00:04:14,500
+czyli 50,24.
+
+80
+00:04:15,000 --> 00:04:16,000
+Dobra.
+
+81
+00:04:16,000 --> 00:04:17,500
+I została nam ostatnia rzecz.
+
+82
+00:04:17,500 --> 00:04:20,500
+Taka, wiecie, na próbę do pobawienia się
+
+83
+00:04:20,500 --> 00:04:23,500
+i do tego też Was bardzo zachęcam.
+
+84
+00:04:23,500 --> 00:04:25,500
+Jeżeli coś Was interesuje,
+
+85
+00:04:25,500 --> 00:04:27,000
+to idźcie za tym.
+
+86
+00:04:27,000 --> 00:04:31,000
+Spróbujcie sprawdzić, co się stanie, jeżeli zrobicie coś źle.
+
+87
+00:04:31,000 --> 00:04:33,000
+Być może zrobicie literówkę.
+
+88
+00:04:33,000 --> 00:04:37,000
+Na przykład zamiast słowa radius napiszecie radus.
+
+89
+00:04:37,000 --> 00:04:39,000
+Co się wtedy stanie?
+
+90
+00:04:39,000 --> 00:04:40,000
+Błąd!
+
+91
+00:04:40,000 --> 00:04:41,500
+Ale błędami się nie przejmujemy.
+
+92
+00:04:41,500 --> 00:04:43,500
+Błędy czytamy i naprawiamy.
+
+93
+00:04:43,500 --> 00:04:44,500
+Zobacz.
+
+94
+00:04:44,500 --> 00:04:45,500
+Name error.
+
+95
+00:04:45,500 --> 00:04:47,500
+Czyli już wiesz, że coś jest nie tak z nazwą.
+
+96
+00:04:47,500 --> 00:04:50,500
+Name radus is not defined.
+
+97
+00:04:50,500 --> 00:04:52,500
+Czyli coś tu jest nie tak.
+
+98
+00:04:52,500 --> 00:04:53,500
+Aaa, to był radius.
+
+99
+00:04:53,500 --> 00:04:55,000
+No i wtedy mogę sobie to zmienić.
+
+100
+00:04:55,000 --> 00:04:57,000
+I wszystko będzie działało dalej.
+
+101
+00:04:57,000 --> 00:04:59,000
+Te błędy bardzo często się pojawiają,
+
+102
+00:04:59,000 --> 00:05:02,000
+ale zawsze tu, ta ostatnia linia,
+
+103
+00:05:02,000 --> 00:05:05,000
+to jest linia, która nie jest po to, żeby się wyśmiał,
+
+104
+00:05:05,000 --> 00:05:06,000
+tylko po to, żeby Ci pomóc.
+
+105
+00:05:06,000 --> 00:05:08,000
+I dlatego trzeba czytać te komunikaty,
+
+106
+00:05:08,000 --> 00:05:09,500
+żeby móc je naprawiać.
+
+107
+00:05:09,500 --> 00:05:12,500
+No i właśnie w ten sposób dochodzimy sobie do
+
+108
+00:05:12,500 --> 00:05:14,500
+ostatniego zadania.
+
+109
+00:05:14,500 --> 00:05:18,500
+Sprawdźmy, co by się stało, gdybyśmy zrobili 3,14 jako pi,
+
+110
+00:05:18,500 --> 00:05:20,500
+a nie 3,14.
+
+111
+00:05:20,500 --> 00:05:24,000
+Pi równa się 3,14. Enter.
+
+112
+00:05:24,000 --> 00:05:25,000
+Błędu nie ma.
+
+113
+00:05:25,000 --> 00:05:27,000
+Ale jeżeli wpiszemy sobie pi,
+
+114
+00:05:27,000 --> 00:05:30,000
+to pojawi nam się to pi w jakichś dziwnych nawiasach.
+
+115
+00:05:30,000 --> 00:05:33,000
+Kto oglądał filmy u mnie na kanale,
+
+116
+00:05:33,000 --> 00:05:35,000
+to już pewnie wie, że to jest tupla.
+
+117
+00:05:35,000 --> 00:05:37,000
+A kto nie wie, że to jest tupla,
+
+118
+00:05:37,000 --> 00:05:38,000
+to niech się nie przejmuje o tym sobie.
+
+119
+00:05:38,000 --> 00:05:39,000
+Jeszcze porozmawiamy.
+
+120
+00:05:39,000 --> 00:05:41,000
+Natomiast w naszym przypadku,
+
+121
+00:05:41,000 --> 00:05:43,000
+jeżeli teraz chcemy wyświetlić zawartość,
+
+122
+00:05:43,000 --> 00:05:45,000
+zobaczyć sobie, co to jest to pi,
+
+123
+00:05:45,000 --> 00:05:47,000
+i że to jest ta tupla.
+
+124
+00:05:47,000 --> 00:05:50,000
+Pamiętacie, można użyć funkcji type na pi
+
+125
+00:05:50,000 --> 00:05:52,000
+i pojawi się class tuple,
+
+126
+00:05:52,000 --> 00:05:54,000
+zwana inaczej krotką.
+
+127
+00:05:54,000 --> 00:05:56,000
+Tym się teraz nie przejmujemy.
+
+128
+00:05:56,000 --> 00:05:58,000
+Natomiast to, co nas będzie interesowało,
+
+129
+00:05:58,000 --> 00:05:59,000
+to pi z kropką.
+
+130
+00:05:59,000 --> 00:06:00,000
+Więc ja to od razu nadmieniam,
+
+131
+00:06:00,000 --> 00:06:02,000
+żeby w przyszłości nie mieć jakichś problemów,
+
+132
+00:06:02,000 --> 00:06:04,000
+kiedy będę ten kod chciał sobie wywołać raz jeszcze.
+
+133
+00:06:04,000 --> 00:06:06,000
+Wszystko działa, więc kciuki w górę.
+
+134
+00:06:06,000 --> 00:06:08,000
+Super, mamy to.
+
+135
+00:06:08,000 --> 00:06:12,000
+No i ciekawostka dla ciekawych.
+
+136
+00:06:12,000 --> 00:06:14,000
+Rzecz, która może Ci się spodobać,
+
+137
+00:06:14,000 --> 00:06:18,000
+jeżeli chcesz programować bardziej profesjonalnie.
+
+138
+00:06:18,000 --> 00:06:19,000
+A mianowicie, co z tym pi?
+
+139
+00:06:19,000 --> 00:06:20,000
+Czemu 3,14?
+
+140
+00:06:20,000 --> 00:06:23,000
+From math import pi.
+
+141
+00:06:23,000 --> 00:06:25,000
+Pamiętasz, jak importowaliśmy kwadrat?
+
+142
+00:06:25,000 --> 00:06:28,000
+Tak samo można zaimportować też liczbę pi.
+
+143
+00:06:28,000 --> 00:06:31,000
+Tu ona, co prawda, nie będzie miała wszystkich miejsc po przecinku,
+
+144
+00:06:31,000 --> 00:06:34,000
+ale jak widać, jest ich troszeczkę więcej niż 3,14.
+
+145
+00:06:34,000 --> 00:06:36,000
+Więc bardzo serdecznie dziękuję.
+
+146
+00:06:36,000 --> 00:06:37,000
+Zapraszam do kolejnych lekcji.
+
+147
+00:06:37,000 --> 00:06:38,000
+Do zobaczenia.

@@ -1,0 +1,167 @@
+1
+00:00:00,000 --> 00:00:01,480
+Lecimy z pracą domową.
+
+2
+00:00:01,940 --> 00:00:05,900
+W zadaniu pierwszym mamy napisać program, który odbierze od użytkownika liczbę całkowitą,
+
+3
+00:00:06,020 --> 00:00:11,320
+a następnie wyświetli na ekranie wszystkie liczby parzyste od dwóch do tej liczby.
+
+4
+00:00:11,880 --> 00:00:15,220
+No i chcemy te wszystkie wartości wyświetlić oddzielone przecinkami.
+
+5
+00:00:15,839 --> 00:00:16,300
+No to co?
+
+6
+00:00:16,820 --> 00:00:20,400
+Możemy sobie wykonać zatem pobranie liczby,
+
+7
+00:00:20,400 --> 00:00:22,640
+czyli jakieś tam sobie value, czy tam number,
+
+8
+00:00:23,300 --> 00:00:28,960
+równa się int, input, podaj liczbę.
+
+9
+00:00:28,960 --> 00:00:36,039
+I teraz w momencie, w którym chcielibyśmy wyświetlić sobie wszystkie wartości od dwóch do tej liczby,
+
+10
+00:00:36,359 --> 00:00:38,939
+no to potrzebujemy użyć pętli for oraz range.
+
+11
+00:00:39,439 --> 00:00:47,719
+Czyli for jakaś ta zmienna, czyli na przykład n, czy counter może,
+
+12
+00:00:48,460 --> 00:00:54,100
+in range i chcemy wyświetlić tylko liczby parzyste.
+
+13
+00:00:54,500 --> 00:00:56,079
+Więc można to zrobić na dwa sposoby.
+
+14
+00:00:56,079 --> 00:00:57,600
+Albo sprawdzać sobie,
+
+15
+00:00:57,600 --> 00:01:04,900
+czy liczba jest parzysta i po prostu w środku, wewnątrz pętli robić if liczba modulo 2 równa się 0,
+
+16
+00:01:04,980 --> 00:01:05,900
+to wtedy ją wyświetlam,
+
+17
+00:01:06,299 --> 00:01:10,640
+ale przez to będziemy mieli zawsze jeszcze raz tyle przebiegów pętli.
+
+18
+00:01:11,099 --> 00:01:14,480
+Dużo prościej będzie, jeżeli sobie założymy, że chcemy robić od dwójki
+
+19
+00:01:14,480 --> 00:01:19,159
+do tej podanej liczby przez użytkownika, przecinek,
+
+20
+00:01:19,540 --> 00:01:20,960
+i chcemy skakać co dwie liczby.
+
+21
+00:01:21,960 --> 00:01:25,579
+W ten sposób jeszcze możemy się na wszelki wypadek upewnić,
+
+22
+00:01:25,659 --> 00:01:27,099
+że ktoś nam poda na przykład liczbę 4,
+
+23
+00:01:27,599 --> 00:01:29,599
+żeby zawsze mieć pewność, że ta liczba 4 nam się wyświetli,
+
+24
+00:01:29,599 --> 00:01:32,859
+to można zrobić plus 1 i skaczemy w range co 2.
+
+25
+00:01:32,859 --> 00:01:35,299
+W ten sposób, jeżeli sobie to wyświetlimy,
+
+26
+00:01:35,299 --> 00:01:39,500
+to okaże się, że on nam powinien ładnie wyświetlać.
+
+27
+00:01:39,500 --> 00:01:45,899
+Sprawdźmy to, Python, spacja, 1py, podaj liczbę 30
+
+28
+00:01:45,899 --> 00:01:51,899
+i zobaczcie mam 2, 4, 6, 8, 10 i tak aż do 30.
+
+29
+00:01:51,899 --> 00:01:55,099
+Ten sposób drugi zakładałby, że nie podalibyśmy tego warunku
+
+30
+00:01:55,099 --> 00:01:57,299
+i sprawdzalibyśmy wtedy, teraz to nie ma sensu,
+
+31
+00:01:57,299 --> 00:02:00,799
+ale dla pewności pokażę wam jak to zrobić.
+
+32
+00:02:00,799 --> 00:02:05,299
+O i wtedy będziemy mieli tę wartość podaną poprawnie.
+
+33
+00:02:05,299 --> 00:02:08,300
+I wszystkie nasze wartości powinny być rozdzielone przecinkami,
+
+34
+00:02:08,300 --> 00:02:12,800
+więc możemy dorzucić przecinek, end równa się przecinek.
+
+35
+00:02:12,800 --> 00:02:17,300
+Ja wam wspominałem o tym, że tutaj chcemy jakby uniknąć sytuacji,
+
+36
+00:02:17,300 --> 00:02:20,300
+w której przecinek potencjalnie wyświetlałby się na końcu,
+
+37
+00:02:20,300 --> 00:02:23,300
+no ale w tym przypadku takiej możliwości nie ma.
+
+38
+00:02:23,300 --> 00:02:26,300
+Można byłoby pokombinować z listą, list jeszcze nie było,
+
+39
+00:02:26,300 --> 00:02:27,139
+więc dopiero w przyszłości,
+
+40
+00:02:27,139 --> 00:02:30,139
+ale jak widać w ten sposób nam to też zadziałało.
+
+41
+00:02:30,139 --> 00:02:32,139
+Jedyna rzecz, której będę chciał uniknąć to tutaj,
+
+42
+00:02:32,139 --> 00:02:36,139
+żeby był dwukropek spacja, tak żeby nam się to ładniej zlepiało.

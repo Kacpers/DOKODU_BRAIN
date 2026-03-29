@@ -1,0 +1,747 @@
+1
+00:00:00,000 --> 00:00:06,640
+W zadaniu drugim mamy tę historię o Zosi chodzącej po łące zbierającej jabłka.
+
+2
+00:00:07,100 --> 00:00:09,800
+Czyli potrzebujemy mieć klasę o nazwie Apple.
+
+3
+00:00:11,800 --> 00:00:15,380
+I w initie będziemy potrzebowali mieć color, taste.
+
+4
+00:00:16,039 --> 00:00:20,839
+I tu mówiliśmy, że lepiej nie robić type, bo to jest słówko zarezerwowane,
+
+5
+00:00:20,960 --> 00:00:22,980
+więc zrobię apple type, niech będzie coś takiego.
+
+6
+00:00:23,500 --> 00:00:28,820
+Color to string, taste to string i apple type to string.
+
+7
+00:00:28,820 --> 00:00:41,700
+No i znowu mamy.
+
+8
+00:00:42,100 --> 00:00:45,519
+W ten sposób możemy sobie stworzyć kilka jabłek.
+
+9
+00:00:45,719 --> 00:00:51,079
+Tylko żeby je sobie potworzyć, czy też żeby w ogóle nad nimi popracować,
+
+10
+00:00:51,480 --> 00:00:57,219
+będziemy potrzebowali sobie jeszcze móc gdzieś te jabłka do tego koszyka dodawać.
+
+11
+00:00:57,219 --> 00:00:58,380
+Czyli klas.
+
+12
+00:00:58,820 --> 00:01:00,359
+Niech to będzie basket.
+
+13
+00:01:02,439 --> 00:01:06,180
+W naszym koszyku na dzień dobry nie ma żadnych jabłek.
+
+14
+00:01:08,239 --> 00:01:09,680
+Ta lista jest pusta.
+
+15
+00:01:10,400 --> 00:01:14,359
+Natomiast w naszym koszyku będziemy potrzebowali mieć metodę addApple.
+
+16
+00:01:16,980 --> 00:01:19,500
+No i będziemy potrzebowali mieć jabłko.
+
+17
+00:01:20,819 --> 00:01:23,519
+Jak widzisz, mało to programistyczne to zadanie.
+
+18
+00:01:23,519 --> 00:01:28,519
+Po prostu jest to zadanie, w którym...
+
+19
+00:01:28,819 --> 00:01:32,979
+Opisujemy sobie jakąś sytuację bardzo mocno życiową.
+
+20
+00:01:34,679 --> 00:01:36,679
+Jeżeli ktoś z was chodził i zbierał jabłka.
+
+21
+00:01:36,679 --> 00:01:37,679
+Ok.
+
+22
+00:01:37,679 --> 00:01:43,019
+No i teraz będziemy potrzebowali stworzyć sobie różne owoce.
+
+23
+00:01:43,019 --> 00:01:47,439
+No i mieć możliwość generowania raportu.
+
+24
+00:01:47,439 --> 00:01:54,439
+Tutaj myślę, że generowanie raportu może być odpowiedzialny basket.
+
+25
+00:01:54,439 --> 00:01:56,939
+Czyli dev getReport.
+
+26
+00:01:56,939 --> 00:01:58,239
+No i tutaj mamy.
+
+27
+00:01:58,239 --> 00:02:04,099
+Można byłoby też stworzyć osobną klasę, która by dostawała ten basket i pobierała go.
+
+28
+00:02:04,099 --> 00:02:06,099
+I tak chyba nawet byłoby lepiej.
+
+29
+00:02:06,099 --> 00:02:11,099
+Bo zobacz, jeżeli się zastanowimy nad tym, czy koszyk generuje raport.
+
+30
+00:02:11,099 --> 00:02:15,099
+No to jak się nad tym zastanowić, to nie jest to, wracając do odpowiedzialności,
+
+31
+00:02:15,099 --> 00:02:18,099
+odpowiedzialność koszyka, żeby był generowany raport.
+
+32
+00:02:18,099 --> 00:02:23,099
+Dużo rozsądniej byłoby, jakbyśmy chcieli taki raport zrobić, no to bralibyśmy,
+
+33
+00:02:23,099 --> 00:02:26,099
+wzięlibyśmy kogoś, kto byłby takim raportującym człowiekiem.
+
+34
+00:02:26,099 --> 00:02:27,099
+Dalibyśmy mu ten koszyk.
+
+35
+00:02:27,099 --> 00:02:28,099
+Byśmy mu brali.
+
+36
+00:02:28,099 --> 00:02:35,099
+I powiedzieli, ej, policz mi, ile jest jabłek według poszczególnych kolorów.
+
+37
+00:02:35,099 --> 00:02:41,099
+I wtedy ten gość, by nam brał te jabłka po kolei, by nam to weryfikował.
+
+38
+00:02:41,099 --> 00:02:48,099
+Więc myślę, że tutaj spokojnie możemy sobie stworzyć taką klasę.
+
+39
+00:02:48,099 --> 00:02:51,099
+No i tutaj o nazwie report.
+
+40
+00:02:51,099 --> 00:02:57,099
+I tu getReport, to będzie potrzebowało otrzymywać ten basket.
+
+41
+00:02:57,099 --> 00:02:58,099
+W tym razie.
+
+42
+00:02:58,099 --> 00:03:01,099
+I w tym momencie to jeszcze Python za chwilę zacznie nam mówić, że ta klasa może być statyczna,
+
+43
+00:03:01,099 --> 00:03:03,099
+ale tym się zupełnie póki co nie przejmujemy.
+
+44
+00:03:03,099 --> 00:03:07,099
+To jest temat na inne spotkanie zupełnie.
+
+45
+00:03:07,099 --> 00:03:10,099
+Czyli class report, getReport.
+
+46
+00:03:10,099 --> 00:03:14,099
+No i wtedy będziemy chcieli przejść po wszystkich jabłkach, które mamy w koszyku.
+
+47
+00:03:14,099 --> 00:03:24,099
+Czyli for apple in basket, tu bez self, kropka apples, dwukropek.
+
+48
+00:03:24,099 --> 00:03:26,099
+I wtedy...
+
+49
+00:03:26,099 --> 00:03:27,099
+...
+
+50
+00:03:27,099 --> 00:03:28,099
+...
+
+51
+00:03:28,099 --> 00:03:29,099
+...
+
+52
+00:03:29,099 --> 00:03:31,099
+No właśnie, getReport.mayBeStatic.
+
+53
+00:03:31,099 --> 00:03:33,099
+I wtedy tym się nie przejmujemy.
+
+54
+00:03:33,099 --> 00:03:42,099
+I wtedy będziemy potrzebowali zrobić rzecz następującą, a mianowicie sprawdzić sobie, dla jakiej cechy jeszcze ten raport ma być wygenerowany.
+
+55
+00:03:42,099 --> 00:03:45,099
+Bo mamy do dyspozycji kolor, smak i rodzaj.
+
+56
+00:03:45,099 --> 00:03:48,099
+Czyli tutaj powinniśmy wziąć jeszcze jakieś property.
+
+57
+00:03:48,099 --> 00:03:49,099
+...
+
+58
+00:03:49,099 --> 00:03:50,099
+...
+
+59
+00:03:50,099 --> 00:03:51,099
+...
+
+60
+00:03:51,099 --> 00:03:53,099
+A basket to jest nasz basket.
+
+61
+00:03:53,099 --> 00:03:54,099
+I wtedy...
+
+62
+00:03:54,099 --> 00:03:55,099
+...
+
+63
+00:03:55,099 --> 00:03:56,099
+...
+
+64
+00:03:56,099 --> 00:03:57,099
+...
+
+65
+00:03:57,099 --> 00:03:58,099
+Być nie jest ocur油,!!!!!
+
+66
+00:03:58,099 --> 00:04:13,500
+Masz
+
+67
+00:04:13,500 --> 00:04:21,060
+A
+
+68
+00:04:21,060 --> 00:04:22,060
+Ę
+
+69
+00:04:22,060 --> 00:04:23,060
+� yağ
+
+70
+00:04:23,060 --> 00:04:24,600
+, k hacia
+
+71
+00:04:24,600 --> 00:04:29,920
+w tym wypadku może być tą właściwością jeszcze ten nasz AppleType.
+
+72
+00:04:33,879 --> 00:04:38,379
+I wtedy będzie nas interesowało apple.appleType.
+
+73
+00:04:38,620 --> 00:04:40,080
+I co będziemy chcieli robić?
+
+74
+00:04:40,280 --> 00:04:43,620
+Będziemy chcieli to pobierać i sprawdzać, czy jest to już w słowniku.
+
+75
+00:04:44,040 --> 00:04:46,480
+Czyli dokładnie taka sama rzecz, jaką robiliśmy do tej pory.
+
+76
+00:04:47,040 --> 00:04:52,500
+Możemy stworzyć sobie więc zmienną statistics, pusty słownik
+
+77
+00:04:52,500 --> 00:04:57,160
+i będziemy chcieli pobrać z tego słownika ten konkretny kolor.
+
+78
+00:04:57,160 --> 00:05:01,300
+Jeżeli nie wystąpił do tej pory, no to będziemy chcieli go,
+
+79
+00:05:01,959 --> 00:05:06,060
+będziemy chcieli przypisać mu wartość zerową
+
+80
+00:05:06,060 --> 00:05:09,160
+i zwiększyć ilość tego koloru w koszyku.
+
+81
+00:05:09,459 --> 00:05:12,600
+Czyli statistics.update.
+
+82
+00:05:13,899 --> 00:05:15,500
+I co update'ujemy?
+
+83
+00:05:16,899 --> 00:05:22,160
+Update'ujemy kolor w taki sposób, że robimy statistics,
+
+84
+00:05:22,500 --> 00:05:30,439
+statistics.get appleColor 0 plus 1.
+
+85
+00:05:30,959 --> 00:05:36,980
+I w ten sposób on będzie wiedział, jaką rzecz chcemy modyfikować.
+
+86
+00:05:37,660 --> 00:05:40,959
+I dla jakiej rzeczy chcielibyśmy wygenerować raport.
+
+87
+00:05:41,399 --> 00:05:44,439
+Statistics.update i tu będziemy mieli appleType.
+
+88
+00:05:47,100 --> 00:05:48,040
+O właśnie tak.
+
+89
+00:05:48,040 --> 00:05:51,519
+Jeszcze sobie to sformatujmy i zwracamy statistics.
+
+90
+00:05:52,500 --> 00:05:58,920
+I teraz, żeby to sprawdzić, wypadałoby stworzyć sobie
+
+91
+00:05:58,920 --> 00:06:03,240
+odpowiednią ilość tych naszych jabłek.
+
+92
+00:06:03,459 --> 00:06:05,379
+No bo na chwilę obecną jabłek nie mamy wcale.
+
+93
+00:06:06,000 --> 00:06:13,019
+Więc możemy sobie wykonać for podkreślenie in range.
+
+94
+00:06:14,240 --> 00:06:16,379
+Niech będzie 100. 100 nam chyba wystarczy, co?
+
+95
+00:06:17,000 --> 00:06:19,579
+Warto byłoby sobie przygotować jakąś listę.
+
+96
+00:06:19,579 --> 00:06:21,620
+Na przykład mógłbym je robić ręcznie,
+
+97
+00:06:21,620 --> 00:06:23,620
+ale po co jak mogę po prostu sobie wygenerować.
+
+98
+00:06:23,620 --> 00:06:26,259
+Kolory, czyli colors.
+
+99
+00:06:26,259 --> 00:06:29,300
+No to jabłka mogą być, być jednym z kolorów.
+
+100
+00:06:29,300 --> 00:06:36,860
+Zielony, czerwony, żółty.
+
+101
+00:06:39,300 --> 00:06:39,899
+Wystarczy.
+
+102
+00:06:41,079 --> 00:06:43,079
+Następnie mamy smaki.
+
+103
+00:06:45,560 --> 00:06:51,340
+Może być cierpki, słodki, kwaśny.
+
+104
+00:06:51,620 --> 00:06:53,060
+Gimme.
+
+105
+00:06:53,600 --> 00:06:56,220
+No i mamy jeszcze rodzaj jabłka.
+
+106
+00:07:01,860 --> 00:07:03,860
+Na przykład dojrzały, niedojrzały.
+
+107
+00:07:10,620 --> 00:07:12,340
+I to co mi się przyda
+
+108
+00:07:12,340 --> 00:07:14,720
+to będę chciał po prostu pobierać sobie losowe wartości
+
+109
+00:07:14,899 --> 00:07:16,480
+z tych naszych dostępnych danych
+
+110
+00:07:16,780 --> 00:07:18,399
+i tworzyć nowe jabłka.
+
+111
+00:07:18,500 --> 00:07:20,160
+Żeby pobierać losowe wartości z danych
+
+112
+00:07:20,160 --> 00:07:20,980
+można sobie w inną kartkę palić na dole,
+
+113
+00:07:20,980 --> 00:07:21,600
+żeby to zrobić.
+
+114
+00:07:21,600 --> 00:07:29,000
+from random zaimportować choice i random choice potrafi pobrać jedną wartość z
+
+115
+00:07:29,040 --> 00:07:33,060
+czegoś po czym można iterować czyli Apple.
+
+116
+00:07:33,100 --> 00:07:36,800
+Nawet nie muszę robić Apple wystarczy że zrobię
+
+117
+00:07:36,840 --> 00:07:43,379
+albo dobra Apple równa się Apple i teraz mu będę przekazywał kolor.
+
+118
+00:07:43,420 --> 00:07:47,360
+To jest jakiś choice kolorów.
+
+119
+00:07:47,360 --> 00:07:53,240
+Smak to jest jakiś choice ze smaków.
+
+120
+00:07:54,439 --> 00:08:01,040
+No i Apple Type to będzie jakiś type z tego jakiś choice z Apple Type.
+
+121
+00:08:01,920 --> 00:08:04,780
+I zawsze możemy sobie też wyprintować.
+
+122
+00:08:04,800 --> 00:08:11,860
+Można byłoby zrobić Apple.getInfo jako taką metodę która by nam wypisywała
+
+123
+00:08:11,879 --> 00:08:16,259
+jakie jest to jabłko czyli zobaczcie wracam do jabłka.
+
+124
+00:08:16,280 --> 00:08:17,319
+Już teraz muszę się
+
+125
+00:08:17,319 --> 00:08:23,959
+pilnować żeby dopisać tę metodę do dobrego do dobrego miejsca bo może się
+
+126
+00:08:24,000 --> 00:08:26,939
+okazać że wrzucę to w złej klasie.
+
+127
+00:08:26,959 --> 00:08:29,420
+Nigdy mi się to nie zdarzyło oczywiście że wiele razy.
+
+128
+00:08:29,439 --> 00:08:37,319
+Czyli to jest self color czyli na prawdę zielone.
+
+129
+00:08:37,360 --> 00:08:40,220
+Self taste czyli kwaśne.
+
+130
+00:08:40,259 --> 00:08:44,179
+Self Apple Type niedojrzałe.
+
+131
+00:08:44,220 --> 00:08:46,179
+Jabłko.
+
+132
+00:08:47,320 --> 00:08:52,500
+No i teraz strzała do góry Enter.
+
+133
+00:08:52,540 --> 00:08:54,780
+To zadanie drugie.
+
+134
+00:08:54,820 --> 00:08:59,379
+Jak widać to jest żółte cierpkie niedojrzałe jabłko żółte.
+
+135
+00:08:59,420 --> 00:09:05,580
+Zielone cierpkie słodkie kwaśne.
+
+136
+00:09:05,620 --> 00:09:08,080
+A żeby było.
+
+137
+00:09:09,000 --> 00:09:12,140
+Żeby było jak w zdaniu możemy zrobić coś takiego.
+
+138
+00:09:12,180 --> 00:09:16,300
+I teraz to jest zielone kwaśne dojrzałe jabłko to jest zielone kwaśne dojrzałe
+
+139
+00:09:16,340 --> 00:09:17,180
+jabłko.
+
+140
+00:09:17,320 --> 00:09:18,320
+Żółte kwaśne dojrzałe.
+
+141
+00:09:18,360 --> 00:09:18,820
+Wychodzą.
+
+142
+00:09:18,860 --> 00:09:22,260
+Nie są też niedojrzałe żółte kwaśne niedojrzałe.
+
+143
+00:09:22,300 --> 00:09:25,860
+Pseudo losowo wygenerowały nam się różne jabłka.
+
+144
+00:09:25,900 --> 00:09:28,980
+I teraz nasze jabłka będziemy chcieli dodawać do koszyka.
+
+145
+00:09:29,020 --> 00:09:31,500
+Czyli potrzebujemy mieć koszyk.
+
+146
+00:09:31,540 --> 00:09:36,180
+Zanim zaczniemy te jabłka sobie gdzieś tam umieszczać to możemy sobie stworzyć nowy
+
+147
+00:09:36,220 --> 00:09:43,140
+koszyk i możemy oprócz wypisywania zrobić basket kropka ad Apple.
+
+148
+00:09:43,180 --> 00:09:46,980
+I wskazujemy mu konkretne jabłko.
+
+149
+00:09:46,980 --> 00:09:50,740
+I jedyna rzecz którą teraz trzeba będzie zrobić to pobrać raport dla jakiejś cechy.
+
+150
+00:09:50,779 --> 00:09:54,600
+Na przykład interesuje mnie ile było dojrzałych a ile było niedojrzałych.
+
+151
+00:09:54,639 --> 00:10:01,680
+Więc tworzę sobie nowy obiekt z report i wykonam report kropka get report.
+
+152
+00:10:01,720 --> 00:10:07,700
+Muszę mu przekazać property czyli moje property to będzie Apple Type.
+
+153
+00:10:07,740 --> 00:10:12,060
+A moja metoda a to co będzie jako druga wartość to jest po prostu koszyk dla
+
+154
+00:10:12,100 --> 00:10:16,320
+którego chce te informacje ten raport zwrócić.
+
+155
+00:10:16,320 --> 00:10:21,500
+Zerknę tylko jeszcze na to czy zrobiłem już zwróciłem statistics zwróciłem statistics.
+
+156
+00:10:21,540 --> 00:10:25,140
+No to strzała do góry Enter i mam Apple Type 1.
+
+157
+00:10:25,180 --> 00:10:26,940
+Coś skiepściłem.
+
+158
+00:10:27,379 --> 00:10:30,260
+Co skiepściłem Apple Type.
+
+159
+00:10:31,820 --> 00:10:37,320
+Ach tutaj powinienem zostawić kolor bez tego bo ja bym chciał mieć konkretne
+
+160
+00:10:37,360 --> 00:10:42,660
+wartości przypisane i dlatego to tak nie powinno być.
+
+161
+00:10:42,700 --> 00:10:46,160
+A i tu nie powinno być kolor tylko tu powinno być property.
+
+162
+00:10:46,320 --> 00:10:55,820
+Bo ja chcę podstawić sobie czerwony zielony niebieski powiedzmy jak byłoby niebieskie
+
+163
+00:10:55,860 --> 00:10:58,840
+jabłko i konkretne smaki pod konkretne wartości.
+
+164
+00:10:58,879 --> 00:11:00,660
+Teraz powinno być OK.
+
+165
+00:11:00,700 --> 00:11:03,000
+Coś jeszcze mu się nie spodobało.
+
+166
+00:11:11,000 --> 00:11:13,420
+Ach tu oczywiście będzie Apple Color.
+
+167
+00:11:13,460 --> 00:11:14,940
+O tak.
+
+168
+00:11:16,320 --> 00:11:20,100
+Czyli Apple Taste.
+
+169
+00:11:20,140 --> 00:11:25,500
+Bo pod tą zmienną to siedzi przecież i Apple Apple Type.
+
+170
+00:11:26,180 --> 00:11:32,020
+Dokładnie tak jak robiliśmy to wcześniej tylko akurat się gdzieś odpłynąłem.
+
+171
+00:11:32,060 --> 00:11:33,260
+Już wszystko jest OK.
+
+172
+00:11:33,300 --> 00:11:36,300
+Robiliśmy to w pracy domowej z tego co pamiętam.
+
+173
+00:11:36,340 --> 00:11:38,580
+I zobaczcie mamy dodawanie jabłek.
+
+174
+00:11:38,620 --> 00:11:41,740
+I widzimy że niedojrzałych 44 dojrzałych 56.
+
+175
+00:11:41,780 --> 00:11:45,400
+Oczywiście za każdym razem te wartości będą nam się zmieniały bo za każdym razem
+
+176
+00:11:45,440 --> 00:11:46,020
+losują.
+
+177
+00:11:46,019 --> 00:11:49,539
+Zobaczymy jak się nam się nowe jabłka ale sumarycznie jest ich 100 czyli tyle ile
+
+178
+00:11:49,579 --> 00:11:51,120
+sobie wygenerowaliśmy.
+
+179
+00:11:51,159 --> 00:11:52,879
+Jeżeli chcielibyśmy dowiedzieć się np.
+
+180
+00:11:52,919 --> 00:11:59,539
+o kolorze to zawsze możemy stworzyć sobie drugi raport tym razem dla koloru.
+
+181
+00:12:01,899 --> 00:12:05,600
+I dowiemy się że dojrzałych 51 niedojrzałych 49.
+
+182
+00:12:05,639 --> 00:12:09,559
+I w tym mniej więcej prawie po równo zielonych czerwonych i żółtych.
+
+183
+00:12:09,600 --> 00:12:13,759
+Takie oto zadanie drugie trochę bardziej skomplikowane ale zobaczcie ile udało nam
+
+184
+00:12:13,799 --> 00:12:15,860
+się przy okazji przekazać.
+
+185
+00:12:15,860 --> 00:12:17,560
+Wiedzy dodatkowej.
+
+186
+00:12:17,600 --> 00:12:21,560
+No i faktycznie raport został utworzony jako osobna klasa.
+
+187
+00:12:21,600 --> 00:12:26,000
+To co chwila przerwy i zadanie trzecie.

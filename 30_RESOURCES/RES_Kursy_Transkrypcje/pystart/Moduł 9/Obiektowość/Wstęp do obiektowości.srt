@@ -1,0 +1,835 @@
+1
+00:00:00,000 --> 00:00:04,879
+Dochodzimy w naszym kursie do niezwykle, niezwykle emocjonującego momentu.
+
+2
+00:00:05,240 --> 00:00:09,099
+Ten moment polega na tym, że zaczynamy programować obiektowo.
+
+3
+00:00:09,700 --> 00:00:10,380
+Co to oznacza?
+
+4
+00:00:11,380 --> 00:00:12,780
+Muszę Ci powiedzieć dwie rzeczy.
+
+5
+00:00:13,099 --> 00:00:17,740
+Po pierwsze, w Pythonie wszystko jest obiektem i programowaliśmy obiektowo już od dawna.
+
+6
+00:00:18,080 --> 00:00:24,620
+Natomiast za bardzo nie można było tego rozwijać, może tak powiedzmy,
+
+7
+00:00:24,960 --> 00:00:28,379
+czy też używać takich prawdziwych obiektów tworzonych przez nas.
+
+8
+00:00:28,379 --> 00:00:34,019
+Tutaj chodzi o to, że jeżeli pracujemy z obiektowością, to używamy class.
+
+9
+00:00:34,420 --> 00:00:36,799
+Natomiast my tak naprawdę korzystaliśmy z obiektów.
+
+10
+00:00:36,939 --> 00:00:38,979
+Z tego względu, że w Pythonie wszystko jest obiektem.
+
+11
+00:00:39,460 --> 00:00:40,119
+Już tłumaczę.
+
+12
+00:00:40,579 --> 00:00:46,280
+Kiedy używaliśmy stringa, można było po stringu zrobić kropkę i zrobić to upper,
+
+13
+00:00:46,739 --> 00:00:52,219
+albo kropkę i zrobić lower, albo zrobić inne metody.
+
+14
+00:00:52,219 --> 00:00:58,239
+Czyli wszystko to, co było po kropce, to były metody jakiegoś obiektu.
+
+15
+00:00:58,380 --> 00:00:59,440
+Co to jest metoda?
+
+16
+00:01:00,020 --> 00:01:02,280
+Mamy metody i funkcje.
+
+17
+00:01:02,700 --> 00:01:06,299
+Możliwe, że zauważyłeś, że kiedy wykonywaliśmy pewien kod,
+
+18
+00:01:06,939 --> 00:01:11,740
+to czasem przekazywaliśmy do środka pewne rzeczy,
+
+19
+00:01:11,840 --> 00:01:14,219
+a czasem można było zrobić kropkę i wartości.
+
+20
+00:01:14,659 --> 00:01:17,340
+Na przykład, żeby połączyć sobie listę,
+
+21
+00:01:17,740 --> 00:01:21,740
+nie używaliśmy jakiejś funkcji specjalnej,
+
+22
+00:01:21,740 --> 00:01:27,480
+tylko najpierw się wstawiało, mówmy najczęściej w apostrofach,
+
+23
+00:01:28,379 --> 00:01:32,259
+że to jest odcinek, no i robiło się join i połącz mi to tutaj.
+
+24
+00:01:32,459 --> 00:01:33,899
+I to jest OK.
+
+25
+00:01:34,099 --> 00:01:36,979
+W sensie tak można pracować jak najbardziej.
+
+26
+00:01:37,179 --> 00:01:37,859
+I to były metody.
+
+27
+00:01:38,060 --> 00:01:43,699
+Natomiast funkcje to były takie rzeczy jak sum, len, gdzie do środka coś przekazywaliśmy.
+
+28
+00:01:43,899 --> 00:01:44,979
+Miały jakieś parametry.
+
+29
+00:01:45,179 --> 00:01:49,060
+My przekazywaliśmy argumenty i one nam zwracały konkretny wynik.
+
+30
+00:01:49,259 --> 00:01:51,060
+Na przykład sort i sorted.
+
+31
+00:01:51,259 --> 00:01:52,459
+Kojarzysz różnicę?
+
+32
+00:01:52,659 --> 00:01:54,819
+Pokazywałem ci ją, kiedy wprowadzaliśmy listy.
+
+33
+00:01:55,019 --> 00:01:57,939
+Sort to jest metoda, którą możemy
+
+34
+00:01:57,939 --> 00:02:05,099
+wykonać na obiekcie listy, a sorted to jest funkcja, do której można właśnie listę przekazać.
+
+35
+00:02:05,299 --> 00:02:06,299
+Taka jest różnica.
+
+36
+00:02:06,500 --> 00:02:10,219
+I my teraz będziemy uczyli się jak tworzyć obiekty.
+
+37
+00:02:10,419 --> 00:02:14,219
+A żeby stworzyć obiekt musimy mieć klasę.
+
+38
+00:02:14,419 --> 00:02:15,539
+Cóż to takiego jest?
+
+39
+00:02:15,740 --> 00:02:16,979
+Spójrz na obrazek.
+
+40
+00:02:17,180 --> 00:02:20,699
+Na ekranie widzisz w tej chwili kwadrat.
+
+41
+00:02:20,900 --> 00:02:23,780
+Tylko pytanie czy to naprawdę jest kwadrat?
+
+42
+00:02:23,979 --> 00:02:24,740
+Co mam na myśli?
+
+43
+00:02:24,939 --> 00:02:27,819
+Mam na myśli to, że tak naprawdę to co widzimy na ekranie
+
+44
+00:02:28,139 --> 00:02:32,419
+to jest czerwony kwadrat, który możemy powiedzieć, że ma
+
+45
+00:02:32,620 --> 00:02:37,419
+jakiś konkretny bok, czyli jego długość, jego boku jest w jakiś sposób określona.
+
+46
+00:02:37,620 --> 00:02:40,340
+Z tego względu, że to już nie jest tak po prostu kwadrat.
+
+47
+00:02:40,379 --> 00:02:42,379
+My wiemy, że to jest kwadrat, bo tak to się nazywa.
+
+48
+00:02:42,579 --> 00:02:44,340
+Ale to jest konkretny obiekt.
+
+49
+00:02:44,539 --> 00:02:46,340
+On posiada już swoje cechy.
+
+50
+00:02:46,539 --> 00:02:51,060
+Jeżeli ja bym kogoś z was zapytał czym jest kwadrat, to pewnie odpowiedzieliście mi,
+
+51
+00:02:51,259 --> 00:02:57,379
+że kwadrat to taka figura geometryczna, która może posiada wszystkie kąty proste.
+
+52
+00:02:57,939 --> 00:02:59,579
+Czyli wszystkie boki jej są równe.
+
+53
+00:02:59,780 --> 00:03:04,460
+Czyli tak naprawdę opisywali byście coś co byłoby takim ogółem, taką abstrakcją.
+
+54
+00:03:04,659 --> 00:03:06,139
+Nikt takiego kwadratu nie widział.
+
+55
+00:03:06,340 --> 00:03:11,020
+Każdy kto widzi kwadrat widzi już konkretną reprezentację tego kwadratu, czyli widzi
+
+56
+00:03:11,219 --> 00:03:13,939
+już jakąś figurę, która posiada jakąś długość boku.
+
+57
+00:03:14,139 --> 00:03:18,219
+Może jakiś kolor, jakąś pozycję, położenie na kartce.
+
+58
+00:03:18,419 --> 00:03:22,419
+Można ją na tej kartce, może w jakimś programie graficznym przesunąć wyżej, niżej.
+
+59
+00:03:22,620 --> 00:03:26,740
+Tak po prostu to działa, że to są już konkretne obiekty.
+
+60
+00:03:26,939 --> 00:03:27,939
+Natomiast jeżeli mówimy o tym, że to jest kwadrat, to jest kwadrat.
+
+61
+00:03:28,139 --> 00:03:31,900
+Jeżeli mówimy o tych cechach wszystkich, o takich rzeczach ogólnych, no to wtedy mówimy
+
+62
+00:03:32,099 --> 00:03:36,859
+o klasie, czyli mówimy o tym co opisuje nam, można powiedzieć w cudzysłowie, taki
+
+63
+00:03:37,060 --> 00:03:41,780
+schemat tego naszego obiektu. Więc patrząc na ten konkretny kwadrat,
+
+64
+00:03:41,979 --> 00:03:45,139
+moglibyśmy o nim powiedzieć, że to kwadrat.
+
+65
+00:03:45,340 --> 00:03:49,819
+Ponadto moglibyśmy powiedzieć, w zależności od tego jaką mamy percepcję
+
+66
+00:03:50,020 --> 00:03:52,300
+kolorystyczną, że jest to kwadrat np.
+
+67
+00:03:52,500 --> 00:03:57,460
+różowy, że ma długość boku 10 centymetrów i że jest wyśrodkowany.
+
+68
+00:03:57,460 --> 00:04:04,060
+Czyli możemy opisać pewne cechy tej figury oraz moglibyśmy zrobić z nim też pewne rzeczy.
+
+69
+00:04:04,260 --> 00:04:08,700
+No na pewno możemy policzyć jego pole, na pewno możemy policzyć jego obwód, na pewno
+
+70
+00:04:08,900 --> 00:04:12,980
+możemy go przesunąć albo go obrócić, jeżeli mówimy o jakimś programie graficznym.
+
+71
+00:04:13,180 --> 00:04:16,100
+Takie rzeczy po prostu w tych programach robimy.
+
+72
+00:04:16,300 --> 00:04:21,939
+I teraz to co jest po lewej stronie, to są wartości, właściwości.
+
+73
+00:04:22,139 --> 00:04:24,019
+Nazywane po angielsku properties.
+
+74
+00:04:24,220 --> 00:04:27,379
+Natomiast to co jest po prawej stronie, to są właśnie metody tego
+
+75
+00:04:27,579 --> 00:04:32,739
+naszego kwadratu, czyli wszystko to co możemy z nim zrobić.
+
+76
+00:04:32,939 --> 00:04:37,539
+Jeżeli sobie weźmiemy inny przykład, to zobacz tutaj mamy studenta.
+
+77
+00:04:37,739 --> 00:04:40,299
+Niech to będzie sobie jakiś człowiek.
+
+78
+00:04:40,500 --> 00:04:44,779
+I ten człowiek możemy powiedzieć, że posiada cztery ręce,
+
+79
+00:04:44,979 --> 00:04:50,899
+dwie ręce, dwie nogi, cztery kończyny, głowę, ma jakiś wzrost, ma jakąś wagę.
+
+80
+00:04:51,099 --> 00:04:55,579
+Możemy dużo rzeczy o nim wymienić, ale nie podstawiamy żadnej konkretnej cechy.
+
+81
+00:04:55,779 --> 00:04:57,459
+Natomiast już po prawej stronie możemy
+
+82
+00:04:57,659 --> 00:04:59,219
+powiedzieć, że to jest jakiś tam nasz obiekt.
+
+83
+00:04:59,419 --> 00:05:01,139
+To jest Janek. Janek jest dociekliwy.
+
+84
+00:05:01,339 --> 00:05:02,459
+Janek ma na sobie koszulkę.
+
+85
+00:05:02,659 --> 00:05:05,019
+A propos zakładania obiektów przez obiekty
+
+86
+00:05:05,219 --> 00:05:08,819
+też jeszcze sobie porozmawiamy przy okazji kompozycji w dalszej części.
+
+87
+00:05:09,019 --> 00:05:10,379
+Janek ma pytania.
+
+88
+00:05:10,579 --> 00:05:11,899
+Janek potrafi mówić.
+
+89
+00:05:12,099 --> 00:05:13,859
+Janek potrafi skakać, potrafi biegać.
+
+90
+00:05:14,060 --> 00:05:18,539
+Ma różne swoje cechy i różne swoje działania.
+
+91
+00:05:18,740 --> 00:05:21,819
+I o tym też będziemy rozmawiali przy okazji programowania obiektowego.
+
+92
+00:05:22,019 --> 00:05:25,579
+Jednakże wszyscy na pewno jesteście dociekliwi.
+
+93
+00:05:25,779 --> 00:05:27,259
+Jak taka sytuacja
+
+94
+00:05:27,459 --> 00:05:32,859
+wygląda od strony kodu? Czyli jak to się dzieje, że taki obiekt powstaje?
+
+95
+00:05:33,060 --> 00:05:40,419
+I o tyle, o ile nie zerkniemy na kod stringa, to możemy zerknąć na to, jak
+
+96
+00:05:40,620 --> 00:05:44,339
+stworzyć takiego studenta, jakim może być na przykład Janek.
+
+97
+00:05:44,539 --> 00:05:48,620
+Więc żeby stworzyć takiego studenta jak Janek, potrzebujemy mieć najpierw klasę.
+
+98
+00:05:48,819 --> 00:05:52,819
+I klasa wymaga nowego słówka kluczowego.
+
+99
+00:05:53,019 --> 00:05:55,459
+Jak pracowaliśmy z funkcjami, to w ramach
+
+100
+00:05:55,659 --> 00:05:57,379
+funkcji używaliśmy słówka kluczowego
+
+101
+00:05:57,579 --> 00:06:00,459
+def, bo robiliśmy definicję funkcji.
+
+102
+00:06:00,659 --> 00:06:02,419
+Natomiast w momencie, w którym pracujemy z
+
+103
+00:06:02,620 --> 00:06:06,099
+klasami, no to potrzebujemy słówka kluczowego klas.
+
+104
+00:06:06,299 --> 00:06:10,180
+Za tym słówkiem kluczowym klas znajduje się nazwa tej klasy.
+
+105
+00:06:10,379 --> 00:06:15,060
+To, co jest niezwykle istotne, to jest to, że nazwa tej klasy zapisywana jest zawsze z
+
+106
+00:06:15,259 --> 00:06:21,019
+wielkiej litery i po nazwie jest dwukropek, czyli możesz się spodziewać tego, że
+
+107
+00:06:21,219 --> 00:06:26,859
+będziemy mieli drobne wcięcie. No i w ramach tego wcięcia, w ramach tego bloku
+
+108
+00:06:27,579 --> 00:06:33,500
+będą się znajdowały metody, czyli metoda to jest tak naprawdę, jak widzisz znowu def,
+
+109
+00:06:33,699 --> 00:06:40,099
+funkcja w ramach klasy, ale ta funkcja ma jedną niezwykle ważną, szczególną cechę, o
+
+110
+00:06:40,299 --> 00:06:45,620
+której też zaraz sobie powiemy. Zacznijmy od nazw tych funkcji, bo jedna z tych nazw
+
+111
+00:06:45,819 --> 00:06:49,740
+jest dosyć dziwna. Posiada dwa podkreślenia z przodu, dwa
+
+112
+00:06:49,939 --> 00:06:56,459
+podkreślenia z tyłu i nazywa się init. W momencie, w którym zamienialiśmy sobie na
+
+113
+00:06:56,459 --> 00:07:03,899
+przykład integer, string na integer, to należało napisać int, otworzyć nawias i do
+
+114
+00:07:04,099 --> 00:07:07,979
+środka przekazać string, który chcieliśmy zamienić na integer.
+
+115
+00:07:08,180 --> 00:07:13,060
+Jeżeli będziemy chcieli stworzyć studenta, czy będziemy chcieli stworzyć kwadrat, czy
+
+116
+00:07:13,259 --> 00:07:17,699
+będziemy chcieli stworzyć dowolny obiekt, to też będziemy potrzebowali przekazać do
+
+117
+00:07:17,899 --> 00:07:22,779
+środka pewne zmienne, które są tak zwanymi zmiennymi inicjalizującymi, czyli zmiennymi,
+
+118
+00:07:22,979 --> 00:07:26,379
+z których będziemy chcieli sklecić ten nasz obiekt.
+
+119
+00:07:26,579 --> 00:07:30,099
+No i jak sobie weźmiemy tego Janka, no to możemy powiedzieć, że Janek tak naprawdę
+
+120
+00:07:30,299 --> 00:07:35,219
+nazywa się Jan Kowalski, czy Jan John Smith i studiuje na którymś semestrze.
+
+121
+00:07:35,419 --> 00:07:40,019
+Czyli kiedy będziemy chcieli go tworzyć, też będziemy chcieli opisać pewne jego cechy.
+
+122
+00:07:40,219 --> 00:07:46,139
+I te cechy musimy właśnie zdefiniować sobie w ramach tego inita, bo init to jest
+
+123
+00:07:46,339 --> 00:07:50,500
+taka specjalna funkcja i tutaj mówiąc specjalna mam na myśli faktycznie, że to
+
+124
+00:07:50,699 --> 00:07:55,659
+się nazywa special method, czyli specjalna metoda właściwie, która służy do tego, żeby
+
+125
+00:07:56,459 --> 00:08:00,579
+zmienić wartości. Jak to zrobić? Za moment zobaczysz, będzie kolejny slajd.
+
+126
+00:08:00,779 --> 00:08:06,060
+I jak widzisz jeszcze jedną rzecz, każda metoda posiada w środku słówko self.
+
+127
+00:08:06,259 --> 00:08:09,859
+O tym słówku za moment sobie powiemy, nic się tym nie przejmuj jeszcze.
+
+128
+00:08:10,060 --> 00:08:12,139
+I init zawsze ma taką nazwę.
+
+129
+00:08:12,339 --> 00:08:13,979
+Nie da się nazywać go inaczej.
+
+130
+00:08:14,179 --> 00:08:16,899
+Są dwa podkreślenia z przodu, dwa podkreślenia z tyłu.
+
+131
+00:08:17,099 --> 00:08:19,579
+No i wszystkie te rzeczy są wymienione.
+
+132
+00:08:19,779 --> 00:08:21,419
+Tak samo zobacz jest promote.
+
+133
+00:08:21,620 --> 00:08:23,579
+To jest taka sama metoda poniżej.
+
+134
+00:08:23,779 --> 00:08:25,579
+Natomiast jak już powiedzieliśmy,
+
+135
+00:08:25,579 --> 00:08:30,459
+z tymi metodami dzieje się coś dziwnego, a mianowicie one w środku mają jakiegoś
+
+136
+00:08:30,659 --> 00:08:34,860
+dziwnego selfa. Cóż to takiego ten self jest?
+
+137
+00:08:35,059 --> 00:08:37,819
+Po angielsku jest takie słówko, które nazywa się myself.
+
+138
+00:08:38,019 --> 00:08:40,620
+I to znaczy, można powiedzieć, przeze mnie.
+
+139
+00:08:40,819 --> 00:08:44,939
+Czyli możemy sobie powiedzieć, że self to jest trochę coś, bo może być też yourself,
+
+140
+00:08:45,139 --> 00:08:49,500
+albo himself, herself. Czyli self to jestem po prostu ja.
+
+141
+00:08:49,699 --> 00:08:55,220
+Można tak powiedzieć. Czyli self odnosi się do mnie, odnosi się do tego czegoś, w czym on
+
+142
+00:08:55,580 --> 00:08:58,180
+się znajduje. No bo jeżeli jestem ja, to jest myself.
+
+143
+00:08:58,180 --> 00:08:59,700
+Jeżeli jesteś ty, to jest yourself.
+
+144
+00:08:59,900 --> 00:09:01,300
+Jeżeli jest on, to jest himself.
+
+145
+00:09:01,500 --> 00:09:03,860
+Jeżeli jest ona, to jest herself itd. itd.
+
+146
+00:09:04,060 --> 00:09:05,420
+Więc jej.
+
+147
+00:09:05,620 --> 00:09:10,100
+Więc my zawsze tego słówka self używamy wtedy, kiedy chcemy powiedzieć, że coś jest
+
+148
+00:09:10,300 --> 00:09:13,340
+czyjeś. I tutaj używamy go do tego samego kontekstu.
+
+149
+00:09:13,540 --> 00:09:16,740
+A mianowicie, jeżeli mamy
+
+150
+00:09:16,940 --> 00:09:22,379
+argument wewnątrz funkcji, to ten argument ma jakąś swoją żywotność.
+
+151
+00:09:22,580 --> 00:09:25,379
+Ona najczęściej nie jest zbyt długa, no bo w funkcjach
+
+152
+00:09:25,580 --> 00:09:29,820
+wszystkie argumenty giną nam, przestają nam istnieć wtedy,
+
+153
+00:09:30,020 --> 00:09:33,860
+kiedy nasza funkcja się kończy. Po prostu. Mają bardzo krótki żywot.
+
+154
+00:09:34,060 --> 00:09:38,300
+I tu jest dokładnie tak samo. Czyli w momencie, w którym przekazuję first name,
+
+155
+00:09:38,500 --> 00:09:43,500
+last name i semestr, no to nagle te funkcje, te zmienne gdzieś mi się kończą.
+
+156
+00:09:43,700 --> 00:09:45,940
+I one tutaj już przestają istnieć.
+
+157
+00:09:46,139 --> 00:09:48,900
+A ja przecież po to używam programowania
+
+158
+00:09:49,100 --> 00:09:54,060
+obiektowego, żeby dać sobie dostęp do tych właściwości w innych miejscach.
+
+159
+00:09:54,259 --> 00:09:55,460
+I żeby to osiągnąć,
+
+160
+00:09:55,660 --> 00:10:01,660
+właśnie potrzebujemy tego słówka self. Czyli robiąc self.firstname,
+
+161
+00:10:01,860 --> 00:10:08,540
+self.lastname, self.semestr i self.cośtam, dajemy sobie możliwość na to, żeby móc
+
+162
+00:10:08,740 --> 00:10:13,700
+korzystać później z tych nazw jako z właściwości obiektu.
+
+163
+00:10:13,900 --> 00:10:15,780
+I to jest tyle.
+
+164
+00:10:15,980 --> 00:10:17,940
+Zobacz, masz przykład poniżej.
+
+165
+00:10:18,139 --> 00:10:20,340
+Czyli kiedy tworzymy sobie studenta, my
+
+166
+00:10:20,540 --> 00:10:25,180
+zakładamy, że ten nasz student ma imię, nazwisko i jakiś semestr. Ale przecież ten
+
+167
+00:10:25,580 --> 00:10:30,860
+student musi też mieć możliwość pójścia na wyższy semestr, awansowania.
+
+168
+00:10:31,060 --> 00:10:35,700
+No bo zazwyczaj tak jest. Albo też możemy tego studenta gdzieś zdegradować, ale takiej
+
+169
+00:10:35,900 --> 00:10:39,740
+metody nie mamy. Tu się skupiamy tylko na tych pozytywnych scenariuszach.
+
+170
+00:10:39,940 --> 00:10:43,180
+Więc zwróć uwagę na to, że nasz przykład właśnie tak wygląda.
+
+171
+00:10:43,379 --> 00:10:45,740
+Czyli mamy w metodę promote, w której to
+
+172
+00:10:45,940 --> 00:10:49,860
+metodzie promote znajduje się self.semester plus równa się 1.
+
+173
+00:10:50,060 --> 00:10:55,460
+I to plus równa się 1 oznacza właśnie, że będziemy zwiększać właściwość self.semestra.
+
+174
+00:10:55,660 --> 00:11:01,220
+I możemy to zrobić tylko i wyłącznie dlatego, że przypisaliśmy self.semester
+
+175
+00:11:01,420 --> 00:11:06,700
+sobie tutaj do tej właściwości, czyli w init przedstawiliśmy tego studenta.
+
+176
+00:11:06,900 --> 00:11:12,060
+I dzięki temu później w metodzie promote możemy mu zwiększyć ten semestr.
+
+177
+00:11:12,259 --> 00:11:16,620
+No dobra, strasznie dużo opowiadania, ale jak to działa od strony kodu?
+
+178
+00:11:16,820 --> 00:11:19,259
+Jeżeli chcielibyśmy stworzyć sobie takiego studenta.
+
+179
+00:11:19,460 --> 00:11:23,860
+Zobacz, działa to dokładnie tak. Czyli tworzy sobie jakąś zmienną np.
+
+180
+00:11:24,060 --> 00:11:24,860
+George.
+
+181
+00:11:25,580 --> 00:11:29,020
+George przypisuje sobie równa się student.
+
+182
+00:11:29,220 --> 00:11:32,220
+No i muszę określić, że to jest George Jetson.
+
+183
+00:11:32,420 --> 00:11:34,340
+Kto oglądał bajkę, serdecznie pozdrawiam.
+
+184
+00:11:34,540 --> 00:11:38,500
+Ja oglądałem. Czyli George Jetson jest to nasz student.
+
+185
+00:11:38,700 --> 00:11:43,860
+George Jetson, powinien być Elroy w sumie, studiuje na pierwszym semestrze.
+
+186
+00:11:44,060 --> 00:11:46,620
+Nie? Bo tak żeśmy go sobie utworzyli.
+
+187
+00:11:46,820 --> 00:11:49,100
+Zobacz, pod spodem tam jest trochę to wyszarzone.
+
+188
+00:11:49,300 --> 00:11:52,900
+Mam nadzieję, że to widać, że first name jest tak naprawdę tutaj.
+
+189
+00:11:53,100 --> 00:11:55,460
+Jetson to jest tak naprawdę last name.
+
+190
+00:11:55,620 --> 00:12:00,300
+Natomiast semestr wpada nam dokładnie w to miejsce.
+
+191
+00:12:00,500 --> 00:12:02,340
+I teraz, jeżeli chciałbyś, możesz sobie jak
+
+192
+00:12:02,540 --> 00:12:08,780
+najbardziej napisać ten kod w swoim IDE, a później, kiedy spróbujesz go wykonać, to
+
+193
+00:12:08,980 --> 00:12:12,980
+okaże się, że ten nasz George zwrócił coś dziwnego.
+
+194
+00:12:13,180 --> 00:12:17,900
+On tam napisze, że George to jest tak naprawdę obiekt, który pochodzi z klasy
+
+195
+00:12:18,100 --> 00:12:21,259
+student, znajduje się na takim i na takim miejscu w pamięci.
+
+196
+00:12:21,460 --> 00:12:23,660
+Na chwilę obecną nie musimy się tym przejmować.
+
+197
+00:12:23,860 --> 00:12:25,060
+Natomiast jeżeli
+
+198
+00:12:25,580 --> 00:12:30,180
+mieliśmy sobie właściwości takie jak first name, last name i semestr, to możemy do tych
+
+199
+00:12:30,379 --> 00:12:36,379
+właściwości dostać się też od wewnątrz. Czyli tak samo jak mieliśmy słownik, to
+
+200
+00:12:36,580 --> 00:12:41,100
+możemy się odwoływać do właściwości słownika albo przez nawiasy kwadratowe,
+
+201
+00:12:41,300 --> 00:12:46,660
+albo robiąc kropkę get, bo to też jest obiekt, albo możemy zrobić
+
+202
+00:12:46,860 --> 00:12:49,460
+to tak samo tutaj w przypadku programowania obiektowego.
+
+203
+00:12:49,660 --> 00:12:55,340
+Możemy odwoływać się do właściwości obiektu wykonując George kropka first name,
+
+204
+00:12:55,580 --> 00:13:02,860
+George kropka last name. Po prostu w ten sposób odwołamy się do właściwości i będziemy mogli sobie te właściwości wyświetlić.
+
+205
+00:13:03,060 --> 00:13:06,379
+Bardzo podobnie można też odwołać się do metody.
+
+206
+00:13:06,580 --> 00:13:12,980
+Zobacz, metoda George kropka promote spowoduje, że nasz George pójdzie na kolejny semestr.
+
+207
+00:13:13,180 --> 00:13:18,300
+Proponuję, żebyś teraz wykonał ten kod w swoim IDE i spróbował przed
+
+208
+00:13:18,500 --> 00:13:25,379
+promotem wyświetlić sobie semestr i za promotem wyświetlić sobie semestr i zobaczyć jaka będzie różnica.
+
+209
+00:13:25,580 --> 00:13:28,820
+A ja już za moment zrobię to razem z tobą.

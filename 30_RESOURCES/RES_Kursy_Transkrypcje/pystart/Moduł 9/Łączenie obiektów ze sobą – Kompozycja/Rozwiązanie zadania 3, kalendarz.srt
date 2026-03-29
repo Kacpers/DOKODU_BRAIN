@@ -1,0 +1,1427 @@
+1
+00:00:00,000 --> 00:00:02,839
+No to co? Przechodzimy sobie do zadania trzeciego.
+
+2
+00:00:03,180 --> 00:00:05,419
+Zadanie trzecie będzie posiadało dwie klasy.
+
+3
+00:00:05,759 --> 00:00:08,880
+Jedna klasa to będzie kalendarz, czyli calendar.
+
+4
+00:00:09,640 --> 00:00:15,300
+I ta klasa będzie takim pojemnikiem służącym do przechowywania drugiego obiektu,
+
+5
+00:00:15,359 --> 00:00:17,920
+którym są, czy będą eventy.
+
+6
+00:00:18,440 --> 00:00:20,660
+Więc potrzebujemy wykonać klas kalendar.
+
+7
+00:00:20,980 --> 00:00:23,740
+Na razie zaczynam sobie robić taką strategię małych kroków.
+
+8
+00:00:24,280 --> 00:00:27,519
+Chciałbym zakodować ten fragment, który wam przed chwilą opowiedziałem.
+
+9
+00:00:27,519 --> 00:00:29,859
+Czyli events to jest pusta lista.
+
+10
+00:00:30,000 --> 00:00:32,520
+No właśnie, ja planuję, żeby events to nie była pusta lista,
+
+11
+00:00:33,039 --> 00:00:38,560
+tylko skoro mamy taki wymóg, że możemy mieć tylko i wyłącznie jeden event w jednym czasie,
+
+12
+00:00:39,320 --> 00:00:42,519
+to zrobię tak, że te eventy to będzie słownik.
+
+13
+00:00:43,140 --> 00:00:44,159
+Dlaczego to będzie słownik?
+
+14
+00:00:45,140 --> 00:00:49,719
+Nie wiem, czy pamiętacie, ale w Pythonie jest tak,
+
+15
+00:00:50,260 --> 00:00:55,640
+że w momencie, w którym mamy słownik, to indeksy w słowniku mogą być różne.
+
+16
+00:00:55,640 --> 00:00:57,700
+I coś tutaj mogę zademonstrować.
+
+17
+00:00:58,260 --> 00:00:59,280
+From datetime.
+
+18
+00:01:00,000 --> 00:01:11,960
+I jeżeli sobie stworzymy day, którym będzie datetime rok, dzień, miesiąc, godzina, minuta,
+
+19
+00:01:12,599 --> 00:01:15,900
+załóżmy tak, no to pojawi nam się taka informacja.
+
+20
+00:01:16,240 --> 00:01:22,379
+Czy to jest day, to jest dziesiąty, day, hour, to jest dziesiąta i tak dalej, i tak dalej.
+
+21
+00:01:22,379 --> 00:01:29,859
+I teraz skoro to jest moja data i ta data musi być unikatowa w ramach słownika,
+
+22
+00:01:30,000 --> 00:01:34,079
+oczywiście nie biorąc pod uwagę tutaj sekund, bo każde spotkanie trwa zawsze godzinę,
+
+23
+00:01:34,680 --> 00:01:37,959
+to i zakładamy, że odbywają się jakby co godzinę też.
+
+24
+00:01:38,140 --> 00:01:43,079
+Tutaj w tym moim założeniu takie przyjąłem podejście.
+
+25
+00:01:43,340 --> 00:01:46,200
+Moglibyśmy zrobić jakieś sprawdzenie, czy na przykład nie jest,
+
+26
+00:01:47,400 --> 00:01:51,240
+czy kolejne spotkanie nie jest, wiecie, pół godziny później, jakbyśmy chcieli,
+
+27
+00:01:51,319 --> 00:01:54,000
+ale ja zakładam, że po prostu spotkania mogą być o pełnych godzinach.
+
+28
+00:01:54,000 --> 00:01:58,599
+No to wtedy mogę stworzyć sobie słownik, który będzie pusty
+
+29
+00:01:58,599 --> 00:02:05,439
+i założyć, że na events od day będę miał coś.
+
+30
+00:02:07,780 --> 00:02:11,819
+I nie ma problemu z tym, żeby ta data była moim kluczem.
+
+31
+00:02:12,560 --> 00:02:18,359
+I właśnie takie podejście będę chciał przedsięwziąć w tym rozwiązaniu.
+
+32
+00:02:18,359 --> 00:02:23,680
+Czyli żeby mieć pewność, że te daty będą unikatowe
+
+33
+00:02:23,680 --> 00:02:27,319
+i żeby móc sobie łatwo też pobierać wszystkie daty,
+
+34
+00:02:27,319 --> 00:02:30,639
+ja przyjmę, że moimi kluczami będą właśnie one.
+
+35
+00:02:32,419 --> 00:02:34,479
+Kalendar na razie więcej nic nie będzie miał.
+
+36
+00:02:35,359 --> 00:02:37,280
+Druga rzecz, którą muszę mieć, to jest event.
+
+37
+00:02:39,500 --> 00:02:46,340
+No i event musi odebrać to, kiedy występuje.
+
+38
+00:02:46,919 --> 00:02:50,379
+I tutaj ponownie moglibyśmy odbierać godziny, minuty, sekundy.
+
+39
+00:02:51,400 --> 00:02:52,719
+Nie jest to zły pomysł.
+
+40
+00:02:52,719 --> 00:02:56,340
+Natomiast moglibyśmy też od razu odebrać ten moment,
+
+41
+00:02:56,500 --> 00:02:57,199
+kiedy ten event nastąpi.
+
+42
+00:02:57,319 --> 00:02:58,659
+Czyli ten datetime.
+
+43
+00:02:58,939 --> 00:03:01,900
+Ja tak sobie myślę, że ten moment, kiedy event nastąpi,
+
+44
+00:03:01,979 --> 00:03:04,939
+i tak musimy znać, bo będziemy potrzebowali go użyć w kluczu.
+
+45
+00:03:05,379 --> 00:03:07,979
+Więc przekazywanie go dwa razy byłoby bez sensu.
+
+46
+00:03:08,039 --> 00:03:11,159
+Tutaj osobną godzinę, minutę, sekundę tutaj konkretnie.
+
+47
+00:03:12,280 --> 00:03:16,539
+Więc wydaje mi się, że prościej będzie po prostu tutaj założyć sobie
+
+48
+00:03:16,539 --> 00:03:18,159
+konkretne godziny, minutę, sekundę.
+
+49
+00:03:18,439 --> 00:03:20,959
+Konkretnie już, kiedy ten moment występuje.
+
+50
+00:03:21,500 --> 00:03:22,740
+Czyli event at.
+
+51
+00:03:23,799 --> 00:03:25,379
+I to będzie datetime, na pewno.
+
+52
+00:03:25,719 --> 00:03:27,299
+Więc możemy wykonać from,
+
+53
+00:03:27,319 --> 00:03:29,879
+datetime, import datetime.
+
+54
+00:03:30,299 --> 00:03:33,459
+To też jest o tyle ciekawe, że kiedy dodajemy sobie nowe wydarzenie,
+
+55
+00:03:33,560 --> 00:03:38,799
+zazwyczaj dzieje się ono tu i teraz, czasem, albo ileś dni od konkretnej daty.
+
+56
+00:03:39,199 --> 00:03:42,759
+Więc wtedy za pomocą tego event at możemy właśnie sobie nad tym zapanować.
+
+57
+00:03:43,419 --> 00:03:46,799
+Dodatkowo spotkania mają mieć tytuły, więc przyda nam się jeszcze title,
+
+58
+00:03:46,939 --> 00:03:47,979
+które ma być stringiem.
+
+59
+00:03:50,139 --> 00:03:50,959
+No i tyle.
+
+60
+00:03:51,719 --> 00:03:53,180
+I to musimy sobie przypisać.
+
+61
+00:03:53,180 --> 00:03:54,959
+Czyli self event at.
+
+62
+00:03:54,960 --> 00:03:58,159
+I self title.
+
+63
+00:03:59,360 --> 00:03:59,680
+Title.
+
+64
+00:04:02,760 --> 00:04:03,360
+OK.
+
+65
+00:04:03,740 --> 00:04:04,740
+To mamy zrobione.
+
+66
+00:04:05,300 --> 00:04:06,939
+Każde ze spotkań trwa zawsze godzinę.
+
+67
+00:04:07,120 --> 00:04:07,300
+OK.
+
+68
+00:04:07,460 --> 00:04:08,280
+To będziemy wiedzieli.
+
+69
+00:04:08,680 --> 00:04:11,000
+Moglibyśmy sobie zawsze zrobić też event at.
+
+70
+00:04:11,159 --> 00:04:13,879
+Tutaj event start i event end na przykład.
+
+71
+00:04:14,540 --> 00:04:16,220
+Coś sobie też takiego rozstrzygnąć.
+
+72
+00:04:16,340 --> 00:04:20,460
+Jeżeli ono zawsze trwa godzinę, to jeżeli byśmy chcieli, to zawsze można, nie?
+
+73
+00:04:20,460 --> 00:04:23,160
+Event end.
+
+74
+00:04:23,800 --> 00:04:24,860
+Równa się.
+
+75
+00:04:24,959 --> 00:04:26,959
+I wtedy to będzie event add.
+
+76
+00:04:27,759 --> 00:04:28,279
+Plus.
+
+77
+00:04:28,779 --> 00:04:30,560
+I stąd przyda nam się jeszcze date div.
+
+78
+00:04:30,879 --> 00:04:32,939
+Nie date div, tylko time delta.
+
+79
+00:04:33,859 --> 00:04:34,319
+O właśnie.
+
+80
+00:04:35,060 --> 00:04:35,419
+Widzicie?
+
+81
+00:04:35,699 --> 00:04:37,299
+Pytaliście, czy zapominam czasem.
+
+82
+00:04:37,479 --> 00:04:38,259
+To jak najbardziej.
+
+83
+00:04:39,620 --> 00:04:40,500
+Time delta.
+
+84
+00:04:40,659 --> 00:04:43,179
+I to był hours równa się 1.
+
+85
+00:04:43,579 --> 00:04:47,079
+Wtedy będziemy wiedzieli, kiedy spotkanie się zaczyna, kiedy spotkanie się kończy.
+
+86
+00:04:47,500 --> 00:04:48,560
+I to wszystko będzie jasne.
+
+87
+00:04:48,639 --> 00:04:49,620
+Co tutaj mu nie pasuje?
+
+88
+00:04:49,879 --> 00:04:50,319
+Title.
+
+89
+00:04:51,019 --> 00:04:52,399
+New line brakuje.
+
+90
+00:04:52,500 --> 00:04:53,199
+Nie ma problemu.
+
+91
+00:04:54,259 --> 00:04:54,779
+Dobrze.
+
+92
+00:04:54,959 --> 00:04:58,279
+I to jest to, co jeszcze wymaga od nas to zadanie.
+
+93
+00:04:58,759 --> 00:05:03,159
+To zadanie wymaga jeszcze od nas tego, żebyśmy mogli mieć tylko jedno spotkanie na dany dzień.
+
+94
+00:05:03,239 --> 00:05:03,599
+Ok.
+
+95
+00:05:03,919 --> 00:05:11,199
+Czyli tak naprawdę nasz kalendarz powinien odpowiadać, że słuchaj, w tej dacie nie mogę umówić tego spotkania.
+
+96
+00:05:11,759 --> 00:05:24,759
+Jeżeli nasze spotkania są kluczami, czyli tutaj te daty będą kluczami, to znaczy, że będziemy mogli sobie po prostu przekazać tutaj event add.
+
+97
+00:05:24,759 --> 00:05:26,560
+Check event.
+
+98
+00:05:26,800 --> 00:05:27,560
+Check if.
+
+99
+00:05:28,480 --> 00:05:29,360
+Check if.
+
+100
+00:05:30,879 --> 00:05:31,599
+Is free.
+
+101
+00:05:31,719 --> 00:05:32,319
+Może tak.
+
+102
+00:05:32,879 --> 00:05:33,639
+Coś ten deseń.
+
+103
+00:05:35,560 --> 00:05:45,120
+I skoro są kluczami, to wystarczy, że będę sprawdzał, czy ten event add znajduje się w moim event.
+
+104
+00:05:45,599 --> 00:05:48,060
+Jeżeli się znajduje, to znaczy, że nie jest wolne.
+
+105
+00:05:48,079 --> 00:05:50,079
+Jeżeli się nie znajduje, znaczy, że jest wolne.
+
+106
+00:05:50,099 --> 00:05:51,019
+Czyli return.
+
+107
+00:05:51,639 --> 00:05:53,519
+I teraz, jeżeli się nie znajduje.
+
+108
+00:05:53,519 --> 00:05:54,560
+Jeżeli się nie znajduje.
+
+109
+00:05:54,759 --> 00:05:56,879
+Jeżeli się nie znajduje, to chcę zwrócić prawdę.
+
+110
+00:05:57,319 --> 00:06:02,099
+Czyli not event add in self events.
+
+111
+00:06:03,159 --> 00:06:09,099
+W ten sposób będziemy mieli rozstrzygnięty ten problem sprawdzania, czy zdarzenie znajduje się w słowniku.
+
+112
+00:06:10,339 --> 00:06:10,819
+Not in.
+
+113
+00:06:11,180 --> 00:06:12,139
+Może być not in.
+
+114
+00:06:12,420 --> 00:06:12,939
+Jak najbardziej.
+
+115
+00:06:13,699 --> 00:06:15,319
+Czyli event add not in.
+
+116
+00:06:17,159 --> 00:06:18,639
+Tak też będzie czytelniej.
+
+117
+00:06:19,279 --> 00:06:19,839
+To mamy to.
+
+118
+00:06:19,839 --> 00:06:22,839
+No i jeszcze chcielibyśmy wyświetlić wszystkie spotkania.
+
+119
+00:06:24,759 --> 00:06:29,759
+Możemy do tego po prostu iterować sobie po tym naszym event.
+
+120
+00:06:29,759 --> 00:06:38,759
+Natomiast, jeżeli chcielibyśmy wyświetlić wszystkie spotkania na dany dzień, to możemy zrobić sobie funkcję, która się będzie nazywała get events.
+
+121
+00:06:38,759 --> 00:06:44,219
+Ona będzie miała konkretny dzień, który może być none.
+
+122
+00:06:44,219 --> 00:06:51,639
+I teraz będę chciał zwrócić wszystkie eventy, jeżeli dzień będzie none.
+
+123
+00:06:51,639 --> 00:06:53,439
+Czyli if day.
+
+124
+00:06:53,439 --> 00:06:54,039
+If day.
+
+125
+00:06:54,759 --> 00:06:55,620
+Is none.
+
+126
+00:06:56,000 --> 00:06:56,639
+Dwukropek.
+
+127
+00:06:56,779 --> 00:06:58,500
+Return self events.
+
+128
+00:06:59,099 --> 00:07:10,980
+W przeciwnym wypadku będę musiał przejść po tych wszystkich datach i sprawdzić, czy ten event nam się zgadza.
+
+129
+00:07:11,060 --> 00:07:13,620
+Czy event zawiera się w tym konkretnym dniu.
+
+130
+00:07:14,019 --> 00:07:17,939
+I tutaj też warto byłoby sobie powiedzieć jedną ciekawą sprawę.
+
+131
+00:07:17,939 --> 00:07:21,779
+A mianowicie, jeżeli mam from date time, import date time.
+
+132
+00:07:22,539 --> 00:07:24,279
+I sobie zrobię jakąś datę.
+
+133
+00:07:24,279 --> 00:07:26,279
+Niech to będą moje urodziny.
+
+134
+00:07:26,279 --> 00:07:36,279
+From date time, import datetime.
+
+135
+00:07:36,279 --> 00:07:38,279
+Czyli to są moje urodziny.
+
+136
+00:07:38,279 --> 00:07:44,279
+I załóżmy, że ja się urodziłem o 14.
+
+137
+00:07:44,279 --> 00:07:46,279
+Nie pamiętam.
+
+138
+00:07:46,279 --> 00:07:49,279
+Znaczy, nie wiem tego, ale załóżmy, że o 14.
+
+139
+00:07:49,279 --> 00:07:53,279
+To jeżeli chcielibyśmy porównać sobie te dwie daty.
+
+140
+00:07:53,279 --> 00:07:54,139
+To jeżeli chcielibyśmy porównać sobie te dwie daty.
+
+141
+00:07:54,139 --> 00:07:55,399
+To zobaczcie.
+
+142
+00:07:56,899 --> 00:07:58,019
+With time.
+
+143
+00:07:58,759 --> 00:08:00,099
+Że to nam zwróci false.
+
+144
+00:08:00,319 --> 00:08:03,639
+Z tego względu, że te dwie daty nie są tą samą datą.
+
+145
+00:08:04,019 --> 00:08:10,019
+Ale jeżeli ja bym sobie zrobił birthday.date równa się birthday with time.date.
+
+146
+00:08:10,319 --> 00:08:11,779
+To już wtedy dostanę true.
+
+147
+00:08:12,259 --> 00:08:17,000
+Bo date z obiektu datetime po prostu pobierze mi tę datę.
+
+148
+00:08:17,000 --> 00:08:20,180
+Czyli w moim przypadku mogę sobie zrobić wtedy tak.
+
+149
+00:08:20,439 --> 00:08:22,199
+Events równa się pusta lista.
+
+150
+00:08:22,199 --> 00:08:24,199
+For.
+
+151
+00:08:24,199 --> 00:08:26,199
+Będę potrzebował mieć.
+
+152
+00:08:26,199 --> 00:08:28,199
+W sumie to tylko wartości mi wystarczą.
+
+153
+00:08:28,199 --> 00:08:30,199
+Bo event start będzie mnie interesowało.
+
+154
+00:08:30,199 --> 00:08:32,200
+Nie?
+
+155
+00:08:32,200 --> 00:08:34,200
+Tak myślę.
+
+156
+00:08:34,200 --> 00:08:36,200
+Bo to na konkretny dzień będę chciał tylko te daty.
+
+157
+00:08:36,200 --> 00:08:40,200
+Czyli zakładam, że jeżeli na przykład spotkanie zaczęłoby się o 23.30.
+
+158
+00:08:40,200 --> 00:08:42,200
+To i tak interesuje mnie ten konkretny dzień.
+
+159
+00:08:42,200 --> 00:08:44,200
+Czyli for day.
+
+160
+00:08:44,200 --> 00:08:46,200
+Czyli tam event.
+
+161
+00:08:46,200 --> 00:08:48,200
+In self events.
+
+162
+00:08:48,200 --> 00:08:50,200
+Dwu kropek.
+
+163
+00:08:50,200 --> 00:08:50,960
+I teraz in self events.
+
+164
+00:08:50,960 --> 00:08:51,960
+I teraz in self events.
+
+165
+00:08:51,960 --> 00:09:02,960
+I teraz jeżeli event.eventstart.date równa się day.date.
+
+166
+00:09:02,960 --> 00:09:11,960
+No to wtedy events.append.event.return.events.
+
+167
+00:09:13,960 --> 00:09:19,960
+I oczywiście jest to zadanie, które warto byłoby teraz sprawdzić.
+
+168
+00:09:19,960 --> 00:09:20,960
+Jak je sprawdzić?
+
+169
+00:09:20,960 --> 00:09:22,960
+Najprościej robiąc sobie testy.
+
+170
+00:09:22,960 --> 00:09:24,960
+Możemy też tutaj zrobić jeszcze jedną tylko rzecz.
+
+171
+00:09:24,960 --> 00:09:26,960
+Możemy też tutaj zrobić jeszcze jedną tylko rzecz.
+
+172
+00:09:26,960 --> 00:09:32,960
+A mianowicie myślę, że mało kto będzie pamiętał o tym żeby self events przekazywać w ten sposób żeby kluczami były wartości.
+
+173
+00:09:32,960 --> 00:09:36,960
+Raczej ktoś będzie nam po prostu przekazywał datę zawierającą event.add.
+
+174
+00:09:36,960 --> 00:09:38,960
+Więc wypadałoby do kalendarza dodać też metodę addEvent.
+
+175
+00:09:38,960 --> 00:09:40,960
+Więc wypadałoby do kalendarza dodać też metodę addEvent.
+
+176
+00:09:40,960 --> 00:09:44,960
+Z tego względu, że programista który by to obsługiwał on raczej nie przejmował by się tym, żeby ten należał do tego, żeby to zrealizować.
+
+177
+00:09:44,960 --> 00:09:50,960
+Z tego względu, że programista który by to obsługiwał on raczej nie przejmował by się tym żeby ten należał do tego, żeby to zrealizować.
+
+178
+00:09:50,960 --> 00:09:53,960
+Ten nasz event przekazać w takiej postaci, że do event'u z kluczem będzie data.
+
+179
+00:09:53,960 --> 00:09:56,960
+Ten nasz event przekazać w takiej postaci, że do event'u z kluczem będzie data.
+
+180
+00:09:56,960 --> 00:10:00,960
+Raczej on wolał by mieć prostą sytuację.
+
+181
+00:10:00,960 --> 00:10:10,960
+Zobacz, przez to, że event jest niżej to on nie wie co to jest event.
+
+182
+00:10:10,960 --> 00:10:12,960
+Trzeba przenieść go do góry i jak go przeniosę do góry to też ten błąd zniknie z kolejnością.
+
+183
+00:10:12,960 --> 00:10:13,960
+Trzeba przenieść go do góry i jak go przeniosę do góry to też ten błąd zniknie z kolejnością.
+
+184
+00:10:13,960 --> 00:10:30,300
+I wtedy możemy napisać self.events.start równa się event.
+
+185
+00:10:30,639 --> 00:10:34,220
+Oczywiście warto byłoby sprawdzić, czy ten event nie jest zajęty,
+
+186
+00:10:34,220 --> 00:10:36,780
+jeżeli byśmy chcieli, no bo w ten sposób nadpiszemy.
+
+187
+00:10:37,420 --> 00:10:41,060
+Nie było to jednak podane w treści, więc ja sobie zrobię takie to do,
+
+188
+00:10:41,059 --> 00:10:44,839
+do check if event is free.
+
+189
+00:10:46,000 --> 00:10:48,279
+Z tego should I check if event is free?
+
+190
+00:10:50,500 --> 00:10:53,839
+Bo to zależy od ciebie tak naprawdę, jeżeli robisz to zadanie,
+
+191
+00:10:54,339 --> 00:10:57,839
+bo jeżeli chcesz, żeby nie można było dodać dwóch eventów na tej samej dacie,
+
+192
+00:10:57,939 --> 00:11:00,859
+czyli tak naprawdę, żeby jeden event nie nadpisał nam drugiego,
+
+193
+00:11:00,859 --> 00:11:03,679
+no to warto byłoby to wtedy zweryfikować.
+
+194
+00:11:04,019 --> 00:11:07,799
+Jeżeli natomiast nie przeszkadza ci to, że nadpiszesz, no to okej.
+
+195
+00:11:08,139 --> 00:11:09,539
+To znowu pytanie o odpowiedzialność.
+
+196
+00:11:09,539 --> 00:11:14,759
+Czy najpierw sprawdzamy gdzieś na zewnątrz, czy wydarzenie jest wolne, czy nie sprawdzamy?
+
+197
+00:11:15,000 --> 00:11:18,759
+Bo jeżeli na zewnątrz nie sprawdzamy i chcemy tutaj przy add event dostać błąd,
+
+198
+00:11:19,120 --> 00:11:21,599
+no to powinniśmy to to do zrealizować.
+
+199
+00:11:22,059 --> 00:11:24,879
+Jeżeli na zewnątrz sprawdzamy, no to problemu nie ma.
+
+200
+00:11:25,959 --> 00:11:26,419
+Okej.
+
+201
+00:11:27,559 --> 00:11:32,399
+Tak jak wspomniałem, na pewno potrzebujemy mieć też testy, czyli event creation.
+
+202
+00:11:33,539 --> 00:11:35,360
+Co sprawdzamy w event creation?
+
+203
+00:11:36,199 --> 00:11:37,699
+No mamy już tutaj jakąś logikę.
+
+204
+00:11:37,699 --> 00:11:39,099
+Warto byłoby sprawdzić.
+
+205
+00:11:39,100 --> 00:11:42,600
+Czy data rozpoczęcia i data zakończenia jest okej.
+
+206
+00:11:43,279 --> 00:11:49,000
+Czyli event równa się, zapraszam wszystkich na urodziny moje w tym roku.
+
+207
+00:11:50,159 --> 00:11:51,060
+Czyli event.
+
+208
+00:11:51,840 --> 00:11:56,180
+Event będzie się odbywał, załóżmy 9 listopada o 19.
+
+209
+00:11:56,540 --> 00:11:57,540
+Czyli date time.
+
+210
+00:11:59,600 --> 00:12:01,300
+2023.
+
+211
+00:12:02,480 --> 00:12:03,259
+1.9.
+
+212
+00:12:03,259 --> 00:12:05,000
+Zdradziłem w jakim roku to nagrywam.
+
+213
+00:12:05,600 --> 00:12:07,379
+I o 19 mówiłem, tak?
+
+214
+00:12:07,379 --> 00:12:08,720
+No to 19.00.
+
+215
+00:12:09,100 --> 00:12:12,100
+To jest data wystąpienia.
+
+216
+00:12:12,100 --> 00:12:16,100
+No i drugą wartością jest title, czyli moje urodziny.
+
+217
+00:12:16,100 --> 00:12:23,300
+I teraz jeżeli takie wydarzenie dodałem do swojej, utworzyłem w ogóle,
+
+218
+00:12:23,300 --> 00:12:25,600
+to teraz powinienem je dodać do swojego kalendarza.
+
+219
+00:12:25,600 --> 00:12:29,600
+Mój kalendarz jeszcze nie istnieje, więc ten kalendarz muszę utworzyć.
+
+220
+00:12:29,600 --> 00:12:34,100
+I teraz kiedy dodam wydarzenie do kalendarza,
+
+221
+00:12:34,100 --> 00:12:36,100
+.
+
+222
+00:12:36,100 --> 00:12:37,100
+.
+
+223
+00:12:37,100 --> 00:12:38,100
+.
+
+224
+00:12:38,100 --> 00:12:39,100
+.
+
+225
+00:12:39,100 --> 00:12:40,100
+.
+
+226
+00:12:40,100 --> 00:12:41,100
+.
+
+227
+00:12:41,100 --> 00:12:42,100
+.
+
+228
+00:12:42,100 --> 00:12:43,100
+.
+
+229
+00:12:43,100 --> 00:12:44,100
+.
+
+230
+00:12:44,100 --> 00:12:45,100
+.
+
+231
+00:12:45,100 --> 00:12:46,100
+.
+
+232
+00:12:46,100 --> 00:12:47,100
+.
+
+233
+00:12:47,100 --> 00:12:52,100
+A właściwie nawet nie, nie kiedy dodam, bo ja tutaj chciałem sprawdzić tylko tworzenie eventu, a nie dodanie go do kalendarza.
+
+234
+00:12:52,100 --> 00:12:55,100
+Więc to jest inny test, zaraz do tego testu wrócimy.
+
+235
+00:12:55,100 --> 00:13:03,100
+Natomiast tutaj powinniśmy zrobić assert i sprawdzić czy event start równa się tej dacie.
+
+236
+00:13:03,100 --> 00:13:06,100
+.
+
+237
+00:13:06,100 --> 00:13:07,100
+.
+
+238
+00:13:07,100 --> 00:13:08,100
+.
+
+239
+00:13:08,100 --> 00:13:11,100
+To jest 20.
+
+240
+00:13:11,100 --> 00:13:15,100
+I można byłoby jeszcze sprawdzić, czy dobrze nam się tytuł dodał.
+
+241
+00:13:19,980 --> 00:13:21,580
+To jest taki pierwszy test.
+
+242
+00:13:23,060 --> 00:13:26,100
+DevTest Event in Calendar.
+
+243
+00:13:28,820 --> 00:13:30,200
+To jest drugi test.
+
+244
+00:13:30,740 --> 00:13:33,920
+Możemy sobie na tym samym wydarzeniu pracować.
+
+245
+00:13:34,000 --> 00:13:36,220
+Zachęcam, żebyście pracowali też na swoich urodzinach.
+
+246
+00:13:36,220 --> 00:13:38,580
+Kalendar Add Event.
+
+247
+00:13:38,899 --> 00:13:41,160
+I to są zdarzenia, które powinny się zadziać.
+
+248
+00:13:41,279 --> 00:13:45,000
+I wtedy powinniśmy mieć na pewno jeden event w kalendarzu.
+
+249
+00:13:45,399 --> 00:13:48,700
+Czyli Assert Kalendar Events.
+
+250
+00:13:49,779 --> 00:13:54,259
+To od tego długość powinna być równa 1.
+
+251
+00:13:54,540 --> 00:13:55,480
+To jest pierwszy test.
+
+252
+00:13:56,899 --> 00:13:59,600
+Drugi test, który moglibyśmy sprawdzić, to to,
+
+253
+00:14:01,660 --> 00:14:03,759
+czy ten event
+
+254
+00:14:06,220 --> 00:14:08,580
+to jest dobry event.
+
+255
+00:14:11,960 --> 00:14:14,320
+To jest też coś, co warto byłoby zweryfikować.
+
+256
+00:14:15,879 --> 00:14:18,500
+Tu już nie będę sprawdzał wszystkiego, bo to sprawdziłem wyżej,
+
+257
+00:14:18,580 --> 00:14:19,800
+czy event się dobrze utworzył.
+
+258
+00:14:20,220 --> 00:14:23,740
+Natomiast czy ten event jest w ten sposób dobrze utworzony.
+
+259
+00:14:23,840 --> 00:14:25,700
+To też warto to sobie zarejestrować.
+
+260
+00:14:26,240 --> 00:14:27,980
+W ten sposób sprawdziliśmy Add Event.
+
+261
+00:14:28,680 --> 00:14:30,620
+No i Get Events jeszcze możemy sprawdzić.
+
+262
+00:14:36,220 --> 00:14:40,220
+I tu w Get Events przydałyby nam się więcej wydarzeń.
+
+263
+00:14:42,040 --> 00:14:43,600
+Czyli zrobię moje urodziny.
+
+264
+00:14:43,680 --> 00:14:47,460
+Zapraszam was też na urodziny Aliny od razu, małżonki mojej.
+
+265
+00:14:47,560 --> 00:14:52,160
+Czyli w tym roku jej urodziny będą przypadały na 6, 18.
+
+266
+00:14:52,720 --> 00:14:55,460
+Też niech będą o 19.
+
+267
+00:14:55,560 --> 00:14:56,759
+Nie ma sprawy.
+
+268
+00:14:56,840 --> 00:14:58,840
+Event 1, event 2.
+
+269
+00:14:58,920 --> 00:15:01,580
+Potrzebujemy kalendarz i dwa wydarzenia.
+
+270
+00:15:04,460 --> 00:15:05,860
+No i powinniśmy teraz sprawdzić,
+
+271
+00:15:05,860 --> 00:15:10,860
+czy pobierając dwa wydarzenia dostajemy dwa wydarzenia.
+
+272
+00:15:11,539 --> 00:15:17,740
+Czyli Events równa się kalendar.getEvents.
+
+273
+00:15:20,000 --> 00:15:24,639
+I możemy sprawdzić, czy Events ma długość 2.
+
+274
+00:15:27,639 --> 00:15:31,139
+No i drugi test, który możemy zrobić, to jeżeli przekażemy mu konkretną datę.
+
+275
+00:15:31,220 --> 00:15:34,240
+Wybieram tutaj datę związaną z rodzinami Aliny.
+
+276
+00:15:35,860 --> 00:15:43,820
+To czy wtedy Events od 0, bo to powinna być lista, nie?
+
+277
+00:15:43,899 --> 00:15:45,039
+To też możemy sobie sprawdzić.
+
+278
+00:15:45,120 --> 00:15:48,639
+Title równa się, o i tu powinny być urodziny Aliny.
+
+279
+00:15:52,879 --> 00:15:57,360
+Jeżeli te dwie rzeczy zajdą, to wszystko jest pięknie.
+
+280
+00:15:57,539 --> 00:16:02,100
+Wtedy możemy mieć pewność, że ten nasz kod zadziałał i ma się dobrze.
+
+281
+00:16:03,080 --> 00:16:05,440
+To, że jest przetestowany, może dowodzić
+
+282
+00:16:05,860 --> 00:16:09,320
+że długość testów jest większa niż długość kodu.
+
+283
+00:16:09,899 --> 00:16:13,820
+Czyli Python minus m, pyTest, zadanie 3py.
+
+284
+00:16:14,899 --> 00:16:16,060
+Jest błąd, hura!
+
+285
+00:16:16,659 --> 00:16:19,899
+DateTimeObject has no attribute eventStart.
+
+286
+00:16:21,100 --> 00:16:23,899
+Event, eventStart, date.
+
+287
+00:16:24,980 --> 00:16:26,320
+Day, date.
+
+288
+00:16:26,779 --> 00:16:27,779
+Coś zrobiłem źle.
+
+289
+00:16:28,379 --> 00:16:30,580
+Dlaczego? Coś mu się tutaj nie podoba, momencik.
+
+290
+00:16:32,580 --> 00:16:33,580
+Hmm.
+
+291
+00:16:33,620 --> 00:16:34,620
+Hmm.
+
+292
+00:16:34,620 --> 00:16:34,800
+Hmm.
+
+293
+00:16:34,800 --> 00:16:34,820
+Hmm.
+
+294
+00:16:34,820 --> 00:16:34,860
+Hmm.
+
+295
+00:16:34,860 --> 00:16:34,920
+Hmm.
+
+296
+00:16:34,920 --> 00:16:34,960
+Tutaj.
+
+297
+00:16:34,960 --> 00:16:35,019
+Hmm.
+
+298
+00:16:35,019 --> 00:16:35,039
+Hmm.
+
+299
+00:16:35,039 --> 00:16:35,100
+Hmm.
+
+300
+00:16:35,100 --> 00:16:35,159
+Hmm.
+
+301
+00:16:35,159 --> 00:16:35,220
+Hmm.
+
+302
+00:16:35,220 --> 00:16:35,259
+Hmm.
+
+303
+00:16:35,259 --> 00:16:35,279
+Hmm.
+
+304
+00:16:35,279 --> 00:16:35,320
+Hmm.
+
+305
+00:16:35,320 --> 00:16:35,340
+Hmm.
+
+306
+00:16:35,340 --> 00:16:35,399
+Hmm.
+
+307
+00:16:35,399 --> 00:16:35,460
+Hmm.
+
+308
+00:16:35,460 --> 00:16:35,500
+Hmm.
+
+309
+00:16:35,500 --> 00:16:35,560
+Hmm.
+
+310
+00:16:35,560 --> 00:16:35,580
+Hmm.
+
+311
+00:16:35,580 --> 00:16:35,600
+Hmm.
+
+312
+00:16:35,600 --> 00:16:35,680
+Hmm.
+
+313
+00:16:35,679 --> 00:16:35,739
+Hmm.
+
+314
+00:16:35,739 --> 00:16:35,879
+Hmm.
+
+315
+00:16:35,879 --> 00:16:35,899
+Hmm.
+
+316
+00:16:36,139 --> 00:16:36,219
+Hmm.
+
+317
+00:16:41,219 --> 00:16:42,539
+Hmm.
+
+318
+00:16:42,679 --> 00:16:43,279
+Hmm.
+
+319
+00:16:43,279 --> 00:16:43,539
+Hmm.
+
+320
+00:16:44,500 --> 00:16:44,639
+Hmm.
+
+321
+00:16:48,959 --> 00:16:49,299
+Hmm.
+
+322
+00:16:49,299 --> 00:16:49,519
+Hmm.
+
+323
+00:16:49,519 --> 00:16:49,759
+Hmm.
+
+324
+00:16:49,759 --> 00:16:50,279
+Hmm.
+
+325
+00:16:50,279 --> 00:16:50,419
+Hmm.
+
+326
+00:16:50,419 --> 00:16:50,759
+Hmm.
+
+327
+00:16:50,759 --> 00:16:50,819
+Hmm.
+
+328
+00:16:50,819 --> 00:16:50,839
+Hmm.
+
+329
+00:16:50,839 --> 00:16:51,319
+Hmm.
+
+330
+00:16:51,319 --> 00:16:51,419
+Hmm.
+
+331
+00:16:51,439 --> 00:16:51,500
+Hmm.
+
+332
+00:16:51,500 --> 00:16:51,519
+Hmm.
+
+333
+00:16:51,519 --> 00:16:51,719
+Hmm.
+
+334
+00:16:51,799 --> 00:16:53,919
+I wtedy powinno nam to wszystko zadziałać.
+
+335
+00:16:53,959 --> 00:16:56,419
+On to twierdzi, że dla tej klasy nie mam tego,
+
+336
+00:16:56,539 --> 00:16:57,620
+a to przecież jest okej.
+
+337
+00:16:58,259 --> 00:16:58,719
+Sprawdzamy.
+
+338
+00:16:58,819 --> 00:16:59,759
+Coś jeszcze mu nie pasuje.
+
+339
+00:17:00,719 --> 00:17:01,639
+I te items nie.
+
+340
+00:17:01,879 --> 00:17:02,319
+Values.
+
+341
+00:17:03,740 --> 00:17:05,259
+O tak, bo jeżeli bym zrobił items,
+
+342
+00:17:05,259 --> 00:17:07,339
+to wtedy tu miałbym datę i event,
+
+343
+00:17:07,660 --> 00:17:09,319
+a jak robię values, to mam same eventy.
+
+344
+00:17:09,400 --> 00:17:10,859
+Teraz powinno być good. Hura!
+
+345
+00:17:11,359 --> 00:17:13,599
+Trzy testy przeszły z małymi
+
+346
+00:17:13,599 --> 00:17:15,539
+potknięciami, ale jak widać
+
+347
+00:17:15,539 --> 00:17:17,299
+zadziałało. Kto ma
+
+348
+00:17:17,299 --> 00:17:19,460
+ochotę, to jeszcze robię taki powolutku
+
+349
+00:17:19,460 --> 00:17:20,839
+przejście przez ten kod.
+
+350
+00:17:21,319 --> 00:17:23,079
+Można go sobie zatrzymać w którymś momencie,
+
+351
+00:17:23,180 --> 00:17:25,420
+jeżeli coś chcielibyście uzupełnić, albo poprawić,
+
+352
+00:17:25,539 --> 00:17:26,799
+albo o tym podyskutować.
+
+353
+00:17:27,319 --> 00:17:28,920
+No to wtedy serdecznie, serdecznie
+
+354
+00:17:28,920 --> 00:17:31,779
+zapraszam
+
+355
+00:17:31,779 --> 00:17:33,779
+na Discorda
+
+356
+00:17:33,779 --> 00:17:35,759
+lub w sekcję komentarzy.
+
+357
+00:17:36,200 --> 00:17:36,599
+Dziękuję.

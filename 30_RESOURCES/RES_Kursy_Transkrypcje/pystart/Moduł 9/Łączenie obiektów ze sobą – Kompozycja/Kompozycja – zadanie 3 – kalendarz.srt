@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:06,080
+A w ostatnim zadaniu chcemy przygotować program, który będzie przechowywał wszystkie nasze spotkania.
+
+2
+00:00:06,600 --> 00:00:10,900
+Informacje o spotkaniach chcemy przechowywać w pliku Meetings.json.
+
+3
+00:00:11,700 --> 00:00:15,599
+Wymagania. Każde ze spotkań trwa zawsze godzinę.
+
+4
+00:00:16,059 --> 00:00:18,219
+Spotkania mogą mieć różne tytuły.
+
+5
+00:00:18,740 --> 00:00:22,699
+Na dany dzień, na daną godzinę może być zapisane tylko jedno spotkanie.
+
+6
+00:00:23,179 --> 00:00:28,800
+Czyli warto zastanowić się nad taką strukturą, gdzie będzie można upewnić się, że nie mamy spotkania na ten dzień.
+
+7
+00:00:28,800 --> 00:00:34,439
+Można na przykład przechowywać spotkania w słowniku, gdzie data spotkania byłaby kluczem.
+
+8
+00:00:35,520 --> 00:00:40,159
+Kalendarz posiada metody umożliwiające wyświetlanie wszystkich spotkań.
+
+9
+00:00:40,939 --> 00:00:47,640
+Możemy też wyświetlać na dany dzień te spotkania oraz sprawdzenie, czy dany termin, data i godzina jest wolna.
+
+10
+00:00:48,560 --> 00:00:52,719
+To co, już powoli? Przechodzimy do pisania takiego własnego Google Kalendara.
+
+11
+00:00:53,420 --> 00:00:55,280
+Google, szykujcie się, idziemy po Was.

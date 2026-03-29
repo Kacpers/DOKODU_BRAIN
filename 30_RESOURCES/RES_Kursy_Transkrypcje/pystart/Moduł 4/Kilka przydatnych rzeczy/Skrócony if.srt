@@ -1,0 +1,467 @@
+1
+00:00:00,000 --> 00:00:02,120
+No, to jak zaczęliśmy temat skracania,
+
+2
+00:00:02,240 --> 00:00:04,299
+to porozmawiajmy o tym, jak możemy sobie skrócić
+
+3
+00:00:04,299 --> 00:00:06,040
+IFA. I od razu wam powiem,
+
+4
+00:00:06,160 --> 00:00:08,060
+że tak jak z Walrucem jakoś specjalnie
+
+5
+00:00:08,060 --> 00:00:10,220
+się nie polubiliśmy, ale czasem go używam,
+
+6
+00:00:10,599 --> 00:00:11,560
+tak w przypadku IFA
+
+7
+00:00:11,560 --> 00:00:13,300
+jestem jego ogromnym fanem,
+
+8
+00:00:13,880 --> 00:00:16,059
+co jest też interesujące z punktu widzenia
+
+9
+00:00:16,059 --> 00:00:18,199
+takiego, że wielu z moich kolegów,
+
+10
+00:00:18,320 --> 00:00:20,199
+którzy już pracują z Pythonem od lat,
+
+11
+00:00:20,940 --> 00:00:22,100
+czasem nawet dłużej
+
+12
+00:00:22,100 --> 00:00:24,280
+niż ja, jak patrzą na tego skróconego
+
+13
+00:00:24,280 --> 00:00:26,019
+IFA, to mówią, że nie, do tego
+
+14
+00:00:26,019 --> 00:00:28,140
+się nigdy nie przyzwyczają. Więc znowu
+
+15
+00:00:28,140 --> 00:00:30,140
+macie dwa obozy i możecie wybrać,
+
+16
+00:00:30,240 --> 00:00:31,539
+w którym z tych obozów chcielibyście
+
+17
+00:00:31,539 --> 00:00:33,960
+być. Zobaczcie.
+
+18
+00:00:34,420 --> 00:00:35,719
+Mamy taką sytuację, że jest
+
+19
+00:00:35,719 --> 00:00:37,859
+result, czyli jakiś wynik
+
+20
+00:00:37,859 --> 00:00:39,939
+z jakiegoś egzaminu czy z czegoś ustawiony na
+
+21
+00:00:39,939 --> 00:00:41,219
+50%, 0,5.
+
+22
+00:00:41,859 --> 00:00:44,060
+Jeżeli result jest większy lub równy
+
+23
+00:00:44,060 --> 00:00:46,299
+0,6, to wtedy egzamin jest zaliczony,
+
+24
+00:00:46,380 --> 00:00:47,760
+w przeciwnym wypadku egzamin jest
+
+25
+00:00:47,760 --> 00:00:50,100
+oblany, niezaliczony. I teraz
+
+26
+00:00:50,100 --> 00:00:51,859
+tym, co chcielibyśmy zrobić,
+
+27
+00:00:52,019 --> 00:00:53,700
+będzie skrócenie tego zapisu
+
+28
+00:00:53,700 --> 00:00:55,280
+do jednej linijki.
+
+29
+00:00:56,079 --> 00:00:57,840
+Jak to zapisać?
+
+30
+00:00:57,840 --> 00:00:59,740
+Zobaczcie. Możemy
+
+31
+00:00:59,740 --> 00:01:01,840
+zrobić tak, przede wszystkim, jeżeli
+
+32
+00:01:01,840 --> 00:01:03,720
+chodzi o skrócenie, że możemy sobie
+
+33
+00:01:03,720 --> 00:01:05,500
+stworzyć result równa się 0,5,
+
+34
+00:01:05,659 --> 00:01:08,040
+przyjąć, że status jest niezaliczony
+
+35
+00:01:08,040 --> 00:01:09,579
+i jeżeli status
+
+36
+00:01:09,579 --> 00:01:11,700
+jest większy lub równy 0,6,
+
+37
+00:01:11,780 --> 00:01:13,240
+to wtedy zmieniamy status na zdany.
+
+38
+00:01:13,859 --> 00:01:15,719
+Dzięki temu jedna linijka,
+
+39
+00:01:15,840 --> 00:01:17,920
+dwie linijki nawet nam się upraszczają.
+
+40
+00:01:18,060 --> 00:01:19,840
+Jedna, nieważne. Nie skupiajmy się
+
+41
+00:01:19,840 --> 00:01:21,580
+na liczeniu. Tu chodzi tylko i wyłącznie o to,
+
+42
+00:01:21,939 --> 00:01:23,980
+że dzięki temu też nasz program
+
+43
+00:01:23,980 --> 00:01:26,040
+jest trochę czytelniejszy.
+
+44
+00:01:26,040 --> 00:01:27,820
+Ja się już tego nauczyłem, że kiedy robi się
+
+45
+00:01:27,840 --> 00:01:30,159
+dużo ifów i else'ów, w którymś momencie
+
+46
+00:01:30,159 --> 00:01:31,859
+okazuje się, że do któregoś ifa
+
+47
+00:01:31,859 --> 00:01:33,939
+coś trzeba dodać, potem do któregoś
+
+48
+00:01:33,939 --> 00:01:35,840
+else'a coś trzeba dodać i wychodzi nam
+
+49
+00:01:35,840 --> 00:01:38,340
+takie wielkie, rozbudowane drzewko decyzyjne,
+
+50
+00:01:38,719 --> 00:01:40,159
+co nie jest dobre dla utrzymywania
+
+51
+00:01:40,159 --> 00:01:42,140
+programu. Zdecydowanie takie zapisy,
+
+52
+00:01:42,240 --> 00:01:43,680
+jakie jest tutaj, widzisz, po prawej stronie,
+
+53
+00:01:44,140 --> 00:01:46,000
+to tego zapisał też z tym większym fanem,
+
+54
+00:01:46,120 --> 00:01:47,820
+żeby nie robić, nie używać else'a tam, gdzie
+
+55
+00:01:47,820 --> 00:01:48,760
+go nie trzeba używać.
+
+56
+00:01:50,000 --> 00:01:51,600
+Ale co jeszcze można zrobić? Zobacz.
+
+57
+00:01:52,320 --> 00:01:53,640
+Można napisać tak.
+
+58
+00:01:53,640 --> 00:01:55,960
+Value równa się
+
+59
+00:01:55,960 --> 00:01:57,340
+value if true
+
+60
+00:01:57,840 --> 00:01:59,320
+jeżeli 2 równa się 3
+
+61
+00:01:59,320 --> 00:02:01,280
+else value if false.
+
+62
+00:02:01,560 --> 00:02:03,820
+W tym przypadku oczywiście 2 nie jest 3,
+
+63
+00:02:03,980 --> 00:02:06,159
+więc zostanie przypisana value if false,
+
+64
+00:02:06,280 --> 00:02:07,640
+natomiast wyrażenie,
+
+65
+00:02:08,439 --> 00:02:09,960
+skracanie tego ifa działa
+
+66
+00:02:09,960 --> 00:02:11,520
+właśnie w ten sposób, czyli
+
+67
+00:02:11,520 --> 00:02:14,060
+do zmiennej płeć
+
+68
+00:02:14,060 --> 00:02:15,920
+przypisz mężczyzna, jeżeli
+
+69
+00:02:15,920 --> 00:02:17,900
+płeć to mężczyzna, w przeciwnym
+
+70
+00:02:17,900 --> 00:02:19,560
+wypadku kobieta, czyli
+
+71
+00:02:19,560 --> 00:02:22,340
+mówiłem o sobie, dlatego mężczyzna poszedł na pierwszy ogień.
+
+72
+00:02:22,819 --> 00:02:24,420
+Czyli value równa się
+
+73
+00:02:24,420 --> 00:02:26,140
+to, co ma być, jeżeli jest
+
+74
+00:02:26,140 --> 00:02:27,640
+prawda, później jest
+
+75
+00:02:27,840 --> 00:02:29,860
+sprawdzenie, a później jest
+
+76
+00:02:29,860 --> 00:02:32,060
+else i to, co ma być, jeżeli fałsz.
+
+77
+00:02:32,520 --> 00:02:34,060
+I ta konstrukcja pozwala nam
+
+78
+00:02:34,060 --> 00:02:35,120
+na skrócenie ifa
+
+79
+00:02:35,120 --> 00:02:37,840
+do jednej linii.
+
+80
+00:02:38,480 --> 00:02:39,099
+Rozumiemy się?
+
+81
+00:02:39,539 --> 00:02:41,560
+Czy na przykład rabat równa się
+
+82
+00:02:41,560 --> 00:02:43,659
+10%, jeżeli ilość
+
+83
+00:02:43,659 --> 00:02:45,199
+zakupionych produktów to 3.
+
+84
+00:02:45,580 --> 00:02:47,439
+W przeciwnym wypadku rabat wynosi 0.
+
+85
+00:02:48,319 --> 00:02:49,480
+I tak możemy sobie
+
+86
+00:02:49,480 --> 00:02:51,759
+konstruować, skracać
+
+87
+00:02:51,759 --> 00:02:52,620
+nasze ify.
+
+88
+00:02:53,740 --> 00:02:55,800
+I zatem, jeżeli wiemy, że
+
+89
+00:02:55,800 --> 00:02:57,819
+tak się skraca ify, to ten kod,
+
+90
+00:02:57,840 --> 00:02:59,819
+który zapisaliśmy powyżej jako result
+
+91
+00:02:59,819 --> 00:03:01,920
+równa się 0.5, if result
+
+92
+00:03:01,920 --> 00:03:03,879
+jest większy lub równy 0.6,
+
+93
+00:03:04,360 --> 00:03:05,480
+status past, w przeciwnym
+
+94
+00:03:05,480 --> 00:03:07,860
+wypadku failed, wyświetli mi result
+
+95
+00:03:07,860 --> 00:03:09,840
+i status, możemy uprościć
+
+96
+00:03:10,819 --> 00:03:11,920
+do takiego zapisu.
+
+97
+00:03:12,199 --> 00:03:13,620
+Status równa się past,
+
+98
+00:03:13,819 --> 00:03:15,659
+czyli zdany, jeżeli
+
+99
+00:03:15,659 --> 00:03:17,879
+result jest większy lub równy 0.6.
+
+100
+00:03:18,300 --> 00:03:19,699
+W przeciwnym wypadku failed.
+
+101
+00:03:20,280 --> 00:03:21,860
+Jak widzisz, takie skracanie ifów
+
+102
+00:03:21,860 --> 00:03:23,819
+też nie zawsze będzie miało zastosowanie.
+
+103
+00:03:24,280 --> 00:03:26,080
+Bo jeżeli w ramach tego ifa
+
+104
+00:03:26,080 --> 00:03:27,840
+tam jest więcej linijek, no to
+
+105
+00:03:27,840 --> 00:03:29,740
+zupełnie odpuszczamy sobie jego skracanie.
+
+106
+00:03:30,280 --> 00:03:32,120
+Natomiast, jeżeli chcemy coś przypisać
+
+107
+00:03:32,120 --> 00:03:34,259
+w zmiennej, w zależności od tego,
+
+108
+00:03:34,439 --> 00:03:35,980
+jaka jest wartość innej
+
+109
+00:03:35,980 --> 00:03:37,759
+zmiennej, albo jaki jest inny warunek,
+
+110
+00:03:38,120 --> 00:03:39,879
+to jak najbardziej wtedy takiego ifa możemy
+
+111
+00:03:39,879 --> 00:03:41,640
+skracać. Więc nie zawsze,
+
+112
+00:03:42,280 --> 00:03:43,980
+ale często. I od tej pory
+
+113
+00:03:43,980 --> 00:03:45,960
+wszędzie tam, gdzie będę mógł tego ifa
+
+114
+00:03:45,960 --> 00:03:47,780
+skrócić, na pewno będę to robił.
+
+115
+00:03:48,699 --> 00:03:50,000
+Mówiąc o tym, że zobacz,
+
+116
+00:03:50,039 --> 00:03:52,080
+to jest wersja pełna, a teraz skróćmy
+
+117
+00:03:52,080 --> 00:03:53,719
+go do wersji uproszczonej.

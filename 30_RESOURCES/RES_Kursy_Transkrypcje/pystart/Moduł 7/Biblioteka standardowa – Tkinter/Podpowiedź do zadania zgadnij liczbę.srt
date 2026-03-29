@@ -1,0 +1,183 @@
+1
+00:00:00,000 --> 00:00:04,540
+Do wykonania zgadywania liczby będziesz potrzebować wiedzieć o czymś,
+
+2
+00:00:04,600 --> 00:00:06,020
+co nazywa się global w funkcji.
+
+3
+00:00:06,600 --> 00:00:07,120
+O co chodzi?
+
+4
+00:00:07,740 --> 00:00:11,099
+Jeżeli mamy funkcję sumit
+
+5
+00:00:11,099 --> 00:00:13,919
+i przekazujemy do niej jakieś dwie wartości,
+
+6
+00:00:14,839 --> 00:00:17,280
+no to możemy wyświetlić return a plus b.
+
+7
+00:00:19,160 --> 00:00:26,699
+W tym momencie, jeżeli chcesz wyświetlić print sumit 4 i 5,
+
+8
+00:00:27,219 --> 00:00:28,560
+no to nie ma żadnego problemu.
+
+9
+00:00:28,559 --> 00:00:30,320
+Wywołuję sobie ten kod
+
+10
+00:00:30,320 --> 00:00:33,839
+i dostaję informację, że jest to 9.
+
+11
+00:00:34,560 --> 00:00:39,640
+Natomiast w momencie, w którym będę chciał odwołać się do jakiejś zmiennej z zewnątrz,
+
+12
+00:00:39,719 --> 00:00:40,719
+to też mam taką możliwość.
+
+13
+00:00:40,799 --> 00:00:41,239
+Pamiętacie?
+
+14
+00:00:41,700 --> 00:00:43,460
+Czy jak stworzę sobie c równa się 20,
+
+15
+00:00:44,179 --> 00:00:46,039
+to mogę wykonać a plus b plus c.
+
+16
+00:00:46,659 --> 00:00:48,420
+Z tym nie ma absolutnie żadnego problemu.
+
+17
+00:00:48,519 --> 00:00:49,640
+Wyświetla się 29.
+
+18
+00:00:50,519 --> 00:00:52,840
+Problem, czy też wyzwanie, zrobi się dopiero wtedy,
+
+19
+00:00:53,000 --> 00:00:56,859
+kiedy będę chciał wewnątrz funkcji modyfikować wartość z zewnątrz.
+
+20
+00:00:56,859 --> 00:00:57,859
+Nie jest to...
+
+21
+00:00:58,560 --> 00:00:59,679
+idealna sytuacja.
+
+22
+00:00:59,820 --> 00:01:02,420
+Nie jest to rozwiązanie, które powinno się robić.
+
+23
+00:01:02,859 --> 00:01:05,519
+Natomiast w kolejnym zadaniu będzie nam to bardzo potrzebne,
+
+24
+00:01:05,579 --> 00:01:08,340
+bo jeszcze nie znam obiektowości i nie wiemy, jak to zrobić inaczej.
+
+25
+00:01:08,920 --> 00:01:11,939
+Stąd też możemy zrobić rzecz następującą,
+
+26
+00:01:12,040 --> 00:01:17,000
+a mianowicie tu dopisać sobie takie słówko jak global c.
+
+27
+00:01:17,400 --> 00:01:19,280
+Dlaczego to słówko global c jest potrzebne?
+
+28
+00:01:19,520 --> 00:01:22,780
+Bo jeżeli ja bym chciał z jakiegoś powodu zmienić wartość zmiennej c,
+
+29
+00:01:23,260 --> 00:01:24,560
+to Python mnie przed tym chroni.
+
+30
+00:01:24,560 --> 00:01:28,040
+On mi tego nie umożliwi, nie pozwoli mi na robienie tego,
+
+31
+00:01:28,560 --> 00:01:31,240
+i kiedy ja wyświetlę tutaj sobie wartość zmiennej c,
+
+32
+00:01:31,240 --> 00:01:33,480
+to ona wciąż będzie miała wartość 20.
+
+33
+00:01:33,719 --> 00:01:37,320
+A my w kolejnym zadaniu będziemy potrzebowali zmienić wartość tej zmiennej c.
+
+34
+00:01:37,719 --> 00:01:40,359
+Stąd też musi właśnie pojawić się słówko global
+
+35
+00:01:42,760 --> 00:01:45,359
+z tą zmienną, którą będziemy chcieli modyfikować.
+
+36
+00:01:45,800 --> 00:01:47,340
+I wtedy Python nam już to umożliwi.
+
+37
+00:01:47,400 --> 00:01:49,800
+Zobacz, wcześniej zmienna c miała wartość 20,
+
+38
+00:01:50,159 --> 00:01:51,840
+teraz już ma wartość 10.
+
+39
+00:01:52,159 --> 00:01:55,359
+Więc w ten sposób jak najbardziej można tę wartość zmieniać.
+
+40
+00:01:55,840 --> 00:01:58,000
+I w kolejnym zadaniu będzie taka...
+
+41
+00:01:58,000 --> 00:01:58,500
+taka...
+
+42
+00:01:58,500 --> 00:02:01,019
+to daje tą podpowiedź, jest taka zmienna jak difference,
+
+43
+00:02:01,019 --> 00:02:03,140
+którą my musimy mieć do niej dostęp.
+
+44
+00:02:03,140 --> 00:02:06,980
+Albo zmienić ją, albo porównać.
+
+45
+00:02:07,219 --> 00:02:10,340
+I tak jak do porównywania nie musielibyśmy tego globala mieć,
+
+46
+00:02:10,340 --> 00:02:13,139
+tak żeby ją zmieniać już musimy ten global posiadać.

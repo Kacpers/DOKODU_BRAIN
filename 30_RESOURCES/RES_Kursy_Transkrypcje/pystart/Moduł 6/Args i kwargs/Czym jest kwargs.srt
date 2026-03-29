@@ -1,0 +1,71 @@
+1
+00:00:00,000 --> 00:00:15,640
+No tak, ale mówiłem o ARKS i o KWARKS. A co z tym KWARKS? No jeżeli się tutaj może domyślasz, to skoro ARKS to są argumenty pozycyjne, to KWARKS to to KW z przodu musi znaczyć coś innego niż komitet wyborczy.
+
+2
+00:00:15,640 --> 00:00:26,620
+Najpewniej jest to keyword, czyli za pomocą ARKS łapiemy wszystkie argumenty pozycyjne, natomiast za pomocą KW łapiemy wszystkie argumenty nazwane.
+
+3
+00:00:26,620 --> 00:00:38,859
+Czyli KWARKS, ja zawsze nazywam to kwarkami po prostu, odbieramy wszystkie pozostałe argumenty nazwane. I tu znowu hasło pozostałe zostało zaznaczone różowo. Dlaczego tak jest?
+
+4
+00:00:38,859 --> 00:00:45,579
+Z tego względu, że jeżeli nasza funkcja miałaby też jakieś argumenty przekazane wprost.
+
+5
+00:00:45,640 --> 00:00:55,120
+Przez programistę i one byłyby przekazane jako argumenty nazwane, to one również nie wpadłyby do tego KWARKS. Tak samo jak z ARKS.
+
+6
+00:00:55,120 --> 00:01:06,000
+Zobacz przykład. Z filename KWARKS. No i tu akurat odebrałem filename, wyświetliłem to KWARKS, no i wywołuję to sobie jako student. No i first name, last name.
+
+7
+00:01:06,000 --> 00:01:14,900
+Na przykład, żeby dodać sobie nowego takiego studenta do jakiegoś pliku w formie CSV, JSON czy czegokolwiek innego. I teraz co jest jeszcze dodatkowo wygodne?
+
+8
+00:01:14,900 --> 00:01:27,840
+Skoro to są klucze i wartości, bo to jest klucz, a to jest wartość, to znaczy, że żeby było najwygodniej, to KWARKI odbierane są w postaci słownika.
+
+9
+00:01:28,320 --> 00:01:36,680
+Czyli później, kiedy będziesz chciał dobrać się do takiego KWARKA, to można zrobić KWARKS od first name, albo można posłużyć się GETEM.
+
+10
+00:01:36,680 --> 00:01:43,740
+Tak, żeby na przykład dynamicznie sterować tym, co ma się stać, jeżeli ktoś tym razem jakiegoś konkretnego KWARKA nie poda.
+
+11
+00:01:44,160 --> 00:01:44,880
+Bardzo wygodne.
+
+12
+00:01:44,900 --> 00:01:49,260
+Już mniej więcej dochodzimy, jak to się stało, że print ma takie umiejętności.
+
+13
+00:01:49,780 --> 00:01:55,040
+Po prostu print ma gwiazdka ARKS, przecinek SEP, przecinek END.
+
+14
+00:01:55,600 --> 00:02:00,380
+I dzięki temu separator END są odbierane wprost.
+
+15
+00:02:00,920 --> 00:02:03,860
+Pozostałe rzeczy przychodzą, bo są argumentami.
+
+16
+00:02:04,320 --> 00:02:09,840
+Natomiast, jeżeli byśmy bardzo chcieli, to moglibyśmy też dorzucić jeszcze jakieś osobne klucze i wartości.
+
+17
+00:02:09,920 --> 00:02:12,080
+Natomiast akurat w printie tego nie ma.
+
+18
+00:02:12,700 --> 00:02:13,980
+Zdarza się w innych funkcjach.

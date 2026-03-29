@@ -1,0 +1,135 @@
+1
+00:00:00,000 --> 00:00:06,179
+W przypadku słownika będziemy mieli taką historię, że potrzebujemy mieć jakiś dowolny słownik zawierający trzy wartości.
+
+2
+00:00:06,280 --> 00:00:07,339
+No to zrobię słownik o sobie.
+
+3
+00:00:07,480 --> 00:00:11,599
+Person to jest first name.
+
+4
+00:00:16,800 --> 00:00:18,980
+Kacper last name.
+
+5
+00:00:21,179 --> 00:00:21,900
+Sieradziński.
+
+6
+00:00:23,199 --> 00:00:24,500
+Trzy wartości.
+
+7
+00:00:24,980 --> 00:00:25,500
+O rany.
+
+8
+00:00:25,859 --> 00:00:27,060
+To jeszcze id sobie dorzucę.
+
+9
+00:00:27,059 --> 00:00:32,719
+Id niech będzie numero uno.
+
+10
+00:00:33,159 --> 00:00:38,500
+I teraz jeżeli ja spróbuję wyświetlić sobie informację, której nie mam w tym słowniku.
+
+11
+00:00:39,079 --> 00:00:40,939
+Mogę nie pytać nawet o to użytkownika, ale zobacz.
+
+12
+00:00:41,060 --> 00:00:44,500
+Print person od first name.
+
+13
+00:00:45,099 --> 00:00:48,899
+Nie użyłem tutaj geta celowo, tylko po prostu używam klucza.
+
+14
+00:00:49,320 --> 00:00:51,439
+To w tym momencie dostaję imię Kacper.
+
+15
+00:00:51,439 --> 00:00:56,799
+A jeżeli zrobiłbym jakąś literówkę albo na przykład odwołałbym się do zmiennej a czy załóżmy.
+
+16
+00:00:57,060 --> 00:00:59,800
+No to dostaję key error age.
+
+17
+00:01:00,219 --> 00:01:01,359
+Jak sobie z tym poradzić?
+
+18
+00:01:01,920 --> 00:01:03,380
+Mogę napisać try.
+
+19
+00:01:04,960 --> 00:01:06,879
+Accept key error.
+
+20
+00:01:07,180 --> 00:01:07,920
+Dwukropek.
+
+21
+00:01:08,579 --> 00:01:10,320
+I mogę napisać print.
+
+22
+00:01:11,200 --> 00:01:12,500
+Klucz nie istnieje.
+
+23
+00:01:15,560 --> 00:01:17,060
+Widzisz? Mam.
+
+24
+00:01:17,659 --> 00:01:21,760
+Jak zobaczyć w ogóle komunikat ten, który się tam pokazał, czyli key error.
+
+25
+00:01:21,760 --> 00:01:24,040
+Bo może nam się to do czegoś przyda.
+
+26
+00:01:24,659 --> 00:01:26,700
+Można dorzucić s message.
+
+27
+00:01:27,060 --> 00:01:31,060
+I wtedy można też wypisać drugą rzecz print message.
+
+28
+00:01:32,920 --> 00:01:39,700
+Tego typu rzeczy też przydają się bardziej wtedy, kiedy tworzymy własną własną rodzaj błędu.
+
+29
+00:01:39,700 --> 00:01:49,460
+Zobacz dostaliśmy tej age trochę więcej nam napisał, więc jeżeli chodzi o własne komunikaty o błędach, to też będziemy je obsługiwać już za moment.
+
+30
+00:01:49,460 --> 00:01:54,500
+Też własne błędy będziemy tworzyć już za moment i do tego bardzo było przydatne nam dziedziczenie.
+
+31
+00:01:54,500 --> 00:01:56,939
+Natomiast ten pierwszy wstęp taki do.
+
+32
+00:01:57,060 --> 00:02:02,159
+Wyjątków mamy za sobą, więc nie pozostaje mi nic innego, jak tylko zaprosić cię dalej.
+
+33
+00:02:02,159 --> 00:02:02,920
+Chodź.
+
+34
+00:02:02,920 --> 00:02:04,040
+and

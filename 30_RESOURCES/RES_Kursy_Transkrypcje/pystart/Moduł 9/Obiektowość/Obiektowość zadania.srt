@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:04,520
+A skoro o ćwiczeniach mowa, to mam dla Ciebie trzy zadania.
+
+2
+00:00:05,060 --> 00:00:05,919
+Zadanie pierwsze.
+
+3
+00:00:06,259 --> 00:00:11,220
+Zaimplementuj klasę Circle, która w metodzie init powinna odebrać promień koła.
+
+4
+00:00:11,859 --> 00:00:17,940
+Klasa ta powinna posiadać dwie metody liczące pole, a także obwód koła i pamiętaj o testach.
+
+5
+00:00:18,420 --> 00:00:21,920
+Czyli polecam, jeżeli będziesz chciał później robić zadanie drugie,
+
+6
+00:00:22,480 --> 00:00:26,740
+to warto zaznaczyć sobie i to zadanie umieścić w if name równa się main,
+
+7
+00:00:27,000 --> 00:00:29,160
+żeby mieć pewność, że nic nam się nie skiepści.
+
+8
+00:00:29,160 --> 00:00:32,460
+W tym momencie wykorzystaj utworzoną w poprzednim zadaniu klasę,
+
+9
+00:00:32,679 --> 00:00:36,439
+zapytaj użytkownika o promień koła i wyświetl jego obwód i pole.
+
+10
+00:00:37,320 --> 00:00:38,240
+No i zadanie trzecie.
+
+11
+00:00:38,659 --> 00:00:46,439
+Przygotuj klasę K, która powinna przechowywać nazwę samochodu oraz jego cenę i maksymalną prędkość.
+
+12
+00:00:46,840 --> 00:00:51,560
+Zapytaj użytkownika o pięć samochodów, a następnie wyświetl je na ekranie.
+
+13
+00:00:52,340 --> 00:00:54,780
+Można je na przykład przechowywać w jakiejś liście.
+
+14
+00:00:55,219 --> 00:00:55,539
+To co?
+
+15
+00:00:56,939 --> 00:00:59,000
+Kilka chwil dla każdego.
+
+16
+00:00:59,159 --> 00:01:02,319
+I widzimy się już za moment po krótkiej przerwie.

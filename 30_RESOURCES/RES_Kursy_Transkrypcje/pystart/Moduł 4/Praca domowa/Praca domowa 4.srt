@@ -1,0 +1,399 @@
+1
+00:00:00,000 --> 00:00:03,720
+No i cóż, zapraszam Cię jeszcze do pracy domowej, po czwartym module.
+
+2
+00:00:04,280 --> 00:00:12,140
+Więc, korzystając z Match Case, zadanie pierwsze, napisz program, który będzie wykonywał różne operacje matematyczne w zależności od wyboru użytkownika.
+
+3
+00:00:12,679 --> 00:00:16,980
+Użytkownik powinien mieć możliwość wyboru między dodawaniem, odejmowaniem, mnożeniem i dzieleniem.
+
+4
+00:00:17,440 --> 00:00:19,280
+Przyjmujemy zawsze dwie liczby.
+
+5
+00:00:20,280 --> 00:00:26,660
+Zadanie drugie, napisz program, który będzie konwertował różne jednostki masy na podstawie wyboru użytkownika.
+
+6
+00:00:26,660 --> 00:00:31,560
+Użytkownik powinien mieć możliwość konwersji między kilogramami, funtami i uncjami.
+
+7
+00:00:31,839 --> 00:00:34,659
+Czyli na dzień dobry pytamy użytkownika, co chcesz zrobić.
+
+8
+00:00:34,799 --> 00:00:43,659
+Chcesz zamienić kilogramy na funty, czy funty na kilogramy, czy kilogramy na uncje, czy uncje na kilogramy, czy funty na uncje.
+
+9
+00:00:43,780 --> 00:00:45,960
+Wiadomo o co chodzi. Kilka tych opcji mu wyświetlamy.
+
+10
+00:00:46,519 --> 00:00:49,719
+No i w zależności od tego, co użytkownik odpowie, przeliczamy.
+
+11
+00:00:50,179 --> 00:00:55,460
+Według przelicznika, jeden kilogram to 35, jeden kilogram to tyle.
+
+12
+00:00:55,659 --> 00:00:56,519
+Łatwo będzie.
+
+13
+00:00:56,659 --> 00:01:02,559
+Czyli najpierw zapytasz użytkownika o wartość do przeliczenia, a potem zapytasz z czego na co chcesz to przeliczyć.
+
+14
+00:01:02,819 --> 00:01:04,140
+Proponuję zrobić to w ten sposób.
+
+15
+00:01:04,899 --> 00:01:15,199
+W zadaniu kolejnym mamy za pomocą pętli while zdefiniować hasło w zmiennej, a następnie napisać program, który za pomocą pętli while będzie pytać użytkownika o wprowadzenie hasła.
+
+16
+00:01:15,819 --> 00:01:19,400
+Jeżeli hasło jest poprawne, program powinien wyświetlić komunikat poprawne hasło.
+
+17
+00:01:19,620 --> 00:01:24,479
+A jeśli hasło jest niepoprawne, program powinien wyświetlać komunikat niepoprawne hasło, spróbuj ponownie.
+
+18
+00:01:24,900 --> 00:01:26,479
+Można użyć np. walrus operacyjny.
+
+19
+00:01:26,659 --> 00:01:37,459
+W kolejnym zadaniu, czyli czwartym, mamy napisać program symulujący działanie bankomatu.
+
+20
+00:01:37,579 --> 00:01:40,319
+Pętla while będzie pytać użytkownika o wybór operacji.
+
+21
+00:01:40,799 --> 00:01:46,659
+Wpłata, wypłata, sprawdzenie stanu konta i będzie kontynuowana, dopóki użytkownik nie wybierze opcji wyjście.
+
+22
+00:01:47,439 --> 00:01:50,420
+Czyli mamy wpłata, wypłata, sprawdź stan konta i wyjście.
+
+23
+00:01:50,959 --> 00:01:54,959
+Na dzień dobry niech każdy ma zero, albo można sobie wpisać dowolną wartość.
+
+24
+00:01:54,959 --> 00:01:55,959
+W zadaniu piątym.
+
+25
+00:01:56,659 --> 00:02:04,379
+Mamy napisać program, który będzie wykonywał pętlę while, która będzie pytać użytkownika o nazwę miasta oraz temperaturę w stopniach Celsjusza.
+
+26
+00:02:04,859 --> 00:02:11,139
+Program będzie przechowywał te informacje w słowniku, gdzie kluczem będzie nazwa miasta, a wartością temperatura.
+
+27
+00:02:11,620 --> 00:02:15,099
+Pętla będzie kontynuowana, dopóki użytkownik nie wprowadzi słowa koniec.
+
+28
+00:02:15,519 --> 00:02:23,620
+Po zakończeniu pętli program powinien wyświetlić średnią temperaturę dla wszystkich miast oraz nazwę miasta o najwyższej i najniższej temperaturze.
+
+29
+00:02:23,620 --> 00:02:26,620
+Czyli chcielibyśmy po prostu zrobić sobie co.
+
+30
+00:02:26,659 --> 00:02:36,060
+Coś takiego, gdzie będziemy wpisywali Gdańsk 23, Warszawa 17, Zakopane 3 i tak różne wartości.
+
+31
+00:02:36,599 --> 00:02:47,060
+I później będziemy chcieli mieć możliwość wyświetlenia tego miasta, które ma najwięcej, tego miasta, które ma najmniej i średniej temperatury ze wszystkich miast.
+
+32
+00:02:47,240 --> 00:02:49,759
+Dopóki użytkownik nie wprowadzi hasła koniec.
+
+33
+00:02:49,759 --> 00:02:55,680
+Czyli nazwa miasta może być koniec i to będzie oznaczało, że koniec, że już nie idziemy dalej.
+
+34
+00:02:55,680 --> 00:03:00,260
+W zadaniu szóstym pytamy użytkownika o imiona, dopóki nie napisze znowu koniec.
+
+35
+00:03:00,640 --> 00:03:08,319
+Program powinien wyświetlać słownik prezentujący imiona wraz z ilością ich wystąpień oraz unikatową listę imion posortowanych alfabetycznie.
+
+36
+00:03:09,360 --> 00:03:18,120
+Czyli ktoś pisuje Basia, Krysia, Zosia, Marysia, Wojtek i tak dalej, i tak dalej, różne imiona.
+
+37
+00:03:18,659 --> 00:03:22,620
+I jeżeli te imiona, któreś z tych imion się powtórzy, to powinien zwiększać licznik imion.
+
+38
+00:03:22,620 --> 00:03:25,420
+Chyba, że napisze koniec, to koniec.
+
+39
+00:03:25,680 --> 00:03:40,980
+No i w momencie, w którym zakończy nam się program, to powinniśmy dostać właśnie słownik z poszczególnymi ilościami wystąpień, poszczególnych imion oraz unikatową listę imion, czyli tylko unikatowe imiona posortowane alfabetycznie.
+
+40
+00:03:42,260 --> 00:03:48,719
+W zadaniu siódmym mamy napisać program, który będzie wykonywał pętlę while, która będzie pytała użytkownika o wprowadzenie liczby.
+
+41
+00:03:48,719 --> 00:03:51,600
+Program będzie sprawdzał, czy liczba jest parzysta.
+
+42
+00:03:51,980 --> 00:03:55,180
+Jeśli tak, to będzie ją dodawał do listy liczb parzystych.
+
+43
+00:03:55,180 --> 00:03:58,120
+A jeśli nie, to do listy liczb nieparzystych.
+
+44
+00:03:58,300 --> 00:04:01,860
+Pętla będzie kontynuowana, dopóki użytkownik nie wprowadzi liczby zero.
+
+45
+00:04:02,379 --> 00:04:09,719
+Po zakończeniu pętli program powinien wyświetlić liczbę liczb parzystych i nieparzystych oraz listy liczb parzystych i nieparzystych.
+
+46
+00:04:09,840 --> 00:04:12,360
+Czyli po prostu znowu wprowadzamy różne liczby.
+
+47
+00:04:12,780 --> 00:04:18,720
+Na koniec mówi, to są liczby nieparzyste, które wprowadziłeś, to są liczby parzyste, które wprowadziłeś i tych liczb jest tyle, a tych liczb jest tyle.
+
+48
+00:04:19,280 --> 00:04:20,860
+Zadanie ósme, czyli sklep.
+
+49
+00:04:21,180 --> 00:04:23,079
+Przygotuj słownik zawierający produkty.
+
+50
+00:04:23,600 --> 00:04:25,079
+Produkt to klucz, a cena to sklep.
+
+51
+00:04:25,180 --> 00:04:31,259
+Cena to wartość, czyli np. nazwa to chleb, nazwa to brokuły, a ceny to wartości.
+
+52
+00:04:31,759 --> 00:04:35,900
+Zapytaj użytkownika, który produkt chce dodać do koszyka, a następnie w jakiej ilości.
+
+53
+00:04:36,459 --> 00:04:38,699
+Robiliśmy coś podobnego, ale pytaliśmy tylko raz.
+
+54
+00:04:39,680 --> 00:04:45,939
+Tym razem chcemy pytać tak długo, jak długo użytkownik nie odpowie nam hasłem podsumuj.
+
+55
+00:04:46,620 --> 00:04:54,939
+Wartość zamówienia możesz przechowywać w pojedynczej zmiennej lub posiadać listę dla chętnych produktów lub słowników, jeśli chcesz wyświetlić podsumowanie.
+
+56
+00:04:55,180 --> 00:05:08,920
+Czyli ktoś sobie dodaje różne produkty do koszyka, robimy podsumuj, po czym powinna pokazać mu się ilość, a zadanie dla chętnych, ja od razu mówię, że będę chętny, to będzie też informacja o tym, jakie produkty w jakich liczbach zostały dodane.
+
+57
+00:05:10,019 --> 00:05:11,280
+No i lecimy dalej.
+
+58
+00:05:11,460 --> 00:05:14,819
+Przechodzimy do kolejnej części, którą robiliśmy też podczas tego modułu.
+
+59
+00:05:14,960 --> 00:05:16,360
+Będziemy pracować ze stringami.
+
+60
+00:05:16,920 --> 00:05:21,660
+Przygotuj program, który będzie szyfrował i odszyfrowywał wyrażenia korzystając z szyfru Cezara.
+
+61
+00:05:22,220 --> 00:05:24,939
+Podpowiedź, mogą Ci się przydać funkcja ORT i CHR.
+
+62
+00:05:25,180 --> 00:05:28,800
+Czym jest szyfr Cezara?
+
+63
+00:05:29,199 --> 00:05:39,480
+Szyfr Cezara polega na tym, że możemy przesuwać, ja będę to powiem Wam dla liczby 3, że można przesuwać każdą literę o 3 znaki w prawo.
+
+64
+00:05:39,480 --> 00:05:46,300
+Czyli zamiast A można powiedzieć, że to jest D, jeżeli będzie kluczem liczba 3, cyfra 3.
+
+65
+00:05:46,639 --> 00:05:50,040
+I zamiast B będzie E i tak dalej.
+
+66
+00:05:50,579 --> 00:05:55,139
+Jeżeli będzie Z, to wtedy powinniśmy wziąć C, bo to jest trzecia.
+
+67
+00:05:55,180 --> 00:06:01,040
+To jakby przekręcił nam się cały szyfr, więc powinniśmy wybrać z powrotem wrócić i wziąć literę C.
+
+68
+00:06:01,620 --> 00:06:04,759
+No i chcemy zarówno mieć możliwość szyfrowania, jak i deszyfrowania.
+
+69
+00:06:04,759 --> 00:06:13,040
+Czy ktoś napisze, dziś jest poniedziałek, SI odpuszczamy, wszystkie polskie znaki odpuszczamy, no i spacja musi zostać spacją.
+
+70
+00:06:13,540 --> 00:06:18,759
+Dziś jest poniedziałek i zamiast tego pojawi się jakiś zbiór innych liter, a później jak będziemy chcieli odszyfrować,
+
+71
+00:06:19,800 --> 00:06:23,879
+no to powinien zrobić to samo, tylko że w drugą stronę, czyli odjąć trzy znaki.
+
+72
+00:06:24,860 --> 00:06:25,160
+I tu wyjdziemy.
+
+73
+00:06:25,180 --> 00:06:31,240
+Ważna sprawa, zakładamy właśnie, że nie ma polskich znaków i możecie przyjąć, że klucz to jest właśnie cyfra 3,
+
+74
+00:06:31,639 --> 00:06:33,500
+o trzy znaki w lewo, o trzy znaki w prawo.
+
+75
+00:06:34,040 --> 00:06:38,259
+Można też tę cyfrę sobie gdzieś zdefiniować u góry, żeby wiedzieć o ile znaków przesuwać.
+
+76
+00:06:38,840 --> 00:06:44,180
+Zadanie dziesiąte, napisz program, który będzie usuwał z tekstu wszystkie słowa zaczynające się na wybraną literę.
+
+77
+00:06:44,540 --> 00:06:49,019
+Czyli na przykład wszystkie słowa na P, Python powinien zniknąć niezależnie od wielkości liter.
+
+78
+00:06:49,600 --> 00:06:54,699
+Zadanie jedenaste, zapytaj użytkownika o dwa wyrażenia, a następnie wyświetl wszystkie znaki,
+
+79
+00:06:54,699 --> 00:06:56,479
+wspólne dla obu tych wyrażeń.
+
+80
+00:06:56,839 --> 00:07:00,180
+Na przykład sala i balkon powinno wyświetlić A oraz L.
+
+81
+00:07:00,500 --> 00:07:04,500
+Zadanie dwunaste, odbierz od użytkownika słowa rozdzielone przecinkami,
+
+82
+00:07:04,620 --> 00:07:08,459
+a następnie wyświetl te słowa wiersz pod wierszem, ale każde tylko jeden raz.
+
+83
+00:07:08,959 --> 00:07:16,159
+Czyli rozbijamy po przecinkach, zamieniamy na zbiór i wyświetlamy wartości unikatowe.
+
+84
+00:07:16,719 --> 00:07:19,620
+Zwróćcie uwagę, co się stanie, jeżeli ktoś zrobi przecinek i spacja.
+
+85
+00:07:19,959 --> 00:07:21,740
+Wtedy może nam się przydać funkcja strip.
+
+86
+00:07:21,740 --> 00:07:24,539
+I jeszcze jedno zadanie, ale już ostatnie.
+
+87
+00:07:24,699 --> 00:07:30,479
+Przygotuj program, który będzie sprawdzał, czy dwa podane słowa są wzajemnymi anagramami.
+
+88
+00:07:31,019 --> 00:07:37,399
+Anagram to jest wyraz ułożony z tych samych liter, z których składa się ten drugi wyraz.
+
+89
+00:07:37,719 --> 00:07:45,899
+Czyli powiedzmy, mamy słowo wanna i teraz, jeżeli byśmy napisali nanaw,
+
+90
+00:07:46,560 --> 00:07:50,500
+czy cokolwiek innego takiego ułożyli, to mielibyśmy anagram.
+
+91
+00:07:50,500 --> 00:07:53,279
+Tak dokładnie, mama i amma.
+
+92
+00:07:53,279 --> 00:07:56,539
+Tu oczywiście nie będziemy sprawdzali, czy takie słowo istnieje.
+
+93
+00:07:56,539 --> 00:07:57,779
+To nie są literaki.
+
+94
+00:07:57,779 --> 00:07:58,779
+Kto chce, to może.
+
+95
+00:07:58,779 --> 00:08:01,039
+Można się pokusić o coś takiego.
+
+96
+00:08:01,039 --> 00:08:07,779
+Natomiast na chwilę obecną wystarczy, że po prostu ułożę te litery w innej kolejności i wszystko powinno grać.
+
+97
+00:08:07,779 --> 00:08:10,179
+Wielkość liter nie jest istotna.
+
+98
+00:08:10,179 --> 00:08:15,519
+Czyli jeżeli gdzieś będzie wielka litera, a gdzieś będzie mała, to i tak wszystko powinno być okej.
+
+99
+00:08:15,519 --> 00:08:18,399
+No i cóż, dziękuję, zapraszam do rozwiązywania.
+
+100
+00:08:18,399 --> 00:08:19,519
+Trzymajcie się, cześć.

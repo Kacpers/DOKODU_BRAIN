@@ -1,0 +1,583 @@
+1
+00:00:00,000 --> 00:00:02,399
+To o czym wspominałem, czyli przeciążanie metod.
+
+2
+00:00:02,500 --> 00:00:05,080
+Przeciążanie metod polega na takim nadpisywaniu jej,
+
+3
+00:00:05,179 --> 00:00:08,199
+to znaczy w klasie potomnej posiadamy taką samą metodę jak w rodzicu.
+
+4
+00:00:08,599 --> 00:00:09,240
+I tu jest przykład.
+
+5
+00:00:09,740 --> 00:00:12,439
+Mamy klasę parent, która posiada metodę getType
+
+6
+00:00:12,439 --> 00:00:15,480
+i po prostu zwraca informację parent, jestem rodzicem.
+
+7
+00:00:16,000 --> 00:00:20,420
+Mamy klasę child, która dziedziczy po naszej klasie parent
+
+8
+00:00:20,420 --> 00:00:25,660
+i metoda getType, taka sama jak tutaj, zwraca nam child.
+
+9
+00:00:25,660 --> 00:00:30,420
+Czyli kiedy tworzymy sobie child i wywołujemy printa na tym getType,
+
+10
+00:00:30,579 --> 00:00:33,619
+to zostanie zwrócona metoda z childa.
+
+11
+00:00:33,899 --> 00:00:36,780
+Natomiast w momencie, w którym tej metody by nie było,
+
+12
+00:00:37,200 --> 00:00:40,840
+no to wtedy wywoływana byłaby metoda rodzica.
+
+13
+00:00:41,259 --> 00:00:42,579
+Po prostu tak to działamy.
+
+14
+00:00:42,740 --> 00:00:46,620
+Przeciążamy tę metodę i wywołujemy tę metodę, która jest poniżej.
+
+15
+00:00:46,760 --> 00:00:48,719
+Bardziej chyba przysłaniamy tę metodę.
+
+16
+00:00:49,039 --> 00:00:51,299
+Głównie do tej nomenklatura nomenklaturą,
+
+17
+00:00:51,299 --> 00:00:54,159
+ale bardziej chodzi o to, że po prostu wywołujemy ten kod,
+
+18
+00:00:54,460 --> 00:00:55,299
+który znajduje się poniżej.
+
+19
+00:00:56,399 --> 00:00:58,139
+Wtedy zawsze pada takie pytanie,
+
+20
+00:00:58,379 --> 00:01:03,739
+a co jeżeli jednak będę chciał wywołać tę metodę, która jest z góry?
+
+21
+00:01:04,039 --> 00:01:08,039
+Bo na przykład okaże się, że w tej klasie mam jakieś obliczenia,
+
+22
+00:01:08,179 --> 00:01:11,219
+mam jakąś logikę w tej metodzie
+
+23
+00:01:11,219 --> 00:01:15,299
+i moje dziecko ma tylko trochę zmodyfikować ten sposób,
+
+24
+00:01:15,439 --> 00:01:17,060
+w jaki myśli mój rodzic.
+
+25
+00:01:17,780 --> 00:01:19,340
+Czyli na przykład wyobraźmy sobie,
+
+26
+00:01:19,340 --> 00:01:23,079
+że tutaj ta metoda parent zwraca nam wartość liczbową, nie wiem, 150.
+
+27
+00:01:23,859 --> 00:01:25,340
+My byśmy chcieli w ramach dziecka,
+
+28
+00:01:25,659 --> 00:01:26,719
+zmienić tę wartość,
+
+29
+00:01:26,799 --> 00:01:29,780
+bo na przykład przemnożyć ją sobie razy jeszcze, nie wiem, 0,23.
+
+30
+00:01:30,579 --> 00:01:33,259
+I w tym momencie, czy musimy całą tę logikę,
+
+31
+00:01:33,340 --> 00:01:35,640
+która jest tutaj, powtarzać w tej metodzie?
+
+32
+00:01:36,840 --> 00:01:37,439
+Nie musimy.
+
+33
+00:01:37,979 --> 00:01:42,359
+Możemy będąc w child skorzystać z tego, co obliczył nam już rodzic,
+
+34
+00:01:42,479 --> 00:01:44,099
+tak żeby tylko to zmodyfikować.
+
+35
+00:01:44,599 --> 00:01:48,140
+I żeby to zmodyfikować, korzystamy z czegoś, co nazywa się super.
+
+36
+00:01:48,719 --> 00:01:50,479
+Super wygląda w kodzie o tak.
+
+37
+00:01:51,599 --> 00:01:53,780
+Zobacz, mam klasę product.
+
+38
+00:01:54,019 --> 00:01:55,640
+Moja klasa product przyjmuje,
+
+39
+00:01:55,640 --> 00:01:56,640
+co jest to, co jest to, co jest to.
+
+40
+00:01:56,640 --> 00:01:56,680
+I to jest to, co jest to.
+
+41
+00:01:56,680 --> 00:01:56,700
+I to jest to, co jest to.
+
+42
+00:01:56,700 --> 00:01:56,719
+I to jest to, co jest to.
+
+43
+00:01:56,719 --> 00:01:59,780
+Jako ten jedyny atrybut, jedyną właściwość
+
+44
+00:01:59,780 --> 00:02:02,239
+i przypisują sobie jako własną właściwość.
+
+45
+00:02:02,900 --> 00:02:05,140
+Następnie mamy metodę get price,
+
+46
+00:02:05,299 --> 00:02:07,260
+która zwraca nam po prostu tę cenę.
+
+47
+00:02:07,680 --> 00:02:10,319
+W tym momencie każdy produkt, który byśmy zrobili,
+
+48
+00:02:10,439 --> 00:02:12,020
+mógłby tę cenę mieć enkapsulowaną,
+
+49
+00:02:12,120 --> 00:02:14,120
+mogłaby być po prostu prywatna.
+
+50
+00:02:14,520 --> 00:02:17,500
+W ten sposób ta cena byłaby niedostępna do zmieniania.
+
+51
+00:02:17,860 --> 00:02:21,360
+Natomiast metoda get price zawsze mogłaby ją zwracać.
+
+52
+00:02:21,759 --> 00:02:23,000
+I teraz to, co zrobiliśmy,
+
+53
+00:02:23,000 --> 00:02:25,240
+to stworzyliśmy sobie discounted product.
+
+54
+00:02:25,639 --> 00:02:29,319
+Discounted product ma zawierać cenę obniżoną o 10%.
+
+55
+00:02:29,319 --> 00:02:32,839
+Stąd też ja nie chcę się nawet zastanawiać nad tym,
+
+56
+00:02:32,939 --> 00:02:35,819
+jaka jest logika za tym, żeby pobierać cenę produktu.
+
+57
+00:02:35,899 --> 00:02:38,199
+Ja po prostu chcę tę cenę obniżyć o 10%.
+
+58
+00:02:38,199 --> 00:02:40,479
+Możliwe, że ta logika tutaj jest bardzo zawiła.
+
+59
+00:02:40,599 --> 00:02:42,159
+Możliwe, że pobieram coś z bazy danych,
+
+60
+00:02:42,239 --> 00:02:44,419
+coś obliczam, sprawdzam, analizuję.
+
+61
+00:02:45,239 --> 00:02:46,399
+Tego nie chcę wiedzieć.
+
+62
+00:02:46,879 --> 00:02:49,199
+Po prostu chcę obniżyć tę cenę o 10%.
+
+63
+00:02:49,199 --> 00:02:51,339
+Stąd też, jeżeli mam metodę,
+
+64
+00:02:51,339 --> 00:02:54,179
+która nazywa się tak samo jak metoda w produkcie,
+
+65
+00:02:54,699 --> 00:02:55,539
+to nie mogę jej wywołać,
+
+66
+00:02:55,639 --> 00:02:57,379
+self.getPrice,
+
+67
+00:02:57,579 --> 00:02:59,959
+bo self.getPrice odwołałoby się do tego.
+
+68
+00:03:00,859 --> 00:03:04,199
+Więc zamiast słówka self pojawia się słówko super.
+
+69
+00:03:04,679 --> 00:03:07,139
+I super z nawiasami .getPrice
+
+70
+00:03:07,139 --> 00:03:09,299
+spowoduje, że ja wywołam tę metodę,
+
+71
+00:03:09,719 --> 00:03:11,059
+pobiorę sobie tę wartość
+
+72
+00:03:11,059 --> 00:03:12,579
+i będę mógł zmienić tę cenę,
+
+73
+00:03:12,699 --> 00:03:14,759
+obniżyć ją o 10%.
+
+74
+00:03:14,759 --> 00:03:18,839
+Zobacz, product równa się discounted product z ceną 100.
+
+75
+00:03:19,399 --> 00:03:22,539
+Print product.getPrice wywoła mi metodę tą,
+
+76
+00:03:22,539 --> 00:03:25,599
+czyli najpierw on pobierze mi cenę z rodzica,
+
+77
+00:03:25,639 --> 00:03:28,399
+czyli po prostu tą, którą sobie ustawiłem, czyli 100,
+
+78
+00:03:28,399 --> 00:03:33,139
+a następnie obniżę tę cenę o 10%.
+
+79
+00:03:34,679 --> 00:03:36,199
+I teraz zauważyłem, że bardzo...
+
+80
+00:03:36,199 --> 00:03:37,199
+Znaczy teraz.
+
+81
+00:03:37,199 --> 00:03:42,279
+Podczas procesu edukowania adeptów sztuki programowania
+
+82
+00:03:42,279 --> 00:03:47,159
+zauważyłem, że to się staje trochę bardziej zawiłe wtedy.
+
+83
+00:03:47,159 --> 00:03:51,479
+Że zaczynamy się zastanawiać, a kiedy self, a kiedy super?
+
+84
+00:03:51,479 --> 00:03:54,279
+No bo self przecież też mogliśmy używać,
+
+85
+00:03:54,279 --> 00:03:55,479
+a czasem...
+
+86
+00:03:55,639 --> 00:03:57,319
+Jednak zamieniamy self na super.
+
+87
+00:03:57,959 --> 00:04:00,319
+Skąd to wiadomo, że self czy super?
+
+88
+00:04:00,839 --> 00:04:01,399
+Więc zobacz.
+
+89
+00:04:02,379 --> 00:04:04,559
+Mamy sytuację, że jest sobie klasa parent.
+
+90
+00:04:05,039 --> 00:04:07,839
+Klasa parent posiada metodę parent method,
+
+91
+00:04:07,839 --> 00:04:10,059
+która po prostu zwraca komunikat parent method.
+
+92
+00:04:10,179 --> 00:04:13,279
+Tutaj nie skupiamy się w ogóle jakby na tym,
+
+93
+00:04:13,379 --> 00:04:14,359
+żeby to miało jakiś sens.
+
+94
+00:04:14,519 --> 00:04:15,959
+Bardziej chodzi mi o to, żeby była metoda,
+
+95
+00:04:16,879 --> 00:04:18,819
+która coś zwraca i żeby na tej podstawie
+
+96
+00:04:18,819 --> 00:04:20,039
+można było to wytłumaczyć.
+
+97
+00:04:20,500 --> 00:04:22,560
+Czyli parent method, jak sama nazwa wskazuje,
+
+98
+00:04:22,639 --> 00:04:24,279
+to jest metoda zawarta w rodzicu.
+
+99
+00:04:24,659 --> 00:04:25,519
+I mamy też coś,
+
+100
+00:04:25,639 --> 00:04:27,039
+co nazywa się common method
+
+101
+00:04:27,039 --> 00:04:29,639
+i to jest metoda wspólna zarówno dla rodzica,
+
+102
+00:04:29,759 --> 00:04:30,339
+jak i dla dziecka.
+
+103
+00:04:31,099 --> 00:04:34,099
+Poniżej mamy child, który dziedziczy po parent.
+
+104
+00:04:34,819 --> 00:04:37,060
+Child posiada child method.
+
+105
+00:04:37,439 --> 00:04:39,979
+I teraz, jeżeli ja chcę z poziomu dziecka
+
+106
+00:04:39,979 --> 00:04:42,259
+wywołać metodę parent method
+
+107
+00:04:42,259 --> 00:04:45,680
+i metoda parent method nie została zadeklarowana
+
+108
+00:04:45,680 --> 00:04:46,939
+na wewnątrz childa,
+
+109
+00:04:47,399 --> 00:04:49,819
+to ja po prostu robię self.parent method.
+
+110
+00:04:50,319 --> 00:04:53,159
+I to spowoduje, że ja wywołam metodę z rodzica.
+
+111
+00:04:54,000 --> 00:04:54,099
+OK?
+
+112
+00:04:54,759 --> 00:04:55,279
+Natomiast,
+
+113
+00:04:55,279 --> 00:04:57,519
+jeżeli ja bym w dziecku stworzył metodę
+
+114
+00:04:57,519 --> 00:04:59,639
+common method, czyli tę samą metodę,
+
+115
+00:04:59,699 --> 00:05:01,579
+metodę o tej samej nazwie, jak ta metoda,
+
+116
+00:05:01,719 --> 00:05:03,000
+która znajduje się w rodzicu,
+
+117
+00:05:03,479 --> 00:05:06,500
+to wtedy, żeby z poziomu tej metody
+
+118
+00:05:06,500 --> 00:05:08,099
+odwołać się do metody rodzica,
+
+119
+00:05:08,339 --> 00:05:09,219
+muszę użyć super.
+
+120
+00:05:09,779 --> 00:05:11,739
+Używam tego super, żeby wytłumaczyć
+
+121
+00:05:11,739 --> 00:05:12,979
+Pythonowi, słuchaj Python,
+
+122
+00:05:13,119 --> 00:05:15,699
+ja chcę wziąć tę metodę
+
+123
+00:05:15,699 --> 00:05:17,359
+z klasy, po której dziedziczę,
+
+124
+00:05:17,839 --> 00:05:19,719
+a nie z klasy,
+
+125
+00:05:19,779 --> 00:05:21,019
+w której się obecnie znajduję.
+
+126
+00:05:21,419 --> 00:05:22,319
+I to oznacza super.
+
+127
+00:05:22,959 --> 00:05:24,899
+Self zawsze w pierwszej kolejności
+
+128
+00:05:24,899 --> 00:05:26,839
+będzie szukało, czy ta metoda nie znajduje się
+
+129
+00:05:26,839 --> 00:05:29,419
+w mojej klasie, czyli w klasie child.
+
+130
+00:05:29,959 --> 00:05:30,959
+Jeżeli znajduje się,
+
+131
+00:05:31,060 --> 00:05:33,019
+to wtedy będzie się nią posługiwał.
+
+132
+00:05:33,500 --> 00:05:35,099
+Natomiast super informuje
+
+133
+00:05:35,099 --> 00:05:36,939
+Pythona, że zawsze chce szukać z góry.
+
+134
+00:05:37,139 --> 00:05:38,699
+Nie chce szukać jakby na moim poziomie,
+
+135
+00:05:38,839 --> 00:05:40,219
+tylko zawsze chce szukać z góry.
+
+136
+00:05:41,399 --> 00:05:43,079
+Jednakże, w momencie, w którym
+
+137
+00:05:43,079 --> 00:05:44,879
+nie mamy takiej metody zadeklarowanej,
+
+138
+00:05:44,939 --> 00:05:46,799
+to nie musimy tego, wręcz nie powinniśmy tego
+
+139
+00:05:46,799 --> 00:05:49,099
+super używać, tak jak jest tutaj parent method,
+
+140
+00:05:49,500 --> 00:05:50,819
+tylko wtedy powinno być self.
+
+141
+00:05:51,339 --> 00:05:52,879
+Bo zobacz, dziecko nie ma
+
+142
+00:05:52,879 --> 00:05:54,879
+parent method, więc po prostu używamy self.
+
+143
+00:05:54,899 --> 00:05:56,859
+Natomiast, jeżeli tu mam
+
+144
+00:05:56,859 --> 00:05:58,579
+common method, to wtedy używam super.
+
+145
+00:05:59,339 --> 00:05:59,639
+Okej?
+
+146
+00:06:00,599 --> 00:06:01,919
+Taka jest różnica.

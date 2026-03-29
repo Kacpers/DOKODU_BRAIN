@@ -1,0 +1,399 @@
+1
+00:00:00,000 --> 00:00:11,380
+No to cóż, przechodzimy do liczenia BMI, czyli mamy przygotować funkcję, która będzie liczyła BMI na podstawie argumentów wzrost oraz waga, gdzie BMI to jest masa podzielona przez wzrost do kwadratu.
+
+2
+00:00:11,380 --> 00:00:25,699
+No to ok, to lecimy. Czyli potrzebujemy mieć funkcję calculateBMI i teraz nasze BMI będzie potrzebowało mieć masę, czyli weight i wzrost, czyli high.
+
+3
+00:00:25,699 --> 00:00:30,699
+Jedno i drugie będzie na pewno przekazywane floatem.
+
+4
+00:00:32,780 --> 00:00:44,500
+Wynik tego BMI to jest return masa w kilogramach, czyli weight podzielone przez wzrost w metrach podniesiony do kwadratu.
+
+5
+00:00:44,879 --> 00:00:47,879
+Kolejność działań jest po naszej stronie, więc tym się przejmować nie musimy.
+
+6
+00:00:47,879 --> 00:00:55,679
+Sprawę mamy załatwioną, a druga funkcja powinna na podstawie wartości liczbowej BMI opisywać wynik za pomocą wskazówki.
+
+7
+00:00:55,700 --> 00:01:00,740
+No to def BMI to text.
+
+8
+00:01:03,140 --> 00:01:09,060
+No i będziemy potrzebowali mieć jakiś BMI score jako ten argument, to też będzie raczej float.
+
+9
+00:01:10,260 --> 00:01:13,820
+I zwracać będziemy string. Tutaj zwracać będziemy na pewno float.
+
+10
+00:01:15,300 --> 00:01:22,100
+Jeżeli chodzi o to nasze BMI to text, no to nasze BMI to text będzie musiało na podstawie tego zwracać konkretne dane.
+
+11
+00:01:22,100 --> 00:01:23,840
+Jak to zrobić sensownie?
+
+12
+00:01:24,040 --> 00:01:25,680
+Można byłoby zrobić na przykład tak.
+
+13
+00:01:25,700 --> 00:01:35,760
+If BMI score mniejsze niż 16 to wtedy return wygłodzenie.
+
+14
+00:01:36,740 --> 00:01:48,260
+Elif może być ono większe niż 16, czyli większe lub równe, albo mniejsze od 16,99.
+
+15
+00:01:51,219 --> 00:01:54,379
+Wtedy return wychudzenie.
+
+16
+00:01:55,700 --> 00:01:57,700
+Ok.
+
+17
+00:01:57,700 --> 00:02:01,700
+Ja teraz spędzę chwilę i po prostu uzupełnię pozostałe dane.
+
+18
+00:02:01,700 --> 00:02:03,700
+No i teraz wypadałoby to sobie sprawdzić.
+
+19
+00:02:03,700 --> 00:02:09,140
+Ja żeby to sprawdzić musiałbym najpierw sobie to przeliczyć, żeby mieć jakieś wartości przykładowe.
+
+20
+00:02:09,140 --> 00:02:12,140
+No i myślę, że dla kilku tych wartości możemy sobie to przetestować.
+
+21
+00:02:12,140 --> 00:02:18,140
+Tak naprawdę powinniśmy sprawdzić dla każdej znajdującej się w tym przedziale, czy odpowiednia wartość jest zwracana.
+
+22
+00:02:18,140 --> 00:02:21,140
+Nie będę tego robił dla każdego, bo to byłoby dużo pisania.
+
+23
+00:02:21,140 --> 00:02:24,140
+Natomiast prawidłowo byłoby tak to właśnie wykonać.
+
+24
+00:02:24,139 --> 00:02:26,139
+Czyli odbiorę sobie jakiś wzrost.
+
+25
+00:02:26,139 --> 00:02:28,139
+Wagę najpierw.
+
+26
+00:02:28,139 --> 00:02:36,139
+Podaj wagę w kilogramach.
+
+27
+00:02:36,139 --> 00:02:42,139
+Podaj wzrost w metrach.
+
+28
+00:02:42,139 --> 00:02:48,139
+No i potrzebujemy wykonać Calculate BMI.
+
+29
+00:02:48,139 --> 00:02:51,139
+Czyli BMI równa się Calculate BMI.
+
+30
+00:02:51,139 --> 00:02:53,139
+Waga, wysokość.
+
+31
+00:02:53,139 --> 00:02:57,139
+No i BMI text.
+
+32
+00:02:57,139 --> 00:03:00,139
+BMI to text.
+
+33
+00:03:00,139 --> 00:03:02,139
+BMI.
+
+34
+00:03:02,139 --> 00:03:04,139
+Print BMI.
+
+35
+00:03:04,139 --> 00:03:09,139
+Print BMI text.
+
+36
+00:03:09,139 --> 00:03:12,139
+No i teraz, jeżeli to sobie odpalimy.
+
+37
+00:03:12,139 --> 00:03:16,139
+Czyli wykonamy Python 5, obliczamy BMI.
+
+38
+00:03:16,139 --> 00:03:18,139
+Waga w kilogramach 95.
+
+39
+00:03:18,139 --> 00:03:21,139
+Wzrost w metrach 1,80 m.
+
+40
+00:03:21,139 --> 00:03:22,139
+No i dostajemy.
+
+41
+00:03:22,139 --> 00:03:24,139
+O, skrajną otyłość.
+
+42
+00:03:24,139 --> 00:03:25,139
+To coś jest chyba nie tak.
+
+43
+00:03:25,139 --> 00:03:26,139
+Tu zrobiłem błąd.
+
+44
+00:03:26,139 --> 00:03:30,139
+Powinno być BMI score od 25 do 29,99.
+
+45
+00:03:30,139 --> 00:03:35,139
+Wartości, które biorę, pobieram z Narodowego Instytutu Kardiologii, więc poprawiłem.
+
+46
+00:03:35,139 --> 00:03:36,139
+W zadaniu też było nie tak.
+
+47
+00:03:36,139 --> 00:03:39,139
+No i teraz zobaczcie, jeżeli podam wagę 75.
+
+48
+00:03:39,139 --> 00:03:40,139
+O tyle kiedyś ważyłem.
+
+49
+00:03:40,139 --> 00:03:42,139
+I 1,82 wzrostu.
+
+50
+00:03:42,139 --> 00:03:45,139
+Wyjdzie mi wartość prawidłowa.
+
+51
+00:03:45,139 --> 00:03:46,139
+No i tak.
+
+52
+00:03:46,139 --> 00:03:47,139
+Tak to właśnie wygląda.
+
+53
+00:03:47,139 --> 00:03:49,139
+I teraz na tej podstawie można byłoby napisać testy.
+
+54
+00:03:49,139 --> 00:03:50,139
+Czy tak naprawdę.
+
+55
+00:03:50,139 --> 00:03:55,139
+Z drugiej strony, skoro kod już mamy działający, nie wiadomo czy testy jest pisać sens.
+
+56
+00:03:55,139 --> 00:03:57,139
+Otóż jest pisać sens.
+
+57
+00:03:57,139 --> 00:03:58,139
+Dlaczego?
+
+58
+00:03:58,139 --> 00:04:02,139
+No bo jeżeli okaże się, że coś zmienimy.
+
+59
+00:04:02,139 --> 00:04:07,139
+Albo ktoś nam powie, że gdzieś te wartości niektóre będzie chciał zmienić.
+
+60
+00:04:07,139 --> 00:04:12,139
+To i tak warto mieć ten kod uruchomiony i mieć pewność, że ten kod działa.
+
+61
+00:04:12,139 --> 00:04:15,139
+Czyli if name dla określonych danych.
+
+62
+00:04:15,139 --> 00:04:16,139
+If name równa się name.
+
+63
+00:04:16,139 --> 00:04:17,139
+To sobie zostawiam.
+
+64
+00:04:17,139 --> 00:04:18,139
+I tutaj mogę wprowadzić kilka zadań.
+
+65
+00:04:18,139 --> 00:04:19,139
+I tutaj mogę wprowadzić kilka zadań.
+
+66
+00:04:19,139 --> 00:04:24,139
+Dla tego testu mogę wprowadzić kilka takich testów,
+
+67
+00:04:24,139 --> 00:04:24,479
+na teraz, test,
+
+68
+00:04:24,479 --> 00:04:27,139
+bmi.
+
+69
+00:04:27,639 --> 00:04:30,139
+i dla tych danych które przed chwilą wprowadziłem mogę sobie to wprowadzić.
+
+70
+00:04:30,139 --> 00:04:31,139
+Czyli assert,
+
+71
+00:04:31,139 --> 00:04:33,139
+dro crashed grew to 685.
+
+72
+00:04:33,500 --> 00:04:34,500
+Jeżeli będziemy chcieli Теперь potrzebny invention do Just hits.
+
+73
+00:04:34,500 --> 00:04:36,139
+Wykonać policzenie z bmi no to dla danychouter test to vaccine철 image
+
+74
+00:04:36,139 --> 00:04:42,139
+75 oraz 182 powinniśmy otrzymać co kilka najlepszą le traditionally made radio
+
+75
+00:04:44,139 --> 00:04:47,139
+większą niż 22.
+
+76
+00:04:47,139 --> 00:04:48,139
+I mniejszą vector current.
+
+77
+00:04:48,139 --> 00:04:50,579
+Może sobie zrobimy taką zmienną tutaj.
+
+78
+00:04:58,579 --> 00:05:00,699
+Powinno być większe niż 22
+
+79
+00:05:00,699 --> 00:05:04,719
+i BMI powinno być mniejsze niż 23.
+
+80
+00:05:05,099 --> 00:05:07,219
+Myślę, że w ten sposób możemy to sobie zapisać,
+
+81
+00:05:07,300 --> 00:05:08,539
+możemy nawet to sobie uprościć.
+
+82
+00:05:08,939 --> 00:05:09,680
+No i druga rzecz,
+
+83
+00:05:11,560 --> 00:05:14,399
+że wtedy jeżeli spróbujemy zamienić to na tekst,
+
+84
+00:05:14,399 --> 00:05:18,439
+tą wartość BMI,
+
+85
+00:05:18,819 --> 00:05:21,319
+no to powinniśmy otrzymać wartość prawidłową.
+
+86
+00:05:24,439 --> 00:05:27,000
+I w ten sposób możemy też pozostałe testy
+
+87
+00:05:27,000 --> 00:05:29,979
+jak najbardziej sobie opisywać,
+
+88
+00:05:30,139 --> 00:05:33,179
+pozostałe te pozycje sobie sprawdzać,
+
+89
+00:05:33,279 --> 00:05:35,179
+czy dla różnych par to będzie nam działało
+
+90
+00:05:35,179 --> 00:05:38,439
+i dzięki temu jeżeli ktoś zmieni nam coś w tym kodzie,
+
+91
+00:05:38,539 --> 00:05:40,120
+no to zawsze będziemy mieli taki sygnał,
+
+92
+00:05:40,179 --> 00:05:41,539
+że oho, test nie przeszedł
+
+93
+00:05:41,539 --> 00:05:42,939
+albo oho, coś się zepsuło.
+
+94
+00:05:43,159 --> 00:05:44,279
+Warto tego typu rzeczy.
+
+95
+00:05:44,399 --> 00:05:47,719
+Warto tego typu rzeczy też weryfikować właśnie testami,
+
+96
+00:05:47,939 --> 00:05:50,079
+nawet jeżeli tutaj w myśl tego zadania
+
+97
+00:05:50,079 --> 00:05:51,859
+nie udało nam się zacząć od testów.
+
+98
+00:05:52,319 --> 00:05:53,000
+No i to byłoby na tyle,
+
+99
+00:05:53,099 --> 00:05:54,019
+jeżeli chodzi o pracę domową.
+
+100
+00:05:54,299 --> 00:05:55,939
+Zapraszam do kolejnego modułu.

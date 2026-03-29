@@ -1,0 +1,143 @@
+1
+00:00:00,000 --> 00:00:04,440
+ok, jeżeli chodzi o pole trójkąta równobocznego
+
+2
+00:00:04,440 --> 00:00:08,900
+to to jest wzór a kwadrat razy pierwiastek z trzech na cztery
+
+3
+00:00:08,900 --> 00:00:11,400
+to jest wzór na pole trójkąta równobocznego
+
+4
+00:00:11,400 --> 00:00:15,900
+a obwód trójkąta równobocznego to oczywiście jest trzy razy a
+
+5
+00:00:15,900 --> 00:00:18,519
+więc jeżeli chcemy sobie odebrać bok
+
+6
+00:00:18,519 --> 00:00:22,000
+to możemy napisać int input
+
+7
+00:00:22,000 --> 00:00:30,259
+podaj bok trójkąta równobocznego
+
+8
+00:00:30,259 --> 00:00:31,200
+dwukropek
+
+9
+00:00:31,200 --> 00:00:33,240
+no i wtedy pole
+
+10
+00:00:33,240 --> 00:00:38,840
+pole to jest po prostu to
+
+11
+00:00:38,840 --> 00:00:43,960
+print sqrt musimy sobie doimportować
+
+12
+00:00:43,960 --> 00:00:45,960
+czyli from math import sqrt
+
+13
+00:00:45,960 --> 00:00:50,960
+i wtedy print pole trójkąta równobocznego
+
+14
+00:00:52,000 --> 00:00:53,299
+wynosi
+
+15
+00:00:53,299 --> 00:00:56,179
+field
+
+16
+00:00:56,179 --> 00:00:58,859
+oczywiście zapomniałem o fc
+
+17
+00:00:58,859 --> 00:00:59,939
+ale sobie już ją dodaję
+
+18
+00:00:59,939 --> 00:01:01,799
+no i obwód to jest trzy razy a
+
+19
+00:01:01,799 --> 00:01:03,079
+czyli print
+
+20
+00:01:03,079 --> 00:01:06,180
+obwód tego trójkąta
+
+21
+00:01:06,180 --> 00:01:07,960
+wynosi
+
+22
+00:01:07,960 --> 00:01:11,299
+a razy
+
+23
+00:01:11,299 --> 00:01:13,159
+trzy
+
+24
+00:01:13,159 --> 00:01:14,599
+lecimy
+
+25
+00:01:14,599 --> 00:01:15,240
+python
+
+26
+00:01:15,240 --> 00:01:17,200
+dziewięć
+
+27
+00:01:17,200 --> 00:01:19,140
+bok trzy
+
+28
+00:01:19,140 --> 00:01:21,379
+no i wtedy pole trójkąta wynosi
+
+29
+00:01:21,379 --> 00:01:21,980
+trzy osiemdziesiąt
+
+30
+00:01:21,980 --> 00:01:22,000
+trzy osiemdziesiąt
+
+31
+00:01:22,000 --> 00:01:22,659
+dziewięć
+
+32
+00:01:22,659 --> 00:01:23,540
+trzy dziewięćdziesiąt
+
+33
+00:01:23,540 --> 00:01:23,859
+właściwie
+
+34
+00:01:23,859 --> 00:01:25,319
+a obwód wynosi
+
+35
+00:01:25,319 --> 00:01:26,459
+dziewięć
+
+36
+00:01:26,459 --> 00:01:29,379
+zostały nam dwa zadania

@@ -1,0 +1,643 @@
+1
+00:00:00,000 --> 00:00:03,560
+Jak tam? Czujecie się w pełni obiektowo spełnieni?
+
+2
+00:00:04,299 --> 00:00:09,200
+To muszę Was zmartwić, bo jeszcze przed nami sporo nowych, ciekawych informacji.
+
+3
+00:00:09,320 --> 00:00:14,000
+No bo programowanie obiektowe jest szerokim bardzo światem i dopiero powoli w ten świat wkraczamy.
+
+4
+00:00:14,679 --> 00:00:17,820
+Ale mam nadzieję, że ta podróż, ten spacer Wam się podoba.
+
+5
+00:00:18,660 --> 00:00:22,679
+I to o czym teraz sobie porozmawiamy będą to inne metody specjalne.
+
+6
+00:00:23,039 --> 00:00:23,839
+Inne niż co?
+
+7
+00:00:24,379 --> 00:00:29,080
+Możliwe, że ta informacja Ci umknęła, ale wspominałem o tym, że init to jest metoda specjalna.
+
+8
+00:00:29,079 --> 00:00:34,320
+I metody specjalne różnią się od innych metod tym, że one są specjalne.
+
+9
+00:00:34,519 --> 00:00:38,619
+One są specjalne dlatego, że robią coś szczególnego.
+
+10
+00:00:39,640 --> 00:00:44,159
+Init na przykład służy do tego, żeby odbierać te dane inicjalizujące.
+
+11
+00:00:44,299 --> 00:00:45,920
+Stąd tak się nazywa.
+
+12
+00:00:46,379 --> 00:00:50,140
+Dodatkowo wywoływana jest ta metoda wtedy, kiedy obiekt jest stworzony.
+
+13
+00:00:50,259 --> 00:00:53,739
+Czyli na przykład jeżeli chcielibyśmy, nie wiem, wyświetlić witaj świecie za każdym razem,
+
+14
+00:00:53,739 --> 00:00:58,980
+kiedy tworzymy sobie obiekt danej klasy, to moglibyśmy taki kod umieścić,
+
+15
+00:00:59,079 --> 00:00:59,820
+w initie.
+
+16
+00:01:00,100 --> 00:01:01,679
+To taka ciekawostka.
+
+17
+00:01:02,239 --> 00:01:04,439
+Niektórzy programiści robią jeszcze jedną ciekawą rzecz,
+
+18
+00:01:04,519 --> 00:01:07,799
+a mianowicie nazywają metody specjalne metodami magicznymi.
+
+19
+00:01:08,299 --> 00:01:11,379
+I to z kolei wynika z tego, że w niektórych językach programowania
+
+20
+00:01:11,379 --> 00:01:13,959
+takie metody właśnie mają nazwę magic methods,
+
+21
+00:01:14,359 --> 00:01:17,239
+więc jeżeli gdzieś spotkasz określenie metoda magiczna,
+
+22
+00:01:17,359 --> 00:01:20,299
+czy metoda specjalna, to generalnie chodzi właśnie o te metody.
+
+23
+00:01:21,420 --> 00:01:23,099
+Dlaczego metoda specjalna? Powiedziałem.
+
+24
+00:01:23,700 --> 00:01:25,079
+Koniecznie pamiętajcie o tych podkreśleniach.
+
+25
+00:01:25,799 --> 00:01:27,439
+Dwóch z przodu i dwóch z tyłu.
+
+26
+00:01:27,439 --> 00:01:29,000
+Jest to niezwykle popularny,
+
+27
+00:01:29,000 --> 00:01:29,060
+bo to jest bardzo popularny, bo to jest bardzo popularny,
+
+28
+00:01:29,079 --> 00:01:30,879
+ale jest to błąd, że gdzieś tych podkreśleń brakuje
+
+29
+00:01:30,879 --> 00:01:33,420
+i przez to okazuje się, że nasz kod nie działa.
+
+30
+00:01:33,980 --> 00:01:36,039
+Po drugie, czy jest więcej metod niż init?
+
+31
+00:01:36,359 --> 00:01:38,140
+Oczywiście, że tak.
+
+32
+00:01:38,659 --> 00:01:42,579
+Wspominaliśmy sobie o tym, że kiedy wyświetlamy listę,
+
+33
+00:01:42,659 --> 00:01:45,439
+czy wyświetlamy coś, nie pamiętam już co to było,
+
+34
+00:01:45,959 --> 00:01:48,959
+to pokazała nam się ta wartość czytelnie w konsoli.
+
+35
+00:01:49,400 --> 00:01:52,159
+Natomiast w momencie, w którym wyświetlaliśmy string,
+
+36
+00:01:52,299 --> 00:01:55,019
+czy wyświetlaliśmy naszego studenta,
+
+37
+00:01:55,420 --> 00:01:57,200
+to pojawiało się jakieś tam coś dziwnego.
+
+38
+00:01:57,200 --> 00:02:02,200
+Natomiast to, dlaczego czasem pojawia się ładny tekst,
+
+39
+00:02:02,240 --> 00:02:03,520
+a czasem pojawia się coś brzydkiego,
+
+40
+00:02:03,640 --> 00:02:06,980
+to właśnie wynika z faktu, że możemy do naszych obiektów,
+
+41
+00:02:07,040 --> 00:02:10,580
+do naszej klasy, zaimplementować metodę magiczną str
+
+42
+00:02:10,580 --> 00:02:13,199
+i to będzie oznaczało, że będziemy mogli zaimplementować
+
+43
+00:02:13,939 --> 00:02:15,199
+reprezentację tekstową.
+
+44
+00:02:16,520 --> 00:02:18,480
+Na chwilę obecną nie daję Ci żadnego przykładu,
+
+45
+00:02:18,560 --> 00:02:21,199
+ale nie martw się, przykłady już niedługo też nadejdą.
+
+46
+00:02:22,400 --> 00:02:24,800
+Jeżeli chcielibyśmy wykonać jakąś operację,
+
+47
+00:02:24,800 --> 00:02:26,800
+typu dodawać, mnożyć, dzielić,
+
+48
+00:02:27,199 --> 00:02:29,199
+czy robić cokolwiek innego takiego,
+
+49
+00:02:29,639 --> 00:02:33,199
+to jak najbardziej też jest to możliwe.
+
+50
+00:02:33,599 --> 00:02:35,599
+Właśnie za pomocą metod specjalnych.
+
+51
+00:02:35,839 --> 00:02:38,239
+Spójrz na to, że mówiliśmy sobie o tym,
+
+52
+00:02:38,239 --> 00:02:43,239
+że listy czy stringi to również są obiekty.
+
+53
+00:02:43,879 --> 00:02:46,959
+Co się stanie, jeżeli dodamy do siebie dwie listy?
+
+54
+00:02:47,439 --> 00:02:50,639
+Utworzymy nową listę i przypiszemy do takiej zmiennej.
+
+55
+00:02:50,679 --> 00:02:56,079
+To utworzymy nową listę, która będzie wynikała z tych dwóch poprzednich list.
+
+56
+00:02:56,479 --> 00:02:56,959
+OK?
+
+57
+00:02:57,199 --> 00:03:01,199
+Co się stanie, jeżeli listę pomnożymy, czy string pomnożymy przez liczbę?
+
+58
+00:03:01,439 --> 00:03:04,119
+Dostaniemy wtedy tę listę powtórzoną tyle razy,
+
+59
+00:03:04,119 --> 00:03:06,399
+przez jaką liczbę pomnożyliśmy.
+
+60
+00:03:06,959 --> 00:03:10,319
+I to też dzieje się dlatego, że w naszych klasach
+
+61
+00:03:10,319 --> 00:03:14,199
+posiadamy metody specjalne nadpisujące taką funkcjonalność.
+
+62
+00:03:14,679 --> 00:03:18,079
+Jeżeli teraz spróbujesz wykonać dodawanie na dwóch Twoich obiektach,
+
+63
+00:03:18,079 --> 00:03:22,439
+typu student plus student albo data wydarzenia,
+
+64
+00:03:22,439 --> 00:03:27,159
+dodaj data wydarzenia, to absolutnie nie dostaniesz żadnego rezultatu.
+
+65
+00:03:27,159 --> 00:03:32,280
+Dostaniesz błąd mówiący o tym, że nie da się dodać do siebie dwóch obiektów klasy event.
+
+66
+00:03:32,799 --> 00:03:37,359
+Natomiast jeżeli napiszesz metodę specjalną add, to będziesz mieć taką możliwość.
+
+67
+00:03:37,960 --> 00:03:40,159
+Czasem jest też tak, że może się okazać, że np.
+
+68
+00:03:40,159 --> 00:03:45,280
+chcielibyśmy porównywać dwa eventy ze sobą albo chcielibyśmy stwierdzić,
+
+69
+00:03:45,280 --> 00:03:48,280
+który event jest wcześniejsze, a który jest późniejszy.
+
+70
+00:03:48,840 --> 00:03:49,919
+Nie ma problemu.
+
+71
+00:03:49,919 --> 00:03:54,719
+Można to osiągnąć, pisząc odpowiednie metody albo można skorzystać z metody specjalnej,
+
+72
+00:03:54,719 --> 00:03:57,120
+takiej jak EQ, która będzie...
+
+73
+00:03:57,159 --> 00:04:02,199
+sprawdzała, czy dwa obiekty są ze sobą equal, czyli identyczne.
+
+74
+00:04:02,199 --> 00:04:07,280
+Możemy też skorzystać z GE czy LE albo GTE albo LTE.
+
+75
+00:04:07,280 --> 00:04:13,759
+I GTE to nie jest... czy LTE to nie jest nazwa sieci, tylko chodzi o less than or equal,
+
+76
+00:04:13,759 --> 00:04:15,960
+czyli mniejsze niż lub równe.
+
+77
+00:04:15,960 --> 00:04:22,839
+A GTE to będzie greater than or equal, gdzie GE to jest po prostu, po prostu greater...
+
+78
+00:04:22,839 --> 00:04:25,040
+a nie, greater or equal.
+
+79
+00:04:25,040 --> 00:04:26,800
+Tam chyba to T nie istnieje.
+
+80
+00:04:27,160 --> 00:04:29,360
+Gdzieś mi się zawieroszyło.
+
+81
+00:04:29,360 --> 00:04:34,800
+I zobacz, i to są nazwy metod specjalnych, które możesz zaimplementować w swoich klasach
+
+82
+00:04:34,800 --> 00:04:38,000
+i dzięki temu będziesz nadpisywać poszczególne operatory,
+
+83
+00:04:38,000 --> 00:04:43,240
+będziesz umożliwiać implementację tych operatorów na twoich obiektach.
+
+84
+00:04:45,600 --> 00:04:48,720
+I zobacz, tu jest przykład metody specjalnej str.
+
+85
+00:04:48,720 --> 00:04:50,720
+Mamy klasę o nazwie person.
+
+86
+00:04:50,720 --> 00:04:52,879
+Klasa reprezentująca osobę.
+
+87
+00:04:52,879 --> 00:04:55,400
+Każda ta osoba ma imię i nazwisko.
+
+88
+00:04:55,400 --> 00:04:56,400
+Jeżeli...
+
+89
+00:04:57,160 --> 00:05:02,280
+I tu wracam w ogóle do tego, żeby sobie to przeklepać do terminala, do IDE i zobaczyć jaki jest rezultat.
+
+90
+00:05:02,280 --> 00:05:06,800
+Jeżeli ja sobie stworzyłbym jakąś przykładową osobę, na przykład o, Kacper Sieradziński,
+
+91
+00:05:06,800 --> 00:05:10,720
+a następnie wykonam print i wskażę mu tę wartość,
+
+92
+00:05:10,720 --> 00:05:14,560
+to on wtedy wyświetli to, co zwraca metoda specjalna str.
+
+93
+00:05:14,560 --> 00:05:16,560
+Taka ciekawostka.
+
+94
+00:05:16,560 --> 00:05:20,960
+Jest też, możecie się spotkać z metodą specjalną repre.
+
+95
+00:05:20,960 --> 00:05:24,160
+I repre to jest skrót od representation.
+
+96
+00:05:24,160 --> 00:05:26,160
+str, skrót od string.
+
+97
+00:05:26,160 --> 00:05:27,040
+Tam string i file.
+
+98
+00:05:27,040 --> 00:05:34,439
+I str jest wykorzystywane wtedy, kiedy zamieniamy obiekt na string, albo kiedy go printujemy.
+
+99
+00:05:34,439 --> 00:05:41,879
+Natomiast jeżeli nasz obiekt, ta osoba, byłaby częścią listy, to w liście wciąż widzielibyście ten dziwny taki zapis.
+
+100
+00:05:41,879 --> 00:05:46,480
+Jeżeli chcielibyście w liście zobaczyć lepszy zapis, typu właśnie imię i nazwisko,
+
+101
+00:05:46,480 --> 00:05:51,480
+to wtedy potrzebujemy metody specjalnej repre, żeby móc to osiągnąć.
+
+102
+00:05:51,480 --> 00:05:54,200
+Inna metoda specjalna to jest metoda add.
+
+103
+00:05:54,200 --> 00:05:55,920
+Załóżmy, że masz pudełko.
+
+104
+00:05:55,920 --> 00:05:56,920
+Obiekt reprezentujący się w liście.
+
+105
+00:05:56,920 --> 00:06:03,120
+Chcielibyśmy do obiektu reprezentującego pudełko dodać drugi obiekt reprezentujący pudełko.
+
+106
+00:06:03,120 --> 00:06:09,720
+Wtedy chcielibyśmy otrzymać pojemnik, którego wynikiem będzie suma tych dwóch pojemności.
+
+107
+00:06:09,720 --> 00:06:11,720
+Załóżmy coś takiego.
+
+108
+00:06:11,720 --> 00:06:14,920
+Albo mamy obiekt reprezentujący event.
+
+109
+00:06:14,920 --> 00:06:18,920
+Dodając dwa eventy do siebie, chcielibyśmy dostać jakąś grupę eventów.
+
+110
+00:06:18,920 --> 00:06:20,920
+Załóżmy.
+
+111
+00:06:20,920 --> 00:06:26,920
+Po co tworzyć metody, jeżeli możemy to samo osiągnąć właśnie za pomocą metody specjalnej add.
+
+112
+00:06:26,920 --> 00:06:28,920
+Zobacz.
+
+113
+00:06:28,920 --> 00:06:34,920
+Mam box def init self capacity, czyli tam pojemność wyrażona w intagerach.
+
+114
+00:06:34,920 --> 00:06:37,920
+No i self capacity równa się capacity.
+
+115
+00:06:37,920 --> 00:06:50,920
+Jeżeli implementuję metodę specjalną add, to będę musiał w jej argumencie odebrać self, czyli to co jest po lewej stronie i other, czyli to co jest po prawej.
+
+116
+00:06:50,920 --> 00:06:54,920
+I wtedy ja bym chciał, żeby wynikiem był nowy obiekt box o pojemności wynikiem.
+
+117
+00:06:54,920 --> 00:07:00,920
+Box o pojemności wynikającej z połączenia jednej pojemności z drugą.
+
+118
+00:07:00,920 --> 00:07:02,920
+I zobacz co się w tym momencie stało.
+
+119
+00:07:02,920 --> 00:07:05,920
+Box 1 równa się box 10.
+
+120
+00:07:05,920 --> 00:07:08,920
+Box 2 równa się box 20.
+
+121
+00:07:08,920 --> 00:07:11,920
+Box 3 równa się box 1 plus box 2.
+
+122
+00:07:11,920 --> 00:07:16,920
+Jak możesz się domyślać, wynikiem tego będzie box 3 o pojemności 30.
+
+123
+00:07:16,920 --> 00:07:18,920
+Czasem właśnie łączymy wydarzenia ze sobą.
+
+124
+00:07:18,920 --> 00:07:22,920
+Czasem, jeżeli zajmujecie się tak bardziej danymi czy jakimiś obliczeniami,
+
+125
+00:07:22,920 --> 00:07:28,920
+to możliwe, że potrzebowalibyście na przykład mieć jakieś macierze i chcielibyście dodawać macierze do siebie.
+
+126
+00:07:28,920 --> 00:07:34,920
+Wtedy można też to robić właśnie za pomocą nadpisywania metody specjalnej add, jeżeli nie chcemy używać numpy.
+
+127
+00:07:34,920 --> 00:07:40,920
+Niektórzy widziałem takie algorytmy, znaczy algorytmy, no zastosowanie, gdzie dodawali do siebie wektory.
+
+128
+00:07:40,920 --> 00:07:43,920
+To też mogłoby się tutaj przydać.
+
+129
+00:07:43,920 --> 00:07:47,920
+No a czasem mamy taką sytuację, że mamy na przykład obiekt, który reprezentuje właśnie cenę.
+
+130
+00:07:47,920 --> 00:07:50,920
+I cena to jest 5 złotych.
+
+131
+00:07:50,920 --> 00:07:52,920
+Ale może być też 5 funtów.
+
+132
+00:07:52,920 --> 00:07:55,920
+Więc tak naprawdę nasza cena to jest wartość oraz waluta.
+
+133
+00:07:55,920 --> 00:08:00,920
+I wtedy, kiedy dodajemy do siebie dwie ceny tej samej waluty, no to powinny się one dodać.
+
+134
+00:08:00,920 --> 00:08:04,920
+Czyli w wyniku dać nową cenę, powiedzmy 10 złotych czy wartość.
+
+135
+00:08:04,920 --> 00:08:08,920
+Natomiast, jeżeli są różne waluty, to powinien pojawić się błąd.
+
+136
+00:08:08,920 --> 00:08:12,920
+Takie rzeczy też możemy implementować za pomocą metody specjalnej add.
+
+137
+00:08:12,920 --> 00:08:16,920
+EQ, no to jest metoda porównująca.
+
+138
+00:08:16,920 --> 00:08:18,920
+Tu mamy znowu przykład z naszymi pudełkami.
+
+139
+00:08:18,920 --> 00:08:20,920
+Jeżeli chcielibyśmy, żeby porównywanie dwóch obiektów z drugim obiektem,
+
+140
+00:08:20,920 --> 00:08:25,920
+zwracało prawdę wtedy, kiedy mają one tę samą objętość,
+
+141
+00:08:25,920 --> 00:08:30,920
+no to wystarczy w EQ też dostajemy self i other.
+
+142
+00:08:30,920 --> 00:08:34,920
+I sprawdzić, czy self capacity jest takie samo jak other capacity.
+
+143
+00:08:34,920 --> 00:08:36,920
+Jeżeli tak, no to wszystko jest good.
+
+144
+00:08:36,920 --> 00:08:38,920
+Jeżeli nie, no to dostaniemy fałsz.
+
+145
+00:08:38,920 --> 00:08:39,920
+I tyle.
+
+146
+00:08:39,920 --> 00:08:41,920
+EQ, IQ.
+
+147
+00:08:41,920 --> 00:08:44,920
+No i tak jak wspominałem, inne metody specjalne, których jeszcze nie było,
+
+148
+00:08:44,920 --> 00:08:47,920
+to może być LT, GT, NE, not equal.
+
+149
+00:08:47,920 --> 00:08:49,920
+Jest ich jeszcze całkiem sporo.
+
+150
+00:08:49,919 --> 00:08:52,919
+One dotyczą też takich bardziej aspektów technicznych.
+
+151
+00:08:52,919 --> 00:08:56,919
+Na przykład, jeżeli masz obiekt i ten obiekt chciałbyś wykonać jak funkcję,
+
+152
+00:08:56,919 --> 00:08:59,919
+czyli z takiego studenta dorzucić nawiasy.
+
+153
+00:08:59,919 --> 00:09:02,919
+To są już bardziej zaawansowane zastosowania,
+
+154
+00:09:02,919 --> 00:09:05,919
+których pewnie teraz na chwilę obecną trudno byłoby je wytłumaczyć,
+
+155
+00:09:05,919 --> 00:09:10,919
+ale czasem też się zdarza, że chcielibyśmy mieć możliwość robienia callable na obiekcie.
+
+156
+00:09:10,919 --> 00:09:14,919
+Ale tak jak mówię, to jest inny temat, nie na teraz.
+
+157
+00:09:14,919 --> 00:09:17,919
+Więc co jest na teraz?
+
+158
+00:09:17,919 --> 00:09:18,919
+Tak jak zawsze.
+
+159
+00:09:18,919 --> 00:09:21,919
+Była wiedza, czas ją przećwiczyć.
+
+160
+00:09:21,919 --> 00:09:22,919
+Robimy zadanie.
+
+161
+00:09:22,919 --> 00:09:23,919
+Chodźcie.

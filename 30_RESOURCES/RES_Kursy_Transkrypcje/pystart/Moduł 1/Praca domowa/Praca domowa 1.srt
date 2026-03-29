@@ -1,0 +1,243 @@
+1
+00:00:00,000 --> 00:00:15,540
+No i stało się dochodzimy do pierwszej pracy domowej w tej pracy domowej mamy bardzo dużo zadań więc zachęcam do tego żeby podzielić te zadania sobie na poszczególne dni i nie zostawiać sobie wszystkiego na ostatnią chwilę to się może źle skończyć.
+
+2
+00:00:15,539 --> 00:00:42,439
+Zadanie pierwsze jest miłe łatwe i przyjemne musisz wejść na discorda przypominam do kodu .def ukośnik discord a następnie korzystając z tego linka a następnie jak wejdziesz założyć sobie konto i napisać do mnie jaki masz mail na platformie jeżeli już to zrobiłeś to pierwsze zadanie masz z głowy dzięki temu ja będę mógł przypiąć ci rolę i zobaczysz dodatkowe kanały na których możemy dyskutować rozmawiać i rozwiewać potencjalne wątpliwości.
+
+3
+00:00:42,759 --> 00:00:45,439
+Zadanie drugie przygotuj program który zainstalujesz.
+
+4
+00:00:45,539 --> 00:00:55,359
+Zmieni temperaturę w stopniach celcjusza na Fahrenheit czyli my musimy przekazać mu temperaturę w celcjuszach a następnie zmodyfikować ją do postaci Fahrenheitów.
+
+5
+00:00:55,719 --> 00:01:04,159
+Poniżej jest wzór czyli wartość w celcjuszach musisz przemnożyć przez 9 na 5 i dodać 32 zwróć uwagę na kolejność działań.
+
+6
+00:01:04,159 --> 00:01:15,140
+Po trzecie przygotuj program który obliczy pole trójkąta o podanych trzech wierzchołkach o każdy wierzchołek pytaj osobno czyli x y x y x y 6 6 pytań.
+
+7
+00:01:15,540 --> 00:01:21,620
+I z tego powinniśmy wyświetlić informację jakie jest pole tego trójkąta wzór znajdziesz w internecie.
+
+8
+00:01:22,020 --> 00:01:24,600
+Trzeba czasem poszukać żeby rozwiązać te zadania.
+
+9
+00:01:25,320 --> 00:01:35,500
+Zadanie czwarte napisz program który wyświetli informację czy liczba jest podzielona przez 5 i 11 lub przez 5 i 11 czyli jeżeli liczba jest podzielona przez 5 i 11 na raz np.
+
+10
+00:01:35,500 --> 00:01:42,120
+55 to wyświetli informację że jest podzielona przez 5 i 11 jeżeli dzieli się tylko przez 5 bo np.
+
+11
+00:01:42,120 --> 00:01:44,380
+jest to 5 to wyświetla taką informację.
+
+12
+00:01:44,700 --> 00:01:45,380
+A jeżeli dzieli się tylko.
+
+13
+00:01:45,540 --> 00:01:47,160
+Przez 11 bo jest to np.
+
+14
+00:01:47,160 --> 00:01:50,160
+121 to napisz że dzieli się tylko przez 11.
+
+15
+00:01:51,060 --> 00:02:00,300
+Ostatnie zadanie na tej stronie a mamy trzy strony jest następujące zapytaj użytkownika o liczbę i wyświetlić informację czy jest to liczba dodatnia ujemna czy zero.
+
+16
+00:02:00,580 --> 00:02:01,980
+Myślę że sprawa prosta.
+
+17
+00:02:02,940 --> 00:02:14,700
+Druga strona zaczyna się od zadania w którym mamy ciekawy problem problem ponieważ ktoś ma taki zegar który odmierza sekundy tylko i wyłącznie sekundy.
+
+18
+00:02:14,699 --> 00:02:20,579
+No i w którymś momencie dostaje taką wartość jak 23400 jest ciekaw która jest teraz godzina.
+
+19
+00:02:21,079 --> 00:02:42,739
+W innym momencie patrzymy 81000 i też się zastanawia nad tym która jest godzina i zadaniem jest zamiana tego formatu na format zrozumiały dla chyba każdego człowieka czyli zamiast 23400 ma się pokazać 330 a zamiast 81000 2230 i tak chcielibyśmy zamieniać poszczególne godziny wartości liczbowe na godziny.
+
+20
+00:02:42,739 --> 00:02:43,839
+Tutaj trzeba będzie się trochę położyć.
+
+21
+00:02:43,839 --> 00:02:43,859
+Tutaj trzeba będzie się trochę położyć.
+
+22
+00:02:43,860 --> 00:02:47,540
+Trzeba będzie się trochę położyć trochę podzielić trochę po odejmą.
+
+23
+00:02:47,800 --> 00:02:49,700
+Nieważne nie będę wam psuł zabawy.
+
+24
+00:02:50,580 --> 00:02:51,580
+Myślę że zadanie ciekawe.
+
+25
+00:02:52,200 --> 00:03:00,020
+W kolejnym zadaniu mamy odebrać od użytkownika dwa dowolne punkty na płaszczyźnie x y x y które tworzą odcinek.
+
+26
+00:03:00,600 --> 00:03:02,140
+Mamy znaleźć jego środek.
+
+27
+00:03:02,680 --> 00:03:07,100
+Następnie wypisać pole oraz promień okręgu którego ten odcinek jest średnicą.
+
+28
+00:03:07,100 --> 00:03:13,480
+Czyli to jest jakby średnica i my musimy tę średnicę sobie jakby no to jest okrąg.
+
+29
+00:03:13,600 --> 00:03:13,840
+Tak więc.
+
+30
+00:03:13,860 --> 00:03:15,460
+Ta średnica będzie nam tworzyła okrąg.
+
+31
+00:03:15,960 --> 00:03:18,600
+Mamy zastanowić się nad tym jakie jest pole i obwód.
+
+32
+00:03:19,820 --> 00:03:25,840
+Przepraszam mamy zastanowić się nad tym jakie jest pole tego tego okręgu oraz podpunkt drugi.
+
+33
+00:03:26,120 --> 00:03:30,900
+Mamy zastanowić się jakie pole i obwód ma prostokąt którego ten odcinek jest przekątną.
+
+34
+00:03:31,420 --> 00:03:39,360
+Tutaj znalezienie tych dwóch brzegów będzie możliwe jeżeli sobie to narysuje na kartce i zobaczysz gdzie te punkty tak naprawdę się znajdują.
+
+35
+00:03:40,080 --> 00:03:43,700
+Podpunkt trzeci na tej stronie dotyczy programu.
+
+36
+00:03:43,699 --> 00:03:48,560
+Który będzie polegał na tym że będziemy odbierali wiek od użytkownika.
+
+37
+00:03:48,939 --> 00:03:51,799
+No i będziemy chcieli odpowiedzieć na pytanie ile ta osoba ma lat.
+
+38
+00:03:51,859 --> 00:03:57,159
+Czyli najpierw w roku urodzenia odbieramy od użytkownika i odpowiadamy na pytanie ile ta osoba ma lat.
+
+39
+00:03:57,459 --> 00:04:03,139
+Chcemy też dorzucić informację czy jest pełnoletnia oraz czy rok w którym się urodziła to rok przestępny.
+
+40
+00:04:03,459 --> 00:04:10,839
+Tutaj polecam zwrócić uwagę na to że rok nie zawsze przestępny nie zawsze przypada na co cztery lata więc warto sprawdzić te reguły.
+
+41
+00:04:11,299 --> 00:04:13,419
+No i rok bieżący można przechowywać w jakiejś zmianie.
+
+42
+00:04:13,419 --> 00:04:13,479
+No i rok bieżący można przechowywać w jakiejś zmianie.
+
+43
+00:04:13,479 --> 00:04:13,560
+No i rok bieżący można przechowywać w jakiejś zmianie.
+
+44
+00:04:13,560 --> 00:04:43,340
+No i rok bieżący można przechowywać w jakiejś zmianie.
+
+45
+00:04:43,339 --> 00:04:48,000
+Drugie zadanie zapytaj użytkownika o długość boku trójkąta równobocznego.
+
+46
+00:04:48,279 --> 00:04:50,579
+Napisz jakie jest jego pole oraz obwód.
+
+47
+00:04:51,419 --> 00:04:58,719
+Przedostatnie zadanie napisz program który odbierze od użytkownika numer dnia tygodnia a następnie wyświetli jego nazwę.
+
+48
+00:04:58,819 --> 00:05:02,899
+Na przykład dla wartości 1 napisze poniedziałek a dla wartości 7 niedziela.
+
+49
+00:05:02,899 --> 00:05:12,259
+I ostatnie zadanie odbierz od użytkownika trzy liczby wyświetl która z nich jest największa a która z nich jest najmniejsza.
+
+50
+00:05:12,579 --> 00:05:13,059
+Czyli mamy.
+
+51
+00:05:13,339 --> 00:05:18,279
+Raz dwa trzy cztery pięć sześć siedem osiem dziewięć dziesięć jedenaście zadań.
+
+52
+00:05:18,619 --> 00:05:25,259
+Czyli tak naprawdę jeżeli jest 11 zadań 6 dni bo dzisiaj zakładam że oglądasz może wszystko naraz a może nie.
+
+53
+00:05:25,739 --> 00:05:29,959
+No warto robić sobie po dwa trzy zadania dziennie żeby się wyrobić.
+
+54
+00:05:29,959 --> 00:05:33,719
+Mam nadzieję że nauka w tym tygodniu przebiegnie ci gładko.
+
+55
+00:05:34,039 --> 00:05:42,899
+I przypominam że rozwiązanie tych zadań poza pierwszym podpunktem znajdziesz już w przyszłym tygodniu na samym początku naszych zmagań.
+
+56
+00:05:42,899 --> 00:05:44,399
+Bardzo dziękuję za dziś.
+
+57
+00:05:44,399 --> 00:05:45,560
+Polecam się na przyszłość.
+
+58
+00:05:45,560 --> 00:05:46,839
+Jakby co to jestem na discordzie.
+
+59
+00:05:46,839 --> 00:05:47,339
+Do zobaczenia.
+
+60
+00:05:47,339 --> 00:05:48,339
+Trzymajcie się.
+
+61
+00:05:48,339 --> 00:05:49,339
+Cześć.

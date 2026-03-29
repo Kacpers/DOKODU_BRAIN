@@ -1,0 +1,535 @@
+1
+00:00:00,000 --> 00:00:03,820
+No to co? W kolejnym zadaniu mamy przygotować słownik zawierający produkty.
+
+2
+00:00:03,919 --> 00:00:05,820
+Produkt to klucz, a cena to wartość.
+
+3
+00:00:05,919 --> 00:00:10,460
+Zwróć uwagę na to, że słownik już tego typu stworzyłem i będę z niego korzystał.
+
+4
+00:00:10,599 --> 00:00:12,759
+Każdy może mieć swój, produkty tutaj nie mają znaczenia.
+
+5
+00:00:13,400 --> 00:00:17,519
+Zapytaj użytkownika, który produkt chce dodać do koszyka, a następnie w jakiej ilości.
+
+6
+00:00:18,039 --> 00:00:20,760
+Pytaj, dopóki użytkownik nie odpowie podsumuj.
+
+7
+00:00:21,300 --> 00:00:24,060
+Wartość zamówienia możesz przechowywać w pojedynczej zmiennej
+
+8
+00:00:24,060 --> 00:00:29,219
+lub posiadać listę dla chętnych produktów lub słownik, jeśli chcesz wyświetlić podsumowanie.
+
+9
+00:00:29,219 --> 00:00:31,839
+Tak jak wspominałem, ja będę chętny.
+
+10
+00:00:31,980 --> 00:00:36,140
+Więc zaczynam sobie od tego, żeby pytać użytkownika, aż nie poda informacji podsumuj,
+
+11
+00:00:36,519 --> 00:00:37,960
+a najpierw wyświetlę mu produkty.
+
+12
+00:00:38,479 --> 00:00:43,560
+Czyli for name price in products.items
+
+13
+00:00:43,560 --> 00:00:49,239
+print name price
+
+14
+00:00:49,239 --> 00:00:51,340
+Może tak, a może zróbmy jakoś tak ładniej.
+
+15
+00:00:52,099 --> 00:00:56,219
+Czyli niech będzie sobie, niech się wyświetlają po myślnikach nazwy produktów.
+
+16
+00:00:56,899 --> 00:00:59,200
+Dwóch kropek, może nie, przecinek.
+
+17
+00:00:59,219 --> 00:01:04,239
+Cena, dwóch kropek, price, złotych.
+
+18
+00:01:04,340 --> 00:01:06,560
+Załóżmy coś ten deseń.
+
+19
+00:01:07,159 --> 00:01:11,840
+Możemy też jeszcze wyświetlić sobie u góry produkty w sklepie.
+
+20
+00:01:14,599 --> 00:01:18,379
+W tym momencie, jeżeli sobie to wywołam, no to zaskoczeniem nie powinno być,
+
+21
+00:01:18,480 --> 00:01:21,879
+że po prostu wyświetlą nam się wszystkie te produkty na ekranie.
+
+22
+00:01:21,939 --> 00:01:24,420
+Jak widać wyświetliły się też i ceny.
+
+23
+00:01:24,980 --> 00:01:26,180
+Okej, idziemy dalej.
+
+24
+00:01:26,180 --> 00:01:29,200
+Rzecz druga, no to trzeba pytać użytkownika o to,
+
+25
+00:01:29,219 --> 00:01:33,039
+bo tak długo aż nie skończymy, jakie produkty on chciałby zamówić.
+
+26
+00:01:33,640 --> 00:01:37,060
+Czyli while będę posługiwał się nazwą produktu.
+
+27
+00:01:37,159 --> 00:01:44,219
+Czyli while name równa się input podaj nazwę produktu.
+
+28
+00:01:47,379 --> 00:01:51,539
+Okej, dopóki to się, tak długo jak to się nie równa słowem,
+
+29
+00:01:51,700 --> 00:01:53,159
+nie jest równe podsumuj.
+
+30
+00:01:53,159 --> 00:01:58,159
+No i ten nasz człowiek ma dodawać te produkty do koszyka jakiegoś.
+
+31
+00:01:58,159 --> 00:02:01,219
+Czyli my potrzebujemy stworzyć sobie koszyk.
+
+32
+00:02:02,479 --> 00:02:08,280
+I mój koszyk będzie wyglądał tak, że będę posiadał klucze i będę posiadał wartości.
+
+33
+00:02:08,759 --> 00:02:14,199
+I będę chciał przypisywać ilości produktów do tego słownika.
+
+34
+00:02:14,740 --> 00:02:19,819
+Czyli kluczem, jeżeli kupię sobie dwa szpadle, to będę miał szpadel z ilością dwa.
+
+35
+00:02:20,539 --> 00:02:22,379
+Czyli cart to jest pusty słownik.
+
+36
+00:02:22,699 --> 00:02:26,460
+I posłużę się tą samą konstrukcją, którą posłużyłem się w poprzednim zadaniu.
+
+37
+00:02:26,460 --> 00:02:27,900
+Czyli quantity.
+
+38
+00:02:28,159 --> 00:02:33,079
+Równa się cart get name przecinek zero.
+
+39
+00:02:34,359 --> 00:02:37,659
+Widzicie, jakie nasze zadania robią się powoli skomplikowane.
+
+40
+00:02:38,120 --> 00:02:41,340
+Czyli po prostu pobieram sobie z koszyka ilość produktów,
+
+41
+00:02:41,560 --> 00:02:44,259
+które, ile razy ten produkt dodałem do tego koszyka.
+
+42
+00:02:44,919 --> 00:02:46,519
+No i dopisuję wartość zero.
+
+43
+00:02:47,099 --> 00:02:51,400
+Jeżeli już wiem, jaką mam ilość, to mogę odwołać się od cart.
+
+44
+00:02:53,319 --> 00:02:54,659
+Od name.
+
+45
+00:02:54,659 --> 00:02:57,159
+Czyli nazwa staje się kluczem.
+
+46
+00:02:57,159 --> 00:03:00,159
+Równa się quantity.
+
+47
+00:03:02,359 --> 00:03:05,139
+I teraz ja nie wiem, ile produktów chciałbym,
+
+48
+00:03:05,139 --> 00:03:07,139
+ile sztuk tego produktu chciałbym dodać.
+
+49
+00:03:07,139 --> 00:03:09,139
+Więc potrzebuję taką informację mieć.
+
+50
+00:03:09,139 --> 00:03:13,139
+Czyli, jak to dodać?
+
+51
+00:03:13,139 --> 00:03:16,639
+Number of items, bo quantity to jest ilość w koszyku.
+
+52
+00:03:16,639 --> 00:03:19,639
+Chociaż z drugiej strony my nie będziemy potrzebowali tej zmiennej.
+
+53
+00:03:19,639 --> 00:03:23,639
+Możemy od razu pójść w tę stronę, że zrobimy sobie o tak.
+
+54
+00:03:23,639 --> 00:03:26,359
+No i tak naprawdę dodamy sobie do tego,
+
+55
+00:03:27,159 --> 00:03:31,159
+czyli plus int input,
+
+56
+00:03:31,159 --> 00:03:36,159
+ile sztuk produktu chcesz zakupić.
+
+57
+00:03:36,159 --> 00:03:43,159
+I w ten sposób będziemy na raz mieli do klucza przypisaną ilość,
+
+58
+00:03:43,159 --> 00:03:47,159
+która już była plus to, co użytkownik nam poda.
+
+59
+00:03:47,159 --> 00:03:51,159
+Powinno zadziałać, powinno przechowywać wtedy poprawne ilości.
+
+60
+00:03:51,159 --> 00:03:55,159
+I finalnie będziemy potrzebowali, kiedy użytkownik powie nam podsumuj,
+
+61
+00:03:55,159 --> 00:03:56,159
+będziemy chcieli,
+
+62
+00:03:56,159 --> 00:03:57,159
+że to jest to, co użytkownik nam poda.
+
+63
+00:03:57,159 --> 00:04:01,159
+Czyli wyświetlić informację o tym, co ten użytkownik chce kupić.
+
+64
+00:04:01,159 --> 00:04:04,159
+Lista dla chętnych produktów, plus słownik,
+
+65
+00:04:04,159 --> 00:04:06,159
+jeśli chcesz wyświetlić podsumowanie.
+
+66
+00:04:06,159 --> 00:04:08,159
+Chcemy wyświetlić podsumowanie i wartość koszyka.
+
+67
+00:04:08,159 --> 00:04:10,159
+Czyli wartość koszyka najpierw.
+
+68
+00:04:10,159 --> 00:04:15,159
+For name, quantity in cart.
+
+69
+00:04:15,159 --> 00:04:17,159
+Dwu kropek.
+
+70
+00:04:17,159 --> 00:04:20,159
+Cena produktu będzie mi potrzebna.
+
+71
+00:04:20,159 --> 00:04:24,159
+Cena produktu to będzie products od name.
+
+72
+00:04:24,159 --> 00:04:26,159
+Czyli skoro moja nazwa to jest to, co mam w koszyku,
+
+73
+00:04:26,160 --> 00:04:29,160
+a products to są moje produkty,
+
+74
+00:04:29,160 --> 00:04:33,160
+no to products od łopata da mi 22.
+
+75
+00:04:33,160 --> 00:04:35,160
+Czyli to jest informacja o cenie.
+
+76
+00:04:35,160 --> 00:04:41,160
+Razy, quantity, to jest z kolei informacja o ilości.
+
+77
+00:04:41,160 --> 00:04:45,160
+No i to będę potrzebował przypisać sobie do jakiejś zmiennej typu total,
+
+78
+00:04:45,160 --> 00:04:48,160
+która będzie reprezentowała cały stan mojego koszyka.
+
+79
+00:04:48,160 --> 00:04:51,160
+Total na dzień dobry ma wartość 0,
+
+80
+00:04:51,160 --> 00:04:54,160
+no bo jak ktoś przychodzi do kasy, to na kasie zazwyczaj powinno być 0.
+
+81
+00:04:54,160 --> 00:04:55,160
+No i total plus również, to jest to, co mam w koszyku.
+
+82
+00:04:55,160 --> 00:04:59,160
+No i total plus równa się products name and price.
+
+83
+00:04:59,160 --> 00:05:02,160
+No i możemy też wypisywać od razu w podsumowaniu.
+
+84
+00:05:02,160 --> 00:05:07,160
+Print, nazwa produktu i cena, niech coś takiego będzie.
+
+85
+00:05:07,160 --> 00:05:12,160
+Tam robiliśmy, najpierw był print, no to możemy zrobić print.
+
+86
+00:05:12,160 --> 00:05:15,160
+Produkty do opłacenia.
+
+87
+00:05:15,160 --> 00:05:17,160
+Dwu kropek.
+
+88
+00:05:17,160 --> 00:05:20,160
+Zrobię dokładnie tak samo jak jest tutaj.
+
+89
+00:05:20,160 --> 00:05:23,160
+Tylko oczywiście to nie jest cena tylko wartość już w tym momencie.
+
+90
+00:05:23,160 --> 00:05:24,160
+Zrobię dokładnie tak samo jak jest tutaj.
+
+91
+00:05:24,160 --> 00:05:26,160
+Tylko oczywiście to nie jest cena tylko wartość już w tym momencie.
+
+92
+00:05:26,160 --> 00:05:27,160
+Dlaczego jest to wartość?
+
+93
+00:05:27,160 --> 00:05:32,160
+No bo wartość to jest cena razy ilość.
+
+94
+00:05:32,160 --> 00:05:34,160
+O, w ten sposób.
+
+95
+00:05:34,160 --> 00:05:42,160
+No i tak naprawdę na koniec możemy wyświetlić sobie ładne jakąś tam linię poziomą.
+
+96
+00:05:42,160 --> 00:05:45,160
+No i podsumowanie.
+
+97
+00:05:45,160 --> 00:05:50,160
+Łączna wartość, dwu kropek, total.
+
+98
+00:05:50,160 --> 00:05:52,160
+Brakuje nam jeszcze f z przodu.
+
+99
+00:05:52,160 --> 00:06:00,160
+No i tak naprawdę najtrudniejszy sposób, najtrudniejszy element tego zadania to jest ten, żeby posługiwać się zmienną jako kluczem.
+
+100
+00:06:00,160 --> 00:06:13,160
+I wyobrazić sobie, że kiedy posługujemy się tym w ten sposób, to on nam pod name będzie podkładał poszczególne wartości, które mamy albo w koszyku, albo poszczególne wartości, które mamy w naszym cenniku.
+
+101
+00:06:13,160 --> 00:06:20,160
+I tak naprawdę wyciągając tę wartość z koszyka, możemy od razu na jej podstawie pobrać sobie też cenę tego produktu.
+
+102
+00:06:20,160 --> 00:06:21,160
+No to co?
+
+103
+00:06:21,160 --> 00:06:24,160
+Nie pozostaje nam nic innego jak tylko wejść do sklepu.
+
+104
+00:06:24,160 --> 00:06:27,160
+Myślę, że przydadzą mi się dwie doniczki.
+
+105
+00:06:27,160 --> 00:06:32,160
+Do tego zdecydowanie młotek.
+
+106
+00:06:32,160 --> 00:06:34,160
+Raczej jeden.
+
+107
+00:06:34,160 --> 00:06:39,160
+No i zdecydowanie zupełnie nie wyjdę ze sklepu, jeżeli nie kupię przynajmniej trzech wiader.
+
+108
+00:06:39,160 --> 00:06:42,160
+Czyli wiadro w liczbie sztuk trzy.
+
+109
+00:06:42,160 --> 00:06:44,160
+Nazwa produktu podsumuj.
+
+110
+00:06:44,160 --> 00:06:46,160
+Enter.
+
+111
+00:06:46,160 --> 00:06:47,160
+Hurra, mamy błąd.
+
+112
+00:06:47,160 --> 00:06:49,160
+Too many values to unpack.
+
+113
+00:06:49,160 --> 00:06:50,160
+No bo oczywiście zapomniałem zrobić to.
+
+114
+00:06:50,160 --> 00:06:52,160
+I zapomniałem zrobić items.
+
+115
+00:06:52,160 --> 00:06:54,160
+Czyli tutaj robimy kropka.
+
+116
+00:06:54,160 --> 00:06:56,160
+Items.
+
+117
+00:06:56,160 --> 00:06:59,160
+Kto zwrócił na to uwagę wcześniej, no to bardzo dobrze.
+
+118
+00:06:59,160 --> 00:07:02,160
+Jeżeli widzieliście.
+
+119
+00:07:02,160 --> 00:07:08,160
+Ja mam po prostu ten problem, że jak mówię i piszę, to czasem popełniam błędy.
+
+120
+00:07:08,160 --> 00:07:11,160
+Czyli jeden młotek i dwa wiadra były chyba, co?
+
+121
+00:07:11,160 --> 00:07:16,160
+Podsumuj.
+
+122
+00:07:16,160 --> 00:07:17,160
+Okej.
+
+123
+00:07:17,160 --> 00:07:19,160
+Dwie doniczki.
+
+124
+00:07:19,160 --> 00:07:22,160
+Za 30 złotych, bo doniczka za 15 pewnie, co?
+
+125
+00:07:22,160 --> 00:07:24,160
+Dokładnie tak.
+
+126
+00:07:24,160 --> 00:07:28,160
+Młotek o wartości 12, bo jeden młotek wystarczy do potłuczenia doniczek.
+
+127
+00:07:28,160 --> 00:07:29,160
+Wygadałem się, co chcę robić.
+
+128
+00:07:29,160 --> 00:07:30,160
+Nieważne.
+
+129
+00:07:30,160 --> 00:07:31,160
+No i wiadra były trzy.
+
+130
+00:07:31,160 --> 00:07:33,160
+Wiadro po osiem.
+
+131
+00:07:33,160 --> 00:07:34,160
+Wychodzi na to, że działa.
+
+132
+00:07:34,160 --> 00:07:36,160
+Łączna wartość 58.
+
+133
+00:07:36,160 --> 00:07:38,160
+Sumarycznie się zgadza.
+
+134
+00:07:38,160 --> 00:07:40,160
+Dzięki i chodźcie do kolejnego zadania.

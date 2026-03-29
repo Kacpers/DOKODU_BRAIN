@@ -1,0 +1,195 @@
+1
+00:00:00,000 --> 00:00:05,120
+Po to wyświetlaliśmy sobie nasze zdjęcia, żeby móc zrobić z nimi coś jeszcze.
+
+2
+00:00:05,520 --> 00:00:08,160
+I tutaj dochodzimy do czegoś, co nazywa się Pillow.
+
+3
+00:00:08,259 --> 00:00:09,740
+Pillow, czyli poduszka.
+
+4
+00:00:10,259 --> 00:00:11,099
+Dlaczego Pillow?
+
+5
+00:00:11,460 --> 00:00:16,379
+Pillow z tego względu, że kiedyś była taka biblioteka, która nazywała się Pill, po prostu.
+
+6
+00:00:16,940 --> 00:00:21,559
+Ona wciąż funkcjonuje, wciąż jest częścią tego Pillow, więc i tak się to instalowuje nam.
+
+7
+00:00:22,179 --> 00:00:27,600
+Natomiast, kiedy instalujemy Pillow, natomiast Pillow to jest taka nakładka na tę bibliotekę Pill
+
+8
+00:00:27,600 --> 00:00:32,100
+i dzięki niej właściwie możemy wykonywać operacje na obrazie.
+
+9
+00:00:32,640 --> 00:00:38,719
+Możemy skalować obrazki, zmieniać im kolory, wycinać z nich jakieś fragmenty.
+
+10
+00:00:39,140 --> 00:00:46,320
+Więc za każdym razem, kiedy potrzebujesz zrobić coś z obrazem, no to właśnie biblioteka Pillow tutaj przychodzi nam z pomocą.
+
+11
+00:00:46,320 --> 00:00:52,540
+Żeby ją sobie doinstalować, wykonujemy polecenie pip install pillow i wówczas ona nam się pięknie zainstaluje.
+
+12
+00:00:52,980 --> 00:00:57,579
+Cała dokumentacja tej biblioteki jest dostępna tutaj pod adresem pillow-read-the-docs.
+
+13
+00:00:57,600 --> 00:01:00,920
+.io-n-stable
+
+14
+00:01:00,920 --> 00:01:08,200
+Więc jeżeli potrzebujesz sobie zobaczyć, co możesz zrobić z biblioteką Pillow, no to to jest właśnie sposób na to, żeby poczytać o tym po prostu.
+
+15
+00:01:08,359 --> 00:01:10,280
+Ale ja Ci już też to pokazuję.
+
+16
+00:01:10,859 --> 00:01:17,939
+Pewnie jak wrócę do kodu, zapomnę o tym, żeby to doinstalować, więc od razu zachęcam Cię też do tego, żebyś wykonał pip install pillow.
+
+17
+00:01:18,299 --> 00:01:21,260
+Ja też to od razu robię, żeby później nie zapomnieć.
+
+18
+00:01:21,260 --> 00:01:23,780
+Czyli pip install pillow.
+
+19
+00:01:24,000 --> 00:01:27,200
+Pillow, Enter, chwila oczekiwania.
+
+20
+00:01:27,200 --> 00:01:29,880
+I po chwili Pillow powinno być zainstalowane.
+
+21
+00:01:29,960 --> 00:01:30,980
+A już miałem zainstalowane.
+
+22
+00:01:31,060 --> 00:01:33,859
+Widocznie jak robiłem jakieś testy dla Was, to je zainstalowałem.
+
+23
+00:01:34,159 --> 00:01:37,299
+Natomiast u Ciebie ten Pillow powinien się wówczas zainstalować.
+
+24
+00:01:37,760 --> 00:01:44,240
+Osoby, które korzystają z Linuxa, mogą w tym momencie zobaczyć jakiś błąd, naprawdę rzeczy, jakieś biblioteki potrzebują jeszcze zainstalować.
+
+25
+00:01:44,620 --> 00:01:47,520
+W sensie z apt-geta, czy z jakiegoś tam jama, czy z czegoś takiego.
+
+26
+00:01:47,980 --> 00:01:53,520
+Więc jeżeli używasz Linuxa i tu pokazał Ci się błąd, to musisz zerknąć, co tam w tym błędzie trzeba naprawić.
+
+27
+00:01:53,520 --> 00:01:56,180
+A jeżeli nie uda Ci się, to napisz na Discordzie.
+
+28
+00:01:56,420 --> 00:01:57,120
+Chętnie pomogę.
+
+29
+00:01:57,200 --> 00:01:58,500
+Czy też do mnie wiadomość prywatną.
+
+30
+00:01:59,060 --> 00:02:00,280
+Okej, lecimy dalej.
+
+31
+00:02:01,299 --> 00:02:07,780
+I teraz, jeżeli będziemy chcieli po zainstalowaniu Pillow na przykład przeskalować nasz obrazek,
+
+32
+00:02:08,240 --> 00:02:12,360
+to wykonujemy taką linijkę from pill import image.
+
+33
+00:02:12,879 --> 00:02:19,500
+Więc jak widzisz, mimo tego, że instalowaliśmy bibliotekę Pillow, no to wykonujemy właśnie from pill import image.
+
+34
+00:02:19,759 --> 00:02:26,539
+Następnie w kolejnej linijce wykonujemy im, czyli tam jakaś zmienna image, która będzie przechowywała obiekt.
+
+35
+00:02:26,539 --> 00:02:29,280
+Obiekt reprezentujący cały nasz obrazek.
+
+36
+00:02:29,400 --> 00:02:37,819
+Wykonujemy im równa się image.open i przekazujemy mu informację, że ten nasz obrazek ma się nazywać flower.jpg.
+
+37
+00:02:37,979 --> 00:02:40,639
+Czyli po prostu wskazujemy mu ścieżkę do obrazka.
+
+38
+00:02:40,739 --> 00:02:45,379
+My te ścieżki już w poprzednim zadaniu zrobiliśmy, więc pewnie spodziewasz się, co się za moment stanie.
+
+39
+00:02:46,000 --> 00:02:52,620
+Dalej mamy thumbnail równa się im resize i tu mu przekazujemy wymiary.
+
+40
+00:02:52,620 --> 00:02:56,000
+I wtedy ten obraz przeskaluje nam się dokładnie do wymiaru.
+
+41
+00:02:56,000 --> 00:02:56,900
+300x300.
+
+42
+00:02:57,439 --> 00:03:02,479
+Jeżeli chcielibyście, żeby skalował się proporcjonalnie, to są do tego inne funkcje.
+
+43
+00:03:02,680 --> 00:03:08,759
+No i na koniec na thumbnail wykorzystujemy save, żeby ten obrazek zapisać sobie w konkretnym miejscu.
+
+44
+00:03:09,199 --> 00:03:10,919
+I tak, takie jest to proste.
+
+45
+00:03:11,120 --> 00:03:16,060
+Dlatego korzystanie z zewnętrznych bibliotek jest niezwykle wydajnym i przyjemnym sposobem,
+
+46
+00:03:16,439 --> 00:03:22,680
+bo tak naprawdę importując sobie bibliotekę możemy na przykład bardzo łatwo stworzyć plik PDF czy jakiś inny plik,
+
+47
+00:03:22,680 --> 00:03:25,800
+bo po prostu wystarczy, że wykonamy szereg instrukcji.
+
+48
+00:03:26,000 --> 00:03:28,240
+Wszystko nam będzie działało.
+
+49
+00:03:28,520 --> 00:03:36,319
+Z tą oczywiście różnicą, że trzeba zerknąć do dokumentacji i zrobić zgodnie z tym, z czego ten twórca biblioteki od nas wymaga.

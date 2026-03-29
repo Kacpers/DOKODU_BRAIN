@@ -1,0 +1,395 @@
+1
+00:00:00,000 --> 00:00:03,820
+Jeżeli chodzi o zadanie pierwsze, to muszę zapytać użytkownika o wzrost,
+
+2
+00:00:04,080 --> 00:00:06,780
+zaznaczyć, że chodzi mi o metry oraz o wagę.
+
+3
+00:00:07,299 --> 00:00:11,179
+Czyli high, hy, e, i, g, hy, ty, równa się.
+
+4
+00:00:11,679 --> 00:00:16,059
+Raczej będzie to wartość wyrażona we floacie, czyli float, input,
+
+5
+00:00:16,679 --> 00:00:22,400
+podaj mi twój wzrost i ten wzrost ma być w metrach, czyli w metrach.
+
+6
+00:00:23,660 --> 00:00:24,219
+Dwukropek.
+
+7
+00:00:24,219 --> 00:00:32,019
+Waga, to jest weight, czyli wy, e, i, g, hy, ty, równa się float, input,
+
+8
+00:00:32,899 --> 00:00:39,000
+ile ważysz, odpowiedz w kilogramach.
+
+9
+00:00:39,759 --> 00:00:40,379
+Dwukropek.
+
+10
+00:00:40,920 --> 00:00:43,780
+W ten sposób będziemy mieli wzrost oraz wagę.
+
+11
+00:00:44,079 --> 00:00:46,579
+No i będziemy mogli przeliczyć użytkownikowi BMI.
+
+12
+00:00:47,159 --> 00:00:53,759
+Czyli BMI równa się, no i ten współczynnik to jest masa w kilogramach,
+
+13
+00:00:53,759 --> 00:00:58,859
+czyli weight podzielony przez wzrost w metrach do kwadratu.
+
+14
+00:00:59,219 --> 00:01:02,119
+Czyli podzielony przez wzrost do kwadratu.
+
+15
+00:01:02,500 --> 00:01:05,840
+Ze względu na to, że najpierw jest potęga, potem jest dzielenie,
+
+16
+00:01:06,140 --> 00:01:07,920
+nawiasy nie są nam tutaj potrzebne.
+
+17
+00:01:08,480 --> 00:01:14,280
+Print, twoje BMI wynosi, i tutaj do tej pory nie robiliśmy czegoś takiego,
+
+18
+00:01:14,400 --> 00:01:17,799
+ale można zrobić przecinek i podać mu drugą wartość.
+
+19
+00:01:18,060 --> 00:01:21,859
+Jeżeli natomiast zrobiłeś tak, to też jest OK, żaden problem.
+
+20
+00:01:21,859 --> 00:01:23,739
+W przyszłości pokażę ci, jak łączyć.
+
+21
+00:01:23,760 --> 00:01:25,760
+Te wartości ze sobą.
+
+22
+00:01:25,760 --> 00:01:28,400
+I teraz zobacz, jeżeli ja sobie to wykonam,
+
+23
+00:01:28,400 --> 00:01:33,859
+czyli zrobię Python 01 BMI, to mnie zapyta o wzrost w metrach.
+
+24
+00:01:33,859 --> 00:01:35,859
+Metr osiemdziesiąt trzy.
+
+25
+00:01:35,859 --> 00:01:38,859
+Ile ważysz, odpowiedz w kilogramach.
+
+26
+00:01:38,859 --> 00:01:40,860
+Dziewięćdziesiąt osiem i pół.
+
+27
+00:01:40,860 --> 00:01:46,260
+Twoje BMI wynosi 29,41.
+
+28
+00:01:46,260 --> 00:01:48,960
+Tutaj na razie nie przejmujemy się zaokrąglaniem,
+
+29
+00:01:48,960 --> 00:01:52,160
+ale jak widać BMI zostało policzone.
+
+30
+00:01:52,160 --> 00:01:53,740
+Idziemy do zadania 0.
+
+31
+00:01:53,760 --> 00:01:54,760
+02.
+
+32
+00:01:54,760 --> 00:01:59,660
+I w zadaniu 02, tak jak mówiłem, za każdym razem będę każdy kolejny plik
+
+33
+00:01:59,660 --> 00:02:02,060
+jakby numerował wyższym zadaniem.
+
+34
+00:02:02,060 --> 00:02:05,060
+Później mogę wam te pliki udostępnić na przykład przez GitHuba,
+
+35
+00:02:05,060 --> 00:02:08,259
+tak żebyście też mogli do nich sobie później zerknąć.
+
+36
+00:02:08,259 --> 00:02:11,360
+Stwórz kalkulator, który przeliczy wartości z netto do brutto,
+
+37
+00:02:11,360 --> 00:02:15,759
+czyli 02 netto brutto.
+
+38
+00:02:15,759 --> 00:02:16,860
+Enter.
+
+39
+00:02:16,860 --> 00:02:19,659
+No i ponownie musimy zapytać użytkownika o coś.
+
+40
+00:02:19,659 --> 00:02:23,259
+W naszym przypadku będzie to wartość netto, czyli netto,
+
+41
+00:02:23,759 --> 00:02:25,459
+czyli równa się.
+
+42
+00:02:25,459 --> 00:02:29,159
+Zdecydowanie float, no bo może być 120 zł i 54 grosze,
+
+43
+00:02:29,159 --> 00:02:31,159
+czyli float input.
+
+44
+00:02:31,159 --> 00:02:33,659
+Podaj mi wartość netto.
+
+45
+00:02:33,659 --> 00:02:39,759
+No i w ten sposób, jeżeli chcemy przeliczyć z netto do brutto,
+
+46
+00:02:39,759 --> 00:02:48,759
+no to możemy napisać brutto równa się netto razy jeden plus stawka VAT,
+
+47
+00:02:48,759 --> 00:02:52,759
+czyli 0,23, czyli od razu razy 1,23 można też zrobić.
+
+48
+00:02:52,759 --> 00:02:55,560
+Wszystko by od razu oczywiście zależało od tego,
+
+49
+00:02:55,560 --> 00:02:59,359
+skąd ta wartość by pochodziła.
+
+50
+00:02:59,359 --> 00:03:04,259
+Zazwyczaj dostaję osobne jako 0,23, więc dlatego dodałem razy 1 plus.
+
+51
+00:03:04,259 --> 00:03:06,060
+Natomiast tak też jest w porządku.
+
+52
+00:03:06,060 --> 00:03:07,060
+Print.
+
+53
+00:03:07,060 --> 00:03:14,859
+Wartość brutto wynosi przecinek brutto.
+
+54
+00:03:14,859 --> 00:03:16,560
+Robię strzałkę do góry.
+
+55
+00:03:16,560 --> 00:03:17,159
+Enter.
+
+56
+00:03:17,159 --> 00:03:20,459
+Nie, przepraszam, otwieram 02 netto brutto.
+
+57
+00:03:20,459 --> 00:03:21,959
+Podaj mi wartość netto.
+
+58
+00:03:21,960 --> 00:03:22,960
+100.
+
+59
+00:03:22,960 --> 00:03:25,760
+No i wartość brutto 123.
+
+60
+00:03:25,760 --> 00:03:27,760
+Wszystko zadziałało.
+
+61
+00:03:27,760 --> 00:03:29,260
+No i zadanie trzecie.
+
+62
+00:03:29,260 --> 00:03:31,960
+Możemy zapytać użytkownika o pole trapezu.
+
+63
+00:03:31,960 --> 00:03:35,159
+I tutaj, żeby podać mu, żeby policzyć to pole trapezu,
+
+64
+00:03:35,159 --> 00:03:38,960
+będziemy potrzebowali podstawę oraz wysokość.
+
+65
+00:03:38,960 --> 00:03:43,360
+No bo na tej podstawie można policzyć pole trapezu.
+
+66
+00:03:43,360 --> 00:03:46,360
+Czyli 03 pole trapezu.
+
+67
+00:03:46,360 --> 00:03:50,360
+Podstawa to będzie base1 równa się.
+
+68
+00:03:50,360 --> 00:03:51,860
+I tu ponownie.
+
+69
+00:03:51,960 --> 00:03:54,760
+Przyda mi się zamiana tej wartości na float.
+
+70
+00:03:54,760 --> 00:03:56,960
+Czyli float input.
+
+71
+00:03:56,960 --> 00:04:01,960
+Podaj długość podstawy pierwszej.
+
+72
+00:04:01,960 --> 00:04:08,960
+To, że kopiuję tą linię od razu i wyświetlam sobie od razu pod spodem linię drugą,
+
+73
+00:04:08,960 --> 00:04:12,560
+to jest to spowodowane skrótem klawiszowym Ctrl D.
+
+74
+00:04:12,560 --> 00:04:13,960
+Duplicate.
+
+75
+00:04:13,960 --> 00:04:15,960
+Podaj długość podstawy drugiej.
+
+76
+00:04:15,960 --> 00:04:17,960
+No i podaj wysokość.
+
+77
+00:04:17,960 --> 00:04:19,960
+Podaj wysokość.
+
+78
+00:04:19,960 --> 00:04:20,960
+Podaj wysokość.
+
+79
+00:04:20,959 --> 00:04:22,959
+Podaj wysokość.
+
+80
+00:04:22,959 --> 00:04:27,959
+No i wtedy, jeżeli chcemy policzyć sobie pole, czyli area,
+
+81
+00:04:27,959 --> 00:04:30,959
+to area równa się
+
+82
+00:04:30,959 --> 00:04:32,959
+podstawa plus podstawa,
+
+83
+00:04:32,959 --> 00:04:36,959
+czyli base1 plus base2.
+
+84
+00:04:36,959 --> 00:04:39,959
+Podstawa plus podstawa razy wysokość na 2.
+
+85
+00:04:39,959 --> 00:04:44,959
+Czyli razy high podzielona przez 2.
+
+86
+00:04:44,959 --> 00:04:49,959
+Print pole trapezu wynosi area.
+
+87
+00:04:50,959 --> 00:04:52,959
+No i możemy sobie to sprawdzić.
+
+88
+00:04:52,959 --> 00:04:57,959
+Żeby były to w miarę proste te przykłady, proste zadania,
+
+89
+00:04:57,959 --> 00:05:01,959
+to jeżeli to jest podstawa plus podstawa, to możemy zrobić dwie podstawy po 5.
+
+90
+00:05:01,959 --> 00:05:03,959
+Razy wysokość niech będzie 5.
+
+91
+00:05:03,959 --> 00:05:10,959
+Czyli będzie 5 plus 5 to będzie 10 razy 5 to będzie 50 na 2, czyli 25, jeżeli dobrze liczę.
+
+92
+00:05:10,959 --> 00:05:12,959
+Podaj długość podstawy pierwszej 5.
+
+93
+00:05:12,959 --> 00:05:14,959
+Podaj długość podstawy drugiej 5.
+
+94
+00:05:14,959 --> 00:05:15,959
+Podaj wysokość.
+
+95
+00:05:15,959 --> 00:05:17,959
+Niech będzie 5.
+
+96
+00:05:17,959 --> 00:05:18,959
+Pole trapezu wynosi 25.
+
+97
+00:05:18,959 --> 00:05:25,959
+Podstawa plus podstawa to jest 10 razy 5, czyli 10 razy 5 to jest 50 na 2, czyli 25.
+
+98
+00:05:25,959 --> 00:05:27,959
+Wygląda na to, że działa.
+
+99
+00:05:27,959 --> 00:05:29,959
+Zapraszam Was dalej.

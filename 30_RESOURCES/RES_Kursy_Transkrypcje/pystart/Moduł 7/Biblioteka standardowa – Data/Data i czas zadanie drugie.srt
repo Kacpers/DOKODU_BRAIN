@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:01,980
+Zadanie jest następujące.
+
+2
+00:00:02,560 --> 00:00:07,940
+Poproś użytkownika o datę rozpoczęcia, datę zakończenia, a także o jego dniówkę.
+
+3
+00:00:08,540 --> 00:00:12,540
+W odpowiedzi powinna wyświetlić się informacja, ile użytkownik zarobi.
+
+4
+00:00:13,179 --> 00:00:17,440
+Czyli pracował od poniedziałku do piątku, 5 dni dniówka to 50 zł,
+
+5
+00:00:17,660 --> 00:00:22,559
+powinien 50 zł na dzisiejszy to już nic, 200 zł, powinien dostać 1000 zł.
+
+6
+00:00:23,140 --> 00:00:24,080
+Zadanie drugie.
+
+7
+00:00:24,580 --> 00:00:29,660
+Spróbuj wyświetlić za pomocą pętli wszystkie dni pomiędzy dwiema datami z poprzedniego zadania.
+
+8
+00:00:29,660 --> 00:00:33,259
+Czyli jeżeli użytkownik podał nam te poniedziałek, piątek,
+
+9
+00:00:33,340 --> 00:00:37,020
+to my chcemy wyświetlić po kolei dni, w których był w pracy.
+
+10
+00:00:37,719 --> 00:00:41,240
+No i w zadaniu trzecim, to są takie trzy podpunkty do jednego zadania.
+
+11
+00:00:41,759 --> 00:00:46,799
+Policz podwójnie wynagrodzenie pracownika za pracę w soboty i w niedzielę.
+
+12
+00:00:47,079 --> 00:00:51,719
+Czyli jeżeli użytkownik nam poda, nie wiem, 1 lipca, 10 lipca, po drodze był weekend,
+
+13
+00:00:52,179 --> 00:00:55,359
+to za sobotę i za niedzielę dostaje podwójne wynagrodzenie.
+
+14
+00:00:55,359 --> 00:00:58,799
+No to już takie zadanie, myślę, że konkretne.
+
+15
+00:00:58,799 --> 00:01:00,959
+Jeszcze chwilę, będziemy pisali Microsoft Project.
+
+16
+00:01:01,739 --> 00:01:03,479
+Może nie dziś, ale jutro.
+
+17
+00:01:04,039 --> 00:01:05,459
+Zapraszam do rozwiązywania.

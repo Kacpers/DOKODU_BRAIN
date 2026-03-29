@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:07,120
+To nie koniec jednak naszych zadań, bo tutaj jak najwięcej praktyki będzie bardzo pomocne.
+
+2
+00:00:07,740 --> 00:00:10,320
+Mamy takie zadanie, takie fabularne.
+
+3
+00:00:10,960 --> 00:00:13,439
+Zosia chodziła po łące i zbierała jabłka.
+
+4
+00:00:13,439 --> 00:00:27,060
+Każde jabłko, każdy owoc ma kolor, na przykład czerwony, zielony, żółty, smak słodki, kwaśny, no i rodzaj dojrzały, niedojrzały, czyli na przykład color, taste and type.
+
+5
+00:00:27,820 --> 00:00:29,519
+Przygotuj, type to zły pomysł.
+
+6
+00:00:30,000 --> 00:00:31,440
+Coś w ramach tego.
+
+7
+00:00:31,820 --> 00:00:36,159
+Może być fruit type czy coś takiego, bo type wydaje mi się, że jest nazwą zarezerwowaną.
+
+8
+00:00:36,780 --> 00:00:43,740
+Przygotuj obiekt, koszyk, do którego można będzie dodawać owoce oraz generować raport według danej cechy.
+
+9
+00:00:43,740 --> 00:00:47,379
+Na przykład ilość owoców według kolorów.
+
+10
+00:00:47,740 --> 00:00:56,560
+Na przykład jeżeli my powiemy, że chcemy wykonać generate report i przekazać informację, że interesuje nas kolor,
+
+11
+00:00:56,960 --> 00:00:59,719
+to chcielibyśmy dowiedzieć się, że czerwonych jest trzy,
+
+12
+00:00:59,879 --> 00:00:59,980
+zielonych jest trzy,
+
+13
+00:01:00,000 --> 00:01:01,460
+zielonych cztery, a żółty jeden.
+
+14
+00:01:01,960 --> 00:01:08,260
+A jeżeli zmienimy rodzaj, tę cechę, którą chcemy raportować na rodzaj właśnie,
+
+15
+00:01:08,780 --> 00:01:11,519
+no to wtedy dojrzałe są dwa, niedojrzałe są trzy.
+
+16
+00:01:11,900 --> 00:01:15,099
+W ten sposób będziemy chcieli się odwoływać z naszych poszczególnych danych.
+
+17
+00:01:16,299 --> 00:01:20,719
+No i tyle. Tak naprawdę będziemy chcieli tylko te informacje wyświetlić.
+
+18
+00:01:21,159 --> 00:01:21,719
+Skąd dane?
+
+19
+00:01:22,039 --> 00:01:27,400
+Dane możesz na razie sobie, żeby nie robić takich inputów wielu i nie spędzać nad tym dużo czasu,
+
+20
+00:01:27,400 --> 00:01:29,780
+możesz sobie te dane już też przygotować w kodzie.
+
+21
+00:01:29,780 --> 00:01:30,980
+Tak jak w poprzednim zadaniu.
+
+22
+00:01:33,140 --> 00:01:33,460
+To co?
+
+23
+00:01:34,659 --> 00:01:35,099
+Rozwiązujemy.
+
+24
+00:01:35,099 --> 00:01:35,200
+Rozwiązujemy.

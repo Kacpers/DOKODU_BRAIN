@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:05,240
+No to co, idziemy dalej i przy okazji dowiadujemy się, że jest też kilka nowych operatorów,
+
+2
+00:00:05,379 --> 00:00:09,419
+czyli tak jak jest operatorem dodawania jest plus, czy mnożenia jest gwiazdka,
+
+3
+00:00:09,939 --> 00:00:14,660
+tak samo można też tutaj na zbiorach wykorzystać kilka nowych operatorów.
+
+4
+00:00:14,780 --> 00:00:18,120
+Po pierwsze suma zbiorów to jest pipe, kreska pionowa.
+
+5
+00:00:18,760 --> 00:00:22,820
+Różnica to jest ten sam minus, który znasz z odejmowania liczb pod siebie.
+
+6
+00:00:23,539 --> 00:00:26,580
+Iloczyn to jest ampersand, czyli shift 7,
+
+7
+00:00:26,579 --> 00:00:30,500
+ten symbol, który jest na przykład w nazwie Johnson & Johnson, tak?
+
+8
+00:00:30,979 --> 00:00:34,000
+Natomiast różnica symetryczna to jest karetka, czyli shift i 6.
+
+9
+00:00:34,539 --> 00:00:38,759
+I w ten sposób za pomocą tych operatorów możemy od siebie odejmować zbiory,
+
+10
+00:00:39,239 --> 00:00:43,420
+robić iloczyn, czyli szukać części wspólnej, czy różnicę symetryczną.
+
+11
+00:00:43,700 --> 00:00:47,280
+Różnica symetryczna to jest wszystko to, co jest poza częścią wspólną.
+
+12
+00:00:48,799 --> 00:00:52,480
+Czyli zobacz, jeżeli chodzi o sumę, to zakładając, że mamy,
+
+13
+00:00:52,480 --> 00:00:56,480
+że zbiory nie przechowują unikatowych wartości,
+
+14
+00:00:56,579 --> 00:01:01,579
+no to mamy w zbiorze A serduszko i kotka, w zbiorze B jest serduszko i kaczka,
+
+15
+00:01:01,579 --> 00:01:08,579
+więc w zbiorze, suma tych dwóch zbiorów będzie, powoduje, że wyświetli nam się serduszko, kaczka i kotek.
+
+16
+00:01:08,579 --> 00:01:09,579
+Tak wygląda suma.
+
+17
+00:01:09,579 --> 00:01:13,579
+Jeżeli chodzi o różnicę, to różnica zakłada odjęcie od siebie zbiorów
+
+18
+00:01:13,579 --> 00:01:18,579
+i tutaj musimy pamiętać o tym, że zależnie od tego, czy odejmiemy od zbioru A zbiór B,
+
+19
+00:01:18,579 --> 00:01:22,579
+czy od zbioru B odejmiemy zbiór A, no to wyniki będą różne.
+
+20
+00:01:22,579 --> 00:01:26,579
+W przypadku pierwszym, tutaj, jeżeli od A odejmujemy zbiór B,
+
+21
+00:01:26,579 --> 00:01:32,579
+to oznacza, że w wyniku dostanę wszystko to, co jest w A, czego nie było w B.
+
+22
+00:01:32,579 --> 00:01:38,579
+Czyli w A był kotek i serduszko, w B było serduszko i kaczka, więc dostałem tylko i wyłącznie kotka.
+
+23
+00:01:38,579 --> 00:01:43,579
+Natomiast, jeżeli odejmę, B minus A wykonam, to dostanę tylko i wyłącznie kaczkę.
+
+24
+00:01:43,579 --> 00:01:47,579
+Z tego względu, że w tym przypadku, no tylko jest kaczka, a serce jakby zostało odjęte.
+
+25
+00:01:47,579 --> 00:01:53,579
+Jeżeli tutaj byłby kot, to też byłby odjęty, ale go nie ma, więc się po prostu nam nigdzie tutaj nie wyświetlił.
+
+26
+00:01:53,579 --> 00:01:55,579
+W przypadku iloczynu,
+
+27
+00:01:55,579 --> 00:01:59,579
+mamy serduszko, z tego względu, że jest to część wspólna.
+
+28
+00:01:59,579 --> 00:02:07,579
+Czyli to, co powtarza się w jednym i w drugim zbiorze, to jest serduszko, więc wynikiem będzie tylko i wyłącznie serduszko.
+
+29
+00:02:07,579 --> 00:02:11,579
+Natomiast różnica symetryczna to jest wszystko to, czego nie ma,
+
+30
+00:02:11,579 --> 00:02:18,579
+to wszystko to, co nie jest częścią wspólną, czyli w naszym przypadku będzie to kot i kaczka.
+
+31
+00:02:18,579 --> 00:02:24,579
+Proste? Ważne jest tylko, żebyście zapamiętali poszczególne operatory.
+
+32
+00:02:24,580 --> 00:02:30,580
+Warto je gdzieś sobie odnotować. Ja też gdzieś mam taką notatkę, jeżeli korzystam z tego, to zawsze sobie do tej notatki zerkam.
+
+33
+00:02:30,580 --> 00:02:38,580
+Mniej więcej pamiętam, wiecie, że suma to jest kreska, odejmowanie wiadomo, różnica symetryczna pamiętam, że to karetka, tam ampersand.
+
+34
+00:02:38,580 --> 00:02:42,580
+Można jakoś sobie z tym pokojarzyć, nie? Że takie end między zbiorami.
+
+35
+00:02:42,580 --> 00:02:44,580
+No to co? Poćwiczymy!

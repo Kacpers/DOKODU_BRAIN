@@ -1,0 +1,251 @@
+1
+00:00:00,000 --> 00:00:21,820
+A jeżeli jesteśmy w temacie baz danych, czyli ogólnie tego tematu, który znajduje się po stronie modelu, to warto byłoby sobie wspomnieć jeszcze o tym, że bardzo ważnym tematem w naszych aplikacjach są również asocjacje, czyli nasz model, nasza baza danych ma tabele i te tabele mogą być ze sobą w jakiś sposób powiązane.
+
+2
+00:00:21,820 --> 00:00:37,659
+I tutaj bardzo ważne jest to, abyśmy dobrze zastanowili się, jaki rodzaj tego powiązania, czy tej asocjacji pomiędzy tymi danymi zachodzi. Najprościej, taka podstawowa asocjacja to jest jeden do jednego.
+
+3
+00:00:37,659 --> 00:00:51,460
+Na przykład jeden samochód ma jednego kierowcę, użytkownik może mieć też jeden profil, albo użytkownik może mieć też jedno konto klienta. Czyli wyobraź sobie, że masz tabelę, która miałaby bardzo wiele wierszy.
+
+4
+00:00:51,460 --> 00:01:02,079
+No bo użytkownik mógłby mieć swoje dane profilowe, mógłby mieć swoje dane klienckie, mógłby mieć swoje dane kontaktowe, mógłby mieć jeszcze wiele innych swoich danych.
+
+5
+00:01:02,079 --> 00:01:18,760
+I teraz, żeby nie dodawać tych kolumn pięćdziesięciu, to zdecydujesz się na to, że chcesz to podzielić pomiędzy mniejsze tabele. I na przykład, jeżeli będą Cię interesowały dane klienta i użytkownika, to po prostu pobierzesz sobie te dane z dwóch tabel.
+
+6
+00:01:18,760 --> 00:01:20,760
+Jeżeli będzie Cię interesował użytkownik jako kierowca.
+
+7
+00:01:21,459 --> 00:01:23,459
+To pobierzesz dane użytkownika oraz dane kierowcy.
+
+8
+00:01:23,459 --> 00:01:27,459
+Jak to jest powiązane, za chwilę Ci pokażę, tym na razie się nie przejmuj.
+
+9
+00:01:27,459 --> 00:01:37,459
+Ważne jest tylko to, żeby pamiętać, że jeżeli jest asocjacja jeden do jednego, to jeden wiersz w tabeli A odpowiada dokładnie jednemu wierszowi w tabeli B.
+
+10
+00:01:37,459 --> 00:01:43,459
+Inny przykład asocjacji, bardzo częsty, to jest jeden do wielu.
+
+11
+00:01:43,459 --> 00:01:46,459
+Czyli jeden produkt posiada wiele kategorii.
+
+12
+00:01:46,459 --> 00:01:48,459
+Jeden użytkownik posiada wiele domen.
+
+13
+00:01:48,459 --> 00:01:50,459
+Jeden użytkownik może posiadać wiele sektorów.
+
+14
+00:01:51,459 --> 00:01:53,459
+Jeden użytkownik może posiadać wiele samochodów.
+
+15
+00:01:53,459 --> 00:02:01,459
+Czyli w momencie, w którym realizujesz pracę, okaże się, że Twoje powiązanie będzie skonstruowane bardzo podobnie jak w przypadku jeden do jednego.
+
+16
+00:02:01,459 --> 00:02:07,459
+Natomiast kod, który obsługuje odpowiedzi, będzie wyglądał zupełnie inaczej.
+
+17
+00:02:07,459 --> 00:02:15,459
+No bo wyobraź sobie sytuację, w której zaplanowałeś, że jeden użytkownik może być kierowcą, ma dane kierowcy tylko jedne.
+
+18
+00:02:15,459 --> 00:02:19,459
+Bo ktoś Ci powiedział, klient Ci powiedział, panie Kacprze, jest taka sytuacja, że użytkownik może być kierowcą, ale nie ma dane kierowcy.
+
+19
+00:02:19,459 --> 00:02:20,459
+Bo ktoś Ci powiedział, klient Ci powiedział, panie Kacprze, jest taka sytuacja, że użytkownik może być kierowcą, ale nie ma dane kierowcy.
+
+20
+00:02:20,460 --> 00:02:21,460
+Bo ktoś Ci powiedział, klient Ci powiedział, panie Kacprze, jest taka sytuacja, że użytkownik może być kierowcą, ale nie ma dane kierowcy.
+
+21
+00:02:21,460 --> 00:02:22,460
+Bo ktoś Ci powiedział, klient Ci powiedział, klient Ci powiedział, że użytkownik może być kierowcą, ale nie ma dane kierowcy.
+
+22
+00:02:22,460 --> 00:02:27,460
+Bo ktoś Ci powiedział, klient Ci powiedział, klient Ci powiedział, klient Ci powiedział, kocownik może być kierowcą, i będzie miał tylko jeden numer kierowcy, numer rejestracyjny, numer tam czegoś.
+
+23
+00:02:27,460 --> 00:02:29,460
+Po prostu będą pojedyncze dane.
+
+24
+00:02:29,460 --> 00:02:31,460
+I my nie potrzebujemy nic więcej.
+
+25
+00:02:31,460 --> 00:02:42,460
+Po czym ktoś, obsługując bazę danych, wklepał jeszcze jedne dane dopasowane do jednego kierowcy, bo akurat wyszło tak, że w tym jednym przypadku jest inaczej.
+
+26
+00:02:42,460 --> 00:03:03,439
+I to powoduje, że programiści się złoszczą, odchodzą z pracy i są bardzo niezadowoleni, bo nagle zmieniają się nasze ustalenia. I to, że można byłoby dodać więcej wierszy, nie jest przeszkodą, natomiast to, że później program obsługuje to za pomocą, z założeniem, że zawsze będzie jeden wiersz tu, jeden wiersz tu, przeszkodą już jest.
+
+27
+00:03:03,439 --> 00:03:25,900
+No właśnie, no ale często tak jest, że wykorzystujemy właśnie jeden do wielu, tam gdzie jest produkt, kategoria, tam gdzie jest użytkownik, który coś ma, tam gdzie są, gdzie mamy sytuację, gdzie powiedzmy jeden post ma wiele tagów, tak, to jak najbardziej tego typu rzeczy moglibyśmy ogarnąć za pomocą takiej asociacji.
+
+28
+00:03:25,900 --> 00:03:32,819
+I tutaj odrobinę wpuściłem się w maliny, bo oczywiście jeden post ma wiele tagów, to jest prawda.
+
+29
+00:03:33,439 --> 00:03:36,359
+Ale ile postów będzie miał jeden tag?
+
+30
+00:03:37,259 --> 00:03:43,039
+Jak się dobrze nad tym zastanowimy, no to wyjdzie nam z tego, że kurczę, no jeden tag może mieć też wiele postów, prawda?
+
+31
+00:03:43,539 --> 00:03:52,520
+Bo załóżmy, piszę artykuł o motoryzacji, skoro jesteśmy w tym temacie, no i dodaję sobie tagi, samochód, rodzina, wakacje.
+
+32
+00:03:52,900 --> 00:03:59,900
+I teraz, jeżeli ktoś kliknie w samochód, to chciałby zobaczyć wiele postów odpowiadających temu tagowi.
+
+33
+00:04:00,219 --> 00:04:03,120
+Czyli wychodzi na to, że musi być coś jeszcze, o czym wam nie powiedziałem.
+
+34
+00:04:03,120 --> 00:04:08,000
+I tak jest. Ponieważ jest jeszcze trzeci rodzaj asociacji, jest to asociacja wiele do wielu.
+
+35
+00:04:08,460 --> 00:04:15,360
+Natomiast na razie skupmy się na tym, żeby pokazać sobie, jak wygląda jeden do wielu i jeden do jednego w bazie danych.
+
+36
+00:04:15,939 --> 00:04:19,819
+Zobacz. Mamy taką sytuację, że produkt ma kategorie.
+
+37
+00:04:20,220 --> 00:04:26,420
+I zakładamy, że każdy produkt może mieć jedną kategorię, a jedna kategoria będzie miała wiele produktów.
+
+38
+00:04:26,420 --> 00:04:30,780
+Czyli robimy sobie products, tabelę taką.
+
+39
+00:04:31,079 --> 00:04:32,920
+I ta tabela jest bardzo tutaj uproszczona.
+
+40
+00:04:33,120 --> 00:04:36,680
+Ma tylko i wyłącznie id, to jest id produktu.
+
+41
+00:04:36,680 --> 00:04:45,180
+Category id, to jest jedynka, no bo to jest coś, co odpowiada temu pojedynczemu produktowi, tej pojedynczej kategorii.
+
+42
+00:04:45,180 --> 00:04:47,180
+No i mamy name jabłko.
+
+43
+00:04:47,180 --> 00:04:51,180
+Czyli, jeżeli patrzymy sobie na jabłko, to wiemy, że jabłko to jest owoc.
+
+44
+00:04:51,180 --> 00:04:58,180
+Stąd też zerkamy na tabelę categories i widzimy, że kategoria i owoce ma id 1.
+
+45
+00:04:58,180 --> 00:05:01,920
+Stąd też wiemy, że owoce to jest jabłko i mamy sprawę z głowy.
+
+46
+00:05:01,920 --> 00:05:03,120
+Marchewka.
+
+47
+00:05:03,120 --> 00:05:04,120
+Ma dwójkę.
+
+48
+00:05:04,120 --> 00:05:05,420
+Dwójka to warzywa.
+
+49
+00:05:05,420 --> 00:05:12,720
+Więc dzięki temu wiemy, jakiej kategorii jest jabłko, a jakiej kategorii jest marchewka.
+
+50
+00:05:12,720 --> 00:05:14,720
+Dlaczego tak to rozbiliśmy?
+
+51
+00:05:14,720 --> 00:05:22,720
+No bo jeżeli będziemy chcieli zrobić zmianę, to zmiana będzie znajdowała się tylko tutaj, a nie w każdym jednym miejscu, gdzie napisalibyśmy nazwę kategorii.
+
+52
+00:05:22,720 --> 00:05:27,220
+Co więcej, bardzo często te kategorie będą miały też więcej informacji.
+
+53
+00:05:27,220 --> 00:05:28,620
+Tu sobie to uprościliśmy.
+
+54
+00:05:28,620 --> 00:05:32,620
+Ale kategoria może mieć przecież opis, może mieć właściciela, może mieć datę utworu.
+
+55
+00:05:33,120 --> 00:05:35,120
+Może mieć mnóstwo różnych kolumn.
+
+56
+00:05:35,120 --> 00:05:42,120
+I myślę, że nikt nie wyobraża sobie dodawania tych kolumn tutaj obok każdego produktu i zmieniania ich w każdym produkcie.
+
+57
+00:05:42,120 --> 00:05:45,120
+To byłoby zdecydowanie bardzo kłopotliwe.
+
+58
+00:05:45,120 --> 00:05:55,120
+Dlatego też właśnie przytrzymamy to w tej postaci, gdzie mamy osobne dane jako products, osobne dane jako categories i wiążemy to sobie tylko w ten sposób.
+
+59
+00:05:55,120 --> 00:05:58,120
+To powiązanie nazywamy właśnie asocjacją.
+
+60
+00:05:58,120 --> 00:06:02,120
+I tutaj mamy klucz główny, a tu mamy klucz obcy.
+
+61
+00:06:02,120 --> 00:06:07,120
+Czyli category id to jest klucz obcy, a id to jest klucz główny.
+
+62
+00:06:07,120 --> 00:06:11,120
+Więcej na ten temat oczywiście znajdziesz też w kursie SkumajBazy.
+
+63
+00:06:11,120 --> 00:06:13,120
+To co? Idziemy dalej?

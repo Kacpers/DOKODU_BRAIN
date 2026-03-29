@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:07,360
+W kolejnym zadaniu rozwiązanie będzie bardzo zbliżone do poprzedniego, szczególnie ten początek, bo też przechodzimy sobie po plikach w katalogu.
+
+2
+00:00:07,839 --> 00:00:16,699
+Interesują nas ścieżki, katalogi, pliki, więc jeżeli będziemy chcieli się do tego odnieść, tak naprawdę tu w naszym przypadku interesować nas będą tylko i wyłącznie pliki.
+
+3
+00:00:17,120 --> 00:00:24,339
+Stąd też ścieżki i katalogi możemy sobie zamienić na dwa znaki podkreślenia, żeby po prostu mieć je z głowy.
+
+4
+00:00:24,339 --> 00:00:36,200
+No i teraz, żeby pobrać sobie to nasze rozszerzenie, będziemy potrzebowali wykonać path na pliku, czyli from pathlib import path.
+
+5
+00:00:36,640 --> 00:00:43,120
+Zobacz, co się stanie, jeżeli zrobię path, równa się path i przekażę mu tutaj plik.
+
+6
+00:00:43,859 --> 00:00:54,120
+Znowu zapomniałem, żeby wykonać for file in files i w tym momencie, kiedy wyprintuję sobie ten path.suffix, to on mi powinien wyświetlać,
+
+7
+00:00:54,340 --> 00:00:57,500
+mimo tego, że to nie są poprawne ścieżki, te rozszerzenia.
+
+8
+00:00:57,920 --> 00:01:00,920
+Czyli domowe trzy, zobacz, wszystkie rozszerzenia są.
+
+9
+00:01:01,420 --> 00:01:09,439
+Tak naprawdę path, on tylko służy do parsowania, on nie musi mieć tutaj konkretnej ścieżki, a nam te rozszerzenia w zupełności wystarczają.
+
+10
+00:01:10,100 --> 00:01:21,620
+To, co nam też wystarczy, to usunięcie tej kropki, więc możemy zawsze wiedząc, że to jest string, wykonać replace, kropka, na nic i zobacz, kropka nam wtedy zniknęła.
+
+11
+00:01:21,620 --> 00:01:23,620
+No i zostanie nam tylko i wyłącznie wykonanie stringu.
+
+12
+00:01:24,340 --> 00:01:26,960
+Statistics to jest pusty słownik.
+
+13
+00:01:29,280 --> 00:01:34,980
+Rozszerzenie extension to jest to, co nam zwrócił ten nasz path.
+
+14
+00:01:35,380 --> 00:01:42,340
+I wtedy trzeba będzie w tym statistics ustawić sobie, żeby tak naprawdę ten nasze extension miało extension jeden większe.
+
+15
+00:01:42,900 --> 00:01:51,200
+Czyli extension to będzie ta nasza wartość, którą będziemy chcieli przypisać, znaczy do której będziemy chcieli przypisać, na przykład jpg.
+
+16
+00:01:51,480 --> 00:01:54,200
+Natomiast to, co będziemy chcieli dopisać, to pobaczmy.
+
+17
+00:01:54,340 --> 00:01:58,340
+Czyli mamy tu ubraną wartość dla tego rozszerzenia, zwiększoną o 1.
+
+18
+00:01:58,340 --> 00:02:04,340
+Czyli w tym miejscu potrzebujemy wykonać sobie statistics.getExtension.
+
+19
+00:02:08,340 --> 00:02:12,340
+Jeżeli nie ma, to wartość ma 0, plus 1.
+
+20
+00:02:12,340 --> 00:02:16,340
+I tu jak widzisz, mam już trochę plików z różnymi rozszerzeniami.
+
+21
+00:02:16,340 --> 00:02:20,340
+Jeżeli sobie wyprintuję to statistics, to powinienem dostać podsumowanie.
+
+22
+00:02:20,340 --> 00:02:24,340
+Łącznie mam 3 pliki tekstowe, 2 pliki py.
+
+23
+00:02:24,340 --> 00:02:26,340
+I 2 pliki html.
+
+24
+00:02:26,340 --> 00:02:28,340
+Czyli działa.

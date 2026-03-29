@@ -1,0 +1,139 @@
+1
+00:00:00,000 --> 00:00:05,520
+W zadaniu ósmym natomiast mamy napisać program, który odbierze od użytkownika dowolny ciąg znaków
+
+2
+00:00:05,520 --> 00:00:09,599
+i wypisze na ekranie ten sam ciąg, tylko że w odwrotnej kolejności.
+
+3
+00:00:10,140 --> 00:00:14,400
+Robiliśmy coś już bardzo podobnego przy okazji palindromów, gdzie odwracaliśmy sobie teksty
+
+4
+00:00:14,400 --> 00:00:16,339
+i tutaj właśnie też z tego skorzystamy.
+
+5
+00:00:16,780 --> 00:00:23,280
+Czyli potrzebujemy mieć zmienną sentence, równa się input, napisz zdanie do odwrócenia.
+
+6
+00:00:23,760 --> 00:00:24,440
+Dwu kropek.
+
+7
+00:00:24,980 --> 00:00:28,920
+Żeby teraz odwrócić sobie to zdanie, możemy wykonać rzecz następującą,
+
+8
+00:00:28,920 --> 00:00:37,840
+a mianowicie napisać print, odwrócone zdanie, brzmi, możemy zrobić przecinek.
+
+9
+00:00:38,320 --> 00:00:41,760
+Tutaj ja raz stosuję przecinek, a raz stosuję f.
+
+10
+00:00:41,939 --> 00:00:45,700
+Czy to znaczy, że w którychś momentach jakieś podejście jest lepsze?
+
+11
+00:00:45,799 --> 00:00:46,340
+Myślę, że nie.
+
+12
+00:00:46,799 --> 00:00:51,439
+Jeżeli chcę przeplatać tekst, przeplatać zdanie jakimiś zmiennymi,
+
+13
+00:00:51,859 --> 00:00:53,560
+no to wtedy będę stosował raczej f.
+
+14
+00:00:53,780 --> 00:00:56,960
+Natomiast jeżeli po prostu chcę sobie wyświetlić dwie wartości obok siebie,
+
+15
+00:00:56,960 --> 00:00:58,380
+to wtedy robię przecinek.
+
+16
+00:00:58,380 --> 00:01:00,719
+To nie wynika z tego, że któreś rozwiązanie jest lepsze.
+
+17
+00:01:00,820 --> 00:01:02,920
+Po prostu tutaj wydaje mi się, że będzie bardziej czytelnie,
+
+18
+00:01:03,240 --> 00:01:07,079
+niż za każdym razem pamiętać o tej literce f i o tych operacjach.
+
+19
+00:01:07,460 --> 00:01:09,200
+No i chciałbym też te wartości mieć obok siebie.
+
+20
+00:01:09,620 --> 00:01:13,900
+Jeżeli chciałbym mieć jedna pod drugą, to po prostu wyświetliłbym w jednym princie informację,
+
+21
+00:01:14,240 --> 00:01:16,500
+a w drugim princie zawarłbym wynik.
+
+22
+00:01:16,859 --> 00:01:19,379
+Więc tutaj mogę napisać, odwrócone zdanie brzmi,
+
+23
+00:01:20,359 --> 00:01:21,859
+no i odwołam się do sentence
+
+24
+00:01:21,859 --> 00:01:26,180
+i tak samo jak odwracaliśmy sobie, czy pobieraliśmy sobie wartości od końca,
+
+25
+00:01:26,180 --> 00:01:27,280
+tak samo zrobimy tutaj.
+
+26
+00:01:27,620 --> 00:01:28,000
+Dwu kropek.
+
+27
+00:01:28,000 --> 00:01:29,680
+Dwa kropek minus jeden.
+
+28
+00:01:30,219 --> 00:01:34,120
+Odpalenie ósemki powinno poskutkować tym,
+
+29
+00:01:34,200 --> 00:01:37,280
+że jeżeli napiszę napisz zdanie do odwrócenia Kacper,
+
+30
+00:01:37,579 --> 00:01:39,400
+no to w wyniku dostanę repcak.
+
+31
+00:01:40,040 --> 00:01:41,120
+Tak to właśnie wygląda.
+
+32
+00:01:41,319 --> 00:01:45,340
+Odwrotnie działa to dokładnie tak samo.
+
+33
+00:01:46,019 --> 00:01:49,599
+Krótkie zadanko, no ale trzeba było to sobie jeszcze powtórzyć.
+
+34
+00:01:49,980 --> 00:01:50,780
+Idziemy do dziewiątego.
+
+35
+00:01:51,019 --> 00:01:51,420
+Chodźcie.

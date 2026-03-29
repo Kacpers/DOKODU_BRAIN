@@ -1,0 +1,571 @@
+1
+00:00:00,460 --> 00:00:08,859
+Natomiast programy komputerowe byłyby zupełnie bez sensu, gdybyśmy tak naprawdę za każdym razem wykonywali wszystko, wiecie, od początku do końca.
+
+2
+00:00:09,800 --> 00:00:19,820
+Co prawda już wiemy jak odbierać od użytkownika informacje, więc możemy się umówić, że te programy są trochę mądrzejsze, no bo coś tam odbierzemy, coś policzymy, wyświetlimy.
+
+3
+00:00:19,820 --> 00:00:22,179
+Ale wciąż jest to kalkulator.
+
+4
+00:00:23,440 --> 00:00:29,260
+Żeby nasz program wyszedł z takiego stanu, trzeba wprowadzić warunki.
+
+5
+00:00:29,260 --> 00:00:40,520
+Na przykład, jeżeli dojdziemy do jakiegoś miejsca i wtedy w wyniku operacji albo danych podanych od użytkownika ma stać się jedna rzecz, no to trzeba podać taki warunek.
+
+6
+00:00:40,660 --> 00:00:44,280
+Albo może stać się też druga rzecz, na przykład jeżeli ta pierwsza nie zadziała, prawda?
+
+7
+00:00:44,920 --> 00:00:50,600
+I do tego potrzebujemy znać drugi rodzaj operatorów, którymi są operatory logiczne.
+
+8
+00:00:50,600 --> 00:00:54,400
+Operatory logiczne też znacie zazwyczaj z matematyki.
+
+9
+00:00:54,480 --> 00:00:59,100
+To są operatory typu większe, mniejsze, równe, nierówne, ale też większe.
+
+10
+00:00:59,259 --> 00:01:00,960
+Większe lub równe i mniejsze lub równe.
+
+11
+00:01:01,559 --> 00:01:07,519
+W szkole podstawowej większe lub równe zapisywane było jako symbol większości z taką jeszcze tam jedną kreską na dole.
+
+12
+00:01:07,879 --> 00:01:13,219
+Tutaj zapisujemy to na dwóch znakach, czyli większe, równe i mniejsze, równe, tak?
+
+13
+00:01:13,280 --> 00:01:16,599
+Czyli dwa znaki tak naprawdę tutaj muszą wziąć udział.
+
+14
+00:01:17,659 --> 00:01:18,819
+Jak to będzie wyglądało?
+
+15
+00:01:18,819 --> 00:01:24,799
+Jeżeli nastąpi jakiś warunek, to wtedy wykonaj mi zbiór czynności.
+
+16
+00:01:25,219 --> 00:01:27,859
+W przeciwnym wypadku wykonaj mi inne czynności.
+
+17
+00:01:28,379 --> 00:01:29,219
+A print jestem zainteresowany.
+
+18
+00:01:29,260 --> 00:01:34,420
+Iwem to jest czynność, to jest fragment kodu, który ma zadziałać wtedy, kiedy już za tym ifem się znajdziemy.
+
+19
+00:01:34,980 --> 00:01:37,620
+To, co jest bardzo ważne, to jest ten if warunek.
+
+20
+00:01:38,180 --> 00:01:42,660
+Warunek opisujemy za pomocą tego, co widzieliśmy przed chwilą, pokazywałem ci przed chwilą.
+
+21
+00:01:42,660 --> 00:01:46,420
+Czyli na przykład zmienna równa się wartość.
+
+22
+00:01:46,560 --> 00:01:48,460
+Albo wiek większy lub równo do 18.
+
+23
+00:01:49,040 --> 00:01:51,820
+Albo imię równa się Kacper.
+
+24
+00:01:52,000 --> 00:01:54,620
+Albo cokolwiek innego, co tylko byś potrzebował.
+
+25
+00:01:54,880 --> 00:01:55,939
+Rola to administrator.
+
+26
+00:01:56,680 --> 00:01:58,340
+Następnie znajduje się dwukropek.
+
+27
+00:01:59,260 --> 00:02:02,359
+W Pythonie mówi o tym, słuchaj, za chwilę zacznie się blok.
+
+28
+00:02:02,680 --> 00:02:03,859
+Ten blok będzie wcięty.
+
+29
+00:02:03,859 --> 00:02:12,159
+I wszystko, co jest wcięte, czyli ma ten tabulator, czy też te spacje z przodu, ma być wewnątrz tego ifa.
+
+30
+00:02:12,620 --> 00:02:13,860
+W Pythonie nie ma klamerek.
+
+31
+00:02:14,580 --> 00:02:15,960
+W Pythonie właśnie jest dwukropek.
+
+32
+00:02:16,879 --> 00:02:23,939
+I tu zobacz, jeżeli bym napisał if warunek dwukropek i następnie zostawił te dwie linie, ale pominął ten fragment z elsem,
+
+33
+00:02:24,360 --> 00:02:26,319
+to też zadziałałoby to dokładnie tak samo.
+
+34
+00:02:26,560 --> 00:02:29,240
+Po prostu nie miałbym czynności, która ma się wykonać wtedy.
+
+35
+00:02:29,259 --> 00:02:31,560
+Kiedy warunek nie jest spełniony.
+
+36
+00:02:31,939 --> 00:02:34,139
+Bo else nie sprawdza nic więcej.
+
+37
+00:02:34,599 --> 00:02:40,060
+Else po prostu zakłada, że warunek nie jest spełniony i wtedy wykonuje się część w else.
+
+38
+00:02:40,379 --> 00:02:46,359
+Czyli na przykład, jeżeli wiek jest większy od 18, to wyświetl informację, jesteś dorosły.
+
+39
+00:02:46,719 --> 00:02:49,819
+W przeciwnym wypadku wyświetl informację, jesteś dzieckiem.
+
+40
+00:02:50,359 --> 00:02:54,979
+Czyli znowu mamy dwukropek, jak widzisz jest powtórzony, po którym ponownie następuje wcięcie.
+
+41
+00:02:55,479 --> 00:02:57,939
+I dzięki temu właśnie budujemy nasz program.
+
+42
+00:02:57,939 --> 00:03:02,939
+Natomiast ten print, który jest tutaj, print jestem za ifem, on wykona nam się zawsze.
+
+43
+00:03:02,939 --> 00:03:07,939
+Niezależnie od tego, czy warunek będzie spełniony czy nie, to to wyrównanie jakby do lewej,
+
+44
+00:03:07,939 --> 00:03:13,939
+będzie powodowało, że po prostu niezależnie od tego, co się stanie z ifem, ten fragment nam zadziała.
+
+45
+00:03:13,939 --> 00:03:15,939
+Tu jest jeszcze przerwa.
+
+46
+00:03:15,939 --> 00:03:19,939
+Ta przerwa nie jest wymagana, jednak jest dobrze ją praktykować.
+
+47
+00:03:19,939 --> 00:03:22,939
+Dzięki temu ten kod jest czytelniejszy i troszeczkę bardziej poukładany.
+
+48
+00:03:22,939 --> 00:03:26,939
+Tutaj zachęcam cię jeszcze do jednej rzeczy, a mianowicie jeżeli w środku,
+
+49
+00:03:26,939 --> 00:03:31,939
+chciałbyś umieścić drugiego ifa, to też jak najbardziej można to robić.
+
+50
+00:03:31,939 --> 00:03:37,939
+Natomiast wtedy też trzeba pamiętać o tym, żeby cała ta zawartość była coraz bardziej wcięta.
+
+51
+00:03:37,939 --> 00:03:43,939
+Może to brzmieć trochę dwuznacznie, ale wiesz o co mi chodzi.
+
+52
+00:03:43,939 --> 00:03:46,939
+Warunki w ifie również można łączyć.
+
+53
+00:03:46,939 --> 00:03:51,939
+Ale zanim sobie do tego przejdziemy, pokażmy sobie jeszcze co zrobić, jeżeli if nie zadziałał.
+
+54
+00:03:51,939 --> 00:03:56,939
+Powiedzieliśmy sobie przed momentem, że jeżeli if nie zadziałał, to wtedy zjadła nam kod.
+
+55
+00:03:56,939 --> 00:04:00,939
+Natomiast pomiędzy ifem a elsem może się znaleźć też jeszcze coś takiego,
+
+56
+00:04:00,939 --> 00:04:04,939
+jak widzisz teraz na ekranie, czyli elif, elif i dopiero wtedy else.
+
+57
+00:04:04,939 --> 00:04:10,939
+Czyli możesz układać twój program w taki sposób, żeby jeżeli coś zadziała,
+
+58
+00:04:10,939 --> 00:04:12,939
+to wtedy wyświetla się jakiś komunikat.
+
+59
+00:04:12,939 --> 00:04:14,939
+Jeżeli nie zadziałało, to sprawdźmy drugi warunek.
+
+60
+00:04:14,939 --> 00:04:16,939
+Wtedy wyświetli się może inny komunikat.
+
+61
+00:04:16,939 --> 00:04:19,939
+Jeżeli znowu się nie zadziałało, to sprawdź trzeci komunikat.
+
+62
+00:04:19,939 --> 00:04:22,939
+I takich elifów w twoim kodzie może być bardzo, bardzo dużo.
+
+63
+00:04:22,939 --> 00:04:24,939
+Ważne jest tylko to, żeby na końcu był else.
+
+64
+00:04:24,939 --> 00:04:25,939
+No i układ jest taki, że jeżeli nie zadziałało, to sprawdź drugi warunek.
+
+65
+00:04:25,939 --> 00:04:29,939
+No i układ tych elifów musi być logiczny.
+
+66
+00:04:29,939 --> 00:04:31,939
+No bo to jest logika.
+
+67
+00:04:31,939 --> 00:04:35,939
+Na przykład jeżeli chcesz dawać komuś, nie wiem, premię,
+
+68
+00:04:35,939 --> 00:04:38,939
+na przykład w zależności od tego, ile lat ma stażu pracy,
+
+69
+00:04:38,939 --> 00:04:43,939
+no to trzeba sprawdzać te elify w taki sposób, żeby najpierw sprawdzić,
+
+70
+00:04:43,939 --> 00:04:46,939
+czy wartość jest większa niż, potem większa niż, większa niż,
+
+71
+00:04:46,939 --> 00:04:51,939
+czyli na przykład od 60 taki, od 50 taki, od 40 taki, od 30 taki,
+
+72
+00:04:51,939 --> 00:04:53,939
+bo w ten sposób, chociaż kto pracuje 60 lat,
+
+73
+00:04:53,939 --> 00:04:55,939
+w ten sposób będziemy wytrzymywać,
+
+74
+00:04:55,939 --> 00:04:57,939
+że nie będziemy mieli właśnie to zrobione poprawnie,
+
+75
+00:04:57,939 --> 00:04:59,939
+bo Python będzie działał zachłannie,
+
+76
+00:04:59,939 --> 00:05:01,939
+czyli jeżeli wejdzie w pierwszego elifa,
+
+77
+00:05:01,939 --> 00:05:03,939
+to on już nie będzie sprawdzał pozostałych.
+
+78
+00:05:03,939 --> 00:05:05,939
+Musisz o tym wiedzieć.
+
+79
+00:05:05,939 --> 00:05:07,939
+OK?
+
+80
+00:05:07,939 --> 00:05:10,939
+I tak jak wspominałem, możemy też łączyć ze sobą warunki.
+
+81
+00:05:10,939 --> 00:05:15,939
+Łączenie warunków dzieje się za pomocą koniunkcji lub też alternatywy,
+
+82
+00:05:15,939 --> 00:05:18,939
+czyli AND albo OR.
+
+83
+00:05:18,939 --> 00:05:21,939
+Załóżmy, że mamy taką sytuację, że mamy pracowników,
+
+84
+00:05:21,939 --> 00:05:23,939
+którzy sprzedają nasze usługi.
+
+85
+00:05:23,939 --> 00:05:26,939
+I teraz jeżeli ktoś znalazł 200 klientów,
+
+86
+00:05:26,939 --> 00:05:28,939
+albo osiągnął 100 tysięcy złotych,
+
+87
+00:05:28,939 --> 00:05:30,939
+no to wtedy osiąga premię.
+
+88
+00:05:30,939 --> 00:05:32,939
+I teraz jeżeli użyjemy AND,
+
+89
+00:05:32,939 --> 00:05:37,939
+to znaczy, że będzie musiał spełnić zarówno pierwszy warunek, jak i drugi.
+
+90
+00:05:37,939 --> 00:05:40,939
+Zobacz, tu jest YES, tu jest YES,
+
+91
+00:05:40,939 --> 00:05:43,939
+więc w przypadku koniunkcji pojawi się nam YES.
+
+92
+00:05:43,939 --> 00:05:45,939
+W przypadku alternatywy też pojawi nam się YES.
+
+93
+00:05:45,939 --> 00:05:49,939
+Tutaj mamy NO i YES,
+
+94
+00:05:49,939 --> 00:05:51,939
+wtedy koniunkcja da nam NO,
+
+95
+00:05:51,939 --> 00:05:52,939
+a alternatywa da nam YES.
+
+96
+00:05:52,939 --> 00:05:54,939
+Dlaczego tak jest?
+
+97
+00:05:54,939 --> 00:05:57,939
+Z tego względu, że koniunkcja potrzebuje mieć samych prawd,
+
+98
+00:05:57,939 --> 00:06:03,939
+używam specjalnie takiego zwrotu, ponieważ AND może łączyć wiele warunków, prawda?
+
+99
+00:06:03,939 --> 00:06:07,939
+I AND zawsze wymaga samych prawd, żeby mógł zadziałać.
+
+100
+00:06:07,939 --> 00:06:11,939
+Natomiast OR, czyli alternatywa, potrzebuje tylko jednej prawdy.
+
+101
+00:06:11,939 --> 00:06:14,939
+Więc wszędzie tam, gdzie jest jedno YES,
+
+102
+00:06:14,939 --> 00:06:16,939
+przynajmniej jedno YES,
+
+103
+00:06:16,939 --> 00:06:18,939
+tam wszędzie alternatywa zwraca nam YES,
+
+104
+00:06:18,939 --> 00:06:21,939
+natomiast tam, gdzie oba są wyrażenia prawdziwe,
+
+105
+00:06:21,939 --> 00:06:24,939
+to tylko tam mamy w koniunkcji YES.
+
+106
+00:06:24,939 --> 00:06:26,939
+W pozostałych przypadkach mamy NO.
+
+107
+00:06:26,939 --> 00:06:29,939
+Dokładnie tak to działa.
+
+108
+00:06:29,939 --> 00:06:33,939
+Tu, może trochę za szybko, ale jeszcze chciałbym Ci o tym od razu powiedzieć,
+
+109
+00:06:33,939 --> 00:06:35,939
+jest taka zasada w sprawdzaniu tego,
+
+110
+00:06:35,939 --> 00:06:40,939
+że jeżeli Python wykonuje sobie czynności i wie, że pomiędzy nimi jest AND,
+
+111
+00:06:40,939 --> 00:06:45,939
+to o jemu wystarczy pierwszy fałsz, żeby już nie sprawdzać pozostałych warunków.
+
+112
+00:06:45,939 --> 00:06:46,939
+To jest dosyć logiczne, nie?
+
+113
+00:06:46,939 --> 00:06:49,939
+No bo jeżeli wiem, że dalej mamy same fałsze,
+
+114
+00:06:49,939 --> 00:06:50,939
+chociaż jeden fałsz nastąpił, ale potrzebujemy jeszcze jeden fałsz, to jest to.
+
+115
+00:06:50,939 --> 00:06:52,939
+Jeżeli jeden fałsz nastąpił, ale potrzebuję samych prawd,
+
+116
+00:06:52,939 --> 00:06:55,939
+to jeden fałsz już sprawia, że nie muszę sprawdzać pozostałych rzeczy,
+
+117
+00:06:55,939 --> 00:06:57,939
+bo od razu mogę zostawić ten wiersz i iść dalej.
+
+118
+00:06:57,939 --> 00:07:00,939
+Jeżeli natomiast mam ORA,
+
+119
+00:07:00,939 --> 00:07:02,939
+to wystarczy, że pojawi się jedna prawda
+
+120
+00:07:02,939 --> 00:07:04,939
+i też nie muszę sprawdzać pozostałych warunków.
+
+121
+00:07:04,939 --> 00:07:06,939
+Dlaczego Ci o tym mówię?
+
+122
+00:07:06,939 --> 00:07:09,939
+Dlatego, że jeżeli układasz sobie te warunki,
+
+123
+00:07:09,939 --> 00:07:14,939
+to układaj je zawsze względem kolejności od tych, które są najtańsze, najszybsze,
+
+124
+00:07:14,939 --> 00:07:17,939
+do tych, które są najtrudniejsze.
+
+125
+00:07:17,939 --> 00:07:19,939
+Przykład z życia? Bardzo proszę.
+
+126
+00:07:19,939 --> 00:07:21,939
+Załóżmy, że mamy tą sytuację z tą premią
+
+127
+00:07:21,939 --> 00:07:25,939
+i mamy tabelkę, w której jest informacja o tym, ilu jest klientów.
+
+128
+00:07:25,939 --> 00:07:27,939
+OK?
+
+129
+00:07:27,939 --> 00:07:29,939
+A żeby policzyć przychód,
+
+130
+00:07:29,939 --> 00:07:32,939
+trzeba gdzieś wejść do Excela, podsumować jakieś wartości,
+
+131
+00:07:32,939 --> 00:07:34,939
+coś przeliczyć, sprawdzić, czy nie ma wydatków,
+
+132
+00:07:34,939 --> 00:07:36,939
+zrobić wiele czynności.
+
+133
+00:07:36,939 --> 00:07:39,939
+I to wyobraź sobie, że masz wyfiltrować,
+
+134
+00:07:39,939 --> 00:07:42,939
+znaleźć tylko te osoby, które dostają te premie
+
+135
+00:07:42,939 --> 00:07:44,939
+i muszą one spełniać dwa warunki.
+
+136
+00:07:44,939 --> 00:07:47,939
+To dużo szybciej byłoby Ci sprawdzić w tabelce,
+
+137
+00:07:47,939 --> 00:07:49,939
+kto się kwalifikuje do klientów,
+
+138
+00:07:49,939 --> 00:07:53,939
+i dopiero potem dla tych osób sprawdzić te przychody,
+
+139
+00:07:53,939 --> 00:07:55,939
+niż robić to odwrotnie, prawda?
+
+140
+00:07:55,939 --> 00:07:57,939
+No i tu jest dokładnie tak samo z Pythonem.
+
+141
+00:07:57,939 --> 00:07:59,939
+Też musisz ułożyć te rzeczy w kolejności,
+
+142
+00:07:59,939 --> 00:08:01,939
+żeby było taniej i szybciej.
+
+143
+00:08:01,939 --> 00:08:03,939
+To tyle.

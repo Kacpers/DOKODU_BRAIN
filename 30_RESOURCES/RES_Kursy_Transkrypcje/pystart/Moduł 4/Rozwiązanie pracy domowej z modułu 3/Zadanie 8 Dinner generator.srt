@@ -1,0 +1,443 @@
+1
+00:00:00,000 --> 00:00:05,740
+W zadaniu ósmym chcemy napisać program, który losuje po jednym daniu z każdej z trzech kategorii,
+
+2
+00:00:06,160 --> 00:00:09,480
+na przykład zupa, drugie danie i deser i wyświetla je na ekranie.
+
+3
+00:00:09,900 --> 00:00:13,300
+Kategoria i dania mogą być zdefiniowane jako słownik mamy,
+
+4
+00:00:13,780 --> 00:00:18,839
+w którym każdemu kluczowi, na przykład zupa, odpowiada lista z dostępnymi daniami z tej kategorii.
+
+5
+00:00:18,839 --> 00:00:19,640
+No to lecimy.
+
+6
+00:00:20,379 --> 00:00:23,960
+Najpierw będę chciał przejść sobie pętlą po tych trzech wartościach,
+
+7
+00:00:24,039 --> 00:00:25,920
+co by nie trzeba było ich za każdym razem pisać,
+
+8
+00:00:26,019 --> 00:00:29,339
+bo jak później jeszcze pojawią się jakieś przystawki i inne takie rzeczy,
+
+9
+00:00:29,339 --> 00:00:33,579
+no to będzie trzeba kopiować kod, a lepiej jest po prostu używać pętli for.
+
+10
+00:00:34,859 --> 00:00:39,820
+Czyli for i będę potrzebował zarówno mieć nazwę, jak i dania.
+
+11
+00:00:40,880 --> 00:00:51,980
+Więc mogę sobie nazwać to kategory, przecinek dishes at kategory in dishes.items.
+
+12
+00:00:52,799 --> 00:00:56,379
+I w tym momencie moje kategory to będzie soup, dinner i deser,
+
+13
+00:00:56,379 --> 00:00:59,159
+natomiast dishes at kategory to będą te trzy.
+
+14
+00:00:59,340 --> 00:01:00,220
+I to będzie na przykład dla mnie jedna z tych danych.
+
+15
+00:01:00,220 --> 00:01:00,320
+Czyli to będzie dla mnie jedna z tych danych.
+
+16
+00:01:00,320 --> 00:01:00,780
+I to będzie dla mnie jedna z tych danych.
+
+17
+00:01:00,780 --> 00:01:06,480
+Następnie potrzebuję mieć choice, żeby móc wybrać losową wartość z listy.
+
+18
+00:01:06,480 --> 00:01:10,100
+Czyli w import, from random import choice.
+
+19
+00:01:10,100 --> 00:01:18,140
+I wtedy mogę sobie zapisać, co zapisać?
+
+20
+00:01:18,400 --> 00:01:28,400
+Wybór dania, czyli wybór jednego dania z kategorii, czyli dishes at kategory równa się choice,
+
+21
+00:01:29,340 --> 00:01:30,719
+dishes at kategory.
+
+22
+00:01:31,159 --> 00:01:39,840
+I w ten sposób możemy sobie wypisać print kategory, przecinek dish at kategory.
+
+23
+00:01:40,920 --> 00:01:44,939
+Jeżeli teraz to wywołamy, czyli ósemka dinner generator,
+
+24
+00:01:46,140 --> 00:01:50,100
+to dostaniemy zupa, barszcz, dinner schabowy, deser, ciasto.
+
+25
+00:01:50,359 --> 00:01:54,700
+Strzałka do góry, enter, zupa pomidorowa, dinner gołąbki, deser lody.
+
+26
+00:01:54,700 --> 00:01:57,000
+Ok, czemu to jest zup, dinner, deser?
+
+27
+00:01:57,080 --> 00:01:57,900
+Jak to uprościć?
+
+28
+00:01:58,260 --> 00:01:58,700
+Możemy sobie zrobić takie...
+
+29
+00:01:59,340 --> 00:02:02,100
+dodatkowy słownik, nazwać go translations.
+
+30
+00:02:02,100 --> 00:02:07,400
+Czy translation po prostu.
+
+31
+00:02:07,400 --> 00:02:09,159
+Słownik.
+
+32
+00:02:09,159 --> 00:02:13,000
+Klucze będą te same, ale wartości będą inne.
+
+33
+00:02:13,000 --> 00:02:15,840
+Zupa.
+
+34
+00:02:15,840 --> 00:02:25,719
+To u nas jest, nazywa się to zwyczajnie drugie danie.
+
+35
+00:02:25,719 --> 00:02:25,840
+Ok.
+
+36
+00:02:25,840 --> 00:02:25,860
+Ok.
+
+37
+00:02:25,860 --> 00:02:25,920
+Ok.
+
+38
+00:02:25,920 --> 00:02:25,960
+Ok.
+
+39
+00:02:25,960 --> 00:02:26,000
+Ok.
+
+40
+00:02:26,000 --> 00:02:26,039
+Ok.
+
+41
+00:02:26,039 --> 00:02:26,099
+Ok.
+
+42
+00:02:26,099 --> 00:02:26,159
+Ok.
+
+43
+00:02:26,159 --> 00:02:26,199
+Ok.
+
+44
+00:02:26,199 --> 00:02:26,280
+Ok.
+
+45
+00:02:26,280 --> 00:02:26,319
+Ok.
+
+46
+00:02:26,319 --> 00:02:26,400
+Ok.
+
+47
+00:02:26,400 --> 00:02:26,439
+Ok.
+
+48
+00:02:26,439 --> 00:02:26,480
+Ok.
+
+49
+00:02:26,480 --> 00:02:26,520
+Ok.
+
+50
+00:02:26,520 --> 00:02:26,560
+Ok.
+
+51
+00:02:26,560 --> 00:02:26,620
+Ok.
+
+52
+00:02:26,620 --> 00:02:26,640
+Ok.
+
+53
+00:02:26,640 --> 00:02:26,680
+Ok.
+
+54
+00:02:26,680 --> 00:02:26,719
+Ok.
+
+55
+00:02:26,719 --> 00:02:26,759
+Ok.
+
+56
+00:02:26,759 --> 00:02:26,780
+Ok.
+
+57
+00:02:26,780 --> 00:02:26,800
+Ok.
+
+58
+00:02:26,800 --> 00:02:26,840
+Ok.
+
+59
+00:02:26,840 --> 00:02:26,860
+Ok.
+
+60
+00:02:26,860 --> 00:02:26,879
+Ok.
+
+61
+00:02:26,879 --> 00:02:26,920
+Ok.
+
+62
+00:02:26,920 --> 00:02:26,939
+Ok.
+
+63
+00:02:26,939 --> 00:02:27,000
+Ok.
+
+64
+00:02:27,000 --> 00:02:27,039
+Ok.
+
+65
+00:02:27,039 --> 00:02:27,060
+Ok.
+
+66
+00:02:27,060 --> 00:02:27,099
+Ok.
+
+67
+00:02:27,099 --> 00:02:27,120
+Ok.
+
+68
+00:02:27,120 --> 00:02:27,159
+Ok.
+
+69
+00:02:27,159 --> 00:02:27,199
+Ok.
+
+70
+00:02:27,199 --> 00:02:27,259
+Ok.
+
+71
+00:02:27,259 --> 00:02:27,360
+Ok.
+
+72
+00:02:27,360 --> 00:02:27,439
+Ok.
+
+73
+00:02:27,439 --> 00:02:27,539
+Ok.
+
+74
+00:02:28,079 --> 00:02:28,439
+Ok.
+
+75
+00:02:29,180 --> 00:02:29,199
+Ok.
+
+76
+00:02:29,840 --> 00:02:30,079
+Ok.
+
+77
+00:02:30,079 --> 00:02:30,139
+Ok.
+
+78
+00:02:30,139 --> 00:02:32,039
+Ok.
+
+79
+00:02:32,039 --> 00:02:32,060
+Ok.
+
+80
+00:02:32,060 --> 00:02:32,539
+Ok.
+
+81
+00:02:32,539 --> 00:02:33,039
+Ok.
+
+82
+00:02:33,159 --> 00:02:33,300
+Ok.
+
+83
+00:02:33,300 --> 00:02:33,419
+Ok.
+
+84
+00:02:33,419 --> 00:02:34,079
+Ok.
+
+85
+00:02:39,079 --> 00:02:41,199
+Ok.
+
+86
+00:02:42,199 --> 00:02:44,500
+Jak.
+
+87
+00:02:48,500 --> 00:02:53,039
+lon.
+
+88
+00:02:55,800 --> 00:02:55,900
+Ok.
+
+89
+00:02:55,900 --> 00:02:55,939
+Ok.
+
+90
+00:02:55,939 --> 00:02:58,219
+no to on by mi w tym momencie wyświetlił błąd,
+
+91
+00:02:58,280 --> 00:03:00,300
+indeks, key error, czy też
+
+92
+00:03:00,300 --> 00:03:01,800
+indeks error, jeżeli byłaby to lista.
+
+93
+00:03:02,259 --> 00:03:04,379
+Natomiast tu jest słownik, więc jest key error desert.
+
+94
+00:03:04,859 --> 00:03:06,199
+Jak to zatem uprościć?
+
+95
+00:03:06,659 --> 00:03:08,199
+Oczywiście zamiast korzystać z tego
+
+96
+00:03:08,199 --> 00:03:10,319
+zapisu, skorzystamy sobie z geta.
+
+97
+00:03:10,740 --> 00:03:12,699
+Czyli translation.get
+
+98
+00:03:12,699 --> 00:03:13,659
+od kategory.
+
+99
+00:03:15,939 --> 00:03:18,039
+No i wtedy, jeżeli nie ma
+
+100
+00:03:18,039 --> 00:03:19,979
+takiego klucza, to ma po prostu
+
+101
+00:03:19,979 --> 00:03:22,259
+wyświetlić nazwę w postaci tego klucza.
+
+102
+00:03:22,259 --> 00:03:23,599
+I dzięki temu
+
+103
+00:03:23,599 --> 00:03:25,620
+deser wymieni nam się na desert
+
+104
+00:03:25,620 --> 00:03:28,039
+i będziemy mieli wszystko tak, jakbyśmy mogli się
+
+105
+00:03:28,039 --> 00:03:30,039
+spodziewać, ale oczywiście my wolimy mieć
+
+106
+00:03:30,039 --> 00:03:32,120
+tutaj ładnie to zapisane,
+
+107
+00:03:32,240 --> 00:03:33,419
+więc dodajemy desert
+
+108
+00:03:33,419 --> 00:03:37,699
+i desert.
+
+109
+00:03:38,560 --> 00:03:40,280
+Hops! I wszystko nam pięknie
+
+110
+00:03:40,280 --> 00:03:41,799
+działa. To co?
+
+111
+00:03:42,180 --> 00:03:43,840
+Zapraszam Was do dziewiątki.

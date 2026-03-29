@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:04,280
+No i jak widać dochodzimy do symbolu stop, czyli zadanie.
+
+2
+00:00:04,440 --> 00:00:09,080
+A skoro zadanie, no to Kacper musi zwolnić, ale bardzo chcę Was nauczyć.
+
+3
+00:00:09,200 --> 00:00:11,560
+Nie tylko chcę, żebyśmy ćwiczyli, ale też żebyśmy się uczyli.
+
+4
+00:00:11,900 --> 00:00:16,039
+Więc zaznaczam, że typ zmiennej możesz sprawdzić też za pomocą funkcji type.
+
+5
+00:00:16,160 --> 00:00:25,000
+Na przykład jeżeli stworzysz sobie name równa się Kacper, to możesz później wykonać type, przekazać ten name i zobaczysz jaki będzie to miało wówczas typ.
+
+6
+00:00:25,000 --> 00:00:31,120
+Zobacz tutaj odpaliłem sobie już ten kod wcześniej i mogę sobie wtedy wykonać name równa się Kacper.
+
+7
+00:00:32,179 --> 00:00:35,980
+Jeżeli wykonam type na tym name to pojawi mi się class string.
+
+8
+00:00:36,420 --> 00:00:39,359
+Tym słowem class na razie się nie przejmujemy.
+
+9
+00:00:39,539 --> 00:00:46,060
+Póki co wystarcza nam informacja, że jest to string, czyli w ten sposób wiemy, że typem tej zmiennej jest string.
+
+10
+00:00:46,560 --> 00:00:47,740
+Tak samo byłoby z liczbą.
+
+11
+00:00:48,859 --> 00:00:52,700
+Age równa się 34, type to od age class int.
+
+12
+00:00:52,700 --> 00:00:54,600
+Czyli możemy sobie rozpoznać typ.
+
+13
+00:00:54,600 --> 00:00:56,560
+Jaki ma nasza zmienna.
+
+14
+00:00:57,160 --> 00:00:59,899
+No i tu przechodzimy teraz do edukacji.
+
+15
+00:01:00,020 --> 00:01:02,100
+A w ramach edukacji ćwiczenie.
+
+16
+00:01:02,240 --> 00:01:10,740
+A w ramach ćwiczenia mamy korzystając ze zmiennych oraz interaktywnego środowiska interaktywnej konsoli, czyli tego co właśnie odpaliłem.
+
+17
+00:01:11,240 --> 00:01:20,180
+Spoliczyć jaki jest koszt paliwa na trasie wynoszącej 150 km, jeśli cena benzyny wynosi 6 zł, a samochód pali 6 litrów na 100 km.
+
+18
+00:01:20,819 --> 00:01:21,799
+Użyj zmiennych.
+
+19
+00:01:21,799 --> 00:01:24,520
+Po drugie oblicz pole i obwód koła.
+
+20
+00:01:24,599 --> 00:01:26,599
+W tym przypadku mamy w tym przypadku promieniu 8.
+
+21
+00:01:26,599 --> 00:01:28,599
+Dla ułatwienia przyjmij, że pi ma wartość 3,14.
+
+22
+00:01:28,599 --> 00:01:34,599
+No i pod punkt 3 sprawdź co zwróci type od zmienna.
+
+23
+00:01:34,599 --> 00:01:38,599
+Jeśli wartość tej zmiennej to będzie 3,14 z przecinkiem zamiast z kropką.
+
+24
+00:01:38,599 --> 00:01:40,599
+No to co?
+
+25
+00:01:40,599 --> 00:01:42,599
+3 minuty dla Was i widzimy się za chwilę w rozwiązaniu.
+
+26
+00:01:42,599 --> 00:01:44,599
+Do zobaczenia.

@@ -1,0 +1,375 @@
+1
+00:00:00,000 --> 00:00:07,040
+Zanim przejdziemy jednak dalej, warto byłoby sobie powiedzieć jeszcze kilka słów o tym, co jeszcze możemy z tymi tuplami zrobić.
+
+2
+00:00:07,040 --> 00:00:12,099
+I tutaj można na przykład tuple pomnożyć przez liczbę.
+
+3
+00:00:12,400 --> 00:00:21,219
+Zobacz, jeżeli sobie stworzymy taką tuplę 1, 2, 3, a następnie przemnożymy ją razy liczbę, to okaże się, że on nam te tuple powtórzy trzy razy.
+
+4
+00:00:21,480 --> 00:00:23,559
+I mamy raz, dwa, trzy, raz, dwa, trzy, raz, dwa, trzy.
+
+5
+00:00:24,900 --> 00:00:26,420
+To taki walczyk nam wyszedł, co?
+
+6
+00:00:26,879 --> 00:00:27,359
+Idziemy dalej.
+
+7
+00:00:27,359 --> 00:00:33,219
+W drugim przypadku mamy tuple A składającą się z trzech wartości, 1, 2, 3.
+
+8
+00:00:33,619 --> 00:00:36,619
+Tuple B składającą się też z trzech wartości, 4, 5, 6.
+
+9
+00:00:37,179 --> 00:00:41,719
+Mimo tego, że tupli nie możemy modyfikować, to możemy tuple do siebie dodawać.
+
+10
+00:00:42,100 --> 00:00:47,439
+I w tym momencie, kiedy wykonam A plus równa się B, to on mi tak naprawdę wykonuje taką operację.
+
+11
+00:00:47,780 --> 00:00:50,379
+A równa się A plus B.
+
+12
+00:00:50,379 --> 00:00:57,340
+Czyli tak naprawdę ja do tupli, która była pod zmienną A, przypisałem nową tuplę, która jest wynikiem dodawania.
+
+13
+00:00:57,359 --> 00:01:00,920
+I to jest jak najbardziej możliwe.
+
+14
+00:01:01,280 --> 00:01:10,060
+Tylko tu trzeba rozróżnić, że to tak naprawdę nie jest rozszerzenie tupli A, tylko stworzenie nowej tupli, dodającej te dwie nowe.
+
+15
+00:01:10,319 --> 00:01:11,519
+To trochę tak jest z firmami.
+
+16
+00:01:11,680 --> 00:01:17,900
+Czasem jest tak, że firma przejmuje drugą firmę i wtedy ta firma jakby zwiększa się o zasoby tej drugiej.
+
+17
+00:01:18,359 --> 00:01:25,799
+A czasem jest tak, że firmy dwie robią jakieś konsorcjum i w ramach tego idą dalej i się nazywają jedną wspólną nazwą.
+
+18
+00:01:26,579 --> 00:01:27,340
+Może coś powiem.
+
+19
+00:01:27,359 --> 00:01:29,400
+Okręciłem, ale generalnie o to mi chodzi.
+
+20
+00:01:29,819 --> 00:01:37,599
+To, co zrobiliśmy sobie tutaj w tej linijce, to nie jest wyrażenie, które polega na tym, że my zwiększamy tuple A o nowe elementy,
+
+21
+00:01:37,659 --> 00:01:40,640
+bo to by przeczyło temu, co mówiłem o niemutowalności.
+
+22
+00:01:41,280 --> 00:01:49,579
+Tutaj tworzymy nową tuplę, przypisaną co prawda do tej samej nazwy zmiennej, tylko do tej tupli przypisujemy sobie sumę dwóch wartości.
+
+23
+00:01:51,400 --> 00:01:55,120
+Z tuplą możemy zrobić jeszcze tak zwane wypakowywanie.
+
+24
+00:01:55,120 --> 00:01:57,319
+To wypakowywanie jest niezwykle przydatne.
+
+25
+00:01:57,359 --> 00:02:00,859
+I zobaczysz w przyszłości, że będziemy bardzo często z niego korzystać.
+
+26
+00:02:00,859 --> 00:02:05,359
+I w tym wypakowywaniu mamy taką sytuację, że jest sobie jakaś tupla.
+
+27
+00:02:05,359 --> 00:02:06,760
+Spójrz najpierw na prawo.
+
+28
+00:02:06,760 --> 00:02:08,759
+Składa się z trzech elementów.
+
+29
+00:02:08,759 --> 00:02:11,280
+I mamy tutaj Cyprian Kamil Norwid.
+
+30
+00:02:11,280 --> 00:02:15,960
+Tak się składa, że chcielibyśmy nie pobierać drugiego imienia Pana Norwida.
+
+31
+00:02:15,960 --> 00:02:25,280
+W tym celu przekazujemy po lewej stronie first name, przecinek, znak podkreślenia, przecinek last name, równa się Cyprian Kamil Norwid.
+
+32
+00:02:25,280 --> 00:02:27,280
+To spowoduje, że zmienna się.
+
+33
+00:02:27,280 --> 00:02:30,280
+Zmienna Cyprian znajdzie się pod first name.
+
+34
+00:02:30,280 --> 00:02:32,280
+Zmienna Kamil znajdzie się pod podkreśleniem.
+
+35
+00:02:32,280 --> 00:02:36,280
+A zmienna Norwid, wartość Norwid znajdzie się pod last name.
+
+36
+00:02:36,280 --> 00:02:41,280
+I w ten sposób, kiedy wyświetlam first name pojawił się Cyprian, last name Norwid, podkreślenie Kamil.
+
+37
+00:02:41,280 --> 00:02:49,280
+Tutaj bardzo ważne jest to, żebyś pilnował tego, żeby ilość elementów po lewej stronie była taka sama jak ilość elementów po prawej.
+
+38
+00:02:49,280 --> 00:02:56,280
+Jeżeli te dwie ilości nie będą się zgadzać, to pojawi się błąd mówiący o tym, że nie da się tego wypakować, bo ta ilość się nie zgadza. Po prostu.
+
+39
+00:02:57,280 --> 00:03:00,280
+I druga rzecz, co to za to podkreślenie? Skąd to się w ogóle wzięło?
+
+40
+00:03:00,280 --> 00:03:02,280
+W Python jest językiem konwencji.
+
+41
+00:03:02,280 --> 00:03:09,280
+Czyli w momencie, w którym programujesz w Pythonie, godzisz się w pewien sposób na to, że pewne rzeczy będą umowne.
+
+42
+00:03:09,280 --> 00:03:15,280
+I to podkreślenie to znaczy, że my nie będziemy w przyszłości potrzebowali tej zmiennej.
+
+43
+00:03:15,280 --> 00:03:22,280
+Tu chodzi o to, że jeżeli tworzysz sobie jakąś zmienną, to później powinieneś jej używać.
+
+44
+00:03:22,280 --> 00:03:26,280
+Jeżeli stworzysz sobie zmienną first name w PyCharmie i nie będziesz jej nigdzie używał,
+
+45
+00:03:26,280 --> 00:03:27,280
+to później powinieneś jej używać. Jeżeli stworzysz sobie zmienną first name w PyCharmie i nie będziesz jej nigdzie używał, to później powinieneś jej używać.
+
+46
+00:03:27,280 --> 00:03:28,280
+Jeżeli stworzysz sobie zmienną first name w PyCharmie i nie będziesz jej używał, to później powinieneś jej używać.
+
+47
+00:03:28,280 --> 00:03:29,280
+Jeżeli stworzysz sobie zmienną looka, to creepingadı się na to, żeby R collections zaznaczył cię na szaro i powie,
+
+48
+00:03:29,280 --> 00:03:30,280
+Jeżeli stworzysz sobie zmienną looka, to continuingatri mi się zaznaczył na szaro i powie,
+
+49
+00:03:30,280 --> 00:03:32,280
+to jest nieużywana zmienna, po co ci ona, nie używana zmienna i tyle.
+
+50
+00:03:32,280 --> 00:03:34,280
+to jest nieużywana zmienna, po co ci ona, nie używana zmienna i tyle.
+
+51
+00:03:34,280 --> 00:03:35,280
+Natomiast jak Ty może musiesz odebrać jakby podkreślenie hurtotyła discover,
+
+52
+00:03:35,280 --> 00:03:40,280
+Natomiast jak Ty może może zobaczysz, że musisz odebrać jakby ten środkową część,
+
+53
+00:03:40,280 --> 00:03:42,520
+tylko dlatego, żeby pobrać pierwszą i ostatnią,
+
+54
+00:03:43,000 --> 00:03:44,860
+no to wtedy używamy znaku podkreślenia
+
+55
+00:03:44,860 --> 00:03:47,879
+i ten znak podkreślenia dla PyCharma też i dla PyTona
+
+56
+00:03:47,879 --> 00:03:50,879
+będzie takim sygnałem, a okej, on tego nie będzie potrzebował nigdy.
+
+57
+00:03:51,240 --> 00:03:54,039
+To tylko jest po to, żeby tam coś się mogło wpakować.
+
+58
+00:03:54,379 --> 00:03:57,400
+Takie sytuacje czasem się zdarzają i właśnie to podkreślenie
+
+59
+00:03:57,400 --> 00:04:00,840
+do tego służy. Jeżeli chciałbym ominąć więcej przykładów,
+
+60
+00:04:00,939 --> 00:04:03,920
+to mogę spokojnie to podkreślenie stosować kilkukrotnie.
+
+61
+00:04:03,920 --> 00:04:06,599
+Po prostu ono jest takim śmietnikiem na wszystko to,
+
+62
+00:04:06,699 --> 00:04:09,920
+czego nie potrzebuję. To jest ważna informacja.
+
+63
+00:04:10,439 --> 00:04:12,560
+I tak to właśnie jest też z wypakowywaniem tupli.
+
+64
+00:04:13,039 --> 00:04:16,279
+Bardzo często przydatna sprawa. Na chwilę obecną nie będzie nam przydatna,
+
+65
+00:04:16,379 --> 00:04:18,040
+ale warto wiedzieć, że tak można.
+
+66
+00:04:18,779 --> 00:04:21,720
+I tutaj, jeżeli chodzi o tuple i ogólnie o kolekcję,
+
+67
+00:04:21,879 --> 00:04:24,079
+czyli w momencie, w którym mamy czegoś więcej,
+
+68
+00:04:24,600 --> 00:04:27,199
+to wypadałoby też mieć jakiś operator sprawdzający,
+
+69
+00:04:27,300 --> 00:04:29,100
+czy coś się znajduje w tej tupli.
+
+70
+00:04:29,100 --> 00:04:32,319
+Na przykład mam te owoce i chcę zobaczyć,
+
+71
+00:04:32,399 --> 00:04:34,639
+czy tam jest mango, czy tam jest kiwi,
+
+72
+00:04:34,759 --> 00:04:37,459
+czy tam jest jakiś inny owoc. I mogę to zrobić
+
+73
+00:04:37,459 --> 00:04:39,660
+za pomocą nowego operatora, nowej takiej,
+
+74
+00:04:39,660 --> 00:04:42,260
+nowego wyrażenia, które nazywa się in.
+
+75
+00:04:42,720 --> 00:04:45,640
+I zobacz, jeżeli sobie stworzysz takie coś jak animals,
+
+76
+00:04:45,760 --> 00:04:49,300
+taką tuplę i przypiszesz do niej frog, pig oraz cow
+
+77
+00:04:49,300 --> 00:04:52,020
+i następnie chcesz sprawdzić, czy mamy tutaj świnkę,
+
+78
+00:04:52,140 --> 00:04:54,940
+no to możesz zrobić ping in animals.
+
+79
+00:04:54,940 --> 00:04:58,180
+I wtedy dostaniesz informację true, czyli świnka faktycznie
+
+80
+00:04:58,180 --> 00:05:01,560
+w naszej tupli się znajduje. Natomiast jeżeli chcesz
+
+81
+00:05:01,560 --> 00:05:04,120
+sprawdzić, czy jest python,
+
+82
+00:05:04,580 --> 00:05:07,160
+no to frog, pig i cow to nie jest python,
+
+83
+00:05:07,720 --> 00:05:09,640
+więc dostaniesz informację false.
+
+84
+00:05:09,660 --> 00:05:13,520
+To się niezwykle często przydaje, chociażby wtedy,
+
+85
+00:05:13,680 --> 00:05:16,060
+kiedy masz ifa i chcesz zadziałać w zależności od tego,
+
+86
+00:05:16,180 --> 00:05:20,640
+czy element jest w tupli, w kolekcji, czy go też w kolekcji nie ma.
+
+87
+00:05:21,040 --> 00:05:23,020
+Tutaj rozszerzyłem trochę to pojęcie.
+
+88
+00:05:23,140 --> 00:05:24,780
+Mówiliśmy sobie o tuplach.
+
+89
+00:05:25,040 --> 00:05:27,760
+Przeszedłem trochę wyżej na kolekcję, bo ten operator
+
+90
+00:05:27,760 --> 00:05:30,660
+jest dużo częściej spotykany. Nie będę w innych też przypadkach,
+
+91
+00:05:31,540 --> 00:05:33,000
+czyli do list też możesz go używać.
+
+92
+00:05:33,440 --> 00:05:36,780
+Na razie o listach nie, ale nie chcę ci powtarzać o nim wielokrotnie.
+
+93
+00:05:36,780 --> 00:05:39,640
+Po prostu ci mówię, że in sprawdza, czy element znajduje się w tupli,
+
+94
+00:05:39,639 --> 00:05:42,659
+czy znajduje się w kolekcji. W tym przypadku aplikujemy to do tupli.

@@ -1,0 +1,35 @@
+1
+00:00:00,000 --> 00:00:05,379
+A w zadaniu trzecim mamy te nasze osoby i chcielibyśmy dowiedzieć się, kto zostaje w szkole.
+
+2
+00:00:05,379 --> 00:00:15,500
+No to też nie jest to zbyt skomplikowane, wystarczy, że od students odejmiemy sobie going on trip i wyjdzie nam wtedy, kto zostaje w szkole.
+
+3
+00:00:15,640 --> 00:00:21,800
+Tylko musimy uruchomić trójeczkę i dowiemy się, że Piotr Kowalczyk i Agnieszka Kaczmarek zostają w szkole.
+
+4
+00:00:21,900 --> 00:00:29,879
+Sprawdzamy, kto jedzie. Piotr Kowalczyk faktycznie jest ok, Katarzyna Mazur jedzie na wycieczkę, czyli kto zostaje właściwie.
+
+5
+00:00:30,199 --> 00:00:40,259
+Piotr nam został, jest ok, no i Katarzyna wychodzi na to, że tu została wymieniona, Tomasz został wymieniony, Agnieszka też zostaje w szkole.
+
+6
+00:00:40,780 --> 00:00:51,500
+No i w ten sposób udało nam się zrobić też zadanie trzecie. Jak widać przy zbiorach nie trzeba w ogóle kombinować, wystarczy, że wykonujemy operację i wszystko nam pięknie w ten sposób działa.
+
+7
+00:00:52,060 --> 00:00:59,980
+Mówiąc szczerze, jak spojrzałem na zadanie za pierwszym razem, jak je robiłem, to pomyślałem sobie, że chyba będę musiał połączyć te wydarzenia.
+
+8
+00:01:00,000 --> 00:01:17,260
+Nie pomyślałem, że zbiory tak ładnie działają na tuplach, a działają. Zobaczyłem to zadanie już od paru lat programując w Pythonie i nie sprawdziłem tego nigdy wcześniej, natomiast jeżeli Tobie miałoby się to kiedykolwiek przydać, to warto tą wiedzę mieć, bo później jak już zobaczyłem, stwierdziłem, o, mogę tego używać częściej i używam.
+
+9
+00:01:17,799 --> 00:01:19,180
+To co? Idziemy dalej.

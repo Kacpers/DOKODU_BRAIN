@@ -1,0 +1,103 @@
+1
+00:00:00,000 --> 00:00:08,279
+To skoro sobie to pokazaliśmy, to teraz wypadałoby to jeszcze przećwiczyć, czyli wyjątki i obsługa błędów w ćwiczeniu.
+
+2
+00:00:08,279 --> 00:00:16,379
+Jest taka strona, nazywa się restcountries.com i tam w tej stronie możecie wyszukiwać różne informacje o krajach.
+
+3
+00:00:16,859 --> 00:00:20,300
+Między innymi dla każdego kraju można pobrać jego stolicę.
+
+4
+00:00:20,760 --> 00:00:28,620
+I chcemy stworzyć na podstawie tego API taką aplikację, która zapyta użytkownika o nazwę państwa, a następnie na podstawie odpowiedzi wyświetli stolicę.
+
+5
+00:00:28,620 --> 00:00:37,560
+Pamiętaj obsłużyć takie sytuacje, gdy użytkownik wprowadzi nazwę państwa, którego nie ma w bazie lub skrypt nie będzie miał dostępu do internetu.
+
+6
+00:00:37,939 --> 00:00:46,040
+To można łatwo przetestować, chociażby w ten sposób, że podamy adres, który nie istnieje lub możecie na chwilę wyjąć sobie wtyczkę, czy się odłączyć od sieci i zobaczyć, co się wtedy stanie.
+
+7
+00:00:46,620 --> 00:00:54,640
+Takie sytuacje w programach też powinniśmy przewidzieć, bo jeżeli program się na przykład skreszuje, bo w danym momencie nie mógł wykonać zapytania,
+
+8
+00:00:54,640 --> 00:00:58,040
+skreszuje, czy wyświetli ten komunikat, wróci do konsoli, przestanie działać.
+
+9
+00:00:58,039 --> 00:01:02,719
+No to my nie chcielibyśmy, żeby on się zatrzymywał, tylko żeby on działał.
+
+10
+00:01:03,039 --> 00:01:04,819
+Tu pozwolę sobie na taką małą dygresję.
+
+11
+00:01:05,319 --> 00:01:10,760
+Jak wiecie, ja piszę dużo takich programów automatyzujących i te programy tak naprawdę cały czas chodzą na serwerach.
+
+12
+00:01:11,219 --> 00:01:25,039
+Jeżeli ja, mając tych programów 50, nie dostałbym maila, że któryś z nich się wyłączył, to musiałbym co godzinę tak naprawdę wchodzić na każdą z tych usług i sprawdzać, czy ten program się nie zakończył.
+
+13
+00:01:25,039 --> 00:01:27,599
+Tak naprawdę, jeżeli program nie chodzi przez dzień.
+
+14
+00:01:28,040 --> 00:01:39,280
+Jeżeli program nie chodzi przez dwa dni, to są dwa dni stracone, bo i tak ilość zapytań, które on robi, jest wyśrubowana do takich liczb, których po prostu nie da się już przespieszyć.
+
+15
+00:01:39,280 --> 00:01:55,540
+Czyli załóżmy, jeżeli mielibyście do przeczytania przez całe swoje życie tysiąc książek, dobra, może więcej niż tysiąc, i nagle by się okazało, że gdzieś się zatrzymujecie i nie czytacie, to wy musicie wiedzieć, że nie czytacie, żeby czytać dalej.
+
+16
+00:01:55,540 --> 00:01:58,020
+Bo wiecie, że czasu życia macie tyle, że nie czytacie.
+
+17
+00:01:58,040 --> 00:02:00,780
+I to jest dokładnie tak samo.
+
+18
+00:02:01,360 --> 00:02:21,319
+Więc w takich sytuacjach, jak nie ma internetu, może się wydawać, ha, no nie ma internetu, ale ja muszę też pisać takie programy, które będą to przewidywać, że na przykład, jeżeli na moment coś się właśnie wyłączy w jakiejś serwerowni, czy coś się odepnie, to ja jak tylko to się przypnie, dostanę maila z informacją, Kacper, restartuj, Kacper, zwróć uwagę.
+
+19
+00:02:21,500 --> 00:02:24,960
+Albo po prostu program stwierdzi, okej, nie mam internetu, nie ma sprawy, zaczekam.
+
+20
+00:02:24,960 --> 00:02:27,960
+Więc na takie sytuacje musimy być przygotowani.
+
+21
+00:02:28,039 --> 00:02:35,259
+I warto zastanowić się też nad tym, co powinno się stać, gdy użytkownik zada pytanie drugi raz o to samo państwo.
+
+22
+00:02:35,699 --> 00:02:40,859
+Tu trzeba pamiętać o tym, że większość takich usług restowych ma jakieś ograniczenia, nie możemy ich pytać w nieskończoność.
+
+23
+00:02:41,239 --> 00:02:57,139
+Więc może warto byłoby to gdzieś zapisać w jakiejś pamięci podręcznej, może w pliku, może, no nie chcę uprzedzać, macie parę rozwiązań, to zadanie specjalnie jest tak ogólnie napisane, żeby dać wam możliwość tutaj poimprowizowania i zastanowienia się, jak je rozwiązać.
+
+24
+00:02:57,139 --> 00:02:59,219
+Tak bez mówienia wprost.
+
+25
+00:02:59,619 --> 00:03:01,639
+I bez wprost podanego endpointa.
+
+26
+00:03:01,919 --> 00:03:03,219
+To co? Do roboty!

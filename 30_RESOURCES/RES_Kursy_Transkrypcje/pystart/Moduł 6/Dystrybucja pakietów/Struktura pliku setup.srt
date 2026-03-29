@@ -1,0 +1,343 @@
+1
+00:00:00,000 --> 00:00:03,940
+I teraz sam plik setup.py musi się znaleźć w takim miejscu.
+
+2
+00:00:04,020 --> 00:00:05,000
+To miejsce jest bardzo ważne.
+
+3
+00:00:05,120 --> 00:00:09,380
+Zwróć uwagę na to, że u mnie akurat jest moduł szósty jako tam folder,
+
+4
+00:00:09,700 --> 00:00:11,400
+czemu to jest pakiet, to powinien być zwykły folder.
+
+5
+00:00:11,599 --> 00:00:12,439
+Usuwam ten init.
+
+6
+00:00:12,960 --> 00:00:14,740
+Następnie mam PyStart jako pakiet
+
+7
+00:00:14,740 --> 00:00:18,580
+i później w ramach PyStartu mam te różne rzeczy.
+
+8
+00:00:18,879 --> 00:00:22,080
+Tu są już też rzeczy związane z dalszym naszym jakby kursem.
+
+9
+00:00:22,080 --> 00:00:24,320
+Dowiesz się o tym w przyszłości, na razie się tym nie przejmujemy.
+
+10
+00:00:24,980 --> 00:00:29,240
+I to co znajduje się w katalogu PyStart, zobacz, to jest plik setup.py.
+
+11
+00:00:29,239 --> 00:00:33,960
+I teraz jeżeli będę miał ten setup.py ułożony w ten sposób,
+
+12
+00:00:34,119 --> 00:00:35,920
+to kiedy będę instalował paczki,
+
+13
+00:00:36,320 --> 00:00:39,560
+ja będę instalował paczki calculations oraz utils.
+
+14
+00:00:39,799 --> 00:00:42,759
+Nie będzie mi się instalowała paczka tests, jeżeli bym taką paczkę miał.
+
+15
+00:00:43,280 --> 00:00:46,200
+Natomiast jeżeli chcielibyście, żeby w waszym węwie,
+
+16
+00:00:46,299 --> 00:00:49,879
+w tym ms-węwie pokazała się paczka o nazwie PyStart,
+
+17
+00:00:49,879 --> 00:00:54,920
+to trzeba byłoby ten wewnątrz PyStartu stworzyć jeszcze jeden pakiet o nazwie PyStart
+
+18
+00:00:54,920 --> 00:00:56,879
+i do niego dopiero włożyć wszystko do środka.
+
+19
+00:00:57,799 --> 00:00:58,179
+Okej.
+
+20
+00:00:58,700 --> 00:00:59,200
+Druga rzecz.
+
+21
+00:00:59,240 --> 00:01:01,200
+Którą możecie zauważyć, to jest setup.
+
+22
+00:01:01,560 --> 00:01:02,359
+Co jest funkcja?
+
+23
+00:01:02,780 --> 00:01:06,200
+Funkcja setup pochodzi z biblioteki setup tools,
+
+24
+00:01:06,460 --> 00:01:08,019
+która z kolei pochodzi z Pythona.
+
+25
+00:01:08,120 --> 00:01:09,320
+Ona jest wbudowana w Pythona.
+
+26
+00:01:09,900 --> 00:01:14,480
+I ta pierwsza linijka brzmi from setup tools import setup przecinek find packages.
+
+27
+00:01:15,100 --> 00:01:18,000
+I to oznacza, że my będziemy mogli skorzystać z funkcji,
+
+28
+00:01:18,000 --> 00:01:21,879
+która nazywa się setup oraz drugiej funkcji, która nazywa się find packages.
+
+29
+00:01:22,260 --> 00:01:23,460
+Co robi funkcja setup?
+
+30
+00:01:23,780 --> 00:01:26,300
+Funkcja setup opisuje naszą bibliotekę.
+
+31
+00:01:26,460 --> 00:01:29,000
+Na podstawie tego opisu będzie przygotowany później ten plik,
+
+32
+00:01:29,239 --> 00:01:31,239
+ta paczka, o której sobie mówiliśmy.
+
+33
+00:01:32,140 --> 00:01:36,379
+I teraz ja wykonuję funkcję setup i przekazuję do niej takie rzeczy jak name,
+
+34
+00:01:36,560 --> 00:01:41,299
+version, description, long description, autor, autor email, URL i packages.
+
+35
+00:01:42,319 --> 00:01:45,359
+Nie wszystkie są wymagane, ale warto je podać.
+
+36
+00:01:45,879 --> 00:01:47,640
+Name to jest nazwa naszej paczki.
+
+37
+00:01:47,859 --> 00:01:52,199
+Na podstawie tego name'a później zostanie zbudowana ta paczka z rozszerzeniem tar.gz.
+
+38
+00:01:52,899 --> 00:01:56,399
+Version to jest wersja, jaką nasza paczka będzie miała.
+
+39
+00:01:56,399 --> 00:01:59,159
+I tutaj jeżeli chodzi o wersjonowanie naszej paczki, tak się przyjęło,
+
+40
+00:01:59,239 --> 00:02:01,339
+że wersjonujemy zawsze 001.
+
+41
+00:02:01,819 --> 00:02:04,679
+Ostatnia cyfra to są zmiany, poprawki błędów.
+
+42
+00:02:05,039 --> 00:02:07,259
+Środkowa cyfra to są nowe funkcjonalności.
+
+43
+00:02:07,780 --> 00:02:12,479
+Pierwsza cyfra z kolei to są nowe, może nie nowe funkcjonalności,
+
+44
+00:02:12,659 --> 00:02:16,299
+co zupełnie startujemy od zera z kodem.
+
+45
+00:02:16,740 --> 00:02:18,740
+Czyli w momencie, w którym będziecie poprawiali błędy,
+
+46
+00:02:18,859 --> 00:02:21,099
+będziecie tylko i wyłącznie poprawiali ostatnią cyfrę.
+
+47
+00:02:21,240 --> 00:02:23,180
+Na przykład 001, 002 i tak dalej.
+
+48
+00:02:23,359 --> 00:02:27,639
+Jeżeli będziecie wprowadzali nowe funkcjonalności, nowe wydania będziecie robili,
+
+49
+00:02:27,740 --> 00:02:29,180
+to wtedy iterujemy tę osiągnięcie.
+
+50
+00:02:29,240 --> 00:02:33,240
+Zatem mamy środkową cyfrą, czyli 010, 011 i tak dalej.
+
+51
+00:02:33,740 --> 00:02:36,240
+Natomiast w momencie, w którym zaczniecie od zera,
+
+52
+00:02:36,240 --> 00:02:39,240
+stwierdzicie, że już mam funkcjonalności, wiem jak to działa,
+
+53
+00:02:39,240 --> 00:02:44,240
+ale ta biblioteka to była taka na próbę, teraz zaczynam od nowa,
+
+54
+00:02:44,240 --> 00:02:46,240
+no to wtedy zaczynamy od jedynki.
+
+55
+00:02:46,240 --> 00:02:51,240
+I w ten sposób programista będzie wiedział, że raz, jeżeli są jakieś błędy,
+
+56
+00:02:51,240 --> 00:02:55,240
+czy jakieś informacje, czego te błędy dotyczą, jakich wersji te błędy dotyczą,
+
+57
+00:02:55,240 --> 00:02:58,860
+a dwa, będzie też wiedział, że jeżeli zmienia się pierwsza cyfra,
+
+58
+00:02:58,860 --> 00:03:01,860
+no to tak naprawdę wszystko zaczyna się od nowa.
+
+59
+00:03:01,860 --> 00:03:05,860
+Trzeba w kod, w którym wykorzystujemy tę bibliotekę, napisać od nowa.
+
+60
+00:03:05,860 --> 00:03:08,860
+Zwróć uwagę na to, że z Pythonem też tak ta sprawa wygląda,
+
+61
+00:03:08,860 --> 00:03:11,860
+że była sobie dwójka, potem pojawiła się trójka,
+
+62
+00:03:11,860 --> 00:03:14,860
+no i między dwójką a trójką jest przepaść, jeżeli chodzi o działanie,
+
+63
+00:03:14,860 --> 00:03:18,860
+i te biblioteki nie są, uwaga, trudne słowo, kompatybilne wstecznie.
+
+64
+00:03:18,860 --> 00:03:21,860
+Te języki, można powiedzieć.
+
+65
+00:03:21,860 --> 00:03:24,860
+Czyli w momencie, w którym piszemy coś w Pythonie trzecim,
+
+66
+00:03:24,860 --> 00:03:26,860
+no to nie będzie to wykonywane w Pythonie drugim,
+
+67
+00:03:26,860 --> 00:03:28,860
+i z drugiego tak samo w trzecim.
+
+68
+00:03:28,860 --> 00:03:31,860
+Niżej mamy description, long description,
+
+69
+00:03:31,860 --> 00:03:35,860
+tu chodzi o to, że później, kiedy tworzy nam się taki opis tej paczki,
+
+70
+00:03:35,860 --> 00:03:39,860
+to on jest umiejscowiany na pypi.org,
+
+71
+00:03:39,860 --> 00:03:43,860
+i też na podstawie tych opisów właśnie warto przygotować je odpowiednio,
+
+72
+00:03:43,860 --> 00:03:47,860
+jeżeli chcemy tę paczkę wykorzystać i później umieścić ją gdzieś w repozytorium.
+
+73
+00:03:47,860 --> 00:03:51,860
+Autor myślę, że wiadomo, URL też wiadomo, i to packages.
+
+74
+00:03:51,860 --> 00:03:54,860
+Nasza biblioteka będzie posiadała wiele różnych paczek,
+
+75
+00:03:54,860 --> 00:03:58,860
+ale nie za każdym razem chcemy każdą z tych paczek wymieniać,
+
+76
+00:03:58,860 --> 00:04:00,860
+po kolei, z jakich ona się składa.
+
+77
+00:04:00,860 --> 00:04:03,860
+Więc można skorzystać z czegoś, co się nazywa find packages,
+
+78
+00:04:03,860 --> 00:04:06,860
+to jest funkcja, która po prostu w ramach tego miejsca,
+
+79
+00:04:06,860 --> 00:04:08,860
+w którym znajduje się nasz plik setup,
+
+80
+00:04:08,860 --> 00:04:11,860
+będzie poszukiwać wszystkich paczek.
+
+81
+00:04:11,860 --> 00:04:15,860
+Jeżeli znajdzie paczkę, która nazywa się tests, to ją pominie,
+
+82
+00:04:15,860 --> 00:04:19,860
+a z całej reszty zbuduje taką ładną listę,
+
+83
+00:04:19,860 --> 00:04:23,860
+i dzięki temu nie będzie trzeba tych bibliotek wymieniać,
+
+84
+00:04:23,860 --> 00:04:25,860
+po prostu stworzy nam się paczka.
+
+85
+00:04:25,860 --> 00:04:27,860
+Natomiast jak taką paczkę stworzyć,
+
+86
+00:04:27,860 --> 00:04:29,860
+to już powiemy sobie w kolejnym filmie.

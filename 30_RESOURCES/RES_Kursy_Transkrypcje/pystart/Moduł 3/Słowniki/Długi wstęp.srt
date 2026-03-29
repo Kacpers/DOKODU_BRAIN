@@ -1,0 +1,1171 @@
+1
+00:00:00,260 --> 00:00:04,080
+I przyszedł czas na to, żeby pouczyć się kolejnego typu,
+
+2
+00:00:04,219 --> 00:00:06,560
+którym w tym przypadku naszym będzie słownik.
+
+3
+00:00:07,160 --> 00:00:08,060
+Czym jest słownik?
+
+4
+00:00:08,519 --> 00:00:11,220
+Do tej pory pracowaliśmy z tuplami i z listami.
+
+5
+00:00:11,640 --> 00:00:15,080
+Obie te kolekcje charakteryzowały się tym,
+
+6
+00:00:15,200 --> 00:00:17,320
+że indeksowane były poprzez liczbę.
+
+7
+00:00:17,800 --> 00:00:21,480
+Natomiast jak sobie wyobrazisz takiego Jana Kowalskiego,
+
+8
+00:00:21,719 --> 00:00:25,080
+który ma jakiś wiek, płeć i jeszcze szereg innych rzeczy,
+
+9
+00:00:25,620 --> 00:00:29,580
+to niezwykle trudno będzie ci dojść do konkretnej właściwości tej osoby,
+
+10
+00:00:29,579 --> 00:00:33,460
+nie pamiętając, w której kolejności te właściwości podaliśmy sobie.
+
+11
+00:00:33,899 --> 00:00:37,000
+Bo na przykład, jeżeli ktoś zapyta, a jakim samochodem jeździ Jan,
+
+12
+00:00:37,100 --> 00:00:38,640
+albo jakie języki zna Jan,
+
+13
+00:00:39,099 --> 00:00:40,259
+to trzeba będzie się zastanowić,
+
+14
+00:00:40,420 --> 00:00:44,719
+którą z kolei wartością były te kolumny.
+
+15
+00:00:45,320 --> 00:00:46,519
+No i jest to dosyć kłopotliwe.
+
+16
+00:00:47,039 --> 00:00:49,320
+Dlatego też pomyśl, o ile wygodniej byłoby,
+
+17
+00:00:49,420 --> 00:00:51,079
+gdybyśmy mogli stworzyć sobie coś takiego,
+
+18
+00:00:51,200 --> 00:00:53,420
+gdzie byłby ten Jan i mielibyśmy informację,
+
+19
+00:00:53,519 --> 00:00:56,560
+że zamiast zerowego elementu mielibyśmy imię.
+
+20
+00:00:56,560 --> 00:00:58,840
+Zamiast piętnastego mielibyśmy wykształcenia.
+
+21
+00:00:58,840 --> 00:01:00,860
+Zamiast dwudziestego czwartego mielibyśmy języki.
+
+22
+00:01:01,360 --> 00:01:03,460
+I wtedy, jak ktoś by powiedział, jakie języki zna Jan,
+
+23
+00:01:03,540 --> 00:01:06,280
+to można byłoby zrobić Jan języki
+
+24
+00:01:06,280 --> 00:01:08,280
+i wyświetliłyby się konkretne wartości.
+
+25
+00:01:08,900 --> 00:01:12,460
+To oczywiście sprawia, że ta kolejność tych wartości
+
+26
+00:01:12,460 --> 00:01:13,600
+traci na znaczeniu.
+
+27
+00:01:13,820 --> 00:01:15,359
+Ona przestaje mieć znaczenie.
+
+28
+00:01:15,719 --> 00:01:18,000
+Ponieważ nas tak naprawdę interesują kolumny,
+
+29
+00:01:18,939 --> 00:01:20,840
+a nie kolejność.
+
+30
+00:01:20,980 --> 00:01:22,060
+My po prostu chcemy wiedzieć,
+
+31
+00:01:22,600 --> 00:01:27,439
+jaka jest wartość dla konkretnego klucza.
+
+32
+00:01:27,439 --> 00:01:28,640
+Bo to jest bardzo ważne.
+
+33
+00:01:28,840 --> 00:01:31,840
+W przypadku słowników my już nie mówimy o indeksach,
+
+34
+00:01:31,840 --> 00:01:33,340
+tylko mówimy o kluczach.
+
+35
+00:01:33,340 --> 00:01:38,340
+Czyli dany element, dana wartość znajduje się na konkretnym kluczu.
+
+36
+00:01:38,340 --> 00:01:40,840
+I zobacz, jeżeli chodzi o deklaracje,
+
+37
+00:01:40,840 --> 00:01:44,840
+to używamy albo nawiasów klamrowych, albo używamy dikta.
+
+38
+00:01:44,840 --> 00:01:48,840
+Nawiasy klamrowe, czyli mieliśmy na razie nawiasy okrągłe.
+
+39
+00:01:48,840 --> 00:01:50,840
+One były dla tupli, można było je pomijać.
+
+40
+00:01:50,840 --> 00:01:52,840
+Mieliśmy apostrofy dla stringów.
+
+41
+00:01:52,840 --> 00:01:58,840
+Mieliśmy nawiasy kwadratowe dla list.
+
+42
+00:01:58,840 --> 00:02:01,840
+No i teraz przychodzi czas na nawiasy klamrowe.
+
+43
+00:02:01,840 --> 00:02:05,840
+Czyli te, które znajdują się razem z nawiasami kwadratowymi,
+
+44
+00:02:05,840 --> 00:02:08,840
+tylko wymagają przytrzymania shifta, bo są na górze.
+
+45
+00:02:08,840 --> 00:02:10,840
+I w ten sposób możemy tworzyć słownik.
+
+46
+00:02:10,840 --> 00:02:12,840
+Tylko tutaj bardzo ważna sprawa,
+
+47
+00:02:12,840 --> 00:02:15,840
+bo słowniki tworzą się odrobinę inaczej niż listy.
+
+48
+00:02:15,840 --> 00:02:17,840
+Zobaczysz w następnym przykładzie.
+
+49
+00:02:17,840 --> 00:02:19,840
+Jeżeli chodzi o to, co może być kluczem w słowniku,
+
+50
+00:02:19,840 --> 00:02:22,840
+to mogą być to wszystkie wartości niemutowalne.
+
+51
+00:02:22,840 --> 00:02:24,840
+Najczęściej są to stringi,
+
+52
+00:02:24,840 --> 00:02:27,840
+ale warto, bo tak jest po prostu najwygodniej,
+
+53
+00:02:27,840 --> 00:02:29,840
+ale warto wiedzieć o tym, że kluczem słownika
+
+54
+00:02:29,840 --> 00:02:31,840
+może być dowolna wartość niemutowalna.
+
+55
+00:02:31,840 --> 00:02:35,840
+Może być więc to integer, float, string albo tuple.
+
+56
+00:02:35,840 --> 00:02:38,840
+Natomiast sam słownik jak najbardziej mutowalny jest.
+
+57
+00:02:38,840 --> 00:02:41,840
+To znaczy, że jeżeli do tej struktury pod konkretnym kluczem
+
+58
+00:02:41,840 --> 00:02:43,840
+przypiszemy sobie jakąś wartość,
+
+59
+00:02:43,840 --> 00:02:45,840
+no to nic nie stoi na przeszkodzie,
+
+60
+00:02:45,840 --> 00:02:48,840
+żeby za chwilę tę wartość podmienić na inną.
+
+61
+00:02:48,840 --> 00:02:50,840
+Jest to bardzo często praktykowane
+
+62
+00:02:50,840 --> 00:02:53,840
+i też dzisiaj będziemy sobie dużo na ten temat rozmawiali.
+
+63
+00:02:53,840 --> 00:02:55,840
+No i kolejność elementów nie ma znaczenia,
+
+64
+00:02:55,840 --> 00:02:56,840
+bo tak naprawdę, skoro naszymi kluczami,
+
+65
+00:02:56,840 --> 00:03:00,840
+są teksty, no to co, można byłoby te teksty
+
+66
+00:03:00,840 --> 00:03:02,840
+ewentualnie posortować sobie alfabetycznie,
+
+67
+00:03:02,840 --> 00:03:04,840
+ale to nie miałoby dużego sensu.
+
+68
+00:03:04,840 --> 00:03:06,840
+Natomiast jeżeli chodzi o pobieranie danych,
+
+69
+00:03:06,840 --> 00:03:09,840
+to już przy pobieraniu danych możemy to sobie sortować.
+
+70
+00:03:09,840 --> 00:03:11,840
+I o tym też sobie dzisiaj porozmawiamy.
+
+71
+00:03:11,840 --> 00:03:13,840
+Cóż jeszcze mogę wam powiedzieć?
+
+72
+00:03:13,840 --> 00:03:16,840
+Tak wygląda przykładowa deklaracja słownika.
+
+73
+00:03:16,840 --> 00:03:18,840
+Czyli tak jak mówiliśmy sobie,
+
+74
+00:03:18,840 --> 00:03:20,840
+używamy nawiasów klamrowych.
+
+75
+00:03:20,840 --> 00:03:22,840
+Na przykład mamy zmienną character,
+
+76
+00:03:22,840 --> 00:03:24,840
+która posiada tutaj nawias klamrowy,
+
+77
+00:03:24,840 --> 00:03:26,840
+first name to jest Grzegorz,
+
+78
+00:03:26,840 --> 00:03:28,840
+last name to jest Brzęczyszczykiewicz.
+
+79
+00:03:28,840 --> 00:03:30,840
+Czyli w ten sposób stworzyliśmy sobie słownik,
+
+80
+00:03:30,840 --> 00:03:33,840
+gdzie kluczem jest first name i last name,
+
+81
+00:03:33,840 --> 00:03:35,840
+kluczami jest first name, last name,
+
+82
+00:03:35,840 --> 00:03:38,840
+a wartością jest Grzegorz i Brzęczyszczykiewicz.
+
+83
+00:03:38,840 --> 00:03:41,840
+Poniżej wypisałem sobie character od first name,
+
+84
+00:03:41,840 --> 00:03:43,840
+wyświetlił mi się Grzegorz.
+
+85
+00:03:43,840 --> 00:03:45,840
+Character od last name wyświetlił się Brzęczyszczykiewicz.
+
+86
+00:03:45,840 --> 00:03:47,840
+Czyli wszystko jest jak najbardziej w porządku.
+
+87
+00:03:47,840 --> 00:03:49,840
+Inny przykład deklaracji słownika,
+
+88
+00:03:49,840 --> 00:03:51,840
+to skorzystanie z funkcji dict.
+
+89
+00:03:51,840 --> 00:03:53,840
+I funkcja dict tutaj też jest sposobem na to,
+
+90
+00:03:53,840 --> 00:03:54,840
+żeby taki słownik sobie tworzyć,
+
+91
+00:03:54,840 --> 00:03:56,840
+czy żeby rzutować sobie coś na taki słownik.
+
+92
+00:03:56,840 --> 00:03:58,840
+I zobacz, mam another character,
+
+93
+00:03:58,840 --> 00:04:00,840
+równa się dict, w nawiasie przekazuję mu
+
+94
+00:04:00,840 --> 00:04:02,840
+first name Ambroży, last name Kleks.
+
+95
+00:04:02,840 --> 00:04:06,840
+Czyli jakby używam tutaj nazwanych argumentów
+
+96
+00:04:06,840 --> 00:04:08,840
+i w ten sposób mogę tworzyć sobie też słownik
+
+97
+00:04:08,840 --> 00:04:10,840
+z dowolną ilością pól,
+
+98
+00:04:10,840 --> 00:04:12,840
+z dowolną ilością kluczy.
+
+99
+00:04:12,840 --> 00:04:15,840
+Analogicznie tutaj odnoszę się do tej osoby
+
+100
+00:04:15,840 --> 00:04:18,840
+jako another character od last name.
+
+101
+00:04:18,840 --> 00:04:20,840
+I tutaj często pada pytanie,
+
+102
+00:04:20,840 --> 00:04:22,840
+aha, czyli w takim razie można byłoby sobie
+
+103
+00:04:22,840 --> 00:04:24,840
+tworzyć listę pełną słowników.
+
+104
+00:04:24,840 --> 00:04:26,840
+Jak najbardziej można.
+
+105
+00:04:26,839 --> 00:04:28,839
+I włączenie takich struktur jest w pełni możliwe.
+
+106
+00:04:28,839 --> 00:04:31,839
+Czyli na przykład, jeżeli masz bazę danych,
+
+107
+00:04:31,839 --> 00:04:34,839
+jakąś, czy Excela, czy jakąś inną formę,
+
+108
+00:04:34,839 --> 00:04:37,839
+to możesz jak najbardziej tworzyć sobie listę słowników.
+
+109
+00:04:37,839 --> 00:04:40,839
+To jest zupełnie naturalne i zupełnie możliwe,
+
+110
+00:04:40,839 --> 00:04:43,839
+żeby w tej postaci właśnie dane odbierać.
+
+111
+00:04:43,839 --> 00:04:45,839
+I tutaj przy okazji słowników,
+
+112
+00:04:45,839 --> 00:04:46,839
+przy okazji pobierania danych,
+
+113
+00:04:46,839 --> 00:04:48,839
+warto sobie powiedzieć o następującej metodzie,
+
+114
+00:04:48,839 --> 00:04:50,839
+jaką jest get.
+
+115
+00:04:50,839 --> 00:04:52,839
+Metoda get jest niezwykle przyjemna,
+
+116
+00:04:52,839 --> 00:04:54,839
+jeżeli chodzi o korzystanie z niej w przysłownikach.
+
+117
+00:04:54,839 --> 00:04:56,839
+Bo tu pokazaliśmy sobie,
+
+118
+00:04:56,839 --> 00:04:59,839
+że możemy po prostu wykonać nazwa słownika od
+
+119
+00:04:59,839 --> 00:05:00,839
+i wpisać klucz.
+
+120
+00:05:00,839 --> 00:05:01,839
+To jest ok.
+
+121
+00:05:01,839 --> 00:05:04,839
+Natomiast jeżeli nie mamy takiego klucza,
+
+122
+00:05:04,839 --> 00:05:06,839
+bo na przykład stworzyliśmy sobie słownik,
+
+123
+00:05:06,839 --> 00:05:08,839
+który ma first name i last name,
+
+124
+00:05:08,839 --> 00:05:09,839
+a nie ma age,
+
+125
+00:05:09,839 --> 00:05:11,839
+to w momencie, w którym spróbujemy wykonać
+
+126
+00:05:11,839 --> 00:05:14,839
+character od age, dostaniemy błąd key error age.
+
+127
+00:05:14,839 --> 00:05:17,839
+Czyli hej, nie wiem o co ci chodzi z tym age, tak?
+
+128
+00:05:17,839 --> 00:05:18,839
+Coś jest nie tak.
+
+129
+00:05:18,839 --> 00:05:20,839
+Więc żeby sobie to ułatwić,
+
+130
+00:05:20,839 --> 00:05:21,839
+żeby takiego błędu nie mieć,
+
+131
+00:05:21,839 --> 00:05:24,839
+można wykonać character.get od age.
+
+132
+00:05:24,839 --> 00:05:26,839
+I w ten sposób pojawia się,
+
+133
+00:05:26,839 --> 00:05:28,839
+że pojawi nam się none.
+
+134
+00:05:28,839 --> 00:05:29,839
+No, że jeżeli wartości nie ma,
+
+135
+00:05:29,839 --> 00:05:30,839
+to będzie to none.
+
+136
+00:05:30,839 --> 00:05:31,839
+Jeżeli wartość jest,
+
+137
+00:05:31,839 --> 00:05:34,839
+to oczywiście ta wartość zostanie zwrócona.
+
+138
+00:05:34,839 --> 00:05:35,839
+I get ma jeszcze jedną,
+
+139
+00:05:35,839 --> 00:05:37,839
+przewspaniałą właściwość,
+
+140
+00:05:37,839 --> 00:05:40,839
+a mianowicie można przekazać drugi argument do tej metody.
+
+141
+00:05:40,839 --> 00:05:43,839
+I dzięki temu będziemy mieli wartość domyślną.
+
+142
+00:05:43,839 --> 00:05:47,839
+Czyli jeżeli na przykład nasz Grzegorz Brzęczyszczykiewicz
+
+143
+00:05:47,839 --> 00:05:49,839
+wartości wieku nie ma,
+
+144
+00:05:49,839 --> 00:05:52,839
+to zawsze można po przecinku dorzucić 21.
+
+145
+00:05:52,839 --> 00:05:54,839
+I wtedy, jeżeli tej wartości nie ma,
+
+146
+00:05:54,839 --> 00:05:57,839
+to jest to wartość domyślna przedstawiona jako 21.
+
+147
+00:05:57,839 --> 00:06:00,839
+To nie spowoduje, że ten słownik zyska tę właściwość,
+
+148
+00:06:00,839 --> 00:06:04,839
+tylko spowoduje, że po prostu wartość domyślna zostanie zwrócona.
+
+149
+00:06:04,839 --> 00:06:06,839
+Czasem słowniki się przydają na przykład wtedy,
+
+150
+00:06:06,839 --> 00:06:08,839
+kiedy mówię o swoich zastosowaniach,
+
+151
+00:06:08,839 --> 00:06:10,839
+kiedy mam na przykład adres URL.
+
+152
+00:06:10,839 --> 00:06:13,839
+I w adresie URL czasem pojawiają się takie znaczki,
+
+153
+00:06:13,839 --> 00:06:15,839
+jak znak zapytania, coś tam równa się coś tam,
+
+154
+00:06:15,839 --> 00:06:16,839
+coś tam równa się coś tam.
+
+155
+00:06:16,839 --> 00:06:19,839
+I te dane też są pakowane właśnie do słownika.
+
+156
+00:06:19,839 --> 00:06:22,839
+I żeby później móc sobie pobrać określone informacje z tego słownika,
+
+157
+00:06:22,839 --> 00:06:23,839
+robię właśnie get.
+
+158
+00:06:23,839 --> 00:06:28,839
+I to powoduje, że kiedy użytkownik nie przekaże mi którejś wartości,
+
+159
+00:06:28,839 --> 00:06:30,839
+to ja i tak mam tą wartość domyślną.
+
+160
+00:06:30,839 --> 00:06:33,839
+Na przykład, jeżeli nie podał mi po czym chcę sortować,
+
+161
+00:06:33,839 --> 00:06:35,839
+to sortuje po dacie utworzenia.
+
+162
+00:06:35,839 --> 00:06:37,839
+A jeżeli nie podał w jakiej kolejności chcę sortować,
+
+163
+00:06:37,839 --> 00:06:40,839
+to sortuje według od najstarszego do najnowszego,
+
+164
+00:06:40,839 --> 00:06:42,839
+czy najstarszy na górze.
+
+165
+00:06:42,839 --> 00:06:44,839
+O tego typu zastosowania właśnie chodzi.
+
+166
+00:06:44,839 --> 00:06:47,839
+Więc get tutaj bardzo dobrze się sprawdza,
+
+167
+00:06:47,839 --> 00:06:50,839
+jeżeli na przykład dane właśnie pochodzą od użytkownika
+
+168
+00:06:50,839 --> 00:06:52,839
+i nie zawsze wszystkie podaliśmy.
+
+169
+00:06:52,839 --> 00:06:56,839
+A druga metoda, która służy z kolei do aktualizowania wartości w słowniku,
+
+170
+00:06:56,839 --> 00:06:58,839
+nazywa się update.
+
+171
+00:06:58,839 --> 00:07:01,839
+I tutaj metoda ta wygląda w sposób następujący.
+
+172
+00:07:01,839 --> 00:07:04,839
+Grzegorz Brzęczczykiewicz to był jakiś, że mówmy żołnierz,
+
+173
+00:07:04,839 --> 00:07:07,839
+ten żołnierz na pewno ma jakieś swoje tam zadania,
+
+174
+00:07:07,839 --> 00:07:11,839
+więc przyjąłem, że ma takie, jakieś testy przechodził,
+
+175
+00:07:11,839 --> 00:07:16,839
+miał run, czyli bieg, strzelanie oraz chowanie się, ukrywanie.
+
+176
+00:07:16,839 --> 00:07:19,839
+Więc przyjąłem, że bieg miał na 10, strzelanie trochę gorzej
+
+177
+00:07:19,839 --> 00:07:21,839
+i ukrywanie się najgorzej.
+
+178
+00:07:21,839 --> 00:07:24,839
+I teraz, jeżeli wykonam sobie następującą czynność,
+
+179
+00:07:24,839 --> 00:07:27,839
+czyli na tym charakter zrobię kropkę update tests,
+
+180
+00:07:27,839 --> 00:07:30,839
+to to spowoduje, że mój charakter rozszerzy się,
+
+181
+00:07:30,839 --> 00:07:32,839
+czyli jakby połączę sobie dwa słowniki.
+
+182
+00:07:32,839 --> 00:07:35,839
+W tym momencie zobacz, pojawił mi się first name, last name,
+
+183
+00:07:35,839 --> 00:07:37,839
+run, shoot oraz hide.
+
+184
+00:07:37,839 --> 00:07:42,839
+Czyli te trzy dodatkowe wartości połączyły mi się ze słownikiem charakter.
+
+185
+00:07:42,839 --> 00:07:47,839
+Bardzo ważna informacja, że update nadpisuje nam też właściwości.
+
+186
+00:07:47,839 --> 00:07:50,839
+Więc jeżeli w tym drugim słowniku miałbyś jakieś wartości,
+
+187
+00:07:50,839 --> 00:07:53,839
+którymi chciałbyś nadpisać ten pierwszy,
+
+188
+00:07:53,839 --> 00:07:56,839
+to też update w ten sposób zadziała.
+
+189
+00:07:56,839 --> 00:07:58,839
+Czyli on połączy te dwa słowniki,
+
+190
+00:07:58,839 --> 00:08:00,839
+natomiast jeżeli będzie jakaś wartość wspólna,
+
+191
+00:08:00,839 --> 00:08:03,839
+to ten, którym aktualizujesz, czyli w naszym przypadku tests,
+
+192
+00:08:03,839 --> 00:08:06,839
+zostanie tutaj zapisany.
+
+193
+00:08:06,839 --> 00:08:08,839
+Serdecznie zachęcam, żeby to sobie przećwiczyć,
+
+194
+00:08:08,839 --> 00:08:11,839
+żeby sobie stworzyć albo w środowisku interaktywnym taki kod,
+
+195
+00:08:11,839 --> 00:08:13,839
+albo napisać go sobie w PyCharmie
+
+196
+00:08:13,839 --> 00:08:16,839
+i zobaczyć, jakie wartości ten wasz słownik będzie miał.
+
+197
+00:08:16,839 --> 00:08:18,839
+Bo tutaj zdecydowanie warto to mieć w palcach,
+
+198
+00:08:18,839 --> 00:08:20,839
+to tworzenie słownika, te aktualizacje,
+
+199
+00:08:20,839 --> 00:08:23,839
+pobieranie, warto sobie to przećwiczyć,
+
+200
+00:08:23,839 --> 00:08:26,839
+a my sobie oczywiście też za moment to jeszcze przećwiczymy.
+
+201
+00:08:26,839 --> 00:08:28,839
+Jeżeli chodzi o usuwanie wartości ze słownika,
+
+202
+00:08:28,839 --> 00:08:30,839
+to nie ma z tym absolutnie żadnego problemu,
+
+203
+00:08:30,839 --> 00:08:31,839
+można to robić.
+
+204
+00:08:31,839 --> 00:08:33,839
+Tak samo jak można nadpisywać,
+
+205
+00:08:33,839 --> 00:08:36,839
+bo tak jak wykonamy teraz, jakbyśmy chcieli to nadpisać,
+
+206
+00:08:36,839 --> 00:08:39,839
+to można zawsze byłoby zrobić charakter strzałka lastname
+
+207
+00:08:39,839 --> 00:08:41,839
+równa się i tam nie wiem, lato.
+
+208
+00:08:41,839 --> 00:08:43,839
+Można byłoby zmienić tego Grzegorza.
+
+209
+00:08:43,839 --> 00:08:46,839
+Natomiast jeżeli chcemy usunąć wartość ze słownika,
+
+210
+00:08:46,839 --> 00:08:49,839
+no to wykonujemy delete, czyli del, spacja,
+
+211
+00:08:49,840 --> 00:08:52,840
+charakter od lastname
+
+212
+00:08:52,840 --> 00:08:55,840
+i to spowoduje, że w tym przypadku ten nasz lastname zniknie.
+
+213
+00:08:55,840 --> 00:08:58,840
+Oczywiście ten błądki error to jest podane źle.
+
+214
+00:09:00,840 --> 00:09:02,840
+O, tak jest dużo lepiej.
+
+215
+00:09:02,840 --> 00:09:04,840
+Więc on nam po prostu usunie ten lastname.
+
+216
+00:09:04,840 --> 00:09:06,840
+No i ten przykład możecie też przetestować,
+
+217
+00:09:06,840 --> 00:09:08,840
+wykonując po prostu charakter,
+
+218
+00:09:08,840 --> 00:09:10,840
+pojawi się firstname Grzegorz pod spodem,
+
+219
+00:09:10,840 --> 00:09:12,840
+no bo lastname usunęliśmy.
+
+220
+00:09:12,840 --> 00:09:15,840
+I tutaj jeszcze jedna niezwykle ważna rzecz,
+
+221
+00:09:15,840 --> 00:09:18,840
+jak wygląda sprawa przechodzenia po słowniku.
+
+222
+00:09:18,840 --> 00:09:20,840
+Bo przechodzenie po słowniku wygląda inaczej,
+
+223
+00:09:20,840 --> 00:09:22,840
+niż przechodzenie po liście.
+
+224
+00:09:22,840 --> 00:09:25,840
+W listach, jak pamiętasz, kiedy wykonywaliśmy sobie for,
+
+225
+00:09:25,840 --> 00:09:27,840
+to było for element in lista.
+
+226
+00:09:27,840 --> 00:09:30,840
+I w ten sposób dochodziliśmy do poszczególnych elementów.
+
+227
+00:09:30,840 --> 00:09:32,840
+Jak zatem zachowa się słownik?
+
+228
+00:09:32,840 --> 00:09:34,840
+Tutaj przechodzimy sobie po kluczach.
+
+229
+00:09:34,840 --> 00:09:37,840
+Czyli zobacz, stworzyłem sobie rzecz następującą,
+
+230
+00:09:37,840 --> 00:09:40,840
+mam słownik, który składa się z takich wartości jak
+
+231
+00:09:40,840 --> 00:09:43,840
+Poland, Warsaw, Maroko, Rabat, Estonia, Tallinn.
+
+232
+00:09:43,840 --> 00:09:46,840
+Czyli stolicą Polski jest Warszawa, Maroka jest Rabat,
+
+233
+00:09:46,840 --> 00:09:47,840
+Estonii jest Tallinn.
+
+234
+00:09:47,840 --> 00:09:51,840
+I teraz, jeżeli wykonam for country in capitals,
+
+235
+00:09:51,840 --> 00:09:56,840
+to ja pod zmienną country będę właśnie miał poszczególne kraje.
+
+236
+00:09:56,840 --> 00:09:59,840
+I to nie wynika z tego, że on tutaj zastosował jakąś sztuczną inteligencję,
+
+237
+00:09:59,840 --> 00:10:02,840
+tylko zawsze, kiedy przechodzimy sobie po słowniku,
+
+238
+00:10:02,840 --> 00:10:06,840
+do tej zmiennej pakowany jest klucz.
+
+239
+00:10:06,840 --> 00:10:09,840
+Czyli skoro kraje są moim kluczem, no to właśnie mam
+
+240
+00:10:09,840 --> 00:10:11,840
+for country in capitals.
+
+241
+00:10:11,840 --> 00:10:13,840
+Stąd też mogę sobie wypisać country,
+
+242
+00:10:13,840 --> 00:10:16,840
+ale mogę też sobie wypisać wartość ze słownika dla danego country,
+
+243
+00:10:16,840 --> 00:10:20,840
+albo za pomocą get, albo za pomocą tego capitals od country.
+
+244
+00:10:20,840 --> 00:10:23,840
+Czyli w ten sposób capitals od country on wypisze mi
+
+245
+00:10:23,840 --> 00:10:27,840
+Poland, Warsaw, Maroko, Rabat, Estonia, Tallinn.
+
+246
+00:10:27,840 --> 00:10:30,840
+Jeżeli bym zrobił capitals.get i w nawiasie bym wpisał country,
+
+247
+00:10:30,840 --> 00:10:33,840
+to oczywiście też tak by to zadziałało.
+
+248
+00:10:33,840 --> 00:10:36,840
+Natomiast można też to zrobić prościej,
+
+249
+00:10:36,840 --> 00:10:39,840
+a mianowicie, znaczy prościej, może trochę bardziej estetycznie,
+
+250
+00:10:39,840 --> 00:10:42,840
+a mianowicie na słowniku jest taka metoda jak items.
+
+251
+00:10:42,840 --> 00:10:44,840
+I metoda items, którą tutaj widzisz, powoduje, że,
+
+252
+00:10:44,840 --> 00:10:47,840
+zamienia nam się słownik tak naprawdę w listę tupli,
+
+253
+00:10:47,840 --> 00:10:50,840
+gdzie po lewej stronie najpierw mamy kraje,
+
+254
+00:10:50,840 --> 00:10:53,840
+a po prawej stronie mamy stolice.
+
+255
+00:10:53,840 --> 00:10:56,840
+I dzięki temu od razu te tuple możemy sobie wypisywać,
+
+256
+00:10:56,840 --> 00:10:59,840
+wyświetlając country i capital.
+
+257
+00:10:59,840 --> 00:11:02,840
+To warto o tym pamiętać, że jeżeli coś jest słownikiem
+
+258
+00:11:02,840 --> 00:11:05,840
+i chcemy szybko po tym iterować, od razu wypakowywać to
+
+259
+00:11:05,840 --> 00:11:08,840
+i nie korzystać z takiego zapisu, bo dla wielu osób na początku
+
+260
+00:11:08,840 --> 00:11:10,840
+ten zapis nie jest najczytelniejszy,
+
+261
+00:11:10,840 --> 00:11:12,840
+to właśnie można wykonać to, że jest to słownik,
+
+262
+00:11:12,840 --> 00:11:16,840
+to właśnie można wykonać for country capital in capitals,
+
+263
+00:11:16,840 --> 00:11:19,840
+tylko trzeba pamiętać, żeby zrobić kropka items.
+
+264
+00:11:19,840 --> 00:11:22,840
+Bez tego kropka items niestety nic nie zadziała,
+
+265
+00:11:22,840 --> 00:11:24,840
+trzeba o tym po prostu pamiętać.
+
+266
+00:11:24,840 --> 00:11:29,840
+No i in w tym przypadku również zachowuje się też inaczej.
+
+267
+00:11:29,840 --> 00:11:33,840
+No bo skoro mieliśmy listę, to in czy tuple,
+
+268
+00:11:33,840 --> 00:11:36,840
+to in sprawdzał, czy dana wartość znajduje się w tej tupli,
+
+269
+00:11:36,840 --> 00:11:38,840
+czy znajduje się w tej liście.
+
+270
+00:11:38,840 --> 00:11:41,840
+W naszym przypadku, jeżeli mamy słownik, to in sprawdza,
+
+271
+00:11:41,840 --> 00:11:45,840
+czy dana wartość znajduje się w słowniku, jeżeli chodzi o klucz.
+
+272
+00:11:45,840 --> 00:11:49,840
+Czyli znowu Poland in capitals, Warsaw in capitals.
+
+273
+00:11:49,840 --> 00:11:54,840
+A jeżeli chcielibyście sprawdzić, czy Warsaw znajduje się w wartościach,
+
+274
+00:11:54,840 --> 00:11:58,840
+to wtedy trzeba napisać capitals.values.
+
+275
+00:11:58,840 --> 00:12:02,840
+I tak samo jak mamy items, tak mamy keys oraz values.
+
+276
+00:12:02,840 --> 00:12:07,840
+Keys jako keys, czyli klucze i values jako wartości.
+
+277
+00:12:07,840 --> 00:12:10,840
+To, co zwraca nam values, to nie jest lista akurat,
+
+278
+00:12:10,840 --> 00:12:13,840
+to jest coś innego, o tym się na razie nie przejmuj.
+
+279
+00:12:13,840 --> 00:12:15,840
+Możesz to sobie w razie czego rzucić na listę,
+
+280
+00:12:15,840 --> 00:12:18,840
+zobaczysz listę tych wartości, można też po tym iterować.
+
+281
+00:12:18,840 --> 00:12:20,840
+To się zachowuje bardzo podobnie do listy.
+
+282
+00:12:20,840 --> 00:12:22,840
+Natomiast można też w ten sposób sprawdzać właśnie,
+
+283
+00:12:22,840 --> 00:12:24,840
+czy Warsaw znajduje się w tym capitals.values
+
+284
+00:12:24,840 --> 00:12:28,840
+i tak samo, czy Poland znajdowałoby się in capital keys.
+
+285
+00:12:28,840 --> 00:12:29,840
+To też mógłbyś zrobić.
+
+286
+00:12:29,840 --> 00:12:31,840
+Tu oczywiście z racji tego, że Polska jest, to jest ok.
+
+287
+00:12:31,840 --> 00:12:34,840
+Natomiast Warsaw nie jest kluczem, tylko jest wartością,
+
+288
+00:12:34,840 --> 00:12:36,840
+więc to wyrażenie zwróci nam fałsz.
+
+289
+00:12:36,840 --> 00:12:38,840
+Natomiast już tutaj zobaczymy prawdę.
+
+290
+00:12:38,840 --> 00:12:40,840
+Trochę tych rzeczy jest jeszcze w tym filmie,
+
+291
+00:12:40,840 --> 00:12:42,840
+jeszcze przy okazji słowników do zapamiętania,
+
+292
+00:12:42,840 --> 00:12:44,840
+więc tutaj polecam się skupić
+
+293
+00:12:44,840 --> 00:12:46,840
+i na pewno warto to sobie dobrze przećwiczyć.

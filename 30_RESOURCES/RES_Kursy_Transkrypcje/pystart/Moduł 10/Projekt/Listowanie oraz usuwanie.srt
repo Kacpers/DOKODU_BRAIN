@@ -1,0 +1,343 @@
+1
+00:00:00,000 --> 00:00:06,140
+Jakie funkcjonalności powinny się znaleźć jeszcze w tym naszym repozytorium?
+
+2
+00:00:06,700 --> 00:00:08,259
+Na pewno usuwanie.
+
+3
+00:00:08,759 --> 00:00:10,500
+I tym usuwaniem zajmę się od razu.
+
+4
+00:00:10,640 --> 00:00:19,519
+Czyli mam add item, mogę zjechać sobie niżej, wykonać dev delete item id.
+
+5
+00:00:19,519 --> 00:00:22,059
+No i ponownie cursor.
+
+6
+00:00:24,240 --> 00:00:27,500
+Już ten main nam puchnie, zaraz trzeba będzie go posprzątać.
+
+7
+00:00:27,500 --> 00:00:37,780
+Cursor execute delete from items, where id równa się znak zapytania.
+
+8
+00:00:38,780 --> 00:00:43,219
+I to nasze id, czy możemy nazwać to item id, będzie ładniej.
+
+9
+00:00:46,140 --> 00:00:47,079
+To jest item id.
+
+10
+00:00:48,359 --> 00:00:50,420
+Cursor execute.
+
+11
+00:00:50,420 --> 00:00:56,879
+Nie cursor execute, tylko self connection commit.
+
+12
+00:00:57,500 --> 00:01:03,020
+W tym momencie usuniemy sobie ten nasz item z bazy danych.
+
+13
+00:01:03,520 --> 00:01:10,299
+No natomiast, żeby zobaczyć, czy się usunął, wypadałoby jeszcze mieć coś, co pobierze nam ten item.
+
+14
+00:01:10,799 --> 00:01:15,539
+Czyli dev get items.
+
+15
+00:01:15,539 --> 00:01:20,640
+Tu nie mamy żadnych kryteriów na chwilę obecną.
+
+16
+00:01:21,500 --> 00:01:23,480
+I raczej w tej aplikacji nie będziemy mieli.
+
+17
+00:01:23,900 --> 00:01:25,859
+Będziemy potrzebowali mieć natomiast cursor.
+
+18
+00:01:26,379 --> 00:01:27,340
+No i będziemy potrzebować...
+
+19
+00:01:27,500 --> 00:01:28,260
+Będziemy potrzebować, żebyśmy mieli odpowiedź na to pytanie.
+
+20
+00:01:28,780 --> 00:01:37,760
+Czyli cursor execute select gwiazdka from items.
+
+21
+00:01:38,819 --> 00:01:44,460
+Jeszcze będziemy mieli jedną zmienną, jedną metodę odpowiedzialną za statystyki.
+
+22
+00:01:44,560 --> 00:01:46,680
+Natomiast tą metodą zajmiemy się na koniec.
+
+23
+00:01:47,159 --> 00:01:51,079
+To, co teraz wykonam, to zrobię to, co lubimy najbardziej, czyli posprzątam.
+
+24
+00:01:51,480 --> 00:01:53,579
+Wyniosę repozytorium do osobnego pliku.
+
+25
+00:01:53,579 --> 00:01:56,719
+I jak wyniosę repozytorium do osobnego pliku,
+
+26
+00:01:56,719 --> 00:02:00,379
+to spróbuję wykorzystać to repozytorium w moim application
+
+27
+00:02:00,379 --> 00:02:03,579
+i wykonać delete item oraz get items,
+
+28
+00:02:03,840 --> 00:02:07,420
+a następnie sprawdzę, czy dobrze mi się te wartości pobierają i listują.
+
+29
+00:02:08,159 --> 00:02:12,159
+Tutaj jeszcze oczywiście wypadałoby w get items wykonać return.
+
+30
+00:02:13,780 --> 00:02:14,020
+OK.
+
+31
+00:02:14,620 --> 00:02:19,379
+Następnie zaznaczam, wycinam.
+
+32
+00:02:20,439 --> 00:02:22,199
+U góry nic nie płacze, że czegoś nie ma.
+
+33
+00:02:22,199 --> 00:02:25,939
+Więc tworzę nowy Python file repository.
+
+34
+00:02:25,939 --> 00:02:30,939
+I w tym repository będzie płakało o to, że nie wie, co to jest SQLite 3.
+
+35
+00:02:30,939 --> 00:02:32,740
+Nie, nie mamy tego nigdzie tutaj.
+
+36
+00:02:32,740 --> 00:02:33,460
+No to świetnie.
+
+37
+00:02:34,060 --> 00:02:38,419
+Więc jedyne, co zrobię po tym, jak wyniosłem repozytorium do repozytorium,
+
+38
+00:02:38,780 --> 00:02:43,699
+to wykonam from repository import repository.
+
+39
+00:02:44,199 --> 00:02:50,039
+I dzięki temu mogę z powodzeniem tutaj sobie je utworzyć.
+
+40
+00:02:53,479 --> 00:02:55,379
+A skoro repozytorium zostało przekazane do application,
+
+41
+00:02:55,379 --> 00:02:55,900
+to mogę je utworzyć.
+
+42
+00:02:55,939 --> 00:02:58,259
+I jeśli mamy to do application, to nie musimy tu już nic więcej dotykać.
+
+43
+00:02:58,699 --> 00:03:01,340
+Jedyne, co musimy zrobić, to wrócić do application
+
+44
+00:03:01,340 --> 00:03:05,060
+i w application sprawdzić usuwanie.
+
+45
+00:03:05,699 --> 00:03:07,300
+A usuwanie powinno działać tak.
+
+46
+00:03:07,560 --> 00:03:12,659
+self repository.delete item id.
+
+47
+00:03:13,579 --> 00:03:16,079
+Umawialiśmy się, że to się będzie nazywało item id,
+
+48
+00:03:16,280 --> 00:03:17,919
+więc może się nazywać to też i tutaj,
+
+49
+00:03:18,439 --> 00:03:20,879
+żeby nie nadpisywać wartości id.
+
+50
+00:03:21,560 --> 00:03:23,280
+No i mamy jeszcze listę.
+
+51
+00:03:23,280 --> 00:03:25,419
+W przypadku listy,
+
+52
+00:03:25,939 --> 00:03:29,819
+mamy tę sytuację, że mamy metodę odpowiedzialną za get items
+
+53
+00:03:29,819 --> 00:03:34,379
+i tutaj powinniśmy to wyświetlanie tej naszej listy
+
+54
+00:03:34,379 --> 00:03:36,079
+zawrzeć właśnie w tym miejscu,
+
+55
+00:03:36,079 --> 00:03:42,740
+czyli for item in self repository get items.
+
+56
+00:03:42,740 --> 00:03:46,020
+Dwukropek print item.
+
+57
+00:03:46,020 --> 00:03:49,620
+I zacznę od tego, że sprawdzę, czy ta lista mi działa.
+
+58
+00:03:49,620 --> 00:03:53,319
+Jeżeli lista mi działa, spróbuję usunąć jeden wpis
+
+59
+00:03:53,319 --> 00:03:55,500
+i następnie listę wykonam.
+
+60
+00:03:55,500 --> 00:03:56,259
+Raz jeszcze.
+
+61
+00:03:56,879 --> 00:03:59,639
+Wygląd tej listy oczywiście możemy sobie jeszcze dopasować,
+
+62
+00:03:59,759 --> 00:04:02,860
+natomiast tym możemy się zająć już kiedyś w przyszłości.
+
+63
+00:04:03,419 --> 00:04:04,979
+Wracam do mojego terminala
+
+64
+00:04:04,979 --> 00:04:10,719
+i wykonuję python main py list.
+
+65
+00:04:11,139 --> 00:04:13,139
+Zobaczcie, pojawił mi się ten wydatek.
+
+66
+00:04:13,460 --> 00:04:16,579
+Wiem, że ma id 1, więc dorzucam delete.
+
+67
+00:04:17,339 --> 00:04:18,740
+Ojej, nie pokazałem mu id.
+
+68
+00:04:19,100 --> 00:04:21,000
+No to id 1.
+
+69
+00:04:21,300 --> 00:04:22,420
+Pojawiło się, usuwam.
+
+70
+00:04:22,980 --> 00:04:24,379
+Wracam do listy
+
+71
+00:04:24,379 --> 00:04:27,180
+i uwaga, w liście nie mam wydatku,
+
+72
+00:04:27,459 --> 00:04:31,420
+co oznacza, że usuwanie bardzo ładnie nam zadziałało.
+
+73
+00:04:31,860 --> 00:04:35,000
+Czyli mamy listowanie, usuwanie,
+
+74
+00:04:35,519 --> 00:04:37,540
+zostają nam statystyki.
+
+75
+00:04:38,060 --> 00:04:40,219
+Mimo tego, że ten film nie był najdłuższy,
+
+76
+00:04:40,319 --> 00:04:43,500
+na statystyki zarezerwuję sobie osobny film
+
+77
+00:04:43,500 --> 00:04:46,040
+i później będzie jeszcze jeden z takim podsumowaniem.
+
+78
+00:04:46,040 --> 00:04:48,959
+Ale myślę, że nasz projekt zaczyna mieć ręce i nogi
+
+79
+00:04:48,959 --> 00:04:52,180
+i te obiekty ładnie się ze sobą zazębiają.
+
+80
+00:04:52,560 --> 00:04:52,899
+To co?
+
+81
+00:04:54,379 --> 00:04:56,939
+To do filmu, gdzie zajmiemy się podsumowaniem.
+
+82
+00:04:56,939 --> 00:04:59,639
+Czyli będziemy chcieli dodać sobie kilka wydatków.
+
+83
+00:04:59,639 --> 00:05:00,899
+Ja to zrobię poza kadrem.
+
+84
+00:05:00,899 --> 00:05:03,920
+I jak dodam sobie kilka wydatków z różnych kategorii,
+
+85
+00:05:03,920 --> 00:05:07,920
+to następnie będę chciał sprawdzić statystyki.
+
+86
+00:05:07,920 --> 00:05:09,920
+Do zobaczenia.

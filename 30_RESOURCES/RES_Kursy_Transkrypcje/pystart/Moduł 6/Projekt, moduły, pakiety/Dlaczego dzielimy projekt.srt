@@ -1,0 +1,311 @@
+1
+00:00:00,000 --> 00:00:04,020
+No ale dobra, dlaczego tak właściwie dzielimy te projekty?
+
+2
+00:00:04,179 --> 00:00:06,100
+Po co nam te moduły, pakiety?
+
+3
+00:00:06,200 --> 00:00:08,080
+Nie można byłoby wszystkiego trzymać w jednym pliku,
+
+4
+00:00:08,220 --> 00:00:11,400
+przecież taki plik 8 tysięcy linii to żaden problem.
+
+5
+00:00:12,740 --> 00:00:14,019
+To zależy dla kogo.
+
+6
+00:00:14,720 --> 00:00:17,920
+Przede wszystkim dzięki temu, że trzymamy pakiety, moduły,
+
+7
+00:00:18,039 --> 00:00:19,980
+możemy osobno też trzymać testy.
+
+8
+00:00:20,179 --> 00:00:22,679
+O testach też w tym module będziemy sobie rozmawiali,
+
+9
+00:00:23,039 --> 00:00:26,980
+ale warto po prostu mieć porządek i wiedzieć co, gdzie leży.
+
+10
+00:00:26,980 --> 00:00:30,920
+Po drugie, dzięki modułom i pakietom możemy grupować funkcje
+
+11
+00:00:30,920 --> 00:00:32,060
+według ich zastosowania.
+
+12
+00:00:32,579 --> 00:00:35,100
+W ten sposób możemy mieć funkcję show,
+
+13
+00:00:35,299 --> 00:00:38,120
+czy funkcję delete, czy funkcję jakąkolwiek
+
+14
+00:00:38,120 --> 00:00:43,640
+umiejscowioną w pakiecie, na przykład animal, czy dog.
+
+15
+00:00:44,039 --> 00:00:47,120
+I wtedy jeżeli będę miał pakiet czy moduł dog,
+
+16
+00:00:47,460 --> 00:00:49,140
+w środku będę miał funkcję delete,
+
+17
+00:00:49,240 --> 00:00:51,420
+to będę wiedział, że to delete odnosi się do tego psa,
+
+18
+00:00:51,620 --> 00:00:55,420
+a nie do kota, czyli mogę dzięki temu ładniej zarządzać moim projektem.
+
+19
+00:00:55,900 --> 00:00:56,460
+Przykład?
+
+20
+00:00:56,460 --> 00:00:57,320
+Bardzo proszę.
+
+21
+00:00:57,840 --> 00:01:02,640
+Wyobraź sobie, że masz moduł, który przechowuje funkcję
+
+22
+00:01:02,640 --> 00:01:05,500
+dotyczącą zarządzania bazą danych.
+
+23
+00:01:05,900 --> 00:01:07,060
+No i masz studentów.
+
+24
+00:01:07,180 --> 00:01:10,740
+I chciałbyś mieć funkcję add student, delete student, remove student,
+
+25
+00:01:11,120 --> 00:01:13,719
+delete, remove to samo, ale edit, tego typu.
+
+26
+00:01:14,140 --> 00:01:17,700
+To zamiast dodawać za każdym razem add student, delete itd.,
+
+27
+00:01:17,700 --> 00:01:20,219
+możesz po prostu stworzyć sobie moduł o nazwie students
+
+28
+00:01:20,219 --> 00:01:21,960
+i tam zawrzeć wszystkie te rzeczy.
+
+29
+00:01:22,680 --> 00:01:24,879
+Ale zaraz może się okazać, że tych studentów
+
+30
+00:01:24,879 --> 00:01:26,439
+będziesz potrzebować mieć w dwóch kontekstach.
+
+31
+00:01:26,459 --> 00:01:29,579
+Na przykład w jednym przypadku będziesz potrzebować ich mieć dlatego,
+
+32
+00:01:29,979 --> 00:01:32,879
+żeby móc, nie wiem, generować im jakieś dokumenty,
+
+33
+00:01:33,259 --> 00:01:35,879
+a w drugim przypadku będziesz mieć ich dlatego,
+
+34
+00:01:36,059 --> 00:01:37,699
+żeby właśnie zapisywać ich do bazy danych.
+
+35
+00:01:38,099 --> 00:01:40,459
+W trzecim, żeby obsługiwać jakieś ich sprawy.
+
+36
+00:01:41,599 --> 00:01:42,259
+Żaden problem.
+
+37
+00:01:42,679 --> 00:01:45,259
+Wystarczy sobie stworzysz wcześniej pakiet print,
+
+38
+00:01:45,399 --> 00:01:46,599
+w nim będziesz miał students
+
+39
+00:01:46,599 --> 00:01:49,139
+i w nim będziesz miał metody dotyczące printowania.
+
+40
+00:01:50,119 --> 00:01:51,459
+Niżej będziesz mieć database students
+
+41
+00:01:52,019 --> 00:01:53,879
+i tam będą metody dotyczące studentów.
+
+42
+00:01:54,179 --> 00:01:55,259
+Albo będziesz miał coś jeszcze,
+
+43
+00:01:55,259 --> 00:01:56,339
+use cases,
+
+44
+00:01:56,459 --> 00:01:57,719
+students i tam będą te rzeczy.
+
+45
+00:01:58,279 --> 00:02:00,639
+Tutaj jak nazwiesz te rzeczy,
+
+46
+00:02:00,759 --> 00:02:02,280
+czy może lepiej byłoby to zamienić
+
+47
+00:02:02,280 --> 00:02:07,099
+i mieć print, database i coś tam wewnątrz pakietu o nazwie students,
+
+48
+00:02:07,479 --> 00:02:08,500
+to zależy od ciebie.
+
+49
+00:02:09,019 --> 00:02:10,060
+Są dwa takie podejścia.
+
+50
+00:02:10,340 --> 00:02:12,159
+Jedno podejście zakłada użyteczność,
+
+51
+00:02:12,439 --> 00:02:14,719
+czyli nazwy pakietów pochodzą od zastosowania,
+
+52
+00:02:14,959 --> 00:02:17,259
+czyli do pokazywania, do sprzedawania,
+
+53
+00:02:17,340 --> 00:02:18,579
+do czegoś, do czegoś, do czegoś.
+
+54
+00:02:18,639 --> 00:02:21,659
+I wtedy w ramach tego mam studentów do pokazywania,
+
+55
+00:02:21,659 --> 00:02:22,900
+czy studentów do drukowania,
+
+56
+00:02:23,079 --> 00:02:25,659
+czy studentów do...
+
+57
+00:02:26,460 --> 00:02:28,460
+zarządzania nimi.
+
+58
+00:02:29,180 --> 00:02:30,860
+A druga rzecz jest też taka,
+
+59
+00:02:30,980 --> 00:02:32,820
+że mogę mieć studentów
+
+60
+00:02:32,820 --> 00:02:35,120
+i w środku mogę mieć pokazywanie, zakazywanie
+
+61
+00:02:35,120 --> 00:02:36,300
+i inne tego typu rzeczy.
+
+62
+00:02:36,400 --> 00:02:38,540
+Czyli można po prostu zamienić tę kolejność
+
+63
+00:02:38,540 --> 00:02:40,900
+i najpierw mieć obiekt,
+
+64
+00:02:41,740 --> 00:02:44,000
+to ten element, do którego się to odnosi,
+
+65
+00:02:44,280 --> 00:02:45,600
+a później w środku mieć moduły,
+
+66
+00:02:45,719 --> 00:02:47,540
+które tym się zajmują.
+
+67
+00:02:47,879 --> 00:02:50,600
+Więc to ułożenie tego projektu,
+
+68
+00:02:50,640 --> 00:02:51,860
+to też nie jest łatwa sprawa.
+
+69
+00:02:52,300 --> 00:02:54,120
+Warto mieć jakieś swoje podejście,
+
+70
+00:02:54,120 --> 00:02:55,760
+ale to się będzie tobie przecierało.
+
+71
+00:02:55,759 --> 00:02:57,280
+I tak naprawdę nie ma dobrego.
+
+72
+00:02:57,359 --> 00:02:59,319
+Nie ma jednego takiego jedynego najlepszego,
+
+73
+00:02:59,699 --> 00:03:00,539
+bo wszystkie są dobre,
+
+74
+00:03:00,780 --> 00:03:02,139
+takie, w których łatwo się odnajdujesz,
+
+75
+00:03:02,259 --> 00:03:03,319
+takie, które są uporządkowane.
+
+76
+00:03:03,679 --> 00:03:04,479
+To jak ze sprzątaniem.
+
+77
+00:03:05,500 --> 00:03:07,879
+Nie każdy ma śmietnik pod zlewem.
+
+78
+00:03:08,479 --> 00:03:09,620
+Ja na przykład mam już indziej.

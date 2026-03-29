@@ -1,0 +1,235 @@
+1
+00:00:00,000 --> 00:00:03,120
+Zadanie trzecie ponownie będzie przypominało to poprzednie,
+
+2
+00:00:03,180 --> 00:00:05,679
+z tą różnicą, że inny będzie nasz sprawdzany argument.
+
+3
+00:00:05,980 --> 00:00:09,000
+Zobacz, tu mamy taką sytuację, że chcemy przygotować funkcję,
+
+4
+00:00:09,160 --> 00:00:13,480
+która przefiltruje tylko słowa, których długość jest większa od 4 i mniejsza od 8.
+
+5
+00:00:13,480 --> 00:00:22,879
+Czyli def filter words, tu filter list, zwracam listę.
+
+6
+00:00:23,719 --> 00:00:29,100
+Mogę od razu sobie zrobić o i napisać filter words,
+
+7
+00:00:30,000 --> 00:00:33,299
+that meets requirements.
+
+8
+00:00:35,100 --> 00:00:36,600
+Words from list.
+
+9
+00:00:39,179 --> 00:00:41,320
+Myślę, że też ten deseń będzie ok.
+
+10
+00:00:41,320 --> 00:00:44,159
+Tu filter, no to list to filter.
+
+11
+00:00:45,600 --> 00:00:49,600
+No i list with words, cokolwiek.
+
+12
+00:00:50,039 --> 00:00:53,640
+Tutaj moglibyśmy też, znając, widząc to zadanie,
+
+13
+00:00:53,820 --> 00:00:56,900
+patrząc na to, że długość jest większa od 4 i mniejsza od 8,
+
+14
+00:00:57,500 --> 00:00:59,159
+fajnie byłoby się nad tym zastanowić,
+
+15
+00:00:59,519 --> 00:00:59,820
+że
+
+16
+00:00:59,820 --> 00:01:02,880
+jeżeli napiszę w kodzie bez problemu,
+
+17
+00:01:02,920 --> 00:01:06,659
+od razu, że interesują mnie tylko i wyłącznie takie słowa,
+
+18
+00:01:07,120 --> 00:01:08,260
+no to to nie będzie złe, nie?
+
+19
+00:01:08,599 --> 00:01:11,159
+Jeżeli, zobacz, stworzymy sobie taką zmienną tutaj output,
+
+20
+00:01:11,159 --> 00:01:13,719
+wykonamy for element into filter,
+
+21
+00:01:14,359 --> 00:01:18,780
+dwukropek, if len element jest większe niż 4,
+
+22
+00:01:18,980 --> 00:01:23,280
+and len element jest mniejsze niż 8,
+
+23
+00:01:23,420 --> 00:01:29,159
+dwukropek, output append element,
+
+24
+00:01:29,819 --> 00:01:31,219
+return output,
+
+25
+00:01:33,219 --> 00:01:34,759
+to nic tutaj złego nie ma.
+
+26
+00:01:36,019 --> 00:01:38,219
+Poza tym, że można sobie tę linijkę skrócić,
+
+27
+00:01:39,199 --> 00:01:42,219
+w ten sposób, to już pokazywałem wcześniej, jak robiliśmy end i or,
+
+28
+00:01:42,359 --> 00:01:44,239
+ja nie jestem wielkim fanem tego zapisu,
+
+29
+00:01:44,359 --> 00:01:48,119
+ale jeżeli wam się, tobie się podoba, to jak najbardziej możesz go używać.
+
+30
+00:01:48,500 --> 00:01:50,739
+Natomiast to, na co chciałem zwrócić uwagę, to jest to,
+
+31
+00:01:50,739 --> 00:01:53,780
+że jeżeli widzę, że wymagania tej funkcji są takie,
+
+32
+00:01:53,879 --> 00:01:57,099
+że mam tylko filtrować słowa od do,
+
+33
+00:01:57,579 --> 00:01:58,599
+no to zdecydowanie,
+
+34
+00:01:58,780 --> 00:01:59,799
+no to, że mam tylko filtrować słowa od do,
+
+35
+00:01:59,819 --> 00:02:03,099
+minimum length jako integer,
+
+36
+00:02:03,279 --> 00:02:06,899
+maximum length jako integer,
+
+37
+00:02:07,319 --> 00:02:10,840
+i w tym momencie dopisuję, używam tych dwóch zmiennych,
+
+38
+00:02:12,939 --> 00:02:17,939
+bo wiem, że dzięki temu moja funkcja będzie bardziej przyszłościowa,
+
+39
+00:02:18,599 --> 00:02:23,759
+i robienie kolejnej funkcji, która miałaby sprawdzać tego typu rzeczy,
+
+40
+00:02:24,479 --> 00:02:26,780
+jest po prostu bez sensu, bezcelowe.
+
+41
+00:02:26,780 --> 00:02:29,519
+Dużo lepiej jest właśnie dodać sobie,
+
+42
+00:02:29,520 --> 00:02:32,939
+dwa takie argumenty, dwa parametry, przepraszam,
+
+43
+00:02:33,080 --> 00:02:35,420
+później przekazać argument, no i zdecydować,
+
+44
+00:02:35,760 --> 00:02:37,540
+czy ta długość jest okej.
+
+45
+00:02:38,020 --> 00:02:40,939
+I tu wtedy PyCharm też nam zwraca uwagę, mówi,
+
+46
+00:02:41,040 --> 00:02:45,120
+zobacz, nie masz tego w swojej sygnaturze.
+
+47
+00:02:45,420 --> 00:02:48,000
+Jeżeli klikniemy update usage to reflect signature,
+
+48
+00:02:48,439 --> 00:02:52,020
+on nam to jeszcze podpowie, że możemy dodać to do docstringa,
+
+49
+00:02:52,140 --> 00:02:53,980
+i to też powinniśmy dodać do docstringa,
+
+50
+00:02:53,980 --> 00:02:58,980
+bo skoro mamy docstringa, to on zawsze musi podążać,
+
+51
+00:02:59,520 --> 00:03:03,520
+za tym, co jest w parametrach, no i warto byłoby go też uzupełnić.
+
+52
+00:03:03,620 --> 00:03:06,620
+W życiu codziennym takie rzeczy powinny wychodzić na etapie,
+
+53
+00:03:06,620 --> 00:03:09,620
+no, powinien każdy to widzieć i zwracać na to uwagę,
+
+54
+00:03:09,620 --> 00:03:12,620
+natomiast jeżeli o tym zapomnimy, to często w code review,
+
+55
+00:03:12,620 --> 00:03:15,620
+czyli na tym etapie, gdzie ktoś sprawdza nasz kod, czy jest okej,
+
+56
+00:03:15,620 --> 00:03:18,620
+gdzieś mam film na kanale na ten temat, że masz chęć to obejrzyj,
+
+57
+00:03:18,620 --> 00:03:21,620
+to na tym etapie zwraca nam uwagę, mówi,
+
+58
+00:03:21,620 --> 00:03:24,620
+ej, nie dodałeś tego do docstringa, pamiętaj o tym, żeby to dodać.
+
+59
+00:03:24,620 --> 00:03:28,620
+Okej, no to zadanie zhakowane, chodźmy do następnego.

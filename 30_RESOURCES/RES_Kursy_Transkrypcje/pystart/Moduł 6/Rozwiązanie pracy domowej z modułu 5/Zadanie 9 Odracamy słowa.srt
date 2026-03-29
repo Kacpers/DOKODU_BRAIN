@@ -1,0 +1,83 @@
+1
+00:00:00,000 --> 00:00:07,000
+No i dochodzimy sobie do kolejnego zadania, w którym to zadaniu chcemy odwracać poszczególne słowa, zostawiając ich kolejność.
+
+2
+00:00:07,000 --> 00:00:13,919
+Czyli możemy sobie napisać def reverse words in sentence.
+
+3
+00:00:15,060 --> 00:00:19,460
+Argument to będzie sentence, jako string zwracać będziemy string.
+
+4
+00:00:20,160 --> 00:00:29,500
+Pierwsze co trzeba zrobić to rozbić nasze słowa, rozbić nasze zdanie na słowa.
+
+5
+00:00:29,500 --> 00:00:37,840
+Czyli words równa się sentence.split, no i tutaj użyć spacji.
+
+6
+00:00:38,620 --> 00:00:41,519
+Następnie przejść sobie po poszczególnych słowach.
+
+7
+00:00:41,759 --> 00:00:45,480
+For word in words, dwukropek.
+
+8
+00:00:47,719 --> 00:00:49,980
+No i będziemy potrzebowali mieć jakąś zmienną output.
+
+9
+00:00:49,980 --> 00:00:55,879
+Output równa się pusty string.
+
+10
+00:00:57,120 --> 00:00:59,240
+Output, pusta lista.
+
+11
+00:00:59,500 --> 00:01:00,219
+Tak będzie wygodniej.
+
+12
+00:01:01,820 --> 00:01:05,099
+Output append word.
+
+13
+00:01:05,939 --> 00:01:06,939
+Odwrócone.
+
+14
+00:01:08,379 --> 00:01:16,780
+No i zwracamy połączone z pacją wynik.
+
+15
+00:01:19,780 --> 00:01:22,439
+No i chcemy napisać programuję w Pythonie.
+
+16
+00:01:22,439 --> 00:01:28,439
+Czyli print reverse words in sentence programuję w Pythonie.
+
+17
+00:01:29,500 --> 00:01:31,659
+Jako string oczywiście.
+
+18
+00:01:33,599 --> 00:01:34,959
+Strzała do góry.
+
+19
+00:01:37,099 --> 00:01:38,060
+Dziewięć.
+
+20
+00:01:38,900 --> 00:01:39,439
+No i mamy.
+
+21
+00:01:40,400 --> 00:01:41,799
+Wygląda bardzo podobnie, prawda?

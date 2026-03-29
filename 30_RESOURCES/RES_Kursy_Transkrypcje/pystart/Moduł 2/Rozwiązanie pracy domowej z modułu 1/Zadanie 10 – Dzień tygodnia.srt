@@ -1,0 +1,87 @@
+1
+00:00:00,000 --> 00:00:08,000
+W tym zadaniu mamy napisać program, który odbierze od użytkownika numer dnia tygodnia, czyli 1 7, a następnie wyświetli jego nazwę.
+
+2
+00:00:08,140 --> 00:00:12,140
+Na przykład dla wartości 1 napiszę poniedziałek, dla wartości 7 niedziela.
+
+3
+00:00:12,500 --> 00:00:20,960
+No to znowu potrzebujemy mieć numer dnia tygodnia, czyli jakiś tam number równa się int input podaj numer dnia tygodnia.
+
+4
+00:00:20,960 --> 00:00:29,160
+I tutaj pokażę Ci sposób, gdy trzeba więcej napisać z ifami, a później pokażę Ci coś, co funkcjonuje od Pythona 3.10.
+
+5
+00:00:29,160 --> 00:00:43,159
+Jest to match case, czyli if number równa się 1, 2, print poniedziałek, elif number równa się 2, print wtorek.
+
+6
+00:00:45,579 --> 00:00:47,400
+I myślę, że już wiesz co będzie dalej.
+
+7
+00:00:48,519 --> 00:00:53,039
+Dojdźmy więc do number równa się 7, print niedziela.
+
+8
+00:00:53,039 --> 00:00:59,000
+No i można zrobić jeszcze else print, wartość jest nieprawidłowa.
+
+9
+00:00:59,159 --> 00:01:02,039
+Tu apostrofy.
+
+10
+00:01:06,560 --> 00:01:16,659
+I wtedy jak sobie zrobimy Python 10 numer dnia tygodnia nazwy, zrobimy 1 jest poniedziałek, czemu z wielkiej litery to jest język polski, 7 niedziela.
+
+11
+00:01:16,659 --> 00:01:18,199
+I to jest pierwszy sposób.
+
+12
+00:01:19,620 --> 00:01:24,679
+Oczywiście skróciłem go sobie odrobinę, ale myślę, że wiesz co by było pomiędzy.
+
+13
+00:01:25,199 --> 00:01:29,140
+Natomiast drugi sposób zakłada, że będziemy korzystali z czegoś, co nazywa się match case.
+
+14
+00:01:29,159 --> 00:01:43,659
+I wtedy możemy napisać match number, dwukropek, case 1, print poniedziałek, case 2, print wtorek.
+
+15
+00:01:44,140 --> 00:01:47,140
+I tak moglibyśmy sobie znowu pójść dalej, dalej, dalej, dalej.
+
+16
+00:01:47,959 --> 00:01:56,159
+A jeżeli chcielibyśmy zrobić elsa, to można zrobić case podkreślenie, print wartość nieprawidłowa.
+
+17
+00:01:59,159 --> 00:02:03,359
+I w tym momencie powinien być efekt zupełnie taki sam.
+
+18
+00:02:03,439 --> 00:02:04,340
+Co ci się tutaj nie podoba?
+
+19
+00:02:04,979 --> 00:02:13,199
+Ach, 3,9. Ja widocznie mam tutaj starszą wersję Pythona gdzieś ustawioną, ale ten Python, którym to odpalam jest 3,11, więc żaden problem.
+
+20
+00:02:13,400 --> 00:02:19,039
+Python 10, no i jeszcze raz mogę napisać 2, jest 2 razy wtorek.
+
+21
+00:02:19,419 --> 00:02:23,319
+Czyli jak widać i tutaj, i tutaj zadziałał wtorek.
+
+22
+00:02:23,719 --> 00:02:26,039
+Zapraszam cię do ostatniego zadania z trzema liczbami.

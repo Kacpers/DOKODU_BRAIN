@@ -1,0 +1,267 @@
+1
+00:00:00,000 --> 00:00:10,339
+Jak zacząć? Będę potrzebował zacząć od tego, żeby sobie ten kod ponownie wyrzucić, bo ja bym chciał, żeby ten mój main był jak najbardziej uproszczony.
+
+2
+00:00:10,919 --> 00:00:16,160
+Stąd też zaznaczę cały application i myślę o jeszcze jednej rzeczy.
+
+3
+00:00:16,500 --> 00:00:23,480
+Z tego względu, że tak naprawdę ten parser, który jest tutaj, on też niekoniecznie musi być wywoływany na zewnątrz.
+
+4
+00:00:23,480 --> 00:00:31,240
+Ja założyłem, że sobie argumenty będę przekazywał z zewnątrz, ale myślę, że zrobię jedną małą zmianę, która nam bardzo uprości kod.
+
+5
+00:00:31,740 --> 00:00:36,640
+A mianowicie parser stąd wycinam i wstawię go sobie tutaj.
+
+6
+00:00:38,460 --> 00:00:41,400
+Moich argumentów w tym momencie nie będę potrzebował mieć do niczego.
+
+7
+00:00:42,539 --> 00:00:51,019
+Następnie te argumenty po prostu sobie w ten fragment wytnę i wstawię je sobie tu.
+
+8
+00:00:51,640 --> 00:00:53,420
+To jest taka może mała zmiana.
+
+9
+00:00:53,479 --> 00:01:02,140
+Ale dzięki temu wyrzucając stąd application, ja będę mógł wyrzucić arc parse oraz będę mógł wyrzucić parser.
+
+10
+00:01:02,579 --> 00:01:05,539
+Gdyż application tak naprawdę będzie zawierał całą logikę.
+
+11
+00:01:06,060 --> 00:01:08,659
+Czyli ponownie robię tę samą zmianę, którą robiłem poprzednio.
+
+12
+00:01:09,120 --> 00:01:16,620
+Zaznaczam cały mój kod aplikacji, wycinam go, przechodzę sobie do nowego pliku, nazywam go application.
+
+13
+00:01:16,620 --> 00:01:23,459
+I tutaj wklejam sobie ten kod odpowiedzialny za to.
+
+14
+00:01:23,480 --> 00:01:26,560
+To czego nie używam mogę usunąć.
+
+15
+00:01:26,560 --> 00:01:32,980
+I tak samo jak poprzednio pokażę Ci teraz zupełnie tak na spokojnie jaki kod znajduje się w tym pliku.
+
+16
+00:01:32,980 --> 00:01:35,700
+Czyli application to jest from parser import parser.
+
+17
+00:01:35,700 --> 00:01:41,120
+Ta nasza aplikacja i już niedługo w tej aplikacji będzie dużo więcej kodu.
+
+18
+00:01:41,120 --> 00:01:47,100
+No bo będziemy musieli zaimplementować listę statystyki, deleta, add expense i add income.
+
+19
+00:01:47,100 --> 00:01:49,460
+A jak to zaimplementować już Ci pokazuję.
+
+20
+00:01:49,460 --> 00:01:53,439
+Ale żeby zachować działanie kodu muszę wykonać from application.
+
+21
+00:01:53,480 --> 00:01:58,480
+I tu chciałbym się jeszcze wytłumaczyć z jednej rzeczy.
+
+22
+00:01:58,480 --> 00:02:05,260
+Ponieważ to, że tak piszę sobie wszystko w mainie, a potem wyrzucam te rzeczy na zewnątrz nie jest niczym dziwnym.
+
+23
+00:02:05,260 --> 00:02:09,240
+Zdecydowanie taka praca mi bardzo ułatwia życie.
+
+24
+00:02:09,240 --> 00:02:14,080
+Bo zauważyłem, że część osób tworzy najpierw bardzo dużo plików, stawia do nich kod.
+
+25
+00:02:14,080 --> 00:02:17,699
+Później okazuje się, że część plików jest niepotrzebna albo nie wiadomo co gdzie umieścić.
+
+26
+00:02:17,699 --> 00:02:22,800
+Więc takie dzielenie tego kodu podczas jego tworzenia.
+
+27
+00:02:22,800 --> 00:02:23,300
+Więc takie dzielenie tego kodu podczas jego tworzenia.
+
+28
+00:02:23,300 --> 00:02:30,540
+Zapewnia mnie o tym, upewnia mnie w tym, że ten kod po prostu jest uporządkowany i jest czytelny.
+
+29
+00:02:30,540 --> 00:02:34,740
+Wygodniej mi się tak pracuje niż na początek zastanawiać się co, gdzie, jak i dlaczego.
+
+30
+00:02:34,740 --> 00:02:37,900
+Dobrze, co mam zrobić dalej?
+
+31
+00:02:37,900 --> 00:02:42,060
+Dalej będę chciał wykonywać te moje czynności.
+
+32
+00:02:42,060 --> 00:02:46,300
+Jednakże, żeby wykonywać ten kod będę potrzebował mieć kilka rzeczy.
+
+33
+00:02:46,300 --> 00:02:49,060
+Między innymi połączenie z bazą danych.
+
+34
+00:02:49,060 --> 00:02:52,620
+A oprócz połączenia będę potrzebował mieć dwie tabele.
+
+35
+00:02:52,620 --> 00:02:55,180
+Jedna tabela będzie dotyczyła kategorii.
+
+36
+00:02:55,180 --> 00:02:59,460
+Druga tabela będzie dotyczyła tych wydatków i przychodów.
+
+37
+00:02:59,460 --> 00:03:02,860
+I te tabele muszę sobie stworzyć.
+
+38
+00:03:02,860 --> 00:03:04,180
+Gdzie je stworzę?
+
+39
+00:03:04,180 --> 00:03:08,180
+Mógłbym stworzyć je w ramach application.
+
+40
+00:03:08,180 --> 00:03:11,620
+Natomiast zdecydowanie wolę, żeby ten kod był widoczny tutaj.
+
+41
+00:03:11,620 --> 00:03:13,620
+I ja go zawrę w tym miejscu.
+
+42
+00:03:13,620 --> 00:03:18,860
+Dlatego też potrzebuję mieć połączenie z bazą danych w tym miejscu.
+
+43
+00:03:18,860 --> 00:03:20,860
+Zaraz też zobaczysz dlaczego.
+
+44
+00:03:20,860 --> 00:03:21,379
+Zaraz też zobaczysz dlaczego.
+
+45
+00:03:21,379 --> 00:03:26,379
+Natomiast już teraz zaimportuję sobie tutaj import SQLite3.
+
+46
+00:03:26,379 --> 00:03:33,379
+I wykonam with SQLite3.connect.
+
+47
+00:03:33,379 --> 00:03:38,379
+Tutaj mogę mu przekazać budget.db.
+
+48
+00:03:38,379 --> 00:03:40,379
+As database.
+
+49
+00:03:40,379 --> 00:03:42,379
+Dwukropek.
+
+50
+00:03:42,379 --> 00:03:46,379
+I ten mój kod będę potrzebował mieć zarówno.
+
+51
+00:03:46,379 --> 00:03:49,379
+To moje połączenie będę potrzebował mieć zarówno wewnątrz application.
+
+52
+00:03:49,379 --> 00:03:50,379
+Jak i wyżej.
+
+53
+00:03:50,379 --> 00:03:54,379
+Kiedy będę tworzył moje tabele.
+
+54
+00:03:54,379 --> 00:03:58,379
+Więc od razu database mógłbym przekazać do application.
+
+55
+00:03:58,379 --> 00:04:02,379
+Natomiast jak umawialiśmy się na to, że będziemy tworzyli te aplikacje.
+
+56
+00:04:02,379 --> 00:04:08,379
+To umawialiśmy się na to, że będziemy starali się tworzyć ją jak najbardziej zgodnie ze wzorcem MVC.
+
+57
+00:04:08,379 --> 00:04:13,379
+Stąd też nasz kontroler nie powinien wołać bezpośrednio bazy danych.
+
+58
+00:04:13,379 --> 00:04:16,379
+Zamiast tego powinniśmy mieć aplikację.
+
+59
+00:04:16,379 --> 00:04:18,379
+Fragment aplikacji.
+
+60
+00:04:18,379 --> 00:04:22,379
+Która będzie zarządzała tym co ma się stać.
+
+61
+00:04:22,379 --> 00:04:24,379
+Czy ma się dodać wydatek, usunąć wydatek.
+
+62
+00:04:24,379 --> 00:04:27,379
+Czy co i jakie czynności chcemy żeby były zawarte.
+
+63
+00:04:27,379 --> 00:04:29,379
+Więc już za moment.
+
+64
+00:04:29,379 --> 00:04:34,379
+Tu będziemy mieli ten fragment kodu odpowiedzialny właśnie za utworzenie tych tabel.
+
+65
+00:04:34,379 --> 00:04:38,379
+Oraz drugi fragment kodu odpowiedzialny za druga klasa.
+
+66
+00:04:38,379 --> 00:04:40,379
+Którą nazwiemy sobie repozytory.
+
+67
+00:04:40,379 --> 00:04:43,379
+Która będzie odpowiadała za zarządzanie naszymi danymi.

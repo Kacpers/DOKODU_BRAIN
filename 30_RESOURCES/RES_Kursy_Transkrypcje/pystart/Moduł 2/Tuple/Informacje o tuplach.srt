@@ -1,0 +1,499 @@
+1
+00:00:00,000 --> 00:00:03,080
+I w tej lekcji będziemy sobie już rozmawiali o tuplach.
+
+2
+00:00:03,580 --> 00:00:07,740
+Jeżeli chodzi o tuple, to musisz wiedzieć, co w ogóle w takich tuplach się zawiera.
+
+3
+00:00:08,259 --> 00:00:13,359
+Najczęściej są to parę liczb albo kilka wartości znajdujących się obok siebie.
+
+4
+00:00:13,859 --> 00:00:20,140
+Na przykład, jeżeli wyobrazisz sobie wiersz w Excelu, który nie ma tej kolumny nagłówkowej,
+
+5
+00:00:20,480 --> 00:00:22,100
+no to możesz pomyśleć, że jest to tupla.
+
+6
+00:00:22,440 --> 00:00:26,440
+Tylko to, co jest ważne, to jest to, że tupla ta jest niemutowalna.
+
+7
+00:00:26,440 --> 00:00:30,859
+Czyli ona po prostu, kiedy ją stworzysz, nie będzie mogła być zmieniona.
+
+8
+00:00:31,220 --> 00:00:32,800
+To też zaraz pokażę Ci w slajdach.
+
+9
+00:00:33,300 --> 00:00:36,299
+Zacznijmy sobie od tego, że jeżeli tworzymy sobie taką tuplę,
+
+10
+00:00:36,420 --> 00:00:42,460
+no to zapisujemy personal information, równa się i teraz jest zasada taka,
+
+11
+00:00:42,980 --> 00:00:45,320
+że można stosować nawiasy, ale wcale nie trzeba.
+
+12
+00:00:45,980 --> 00:00:49,659
+Jeżeli powdasz w Pythonie dwie wartości rozdzielone przecinkiem,
+
+13
+00:00:50,079 --> 00:00:53,299
+to również Python będzie myślał, że chodzi Ci o tuple.
+
+14
+00:00:53,640 --> 00:00:56,159
+I to jest jak najbardziej poprawny sposób deklaracji.
+
+15
+00:00:56,439 --> 00:01:01,619
+Zobacz, stworzyłem personal information i przypisałem do pierwszej wartości kacper,
+
+16
+00:01:01,719 --> 00:01:02,719
+do drugiej sieradziński.
+
+17
+00:01:03,299 --> 00:01:07,859
+Inny sposób, mogę napisać children i napisać 1,2,3.
+
+18
+00:01:08,439 --> 00:01:12,060
+Mogę też napisać cities i mogę do tego przypisać Gdynia.
+
+19
+00:01:12,680 --> 00:01:14,539
+I tu dochodzimy do bardzo ważnej informacji.
+
+20
+00:01:14,859 --> 00:01:17,560
+A mianowicie, że jeżeli tworzysz tuplę jednoelementową,
+
+21
+00:01:18,039 --> 00:01:20,680
+to zawsze musisz pamiętać o tym, żeby dodać ten przecinek.
+
+22
+00:01:21,200 --> 00:01:23,920
+Jeżeli nie dodasz tej wartości, to to nie będzie tupla.
+
+23
+00:01:23,920 --> 00:01:25,920
+O tym sobie jeszcze za moment porozmawiamy.
+
+24
+00:01:26,439 --> 00:01:29,819
+Jeżeli spróbujesz to wypisać, czyli wykonasz print od cities
+
+25
+00:01:29,819 --> 00:01:32,399
+albo print od personal information,
+
+26
+00:01:32,859 --> 00:01:36,200
+to zobaczysz, że wyświetlą Ci się informacje, że jest to tupla właśnie.
+
+27
+00:01:36,420 --> 00:01:40,620
+Znaczy słowa tuple nie będzie, ale zobaczysz wartości po przecinkach w nawiasie.
+
+28
+00:01:41,159 --> 00:01:43,560
+To jest bardzo ważna informacja. Zapamiętaj ją.
+
+29
+00:01:44,120 --> 00:01:48,019
+I tu właśnie rozmawiamy o tym błędzie.
+
+30
+00:01:48,539 --> 00:01:52,859
+Jeżeli napiszesz test1 równa się 1024 i sobie to wyprintujesz,
+
+31
+00:01:52,859 --> 00:01:55,060
+to wówczas tak naprawdę stworzysz liczbę.
+
+32
+00:01:55,060 --> 00:01:57,060
+Tak jak wykonywaliśmy obliczenia matematyczne,
+
+33
+00:01:57,060 --> 00:01:59,060
+część wartości mogła znajdować się w nawiasach
+
+34
+00:01:59,060 --> 00:02:03,060
+i on po prostu wykonywał na nich obliczenia arytmetyczne.
+
+35
+00:02:03,060 --> 00:02:07,060
+Dokładnie tak samo jest tu. To jest po prostu liczba.
+
+36
+00:02:07,060 --> 00:02:10,060
+Natomiast jeżeli chcesz stworzyć tuplę, to musisz pamiętać o tym,
+
+37
+00:02:10,060 --> 00:02:12,060
+żeby po tej liczbie dodać przecinek.
+
+38
+00:02:12,060 --> 00:02:16,060
+I wtedy Python będzie wiedział, że a, ok, to jest tupla jednoelementowa.
+
+39
+00:02:16,060 --> 00:02:18,060
+Dlaczego to jest takie ważne? Ponieważ są funkcje,
+
+40
+00:02:18,060 --> 00:02:21,060
+które jako argumenty przyjmują tylko i wyłącznie tuple.
+
+41
+00:02:21,060 --> 00:02:23,060
+O tym jeszcze sobie w przyszłości porozmawiamy.
+
+42
+00:02:23,060 --> 00:02:24,060
+I tutaj trzeba pamiętać o tym, że tupla jednoelementowa, to jest tupla jednoelementowa.
+
+43
+00:02:24,060 --> 00:02:27,060
+I tutaj trzeba pamiętać o tym, że tupla jednoelementowa, to jest tupla jednoelementowa,
+
+44
+00:02:27,060 --> 00:02:30,060
+i ma być to tupla, która zawiera jeden element,
+
+45
+00:02:30,060 --> 00:02:32,060
+to konieczne jest dodanie tego jednego przecinka na końcu.
+
+46
+00:02:32,060 --> 00:02:34,060
+to konieczne jest dodanie tego jednego przecinka na końcu.
+
+47
+00:02:34,060 --> 00:02:36,060
+Ten jeden przecinek robi naprawdę różnicę.
+
+48
+00:02:36,060 --> 00:02:38,060
+Ten jeden przecinek robi naprawdę różnicę.
+
+49
+00:02:38,060 --> 00:02:40,060
+Kolejna rzecz, którą mogę Ci powiedzieć na temat tupli,
+
+50
+00:02:40,060 --> 00:02:44,060
+Kolejna rzecz, którą mogę Ci powiedzieć na temat tupli,
+
+51
+00:02:44,060 --> 00:02:46,060
+No bo kiedy na tupli wykonujesz print,
+
+52
+00:02:46,060 --> 00:02:48,060
+no bo kiedy na tupli wykonujesz print,
+
+53
+00:02:48,060 --> 00:02:50,060
+wyświetlają Ci się wszystkie dane, które są składową tej tupli.
+
+54
+00:02:50,060 --> 00:02:52,060
+po prostu, od początku do końca.
+
+55
+00:02:52,060 --> 00:02:54,060
+Pop Tig na przykład dostawę ś MIC.
+
+56
+00:02:54,060 --> 00:02:57,599
+stanie potrzeba, aby wyciągnąć sobie tylko pierwszy element
+
+57
+00:02:57,599 --> 00:03:00,840
+albo drugi element tupli, to można się do nich odwołać
+
+58
+00:03:00,840 --> 00:03:03,120
+za pomocą nawiasów kwadratowych
+
+59
+00:03:03,120 --> 00:03:05,719
+i w nawiasy kwadratowe wpisujemy indeks,
+
+60
+00:03:06,020 --> 00:03:08,699
+na którym znajduje się element, który chcielibyśmy pobrać.
+
+61
+00:03:09,199 --> 00:03:12,659
+Na przykład, jeżeli stworzyłem sobie taką tuplę jak cities,
+
+62
+00:03:12,819 --> 00:03:15,460
+przypisałem do niej sobie dwie nazwy miejscowości,
+
+63
+00:03:15,920 --> 00:03:18,640
+Gdynia i Sochaczew, a następnie chcę pobrać
+
+64
+00:03:18,640 --> 00:03:22,300
+któryś z elementów tej tupli, to mogę napisać cities od zera
+
+65
+00:03:22,300 --> 00:03:24,640
+i to spowoduje, że dostanę Gdynię.
+
+66
+00:03:25,660 --> 00:03:27,520
+Natomiast jeżeli napiszę cities od 1,
+
+67
+00:03:27,780 --> 00:03:29,640
+no to w wyniku dostanę Sochaczew.
+
+68
+00:03:30,060 --> 00:03:32,200
+Co by się stało, gdybyś napisał cities od 2?
+
+69
+00:03:32,740 --> 00:03:36,060
+Pojawiłby się błąd. Zupełnie nie musisz się takim błędem martwić,
+
+70
+00:03:36,140 --> 00:03:39,800
+pojawi się po prostu informacja, że taki indeks nie istnieje w Twojej tupli,
+
+71
+00:03:40,180 --> 00:03:42,720
+natomiast jeżeli masz ochotę go wykonać, to wykonaj go.
+
+72
+00:03:43,020 --> 00:03:45,020
+Z takimi błędami warto się zaznajamiać.
+
+73
+00:03:45,020 --> 00:03:47,900
+Im więcej błędów zobaczysz, tym łatwiej będzie Ci w przyszłości.
+
+74
+00:03:48,840 --> 00:03:51,160
+Kolejna rzecz, którą mówiliśmy sobie o tupli,
+
+75
+00:03:51,260 --> 00:03:52,020
+to jest to, że tupli...
+
+76
+00:03:52,640 --> 00:03:55,939
+I tutaj też przykład, widzisz, błąd.
+
+77
+00:03:56,480 --> 00:03:59,240
+Jeżeli stworzymy sobie tuplę, która nazywa się cities,
+
+78
+00:03:59,360 --> 00:04:01,540
+przypiszemy sobie do niej te dwie nazwy miejscowości,
+
+79
+00:04:01,660 --> 00:04:06,080
+po czym najdzie nas chęć, żeby zmienić pierwszą z wartości,
+
+80
+00:04:06,540 --> 00:04:08,060
+to wówczas zwróć uwagę na to,
+
+81
+00:04:08,120 --> 00:04:10,060
+że oczywiście indeksacja zaczyna się od zera.
+
+82
+00:04:10,320 --> 00:04:13,500
+Czyli ja wprowadzam cities od zera, równa się Gdańsk.
+
+83
+00:04:13,500 --> 00:04:16,660
+To jest próba wymienienia Gdyni na Gdańsk,
+
+84
+00:04:17,019 --> 00:04:18,740
+co w przypadku tupli jest niemożliwe.
+
+85
+00:04:19,220 --> 00:04:22,139
+Tuple są niemutowalne, nie można więc dodawać do nich
+
+86
+00:04:22,139 --> 00:04:24,579
+nowych elementów, ani też zmieniać istniejących.
+
+87
+00:04:24,959 --> 00:04:27,759
+W tym momencie Python się na nas trochę, można powiedzieć, obrazi
+
+88
+00:04:27,759 --> 00:04:28,860
+i wyświetli komunikat.
+
+89
+00:04:29,279 --> 00:04:29,939
+Type error.
+
+90
+00:04:30,099 --> 00:04:32,399
+Tuple object does not support item assignment.
+
+91
+00:04:32,680 --> 00:04:35,839
+Czyli tak naprawdę nie możesz do poszczególnych itemów,
+
+92
+00:04:35,919 --> 00:04:37,319
+czyli do poszczególnych elementów,
+
+93
+00:04:37,740 --> 00:04:39,680
+przypisywać innych wartości.
+
+94
+00:04:41,579 --> 00:04:45,120
+Mówiliśmy sobie więc, że do deklaracji możemy użyć nawiasów,
+
+95
+00:04:45,219 --> 00:04:47,339
+okrągłych, ale możemy je też pominąć.
+
+96
+00:04:47,819 --> 00:04:50,199
+Po drugie, jeżeli chcemy rzutować coś na tuple,
+
+97
+00:04:50,199 --> 00:04:51,819
+na razie rzutowaliśmy range,
+
+98
+00:04:52,139 --> 00:04:54,079
+no to używamy funkcji o nazwie tuple.
+
+99
+00:04:54,579 --> 00:04:57,240
+Po trzecie, tupla jest indeksowana.
+
+100
+00:04:57,599 --> 00:05:00,839
+Jeżeli chcemy pobrać sobie wartość leżącą na którymś elemencie,
+
+101
+00:05:01,219 --> 00:05:04,399
+to zawsze wprowadzamy ją po prostu w nawiasach kwadratowych
+
+102
+00:05:04,399 --> 00:05:07,620
+i pamiętaj, indeksowanie zawsze zaczyna się od zera.
+
+103
+00:05:07,959 --> 00:05:10,740
+Czyli to, co jest pierwszym elementem, jest na zerowym indeksie.
+
+104
+00:05:11,159 --> 00:05:13,819
+To, co jest drugim elementem, znajduje się na trzecim indeksie.
+
+105
+00:05:14,180 --> 00:05:14,899
+I tak dalej.
+
+106
+00:05:15,879 --> 00:05:16,839
+Pierwszym indeksie.
+
+107
+00:05:17,120 --> 00:05:18,079
+No, rozumiesz, o co mi chodzi.
+
+108
+00:05:18,879 --> 00:05:21,680
+Po czwarte, tupla jest niemutowalna,
+
+109
+00:05:21,680 --> 00:05:23,379
+czyli nie możemy zmieniać wartości.
+
+110
+00:05:23,540 --> 00:05:25,220
+Kiedy już stworzymy sobie tuple,
+
+111
+00:05:25,540 --> 00:05:28,379
+no to te wartości tak zostają
+
+112
+00:05:28,379 --> 00:05:30,100
+i nic się z nimi nie może stać.
+
+113
+00:05:30,660 --> 00:05:33,379
+Możesz ewentualnie pod zmienną przypisać nową tuple,
+
+114
+00:05:33,680 --> 00:05:36,220
+ale nie możesz zmodyfikować elementów jej istniejącej.
+
+115
+00:05:37,600 --> 00:05:40,420
+I ostatnia rzecz, kolejność jest zachowana.
+
+116
+00:05:40,879 --> 00:05:43,100
+Na chwilę obecną ten punkt nie ma sensu,
+
+117
+00:05:43,199 --> 00:05:44,960
+ale dojdziemy w przyszłości do takich struktur,
+
+118
+00:05:45,439 --> 00:05:49,399
+które będą miały ambiwalentny stosunek do tej kolejności
+
+119
+00:05:49,399 --> 00:05:51,660
+i będą potrafiły dowolnie sobie zmieniać.
+
+120
+00:05:51,680 --> 00:05:54,540
+I tę kolejność zmieniać przy różnych wywołaniach.
+
+121
+00:05:54,980 --> 00:05:56,740
+Tutaj, jeżeli tworzysz sobie tuple,
+
+122
+00:05:57,019 --> 00:05:58,740
+przypisujesz coś na zerowym indeksie,
+
+123
+00:05:58,800 --> 00:06:01,019
+na pierwszym, na drugim, na czwartym, na piątym i tak dalej,
+
+124
+00:06:01,400 --> 00:06:02,900
+to wówczas możesz mieć pewność,
+
+125
+00:06:03,100 --> 00:06:06,340
+że zawsze te elementy tam będą pod tymi indeksami.

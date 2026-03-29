@@ -1,0 +1,1095 @@
+1
+00:00:00,780 --> 00:00:03,000
+Dobra, mamy więc kolejne zadanie.
+
+2
+00:00:03,500 --> 00:00:05,419
+Utwórz bazę danych o nazwie test.ip.
+
+3
+00:00:05,700 --> 00:00:08,500
+W bazie powinna znaleźć się tabela ip2check,
+
+4
+00:00:08,640 --> 00:00:12,660
+która powinna zawierać jedną kolumnę zawierającą tylko adresy IP do sprawdzenia
+
+5
+00:00:12,660 --> 00:00:14,919
+oraz drugą kolumnę log,
+
+6
+00:00:15,280 --> 00:00:17,359
+która będzie przechowywała datę sprawdzenia
+
+7
+00:00:17,359 --> 00:00:19,980
+oraz informacje o sukcesie lub porażce.
+
+8
+00:00:20,480 --> 00:00:22,519
+Ja od razu powiem, że się odrobinkę pomyliłem
+
+9
+00:00:22,519 --> 00:00:24,760
+i zrobiłem sobie dodatkową kolumnę jeszcze id,
+
+10
+00:00:24,760 --> 00:00:27,339
+ale faktycznie ta kolumna id nie jest mi potrzebna,
+
+11
+00:00:27,780 --> 00:00:29,519
+więc ją sobie po prostu usuwam.
+
+12
+00:00:29,519 --> 00:00:31,759
+I w ten sposób mam takie zapytanie.
+
+13
+00:00:31,899 --> 00:00:36,519
+Create table ip2check z ip, które jest tekstem
+
+14
+00:00:36,519 --> 00:00:38,340
+oraz drugie zapytanie.
+
+15
+00:00:39,060 --> 00:00:41,820
+Create table log, gdzie mamy id,
+
+16
+00:00:42,100 --> 00:00:44,519
+które jest primary key autoincrement
+
+17
+00:00:44,519 --> 00:00:46,500
+created at timestamp default.
+
+18
+00:00:46,799 --> 00:00:49,200
+No i current timestamp, to już znacie z poprzedniego zadania
+
+19
+00:00:49,200 --> 00:00:52,200
+oraz ip isup jako integer,
+
+20
+00:00:52,200 --> 00:00:54,460
+czyli 0 to jest isup,
+
+21
+00:00:54,739 --> 00:00:57,760
+a 1 to jest isup.
+
+22
+00:00:58,000 --> 00:00:59,500
+I w ten sposób będę chciał,
+
+23
+00:00:59,520 --> 00:01:00,179
+żebym mógł rozkminiać,
+
+24
+00:01:00,280 --> 00:01:01,859
+czy to urządzenie działa, czy nie działa.
+
+25
+00:01:02,320 --> 00:01:02,780
+Co jeszcze?
+
+26
+00:01:03,180 --> 00:01:04,740
+Jeszcze zrobiłem rzecz następującą,
+
+27
+00:01:04,799 --> 00:01:06,640
+a mianowicie po prostu przeszedłem,
+
+28
+00:01:06,820 --> 00:01:07,780
+pobrałem sobie kursor,
+
+29
+00:01:07,879 --> 00:01:11,020
+następnie przeszedłem sobie po wszystkich tych zapytaniach
+
+30
+00:01:11,020 --> 00:01:13,879
+no i wykonałem je sobie na sam koniec,
+
+31
+00:01:14,100 --> 00:01:15,300
+bo tak też mogę robić,
+
+32
+00:01:15,420 --> 00:01:17,400
+czyli kiedy executy będą w pętli,
+
+33
+00:01:17,740 --> 00:01:20,020
+to na sam koniec mogę zrobić dbconnection commit
+
+34
+00:01:20,020 --> 00:01:22,420
+i on wtedy oba te zapytania mi wykona.
+
+35
+00:01:22,420 --> 00:01:24,859
+No i tak naprawdę reszta konstrukcji,
+
+36
+00:01:24,980 --> 00:01:26,159
+którą widzicie jest identyczna,
+
+37
+00:01:26,260 --> 00:01:27,420
+jak to co robiliśmy do tej pory,
+
+38
+00:01:27,520 --> 00:01:29,020
+czyli with SQLite 3 connect,
+
+39
+00:01:29,519 --> 00:01:31,979
+check, sconnection, len, bla, bla, bla.
+
+40
+00:01:32,500 --> 00:01:33,759
+Wszystko bez problemu.
+
+41
+00:01:34,239 --> 00:01:36,280
+I teraz naszym zadaniem będzie
+
+42
+00:01:36,280 --> 00:01:38,060
+zrobienie rzeczy następującej,
+
+43
+00:01:38,159 --> 00:01:39,659
+a mianowicie będziemy chcieli zrobić
+
+44
+00:01:39,659 --> 00:01:41,500
+kilka dodatkowych funkcji.
+
+45
+00:01:42,060 --> 00:01:45,879
+Pierwsza funkcja będzie pobierała adresy,
+
+46
+00:01:46,099 --> 00:01:47,759
+czyli musimy sobie po prostu zrobić funkcję,
+
+47
+00:01:47,879 --> 00:01:50,459
+która będzie nam zwracała na podstawie połączenia
+
+48
+00:01:50,459 --> 00:01:52,819
+wszystkie nasze adresy IP,
+
+49
+00:01:53,039 --> 00:01:55,459
+które znajdują się w naszej bazie.
+
+50
+00:01:56,519 --> 00:01:59,459
+Następnie będziemy potrzebowali drugą rzecz,
+
+51
+00:01:59,519 --> 00:02:02,819
+a mianowicie funkcję odpytującą ten adres IP,
+
+52
+00:02:03,500 --> 00:02:04,959
+pobierającą informację,
+
+53
+00:02:05,060 --> 00:02:06,979
+czy się udało, czy się nie udało.
+
+54
+00:02:07,399 --> 00:02:08,620
+Więc ja zaczynam sobie od początku.
+
+55
+00:02:09,199 --> 00:02:11,439
+Mogę zrobić to nad initialize,
+
+56
+00:02:11,919 --> 00:02:15,419
+czyli dev get ips.
+
+57
+00:02:15,840 --> 00:02:17,439
+Potrzebuję dbconnection
+
+58
+00:02:17,439 --> 00:02:21,919
+i tu będę tylko i wyłącznie pobierał te adresy IP,
+
+59
+00:02:22,300 --> 00:02:25,280
+czyli for, mogę for,
+
+60
+00:02:26,139 --> 00:02:28,159
+no dobra, zrobimy najpierw jedno zapytanie,
+
+61
+00:02:28,159 --> 00:02:29,240
+czyli n20,
+
+62
+00:02:29,240 --> 00:02:30,640
+to jeszcze kursor potrzebujemy.
+
+63
+00:02:31,159 --> 00:02:33,980
+Czyli kursor to jest dbconnection kursor,
+
+64
+00:02:34,600 --> 00:02:40,540
+następnie kursor.execute
+
+65
+00:02:40,540 --> 00:02:42,980
+select gwiazdka,
+
+66
+00:02:43,060 --> 00:02:44,180
+możemy zrobić select IP,
+
+67
+00:02:44,680 --> 00:02:45,939
+from IP to check
+
+68
+00:02:45,939 --> 00:02:51,040
+i tutaj przypisuję to sobie do res,
+
+69
+00:02:51,200 --> 00:02:53,219
+równa się, return
+
+70
+00:02:53,219 --> 00:02:56,560
+i teraz mógłbym zwrócić po prostu to res,
+
+71
+00:02:56,560 --> 00:02:58,660
+z tego względu, że on mi dzięki temu,
+
+72
+00:02:58,659 --> 00:03:01,579
+pozwoli też na tym resie iterować
+
+73
+00:03:01,579 --> 00:03:04,620
+i przechodzić po kolejnych wartościach,
+
+74
+00:03:04,680 --> 00:03:05,740
+po kolejnych adresach IP.
+
+75
+00:03:06,199 --> 00:03:07,000
+To jest pierwsza rzecz.
+
+76
+00:03:07,500 --> 00:03:09,379
+Druga rzecz to jest dev
+
+77
+00:03:09,379 --> 00:03:11,900
+i możemy ją nazwać sobie save status.
+
+78
+00:03:13,680 --> 00:03:14,879
+Coś w ten deseń.
+
+79
+00:03:15,280 --> 00:03:16,939
+Też będę potrzebował dbconnection
+
+80
+00:03:16,939 --> 00:03:21,379
+oraz będę potrzebował mieć to created at,
+
+81
+00:03:21,800 --> 00:03:25,680
+to tutaj możemy nie posługiwać się w ogóle tym created at,
+
+82
+00:03:25,780 --> 00:03:27,419
+możemy posłużyć się tym current timestamp,
+
+83
+00:03:27,419 --> 00:03:28,300
+żeby było ciekawiej,
+
+84
+00:03:28,300 --> 00:03:29,400
+żeby było raz tak, raz tak.
+
+85
+00:03:30,020 --> 00:03:32,260
+Natomiast będziemy potrzebowali na pewno mieć isup.
+
+86
+00:03:32,600 --> 00:03:34,840
+Ach, no i tu jeszcze oczywiście IP też nam się przyda,
+
+87
+00:03:35,200 --> 00:03:36,180
+no bo musimy wiedzieć,
+
+88
+00:03:36,820 --> 00:03:39,160
+czy ten adres działa, czy nie działa.
+
+89
+00:03:39,500 --> 00:03:41,120
+Więc będziemy potrzebowali mieć IP,
+
+90
+00:03:41,640 --> 00:03:43,820
+no właściwie to który adres działa, czy nie działa.
+
+91
+00:03:44,160 --> 00:03:46,500
+IP oraz informacje, czy isup.
+
+92
+00:03:48,160 --> 00:03:50,740
+Gdzie IP to jest po prostu text, string,
+
+93
+00:03:51,320 --> 00:03:53,860
+isup natomiast to będzie wartość boolean.
+
+94
+00:03:55,180 --> 00:03:58,080
+Tu nie będę szedł jeszcze tą konstrukcją,
+
+95
+00:03:58,300 --> 00:04:00,300
+bo nie mam już tego typu,
+
+96
+00:04:00,300 --> 00:04:03,300
+no bo w ogóle tak długo jak tylko mogę zachowywać porządek.
+
+97
+00:04:03,300 --> 00:04:04,300
+Okej?
+
+98
+00:04:04,300 --> 00:04:08,300
+I to będzie mi wykonywało następującą rzecz,
+
+99
+00:04:08,300 --> 00:04:13,300
+czyli dbconnection.cursor
+
+100
+00:04:13,300 --> 00:04:17,259
+i to sobie przypiszę do zmiennej cursor="
+
+101
+00:04:17,259 --> 00:04:21,800
+Następnie będę potrzebował wykonać zapytanie insert
+
+102
+00:04:21,800 --> 00:04:26,060
+dodające nowy wpis do tej tabeli, którą mamy tutaj log,
+
+103
+00:04:26,060 --> 00:04:27,019
+czyli cursor.exe,
+
+104
+00:04:27,019 --> 00:04:29,019
+cursor.execute,
+
+105
+00:04:29,019 --> 00:04:35,019
+insert into log,
+
+106
+00:04:35,019 --> 00:04:39,019
+values,
+
+107
+00:04:39,019 --> 00:04:41,019
+null,
+
+108
+00:04:41,019 --> 00:04:42,019
+null dlaczego?
+
+109
+00:04:42,019 --> 00:04:43,019
+No bo id.
+
+110
+00:04:43,019 --> 00:04:45,019
+Dalej jest IP, czyli znak zapytania,
+
+111
+00:04:45,019 --> 00:04:47,019
+created at.
+
+112
+00:04:47,019 --> 00:04:50,019
+No dobra, wymieńmy te kolumny, będzie prościej.
+
+113
+00:04:50,019 --> 00:04:53,019
+Czyli IP i isup
+
+114
+00:04:53,019 --> 00:04:56,019
+i tutaj będę chciał wtedy przekazać dwa znaki zapytania.
+
+115
+00:04:57,019 --> 00:04:59,019
+Dobra.
+
+116
+00:04:59,019 --> 00:05:04,019
+No i potrzebujemy podstawić sobie pod te znaki zapytania konkretne wartości.
+
+117
+00:05:04,019 --> 00:05:07,019
+Czyli IP, no to jest IP,
+
+118
+00:05:07,019 --> 00:05:10,019
+a isup to jest wartość boolowska,
+
+119
+00:05:10,019 --> 00:05:13,019
+więc powinniśmy po prostu zamienić ją sobie na integer,
+
+120
+00:05:13,019 --> 00:05:15,019
+czyli integer isup.
+
+121
+00:05:15,019 --> 00:05:17,019
+Dlaczego mogę tak zrobić?
+
+122
+00:05:17,019 --> 00:05:19,019
+Zobacz, jeżeli odpalam sobie Pythona
+
+123
+00:05:19,019 --> 00:05:24,019
+i na integer rzucę wartość true,
+
+124
+00:05:24,019 --> 00:05:26,019
+to dostanę wtedy jedynkę.
+
+125
+00:05:26,019 --> 00:05:28,019
+A jeżeli na integer rzucę false,
+
+126
+00:05:28,019 --> 00:05:30,019
+to dostanę wtedy zero.
+
+127
+00:05:30,019 --> 00:05:32,019
+Stąd też quit.
+
+128
+00:05:32,019 --> 00:05:36,019
+Mogę tak zrobić bez żadnego problemu.
+
+129
+00:05:36,019 --> 00:05:39,019
+I tutaj również nie potrzebuję też mieć żadnego wyniku,
+
+130
+00:05:39,019 --> 00:05:42,019
+po prostu robię ten save status i wszystko jest ok.
+
+131
+00:05:42,019 --> 00:05:47,019
+No i potrzebujemy mieć jeszcze jedną metafunkcję,
+
+132
+00:05:47,019 --> 00:05:50,019
+którą nazwiemy check if isup.
+
+133
+00:05:50,019 --> 00:05:51,019
+Niech będzie tak.
+
+134
+00:05:51,019 --> 00:05:54,019
+Ona będzie przyjmowała tylko i wyłącznie adres IP,
+
+135
+00:05:54,019 --> 00:05:55,019
+który jest stringiem
+
+136
+00:05:55,019 --> 00:05:59,019
+i będzie mi zwracała boola.
+
+137
+00:05:59,019 --> 00:06:03,019
+I tu będziemy potrzebowali uruchomić sobie subprocess run,
+
+138
+00:06:03,019 --> 00:06:05,019
+odebrać wynik tego pinga,
+
+139
+00:06:05,019 --> 00:06:07,019
+no i zwrócić informację prawda lub fałsz,
+
+140
+00:06:07,019 --> 00:06:08,019
+w zależności od tego,
+
+141
+00:06:08,019 --> 00:06:11,019
+czy było dobrze, czy nie było dobrze.
+
+142
+00:06:11,019 --> 00:06:17,019
+Czyli import subprocess
+
+143
+00:06:17,019 --> 00:06:19,019
+i wtedy robimy tak.
+
+144
+00:06:19,019 --> 00:06:24,019
+Subprocess.run argument.
+
+145
+00:06:24,019 --> 00:06:28,019
+To jest ping ip,
+
+146
+00:06:28,019 --> 00:06:34,019
+przecinek capture output true shell true.
+
+147
+00:06:34,019 --> 00:06:36,019
+No i potrzebujemy mieć wynik,
+
+148
+00:06:36,019 --> 00:06:40,019
+czyli output równa się
+
+149
+00:06:40,019 --> 00:06:42,019
+i teraz w zależności od tego,
+
+150
+00:06:42,019 --> 00:06:44,019
+czy ten host nam działa, czy nie działa,
+
+151
+00:06:44,019 --> 00:06:46,019
+będziemy chcieli obsłużyć tę sytuację
+
+152
+00:06:46,019 --> 00:06:48,019
+i wyświetlić odpowiedni komunikat.
+
+153
+00:06:48,019 --> 00:06:49,019
+Jak to było?
+
+154
+00:06:49,019 --> 00:06:52,019
+Możemy sobie najpierw sprawdzić to zawsze na sucho,
+
+155
+00:06:52,019 --> 00:06:53,019
+czyli print output.
+
+156
+00:06:54,019 --> 00:06:56,019
+I to co zrobię,
+
+157
+00:06:56,019 --> 00:07:03,019
+to sobie zapinguje jakiś adres.
+
+158
+00:07:03,019 --> 00:07:04,019
+Co ja robię?
+
+159
+00:07:04,019 --> 00:07:10,019
+Check if ip is up 8 8 8 8.
+
+160
+00:07:10,019 --> 00:07:12,019
+Mam nadzieję, że ósemki odpowiadają na pingi.
+
+161
+00:07:12,019 --> 00:07:13,019
+Wydaje mi się, że tak.
+
+162
+00:07:13,019 --> 00:07:16,019
+Python domowa 5.
+
+163
+00:07:16,019 --> 00:07:19,019
+Chwila czekania.
+
+164
+00:07:19,019 --> 00:07:21,019
+Zaraz się dowiemy.
+
+165
+00:07:21,019 --> 00:07:23,019
+No i dostaliśmy konkretną informację.
+
+166
+00:07:23,019 --> 00:07:26,019
+Zobaczcie, tu są informacje, że udało się.
+
+167
+00:07:26,019 --> 00:07:29,019
+I jeżeli byśmy chcieli zobaczyć sam wynik,
+
+168
+00:07:29,019 --> 00:07:31,019
+to przypominam, że możemy to zrobić,
+
+169
+00:07:31,019 --> 00:07:34,019
+wykonując output kropka i tu jest std out.
+
+170
+00:07:34,019 --> 00:07:36,019
+I wtedy będziemy mieli troszeczkę
+
+171
+00:07:36,019 --> 00:07:39,019
+czytelniejszą formę do korzystania.
+
+172
+00:07:39,019 --> 00:07:42,019
+I widzimy, jest po prostu b,
+
+173
+00:07:42,019 --> 00:07:45,019
+więc wykonamy sobie encode i decode
+
+174
+00:07:45,019 --> 00:07:47,019
+i wtedy będziemy mieli też czytelnie.
+
+175
+00:07:47,019 --> 00:07:49,019
+No ale skoro wartości są OK,
+
+176
+00:07:49,019 --> 00:07:51,019
+widzimy, że jest odpowiedź,
+
+177
+00:07:51,019 --> 00:07:52,019
+to wszystko jest good.
+
+178
+00:07:52,019 --> 00:07:54,019
+A co by było, jakby było źle?
+
+179
+00:07:54,019 --> 00:07:57,019
+No to trzeba byłoby naprawdę sobie zrobić 28, 82
+
+180
+00:07:57,019 --> 00:07:59,019
+i tu jakaś dzika wartość.
+
+181
+00:07:59,019 --> 00:08:01,019
+Powinniśmy wtedy zobaczyć błąd.
+
+182
+00:08:01,019 --> 00:08:03,019
+No właśnie, tu w ogóle jest
+
+183
+00:08:03,019 --> 00:08:04,019
+please try again,
+
+184
+00:08:04,019 --> 00:08:06,019
+ale ja sobie sprawdzę jakąś domenę
+
+185
+00:08:06,019 --> 00:08:09,019
+i widzę, że też ping request could not find,
+
+186
+00:08:09,019 --> 00:08:11,019
+czyli tak naprawdę nie działa.
+
+187
+00:08:11,019 --> 00:08:13,019
+Jeżeli dostajemy komunikat
+
+188
+00:08:13,019 --> 00:08:15,019
+ping request could not find,
+
+189
+00:08:15,019 --> 00:08:17,019
+no to wiadomo, że nie jest OK.
+
+190
+00:08:17,019 --> 00:08:19,019
+OK, czyli powinniśmy sprawdzić,
+
+191
+00:08:19,019 --> 00:08:21,019
+czy to zapytanie zwraca nam could not find,
+
+192
+00:08:21,019 --> 00:08:23,019
+czyli możemy tak naprawdę zrobić
+
+193
+00:08:23,019 --> 00:08:29,019
+if could not in
+
+194
+00:08:29,019 --> 00:08:32,019
+i tutaj pamiętamy o określonych rzeczach,
+
+195
+00:08:32,019 --> 00:08:36,019
+czyli encode, decode utf-8
+
+196
+00:08:36,019 --> 00:08:39,019
+i możemy zamienić to od razu na małe litery,
+
+197
+00:08:39,019 --> 00:08:40,019
+dwukropek.
+
+198
+00:08:40,019 --> 00:08:42,019
+Jeżeli znalazł could not,
+
+199
+00:08:42,019 --> 00:08:44,019
+to raczej znaczy, że ten host nie działa,
+
+200
+00:08:44,019 --> 00:08:46,019
+czyli return false,
+
+201
+00:08:46,019 --> 00:08:50,019
+a w przeciwnym wypadku return true.
+
+202
+00:08:51,019 --> 00:08:54,019
+Tak powinniśmy to sobie ogarnąć.
+
+203
+00:08:54,019 --> 00:08:57,019
+No i wtedy bez trudu możemy użyć tej naszej funkcji.
+
+204
+00:08:57,019 --> 00:08:59,019
+Tak naprawdę to, co trzeba będzie zrobić
+
+205
+00:08:59,019 --> 00:09:01,019
+w pierwszej kolejności,
+
+206
+00:09:01,019 --> 00:09:04,019
+to trzeba będzie pobrać wszystkie nasze adresy IP
+
+207
+00:09:04,019 --> 00:09:07,019
+i na to się przygotować.
+
+208
+00:09:07,019 --> 00:09:10,019
+Nasze adresy IP mamy za pomocą funkcji getIps,
+
+209
+00:09:10,019 --> 00:09:15,019
+czyli for ip in getIps,
+
+210
+00:09:15,019 --> 00:09:18,019
+no i tutaj trzeba przekazać mu connection.
+
+211
+00:09:18,019 --> 00:09:19,019
+Pamiętajcie, że to jest funkcja,
+
+212
+00:09:19,019 --> 00:09:21,019
+która jest w sklepie.
+
+213
+00:09:21,019 --> 00:09:24,019
+Pamiętajcie, żeby te adresy IP mieć przygotowane,
+
+214
+00:09:24,019 --> 00:09:26,019
+bo jeżeli nie mamy tych adresów IP przygotowanych,
+
+215
+00:09:26,019 --> 00:09:30,019
+no to niestety nie będziemy mogli tego sprawdzić.
+
+216
+00:09:30,019 --> 00:09:32,019
+Dodałem sobie dwa adresy IP.
+
+217
+00:09:32,019 --> 00:09:34,019
+Myślę, że jeden nie powinien działać.
+
+218
+00:09:34,019 --> 00:09:36,019
+No i wtedy, jeżeli wykonam print IP,
+
+219
+00:09:36,019 --> 00:09:38,019
+no to powinienem te adresy zobaczyć.
+
+220
+00:09:38,019 --> 00:09:40,019
+Wszystkie działają, ok.
+
+221
+00:09:40,019 --> 00:09:43,019
+Co też ciekawe, mogę sobie od razu je tutaj wypakować.
+
+222
+00:09:43,019 --> 00:09:45,019
+Wystarczy, że zrobię przecinek
+
+223
+00:09:45,019 --> 00:09:47,019
+i wtedy będę miał po prostu adresy IP,
+
+224
+00:09:47,019 --> 00:09:49,019
+bo nie ma drugiego elementu,
+
+225
+00:09:49,019 --> 00:09:51,019
+który wyprzyta tupla.
+
+226
+00:09:51,019 --> 00:09:53,019
+Do tego będę mógł sprawdzić,
+
+227
+00:09:53,019 --> 00:09:54,019
+czy ten adres działa.
+
+228
+00:09:54,019 --> 00:09:59,019
+Na przykład robiąc if checkifisp is up,
+
+229
+00:09:59,019 --> 00:10:02,019
+czyli if checkifip is up,
+
+230
+00:10:02,019 --> 00:10:05,019
+no i tu mogę przekazać mu adres IP.
+
+231
+00:10:05,019 --> 00:10:09,019
+Print działa.
+
+232
+00:10:09,019 --> 00:10:13,019
+Else nie odpowiada.
+
+233
+00:10:13,019 --> 00:10:15,019
+No i adres IP też wypadałoby sobie dorzucić.
+
+234
+00:10:15,019 --> 00:10:17,019
+Te komunikaty ja zostawię póki co,
+
+235
+00:10:17,019 --> 00:10:18,019
+no bo tak czy siak,
+
+236
+00:10:18,019 --> 00:10:20,019
+warto też je mieć tutaj,
+
+237
+00:10:20,019 --> 00:10:22,019
+żeby widzieć, jak uruchamiamy program,
+
+238
+00:10:22,019 --> 00:10:24,019
+czy wszystko jest ok, czy nie jest ok.
+
+239
+00:10:24,019 --> 00:10:25,019
+Sprawdzamy.
+
+240
+00:10:25,019 --> 00:10:26,019
+Działa, nie odpowiada.
+
+241
+00:10:26,019 --> 00:10:27,019
+Dobra.
+
+242
+00:10:27,019 --> 00:10:30,019
+To są ósemki, które sprawdzałem wcześniej,
+
+243
+00:10:30,019 --> 00:10:32,019
+a to wiadomo, jest jakiś adres losowy.
+
+244
+00:10:32,019 --> 00:10:33,019
+Dobra.
+
+245
+00:10:33,019 --> 00:10:34,019
+Czyli to mamy.
+
+246
+00:10:34,019 --> 00:10:35,019
+Jeżeli to mamy,
+
+247
+00:10:35,019 --> 00:10:38,019
+to teraz możemy dodać logi.
+
+248
+00:10:38,019 --> 00:10:41,019
+Czyli tutaj mamy checkifipisup,
+
+249
+00:10:41,019 --> 00:10:43,019
+no i mamy save status.
+
+250
+00:10:43,019 --> 00:10:45,019
+Czyli będziemy potrzebowali tu po prostu,
+
+251
+00:10:45,019 --> 00:10:46,019
+nawet niezależnie od tego,
+
+252
+00:10:46,019 --> 00:10:47,019
+czy działa, czy nie działa,
+
+253
+00:10:47,019 --> 00:10:52,019
+wykonać save status.
+
+254
+00:10:52,019 --> 00:10:54,019
+I do tego będziemy potrzebowali zapisać sobie
+
+255
+00:10:54,019 --> 00:10:56,019
+dbconnection,
+
+256
+00:10:56,019 --> 00:10:58,019
+czyli connection,
+
+257
+00:10:58,019 --> 00:10:59,019
+przecinek.
+
+258
+00:10:59,019 --> 00:11:04,019
+Następnie jest adres IP.
+
+259
+00:11:04,019 --> 00:11:06,019
+No i po trzecie właśnie wynik,
+
+260
+00:11:06,019 --> 00:11:08,019
+czy działa, czy nie działa.
+
+261
+00:11:08,019 --> 00:11:13,019
+Czyli wystarczy zrobić to.
+
+262
+00:11:13,019 --> 00:11:15,019
+Zapisuję.
+
+263
+00:11:15,019 --> 00:11:17,019
+I w tym momencie, jeżeli ten kod tak działa,
+
+264
+00:11:17,019 --> 00:11:18,019
+tak wywołam,
+
+265
+00:11:18,019 --> 00:11:22,019
+no to powinienem po chwili zobaczyć wewnątrz bazy danych,
+
+266
+00:11:22,019 --> 00:11:24,019
+w moich logach,
+
+267
+00:11:24,019 --> 00:11:26,019
+informacje, czy zadziałało, czy nie zadziałało.
+
+268
+00:11:26,019 --> 00:11:28,019
+I mogę wam już powiedzieć,
+
+269
+00:11:28,019 --> 00:11:32,019
+że wszystkie informacje znajdują się w bazie danych.
+
+270
+00:11:32,019 --> 00:11:33,019
+Czyli jest pięknie.
+
+271
+00:11:33,019 --> 00:11:35,019
+Nie pozostaje nam więc nic innego,
+
+272
+00:11:35,019 --> 00:11:38,019
+jak tylko przejść do ostatniego zadania.
+
+273
+00:11:38,019 --> 00:11:41,019
+A ostatnie zadanie będziemy robili na bazie tego kodu,
+
+274
+00:11:41,019 --> 00:11:43,019
+więc już za chwilę dokończamy.

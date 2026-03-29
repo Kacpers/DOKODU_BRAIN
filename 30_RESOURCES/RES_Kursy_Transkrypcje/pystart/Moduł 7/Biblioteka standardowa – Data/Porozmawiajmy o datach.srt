@@ -1,0 +1,303 @@
+1
+00:00:00,000 --> 00:00:04,259
+Opowiedzmy sobie więc co w ogóle z datami w Pythonie możemy robić.
+
+2
+00:00:04,379 --> 00:00:06,719
+Przede wszystkim dowiedzmy się jaka dzisiaj jest data.
+
+3
+00:00:07,660 --> 00:00:11,820
+Możesz to osiągnąć wykonując from datetime import date.
+
+4
+00:00:11,820 --> 00:00:17,539
+Jeżeli wykonamy from datetime import date to będziemy pracowali na dacie jak sama nazwa wskazuje.
+
+5
+00:00:18,100 --> 00:00:23,039
+Więc żeby dowiedzieć się jaka jest dzisiaj data wykonujemy date.today.
+
+6
+00:00:23,240 --> 00:00:25,100
+Tak samo importujemy jak poprzednio.
+
+7
+00:00:25,100 --> 00:00:30,140
+Czyli moglibyśmy zrobić from datetime.date import today i wtedy moglibyśmy sobie ułatwić.
+
+8
+00:00:30,480 --> 00:00:33,780
+No ale to rozwiązanie też jest jak najbardziej w porządku.
+
+9
+00:00:34,160 --> 00:00:39,280
+Czyli today równa się date.today no i wtedy dostaniemy dzisiejszą datę.
+
+10
+00:00:40,020 --> 00:00:44,780
+Natomiast jeżeli chcielibyśmy ją zamienić to możemy to zrobić też bez problemu.
+
+11
+00:00:44,859 --> 00:00:47,719
+Tylko, że musimy mieć obiekt daty.
+
+12
+00:00:48,100 --> 00:00:54,359
+Czyli zobacz my przed chwilą wykonaliśmy sobie to today i ładnie wyświetliliśmy tę datę.
+
+13
+00:00:54,359 --> 00:00:58,640
+Ale tak naprawdę to jest coś co udało nam się zamienić na string.
+
+14
+00:00:58,780 --> 00:01:02,359
+On po prostu zamienił nam tę datę do takiej czytelnej formy.
+
+15
+00:01:03,060 --> 00:01:05,039
+Jednak ta forma nie wszystkim będzie odpowiadała.
+
+16
+00:01:05,140 --> 00:01:08,560
+Zachęcam Cię do tego żebyś wykonał ten kod i zobacz jak ta data wygląda.
+
+17
+00:01:09,159 --> 00:01:13,420
+I wtedy bardzo często pada pytanie Kacper a jak sprawić żeby ta data wyglądała inaczej?
+
+18
+00:01:13,579 --> 00:01:14,439
+Otóż tak.
+
+19
+00:01:15,079 --> 00:01:19,359
+To co zwraca nam today to jest jakaś data z którą coś możemy jeszcze porobić.
+
+20
+00:01:19,980 --> 00:01:22,439
+Między innymi właśnie możemy zmienić jej format.
+
+21
+00:01:22,439 --> 00:01:24,340
+I tu są dwie takie.
+
+22
+00:01:24,359 --> 00:01:30,000
+Funkcje które bardzo często się mylą i trzeba się skupić żeby zrozumieć czym się one różnią.
+
+23
+00:01:31,019 --> 00:01:31,379
+Zobacz.
+
+24
+00:01:31,920 --> 00:01:34,980
+Today kropka str to jest string.
+
+25
+00:01:35,599 --> 00:01:37,980
+F format time.
+
+26
+00:01:38,400 --> 00:01:46,379
+Czyli dzięki temu jeżeli mamy dziś dzisiejszą datę to możemy korzystając str f time zmienić format tej dzisiejszej daty.
+
+27
+00:01:46,799 --> 00:01:52,620
+I wtedy ona zostanie zwrócona już nie jako ta data obiekt daty tylko obiekt tylko już string.
+
+28
+00:01:53,099 --> 00:01:54,319
+I w ten sposób możemy napisać.
+
+29
+00:01:54,359 --> 00:01:56,359
+%d %m %y.
+
+30
+00:01:56,359 --> 00:01:58,359
+Y jest wielkie.
+
+31
+00:01:58,359 --> 00:02:00,359
+I w ten sposób on nam wyświetli.
+
+32
+00:02:00,359 --> 00:02:02,359
+0101 2011.
+
+33
+00:02:02,359 --> 00:02:08,360
+Czyli dzięki temu on nam zwróci konkretną datę w takiej lepiej bardziej czytelnej dla nas formie.
+
+34
+00:02:08,360 --> 00:02:10,360
+Jako formatted.
+
+35
+00:02:10,360 --> 00:02:12,360
+Zapytacie cóż to za literki?
+
+36
+00:02:12,360 --> 00:02:14,360
+Czemu D czemu M czemu Y?
+
+37
+00:02:14,360 --> 00:02:16,360
+Otóż przed wami mała tabelka.
+
+38
+00:02:16,360 --> 00:02:18,360
+Ta tabelka oczywiście pochodzi z dokumentacji.
+
+39
+00:02:18,360 --> 00:02:20,360
+Do czego przyznaję się bez bicia.
+
+40
+00:02:20,360 --> 00:02:22,360
+No bo nie miałbym jak tego sam wymyśleć.
+
+41
+00:02:22,360 --> 00:02:24,360
+Natomiast.
+
+42
+00:02:24,360 --> 00:02:30,360
+Ta tabela pokazuje nam że możemy tworzyć sobie daty w bardzo przystępnej formie.
+
+43
+00:02:30,360 --> 00:02:31,360
+Zobacz.
+
+44
+00:02:31,360 --> 00:02:33,360
+%a skrócony dzień tygodnia.
+
+45
+00:02:33,360 --> 00:02:34,360
+Mont you wed.
+
+46
+00:02:34,360 --> 00:02:35,360
+%a wielkie.
+
+47
+00:02:35,360 --> 00:02:37,360
+Pełny dzień tygodnia.
+
+48
+00:02:37,360 --> 00:02:39,360
+%w dzień tygodnia cyfrą.
+
+49
+00:02:39,360 --> 00:02:42,360
+Gdzie 0 to jest niedziela 6 to jest sobota.
+
+50
+00:02:42,360 --> 00:02:45,360
+%d dzień miesiąca z zerem itd.
+
+51
+00:02:45,360 --> 00:02:51,360
+Budując to wyrażenie możemy decydować się na to żeby ta data wyglądała inaczej.
+
+52
+00:02:51,360 --> 00:02:54,360
+Możemy po prostu formatować ją według naszych potrzeb.
+
+53
+00:02:54,360 --> 00:02:56,360
+Na przykład skoro %a daje dzień.
+
+54
+00:02:56,360 --> 00:02:59,360
+To dodając sobie tutaj z przodu %a i spację.
+
+55
+00:02:59,360 --> 00:03:03,360
+A potem dmy spowodujemy że pojawi nam się np. mon.
+
+56
+00:03:03,360 --> 00:03:06,360
+Zależy czy było wielką czy małą napisane.
+
+57
+00:03:06,360 --> 00:03:07,360
+I ta data.
+
+58
+00:03:07,360 --> 00:03:11,360
+Jeżeli chciałbyś zobaczyć więcej przykładów co można robić z datami.
+
+59
+00:03:11,360 --> 00:03:13,360
+To polecam ten adres.
+
+60
+00:03:13,360 --> 00:03:15,360
+docpython.org.slash3 librarydatetime.
+
+61
+00:03:15,360 --> 00:03:17,360
+I tam jest dużo różnych formatów.
+
+62
+00:03:17,360 --> 00:03:20,360
+Warto się z nimi zaprzyjaźnić i je zobaczyć.
+
+63
+00:03:20,360 --> 00:03:21,360
+I tu jest też napisane.
+
+64
+00:03:21,360 --> 00:03:23,360
+String strftime and strftime.
+
+65
+00:03:23,360 --> 00:03:30,360
+Bo string format time zamienia nam datę na string.
+
+66
+00:03:30,360 --> 00:03:32,360
+Natomiast jeżeli masz już string.
+
+67
+00:03:32,360 --> 00:03:36,360
+Bo na przykład odebrałeś tę datę gdzieś z pliku tekstowego.
+
+68
+00:03:36,360 --> 00:03:38,360
+I chcesz ją zamienić na datę.
+
+69
+00:03:38,360 --> 00:03:41,360
+To wtedy trzeba użyć właśnie funkcji strptime.
+
+70
+00:03:41,360 --> 00:03:43,360
+Bo to jest p oznacza parse.
+
+71
+00:03:43,360 --> 00:03:45,360
+Czyli sparsuj mi to.
+
+72
+00:03:45,360 --> 00:03:47,360
+Zamień mi to na odpowiedni format.
+
+73
+00:03:47,360 --> 00:03:48,360
+No i co?
+
+74
+00:03:48,360 --> 00:03:51,360
+Chcesz jeszcze może popracować trochę z datami?
+
+75
+00:03:51,360 --> 00:03:52,360
+To chodź do kolejnego odcinka.
+
+76
+00:03:52,360 --> 00:03:54,360
+Tam sobie trochę z nimi poćwiczymy.

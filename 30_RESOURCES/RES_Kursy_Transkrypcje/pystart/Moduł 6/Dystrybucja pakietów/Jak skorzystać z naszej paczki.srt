@@ -1,0 +1,127 @@
+1
+00:00:00,000 --> 00:00:03,960
+No i cóż, to co teraz zrobimy, to stworzymy jeszcze jeden nowy projekt,
+
+2
+00:00:04,120 --> 00:00:08,380
+czyli już trzeci i stworzymy go tylko po to, żeby zainstalować tę paczkę
+
+3
+00:00:08,380 --> 00:00:12,679
+naszą PyStartową i sprawdzić, czy wszystko nam dobrze działa.
+
+4
+00:00:13,179 --> 00:00:17,179
+Więc stwórz nowy pusty projekt. Jak stworzysz ten nowy pusty projekt,
+
+5
+00:00:17,179 --> 00:00:23,320
+to skopiuj sobie tę paczkę targ.gz gdzieś do tego projektu.
+
+6
+00:00:23,359 --> 00:00:25,980
+Na razie nieważne, gdzie ją umieścisz, tu chodzi tylko o to,
+
+7
+00:00:26,019 --> 00:00:29,460
+żeby ona była dostępna w dobrym miejscu i żeby później ją sobie zainstalować.
+
+8
+00:00:29,460 --> 00:00:33,280
+Czyli tworzymy nowy projekt, w przypadku PyCharma klikamy na File, New Project,
+
+9
+00:00:33,420 --> 00:00:37,500
+wybieramy Pure Python, określamy sobie jakąś tam wersję, u mnie jest 3.11,
+
+10
+00:00:37,899 --> 00:00:40,380
+nazwa projektu to nie ma znaczenia, to tylko jest do testów,
+
+11
+00:00:40,439 --> 00:00:42,560
+żeby sprawdzić, czy zadziałało i czy udało się zainstalować.
+
+12
+00:00:43,240 --> 00:00:46,540
+Następnie przenosimy sobie tę paczkę, na przykład, jak wspomniałem,
+
+13
+00:00:46,700 --> 00:00:51,859
+właśnie do tego głównego folderu projektu i w terminalu wykonujemy polecenie
+
+14
+00:00:51,859 --> 00:00:55,380
+pip install nazwa paczki. Pip, co to jest pip?
+
+15
+00:00:55,560 --> 00:00:58,380
+Pip to jest skrót od Python Package Installer,
+
+16
+00:00:58,380 --> 00:01:01,300
+czyli coś, co pozwala nam na instalowanie paczek.
+
+17
+00:01:01,700 --> 00:01:04,980
+Paczki instalować możemy zarówno z plików, takich przygotowanych przez nas,
+
+18
+00:01:05,040 --> 00:01:09,480
+jak i z internetu. O tym, jak instalować paczki z internetu, dowiesz się już niedługo.
+
+19
+00:01:09,960 --> 00:01:14,740
+W każdym razie wykonanie polecenia pip install nazwa paczki spowoduje,
+
+20
+00:01:15,300 --> 00:01:18,040
+tu oczywiście zamiast paczka targ.gz powinien się pojawić
+
+21
+00:01:18,040 --> 00:01:23,879
+pystart-10 targ.gz, spowoduje, że w Twoim wirtualnym środowisku,
+
+22
+00:01:23,879 --> 00:01:27,640
+w katalogu lib-site-packages powinien pojawić się katalog
+
+23
+00:01:27,640 --> 00:01:27,960
+pystart-10 targ.gz, który jest w tym samym środowisku,
+
+24
+00:01:27,960 --> 00:01:28,000
+który jest w tym samym środowisku, który jest w tym samym środowisku,
+
+25
+00:01:28,000 --> 00:01:32,780
+pystart i tam w środku powinien być cały kod naszej biblioteki,
+
+26
+00:01:32,859 --> 00:01:37,000
+ten, który stworzyliśmy. Wszystkie te pakiety, które do tej pory zostały utworzone.
+
+27
+00:01:37,579 --> 00:01:41,659
+I dzięki temu można będzie wykorzystywać te pakiety.
+
+28
+00:01:42,799 --> 00:01:46,960
+Jak z tego skorzystać? No po prostu wykonujemy from pystart import cokolwiek.
+
+29
+00:01:47,099 --> 00:01:50,560
+Najpierw podajemy mu nazwę naszej biblioteki, ona nazywa się pystart
+
+30
+00:01:50,560 --> 00:01:54,159
+i wówczas, jak już wpiszesz from pystart import, zobaczysz,
+
+31
+00:01:54,159 --> 00:01:57,980
+że PyCharm zacznie Ci podpowiadać różne rzeczy, które możesz zajmować,
+
+32
+00:01:58,000 --> 00:01:59,180
+importować z tej biblioteki.

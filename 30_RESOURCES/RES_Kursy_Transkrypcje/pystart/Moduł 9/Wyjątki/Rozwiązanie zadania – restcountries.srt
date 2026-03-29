@@ -1,0 +1,1579 @@
+1
+00:00:00,000 --> 00:00:12,640
+No to cóż, lecimy z naszym zadaniem. Jak widzicie część kodu już wykonałem poza kadrem, czyli tak naprawdę zaimportowałem sobie request, pobrałem sobie, znalazłem endpoint, przekazałem mu tutaj Poland.
+
+2
+00:00:13,220 --> 00:00:23,420
+W tym momencie wyświetliłem sobie to jako JSON, on mi wyświetlił całą zawartość. Jak widać jest tu bardzo dużo informacji. Mamy common, official, native i tak dalej, i tak dalej.
+
+3
+00:00:23,420 --> 00:00:34,840
+Wierzę, że gdzieś na tej liście też jest Warszawa. I jest, zobaczcie, tu jest Capital Warsaw. Żeby było czytelniej można też sobie to wrzucić do jakiegoś JSON formatera, wtedy ładniej widać co się w środku znajduje.
+
+4
+00:00:35,560 --> 00:00:46,020
+I rzeczy, które mamy do zrobienia, to chcemy najpierw wyświetlić wyłącznie stolice tego naszego kraju. Czyli jak widzę, na zewnątrz mam listę, będę miał więc słownik.
+
+5
+00:00:46,020 --> 00:00:52,200
+Później mam name, native name, coś tam tld i tak idę aż do Capital.
+
+6
+00:00:52,719 --> 00:00:53,400
+Więc wydaje mi się, że to jest bardzo fajne.
+
+7
+00:00:53,420 --> 00:00:58,640
+To co powinienem zrobić, to powinienem sobie stworzyć zmienną output równa się response.json.
+
+8
+00:00:59,179 --> 00:01:06,060
+Następnie mogę wyświetlić, mogę sobie pobrać zerowy element tak naprawdę stąd. Nad tym jeszcze sobie oczywiście popracujemy.
+
+9
+00:01:06,680 --> 00:01:14,640
+I wtedy output Capital od zera powinien wyświetlić mi wyłącznie Warszawę.
+
+10
+00:01:14,640 --> 00:01:22,640
+I tak też się stało. Jeżeli bym zmienił nazwę kraju, na przykład na England, no to w tym momencie dostanę.
+
+11
+00:01:23,420 --> 00:01:30,420
+I tak jak mówiłem, to jest London. Powinienem dostać London, ale okazało się, że England jest nieprawidłową nazwą. Powinna być to jakaś inna nazwa.
+
+12
+00:01:30,420 --> 00:01:33,420
+Sprawdźmy co się stanie, jeżeli wpiszemy na przykład Germany.
+
+13
+00:01:33,420 --> 00:01:43,420
+Ok, pojawił nam się Berlin. Czyli z tymi nazwami trzeba też uważać. Pewnie England to nie jest nazwa, tylko trzeba byłoby użyć czegoś innego. Mniejsze o to.
+
+14
+00:01:43,420 --> 00:01:52,420
+Ważne jest teraz to, że stolica nam się wyświetla. Skoro stolica nam się wyświetla, pojawiają się też błędy, z błędami na spokojnie, to chcemy odebrać nazwę państwa od użytkownika.
+
+15
+00:01:52,420 --> 00:02:02,420
+Czyli możemy sobie zrobić COUNTRY równa się INPUT, podaj nazwę kraju.
+
+16
+00:02:02,420 --> 00:02:11,420
+I wtedy to co będziemy chcieli tutaj zrobić, to będziemy chcieli sobie wymienić to na COUNTRY.LOWER.
+
+17
+00:02:11,420 --> 00:02:21,420
+Z tym założeniem, że nie każdy kraj będzie nam się tutaj wyświetlał. Jak widać Poland zadziałało, natomiast jak widzieliście England nie zadziałało.
+
+18
+00:02:21,419 --> 00:02:23,819
+nie zadziałało. Brak kraju
+
+19
+00:02:23,819 --> 00:02:25,399
+też byłby błędem,
+
+20
+00:02:25,519 --> 00:02:27,679
+bo widzimy wówczas, że ten response.json
+
+21
+00:02:27,679 --> 00:02:28,859
+zero jest pusty.
+
+22
+00:02:29,379 --> 00:02:31,479
+Dlaczego on jest pusty? Warto byłoby to
+
+23
+00:02:31,479 --> 00:02:33,439
+sobie sprawdzić. Możemy sobie po prostu
+
+24
+00:02:33,439 --> 00:02:35,739
+wyprintować wcześniej response.json
+
+25
+00:02:35,739 --> 00:02:37,479
+i też sobie to
+
+26
+00:02:37,479 --> 00:02:39,399
+sprawdzić, czy może oni nam jakoś
+
+27
+00:02:39,399 --> 00:02:40,439
+odpowiadają na to.
+
+28
+00:02:41,759 --> 00:02:43,319
+Odpowiadają, coś tam tutaj powiedzieli,
+
+29
+00:02:43,439 --> 00:02:43,919
+zobaczcie.
+
+30
+00:02:45,979 --> 00:02:47,219
+Dla AA coś podali,
+
+31
+00:02:47,319 --> 00:02:49,399
+może ja podam coś dużo dziwniejszego.
+
+32
+00:02:49,400 --> 00:02:51,439
+OK. Wtedy widać, że
+
+33
+00:02:51,439 --> 00:02:52,840
+response tak naprawdę jest
+
+34
+00:02:52,840 --> 00:02:55,620
+status 404 i to jest informacja,
+
+35
+00:02:55,780 --> 00:02:57,159
+że kraj nie został
+
+36
+00:02:57,159 --> 00:02:59,340
+odnaleziony. Czyli my moglibyśmy
+
+37
+00:02:59,340 --> 00:03:01,420
+albo posłużyć się tym statusem,
+
+38
+00:03:01,659 --> 00:03:03,300
+albo tą informacją, że tutaj jest
+
+39
+00:03:03,300 --> 00:03:05,280
+ta wartość od zera. Myślę, że
+
+40
+00:03:05,280 --> 00:03:06,240
+statusem byłoby
+
+41
+00:03:06,240 --> 00:03:09,240
+trochę lepiej, natomiast skoro
+
+42
+00:03:09,240 --> 00:03:11,599
+uczymy się wyjątków, to możemy obsłużyć
+
+43
+00:03:11,599 --> 00:03:12,680
+ten wyjątek,
+
+44
+00:03:12,879 --> 00:03:14,939
+o którym rozmawialiśmy,
+
+45
+00:03:15,420 --> 00:03:17,400
+czyli index error. Czyli
+
+46
+00:03:17,400 --> 00:03:19,200
+będziemy potrzebowali ten kod, który
+
+47
+00:03:19,199 --> 00:03:21,459
+jest odpowiedzialny za to, czyli ten
+
+48
+00:03:21,459 --> 00:03:23,479
+try, aż do
+
+49
+00:03:23,479 --> 00:03:24,819
+tąd
+
+50
+00:03:24,819 --> 00:03:27,399
+umieścić sobie w bloku accept
+
+51
+00:03:27,399 --> 00:03:29,639
+index error
+
+52
+00:03:29,639 --> 00:03:31,299
+i tu możemy zrobić
+
+53
+00:03:31,299 --> 00:03:32,019
+dwukropek
+
+54
+00:03:32,019 --> 00:03:35,359
+print, tu oczywiście jeszcze wcięcia,
+
+55
+00:03:35,539 --> 00:03:37,659
+żeby nam Python się nie stresował.
+
+56
+00:03:38,319 --> 00:03:38,659
+Print.
+
+57
+00:03:39,159 --> 00:03:41,099
+Nie znam tego kraju, czy tam nie mam
+
+58
+00:03:41,099 --> 00:03:42,120
+tego kraju na liście.
+
+59
+00:03:45,139 --> 00:03:47,319
+OK. I w tym momencie, jeżeli ja wpiszę
+
+60
+00:03:47,319 --> 00:03:48,079
+sobie England,
+
+61
+00:03:48,079 --> 00:03:48,519
+to
+
+62
+00:03:48,519 --> 00:03:49,159
+to jest
+
+63
+00:03:49,199 --> 00:03:51,119
+to dostanę błąd, a key error to jest,
+
+64
+00:03:51,139 --> 00:03:53,139
+przepraszam, to jest słownik,
+
+65
+00:03:53,280 --> 00:03:54,439
+gdzieś tam jest key error.
+
+66
+00:03:54,979 --> 00:03:56,799
+OK. Nie spojrzałem, że to jest key error.
+
+67
+00:03:57,500 --> 00:03:58,159
+Więc raz jeszcze.
+
+68
+00:04:00,179 --> 00:04:01,179
+O. Nie mam
+
+69
+00:04:01,179 --> 00:04:03,319
+tego kraju na liście. Jeżeli odwołam
+
+70
+00:04:03,319 --> 00:04:04,079
+się do Polski,
+
+71
+00:04:05,359 --> 00:04:06,919
+to pojawi mi się Warszawa.
+
+72
+00:04:07,199 --> 00:04:08,839
+Czyli pod tym względem wszystko działa
+
+73
+00:04:08,839 --> 00:04:11,219
+OK. Inne błędy, które
+
+74
+00:04:11,219 --> 00:04:13,099
+potencjalnie mogłyby się pokazywać,
+
+75
+00:04:13,379 --> 00:04:15,179
+to może na przykład problem
+
+76
+00:04:15,179 --> 00:04:17,500
+ten z internetem. Bo tutaj zrobiliśmy
+
+77
+00:04:17,500 --> 00:04:18,939
+sobie to to do, czyli wyświetl,
+
+78
+00:04:18,939 --> 00:04:20,540
+wyłącznie stolice mamy zrobione,
+
+79
+00:04:20,879 --> 00:04:22,439
+odbierz nazwę państwa zrobione.
+
+80
+00:04:22,759 --> 00:04:24,160
+Co się stanie, gdy państwa nie ma w
+
+81
+00:04:24,160 --> 00:04:26,500
+bazie? To tak naprawdę też zrobione.
+
+82
+00:04:27,040 --> 00:04:28,160
+No i co się stanie, gdy nie będzie
+
+83
+00:04:28,160 --> 00:04:30,019
+internetu? I drugi raz pytanie o to samo
+
+84
+00:04:30,019 --> 00:04:31,019
+państwo.
+
+85
+00:04:31,040 --> 00:04:32,459
+Jeżeli chodzi o to, co się stanie,
+
+86
+00:04:32,459 --> 00:04:33,839
+gdy nie będzie internetu, to zrobię
+
+87
+00:04:33,839 --> 00:04:35,839
+sobie taką
+
+88
+00:04:35,839 --> 00:04:37,819
+małą symulację, a mianowicie przyjmę,
+
+89
+00:04:38,120 --> 00:04:39,759
+że tu jest jakiś błąd w adresie.
+
+90
+00:04:40,939 --> 00:04:42,339
+Ten błąd w adresie też mógłby się
+
+91
+00:04:42,339 --> 00:04:43,339
+gdzieś pojawić.
+
+92
+00:04:44,019 --> 00:04:46,180
+Zobaczcie, że jeżeli wtedy taką
+
+93
+00:04:46,180 --> 00:04:48,220
+wartość podam, to dostaję wyjątek
+
+94
+00:04:48,220 --> 00:04:48,819
+request.
+
+95
+00:04:48,939 --> 00:04:50,939
+Exception connection error,
+
+96
+00:04:51,259 --> 00:04:53,259
+czyli występuje connection error
+
+97
+00:04:53,259 --> 00:04:55,360
+i ten connection error możemy tak samo
+
+98
+00:04:55,360 --> 00:04:57,319
+się na niego do niego
+
+99
+00:04:57,319 --> 00:04:59,620
+dostosować, wykonując accept
+
+100
+00:04:59,920 --> 00:05:01,920
+i tutaj można byłoby wpisać go w całości,
+
+101
+00:05:02,120 --> 00:05:04,120
+ale można go też zaimportować,
+
+102
+00:05:04,939 --> 00:05:07,500
+czyli request exceptions.
+
+103
+00:05:08,579 --> 00:05:10,480
+I wtedy możemy napisać exceptions
+
+104
+00:05:10,480 --> 00:05:11,300
+kropka.
+
+105
+00:05:12,879 --> 00:05:13,959
+Connection error.
+
+106
+00:05:17,519 --> 00:05:18,519
+Wystąpił problem.
+
+107
+00:05:18,939 --> 00:05:20,939
+Zobaczcie, że w tym momencie,
+
+108
+00:05:20,939 --> 00:05:22,939
+gdy połączyłem się z internetem.
+
+109
+00:05:22,939 --> 00:05:24,939
+Dobra, jeżeli chodzi o połączenie z
+
+110
+00:05:24,939 --> 00:05:26,939
+internetem, mógłbym je sobie też wyłączyć,
+
+111
+00:05:26,939 --> 00:05:28,939
+zasymulować, co się stanie, jeżeli będzie ono wyłączone
+
+112
+00:05:28,939 --> 00:05:30,939
+i zobaczymy, co się wówczas stanie.
+
+113
+00:05:30,939 --> 00:05:32,939
+Trochę się w pierwszej chwili bałem,
+
+114
+00:05:32,939 --> 00:05:34,939
+że zaraz nas rozłączy, ale przecież my się,
+
+115
+00:05:34,939 --> 00:05:36,939
+ja jestem nagrywam, więc nie powinienem mieć
+
+116
+00:05:36,939 --> 00:05:38,939
+tego problemu.
+
+117
+00:05:38,939 --> 00:05:40,939
+Momencik, dobra, jestem bez internetu.
+
+118
+00:05:40,939 --> 00:05:42,939
+Zobaczcie.
+
+119
+00:05:42,939 --> 00:05:44,939
+Podaje Polskę.
+
+120
+00:05:44,939 --> 00:05:46,939
+Też pojawił się pierwszy krok.
+
+121
+00:05:46,939 --> 00:05:48,939
+Zobaczcie, że w tym momencie, kiedy jestem bez internetu,
+
+122
+00:05:48,939 --> 00:05:50,939
+mam problem z internetem,
+
+123
+00:05:50,939 --> 00:05:52,939
+bo tu jest cały czas ta literówka, zrobię teraz jeszcze.
+
+124
+00:05:54,939 --> 00:05:56,939
+Czyli connection error
+
+125
+00:05:56,939 --> 00:05:58,939
+jest jak najbardziej wspólnym komunikatem,
+
+126
+00:05:58,939 --> 00:06:00,939
+również dla sytuacji,
+
+127
+00:06:00,939 --> 00:06:02,939
+gdy nie mam połączenia z internetem,
+
+128
+00:06:02,939 --> 00:06:04,939
+bo nie mam połączenia, zobaczcie,
+
+129
+00:06:04,939 --> 00:06:06,939
+nie mogę spingować onetu.
+
+130
+00:06:06,939 --> 00:06:08,939
+Wchodzę raz jeszcze.
+
+131
+00:06:08,939 --> 00:06:10,939
+Połęt i też
+
+132
+00:06:10,939 --> 00:06:12,939
+dostaję connection error.
+
+133
+00:06:12,939 --> 00:06:14,939
+Czyli tak naprawdę w tym przypadku, niezależnie od tego,
+
+134
+00:06:14,939 --> 00:06:16,939
+czy wykonujemy błąd, błąd
+
+135
+00:06:16,939 --> 00:06:18,939
+w literówkę jakąś, czy w tym
+
+136
+00:06:18,939 --> 00:06:23,439
+Nie mamy internetu, komunikacja jest ten sam, nie możemy się podłączyć.
+
+137
+00:06:23,680 --> 00:06:28,620
+I zostanie nam wtedy jeszcze ostatnia rzecz na naszej liście, a mianowicie drugi raz pytanie o to samo państwo.
+
+138
+00:06:29,219 --> 00:06:34,379
+I w tym celu ja sobie zrobię taką funkcję, którą nazwę getCapital.
+
+139
+00:06:38,860 --> 00:06:39,420
+getCapital.
+
+140
+00:06:39,980 --> 00:06:46,000
+Ja bym chciał, żeby w tej funkcji znalazło się tak naprawdę praktycznie wszystko poza moim krajem.
+
+141
+00:06:46,000 --> 00:06:58,339
+Czyli to pobranie kraju ma być jakby na zewnątrz, natomiast ta część ma być elementem tej mojej funkcji.
+
+142
+00:06:58,740 --> 00:07:03,019
+W tym momencie mogę zrobić sobie oczywiście return zamiast tego komunikatu.
+
+143
+00:07:03,519 --> 00:07:09,639
+No i zrobić print getCapital country.
+
+144
+00:07:09,639 --> 00:07:14,639
+Tu oczywiście wypadałoby te błędy odznaczyć.
+
+145
+00:07:15,480 --> 00:07:15,639
+I country.
+
+146
+00:07:16,000 --> 00:07:17,759
+I country wpisać w nawias, a nie poza nim.
+
+147
+00:07:19,439 --> 00:07:24,259
+W tym momencie jak zrobię strzałkę do góry enter, to nie mam internetu, muszę wrócić z internetem.
+
+148
+00:07:24,660 --> 00:07:26,040
+Zobaczcie, internet wrócił.
+
+149
+00:07:27,040 --> 00:07:31,920
+To wówczas, jeżeli sobie to wywołam, jeszcze jakaś literówka jest.
+
+150
+00:07:32,000 --> 00:07:33,600
+Gdzie jest ta literówka? Tu brakuje dwukropka.
+
+151
+00:07:33,600 --> 00:07:41,720
+O, to tu jeszcze country wypadałoby przekazać.
+
+152
+00:07:43,339 --> 00:07:45,980
+Możemy sobie zmienić nazwę tego parametru.
+
+153
+00:07:46,000 --> 00:07:51,379
+Bo na zewnątrz jest country, w środku jest country.
+
+154
+00:07:51,379 --> 00:07:54,240
+Możemy zmienić to na lookup country.
+
+155
+00:07:54,240 --> 00:07:57,060
+Czy tam check country.
+
+156
+00:07:57,060 --> 00:07:57,759
+O tak, może tak.
+
+157
+00:07:57,759 --> 00:08:03,459
+Ok, żeby mu się to nie podobało.
+
+158
+00:08:03,459 --> 00:08:07,379
+Żeby błędów po prostu nie było, bo po co mamy się tutaj tymi błędami stresować.
+
+159
+00:08:07,379 --> 00:08:09,439
+I raz jeszcze wpisujemy Polskę.
+
+160
+00:08:09,439 --> 00:08:11,319
+Zwrócił Warszawę.
+
+161
+00:08:11,319 --> 00:08:15,360
+I teraz tak naprawdę to co mogę zrobić, to mogę wykonać rzecz następującą.
+
+162
+00:08:15,360 --> 00:08:18,600
+A mianowicie, stworzyć sobie zmienną capitals.
+
+163
+00:08:18,600 --> 00:08:21,120
+Przypisać do niej słownik.
+
+164
+00:08:21,120 --> 00:08:26,720
+I tutaj, oczywiście ten program, z racji tego, że on się zatrzymuje.
+
+165
+00:08:26,720 --> 00:08:30,560
+W tym miejscu, no to też tej różnicy nie będę miał.
+
+166
+00:08:30,560 --> 00:08:33,440
+Dopiero tę różnicę miałbym, kiedy bym go zapętlił.
+
+167
+00:08:33,440 --> 00:08:37,120
+Ale nie ma problemu, za chwilę sobie zrobimy obsługę jasona.
+
+168
+00:08:37,120 --> 00:08:41,519
+Tylko chcę ci pokazać, jaki będzie, jak chcę z niego korzystać.
+
+169
+00:08:41,519 --> 00:08:44,159
+A dopiero później go sobie obsłużymy.
+
+170
+00:08:44,159 --> 00:08:45,220
+Czyli to nasze getcon.
+
+171
+00:08:45,220 --> 00:08:48,460
+GetCapitals od country powinno wyglądać tak.
+
+172
+00:08:48,460 --> 00:08:52,779
+Capital równa się getCapital od country.
+
+173
+00:08:52,779 --> 00:08:54,660
+I to sobie wymienimy.
+
+174
+00:08:54,660 --> 00:08:59,300
+Wymienimy to sobie w taki sposób, żeby najpierw on spróbował znaleźć nam ze słownika tę wartość.
+
+175
+00:08:59,300 --> 00:09:02,100
+A jeżeli jej nie ma, dopiero wtedy pobrał ją z API.
+
+176
+00:09:02,100 --> 00:09:05,740
+Czyli capitals.get.
+
+177
+00:09:05,740 --> 00:09:09,460
+Tutaj muszę mu przekazać country.
+
+178
+00:09:09,460 --> 00:09:12,580
+A jeżeli nie udało ci się tego zrobić.
+
+179
+00:09:12,580 --> 00:09:15,019
+To wtedy pobierz mi te informacje.
+
+180
+00:09:15,019 --> 00:09:16,299
+Z internetu.
+
+181
+00:09:16,299 --> 00:09:22,179
+W tym momencie, jeżeli wykonam Poland, to on mi i tak pobierze to, jak widzicie stąd.
+
+182
+00:09:22,179 --> 00:09:28,379
+Natomiast cała zabawa będzie teraz polegała na tym, żebym po pierwsze otworzył sobie ten plik capitals.
+
+183
+00:09:28,379 --> 00:09:31,019
+I załadował wszystkie te na moje kraje.
+
+184
+00:09:31,019 --> 00:09:33,019
+A druga rzecz, którą muszę zrobić.
+
+185
+00:09:33,019 --> 00:09:36,860
+To muszę zapisać wynik do tego pliku.
+
+186
+00:09:36,860 --> 00:09:42,299
+Czyli będę potrzebował znaną już nam funkcję from jason import load.
+
+187
+00:09:42,299 --> 00:09:44,860
+Oraz dump.
+
+188
+00:09:45,019 --> 00:09:48,019
+Jeżeli chodzi o capitals.
+
+189
+00:09:48,019 --> 00:09:53,019
+To będzie to load capitals.json.
+
+190
+00:09:53,019 --> 00:09:55,019
+I tutaj pytaliście mnie o to.
+
+191
+00:09:55,019 --> 00:09:56,019
+Co zrobić.
+
+192
+00:09:56,019 --> 00:09:58,019
+Też było takie pytanie widziałem na Discordie kiedyś.
+
+193
+00:09:58,019 --> 00:10:02,019
+Co zrobić, jeżeli tego pliku capitals.json nie ma.
+
+194
+00:10:02,019 --> 00:10:05,019
+Jak sobie mogę z nim w ogóle poradzić.
+
+195
+00:10:05,019 --> 00:10:07,019
+Coś mu się tutaj nie podoba jeszcze.
+
+196
+00:10:07,019 --> 00:10:08,019
+Load.
+
+197
+00:10:08,019 --> 00:10:10,019
+Ach, bo load potrzebuje pliku.
+
+198
+00:10:10,019 --> 00:10:13,019
+No właśnie. Ale tego pliku load potrzebuje uchwyt do pliku, a nie nazwę.
+
+199
+00:10:13,019 --> 00:10:14,019
+Ale i tak mamy te sytuacje.
+
+200
+00:10:14,019 --> 00:10:17,019
+W której my musielibyśmy teraz ten plik otworzyć.
+
+201
+00:10:17,019 --> 00:10:18,019
+I tego pliku nie ma.
+
+202
+00:10:18,019 --> 00:10:19,019
+Zobaczcie.
+
+203
+00:10:19,019 --> 00:10:23,019
+Czyli with open capitals.json.
+
+204
+00:10:23,019 --> 00:10:26,019
+As file.
+
+205
+00:10:26,019 --> 00:10:29,019
+Capitals.load.file.
+
+206
+00:10:29,019 --> 00:10:32,019
+I co mogę zrobić w tej sytuacji.
+
+207
+00:10:32,019 --> 00:10:36,019
+W tej sytuacji, kiedy zrobię sobie strzałkę do góry enter.
+
+208
+00:10:36,019 --> 00:10:39,019
+Dostaję file not found error.
+
+209
+00:10:39,019 --> 00:10:41,019
+Więc bardzo łatwo mogę go sobie ogarnąć.
+
+210
+00:10:41,019 --> 00:10:43,019
+Wykonując try.
+
+211
+00:10:43,019 --> 00:10:46,019
+Accept.
+
+212
+00:10:46,019 --> 00:10:49,019
+File not found error.
+
+213
+00:10:49,019 --> 00:10:51,019
+Capitals.
+
+214
+00:10:51,019 --> 00:10:53,019
+To pusty słownik.
+
+215
+00:10:53,019 --> 00:10:55,019
+W ten sposób.
+
+216
+00:10:55,019 --> 00:10:58,019
+Jeżeli będę miał już moje kraje.
+
+217
+00:10:58,019 --> 00:11:00,019
+Przygotowane.
+
+218
+00:11:00,019 --> 00:11:02,019
+No to mogę sobie z nich skorzystać.
+
+219
+00:11:02,019 --> 00:11:03,019
+A jeżeli nie będę ich miał.
+
+220
+00:11:03,019 --> 00:11:05,019
+To będę miał po prostu pusty słownik.
+
+221
+00:11:05,019 --> 00:11:06,019
+Ten kod.
+
+222
+00:11:06,019 --> 00:11:08,019
+Też wypadałoby przenieść do czegoś na zewnątrz.
+
+223
+00:11:08,019 --> 00:11:10,019
+W tym celu zaznaczam go sobie.
+
+224
+00:11:10,019 --> 00:11:12,019
+Wybieram refactor.
+
+225
+00:11:12,019 --> 00:11:15,019
+Extract.Introduce.
+
+226
+00:11:15,019 --> 00:11:16,019
+Method.
+
+227
+00:11:16,019 --> 00:11:19,019
+I nazywam to load.capitals.
+
+228
+00:11:19,019 --> 00:11:22,019
+Ok.
+
+229
+00:11:22,019 --> 00:11:24,019
+Zobaczcie.
+
+230
+00:11:24,019 --> 00:11:26,019
+Global.capitals nam nie będzie potrzebne.
+
+231
+00:11:26,019 --> 00:11:28,019
+My po prostu będziemy chcieli wykonać.
+
+232
+00:11:28,019 --> 00:11:30,019
+Return.capitals.
+
+233
+00:11:30,019 --> 00:11:32,019
+Mógłbym też tu zrobić po prostu return.
+
+234
+00:11:32,019 --> 00:11:34,019
+I tu zrobić return.
+
+235
+00:11:34,019 --> 00:11:36,019
+Żeby było spokojniej.
+
+236
+00:11:36,019 --> 00:11:38,019
+I wtedy.
+
+237
+00:11:38,019 --> 00:11:39,019
+Capitals.
+
+238
+00:11:39,019 --> 00:11:40,019
+Równa się.
+
+239
+00:11:40,019 --> 00:11:44,019
+Load.capitals.
+
+240
+00:11:44,019 --> 00:11:46,019
+Co mu się jeszcze nie będzie podobało wtedy.
+
+241
+00:11:46,019 --> 00:11:47,019
+A no to.
+
+242
+00:11:47,019 --> 00:11:49,019
+Że skoro już pobraliśmy sobie jakieś państwo.
+
+243
+00:11:49,019 --> 00:11:51,019
+To wypadałoby też to państwo zapisać.
+
+244
+00:11:51,019 --> 00:11:53,019
+No i tu analogicznie.
+
+245
+00:11:53,019 --> 00:11:59,019
+Czyli with.open.capitals.json.mode.
+
+246
+00:11:59,019 --> 00:12:00,019
+To jest w.
+
+247
+00:12:00,019 --> 00:12:01,019
+Pamiętamy o tym.
+
+248
+00:12:01,019 --> 00:12:03,019
+As file.
+
+249
+00:12:03,019 --> 00:12:05,019
+No i tutaj potrzebujemy wykonać.
+
+250
+00:12:05,019 --> 00:12:08,019
+Dump.file.capitals.
+
+251
+00:12:08,019 --> 00:12:10,019
+I do.capitals.
+
+252
+00:12:10,019 --> 00:12:11,019
+Musimy oczywiście dołożyć.
+
+253
+00:12:11,019 --> 00:12:12,019
+To nasze.capital.
+
+254
+00:12:12,019 --> 00:12:13,019
+Open.
+
+255
+00:12:13,019 --> 00:12:14,019
+Bo to będzie.
+
+256
+00:12:14,019 --> 00:12:15,019
+Lista słowników.
+
+257
+00:12:15,019 --> 00:12:16,019
+Nie.
+
+258
+00:12:16,019 --> 00:12:17,019
+To będzie słownik.
+
+259
+00:12:17,019 --> 00:12:18,019
+Czyli potrzebujemy tutaj zrobić.
+
+260
+00:12:18,019 --> 00:12:19,019
+Po prostu.
+
+261
+00:12:19,019 --> 00:12:20,019
+Capitals.
+
+262
+00:12:20,019 --> 00:12:21,019
+Od.
+
+263
+00:12:21,019 --> 00:12:22,019
+Country.
+
+264
+00:12:22,019 --> 00:12:23,019
+Równa się.
+
+265
+00:12:23,019 --> 00:12:24,019
+Capital.
+
+266
+00:12:24,019 --> 00:12:25,019
+W ten sposób.
+
+267
+00:12:25,019 --> 00:12:26,019
+Nie tylko.
+
+268
+00:12:26,019 --> 00:12:27,019
+Wyświetlimy.
+
+269
+00:12:27,019 --> 00:12:28,019
+Te informacje.
+
+270
+00:12:28,019 --> 00:12:29,019
+Ale też.
+
+271
+00:12:29,019 --> 00:12:30,019
+Zapiszemy.
+
+272
+00:12:30,019 --> 00:12:31,019
+Do pliku.
+
+273
+00:12:31,019 --> 00:12:32,019
+Sprawdźmy.
+
+274
+00:12:32,019 --> 00:12:33,019
+Czy działa.
+
+275
+00:12:33,019 --> 00:12:34,019
+Ok.
+
+276
+00:12:34,019 --> 00:12:35,019
+I teraz.
+
+277
+00:12:35,019 --> 00:12:36,019
+Zobaczmy.
+
+278
+00:12:36,019 --> 00:12:37,019
+Jak to wygląda.
+
+279
+00:12:37,019 --> 00:12:38,019
+Sprawdźmy.
+
+280
+00:12:38,019 --> 00:12:39,019
+Czy działa.
+
+281
+00:12:39,019 --> 00:12:40,019
+Czyli.
+
+282
+00:12:40,019 --> 00:12:41,019
+Python.rest.
+
+283
+00:12:41,019 --> 00:12:42,019
+Poland.
+
+284
+00:12:42,019 --> 00:12:43,019
+O.
+
+285
+00:12:43,019 --> 00:12:44,019
+Chwilę.
+
+286
+00:12:44,019 --> 00:12:45,019
+Musiałem.
+
+287
+00:12:45,019 --> 00:12:46,019
+Zaczekać.
+
+288
+00:12:46,019 --> 00:12:47,019
+Coś jest nie tak.
+
+289
+00:12:47,019 --> 00:12:48,019
+Chyba.
+
+290
+00:12:48,019 --> 00:12:49,019
+Pomyliłem.
+
+291
+00:12:49,019 --> 00:12:50,019
+Kolejność.
+
+292
+00:12:50,019 --> 00:12:51,019
+Zdarza.
+
+293
+00:12:51,019 --> 00:12:52,019
+Mi się.
+
+294
+00:12:52,019 --> 00:12:53,019
+To.
+
+295
+00:12:53,019 --> 00:12:54,019
+Czasem.
+
+296
+00:12:54,019 --> 00:12:55,019
+Najpierw.
+
+297
+00:12:55,019 --> 00:12:56,019
+Jest.
+
+298
+00:12:56,019 --> 00:12:57,019
+To.
+
+299
+00:12:57,019 --> 00:12:58,019
+Co.
+
+300
+00:12:58,019 --> 00:12:59,019
+Zapisuję.
+
+301
+00:12:59,019 --> 00:13:00,019
+A.
+
+302
+00:13:00,019 --> 00:13:01,019
+Później.
+
+303
+00:13:01,019 --> 00:13:02,019
+Jest.
+
+304
+00:13:02,019 --> 00:13:03,019
+Gdzie.
+
+305
+00:13:03,019 --> 00:13:04,019
+I mam.
+
+306
+00:13:04,019 --> 00:13:05,019
+Plik.
+
+307
+00:13:05,019 --> 00:13:06,019
+Jason.
+
+308
+00:13:06,019 --> 00:13:07,019
+Niepoprawny.
+
+309
+00:13:07,019 --> 00:13:08,019
+Możemy.
+
+310
+00:13:08,019 --> 00:13:09,019
+Też.
+
+311
+00:13:09,019 --> 00:13:10,019
+To.
+
+312
+00:13:10,019 --> 00:13:11,019
+Sprawdzić.
+
+313
+00:13:11,019 --> 00:13:12,019
+Czy.
+
+314
+00:13:12,019 --> 00:13:13,019
+Odpytuje.
+
+315
+00:13:13,019 --> 00:13:14,019
+Internet.
+
+316
+00:13:14,019 --> 00:13:15,019
+Po prostu.
+
+317
+00:13:15,019 --> 00:13:16,019
+Wyświetlając.
+
+318
+00:13:16,019 --> 00:13:17,019
+Sobie.
+
+319
+00:13:17,019 --> 00:13:18,019
+Printa.
+
+320
+00:13:18,019 --> 00:13:19,019
+Sprawdzam.
+
+321
+00:13:19,019 --> 00:13:20,019
+Czy.
+
+322
+00:13:20,019 --> 00:13:21,019
+Sprawdzam.
+
+323
+00:13:21,019 --> 00:13:22,019
+Stolicę.
+
+324
+00:13:22,019 --> 00:13:23,019
+Dla.
+
+325
+00:13:23,019 --> 00:13:24,019
+Państwa.
+
+326
+00:13:24,019 --> 00:13:25,019
+Check.
+
+327
+00:13:25,019 --> 00:13:26,019
+Country.
+
+328
+00:13:26,019 --> 00:13:27,019
+Ok.
+
+329
+00:13:27,019 --> 00:13:28,019
+Błąd.
+
+330
+00:13:28,019 --> 00:13:29,019
+Znalazłem.
+
+331
+00:13:29,019 --> 00:13:30,019
+Ciekawa.
+
+332
+00:13:30,019 --> 00:13:31,019
+Sprawa.
+
+333
+00:13:31,019 --> 00:13:32,019
+Jeżeli.
+
+334
+00:13:32,019 --> 00:13:33,019
+Robimy.
+
+335
+00:13:33,019 --> 00:13:34,019
+Kapital.
+
+336
+00:13:34,019 --> 00:13:35,019
+Z.
+
+337
+00:13:35,019 --> 00:13:36,019
+Kropka.
+
+338
+00:13:36,019 --> 00:13:37,019
+Kronie.
+
+339
+00:13:37,019 --> 00:13:38,019
+Czyli.
+
+340
+00:13:38,019 --> 00:13:39,019
+Nawet.
+
+341
+00:13:39,019 --> 00:13:40,019
+Jeżeli.
+
+342
+00:13:40,019 --> 00:13:41,019
+Ten.
+
+343
+00:13:41,019 --> 00:13:42,019
+Kraj.
+
+344
+00:13:42,019 --> 00:13:43,019
+Był.
+
+345
+00:13:43,019 --> 00:13:44,019
+By.
+
+346
+00:13:44,019 --> 00:13:45,019
+W.
+
+347
+00:13:45,019 --> 00:13:46,019
+Słowniku.
+
+348
+00:13:46,019 --> 00:13:47,019
+To.
+
+349
+00:13:47,019 --> 00:13:48,019
+I.
+
+350
+00:13:48,019 --> 00:13:49,019
+Tak.
+
+351
+00:13:49,019 --> 00:13:50,019
+On.
+
+352
+00:13:50,019 --> 00:13:51,019
+Wywołuje.
+
+353
+00:13:51,019 --> 00:13:52,019
+Tę.
+
+354
+00:13:52,019 --> 00:13:53,019
+Wartość.
+
+355
+00:13:53,019 --> 00:13:54,019
+Domyślną.
+
+356
+00:13:54,019 --> 00:13:55,019
+On.
+
+357
+00:13:55,019 --> 00:13:56,019
+Musi.
+
+358
+00:13:56,019 --> 00:13:57,019
+To.
+
+359
+00:13:57,019 --> 00:13:58,019
+Wywołać.
+
+360
+00:13:58,019 --> 00:13:59,019
+Wcześniej.
+
+361
+00:13:59,019 --> 00:14:00,019
+Więc.
+
+362
+00:14:00,019 --> 00:14:01,019
+Zamieniłem.
+
+363
+00:14:01,019 --> 00:14:02,019
+To.
+
+364
+00:14:02,019 --> 00:14:03,019
+Sobie.
+
+365
+00:14:03,019 --> 00:14:04,019
+Na.
+
+366
+00:14:04,019 --> 00:14:05,019
+Zwykłego.
+
+367
+00:14:05,019 --> 00:14:06,019
+Z.
+
+368
+00:14:06,019 --> 00:14:07,019
+Wykonania.
+
+369
+00:14:07,019 --> 00:14:08,019
+Mianowicie.
+
+370
+00:14:08,019 --> 00:14:09,019
+Widziałem.
+
+371
+00:14:09,019 --> 00:14:10,019
+Że.
+
+372
+00:14:10,019 --> 00:14:11,019
+Raz.
+
+373
+00:14:11,019 --> 00:14:12,019
+Pisałem.
+
+374
+00:14:12,019 --> 00:14:13,019
+Polska.
+
+375
+00:14:13,019 --> 00:14:14,019
+Z.
+
+376
+00:14:14,019 --> 00:14:15,019
+Wielkiej.
+
+377
+00:14:15,019 --> 00:14:16,019
+Raz.
+
+378
+00:14:16,019 --> 00:14:17,019
+Z.
+
+379
+00:14:17,019 --> 00:14:18,019
+Małej.
+
+380
+00:14:18,019 --> 00:14:19,019
+Więc.
+
+381
+00:14:19,019 --> 00:14:20,019
+Warto.
+
+382
+00:14:20,019 --> 00:14:21,019
+W.
+
+383
+00:14:21,019 --> 00:14:22,019
+Słowniku.
+
+384
+00:14:22,019 --> 00:14:23,019
+Mieć.
+
+385
+00:14:23,019 --> 00:14:24,019
+Te.
+
+386
+00:14:24,019 --> 00:14:25,019
+Dane.
+
+387
+00:14:25,019 --> 00:14:26,019
+Ujednolicone.
+
+388
+00:14:26,019 --> 00:14:27,019
+Jednorodne.
+
+389
+00:14:27,019 --> 00:14:28,019
+No.
+
+390
+00:14:28,019 --> 00:14:29,019
+I.
+
+391
+00:14:29,019 --> 00:14:30,019
+Sprawa.
+
+392
+00:14:30,019 --> 00:14:31,019
+Z.
+
+393
+00:14:31,019 --> 00:14:32,019
+Głowy.
+
+394
+00:14:32,019 --> 00:14:33,019
+Bardzo.
+
+395
+00:14:33,019 --> 00:14:34,019
+Dziękuję.

@@ -1,0 +1,1 @@
+I zadanie wygląda następująco. Korzystając ze zdobytej wiedzy napisz funkcję liczącą silnie dla podanej przez użytkownika w argumencie liczby. Czyli l silnia równa się l razy l minus 1 silnia. Czyli pamiętaj o tym, że jeżeli l będzie równe 0 to wtedy zwróć 1, a w przeciwnym wypadku zwróć silnie dla l minus 1. Czekam na rozwiązanie.

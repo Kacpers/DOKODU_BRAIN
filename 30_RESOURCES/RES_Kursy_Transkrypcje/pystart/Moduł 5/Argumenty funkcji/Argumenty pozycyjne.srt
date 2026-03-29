@@ -1,0 +1,183 @@
+1
+00:00:00,000 --> 00:00:08,480
+Odrobinę jestem winny wam wyjaśnienia, ponieważ wszystkie te argumenty, które do tej pory wprowadzaliśmy, to były argumenty pozycyjne.
+
+2
+00:00:08,480 --> 00:00:13,560
+Co to znaczy, że argument jest pozycyjny? To znaczy, że musi być przekazywany na konkretnej pozycji.
+
+3
+00:00:14,339 --> 00:00:23,940
+Było to dosyć logiczne, ponieważ wszystkie nasze funkcje przyjmowały dwa albo trzy argumenty, czyli wiedzieliśmy, że mamy liczba jeden, liczba dwa, więc trzeba mu przekazać dwie liczby.
+
+4
+00:00:23,940 --> 00:00:41,760
+Albo jedna liczba, no to wiadomo. Czyli mówiliśmy sobie o tym, że jeżeli w nawiasie, po słowie def i po nazwie funkcji w nawiasie podamy jakieś parametry, to później, kiedy pod te parametry podstawiamy poszczególne argumenty, to musimy używać konkretnych nazw w konkretnej kolejności.
+
+5
+00:00:41,760 --> 00:00:53,700
+Bo tylko w ten sposób to zadziała. I jest to prawda, ale niepełna. Ponieważ poza argumentami pozycyjnymi mamy też argumenty nazwane i o nich właśnie też chciałem z wami teraz porozmawiać.
+
+6
+00:00:53,939 --> 00:01:03,820
+Więc to jest bardzo ważne, żebyście zapamiętali, że poza argumentami pozycyjnymi, które polegają na tym, że muszą być przekazywane na poszczególnych pozycjach, mamy też argumenty nazwane.
+
+7
+00:01:03,820 --> 00:01:15,299
+A cóż to są argumenty nazwane? Tak naprawdę z argumentem nazwanym mieliśmy już styczność, kiedy robiliśmy printa i na przykład chcieliśmy, żeby separator nie był spacją, tylko czymś innym.
+
+8
+00:01:15,500 --> 00:01:20,239
+Albo kiedy chcieliśmy, żeby end nie był enterem, tylko był czymś innym.
+
+9
+00:01:20,759 --> 00:01:23,819
+Kiedy do range'a przekazywaliśmy na przykład wartość, żeby...
+
+10
+00:01:23,939 --> 00:01:29,019
+Zaczynał się od zera, czy od jedynki, to też używaliśmy argumentu pozycyjnego start.
+
+11
+00:01:29,019 --> 00:01:34,340
+I takich argumentów nazwanych jest bardzo dużo.
+
+12
+00:01:34,759 --> 00:01:38,840
+Co więcej, sami możemy też do naszych funkcji przekazywać argumenty jako nazwane.
+
+13
+00:01:39,299 --> 00:01:40,200
+Zobaczcie ten przykład.
+
+14
+00:01:40,700 --> 00:01:46,620
+Stworzyłem sobie taką funkcję calculateBrutto, która ma dwa parametry, ma netto i ma wad.
+
+15
+00:01:47,180 --> 00:01:51,000
+No i zwracam sobie po prostu netto razy jeden plus wad.
+
+16
+00:01:51,000 --> 00:01:53,439
+I w momencie, w którym chcę wywołać tę funkcję,
+
+17
+00:01:53,939 --> 00:01:58,060
+może się okazać, że ktoś, kto będzie patrzył na wywołanie, nie będzie wiedział,
+
+18
+00:01:58,179 --> 00:02:00,840
+co on podstawia za pierwszy parametr.
+
+19
+00:02:00,959 --> 00:02:02,659
+O co chodzi, co to jest?
+
+20
+00:02:03,060 --> 00:02:05,140
+150 i 0,23. Nie wiem.
+
+21
+00:02:05,719 --> 00:02:11,120
+Więc patrząc na ten przykład, od razu widzimy, że my mamy netto i mamy wad.
+
+22
+00:02:11,539 --> 00:02:16,740
+Czyli nie tylko używamy tych wartości, ale też możemy nazwać je,
+
+23
+00:02:16,879 --> 00:02:21,759
+przez co łatwiej jest ten kod czytać i łatwiej jest dojść, co ta funkcja tak naprawdę robi.
+
+24
+00:02:22,060 --> 00:02:23,759
+Drugą rzeczą, którą mamy wtedy...
+
+25
+00:02:23,939 --> 00:02:28,359
+to jest też to, że kolejność takich argumentów nie ma znaczenia.
+
+26
+00:02:29,060 --> 00:02:32,620
+Jeżeli najpierw będziesz chcieć dać wad, a dopiero później netto,
+
+27
+00:02:32,919 --> 00:02:34,919
+jak najbardziej masz taką możliwość.
+
+28
+00:02:35,359 --> 00:02:42,599
+Co więcej, jeżeli te twoje argumenty, parametry będą miały wartości domyślne,
+
+29
+00:02:42,860 --> 00:02:45,900
+to nie ma problemu, możesz ominąć niektóre z wartości.
+
+30
+00:02:46,240 --> 00:02:51,060
+Czy na przykład podaję sobie pierwszą i trzecią, a środkowa zostaje z wartością domyślną.
+
+31
+00:02:51,460 --> 00:02:53,819
+No i dzięki temu też, tak jak wspomniałem, ten kod jest poprawnie zrozumiały,
+
+32
+00:02:53,819 --> 00:02:53,919
+No i dzięki temu też, tak jak wspomniałem, ten kod jest poprawnie zrozumiały,
+
+33
+00:02:53,939 --> 00:02:55,000
+to jest po prostu bardziej czytelny.
+
+34
+00:02:55,479 --> 00:02:57,060
+Czyli w formie takiego podsumowania.
+
+35
+00:02:57,400 --> 00:03:00,979
+Argument pozycyjny zawsze idzie na pierwszy ogień w ramach jakiejś pozycji.
+
+36
+00:03:01,500 --> 00:03:03,900
+Kolejność argumentów pozycyjnych musi być zachowana,
+
+37
+00:03:04,060 --> 00:03:07,199
+bo stąd wychodzi ich nazwa, że po prostu są one pozycyjne.
+
+38
+00:03:07,620 --> 00:03:08,319
+No i ostatnia rzecz.
+
+39
+00:03:08,419 --> 00:03:11,500
+Argumenty nazwane mogą być pomijane, jeżeli mają wartości domyślne.
+
+40
+00:03:11,879 --> 00:03:15,939
+Czyli jeżeli mamy wartość domyślną, możemy zawsze sobie taki argument pominąć.
+
+41
+00:03:16,659 --> 00:03:18,840
+Albo jeżeli mielibyśmy więcej wartości domyślnych,
+
+42
+00:03:18,900 --> 00:03:20,460
+to o czym wspomniałem w poprzednim slajdzie,
+
+43
+00:03:20,460 --> 00:03:23,800
+możemy po prostu sobie przeskoczyć o kilka i wskazać,
+
+44
+00:03:23,800 --> 00:03:24,880
+czy są jakieś kolejne.
+
+45
+00:03:25,600 --> 00:03:27,780
+I chciałbym Ci to pokazać w kodzie.
+
+46
+00:03:28,420 --> 00:03:28,760
+Chodźmy.

@@ -1,0 +1,319 @@
+1
+00:00:00,000 --> 00:00:08,500
+W zadaniu dziewiątym mamy napisać program, który pobierze od użytkownika ciąg znaków i zwróci ten sam tekst bez spacji oraz znaków interpunkcyjnych.
+
+2
+00:00:09,000 --> 00:00:11,580
+O, bez spacji też, dobra. Więc jak to zrobić?
+
+3
+00:00:11,919 --> 00:00:14,040
+Przede wszystkim musimy mieć jakieś zdanie.
+
+4
+00:00:14,419 --> 00:00:17,640
+Ja sobie już na potrzeby tego zadania przygotowałem wcześniej zdanie.
+
+5
+00:00:18,339 --> 00:00:22,559
+Później usunę to zdanie i po prostu będę je za każdym razem odbierał od użytkownika.
+
+6
+00:00:22,940 --> 00:00:27,980
+Natomiast na chwilę obecną, żeby sobie ułatwić uruchamianie tego programu za każdym razem, zrobiłem tak.
+
+7
+00:00:27,980 --> 00:00:32,280
+Następnie będę chciał przejść po tym zdaniu znak po znaku.
+
+8
+00:00:32,560 --> 00:00:41,560
+W tym celu wykonam sobie fora i żeby przejść znak po znaku napiszę for car in sentence dwukropek print car.
+
+9
+00:00:42,840 --> 00:00:44,100
+Zobacz co się w tym momencie stanie.
+
+10
+00:00:44,820 --> 00:00:54,980
+Jeżeli ja to zadanie sobie wykonam, to dostanę poszczególne jeden być albo nie być, o to jest pytanie i każdy pojedynczy znak wyświetla mi się w nowym wierszu.
+
+11
+00:00:54,980 --> 00:00:57,980
+I teraz będę chciał wykonać szereg testów.
+
+12
+00:00:57,979 --> 00:01:02,539
+Na tych znakach, które będą określały czy chcę ten znak wyświetlać czy nie.
+
+13
+00:01:03,179 --> 00:01:08,379
+Na początek wiem, że chcę sprawdzić czy to jest litera, bo wszystkie litery mają zostawać.
+
+14
+00:01:08,620 --> 00:01:14,939
+No to mogę sobie wykonać car, kropka i tu po tej kropce mamy szereg różnych propozycji.
+
+15
+00:01:15,060 --> 00:01:16,599
+Na przykład jest is numeric.
+
+16
+00:01:16,699 --> 00:01:18,140
+Zacznijmy może od is numeric.
+
+17
+00:01:18,659 --> 00:01:27,519
+Wybieram to is numeric, wywołuję i mam informację przy każdym wyrażeniu, które nie jest znakiem, nie jest liczbą, że jest to false.
+
+18
+00:01:27,519 --> 00:01:29,219
+A przy jedynce pojawiło się true.
+
+19
+00:01:29,659 --> 00:01:31,719
+Ok, co jeszcze możemy sobie sprawdzić?
+
+20
+00:01:31,979 --> 00:01:35,619
+Przecinek, car, kropka, is alfa.
+
+21
+00:01:36,259 --> 00:01:37,359
+To też sobie to wybierzmy.
+
+22
+00:01:38,259 --> 00:01:45,599
+Strzałka do góry, enter i zobacz też mam tutaj, jeżeli mam literę to pojawia mi się true, jeżeli nie mam litery pojawia mi się false.
+
+23
+00:01:46,120 --> 00:01:52,699
+Tu jak widać przy spacjach mamy dwa fałsze, tak samo przy znakach interpunkcyjnych mamy dwa fałsze.
+
+24
+00:01:52,699 --> 00:01:56,239
+Jeżeli byśmy chcieli zostawić spacje jednak z jakiegoś powodu,
+
+25
+00:01:57,519 --> 00:02:07,259
+to możemy skorzystać z is space, zobacz mamy też is lower, is upper i tych funkcji zaczynających się od is trochę takich różnych tutaj jest.
+
+26
+00:02:07,259 --> 00:02:12,939
+Natomiast nas w zupełności będą satysfakcjonować te dwie, czyli is numeric oraz is alfa.
+
+27
+00:02:12,939 --> 00:02:21,699
+My tak naprawdę będziemy chcieli zostawić tylko i wyłącznie cyfry i litery, no bo nie chcemy, żeby wyświetlały nam się inne znaki, tak?
+
+28
+00:02:21,699 --> 00:02:24,699
+Bo chcemy ten tekst bez spacji znaków interpunkcyjnych.
+
+29
+00:02:24,699 --> 00:02:27,159
+Stąd też możemy sobie zrobić ifa,
+
+30
+00:02:27,159 --> 00:02:37,939
+w którym to ifie sprawdzimy czy nasz znak jest liczbą lub, no bo nie może być jednym i drugim naraz, czyli or po angielsku jest literą.
+
+31
+00:02:37,939 --> 00:02:40,939
+I wtedy możemy sobie wyświetlić taki znak.
+
+32
+00:02:40,939 --> 00:02:47,240
+Robię strzałę do góry enter i sprawdzam i faktycznie zobaczcie zostały same litery.
+
+33
+00:02:47,240 --> 00:02:54,340
+Natomiast pojawił się pewien problem, no bo one nam się tutaj wszystkie ładnie zlepiły, znaczy są jedna pod wierszem.
+
+34
+00:02:54,340 --> 00:02:56,340
+Żeby one wyświetliły się obok siebie,
+
+35
+00:02:56,340 --> 00:02:59,340
+moglibyśmy oczywiście zrobić end równa się nic.
+
+36
+00:02:59,340 --> 00:03:05,340
+Natomiast w tej sytuacji dostaniemy wszystko zapisane obok siebie za pomocą printa.
+
+37
+00:03:05,340 --> 00:03:14,340
+Czasem zdarza się i zobaczysz w przyszłości, że ten print taki wykonywany wiele razy, jeżeli chcemy później, chcielibyśmy później to jakoś obsłużyć, nie jest najwygodniejszy.
+
+38
+00:03:14,340 --> 00:03:18,340
+No bo wyobraź sobie, że teraz ktoś da Ci zadanie zmienić wszystkie te litery na wielkie.
+
+39
+00:03:18,340 --> 00:03:22,340
+To tak naprawdę musisz każdą pojedynczą zmieniać na wielką, a nie możesz ich zmienić hurtem.
+
+40
+00:03:22,340 --> 00:03:24,340
+Żeby taką czynność wykonać, potrzebowalibyśmy mieć wszystkie te znaki, które są na górze.
+
+41
+00:03:24,340 --> 00:03:28,340
+W jednej dodatkowej zmiennej.
+
+42
+00:03:28,340 --> 00:03:30,340
+I to sobie teraz też tutaj zrobimy.
+
+43
+00:03:30,340 --> 00:03:34,340
+Czyli stworzymy sobie zmienną, gdzieś tu powyżej, możemy ją nazwać newSentence.
+
+44
+00:03:34,340 --> 00:03:38,340
+Przypisać sobie do niej po prostu pusty string.
+
+45
+00:03:38,340 --> 00:03:42,340
+I następnie będziemy mogli zwiększać to newSentence.
+
+46
+00:03:42,340 --> 00:03:50,340
+I tu mogą się podnieść głosy, Kacper powiedziałaś, że przecież nie da się takich rzeczy robić, ponieważ to jest string, a string jest niemutowalny.
+
+47
+00:03:50,340 --> 00:03:52,340
+I owszem.
+
+48
+00:03:52,340 --> 00:04:00,340
+Ale trzeba zwrócić uwagę na to, że kiedy my zrobimy taką operację newSentence równa się newSentence plus char,
+
+49
+00:04:00,340 --> 00:04:04,340
+to to nie powoduje, że ja mutuję, zmieniam newSentence,
+
+50
+00:04:04,340 --> 00:04:14,340
+tylko ja tworzę sobie nową zupełnie wartość, która określa to zdanie, ten tekst, który był, plus nowy znak.
+
+51
+00:04:14,340 --> 00:04:18,340
+Ja dopiero to wyrażenie przypisuję do zmiennej.
+
+52
+00:04:18,340 --> 00:04:20,340
+W tym samym ja jakby pozbawiam tę zmienną tej poprzedniej wartości.
+
+53
+00:04:20,340 --> 00:04:22,340
+W tym samym ja jakby pozbawiam tę zmienną tej poprzedniej wartości.
+
+54
+00:04:22,339 --> 00:04:29,339
+Czyli my w tym momencie nie mutujemy, nie zmieniamy tamtego stringa, tylko my do zmiennej przypisujemy zupełnie nowy string.
+
+55
+00:04:29,339 --> 00:04:32,339
+Czy to jest to samo? No nie jest to to samo.
+
+56
+00:04:32,339 --> 00:04:39,339
+To jest tak jakbyś chciał samochód przemalować na inny kolor, to jest jedna opcja, trochę może kłopotliwa,
+
+57
+00:04:39,339 --> 00:04:46,339
+albo kupić sobie, może jeszcze bardziej kosztowna ta druga, kupić sobie samochód, który byłby tą samą marką, ale w innym kolorze.
+
+58
+00:04:46,339 --> 00:04:50,339
+To wnętrze tego samochodu będzie inne, nie? Zawsze nie będzie tych papierków czy okruszków, które zostawiłeś w nim poprzednio.
+
+59
+00:04:50,339 --> 00:04:52,339
+To wnętrze tego samochodu będzie inne, nie? Zawsze nie będzie tych papierków czy okruszków, które zostawiłeś w nim poprzednio.
+
+60
+00:04:52,339 --> 00:04:54,339
+Tylko po prostu będzie miał inny kolor.
+
+61
+00:04:54,339 --> 00:04:58,339
+Natomiast tutaj, żebyś przemalował ten pierwszy, no to cała wnętrze by zostało, tylko kolor by się zmienił.
+
+62
+00:04:58,339 --> 00:05:00,339
+Natomiast tutaj, żebyś przemalował ten pierwszy, no to cała wnętrze by zostało, tylko kolor by się zmienił.
+
+63
+00:05:00,339 --> 00:05:02,339
+I my tutaj właśnie parkujemy za każdym razem nowy samochód w naszym garażu, jeżeli używamy tego skojarzenia.
+
+64
+00:05:02,339 --> 00:05:04,339
+I my tutaj właśnie parkujemy za każdym razem nowy samochód w naszym garażu, jeżeli używamy tego skojarzenia.
+
+65
+00:05:04,339 --> 00:05:06,339
+I wtedy to print car usuwamy i za tym forem możemy sobie wyświetlić print new sentence.
+
+66
+00:05:06,339 --> 00:05:08,339
+modes twice times to same in tracking view according to relevant behavior.
+
+67
+00:05:08,339 --> 00:05:10,339
+modes twice times to same in tracking view according to relevant behavior.
+
+68
+00:05:10,339 --> 00:05:12,339
+I wtedy no to proszę.
+
+69
+00:05:12,339 --> 00:05:14,339
+I wtedy no to proszę.
+
+70
+00:05:14,339 --> 00:05:16,339
+Wszystko się ładnie wyświetliło.
+
+71
+00:05:16,339 --> 00:05:18,339
+No i wszystko jest OK.
+
+72
+00:05:18,339 --> 00:05:20,339
+No i wszystko jest OK.
+
+73
+00:05:20,339 --> 00:05:22,339
+To co? Idziemy do dziesiątki.
+
+74
+00:05:22,339 --> 00:05:24,339
+Chodźcie.
+
+75
+00:05:24,339 --> 00:05:26,339
+Chodźcie.
+
+76
+00:05:26,339 --> 00:05:28,339
+Chodź.
+
+77
+00:05:28,339 --> 00:05:30,339
+Co mam na skoro promote?
+
+78
+00:05:30,339 --> 00:05:32,339
+Aahan!
+
+79
+00:05:32,339 --> 00:05:34,339
+I increíbnie, no usualnie to jest tak oleh, ale preparix sensExit,
+
+80
+00:05:34,339 --> 00:05:36,339
+i però depresatt urżad WrestleMania these days,

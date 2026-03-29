@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:01,679
+I mam też zadanie dla Ciebie.
+
+2
+00:00:02,020 --> 00:00:04,879
+Pamiętaj o tym, żeby Twoje funkcje posiadały Pajdoka.
+
+3
+00:00:05,419 --> 00:00:09,120
+Przygotuj funkcję, która na podstawie czasu pracy, ilości zużywanych kWh,
+
+4
+00:00:09,419 --> 00:00:12,280
+odpowie ile zapłacę za prąd, który zużywa dane urządzenie.
+
+5
+00:00:12,780 --> 00:00:15,620
+Domyślny koszt 1 kWh co 617 zł.
+
+6
+00:00:16,160 --> 00:00:18,120
+Znaczy zarobcznych 617 zł.
+
+7
+00:00:18,879 --> 00:00:20,980
+I to jest jakaś archiwalna wartość.
+
+8
+00:00:21,059 --> 00:00:22,539
+Wiemy, że teraz wszystkie ceny poszły w górę.
+
+9
+00:00:22,660 --> 00:00:25,679
+Jeżeli kogoś tym denerwuje, to przepraszam, nie jest to moją intencją.
+
+10
+00:00:26,080 --> 00:00:27,580
+Możecie zaktualizować tę wartość.
+
+11
+00:00:27,579 --> 00:00:32,560
+Po drugie, przygotuj funkcję, której deklaracja będzie wyglądała następująco.
+
+12
+00:00:32,920 --> 00:00:33,799
+COUNT NUMBERS.
+
+13
+00:00:33,879 --> 00:00:36,140
+Widzimy, że funkcja przyjmuje NUMBERS jako listę.
+
+14
+00:00:36,519 --> 00:00:40,739
+Informacje COUNT ODD to jest wartość BULL TRUE albo FALSE.
+
+15
+00:00:41,119 --> 00:00:42,859
+COUNT EVEN BULL TRUE albo FALSE.
+
+16
+00:00:43,280 --> 00:00:45,019
+Zadaniem funkcji będzie odpowiedź na pytanie,
+
+17
+00:00:45,320 --> 00:00:48,359
+ile jest licz spełniających podane w argumentach wymagania
+
+18
+00:00:48,359 --> 00:00:50,359
+w liście przekazanej w pierwszym przedziale.
+
+19
+00:00:50,739 --> 00:00:54,299
+Czyli przekazujemy mu listę, mówimy, czy chcemy liczyć parzyste czy nieparzyste
+
+20
+00:00:54,299 --> 00:00:57,299
+i on nam w tym momencie powinien zwrócić odpowiednią,
+
+21
+00:00:57,579 --> 00:00:59,399
+odpowiednie wartości, odpowiednią ilość,
+
+22
+00:00:59,719 --> 00:01:03,460
+licząc albo parzyste, albo nieparzyste, albo jedne i drugie, albo żadnych.
+
+23
+00:01:04,280 --> 00:01:04,759
+No to co?
+
+24
+00:01:06,359 --> 00:01:07,239
+Do rozwiązywania.

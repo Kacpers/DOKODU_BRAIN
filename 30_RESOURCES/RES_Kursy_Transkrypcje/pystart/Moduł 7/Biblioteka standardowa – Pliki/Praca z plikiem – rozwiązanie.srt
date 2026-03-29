@@ -1,0 +1,679 @@
+1
+00:00:00,000 --> 00:00:02,100
+To co? Lecimy z naszym rozwiązaniem.
+
+2
+00:00:02,180 --> 00:00:04,219
+Jak widzicie transakcje mam już przygotowane.
+
+3
+00:00:04,719 --> 00:00:05,900
+Stworzę sobie nowy plik.
+
+4
+00:00:06,120 --> 00:00:08,660
+Praca z transakcjami.
+
+5
+00:00:08,660 --> 00:00:13,460
+I w tym naszym pliku będę potrzebował najpierw te transakcje sobie wczytać.
+
+6
+00:00:13,620 --> 00:00:16,920
+Czyli with open transakcje txt.
+
+7
+00:00:17,320 --> 00:00:23,740
+Oczywiście pamiętam o tym, żeby dorzucić encoding utf8 as file dwukropek.
+
+8
+00:00:24,280 --> 00:00:29,420
+For transaction in file.
+
+9
+00:00:30,000 --> 00:00:34,079
+Print transaction strip.
+
+10
+00:00:34,079 --> 00:00:38,480
+No i oczywiście od razu sobie to też będę splitował po średnikach.
+
+11
+00:00:38,840 --> 00:00:41,240
+Zwróćcie uwagę na fakt, że ja ten plik mam otwarty.
+
+12
+00:00:41,679 --> 00:00:45,980
+Możliwe, że przez to, że będę miał go otwartym, to też nie uda mi się go otworzyć.
+
+13
+00:00:46,420 --> 00:00:49,840
+Zaznaczam to, bo wiem, że na niektórych komputerach taki problem występował.
+
+14
+00:00:50,460 --> 00:00:52,719
+Ok, wszystkie dane tutaj się znajdują.
+
+15
+00:00:53,200 --> 00:00:57,019
+Teraz mogę sobie poszczególne linie przypisać do poszczególnych zmiennych.
+
+16
+00:00:57,120 --> 00:00:58,400
+Tak samo jak robiliśmy w demie.
+
+17
+00:00:58,400 --> 00:00:59,719
+Czyli data.
+
+18
+00:01:00,000 --> 00:01:00,960
+Czy też date.
+
+19
+00:01:01,539 --> 00:01:04,060
+Może created add będzie ładniej.
+
+20
+00:01:04,980 --> 00:01:07,900
+Bo date to jest słowo zarezerwowane, więc lepiej go nie używać.
+
+21
+00:01:08,519 --> 00:01:09,859
+Description czy tam title.
+
+22
+00:01:10,500 --> 00:01:11,180
+No i amount.
+
+23
+00:01:12,560 --> 00:01:15,420
+Za pamięci amount zmienimy sobie jeszcze na liczbę.
+
+24
+00:01:15,799 --> 00:01:18,859
+Czyli amount równa się integer czy też float.
+
+25
+00:01:19,099 --> 00:01:25,140
+W naszym zadaniu chcielibyśmy tylko i wyłącznie dodatnie transakcje zapisać do nowego pliku o nazwie przychody.
+
+26
+00:01:25,140 --> 00:01:27,120
+Czyli robimy przecinek.
+
+27
+00:01:28,480 --> 00:01:29,159
+Open.
+
+28
+00:01:30,000 --> 00:01:31,000
+Przychody.
+
+29
+00:01:32,000 --> 00:01:32,719
+txt.
+
+30
+00:01:33,620 --> 00:01:34,599
+Encoding.
+
+31
+00:01:35,280 --> 00:01:36,480
+utf8.
+
+32
+00:01:37,640 --> 00:01:38,140
+s.
+
+33
+00:01:38,719 --> 00:01:39,359
+Output.
+
+34
+00:01:39,359 --> 00:01:40,239
+Może być output.
+
+35
+00:01:40,939 --> 00:01:44,900
+No i wtedy jak mamy informację o tym, że amount jest dodatni.
+
+36
+00:01:49,060 --> 00:01:50,560
+Czy amount jest większy od zera.
+
+37
+00:01:51,159 --> 00:01:56,120
+No to tak naprawdę naszą linię, czyli naszą transakcję moglibyśmy wprost zapisać do pliku.
+
+38
+00:01:56,539 --> 00:01:59,500
+Ta linia ma też już znak końca linii.
+
+39
+00:02:00,000 --> 00:02:04,099
+Więc output write transaction.
+
+40
+00:02:05,799 --> 00:02:06,599
+Wykonujemy.
+
+41
+00:02:08,080 --> 00:02:12,759
+O błąd przychody txt nie istnieje, a ja go tutaj otworzyłem w trybie R.
+
+42
+00:02:12,919 --> 00:02:14,000
+Nie dodałem mu moda.
+
+43
+00:02:14,460 --> 00:02:15,759
+Dorzuca mu jeszcze mode.
+
+44
+00:02:16,840 --> 00:02:17,639
+Jako w.
+
+45
+00:02:18,520 --> 00:02:20,680
+I wtedy strzała do góry enter.
+
+46
+00:02:21,159 --> 00:02:22,199
+Komunikatu nie ma.
+
+47
+00:02:22,620 --> 00:02:26,319
+Przechodzimy więc sobie do sprawdzenia czy przychody nam się pojawiły.
+
+48
+00:02:26,319 --> 00:02:27,800
+Przychody się pojawiły.
+
+49
+00:02:28,280 --> 00:02:29,800
+Jak widać wszystkie te dane, które były.
+
+50
+00:02:29,800 --> 00:02:32,800
+Też się pojawiły, czyli wszystko jest OK.
+
+51
+00:02:33,320 --> 00:02:36,680
+Jeżeli wszystko jest OK, to możemy przejść do drugiej części naszego zadania.
+
+52
+00:02:36,680 --> 00:02:44,480
+A w drugim zadaniu tak naprawdę mamy napisać program, który otworzy przychody odczyta wartości zapisane w kolejnych wierszach i wyświetli sumę.
+
+53
+00:02:45,000 --> 00:02:47,800
+No to robimy sobie analizuj przychody.
+
+54
+00:02:49,439 --> 00:02:50,080
+Py.
+
+55
+00:02:50,640 --> 00:02:53,360
+No i będziemy chcieli otworzyć plik py do odczytu.
+
+56
+00:02:53,720 --> 00:02:55,200
+Otworzyć plik txt do odczytu.
+
+57
+00:02:58,680 --> 00:02:59,680
+Przychody.
+
+58
+00:02:59,800 --> 00:03:00,800
+Odczyt czyli r.
+
+59
+00:03:01,760 --> 00:03:04,480
+Kodowanie nas tutaj już nie musimy się nim przejmować.
+
+60
+00:03:04,480 --> 00:03:06,480
+Dlaczego się nie muszę przejmować?
+
+61
+00:03:06,480 --> 00:03:08,480
+Bo tylko będę czytał wartości po średnikach.
+
+62
+00:03:08,480 --> 00:03:10,480
+Interesuje mnie ostatnia.
+
+63
+00:03:10,480 --> 00:03:12,480
+Czyli line.
+
+64
+00:03:12,480 --> 00:03:14,480
+Równa się.
+
+65
+00:03:14,480 --> 00:03:16,480
+Czy też potrzebuje line?
+
+66
+00:03:16,480 --> 00:03:18,480
+Potrzebuje line.
+
+67
+00:03:18,480 --> 00:03:20,480
+Bo for line in input file.
+
+68
+00:03:20,480 --> 00:03:22,480
+Dwu kropek.
+
+69
+00:03:22,480 --> 00:03:24,480
+I teraz z linii interesuje mnie tylko ostatnia wartość.
+
+70
+00:03:24,480 --> 00:03:26,480
+Czyli.
+
+71
+00:03:26,480 --> 00:03:27,480
+Znowu.
+
+72
+00:03:27,480 --> 00:03:28,480
+Znowu.
+
+73
+00:03:28,480 --> 00:03:29,080
+Znowu.
+
+74
+00:03:29,080 --> 00:03:30,080
+Znowu.
+
+75
+00:03:30,080 --> 00:03:31,080
+Więc mogę mu powiedzieć.
+
+76
+00:03:31,080 --> 00:03:32,080
+Słuchaj.
+
+77
+00:03:32,080 --> 00:03:33,080
+Te dwie pierwsze mnie nie interesują.
+
+78
+00:03:33,080 --> 00:03:35,080
+Interesuje mnie tylko i wyłącznie amount.
+
+79
+00:03:35,080 --> 00:03:38,080
+I mogę zrobić równa się.
+
+80
+00:03:38,080 --> 00:03:40,080
+Line strip.
+
+81
+00:03:40,080 --> 00:03:42,080
+Split.
+
+82
+00:03:42,080 --> 00:03:44,080
+Po średniku.
+
+83
+00:03:44,080 --> 00:03:46,080
+I teraz.
+
+84
+00:03:46,080 --> 00:03:47,080
+Jeżeli mamy taką sytuację.
+
+85
+00:03:47,080 --> 00:03:50,080
+To jeszcze amount musimy pamiętać, że jest txtem.
+
+86
+00:03:50,080 --> 00:03:52,080
+My chcemy mieć liczbę.
+
+87
+00:03:52,080 --> 00:03:53,080
+Czyli.
+
+88
+00:03:53,080 --> 00:03:55,080
+Wypadałoby sobie dorzucić jakąś zmienną.
+
+89
+00:03:55,080 --> 00:03:57,080
+Total równa się 0.
+
+90
+00:03:57,080 --> 00:03:58,080
+Total.
+
+91
+00:03:58,080 --> 00:03:59,080
+Plus.
+
+92
+00:03:59,080 --> 00:04:00,080
+Równa się.
+
+93
+00:04:00,080 --> 00:04:01,080
+Amount.
+
+94
+00:04:01,080 --> 00:04:02,080
+No i teraz.
+
+95
+00:04:02,080 --> 00:04:04,080
+Wyświetlenie tego tylko nam zostało.
+
+96
+00:04:04,080 --> 00:04:05,080
+Czyli print.
+
+97
+00:04:05,080 --> 00:04:06,080
+Łączna wartość.
+
+98
+00:04:06,080 --> 00:04:07,080
+Transakcji.
+
+99
+00:04:07,080 --> 00:04:08,080
+To.
+
+100
+00:04:08,080 --> 00:04:09,080
+Total.
+
+101
+00:04:09,080 --> 00:04:10,080
+Tu chciałem zwrócić uwagę na jeszcze jedną rzecz.
+
+102
+00:04:10,080 --> 00:04:11,080
+Jeżeli zmienna total została zadeklarowana jakby w jednym wcięciu.
+
+103
+00:04:11,080 --> 00:04:12,080
+A ja tutaj próbuję się do niej odwołać.
+
+104
+00:04:12,080 --> 00:04:13,080
+Poziom wyżej.
+
+105
+00:04:13,080 --> 00:04:14,080
+To zakładając, że ten plik nie istniałby.
+
+106
+00:04:14,080 --> 00:04:15,080
+Dostanę sobie.
+
+107
+00:04:15,080 --> 00:04:16,080
+Zmienną wartość.
+
+108
+00:04:16,080 --> 00:04:17,080
+Zmienną wartość.
+
+109
+00:04:17,080 --> 00:04:18,080
+Zmienną wartość.
+
+110
+00:04:18,080 --> 00:04:19,080
+Zmienną wartość.
+
+111
+00:04:19,080 --> 00:04:20,080
+Zmienną wartość.
+
+112
+00:04:20,080 --> 00:04:21,080
+Zmienną wartość.
+
+113
+00:04:21,080 --> 00:04:22,080
+Zmienną wartość.
+
+114
+00:04:22,079 --> 00:04:23,079
+I dosyć w górę.
+
+115
+00:04:23,079 --> 00:04:24,079
+centrum.
+
+116
+00:04:24,079 --> 00:04:25,079
+To yo.
+
+117
+00:04:25,079 --> 00:04:26,079
+To Municipal Planning duszyавa Polszewska.
+
+118
+00:04:26,079 --> 00:04:27,079
+No i teraz.
+
+119
+00:04:27,079 --> 00:04:28,079
+O cooler stałe nasz.
+
+120
+00:04:28,079 --> 00:04:29,079
+Ale opłaca nam już nasza wersja.
+
+121
+00:04:29,079 --> 00:04:30,079
+Jeszcze raz przygotury making co.
+
+122
+00:04:30,079 --> 00:04:31,079
+Świetna jest.
+
+123
+00:04:31,079 --> 00:04:32,079
+Indywidualna.
+
+124
+00:04:32,079 --> 00:04:33,079
+Yes.
+
+125
+00:04:33,079 --> 00:04:34,079
+Jest jak nṇa ma tinham w Russians.
+
+126
+00:04:34,079 --> 00:04:35,079
+No.
+
+127
+00:04:35,079 --> 00:04:36,079
+Favoric.
+
+128
+00:04:36,079 --> 00:04:37,079
+Trzeba coś odłożyć.
+
+129
+00:04:37,079 --> 00:04:38,079
+Podobał mi się.
+
+130
+00:04:38,079 --> 00:04:39,079
+Dobrze.
+
+131
+00:04:39,079 --> 00:04:40,079
+At początku.
+
+132
+00:04:40,079 --> 00:04:41,079
+Z tym blood.
+
+133
+00:04:41,079 --> 00:04:42,079
+I tam.
+
+134
+00:04:42,079 --> 00:04:43,079
+Udało mi się spójasz.
+
+135
+00:04:43,079 --> 00:04:44,079
+Indywidualne.
+
+136
+00:04:44,079 --> 00:04:45,079
+Podobało mi się.
+
+137
+00:04:45,079 --> 00:04:46,079
+Ja.
+
+138
+00:04:46,079 --> 00:04:47,079
+Tak.
+
+139
+00:04:47,079 --> 00:04:48,079
+Decyzja.
+
+140
+00:04:48,079 --> 00:04:49,079
+Ja.
+
+141
+00:04:49,079 --> 00:04:50,079
+Myslam.
+
+142
+00:04:50,079 --> 00:04:51,079
+Ale.
+
+143
+00:04:51,079 --> 00:04:52,079
+Bo ten.
+
+144
+00:04:52,079 --> 00:04:54,120
+się otworzyć plik czy nie, no to dobrze byłoby
+
+145
+00:04:54,120 --> 00:04:56,139
+wyświetlić taki komunikat, tak mi się wydaje.
+
+146
+00:04:56,620 --> 00:04:57,819
+Dlatego zrobiłem to do lewej.
+
+147
+00:04:58,240 --> 00:04:59,959
+Jeżeli byśmy chcieli to zrobić tylko wtedy,
+
+148
+00:05:00,099 --> 00:05:02,199
+kiedy uda się otworzyć plik, no to wtedy powinno
+
+149
+00:05:02,199 --> 00:05:03,219
+być do prawej.
+
+150
+00:05:03,919 --> 00:05:06,060
+Analizuj przychody, no i mam błąd,
+
+151
+00:05:06,199 --> 00:05:07,839
+integer i string, no bo amount
+
+152
+00:05:07,839 --> 00:05:09,879
+chciałem zamienić na float, a nie zamieniłem.
+
+153
+00:05:10,699 --> 00:05:11,279
+Raz jeszcze.
+
+154
+00:05:12,339 --> 00:05:14,079
+I mamy 1790.
+
+155
+00:05:15,299 --> 00:05:16,199
+Dlatego korzystamy
+
+156
+00:05:16,199 --> 00:05:17,879
+razem z tego samego pliku, żeby móc
+
+157
+00:05:17,879 --> 00:05:19,879
+właśnie sprawdzić, czy wynik mamy ten sam,
+
+158
+00:05:19,879 --> 00:05:22,100
+więc jeżeli u Ciebie wyszedł ten sam wynik,
+
+159
+00:05:22,199 --> 00:05:23,379
+to znaczy, że jest OK.
+
+160
+00:05:24,120 --> 00:05:26,019
+Mógłbym jeszcze sprawdzić, czy w tym
+
+161
+00:05:26,019 --> 00:05:27,680
+pliku faktycznie wartości są OK.
+
+162
+00:05:28,180 --> 00:05:29,579
+Tylko nie wiem, czy będę w stanie go
+
+163
+00:05:29,579 --> 00:05:31,839
+tak szybko podać, ale 500,
+
+164
+00:05:32,000 --> 00:05:33,959
+500 to 1000, 200, 200
+
+165
+00:05:33,959 --> 00:05:36,159
+to 400, czy 1400,
+
+166
+00:05:36,659 --> 00:05:37,959
+no i wychodzi na to, że
+
+167
+00:05:37,959 --> 00:05:39,719
+jest OK. To dzięki.
+
+168
+00:05:40,159 --> 00:05:41,879
+Zapraszam Was dalej do Jasona.
+
+169
+00:05:42,680 --> 00:05:44,139
+I nie chodzi mi o amerykańskie
+
+170
+00:05:44,139 --> 00:05:45,279
+imię. Chodźcie.

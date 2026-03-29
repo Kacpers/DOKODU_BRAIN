@@ -1,0 +1,199 @@
+1
+00:00:00,000 --> 00:00:04,660
+Cześć! Z tego miejsca chciałem Ci bardzo serdecznie podziękować, że dołączyłeś do Pajstartu
+
+2
+00:00:04,660 --> 00:00:10,160
+i że zdecydowałeś, czy zdecydowałaś się na rozpoczęcie tej wspaniałej przygody.
+
+3
+00:00:10,599 --> 00:00:12,220
+Cały kurs będzie wyglądał właśnie tak.
+
+4
+00:00:12,359 --> 00:00:16,760
+To znaczy, ja będę mówić do Ciebie, a Ty będziesz tego słuchać,
+
+5
+00:00:17,179 --> 00:00:20,859
+będziesz mógł, będziesz mogła wykonywać ćwiczenia
+
+6
+00:00:20,859 --> 00:00:22,679
+i do tego bardzo serdecznie zachęcam.
+
+7
+00:00:23,199 --> 00:00:27,679
+Za chwilę porozmawiamy sobie o tym, jak wygląda w ogóle nauka, programowania,
+
+8
+00:00:27,679 --> 00:00:33,719
+jakie trudności mogą Cię napotkać oraz co zrobić, żeby tych trudności było jak najmniej.
+
+9
+00:00:34,460 --> 00:00:38,060
+I tutaj bardzo zachęcam do tego, żeby ten moduł wysłuchać w całości,
+
+10
+00:00:38,539 --> 00:00:42,380
+żeby się do niego przyłożyć i później wracać do niego raz na jakiś czas.
+
+11
+00:00:42,960 --> 00:00:46,840
+Ponieważ to, co jest zmorą dzisiejszych czasów i wszystkich tych kursów online,
+
+12
+00:00:46,960 --> 00:00:50,280
+to jest to, że ludzie zaczynają te kursy, a nigdy ich nie kończą.
+
+13
+00:00:50,920 --> 00:00:51,700
+I tu mam prośbę.
+
+14
+00:00:52,179 --> 00:00:55,480
+Jeżeli z jakiegoś powodu zatrzymasz się w tym kursie i stwierdzisz,
+
+15
+00:00:55,480 --> 00:00:56,760
+że nie chcesz go robić dalej,
+
+16
+00:00:56,759 --> 00:00:58,679
+to napisz do mnie wiadomość.
+
+17
+00:00:58,679 --> 00:01:01,759
+Napisz Kacper wymiękłem, Kacper wymiękłam.
+
+18
+00:01:01,759 --> 00:01:06,560
+To jest taki moduł i albo uznałem, że to nie jest dla mnie,
+
+19
+00:01:06,560 --> 00:01:09,959
+albo stwierdziłem, że to jest po prostu coś zbyt trudnego,
+
+20
+00:01:09,959 --> 00:01:14,039
+albo już mi się to po prostu znudziło i kupiłem ten kurs tylko na próbę.
+
+21
+00:01:14,039 --> 00:01:15,840
+Jestem strasznie ciekaw.
+
+22
+00:01:15,840 --> 00:01:18,840
+Ja nie chcę sam pytać, robisz, robisz, bo to tak głupio,
+
+23
+00:01:18,840 --> 00:01:23,439
+ale bardzo mi zależy na tym, żebyście wali mi znać o Waszych postępach
+
+24
+00:01:23,439 --> 00:01:26,400
+i o Waszej nauce.
+
+25
+00:01:26,400 --> 00:01:26,659
+Tak?
+
+26
+00:01:26,659 --> 00:01:29,019
+O tym, jak wygląda u Was ten proces.
+
+27
+00:01:29,019 --> 00:01:32,060
+I zależy mi też na tym, żebym mógł pełnić też taką rolę takiego coacha,
+
+28
+00:01:32,060 --> 00:01:34,739
+że jeżeli ktoś z Was, może nie na co dzień, tak?
+
+29
+00:01:34,739 --> 00:01:40,340
+Nie będę Wam mówił ucz się, ucz się, ale jeżeli uznasz, że to nie dla Ciebie,
+
+30
+00:01:40,340 --> 00:01:44,659
+albo że to po prostu okazało się zbyt trudne, to napisz do mnie,
+
+31
+00:01:44,659 --> 00:01:47,900
+a ja bardzo chciałbym zrobić wszystko, co w mojej mocy, żeby Cię przekonać,
+
+32
+00:01:47,900 --> 00:01:50,699
+żeby jednak ten kurs zakończyć.
+
+33
+00:01:50,699 --> 00:01:53,420
+Bo te emocje, z którymi zaczynasz ten kurs teraz, to jest coś,
+
+34
+00:01:53,420 --> 00:01:56,299
+co warto zapamiętać i pielęgnować w swoim sercu i w sobie.
+
+35
+00:01:56,299 --> 00:02:00,179
+Bo tak naprawdę w momencie, w którym zatrzymasz się w tym kursie,
+
+36
+00:02:00,179 --> 00:02:03,620
+twierdzisz, nie chcę go robić dalej, to właśnie te emocje są tym,
+
+37
+00:02:03,620 --> 00:02:07,939
+co może Ci pomóc robić go i kontynuować.
+
+38
+00:02:07,939 --> 00:02:12,020
+Więc za każdym razem, kiedy na przykład teraz myślisz sobie o tym,
+
+39
+00:02:12,020 --> 00:02:16,180
+że zaczynam ten kurs, bo chcę lepiej zarabiać, bo chcę nauczyć się programowania,
+
+40
+00:02:16,180 --> 00:02:21,219
+bo chcę zaimponować żonie, przyjaciołom, bo chcę napisać program,
+
+41
+00:02:21,219 --> 00:02:25,060
+który mam gdzieś w głowie, to spróbuj sobie to gdzieś zapisać na karteczce
+
+42
+00:02:25,060 --> 00:02:25,939
+i wracać do tego,
+
+43
+00:02:25,939 --> 00:02:30,579
+ile razy będziesz czuć, że coś się dzieje z takiego słabego,
+
+44
+00:02:30,579 --> 00:02:35,579
+że gubisz chęci, że nie uczysz się, że odpuszczasz sobie poszczególne moduły.
+
+45
+00:02:35,579 --> 00:02:39,419
+Przyklej to sobie gdzieś w widocznym miejscu i po prostu do tego wracaj.
+
+46
+00:02:39,419 --> 00:02:43,500
+I cóż, to taka moja mowa wstępna.
+
+47
+00:02:43,500 --> 00:02:48,060
+Mam nadzieję, że niezbyt długa i rozgrzała Twoje serce do tego,
+
+48
+00:02:48,060 --> 00:02:50,780
+żeby uczyć się ze mną i zacząć kurs.
+
+49
+00:02:50,780 --> 00:02:55,419
+Więc zachęcam, moduł pierwszy, lekcja pierwsza, zaczynamy.
+
+50
+00:02:55,939 --> 00:02:56,939
+Dzięki.

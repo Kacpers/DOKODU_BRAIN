@@ -1,0 +1,407 @@
+1
+00:00:00,000 --> 00:00:03,620
+No i moi drodzy, nastał ten moment, lecimy z ósmą pracą domową.
+
+2
+00:00:04,060 --> 00:00:07,919
+Tutaj zadań znowu jest troszkę mniej, ale są one odrobinę bardziej złożone też,
+
+3
+00:00:08,040 --> 00:00:11,859
+żeby na tych trudniejszych takich zagadnieniach móc spędzić chwilę dłużej.
+
+4
+00:00:12,480 --> 00:00:15,960
+Plus mam dla Was też całkiem ciekawy projekt, ale o tym już za moment.
+
+5
+00:00:16,920 --> 00:00:20,859
+Pytaj użytkownika o nazwy produktów tak długo, aż nie napisze koniec.
+
+6
+00:00:21,039 --> 00:00:24,820
+Zapisz wówczas tą zawartość do pliku o nazwie według wzoru
+
+7
+00:00:24,820 --> 00:00:27,019
+dzień, dzień, miesiąc, miesiąc, rok, rok, rok, rok,
+
+8
+00:00:27,019 --> 00:00:30,439
+tylko unikatowe nazwy wprowadzanych przez niego produktów.
+
+9
+00:00:30,759 --> 00:00:33,799
+Czyli chcemy pytać użytkownika, następnie zrobić z tego zbiór
+
+10
+00:00:33,799 --> 00:00:37,799
+i później to wszystko wpakować do pliku o nazwie według takiego schematu.
+
+11
+00:00:38,140 --> 00:00:43,439
+Czyli na przykład 0101-2001, jeżeli byłby to plik, z 1 stycznia.
+
+12
+00:00:43,859 --> 00:00:47,659
+Po drugie, znajdź sposób listowania plików w katalogu, robiliśmy to,
+
+13
+00:00:48,060 --> 00:00:51,219
+a następnie napisz program, który odszuka wszystkie pliki tekstowe
+
+14
+00:00:51,219 --> 00:00:55,560
+w wybranym przez Ciebie folderze i do nowego pliku o nazwie scalone.txt
+
+15
+00:00:55,560 --> 00:00:57,000
+wstawi wynik, jakim będzie to plik.
+
+16
+00:00:57,000 --> 00:00:58,200
+I będą połączone te pliki.
+
+17
+00:00:58,659 --> 00:01:03,200
+Czyli mamy na przykład w jednym pliku pierwszą parę wersów inwokacji,
+
+18
+00:01:03,299 --> 00:01:05,019
+w drugim kolejne, w trzecim kolejne.
+
+19
+00:01:05,439 --> 00:01:08,260
+I chcielibyśmy stworzyć plik o nazwie scalone, który będzie łączył
+
+20
+00:01:08,260 --> 00:01:10,400
+wszystkie te pliki tekstowe.
+
+21
+00:01:10,439 --> 00:01:13,500
+Albo inny przykład, taki bardziej domowy.
+
+22
+00:01:14,120 --> 00:01:17,980
+Miałem kiedyś taki program, który listował mi dane w różnych katalogach,
+
+23
+00:01:18,400 --> 00:01:20,799
+znaczy w różnych plikach właśnie zapisywanych dniami.
+
+24
+00:01:21,359 --> 00:01:24,280
+I wtedy jak potrzebowałem zrobić taki agregat, to musiałem każdy
+
+25
+00:01:24,280 --> 00:01:26,780
+z tych plików pojedynczo otwierać i te dane ze sobą łączyć.
+
+26
+00:01:27,000 --> 00:01:29,780
+My chcemy zrobić to za pomocą programu Pythonowego.
+
+27
+00:01:30,379 --> 00:01:31,319
+Podpunkt trzeci.
+
+28
+00:01:31,560 --> 00:01:35,319
+Przygotuj program, który przeskanuje katalog pod kątem różnych rozszerzeń.
+
+29
+00:01:35,840 --> 00:01:39,540
+Wynikiem powinien być wykres prezentujący te rozszerzenia oraz ilość plików.
+
+30
+00:01:39,620 --> 00:01:44,840
+Na przykład pliki tekstowe 10, pliki txt 10, jpg 3 i py 2.
+
+31
+00:01:45,519 --> 00:01:49,700
+Dodatkowo możemy utworzyć plik csv o następującej strukturze
+
+32
+00:01:49,700 --> 00:01:51,260
+filetype oraz quantity.
+
+33
+00:01:51,439 --> 00:01:54,299
+Czyli po prostu to samo, co pokazujemy na wykresie,
+
+34
+00:01:54,659 --> 00:01:56,900
+chcielibyśmy też zapisać w pliku csv.
+
+35
+00:01:57,000 --> 00:01:58,840
+Co dalej?
+
+36
+00:01:59,280 --> 00:02:02,519
+W kolejnym slajdzie mamy takie udoskonalenie.
+
+37
+00:02:02,879 --> 00:02:05,439
+Pamiętasz dane pogodowe pobierane z serwisu IMGW?
+
+38
+00:02:05,879 --> 00:02:09,419
+Przygotuj program o nazwie pogoda.py, którego zadaniem będzie
+
+39
+00:02:09,419 --> 00:02:12,719
+pobieranie informacji o pogodzie w konkretnej stacji pogodowej
+
+40
+00:02:12,719 --> 00:02:14,819
+i zapisywanie tych informacji w bazie danych.
+
+41
+00:02:15,300 --> 00:02:18,039
+Czyli to, co robiliśmy sobie, gdzie odpalaliśmy to ręcznie
+
+42
+00:02:18,039 --> 00:02:21,280
+i sprawdzaliśmy jaka jest pogoda, to teraz chcielibyśmy zdefiniować
+
+43
+00:02:21,280 --> 00:02:24,699
+sobie gdzieś w jakimś pliku na przykład określone stacje,
+
+44
+00:02:24,699 --> 00:02:25,680
+które nas interesują.
+
+45
+00:02:25,680 --> 00:02:29,140
+I dane z tych stacji zapisywać sobie do bazy danych.
+
+46
+00:02:29,580 --> 00:02:32,340
+Czyli później w jakimś kronie czy jakimś szedulerze możemy
+
+47
+00:02:32,340 --> 00:02:37,360
+zdefiniować takie odpytywanie tej strony na przykład raz dziennie.
+
+48
+00:02:37,840 --> 00:02:40,319
+No i w momencie, kiedy pytamy o to raz dziennie, zapisujemy dane
+
+49
+00:02:40,319 --> 00:02:43,080
+do bazy danych i później możemy zrobić wykres jaka pogoda była
+
+50
+00:02:43,080 --> 00:02:46,300
+w danym mieście, czy też jaka temperatura była w danym mieście.
+
+51
+00:02:46,740 --> 00:02:48,560
+Natomiast my tutaj nie skupiamy się na wykresie.
+
+52
+00:02:48,680 --> 00:02:51,439
+Jedyne co robimy to przechowujemy te dane historyczne.
+
+53
+00:02:51,439 --> 00:02:55,300
+I uwaga, jeżeli dla danego dnia był już zarejestrowany pomiar,
+
+54
+00:02:55,680 --> 00:02:58,180
+to nie powinien być on dodany do bazy drugi raz.
+
+55
+00:02:58,340 --> 00:03:01,040
+To też zwróćcie na to uwagę, czyli dla danej konkretnej stacji.
+
+56
+00:03:01,319 --> 00:03:04,439
+Czyli jeżeli wpisujemy sobie Kasprowy Wierch, to interesuje nas tylko
+
+57
+00:03:04,439 --> 00:03:08,080
+Kasprowy Wierch dla daty dzisiejszej i tak za każdym razem.
+
+58
+00:03:10,280 --> 00:03:14,200
+No i tutaj dochodzimy do takiego kolejnego mini projektu, który wykonamy.
+
+59
+00:03:14,560 --> 00:03:18,600
+Jest strona, która jest płatną usługą wykonującą coś takiego,
+
+60
+00:03:18,920 --> 00:03:21,640
+gdzie możecie zdefiniować sobie konkretne adresy IP.
+
+61
+00:03:21,700 --> 00:03:25,200
+Ta strona wysyła do tych adresów IP zapytanie.
+
+62
+00:03:25,199 --> 00:03:29,439
+Hej, istniejesz, działasz i w momencie, w którym ten adres odpowiada,
+
+63
+00:03:29,699 --> 00:03:30,359
+to wszystko jest OK.
+
+64
+00:03:30,519 --> 00:03:33,319
+Jeżeli adres nie odpowiada, to wysyła wam powiadomienie mailowe,
+
+65
+00:03:33,399 --> 00:03:35,000
+że strona przestała działać.
+
+66
+00:03:35,339 --> 00:03:41,319
+I tak firmy czy też programiści mogą monitorować różnego rodzaju usługi
+
+67
+00:03:41,319 --> 00:03:44,259
+albo też dowiedzieć się, kiedy te usługi były wyłączone,
+
+68
+00:03:44,399 --> 00:03:45,280
+chociaż na chwilę.
+
+69
+00:03:45,679 --> 00:03:47,259
+I my też chcielibyśmy coś takiego zrobić.
+
+70
+00:03:47,539 --> 00:03:49,819
+Ja między innymi podobny projekt wykorzystałem do tego,
+
+71
+00:03:49,819 --> 00:03:54,359
+żeby stwierdzić, jak długo w ciągu doby mój usługodawca odcina mnie od internetu,
+
+72
+00:03:54,399 --> 00:03:54,819
+kiedy nie zauważa.
+
+73
+00:03:55,199 --> 00:03:58,799
+I chcemy utworzyć bazę danych o nazwie test IP.
+
+74
+00:03:59,259 --> 00:04:02,119
+W bazie powinna znaleźć się tabela IP to check,
+
+75
+00:04:02,579 --> 00:04:06,859
+która powinna zawierać jedną kolumnę zawierającą tylko adresy IP do sprawdzenia
+
+76
+00:04:06,859 --> 00:04:11,199
+oraz drugą kolumnę log, która będzie przechowywała datę sprawdzenia
+
+77
+00:04:11,199 --> 00:04:13,419
+oraz informacje o sukcesie lub o porażce.
+
+78
+00:04:13,839 --> 00:04:19,459
+Czyli is complete albo is failure i tam wstawiamy sobie odpowiednią informację.
+
+79
+00:04:20,099 --> 00:04:24,180
+Skrypt powinien odpytywać wszystkie adresy IP z tej bazy, z tej tabeli,
+
+80
+00:04:24,180 --> 00:04:25,459
+co 5 minut.
+
+81
+00:04:25,740 --> 00:04:30,480
+Skorzystaj z biblioteki time oraz funkcji sleep i czekaj 5x60 sekund.
+
+82
+00:04:30,579 --> 00:04:33,420
+Czyli w while true umieszczamy my po prostu sleepa.
+
+83
+00:04:34,240 --> 00:04:37,480
+Odpytywanie możesz zrealizować za pomocą polecenia ping.
+
+84
+00:04:37,879 --> 00:04:39,180
+Oczywiście wraz z subprocesem.
+
+85
+00:04:40,420 --> 00:04:44,480
+Możesz stworzyć też drugi program, który będzie wyświetlał ilość wysłanych zapytań,
+
+86
+00:04:44,579 --> 00:04:46,060
+ilość udanych, ilość nieudanych.
+
+87
+00:04:46,439 --> 00:04:49,399
+Z tego względu, że ten nasz time import ping
+
+88
+00:04:49,399 --> 00:04:53,759
+mógłby tak naprawdę po każdym wyświetleniu prezentować te adresy IP,
+
+89
+00:04:53,759 --> 00:04:56,000
+z informacją jak ile się udało, ile się nie udało.
+
+90
+00:04:56,120 --> 00:04:57,019
+Można też tak zrobić.
+
+91
+00:04:57,439 --> 00:05:01,459
+Albo można w ramach drugiego programu taki monitoring też sobie prowadzić.
+
+92
+00:05:01,920 --> 00:05:05,839
+No i właśnie, w przyszłości możesz zakodować na przykład system powiadamiania,
+
+93
+00:05:05,839 --> 00:05:09,839
+jeśli jedno z twoich urządzeń lub serwerów nie odpowiada przez dłuższy czas.
+
+94
+00:05:10,699 --> 00:05:12,839
+Oczywiście, tak jak wspominałem podczas pingowania,
+
+95
+00:05:13,800 --> 00:05:16,699
+określone urządzenia mogą mieć wyłączony ping.
+
+96
+00:05:16,839 --> 00:05:19,159
+Natomiast skoro piszemy takie narzędzie monitorujące,
+
+97
+00:05:19,519 --> 00:05:22,800
+no to z góry wiemy, kiedy te urządzenia są włączone
+
+98
+00:05:22,800 --> 00:05:23,519
+i kiedy...
+
+99
+00:05:23,519 --> 00:05:25,719
+i że chcemy na te pingi odpowiadać.
+
+100
+00:05:26,139 --> 00:05:27,959
+I to byłoby na tyle, jeżeli chodzi o pracę domową.
+
+101
+00:05:28,079 --> 00:05:30,180
+Widzimy się już niedługo w rozwiązaniu.
+
+102
+00:05:30,459 --> 00:05:30,939
+Do zobaczenia.

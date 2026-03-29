@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:06,200
+I tym co musisz wykonać żeby to zrobić jest stworzenie nowego projektu.
+
+2
+00:00:06,200 --> 00:00:11,800
+Więc odpal PyCharma. Jeżeli tam nie pojawiło się takie okno z propozycją
+
+3
+00:00:11,800 --> 00:00:16,000
+uruchomienia nowego projektu to kliknij sobie u góry na file, wybierz new
+
+4
+00:00:16,000 --> 00:00:20,000
+project i powinieneś wtedy spotkać się mniej więcej z oknem które będzie
+
+5
+00:00:20,000 --> 00:00:24,000
+wyglądało tak jak to moje. Co w tym oknie będzie ważne? Przede wszystkim
+
+6
+00:00:24,000 --> 00:00:28,800
+ścieżka. Ja mam tak, że wszystkie projekty lubię mieć uporządkowane, no bo
+
+7
+00:00:28,800 --> 00:00:33,000
+łatwiej mi się jest po nich nawigować, więc ja sobie przyjąłem, że mój
+
+8
+00:00:33,000 --> 00:00:38,000
+PyStart, moje pliki PyStartowe będą znajdowały się w katalogu
+
+9
+00:00:38,000 --> 00:00:43,399
+The Projects PyStart. I też zachęcam cię do tego, może być podkreślenie
+
+10
+00:00:43,399 --> 00:00:47,799
+jeszcze code, bo u mnie jest trochę też takich plików wiesz przygotowanych
+
+11
+00:00:47,799 --> 00:00:51,200
+już wcześniej ćwiczeń, więc ja sobie robię tutaj PyStart podkreślenie code
+
+12
+00:00:51,200 --> 00:00:56,000
+żeby mieć pewność, że ta nazwa nigdzie mi nie wystąpi. Po drugie chcemy
+
+13
+00:00:56,000 --> 00:00:58,700
+żeby PyCharm od razu stworzył nam
+
+14
+00:00:58,700 --> 00:01:02,900
+nowe, wirtualne środowisko. Stąd też zostawiamy zaznaczoną opcję
+
+15
+00:01:02,900 --> 00:01:09,900
+New Environment Using i tu zostawiamy wybrany Virtual Env. I w tym momencie
+
+16
+00:01:09,900 --> 00:01:16,000
+zobacz on stworzy nowe środowisko w PyStart Code MS-Venv. Ja akurat korzystam
+
+17
+00:01:16,000 --> 00:01:21,700
+z Windowsa, więc to środowisko będzie nazywało się MS-Venv. MS Microsoft.
+
+18
+00:01:21,700 --> 00:01:25,900
+Jeżeli natomiast korzystasz z Linuxa to będziesz miał samo Env. Jeżeli
+
+19
+00:01:25,900 --> 00:01:26,700
+korzystasz z Maca też będzie Env czy Venv. Natomiast to nie ma absolutnie żadnego znaczenia.
+
+20
+00:01:28,700 --> 00:01:34,900
+Ta nazwa po prostu zazwyczaj zawiera końcówkę Env i to jest jak najbardziej
+
+21
+00:01:34,900 --> 00:01:40,299
+w porządku. I tu jest Base Interpreter. Ty zakładam masz zainstalowanych w wersji
+
+22
+00:01:40,299 --> 00:01:45,900
+Pythona kilka i teraz czy jedną tą najnowszą i teraz tu masz możliwość
+
+23
+00:01:45,900 --> 00:01:52,000
+wybrania tej własnej wersji, tej którą potrzebujesz. Wersja 3.10 jest całkiem nowa.
+
+24
+00:01:52,000 --> 00:01:56,700
+3.11 jest najnowsza. Ja mam trochę taką obawę przed używaniem tych najnowszych rzeczy, bo wiem, że czasem nie wszystkie rzeczy najnowsze są.
+
+25
+00:01:58,700 --> 00:02:04,700
+Ale 3.11 tutaj też by absolutnie zadziałała. Zmienię sobie teraz tę wersję na 3.11.
+
+26
+00:02:04,700 --> 00:02:12,699
+Wolałem to robić nie pokazując tego co się tam znajduje, bo tam projektów jest dużo. Trochę też nazw, których nie zawsze mogę ci pokazywać.
+
+27
+00:02:12,699 --> 00:02:17,699
+No i w tym momencie kiedy wybrałem wersję 3.11 nie robię już nic więcej jak tylko odznaczam
+
+28
+00:02:17,699 --> 00:02:23,699
+Create a main PyWelcome Script, bo tego nie będę potrzebować. I jeżeli zostawiłeś zaznaczone to się niczym nie przejmuj.
+
+29
+00:02:23,699 --> 00:02:28,500
+Po prostu usuniesz go za moment i wciskam przycisk Create. I w tym momencie
+
+30
+00:02:28,699 --> 00:02:36,699
+jak widać będziemy przechodzili sobie do tematu utworzenia pierwszego programu w ramach tego naszego kodu.

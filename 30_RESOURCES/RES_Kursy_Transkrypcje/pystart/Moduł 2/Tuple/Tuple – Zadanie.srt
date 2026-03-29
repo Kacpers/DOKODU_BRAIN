@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,879
+No i kimże bym był, gdybym nie dał Wam przetestować tych rzeczy.
+
+2
+00:00:04,360 --> 00:00:07,799
+Dodatkowo jak znam się na leniach, bo sam się do nich zaliczam,
+
+3
+00:00:08,199 --> 00:00:13,359
+no to zapewne nie sprawdziliście czym się różni wartość z przecinkiem od wartości bez przecinka.
+
+4
+00:00:13,839 --> 00:00:16,480
+Więc do tego też zachęcam, to jest w zadaniu pierwszym.
+
+5
+00:00:16,480 --> 00:00:20,140
+Po drugie też taka mała podpowiedź, możesz tutaj użyć funkcji type,
+
+6
+00:00:20,359 --> 00:00:24,379
+żeby zobaczyć jaki typ ma nasza wartość i to też za moment sobie sprawdzimy.
+
+7
+00:00:24,379 --> 00:00:30,119
+No i podpunkt drugi tego zadania, utwórz tuple zawierające o nazwy pięciu owoców,
+
+8
+00:00:30,239 --> 00:00:34,479
+a następnie wyświetl nazwy pierwszego, trzeciego i piątego elementu,
+
+9
+00:00:34,859 --> 00:00:36,899
+korzystając z jednej instrukcji print.
+
+10
+00:00:37,259 --> 00:00:42,379
+Czyli w jednej instrukcji print po przecinkach będziemy chcieli wyświetlić sobie te trzy nazwy owoców.
+
+11
+00:00:44,140 --> 00:00:49,320
+I tutaj chwila dla każdego, widzimy się po krótkiej przerwie w rozwiązaniu.

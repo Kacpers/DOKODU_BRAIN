@@ -1,0 +1,263 @@
+1
+00:00:00,000 --> 00:00:19,000
+Czasem, tak jak w przypadku pinga, którego widzieliście przed chwilą, zdarza się, że nasze programy potrzebują otrzymywać argumenty. Nie zawsze chcemy włączać program, za każdym razem wpisywać te polecenia do inputów, czasem chcemy sobie ułatwić życie i po prostu mieć możliwość wykonywania tego szybciej.
+
+2
+00:00:19,000 --> 00:00:32,420
+I tutaj z pomocą przychodzi nam ArcPars. ArcPars to jest taka biblioteka wbudowana w Pythona, która pomaga nam budować zbiór tych argumentów, z jakimi będziemy chcieli uruchamiać nasze programy.
+
+3
+00:00:32,420 --> 00:00:48,379
+Tutaj nie zawsze wszystkie muszą być wymagane, ale powoli. Zobacz, możemy sobie stworzyć taką sytuację, że nasz program będzie odpalany za pomocą polecenia Python, spacja myprogram, py, spacja name to kacperh18, chciałbym.
+
+4
+00:00:48,380 --> 00:01:00,980
+Można byłoby przekazać to, filozofię innym razem, można to przekazywać albo wykonując name równa się, albo po prostu robiąc spację pomiędzy.
+
+5
+00:01:01,120 --> 00:01:07,840
+W ten sposób stworzymy takie narzędzia nazwane CLI, czyli narzędzia klienckie, programy, którymi możemy sterować z linii poleceń w konsoli.
+
+6
+00:01:08,379 --> 00:01:17,780
+No i ArcPars udostępnia nam również pomoc, czyli kiedy sobie go skonfigurujemy i powiemy mu, słuchaj, potrzebuję tego i tego, no to wtedy można dorzucić minus H.
+
+7
+00:01:17,780 --> 00:01:28,439
+I dzięki temu będziemy mieli stronę pomocy informującą nas o tym, czym jest name, czym jest age i że takich informacji po prostu potrzebujemy. Bardzo wygodna sprawa.
+
+8
+00:01:29,439 --> 00:01:38,159
+Jeżeli chodzi o przykład, jak to wygląda w kodzie, no to wygląda to właśnie tak. Czyli na początek musimy sobie zaimportować ArcPars, linia pierwsza.
+
+9
+00:01:38,159 --> 00:01:46,859
+Kiedy zaimportujemy ArcPars, to wówczas przekazujemy mu, tworzymy sobie taką jakby konfigurację opisującą nasz program.
+
+10
+00:01:47,780 --> 00:01:51,060
+Słuchaj, nasz program ma nazywać się Hello World.
+
+11
+00:01:51,540 --> 00:01:52,519
+This is an sample.
+
+12
+00:01:52,640 --> 00:01:53,579
+This is the sample.
+
+13
+00:01:54,200 --> 00:01:55,620
+In English it's not fine.
+
+14
+00:01:56,260 --> 00:01:59,540
+To jest przykładowa aplikacja bystartowa.
+
+15
+00:01:59,939 --> 00:02:01,700
+No i autor Kacper Sieradziński.
+
+16
+00:02:02,219 --> 00:02:04,719
+Program to jest nazwa naszego programu.
+
+17
+00:02:04,920 --> 00:02:10,639
+Description to jest opis, wiadomo, a epilog to jest coś, co pokazuje się w helpie, jest taką linijką na dole.
+
+18
+00:02:10,979 --> 00:02:14,639
+Czasem tam ludzie jakąś sentencję dodają, czasem właśnie informację o autorze.
+
+19
+00:02:14,639 --> 00:02:16,060
+Co robimy następnie?
+
+20
+00:02:16,240 --> 00:02:17,639
+Następnie na tym, co zwróci nasz program, to jest to, co jest na nasz program.
+
+21
+00:02:17,639 --> 00:02:22,119
+Kiedy wróci nam ten argument parser, wykonujemy parser.addArgument.
+
+22
+00:02:22,799 --> 00:02:25,879
+No i tak możemy sobie dodawać dowolną ilość argumentów.
+
+23
+00:02:26,339 --> 00:02:30,899
+Jeżeli przekazujemy addArgument name, to wówczas name będzie argumentem wymaganym.
+
+24
+00:02:31,259 --> 00:02:37,939
+Natomiast jeżeli opiszemy minus l albo last name w taki sposób, to wtedy będziemy mogli używać albo jednego, albo drugiego.
+
+25
+00:02:38,279 --> 00:02:40,259
+I to nie będzie wymagane, to będzie opcjonalne.
+
+26
+00:02:40,259 --> 00:02:46,979
+I analogicznie można też napisać minus admin i to będzie też niewymagane.
+
+27
+00:02:47,639 --> 00:02:49,079
+Dlaczego tu jest stort true?
+
+28
+00:02:49,519 --> 00:02:56,039
+Bo czasem chcemy mieć takie polecenia, jak były w pingu, że robiło się ping minus n, spacja 1,
+
+29
+00:02:56,459 --> 00:03:02,059
+a czasem chcielibyśmy móc tylko dopisać na przykład minus t i zostawić, albo minus v i zostawić.
+
+30
+00:03:02,559 --> 00:03:08,819
+I to będzie oznaczało, że jeżeli pojawiło się to minus v, to znaczy, że ping ma na przykład wyświetlać więcej informacji,
+
+31
+00:03:09,219 --> 00:03:12,419
+a jeżeli się nie pojawi, to ma być tylko powiedzieć ok, nie ok.
+
+32
+00:03:13,560 --> 00:03:17,419
+Czyli czasem chcielibyśmy, dodając taką flagę, taką przełączkę,
+
+33
+00:03:17,639 --> 00:03:23,559
+chcielibyśmy powodować, że dodanie jej ma być interpretowane jako prawda, a nie dodanie jej jako fałsz.
+
+34
+00:03:23,939 --> 00:03:27,000
+I można to osiągnąć właśnie wykonując stort true.
+
+35
+00:03:27,399 --> 00:03:33,839
+W ten sposób, dodając takie stort true, sprawiamy, że ta nasza przełączka będzie po prostu oznaczała,
+
+36
+00:03:33,959 --> 00:03:38,599
+że jeżeli jest minus a, to znaczy, że to jest w trybie administratorskim i jest to admin.
+
+37
+00:03:39,560 --> 00:03:43,799
+Wtedy w aplikacji można byłoby na przykład zapytać o hasło, wiecie, zrobić parę innych rzeczy.
+
+38
+00:03:44,599 --> 00:03:47,519
+To, co jest niżej, w linii 13, czyli args równa się,
+
+39
+00:03:47,520 --> 00:03:52,060
+parser pars args, to jest najważniejsza linia, która spowoduje,
+
+40
+00:03:52,500 --> 00:03:57,520
+że wszystko to, co użytkownik Wam podał, zostanie zwrócone i będzie można z tym pracować.
+
+41
+00:03:58,560 --> 00:04:02,680
+I w ten sposób, kiedy dodamy taką linię na args, zobaczycie, że wszystkie wartości,
+
+42
+00:04:02,800 --> 00:04:06,540
+które zostały wpisane, będą miały wartość, natomiast tam, gdzie nie mamy,
+
+43
+00:04:06,640 --> 00:04:11,100
+na przykład last name nie byłoby podane, no to wtedy miałoby wartość po prostu none.
+
+44
+00:04:12,100 --> 00:04:16,080
+I na dole jeszcze jest taka ciekawostka, jeżeli chcemy, możemy też do arg parsa
+
+45
+00:04:16,080 --> 00:04:17,400
+od razu dorzucać sobie typy.
+
+46
+00:04:17,519 --> 00:04:21,539
+Na przykład type integer spowoduje, że ta wartość, która będzie przekazana,
+
+47
+00:04:21,659 --> 00:04:26,639
+będzie w typie integer i dzięki temu już nie będzie trzeba zamieniać jej zawsze na ten int.
+
+48
+00:04:26,959 --> 00:04:30,159
+Co więcej, jeżeli podamy wartość, która nie będzie liczbą całkowitą,
+
+49
+00:04:30,240 --> 00:04:32,099
+to nasz arg pars po prostu nie pójdzie dalej.
+
+50
+00:04:32,279 --> 00:04:34,859
+Powie, nie idę dalej, koniec, nie przejdę.
+
+51
+00:04:35,879 --> 00:04:36,399
+Daruj sobie.
+
+52
+00:04:38,039 --> 00:04:39,659
+Jak później te dane odebrać?
+
+53
+00:04:39,819 --> 00:04:44,099
+No tak jak wspomniałem, kiedy to odbierzemy, on Wam pokaże znowu, że to jest jakiś obiekt,
+
+54
+00:04:44,099 --> 00:04:47,399
+ale z tego obiektu można wyciągać poszczególne dane po prostu po kropce.
+
+55
+00:04:47,879 --> 00:04:49,219
+Czyli tak jak było ze stringiem, nie?
+
+56
+00:04:49,339 --> 00:04:52,659
+Było string.upper, string.lower i tu jest dokładnie tak samo.
+
+57
+00:04:53,219 --> 00:04:55,479
+args.name, args.lastname.
+
+58
+00:04:55,799 --> 00:04:58,799
+Czyli skoro nazwaliśmy to sobie name, lastname i admin,
+
+59
+00:04:59,139 --> 00:05:04,519
+to wykonując args.hmhmhmhmhm, możemy się dobrać do tych wartości.
+
+60
+00:05:04,959 --> 00:05:08,819
+To są tylko skróty, które mają nam pomóc wstawić tam konkretne dane,
+
+61
+00:05:09,240 --> 00:05:11,879
+natomiast my posługujemy się tymi pełnymi nazwami
+
+62
+00:05:11,879 --> 00:05:15,859
+i dzięki temu możemy wyświetlić poszczególne wartości.
+
+63
+00:05:16,299 --> 00:05:17,379
+No i później można je sobie przetworzyć.
+
+64
+00:05:17,519 --> 00:05:20,299
+Przeanalizować i zobaczyć jak to działa.
+
+65
+00:05:20,740 --> 00:05:23,639
+A żeby zobaczyć jak to działa, najlepiej będzie zrobić zadanie,
+
+66
+00:05:23,740 --> 00:05:28,079
+więc zachęcam Cię do kolejnego slajdu, gdzie właśnie już takie zadanie sobie wykonamy.

@@ -1,0 +1,119 @@
+1
+00:00:00,000 --> 00:00:01,900
+I przed nami obiecane zadanie.
+
+2
+00:00:02,240 --> 00:00:05,839
+Przygotuj program zarządzający listą zadań do zrobienia.
+
+3
+00:00:06,419 --> 00:00:09,859
+Wyświetl wyłącznie te zadania, które nie zostały jeszcze wykonane.
+
+4
+00:00:09,960 --> 00:00:14,780
+Tutaj taka podpowiedź, możemy mieć title i zamiast autora wprowadzić sobie isDone.
+
+5
+00:00:15,140 --> 00:00:18,480
+I isDone może być wartością liczbową 0,1 na przykład.
+
+6
+00:00:19,199 --> 00:00:20,859
+Pytaj użytkownika co chce zrobić.
+
+7
+00:00:21,059 --> 00:00:24,940
+0 to dodaj nowe zadanie, a 1 oznacz jako zrealizowane.
+
+8
+00:00:25,640 --> 00:00:28,839
+Jeżeli wskaże 0 to poproś go o podanie treści zadania,
+
+9
+00:00:28,839 --> 00:00:32,039
+a jeżeli 1 to zapytaj go o ID zadania, które chcesz wykonać,
+
+10
+00:00:32,079 --> 00:00:34,079
+czyli zaznaczyć jako wykonane.
+
+11
+00:00:34,460 --> 00:00:37,280
+No i zobaczcie, poniżej jest wygląd takiego programu.
+
+12
+00:00:37,340 --> 00:00:41,100
+Co chcesz zrobić? 0 dodaj nowe zadanie, 1 ustaw zadanie jako zrealizowane.
+
+13
+00:00:41,659 --> 00:00:48,939
+Odpowiedział 1, że chce ustawić jako zrealizowane,
+
+14
+00:00:49,359 --> 00:00:50,840
+więc wyświetliły mu się zadania,
+
+15
+00:00:50,960 --> 00:00:52,900
+chociaż te zadania mogłyby się też wyświetlać powyżej,
+
+16
+00:00:53,019 --> 00:00:54,280
+tak żeby było po prostu wygodniej.
+
+17
+00:00:54,280 --> 00:00:58,620
+I wtedy wpisuje 2, no i śmieci zostały wyniesione.
+
+18
+00:00:58,840 --> 00:01:01,880
+Natomiast jeżeli by nie chciał dodać nowe zadanie, to wskazuje 0.
+
+19
+00:01:02,240 --> 00:01:04,700
+No i co masz do zrobienia? Ugotuj obiad. I tyle.
+
+20
+00:01:05,020 --> 00:01:10,140
+I tak naprawdę jeżeli podpisałby 3, 4, 5, to mówimy mu nie wiem co chcesz zrobić.
+
+21
+00:01:10,520 --> 00:01:12,680
+I tu jest jeszcze jedna mała podpowiedź z tego względu,
+
+22
+00:01:12,760 --> 00:01:15,379
+że zapytanie aktualizujące nie było przekazane wcześniej,
+
+23
+00:01:15,879 --> 00:01:19,379
+więc jeżeli chcemy coś zaktualizować, to wykonujemy update to do's,
+
+24
+00:01:19,520 --> 00:01:21,939
+czyli update nazwa tabeli, set.
+
+25
+00:01:22,300 --> 00:01:24,240
+Tu set mógłby być wielkimi literami zapisany.
+
+26
+00:01:24,240 --> 00:01:27,500
+I z done równa się 0, czy też i z done równa się 1.
+
+27
+00:01:28,840 --> 00:01:35,340
+To do id równa się 1, czyli w ten sposób zmieni nam się wartość w kolumnie is done na 0
+
+28
+00:01:35,340 --> 00:01:38,640
+dla zadania, które ma to do id równe 1.
+
+29
+00:01:39,120 --> 00:01:42,359
+I widzimy się już za moment w rozwiązaniu, a później w pracy domowej.
+
+30
+00:01:42,659 --> 00:01:43,020
+Chodźcie.

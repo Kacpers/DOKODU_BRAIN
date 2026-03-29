@@ -1,0 +1,251 @@
+1
+00:00:00,000 --> 00:00:15,380
+W zadaniu trzecim przyda nam się tekst no i samogłoski, czyli dev, test, test, filter, może najpierw funkcję zrobimy, filter words.
+
+2
+00:00:15,380 --> 00:00:31,620
+Ok, będę potrzebował mieć tylko tekst, tak naprawdę będzie on stringiem i zwrotka no to też będzie wszystkie wyrazy, czyli stawiamy, że jakaś lista, dwukropek.
+
+3
+00:00:31,620 --> 00:00:36,620
+Chociaż jeżeli wyrazy mają się nie powtarzać to możemy pójść w stronę zbioru.
+
+4
+00:00:37,620 --> 00:00:44,719
+Następnie będę chciał tutaj sobie to spasować no i stworzyć jakiś przykładowy test.
+
+5
+00:00:44,719 --> 00:00:49,719
+Czyli test, filter words, dwukropek.
+
+6
+00:00:49,719 --> 00:00:51,719
+Co będę chciał testować?
+
+7
+00:00:51,719 --> 00:01:04,719
+Mam jakieś zdanie, możemy wziąć to zdanie ala makota, ale tutaj biorę pod uwagę też wielkość liter, bo ala makota będzie musiał sprawdzać zarówno małe litery jak i wielkie.
+
+8
+00:01:04,719 --> 00:01:11,719
+Więc i też wtedy kiedy zaczyna się od małej a kończy się na wielką, to są takie rzeczy, które myślę, że możemy też tutaj przyjąć sobie w teście.
+
+9
+00:01:11,719 --> 00:01:13,719
+Assert.
+
+10
+00:01:13,719 --> 00:01:14,719
+Filter words.
+
+11
+00:01:14,719 --> 00:01:19,719
+Alamakota.
+
+12
+00:01:19,719 --> 00:01:29,719
+Powinniśmy dostać zbiór, który będzie zawierał ma i kota.
+
+13
+00:01:29,719 --> 00:01:34,719
+Jeżeli okaże się, że ma i kota będzie zapisane też wielkimi literami.
+
+14
+00:01:34,719 --> 00:01:43,719
+O tak.
+
+15
+00:01:43,719 --> 00:01:47,719
+To wtedy też powinienem ma i kota dostać wielkimi literami.
+
+16
+00:01:47,719 --> 00:01:59,719
+No i jeszcze jest opcja, że ma będzie małą, a kota będzie tak i też powinienem wtedy dostać taką informację.
+
+17
+00:01:59,719 --> 00:02:09,719
+Mógłbym jeszcze sprawdzić co w przypadku, w którym nie ma takiej sytuacji, gdzie pojawia nam się coś takiego, czy wtedy zbiór jest pusty.
+
+18
+00:02:09,719 --> 00:02:12,719
+Czyli na przykład jakieś wyrażenie tygrys.
+
+19
+00:02:12,719 --> 00:02:17,719
+To wtedy powinien być pusty zbiór, a pusty zbiór to oczywiście jest set.
+
+20
+00:02:17,719 --> 00:02:19,719
+I teraz jak to zrobimy?
+
+21
+00:02:19,719 --> 00:02:23,719
+Po pierwsze rozbijamy sobie tekst po spacjach i przechodzimy po wyrazach.
+
+22
+00:02:23,719 --> 00:02:30,719
+Czyli for word in text split po spacjach dwukropek.
+
+23
+00:02:30,719 --> 00:02:34,719
+Przyda nam się jeszcze jakiś wynik czy jakiś result.
+
+24
+00:02:34,719 --> 00:02:40,719
+To będzie po prostu pusty zbiór i na do widzenia ten result będziemy chcieli sobie zwracać.
+
+25
+00:02:40,719 --> 00:03:01,719
+I teraz jeżeli, myślę, bo jeżeli zrobimy starts with i ends with, no to nie będziemy mogli tam przekazać mu konkretnej jednej litery w naszym przypadku, tylko mamy ich więcej.
+
+26
+00:03:01,719 --> 00:03:08,719
+Czyli moglibyśmy sobie sprawdzić pierwszą literę, czyli word kropka zero.
+
+27
+00:03:08,719 --> 00:03:13,719
+Następnie trzeba byłoby ją zamienić na małe litery, czyli lower.
+
+28
+00:03:13,719 --> 00:03:24,719
+I teraz mogę sprawdzić czy to się znajduje w a, e, i, o, u, y, on, en.
+
+29
+00:03:24,719 --> 00:03:26,719
+Wydaje mi się, że to jest dobry pomysł.
+
+30
+00:03:26,719 --> 00:03:32,719
+And ostatnia litera zamieniona na małe litery.
+
+31
+00:03:32,719 --> 00:03:36,719
+Not in, bo małaby zacząć, a zaczyna się na spółgłoskę.
+
+32
+00:03:36,719 --> 00:03:37,719
+Czyli not in.
+
+33
+00:03:37,719 --> 00:03:40,719
+A tutaj będzie in.
+
+34
+00:03:40,719 --> 00:03:47,719
+Łatwiej jest, samogłosek jest mniej niż spółgłosek, więc łatwiej jest po prostu wymienić sobie samogłoski i sprawdzić czy jest w samogłoskach czy nie jest.
+
+35
+00:03:47,719 --> 00:03:51,719
+No i wtedy result add word.
+
+36
+00:03:51,719 --> 00:03:53,719
+Kurczę, wydaje mi się, że już.
+
+37
+00:03:53,719 --> 00:04:00,719
+No i na całe szczęście byłoby za szybko.
+
+38
+00:04:00,719 --> 00:04:03,719
+Zobaczcie, ma kota, ale chyba błąd w teście.
+
+39
+00:04:03,719 --> 00:04:04,719
+No tak, niestety.
+
+40
+00:04:04,719 --> 00:04:06,719
+Jeżeli ma jest tak.
+
+41
+00:04:07,719 --> 00:04:09,719
+Kota jest tak.
+
+42
+00:04:09,719 --> 00:04:11,719
+No to nam przeszedł ten test.
+
+43
+00:04:11,719 --> 00:04:12,719
+Czyli zadziałało.
+
+44
+00:04:12,719 --> 00:04:17,720
+Czyli w ten sposób jak najbardziej można do tego podejść i to zadanie można było tak zhakować.
+
+45
+00:04:17,720 --> 00:04:19,720
+Bardzo dziękuję.
+
+46
+00:04:19,720 --> 00:04:22,720
+Mam nadzieję, że podobało wam się takie ćwiczenie.
+
+47
+00:04:22,720 --> 00:04:25,720
+I tutaj chciałem jeszcze zrobić małą reklamę.
+
+48
+00:04:25,720 --> 00:04:26,720
+Reklama zupełnie bezpłatna.
+
+49
+00:04:26,720 --> 00:04:33,720
+Jest świetna strona, gdzie możecie wykonywać więcej tego typu ćwiczeń.
+
+50
+00:04:33,720 --> 00:04:35,720
+Czyli dostajecie po prostu różne wyzwania.
+
+51
+00:04:35,720 --> 00:04:38,720
+W ramach wyzwań dostajecie też możliwość wykonania ich.
+
+52
+00:04:38,720 --> 00:04:40,720
+Ja o tym w tej stronie wspominałem wcześniej.
+
+53
+00:04:40,720 --> 00:04:45,720
+Bo to jest jak mówiłem wam o tym, że czasem te krótkie rozwiązania właśnie się tam pokazują.
+
+54
+00:04:45,720 --> 00:04:49,720
+I na codeworkach jest mnóstwo miejsca na praktykę.
+
+55
+00:04:49,720 --> 00:04:56,720
+Ja tak naprawdę mógłbym z codeworków podobne zadania wam tutaj przekazywać i pokazywać i rzucać wam wyzwania.
+
+56
+00:04:56,720 --> 00:04:58,720
+Ale polecam, żeby każdy wszedł.
+
+57
+00:04:58,720 --> 00:05:00,720
+Nawet mamy team do kodu na codeworkach.
+
+58
+00:05:00,720 --> 00:05:04,720
+Warto sobie wejść, porozwiązywać zadania tam, bo to jest najlepsza praktyka.
+
+59
+00:05:04,720 --> 00:05:07,720
+Więc tyle z mojej strony.
+
+60
+00:05:07,720 --> 00:05:09,720
+Zapraszam was do pracy domowej.
+
+61
+00:05:09,720 --> 00:05:18,720
+No i zachęcam też, jeżeli czasu będzie za dużo, to codeworki dają możliwość nie tylko poćwiczenia sobie pythona,
+
+62
+00:05:18,720 --> 00:05:22,720
+ale też poćwiczenia sobie języka angielskiego, bo tam treści zadań są po angielsku.
+
+63
+00:05:22,720 --> 00:05:26,720
+Dzięki i zobaczymy się w pracy domowej. Chodźcie.

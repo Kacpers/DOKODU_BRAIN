@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:08,519
+No tak, nie byłbym sobą, gdybym nie wyprzedzał faktów i gdybym nie mówił Ci o rzeczach, które będą w przyszłości.
+
+2
+00:00:08,519 --> 00:00:14,880
+No ale dobrze, czasem będzie mi się to zdarzało i wtedy będziemy sobie po prostu w formie powtórzenia raz jeszcze omawiali te slajdy.
+
+3
+00:00:15,419 --> 00:00:17,120
+Czyli to, o czym mówiłem Ci przed momentem.
+
+4
+00:00:17,539 --> 00:00:28,859
+Jeżeli chcesz wykonać pierwiastek, to możesz po prostu skorzystać z twierdzenia, że liczba podniesiona do potęgi 1 przez stopień pierwiastka to jest ten stopień pierwiastka z tej liczby.
+
+5
+00:00:28,859 --> 00:00:40,579
+Czyli na przykład 27 podniesione do potęgi 1 trzeciej to jest 3, a 9 podniesione do potęgi 1 drugiej to też jest 3, bo tutaj mamy trzeci stopień pierwiastka, tu mamy drugi stopień pierwiastka.
+
+6
+00:00:41,200 --> 00:00:55,600
+Jeżeli natomiast chcesz prościej, czyli po prostu nie chcesz używać takich operatorów, takiego dzielenia, wolisz zrobić to za pomocą funkcji, to jest funkcja, która służy do pierwiastka kwadratowego, ale trzeba ją zaimportować.
+
+7
+00:00:55,960 --> 00:00:58,600
+W Pythonie jest bardzo dużo bibliotek.
+
+8
+00:00:58,859 --> 00:01:01,479
+O nich sobie jeszcze będziemy w przyszłości oczywiście mówili.
+
+9
+00:01:01,960 --> 00:01:15,319
+Natomiast już tu zobacz, from math, czyli wiemy, że z jakiejś biblioteki, w tym przypadku matematycznej, importujemy funkcję, która nazywa się sqrt, czyli square, po prostu liczącej pierwiastek kwadratowy.
+
+10
+00:01:15,939 --> 00:01:23,180
+I wtedy, żeby policzyć pierwiastek kwadratowy na przykład ze 121, wystarczy wykonać sqrt 121.
+
+11
+00:01:23,960 --> 00:01:26,859
+Możesz to też sobie przećwiczyć w Twoim CMD.
+
+12
+00:01:26,859 --> 00:01:27,859
+Możesz wykonać.
+
+13
+00:01:28,859 --> 00:01:31,439
+From math import sqrt.
+
+14
+00:01:32,079 --> 00:01:35,560
+Jeżeli nie wykonasz żadnego tej błędu literówki, to wszystko powinno przejść.
+
+15
+00:01:36,000 --> 00:01:38,739
+A następnie sqrt od 121.
+
+16
+00:01:39,359 --> 00:01:39,799
+Enter.
+
+17
+00:01:40,480 --> 00:01:43,359
+Niektóre funkcje wymagają importowania.
+
+18
+00:01:43,879 --> 00:01:45,200
+Inne są wbudowane.
+
+19
+00:01:45,739 --> 00:01:48,980
+Takie jak na przykład quit, który pomaga wyjść z tego okienka.
+
+20
+00:01:49,560 --> 00:01:51,599
+Control C tutaj nie pomoże.
+
+21
+00:01:51,599 --> 00:01:55,980
+Żeby zamknąć to okno, wprowadzamy polecenie quit, koniecznie z nawiasami.
+
+22
+00:01:56,359 --> 00:01:57,039
+Robimy enter.
+
+23
+00:01:57,560 --> 00:01:58,599
+I jesteśmy z powrotem w Windowsie.
+
+24
+00:01:58,859 --> 00:02:00,859
+Zapraszam do kolejnej lekcji.

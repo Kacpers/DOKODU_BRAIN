@@ -3,7 +3,9 @@
     <div class="n8n-flow" :class="layout">
       <template v-for="(node, i) in nodes" :key="i">
         <!-- Error branch node -->
-        <div v-if="node.branch === 'error'" class="branch-wrapper">
+        <div v-if="node.branch === 'error'" class="branch-wrapper"
+             :class="{ 'anim-node': animated }"
+             :style="animated ? { animationDelay: (i * 300) + 'ms' } : {}">
           <div class="branch-line error-line"></div>
           <div class="n8n-node error">
             <div class="node-icon-wrap error">
@@ -17,7 +19,8 @@
         </div>
 
         <!-- Regular node -->
-        <div v-else class="n8n-node" :class="node.variant || 'default'">
+        <div v-else class="n8n-node" :class="[node.variant || 'default', { 'anim-node': animated }]"
+             :style="animated ? { animationDelay: (i * 300) + 'ms' } : {}">
           <div class="node-icon-wrap" :class="node.variant || 'default'">
             <Icon :icon="node.icon" :width="32" :height="32" />
           </div>
@@ -31,7 +34,9 @@
         </div>
 
         <!-- Connector arrow -->
-        <div v-if="i < nodes.length - 1 && !nodes[i+1].branch" class="n8n-connector">
+        <div v-if="i < nodes.length - 1 && !nodes[i+1].branch" class="n8n-connector"
+             :class="{ 'anim-connector': animated }"
+             :style="animated ? { animationDelay: ((i * 300) + 150) + 'ms' } : {}">
           <svg width="44" height="12" viewBox="0 0 44 12" fill="none">
             <line x1="0" y1="6" x2="36" y2="6" stroke="#E63946" stroke-width="1.5"
                   stroke-dasharray="3 2" />
@@ -61,6 +66,10 @@ defineProps({
   caption: {
     type: String,
     default: ''
+  },
+  animated: {
+    type: Boolean,
+    default: false
   }
 })
 </script>
@@ -188,6 +197,37 @@ defineProps({
   height: 24px;
   background: #EF4444;
   opacity: 1;
+}
+
+/* ── STAGGERED ANIMATION ── */
+@keyframes nodeAppear {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes connectorAppear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.anim-node {
+  opacity: 0;
+  animation: nodeAppear 0.4s ease-out forwards;
+}
+
+.anim-connector {
+  opacity: 0;
+  animation: connectorAppear 0.3s ease-out forwards;
 }
 
 /* ── CAPTION ── */

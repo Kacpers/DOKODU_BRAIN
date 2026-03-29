@@ -1,0 +1,783 @@
+1
+00:00:00,000 --> 00:00:05,759
+No to zobacz, mamy taką sytuację, że mamy Judytę Dąbrowską, Ignacego Włodarczyka i to są różni nasi studenci.
+
+2
+00:00:06,320 --> 00:00:10,019
+Jak to ze studentami bywa? Niektórzy dostali lepsze oceny, a niektórzy dostali gorsze.
+
+3
+00:00:10,880 --> 00:00:19,219
+I zadanie będzie polegało na tym, że chcemy odczytać ten plik w taki sposób, żeby zapisać do wynikowego tylko tych, którzy dostali dwóje.
+
+4
+00:00:19,800 --> 00:00:26,719
+Jak to zrobić? Potrzebujemy otworzyć sobie ten plik, czyli with open przekazuję file name.
+
+5
+00:00:26,719 --> 00:00:30,460
+Plik nazywa się students, czyli robię students.txt.
+
+6
+00:00:30,979 --> 00:00:35,899
+Następnie muszę dorzucić jako nazwę s file dwukropek.
+
+7
+00:00:36,479 --> 00:00:40,159
+I żeby teraz wyświetlić wszystkich tych studentów, mogę sobie potem plik uiterować.
+
+8
+00:00:40,340 --> 00:00:43,960
+For line in file print line.
+
+9
+00:00:44,620 --> 00:00:48,679
+Chcę Ci pokazać wszystkie te rzeczy, które robiliśmy poprzednio wraz z ich skutkiem.
+
+10
+00:00:48,679 --> 00:00:54,620
+I teraz jeżeli sobie wywołam python odczyt zapisz plik, no to proszę.
+
+11
+00:00:55,099 --> 00:00:56,679
+Polskie znaki się posypują.
+
+12
+00:00:56,719 --> 00:01:00,699
+Średniki są, ale są też dodatkowe linie pomiędzy.
+
+13
+00:01:01,100 --> 00:01:02,000
+Chcemy się ich pozbyć.
+
+14
+00:01:02,079 --> 00:01:04,439
+Żeby się ich pozbyć dorzucamy polecenie strip.
+
+15
+00:01:04,579 --> 00:01:06,819
+Ten strip jest niezwykle tutaj często potrzebny.
+
+16
+00:01:06,939 --> 00:01:09,359
+Zobacz, wolne linie zniknęły.
+
+17
+00:01:09,620 --> 00:01:10,120
+Idziemy dalej.
+
+18
+00:01:10,700 --> 00:01:14,980
+Jeżeli chcemy polskie znaki, to dopisujemy encoding równa się utf8.
+
+19
+00:01:15,659 --> 00:01:16,840
+Wywołuję teraz jeszcze.
+
+20
+00:01:17,340 --> 00:01:18,960
+Polskie znaki wróciły.
+
+21
+00:01:19,039 --> 00:01:23,180
+Tak jak mówiłem encoding utf8 też załatwia nam bardzo często sprawę.
+
+22
+00:01:23,480 --> 00:01:26,480
+Kolejną rzeczą jest to, że potrzebuję mieć imiona i nazwiska.
+
+23
+00:01:26,480 --> 00:01:29,040
+Tych osób oraz interesują mnie ich oceny.
+
+24
+00:01:29,620 --> 00:01:33,560
+W tym celu mogę zrobić rzecz następującą, a mianowicie zrobić sobie zmienną.
+
+25
+00:01:33,960 --> 00:01:35,960
+Może nie line, ale na przykład.
+
+26
+00:01:38,439 --> 00:01:41,920
+Data równa się line kropka strip.
+
+27
+00:01:42,920 --> 00:01:44,880
+Kropka split.
+
+28
+00:01:46,800 --> 00:01:52,420
+I pośrednikach, bo najpierw usuwam ostatni znak, a później splituje pośredniku.
+
+29
+00:01:52,800 --> 00:01:54,859
+Jeżeli wtedy wyprintuje sobie data.
+
+30
+00:01:54,859 --> 00:01:55,859
+Okaże się.
+
+31
+00:01:55,859 --> 00:01:59,099
+Że mam listę składającą się z trzech elementów.
+
+32
+00:01:59,099 --> 00:02:01,099
+Imię, nazwisko i ocena.
+
+33
+00:02:01,099 --> 00:02:03,099
+Co z tym mogę zrobić?
+
+34
+00:02:03,099 --> 00:02:06,099
+Mógłbym na przykład od razu to też wypakować.
+
+35
+00:02:06,099 --> 00:02:08,620
+Skoro wiem, że zawsze będę miał trzy kolumny.
+
+36
+00:02:08,620 --> 00:02:13,620
+To mogę napisać first name, last name i ocena note.
+
+37
+00:02:13,620 --> 00:02:17,620
+Jeżeli teraz to wyświetla sobie na przykład tylko i wyłącznie noty.
+
+38
+00:02:17,620 --> 00:02:20,620
+To powinienem dostać trzy, dwa, trzy i tak dalej.
+
+39
+00:02:20,620 --> 00:02:22,620
+Jak widzisz zadziałało.
+
+40
+00:02:22,620 --> 00:02:23,620
+No dobra.
+
+41
+00:02:23,620 --> 00:02:24,860
+Co dalej?
+
+42
+00:02:24,860 --> 00:02:30,860
+Dalej chcielibyśmy dostać wyniki w postaci tylko i wyłącznie osób, które mają dwóje.
+
+43
+00:02:30,860 --> 00:02:33,860
+Stąd też możemy wyprintować sobie.
+
+44
+00:02:33,860 --> 00:02:36,860
+If note równa się dwa.
+
+45
+00:02:36,860 --> 00:02:38,860
+To wówczas print.
+
+46
+00:02:38,860 --> 00:02:40,860
+First name.
+
+47
+00:02:40,860 --> 00:02:42,860
+Last name.
+
+48
+00:02:42,860 --> 00:02:43,860
+I note.
+
+49
+00:02:43,860 --> 00:02:45,860
+Strzała do góry enter.
+
+50
+00:02:45,860 --> 00:02:48,860
+Dostałem Ignacego, Dominikę i Marka.
+
+51
+00:02:48,860 --> 00:02:51,860
+Jeżeli teraz chcę ich zapisać do pliku wynikowego.
+
+52
+00:02:51,860 --> 00:02:53,860
+To mogę to zrobić na dwa sposoby.
+
+53
+00:02:53,860 --> 00:02:57,860
+Sposób pierwszy jest taki, że gdzieś muszę ich sobie zapisać do jakiejś zmiennej.
+
+54
+00:02:57,860 --> 00:03:01,860
+Czyli mogę sobie zrobić tutaj not past studenci.
+
+55
+00:03:01,860 --> 00:03:04,860
+Ci którzy nie zdali czy też failed.
+
+56
+00:03:04,860 --> 00:03:07,860
+Do niej tutaj stworzyć sobie taką listę.
+
+57
+00:03:07,860 --> 00:03:10,860
+I później otworzyć drugi raz ten sam plik.
+
+58
+00:03:10,860 --> 00:03:12,860
+Z tą zmianą.
+
+59
+00:03:12,860 --> 00:03:15,860
+Czyli zrobię sobie zmienną past.
+
+60
+00:03:15,860 --> 00:03:17,860
+Równa się pusta lista.
+
+61
+00:03:17,860 --> 00:03:22,860
+Mogę do tej listy appendować sobie.
+
+62
+00:03:22,860 --> 00:03:24,860
+Tych studentów.
+
+63
+00:03:24,860 --> 00:03:26,860
+Mogę to robić albo w postaci tupli.
+
+64
+00:03:26,860 --> 00:03:30,860
+Albo mogę ich dodawać w postaci słownika na przykład.
+
+65
+00:03:30,860 --> 00:03:34,860
+Pokażę Ci dwa podejścia.
+
+66
+00:03:34,860 --> 00:03:46,860
+No i w ten sposób kiedy wyprintuję sobie to past.
+
+67
+00:03:46,860 --> 00:03:50,860
+Dostanę od razu wszystkich tych studentów wymienionych w postaci listy słowników.
+
+68
+00:03:50,860 --> 00:03:52,860
+Są? Są.
+
+69
+00:03:52,860 --> 00:03:56,860
+I wtedy oczywiście musiałbym wykonać drugą rzecz poniżej.
+
+70
+00:03:56,860 --> 00:04:01,860
+Czyli with open output txt.
+
+71
+00:04:01,860 --> 00:04:03,860
+Od razu zapiszę sobie encoding też utf8.
+
+72
+00:04:03,860 --> 00:04:05,860
+Żeby mieć pewność, że działa.
+
+73
+00:04:05,860 --> 00:04:07,860
+No i oczywiście jeszcze tryb.
+
+74
+00:04:07,860 --> 00:04:09,860
+Będzie mnie interesował.
+
+75
+00:04:09,860 --> 00:04:13,860
+Czyli mode musi być ustawiony na w.
+
+76
+00:04:13,860 --> 00:04:16,860
+Wtedy dodaję sobie s file.
+
+77
+00:04:16,860 --> 00:04:18,860
+Nazwa może być dokładnie ta sama.
+
+78
+00:04:18,860 --> 00:04:20,860
+W tym podejściu.
+
+79
+00:04:20,860 --> 00:04:25,860
+No i wtedy for student in past.
+
+80
+00:04:25,860 --> 00:04:26,860
+Dwu kropek.
+
+81
+00:04:26,860 --> 00:04:28,860
+Dlaczego otwieram plik wyżej.
+
+82
+00:04:28,860 --> 00:04:30,860
+A iteruję po studentach niżej.
+
+83
+00:04:30,860 --> 00:04:34,860
+Z tego względu, że jeżeli wewnątrz przechodzenia po studentach.
+
+84
+00:04:34,860 --> 00:04:36,860
+Dodałbym with open.
+
+85
+00:04:36,860 --> 00:04:38,860
+To to by powodowało coś takiego.
+
+86
+00:04:38,860 --> 00:04:40,860
+Masz pierwszego studenta? Mam.
+
+87
+00:04:40,860 --> 00:04:41,860
+Otwórz plik. Dobra.
+
+88
+00:04:41,860 --> 00:04:42,860
+Zapisz studenta. Ok.
+
+89
+00:04:42,860 --> 00:04:43,860
+Zamknij plik. Ok.
+
+90
+00:04:43,860 --> 00:04:45,860
+Masz drugiego studenta? Mam. Otwórz plik.
+
+91
+00:04:45,860 --> 00:04:47,860
+Czyli za każdym razem trzeba byłoby na nowo otwierać ten plik.
+
+92
+00:04:47,860 --> 00:04:48,860
+Po co?
+
+93
+00:04:48,860 --> 00:04:49,860
+Dużo lepiej.
+
+94
+00:04:49,860 --> 00:04:51,860
+Zamiast otwierać, zamykać, otwierać, zamykać.
+
+95
+00:04:51,860 --> 00:04:53,860
+Jest po prostu raz otworzyć.
+
+96
+00:04:53,860 --> 00:04:54,860
+Dodać tych co potrzeba.
+
+97
+00:04:54,860 --> 00:04:55,860
+I zamknąć.
+
+98
+00:04:55,860 --> 00:04:58,860
+Oczywiście to wszystko zależy od tego jak długo z tym plikiem pracujemy.
+
+99
+00:04:58,860 --> 00:05:02,860
+Bo jak długo i na przykład dwa programy naraz by chciały do tego pliku się dostać.
+
+100
+00:05:02,860 --> 00:05:04,860
+To moglibyśmy mieć problem.
+
+101
+00:05:04,860 --> 00:05:08,860
+Natomiast w tej sytuacji myślę, że zdecydowanie taki zapis jest łatwiejszy.
+
+102
+00:05:08,860 --> 00:05:10,860
+No i wtedy lecimy po prostu.
+
+103
+00:05:10,860 --> 00:05:15,860
+Czyli file.write.
+
+104
+00:05:15,860 --> 00:05:17,860
+No i trzeba stworzyć sobie warunki do tego.
+
+105
+00:05:17,860 --> 00:05:18,860
+Żeby móc studentów zapisać.
+
+106
+00:05:18,860 --> 00:05:28,860
+Czyli student.getFirstName.
+
+107
+00:05:28,860 --> 00:05:32,860
+Możemy się umówić, że średnikami ich dalej rozdzielamy.
+
+108
+00:05:32,860 --> 00:05:34,860
+Potem student.lastName.
+
+109
+00:05:34,860 --> 00:05:36,860
+No i będzie note.
+
+110
+00:05:36,860 --> 00:05:38,860
+Czyli tutaj będzie first.
+
+111
+00:05:38,860 --> 00:05:40,860
+Tu będzie last.
+
+112
+00:05:40,860 --> 00:05:42,860
+A tutaj będzie note.
+
+113
+00:05:42,860 --> 00:05:46,860
+Co mi to da?
+
+114
+00:05:46,860 --> 00:05:50,860
+To da mi to to, że w dwóch osobnych procesach otwieram plik.
+
+115
+00:05:50,860 --> 00:05:53,860
+I odczytuję.
+
+116
+00:05:53,860 --> 00:05:55,860
+I otwieram plik i zapisuję.
+
+117
+00:05:55,860 --> 00:05:58,860
+Zobacz. Zapomniałem o znaku nowego wiersza.
+
+118
+00:05:58,860 --> 00:06:02,860
+Więc ten znak nowego wiersza od razu sobie doklejam tutaj robiąc backslash n.
+
+119
+00:06:02,860 --> 00:06:05,860
+Odpalam raz jeszcze.
+
+120
+00:06:05,860 --> 00:06:06,860
+No i plik mi się zmienił.
+
+121
+00:06:06,860 --> 00:06:08,860
+Mam Ignacego, Dominika i Marka.
+
+122
+00:06:08,860 --> 00:06:10,860
+Natomiast w tym momencie.
+
+123
+00:06:10,860 --> 00:06:13,860
+Ja tak naprawdę najpierw otwieram.
+
+124
+00:06:13,860 --> 00:06:14,860
+Zapisuję ich do pamięci.
+
+125
+00:06:14,860 --> 00:06:18,860
+Potem otwieram i z pamięci zapisuję ich do pliku.
+
+126
+00:06:18,860 --> 00:06:21,860
+Mógłbym od razu zrobić te dwie rzeczy.
+
+127
+00:06:21,860 --> 00:06:23,860
+Czyli od razu otworzyć jeden plik.
+
+128
+00:06:23,860 --> 00:06:25,860
+Od razu otworzyć drugi plik.
+
+129
+00:06:25,860 --> 00:06:26,860
+I na obu tych.
+
+130
+00:06:26,860 --> 00:06:28,860
+Zamiast tutaj dodawać to do tej zmiennej past.
+
+131
+00:06:28,860 --> 00:06:32,860
+Od razu wrzucać mu konkretne wiersze do pliku wynikowego.
+
+132
+00:06:32,860 --> 00:06:33,860
+To też byłoby ok.
+
+133
+00:06:33,860 --> 00:06:34,860
+Jak to zrobić?
+
+134
+00:06:34,860 --> 00:06:36,860
+Można to zrobić na dwa sposoby.
+
+135
+00:06:36,860 --> 00:06:38,860
+Albo można to sobie otworzyć tu.
+
+136
+00:06:38,860 --> 00:06:40,860
+I zrobić tak.
+
+137
+00:06:40,860 --> 00:06:42,860
+Albo sposób drugi jest taki.
+
+138
+00:06:42,860 --> 00:06:43,860
+Że można.
+
+139
+00:06:43,860 --> 00:06:44,860
+Nie mówię, że można.
+
+140
+00:06:44,860 --> 00:06:46,860
+Mówiłem o tym przy prezentacji.
+
+141
+00:06:46,860 --> 00:06:47,860
+Ale teraz Ci pokazuję.
+
+142
+00:06:47,860 --> 00:06:48,860
+Skoro oglądasz to demo.
+
+143
+00:06:48,860 --> 00:06:50,860
+To masz taki bonus jeszcze ode mnie.
+
+144
+00:06:50,860 --> 00:06:52,860
+Można napisać przecinek.
+
+145
+00:06:52,860 --> 00:06:54,860
+Tylko przecinek nie ma wiva kolejnego.
+
+146
+00:06:54,860 --> 00:06:55,860
+Tylko ma.
+
+147
+00:06:55,860 --> 00:06:57,860
+With open students as file.
+
+148
+00:06:57,860 --> 00:06:59,860
+Tu zrobimy as input.
+
+149
+00:06:59,860 --> 00:07:01,860
+File.
+
+150
+00:07:01,860 --> 00:07:03,860
+Przecinek open bla bla bla bla bla.
+
+151
+00:07:03,860 --> 00:07:05,860
+As output file.
+
+152
+00:07:07,860 --> 00:07:09,860
+No i oczywiście nie polecam tego samego pliku.
+
+153
+00:07:09,860 --> 00:07:11,860
+Próbować otwierać jako.
+
+154
+00:07:11,860 --> 00:07:12,860
+Plik wejściowy i wyjściowy.
+
+155
+00:07:12,860 --> 00:07:13,860
+To raczej się dobrze nie skończy.
+
+156
+00:07:13,860 --> 00:07:14,860
+No i wtedy.
+
+157
+00:07:14,860 --> 00:07:16,860
+For line in input file.
+
+158
+00:07:16,860 --> 00:07:20,860
+No bo musimy zmienić tą zawartość.
+
+159
+00:07:20,860 --> 00:07:22,860
+Natomiast tutaj gdzie zapisujemy.
+
+160
+00:07:22,860 --> 00:07:24,860
+To zamiast robić zapis.
+
+161
+00:07:24,860 --> 00:07:26,860
+Możemy zrobić rzecz następującą.
+
+162
+00:07:26,860 --> 00:07:28,860
+Output file write.
+
+163
+00:07:32,860 --> 00:07:34,860
+I musimy mu przekazać.
+
+164
+00:07:34,860 --> 00:07:36,860
+First name.
+
+165
+00:07:36,860 --> 00:07:38,860
+Dzięki temu zobacz.
+
+166
+00:07:38,860 --> 00:07:40,860
+Twój kod jest krótszy.
+
+167
+00:07:40,860 --> 00:07:41,860
+Po pierwsze.
+
+168
+00:07:41,860 --> 00:07:42,860
+Po drugie.
+
+169
+00:07:42,860 --> 00:07:44,860
+Dzięki temu masz sytuację taką.
+
+170
+00:07:44,860 --> 00:07:46,860
+W której nie tworzysz sobie.
+
+171
+00:07:46,860 --> 00:07:48,860
+Dodatkowych jakichś struktur w pamięci.
+
+172
+00:07:48,860 --> 00:07:50,860
+No i.
+
+173
+00:07:50,860 --> 00:07:52,860
+Oczywiście tutaj trzeba liczyć się z tym.
+
+174
+00:07:52,860 --> 00:07:54,860
+Że kod musi działać szybko.
+
+175
+00:07:54,860 --> 00:07:56,860
+Bo w tym momencie dwa pliki blokujemy.
+
+176
+00:07:56,860 --> 00:07:58,860
+Tutaj można byłoby dorzucić przecinek.
+
+177
+00:07:58,860 --> 00:08:00,860
+Ale raczej nie trzeba.
+
+178
+00:08:00,860 --> 00:08:02,860
+Enter ale raczej nie trzeba tego robić.
+
+179
+00:08:02,860 --> 00:08:04,860
+Wywołuję ten kod raz jeszcze.
+
+180
+00:08:04,860 --> 00:08:06,860
+I zobacz że kiedy otworzę sobie.
+
+181
+00:08:06,860 --> 00:08:08,860
+Plik wyjściowy.
+
+182
+00:08:08,860 --> 00:08:10,860
+Mam dane.
+
+183
+00:08:10,860 --> 00:08:11,860
+Ktoś mógłby posądzić mnie o to.
+
+184
+00:08:11,860 --> 00:08:13,860
+I to jest z tego poprzedniego zadania.
+
+185
+00:08:13,860 --> 00:08:14,860
+Więc ok.
+
+186
+00:08:14,860 --> 00:08:15,860
+Usuwam.
+
+187
+00:08:15,860 --> 00:08:16,860
+Odpalam raz jeszcze.
+
+188
+00:08:16,860 --> 00:08:18,860
+Mam dane.
+
+189
+00:08:18,860 --> 00:08:20,860
+Czyli wszystko pięknie zadziałało.
+
+190
+00:08:20,860 --> 00:08:22,860
+I dzięki temu pokazaliśmy sobie kolejne sposoby.
+
+191
+00:08:22,860 --> 00:08:24,860
+Na to jak można otwierać plik.
+
+192
+00:08:24,860 --> 00:08:25,860
+Zapisywać do niego zawartość.
+
+193
+00:08:25,860 --> 00:08:26,860
+Pobierać.
+
+194
+00:08:26,860 --> 00:08:28,860
+Myślę że coraz więcej umiemy.
+
+195
+00:08:28,860 --> 00:08:30,860
+Czas to chyba przećwiczyć.
+
+196
+00:08:30,860 --> 00:08:32,860
+Chodźcie.

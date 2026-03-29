@@ -1,0 +1,5275 @@
+1
+00:00:00,000 --> 00:00:04,000
+Jeżeli się pokaże to wszystko będzie dobrze.
+
+2
+00:00:04,000 --> 00:00:06,000
+Super, ekstra.
+
+3
+00:00:06,000 --> 00:00:08,000
+Ekstra.
+
+4
+00:00:18,000 --> 00:00:22,000
+Ten początek później sobie wytniemy.
+
+5
+00:00:30,000 --> 00:00:54,000
+...
+
+6
+00:00:54,000 --> 00:00:57,000
+Halo, halo, halo, halo.
+
+7
+00:00:57,000 --> 00:00:59,000
+Dajcie znać czy wszystko dobrze mi słychać.
+
+8
+00:00:59,000 --> 00:01:01,000
+Widać.
+
+9
+00:01:01,000 --> 00:01:03,000
+Chciałem zrobić tak klasycznie przez OBSa.
+
+10
+00:01:03,000 --> 00:01:05,000
+Myślałem, że taka wersja będzie lepsza.
+
+11
+00:01:05,000 --> 00:01:07,000
+Z tego względu, że na Discordzie
+
+12
+00:01:07,000 --> 00:01:09,000
+może być potencjalnie problem z nagrywaniem.
+
+13
+00:01:09,000 --> 00:01:11,000
+A zależy mi na tym, że później też osobom,
+
+14
+00:01:11,000 --> 00:01:13,000
+którzy nie wpadną do nas,
+
+15
+00:01:13,000 --> 00:01:15,000
+to żeby wszystko te osoby miały.
+
+16
+00:01:15,000 --> 00:01:17,000
+Więc fajnie, że jesteście.
+
+17
+00:01:17,000 --> 00:01:19,000
+Słychać działa, okej.
+
+18
+00:01:19,000 --> 00:01:21,000
+Bardzo się cieszę.
+
+19
+00:01:21,000 --> 00:01:23,000
+Ekstra.
+
+20
+00:01:23,000 --> 00:01:25,000
+Tak jak wspominałem w mailu,
+
+21
+00:01:25,000 --> 00:01:27,000
+to ja mam taką wersję,
+
+22
+00:01:27,000 --> 00:01:29,000
+którą mam w mailu,
+
+23
+00:01:29,000 --> 00:01:31,000
+planu na dzisiaj takiego wielkiego nie mamy.
+
+24
+00:01:31,000 --> 00:01:33,000
+Ja jeszcze nie wrzuciłem wam plików,
+
+25
+00:01:33,000 --> 00:01:35,000
+już modułu trzeciego.
+
+26
+00:01:35,000 --> 00:01:37,000
+Moduł trzeci jest zakończony, zmontowany.
+
+27
+00:01:37,000 --> 00:01:39,000
+Mam już cały wrzucony u was ten moduł na...
+
+28
+00:01:39,000 --> 00:01:41,000
+...
+
+29
+00:01:41,000 --> 00:01:43,000
+...
+
+30
+00:01:43,000 --> 00:01:45,000
+A i tu jest jeszcze mniejsze opóźnienie powinno być
+
+31
+00:01:45,000 --> 00:01:47,000
+niż przy tych normalnych moich streamach.
+
+32
+00:01:47,000 --> 00:01:49,000
+I lepsza jakość.
+
+33
+00:01:49,000 --> 00:01:51,000
+Więc ten moduł mam już wrzucony na...
+
+34
+00:01:51,000 --> 00:01:53,000
+...
+
+35
+00:01:53,000 --> 00:01:55,000
+... na Vimeo. Natomiast jeszcze go nie wrzuciłem na platformę.
+
+36
+00:01:55,000 --> 00:01:57,000
+Więc powinien za moment być.
+
+37
+00:01:57,000 --> 00:01:59,000
+Za moment powinien być. Dosłownie jak skończę streama, to to będzie.
+
+38
+00:01:59,000 --> 00:02:01,000
+Ten moduł trzeci dokończenie się pojawi.
+
+39
+00:02:01,000 --> 00:02:03,000
+I moduł czwarty już też mam
+
+40
+00:02:03,000 --> 00:02:05,000
+w całości nagrany.
+
+41
+00:02:05,000 --> 00:02:07,000
+Jeszcze nie do końca zmontowany, ale to będę montował dzisiaj wieczorem.
+
+42
+00:02:07,000 --> 00:02:09,000
+Więc na pewno te moduły
+
+43
+00:02:09,000 --> 00:02:11,000
+do was już niedługo
+
+44
+00:02:11,000 --> 00:02:13,000
+wpadną.
+
+45
+00:02:13,000 --> 00:02:15,000
+Cześć, cześć, cześć. Tu nie mam możliwości niestety zaznaczania
+
+46
+00:02:15,000 --> 00:02:17,000
+poszczególnych osób, ale witam was.
+
+47
+00:02:17,000 --> 00:02:19,000
+Witam was wszystkich. Miło mi, że
+
+48
+00:02:19,000 --> 00:02:21,000
+wpadliście tak licznie.
+
+49
+00:02:21,000 --> 00:02:23,000
+Bardzo się cieszę.
+
+50
+00:02:23,000 --> 00:02:25,000
+O, i Arek napisał, że
+
+51
+00:02:25,000 --> 00:02:27,000
+kończy pierwszy moduł. Ogólnie dużo osób
+
+52
+00:02:27,000 --> 00:02:29,000
+ostatnio jeszcze dołączyło z pakietów.
+
+53
+00:02:29,000 --> 00:02:31,000
+Tak, tylko
+
+54
+00:02:31,000 --> 00:02:33,000
+nie chcę zrobić wielkiej reklamy, bo wiadomo
+
+55
+00:02:33,000 --> 00:02:35,000
+to jest tam nasze takie
+
+56
+00:02:35,000 --> 00:02:37,000
+zamknięte grono, ale
+
+57
+00:02:37,000 --> 00:02:39,000
+jeżeli byście chcieli, na do kodu IT
+
+58
+00:02:39,000 --> 00:02:41,000
+jest świąteczna promocja. Ona jeszcze trwa.
+
+59
+00:02:41,000 --> 00:02:43,000
+Więc ja to później wytnę, ten fragment
+
+60
+00:02:43,000 --> 00:02:45,000
+na platformie, ale jeżeli byście mieli ochotę
+
+61
+00:02:45,000 --> 00:02:47,000
+dołączyć do któregoś z pakietów, to serdecznie
+
+62
+00:02:47,000 --> 00:02:49,000
+do tego zapraszam. I tu jest też taka
+
+63
+00:02:49,000 --> 00:02:51,000
+informacja dla was, że jeżeli
+
+64
+00:02:51,000 --> 00:02:53,000
+macie na przykład PyStart
+
+65
+00:02:53,000 --> 00:02:55,000
+już, to po prostu można do PyCampu dołączyć
+
+66
+00:02:55,000 --> 00:02:57,000
+odrobinę taniej, nie? To po prostu
+
+67
+00:02:57,000 --> 00:02:59,000
+taka też ciekawostka, jakby co
+
+68
+00:02:59,000 --> 00:03:01,000
+No, plan
+
+69
+00:03:01,000 --> 00:03:03,000
+na dzisiaj jest taki, że zrobiłbym sobie
+
+70
+00:03:03,000 --> 00:03:05,000
+na przykład z wami któreś zadanie domowe
+
+71
+00:03:05,000 --> 00:03:07,000
+z ostatnich. Możecie dać znać, czy
+
+72
+00:03:07,000 --> 00:03:09,000
+chcecie zadanie domowe
+
+73
+00:03:09,000 --> 00:03:11,000
+rozwiązać wspólnie.
+
+74
+00:03:11,000 --> 00:03:13,000
+Przemo, widzę, że
+
+75
+00:03:13,000 --> 00:03:15,000
+już Python szedł mocno.
+
+76
+00:03:17,000 --> 00:03:19,000
+Więc bardzo byłbym chętny.
+
+77
+00:03:19,000 --> 00:03:21,000
+Możemy rozwiązać na przykład zadanie domowe,
+
+78
+00:03:21,000 --> 00:03:23,000
+które za moment będzie.
+
+79
+00:03:23,000 --> 00:03:25,000
+Albo możemy też sobie wspólnie
+
+80
+00:03:25,000 --> 00:03:27,000
+zrobić projekt, bo w tym
+
+81
+00:03:27,000 --> 00:03:29,000
+kolejnym module jest projekt całkiem taki
+
+82
+00:03:29,000 --> 00:03:31,000
+sympatyczny, dotyczący weryfikacji
+
+83
+00:03:31,000 --> 00:03:33,000
+PESELu. Osoby, które były na pierwszej edycji
+
+84
+00:03:33,000 --> 00:03:35,000
+to tę wiedzę już mają
+
+85
+00:03:35,000 --> 00:03:37,000
+i znają. Natomiast nam się też
+
+86
+00:03:37,000 --> 00:03:39,000
+te rzeczy gdzieś wcześniej
+
+87
+00:03:39,000 --> 00:03:41,000
+przewinęły. Zaraz wam znajdę tą prezentację,
+
+88
+00:03:41,000 --> 00:03:43,000
+odpalę i możemy sobie tę weryfikację PESELu
+
+89
+00:03:43,000 --> 00:03:45,000
+zrobić jako taki
+
+90
+00:03:45,000 --> 00:03:47,000
+też wstęp do tego, co
+
+91
+00:03:47,000 --> 00:03:49,000
+czeka nas za moment,
+
+92
+00:03:49,000 --> 00:03:51,000
+za moment w przyszłym module.
+
+93
+00:03:51,000 --> 00:03:53,000
+Dajcie znać jak święta. Czy pracowicie?
+
+94
+00:03:53,000 --> 00:03:55,000
+Czy udało się
+
+95
+00:03:55,000 --> 00:03:57,000
+pokodować?
+
+96
+00:03:57,000 --> 00:03:59,000
+O!
+
+97
+00:03:59,000 --> 00:04:01,000
+W ramach koncertu życzeń pojawiło się życzenie.
+
+98
+00:04:01,000 --> 00:04:03,000
+Może coś ze słownikami dzisiaj?
+
+99
+00:04:03,000 --> 00:04:05,000
+Okej, pewnie. Dobra, to robimy sobie taki pliczek.
+
+100
+00:04:05,000 --> 00:04:07,000
+Nazywamy go
+
+101
+00:04:07,000 --> 00:04:09,000
+Koncert życzeń.
+
+102
+00:04:09,000 --> 00:04:11,000
+Iiii...
+
+103
+00:04:11,000 --> 00:04:13,000
+Iii...
+
+104
+00:04:15,000 --> 00:04:17,000
+I Dawid pyta
+
+105
+00:04:17,000 --> 00:04:19,000
+czy coś ze słownikami. Dobra.
+
+106
+00:04:19,000 --> 00:04:21,000
+Super. Takie życzenia
+
+107
+00:04:21,000 --> 00:04:23,000
+są super. Zachęcam was w ogóle do tego, żebyście
+
+108
+00:04:23,000 --> 00:04:25,000
+dorzucili też
+
+109
+00:04:25,000 --> 00:04:27,000
+od siebie życzenia.
+
+110
+00:04:27,000 --> 00:04:29,000
+Ja jestem jak najbardziej chętny do tego, żeby
+
+111
+00:04:29,000 --> 00:04:31,000
+robić rzeczy przewidziane.
+
+112
+00:04:31,000 --> 00:04:33,000
+Jeżeli natomiast, Dawidzie,
+
+113
+00:04:33,000 --> 00:04:35,000
+pytałeś o to, czy coś ze słownikami będzie
+
+114
+00:04:35,000 --> 00:04:37,000
+na platformie, to tak, dzisiaj też jeszcze będzie dużo rzeczy
+
+115
+00:04:37,000 --> 00:04:39,000
+ze słownikami. Będą też słowniki
+
+116
+00:04:39,000 --> 00:04:41,000
+z listami, tylko tam naprawdę jest
+
+117
+00:04:41,000 --> 00:04:43,000
+naprawdę jest sporo.
+
+118
+00:04:43,000 --> 00:04:45,000
+Dawid jeszcze z łóżka. No cóż...
+
+119
+00:04:45,000 --> 00:04:47,000
+Zadanie ze słowników
+
+120
+00:04:47,000 --> 00:04:49,000
+to, który licza słowa w zdaniu. Okej.
+
+121
+00:04:49,000 --> 00:04:51,000
+Super. Bardzo
+
+122
+00:04:51,000 --> 00:04:53,000
+chętnie. Właśnie od tego jest ten nasz
+
+123
+00:04:53,000 --> 00:04:55,000
+live, żeby te tematy
+
+124
+00:04:55,000 --> 00:04:57,000
+sobie w ten sposób właśnie
+
+125
+00:04:57,000 --> 00:04:59,000
+usystematyzować, usystematyzować.
+
+126
+00:04:59,000 --> 00:05:01,000
+Więc, no jeżeli, Arku, jesteś
+
+127
+00:05:01,000 --> 00:05:03,000
+na pierwszym module, to nie wszystko może być dla ciebie jasne,
+
+128
+00:05:03,000 --> 00:05:05,000
+ale zobaczysz, co cię czeka.
+
+129
+00:05:05,000 --> 00:05:07,000
+Więc liczanie słowa w zdaniu jak najbardziej.
+
+130
+00:05:07,000 --> 00:05:09,000
+Mariano Italiano. Czy można do
+
+131
+00:05:09,000 --> 00:05:11,000
+PyStartu jeszcze dołączyć? Do kolegi pytam.
+
+132
+00:05:11,000 --> 00:05:13,000
+Można dołączyć przez pakiet w tej chwili,
+
+133
+00:05:13,000 --> 00:05:15,000
+natomiast dostęp do PyStartu
+
+134
+00:05:15,000 --> 00:05:17,000
+będzie możliwy
+
+135
+00:05:17,000 --> 00:05:19,000
+będzie możliwy dopiero
+
+136
+00:05:19,000 --> 00:05:21,000
+w przyszłym roku, jeżeli
+
+137
+00:05:21,000 --> 00:05:23,000
+interesuje cię sam PyStart. Natomiast
+
+138
+00:05:23,000 --> 00:05:25,000
+teraz można jeszcze na stronie dołączać
+
+139
+00:05:25,000 --> 00:05:27,000
+do pakietu PyStart i PyCamp
+
+140
+00:05:27,000 --> 00:05:29,000
+chyba najtaniej.
+
+141
+00:05:29,000 --> 00:05:31,000
+O!
+
+142
+00:05:31,000 --> 00:05:33,000
+Piotr super zadał pytanie.
+
+143
+00:05:37,000 --> 00:05:39,000
+Ja mam pytanko. Jak można
+
+144
+00:05:39,000 --> 00:05:41,000
+sprawdzić, czy user wprowadził liczbę?
+
+145
+00:05:43,000 --> 00:05:45,000
+Są metody
+
+146
+00:05:45,000 --> 00:05:47,000
+isDigit, ale są
+
+147
+00:05:47,000 --> 00:05:49,000
+liczbami ujemnymi z przecinkiem.
+
+148
+00:05:49,000 --> 00:05:51,000
+Dobra, to jest fajne zagadnienie
+
+149
+00:05:51,000 --> 00:05:53,000
+też. Generalnie
+
+150
+00:05:53,000 --> 00:05:55,000
+rozwiążemy
+
+151
+00:05:55,000 --> 00:05:57,000
+to sobie. Pokażę wam, jak to zrobić.
+
+152
+00:05:59,000 --> 00:06:01,000
+Jak posortować ilość słów
+
+153
+00:06:01,000 --> 00:06:03,000
+w tym zdaniu? Drillers, musisz
+
+154
+00:06:03,000 --> 00:06:05,000
+dokładniej napisać, o co chodzi.
+
+155
+00:06:05,000 --> 00:06:07,000
+Czy tu chodzi o
+
+156
+00:06:07,000 --> 00:06:09,000
+czy tu chodzi tobie o słowniku?
+
+157
+00:06:09,000 --> 00:06:11,000
+Jak posortować słownik?
+
+158
+00:06:11,000 --> 00:06:13,000
+Czy jak posortować, jak posortować
+
+159
+00:06:13,000 --> 00:06:15,000
+co? Paweł, zapytałeś, czy
+
+160
+00:06:15,000 --> 00:06:17,000
+można wyskakiwać w przód? Myślę, że trochę
+
+161
+00:06:17,000 --> 00:06:19,000
+można. To w ramach takiej zachęty
+
+162
+00:06:19,000 --> 00:06:21,000
+przyszłościowej jak najbardziej można.
+
+163
+00:06:21,000 --> 00:06:23,000
+Natomiast żebyśmy nie
+
+164
+00:06:23,000 --> 00:06:25,000
+żebyśmy tylko nie zahaczali o
+
+165
+00:06:25,000 --> 00:06:27,000
+jakieś rzeczy typu dżango, nie? Bo
+
+166
+00:06:27,000 --> 00:06:29,000
+to już za bardzo, za bardzo do przodu.
+
+167
+00:06:29,000 --> 00:06:31,000
+Dawid napisał, że nie wszyscy w
+
+168
+00:06:31,000 --> 00:06:33,000
+Pythonie nie ma przecinków, są kropki, ale wszyscy wiemy
+
+169
+00:06:33,000 --> 00:06:35,000
+o co chodzi, o liczby zmienną przecinkowe.
+
+170
+00:06:35,000 --> 00:06:37,000
+Piotr, czy można dokupić sam PyCamp, jeśli ma się
+
+171
+00:06:37,000 --> 00:06:39,000
+PyStart? Można. Napisz do mnie po prostu wiadomość
+
+172
+00:06:39,000 --> 00:06:41,000
+prywatną, pogadamy.
+
+173
+00:06:41,000 --> 00:06:43,000
+Mówię, nie chcę tutaj absolutnie, absolutnie
+
+174
+00:06:43,000 --> 00:06:45,000
+sprzedawać. Natomiast tak,
+
+175
+00:06:45,000 --> 00:06:47,000
+jeżeli chodzi o rzeczy,
+
+176
+00:06:47,000 --> 00:06:49,000
+czy prezentacja będzie dziś
+
+177
+00:06:49,000 --> 00:06:51,000
+dostępna? Być może treść zadań będą podane
+
+178
+00:06:51,000 --> 00:06:53,000
+w dolnej sekcji pod filmikiem, tak jak linki
+
+179
+00:06:53,000 --> 00:06:55,000
+pod, tak.
+
+180
+00:06:55,000 --> 00:06:57,000
+Tak, Tinej,
+
+181
+00:06:57,000 --> 00:06:59,000
+mam w planach też dzisiaj, w ramach
+
+182
+00:06:59,000 --> 00:07:01,000
+takiego to do, dopiszę sobie też tutaj,
+
+183
+00:07:01,000 --> 00:07:03,000
+koniecznie wrzuć prezentację.
+
+184
+00:07:05,000 --> 00:07:07,000
+Bo jak widzicie mam porządek i w plikach
+
+185
+00:07:07,000 --> 00:07:09,000
+i w prezentacji też mam porządek, tylko jeszcze
+
+186
+00:07:09,000 --> 00:07:11,000
+jej nie wrzuciłem. Jak najbardziej,
+
+187
+00:07:11,000 --> 00:07:13,000
+jak najbardziej to zrobię. Mam
+
+188
+00:07:13,000 --> 00:07:15,000
+na myśli to zadanie ze słowników, ze zliczaniem
+
+189
+00:07:15,000 --> 00:07:17,000
+słów, okej.
+
+190
+00:07:17,000 --> 00:07:19,000
+Dobra. Czyli tak naprawdę
+
+191
+00:07:19,000 --> 00:07:21,000
+wychodzi na to, że dzisiejszy,
+
+192
+00:07:21,000 --> 00:07:23,000
+dzisiejszy temat, okej,
+
+193
+00:07:23,000 --> 00:07:25,000
+OOP to jeszcze nie teraz, to
+
+194
+00:07:25,000 --> 00:07:27,000
+później, na kolejne live'y. Zostaw sobie
+
+195
+00:07:27,000 --> 00:07:29,000
+pytanie na kolejne live'y.
+
+196
+00:07:29,000 --> 00:07:31,000
+Chyba, że chcesz po prostu pogadać
+
+197
+00:07:31,000 --> 00:07:33,000
+ot tak, to napisz do mnie później prywatną wiadomość.
+
+198
+00:07:33,000 --> 00:07:35,000
+Dobra, czyli wychodzi na to, że dzisiejszy
+
+199
+00:07:35,000 --> 00:07:37,000
+temat, w ogóle dzisiejsza pogadanka
+
+200
+00:07:37,000 --> 00:07:39,000
+to będą słowniki i
+
+201
+00:07:39,000 --> 00:07:41,000
+wcześniej pojawia się, pojawiło się pytanie
+
+202
+00:07:41,000 --> 00:07:43,000
+jak sprawdzić, czy użytkownik wprowadził liczbę.
+
+203
+00:07:43,000 --> 00:07:45,000
+Więc możemy, możemy
+
+204
+00:07:45,000 --> 00:07:47,000
+te tematy sobie dwie,
+
+205
+00:07:47,000 --> 00:07:49,000
+dwa
+
+206
+00:07:49,000 --> 00:07:51,000
+poruszyć i myślę, że będziemy mieli
+
+207
+00:07:51,000 --> 00:07:53,000
+w sam raz. Dekoratorki dokładniej
+
+208
+00:07:53,000 --> 00:07:55,000
+można? Dekoratorki dokładniej
+
+209
+00:07:55,000 --> 00:07:57,000
+można, Grzegorzu, ale nie na, nie
+
+210
+00:07:57,000 --> 00:07:59,000
+po trzecim module. Ja bardzo chętny
+
+211
+00:07:59,000 --> 00:08:01,000
+jestem do tego, żeby też robić bardziej rzeczy zaawansowane,
+
+212
+00:08:01,000 --> 00:08:03,000
+natomiast tutaj nie chcę też
+
+213
+00:08:03,000 --> 00:08:05,000
+wystraszyć ludzi, którzy, którzy się uczą od podstaw,
+
+214
+00:08:05,000 --> 00:08:07,000
+więc na spokojnie, na spokojnie.
+
+215
+00:08:09,000 --> 00:08:11,000
+Okej.
+
+216
+00:08:11,000 --> 00:08:13,000
+Więc tak, koncert życzeń.
+
+217
+00:08:13,000 --> 00:08:15,000
+Ja od razu mówię, że w tym koncercie
+
+218
+00:08:15,000 --> 00:08:17,000
+życzeń trochę będziemy musieli wyjść naprzód
+
+219
+00:08:17,000 --> 00:08:19,000
+i po kolei
+
+220
+00:08:19,000 --> 00:08:21,000
+zrobimy sobie to w tej kolejności.
+
+221
+00:08:21,000 --> 00:08:23,000
+Czyli najpierw będzie pytanie Piotra.
+
+222
+00:08:25,000 --> 00:08:27,000
+Piotr N. Następnie będzie dalej
+
+223
+00:08:27,000 --> 00:08:29,000
+Dawid P. Później będzie partner projektu
+
+224
+00:08:29,000 --> 00:08:31,000
+i później będzie drillers,
+
+225
+00:08:31,000 --> 00:08:33,000
+bo to zadanie będzie takim zadaniem
+
+226
+00:08:33,000 --> 00:08:35,000
+podsumowującym.
+
+227
+00:08:39,000 --> 00:08:41,000
+Podsumowującym.
+
+228
+00:08:41,000 --> 00:08:43,000
+A kiedy będzie dostępny pakiet z gitem?
+
+229
+00:08:43,000 --> 00:08:45,000
+Wszystkie pakiety będą dostępne
+
+230
+00:08:45,000 --> 00:08:47,000
+w styczniu. Ja mam w planach w ogóle,
+
+231
+00:08:47,000 --> 00:08:49,000
+ambitny mam taki plan, żeby do 15
+
+232
+00:08:49,000 --> 00:08:51,000
+stycznia nagrać całość PyStartu,
+
+233
+00:08:51,000 --> 00:08:53,000
+czyli całe, wszystkie filmy
+
+234
+00:08:53,000 --> 00:08:55,000
+z teorią, znaczy z teorią,
+
+235
+00:08:55,000 --> 00:08:57,000
+wszystkie moduły, tak żeby osobom,
+
+236
+00:08:57,000 --> 00:08:59,000
+ambitym, tym, którzy chcą szybciej robić PyStart,
+
+237
+00:08:59,000 --> 00:09:01,000
+móc te materiały
+
+238
+00:09:01,000 --> 00:09:03,000
+udostępnić szybciej. Mam nadzieję,
+
+239
+00:09:03,000 --> 00:09:05,000
+że mi się uda. Natomiast
+
+240
+00:09:05,000 --> 00:09:07,000
+następną rzeczą,
+
+241
+00:09:07,000 --> 00:09:09,000
+którą będę robił, będzie siadanie
+
+242
+00:09:09,000 --> 00:09:11,000
+do nagrywania właśnie tych bonusów dla Was
+
+243
+00:09:11,000 --> 00:09:13,000
+i tutaj zakładam, że
+
+244
+00:09:13,000 --> 00:09:15,000
+jest szansa, że od 15 do
+
+245
+00:09:15,000 --> 00:09:17,000
+końca stycznia te bonusy będą
+
+246
+00:09:17,000 --> 00:09:19,000
+gotowe. Tak, żeby po skończeniu
+
+247
+00:09:19,000 --> 00:09:21,000
+PyStartu tak naprawdę przed samym końcem
+
+248
+00:09:21,000 --> 00:09:23,000
+można było do tych bonusów sobie usiąść.
+
+249
+00:09:25,000 --> 00:09:27,000
+A właśnie, jeżeli chodzi o dekoratory, Rafał tutaj
+
+250
+00:09:27,000 --> 00:09:29,000
+wspomina, że, podpowiada, że może film na YouTube,
+
+251
+00:09:29,000 --> 00:09:31,000
+to ja już taki film mam.
+
+252
+00:09:37,000 --> 00:09:39,000
+Jak wejdziecie sobie na Kacper Środziński Dekoratory,
+
+253
+00:09:39,000 --> 00:09:41,000
+to pojawi się, jak tworzyć dekoratory
+
+254
+00:09:41,000 --> 00:09:43,000
+z awansowanym kursem PyTona. To jest jeden
+
+255
+00:09:43,000 --> 00:09:45,000
+z pierwszych filmów w ogóle, jak jeszcze badałem
+
+256
+00:09:45,000 --> 00:09:47,000
+temat kanału, jakie te treści Was
+
+257
+00:09:47,000 --> 00:09:49,000
+interesują, czy bardziej skomplikowane,
+
+258
+00:09:49,000 --> 00:09:51,000
+czy mniej skomplikowane.
+
+259
+00:09:51,000 --> 00:09:53,000
+I tutaj właśnie jest film z dekoratorami,
+
+260
+00:09:53,000 --> 00:09:55,000
+jak jeszcze byłem piękny i młody.
+
+261
+00:09:55,000 --> 00:09:57,000
+Nie się śmieję, bo tutaj ogolony,
+
+262
+00:09:57,000 --> 00:09:59,000
+bez czapki, zdecydowanie wolę
+
+263
+00:09:59,000 --> 00:10:01,000
+imaż aktualny.
+
+264
+00:10:01,000 --> 00:10:03,000
+To w ogóle śmieszna historia, bo to było
+
+265
+00:10:03,000 --> 00:10:05,000
+nagrywane telefonem,
+
+266
+00:10:05,000 --> 00:10:07,000
+nie mam tego telefonu tu na biurku, ale nagrywane telefonem,
+
+267
+00:10:07,000 --> 00:10:09,000
+który stał na biurku na takim statywie,
+
+268
+00:10:09,000 --> 00:10:11,000
+w ogóle wyciągniętym ramieniu, i on
+
+269
+00:10:11,000 --> 00:10:13,000
+strasznie drgał. I jak ktoś pisze,
+
+270
+00:10:13,000 --> 00:10:15,000
+to czasem widać takie drgania.
+
+271
+00:10:15,000 --> 00:10:17,000
+Strasznie mnie to denerwowało, ale no,
+
+272
+00:10:17,000 --> 00:10:19,000
+jest kodzik, można, można
+
+273
+00:10:19,000 --> 00:10:21,000
+tak to oglądać.
+
+274
+00:10:21,000 --> 00:10:23,000
+Okej.
+
+275
+00:10:23,000 --> 00:10:25,000
+Paweł, czym różni się PyStart 2 od PyStart 3?
+
+276
+00:10:25,000 --> 00:10:27,000
+To są, PyStart 2 jest nagrywane
+
+277
+00:10:27,000 --> 00:10:29,000
+w pełni od nowa
+
+278
+00:10:29,000 --> 00:10:31,000
+i
+
+279
+00:10:31,000 --> 00:10:33,000
+kończy się odrobinę szybciej.
+
+280
+00:10:33,000 --> 00:10:35,000
+Zobacz agendę PyStartu, to
+
+281
+00:10:35,000 --> 00:10:37,000
+wszystko znajdziesz. I jest dużo bonusów
+
+282
+00:10:37,000 --> 00:10:39,000
+w PyStartie pierwszym.
+
+283
+00:10:39,000 --> 00:10:41,000
+Na kanale Pasja Informatyki
+
+284
+00:10:41,000 --> 00:10:43,000
+miałeś problem z terminalem w PyCharmie,
+
+285
+00:10:43,000 --> 00:10:45,000
+jak go rozwiązałeś?
+
+286
+00:10:45,000 --> 00:10:47,000
+Cannot be loaded because running script is disabled on this system.
+
+287
+00:10:49,000 --> 00:10:51,000
+Uruchomiłem,
+
+288
+00:10:51,000 --> 00:10:53,000
+wygooglałem
+
+289
+00:10:53,000 --> 00:10:55,000
+i włączyłem coś
+
+290
+00:10:55,000 --> 00:10:57,000
+i było jakieś polecenie,
+
+291
+00:10:57,000 --> 00:10:59,000
+które pozwalało na włączenie tego,
+
+292
+00:10:59,000 --> 00:11:01,000
+na włączenie tej informacji
+
+293
+00:11:01,000 --> 00:11:03,000
+w tym,
+
+294
+00:11:03,000 --> 00:11:05,000
+na włączenie tej informacji w cmd.
+
+295
+00:11:05,000 --> 00:11:07,000
+Przenajpierw uruchomiłem sobie terminal
+
+296
+00:11:07,000 --> 00:11:09,000
+jako administrator i wtedy wykonałem
+
+297
+00:11:09,000 --> 00:11:11,000
+coś, czego Ci nie znajdę w tej chwili,
+
+298
+00:11:11,000 --> 00:11:13,000
+ale, ale tak to, tak to
+
+299
+00:11:13,000 --> 00:11:15,000
+wyglądało. Początki
+
+300
+00:11:15,000 --> 00:11:17,000
+są fajne do wspominania, teraz widać Ci
+
+301
+00:11:17,000 --> 00:11:19,000
+profesjonalizm. Bardzo dziękuję i guten Abend, Michale.
+
+302
+00:11:19,000 --> 00:11:21,000
+Dobra, więc 11 minut
+
+303
+00:11:21,000 --> 00:11:23,000
+już gadamy.
+
+304
+00:11:23,000 --> 00:11:25,000
+O, też mam ten problem
+
+305
+00:11:25,000 --> 00:11:27,000
+z running script is disabled.
+
+306
+00:11:27,000 --> 00:11:29,000
+Napiszcie, Harmo i Tinej,
+
+307
+00:11:29,000 --> 00:11:31,000
+napiszcie na tym,
+
+308
+00:11:31,000 --> 00:11:33,000
+na Discordzie, to ja chętnie
+
+309
+00:11:33,000 --> 00:11:35,000
+zerknę po prostu po live'ie
+
+310
+00:11:35,000 --> 00:11:37,000
+i ten problem sobie rozwiążemy.
+
+311
+00:11:37,000 --> 00:11:39,000
+Czy na Discordzie coś się pojawiło jeszcze do mnie?
+
+312
+00:11:39,000 --> 00:11:41,000
+Nie widzę.
+
+313
+00:11:41,000 --> 00:11:43,000
+Okej, no to co?
+
+314
+00:11:43,000 --> 00:11:45,000
+A, są wiadomości prywatne,
+
+315
+00:11:45,000 --> 00:11:47,000
+ale wiadomości prywatne muszę teraz chwilę zaczekać.
+
+316
+00:11:47,000 --> 00:11:49,000
+Dobrze, dobra, dobra, dobra.
+
+317
+00:11:49,000 --> 00:11:51,000
+Więc lecimy, lecimy z tym kodem.
+
+318
+00:11:51,000 --> 00:11:53,000
+Po pierwsze,
+
+319
+00:11:53,000 --> 00:11:55,000
+mam pytanko, jak sprawdzać, czy użytkownik wprowadził liczbę.
+
+320
+00:11:55,000 --> 00:11:57,000
+Więc ja sobie zrobię pliczek,
+
+321
+00:11:57,000 --> 00:11:59,000
+nazwę go live1.
+
+322
+00:11:59,000 --> 00:12:01,000
+Te pliki też
+
+323
+00:12:01,000 --> 00:12:03,000
+oczywiście Wam udostępnię, ale oczywiście,
+
+324
+00:12:03,000 --> 00:12:05,000
+jeżeli ktoś ma ochotę, to zachęcam do tego, żebyśmy
+
+325
+00:12:05,000 --> 00:12:07,000
+sobie wspólnie, wspólnie
+
+326
+00:12:07,000 --> 00:12:09,000
+pokodowali. Uprzedzam też,
+
+327
+00:12:09,000 --> 00:12:11,000
+że Julek nie śpi. Ostatnio u nas w domu jest system
+
+328
+00:12:11,000 --> 00:12:13,000
+chodzenia spać po 22.00 u wszystkich
+
+329
+00:12:13,000 --> 00:12:15,000
+dzieci. Niektóre dzieci
+
+330
+00:12:15,000 --> 00:12:17,000
+chodzą jeszcze dużo później spać,
+
+331
+00:12:17,000 --> 00:12:19,000
+więc cóż.
+
+332
+00:12:21,000 --> 00:12:23,000
+Niestety może być w tle słychać
+
+333
+00:12:23,000 --> 00:12:25,000
+płaczące dziecko. Jak sprawdzić, czy
+
+334
+00:12:25,000 --> 00:12:27,000
+użytkownik wprowadził liczbę? I to jest bardzo dobre pytanie.
+
+335
+00:12:27,000 --> 00:12:29,000
+Bo
+
+336
+00:12:29,000 --> 00:12:31,000
+rozwiązaniem na tego pytania,
+
+337
+00:12:31,000 --> 00:12:33,000
+rozwiązanie tego pytania nie jest takie proste.
+
+338
+00:12:33,000 --> 00:12:35,000
+Natomiast pokażę Wam,
+
+339
+00:12:35,000 --> 00:12:37,000
+jak ja to robię najczęściej, jak
+
+340
+00:12:37,000 --> 00:12:39,000
+to u mnie
+
+341
+00:12:39,000 --> 00:12:41,000
+działa najlepiej. A mianowicie,
+
+342
+00:12:41,000 --> 00:12:43,000
+robimy sobie zwykłego inputa, czyli jakiś tam
+
+343
+00:12:43,000 --> 00:12:45,000
+value
+
+344
+00:12:45,000 --> 00:12:47,000
+równa się input, podaj
+
+345
+00:12:47,000 --> 00:12:49,000
+liczbę.
+
+346
+00:12:49,000 --> 00:12:51,000
+No i możemy też tego inputa sobie zrobić,
+
+347
+00:12:51,000 --> 00:12:53,000
+zamienić na float poniżej.
+
+348
+00:12:55,000 --> 00:12:57,000
+No bo wszystko
+
+349
+00:12:57,000 --> 00:12:59,000
+rozbija się o floaty, nie? I teraz sytuacja
+
+350
+00:12:59,000 --> 00:13:01,000
+jest taka, że
+
+351
+00:13:01,000 --> 00:13:03,000
+jeżeli wykonamy sobie Python,
+
+352
+00:13:03,000 --> 00:13:05,000
+python, python, python, live1py
+
+353
+00:13:05,000 --> 00:13:07,000
+live1py
+
+354
+00:13:07,000 --> 00:13:09,000
+Tylko zerknę, czy wszystko widać. Chyba
+
+355
+00:13:09,000 --> 00:13:11,000
+to jest trochę za małe. Ok, to też sobie powiększę.
+
+356
+00:13:11,000 --> 00:13:13,000
+To w tym momencie, jeżeli wpiszemy
+
+357
+00:13:13,000 --> 00:13:15,000
+sobie liczbę 2,5,
+
+358
+00:13:15,000 --> 00:13:17,000
+no to błędu nie będzie. Natomiast,
+
+359
+00:13:17,000 --> 00:13:19,000
+jeżeli wpiszemy liczbę minus 2,5,
+
+360
+00:13:19,000 --> 00:13:21,000
+to też błędu nie będzie.
+
+361
+00:13:21,000 --> 00:13:23,000
+Problem pojawi się natomiast,
+
+362
+00:13:23,000 --> 00:13:25,000
+jeżeli ktoś wpisze nam
+
+363
+00:13:25,000 --> 00:13:27,000
+abcde.
+
+364
+00:13:27,000 --> 00:13:29,000
+I w tym momencie, tu pojawia się błąd.
+
+365
+00:13:29,000 --> 00:13:31,000
+Value error could not
+
+366
+00:13:31,000 --> 00:13:33,000
+convert string to float abcde.
+
+367
+00:13:33,000 --> 00:13:35,000
+Czyli tak naprawdę,
+
+368
+00:13:35,000 --> 00:13:37,000
+każdą wartość, którą podajemy,
+
+369
+00:13:37,000 --> 00:13:39,000
+która jest liczbą,
+
+370
+00:13:39,000 --> 00:13:41,000
+potrafimy zamienić na floata.
+
+371
+00:13:41,000 --> 00:13:43,000
+Natomiast, jeżeli wartość
+
+372
+00:13:43,000 --> 00:13:45,000
+nie jest liczbą, to mamy z tym problem.
+
+373
+00:13:45,000 --> 00:13:47,000
+I teraz, tutaj Piotr
+
+374
+00:13:47,000 --> 00:13:49,000
+zadał sobie taką wypowiedź, że, jeżeli wartość
+
+375
+00:13:49,000 --> 00:13:51,000
+jest liczbą, to możemy ją
+
+376
+00:13:51,000 --> 00:13:53,000
+zmienić na string.
+
+377
+00:13:53,000 --> 00:13:55,000
+I tutaj,
+
+378
+00:13:55,000 --> 00:13:57,000
+Piotr,
+
+379
+00:13:57,000 --> 00:13:59,000
+zasugerował takie rozwiązanie,
+
+380
+00:13:59,000 --> 00:14:01,000
+które jest bardzo dobrym rozwiązaniem
+
+381
+00:14:01,000 --> 00:14:03,000
+na początek. A mianowicie,
+
+382
+00:14:03,000 --> 00:14:05,000
+value, jeżeli odbieramy, co jest inputa,
+
+383
+00:14:05,000 --> 00:14:07,000
+co jest stringiem,
+
+384
+00:14:07,000 --> 00:14:09,000
+to na tym czymś, możemy wykonać,
+
+385
+00:14:09,000 --> 00:14:11,000
+na przykład is,
+
+386
+00:14:11,000 --> 00:14:13,000
+i wtedy tu nam się pojawiają takie propozycje.
+
+387
+00:14:13,000 --> 00:14:15,000
+Ja trochę się powtarzam z tym, co było w kursie,
+
+388
+00:14:15,000 --> 00:14:17,000
+ale no, myślę, że wszystko jest, wybaczycie.
+
+389
+00:14:17,000 --> 00:14:19,000
+To mamy też coś takiego,
+
+390
+00:14:19,000 --> 00:14:21,000
+jak is
+
+391
+00:14:21,000 --> 00:14:23,000
+is al num, czy jest
+
+392
+00:14:23,000 --> 00:14:25,000
+alfanumerycznym znakiem, albo czy is digit.
+
+393
+00:14:25,000 --> 00:14:27,000
+I wtedy, jeżeli my sobie wpiszemy
+
+394
+00:14:27,000 --> 00:14:29,000
+taką wartość jak 2,5,
+
+395
+00:14:29,000 --> 00:14:31,000
+to on nam w jednym i drugim przypadku powie
+
+396
+00:14:31,000 --> 00:14:33,000
+false. Czyli tak naprawdę 2,5,
+
+397
+00:14:33,000 --> 00:14:35,000
+mimo tego, że tu jest
+
+398
+00:14:35,000 --> 00:14:37,000
+is decimal, nie pamiętam nawet, do czego is decimal
+
+399
+00:14:37,000 --> 00:14:39,000
+pasuje, chyba do wartości dziesiętnej po prostu,
+
+400
+00:14:39,000 --> 00:14:41,000
+w sensie podanej dziesiętnie, o.
+
+401
+00:14:41,000 --> 00:14:43,000
+O to chodzi, nie? On odpowiada true true,
+
+402
+00:14:43,000 --> 00:14:45,000
+ale wciąż mamy problem
+
+403
+00:14:45,000 --> 00:14:47,000
+z tym przecinkiem.
+
+404
+00:14:47,000 --> 00:14:49,000
+I wciąż będziemy mieli problem
+
+405
+00:14:49,000 --> 00:14:51,000
+z wartością ujemną.
+
+406
+00:14:51,000 --> 00:14:53,000
+Jak sobie z tym zatem poradzić? To rozwiązanie
+
+407
+00:14:53,000 --> 00:14:55,000
+uznajemy za rozwiązanie, które nam
+
+408
+00:14:55,000 --> 00:14:57,000
+nie pasuje. Natomiast,
+
+409
+00:14:57,000 --> 00:14:59,000
+jeżeli podajemy coś,
+
+410
+00:14:59,000 --> 00:15:01,000
+co nie jest liczbą,
+
+411
+00:15:01,000 --> 00:15:03,000
+to on w tym momencie wyrzuca
+
+412
+00:15:03,000 --> 00:15:05,000
+taki komunikat.
+
+413
+00:15:07,000 --> 00:15:09,000
+I my możemy ten komunikat przechwycić.
+
+414
+00:15:09,000 --> 00:15:11,000
+I to, co teraz
+
+415
+00:15:11,000 --> 00:15:13,000
+zrobię, jest bardzo
+
+416
+00:15:13,000 --> 00:15:15,000
+mocno wykraczające poza zakres
+
+417
+00:15:15,000 --> 00:15:17,000
+naszego kursu, ale jeżeli
+
+418
+00:15:17,000 --> 00:15:19,000
+na chwilę obecną nie będziecie starali się tego
+
+419
+00:15:19,000 --> 00:15:21,000
+w stu procentach zrozumieć, tylko potraktujecie to
+
+420
+00:15:21,000 --> 00:15:23,000
+jako takie zaklęcie,
+
+421
+00:15:23,000 --> 00:15:25,000
+że słuchaj, tak można
+
+422
+00:15:25,000 --> 00:15:27,000
+to robić, to wszystko będzie okej.
+
+423
+00:15:27,000 --> 00:15:29,000
+Bo nie ma tutaj dużo pisania,
+
+424
+00:15:29,000 --> 00:15:31,000
+logika tego nie jest bardzo zawiła,
+
+425
+00:15:31,000 --> 00:15:33,000
+tylko nie mogę
+
+426
+00:15:33,000 --> 00:15:35,000
+wam powiedzieć od razu wszystkiego, żebyście
+
+427
+00:15:35,000 --> 00:15:37,000
+w pełni mogli to zrozumieć, natomiast jest to
+
+428
+00:15:37,000 --> 00:15:39,000
+bardzo dobre zaklęcie. I to zaklęcie
+
+429
+00:15:39,000 --> 00:15:41,000
+brzmi try
+
+430
+00:15:41,000 --> 00:15:43,000
+dwukropek,
+
+431
+00:15:43,000 --> 00:15:45,000
+czyli jakbyśmy sobie chcieli znowu ten
+
+432
+00:15:45,000 --> 00:15:47,000
+język angielski
+
+433
+00:15:47,000 --> 00:15:49,000
+tłumaczyć na język polski, no to
+
+434
+00:15:49,000 --> 00:15:51,000
+spróbuj, tak, no bo try
+
+435
+00:15:51,000 --> 00:15:53,000
+try it, tak, to jest
+
+436
+00:15:53,000 --> 00:15:55,000
+wypróbuj coś. Spróbuj
+
+437
+00:15:55,000 --> 00:15:57,000
+wykonać te dwie rzeczy. Natomiast
+
+438
+00:15:57,000 --> 00:15:59,000
+jeżeli
+
+439
+00:15:59,000 --> 00:16:01,000
+pojawi ci się value error,
+
+440
+00:16:01,000 --> 00:16:03,000
+to napisz
+
+441
+00:16:03,000 --> 00:16:05,000
+print to nie jest liczba.
+
+442
+00:16:07,000 --> 00:16:09,000
+I teraz cały ten fragment, który znajduje
+
+443
+00:16:09,000 --> 00:16:11,000
+się w try, to jest fragment,
+
+444
+00:16:11,000 --> 00:16:13,000
+w którym ja operuję na tych liczbach.
+
+445
+00:16:13,000 --> 00:16:15,000
+Jeżeli w tym miejscu
+
+446
+00:16:15,000 --> 00:16:17,000
+wystąpi wyjątek,
+
+447
+00:16:17,000 --> 00:16:19,000
+pojawi się mu ten błąd, to to
+
+448
+00:16:19,000 --> 00:16:21,000
+spowoduje, że on mi od razu przejdzie do tego miejsca,
+
+449
+00:16:21,000 --> 00:16:23,000
+a później już pójdzie z powrotem tu,
+
+450
+00:16:23,000 --> 00:16:25,000
+chwilę nie patrzę na czat, dobra,
+
+451
+00:16:25,000 --> 00:16:27,000
+chwilę wróci sobie tu i będzie wykonywał
+
+452
+00:16:27,000 --> 00:16:29,000
+tę linię. Więc możliwe,
+
+453
+00:16:29,000 --> 00:16:31,000
+że w tego try i accepta trzeba
+
+454
+00:16:31,000 --> 00:16:33,000
+będzie opakować cały program.
+
+455
+00:16:33,000 --> 00:16:35,000
+Albo na przykład,
+
+456
+00:16:35,000 --> 00:16:37,000
+bazując na naszej wiedzy obecnej,
+
+457
+00:16:37,000 --> 00:16:39,000
+tutaj zrobić quit.
+
+458
+00:16:39,000 --> 00:16:41,000
+To na początek jest spoko,
+
+459
+00:16:41,000 --> 00:16:43,000
+jeżeli chodzi o takie rozwiązania.
+
+460
+00:16:43,000 --> 00:16:45,000
+Czy na przykład odbierasz sobie dane, tutaj różne
+
+461
+00:16:45,000 --> 00:16:47,000
+wartości, no i na koniec, jeżeli gdzieś
+
+462
+00:16:47,000 --> 00:16:49,000
+masz value error, to robisz quita.
+
+463
+00:16:49,000 --> 00:16:51,000
+I w tym momencie, zobacz co się stanie,
+
+464
+00:16:51,000 --> 00:16:53,000
+jeżeli ja wprowadzę
+
+465
+00:16:53,000 --> 00:16:55,000
+sobie wartość minus 20,
+
+466
+00:16:55,000 --> 00:16:57,000
+przeszło, minus 20
+
+467
+00:16:57,000 --> 00:16:59,000
+i 3 czwarte,
+
+468
+00:16:59,000 --> 00:17:01,000
+czyli 75,
+
+469
+00:17:01,000 --> 00:17:03,000
+to też przeszło.
+
+470
+00:17:03,000 --> 00:17:05,000
+Ale jeżeli napiszę 2e plus 3,
+
+471
+00:17:05,000 --> 00:17:07,000
+to też przejdzie,
+
+472
+00:17:07,000 --> 00:17:09,000
+no bo to też jest liczba,
+
+473
+00:17:09,000 --> 00:17:11,000
+ale jeżeli napiszemy sobie error,
+
+474
+00:17:11,000 --> 00:17:13,000
+to pojawi się komunikat, to nie jest liczba.
+
+475
+00:17:13,000 --> 00:17:15,000
+Więc w ten sposób,
+
+476
+00:17:15,000 --> 00:17:17,000
+możesz sprawdzać, czy coś
+
+477
+00:17:17,000 --> 00:17:19,000
+jest liczbą, gdyż jeżeli
+
+478
+00:17:19,000 --> 00:17:21,000
+podasz mu nieprawidłową wartość, to wtedy leci
+
+479
+00:17:21,000 --> 00:17:23,000
+wyjątek value error, czyli leci taki błąd
+
+480
+00:17:23,000 --> 00:17:25,000
+value error. I w ten sposób,
+
+481
+00:17:25,000 --> 00:17:27,000
+takim zaklęciem możesz to obsłużyć
+
+482
+00:17:27,000 --> 00:17:29,000
+i sprawdzić, czy to jest liczba.
+
+483
+00:17:29,000 --> 00:17:31,000
+To jest rozwiązanie numero uno.
+
+484
+00:17:31,000 --> 00:17:33,000
+Rozwiązanie drugie jest takie, że można,
+
+485
+00:17:33,000 --> 00:17:35,000
+ale to będzie dużo bardziej niefajne,
+
+486
+00:17:35,000 --> 00:17:37,000
+jeżeli chodzi o wygląd,
+
+487
+00:17:37,000 --> 00:17:39,000
+można użyć w reg expa,
+
+488
+00:17:39,000 --> 00:17:41,000
+czyli
+
+489
+00:17:41,000 --> 00:17:43,000
+regular expression,
+
+490
+00:17:43,000 --> 00:17:45,000
+czyli
+
+491
+00:17:45,000 --> 00:17:47,000
+in polish to są wyrażenia regularne.
+
+492
+00:17:47,000 --> 00:17:49,000
+I tam można sprawdzić,
+
+493
+00:17:49,000 --> 00:17:51,000
+czy dana wartość jest liczbą.
+
+494
+00:17:51,000 --> 00:17:53,000
+Natomiast ja tego nie będę
+
+495
+00:17:53,000 --> 00:17:55,000
+teraz tutaj pokazywał, bo to byłoby
+
+496
+00:17:55,000 --> 00:17:57,000
+znowu za dużo zaklęć
+
+497
+00:17:57,000 --> 00:17:59,000
+i w tych zaklęciach
+
+498
+00:17:59,000 --> 00:18:01,000
+tej książki nie przeczytałem za dobrze.
+
+499
+00:18:01,000 --> 00:18:03,000
+Nie jestem w tym biegły.
+
+500
+00:18:03,000 --> 00:18:05,000
+Zawsze jeżeli chodzi o regular expression,
+
+501
+00:18:05,000 --> 00:18:07,000
+skorzystam ze strony regex101.
+
+502
+00:18:07,000 --> 00:18:09,000
+Moment.
+
+503
+00:18:09,000 --> 00:18:11,000
+Let me google it for me.
+
+504
+00:18:11,000 --> 00:18:13,000
+Tak, regex101.com
+
+505
+00:18:13,000 --> 00:18:15,000
+i tą stroną,
+
+506
+00:18:15,000 --> 00:18:17,000
+którą się posiłkuje.
+
+507
+00:18:17,000 --> 00:18:19,000
+Czyli jedno rozwiązanie to jest try
+
+508
+00:18:19,000 --> 00:18:21,000
+accept value error.
+
+509
+00:18:21,000 --> 00:18:23,000
+Drugie rozwiązanie
+
+510
+00:18:23,000 --> 00:18:25,000
+to jest regular expression.
+
+511
+00:18:25,000 --> 00:18:27,000
+Jeżeli ktoś ma pomysł na trzecie,
+
+512
+00:18:27,000 --> 00:18:29,000
+bo na przykład jest dalej z wiedzą,
+
+513
+00:18:29,000 --> 00:18:31,000
+to śmiało rzucajcie.
+
+514
+00:18:31,000 --> 00:18:33,000
+Ja posługuję się zawsze tym.
+
+515
+00:18:33,000 --> 00:18:35,000
+No i w ten sposób
+
+516
+00:18:35,000 --> 00:18:37,000
+koncert życzeń numero uno
+
+517
+00:18:37,000 --> 00:18:39,000
+poszedł,
+
+518
+00:18:39,000 --> 00:18:41,000
+został rozwiązany,
+
+519
+00:18:41,000 --> 00:18:43,000
+mam nadzieję.
+
+520
+00:18:43,000 --> 00:18:45,000
+Co jest ze słownikami dzisiaj?
+
+521
+00:18:45,000 --> 00:18:47,000
+Zaraz sobie ten temat słowników oczywiście przejdziemy.
+
+522
+00:18:47,000 --> 00:18:49,000
+Tylko co tu się wydarzyło na czacie?
+
+523
+00:18:49,000 --> 00:18:51,000
+Co daje
+
+524
+00:18:51,000 --> 00:18:53,000
+kod na 4 miesiące
+
+525
+00:18:53,000 --> 00:18:55,000
+pełnej wersji PyCharm, a jakie są różnice
+
+526
+00:18:55,000 --> 00:18:57,000
+do wersji community?
+
+527
+00:18:57,000 --> 00:18:59,000
+Ok, to od razu na to pytanie odpowiem.
+
+528
+00:18:59,000 --> 00:19:01,000
+Wersja community nie wspiera
+
+529
+00:19:01,000 --> 00:19:03,000
+baz danych, a baza danych
+
+530
+00:19:03,000 --> 00:19:05,000
+nam się przyda.
+
+531
+00:19:05,000 --> 00:19:07,000
+Jeżeli będziemy chcieli korzystać,
+
+532
+00:19:07,000 --> 00:19:09,000
+będziemy pracowali z Django,
+
+533
+00:19:09,000 --> 00:19:11,000
+to jest pierwsza rzecz.
+
+534
+00:19:11,000 --> 00:19:13,000
+Wsparcie dla Django
+
+535
+00:19:13,000 --> 00:19:15,000
+jest w wersji professional,
+
+536
+00:19:15,000 --> 00:19:17,000
+w wersji community jej nie ma.
+
+537
+00:19:17,000 --> 00:19:19,000
+I wsparcie dla Pandasa
+
+538
+00:19:19,000 --> 00:19:21,000
+jest w wersji community,
+
+539
+00:19:21,000 --> 00:19:23,000
+znaczy nie ma jej w wersji community,
+
+540
+00:19:23,000 --> 00:19:25,000
+a jest w wersji professional.
+
+541
+00:19:25,000 --> 00:19:27,000
+To są trzy różnice, które w ramach tego kursu
+
+542
+00:19:27,000 --> 00:19:29,000
+będą ci potrzebne i będziesz mógł
+
+543
+00:19:29,000 --> 00:19:31,000
+bez problemu łączyć się właśnie z bazą danych,
+
+544
+00:19:31,000 --> 00:19:33,000
+używać Django,
+
+545
+00:19:33,000 --> 00:19:35,000
+że on będzie więcej podpowiadał
+
+546
+00:19:35,000 --> 00:19:37,000
+i będziesz mógł używać Pandasa.
+
+547
+00:19:37,000 --> 00:19:39,000
+To są trzy rzeczy takie podstawowe.
+
+548
+00:19:41,000 --> 00:19:43,000
+O, Rafał mi ładnie napisał.
+
+549
+00:19:43,000 --> 00:19:45,000
+Ten już widziałem,
+
+550
+00:19:45,000 --> 00:19:47,000
+ale przydałoby się jakoś odświeżyć ten film,
+
+551
+00:19:47,000 --> 00:19:49,000
+bo jednak jakość Twoich filmów
+
+552
+00:19:49,000 --> 00:19:51,000
+przez lata wzrosła dość mocno.
+
+553
+00:19:51,000 --> 00:19:53,000
+Bardzo dziękuję Rafale.
+
+554
+00:19:53,000 --> 00:19:55,000
+Zapisuję sobie, żeby zrobić też
+
+555
+00:19:55,000 --> 00:19:57,000
+koncert życzeń,
+
+556
+00:19:57,000 --> 00:19:59,000
+film na YouTube
+
+557
+00:19:59,000 --> 00:20:01,000
+o dekoratorach.
+
+558
+00:20:01,000 --> 00:20:03,000
+Dobra.
+
+559
+00:20:03,000 --> 00:20:05,000
+Jeżeli chcecie,
+
+560
+00:20:05,000 --> 00:20:07,000
+też
+
+561
+00:20:07,000 --> 00:20:09,000
+zapraszam na film
+
+562
+00:20:09,000 --> 00:20:11,000
+na YouTube,
+
+563
+00:20:11,000 --> 00:20:13,000
+bo jakieś życzenia na YouTube
+
+564
+00:20:13,000 --> 00:20:15,000
+w ramach tego koncertu życzeń
+
+565
+00:20:15,000 --> 00:20:17,000
+to też śmiało możecie pisać.
+
+566
+00:20:17,000 --> 00:20:19,000
+Mówię też do osób, które oglądają zapis tego live'a.
+
+567
+00:20:19,000 --> 00:20:21,000
+Jeżeli macie ochotę
+
+568
+00:20:21,000 --> 00:20:23,000
+też coś dodać od siebie,
+
+569
+00:20:23,000 --> 00:20:25,000
+to pamiętajcie, że na Discordzie
+
+570
+00:20:25,000 --> 00:20:27,000
+zawsze jestem.
+
+571
+00:20:27,000 --> 00:20:29,000
+Nazywam się Kacper Sieradziński, jakby gdzieś ta wiedza
+
+572
+00:20:29,000 --> 00:20:31,000
+przeleciała i też zachęcam
+
+573
+00:20:31,000 --> 00:20:33,000
+do tego, żeby pisać do mnie na Discordzie
+
+574
+00:20:33,000 --> 00:20:35,000
+wiadomości, ej Kacper zrób film.
+
+575
+00:20:35,000 --> 00:20:37,000
+Obecnie siedzę przy filmie o wzorcach projektowych,
+
+576
+00:20:37,000 --> 00:20:39,000
+...
+
+577
+00:20:39,000 --> 00:20:41,000
+...
+
+578
+00:20:41,000 --> 00:21:11,000
+
+
+579
+00:21:11,000 --> 00:21:41,000
+
+
+580
+00:21:41,000 --> 00:22:11,000
+
+
+581
+00:22:11,000 --> 00:22:41,000
+
+
+582
+00:22:41,000 --> 00:23:11,000
+
+
+583
+00:23:11,000 --> 00:23:41,000
+
+
+584
+00:23:41,000 --> 00:24:11,000
+
+
+585
+00:24:11,000 --> 00:24:41,000
+
+
+586
+00:24:41,000 --> 00:25:11,000
+
+
+587
+00:25:11,000 --> 00:25:41,000
+
+
+588
+00:25:41,000 --> 00:26:11,000
+
+
+589
+00:26:11,000 --> 00:26:41,000
+
+
+590
+00:26:41,000 --> 00:27:11,000
+
+
+591
+00:27:11,000 --> 00:27:41,000
+
+
+592
+00:27:41,000 --> 00:28:11,000
+
+
+593
+00:28:11,000 --> 00:28:41,000
+
+
+594
+00:28:41,000 --> 00:29:11,000
+
+
+595
+00:29:11,000 --> 00:29:41,000
+
+
+596
+00:29:41,000 --> 00:30:11,000
+
+
+597
+00:30:11,000 --> 00:30:41,000
+
+
+598
+00:30:41,000 --> 00:31:11,000
+
+
+599
+00:31:11,000 --> 00:31:41,000
+
+
+600
+00:31:41,000 --> 00:32:11,000
+
+
+601
+00:32:11,000 --> 00:32:41,000
+
+
+602
+00:32:41,000 --> 00:33:11,000
+
+
+603
+00:33:11,000 --> 00:33:41,000
+
+
+604
+00:33:41,000 --> 00:34:11,000
+
+
+605
+00:34:11,000 --> 00:34:41,000
+
+
+606
+00:34:41,000 --> 00:35:11,000
+
+
+607
+00:35:11,000 --> 00:35:41,000
+
+
+608
+00:35:41,000 --> 00:36:11,000
+
+
+609
+00:36:11,000 --> 00:36:41,000
+
+
+610
+00:36:41,000 --> 00:37:11,000
+
+
+611
+00:37:11,000 --> 00:37:41,000
+
+
+612
+00:37:41,000 --> 00:38:11,000
+
+
+613
+00:38:11,000 --> 00:38:41,000
+
+
+614
+00:38:41,000 --> 00:39:11,000
+
+
+615
+00:39:11,000 --> 00:39:41,000
+
+
+616
+00:39:41,000 --> 00:40:11,000
+
+
+617
+00:40:11,000 --> 00:40:41,000
+
+
+618
+00:40:41,000 --> 00:41:11,000
+
+
+619
+00:41:11,000 --> 00:41:41,000
+
+
+620
+00:41:41,000 --> 00:42:11,000
+
+
+621
+00:42:11,000 --> 00:42:41,000
+
+
+622
+00:42:41,000 --> 00:43:11,000
+
+
+623
+00:43:11,000 --> 00:43:41,000
+
+
+624
+00:43:41,000 --> 00:44:11,000
+
+
+625
+00:44:11,000 --> 00:44:41,000
+
+
+626
+00:44:41,000 --> 00:45:11,000
+
+
+627
+00:45:11,000 --> 00:45:41,000
+
+
+628
+00:45:41,000 --> 00:46:11,000
+
+
+629
+00:46:11,000 --> 00:46:41,000
+
+
+630
+00:46:41,000 --> 00:47:11,000
+
+
+631
+00:47:11,000 --> 00:47:41,000
+
+
+632
+00:47:41,000 --> 00:48:11,000
+
+
+633
+00:48:11,000 --> 00:48:41,000
+
+
+634
+00:48:41,000 --> 00:49:11,000
+
+
+635
+00:49:11,000 --> 00:49:41,000
+
+
+636
+00:49:41,000 --> 00:50:11,000
+
+
+637
+00:50:11,000 --> 00:50:41,000
+
+
+638
+00:50:41,000 --> 00:51:11,000
+
+
+639
+00:51:11,000 --> 00:51:41,000
+
+
+640
+00:51:41,000 --> 00:52:11,000
+
+
+641
+00:52:11,000 --> 00:52:41,000
+
+
+642
+00:52:41,000 --> 00:53:11,000
+
+
+643
+00:53:11,000 --> 00:53:41,000
+
+
+644
+00:53:41,000 --> 00:54:11,000
+
+
+645
+00:54:11,000 --> 00:54:41,000
+
+
+646
+00:54:41,000 --> 00:55:11,000
+
+
+647
+00:55:11,000 --> 00:55:41,000
+
+
+648
+00:55:41,000 --> 00:56:11,000
+
+
+649
+00:56:11,000 --> 00:56:41,000
+
+
+650
+00:56:41,000 --> 00:57:11,000
+
+
+651
+00:57:11,000 --> 00:57:41,000
+
+
+652
+00:57:41,000 --> 00:58:11,000
+
+
+653
+00:58:11,000 --> 00:58:41,000
+
+
+654
+00:58:41,000 --> 00:59:11,000
+
+
+655
+00:59:11,000 --> 00:59:41,000
+
+
+656
+00:59:41,000 --> 01:00:11,000
+
+
+657
+01:00:11,000 --> 01:00:41,000
+
+
+658
+01:00:41,000 --> 01:01:11,000
+
+
+659
+01:01:11,000 --> 01:01:41,000
+
+
+660
+01:01:41,000 --> 01:02:11,000
+
+
+661
+01:02:11,000 --> 01:02:41,000
+
+
+662
+01:02:41,000 --> 01:03:11,000
+
+
+663
+01:03:11,000 --> 01:03:41,000
+
+
+664
+01:03:41,000 --> 01:04:11,000
+
+
+665
+01:04:11,000 --> 01:04:41,000
+
+
+666
+01:04:41,000 --> 01:05:11,000
+
+
+667
+01:05:11,000 --> 01:05:41,000
+
+
+668
+01:05:41,000 --> 01:06:11,000
+
+
+669
+01:06:11,000 --> 01:06:41,000
+
+
+670
+01:06:41,000 --> 01:07:11,000
+
+
+671
+01:07:11,000 --> 01:07:41,000
+
+
+672
+01:07:41,000 --> 01:08:11,000
+
+
+673
+01:08:11,000 --> 01:08:41,000
+
+
+674
+01:08:41,000 --> 01:09:11,000
+
+
+675
+01:09:11,000 --> 01:09:41,000
+
+
+676
+01:09:41,000 --> 01:10:11,000
+
+
+677
+01:10:11,000 --> 01:10:41,000
+
+
+678
+01:10:41,000 --> 01:11:11,000
+
+
+679
+01:11:11,000 --> 01:11:41,000
+
+
+680
+01:11:41,000 --> 01:12:11,000
+
+
+681
+01:12:11,000 --> 01:12:41,000
+
+
+682
+01:12:41,000 --> 01:13:11,000
+
+
+683
+01:13:11,000 --> 01:13:41,000
+
+
+684
+01:13:41,000 --> 01:14:11,000
+
+
+685
+01:14:11,000 --> 01:14:41,000
+
+
+686
+01:14:41,000 --> 01:15:11,000
+
+
+687
+01:15:11,000 --> 01:15:41,000
+
+
+688
+01:15:41,000 --> 01:16:11,000
+
+
+689
+01:16:11,000 --> 01:16:41,000
+
+
+690
+01:16:41,000 --> 01:17:11,000
+
+
+691
+01:17:11,000 --> 01:17:41,000
+
+
+692
+01:17:41,000 --> 01:18:11,000
+
+
+693
+01:18:11,000 --> 01:18:41,000
+
+
+694
+01:18:41,000 --> 01:19:11,000
+
+
+695
+01:19:11,000 --> 01:19:41,000
+
+
+696
+01:19:41,000 --> 01:20:11,000
+
+
+697
+01:20:11,000 --> 01:20:41,000
+
+
+698
+01:20:41,000 --> 01:21:11,000
+
+
+699
+01:21:11,000 --> 01:21:41,000
+
+
+700
+01:21:41,000 --> 01:22:11,000
+
+
+701
+01:22:11,000 --> 01:22:41,000
+
+
+702
+01:22:41,000 --> 01:23:11,000
+
+
+703
+01:23:11,000 --> 01:23:41,000
+
+
+704
+01:23:41,000 --> 01:24:11,000
+
+
+705
+01:24:11,000 --> 01:24:41,000
+
+
+706
+01:24:41,000 --> 01:25:11,000
+
+
+707
+01:25:11,000 --> 01:25:41,000
+
+
+708
+01:25:41,000 --> 01:26:11,000
+
+
+709
+01:26:11,000 --> 01:26:41,000
+
+
+710
+01:26:41,000 --> 01:27:11,000
+
+
+711
+01:27:11,000 --> 01:27:41,000
+
+
+712
+01:27:41,000 --> 01:28:11,000
+
+
+713
+01:28:11,000 --> 01:28:41,000
+
+
+714
+01:28:41,000 --> 01:29:11,000
+
+
+715
+01:29:11,000 --> 01:29:41,000
+
+
+716
+01:29:41,000 --> 01:30:11,000
+
+
+717
+01:30:11,000 --> 01:30:41,000
+
+
+718
+01:30:41,000 --> 01:31:11,000
+
+
+719
+01:31:11,000 --> 01:31:41,000
+
+
+720
+01:31:41,000 --> 01:32:11,000
+
+
+721
+01:32:11,000 --> 01:32:41,000
+
+
+722
+01:32:41,000 --> 01:33:11,000
+
+
+723
+01:33:11,000 --> 01:33:41,000
+
+
+724
+01:33:41,000 --> 01:34:11,000
+
+
+725
+01:34:11,000 --> 01:34:41,000
+
+
+726
+01:34:41,000 --> 01:35:11,000
+
+
+727
+01:35:11,000 --> 01:35:41,000
+
+
+728
+01:35:41,000 --> 01:35:47,000
+there we east
+
+729
+01:35:47,000 --> 01:35:49,000
+iimi
+
+730
+01:35:49,000 --> 01:36:10,680
+konstrukta ya
+
+731
+01:36:10,680 --> 01:36:10,720
+...
+
+732
+01:36:10,720 --> 01:36:10,840
+Todd
+
+733
+01:36:10,840 --> 01:36:12,739
+czym? W tej książce nic nie ma.
+
+734
+01:36:13,119 --> 01:36:15,420
+Tak zerknął. Przecież to jest HTML4,
+
+735
+01:36:15,680 --> 01:36:17,440
+teraz się prokoduje w xHTMLu,
+
+736
+01:36:17,500 --> 01:36:19,119
+jeden coś tam strict, no to właśnie
+
+737
+01:36:19,119 --> 01:36:20,980
+to jest coś,
+
+738
+01:36:21,159 --> 01:36:22,840
+co boli, ale
+
+739
+01:36:22,840 --> 01:36:24,800
+no, nie zawsze
+
+740
+01:36:24,800 --> 01:36:26,779
+i nie wszystkich. Jak działa, to
+
+741
+01:36:26,779 --> 01:36:27,680
+co się przejmować.
+
+742
+01:36:30,960 --> 01:36:32,760
+No, Python tak dynamicznie się rozwija, że nawet
+
+743
+01:36:32,760 --> 01:36:34,699
+w wielu filmach są już determinowane rzeczy. Akurat
+
+744
+01:36:34,699 --> 01:36:36,199
+w Pythonie aż tak bardzo to nie boli, ale
+
+745
+01:36:36,199 --> 01:36:38,520
+w Javascriptie na przykład bardzo boli.
+
+746
+01:36:39,159 --> 01:36:40,640
+Wiem, że ja miałem roczną
+
+747
+01:36:40,640 --> 01:36:42,740
+przerwę z Javascriptem i już jak
+
+748
+01:36:42,740 --> 01:36:44,619
+zerkam sobie na to, co tam się dzieje, to jest
+
+749
+01:36:44,619 --> 01:36:46,600
+problem. W PHP miałem też chwilę
+
+750
+01:36:46,600 --> 01:36:48,579
+przerwy i jak patrzę na te rzeczy, które wchodzą,
+
+751
+01:36:48,700 --> 01:36:50,600
+to przed ostatnim kursem z PHP,
+
+752
+01:36:50,600 --> 01:36:52,560
+który miałem w stacjonarnym,
+
+753
+01:36:53,060 --> 01:36:54,880
+dużo rzeczy sobie przeglądałem, tych nowych,
+
+754
+01:36:55,020 --> 01:36:56,440
+trochę sobie ćwiczeń porobiłem, bo
+
+755
+01:36:56,440 --> 01:36:58,600
+normalnie zaskoczył mnie.
+
+756
+01:37:03,680 --> 01:37:04,579
+Kacper, polecasz
+
+757
+01:37:04,579 --> 01:37:06,200
+kursy na Udemy o Pythonie?
+
+758
+01:37:06,400 --> 01:37:08,800
+Nie, nie polecę z tego względu,
+
+759
+01:37:08,880 --> 01:37:10,480
+że żadnego kursu, a, jeden mogę
+
+760
+01:37:10,479 --> 01:37:12,239
+polecić, na pewno.
+
+761
+01:37:12,479 --> 01:37:12,939
+Tej pani
+
+762
+01:37:12,939 --> 01:37:16,419
+i ten kurs polecają
+
+763
+01:37:16,419 --> 01:37:17,319
+wszyscy tak naprawdę.
+
+764
+01:37:18,379 --> 01:37:20,319
+Oczywiście dużo bardziej polecam,
+
+765
+01:37:20,639 --> 01:37:22,119
+polecam moje kursy,
+
+766
+01:37:22,559 --> 01:37:24,399
+natomiast jeżeli szukacie jakiegoś kursu z Udemy,
+
+767
+01:37:24,599 --> 01:37:26,339
+to ta pani Chinka, czy
+
+768
+01:37:26,339 --> 01:37:28,579
+Japonka, znowu może ją obrażam,
+
+769
+01:37:28,679 --> 01:37:30,659
+doktor Angela Yu, ona jest
+
+770
+01:37:30,659 --> 01:37:32,079
+tutaj zdecydowanie,
+
+771
+01:37:32,459 --> 01:37:34,439
+zdecydowanie dobrym,
+
+772
+01:37:34,519 --> 01:37:36,659
+tym, dobrym
+
+773
+01:37:37,519 --> 01:37:38,299
+wzorem.
+
+774
+01:37:39,119 --> 01:37:40,419
+Nie kupiłem tego kursu, jak widzicie,
+
+775
+01:37:40,479 --> 01:37:42,379
+nie mam go, mimo, że jestem zalogowany, nie mam tego
+
+776
+01:37:42,379 --> 01:37:44,139
+kursu w koszyku, natomiast,
+
+777
+01:37:44,139 --> 01:37:46,199
+słyszałem o tym kursie dużo
+
+778
+01:37:46,199 --> 01:37:48,719
+dobrego i jest on przepakowany
+
+779
+01:37:48,719 --> 01:37:50,439
+materiałem, 60 godzin
+
+780
+01:37:50,439 --> 01:37:52,739
+treści, może nie ma tyle materiału,
+
+781
+01:37:52,779 --> 01:37:54,000
+co w PyCampie chociażby,
+
+782
+01:37:54,599 --> 01:37:55,259
+ale no,
+
+783
+01:37:56,439 --> 01:37:58,379
+to jest coś, co, jedyny
+
+784
+01:37:58,379 --> 01:38:00,319
+kurs to chyba ten bym polecił, takich, które
+
+785
+01:38:00,319 --> 01:38:01,719
+widziałem i słyszałem.
+
+786
+01:38:02,239 --> 01:38:04,219
+To, co mnie bardzo często boli w tych kursach
+
+787
+01:38:04,219 --> 01:38:06,199
+Python po polsku,
+
+788
+01:38:06,479 --> 01:38:08,459
+jeżeli chodzi o
+
+789
+01:38:08,459 --> 01:38:10,459
+Udemy, to jest to, że najczęściej mamy te kursy,
+
+790
+01:38:10,479 --> 01:38:11,739
+co prawda za 34 zł,
+
+791
+01:38:12,059 --> 01:38:14,199
+ale gdzieś ta ilość tych godzin
+
+792
+01:38:14,199 --> 01:38:16,259
+materiałów, to często jest na przykład
+
+793
+01:38:16,259 --> 01:38:18,579
+o 34 zł, tam akurat u góry było więcej.
+
+794
+01:38:19,799 --> 01:38:20,279
+Tu
+
+795
+01:38:20,279 --> 01:38:22,479
+człowieka
+
+796
+01:38:22,479 --> 01:38:24,339
+nie znam, jedyną osobą, którą
+
+797
+01:38:24,339 --> 01:38:26,459
+znam z tych Udemy jest Rafał Mobilo,
+
+798
+01:38:26,959 --> 01:38:27,679
+ale tu jest,
+
+799
+01:38:28,319 --> 01:38:30,619
+tam było paręnaście,
+
+800
+01:38:30,719 --> 01:38:32,339
+parędziesiąt tych godzin materiału, a czasem
+
+801
+01:38:32,339 --> 01:38:34,599
+jest właśnie 4 godziny materiału, 3 godziny materiału,
+
+802
+01:38:35,079 --> 01:38:36,479
+to są takie, no, sposób na marketing
+
+803
+01:38:36,479 --> 01:38:38,419
+po prostu, więc no, trzeba byłoby
+
+804
+01:38:38,419 --> 01:38:39,500
+tak sobie tu na to,
+
+805
+01:38:40,479 --> 01:38:41,859
+na to popatrzeć.
+
+806
+01:38:42,479 --> 01:38:44,239
+Ja nie polecę, nie ten.
+
+807
+01:38:44,759 --> 01:38:46,019
+I ten,
+
+808
+01:38:46,579 --> 01:38:47,899
+Adam, który ma,
+
+809
+01:38:48,539 --> 01:38:50,139
+miał z pracy takie Udemy
+
+810
+01:38:50,139 --> 01:38:52,579
+pracowe, można powiedzieć,
+
+811
+01:38:52,739 --> 01:38:54,279
+gdzie były wszystkie kursy wykupione,
+
+812
+01:38:54,899 --> 01:38:56,459
+znaczy oni po prostu korzystali
+
+813
+01:38:56,459 --> 01:38:58,399
+z jakiejś tam opcji, z jakiegoś abonamentu,
+
+814
+01:38:58,459 --> 01:38:59,879
+gdzie mieli dostęp do wszystkich kursów,
+
+815
+01:39:00,279 --> 01:39:01,719
+przeglądał większość i mówił, że nie,
+
+816
+01:39:01,959 --> 01:39:04,239
+że to nie jest ten, więc Adama
+
+817
+01:39:04,239 --> 01:39:06,219
+możesz zapytać, może on coś tutaj więcej
+
+818
+01:39:06,219 --> 01:39:08,339
+na ten temat powie. Ja nie kupuję
+
+819
+01:39:08,339 --> 01:39:09,459
+kursów na Udemy praktycznie.
+
+820
+01:39:10,479 --> 01:39:16,139
+No, Michał pisze to samo, co ja też mam.
+
+821
+01:39:16,739 --> 01:39:18,139
+Ja mam straszny problem z książkami,
+
+822
+01:39:18,239 --> 01:39:20,419
+bo wolę od razu coś robić, a nie czytać ścianę tekstu,
+
+823
+01:39:20,479 --> 01:39:22,000
+jakoś za szybko chcę od razu zacząć
+
+824
+01:39:22,000 --> 01:39:24,159
+używać wszystkiego, a nie lecieć po kolei
+
+825
+01:39:24,159 --> 01:39:25,279
+z autorem. Docy są lepsze.
+
+826
+01:39:25,779 --> 01:39:27,899
+No, to też jest mój problem,
+
+827
+01:39:27,979 --> 01:39:29,879
+to co mówiłem o origami, że niby zaczynam,
+
+828
+01:39:29,959 --> 01:39:32,199
+robię coś po kolei, miałem zrobić żurawia,
+
+829
+01:39:32,419 --> 01:39:33,899
+a wychodzi mi coś zupełnie innego.
+
+830
+01:39:35,399 --> 01:39:36,179
+Zamiast żurawia
+
+831
+01:39:36,179 --> 01:39:36,859
+wychodzi mi koń.
+
+832
+01:39:36,859 --> 01:39:40,319
+Takiego dostałem też od żony kiedyś.
+
+833
+01:39:40,479 --> 01:39:43,159
+W Olsztynie jest super chuta szkła.
+
+834
+01:39:43,379 --> 01:39:44,959
+Jak ktoś jest z Olsztynka,
+
+835
+01:39:45,119 --> 01:39:45,819
+to polecam.
+
+836
+01:39:46,379 --> 01:39:48,379
+Super chuta szkła. Nie są te rzeczy drogie,
+
+837
+01:39:48,699 --> 01:39:50,119
+a naprawdę można sobie
+
+838
+01:39:50,119 --> 01:39:52,919
+konia albo
+
+839
+01:39:52,919 --> 01:39:54,959
+byka na biureczku
+
+840
+01:39:54,959 --> 01:39:55,479
+postawić.
+
+841
+01:40:00,979 --> 01:40:02,500
+Czy to tak można?
+
+842
+01:40:03,799 --> 01:40:04,439
+Piotr,
+
+843
+01:40:05,699 --> 01:40:06,939
+jest opóźnienie.
+
+844
+01:40:07,419 --> 01:40:08,599
+Nie wiem, co można
+
+845
+01:40:08,599 --> 01:40:09,819
+konia pokazywać.
+
+846
+01:40:10,479 --> 01:40:11,379
+Bardzo proszę.
+
+847
+01:40:12,879 --> 01:40:13,319
+Można.
+
+848
+01:40:17,859 --> 01:40:18,839
+Bardzo można.
+
+849
+01:40:19,159 --> 01:40:20,839
+Jeżeli pytałeś natomiast o
+
+850
+01:40:20,839 --> 01:40:22,879
+kursy, czy tak można, to tak.
+
+851
+01:40:22,959 --> 01:40:24,619
+Jest Udemy for Business.
+
+852
+01:40:24,899 --> 01:40:26,719
+Coś takiego. Jakoś tak to się nazywa.
+
+853
+01:40:27,379 --> 01:40:28,919
+I to nie było konto,
+
+854
+01:40:29,000 --> 01:40:31,079
+gdzie było wszystko wykupione, tylko to było
+
+855
+01:40:31,079 --> 01:40:32,259
+konto z firmy.
+
+856
+01:40:32,739 --> 01:40:33,339
+U nas też.
+
+857
+01:40:33,339 --> 01:40:35,159
+A, to tyle.
+
+858
+01:40:39,819 --> 01:40:40,339
+Szacownie,
+
+859
+01:40:40,479 --> 01:40:41,259
+to jest stosunek dla ciebie, Kacprzy.
+
+860
+01:40:41,339 --> 01:40:43,639
+Tu spacerek po książki, tu promowanie innego kursu.
+
+861
+01:40:43,699 --> 01:40:44,899
+Nie masz w tym problemu. Fajnie, przyjemnie.
+
+862
+01:40:45,259 --> 01:40:47,179
+Znaczy ja mam, myślę,
+
+863
+01:40:47,559 --> 01:40:49,579
+tak mi się wydaje, że
+
+864
+01:40:49,579 --> 01:40:51,719
+udawanie, że
+
+865
+01:40:51,719 --> 01:40:53,399
+Udemy nie istnieje,
+
+866
+01:40:53,539 --> 01:40:56,339
+albo inne kursy
+
+867
+01:40:56,339 --> 01:40:57,979
+poza Pajstartem nie istnieją,
+
+868
+01:40:58,479 --> 01:40:59,699
+to nie jest.
+
+869
+01:41:00,500 --> 01:41:02,739
+Ja nie traktuję tego jako moją konkurencję.
+
+870
+01:41:03,439 --> 01:41:04,379
+Uważam, że osoby, które
+
+871
+01:41:04,379 --> 01:41:06,479
+przychodzą do mnie na kursy,
+
+872
+01:41:06,519 --> 01:41:08,559
+to są osoby, które przychodzą do mnie na kursy.
+
+873
+01:41:08,559 --> 01:41:10,379
+A jeżeli ktoś chce,
+
+874
+01:41:10,479 --> 01:41:12,659
+kupić kurs gdzieś indziej, to kupi kurs gdzieś indziej.
+
+875
+01:41:13,399 --> 01:41:13,659
+Jeżeli,
+
+876
+01:41:14,939 --> 01:41:18,359
+no, to chyba jest to.
+
+877
+01:41:18,839 --> 01:41:20,579
+Część osób ulubi na przykład uzupełniać
+
+878
+01:41:20,579 --> 01:41:21,879
+pewne tematy, nie? Czyli
+
+879
+01:41:21,879 --> 01:41:24,919
+poczytać sobie coś właśnie papierowego.
+
+880
+01:41:26,299 --> 01:41:28,819
+Za zrobienie recenzji dostałem tylko parę książek.
+
+881
+01:41:29,139 --> 01:41:31,000
+Albo poczytać sobie coś innego papierowego,
+
+882
+01:41:31,159 --> 01:41:32,399
+więc to jest taka rzecz.
+
+883
+01:41:33,699 --> 01:41:34,599
+A jeżeli
+
+884
+01:41:34,599 --> 01:41:36,159
+chodzi o te, o
+
+885
+01:41:36,159 --> 01:41:37,759
+Udemy, nie no,
+
+886
+01:41:40,479 --> 01:41:42,479
+nie wiem, co mogę powiedzieć na to.
+
+887
+01:41:42,479 --> 01:41:44,479
+No tak, raczej nie, nie myślę o tym.
+
+888
+01:41:44,479 --> 01:41:46,479
+Myślę, że kto będzie chciał,
+
+889
+01:41:46,479 --> 01:41:48,479
+kto będzie chciał przyjść na
+
+890
+01:41:48,479 --> 01:41:50,479
+Pycamp, Pyrest,
+
+891
+01:41:50,479 --> 01:41:52,479
+Pywww, czy coś innego, to przyjdzie.
+
+892
+01:41:52,479 --> 01:41:54,479
+Czy PHP w przyszłym roku.
+
+893
+01:41:54,479 --> 01:41:56,479
+W ogóle dajcie znać, jak nagrać,
+
+894
+01:41:56,479 --> 01:41:58,479
+jaką domenę dla PHP,
+
+895
+01:41:58,479 --> 01:42:00,479
+bo PHP Start, to głupio.
+
+896
+01:42:00,479 --> 01:42:02,479
+Dajcie znać.
+
+897
+01:42:02,479 --> 01:42:04,479
+Więc tak to, tak to jest.
+
+898
+01:42:04,479 --> 01:42:06,479
+Tak to właśnie jest i, i, i ten,
+
+899
+01:42:06,479 --> 01:42:08,479
+i, i, i,
+
+900
+01:42:08,479 --> 01:42:10,459
+i nie mam raczej oporów z tym.
+
+901
+01:42:10,460 --> 01:42:12,460
+No jeżeli
+
+902
+01:42:12,460 --> 01:42:14,460
+bym wiedział, że jakiś kurs Udemy byłby
+
+903
+01:42:14,460 --> 01:42:16,460
+super, to pewnie bym też o nim
+
+904
+01:42:16,460 --> 01:42:18,460
+powiedział, ale, ale ja nie, nie ten.
+
+905
+01:42:18,460 --> 01:42:20,460
+Kto się połapie w PHP?
+
+906
+01:42:20,460 --> 01:42:22,460
+Kto się połapie w PHP?
+
+907
+01:42:22,460 --> 01:42:24,460
+Jo, jo się połapie.
+
+908
+01:42:24,460 --> 01:42:26,460
+Taki dowcip był.
+
+909
+01:42:26,460 --> 01:42:28,460
+Taki dowcip był.
+
+910
+01:42:28,460 --> 01:42:30,460
+Rozerwał mi się worek.
+
+911
+01:42:30,460 --> 01:42:32,460
+Mąż nowy? Nie mam.
+
+912
+01:42:32,460 --> 01:42:34,460
+Tak mi się skojarzyło.
+
+913
+01:42:34,460 --> 01:42:36,460
+A propos, kto się w PHP połapie.
+
+914
+01:42:36,460 --> 01:42:38,460
+Wielu kursantów przychodzi na kolejne kursy do twojej osoby,
+
+915
+01:42:38,460 --> 01:42:40,460
+bo wiedzą, że będzie jakoś, chociaż czasem są problemy,
+
+916
+01:42:40,460 --> 01:42:42,460
+z terminami. Tak, to prawda.
+
+917
+01:42:42,460 --> 01:42:44,460
+To bije się w pierś. Mam czasem
+
+918
+01:42:44,460 --> 01:42:46,460
+problemy, mam czasem problemy
+
+919
+01:42:46,460 --> 01:42:48,460
+z terminami, to jest, to jest prawda.
+
+920
+01:42:50,460 --> 01:42:52,460
+Na Udemy są kursy, ale staram się
+
+921
+01:42:52,460 --> 01:42:54,460
+ostatecznie dowozić,
+
+922
+01:42:54,460 --> 01:42:56,460
+ale mam nadzieję, że w przyszłym roku
+
+923
+01:42:56,460 --> 01:42:58,460
+będzie lepiej, bo mówię, ilość obowiązków
+
+924
+01:42:58,460 --> 01:43:00,460
+mi się zmniejszy, a skupiam się
+
+925
+01:43:00,460 --> 01:43:02,460
+głównie na, na YouTubach, na,
+
+926
+01:43:02,460 --> 01:43:04,460
+na kursach. Bardzo
+
+927
+01:43:04,460 --> 01:43:06,460
+na ten czas też czekam.
+
+928
+01:43:06,460 --> 01:43:08,460
+Na Udemy są kursy różnej jakości,
+
+929
+01:43:08,460 --> 01:43:10,460
+są dobre i są tej gorszej jakości.
+
+930
+01:43:10,460 --> 01:43:12,460
+No tak jest. No i kursy też są od,
+
+931
+01:43:12,460 --> 01:43:14,460
+od panów
+
+932
+01:43:14,460 --> 01:43:16,460
+z Indii, którzy też, nie każdy ich,
+
+933
+01:43:16,460 --> 01:43:18,460
+nie każdy ich lubi. Co z GitHubem?
+
+934
+01:43:18,460 --> 01:43:20,460
+Na koniec będzie, fajnie by było, można
+
+935
+01:43:20,460 --> 01:43:22,460
+teraz już małe projekty na GitHuba
+
+936
+01:43:22,460 --> 01:43:24,460
+wysyłać. Łukaszu,
+
+937
+01:43:24,460 --> 01:43:26,460
+GitHub będzie w styczniu. Po 15
+
+938
+01:43:26,460 --> 01:43:28,460
+stycznia będę siadał do tych bonusów.
+
+939
+01:43:30,460 --> 01:43:32,460
+Więc trzymaj projekty,
+
+940
+01:43:32,460 --> 01:43:34,460
+później wszystko na raz wrzucisz.
+
+941
+01:43:38,460 --> 01:43:40,460
+O, Grzegorz napisał. No ja równolegle
+
+942
+01:43:40,460 --> 01:43:42,460
+się zapisałem do Kacpra, chodząc na inne od sierpnia
+
+943
+01:43:42,460 --> 01:43:44,460
+już dla przypomnienia wszystkiego
+
+944
+01:43:44,460 --> 01:43:46,460
+jeszcze raz. Cieszę się,
+
+945
+01:43:46,460 --> 01:43:48,460
+cieszę się, że tak,
+
+946
+01:43:48,460 --> 01:43:50,460
+że tak. O, Marek napisał.
+
+947
+01:43:50,460 --> 01:43:52,460
+Kursy BartkaJS i React na Udemy są
+
+948
+01:43:52,460 --> 01:43:54,460
+spoko. To tak.
+
+949
+01:43:54,460 --> 01:43:56,460
+Polecam szczególnie
+
+950
+01:43:56,460 --> 01:43:58,460
+jeden.
+
+951
+01:44:00,460 --> 01:44:02,460
+To ten?
+
+952
+01:44:02,460 --> 01:44:04,460
+Czy to ten?
+
+953
+01:44:04,460 --> 01:44:06,460
+Czy to ten?
+
+954
+01:44:08,460 --> 01:44:10,460
+Nie. Ale jest taki kurs,
+
+955
+01:44:10,460 --> 01:44:12,460
+obiektowe gry
+
+956
+01:44:12,460 --> 01:44:14,460
+w Javascriptie. Mam nadzieję, że
+
+957
+01:44:14,460 --> 01:44:16,460
+jeszcze jest. Bo to jest kurs,
+
+958
+01:44:16,460 --> 01:44:18,460
+w którym też i ja jestem.
+
+959
+01:44:18,460 --> 01:44:20,460
+I nawet
+
+960
+01:44:20,460 --> 01:44:22,460
+w ten kurs, w tym, o jest.
+
+961
+01:44:22,460 --> 01:44:24,460
+Programowanie obiektowe, a teraz
+
+962
+01:44:24,460 --> 01:44:26,460
+jest drogi. Chyba, że to po prostu ja nie mam,
+
+963
+01:44:26,460 --> 01:44:28,460
+a ja już mam i tak go kupionego.
+
+964
+01:44:28,460 --> 01:44:30,460
+O, widzicie?
+
+965
+01:44:30,460 --> 01:44:32,460
+To Kacper nagrywał kurs.
+
+966
+01:44:40,460 --> 01:44:42,460
+Kacper przynagrywa film
+
+967
+01:44:42,460 --> 01:44:44,460
+w Javascriptie.
+
+968
+01:44:44,460 --> 01:44:46,460
+I dealuje, ale kartami.
+
+969
+01:44:50,460 --> 01:44:52,460
+Tak.
+
+970
+01:44:52,460 --> 01:44:54,460
+Dzisiaj z dwoma, dzisiaj
+
+971
+01:44:54,460 --> 01:44:56,460
+z dwoma panami z Indii rozmawiałem,
+
+972
+01:44:56,460 --> 01:44:58,460
+żeby mi odblokowali jeden dostęp.
+
+973
+01:44:58,460 --> 01:45:00,460
+Masakra.
+
+974
+01:45:00,460 --> 01:45:02,460
+Nie wspominam tego dobrze, ale udało się.
+
+975
+01:45:02,460 --> 01:45:04,460
+Odblokowali.
+
+976
+01:45:04,460 --> 01:45:06,460
+Odblokowali.
+
+977
+01:45:10,460 --> 01:45:12,460
+Wszystkiego jeszcze raz.
+
+978
+01:45:12,460 --> 01:45:14,460
+Oraz obiecanego odblokowania.
+
+979
+01:45:14,460 --> 01:45:16,460
+Nie rozumiem.
+
+980
+01:45:16,460 --> 01:45:18,460
+W ogóle takie pytanie. Czy ciężko
+
+981
+01:45:18,460 --> 01:45:20,460
+zrobić jakąś gierkę typu memory game?
+
+982
+01:45:20,460 --> 01:45:22,460
+Jakieś odkrywanie kart, szukanie tych samych par,
+
+983
+01:45:22,460 --> 01:45:24,460
+albo pamiętanie kolejności kolejnych
+
+984
+01:45:24,460 --> 01:45:26,460
+kolorów, czy coś? Nie jest ciężko.
+
+985
+01:45:26,460 --> 01:45:28,460
+To nawet możesz zrobić w konsoli kolejność
+
+986
+01:45:28,460 --> 01:45:30,460
+tych. Natomiast tak, jak najbardziej.
+
+987
+01:45:30,460 --> 01:45:32,460
+Jak najbardziej
+
+988
+01:45:32,460 --> 01:45:34,460
+możesz. Ja Pygame'a nie znam
+
+989
+01:45:34,460 --> 01:45:36,460
+tak dobrze, więc tutaj
+
+990
+01:45:36,460 --> 01:45:38,460
+polecam poczytać, ale z tego co
+
+991
+01:45:38,460 --> 01:45:40,460
+znam, to mam pewne pomysły jak to zrobić.
+
+992
+01:45:40,460 --> 01:45:42,460
+Ale nie chcę nagrywać filmów o Pygame'ie
+
+993
+01:45:42,460 --> 01:45:44,460
+raczej. Bartek na swoją platformę?
+
+994
+01:45:44,460 --> 01:45:46,460
+Tak, jak najbardziej.
+
+995
+01:45:46,460 --> 01:45:48,460
+Na którymś filmingu Kacper miał robienie
+
+996
+01:45:48,460 --> 01:45:50,460
+gry Findyki? Miał.
+
+997
+01:45:50,460 --> 01:45:52,460
+Jeszcze jak.
+
+998
+01:45:52,460 --> 01:45:54,460
+sieradziński.pl
+
+999
+01:45:54,460 --> 01:45:56,460
+Python podstawy.
+
+1000
+01:45:56,460 --> 01:45:58,460
+Też
+
+1001
+01:45:58,460 --> 01:46:00,460
+podsyłam.
+
+1002
+01:46:00,460 --> 01:46:02,460
+I tu są cztery projekty dla początkujących,
+
+1003
+01:46:02,460 --> 01:46:04,460
+gdzie Kacper robił grę.
+
+1004
+01:46:06,460 --> 01:46:08,460
+Tylko o MK
+
+1005
+01:46:08,460 --> 01:46:10,460
+nie wolno mówić.
+
+1006
+01:46:10,460 --> 01:46:12,460
+O MK nie wolno mówić.
+
+1007
+01:46:12,460 --> 01:46:14,460
+Nie, tam się zdarza z żartami.
+
+1008
+01:46:16,460 --> 01:46:18,460
+Problemy z terminami.
+
+1009
+01:46:18,460 --> 01:46:20,460
+Ale super jest to, że kursy są na świeży nagrywany,
+
+1010
+01:46:20,460 --> 01:46:22,460
+a nie odgrzewany kotlet. Tak.
+
+1011
+01:46:22,460 --> 01:46:24,460
+To się staram.
+
+1012
+01:46:24,460 --> 01:46:26,460
+Część osób, która teraz dołączyło
+
+1013
+01:46:26,460 --> 01:46:28,460
+do Pycampu, to po części jest to odgrzewany
+
+1014
+01:46:28,460 --> 01:46:30,460
+kotlet, ale wciąż świeży.
+
+1015
+01:46:30,460 --> 01:46:32,460
+Moim zdaniem.
+
+1016
+01:46:34,460 --> 01:46:36,460
+Coś za coś. To jest prawda.
+
+1017
+01:46:36,460 --> 01:46:38,460
+W Pystarcie w wersji pierwszej
+
+1018
+01:46:38,460 --> 01:46:40,460
+często filmy były trochę na zamówieniu kursantów.
+
+1019
+01:46:40,460 --> 01:46:42,460
+Tak było. Tutaj też zresztą tak robimy.
+
+1020
+01:46:42,460 --> 01:46:44,460
+To o czym mówiłem, że jeżeli ktoś mówi
+
+1021
+01:46:44,460 --> 01:46:46,460
+tak jak wcześniej
+
+1022
+01:46:46,460 --> 01:46:48,460
+koleżanka
+
+1023
+01:46:48,460 --> 01:46:50,460
+powiedziała, że
+
+1024
+01:46:50,460 --> 01:46:52,460
+gdzieś jest
+
+1025
+01:46:52,460 --> 01:46:54,460
+za ciężko, no to ja też jestem chętny,
+
+1026
+01:46:54,460 --> 01:46:56,460
+żeby coś dograć. Tutaj pod tym względem
+
+1027
+01:46:56,460 --> 01:46:58,460
+nie ma problemu. I to też na przyszłość mówię.
+
+1028
+01:46:58,460 --> 01:47:00,460
+Tutaj Pystart jest w planach, żeby był największym,
+
+1029
+01:47:00,460 --> 01:47:02,460
+najbardziej takim pełnym super
+
+1030
+01:47:02,460 --> 01:47:04,460
+mega kursem z Pythona.
+
+1031
+01:47:04,460 --> 01:47:06,460
+No.
+
+1032
+01:47:06,460 --> 01:47:08,460
+Ale fajnie się gada.
+
+1033
+01:47:08,460 --> 01:47:10,460
+Dawno nic nie kodowałem.
+
+1034
+01:47:10,460 --> 01:47:12,460
+Może ktoś bym pokodował.
+
+1035
+01:47:12,460 --> 01:47:14,460
+25 osób jeszcze nas jest, ale
+
+1036
+01:47:14,460 --> 01:47:16,460
+muszę znikać na razie. Dobra.
+
+1037
+01:47:16,460 --> 01:47:18,460
+Jak Rafał musi znikać, to ja też bym poznikał.
+
+1038
+01:47:18,460 --> 01:47:20,460
+Kurs jak kawa. Dobrze składowany.
+
+1039
+01:47:20,460 --> 01:47:22,460
+Można odgrzewać, jeśli się wie jak.
+
+1040
+01:47:22,460 --> 01:47:24,460
+Chodzi o tę granicę.
+
+1041
+01:47:24,460 --> 01:47:26,460
+A propos kawy, też już się mrozi.
+
+1042
+01:47:26,460 --> 01:47:28,460
+Trzymaj się Rafał. Ja też mówię.
+
+1043
+01:47:28,460 --> 01:47:30,460
+Trzymaj się Rafał. To co?
+
+1044
+01:47:30,460 --> 01:47:32,460
+10 pytań
+
+1045
+01:47:32,460 --> 01:47:34,460
+i
+
+1046
+01:47:34,460 --> 01:47:36,460
+idziemy do domu.
+
+1047
+01:47:36,460 --> 01:47:38,460
+Katper, czy miałeś jakieś projekty powiązane Python vs
+
+1048
+01:47:38,460 --> 01:47:40,460
+Docker? Python i Docker?
+
+1049
+01:47:40,460 --> 01:47:42,460
+Tak. Cały czas.
+
+1050
+01:47:42,460 --> 01:47:44,460
+Natomiast versus?
+
+1051
+01:47:44,460 --> 01:47:46,460
+Czemu versus?
+
+1052
+01:47:46,460 --> 01:47:48,460
+Why not both?
+
+1053
+01:47:48,460 --> 01:47:50,460
+Możesz uruchamiać Pythona w Dockerze i to bardzo dobrze się trzyma.
+
+1054
+01:47:52,460 --> 01:47:54,460
+Też pijesz kawę na zimno? Znaczy ja ją piję
+
+1055
+01:47:54,460 --> 01:47:56,460
+kawę zimną, która
+
+1056
+01:47:56,460 --> 01:47:58,460
+była ciepła.
+
+1057
+01:47:58,460 --> 01:48:00,460
+Nie jest to żaden cold brew, tylko
+
+1058
+01:48:00,460 --> 01:48:02,460
+moja kawa była
+
+1059
+01:48:02,460 --> 01:48:04,460
+ciepła, a teraz jest zimna.
+
+1060
+01:48:04,460 --> 01:48:06,460
+Tu nawet mam jeszcze wersję
+
+1061
+01:48:06,460 --> 01:48:08,460
+z rana. Więc ta tutaj jest
+
+1062
+01:48:08,460 --> 01:48:10,460
+świeższa.
+
+1063
+01:48:10,460 --> 01:48:12,460
+Jerbę też. Jerbę też
+
+1064
+01:48:12,460 --> 01:48:14,460
+piłem. Jerbę lubię,
+
+1065
+01:48:14,460 --> 01:48:16,460
+ale gdzieś mi się zgubiła rurka
+
+1066
+01:48:16,460 --> 01:48:18,460
+od Bombii i mam tylko tą końcówkę.
+
+1067
+01:48:22,460 --> 01:48:24,460
+Czy kiedyś nie zapłacili ci te roboty?
+
+1068
+01:48:24,460 --> 01:48:26,460
+Powiedzieli, że źle? Tak. To jest historia
+
+1069
+01:48:26,460 --> 01:48:28,460
+o tym jak zacząłem palić papierosy.
+
+1070
+01:48:28,460 --> 01:48:30,460
+Pewna firma
+
+1071
+01:48:30,460 --> 01:48:32,460
+już nie palę.
+
+1072
+01:48:32,460 --> 01:48:34,460
+Pewna firma, tylko wezmę sobie coś do papierosy.
+
+1073
+01:48:34,460 --> 01:48:36,460
+Do potrzymania.
+
+1074
+01:48:36,460 --> 01:48:38,460
+Ten statyw jest świetny do trzymania.
+
+1075
+01:48:38,460 --> 01:48:40,460
+Pewna firma
+
+1076
+01:48:40,460 --> 01:48:42,460
+zleciła mi wykonanie strony internetowej.
+
+1077
+01:48:42,460 --> 01:48:44,460
+Bo ja kiedyś też pracowałem
+
+1078
+01:48:44,460 --> 01:48:46,460
+w takiej firmie, nazywała się na Codart.
+
+1079
+01:48:46,460 --> 01:48:48,460
+To była firma, którą robiliśmy z Alinką.
+
+1080
+01:48:48,460 --> 01:48:50,460
+I w ramach tej firmy
+
+1081
+01:48:50,460 --> 01:48:52,460
+realizowaliśmy po pierwsze strony internetowe,
+
+1082
+01:48:52,460 --> 01:48:54,460
+a po drugie robiliśmy kampanię
+
+1083
+01:48:54,460 --> 01:48:56,460
+reklamową
+
+1084
+01:48:56,460 --> 01:48:58,460
+dla pewnej dużej bardzo firmy
+
+1085
+01:48:58,460 --> 01:49:00,460
+zajmującej się chemią budowlaną.
+
+1086
+01:49:02,460 --> 01:49:04,460
+Nie mam w tym temacie zbyt dużo... No nieważne.
+
+1087
+01:49:04,460 --> 01:49:06,460
+I pewna firma
+
+1088
+01:49:06,460 --> 01:49:08,460
+zleciła mi wykonanie strony internetowej.
+
+1089
+01:49:08,460 --> 01:49:10,460
+Ja tę stronę wykonałem.
+
+1090
+01:49:10,460 --> 01:49:12,460
+Nasz grafik naprawdę zrobił bardzo dobry kawał roboty
+
+1091
+01:49:12,460 --> 01:49:14,460
+i tę grafikę wykonał.
+
+1092
+01:49:14,460 --> 01:49:16,460
+Pan powiedział, że
+
+1093
+01:49:16,460 --> 01:49:18,460
+grafika jest piękna
+
+1094
+01:49:18,460 --> 01:49:20,460
+i ją akceptuje.
+
+1095
+01:49:20,460 --> 01:49:22,460
+Więc myśmy wszystko pocieli, przygotowali coś tam jeszcze.
+
+1096
+01:49:22,460 --> 01:49:24,460
+Po czym pan zadzwonił do mnie i powiedział
+
+1097
+01:49:24,460 --> 01:49:26,460
+wie pan co no głupio wyszło, ale żona
+
+1098
+01:49:26,460 --> 01:49:28,460
+mówi, że trochę bym tam pozmieniała na tej stronie,
+
+1099
+01:49:28,460 --> 01:49:30,460
+bo do końca jej się nie podoba.
+
+1100
+01:49:30,460 --> 01:49:32,460
+Ja mówię no okej.
+
+1101
+01:49:32,460 --> 01:49:34,460
+Zrealizowaliśmy to tak, że
+
+1102
+01:49:34,460 --> 01:49:36,460
+wprowadziliśmy zmiany
+
+1103
+01:49:36,460 --> 01:49:38,460
+tego pana pierwsze.
+
+1104
+01:49:38,460 --> 01:49:40,460
+Potem pan napisał znowu maila i mówi
+
+1105
+01:49:40,460 --> 01:49:42,460
+słuchajcie, no niestety
+
+1106
+01:49:42,460 --> 01:49:44,460
+ta strona
+
+1107
+01:49:44,460 --> 01:49:46,460
+dalej nam się nie podoba.
+
+1108
+01:49:46,460 --> 01:49:48,460
+Dostarczyli kolejne
+
+1109
+01:49:48,460 --> 01:49:50,460
+poprawki. No to myśmy
+
+1110
+01:49:50,460 --> 01:49:52,460
+zagryźli wargi, zęby.
+
+1111
+01:49:52,460 --> 01:49:54,460
+Tak, zęby się zagryza. Z wargi też.
+
+1112
+01:49:54,460 --> 01:49:56,460
+I usiedliśmy do tego, żeby tę grafikę
+
+1113
+01:49:56,460 --> 01:49:58,460
+poprawić zgodnie z wytycznymi
+
+1114
+01:49:58,460 --> 01:50:00,460
+pana czy też jego żony.
+
+1115
+01:50:00,460 --> 01:50:02,460
+Ta strona przestała
+
+1116
+01:50:02,460 --> 01:50:04,460
+mi się już wtedy podobać.
+
+1117
+01:50:04,460 --> 01:50:06,460
+Potem przyszła trzecia wersja poprawek.
+
+1118
+01:50:06,460 --> 01:50:08,460
+Wtedy już
+
+1119
+01:50:08,460 --> 01:50:10,460
+nie wiem co zagryzałem, ale
+
+1120
+01:50:10,460 --> 01:50:12,460
+bardzo dużo musiałem rzeczy zagryźć, żeby
+
+1121
+01:50:12,460 --> 01:50:14,460
+też te poprawki zaakceptować.
+
+1122
+01:50:14,460 --> 01:50:16,460
+No ale stwierdziłem dobrze, jeżeli
+
+1123
+01:50:16,460 --> 01:50:18,460
+pan chce taką stronę to niech
+
+1124
+01:50:18,460 --> 01:50:20,460
+będzie. Klient nasz pan.
+
+1125
+01:50:20,460 --> 01:50:22,460
+Wtedy myślałem, że to jest zawsze prawda,
+
+1126
+01:50:22,460 --> 01:50:24,460
+ale to nie jest zawsze prawda.
+
+1127
+01:50:24,460 --> 01:50:26,460
+Jeżeli chodzi szczególnie o takie przypadki.
+
+1128
+01:50:26,460 --> 01:50:28,460
+No i też nie chciałem jakby korzystać
+
+1129
+01:50:28,460 --> 01:50:30,460
+z jakiegoś tam swojego autorytetu i mówić panu
+
+1130
+01:50:30,460 --> 01:50:32,460
+ej panie, pan nie masz racji.
+
+1131
+01:50:32,460 --> 01:50:34,460
+W momencie, w którym
+
+1132
+01:50:34,460 --> 01:50:36,460
+przyszły te trzy, trzecie poprawki,
+
+1133
+01:50:36,460 --> 01:50:38,460
+pan zrobił rzecz, której się nie spodziewałem.
+
+1134
+01:50:38,460 --> 01:50:40,460
+Wie pan co?
+
+1135
+01:50:40,460 --> 01:50:42,460
+Rozmawialiśmy z żoną
+
+1136
+01:50:42,460 --> 01:50:44,460
+i ta strona nam się nie podoba.
+
+1137
+01:50:44,460 --> 01:50:46,460
+Jednak
+
+1138
+01:50:46,460 --> 01:50:48,460
+rezygnujemy z tego zamówienia.
+
+1139
+01:50:48,460 --> 01:50:50,460
+W tym momencie
+
+1140
+01:50:50,460 --> 01:50:52,460
+nóż mi się w kieszeni otworzył
+
+1141
+01:50:52,460 --> 01:50:54,460
+i wszystko w ogóle, co mogło mi się otworzyć, mi się otworzyło.
+
+1142
+01:50:54,460 --> 01:50:56,460
+Bardzo się zezłościłem.
+
+1143
+01:50:56,460 --> 01:50:58,460
+No ale dobra, zachowałem spokój.
+
+1144
+01:50:58,460 --> 01:51:00,460
+Wziąłem umowę.
+
+1145
+01:51:00,460 --> 01:51:02,460
+Alinka wtedy, jak mówiłem,
+
+1146
+01:51:02,460 --> 01:51:04,460
+zrobiłem to z Alinką, więc Alinka też miała doświadczenie
+
+1147
+01:51:04,460 --> 01:51:06,460
+jakieś prawnicze, to było z 10 lat temu, więc
+
+1148
+01:51:06,460 --> 01:51:08,460
+jeszcze nie była wtedy chyba na studiach, albo już była na pierwszym roku.
+
+1149
+01:51:08,460 --> 01:51:10,460
+Nie, nie pamiętam, ale prawem się interesowała,
+
+1150
+01:51:10,460 --> 01:51:12,460
+więc wzięliśmy tę umowę.
+
+1151
+01:51:12,460 --> 01:51:14,460
+No i punkt po punkcie wytłumaczyliśmy panu
+
+1152
+01:51:14,460 --> 01:51:16,460
+w takim bardzo, bardzo, bardzo długim mailu,
+
+1153
+01:51:16,460 --> 01:51:18,460
+że
+
+1154
+01:51:18,460 --> 01:51:20,460
+jeżeli on chce odstąpić od umowy,
+
+1155
+01:51:20,460 --> 01:51:22,460
+to ilość prac, która została wykonana,
+
+1156
+01:51:22,460 --> 01:51:24,460
+powoduje, że i tak musi nam całej zapłacić.
+
+1157
+01:51:24,460 --> 01:51:26,460
+Pan powiedział,
+
+1158
+01:51:26,460 --> 01:51:28,460
+że nam nie zapłaci.
+
+1159
+01:51:28,460 --> 01:51:30,460
+Więc myśmy wtedy wytoczyli cięższe działa i zaczęliśmy
+
+1160
+01:51:30,460 --> 01:51:32,460
+odwoływać się do poszczególnych tam paragrafów,
+
+1161
+01:51:32,460 --> 01:51:34,460
+takich rzeczy.
+
+1162
+01:51:34,460 --> 01:51:36,460
+I wtedy pan zrobił rzecz, zaskoczył mnie drugi raz.
+
+1163
+01:51:36,460 --> 01:51:38,460
+Zadzwonił do mnie i powiedział
+
+1164
+01:51:38,460 --> 01:51:40,460
+wie pan co, myśmy
+
+1165
+01:51:40,460 --> 01:51:42,460
+z żoną otworzyli jeszcze raz tą pierwszą wersję
+
+1166
+01:51:42,460 --> 01:51:44,460
+i w sumie
+
+1167
+01:51:44,460 --> 01:51:46,460
+doszliśmy do wniosku, że ona nam się jednak podoba.
+
+1168
+01:51:46,460 --> 01:51:48,460
+Ona była dużo lepsza niż ta, co
+
+1169
+01:51:48,460 --> 01:51:50,460
+poprawiliśmy.
+
+1170
+01:51:50,460 --> 01:51:52,460
+I to był moment, gdzie wyszedłem na dwór do kolegi,
+
+1171
+01:51:52,460 --> 01:51:54,460
+który właśnie palił, zapytałem, czy da mnie papierosa.
+
+1172
+01:51:54,460 --> 01:51:56,460
+I to jest
+
+1173
+01:51:56,460 --> 01:51:58,460
+historia o tym, jak zacząłem palić.
+
+1174
+01:51:58,460 --> 01:52:00,460
+I tak,
+
+1175
+01:52:00,460 --> 01:52:02,460
+historia skończyła się ostatecznie
+
+1176
+01:52:02,460 --> 01:52:04,460
+napiętem, natomiast pan mi wprost powiedział,
+
+1177
+01:52:04,460 --> 01:52:06,460
+że nie zapłaci mi za robotę, bo
+
+1178
+01:52:06,460 --> 01:52:08,460
+moja strona nie podoba.
+
+1179
+01:52:08,460 --> 01:52:10,460
+Więc wniosek z tej historii jest taki, róbcie zawsze umowy,
+
+1180
+01:52:10,460 --> 01:52:12,460
+miejcie zawsze umowy.
+
+1181
+01:52:12,460 --> 01:52:14,460
+Natomiast nie jest tak w moim życiu,
+
+1182
+01:52:14,460 --> 01:52:16,460
+że zawsze umowy miałem.
+
+1183
+01:52:16,460 --> 01:52:18,460
+Czasem zdarzało mi się umów nie mieć.
+
+1184
+01:52:18,460 --> 01:52:20,460
+Potem Alinka zawsze mówiła, a nie mówiłam.
+
+1185
+01:52:20,460 --> 01:52:22,460
+No bo umowa to przecież dużo podpisywania,
+
+1186
+01:52:22,460 --> 01:52:24,460
+wysyłania, chodzenia jeszcze nie daj Boże na pocztę itd.
+
+1187
+01:52:24,460 --> 01:52:26,460
+Natomiast no
+
+1188
+01:52:26,460 --> 01:52:28,460
+jest to zdecydowanie
+
+1189
+01:52:28,460 --> 01:52:30,460
+miałem takie przypadki w życiu.
+
+1190
+01:52:30,460 --> 01:52:32,460
+Myślę, jak każdy, kto pracował jako freelancer,
+
+1191
+01:52:32,460 --> 01:52:34,460
+to czasem trzeba było
+
+1192
+01:52:34,460 --> 01:52:36,460
+szybko wziąć jakieś zlecenie,
+
+1193
+01:52:36,460 --> 01:52:38,460
+żeby mieć za co żyć,
+
+1194
+01:52:38,460 --> 01:52:40,460
+bo bywało różnie.
+
+1195
+01:52:40,460 --> 01:52:42,460
+Po prostu, jeżeli ktoś oszukuje,
+
+1196
+01:52:42,460 --> 01:52:44,460
+to czasem stawia drugą osobę
+
+1197
+01:52:44,460 --> 01:52:46,460
+w bardzo nieciekawej sytuacji.
+
+1198
+01:52:46,460 --> 01:52:48,460
+Tak też się niestety czasem zdarzało.
+
+1199
+01:52:48,460 --> 01:52:50,460
+Dlatego później poszedłem na etat
+
+1200
+01:52:50,460 --> 01:52:52,460
+i to sobie bardzo chwaliłem,
+
+1201
+01:52:52,460 --> 01:52:54,460
+jeżeli chodzi o pracę na etacie,
+
+1202
+01:52:54,460 --> 01:52:56,460
+że jako freelancer,
+
+1203
+01:52:56,460 --> 01:52:58,460
+jeżeli nie masz stałej takiego
+
+1204
+01:52:58,460 --> 01:53:00,460
+przypływu zleceń,
+
+1205
+01:53:00,460 --> 01:53:02,460
+i to zlecenie, mówmy,
+
+1206
+01:53:02,460 --> 01:53:04,460
+godzinowych tylko właśnie
+
+1207
+01:53:04,460 --> 01:53:06,460
+na pracę na akord,
+
+1208
+01:53:06,460 --> 01:53:08,460
+to jest to problem.
+
+1209
+01:53:08,460 --> 01:53:10,460
+Jak sądzisz,
+
+1210
+01:53:10,460 --> 01:53:12,460
+że sama znajomość Pythona
+
+1211
+01:53:12,460 --> 01:53:14,460
+daje perspektywy pracy?
+
+1212
+01:53:14,460 --> 01:53:16,460
+Mhm, uważam, że tak.
+
+1213
+01:53:16,460 --> 01:53:18,460
+Natomiast warto
+
+1214
+01:53:18,460 --> 01:53:20,460
+znać coś jeszcze.
+
+1215
+01:53:20,460 --> 01:53:22,460
+To nie jest kwestia tego,
+
+1216
+01:53:22,460 --> 01:53:24,460
+że trzeba, tylko warto znać coś jeszcze,
+
+1217
+01:53:24,460 --> 01:53:26,460
+bo nauczenie się właśnie nawet samego Django,
+
+1218
+01:53:26,460 --> 01:53:28,460
+PHP nie musisz znać,
+
+1219
+01:53:28,460 --> 01:53:30,460
+jeżeli znasz Pythona.
+
+1220
+01:53:30,460 --> 01:53:32,460
+Nauczenie się samego Django,
+
+1221
+01:53:32,460 --> 01:53:34,460
+HTML, CSS, on po prostu zwiększa
+
+1222
+01:53:34,460 --> 01:53:36,460
+twoje perspektywy i zwiększa
+
+1223
+01:53:36,460 --> 01:53:38,460
+twoje szanse na znalezienie pracy,
+
+1224
+01:53:38,460 --> 01:53:40,460
+bo już zamiast pracować jako back-end developer
+
+1225
+01:53:40,460 --> 01:53:42,460
+stajesz się full-stack developerem.
+
+1226
+01:53:42,460 --> 01:53:44,460
+Inna sytuacja jest też taka,
+
+1227
+01:53:44,460 --> 01:53:46,460
+za 7 minut kończymy, uprzedzam,
+
+1228
+01:53:46,460 --> 01:53:48,460
+bo dwie godziny nam pękną.
+
+1229
+01:53:48,460 --> 01:53:50,460
+Druga sytuacja jest taka,
+
+1230
+01:53:50,460 --> 01:53:52,460
+że jako Python developer
+
+1231
+01:53:52,460 --> 01:53:54,460
+możesz też pójść na pracę w chmurę
+
+1232
+01:53:54,460 --> 01:53:56,460
+i zainteresować się w ogóle cloudem.
+
+1233
+01:53:56,460 --> 01:53:58,460
+Tu masz AWS, Google i Azure.
+
+1234
+01:53:58,460 --> 01:54:00,460
+Ja mam ten problem,
+
+1235
+01:54:00,460 --> 01:54:02,460
+bo nie mam pomysłu czego mogę się uczyć,
+
+1236
+01:54:02,460 --> 01:54:06,460
+więc nie mam takiej możliwości,
+
+1237
+01:54:06,460 --> 01:54:08,460
+żeby gdzieś zaprzestać.
+
+1238
+01:54:08,460 --> 01:54:10,460
+Zawsze bym sobie coś znalazł
+
+1239
+01:54:10,460 --> 01:54:12,460
+i nie potrafię sobie wyobrazić tego,
+
+1240
+01:54:12,460 --> 01:54:14,460
+że mógłbym nie chcieć się uczyć dalej czegoś.
+
+1241
+01:54:14,460 --> 01:54:16,460
+Projekt kawy poszedł do Adama.
+
+1242
+01:54:16,460 --> 01:54:18,460
+Adam będzie robił kawę,
+
+1243
+01:54:18,460 --> 01:54:20,460
+więc jeżeli macie ochotę
+
+1244
+01:54:20,460 --> 01:54:22,460
+napić się kawy programistycznej,
+
+1245
+01:54:22,460 --> 01:54:24,460
+to Adam temat kawy będzie kontynuował.
+
+1246
+01:54:24,460 --> 01:54:26,460
+Ja temat kawy poruszyłem,
+
+1247
+01:54:26,460 --> 01:54:28,460
+porzuciłem.
+
+1248
+01:54:28,460 --> 01:54:30,460
+Więc to jest taka
+
+1249
+01:54:30,460 --> 01:54:32,460
+odpowiedź na twoje pytanie.
+
+1250
+01:54:32,460 --> 01:54:34,460
+Można, ale po co?
+
+1251
+01:54:34,460 --> 01:54:36,460
+Alinka też programuje.
+
+1252
+01:54:36,460 --> 01:54:38,460
+Alinka jest tutaj.
+
+1253
+01:54:38,460 --> 01:54:40,460
+Tu jest Alinka i tu jest Alinka.
+
+1254
+01:54:40,460 --> 01:54:42,460
+I... tyle Alinki?
+
+1255
+01:54:42,460 --> 01:54:44,460
+Nie ma więcej Alinki?
+
+1256
+01:54:44,460 --> 01:54:46,460
+To dziwne. Myślałem, że będzie więcej Alinki na kanale.
+
+1257
+01:54:46,460 --> 01:54:48,460
+To tylko na dwóch okładkach jest.
+
+1258
+01:54:48,460 --> 01:54:50,460
+I Alinka czasem się pojawia
+
+1259
+01:54:50,460 --> 01:54:52,460
+gdzieś w reklamach.
+
+1260
+01:54:52,460 --> 01:54:54,460
+Czasem jest na... o, na webinarach była.
+
+1261
+01:54:54,460 --> 01:54:56,460
+Już wiem dlaczego myślałem, że będzie więcej Alinki.
+
+1262
+01:54:56,460 --> 01:54:58,460
+Bo tu jest Alinka też
+
+1263
+01:54:58,460 --> 01:55:00,460
+i na stronie PyCamp.pl jest Alinka.
+
+1264
+01:55:00,460 --> 01:55:02,460
+I to nie jest Alinka.
+
+1265
+01:55:02,460 --> 01:55:04,460
+Oj, obrazi się.
+
+1266
+01:55:04,460 --> 01:55:06,460
+I to też nie jest Alinka.
+
+1267
+01:55:06,460 --> 01:55:08,460
+Ale Alinka się pojawia.
+
+1268
+01:55:08,460 --> 01:55:10,460
+No i żebyście chcieli poczytać czym się zajmuje Alinka,
+
+1269
+01:55:10,460 --> 01:55:12,460
+to też polecam stronę do Code.IT. Pewnie znacie.
+
+1270
+01:55:12,460 --> 01:55:14,460
+I tu jest podstrona Onas.
+
+1271
+01:55:14,460 --> 01:55:16,460
+About us.
+
+1272
+01:55:16,460 --> 01:55:18,460
+I tu jest takie ładne zdanie.
+
+1273
+01:55:18,460 --> 01:55:20,460
+Nazywam się Alina i wraz z moim mężem,
+
+1274
+01:55:20,460 --> 01:55:22,460
+którego najprawdopodobniej znacie,
+
+1275
+01:55:22,460 --> 01:55:24,460
+tworzymy dla was bootcampy programistyczne
+
+1276
+01:55:24,460 --> 01:55:26,460
+oraz szkolenia dla firm.
+
+1277
+01:55:26,460 --> 01:55:28,460
+Kacper nagrywa szkolenia, przygotowuje programy, udziela się na live'ach.
+
+1278
+01:55:28,460 --> 01:55:30,460
+Większość tego co widzicie to moje pomysły i moja zasługa.
+
+1279
+01:55:30,460 --> 01:55:32,460
+To, że dostajecie faktury
+
+1280
+01:55:32,460 --> 01:55:34,460
+i wszystko spina się organizacyjnie
+
+1281
+01:55:34,460 --> 01:55:36,460
+to też moja zasługa.
+
+1282
+01:55:36,460 --> 01:55:38,460
+Jestem skromny i pewnie bym tego nie napisał,
+
+1283
+01:55:38,460 --> 01:55:40,460
+ale ten tekst tak naprawdę napisał Kacper,
+
+1284
+01:55:40,460 --> 01:55:42,460
+a ja nie wiem gdzie go zmienić.
+
+1285
+01:55:42,460 --> 01:55:44,460
+To jest to co robi Alinka.
+
+1286
+01:55:44,460 --> 01:55:46,460
+Zajmuje się kwestiami prawno-marketingowymi,
+
+1287
+01:55:46,460 --> 01:55:48,460
+doradczymi, organizacyjnymi.
+
+1288
+01:55:48,460 --> 01:55:50,460
+Wszystkim się Alinka zajmuje,
+
+1289
+01:55:50,460 --> 01:55:52,460
+ja tu tylko szkolę.
+
+1290
+01:55:52,460 --> 01:55:54,460
+Tak naprawdę to, że tutaj z wami rozmawiam
+
+1291
+01:55:54,460 --> 01:55:56,460
+to też zasługa Alinki.
+
+1292
+01:55:56,460 --> 01:55:58,460
+Dobrze. No i co?
+
+1293
+01:55:58,460 --> 01:56:00,460
+Nie ma więcej wiadomości.
+
+1294
+01:56:00,460 --> 01:56:02,460
+Idziemy do domu.
+
+1295
+01:56:02,460 --> 01:56:04,460
+Więc bardzo serdecznie wam dziękuję za ten live.
+
+1296
+01:56:04,460 --> 01:56:06,460
+Mam nadzieję, że się podobało.
+
+1297
+01:56:06,460 --> 01:56:08,460
+Trochę było wiedzy, trochę było też tematów luźniejszych.
+
+1298
+01:56:08,460 --> 01:56:10,460
+Porozmawialiśmy sobie o życiu,
+
+1299
+01:56:10,460 --> 01:56:12,460
+przyszłości i sławie.
+
+1300
+01:56:12,460 --> 01:56:14,460
+Fajny opis.
+
+1301
+01:56:14,460 --> 01:56:16,460
+No bo ja go pisałem.
+
+1302
+01:56:16,460 --> 01:56:18,460
+Więc bardzo serdecznie dziękuję.
+
+1303
+01:56:18,460 --> 01:56:20,460
+Nie widzimy się już w przyszłym roku,
+
+1304
+01:56:20,460 --> 01:56:22,460
+więc widzimy się w przyszłym.
+
+1305
+01:56:22,460 --> 01:56:24,460
+Bardzo też, tak jak tutaj piszecie,
+
+1306
+01:56:24,460 --> 01:56:26,460
+do siego roku bardzo serdecznie dzięki.
+
+1307
+01:56:26,460 --> 01:56:28,460
+Wszystkiego dobrego.
+
+1308
+01:56:28,460 --> 01:56:30,460
+Życzę wam, żeby ten nadchodzący rok
+
+1309
+01:56:30,460 --> 01:56:32,460
+był dla was rokiem pełnym wiedzy,
+
+1310
+01:56:32,460 --> 01:56:34,460
+rokiem pełnym zdrowia,
+
+1311
+01:56:34,460 --> 01:56:36,460
+rokiem pełnym szczęścia.
+
+1312
+01:56:36,460 --> 01:56:38,460
+Gdzieś ostatnio przeczytałem,
+
+1313
+01:56:38,460 --> 01:56:40,460
+że ci, co podróżowali tytanikiem
+
+1314
+01:56:40,460 --> 01:56:42,460
+mieli zdrowie, pieniądze,
+
+1315
+01:56:42,460 --> 01:56:44,460
+sławę, bogactwo i wszystko,
+
+1316
+01:56:44,460 --> 01:56:46,460
+tylko szczęścia im zabrakło,
+
+1317
+01:56:46,460 --> 01:56:48,460
+więc życzę wam szczęścia przede wszystkim.
+
+1318
+01:56:48,460 --> 01:56:50,460
+I tyle. Wszystkiego dobrego. Pa pa.
+
+1319
+01:56:58,460 --> 01:57:00,460
+Napisy by Jacek Makarewicz

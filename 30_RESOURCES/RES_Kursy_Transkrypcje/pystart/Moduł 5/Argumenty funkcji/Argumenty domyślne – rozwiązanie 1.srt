@@ -1,0 +1,415 @@
+1
+00:00:00,000 --> 00:00:04,419
+Mamy przygotować funkcję, która będzie szukała wspólnych dzielników dla dwóch liczb.
+
+2
+00:00:04,540 --> 00:00:08,099
+Funkcja będzie posiadała trzeci argument domyślny określający wartość początkową.
+
+3
+00:00:08,620 --> 00:00:10,660
+Ok, to zaczniemy sobie od początku.
+
+4
+00:00:10,859 --> 00:00:15,820
+Najpierw powinniśmy mieć taką funkcję, czyli np. getCommonDevisors.
+
+5
+00:00:16,420 --> 00:00:23,679
+Będziemy potrzebowali dwóch liczb, no to potrzebujemy mieć number1, number2.
+
+6
+00:00:23,679 --> 00:00:32,820
+Ok, najpierw będziemy potrzebowali znaleźć wszystkie dzielniki dla liczby pierwszej.
+
+7
+00:00:33,340 --> 00:00:38,759
+Czyli mamy jeszcze jedną rzecz, aha, teraz przypomniałem sobie,
+
+8
+00:00:38,899 --> 00:00:42,219
+że jeszcze mamy ten argument domyślny określający wartość początkową.
+
+9
+00:00:42,799 --> 00:00:46,659
+Czyli możemy sobie stworzyć zmienną start i przypisać do niej jakąś wartość.
+
+10
+00:00:47,120 --> 00:00:50,019
+Myślę, że dzielnikiem pierwszym może być potencjalnie dwa,
+
+11
+00:00:50,019 --> 00:00:53,219
+więc wartością tutaj powinna być wartość,
+
+12
+00:00:53,679 --> 00:00:54,920
+początkowa jako dwa.
+
+13
+00:00:55,460 --> 00:01:00,340
+Natomiast jeżeli ktoś poda większą wartość, no to po prostu będziemy szukali od tej wartości.
+
+14
+00:01:01,100 --> 00:01:01,659
+Idziemy dalej.
+
+15
+00:01:01,939 --> 00:01:09,180
+For i pędla for powinna teraz przejść przez zakres od właśnie tego startu
+
+16
+00:01:09,180 --> 00:01:12,039
+do połowy z liczby tak naprawdę.
+
+17
+00:01:12,039 --> 00:01:21,460
+Czyli for divisor in range start przecinek.
+
+18
+00:01:22,219 --> 00:01:23,659
+I tu powinienem zaokrąglić.
+
+19
+00:01:23,680 --> 00:01:33,720
+I dodać jeden, czyli seal number jeden przez dwa plus jeden.
+
+20
+00:01:34,900 --> 00:01:36,680
+I seal'a wypadałoby sobie doimportować.
+
+21
+00:01:37,340 --> 00:01:39,600
+Możemy użyć tego sposobu, który wam pokazałem wcześniej,
+
+22
+00:01:39,760 --> 00:01:44,560
+czyli ctrl enter, alt enter i import math seal.
+
+23
+00:01:45,100 --> 00:01:49,340
+I teraz jeżeli ta liczba jest dzielnikiem, to chcemy ją dodać do jakiegoś zbioru.
+
+24
+00:01:49,340 --> 00:01:51,800
+Czyli if number jeden.
+
+25
+00:01:52,800 --> 00:01:53,219
+Eee.
+
+26
+00:01:53,680 --> 00:01:58,260
+Zulu divisor równa się zero.
+
+27
+00:01:58,260 --> 00:02:00,680
+No to wtedy chcielibyśmy dodać do jakiegoś zbioru.
+
+28
+00:02:00,680 --> 00:02:03,060
+Możemy ten zbiór nazwać sobie divisors.
+
+29
+00:02:06,060 --> 00:02:07,860
+Divisors to jest zbiór.
+
+30
+00:02:07,860 --> 00:02:13,980
+No i divisors add number jeden.
+
+31
+00:02:13,980 --> 00:02:20,020
+I teraz tą samą czynność powinienem wykonać dla drugiej liczby.
+
+32
+00:02:20,020 --> 00:02:22,939
+Czyli tak naprawdę powinienem sobie ten kod skopiować.
+
+33
+00:02:22,939 --> 00:02:25,240
+Znaczy mógłbym ten kod skopiować.
+
+34
+00:02:26,060 --> 00:02:27,039
+Wkleić go tutaj.
+
+35
+00:02:27,620 --> 00:02:31,800
+I jedyną rzeczą, która by się zmieniała tak naprawdę w tym miejscu byłby number jeden.
+
+36
+00:02:32,359 --> 00:02:34,840
+A tutaj byłby number jeden, a tu byłby number dwa.
+
+37
+00:02:35,539 --> 00:02:37,060
+Nie jest to rozsądne.
+
+38
+00:02:37,280 --> 00:02:40,280
+No bo jeżeli mam taki kod, który się w stu procentach powiela,
+
+39
+00:02:40,840 --> 00:02:46,240
+to znaczy, że dużo wyładniej byłoby, gdybyśmy ten kod sobie po prostu przenieśli do zewnętrznej funkcji
+
+40
+00:02:46,240 --> 00:02:48,819
+i nazwali ją get divisors.
+
+41
+00:02:48,819 --> 00:02:51,800
+A później ta funkcja, która robiłaby get common divisors,
+
+42
+00:02:51,900 --> 00:02:52,860
+po prostu brałaby część.
+
+43
+00:02:52,939 --> 00:02:57,280
+Wspólną tych dwóch divisorów, tych dwóch dzielników.
+
+44
+00:02:58,020 --> 00:03:00,099
+Więc to, co zrobię, to wytnę sobie ten kawałek.
+
+45
+00:03:01,240 --> 00:03:01,979
+Robię to ręcznie.
+
+46
+00:03:01,979 --> 00:03:04,979
+Chociaż mógłbym skorzystać z refactor extract.
+
+47
+00:03:06,099 --> 00:03:07,259
+I tutaj jest metod.
+
+48
+00:03:07,699 --> 00:03:08,699
+I to też by zadziałało.
+
+49
+00:03:09,400 --> 00:03:11,979
+Czyli robię get divisors.
+
+50
+00:03:15,259 --> 00:03:16,719
+Potrzebuję mieć number.
+
+51
+00:03:16,900 --> 00:03:18,060
+Potrzebuję mieć start.
+
+52
+00:03:18,520 --> 00:03:20,659
+Może mieć też wartość domyślną równą dwa.
+
+53
+00:03:21,419 --> 00:03:21,860
+I tutaj.
+
+54
+00:03:22,199 --> 00:03:22,919
+Potrzebuję mieć to.
+
+55
+00:03:22,939 --> 00:03:24,020
+I tutaj mogę mieć to divisors też.
+
+56
+00:03:26,340 --> 00:03:29,439
+I wtedy mogę zwrócić sobie po prostu divisors.
+
+57
+00:03:31,699 --> 00:03:35,479
+Czyli stworzyłem sobie funkcję,
+
+58
+00:03:36,159 --> 00:03:37,219
+która będzie to funkcja,
+
+59
+00:03:37,419 --> 00:03:39,919
+zwracała mi wszystkie dzielniki.
+
+60
+00:03:40,500 --> 00:03:43,479
+No i będzie je zwracała w postaci zbioru.
+
+61
+00:03:43,960 --> 00:03:47,379
+Dzięki temu wewnątrz funkcji get common divisors
+
+62
+00:03:47,379 --> 00:03:50,319
+ja mogę sobie wywołać tę funkcję get divisors.
+
+63
+00:03:51,099 --> 00:03:52,120
+Przekazać mu.
+
+64
+00:03:52,939 --> 00:03:54,139
+Number jeden.
+
+65
+00:03:55,180 --> 00:03:56,500
+Oraz start.
+
+66
+00:03:56,500 --> 00:04:01,500
+To samo wykonać dla number dwa oraz dla startu.
+
+67
+00:04:02,560 --> 00:04:05,500
+A następnie tylko zwrócić divisors jeden.
+
+68
+00:04:06,960 --> 00:04:09,500
+Część wspólna divisors dwa.
+
+69
+00:04:11,219 --> 00:04:13,900
+No i wypadałoby sobie to wtedy przetestować.
+
+70
+00:04:14,079 --> 00:04:15,500
+Możemy odebrać liczbę pierwszą.
+
+71
+00:04:19,920 --> 00:04:21,540
+Liczbę drugą.
+
+72
+00:04:22,939 --> 00:04:27,100
+Minimum.
+
+73
+00:04:27,939 --> 00:04:29,060
+Czyli ten nasz start.
+
+74
+00:04:32,319 --> 00:04:34,439
+No i można to wtedy wywołać.
+
+75
+00:04:34,519 --> 00:04:37,060
+Czyli print get common divisors.
+
+76
+00:04:40,199 --> 00:04:41,480
+Number jeden.
+
+77
+00:04:42,060 --> 00:04:42,800
+Number dwa.
+
+78
+00:04:43,639 --> 00:04:44,079
+I start.
+
+79
+00:04:44,540 --> 00:04:49,159
+Jeżeli byśmy chcieli zawsze możemy wyżej wyświetlić sobie te wartości.
+
+80
+00:04:49,319 --> 00:04:52,360
+Możemy z tego skorzystać, że mamy te dzielniki.
+
+81
+00:04:52,360 --> 00:04:52,920
+Więc moglibyśmy wyświetlać.
+
+82
+00:04:52,920 --> 00:04:55,580
+Moglibyśmy sobie wyświetlić dzielniki dla liczby pierwszej,
+
+83
+00:04:55,660 --> 00:04:57,759
+dzielniki dla liczby drugiej, wspólne dzielniki to.
+
+84
+00:04:58,220 --> 00:05:00,699
+Ale wybierzemy sobie taką liczbę, żeby było w miarę sensownie.
+
+85
+00:05:00,780 --> 00:05:03,980
+Wybierzemy sobie 6 i 12 na przykład.
+
+86
+00:05:06,420 --> 00:05:08,319
+Czyli 6 i 12.
+
+87
+00:05:08,900 --> 00:05:12,720
+No i niech 3 będzie wartością początkową.
+
+88
+00:05:13,139 --> 00:05:13,920
+Nie mamy nic.
+
+89
+00:05:15,379 --> 00:05:16,040
+Tu jest błąd.
+
+90
+00:05:16,100 --> 00:05:18,740
+Oczywiście nie powinienem dodawać number, tylko divisor.
+
+91
+00:05:20,080 --> 00:05:21,439
+W tym miejscu.
+
+92
+00:05:22,920 --> 00:05:25,680
+I w ten sposób zadziała.
+
+93
+00:05:25,759 --> 00:05:27,080
+Jeżeli sobie weźmiemy.
+
+94
+00:05:27,160 --> 00:05:29,879
+Wyświetliłem sobie dzielniki.
+
+95
+00:05:29,960 --> 00:05:32,300
+No i mam dla dzielniki 12.
+
+96
+00:05:32,379 --> 00:05:34,759
+1, 2, 3, 4, 6, 12.
+
+97
+00:05:34,840 --> 00:05:35,600
+Wszystko jest OK.
+
+98
+00:05:35,680 --> 00:05:40,300
+Muszę sobie odkomentować to, co sobie zakomentowałem, jak szukałem tego błędu.
+
+99
+00:05:40,379 --> 00:05:45,420
+I zobaczcie mam 2, 3, 6.
+
+100
+00:05:45,500 --> 00:05:46,800
+Zadanie rozwiązane.
+
+101
+00:05:46,879 --> 00:05:52,040
+Co prawda z małym babolem, ale prosiliście, żebym takie babole też zostawiał, takie błędy.
+
+102
+00:05:52,120 --> 00:05:52,879
+Więc zostawiam.
+
+103
+00:05:52,960 --> 00:05:55,220
+Pokazuję, że czasem im się zdarza.
+
+104
+00:05:55,300 --> 00:05:56,500
+Idziemy do drugiego.

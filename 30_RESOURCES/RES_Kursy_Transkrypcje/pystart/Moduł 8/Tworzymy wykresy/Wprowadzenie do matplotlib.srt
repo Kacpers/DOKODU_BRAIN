@@ -1,0 +1,255 @@
+1
+00:00:00,000 --> 00:00:03,560
+No i nadszedł czas, żeby trochę odejść od grafiki, ale tylko trochę.
+
+2
+00:00:03,740 --> 00:00:04,600
+Dlaczego tylko trochę?
+
+3
+00:00:04,960 --> 00:00:12,759
+Bo matplotlib, jak sama nazwa wskazuje, to jest połączenie matematyki, wykresów i bibliotekarstwa.
+
+4
+00:00:13,640 --> 00:00:18,080
+A mianowicie jest to biblioteka matematyczna służąca do robienia wykresów.
+
+5
+00:00:18,500 --> 00:00:20,920
+Jak takie wykresy tworzyć? Jak mogą wyglądać?
+
+6
+00:00:21,339 --> 00:00:26,339
+Zobacz, biblioteka ta jest co prawda niezwykle rozbudowana, pozwala robić naprawdę prześliczne wykresy.
+
+7
+00:00:26,339 --> 00:00:29,660
+Natomiast my tutaj skupimy się przede wszystkim na takich podstawowych kwestiach,
+
+8
+00:00:30,000 --> 00:00:32,899
+żeby po prostu sobie to przećwiczyć i taki wykres stworzyć.
+
+9
+00:00:33,000 --> 00:00:35,259
+A nóż gdzieś w Twojej aplikacji się to przyda.
+
+10
+00:00:35,960 --> 00:00:39,679
+Zwróć uwagę na to, że po zainstalowaniu matplotlib-a,
+
+11
+00:00:39,780 --> 00:00:45,100
+zaimportowałem sobie z matplotlib-a coś, co nazywa się pyplot i dorzuciłem splt.
+
+12
+00:00:45,259 --> 00:00:50,320
+Dlaczego to splt? No bo pyplot jest trochę długie, krócej napisać pyplot jako plt.
+
+13
+00:00:51,700 --> 00:00:58,120
+Następnie stworzyłem sobie coś, co nazywa się plt-subplot i to mi zwraca feature oraz axis.
+
+14
+00:00:58,119 --> 00:01:02,079
+Następnie to co wykonuję, to tworzę sobie dane.
+
+15
+00:01:02,079 --> 00:01:07,679
+Dane wyglądają w ten sposób tak samo jak w Excelu, czyli mamy po pierwsze zaznaczone wartości,
+
+16
+00:01:07,679 --> 00:01:11,140
+dla których będziemy chcieli prezentować poszczególne dane,
+
+17
+00:01:11,140 --> 00:01:18,799
+a następnie mamy zmienną, która ilustruje nam jakieś trzy zmienne, czyli 220, 250 i 300.
+
+18
+00:01:18,799 --> 00:01:24,739
+W ten sposób do Gdyni będzie przypasowane 220, do Gdańska 250, do Sopotu 300.
+
+19
+00:01:24,739 --> 00:01:28,079
+Jeżeli będziemy chcieli stworzyć sobie wykres, wykonujemy ax,
+
+20
+00:01:28,079 --> 00:01:34,480
+to jest typ wykresu, gdzie przekazujemy mu informacje, co ma być opisane na osi poziomej
+
+21
+00:01:34,480 --> 00:01:37,539
+oraz jakie wartości mają być przedstawione na osi pionowej.
+
+22
+00:01:37,939 --> 00:01:41,539
+I zobacz, po prawej stronie mamy wykres, gdzie Gdynia, Gdańsk i Sopot,
+
+23
+00:01:41,879 --> 00:01:45,400
+to są te trzy miasta, które przedstawiły nam się na osi poziomej
+
+24
+00:01:45,400 --> 00:01:49,959
+oraz mamy po lewej stronie wartości liczbowe, reprezentujące dokładnie tę skalę,
+
+25
+00:01:49,959 --> 00:01:56,759
+o którą pytamy poniżej, czyli 300 to jest Sopot, Gdynia ma tutaj 220,
+
+26
+00:01:56,760 --> 00:01:59,520
+czyli coś między 250 a 200.
+
+27
+00:02:00,680 --> 00:02:05,960
+Następnie mówimy, słuchaj, zrób mi wykres, właśnie ten kolumnowy z Cities i People
+
+28
+00:02:05,960 --> 00:02:09,819
+i wtedy, żeby ten wykres się wyświetlił w takim wyskakującym okienku,
+
+29
+00:02:10,280 --> 00:02:15,759
+wykonujemy polecenie plt.show i to polecenie spowoduje, że wykres nam się po prostu ukaże.
+
+30
+00:02:16,500 --> 00:02:20,040
+A jeżeli do naszego wykresu chcielibyśmy dodać taki ładny tytuł,
+
+31
+00:02:20,219 --> 00:02:23,980
+jakiś opis dla osi pionowej, to też nie ma żadnego problemu.
+
+32
+00:02:23,980 --> 00:02:25,980
+Zobacz, wystarczy napisać ax.setx.
+
+33
+00:02:26,759 --> 00:02:32,519
+Ax.label miasta i w ten sposób tutaj ta oś dostanie taką etykietę
+
+34
+00:02:32,519 --> 00:02:39,340
+oraz jeżeli dopiszemy ax.set.y.label ilość komentarzy, to tu się pokaże nam ilość komentarzy
+
+35
+00:02:39,340 --> 00:02:43,039
+i możemy też opisać ilość dodanych komentarzy na górze.
+
+36
+00:02:43,500 --> 00:02:47,219
+Tu jest w ogóle tego całe mnóstwo, można pokazywać legendę, ukrywać legendę,
+
+37
+00:02:47,299 --> 00:02:52,840
+ale znowu miałoby to się sprowadzać do tego, że po prostu przepisywałbym Ci całą dokumentację,
+
+38
+00:02:52,840 --> 00:02:56,560
+więc jeżeli interesuje Cię tworzenie wykresów, to na pewno wszystko znajdziesz,
+
+39
+00:02:56,560 --> 00:02:59,319
+w dokumentacji właśnie matplotlib.
+
+40
+00:02:59,319 --> 00:03:04,659
+Ja tutaj tylko i wyłącznie chciałem Ci pokazać, z czego można korzystać tak pokrótce,
+
+41
+00:03:04,659 --> 00:03:06,659
+tworząc najprostsze wykresy.
+
+42
+00:03:06,659 --> 00:03:10,420
+A co w przypadku, gdybyśmy chcieli zapisać wykres do pliku?
+
+43
+00:03:10,420 --> 00:03:15,199
+No bo plt.show wyświetla nam okno z wykresem.
+
+44
+00:03:15,199 --> 00:03:18,500
+Czasem może się okazać, że na przykład mamy bardzo dużo zestawień,
+
+45
+00:03:18,500 --> 00:03:21,819
+chcemy uruchomić skrypt, żeby on nam stworzył te wykresy, zapisał do pliku
+
+46
+00:03:21,819 --> 00:03:23,819
+i potem gdzieś te wykresy na przykład umieścić.
+
+47
+00:03:23,819 --> 00:03:25,819
+Chociażby w dokumencie,
+
+48
+00:03:26,560 --> 00:03:28,560
+czy w Wordzie, czy w PDF-ie.
+
+49
+00:03:28,560 --> 00:03:30,560
+Nie ma problemu.
+
+50
+00:03:30,560 --> 00:03:34,560
+Można to zrobić, gdyż wystarczy zamienić tylko i wyłącznie, albo dopisać,
+
+51
+00:03:34,560 --> 00:03:36,560
+bo można i pokazywać i zapisywać,
+
+52
+00:03:36,560 --> 00:03:40,060
+zamiast plt.show napisać plt.savefig.
+
+53
+00:03:40,060 --> 00:03:42,060
+I savefig to jest save feature,
+
+54
+00:03:42,060 --> 00:03:45,060
+czyli zapisz mi po prostu, można powiedzieć w skrócie obrazek,
+
+55
+00:03:45,060 --> 00:03:47,060
+pod konkretną nazwą.
+
+56
+00:03:47,060 --> 00:03:49,560
+I w tym momencie on nam zapisze ten obrazek
+
+57
+00:03:49,560 --> 00:03:53,060
+i będzie on dostępny na dysku jako zwykły jpeg.
+
+58
+00:03:53,060 --> 00:03:56,560
+Tam też jest dużo opcji, chociażby przezroczystość tła,
+
+59
+00:03:56,560 --> 00:03:59,560
+jeżeli byśmy chcieli włączyć albo wyłączyć,
+
+60
+00:03:59,560 --> 00:04:01,560
+bo domyślnie jak widzieliście obrazki są na białym tle,
+
+61
+00:04:01,560 --> 00:04:03,560
+wykresy są na białym tle,
+
+62
+00:04:03,560 --> 00:04:06,560
+no to wtedy też można to w save feature określić.
+
+63
+00:04:06,560 --> 00:04:09,560
+Natomiast tak pokrótce myślę, że to nam wystarczy,
+
+64
+00:04:09,560 --> 00:04:12,560
+żeby zrobić zadanie, które już za moment.

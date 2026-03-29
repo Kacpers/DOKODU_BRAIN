@@ -1,0 +1,75 @@
+1
+00:00:00,000 --> 00:00:06,339
+I tutaj zakładając, że idziemy dalej z tematem library, czyli biblioteki wypożyczającej książki,
+
+2
+00:00:06,860 --> 00:00:13,359
+chcielibyśmy przygotować klasy, które odwzorowują takie dane, a następnie utworzyć obiekty według tej struktury.
+
+3
+00:00:13,359 --> 00:00:17,620
+Czyli spójrz, mamy książkę, czyli jakąś klasę book.
+
+4
+00:00:18,199 --> 00:00:22,620
+Nasza książka ma tytuł, gatunek, opis, streszczenie i ocenę.
+
+5
+00:00:23,140 --> 00:00:29,839
+Te parametry, można powiedzieć, właściwości naszego obiektu są dosyć oczywiste,
+
+6
+00:00:29,839 --> 00:00:32,500
+czyli jakieś tam stringi, mamy jakąś wartość liczbową.
+
+7
+00:00:33,100 --> 00:00:36,859
+Jest natomiast jeden, który jest bardziej skomplikowany i są to autorzy,
+
+8
+00:00:37,179 --> 00:00:39,920
+czyli jakieś authors, które mogłoby być listą.
+
+9
+00:00:39,920 --> 00:00:43,240
+I nasza lista będzie zawierała autora.
+
+10
+00:00:44,280 --> 00:00:47,379
+I zobacz, każdy autor posiada imię, nazwisko oraz datę urodzenia.
+
+11
+00:00:48,000 --> 00:00:55,539
+Data urodzenia tutaj akurat jest date, więc można byłoby bez problemu przyjąć sobie również taki typ danych w initie,
+
+12
+00:00:55,820 --> 00:00:57,060
+który może być przekazywany.
+
+13
+00:00:57,560 --> 00:00:59,579
+No i dzięki temu będziemy mieli konkretne dane.
+
+14
+00:00:59,840 --> 00:01:03,880
+I to, co później należy zrobić, to należy stworzyć sobie tych dwóch autorów,
+
+15
+00:01:04,060 --> 00:01:10,540
+bo zaczynamy zawsze najpierw od tych obiektów, z których składa się ta nasza docelowa konstrukcja.
+
+16
+00:01:11,079 --> 00:01:16,500
+Następnie tworzymy sobie obiekt książka, przypisujemy do niego poszczególne właściwości.
+
+17
+00:01:17,100 --> 00:01:18,379
+No i tyle tak naprawdę.
+
+18
+00:01:18,920 --> 00:01:22,620
+Zadanie takie na tworzenie obiektów i modelowanie tych struktur.
+
+19
+00:01:23,300 --> 00:01:25,320
+Chwila dla Ciebie. Zapraszam.

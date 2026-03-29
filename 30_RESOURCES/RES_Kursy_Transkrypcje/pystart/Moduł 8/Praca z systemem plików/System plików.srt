@@ -1,0 +1,495 @@
+1
+00:00:00,000 --> 00:00:06,600
+Chwilę temu poruszyliśmy sobie temat target i path, czyli jakiegoś katalogu i jakiegoś katalogu.
+
+2
+00:00:06,919 --> 00:00:11,599
+Ale generalnie sprowadza się to do tego, że będziemy chcieli na przykład mieć możliwość sprawdzenia,
+
+3
+00:00:11,980 --> 00:00:14,859
+czy te katalogi istnieją. Po drugie, czy są katalogami.
+
+4
+00:00:14,859 --> 00:00:20,100
+Po trzecie, na przykład, będziemy chcieli wypisać wszystkie pliki, które się w środku znajdują.
+
+5
+00:00:20,699 --> 00:00:26,339
+I dzięki tego typu, właściwie nie dzięki, tylko żeby wykonać takie czynności,
+
+6
+00:00:26,339 --> 00:00:33,100
+musimy wiedzieć, jak w Pythonie pracować z filesystemem, czyli filesystem to jest system plików.
+
+7
+00:00:33,560 --> 00:00:36,859
+Kiedy się to przydaje? No, chociażby, kiedy chcesz wylistować pliki w katalogu.
+
+8
+00:00:37,619 --> 00:00:44,079
+Sprawa jasna. Potrzebujesz segregować pliki w zależności od rozszerzenia tego pliku.
+
+9
+00:00:44,079 --> 00:00:47,960
+Na przykład wiemy, że obrazki mają iść do obrazków, filmy do filmów.
+
+10
+00:00:48,359 --> 00:00:51,840
+To mi się często zdarza, że na przykład mam aparat, zgrywam z niego wszystkie dane
+
+11
+00:00:51,840 --> 00:00:56,320
+i później muszę, kombinuję, jak to ładnie poukładać, które zdjęcia są ważniejsze,
+
+12
+00:00:56,340 --> 00:01:01,220
+które są mniej ważne, na przykład po dniach je przeglądam, a tak uruchamiam skrypt Pythonowy,
+
+13
+00:01:01,220 --> 00:01:03,600
+on mi to wszystko ładnie uporządkowuje.
+
+14
+00:01:04,260 --> 00:01:08,719
+Szukasz pliku zawierającego konkretną nazwę? No oczywiście są do tego lepsze narzędzia,
+
+15
+00:01:08,719 --> 00:01:12,260
+bo możemy skorzystać z wyszukiwarki pod Windowsem, Linuxem, gdzie chcemy.
+
+16
+00:01:12,260 --> 00:01:17,520
+Natomiast czasem program musi przejść po plikach i znaleźć ten o konkretnej nazwie.
+
+17
+00:01:17,520 --> 00:01:24,400
+Tu znowu przykład, pracowałem w takim projekcie, który polegał na tym, że ściągaliśmy pliki z logami,
+
+18
+00:01:24,400 --> 00:01:25,640
+z różnych tam programów.
+
+19
+00:01:25,640 --> 00:01:30,099
+Z różnych produktów, z różnych informacji i musieliśmy je agregować i przetwarzać.
+
+20
+00:01:30,099 --> 00:01:34,859
+I właśnie tutaj bardzo się przydawał Python, też dlatego, że trzeba było poszczególne pliki
+
+21
+00:01:34,859 --> 00:01:37,060
+ze sobą połączyć na podstawie dat.
+
+22
+00:01:37,060 --> 00:01:42,560
+No i tutaj bardzo proszę, mogliśmy przedwchodzić po katalogu zawierającym wszystkie takie logi,
+
+23
+00:01:42,560 --> 00:01:47,920
+sprawdzać daty, które znajdowały się akurat w nazwie, tu nie trzeba było posługiwać datą utworzenia
+
+24
+00:01:47,920 --> 00:01:52,299
+i później je ze sobą łączyć, agregować i wyciągać z nich informacje.
+
+25
+00:01:52,299 --> 00:01:54,159
+Bardzo przydatna rzecz.
+
+26
+00:01:54,159 --> 00:01:58,119
+I korzystałem właśnie wtedy z wiedzy, którą chcę Ci tutaj przekazać.
+
+27
+00:01:58,119 --> 00:02:04,280
+No i właśnie, jeżeli chodzi o korzystanie z tych poleceń, to oczywiście pokazaliśmy sobie wcześniej,
+
+28
+00:02:04,280 --> 00:02:08,479
+że możemy wykorzystywać polecenia dir, ls, one wyświetlają nam listy plików,
+
+29
+00:02:08,479 --> 00:02:16,400
+natomiast zdecydowanie lepiej korzystać z tego, co za chwilę zobaczysz, bo os-log jest dużo, dużo wygodniejszy.
+
+30
+00:02:16,400 --> 00:02:18,639
+Napisałem os-log, o co chodzi?
+
+31
+00:02:18,639 --> 00:02:20,079
+Zobacz.
+
+32
+00:02:20,079 --> 00:02:24,159
+Mamy taką sytuację, że chcemy wyświetlić zawartość katalogu.
+
+33
+00:02:24,159 --> 00:02:27,400
+Znajdującego się w konkretnej ścieżce.
+
+34
+00:02:27,400 --> 00:02:32,439
+Ale tu uwaga, no nie zawsze jest tak, że ten katalog zawiera tylko i wyłącznie od razu pliki.
+
+35
+00:02:32,439 --> 00:02:38,439
+Czasem w katalogu też mogą się znaleźć katalogi i w tych katalogach też mogą być katalogi, w których mogą być katalogi
+
+36
+00:02:38,439 --> 00:02:40,439
+i dopiero w nich mogą być pliki.
+
+37
+00:02:40,439 --> 00:02:46,280
+I za pomocą walka, czyli takiego spaceru, możemy właśnie przespacerować się po wszystkich tych plikach,
+
+38
+00:02:46,280 --> 00:02:48,079
+które nas interesują.
+
+39
+00:02:48,079 --> 00:02:48,759
+Zobacz.
+
+40
+00:02:48,759 --> 00:02:53,439
+Wykonałem from os-import walk, czyli zaimportowałem sobie po prostu te funkcje.
+
+41
+00:02:53,439 --> 00:03:01,439
+Następnie, patrzymy na prawo, wykonałem walk some path, czyli spaceruj po konkretnej ścieżce.
+
+42
+00:03:01,439 --> 00:03:04,000
+O, jak to nawet brzmi ciekawie.
+
+43
+00:03:04,000 --> 00:03:10,360
+I tutaj to, co zwraca nam walk, to jest za każdym razem, każda iteracja walka, zwraca nam tuple.
+
+44
+00:03:10,360 --> 00:03:12,680
+Ta tupla składa się z trzech elementów.
+
+45
+00:03:12,680 --> 00:03:18,840
+Tymi elementami są directory, directories in path, files in directory.
+
+46
+00:03:18,840 --> 00:03:20,680
+Cóż to takiego jest?
+
+47
+00:03:20,680 --> 00:03:22,680
+Directory to jest katalog, który w dalszym czasie, w którym mamy te pliki, które myśmy już wytrzymywali.
+
+48
+00:03:22,680 --> 00:03:25,439
+Katalog, który w danym momencie przetwarzam.
+
+49
+00:03:25,439 --> 00:03:29,280
+Załóżmy, że mamy taką sytuację, że jesteśmy w katalogu zdjęcia.
+
+50
+00:03:29,280 --> 00:03:36,760
+Więc w tym momencie zobaczę wewnątrz dir, będę miał powiedzmy sobie d dwukropek zdjęcia.
+
+51
+00:03:36,760 --> 00:03:37,159
+Okej?
+
+52
+00:03:37,159 --> 00:03:38,040
+Czytam photos.
+
+53
+00:03:38,040 --> 00:03:39,960
+Pójdę w angielskie nazwy.
+
+54
+00:03:39,960 --> 00:03:50,680
+Następnie wewnątrz katalogu photos posiadam zdjęcia z wakacji oraz posiadam zdjęcia z urodzin oraz posiadam po prostu jakieś luzem wrzucone zdjęcia.
+
+55
+00:03:50,680 --> 00:03:51,480
+Oraz posiadam po prostu jakieś luzem wrzucone zdjęcia.
+
+56
+00:03:51,480 --> 00:03:52,680
+Oraz posiadam po prostu jakieś luzem wrzucone zdjęcia.
+
+57
+00:03:52,680 --> 00:03:58,480
+W tym momencie files in dir będzie zawierało te luzem wrzucone zdjęcia.
+
+58
+00:03:58,480 --> 00:04:00,480
+Po prostu takie zdjęcia, które są rozsypane.
+
+59
+00:04:00,480 --> 00:04:03,719
+Natomiast ja muszę mieć możliwość też wejścia głębiej.
+
+60
+00:04:03,719 --> 00:04:08,960
+I wtedy directories in dir będzie zawierało właśnie te katalogi, które wymieniliśmy sobie wcześniej.
+
+61
+00:04:08,960 --> 00:04:11,760
+Czyli tam powiedzmy vacation, birthday i coś tam jeszcze.
+
+62
+00:04:11,760 --> 00:04:12,319
+Nie?
+
+63
+00:04:12,319 --> 00:04:15,120
+Czyli to są katalogi znajdujące się w tym katalogu.
+
+64
+00:04:15,120 --> 00:04:16,920
+A to jest files in dir.
+
+65
+00:04:16,920 --> 00:04:21,399
+Dzięki temu możemy po prostu zobaczyć sobie jakie katalogi są w tym katalogu.
+
+66
+00:04:21,399 --> 00:04:22,280
+Ale nie martw się.
+
+67
+00:04:22,279 --> 00:04:28,199
+Jeżeli wewnątrz tego katalogu masz jeszcze inne katalogi, to walk działa rekursywnie.
+
+68
+00:04:28,199 --> 00:04:30,119
+Czyli on będzie wchodził też głębiej.
+
+69
+00:04:30,119 --> 00:04:32,879
+Więc tak naprawdę tym nie musisz się przejmować.
+
+70
+00:04:32,879 --> 00:04:36,119
+To co mi się najbardziej przydaje zazwyczaj to jest po prostu to files in dir.
+
+71
+00:04:36,119 --> 00:04:37,199
+Głównie z tego korzystam.
+
+72
+00:04:37,199 --> 00:04:40,359
+Zresztą zaraz sobie to wszystko przećwiczymy.
+
+73
+00:04:40,359 --> 00:04:41,719
+I tu jest też informacja.
+
+74
+00:04:41,719 --> 00:04:43,559
+Czyli walk przechodzi po ścieżkach rekursywnie.
+
+75
+00:04:43,559 --> 00:04:46,119
+Znaczy wchodzi do wszystkich katalogów wewnątrz sam path.
+
+76
+00:04:46,119 --> 00:04:50,919
+Natomiast dir to jest ścieżka do przetworzenia do przetworzonego folderu.
+
+77
+00:04:50,919 --> 00:04:51,959
+Directories in path.
+
+78
+00:04:52,279 --> 00:04:53,279
+Do folderów w dir.
+
+79
+00:04:53,279 --> 00:04:55,279
+Czyli w tym gdzie się obecnie znajdujemy.
+
+80
+00:04:55,279 --> 00:04:57,959
+I files in dir to jest lista plików w dir.
+
+81
+00:04:57,959 --> 00:05:02,319
+Tu zwróć uwagę tylko na to, że jeżeli byś nie potrzebował któregoś z tych elementów.
+
+82
+00:05:02,319 --> 00:05:04,239
+Warto wymienić go na podkreślenie.
+
+83
+00:05:04,239 --> 00:05:05,519
+Czyli np.
+
+84
+00:05:05,519 --> 00:05:08,039
+Podkreślenie, podkreślenie files in dir.
+
+85
+00:05:08,039 --> 00:05:10,159
+To jest bardzo częste podejście.
+
+86
+00:05:10,159 --> 00:05:14,959
+Kolejną rzeczą, którą chciałbym ci pokazać to jak sprawdzić rozszerzenie naszego pliku.
+
+87
+00:05:14,959 --> 00:05:17,359
+I też trochę więcej o tym pliku.
+
+88
+00:05:17,359 --> 00:05:20,919
+Oczywiście kiedy wykonujemy walka i przechodzimy sobie po plikach.
+
+89
+00:05:20,920 --> 00:05:23,319
+Bo te pliki, te ścieżki są stringami.
+
+90
+00:05:23,319 --> 00:05:25,520
+Więc można łatwo sprawdzić ends with.
+
+91
+00:05:25,520 --> 00:05:28,759
+Żeby się dowiedzieć czy jest to pdf, jpeg czy coś innego.
+
+92
+00:05:28,759 --> 00:05:31,520
+Ale nie jest to takie najbardziej profesjonalne.
+
+93
+00:05:31,520 --> 00:05:32,800
+Chociaż działa.
+
+94
+00:05:32,800 --> 00:05:34,720
+Można zrobić też odrobinę inaczej.
+
+95
+00:05:34,720 --> 00:05:38,240
+A mianowicie jest taka biblioteka, która nazywa się pathlib.
+
+96
+00:05:38,240 --> 00:05:40,759
+I w niej jest coś co nazywa się path.
+
+97
+00:05:40,759 --> 00:05:41,840
+Klasa.
+
+98
+00:05:41,840 --> 00:05:44,319
+Jeżeli wykonamy from pathlib import path.
+
+99
+00:05:44,319 --> 00:05:46,879
+To możemy wykonać file równa się path.
+
+100
+00:05:46,879 --> 00:05:49,840
+I tutaj przekazujemy mu nazwę pliku.
+
+101
+00:05:49,840 --> 00:05:50,920
+W tym miejscu.
+
+102
+00:05:50,920 --> 00:05:53,480
+I kiedy przekażemy mu nazwę tego pliku.
+
+103
+00:05:53,480 --> 00:05:57,040
+Będziemy mogli wyciągnąć z tego pliku trochę więcej informacji.
+
+104
+00:05:57,040 --> 00:05:58,879
+Na przykład rozszerzenie pliku.
+
+105
+00:05:58,879 --> 00:06:00,400
+To jest file z suffix.
+
+106
+00:06:00,400 --> 00:06:01,680
+Czyli to będzie wtedy txt.
+
+107
+00:06:01,680 --> 00:06:03,280
+Czy plik istnieje?
+
+108
+00:06:03,280 --> 00:06:04,360
+File exists.
+
+109
+00:06:04,360 --> 00:06:06,960
+Bo możliwe, że ta ścieżka już nie istnieje.
+
+110
+00:06:06,960 --> 00:06:09,480
+Albo w międzyczasie ten plik zostanie usunięty na przykład.
+
+111
+00:06:09,480 --> 00:06:11,960
+Więc dzięki temu możemy sprawdzić czy plik istnieje.
+
+112
+00:06:11,960 --> 00:06:15,879
+Możemy też sprawdzić czy jest plikiem lub czy jest katalogiem.
+
+113
+00:06:15,879 --> 00:06:18,200
+Dzięki is file oraz is dir.
+
+114
+00:06:18,200 --> 00:06:19,840
+No i też dodatkowo.
+
+115
+00:06:19,839 --> 00:06:21,839
+Możemy wykonać file resolve.
+
+116
+00:06:21,839 --> 00:06:24,000
+I wtedy dostaniemy ścieżkę bezwzględną.
+
+117
+00:06:24,000 --> 00:06:25,519
+Bo tu jest tylko ścieżka względna.
+
+118
+00:06:25,519 --> 00:06:29,279
+Względem skryptu w którym w danym momencie się znajdujemy.
+
+119
+00:06:29,279 --> 00:06:31,959
+Natomiast można byłoby też podać ścieżkę bezwzględną.
+
+120
+00:06:31,959 --> 00:06:36,799
+A resolve zawsze zwróci nam ścieżkę bezwzględną do tego pliku.
+
+121
+00:06:36,799 --> 00:06:40,000
+No i myślę, że nie mamy już nic.
+
+122
+00:06:40,000 --> 00:06:43,239
+Do zrobienia więcej poza przetestowaniem tej wiedzy.
+
+123
+00:06:43,239 --> 00:06:47,639
+Dlatego też w kolejnym slajdzie w kolejnym filmie będę miał dla ciebie zadanie.
+
+124
+00:06:47,639 --> 00:06:47,959
+Chodź.

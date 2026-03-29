@@ -1,0 +1,115 @@
+1
+00:00:00,000 --> 00:00:01,439
+Zadania są następujące.
+
+2
+00:00:02,140 --> 00:00:08,599
+Po pierwsze, z podanej tupli liczb wyświetl te, które są podzielne przez 4 i które są podzielne przez 5.
+
+3
+00:00:09,019 --> 00:00:14,080
+Czyli stwórzmy sobie jakąś tuplę losowych wartości, co Wam przyjdzie na palce.
+
+4
+00:00:14,640 --> 00:00:17,300
+No i będziemy chcieli przejść po wszystkich elementach z tej tupli,
+
+5
+00:00:18,160 --> 00:00:22,740
+a następnie wyświetlić tylko te, które są podzielne przez 4 i te, które są podzielne przez 5.
+
+6
+00:00:22,879 --> 00:00:23,960
+Czyli tak naprawdę loop.
+
+7
+00:00:23,960 --> 00:00:30,620
+Po drugie, z podanej listy imion, tutaj tupli imion o różnej długości,
+
+8
+00:00:31,039 --> 00:00:34,280
+wyświetl te, które są dłuższe niż 5 znaków.
+
+9
+00:00:34,679 --> 00:00:36,380
+Długość imienia sprawdź funkcją len.
+
+10
+00:00:36,460 --> 00:00:38,960
+Ja tu mówię o liście, ale mam na myśli po prostu kolekcję tuple imion.
+
+11
+00:00:39,799 --> 00:00:42,640
+I chcemy sprawdzać długość imienia za pomocą funkcji len.
+
+12
+00:00:43,120 --> 00:00:48,579
+Czyli jakiś tam Kleofas, Aola, Ala, Krzysztof,
+
+13
+00:00:48,640 --> 00:00:51,960
+no to chcielibyśmy tylko te imiona dłuższe wyświetlić, krótszych nie wyświetlać.
+
+14
+00:00:51,960 --> 00:00:52,960
+No i następnie wyświetlamy.
+
+15
+00:00:52,960 --> 00:00:54,780
+No i ostatni przykład.
+
+16
+00:00:55,280 --> 00:00:57,200
+Tutaj będziemy musieli trochę też pogłówkować,
+
+17
+00:00:57,320 --> 00:01:01,340
+bo będziemy potrzebowali mieć pętlę for wewnątrz drugiej pętli for.
+
+18
+00:01:01,820 --> 00:01:05,099
+Jedna pętla for będzie miała wyświetlać nam po prostu elementy,
+
+19
+00:01:05,200 --> 00:01:10,659
+jeden pod drugim, a druga pętla for będzie miała wyświetlać nam te wartości obok siebie.
+
+20
+00:01:11,299 --> 00:01:14,379
+I chcielibyśmy, umieszczając pętlę for w drugiej pętli for,
+
+21
+00:01:14,480 --> 00:01:16,159
+wyświetlić trójkąt jak na przykładzie.
+
+22
+00:01:16,540 --> 00:01:19,700
+Czyli właśnie 1, 2, 3, 4, 1, 2, 3, 1, 2 i 1.
+
+23
+00:01:20,219 --> 00:01:21,760
+Taki jest plan na teraz.
+
+24
+00:01:21,760 --> 00:01:24,219
+Myślę, że spokojnie, dobra chwila dla każdego.
+
+25
+00:01:24,620 --> 00:01:25,620
+Nie spieszcie się.
+
+26
+00:01:26,020 --> 00:01:27,560
+Za moment widzimy się w rozwiązaniu
+
+27
+00:01:27,560 --> 00:01:29,080
+i w kolejnym filmie, po prostu w jednym,
+
+28
+00:01:29,480 --> 00:01:31,740
+pokażę Wam wszystkie trzy rozwiązania.
+
+29
+00:01:32,780 --> 00:01:33,260
+Do zobaczenia.

@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:05,560
+Na podstawie danych publicznych udostępnionych bezpłatnie przez dane publiczne imgw.pl api.info
+
+2
+00:00:05,560 --> 00:00:13,380
+przygotuj skrypt, który wyświetli informacje o temperaturze oraz ciśnieniu w mieście najbliższym miejscu Twojego zamieszkania.
+
+3
+00:00:14,000 --> 00:00:21,719
+Ja jestem z Gdyni, Gdyni niestety nie ma na tej liście, jest Gdańsk, więc cóż, podam temperaturę z Gdańska.
+
+4
+00:00:21,719 --> 00:00:29,940
+Chociaż bliski mojemu sercu jest też Kasprowy Wierch, chociażby jeżeli chodzi o nazwę, więc temperaturę z tego miejsca też wyświetlimy.
+
+5
+00:00:30,420 --> 00:00:35,179
+Zwróćcie uwagę na to, że dane, które znajdują się na tej stronie są listą i od razu w liście są słowniki,
+
+6
+00:00:35,640 --> 00:00:39,759
+więc bez problemu można po tych danych iterować i pobierać sobie te dane.
+
+7
+00:00:39,920 --> 00:00:45,320
+A co później z nimi zrobicie, czy pokażecie na jakimś urządzeniu, czy będziecie gdzieś wysyłać,
+
+8
+00:00:45,380 --> 00:00:50,320
+czy będziecie analizować i może rysować wykresy, to już oczywiście zależy od Was.
+
+9
+00:00:50,320 --> 00:00:51,939
+Wszystko to Python umożliwia.
+
+10
+00:00:52,460 --> 00:00:56,320
+To co, chwila dla każdego i widzimy się już za moment w moim rozwiązaniu.

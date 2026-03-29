@@ -1,0 +1,143 @@
+1
+00:00:00,000 --> 00:00:10,640
+No i właśnie w zadaniu 11 chcielibyśmy zrobić dokładnie to samo, ale tylko jeszcze sprawdzić ile użytkownik zdobył punktów i pytać użytkownika 3 razy o poprawną odpowiedź.
+
+2
+00:00:10,640 --> 00:00:35,219
+Ja sobie więc skopiuję to co zrobiłem wcześniej, wkleję to sobie tutaj, no i rozszerzę ten mój kod tak żeby działał 3 razy, czyli for tries in random, czy też jeżeli ja nie chcę tego w ogóle przechowywać, tylko wiem, że będę pytał 3 razy, to mogę zrobić podkreślenie, for podkreślenie in nie random, tylko in, wy wiecie co, nie?
+
+3
+00:00:35,219 --> 00:00:39,540
+Range 3, dwukropek.
+
+4
+00:00:40,640 --> 00:00:58,780
+To możemy w ten sposób pytać użytkownika, no i chcemy zliczać te poprawne odpowiedzi, czyli correct answers, tu równa się 0, a tutaj chcemy zwiększać ilość tych poprawnych odpowiedzi, czyli correct answers plus równa się 1.
+
+5
+00:00:58,780 --> 00:01:04,540
+I w ten sposób będziemy mogli wywołać to sobie i sprawdzić czy użytkownik nam dobrze odpowiedział.
+
+6
+00:01:05,079 --> 00:01:10,120
+Python, spacja, 11, liczenie punktów. Jaka jest stolica kraju? Polska, Warszawa.
+
+7
+00:01:10,640 --> 00:01:15,340
+A, nie wyświetla mnie gdzie correct answers, no ale dobra, sprawdzimy najpierw 3 razy.
+
+8
+00:01:15,780 --> 00:01:18,260
+Chorwacja, nie pamiętam, Wilno.
+
+9
+00:01:19,239 --> 00:01:23,060
+I Bośnia i Hercegowina, też nie pamiętam, może jest to Bukareszt?
+
+10
+00:01:24,239 --> 00:01:26,280
+No, ale zapytał 3 razy, super.
+
+11
+00:01:26,280 --> 00:01:40,280
+I teraz będziemy chcieli sprawdzić, w zależności od tego ile razy odpowiedział, dla 3 razy poszło ci bezbłędnie, czyli if correct answers równa się 3, print, poszło ci bezbłędnie.
+
+12
+00:01:40,640 --> 00:01:43,239
+i to jest bezbłędnie.
+
+13
+00:01:43,640 --> 00:01:48,400
+elif, correct answers, równa się 2.
+
+14
+00:01:48,400 --> 00:01:52,280
+Tylko 1 błąd, nieźle.
+
+15
+00:01:59,280 --> 00:02:03,400
+elif, correct answers, 1.
+
+16
+00:02:03,400 --> 00:02:07,400
+elif, correct answers, 1.
+
+17
+00:02:07,400 --> 00:02:09,400
+1 punkt na otarcie łez.
+
+18
+00:02:10,639 --> 00:02:15,779
+print
+
+19
+00:02:15,779 --> 00:02:19,019
+no i else
+
+20
+00:02:19,019 --> 00:02:21,639
+następnym razem będzie lepiej
+
+21
+00:02:21,639 --> 00:02:27,479
+i już mamy takie zadanie, gdzie można byłoby
+
+22
+00:02:27,479 --> 00:02:29,419
+zaskoczyć i pokazać rodzinie
+
+23
+00:02:29,419 --> 00:02:31,359
+uwaga, stolica kraju Polska
+
+24
+00:02:31,359 --> 00:02:33,239
+zawsze ta Polska jakoś na początek mi
+
+25
+00:02:33,239 --> 00:02:35,119
+wyskakuje, no ale dobrze, Warszawa
+
+26
+00:02:35,119 --> 00:02:37,799
+to ten jeden punkt na otarcie łez
+
+27
+00:02:37,799 --> 00:02:39,079
+Niemcy to Berlin
+
+28
+00:02:39,080 --> 00:02:41,760
+no i Rumunia, Bukaryst
+
+29
+00:02:41,760 --> 00:02:45,820
+poszło Ci bezbłędnie
+
+30
+00:02:45,820 --> 00:02:47,880
+mam nadzieję, że i Tobie poszło bezbłędnie
+
+31
+00:02:47,880 --> 00:02:49,120
+jeżeli chodzi o tę pracę domową
+
+32
+00:02:49,120 --> 00:02:51,380
+jesteś przygotowany, przygotowana do tego
+
+33
+00:02:51,380 --> 00:02:53,740
+żeby zmierzyć się z kolejnym modułem
+
+34
+00:02:53,740 --> 00:02:55,500
+który czeka tuż za rogiem
+
+35
+00:02:55,500 --> 00:02:58,200
+widzimy się za moment w kolejnej lekcji
+
+36
+00:02:58,200 --> 00:02:58,800
+do zobaczenia

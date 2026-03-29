@@ -1,0 +1,259 @@
+1
+00:00:00,000 --> 00:00:06,200
+No i zobacz, stworzyłem sobie właśnie taką klasę, posiadam tutaj first name, last name i semestr.
+
+2
+00:00:06,640 --> 00:00:10,960
+Wszystkie te właściwości, czyli first name, last name i semestr przypisałem sobie,
+
+3
+00:00:11,300 --> 00:00:14,919
+czy właściwie wartości przypisałem sobie do właściwości,
+
+4
+00:00:15,419 --> 00:00:19,820
+no i z tego powodu mogę z nich korzystać też w pozostałych metodach.
+
+5
+00:00:20,379 --> 00:00:22,879
+Zrobiłem jeszcze jedną ciekawą rzecz, a mianowicie zobacz,
+
+6
+00:00:23,300 --> 00:00:29,260
+założyłem, że mój student posiada też oceny, czyli mam jakieś self notes,
+
+7
+00:00:29,260 --> 00:00:31,880
+gdzie przypisuję mu po prostu oceny.
+
+8
+00:00:32,179 --> 00:00:33,820
+Dlaczego to zrobiłem w ten sposób?
+
+9
+00:00:34,140 --> 00:00:39,480
+No bo oceny są właściwością studenta, więc muszą być tak przypisane.
+
+10
+00:00:40,200 --> 00:00:45,140
+Druga rzecz, która się stała, to tutaj, kiedy odwołuję się do tych ocen,
+
+11
+00:00:45,540 --> 00:00:50,320
+no to też oceny nie zawsze muszą być przypisywane.
+
+12
+00:00:50,780 --> 00:00:54,640
+No bo jak ktoś by chciał dać komuś ocenę minus cztery albo piętnaście,
+
+13
+00:00:54,640 --> 00:00:58,880
+no to nie może dać, bo oceny w szkole polskiej są od jeden do sześć.
+
+14
+00:00:59,259 --> 00:01:02,320
+I z tego powodu zrobiłem takie sprawdzenie.
+
+15
+00:01:02,739 --> 00:01:08,700
+Ale żeby to sprawdzenie móc wykonać, posłużyłem się dodatkową metodą o nazwie add note.
+
+16
+00:01:09,079 --> 00:01:13,659
+Czyli zobacz, mam taką sytuację, że jest student, on posiada oczywiście tę metodę promote,
+
+17
+00:01:13,879 --> 00:01:18,340
+ale ma też metodę add note, która przyjmuje selfa,
+
+18
+00:01:18,719 --> 00:01:22,759
+jak już pamiętasz z poprzedniego filmu self zawsze musi znajdować się wewnątrz metody,
+
+19
+00:01:23,259 --> 00:01:25,479
+oraz note, który jest integerem.
+
+20
+00:01:25,479 --> 00:01:29,120
+No i mam tutaj takie założenie, że jeżeli note jest większy,
+
+21
+00:01:29,260 --> 00:01:34,500
+czyli 6 or note jest mniejszy niż 1, to po prostu robię return.
+
+22
+00:01:34,500 --> 00:01:38,700
+Return wyjdzie mi z add note'a i nie przypisze mi tej oceny.
+
+23
+00:01:38,700 --> 00:01:40,200
+Tak samo jak było w funkcjach.
+
+24
+00:01:40,200 --> 00:01:45,160
+Tu jest taka sprawa, że w przyszłości pokażę ci jak wyrzucać wyjątki,
+
+25
+00:01:45,160 --> 00:01:49,120
+jak za pomocą wyjątków obsłużyć takie zdarzenia.
+
+26
+00:01:49,120 --> 00:01:52,439
+Natomiast w tym przypadku return też nam wystarczy.
+
+27
+00:01:52,439 --> 00:01:57,340
+No i następnie robię self notes append note,
+
+28
+00:01:57,340 --> 00:01:59,240
+czyli do ocen,
+
+29
+00:01:59,260 --> 00:02:02,260
+które są ocenami danego studenta,
+
+30
+00:02:02,260 --> 00:02:08,259
+dodaję nową ocenę appendując ją po prostu do tych, które już miał.
+
+31
+00:02:08,259 --> 00:02:13,259
+Dzięki temu mogę też na przykład określić średnią tych ocen.
+
+32
+00:02:13,259 --> 00:02:17,259
+Zobacz, mam inną metodę get average i w ramach tej metody
+
+33
+00:02:17,259 --> 00:02:20,259
+dzielę sobie po prostu sumę ocen przez ilość,
+
+34
+00:02:20,259 --> 00:02:22,259
+no i w ten sposób dostajemy konkretny wynik.
+
+35
+00:02:22,259 --> 00:02:25,259
+Czyli jeżeli będę chciał sobie stworzyć takiego studenta,
+
+36
+00:02:25,259 --> 00:02:29,259
+to wykonuję john równa się student john smith.
+
+37
+00:02:29,259 --> 00:02:32,259
+John dostaje piątkę, czwórkę i szóstkę.
+
+38
+00:02:32,259 --> 00:02:35,259
+Czyli wiemy, że średnia jego ocen wynosi 5,0,
+
+39
+00:02:35,259 --> 00:02:38,259
+no bo 5 plus 4 to 9, plus 6 to 15, na 3 to 5,
+
+40
+00:02:38,259 --> 00:02:41,259
+a skoro dzielimy to zwracamy floata.
+
+41
+00:02:41,259 --> 00:02:45,259
+No i w ten sposób, jeżeli byśmy chcieli wyświetlić sobie jego oceny,
+
+42
+00:02:45,259 --> 00:02:48,259
+to możemy to zrobić wykonując john.notes,
+
+43
+00:02:48,259 --> 00:02:54,259
+ale też możemy wyświetlić sobie średnią tych ocen wykonując john.get average.
+
+44
+00:02:54,259 --> 00:02:58,259
+Gdybym zmieniał ten notes bezpośrednio,
+
+45
+00:02:58,259 --> 00:03:01,259
+to też mógłbym to robić, czyli mógłbym zrobić
+
+46
+00:03:01,259 --> 00:03:07,259
+john.notes append 61, tam 561,
+
+47
+00:03:07,259 --> 00:03:10,259
+to również by zadziałało, no ale w ten sposób,
+
+48
+00:03:10,259 --> 00:03:14,259
+mając taką metodę add note, my po prostu zaznaczamy użytkownikowi
+
+49
+00:03:14,259 --> 00:03:16,259
+słuchaj, użyj lepiej tej metody,
+
+50
+00:03:16,259 --> 00:03:21,259
+nie korzystaj z modyfikowania takich właściwości samodzielnie.
+
+51
+00:03:21,259 --> 00:03:24,259
+I tak właśnie ten nasz kod zadziałał,
+
+52
+00:03:24,259 --> 00:03:26,259
+i tak ten nasz kod też się prezentuje.
+
+53
+00:03:26,259 --> 00:03:27,259
+Dzięki temu, jeżeli będziemy wytłumaczyć, że ten nasz kod,
+
+54
+00:03:27,259 --> 00:03:29,259
+to też będzie mój kod,
+
+55
+00:03:29,259 --> 00:03:31,259
+dzięki temu, jeżeli będę chciał stworzyć sobie nową osobę,
+
+56
+00:03:31,259 --> 00:03:33,259
+niech to będzie Mary,
+
+57
+00:03:33,259 --> 00:03:37,259
+powiedzmy sobie siostra z Johna,
+
+58
+00:03:37,259 --> 00:03:43,259
+może się uczyć lepiej,
+
+59
+00:03:43,259 --> 00:03:47,259
+dajmy Mary 3 szóstki,
+
+60
+00:03:47,259 --> 00:03:53,259
+no i wtedy jak sobie wyświetlimy Mary.get average,
+
+61
+00:03:53,259 --> 00:03:55,259
+no to też dostaniemy informację, że średnia Mary to jest,
+
+62
+00:03:55,259 --> 00:04:01,259
+6,0.
+
+63
+00:04:01,259 --> 00:04:03,259
+Start.
+
+64
+00:04:03,259 --> 00:04:05,259
+Dokładnie taka wartość mi się wyświetliła.
+
+65
+00:04:05,259 --> 00:04:10,259
+No to co, chodźmy dalej, czas troszkę to sobie poćwiczyć.

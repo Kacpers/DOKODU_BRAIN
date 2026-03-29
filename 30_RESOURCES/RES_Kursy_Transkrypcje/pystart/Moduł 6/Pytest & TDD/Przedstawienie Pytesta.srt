@@ -1,0 +1,107 @@
+1
+00:00:00,000 --> 00:00:02,980
+No i właśnie w ten sposób, chociaż może nie do końca w ten sposób,
+
+2
+00:00:03,120 --> 00:00:05,919
+bo to jest po prostu jedna z bardziej polecanych bibliotek
+
+3
+00:00:05,919 --> 00:00:08,080
+i jedna z częściej wykorzystywanych przeze mnie,
+
+4
+00:00:08,620 --> 00:00:11,179
+dochodzimy do biblioteki o nazwie PyTest.
+
+5
+00:00:12,080 --> 00:00:16,000
+Tak się jakoś stało, że wszystkie biblioteki Pythonowe mają to Py z przodu.
+
+6
+00:00:16,240 --> 00:00:18,300
+Dużo z nich, ok? Request nie miało.
+
+7
+00:00:18,820 --> 00:00:22,440
+No i to, co zostanie nam po odjęciu Py jest to test.
+
+8
+00:00:22,440 --> 00:00:26,440
+Czyli tak naprawdę PyTest jest to biblioteka, która służy do tego,
+
+9
+00:00:27,039 --> 00:00:29,859
+żeby wykonywać testy.
+
+10
+00:00:30,000 --> 00:00:34,020
+I teraz trochę będzie takich momentów, gdzie będziemy sobie gadali o tym,
+
+11
+00:00:34,140 --> 00:00:36,380
+czym są testy, dlaczego testujemy i tak dalej,
+
+12
+00:00:36,500 --> 00:00:39,659
+więc na chwilę możesz odłożyć klawiaturę, tak?
+
+13
+00:00:39,740 --> 00:00:43,579
+Możesz ją gdzieś sobie tam przenieść, odstawić na bok i posłuchać.
+
+14
+00:00:44,640 --> 00:00:46,939
+Zamiast tego lepiej wziąć na jakiś notatnik, sobie notować.
+
+15
+00:00:47,260 --> 00:00:50,140
+To pierwsza rzecz. A druga rzecz, że w tym momencie,
+
+16
+00:00:50,140 --> 00:00:54,079
+za chwilę już wrócimy do tego naszego projektu rdzennego,
+
+17
+00:00:54,240 --> 00:00:55,780
+w którym znajdowały się te wszystkie zadania.
+
+18
+00:00:56,379 --> 00:00:58,939
+Ok? Będziemy, o tych modułach sobie powiedzieliśmy.
+
+19
+00:00:58,939 --> 00:01:00,939
+Będziemy z tego oczywiście korzystali.
+
+20
+00:01:00,939 --> 00:01:07,439
+Natomiast za chwilę wracamy sobie do naszego pierwszego projektu.
+
+21
+00:01:07,439 --> 00:01:09,700
+Tego, gdzie znajdowały się wszystkie te pliki.
+
+22
+00:01:09,700 --> 00:01:13,879
+Z tego względu, że PyTest jak najbardziej będzie w ten sposób działał
+
+23
+00:01:13,879 --> 00:01:15,560
+i mu to jak najbardziej wystarczy.
+
+24
+00:01:15,560 --> 00:01:17,939
+A! Tylko tu jest małe zadanie oczywiście.
+
+25
+00:01:17,939 --> 00:01:22,180
+pip install pytest to już w tamtym projekcie, do którego wróciliśmy.
+
+26
+00:01:22,180 --> 00:01:23,379
+Możecie to wykonać.
+
+27
+00:01:23,379 --> 00:01:26,280
+A jeżeli nie wykonacie, no to raz jeszcze o tym zaraz wspomnę.

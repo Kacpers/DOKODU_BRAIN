@@ -1,0 +1,39 @@
+1
+00:00:00,000 --> 00:00:05,860
+I tu mam dla Ciebie zadanie, żeby przećwiczyć sobie to, co pokazałem przed momentem.
+
+2
+00:00:06,459 --> 00:00:12,620
+Wykorzystaj zdobytą wiedzę o plikach CSV, aby utworzyć nowy plik zawierający poniższe dane,
+
+3
+00:00:12,839 --> 00:00:17,000
+a następnie w drugim programie odczytaj wszystkie zgromadzone informacje.
+
+4
+00:00:17,559 --> 00:00:22,280
+Najwygodniej korzystać ze słownika, bo mamy kolumnę nagłówkową, więc warto byłoby się nią posłużyć.
+
+5
+00:00:22,280 --> 00:00:28,339
+Czyli mamy kolumnę nagłówkową name, time to 100, tu chodzi o czas potrzebny do osiągnięcia 100 km na godzinę,
+
+6
+00:00:28,339 --> 00:00:33,759
+oraz speed record i to są cztery najszybsze samochody według Wikipedii.
+
+7
+00:00:34,399 --> 00:00:40,679
+Nie będę ich czytał, ale jak widzicie od 484 do 450 rekord prędkości,
+
+8
+00:00:40,880 --> 00:00:44,539
+natomiast do 100 potrafią dojść w 2,5 sekundy.
+
+9
+00:00:45,159 --> 00:00:50,439
+Imponujące, mam nadzieję, że równie imponujące jak praca z CSV, do której zachęcam.
+
+10
+00:00:50,780 --> 00:00:50,980
+Do zobaczenia.

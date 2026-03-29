@@ -1,0 +1,215 @@
+1
+00:00:00,000 --> 00:00:03,140
+Zacznę sobie od tego, że przygotuję sobie to wyrażenie,
+
+2
+00:00:03,520 --> 00:00:06,259
+na którym będę chciał później to sprawdzić.
+
+3
+00:00:06,679 --> 00:00:08,060
+Czyli alamakota
+
+4
+00:00:08,060 --> 00:00:12,019
+oraz python
+
+5
+00:00:12,019 --> 00:00:14,599
+delimiter
+
+6
+00:00:14,599 --> 00:00:17,420
+to jest 3 i repeat
+
+7
+00:00:17,420 --> 00:00:19,300
+delimiter to jest średnik
+
+8
+00:00:19,300 --> 00:00:22,839
+i repeat równa się 3.
+
+9
+00:00:23,379 --> 00:00:27,140
+Czyli tak naprawdę zadanie będzie polegało na tym, że musimy sobie stworzyć listę
+
+10
+00:00:27,140 --> 00:00:29,800
+zawierającą tyle elementów
+
+11
+00:00:29,800 --> 00:00:31,940
+a następnie połączyć je tym.
+
+12
+00:00:32,579 --> 00:00:34,140
+Czyli def repeat
+
+13
+00:00:34,140 --> 00:00:37,679
+jakiś tam tekst, może tak będzie lepiej
+
+14
+00:00:37,679 --> 00:00:42,039
+delimiter, domyślnie miał być nim przecinek
+
+15
+00:00:42,039 --> 00:00:45,740
+no i wartość repeat równa 1.
+
+16
+00:00:48,200 --> 00:00:50,659
+Następnie będziemy sobie wykonywali pętlę
+
+17
+00:00:50,659 --> 00:00:53,299
+for, tylko przydałaby nam się jakaś lista
+
+18
+00:00:53,299 --> 00:00:55,579
+może być to lista output
+
+19
+00:00:55,579 --> 00:00:57,260
+jako lista
+
+20
+00:00:57,259 --> 00:01:00,439
+for znak podkreślenia
+
+21
+00:01:00,439 --> 00:01:01,939
+dlaczego znak podkreślenia?
+
+22
+00:01:02,039 --> 00:01:04,099
+Bo tak naprawdę nie potrzebujemy mieć
+
+23
+00:01:04,099 --> 00:01:07,459
+wiedzieć ile razy przechodzimy przez tą pętlę
+
+24
+00:01:07,459 --> 00:01:09,980
+tylko po prostu ona ma się wykonać tyle razy.
+
+25
+00:01:10,099 --> 00:01:12,039
+Czyli for znak podkreślenia
+
+26
+00:01:12,039 --> 00:01:14,439
+in range repeat
+
+27
+00:01:14,439 --> 00:01:15,799
+dwukropek
+
+28
+00:01:15,799 --> 00:01:18,659
+output append
+
+29
+00:01:18,659 --> 00:01:20,239
+text
+
+30
+00:01:20,239 --> 00:01:22,459
+return
+
+31
+00:01:22,459 --> 00:01:24,519
+delimiter
+
+32
+00:01:24,519 --> 00:01:26,620
+kropka join
+
+33
+00:01:26,620 --> 00:01:29,460
+output
+
+34
+00:01:32,500 --> 00:01:33,500
+to sobie jeszcze wyprintujemy.
+
+35
+00:01:33,500 --> 00:01:35,500
+Dlaczego zrobiłem delimiter join output?
+
+36
+00:01:35,500 --> 00:01:38,500
+To jest taka linijka, która w tym momencie często na szkoleniach
+
+37
+00:01:38,500 --> 00:01:40,500
+takich na żywo
+
+38
+00:01:40,500 --> 00:01:42,500
+pada pytanie dlaczego delimiter?
+
+39
+00:01:42,500 --> 00:01:44,500
+Bo normalnie jak sobie coś łączyliśmy
+
+40
+00:01:44,500 --> 00:01:46,500
+to wykonywaliśmy na przykład średnik
+
+41
+00:01:46,500 --> 00:01:48,500
+join fruits
+
+42
+00:01:48,500 --> 00:01:50,500
+więc to
+
+43
+00:01:50,500 --> 00:01:54,500
+czym łączymy sobie nasze wyrażenia, naszą listę
+
+44
+00:01:54,500 --> 00:01:56,500
+jest właśnie określone na początku.
+
+45
+00:01:56,620 --> 00:01:58,620
+I wtedy potem robimy join
+
+46
+00:01:58,620 --> 00:02:00,620
+i w nawiasie wprowadzamy to
+
+47
+00:02:00,620 --> 00:02:02,620
+co chcemy połączyć. I tu jest tak samo.
+
+48
+00:02:02,620 --> 00:02:06,620
+Tylko z racji tego, że delimiter to jest jakiś string, który przychodzi do nas z zewnątrz
+
+49
+00:02:06,620 --> 00:02:08,620
+no to właśnie dlatego tak to
+
+50
+00:02:08,620 --> 00:02:10,620
+zapisujemy.
+
+51
+00:02:10,620 --> 00:02:13,620
+Python argumenty nazwane rozwiązanie
+
+52
+00:02:17,620 --> 00:02:19,620
+O i zobacz, a la Makota
+
+53
+00:02:19,620 --> 00:02:21,620
+Python, Python, Python.
+
+54
+00:02:21,620 --> 00:02:23,620
+Chodźcie dalej.

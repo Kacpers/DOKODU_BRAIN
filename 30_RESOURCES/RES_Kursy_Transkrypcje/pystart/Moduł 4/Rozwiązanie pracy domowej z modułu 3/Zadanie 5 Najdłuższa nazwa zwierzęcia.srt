@@ -1,0 +1,151 @@
+1
+00:00:00,000 --> 00:00:14,780
+No to co? Podobnie jak w poprzednim zadaniu napisz program, który stworzy słownik zawierający informacje o Twoich ulubionych zwierzętach domowych. Mam różne zwierzęta, nie wszystkie domowe, ale okej. Chociaż no, czy kurczak jest zwierzęciem domowym?
+
+2
+00:00:14,779 --> 00:00:29,820
+Tak, to jest zwierzę, następnie znajdź zwierzę, które ma najdłuższą nazwę i wyświetl jego nazwę i rasę. Czyli tak naprawdę w moim przypadku najdłuższą nazwę ma konik polny. Kurczę, coś trzeba tutaj zmienić. No ale dobra, zwróćcie uwagę na to, że tych zwierząt tutaj też jest trochę więcej.
+
+3
+00:00:29,820 --> 00:00:43,820
+No i moglibyśmy na przykład szukać tutaj najdłuższej nazwy w połączeniu na przykład nazwy oraz rasy, tak? No bo zakładam, że powiedzmy pająk, pająk, pajęczak czy mrówka jako mrówka miodowa.
+
+4
+00:00:43,820 --> 00:00:59,439
+No to tutaj można byłoby poszukać tych dłuższych wyrażeń. O i między innymi udałoby się znaleźć w ten sposób najdłuższego psa jako owczarka niemieckiego i byłoby zwierzę domowe. Ale wiadomo, dane są danymi. Przede wszystkim chodzi nam o to, żeby wykonać to zadanie przyzwoicie.
+
+5
+00:00:59,439 --> 00:01:12,340
+Czyli będziemy potrzebowali przejść sobie po wszystkich tych zwierzętach i wyświetlić długość na przykład tej nazwy wraz z rasą. Czyli for animal in animals.
+
+6
+00:01:13,340 --> 00:01:13,439
+Dwukrotnie.
+
+7
+00:01:13,819 --> 00:01:28,319
+I potrzebuje wyświetlić długość animal od name plus długość animal od breed. Breed to jest rasa. No i to jest nasz jakiś tam length.
+
+8
+00:01:31,319 --> 00:01:41,060
+Dzięki temu będę mógł sobie wyświetlić print na przykład animal od name przecinek length.
+
+9
+00:01:43,819 --> 00:02:12,199
+Jak to sobie teraz wywołam? Czyli view to window terminal strzałka do góry. Nie. 5. No chodź, nie rób mi wstydu. O, no to mam pies 22, mrówka 20, ślimak 24. Czyli kurczę pies cały czas przegrywa tym razem ze ślimakiem. No dobra. Ale chcielibyśmy tego ślimaka sobie zatem wyświetlić. Czyli tak samo jak w poprzednim przykładzie wybierzemy longest czy tam maximum length.
+
+10
+00:02:13,819 --> 00:02:32,419
+Możemy ją zrobić sobie jako none. No i wtedy if maximum length is none or length jest większy od maximum length.
+
+11
+00:02:32,419 --> 00:02:41,000
+Dwukropek. No i wtedy możemy wykonać maximum length równa się length.
+
+12
+00:02:41,000 --> 00:02:43,340
+For.
+
+13
+00:02:43,819 --> 00:02:46,239
+Animal in animals.
+
+14
+00:02:46,840 --> 00:02:49,060
+Dwukropek. No i chcemy sprawdzić.
+
+15
+00:02:49,599 --> 00:02:51,359
+Potrzebujemy ponownie mieć length.
+
+16
+00:02:51,479 --> 00:02:53,359
+Już niedługo będzie temat funkcji,
+
+17
+00:02:53,799 --> 00:02:55,539
+gdzie dowiesz się jak taki kod
+
+18
+00:02:55,539 --> 00:02:58,280
+zamknąć sobie właśnie w funkcji, żeby nie trzeba było go powtarzać.
+
+19
+00:02:58,879 --> 00:03:00,039
+No i wtedy jeżeli
+
+20
+00:03:00,039 --> 00:03:00,859
+length
+
+21
+00:03:00,859 --> 00:03:03,419
+równa się maximum length
+
+22
+00:03:03,419 --> 00:03:06,060
+no to wtedy
+
+23
+00:03:06,060 --> 00:03:08,019
+no a już mamy poniżej
+
+24
+00:03:08,019 --> 00:03:08,539
+print.
+
+25
+00:03:10,000 --> 00:03:12,019
+O. Strzałka do góry enter.
+
+26
+00:03:13,060 --> 00:03:13,519
+I mamy
+
+27
+00:03:13,520 --> 00:03:15,520
+ślimak ma najdłuższą nazwę.
+
+28
+00:03:15,520 --> 00:03:17,520
+Jak chcemy ślimaka razem z breedem
+
+29
+00:03:17,520 --> 00:03:19,520
+length nam niepotrzebny to możemy zawsze
+
+30
+00:03:19,520 --> 00:03:27,520
+wyświetlić sobie te dwie rzeczy i będziemy wiedzieli, że ślimak gąsienicowy to jest najdłuższa nazwa.
+
+31
+00:03:27,520 --> 00:03:31,520
+Tak naprawdę tu w niektórych przypadkach można byłoby pousuwać te wartości.
+
+32
+00:03:31,520 --> 00:03:36,520
+Bo jak mamy ślimak ślimak no to może niezbyt po prostu gąsienicowy.
+
+33
+00:03:36,520 --> 00:03:39,520
+Tak jak tutaj jest pies owczarek niemiecki. Wiecie o co mi chodzi, nie?
+
+34
+00:03:39,520 --> 00:03:41,520
+Ale tak jak mówiłem dane to dane.
+
+35
+00:03:41,520 --> 00:03:43,520
+Najważniejsze jest to, że wiemy jak do tego dodać.
+
+36
+00:03:43,520 --> 00:03:45,520
+Że możemy do tego typu zadań podchodzić.
+
+37
+00:03:45,520 --> 00:03:52,520
+No i że też poćwiczyliśmy sobie przechodzenie po słownikach oraz przechodzenie po pobieranie z nich danych.
+
+38
+00:03:52,520 --> 00:03:53,520
+Chodźcie dalej.

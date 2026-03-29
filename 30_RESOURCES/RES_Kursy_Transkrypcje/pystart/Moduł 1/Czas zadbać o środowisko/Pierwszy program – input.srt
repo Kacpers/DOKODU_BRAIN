@@ -1,0 +1,123 @@
+1
+00:00:00,000 --> 00:00:03,060
+No to co? Zaczynamy Twój pierwszy program.
+
+2
+00:00:03,560 --> 00:00:06,839
+Jeżeli chodzi o pierwszy program, to oczywiście już napisaliśmy go moment temu,
+
+3
+00:00:06,960 --> 00:00:10,019
+ale chciałem tutaj pokazać Ci kilka jeszcze dodatkowych rzeczy,
+
+4
+00:00:10,179 --> 00:00:11,800
+które pomogą Ci programować.
+
+5
+00:00:12,140 --> 00:00:15,759
+Po pierwsze, jeżeli chcesz odbierać informacje od użytkownika,
+
+6
+00:00:16,160 --> 00:00:17,900
+to możesz to zrobić bajecznie prosto.
+
+7
+00:00:18,019 --> 00:00:19,839
+Wystarczy użyć funkcji input.
+
+8
+00:00:20,240 --> 00:00:23,660
+I zobacz, jeżeli napiszesz name równa się input
+
+9
+00:00:23,660 --> 00:00:25,719
+i mu powiesz, jak masz na imię,
+
+10
+00:00:26,080 --> 00:00:28,839
+to on Ci wówczas odpowie, cześć, miło mi Cię poznać.
+
+11
+00:00:28,839 --> 00:00:31,839
+Pamiętaj jednakże, że zawsze wszystko to,
+
+12
+00:00:31,940 --> 00:00:36,039
+co odbierasz od użytkownika, będzie miało typ string.
+
+13
+00:00:36,480 --> 00:00:38,079
+Możesz to zmienić na dowolny typ.
+
+14
+00:00:38,200 --> 00:00:40,640
+Jeżeli pamiętasz te typy, które przed chwilą sprawdzaliśmy
+
+15
+00:00:40,640 --> 00:00:43,500
+za pomocą funkcji type, to oni tam mówili
+
+16
+00:00:43,500 --> 00:00:45,939
+int float str.
+
+17
+00:00:46,439 --> 00:00:49,960
+I te nazwy, czyli int float str, to są jakby takie funkcje,
+
+18
+00:00:50,140 --> 00:00:52,480
+które służą do konwertowania tych typów na inne.
+
+19
+00:00:52,859 --> 00:00:57,480
+Zobacz, na przykład chcę odebrać od użytkownika ilość, cenę,
+
+20
+00:00:57,479 --> 00:00:59,279
+no i napisać, ile ma do zapłaty.
+
+21
+00:00:59,799 --> 00:01:04,420
+Mogę wówczas napisać int input ilość, float input cena,
+
+22
+00:01:05,019 --> 00:01:08,000
+amount równa się quantity razy price.
+
+23
+00:01:08,280 --> 00:01:11,500
+I w ten sposób będę mógł mu wypisać do zapłaty
+
+24
+00:01:11,500 --> 00:01:13,579
+i podać konkretną wartość.
+
+25
+00:01:15,420 --> 00:01:17,299
+I w ten sposób, jeżeli to wykonasz,
+
+26
+00:01:17,620 --> 00:01:19,219
+no to wówczas dostaniesz informację,
+
+27
+00:01:19,539 --> 00:01:21,359
+ile tak naprawdę trzeba zapłacić,
+
+28
+00:01:21,459 --> 00:01:25,400
+gdzie int razy float oczywiście zwróci nam znowu floata.
+
+29
+00:01:25,400 --> 00:01:27,459
+Gdzie int, pamiętamy, że to są wartości,
+
+30
+00:01:27,480 --> 00:01:30,340
+czyli całkowite, natomiast float, wartości zmienne,
+
+31
+00:01:30,420 --> 00:01:30,700
+przecinki.

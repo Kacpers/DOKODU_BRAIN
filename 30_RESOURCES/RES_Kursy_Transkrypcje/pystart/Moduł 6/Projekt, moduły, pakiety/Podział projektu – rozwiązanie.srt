@@ -1,0 +1,459 @@
+1
+00:00:00,000 --> 00:00:03,899
+To co? Przyszedł czas na stworzenie naszego pierwszego pakietu.
+
+2
+00:00:04,400 --> 00:00:08,859
+Na początek będę potrzebował stworzyć sobie Python package i nazwać go PyStart.
+
+3
+00:00:10,700 --> 00:00:16,920
+Wewnątrz PyStartu potrzebuję mieć Utils oraz Calculations.
+
+4
+00:00:17,140 --> 00:00:17,859
+No to Utils.
+
+5
+00:00:18,219 --> 00:00:25,560
+Jak nie wiadomo, gdzie upakować jakąś funkcję, bo jest ona taka bardzo ogólna,
+
+6
+00:00:25,660 --> 00:00:27,519
+to Utils to jest jeden z takich miejsc.
+
+7
+00:00:27,519 --> 00:00:29,440
+Nie jest to może najlepsze.
+
+8
+00:00:30,000 --> 00:00:33,000
+Miejsce, ale często się zdarza.
+
+9
+00:00:33,240 --> 00:00:34,579
+Drugim takim miejscem jest Common.
+
+10
+00:00:34,719 --> 00:00:36,280
+Jak nie wiadomo, co gdzie jest, to Common.
+
+11
+00:00:36,439 --> 00:00:38,060
+Taka też popularna nazwa.
+
+12
+00:00:38,700 --> 00:00:40,219
+Czyli Calculations, Utils.
+
+13
+00:00:40,480 --> 00:00:40,880
+Dalej.
+
+14
+00:00:41,219 --> 00:00:43,299
+W pakiecie Utils stwórz moduł Lists.
+
+15
+00:00:43,420 --> 00:00:47,700
+Czyli wewnątrz Utilsów robimy prawy menu i po prostu robimy Python file.
+
+16
+00:00:47,840 --> 00:00:49,340
+Nazywamy go Lists.
+
+17
+00:00:51,179 --> 00:00:54,359
+I nasze Lists musi zawierać funkcję AddLists.
+
+18
+00:00:54,359 --> 00:00:57,600
+No to dev addLists.
+
+19
+00:00:58,539 --> 00:00:59,939
+List1 jako lista.
+
+20
+00:01:00,079 --> 00:01:01,880
+Powiększę to, żebyśmy wszyscy widzieli.
+
+21
+00:01:02,280 --> 00:01:03,880
+List2 jako lista.
+
+22
+00:01:03,880 --> 00:01:05,519
+Zwracać będziemy listę.
+
+23
+00:01:06,180 --> 00:01:14,159
+For element1, element2 in zip list1, list2, dwukropek.
+
+24
+00:01:15,299 --> 00:01:17,240
+Tu jeszcze przyda nam się jakiś result.
+
+25
+00:01:19,379 --> 00:01:19,960
+Result.
+
+26
+00:01:19,960 --> 00:01:27,879
+Kto jest bardzo znudzony tym, mam nadzieję, że nikt nie jest znudzony, bo to nie chodzi o to, żeby nudzić, to może poczytać o ListComprehension.
+
+27
+00:01:27,879 --> 00:01:29,659
+I to zadanie robi za pomocą ListComprehension.
+
+28
+00:01:29,659 --> 00:01:29,799
+A kto nie, to nie ma problemu.
+
+29
+00:01:29,799 --> 00:01:29,900
+A kto nie, to nie ma problemu.
+
+30
+00:01:30,000 --> 00:01:34,060
+Kto robi je zawsze za pomocą ListComprehension, to mógłby poczytać sobie o generatorach.
+
+31
+00:01:34,560 --> 00:01:39,640
+Daje takie zadania wykraczające też po to, żebyście się pouczyli tych dodatkowych rzeczy.
+
+32
+00:01:39,760 --> 00:01:42,040
+Natomiast to są takie jakieś dalsze tematy.
+
+33
+00:01:42,560 --> 00:01:46,620
+A kto się czuje komfortowo, to też może, mówię, ListComprehension najpierw zrobić.
+
+34
+00:01:46,939 --> 00:01:47,640
+Czyli Lists.
+
+35
+00:01:48,659 --> 00:01:49,060
+Mamy.
+
+36
+00:01:50,060 --> 00:01:50,579
+OK.
+
+37
+00:01:51,060 --> 00:01:54,439
+Następnie w pakiecie Calculations stwórz moduł Geometry.
+
+38
+00:01:54,439 --> 00:01:59,560
+No to na Calculations prawym, Python file, Geometry.
+
+39
+00:02:00,000 --> 00:02:00,500
+Enter.
+
+40
+00:02:00,500 --> 00:02:08,580
+I w Geometry potrzebujemy mieć funkcję do obliczania pola oraz obwodu okręgu i trójkąta równobocznego.
+
+41
+00:02:09,099 --> 00:02:18,460
+Czyli będziemy potrzebowali mieć def, oczywiście obwodu nie okręgu, tylko koła, prawda?
+
+42
+00:02:19,060 --> 00:02:28,840
+Def, ktoś mi ostatnio zwrócił na to uwagę, to pozdrawiam i przepraszam, że w którymś poprzednim zadaniu wspomniałem o okręgu, który jest tylko i wyłącznie o tym dookoła,
+
+43
+00:02:28,840 --> 00:02:29,840
+a nam chodzi o filtr.
+
+44
+00:02:30,000 --> 00:02:31,479
+Więc def.
+
+45
+00:02:31,960 --> 00:02:37,180
+No i możemy sobie powiedzieć CircleArea.
+
+46
+00:02:37,539 --> 00:02:40,120
+Do tego potrzebujemy mieć oczywiście promień.
+
+47
+00:02:41,159 --> 00:02:42,460
+I jeszcze przyda nam się pi.
+
+48
+00:02:45,960 --> 00:02:50,060
+I to jest return pi razy r do kwadratu.
+
+49
+00:02:50,900 --> 00:02:57,020
+Natomiast jeżeli chodzi o obwód, to jest CircleCircumference.
+
+50
+00:02:57,020 --> 00:02:59,879
+Nie umiem tego słowa zapamiętać.
+
+51
+00:03:00,000 --> 00:03:02,000
+CircleCircumference.
+
+52
+00:03:02,000 --> 00:03:04,000
+CircleCircumference.
+
+53
+00:03:04,000 --> 00:03:10,000
+I też potrzebujemy mieć promień i zwracamy dwa razy pi razy r.
+
+54
+00:03:10,000 --> 00:03:14,000
+Możemy sobie oczywiście dorzucić informację, że to będzie zawsze integer.
+
+55
+00:03:14,000 --> 00:03:16,000
+Chociaż no nie zawsze, może być float.
+
+56
+00:03:16,000 --> 00:03:20,000
+I zwracać będziemy zawsze float w tym przypadku.
+
+57
+00:03:20,000 --> 00:03:26,000
+I zwracać będziemy zawsze float w tym przypadku.
+
+58
+00:03:26,000 --> 00:03:27,000
+Ok.
+
+59
+00:03:27,000 --> 00:03:29,000
+I to jeszcze nie koniec naszych funkcji.
+
+60
+00:03:29,000 --> 00:03:30,000
+Ok. I to jeszcze nie koniec naszych funkcji.
+
+61
+00:03:30,000 --> 00:03:41,000
+W zadaniu jest jeszcze informacja o tym, że potrzebujemy mieć funkcję, która będzie obliczała pole, funkcję do obliczania pola obwodu okręgu i trójkąta równobocznego.
+
+62
+00:03:41,000 --> 00:03:44,000
+Czyli def.triangle.
+
+63
+00:03:44,000 --> 00:03:47,000
+triangle.obwód.
+
+64
+00:04:00,000 --> 00:04:07,000
+On jeszcze musi być równoboczny, więc to jest equilateral.
+
+65
+00:04:07,000 --> 00:04:08,000
+Ok.
+
+66
+00:04:08,000 --> 00:04:11,000
+Będziemy potrzebowali mieć wtedy bok, czyli a.
+
+67
+00:04:11,000 --> 00:04:16,000
+Będziemy potrzebowali mieć wtedy bok, czyli a.
+
+68
+00:04:16,000 --> 00:04:19,000
+I tu akurat będzie prościzna, bo to jest 3 razy a.
+
+69
+00:04:19,000 --> 00:04:22,000
+No bo jak jest trójkąt równoboczny, no to sprawa jest prosta.
+
+70
+00:04:22,000 --> 00:04:24,000
+Gorzej jest z polem.
+
+71
+00:04:24,000 --> 00:04:25,000
+Ktoś pamięta jaki jest wzór na pole trójkąta równobocznego?
+
+72
+00:04:25,000 --> 00:04:28,000
+Ktoś pamięta jaki jest wzór na pole trójkąta równobocznego?
+
+73
+00:04:28,000 --> 00:04:29,000
+Czyli zamiast równobocznego, to jest trójkąt równoboczny.
+
+74
+00:04:29,000 --> 00:04:30,000
+Ktoś pamięta jaki jest wzór na pole trójkąta równobocznego?
+
+75
+00:04:30,000 --> 00:04:31,000
+Czyli zamiast równobocznego, wybieramy sobie field...
+
+76
+00:04:31,000 --> 00:04:32,000
+Czyli zamiast równobocznego, wybieramy sobie field...
+
+77
+00:04:32,000 --> 00:04:33,000
+Area.
+
+78
+00:04:33,000 --> 00:04:34,000
+Przepraszam, area.
+
+79
+00:04:34,000 --> 00:04:37,000
+Wzór na pole takiego trójkąta to jest A kwadrat,
+
+80
+00:04:37,000 --> 00:04:44,000
+czyli a do kwadratu razy pierwiastek z trzech, czyli sqrt z trzech
+
+81
+00:04:44,000 --> 00:04:47,000
+dzielone przez cztery.
+
+82
+00:04:47,000 --> 00:04:50,000
+Jak sqrt nie mamy, to sobie też dorzucamy u góry.
+
+83
+00:04:50,000 --> 00:04:55,000
+No i dzięki temu będziemy mieli wszystkie obliczenia przygotowane.
+
+84
+00:04:55,000 --> 00:04:56,000
+Te, które były wymagane.
+
+85
+00:04:56,000 --> 00:04:58,000
+Chociaż tam jeszcze było coś z odcinkiem z tego co pamiętam.
+
+86
+00:04:58,000 --> 00:04:59,000
+Chociaż tam jeszcze było coś z odcinkiem z tego co pamiętam.
+
+87
+00:04:59,000 --> 00:05:05,560
+No właśnie, jeszcze druga rzecz to funkcja do obliczania długości i wyznaczania środka odcinka o zadanych współrzędnych.
+
+88
+00:05:06,019 --> 00:05:07,220
+To jeszcze to sobie dorzućmy.
+
+89
+00:05:07,560 --> 00:05:10,699
+Myśmy już to sobie gdzieś liczyli, więc raz, dwa, trzy, dokładam funkcję.
+
+90
+00:05:11,000 --> 00:05:15,139
+No dobra, ale fajnie byłoby, żeby jeszcze te funkcje miały jakieś tam obliczenia robiły.
+
+91
+00:05:15,220 --> 00:05:17,339
+To jeszcze jeden pstryk na poprawkę, uwaga.
+
+92
+00:05:18,279 --> 00:05:21,259
+O, i mamy wszystko to, co trzeba było policzyć.
+
+93
+00:05:21,259 --> 00:05:24,300
+Z tą różnicą, że dobrze byłoby jeszcze zwrócić sobie to integer.
+
+94
+00:05:24,300 --> 00:05:30,240
+Integer, float raczej, no bo dzielimy przez dwa, to raczej to nie będzie integer.
+
+95
+00:05:30,360 --> 00:05:31,840
+I tutaj też zwrócić sobie floata.
+
+96
+00:05:33,120 --> 00:05:34,020
+Co zrobiłem?
+
+97
+00:05:34,560 --> 00:05:38,180
+Założyłem, że, znaczy to się sama założyło, zakładam, śmieję się,
+
+98
+00:05:38,300 --> 00:05:43,100
+że tutaj tym elementem, który określa początek i koniec odcinka,
+
+99
+00:05:43,199 --> 00:05:45,379
+zawsze są podane x i y osobno.
+
+100
+00:05:46,060 --> 00:05:48,900
+One możemy przyjąć, że zawsze będą integerami, na przykład tutaj sobie.
+
+101
+00:05:49,400 --> 00:05:52,780
+Natomiast, jeżeli chodzi o środek odcinka,
+
+102
+00:05:53,480 --> 00:05:53,900
+to założyłem.
+
+103
+00:05:54,300 --> 00:05:59,300
+że po prostu będę zwracał środek jako x i y rozdzielone,
+
+104
+00:05:59,400 --> 00:06:01,300
+a właśnie x i y rozdzielone przecinkiem,
+
+105
+00:06:01,400 --> 00:06:05,400
+czyli to będzie tupla, a nie float.
+
+106
+00:06:05,800 --> 00:06:08,199
+Natomiast, jeżeli chodzi o length, no to też założyłem tutaj,
+
+107
+00:06:08,300 --> 00:06:11,400
+że mamy tylko i wyłącznie podawane integer,
+
+108
+00:06:11,800 --> 00:06:13,800
+no i oczywiście zwracamy sobie floata.
+
+109
+00:06:15,500 --> 00:06:19,600
+I w ten sposób stworzyliśmy naszą paczkę, czyli to jest nasza paczka.
+
+110
+00:06:19,699 --> 00:06:22,600
+Będziemy mogli z niej importować sobie te funkcje,
+
+111
+00:06:22,699 --> 00:06:24,199
+tak żeby już nigdy nie trzeba było,
+
+112
+00:06:24,300 --> 00:06:26,300
+nie trzeba było tych funkcji pisać.
+
+113
+00:06:26,400 --> 00:06:27,400
+A jak to zrobić?
+
+114
+00:06:27,500 --> 00:06:29,800
+Zapraszam do kolejnego odcinka, żeby zobaczyć,
+
+115
+00:06:29,900 --> 00:06:34,100
+jak ładujemy sobie takie funkcje do kodu.

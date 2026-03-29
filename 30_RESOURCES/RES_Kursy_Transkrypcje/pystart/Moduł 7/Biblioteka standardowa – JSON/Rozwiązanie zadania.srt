@@ -1,0 +1,527 @@
+1
+00:00:00,000 --> 00:00:02,280
+Więc część rzeczy była już widoczna.
+
+2
+00:00:02,540 --> 00:00:04,520
+Między innymi pytanie operacje,
+
+3
+00:00:04,839 --> 00:00:06,160
+D to dodaj wydatek,
+
+4
+00:00:06,600 --> 00:00:07,500
+W wypisz wszystkie.
+
+5
+00:00:08,019 --> 00:00:10,200
+Następnie mamy tytuł,
+
+6
+00:00:10,279 --> 00:00:12,120
+dotyczący tego,
+
+7
+00:00:12,540 --> 00:00:14,060
+czego dotyczy wydatek oraz value.
+
+8
+00:00:14,519 --> 00:00:15,720
+Ale te dwie rzeczy mają się
+
+9
+00:00:15,720 --> 00:00:17,859
+pokazywać tylko i wyłącznie wtedy, kiedy
+
+10
+00:00:17,859 --> 00:00:19,199
+ktoś napisze D albo W.
+
+11
+00:00:19,199 --> 00:00:20,859
+Czyli if
+
+12
+00:00:20,859 --> 00:00:23,240
+operation równa się
+
+13
+00:00:23,240 --> 00:00:25,140
+D, no to
+
+14
+00:00:25,140 --> 00:00:27,400
+wtedy chcielibyśmy, żeby zadziałało to.
+
+15
+00:00:27,900 --> 00:00:29,260
+W przeciwnym wypadku
+
+16
+00:00:29,260 --> 00:00:30,820
+elif operation
+
+17
+00:00:30,820 --> 00:00:32,620
+równa się W,
+
+18
+00:00:33,560 --> 00:00:35,280
+to wtedy chcielibyśmy, żeby zadziałało
+
+19
+00:00:35,280 --> 00:00:36,500
+coś innego.
+
+20
+00:00:37,120 --> 00:00:38,820
+Do tego na pewno będziemy
+
+21
+00:00:38,820 --> 00:00:41,120
+potrzebowali te wydatki wszystkie mieć
+
+22
+00:00:41,120 --> 00:00:43,160
+załadowane. Więc możemy sobie
+
+23
+00:00:43,160 --> 00:00:44,540
+gdzieś powyżej zrobić coś takiego.
+
+24
+00:00:44,760 --> 00:00:47,280
+With open
+
+25
+00:00:48,020 --> 00:00:49,280
+wydatki.json
+
+26
+00:00:49,820 --> 00:00:53,420
+do odczytu, czyli po prostu R
+
+27
+00:00:53,420 --> 00:00:55,120
+as file
+
+28
+00:00:55,120 --> 00:00:56,120
+dwukropek
+
+29
+00:00:56,120 --> 00:00:59,020
+wydatki równa się
+
+30
+00:00:59,020 --> 00:01:01,040
+i tutaj robimy sobie pusty
+
+31
+00:01:01,040 --> 00:01:03,400
+słownik, pustą listę.
+
+32
+00:01:03,540 --> 00:01:05,060
+Nie, robimy sobie, gdzie tam?
+
+33
+00:01:05,299 --> 00:01:06,820
+Przecież mamy plik odczytać.
+
+34
+00:01:07,219 --> 00:01:08,939
+Czyli robimy load
+
+35
+00:01:08,939 --> 00:01:11,079
+file. Load nie jest
+
+36
+00:01:11,079 --> 00:01:12,740
+załadowany, można na nim stanąć,
+
+37
+00:01:12,939 --> 00:01:14,900
+wykonać alt enter i wybrać
+
+38
+00:01:14,900 --> 00:01:17,219
+import this name, json load
+
+39
+00:01:17,219 --> 00:01:18,900
+zdecydowanie i wszystko będzie
+
+40
+00:01:18,900 --> 00:01:21,100
+wtedy załadowane albo po prostu napisać sobie
+
+41
+00:01:21,100 --> 00:01:22,740
+tę linijkę, żeby się nie popisywać.
+
+42
+00:01:23,260 --> 00:01:24,780
+W tym momencie nasze wydatki, czy może
+
+43
+00:01:24,780 --> 00:01:25,700
+expenses
+
+44
+00:01:25,700 --> 00:01:28,980
+powinny być załadowane i
+
+45
+00:01:28,980 --> 00:01:31,040
+można będzie z nich skorzystać.
+
+46
+00:01:31,480 --> 00:01:32,840
+Dlaczego będziemy z nich korzystali?
+
+47
+00:01:32,939 --> 00:01:35,000
+Oczywiście plik wydatki.json musi być przygotowany
+
+48
+00:01:35,000 --> 00:01:36,600
+wcześniej i zawierać puste klamerki.
+
+49
+00:01:37,200 --> 00:01:39,159
+Jak porozmawiamy sobie o wyjątkach,
+
+50
+00:01:39,260 --> 00:01:41,159
+to będzie w przedostatnim module, to dowiesz się
+
+51
+00:01:41,159 --> 00:01:42,920
+jak można zarządzić tym,
+
+52
+00:01:43,020 --> 00:01:44,840
+żeby sprawdzić, czy plik istnieje. Albo można
+
+53
+00:01:44,840 --> 00:01:46,939
+poszukać w bibliotece
+
+54
+00:01:46,939 --> 00:01:49,060
+standardowej takiej funkcji
+
+55
+00:01:49,060 --> 00:01:50,900
+sprawdzającej, czy plik istnieje i też sobie
+
+56
+00:01:50,900 --> 00:01:52,420
+tutaj taką obsługę do tego
+
+57
+00:01:52,420 --> 00:01:54,859
+dorzucić. Następnie mam title
+
+58
+00:01:54,859 --> 00:01:56,920
+value ok. No i jeżeli ktoś chce
+
+59
+00:01:56,920 --> 00:01:58,960
+dodać, no to od razu możemy też dodać.
+
+60
+00:01:58,980 --> 00:02:00,359
+Czyli tak naprawdę dump
+
+61
+00:02:00,359 --> 00:02:04,980
+expenses.append
+
+62
+00:02:06,060 --> 00:02:09,060
+Myślę, że możemy się
+
+63
+00:02:09,060 --> 00:02:10,920
+umówić na te same nazwy, które mają nasze
+
+64
+00:02:10,920 --> 00:02:12,939
+inputy. Title to
+
+65
+00:02:12,939 --> 00:02:13,680
+jest title
+
+66
+00:02:13,680 --> 00:02:15,960
+i value
+
+67
+00:02:15,960 --> 00:02:18,920
+to jest value.
+
+68
+00:02:20,180 --> 00:02:20,860
+Natomiast
+
+69
+00:02:20,860 --> 00:02:22,699
+w momencie, w którym ktoś wykona
+
+70
+00:02:22,699 --> 00:02:24,420
+w, czyli będzie chciał
+
+71
+00:02:24,420 --> 00:02:26,900
+wypisać wszystkie, no to
+
+72
+00:02:26,900 --> 00:02:28,900
+expenses mamy już załadowane.
+
+73
+00:02:28,979 --> 00:02:30,479
+Wystarczy, że wykonamy
+
+74
+00:02:30,479 --> 00:02:32,159
+for expense
+
+75
+00:02:32,159 --> 00:02:34,859
+in
+
+76
+00:02:34,859 --> 00:02:36,819
+expenses
+
+77
+00:02:36,819 --> 00:02:39,060
+dwukropek. No i
+
+78
+00:02:39,060 --> 00:02:40,060
+można napisać print
+
+79
+00:02:40,060 --> 00:02:42,599
+expense
+
+80
+00:02:42,599 --> 00:02:43,899
+od
+
+81
+00:02:43,899 --> 00:02:45,459
+title
+
+82
+00:02:45,459 --> 00:02:48,339
+przecinek expense
+
+83
+00:02:48,339 --> 00:02:50,739
+od value. Czy też
+
+84
+00:02:50,739 --> 00:02:51,759
+opcja z getem
+
+85
+00:02:51,759 --> 00:02:53,759
+bezpieczniejsza nawet.
+
+86
+00:02:58,979 --> 00:03:01,979
+O i w tym momencie dump nie jest
+
+87
+00:03:01,979 --> 00:03:03,479
+tu potrzebny. Jest potrzebny jeszcze na koniec
+
+88
+00:03:03,479 --> 00:03:05,579
+dump object, czyli
+
+89
+00:03:05,579 --> 00:03:07,379
+expenses przecinek
+
+90
+00:03:07,379 --> 00:03:09,679
+opery przecinek przecinek przecinek
+
+91
+00:03:09,679 --> 00:03:11,979
+i tu nie było twardy plik, czyli
+
+92
+00:03:11,979 --> 00:03:14,219
+with open wydatki
+
+93
+00:03:14,219 --> 00:03:16,079
+jason w
+
+94
+00:03:19,579 --> 00:03:22,079
+s file. No i wtedy robimy
+
+95
+00:03:22,079 --> 00:03:23,579
+dump
+
+96
+00:03:25,079 --> 00:03:27,579
+file. O właśnie tak. No dobra.
+
+97
+00:03:27,579 --> 00:03:28,060
+I żeby to sprawdzić, powinienem się to sprawdzić.
+
+98
+00:03:28,060 --> 00:03:31,259
+Powinienem utworzyć sobie ten nowy plik, czyli nowy
+
+99
+00:03:31,259 --> 00:03:33,659
+w tym moim projekcie tworzę nowy plik.
+
+100
+00:03:33,659 --> 00:03:35,860
+Nazywam go wydatki kropka jason
+
+101
+00:03:35,860 --> 00:03:37,960
+i przez to, że moje wydatki będą
+
+102
+00:03:37,960 --> 00:03:40,759
+listą słowników, to tutaj też powinienem zawrzeć
+
+103
+00:03:40,759 --> 00:03:43,560
+listę, czyli po prostu nawiasy kwadratowe.
+
+104
+00:03:43,560 --> 00:03:46,560
+I w tym momencie, kiedy wejdę sobie do terminala
+
+105
+00:03:46,560 --> 00:03:49,860
+i to odpalę, czyli sobie python wydatki py, mogę dodać
+
+106
+00:03:49,860 --> 00:03:52,259
+nowy wydatek. Czego dotyczy wydatek? Niech to będą
+
+107
+00:03:52,259 --> 00:03:55,159
+korepetycje z matematyki.
+
+108
+00:03:55,159 --> 00:03:57,960
+Załóżmy dziecka. Ja już chyba nie potrzebuję.
+
+109
+00:03:58,060 --> 00:04:01,460
+Chociaż może tak. Jaka kwota została wydana?
+
+110
+00:04:01,560 --> 00:04:05,460
+200 zł. Nic się nie pokazało. Spróbujmy uruchomić
+
+111
+00:04:05,460 --> 00:04:08,460
+teraz jeszcze. Wypisując wszystkie wydatki mam korepetycje
+
+112
+00:04:08,460 --> 00:04:11,759
+z matematyki na 200. Raz jeszcze sobie coś dodam.
+
+113
+00:04:11,960 --> 00:04:13,960
+Niech to będzie nowy kalkulator.
+
+114
+00:04:15,060 --> 00:04:18,259
+Nie wiem dlaczego. Na te korepetycje potrzebne za 300 zł.
+
+115
+00:04:18,959 --> 00:04:22,160
+Udparam raz jeszcze. Robię wypisz wszystkie i już mam korepetycje
+
+116
+00:04:22,160 --> 00:04:26,259
+z matematyki za 200, kalkulator za 300. Jeżeli chcemy to podsumować,
+
+117
+00:04:26,259 --> 00:04:27,259
+no to żaden problem.
+
+118
+00:04:28,060 --> 00:04:33,459
+Możemy stworzyć jakąś zmienną total równa się 0. Total plus
+
+119
+00:04:33,459 --> 00:04:37,759
+równa się, tu przydałoby nam się expenses get od value.
+
+120
+00:04:37,759 --> 00:04:43,560
+No i wtedy na dole print łączna wartość wydatków.
+
+121
+00:04:43,560 --> 00:04:56,959
+To total. Raz jeszcze odpalę to z w, wypisz i mam 500. No bo 200 plus 300 to jest 500.
+
+122
+00:04:56,959 --> 00:05:01,859
+I tak można ten program nadal rozwijać, wyświetlać wydatki per miesiąc,
+
+123
+00:05:01,859 --> 00:05:05,159
+per tydzień. My tą wiedzę już mniej więcej mamy, więc tak naprawdę
+
+124
+00:05:05,159 --> 00:05:08,060
+jeżeli chcesz, to możesz spokojnie rozpocząć od kodowania.
+
+125
+00:05:08,459 --> 00:05:12,060
+To co jeszcze można byłoby zrealizować, to można byłoby tutaj to dodaj
+
+126
+00:05:12,759 --> 00:05:15,959
+i to wypisz zamknąć w dwóch funkcjach, żeby ten kod był jeszcze
+
+127
+00:05:15,959 --> 00:05:19,359
+bardziej czytelny. Na przykład zrobić sobie funkcję add expense,
+
+128
+00:05:19,359 --> 00:05:24,259
+zrobić funkcję print expenses i tak dalej i tak dalej. Nie? Więc naprawdę
+
+129
+00:05:24,259 --> 00:05:26,759
+rozwój tego programu może być jeszcze bardzo, bardzo duży.
+
+130
+00:05:26,959 --> 00:05:31,459
+Ja wiem, że takie zmiany później zaburzają ten ogólny wygląd, więc
+
+131
+00:05:31,459 --> 00:05:35,259
+pokazuje ci cały mój kod, żebyś mógł uzupełnić go w razie czego
+
+132
+00:05:35,259 --> 00:05:39,259
+i zapraszam dalej. Praca z Jasonem jeszcze się nie kończy.

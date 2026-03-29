@@ -1,0 +1,67 @@
+1
+00:00:00,000 --> 00:00:07,200
+Ćwiczenie kolejne polega na tym, że mamy pytać użytkownika o liczbę i sprawdzić czy jest ujemna, dodatnia czy jest zerem.
+
+2
+00:00:07,200 --> 00:00:11,259
+No to myślę, że sprawa bardzo podobna do poprzedniego ćwiczenia.
+
+3
+00:00:11,859 --> 00:00:18,679
+Mam nadzieję, że to zadanie nie sprawiło Ci żadnej trudności, więc zapisujemy sobie float, input, znowu podaj liczbę.
+
+4
+00:00:20,679 --> 00:00:24,300
+Takich zadań z liczbami będzie sporo, no najłatwiej na nich jest zaczynać.
+
+5
+00:00:24,359 --> 00:00:28,339
+Co nie znaczy, że żeby być dobrym programistą musisz świetnie znać matematykę.
+
+6
+00:00:28,339 --> 00:00:30,920
+Zresztą myślę, że to jest wiedza akurat taka elementarna.
+
+7
+00:00:31,719 --> 00:00:36,280
+If value jest większe od zera, print liczba dodatnia.
+
+8
+00:00:41,100 --> 00:00:45,899
+Elif value jest mniejsze od zera, print liczba jest ujemna.
+
+9
+00:00:50,100 --> 00:00:55,120
+Else print liczba to zero.
+
+10
+00:00:57,799 --> 00:00:58,120
+Sprawdzamy.
+
+11
+00:00:58,340 --> 00:01:10,300
+Czyli python 4, 1, dodatnia, 10, dodatnia, minus 5, ujemna, zero, zero.
+
+12
+00:01:11,340 --> 00:01:11,939
+Gotowe.
+
+13
+00:01:12,859 --> 00:01:14,520
+Czy tej pracy domowej nie było za mało?
+
+14
+00:01:15,200 --> 00:01:18,620
+Napisz w komentarzu, czy napisz na Discordzie najlepiej jak to z tą pracą domową.
+
+15
+00:01:19,060 --> 00:01:27,340
+I od razu zaznaczam, że w tym module jest podobna ilość zadań, więc mam nadzieję, że przez to, że poziom trochę nam wzrośnie, będzie też jeszcze ciekawiej.
+
+16
+00:01:27,340 --> 00:01:29,939
+Zapraszam do czasu w sekundach.
+
+17
+00:01:30,159 --> 00:01:30,659
+Do zobaczenia.

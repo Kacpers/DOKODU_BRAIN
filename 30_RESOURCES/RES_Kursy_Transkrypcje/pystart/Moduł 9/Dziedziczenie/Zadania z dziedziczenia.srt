@@ -1,0 +1,95 @@
+1
+00:00:00,000 --> 00:00:01,360
+Zadanie pierwsze brzmi tak.
+
+2
+00:00:01,740 --> 00:00:08,320
+Przygotuj klasę Bank Account, która będzie pozwalała wpłacać deposit i wypłacać withdraw środki.
+
+3
+00:00:08,880 --> 00:00:18,300
+Utwórz klasę konto oszczędnościowe Savings Account, która będzie dziedziczyła po Bank Account i umożliwi zwiększenie stanu konta o procent odsetek.
+
+4
+00:00:18,800 --> 00:00:26,920
+Wartość tego oprocentowania odsetkowego powinna znaleźć się wewnątrz INITAS klasy Savings Account.
+
+5
+00:00:26,920 --> 00:00:29,900
+No i tutaj nie przyjmujmy w ogóle żadnych miesięcy.
+
+6
+00:00:30,020 --> 00:00:37,060
+Po prostu kiedy ktoś wykona metodę dotyczącą Savings Account, tam nie wiem, Collect Savings,
+
+7
+00:00:37,439 --> 00:00:45,340
+to powinna za każdym razem do klasy tej właściwości dowierającej saldo naszego konta,
+
+8
+00:00:45,719 --> 00:00:48,740
+powinna dopisać się ilość, którą sobie tam przekażemy.
+
+9
+00:00:48,740 --> 00:00:54,719
+Czyli na przykład jeżeli raz po razie wywołamy 10% odsetek, no to powinniśmy z 1000 mieć 1100,
+
+10
+00:00:54,880 --> 00:00:56,760
+potem 10% z 1100.
+
+11
+00:00:56,920 --> 00:00:59,640
+Czyli tam 110 i tak dalej i tak dalej.
+
+12
+00:01:00,480 --> 00:01:09,219
+W zadaniu drugim mamy przygotować klasę Employee, która w INITIE będzie odbierała imię, nazwisko oraz stawkę godzinową.
+
+13
+00:01:09,840 --> 00:01:17,700
+Przygotuj klasę Manager, która będzie dziedziczyła po klasie Employee, dla którego każda godzina pracy będzie liczona podwójnie.
+
+14
+00:01:17,700 --> 00:01:23,879
+A dodatkowo będzie możliwość określenia premii menadżera za pomocą funkcji Add Bonus.
+
+15
+00:01:24,400 --> 00:01:26,700
+Czyli pracownik pracuje za stawką.
+
+16
+00:01:26,920 --> 00:01:29,920
+Klasa Manager ma stawkę godzinową i pracuje ileś godzin.
+
+17
+00:01:29,920 --> 00:01:37,799
+Na przykład 3 godziny po 30 zł, wtedy powinniśmy mieć informację, że nasz Employee przepracował za 90 zł.
+
+18
+00:01:38,400 --> 00:01:45,299
+Natomiast menadżer ma każdą godzinę liczoną podwójnie, więc w tym momencie powinien już nasz menadżer otrzymywać 180 zł.
+
+19
+00:01:46,060 --> 00:01:53,879
+I dodatkowo powinien mieć też premię, więc jeżeli wykonamy Add Bonus, no to powinniśmy zwiększyć jakąś właściwość z bonusem.
+
+20
+00:01:53,879 --> 00:01:55,840
+I kiedy wykonamy później informację, że powiedzmy ile zadbało, to powinniśmy mieć informację, że w tym momencie powinien mieć też premię.
+
+21
+00:01:55,840 --> 00:01:55,859
+I kiedy wykonamy później informację, że powiedzmy ile zadbało, to powinniśmy mieć też premię.
+
+22
+00:01:56,920 --> 00:02:08,280
+I kiedy wykonamy później informację, że powiedzmy ile zadbało, to powinniśmy mieć też premię.
+
+23
+00:02:08,280 --> 00:02:13,099
+To co? W dwóch kolejnych filmach zobaczysz dwa rozwiązania.
+
+24
+00:02:13,379 --> 00:02:14,719
+A ja życzę miłej zabawy.

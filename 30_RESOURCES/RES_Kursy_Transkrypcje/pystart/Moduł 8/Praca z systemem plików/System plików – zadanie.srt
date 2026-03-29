@@ -1,0 +1,63 @@
+1
+00:00:00,000 --> 00:00:05,520
+Zadanie będzie łączyło wiedzę związaną z ArcParsem i wiedzę z tym, co pokazaliśmy sobie teraz.
+
+2
+00:00:06,120 --> 00:00:10,220
+Możemy też wykorzystać po części to, co zrobiliśmy wtedy, ale tutaj wiadomo.
+
+3
+00:00:10,839 --> 00:00:15,839
+Napisz program, który odbierze od użytkownika ścieżkę do konkretnego katalogu oraz rozszerzenie pliku.
+
+4
+00:00:16,620 --> 00:00:20,280
+Czyli Python, find files, dir, sample.
+
+5
+00:00:20,280 --> 00:00:27,140
+Czyli mamy gdzieś jakiś katalog sample, a następnie wykonujemy jeszcze dodatkowo extension, równa się jpg.
+
+6
+00:00:27,140 --> 00:00:33,299
+Możemy przyjąć, że ten extension jest wymagany i po prostu to jest konkretne rozszerzenie, w jakiego szukamy.
+
+7
+00:00:33,980 --> 00:00:38,240
+Wynikiem operacji powinno być wyświetlenie wszystkich plików posiadających takie rozszerzenie.
+
+8
+00:00:38,659 --> 00:00:42,399
+Pamiętaj, że walk przechodzi rekursywnie, więc możesz też wyświetlać ścieżki do wszystkich plików.
+
+9
+00:00:42,500 --> 00:00:43,920
+Bardzo sympatyczna sprawa.
+
+10
+00:00:44,519 --> 00:00:48,820
+Odpowiednie dane możesz spreparować osobiście lub użyć katalogu, który już gdzieś masz na dysku.
+
+11
+00:00:48,820 --> 00:00:57,040
+No ja na filmie będę pokazywał spreparowane dane, ale jeżeli masz jakiś swój katalog ze zdjęciami, nie usuwamy tutaj niczego.
+
+12
+00:00:57,140 --> 00:00:57,660
+Spokojnie.
+
+13
+00:00:58,020 --> 00:01:07,319
+To możesz śmiało zapodać, uruchomić ten skrypt na tym naszym konkretnym katalogu, żeby zobaczyć, czy wszystkie zdjęcia faktycznie zostały odnalezione.
+
+14
+00:01:08,239 --> 00:01:08,560
+To co?
+
+15
+00:01:09,040 --> 00:01:12,799
+Znowu 5 minut dla każdego i widzimy się już za moment w rozwiązaniu.
+
+16
+00:01:13,340 --> 00:01:13,799
+Do zobaczenia.

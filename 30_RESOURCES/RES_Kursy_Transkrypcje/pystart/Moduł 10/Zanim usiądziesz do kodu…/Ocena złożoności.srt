@@ -1,0 +1,631 @@
+1
+00:00:00,000 --> 00:00:06,560
+Jak świat długi i szeroki, tak deweloperzy zawsze przestrzelają swoje szacunki.
+
+2
+00:00:07,000 --> 00:00:12,200
+Czyli albo mówią, że coś będzie trwało zbyt długo, albo mówią, że coś będzie trwało zbyt krótko.
+
+3
+00:00:12,580 --> 00:00:19,000
+W jednym i w drugim przypadku albo zawsze jest nie tak, no bo najlepiej jest, jeżeli zgadzamy się.
+
+4
+00:00:19,080 --> 00:00:20,359
+Będzie na jutro i jest na jutro.
+
+5
+00:00:20,600 --> 00:00:25,900
+Niestety jest to bardzo trudne do osiągnięcia, bo niezależnie od tego, jaki mamy stan wiedzy,
+
+6
+00:00:25,899 --> 00:00:32,060
+zawsze albo wyjdzie coś, czego się nie spodziewaliśmy, albo okaże się, że zadanie było zbyt proste,
+
+7
+00:00:32,140 --> 00:00:36,379
+albo było zbyt trudne, albo nie mieliśmy jakiejś wiedzy do tego, żeby to zadanie ukończyć.
+
+8
+00:00:36,920 --> 00:00:41,539
+Więc planowanie czy szacowanie tasków nie jest łatwe.
+
+9
+00:00:41,780 --> 00:00:45,299
+Natomiast jest kilka metod, które mogą nam pomóc w takim szacowaniu.
+
+10
+00:00:46,140 --> 00:00:50,619
+Między innymi story points, albo jest też taka optia, która nazywa się Kanban Poker.
+
+11
+00:00:51,460 --> 00:00:55,280
+Nie będę Wam o tym opowiadał, ale jak macie ochotę, to wpiszcie sobie Kanban Poker w Google.
+
+12
+00:00:55,280 --> 00:00:58,500
+Na pewno znajdziecie informację, jak to szacowanie na bazie pokera wygląda.
+
+13
+00:00:58,920 --> 00:01:00,179
+Albo Scrum Poker.
+
+14
+00:01:00,800 --> 00:01:05,700
+Najczęściej sprowadza się to do tego, że po prostu spotykamy się z zespołem programistycznym
+
+15
+00:01:05,700 --> 00:01:10,480
+i mamy za zadanie ocenić, jak długo będzie trwała praca nad danym taskiem.
+
+16
+00:01:10,920 --> 00:01:13,560
+No bo ktoś mówi, zrób formularz rejestracyjny.
+
+17
+00:01:13,859 --> 00:01:15,359
+Mi się wydaje, że to będzie kilka minut.
+
+18
+00:01:15,719 --> 00:01:22,640
+Ale zaraz, pomimo tego, że musisz zakodować ten formularz, to musisz później też wypchnąć go do repozytorium.
+
+19
+00:01:22,640 --> 00:01:24,500
+Często musisz napisać jeszcze jakieś testy.
+
+20
+00:01:24,500 --> 00:01:30,920
+Często musisz zrobić coś jeszcze, na przykład umieścić ten kod później i tak, żeby można było go pokazać użytkownikowi.
+
+21
+00:01:31,420 --> 00:01:35,180
+Czasem będą jeszcze jakieś, użytkownikowi, czyli mówimy klientowi.
+
+22
+00:01:35,579 --> 00:01:38,900
+Czasem okaże się, że są jeszcze jakieś zmiany i to wszystko też trwa.
+
+23
+00:01:39,799 --> 00:01:46,280
+Więc bardzo często mówienie, że coś zajmie kilka minut, a tak naprawdę musisz się jeszcze dowiedzieć od na przykład UX-a,
+
+24
+00:01:46,359 --> 00:01:52,640
+czy od takiej osoby, która planuje, jak ten formularz ma wyglądać, jak ma on wyglądać, też jest częścią tego zadania.
+
+25
+00:01:52,640 --> 00:01:52,740
+Tak?
+
+26
+00:01:52,740 --> 00:01:52,799
+Tak.
+
+27
+00:01:52,799 --> 00:01:52,819
+Tak?
+
+28
+00:01:52,819 --> 00:01:52,840
+Tak?
+
+29
+00:01:52,840 --> 00:01:52,859
+Tak?
+
+30
+00:01:52,859 --> 00:01:52,879
+Tak?
+
+31
+00:01:52,879 --> 00:01:52,900
+Tak?
+
+32
+00:01:52,900 --> 00:01:52,920
+Tak?
+
+33
+00:01:52,920 --> 00:01:52,939
+Tak?
+
+34
+00:01:52,939 --> 00:01:53,000
+Tak?
+
+35
+00:01:53,000 --> 00:01:53,019
+Tak?
+
+36
+00:01:53,019 --> 00:01:53,039
+Tak?
+
+37
+00:01:53,039 --> 00:01:53,060
+Tak?
+
+38
+00:01:53,060 --> 00:01:53,079
+Tak?
+
+39
+00:01:53,079 --> 00:01:53,099
+Tak?
+
+40
+00:01:53,099 --> 00:01:53,200
+Tak?
+
+41
+00:01:53,200 --> 00:01:53,260
+Tak?
+
+42
+00:01:53,260 --> 00:01:53,280
+Tak?
+
+43
+00:01:53,280 --> 00:01:54,299
+Tak?
+
+44
+00:01:57,439 --> 00:01:58,019
+Tak?
+
+45
+00:02:00,159 --> 00:02:00,340
+Tak?
+
+46
+00:02:00,340 --> 00:02:00,519
+Tak?
+
+47
+00:02:20,939 --> 00:02:22,039
+Nie.
+
+48
+00:02:22,199 --> 00:02:22,400
+Czyli?
+
+49
+00:02:22,400 --> 00:02:22,460
+Nie.
+
+50
+00:02:22,719 --> 00:02:22,920
+Nie.
+
+51
+00:02:22,920 --> 00:02:22,979
+Nie.
+
+52
+00:02:23,000 --> 00:02:23,020
+Tutaj.
+
+53
+00:02:23,060 --> 00:02:23,259
+A, tak to prawda, jak on się mówi.
+
+54
+00:02:23,259 --> 00:02:25,019
+sprint, a sprint trwa dwa tygodnie,
+
+55
+00:02:25,399 --> 00:02:27,539
+więc po prostu inaczej inne szacunki
+
+56
+00:02:27,539 --> 00:02:28,879
+w projektach będziesz spotykać.
+
+57
+00:02:29,219 --> 00:02:31,219
+Natomiast dzięki temu łatwiej jest oszacować,
+
+58
+00:02:31,359 --> 00:02:32,819
+jak długo będzie trwało zadanie.
+
+59
+00:02:32,979 --> 00:02:35,280
+Łatwiej jest powiedzieć, że coś będzie ósemką,
+
+60
+00:02:36,120 --> 00:02:37,719
+z domyśla będzie trwało dwa dni,
+
+61
+00:02:38,099 --> 00:02:39,680
+niż zakładać, że to no powinno
+
+62
+00:02:39,680 --> 00:02:41,039
+zająć mi 16 godzin,
+
+63
+00:02:41,299 --> 00:02:43,259
+bo może się okazać, że po prostu to się nie uda.
+
+64
+00:02:43,819 --> 00:02:45,500
+Ach, no i oczywiście w planowaniu
+
+65
+00:02:45,500 --> 00:02:47,519
+musisz też ująć to, że masz inne
+
+66
+00:02:47,519 --> 00:02:49,539
+zajęcia w pracy, takie jak spotkania,
+
+67
+00:02:49,659 --> 00:02:51,959
+czy wyjście na lunch.
+
+68
+00:02:51,960 --> 00:02:53,500
+Więc tutaj
+
+69
+00:02:53,500 --> 00:02:55,379
+pod tym względem łatwiej nam się
+
+70
+00:02:55,379 --> 00:02:57,939
+planuje. Co ciekawe, też sprint,
+
+71
+00:02:58,060 --> 00:02:59,820
+czyli ten taki czas, który masz
+
+72
+00:02:59,820 --> 00:03:01,900
+dwutygodniowy najczęściej
+
+73
+00:03:01,900 --> 00:03:03,740
+przeznaczony na realizowanie zadań,
+
+74
+00:03:04,020 --> 00:03:05,700
+on ma domyślnie ilość punktów.
+
+75
+00:03:06,060 --> 00:03:07,820
+Ilość tych punktów oznacza, określa
+
+76
+00:03:07,820 --> 00:03:09,819
+oczywiście ilość punktów, które przeznaczamy
+
+77
+00:03:09,819 --> 00:03:11,600
+sobie na te dwa tygodnie,
+
+78
+00:03:12,060 --> 00:03:13,480
+razy ilość pracowników.
+
+79
+00:03:13,920 --> 00:03:16,420
+Jeżeli tydzień to 13 punktów,
+
+80
+00:03:17,159 --> 00:03:17,920
+to dwa tygodnie
+
+81
+00:03:17,920 --> 00:03:19,719
+to 26 punktów. Jeżeli mamy dwóch
+
+82
+00:03:19,719 --> 00:03:21,480
+pracowników, to mamy 52 punkty.
+
+83
+00:03:21,479 --> 00:03:23,519
+I w ten sposób wiemy, że w ramach
+
+84
+00:03:23,519 --> 00:03:25,359
+dwóch tygodni możemy zaplanować tylko
+
+85
+00:03:25,359 --> 00:03:27,579
+zadania, które będą trwały 52 punkty.
+
+86
+00:03:27,819 --> 00:03:29,579
+Jeżeli natomiast ktoś wyrobi się
+
+87
+00:03:29,579 --> 00:03:31,479
+szybciej, to jest możliwość też
+
+88
+00:03:31,479 --> 00:03:32,939
+pójścia do tam
+
+89
+00:03:32,939 --> 00:03:35,219
+Scrum Mastera, Product Ownera, czy kogoś i
+
+90
+00:03:35,219 --> 00:03:37,359
+powiedzenia mu, słuchaj, mam już wszystko zrobione,
+
+91
+00:03:37,739 --> 00:03:39,419
+daj mi coś dodatkowego. I on wtedy
+
+92
+00:03:39,419 --> 00:03:41,599
+wyciąga kolejny task z backlogu
+
+93
+00:03:41,599 --> 00:03:43,379
+tak zwanego, bo o tym też powinniśmy
+
+94
+00:03:43,379 --> 00:03:44,500
+wiedzieć, że
+
+95
+00:03:44,500 --> 00:03:47,399
+nie tylko planując, przygotowując
+
+96
+00:03:47,399 --> 00:03:49,199
+taski, skupiamy się na rzeczach, które są ważne
+
+97
+00:03:49,199 --> 00:03:51,139
+tu i teraz, ale też na rzeczach, które
+
+98
+00:03:51,139 --> 00:03:52,839
+w przyszłości powinniśmy wykonać,
+
+99
+00:03:53,159 --> 00:03:55,159
+bo często jest tak, że kiedy realizuję jakieś
+
+100
+00:03:55,159 --> 00:03:57,419
+zadanie, to wiem, że za chwilę powinienem
+
+101
+00:03:57,419 --> 00:03:59,139
+zrobić jakieś kolejne i wtedy
+
+102
+00:03:59,139 --> 00:04:01,559
+do backlogu dodajemy informację,
+
+103
+00:04:01,659 --> 00:04:03,199
+że pamiętaj o tym, żeby w przyszłości
+
+104
+00:04:03,199 --> 00:04:04,939
+zrobić to i to. To są takie
+
+105
+00:04:04,939 --> 00:04:07,319
+już działania dotyczące Scrama, ale też
+
+106
+00:04:07,319 --> 00:04:09,239
+fajnie, żebyście o tym wiedzieli, bo na pewno
+
+107
+00:04:09,239 --> 00:04:11,319
+jeżeli pójdziecie na taką pierwszą rozmowę,
+
+108
+00:04:11,659 --> 00:04:12,599
+to wiedza o takim
+
+109
+00:04:12,599 --> 00:04:14,859
+podziale zadań, czy o takim planowaniu
+
+110
+00:04:14,859 --> 00:04:16,800
+będzie wielkim plusem.
+
+111
+00:04:16,800 --> 00:04:18,939
+No właśnie, a jak ten czas
+
+112
+00:04:18,939 --> 00:04:20,800
+mierzyć? Niektóre narzędzia
+
+113
+00:04:21,339 --> 00:04:23,099
+mierzą czas, na przykład
+
+114
+00:04:23,099 --> 00:04:24,879
+w Jirze macie taką wtyczkę, która
+
+115
+00:04:24,879 --> 00:04:26,899
+nazywa się Tempo, są
+
+116
+00:04:26,899 --> 00:04:28,659
+takie narzędzia typu Clockify,
+
+117
+00:04:28,819 --> 00:04:30,919
+albo Clockizer, jakoś tak, są takie narzędzia,
+
+118
+00:04:31,019 --> 00:04:33,000
+których można też używać do tego, żeby mierzyć
+
+119
+00:04:33,000 --> 00:04:34,800
+czas pracy i moim zdaniem
+
+120
+00:04:34,800 --> 00:04:36,719
+warto to robić. Ja to robię z tego
+
+121
+00:04:36,719 --> 00:04:38,919
+względu, że mi klienci płacą za czas,
+
+122
+00:04:39,019 --> 00:04:40,979
+który przeznaczam na zadaniu, a nie
+
+123
+00:04:40,979 --> 00:04:42,839
+na jedzenie lunchu, więc jak
+
+124
+00:04:42,839 --> 00:04:44,759
+robię start, to siedzę przed komputerem i koduję,
+
+125
+00:04:44,759 --> 00:04:47,039
+jak robię stop, to wstaję i gdzieś wychodzę
+
+126
+00:04:47,039 --> 00:04:49,099
+z dokładnością co do
+
+127
+00:04:49,099 --> 00:04:50,759
+pięciu minut i
+
+128
+00:04:51,139 --> 00:04:52,939
+moim zdaniem jest to
+
+129
+00:04:52,939 --> 00:04:54,979
+warte grzechu, z tego względu, że
+
+130
+00:04:54,979 --> 00:04:56,919
+dzięki temu widzisz, jak bardzo jesteś efektywny,
+
+131
+00:04:57,019 --> 00:04:59,180
+ile czasu spędzasz nad zadaniami, no i
+
+132
+00:04:59,180 --> 00:05:01,079
+minusem tego oczywiście jest to, że
+
+133
+00:05:01,079 --> 00:05:03,099
+nie można czasu zaliczać, czasu jedzenia
+
+134
+00:05:03,099 --> 00:05:05,240
+kanapki zaliczać, czy zrobienia
+
+135
+00:05:05,240 --> 00:05:06,899
+kawy zaliczać do swojej pracy.
+
+136
+00:05:07,539 --> 00:05:08,939
+Plusem jest też to, że dzięki temu
+
+137
+00:05:08,939 --> 00:05:11,099
+wiesz, ile czasu potrzebujesz dokładnie
+
+138
+00:05:11,099 --> 00:05:13,099
+na wykonanie danego zadania, no i
+
+139
+00:05:13,099 --> 00:05:15,240
+wiesz, że w ciągu ośmiu godzin przepracowałeś
+
+140
+00:05:15,240 --> 00:05:17,000
+na przykład cztery godziny. Czas
+
+141
+00:05:17,000 --> 00:05:19,120
+spotkań w moim przypadku też jest oczywiście
+
+142
+00:05:19,120 --> 00:05:20,699
+zliczany, ale na osobnym jakby,
+
+143
+00:05:21,139 --> 00:05:23,099
+zadaniu, które dotyczy spotkań.
+
+144
+00:05:23,979 --> 00:05:24,560
+Więc zawsze
+
+145
+00:05:24,560 --> 00:05:26,879
+pod tym względem warto
+
+146
+00:05:26,879 --> 00:05:28,819
+moim zdaniem mierzyć ten czas, no,
+
+147
+00:05:28,979 --> 00:05:30,979
+ale jeżeli czas jest przebimbany i pracujesz gdzieś
+
+148
+00:05:30,979 --> 00:05:32,860
+na etacie, no to ktoś może
+
+149
+00:05:32,860 --> 00:05:34,560
+z ciebie z tego chcieć rozliczyć.
+
+150
+00:05:35,199 --> 00:05:36,399
+Niestety tak to wygląda.
+
+151
+00:05:36,959 --> 00:05:38,939
+W różnych firmach działa to różnie, tutaj
+
+152
+00:05:38,939 --> 00:05:40,279
+nie chcę generalizować.
+
+153
+00:05:41,079 --> 00:05:42,979
+Jednym z narzędzi, tak jak wspomniałem, jest
+
+154
+00:05:42,979 --> 00:05:44,819
+tempo i ono bezpośrednio, jeżeli
+
+155
+00:05:44,819 --> 00:05:47,019
+używasz Jiry, o tych narzędziach też za moment,
+
+156
+00:05:47,379 --> 00:05:48,759
+będzie ci tykało
+
+157
+00:05:48,759 --> 00:05:50,560
+z każdą minutą, kiedy
+
+158
+00:05:51,139 --> 00:05:52,279
+pracujesz z komputerem i pracujesz.

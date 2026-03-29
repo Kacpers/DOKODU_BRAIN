@@ -1,0 +1,51 @@
+1
+00:00:00,000 --> 00:00:03,040
+No i mamy przed sobą dwa zadania do przećwiczenia tych tematów.
+
+2
+00:00:03,160 --> 00:00:08,419
+Po pierwsze napisz funkcję, która przyjmuje dowolną ilość argumentów, liczb oraz wartość graniczną.
+
+3
+00:00:08,679 --> 00:00:12,759
+Czyli najpierw mamy dowolną ilość argumentów, które są liczbami oraz wartość graniczną.
+
+4
+00:00:13,259 --> 00:00:17,620
+Funkcja powinna zwrócić sumę liczb, które są większe niż podana wartość graniczna.
+
+5
+00:00:17,900 --> 00:00:23,460
+Funkcja powinna przyjmować argumenty pozycyjne jako args oraz limit, który będzie właśnie tą wartością graniczną.
+
+6
+00:00:23,460 --> 00:00:26,900
+Czyli na przykład mamy wartości 1, 2, 5, 10, 15.
+
+7
+00:00:26,899 --> 00:00:32,560
+W części interesuje nas wartość graniczna 9, więc sumujemy ze sobą 10 i 15, wyjdzie nam 25.
+
+8
+00:00:33,439 --> 00:00:39,579
+W zadaniu drugim chcemy napisać funkcję, która przyjmuje listę słów i zwraca słowo, które występuje najczęściej.
+
+9
+00:00:39,979 --> 00:00:46,899
+Funkcja powinna przyjmować argumenty nazwane jako args oraz ignore case, zwracane z wartością domyślną true,
+
+10
+00:00:47,439 --> 00:00:51,000
+który będzie oznaczał, czy ignorować wielkość liter podczas zliczania wystąpień.
+
+11
+00:00:51,000 --> 00:00:56,879
+Czyli jeżeli ignore case będzie na true, no to wtedy nawet jeżeli napiszę Python i Python wielkimi i małymi,
+
+12
+00:00:56,899 --> 00:01:02,899
+to i tak będzie to zliczane raz, no i później powinno mi zwrócić słowo, które występuje najczęściej.
+
+13
+00:01:02,899 --> 00:01:09,439
+Czyli wydaje mi się, że najpierw można byłoby to wpakować do słownika, a potem pobrać ze słownika tą wartość, która występowała najczęściej.

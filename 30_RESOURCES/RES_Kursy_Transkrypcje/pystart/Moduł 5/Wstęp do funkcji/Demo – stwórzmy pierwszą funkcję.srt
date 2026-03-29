@@ -1,0 +1,611 @@
+1
+00:00:00,000 --> 00:00:01,600
+Kacper, a ty co, tak bez zadania?
+
+2
+00:00:02,000 --> 00:00:03,879
+Tak, bo chciałem ci pokazać w kodzie,
+
+3
+00:00:04,240 --> 00:00:06,660
+jak samodzielnie tworzę taką funkcję i jak to działa.
+
+4
+00:00:07,339 --> 00:00:10,359
+Mieliśmy taką pracę domową jakiś czas temu,
+
+5
+00:00:10,820 --> 00:00:12,919
+która polegała na tym, że trzeba było zweryfikować,
+
+6
+00:00:13,060 --> 00:00:15,380
+czy rok był przestępny, czy nie był przestępny.
+
+7
+00:00:15,860 --> 00:00:18,100
+I teraz ten fragment kodu wyglądał tak.
+
+8
+00:00:18,100 --> 00:00:19,900
+Jeżeli mamy jakiś rok
+
+9
+00:00:19,900 --> 00:00:23,460
+i w tym kodzie było tak,
+
+10
+00:00:23,539 --> 00:00:27,879
+jeżeli rok jest modulo 4 równa się 0
+
+11
+00:00:27,879 --> 00:00:34,000
+and rok modulo 100 nie równa się 0
+
+12
+00:00:34,000 --> 00:00:39,179
+a rok modulo 400 równa się 0,
+
+13
+00:00:39,600 --> 00:00:41,600
+to znaczy, że jest przestępny.
+
+14
+00:00:41,899 --> 00:00:43,840
+A jeżeli nie, to znaczy, że nie jest.
+
+15
+00:00:44,159 --> 00:00:50,420
+I teraz ten kod, który tu był print jest,
+
+16
+00:00:50,879 --> 00:00:56,739
+a tu był print else, print nie jest.
+
+17
+00:00:56,740 --> 00:01:01,320
+I teraz chciałbym ten kod zamienić na funkcję.
+
+18
+00:01:01,960 --> 00:01:02,780
+Jak to zrobić?
+
+19
+00:01:03,240 --> 00:01:05,680
+Tak naprawdę jest to bardzo proste,
+
+20
+00:01:06,060 --> 00:01:08,859
+znaczy bardzo proste, bardzo niskie, bardzo krótkie.
+
+21
+00:01:09,219 --> 00:01:11,079
+Z tego względu, że ten zapis,
+
+22
+00:01:11,799 --> 00:01:14,900
+jeżeli zwróci nam prawdę, to znaczy, że rok jest przestępny,
+
+23
+00:01:14,980 --> 00:01:16,859
+a jeżeli zwróci nam fałsz, to znaczy, że nie jest.
+
+24
+00:01:17,299 --> 00:01:19,240
+Ja najpierw zrobię to tak krok po kroku,
+
+25
+00:01:19,299 --> 00:01:21,579
+a potem pokażę ci, jak to można bardzo szybko uprościć.
+
+26
+00:01:22,060 --> 00:01:23,500
+Czyli po pierwsze robię sobie wcięcie,
+
+27
+00:01:24,359 --> 00:01:26,379
+bo chciałbym, żeby ta wartość,
+
+28
+00:01:26,739 --> 00:01:30,579
+tutaj była, bo chciałbym tak naprawdę,
+
+29
+00:01:30,759 --> 00:01:32,479
+żeby ten cały kod był częścią funkcji.
+
+30
+00:01:33,219 --> 00:01:35,619
+Następnie tworzę sobie funkcję
+
+31
+00:01:35,619 --> 00:01:38,159
+i mogę ją nazwać isLeapYear.
+
+32
+00:01:39,780 --> 00:01:43,459
+To jest po angielsku sprawdzenie, czy jest on przestępny.
+
+33
+00:01:44,259 --> 00:01:48,019
+Następnie wstawiam sobie nazwę parametru
+
+34
+00:01:48,019 --> 00:01:50,140
+i w moim przypadku parametrem jest rok.
+
+35
+00:01:51,819 --> 00:01:52,500
+Dwukropek.
+
+36
+00:01:53,500 --> 00:01:56,500
+Jak pamiętasz, używanie printa w funkcji
+
+37
+00:01:56,739 --> 00:01:58,659
+nie jest najlepszym pomysłem,
+
+38
+00:01:59,239 --> 00:02:02,199
+więc dużo lepiej będzie wykonać tutaj return true,
+
+39
+00:02:03,399 --> 00:02:06,419
+tutaj return false.
+
+40
+00:02:07,500 --> 00:02:09,259
+My w tym momencie, żeby sobie to przetestować,
+
+41
+00:02:09,379 --> 00:02:13,500
+możemy na przykład wypisać print isLeapYear 2000.
+
+42
+00:02:14,959 --> 00:02:22,199
+Co więcej, możemy zrobić for year in range.
+
+43
+00:02:23,379 --> 00:02:24,759
+Tutaj zobacz, tworzę zmienną year,
+
+44
+00:02:24,759 --> 00:02:26,099
+odwołuję się do year,
+
+45
+00:02:26,099 --> 00:02:27,719
+więc nie powinienem tak robić,
+
+46
+00:02:27,840 --> 00:02:29,099
+lepiej jest mieć inną nazwę.
+
+47
+00:02:30,319 --> 00:02:33,780
+Test year, może jakoś tak,
+
+48
+00:02:33,879 --> 00:02:34,979
+albo year to test.
+
+49
+00:02:38,019 --> 00:02:41,180
+Range od 2000 do 2020.
+
+50
+00:02:44,199 --> 00:02:46,280
+No to wtedy isLeapYear.
+
+51
+00:02:48,500 --> 00:02:50,079
+Print mógłby zostać w sumie.
+
+52
+00:02:51,159 --> 00:02:52,659
+Potrzebuję year to test
+
+53
+00:02:52,659 --> 00:02:54,579
+oraz muszę wykonać isLeapYear,
+
+54
+00:02:54,579 --> 00:02:56,019
+przekazując mu,
+
+55
+00:02:56,099 --> 00:02:57,359
+że jest to year to test.
+
+56
+00:02:57,439 --> 00:02:58,519
+I zobacz, co się teraz stanie.
+
+57
+00:02:58,599 --> 00:03:01,219
+Wykonam Python, spacja, rok przestępny
+
+58
+00:03:01,719 --> 00:03:03,539
+i on mi wyświetli wszystkie te lata.
+
+59
+00:03:05,319 --> 00:03:06,340
+Oho, trochę za dużo.
+
+60
+00:03:06,400 --> 00:03:08,539
+Oho, bo trochę tutaj za dużo zer.
+
+61
+00:03:09,199 --> 00:03:09,900
+Przepraszam.
+
+62
+00:03:10,500 --> 00:03:12,280
+Wszystkie te lata wyświetlił z informacjami,
+
+63
+00:03:12,280 --> 00:03:16,620
+że 2008 był, 2016 był, a te lata nie były.
+
+64
+00:03:17,039 --> 00:03:17,379
+Działa.
+
+65
+00:03:17,859 --> 00:03:20,019
+I teraz to jest bardzo przydatne.
+
+66
+00:03:20,379 --> 00:03:22,900
+Natomiast ten kod, jak widać, działa,
+
+67
+00:03:22,900 --> 00:03:24,019
+a chciałbym go uprościć.
+
+68
+00:03:24,759 --> 00:03:26,079
+Jeżeli wiemy, że return,
+
+69
+00:03:26,099 --> 00:03:28,599
+kończy działanie funkcji tak naprawdę,
+
+70
+00:03:28,599 --> 00:03:29,900
+wychodzi z niej od razu,
+
+71
+00:03:29,900 --> 00:03:32,000
+to ten else nie jest do niczego potrzebny.
+
+72
+00:03:32,500 --> 00:03:36,299
+Z tego względu, że jeżeli napotkam na else,
+
+73
+00:03:36,299 --> 00:03:38,500
+napotkam na ifa i wejdę do środka,
+
+74
+00:03:38,500 --> 00:03:41,000
+to return true mi zadziała i wyjdzie z funkcji.
+
+75
+00:03:41,299 --> 00:03:43,199
+Natomiast jeżeli nie wejdę do tego miejsca,
+
+76
+00:03:43,199 --> 00:03:46,199
+to po prostu pójdę sobie kulturalnie do szóstej linii
+
+77
+00:03:46,500 --> 00:03:48,199
+i też wyjdę z funkcji.
+
+78
+00:03:48,599 --> 00:03:49,900
+Więc wykonuję teraz jeszcze
+
+79
+00:03:50,099 --> 00:03:53,299
+i zobacz, wyniki są dokładnie takie same.
+
+80
+00:03:53,699 --> 00:03:56,099
+Ale jak się nad tym zastanowimy, to tak naprawdę,
+
+81
+00:03:56,099 --> 00:03:59,599
+to wyrażenie musi zwrócić prawdę,
+
+82
+00:03:59,599 --> 00:04:01,599
+żeby funkcja zwróciła prawdę.
+
+83
+00:04:01,599 --> 00:04:04,599
+Ale jeżeli nie zwróci prawdy, to powinna zwrócić fałsz.
+
+84
+00:04:04,599 --> 00:04:07,599
+Więc możemy to sobie uprościć jeszcze bardziej
+
+85
+00:04:08,599 --> 00:04:10,599
+i po prostu napisać return
+
+86
+00:04:12,099 --> 00:04:14,599
+i zapisać kod w tej postaci.
+
+87
+00:04:14,599 --> 00:04:17,600
+I nadal będziemy mieli kod działający.
+
+88
+00:04:18,100 --> 00:04:22,100
+To jeszcze nie koniec, ponieważ my możemy każdą funkcję
+
+89
+00:04:22,100 --> 00:04:24,100
+wykorzystywać w innej funkcji.
+
+90
+00:04:24,100 --> 00:04:26,000
+Na przykład, jeżeli teraz mamy funkcję
+
+91
+00:04:26,000 --> 00:04:29,500
+eSleepYear, no to eSleepYear, czyli rok przestępny,
+
+92
+00:04:29,500 --> 00:04:33,000
+wpływa na długość dni lutego, prawda?
+
+93
+00:04:33,000 --> 00:04:35,500
+Czyli mamy albo 28, albo 29.
+
+94
+00:04:35,500 --> 00:04:39,000
+I możemy sobie stworzyć funkcję, która po prostu będzie nam zwracała,
+
+95
+00:04:39,000 --> 00:04:41,000
+ile dni ma dany miesiąc.
+
+96
+00:04:41,500 --> 00:04:44,500
+W tym celu zrobię rzecz następującą,
+
+97
+00:04:44,500 --> 00:04:51,500
+a mianowicie napiszę dev days, getDaysInMonth
+
+98
+00:04:51,500 --> 00:04:54,000
+i mogę przekazać mu wtedy dwa parametry.
+
+99
+00:04:54,000 --> 00:04:55,500
+Po pierwsze, będę potrzebował wiedzieć,
+
+100
+00:04:55,500 --> 00:04:58,500
+w jaki miesiąc mnie interesuje,
+
+101
+00:04:58,500 --> 00:05:01,500
+a po drugie, który to ma być rok.
+
+102
+00:05:03,500 --> 00:05:08,000
+Mógłbym od razu przekazać informację,
+
+103
+00:05:08,000 --> 00:05:10,000
+czy ten rok, w którym ten miesiąc się znajduje,
+
+104
+00:05:10,000 --> 00:05:11,500
+jest przestępny, czy nie,
+
+105
+00:05:11,500 --> 00:05:14,000
+ale tak jak zrobimy sobie w ten sposób, też jest okej.
+
+106
+00:05:14,000 --> 00:05:16,000
+Niech ktoś ma wygodę.
+
+107
+00:05:16,000 --> 00:05:18,500
+No i wtedy potrzebujemy sprawdzić,
+
+108
+00:05:18,500 --> 00:05:22,000
+czy jest to jeden z miesięcy, kiedy mamy 30 dni.
+
+109
+00:05:22,000 --> 00:05:24,000
+30 dni
+
+110
+00:05:24,000 --> 00:05:27,000
+mamy tylko w miesiącach takich jak
+
+111
+00:05:27,000 --> 00:05:33,000
+kwiecień, czerwiec, wrzesień i listopad.
+
+112
+00:05:33,000 --> 00:05:35,000
+No i jeżeli mamy taką sytuację,
+
+113
+00:05:35,000 --> 00:05:37,000
+to oczywiście ten nawias to jednak jest potrzebny
+
+114
+00:05:37,000 --> 00:05:40,000
+i wtedy mamy dni 30.
+
+115
+00:05:40,000 --> 00:05:43,000
+W przeciwnym wypadku, jeżeli nie mamy dni 30,
+
+116
+00:05:43,000 --> 00:05:45,000
+no to możemy mieć sytuację taką,
+
+117
+00:05:45,000 --> 00:05:50,000
+że albo jest to luty, albo jest to dowolny inny miesiąc.
+
+118
+00:05:50,000 --> 00:05:53,000
+Bo luty będzie tutaj kluczowy, czyli elif,
+
+119
+00:05:54,000 --> 00:05:59,000
+month równa się, równa się 2.
+
+120
+00:05:59,000 --> 00:06:01,000
+I wtedy w zależności od tego,
+
+121
+00:06:01,000 --> 00:06:03,000
+czy jest to rok przestępny, czy nie,
+
+122
+00:06:03,000 --> 00:06:06,000
+będziemy chcieli zwrócić 29 lub 28.
+
+123
+00:06:06,000 --> 00:06:10,000
+Czyli jeżeli islipyear,
+
+124
+00:06:10,000 --> 00:06:14,000
+to return 29,
+
+125
+00:06:14,000 --> 00:06:17,000
+w przeciwnym wypadku return 28.
+
+126
+00:06:17,000 --> 00:06:19,000
+Czyli jak widzisz, ilość tych returnów
+
+127
+00:06:19,000 --> 00:06:21,000
+tam bardzo się zwiększyła, ale tak naprawdę
+
+128
+00:06:21,000 --> 00:06:23,000
+ważne jest to, żeby powiedzieć, że w każdym tym przypadku,
+
+129
+00:06:23,000 --> 00:06:26,000
+on będzie wychodził z tej funkcji.
+
+130
+00:06:26,000 --> 00:06:30,000
+Natomiast ostatnia sytuacja to jest po prostu return 31.
+
+131
+00:06:30,000 --> 00:06:33,000
+Jeżeli robię elifa, to raczej robię elsa,
+
+132
+00:06:33,000 --> 00:06:37,000
+chociaż jak wiesz już, on nie byłby tutaj jakoś szczególnie potrzebny,
+
+133
+00:06:37,000 --> 00:06:39,000
+można byłoby go śmiało pominąć,
+
+134
+00:06:39,000 --> 00:06:44,000
+z tego względu, że po prostu kod tak wygląda.
+
+135
+00:06:44,000 --> 00:06:47,000
+No i wtedy możemy sobie sprawdzić w każdym roku,
+
+136
+00:06:47,000 --> 00:06:49,000
+też każdy miesiąc, czyli
+
+137
+00:06:49,000 --> 00:06:51,000
+for month to test,
+
+138
+00:06:51,000 --> 00:06:54,000
+in range od 1 do 13,
+
+139
+00:06:54,000 --> 00:06:59,000
+i wyświetlić zamiast islipyear,
+
+140
+00:06:59,000 --> 00:07:01,000
+zrobić getDaysInMonth.
+
+141
+00:07:01,000 --> 00:07:09,000
+I wtedy będziemy mieli month to test,
+
+142
+00:07:09,000 --> 00:07:11,000
+przecinek year to test.
+
+143
+00:07:11,000 --> 00:07:14,000
+Wchodzę sobie raz jeszcze w terminal,
+
+144
+00:07:14,000 --> 00:07:19,000
+wykonuję o, i widzę, że jeszcze wypadałoby wyświetlić sobie ten miesiąc.
+
+145
+00:07:19,000 --> 00:07:25,000
+Jak chcesz nazwę, to możesz dorzucić sobie słowniczek,
+
+146
+00:07:25,000 --> 00:07:28,000
+zrobić słownik i wyświetlać ładnie nazwami,
+
+147
+00:07:28,000 --> 00:07:33,000
+ale widać, że w 2020 roku grudzień ma 31 dni,
+
+148
+00:07:33,000 --> 00:07:37,000
+a w 2020 roku październik ma dni 31.
+
+149
+00:07:37,000 --> 00:07:40,000
+I tak można sobie to wywoływać.
+
+150
+00:07:40,000 --> 00:07:43,000
+Z mojej strony to wszystko, to było takie demo nadprogramowe.
+
+151
+00:07:43,000 --> 00:07:45,000
+Bardzo serdecznie za nie dziękuję
+
+152
+00:07:45,000 --> 00:07:48,000
+i zapraszam Cię do zadania, gdzie teraz Ty będziesz kodować,
+
+153
+00:07:48,000 --> 00:07:50,000
+a ja rozwiązanie pokażę Ci za chwilę.

@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:02,720
+Otwórz dołączony do zadania plik operacje CSV.
+
+2
+00:00:03,000 --> 00:00:05,020
+Plik ten znajdziesz pod filmem.
+
+3
+00:00:05,560 --> 00:00:08,000
+Policz wartość dochodu dla poszczególnych miesięcy,
+
+4
+00:00:08,099 --> 00:00:12,080
+a następnie utwórz wykres prezentujący dochód dla tych miesięcy.
+
+5
+00:00:12,080 --> 00:00:16,460
+Po drugie, utwórz drugi wykres ilustrujący ilość operacji
+
+6
+00:00:16,460 --> 00:00:18,480
+wykonywanych w poszczególnych miesiącach.
+
+7
+00:00:18,839 --> 00:00:21,280
+Czyli utwórz drugi wykres ilustrujący ilość operacji
+
+8
+00:00:21,280 --> 00:00:23,019
+wykonywanych w poszczególnych miesiącach,
+
+9
+00:00:23,420 --> 00:00:26,359
+a następnie zapisz oba wykresy w katalogu pod nazwami
+
+10
+00:00:26,359 --> 00:00:28,920
+podsumowanie oraz ilość operacji PNG.
+
+11
+00:00:28,920 --> 00:00:32,060
+To cóż, polecam pobrać plik operacje,
+
+12
+00:00:32,420 --> 00:00:34,340
+powtórzyć sobie raz jeszcze odczytywanie pliku,
+
+13
+00:00:34,400 --> 00:00:36,440
+a następnie zrealizować treść zadania.
+
+14
+00:00:36,780 --> 00:00:37,300
+Do zobaczenia!

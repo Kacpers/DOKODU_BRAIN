@@ -1,0 +1,471 @@
+1
+00:00:00,000 --> 00:00:09,339
+No dobra, czyli mamy nasze osoby w takiej strukturze, czyli jest sobie ta lista workers, w niej mamy słowniki, id, job title, name i programming language.
+
+2
+00:00:09,980 --> 00:00:23,420
+Natomiast za chwilę chcemy sprawić, żeby było coś takiego, czyli mamy słownik, słownik ma język programowania, w którym to języku programowania znajduje się quantity, czyli ilość i imiona.
+
+3
+00:00:23,420 --> 00:00:33,719
+I w ten sam sposób wyglądają wszystkie poszczególne języki, czyli pierwszą rzeczą, którą będziemy musieli przejść, będzie dobranie się do tego języka.
+
+4
+00:00:34,780 --> 00:00:42,880
+Czyli tak naprawdę, for work, air in workers, dwukropek, to jest pierwsza rzecz.
+
+5
+00:00:42,880 --> 00:00:48,719
+Teraz pojedynczy ten pracownik, to jest ten słownik. Mnie interesuje jego imię.
+
+6
+00:00:49,140 --> 00:00:52,200
+Imię tylko sobie zapiszę.
+
+7
+00:00:52,200 --> 00:00:56,359
+Imię znajdę pod name.
+
+8
+00:00:57,160 --> 00:01:05,400
+Natomiast, jeżeli będę chciał dostać się do języków, to będę potrzebował worker od programming language.
+
+9
+00:01:05,659 --> 00:01:11,359
+Mogę sobie to wyprintować, żeby sprawdzić, czy wszystko mi działa OK.
+
+10
+00:01:11,359 --> 00:01:17,219
+I w tym momencie programming language powinno być listą, na której też będę widział te języki.
+
+11
+00:01:17,719 --> 00:01:18,560
+Sprawdźmy to.
+
+12
+00:01:18,980 --> 00:01:22,040
+Czyli tutaj sobie uruchamiam lista słowników, enter.
+
+13
+00:01:22,200 --> 00:01:24,200
+No i faktycznie tak mam. Zobaczcie.
+
+14
+00:01:24,200 --> 00:01:26,200
+Martha, PHP, JavaScript, Alex.
+
+15
+00:01:26,200 --> 00:01:28,200
+O, Alex nic nie ma.
+
+16
+00:01:28,200 --> 00:01:30,200
+Czemu Alex nic nie ma? Sprawdźmy.
+
+17
+00:01:30,200 --> 00:01:32,200
+Możliwe, że coś mi się źle...
+
+18
+00:01:32,200 --> 00:01:34,200
+Programming language.
+
+19
+00:01:34,200 --> 00:01:36,200
+Możliwe, że coś źle mi się sformatowało,
+
+20
+00:01:36,200 --> 00:01:40,200
+albo tutaj mi się ucięło po prostu przez to, że ta konsola tak działa, jak działa.
+
+21
+00:01:40,200 --> 00:01:42,200
+O, wszystko działa.
+
+22
+00:01:42,200 --> 00:01:44,200
+O, wszystko działa.
+
+23
+00:01:44,200 --> 00:01:46,200
+O, wszystko działa.
+
+24
+00:01:46,200 --> 00:01:48,200
+O, wszystko działa.
+
+25
+00:01:48,200 --> 00:01:50,200
+O, wszystko działa.
+
+26
+00:01:50,200 --> 00:01:52,200
+Dzięki.
+
+27
+00:01:52,200 --> 00:01:54,200
+Dzięki.
+
+28
+00:01:54,200 --> 00:01:56,200
+Dzięki.
+
+29
+00:01:56,200 --> 00:01:58,200
+Więc to wszystko jest ok w kraju sm Szklania.
+
+30
+00:01:58,200 --> 00:02:00,200
+Bo tu jest osoba, znajdę…
+
+31
+00:02:00,200 --> 00:02:02,200
+Ucha!
+
+32
+00:02:02,200 --> 00:02:04,200
+Kto to completo robił?
+
+33
+00:02:04,200 --> 00:02:06,200
+Zobacz!
+
+34
+00:02:06,200 --> 00:02:12,199
+Wróćcie się przed tobą, po raz pierwszy pański między tymi dwóch tankami wymiarami,
+
+35
+00:02:12,199 --> 00:02:14,199
+père using two names and their reference lettering'.
+
+36
+00:02:14,199 --> 00:02:15,199
+Więc communications agency.
+
+37
+00:02:15,199 --> 00:02:17,199
+I nie büyük zmiany s telescopes.
+
+38
+00:02:17,199 --> 00:02:18,199
+To jest oczywiście returnotherapie.
+
+39
+00:02:18,199 --> 00:02:19,199
+Tak że diliscKEN.pl i местomowy Я предподawktor.
+
+40
+00:02:19,199 --> 00:02:23,939
+Można w Visual Studio Code też tak to chyba działa, że możemy zwijać sobie te słulisty.
+
+41
+00:02:24,579 --> 00:02:29,280
+Kolejna rzecz, że skoro mam kluczem moim jest ten język,
+
+42
+00:02:29,399 --> 00:02:31,879
+to ja powinienem sprawdzić, czy on jest ustawiony.
+
+43
+00:02:32,439 --> 00:02:35,339
+I jeżeli on nie jest ustawiony, to go ustawić tak naprawdę.
+
+44
+00:02:36,019 --> 00:02:40,479
+Czyli if, no właśnie i nie mam jeszcze tego miejsca, gdzie go ustawię.
+
+45
+00:02:40,959 --> 00:02:43,280
+Stworzę więc sobie jakąś strukturę, nazwę ją statistics.
+
+46
+00:02:43,280 --> 00:02:49,539
+I wiem, że to jest słownik, no bo finalnie chcę otrzymać słownik.
+
+47
+00:02:50,219 --> 00:02:53,280
+Czyli if programming language not in statistics.
+
+48
+00:02:56,479 --> 00:03:01,180
+I tutaj muszę się tym posłużyć z tego względu, że jeżeli chodzi o in,
+
+49
+00:03:01,560 --> 00:03:05,740
+to in dla słowników sprawdza, czy klucz znajduje się w słowniku.
+
+50
+00:03:06,240 --> 00:03:11,080
+Więc języki programowania tutaj mi są bardzo okej, ponieważ one są kluczami tego słownika.
+
+51
+00:03:11,080 --> 00:03:13,080
+Więc jeżeli język programowania...
+
+52
+00:03:13,280 --> 00:03:16,360
+Jeżeli język programowania nie jest w statystykach, to mogę go sobie stworzyć.
+
+53
+00:03:16,719 --> 00:03:19,000
+I od razu mogę też wtedy stworzyć go w takiej strukturze,
+
+54
+00:03:19,060 --> 00:03:22,599
+że będę miał quantity ustawiony na zero i names jako pusta lista.
+
+55
+00:03:23,020 --> 00:03:31,879
+Czyli statistics od programming language równa się słownik,
+
+56
+00:03:31,879 --> 00:03:42,280
+w którym mam quantity ustawiony na zero i names jako pusta lista.
+
+57
+00:03:43,280 --> 00:03:47,039
+Ustawiam sobie te typy z tego względu, że dzięki temu łatwiej będzie mi
+
+58
+00:03:47,039 --> 00:03:49,620
+zarówno zwiększyć ilość, jak i dodać imię.
+
+59
+00:03:50,319 --> 00:03:53,120
+Więc mogę sobie wtedy poniżej wykonać statistics
+
+60
+00:03:53,120 --> 00:03:59,639
+od programming language, od quantity.
+
+61
+00:04:04,120 --> 00:04:05,539
+Quantity jako string.
+
+62
+00:04:07,039 --> 00:04:08,659
+Plus równa się jeden.
+
+63
+00:04:08,659 --> 00:04:12,659
+Oraz statistics od programming language.
+
+64
+00:04:13,280 --> 00:04:20,279
+Od names append imię, czyli worker name.
+
+65
+00:04:21,220 --> 00:04:22,360
+Dlaczego tak to robię?
+
+66
+00:04:23,000 --> 00:04:25,120
+Myślę, że wypada to przedyskutować.
+
+67
+00:04:25,660 --> 00:04:32,040
+Robię to w ten sposób z tego względu, że statistics od programming language tutaj,
+
+68
+00:04:32,480 --> 00:04:35,240
+to zakładając, że mój programming language to jest na przykład PHP,
+
+69
+00:04:35,660 --> 00:04:37,939
+no to ja ustawiam statistics od PHP.
+
+70
+00:04:38,480 --> 00:04:40,279
+To jest pusty słownik.
+
+71
+00:04:41,120 --> 00:04:42,620
+Znaczy pusty słownik.
+
+72
+00:04:43,279 --> 00:04:44,039
+To jest pusty słownik.
+
+73
+00:04:44,279 --> 00:04:47,759
+Ale jeżeli ja wiem, że w moim słowniku jest już quantity ustawione na,
+
+74
+00:04:47,819 --> 00:04:51,639
+może być ustawione na zero i names ustawione na konkretną listę,
+
+75
+00:04:52,059 --> 00:04:53,639
+no to mogę sobie to od razu tutaj nadać.
+
+76
+00:04:53,979 --> 00:04:58,179
+Bo później jak będę chciał dodawać, to łatwiej jest do zera dodać jeden niż do niczego.
+
+77
+00:04:58,719 --> 00:05:01,699
+Bo jak dodaję się do niczego, to tam wychodzą błędy.
+
+78
+00:05:01,799 --> 00:05:04,419
+Więc łatwiej jest po prostu do wartości liczbowej dodać sobie jeden.
+
+79
+00:05:04,919 --> 00:05:07,979
+W ten sposób mamy statistics od programming language, od quantity,
+
+80
+00:05:08,179 --> 00:05:09,179
+plus równa się jeden.
+
+81
+00:05:09,659 --> 00:05:11,000
+Dlaczego do tego dodaję quantity?
+
+82
+00:05:11,000 --> 00:05:13,000
+No bo to, tak naprawdę,
+
+83
+00:05:13,279 --> 00:05:14,379
+to jest ten mój słownik.
+
+84
+00:05:14,379 --> 00:05:16,879
+Widzicie? Tu sobie go wyżej utworzyłem.
+
+85
+00:05:17,079 --> 00:05:19,239
+Natomiast jeżeli później będę chciał po tym przechodzić,
+
+86
+00:05:19,239 --> 00:05:21,439
+no to też będę miał statistics od Python,
+
+87
+00:05:21,819 --> 00:05:23,819
+będę miało quantity oraz names.
+
+88
+00:05:24,319 --> 00:05:27,779
+Więc skoro wiem, że tak jest, no to mogę sobie to quantity zwiększyć o jeden.
+
+89
+00:05:28,219 --> 00:05:32,119
+A skoro names to jest lista, bo sobie ją tutaj stworzyłem jako pustą listę,
+
+90
+00:05:32,339 --> 00:05:35,799
+to mogę po prostu do niej appendować nowego pracownika.
+
+91
+00:05:36,239 --> 00:05:40,359
+Mogę sobie to wtedy wyprintować jako statistics.
+
+92
+00:05:41,399 --> 00:05:43,239
+No i sprawdzić, czy zadziałało.
+
+93
+00:05:43,279 --> 00:05:44,279
+Zobaczcie.
+
+94
+00:05:44,279 --> 00:05:50,279
+Znowu tutaj terminal próbuje zbojkotować imprezę.
+
+95
+00:05:50,279 --> 00:05:54,279
+Python ma quantity 4 i names 1, 2, 3, 4.
+
+96
+00:05:54,279 --> 00:05:58,279
+PHP quantity 4 i names raz, dwa, trzy, cztery.
+
+97
+00:05:58,279 --> 00:06:01,279
+No i JavaScript też ma 4 i raz, jeden, dwa, trzy, cztery.
+
+98
+00:06:01,279 --> 00:06:04,279
+Czy to możliwe, że każdy z tych języków występował cztery razy?
+
+99
+00:06:04,279 --> 00:06:05,279
+Wydaje mi się, że tak.
+
+100
+00:06:07,279 --> 00:06:08,279
+Spróbujmy to zmienić.
+
+101
+00:06:08,279 --> 00:06:11,279
+Na przykład zabierzmy JavaScripta Carlowi.
+
+102
+00:06:13,279 --> 00:06:14,279
+Jeszcze raz.
+
+103
+00:06:14,279 --> 00:06:16,279
+I zobaczcie, jest JavaScript.
+
+104
+00:06:16,279 --> 00:06:18,279
+Zmniejszyła nam się ilość na trzy.
+
+105
+00:06:18,279 --> 00:06:22,279
+Wychodzi na to, że w ten sposób przetestowaliśmy nasz kod i chyba działa.
+
+106
+00:06:22,279 --> 00:06:25,279
+Dajcie znać, jak podobają wam się takie konstrukcje.
+
+107
+00:06:25,279 --> 00:06:28,279
+Wiem, że do tego potrzebna jest odrobina wyobraźni.
+
+108
+00:06:28,279 --> 00:06:30,279
+U mnie to poszło dosyć sprawnie.
+
+109
+00:06:30,279 --> 00:06:32,279
+Natomiast u was tak sprawnie nie musiało iść.
+
+110
+00:06:32,279 --> 00:06:37,279
+Pamiętam, że moje początki związane z tym były bardzo, bardzo skomplikowane.
+
+111
+00:06:37,279 --> 00:06:40,279
+I zawsze było w tym mnóstwo ifów.
+
+112
+00:06:40,279 --> 00:06:42,279
+Szukałem tych wartości, jakichś.
+
+113
+00:06:42,279 --> 00:06:45,279
+Jakichś tam dla zera, dla czegoś.
+
+114
+00:06:45,279 --> 00:06:49,279
+A ten myk tak naprawdę, te cztery linijki czy pięć linijek, które zrobiliśmy tutaj,
+
+115
+00:06:49,279 --> 00:06:54,279
+załatwiły nam całe zadanie i sprawiły, że jest ono dużo łatwiejsze niż rozwiązanie,
+
+116
+00:06:54,279 --> 00:06:56,279
+które możecie mieć gdzieś u siebie.
+
+117
+00:06:56,279 --> 00:06:59,279
+Zapiszcie sobie ten fragment, bo to się naprawdę często pojawia.
+
+118
+00:06:59,279 --> 00:07:00,279
+Chodźmy dalej.

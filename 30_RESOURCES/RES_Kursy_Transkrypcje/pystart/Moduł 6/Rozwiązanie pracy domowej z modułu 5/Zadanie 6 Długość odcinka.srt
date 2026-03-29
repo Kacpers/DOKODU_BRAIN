@@ -1,0 +1,43 @@
+1
+00:00:00,000 --> 00:00:03,439
+Kolejne zadanie wymaga tego, żebyśmy zaimportowali funkcję sqrt
+
+2
+00:00:03,439 --> 00:00:08,279
+i policzyli sobie pierwiastek z kwadratu,
+
+3
+00:00:08,279 --> 00:00:10,400
+wiecie, wzór na długość odcinka.
+
+4
+00:00:11,000 --> 00:00:12,960
+Natomiast tutaj bardzo ważne jest to,
+
+5
+00:00:13,040 --> 00:00:15,540
+że argumenty będą przekazywane w postaci tupli.
+
+6
+00:00:16,160 --> 00:00:18,740
+Czyli możemy sobie najpierw zaimportować pierwiastek
+
+7
+00:00:18,740 --> 00:00:21,379
+from math import sqrt
+
+8
+00:00:21,379 --> 00:00:25,980
+i następnie możemy wykonać dev calculate segment length.
+
+9
+00:00:25,980 --> 00:00:55,960
+I tak dalej.
+
+10
+00:00:55,979 --> 00:01:25,959
+I tak dalej.
+
+11
+00:01:25,980 --> 00:01:55,960
+I tak dalej.

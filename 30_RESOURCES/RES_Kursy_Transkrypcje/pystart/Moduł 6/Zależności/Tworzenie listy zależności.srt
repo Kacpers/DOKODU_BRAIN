@@ -1,0 +1,99 @@
+1
+00:00:00,000 --> 00:00:03,660
+No dobra, a jak sprawdzić z jakich zależności korzysta mój projekt?
+
+2
+00:00:03,879 --> 00:00:07,339
+Otóż jest jedno polecenie, które rozwiązuje wszelkie problemy.
+
+3
+00:00:07,799 --> 00:00:09,060
+To polecenie to pip freeze.
+
+4
+00:00:09,179 --> 00:00:12,780
+O nim jeszcze sobie będziemy mówili, kiedy będziemy doinstalowywali coś z zewnątrz.
+
+5
+00:00:12,900 --> 00:00:17,740
+To co możesz wiedzieć teraz to to, że kiedy zainstalowaliśmy ten PyStart w naszym projekcie,
+
+6
+00:00:18,280 --> 00:00:20,420
+to w momencie w którym wykonasz polecenie pip freeze,
+
+7
+00:00:20,420 --> 00:00:25,879
+pojawi Ci się taki link z informacją skąd ten projekt, ta biblioteka została zainstalowana.
+
+8
+00:00:25,879 --> 00:00:30,439
+I dzięki temu za każdym razem, kiedy będziesz chciał postawić sobie ten projekt,
+
+9
+00:00:30,619 --> 00:00:36,379
+to właśnie z tego miejsca Python będzie próbował pobrać Twój PyStart i go zainstalować.
+
+10
+00:00:36,899 --> 00:00:41,340
+Jeżeli rozszerzenie by pochodziło z internetu, to tutaj w tym miejscu pojawiłaby się informacja,
+
+11
+00:00:41,460 --> 00:00:43,879
+że takie rozszerzenie jest potrzebne z internetu.
+
+12
+00:00:44,679 --> 00:00:49,179
+I teraz to co instalowaliśmy, czyli po wykonaniu pip install nazwa pakietu,
+
+13
+00:00:49,539 --> 00:00:52,219
+wyświetli się w tym requirements, ale to o czym Ci mówiłem,
+
+14
+00:00:52,219 --> 00:00:55,859
+czyli zależności Twoich zależności też w tym miejscu się pojawią.
+
+15
+00:00:55,880 --> 00:00:59,880
+Dlatego nie należy tego pliku requirements, tego co zrobiliśmy przy pip freeze,
+
+16
+00:00:59,880 --> 00:01:02,880
+potraktować jako gotowiec dla requirements.txt.
+
+17
+00:01:02,880 --> 00:01:07,379
+To co należy zrobić, to należy z tego pip freeze'a wybrać sobie poszczególne rzeczy,
+
+18
+00:01:07,379 --> 00:01:12,379
+które instalowaliśmy i wkleić je do nowego pliku o nazwie requirements.txt.
+
+19
+00:01:12,379 --> 00:01:16,379
+I Python nawet jest na tyle mądry, że kiedy otwierasz sobie nowy projekt
+
+20
+00:01:16,379 --> 00:01:21,379
+i nie ma w nim żadnych zależności, a są one widoczne w pliku o nazwie requirements.txt,
+
+21
+00:01:21,379 --> 00:01:24,379
+to sam Python zapyta Cię, hej, a może chciałbyś je zainstalować.
+
+22
+00:01:24,379 --> 00:01:25,879
+No i z tego pliku też można po prostu zainstalować.
+
+23
+00:01:25,879 --> 00:01:31,879
+Można je później zainstalować wykonując pip install minus r requirements.txt.
+
+24
+00:01:31,879 --> 00:01:34,379
+Ale to już sprawdzimy sobie w kolejnym module,
+
+25
+00:01:34,379 --> 00:01:36,879
+gdy będziemy instalowali w ten sposób zależności.

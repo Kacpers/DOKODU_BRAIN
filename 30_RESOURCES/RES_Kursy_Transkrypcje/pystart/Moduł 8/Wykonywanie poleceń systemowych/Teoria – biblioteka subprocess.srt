@@ -1,0 +1,519 @@
+1
+00:00:00,000 --> 00:00:04,440
+Kiedy pracujecie z systemem operacyjnym, często używacie terminala.
+
+2
+00:00:04,520 --> 00:00:06,860
+Przynajmniej tak mi się wydaje, bo ja tak robię.
+
+3
+00:00:07,259 --> 00:00:10,939
+Czyli wchodzę sobie do terminala, czasem wpisuję polecenie dir,
+
+4
+00:00:11,040 --> 00:00:15,300
+żeby wypisać polecenia, czasem wpisuję polecenie ls, jeżeli jestem pod linuksem.
+
+5
+00:00:15,720 --> 00:00:18,600
+Czasem na przykład, kiedy chcę sprawdzić, czy jakiś serwer odpowiada,
+
+6
+00:00:18,699 --> 00:00:19,879
+wykonuję polecenie ping.
+
+7
+00:00:20,359 --> 00:00:22,660
+Jeżeli chcę się dowiedzieć, którędy idzie mój pakiet,
+
+8
+00:00:22,740 --> 00:00:26,740
+wykonuję polecenie traceroute i jest dużo takich różnych poleceń, które robię.
+
+9
+00:00:26,739 --> 00:00:30,259
+Co więcej, czasem są jakieś programy, które są gotowe
+
+10
+00:00:30,259 --> 00:00:33,939
+i my po prostu chcemy je tylko uruchomić, albo zatrzymać,
+
+11
+00:00:34,060 --> 00:00:37,099
+albo w ogóle sprawdzić, czy w danym momencie działają.
+
+12
+00:00:37,539 --> 00:00:39,780
+I wtedy też z pomocą przychodzi nam Python,
+
+13
+00:00:40,179 --> 00:00:44,579
+ponieważ z poziomu Pythona można bardzo łatwo wykonywać polecenia systemowe.
+
+14
+00:00:45,519 --> 00:00:47,959
+I na to jest kilka sposobów, natomiast ja się pokazuję ten,
+
+15
+00:00:48,039 --> 00:00:51,959
+który jest zdecydowanie najlepszy i pokażę Ci, jak z niego skorzystać.
+
+16
+00:00:52,299 --> 00:00:54,320
+No i tradycyjnie też wykonamy sobie małe zadanie.
+
+17
+00:00:54,739 --> 00:00:55,299
+Dlaczego?
+
+18
+00:00:55,299 --> 00:00:57,379
+Warto takie dowiedzieć.
+
+19
+00:00:57,859 --> 00:00:59,640
+No, tak jak widzicie na załączonym slajdzie.
+
+20
+00:00:59,739 --> 00:01:03,640
+Przede wszystkim automatyzacja, czyli wykonywanie poleceń o określonym czasie.
+
+21
+00:01:04,120 --> 00:01:08,120
+Czasem w określonym momencie, no bo czas można byłoby to sobie skonfigurować
+
+22
+00:01:08,120 --> 00:01:11,420
+w takim czymś, co nazywa się cron w Linuxie.
+
+23
+00:01:11,799 --> 00:01:15,359
+Natomiast można byłoby też zapisać to sobie wewnątrz skryptu Pythonowego,
+
+24
+00:01:15,479 --> 00:01:16,840
+żeby coś nam się właśnie wykonywało.
+
+25
+00:01:17,439 --> 00:01:20,579
+Czasem mamy takie narzędzia, które nie udostępniają nam API,
+
+26
+00:01:20,700 --> 00:01:23,780
+czyli nie mówią, słuchaj, wykonaj strzał na ten adres,
+
+27
+00:01:23,780 --> 00:01:26,540
+tylko trzeba je sobie jakoś uruchomić, zatrzymać.
+
+28
+00:01:26,900 --> 00:01:28,359
+No i tak to właśnie też działa.
+
+29
+00:01:29,120 --> 00:01:31,340
+Uruchamianie właśnie i zatrzymywanie programów.
+
+30
+00:01:31,579 --> 00:01:34,140
+Zatrzymywanie programów nie tylko takie brutalne,
+
+31
+00:01:34,219 --> 00:01:37,240
+bo można też z poziomu Pythona wylistować sobie procesy
+
+32
+00:01:37,240 --> 00:01:38,980
+i zatrzymać jakiś konkretny program,
+
+33
+00:01:39,579 --> 00:01:43,780
+ale można też po prostu wysłać polecenie zatrzymania do danego programu.
+
+34
+00:01:44,680 --> 00:01:46,939
+No właśnie, to kontrolowanie tych procesów.
+
+35
+00:01:47,260 --> 00:01:50,180
+No i tu między innymi dodałem to wykonywanie takich poleceń jak ping,
+
+36
+00:01:50,180 --> 00:01:53,180
+co też sobie tutaj podczas naszego spotkania zrobimy.
+
+37
+00:01:53,780 --> 00:01:57,299
+Jeżeli chodzi o zastosowanie tego typu rzeczy,
+
+38
+00:01:57,439 --> 00:01:59,859
+jeżeli się zastanawiamy, gdzie to może mi się przydać,
+
+39
+00:02:00,180 --> 00:02:02,540
+to na przykład zobacz robienie backupów.
+
+40
+00:02:02,859 --> 00:02:05,200
+Czyli moglibyśmy sobie wyobrazić, że mamy jakiś katalog,
+
+41
+00:02:05,299 --> 00:02:08,560
+który dla nas jest bardzo ważny i chcemy go sobie skopiować
+
+42
+00:02:08,560 --> 00:02:11,800
+w jakieś inne miejsce, żeby mieć dwie wersje
+
+43
+00:02:11,800 --> 00:02:14,280
+tych samych plików.
+
+44
+00:02:14,680 --> 00:02:17,840
+Następnie tą wersję, którą skopiowaliśmy, będziemy chcieli spakować,
+
+45
+00:02:18,000 --> 00:02:20,860
+czyli korzystając z polecenia zip albo targetar
+
+46
+00:02:20,860 --> 00:02:22,900
+albo rar,
+
+47
+00:02:22,900 --> 00:02:25,099
+chcielibyśmy zrobić archiwum.
+
+48
+00:02:25,360 --> 00:02:28,360
+No i wtedy ta wersja rozpakowana nie jest nam już potrzebna,
+
+49
+00:02:28,420 --> 00:02:31,259
+nie musimy jej przechowywać, po to zrobiliśmy archiwum, żeby mieć tą kopię.
+
+50
+00:02:31,740 --> 00:02:35,780
+I takie polecenie też, taki zbiór poleceń też mógłby się znaleźć w Pythonie.
+
+51
+00:02:35,879 --> 00:02:40,319
+Moglibyśmy sobie stworzyć skrypt, który by robił backupy
+
+52
+00:02:40,319 --> 00:02:42,319
+wszystkich katalogów, które dla nas są ważne.
+
+53
+00:02:42,740 --> 00:02:45,140
+Na przykład raz dziennie, bo to byłoby uruchamiane właśnie
+
+54
+00:02:45,140 --> 00:02:49,060
+albo krona, albo po prostu ten nasz skrypt uruchamiałby się codziennie
+
+55
+00:02:49,060 --> 00:02:51,280
+i takie backupy by robił. Bardzo wygodna sprawa.
+
+56
+00:02:51,280 --> 00:02:52,599
+Ja tak robię na przykład z filmami,
+
+57
+00:02:52,900 --> 00:02:55,500
+które nagrywam dla Was, czy z filmami, które wrzucam na YouTube'a,
+
+58
+00:02:55,500 --> 00:02:58,500
+to zawsze sobie takie kopie zapasowe wykonuję.
+
+59
+00:02:58,980 --> 00:03:01,540
+Inne rzeczy to automatyzacja poleceń,
+
+60
+00:03:01,540 --> 00:03:03,300
+na przykład zapłacą polecenia w GET.
+
+61
+00:03:03,300 --> 00:03:06,300
+Polecenia w GET to jest takie polecenie, które znajduje się pod Linuxem.
+
+62
+00:03:06,300 --> 00:03:10,180
+Pod Windowsem też można je zainstalować albo używać WSL
+
+63
+00:03:10,180 --> 00:03:13,800
+i wówczas, jeżeli chodzi o GETa,
+
+64
+00:03:13,800 --> 00:03:17,500
+to w GET służy do tego, żeby pobierać treści z różnych stron internetowych.
+
+65
+00:03:17,500 --> 00:03:21,000
+I kiedyś było takie, może nie API, ale był taki mechanizm,
+
+66
+00:03:21,000 --> 00:03:22,879
+który musiałem zaimplementować,
+
+67
+00:03:22,900 --> 00:03:25,900
+on wykorzystywał właśnie w GETa do tego,
+
+68
+00:03:25,900 --> 00:03:31,500
+że pobierał ze strony internetowej listę tam jakichś wartości,
+
+69
+00:03:31,500 --> 00:03:36,200
+potem trzeba było to rozpakować i dopiero potem można było z tego korzystać.
+
+70
+00:03:36,200 --> 00:03:42,300
+Więc wtedy też korzystałem z w GETa wywoływanego właśnie w taki, a nie inny sposób.
+
+71
+00:03:42,300 --> 00:03:45,900
+No i to, o czym mówiłem, czyli badanie procesów,
+
+72
+00:03:45,900 --> 00:03:49,700
+czy też ilości procesów, czy ile pamięci zajmują,
+
+73
+00:03:49,700 --> 00:03:52,700
+czy też ile procesów mamy odpalonych,
+
+74
+00:03:52,900 --> 00:03:58,800
+jeżeli chodzi o Linuxa, to PS pod Windowsem Task List nam taką informację da.
+
+75
+00:03:58,800 --> 00:04:02,700
+Jak to robić? Generalnie jak wykonywać takie polecenia?
+
+76
+00:04:02,700 --> 00:04:07,800
+Bo znajdziecie kilka różnych rozwiązań, zdecydowanie najlepsze w tej chwili to jest korzystanie z tego polecenia,
+
+77
+00:04:07,800 --> 00:04:13,000
+które wam pokazuję tu, czyli SAP Proces, czyli wykonujemy import SAP Proces.
+
+78
+00:04:13,000 --> 00:04:20,600
+Następnie, jeżeli chcemy wykonać polecenie, no to wykonujemy LS albo LS-L, zależnie od tego, co chcemy zrobić.
+
+79
+00:04:20,600 --> 00:04:20,699
+Tutaj masz przykład, jak wykonać polecenie, czyli jak wykonać polecenie, jeżeli chcemy wykonać polecenie, no to wykonujemy LS albo LS-L, zależnie od tego, co chcemy zrobić.
+
+80
+00:04:20,699 --> 00:04:23,300
+Tutaj masz przykład, jak wykonać polecenie,
+
+81
+00:04:23,300 --> 00:04:25,300
+bez argumentu oraz z argumentem.
+
+82
+00:04:25,300 --> 00:04:28,699
+O tych argumentach też sobie porozmawiamy w najbliższych lekcjach.
+
+83
+00:04:28,699 --> 00:04:34,899
+Jeżeli natomiast chcesz, żeby to się wykonało, to musisz jeszcze dorzucić, jakby w powłoce systemowej,
+
+84
+00:04:34,899 --> 00:04:39,399
+to musisz dorzucić informację shell="true", no i wtedy to polecenie ci się wykona.
+
+85
+00:04:39,399 --> 00:04:44,599
+Oczywiście pod Windowsem można to samo wypróbować, korzystając z polecenia dir zamiast ls.
+
+86
+00:04:44,599 --> 00:04:50,599
+Natomiast jeżeli chcemy przechwycić wynik takiego polecenia, bo czasem jest tak, że tylko chcielibyśmy,
+
+87
+00:04:50,600 --> 00:04:56,800
+na przykład, niekoniecznie pobrać listę procesów, ale zatrzymać konkretny proces o konkretnej nazwie czy konkretnym ID,
+
+88
+00:04:56,800 --> 00:05:02,900
+no to wtedy wykonujemy takie polecenie i nie interesuje nas wynik, no bo wyniku tak naprawdę bardzo często nie ma.
+
+89
+00:05:02,900 --> 00:05:08,500
+Natomiast tu, jeżeli chcielibyśmy odebrać listę tych plików, to ten wynik nas interesuje.
+
+90
+00:05:08,500 --> 00:05:13,200
+I wtedy do tego trzeba dorzucić takie polecenie, jak captureOutput="true",
+
+91
+00:05:13,200 --> 00:05:17,200
+i to spowoduje, że właśnie ten cały wynik będzie przypisany do zmiennej.
+
+92
+00:05:17,200 --> 00:05:20,300
+Jeżeli będą znaki końca linii, czyli będą nowe linie,
+
+93
+00:05:20,300 --> 00:05:24,100
+no to wówczas te znaki końca linii wyświetlą nam się na ekranie,
+
+94
+00:05:24,100 --> 00:05:27,400
+no i w ten sposób będziemy wiedzieli, gdzie te linie się kończą.
+
+95
+00:05:27,400 --> 00:05:33,800
+I tu bardzo ważna jeszcze jedna uwaga, ponieważ dochodzimy do tematu, który jest niezwykle niebezpieczny.
+
+96
+00:05:33,800 --> 00:05:39,400
+Jeżeli będziecie chcieli wykorzystywać tego typu polecenia,
+
+97
+00:05:39,400 --> 00:05:45,100
+na przykład, nie wiem, w jakichś skryptach webowych, czyli skryptach, które będą wykonywane przez stronę internetową,
+
+98
+00:05:45,100 --> 00:05:49,500
+to bardzo, bardzo, bardzo uważajcie na to, co wasi użytkownicy wprowadzają.
+
+99
+00:05:49,500 --> 00:05:55,800
+Bo jeżeli użytkownik wprowadzi wam jakieś dane, i te dane będą wywoływane po stronie serwera,
+
+100
+00:05:55,800 --> 00:06:00,300
+i będzie miał wpływ na to, co będzie miało być wywołane właśnie w poleceniu systemowym,
+
+101
+00:06:00,300 --> 00:06:03,699
+to to może doprowadzić do tego, że wam nawet włamie się na serwer,
+
+102
+00:06:03,699 --> 00:06:09,300
+no bo dajemy mu możliwość wykonywania tak naprawdę poleceń systemowych z poziomu przeglądarki.
+
+103
+00:06:09,300 --> 00:06:14,699
+Czy przy jakimś ruchu sieciowym, czy przy innych tego typu rzeczach, jeżeli użytkownik ma wpływ na to,
+
+104
+00:06:14,699 --> 00:06:19,300
+jakie polecenia będą wykonywane, to trzeba mieć to na uwadze, żeby to zabezpieczać,
+
+105
+00:06:19,300 --> 00:06:22,300
+żeby sprawdzać, czy to, co wykonujecie jest okej.
+
+106
+00:06:22,300 --> 00:06:28,100
+Jeżeli polecenie jest wykonane tak jak tutaj, czyli SAP proces po prostu dostaje wprost przekazane informacje,
+
+107
+00:06:28,100 --> 00:06:32,500
+no to nie ma problemu, ale jeżeli na przykład ścieżka do katalogu, który chcielibyście wylistować,
+
+108
+00:06:32,500 --> 00:06:38,500
+pochodziłaby gdzieś z zewnątrz, i ten użytkownik siłą rzeczy nie miałby dostępu do waszej powłoki,
+
+109
+00:06:38,500 --> 00:06:40,900
+no to wtedy mogłoby się stać coś złego.
+
+110
+00:06:40,900 --> 00:06:47,699
+Mógłby na przykład pobrać jakiś skrypt, mógłby go wykonać, mógłby założyć sobie nowe konto.
+
+111
+00:06:47,699 --> 00:06:49,199
+No to i wchodzimy w tematy bezpieczeństwa.
+
+112
+00:06:49,199 --> 00:06:54,399
+Jest tego tak do końca nie szkole, natomiast już tutaj zaznaczam, że trzeba na to po prostu uważać.
+
+113
+00:06:54,399 --> 00:06:55,399
+I tu jeszcze jeden temat.
+
+114
+00:06:55,399 --> 00:07:01,199
+Jeżeli chcemy odebrać to żądanie jako tekst, no to wówczas, kiedy wykonujemy capture output,
+
+115
+00:07:01,199 --> 00:07:04,399
+on nam odpowiada, ale odpowiada nam obiektem.
+
+116
+00:07:04,399 --> 00:07:10,800
+Żeby z tego obiektu wyciągnąć treść naszej odpowiedzi, trzeba wykonać result.stdout.
+
+117
+00:07:10,800 --> 00:07:11,599
+No bo to jest obiekt.
+
+118
+00:07:11,599 --> 00:07:17,199
+Jak wpiszecie result. to zobaczycie zbiór różnych podpowiedzi, co można tam pobrać.
+
+119
+00:07:17,199 --> 00:07:18,399
+Na przykład jeżeli byłby error,
+
+120
+00:07:18,399 --> 00:07:23,599
+to można byłoby wtedy pobrać go z stdr, ale to temat na inną rozmowę.
+
+121
+00:07:23,599 --> 00:07:27,000
+I wówczas, kiedy wykonamy stdout, jest jeszcze jedna rzecz,
+
+122
+00:07:27,000 --> 00:07:31,399
+a mianowicie, kiedy wyprintowalibyście samo print result.stdout,
+
+123
+00:07:31,399 --> 00:07:36,000
+to zobaczylibyście, że ta odpowiedź jest typu binary, czyli ma b z przodu.
+
+124
+00:07:36,000 --> 00:07:40,399
+I żeby to b zamienić na zwykły string, no bo to nas interesuje,
+
+125
+00:07:40,399 --> 00:07:44,599
+trzeba wykonać jeszcze jedną rzecz, a mianowicie decode utf8.
+
+126
+00:07:44,599 --> 00:07:45,799
+No i to byłoby na tyle.
+
+127
+00:07:45,799 --> 00:07:48,000
+Powinno udać wam się pingować.
+
+128
+00:07:48,399 --> 00:07:50,599
+To co? Dlaczego mówię o pingowaniu?
+
+129
+00:07:50,599 --> 00:07:52,000
+Bo tego dotyczy zadanie.
+
+130
+00:07:52,000 --> 00:07:53,599
+Chodźcie.

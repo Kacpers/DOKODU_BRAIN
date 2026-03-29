@@ -1,0 +1,447 @@
+1
+00:00:00,000 --> 00:00:08,560
+W kolejnym zadaniu mamy napisać funkcję, która odbierze dowolną liczbę i zwróci jej liczby, czy tam cyfry w tym przypadku powinny być napisane, w kolejności malejącej.
+
+2
+00:00:08,660 --> 00:00:12,540
+Czyli 1, 2, 3, 4, 5, zamieni na 5, 4, 3, 2, 1 i tak dalej.
+
+3
+00:00:13,179 --> 00:00:17,620
+Czyli potrzebujemy, też możemy sobie nazwać sort number.
+
+4
+00:00:20,140 --> 00:00:22,960
+Będę potrzebował mieć jakąś liczbę.
+
+5
+00:00:22,960 --> 00:00:29,620
+Ta liczba będzie liczbą, czyli będę potrzebował mieć jakiś number przekazany jako integer.
+
+6
+00:00:30,000 --> 00:00:34,079
+Zwracać również chciałbym integer tak naprawdę.
+
+7
+00:00:34,780 --> 00:00:43,579
+Więc pierwsze co będę musiał zrobić, to będę musiał tę liczbę zamienić sobie w taki sposób, żeby można było rozbić poszczególne jej elementy.
+
+8
+00:00:44,140 --> 00:00:51,579
+Zobacz, jeżeli sobie wyprintuję sort number i niech to będzie 3, 1, 2, 3, 4, 5.
+
+9
+00:00:55,179 --> 00:00:59,980
+I tutaj spróbowałbym, muszę tak naprawdę pobrać sobie poszczególne.
+
+10
+00:01:00,000 --> 00:01:05,200
+Czyli muszę najpierw zamienić na listę moją liczbę.
+
+11
+00:01:05,420 --> 00:01:06,939
+Pytanie brzmi, czy to zadziała.
+
+12
+00:01:07,659 --> 00:01:08,920
+Moim zdaniem nie.
+
+13
+00:01:09,599 --> 00:01:15,260
+Bo jeżeli spróbujemy zamienić sobie integer na liczbę, to dostaniemy informację, że integer object is not iterable.
+
+14
+00:01:15,879 --> 00:01:17,120
+A co jest iterable?
+
+15
+00:01:17,420 --> 00:01:18,120
+Na przykład string.
+
+16
+00:01:18,719 --> 00:01:29,539
+Czyli powinniśmy najpierw zamienić sobie naszą integer na string, a dopiero string na listę.
+
+17
+00:01:30,000 --> 00:01:34,680
+I w ten sposób okaże się, że uda nam się wyciągnąć poszczególne elementy.
+
+18
+00:01:35,420 --> 00:01:44,099
+Rzecz kolejna, która tutaj staje przed nami jest taka, że będziemy potrzebowali przejść sobie po tych elementach i zamienić je na liczby.
+
+19
+00:01:44,859 --> 00:01:51,099
+Można to zrobić po prostu albo, można tutaj znowu, zadanie dla chętnych na szóstkę.
+
+20
+00:01:51,560 --> 00:01:53,439
+Można użyć list comprehension do takiej zamiany.
+
+21
+00:01:53,620 --> 00:01:58,060
+Można też użyć osobnej funkcji, która na przykład będzie tę czynność wykonywała.
+
+22
+00:01:58,219 --> 00:01:58,840
+Czyli def.
+
+23
+00:02:00,000 --> 00:02:05,659
+Convert strings to ints.
+
+24
+00:02:07,420 --> 00:02:09,419
+Tu potrzebuję mieć jakąś listę.
+
+25
+00:02:14,379 --> 00:02:15,520
+Zwracam listę.
+
+26
+00:02:16,659 --> 00:02:18,219
+Koniecznie robię osobną funkcję.
+
+27
+00:02:19,080 --> 00:02:20,420
+No bo ja nie chcę mieć też funkcji.
+
+28
+00:02:20,420 --> 00:02:27,340
+I to też nie jest dobre, jeżeli tworzylibyście funkcje, które miałyby nie wiadomo ile linii kodu.
+
+29
+00:02:27,740 --> 00:02:29,420
+Więc w momencie, w którym taka długa linia...
+
+30
+00:02:30,000 --> 00:02:32,000
+Taka długa już...
+
+31
+00:02:32,000 --> 00:02:37,000
+Taki długi fragment mi się pojawia, to od razu zapala mi się lampka, że warto byłoby to gdzieś wydzielić.
+
+32
+00:02:37,500 --> 00:02:39,500
+Czyli tworzę sobie zmienną output.
+
+33
+00:02:40,879 --> 00:02:49,379
+output append int element return output
+
+34
+00:02:49,379 --> 00:02:54,280
+Czyli w moim przypadku to, co teraz będę chciał zamienić, to będę chciał zamienić sobie...
+
+35
+00:02:54,280 --> 00:02:55,680
+Przypisać sobie do zmiennej.
+
+36
+00:02:55,680 --> 00:02:59,439
+Czyli do jakiejś zmiennej list of...
+
+37
+00:03:00,000 --> 00:03:00,500
+Ints.
+
+38
+00:03:00,500 --> 00:03:02,080
+Wynik tego.
+
+39
+00:03:02,439 --> 00:03:07,180
+Ale wokół tego muszę jeszcze wykorzystać moją funkcję convert string to integers.
+
+40
+00:03:09,280 --> 00:03:11,919
+To jeszcze oczywiście nie jest rozwiązanie.
+
+41
+00:03:12,300 --> 00:03:16,060
+Natomiast zobacz, że w tym momencie już mam konkretne liczby.
+
+42
+00:03:17,039 --> 00:03:17,699
+Kolejna rzecz.
+
+43
+00:03:18,080 --> 00:03:20,199
+Dlaczego ja muszę to zamienić na tą listę?
+
+44
+00:03:20,379 --> 00:03:21,639
+I dlaczego muszę mieć same intygery?
+
+45
+00:03:21,879 --> 00:03:23,180
+Bo ja chcę to posortować.
+
+46
+00:03:23,699 --> 00:03:26,979
+Czyli list of ints.sort.
+
+47
+00:03:26,979 --> 00:03:28,879
+Jeżeli wykonamy sobie kropka sort...
+
+48
+00:03:28,879 --> 00:03:29,240
+Sort.
+
+49
+00:03:29,360 --> 00:03:29,879
+To dostaniemy...
+
+50
+00:03:30,000 --> 00:03:30,819
+1, 2, 4, 5.
+
+51
+00:03:30,960 --> 00:03:32,000
+A my chcemy odwrotnie.
+
+52
+00:03:32,379 --> 00:03:33,439
+Pamiętasz jak się to robiło?
+
+53
+00:03:34,240 --> 00:03:35,020
+Reverse true.
+
+54
+00:03:35,560 --> 00:03:37,939
+W ten sposób otrzymamy 5, 4, 3, 2, 1.
+
+55
+00:03:38,259 --> 00:03:41,900
+Czyli zbliżamy się już do formy, którą spodziewaliśmy się widzieć.
+
+56
+00:03:42,719 --> 00:03:49,340
+Minus tego jest taki, że nie mamy na chwilę obecną takiej mocy, żeby połączyć intygery ze sobą.
+
+57
+00:03:49,840 --> 00:03:52,319
+Chyba, że zamienimy je na stringi.
+
+58
+00:03:52,319 --> 00:03:58,439
+Więc robimy drugą funkcję, czy już trzecią funkcję, którą nazywamy convert int to strings.
+
+59
+00:04:00,000 --> 00:04:01,860
+Jest to output element.
+
+60
+00:04:01,860 --> 00:04:03,120
+Czyyyy...
+
+61
+00:04:04,580 --> 00:04:06,080
+List of ints.
+
+62
+00:04:08,419 --> 00:04:11,539
+List of ints
+
+63
+00:04:11,539 --> 00:04:13,539
+Output append string element.
+
+64
+00:04:14,860 --> 00:04:15,280
+Okay?
+
+65
+00:04:15,719 --> 00:04:17,139
+Moglibyśmy to zrobić prościej.
+
+66
+00:04:18,019 --> 00:04:21,019
+Zaczekaj, pokażę ci na koniec jak to można uprościć.
+
+67
+00:04:21,019 --> 00:04:24,740
+Żeby ten fragment kodu był prostszy, ale to jest trochę wykracza...
+
+68
+00:04:24,740 --> 00:04:27,699
+Wykracza poza naszą obecną wiedzę, ale ci to pokażę.
+
+69
+00:04:27,699 --> 00:04:28,980
+W ten sposób...
+
+70
+00:04:28,980 --> 00:04:33,379
+Będę miał na razie nic, bo muszę sobie z powrotem to zamienić na listę stringów.
+
+71
+00:04:33,379 --> 00:04:37,879
+Jeżeli wykonam convert ints to strings,
+
+72
+00:04:41,580 --> 00:04:47,040
+no to powinienem dostać convert ints to strings, przekazuję mu listę intów,
+
+73
+00:04:47,160 --> 00:04:48,100
+coś mu się nie podoba.
+
+74
+00:04:50,439 --> 00:04:50,939
+Lista.
+
+75
+00:04:54,379 --> 00:04:58,319
+Ach, że zwracana wartość jeszcze nie jest ok, tym się nie przejmujemy.
+
+76
+00:04:58,980 --> 00:05:05,460
+I mamy 5, 4, 3, 2, 1 i teraz tak naprawdę będziemy musieli to połączyć i zamienić na integer.
+
+77
+00:05:05,879 --> 00:05:06,900
+Jak to połączyć?
+
+78
+00:05:13,560 --> 00:05:18,740
+Żeby to połączyć używamy joina, a następnie wynik tego joina zamieniamy na integer.
+
+79
+00:05:22,160 --> 00:05:27,220
+Czyli list of strings i w ten sposób dostaniemy 5, 4, 3, 2, 1.
+
+80
+00:05:27,560 --> 00:05:28,960
+Widzisz, zadanie, które wygląda tak, że to jest list stringów,
+
+81
+00:05:28,959 --> 00:05:33,120
+wydawało się być bardzo proste, jednak wymagało trochę takiej kombinacji
+
+82
+00:05:33,120 --> 00:05:38,000
+i parę takich dodatkowych funkcji, które można byłoby tutaj dodać.
+
+83
+00:05:38,620 --> 00:05:40,719
+Obiecałem, że pokażę jak to zauprościć.
+
+84
+00:05:41,180 --> 00:05:43,719
+Jest taka funkcja, no wchodzimy już coraz więcej w funkcję,
+
+85
+00:05:43,859 --> 00:05:47,899
+coraz więcej korzystamy z różnych dobrodziejstw, więc myślę, że i tu możemy z tego skorzystać.
+
+86
+00:05:48,319 --> 00:05:50,179
+Jest taka funkcja, która nazywa się map.
+
+87
+00:05:51,179 --> 00:05:57,500
+Funkcja ta przyjmuje jako pierwszy argument funkcję, którą chcemy wywołać na każdym jednym elemencie listy,
+
+88
+00:05:57,500 --> 00:05:58,799
+a drugim elementem jest...
+
+89
+00:05:58,959 --> 00:05:59,959
+lista.
+
+90
+00:05:59,959 --> 00:06:05,560
+Stąd też, jeżeli na każdym elemencie Twojej listy wywołujesz tak naprawdę funkcję int,
+
+91
+00:06:05,560 --> 00:06:09,560
+to wystarczy, że napiszesz int, przecinek list of strings.
+
+92
+00:06:12,560 --> 00:06:14,959
+I wynik zamienisz na listę.
+
+93
+00:06:16,959 --> 00:06:20,959
+I to samo można wykonać w przypadku tego, tym poniższym,
+
+94
+00:06:20,959 --> 00:06:25,959
+dzięki czemu nasz kod tak naprawdę sprowadza się do jednej linii,
+
+95
+00:06:25,959 --> 00:06:28,459
+no i dzięki temu jest czytelniejszy.
+
+96
+00:06:28,959 --> 00:06:32,560
+Jedyna rzecz, którą trzeba wiedzieć jest taka, że map nie zwraca listy,
+
+97
+00:06:32,560 --> 00:06:34,959
+zwraca coś innego, ale tym się teraz nie zajmujemy.
+
+98
+00:06:34,959 --> 00:06:36,959
+Potraktujmy to jako takie zaklęcie.
+
+99
+00:06:36,959 --> 00:06:41,560
+Natomiast druga rzecz jest taka, że pierwszym argumentem jest funkcja,
+
+100
+00:06:41,560 --> 00:06:44,959
+którą chcesz wykorzystać, wywołać na każdym jednym elemencie listy.
+
+101
+00:06:44,959 --> 00:06:49,459
+Robię to, w sensie pokazuję takie uproszczenie nie po to, żeby przestraszyć,
+
+102
+00:06:49,459 --> 00:06:53,359
+tylko żeby pokazać, że jeszcze dużo przed nami i warto się uczyć,
+
+103
+00:06:53,359 --> 00:06:57,959
+warto szukać rozwiązań, bo jak widać zamiast jeden, dwa, trzy, cztery, pięć, dziesięciu,
+
+104
+00:06:57,959 --> 00:07:00,959
+linijek możemy mieć po prostu dwie.
+
+105
+00:07:00,959 --> 00:07:06,959
+Podobało się? Daj mi znać na Discordzie, czy takie wykraczające poza podstawy rzeczy,
+
+106
+00:07:06,959 --> 00:07:10,959
+też poza to, co robiliśmy rzeczy, też chciałbyś widzieć w zadaniach domowych,
+
+107
+00:07:10,959 --> 00:07:15,959
+w rozwiązaniach, takie sposoby, sztuczki, czy sprowadzać się tylko i wyłącznie do tego,
+
+108
+00:07:15,959 --> 00:07:18,959
+co robiliśmy bez takich elementów.
+
+109
+00:07:18,959 --> 00:07:20,959
+Bo myślę, że te dwie linie nie były aż tak bolesne.
+
+110
+00:07:20,959 --> 00:07:23,959
+To też jakbyś mógł to napisze, czy bardzo poszliśmy do przodu,
+
+111
+00:07:23,959 --> 00:07:27,959
+bardzo skomplikowałem Ci życie, czy wręcz kurczę, spodobało mi się to.
+
+112
+00:07:27,959 --> 00:07:29,959
+Dawaj więcej. Dzięki.

@@ -1,0 +1,291 @@
+1
+00:00:00,000 --> 00:00:03,780
+Prędzej czy później pojawi się też pewnie potrzeba odczytania całego pliku,
+
+2
+00:00:03,899 --> 00:00:05,020
+całej jego zawartości.
+
+3
+00:00:05,560 --> 00:00:08,500
+I tu mała taka niespodzianka.
+
+4
+00:00:08,740 --> 00:00:11,720
+Nie musisz koniecznie wywoływać tego read czy read lines.
+
+5
+00:00:12,120 --> 00:00:15,700
+Możesz po prostu iterować po pliku, czyli po handlerze.
+
+6
+00:00:16,240 --> 00:00:20,760
+Zobacz, with open test.txt z tym atrybutem r,
+
+7
+00:00:20,760 --> 00:00:27,640
+a następnie wewnątrz tego kontekst menadżera mamy taki zapis.
+
+8
+00:00:27,879 --> 00:00:29,760
+For line in handler.
+
+9
+00:00:30,420 --> 00:00:35,480
+W ten sposób my po prostu pobieramy sobie linia po linii wiersze z pliku.
+
+10
+00:00:36,240 --> 00:00:37,560
+Bardzo wygodne rozwiązanie.
+
+11
+00:00:38,219 --> 00:00:40,019
+Druga sprawa, która się pojawia poniżej,
+
+12
+00:00:40,140 --> 00:00:42,899
+to wewnątrz tego fora znajduje się print line.
+
+13
+00:00:43,399 --> 00:00:47,000
+Ale ten print posiada jeszcze coś takiego jak line.strip.
+
+14
+00:00:47,179 --> 00:00:48,120
+Co to jest za strip?
+
+15
+00:00:48,340 --> 00:00:49,900
+Normalnie można by było powiedzieć,
+
+16
+00:00:50,079 --> 00:00:51,799
+klasycznie kiedy robimy printa,
+
+17
+00:00:51,939 --> 00:00:55,120
+to na końcu każdego printa przenosi nam kolejny,
+
+18
+00:00:56,100 --> 00:00:59,260
+przynajmniej przenosi nam miejsce, w którym piszemy,
+
+19
+00:00:59,259 --> 00:01:01,259
+do kolejnego wiersza.
+
+20
+00:01:01,259 --> 00:01:04,780
+To powoduje, że kolejny print znowu rozpoczyna się od nowego wiersza.
+
+21
+00:01:04,780 --> 00:01:05,280
+Prawda?
+
+22
+00:01:05,280 --> 00:01:07,280
+No to tak robiliśmy to już wielokrotnie.
+
+23
+00:01:07,280 --> 00:01:09,280
+Czyli print, print, print, print, print.
+
+24
+00:01:09,280 --> 00:01:10,280
+Pokazywałem też,
+
+25
+00:01:10,280 --> 00:01:12,280
+widziałeś na samym początku,
+
+26
+00:01:12,280 --> 00:01:14,280
+że można do print dorzucić end
+
+27
+00:01:14,280 --> 00:01:18,280
+i to spowoduje, że te printy będą umieszczone obok siebie.
+
+28
+00:01:18,280 --> 00:01:20,280
+Też na pewno to było.
+
+29
+00:01:20,280 --> 00:01:24,280
+Natomiast w momencie, w którym czytasz plik tekstowy,
+
+30
+00:01:24,280 --> 00:01:27,799
+to ten plik też ma wiersze jeden pod drugim.
+
+31
+00:01:27,799 --> 00:01:29,000
+To znaczy, że na końcu,
+
+32
+00:01:29,000 --> 00:01:31,000
+na końcu każdego wiersza,
+
+33
+00:01:31,000 --> 00:01:33,000
+również musi znajdować się znak nowego wiersza.
+
+34
+00:01:33,000 --> 00:01:37,000
+Żeby komputer wiedział, że ma ten wiersz złamać.
+
+35
+00:01:37,000 --> 00:01:39,000
+I teraz, jeżeli połączymy tę wiedzę,
+
+36
+00:01:39,000 --> 00:01:42,000
+to okaże się, że print ma swój nowy wiersz,
+
+37
+00:01:42,000 --> 00:01:44,000
+linia ma swój nowy wiersz
+
+38
+00:01:44,000 --> 00:01:48,000
+i pomiędzy liniami będziesz mieć wolną linię przerwy.
+
+39
+00:01:48,000 --> 00:01:50,000
+To nie jest zbyt rozsądne, zbyt wygodne.
+
+40
+00:01:50,000 --> 00:01:54,000
+Dodatkowo, jeżeli używamy, wyświetlamy gdzieś linię,
+
+41
+00:01:54,000 --> 00:01:55,000
+czy chcemy pracować na tej linii,
+
+42
+00:01:55,000 --> 00:01:58,000
+to ten znak nowego wiersza, on po prostu tam przeszkadza.
+
+43
+00:01:58,000 --> 00:01:59,000
+Często jest tak,
+
+44
+00:01:59,000 --> 00:02:00,000
+że my rozbijasz sobie to,
+
+45
+00:02:00,000 --> 00:02:01,000
+gdzieś chcesz zapisać to do bazy,
+
+46
+00:02:01,000 --> 00:02:04,000
+a cały czas ten znak nowego wiersza tam widnieje.
+
+47
+00:02:04,000 --> 00:02:05,000
+Więc, żeby się go pozbyć,
+
+48
+00:02:05,000 --> 00:02:07,000
+używamy metody strip.
+
+49
+00:02:07,000 --> 00:02:08,000
+I metoda strip spowoduje,
+
+50
+00:02:08,000 --> 00:02:10,000
+że wszystkie znaki niedrukowane,
+
+51
+00:02:10,000 --> 00:02:14,000
+czy takie jak spacje, tabulacje, znaki nowego wiersza,
+
+52
+00:02:14,000 --> 00:02:16,000
+które znajdują się na początku i na końcu,
+
+53
+00:02:16,000 --> 00:02:18,000
+po prostu przestają istnieć.
+
+54
+00:02:18,000 --> 00:02:19,000
+Niezwykle wygodne,
+
+55
+00:02:19,000 --> 00:02:21,000
+więc polecam oczyszczać sobie te pliki
+
+56
+00:02:21,000 --> 00:02:23,000
+właśnie za pomocą line.strip.
+
+57
+00:02:23,000 --> 00:02:24,000
+A kiedy sobie to wyprintujemy,
+
+58
+00:02:24,000 --> 00:02:27,000
+no to ładnie nam przedstawi całą zawartość pliku.
+
+59
+00:02:27,000 --> 00:02:29,000
+Polecam ten kod przetestować sobie,
+
+60
+00:02:29,000 --> 00:02:31,000
+wbić go po prostu do PyCharma,
+
+61
+00:02:31,000 --> 00:02:32,000
+dorzucić jakiś plik tekstowy,
+
+62
+00:02:32,000 --> 00:02:33,000
+trochę w nim popisać
+
+63
+00:02:33,000 --> 00:02:35,000
+i zobaczysz, co ci się pokaże.
+
+64
+00:02:35,000 --> 00:02:38,000
+Jeżeli natomiast nie chcesz iterować po pliku,
+
+65
+00:02:38,000 --> 00:02:40,000
+tylko chcesz przetworzyć wszystkie jego linie
+
+66
+00:02:40,000 --> 00:02:41,000
+z jakiegoś powodu,
+
+67
+00:02:41,000 --> 00:02:43,000
+to możesz też użyć readlines,
+
+68
+00:02:43,000 --> 00:02:44,000
+takiej metody.
+
+69
+00:02:44,000 --> 00:02:45,000
+Mówiłem ci o niej już przed chwilą.
+
+70
+00:02:45,000 --> 00:02:48,000
+Czyli handler.readlines spowoduje,
+
+71
+00:02:48,000 --> 00:02:50,000
+że wszystkie twoje linie z pliku
+
+72
+00:02:50,000 --> 00:02:53,000
+ładnie się załadują do jednej zmiennej
+
+73
+00:02:53,000 --> 00:02:54,000
+i będą listą.

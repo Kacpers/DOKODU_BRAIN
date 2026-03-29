@@ -1,0 +1,287 @@
+1
+00:00:00,000 --> 00:00:05,600
+Kolejne zadanie tak naprawdę sprowadza się do tego, żeby dużo i szybko kopiować i wklejać,
+
+2
+00:00:06,000 --> 00:00:11,300
+no bo mamy zapytać o sześć wierzchołków trójkąta, a następnie policzyć z nich pole.
+
+3
+00:00:11,880 --> 00:00:13,939
+Pole to jest wartość bezwzględna.
+
+4
+00:00:13,939 --> 00:00:17,699
+Tego jeszcze nie robiliśmy, ale można to zrobić też prosto za pomocą zwykłego ifa.
+
+5
+00:00:17,879 --> 00:00:22,240
+Natomiast ja Ci w tym rozwiązaniu też pokażę, jak zrobić wartość bezwzględną w Pythonie.
+
+6
+00:00:22,239 --> 00:00:34,799
+No i pole to jest jedna druga razy, i tutaj xb-xa, razy yc-ya, razy yb-ya, no i razy xc-xa.
+
+7
+00:00:35,159 --> 00:00:39,780
+Ja tu nie będę się skupiał na wytłumaczeniu matematycznym, bo od tego są dużo lepsze blogi w internecie,
+
+8
+00:00:40,179 --> 00:00:43,920
+które pewnie musiałeś zwiedzić, żeby móc to policzyć.
+
+9
+00:00:44,320 --> 00:00:49,119
+I w pracy programisty często tak jest, że albo dostajesz gotowe wzory od jakiegoś analityka,
+
+10
+00:00:49,119 --> 00:00:52,060
+czy dostajesz gotowe wzory od biznesu.
+
+11
+00:00:52,060 --> 00:00:56,660
+Które zleca Ci wykonanie jakiegoś zadania, albo czasem trzeba poszukać sobie ich samodzielnie.
+
+12
+00:00:56,660 --> 00:01:00,820
+Nie zawsze trzeba je rozumieć, no ale zawsze jak najbardziej warto.
+
+13
+00:01:00,820 --> 00:01:02,900
+Można w ten sposób też się czegoś nowego douczyć.
+
+14
+00:01:03,340 --> 00:01:04,740
+Ok, co ja potrzebuję?
+
+15
+00:01:04,960 --> 00:01:09,020
+Będę korzystał z takich samych nazw zmiennych, jakie użyłem w tym wzorze.
+
+16
+00:01:09,020 --> 00:01:17,180
+Czyli będę potrzebował mieć xa, podaj x punktu a, dwukropek.
+
+17
+00:01:17,579 --> 00:01:20,500
+No i to, co teraz zrobię, to będę pobierał sobie ya.
+
+18
+00:01:20,500 --> 00:01:24,900
+Używam skrótu ctrl d, jak duplicate.
+
+19
+00:01:24,900 --> 00:01:29,620
+W ten sposób mam po prostu obie linie skopiowane.
+
+20
+00:01:33,519 --> 00:01:36,120
+Wystarczy po zamienię teraz odpowiednie punkty.
+
+21
+00:01:36,120 --> 00:01:42,379
+A oczywiście zrobiłem błąd, tu powinien być input, ale zaraz pokażę Ci też sztuczkę,
+
+22
+00:01:42,379 --> 00:01:44,579
+jak możesz w PyCharmie to zrobić bardzo szybko.
+
+23
+00:01:44,579 --> 00:01:46,420
+Ale to nie szkodzi.
+
+24
+00:01:46,420 --> 00:01:49,819
+Takie rzeczy się zdarzają, szczególnie jeżeli się mówi i się pisze.
+
+25
+00:01:49,819 --> 00:01:50,420
+No i?
+
+26
+00:01:50,420 --> 00:01:52,980
+No zaraz, to jak najbardziej coś takiego może się wydarzyć.
+
+27
+00:01:52,980 --> 00:01:53,980
+Ok.
+
+28
+00:01:54,320 --> 00:01:56,320
+Zobacz, jak ja to bardzo szybko naprawię.
+
+29
+00:01:56,320 --> 00:02:00,640
+Będę korzystał z faktu, że tutaj mam taką samą długość tych wszystkich zmiennych.
+
+30
+00:02:00,640 --> 00:02:05,439
+Przytrzymuję lewy alt i zaznaczam sobie każdą pojedynczą linię.
+
+31
+00:02:06,040 --> 00:02:07,400
+Po prostu klikam.
+
+32
+00:02:07,400 --> 00:02:10,400
+Dzięki temu dostałem bardzo dużo kursorów.
+
+33
+00:02:10,840 --> 00:02:13,180
+I karty z tych kursorów potrafię pisać.
+
+34
+00:02:13,180 --> 00:02:19,939
+Mogę więc napisać input, otworzyć nabias, następnie użyć klawisza end, żeby przejść na koniec.
+
+35
+00:02:19,939 --> 00:02:21,939
+I sobie dołożyć.
+
+36
+00:02:21,939 --> 00:02:23,939
+I escape'em wracam.
+
+37
+00:02:23,939 --> 00:02:29,939
+W ten sposób szybko pokazałem Ci jak można wyjść z takiej sytuacji.
+
+38
+00:02:29,939 --> 00:02:31,939
+No dobra. I teraz tak. Skoro mamy te wszystkie xy,
+
+39
+00:02:31,939 --> 00:02:35,560
+no to nie pozostaje nam nic innego jak tylko napisać wzór.
+
+40
+00:02:35,560 --> 00:02:39,060
+Pole, czyli area, równa się 1, 2.
+
+41
+00:02:39,060 --> 00:02:41,060
+Możemy zapisać ją też tak razy.
+
+42
+00:02:41,060 --> 00:02:43,060
+I tu bardzo ważne będą te nawiasy.
+
+43
+00:02:43,060 --> 00:02:45,060
+Czyli xb-xa.
+
+44
+00:02:45,060 --> 00:02:49,060
+No i skoro mam ten wzór, to tak naprawdę nie muszę nawet tego przepisywać wszystkiego.
+
+45
+00:02:49,060 --> 00:02:49,780
+Po co robić to?
+
+46
+00:02:49,780 --> 00:02:51,780
+Żeby zrobić błędy.
+
+47
+00:02:51,780 --> 00:02:53,780
+Skopiuję sobie to co zrobiłem przedtem.
+
+48
+00:02:53,780 --> 00:02:55,780
+Ciebie oczywiście zachęcam do tego, żebyś napisał ten wzór.
+
+49
+00:02:55,780 --> 00:02:57,780
+A następnie wykonam print.
+
+50
+00:02:57,780 --> 00:02:59,780
+No i tutaj wyświetlę sobie to pole.
+
+51
+00:03:01,780 --> 00:03:08,780
+F pole trójkąta wynosi area.
+
+52
+00:03:08,780 --> 00:03:13,780
+Ponownie mógłbym użyć tej sztuczki z dwukropek, kropka 2f.
+
+53
+00:03:13,780 --> 00:03:17,780
+No dobra. I teraz wypadałoby stworzyć sobie jakiś trójkąt.
+
+54
+00:03:17,780 --> 00:03:22,780
+Więc ja zakładam, że podstawa mojego trójkąta będzie miała długość 3.
+
+55
+00:03:22,780 --> 00:03:25,780
+Wysokość będzie miała 2.
+
+56
+00:03:25,780 --> 00:03:29,780
+No bo będę miał wtedy 3 razy 2 na 2.
+
+57
+00:03:29,780 --> 00:03:31,780
+I wynikiem powinno być 3,0 tak naprawdę.
+
+58
+00:03:31,780 --> 00:03:34,780
+Czyli jak będę chciał to sobie uruchomić.
+
+59
+00:03:34,780 --> 00:03:41,780
+To żeby zrobić ten trójkąt to muszę mieć lewy dolny róg na 0.
+
+60
+00:03:41,780 --> 00:03:44,780
+Y punktu A na 0.
+
+61
+00:03:44,780 --> 00:03:45,780
+Potem B.
+
+62
+00:03:45,780 --> 00:03:48,780
+B to będzie ten punkt, który będzie przesunięty o 3 w prawo.
+
+63
+00:03:48,780 --> 00:03:50,780
+Czyli X będzie na 3.
+
+64
+00:03:50,780 --> 00:03:53,780
+A Y będzie na 0.
+
+65
+00:03:53,780 --> 00:03:55,780
+No i teraz pójdę.
+
+66
+00:03:55,780 --> 00:03:58,780
+A zrobię z niego prostokątny.
+
+67
+00:03:58,780 --> 00:04:00,780
+Pójdę teraz do góry i zrobię go po prostu w 3,3.
+
+68
+00:04:00,780 --> 00:04:04,780
+Ok. 4,5. Sprawdźmy to.
+
+69
+00:04:04,780 --> 00:04:06,780
+Czyli tu ma podstawa 3.
+
+70
+00:04:06,780 --> 00:04:09,780
+No tak. 3 razy 3. Wszystko się zgadza na 2,4,5.
+
+71
+00:04:09,780 --> 00:04:11,780
+Wygląda na to, że działa.
+
+72
+00:04:11,780 --> 00:04:13,780
+Zapraszam do kolejnego ćwiczenia.
