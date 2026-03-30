@@ -19,7 +19,7 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 | 2b | Rossmann SDP | Piotr Jugiel | IT Director / Consumer Systems & Data Analytics | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 2c | Rossmann SDP | Anna Hesiak | Analityk Procesów / Dział Technologii i Innowacji / RPA / AI | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 3 | CAPITAL SERVICE S.A. | Marzena Szulim | Head of Risk and Operations, Board Member | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
-| 4a | UNIQA Polska | Błażej Misztal | Lider Zespołu Gen AI i Automatyzacji - PO | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 4a | UNIQA Polska | Błażej Misztal | Lider Zespołu Gen AI i Automatyzacji - PO | A | 2026-03-30 | dm_wysłany | Czekaj na odpowiedź | 2026-04-06 |
 | 4b | UNIQA Polska | Piotr Brozio | IT Director of Systems Development | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 4c | UNIQA Polska | Marcin Tyrański | IT Manager / Digitalization | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 5a | Media Expert / TERG | Dawid Florkiewicz | IT Development Director / Head of PMO / Digital Transformation | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |

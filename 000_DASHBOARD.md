@@ -8,16 +8,16 @@ tags: [dashboard, priorytety, kpi, projekty]
 
 # DOKODU: MISSION CONTROL
 > **Zasada:** Ten plik otwierasz jako PIERWSZY każdego ranka. Zamykasz jako OSTATNI każdego wieczoru. Wszystko inne wynika stąd.
-> **Ostatnia aktualizacja:** {{data}} | **Tydzień:** {{nr_tygodnia}}
+> **Ostatnia aktualizacja:** 2026-03-30 | **Tydzień:** 14
 
 ---
 
 ## PRIORYTETY NA TEN TYDZIEN (TOP 3 — nie wiecej)
 > Zasada: Jezeli wszystko jest priorytetem, nic nie jest priorytetem.
 
-- [ ] **P1:** _______________________________________________
-- [ ] **P2:** _______________________________________________
-- [ ] **P3:** _______________________________________________
+- [ ] **P1:** Dokończyć LMS (platforma kursów) → sprzedaż rusza po Wielkanocy
+- [ ] **P2:** Nagranie VSL + Moduł 0 n8n (czwartek 2.04 po fryzjerze)
+- [ ] **P3:** LinkedIn outreach — follow-upy + DM do akceptujących
 
 **Pytanie blokujace na start dnia:** Co, jesli zrobie dzisiaj TYLKO te 3 rzeczy, sprawi ze tydzien uznam za sukces?
 
@@ -27,9 +27,11 @@ tags: [dashboard, priorytety, kpi, projekty]
 
 | Projekt | Status | Health | Nastepny krok | Deadline | Wartosc (PLN) |
 | :--- | :---: | :---: | :--- | :---: | ---: |
-| [[PRJ_Animex_Szkolenie]] | W trakcie | ZOLTY | Grupa 4-5 (23-26 mar) → faktura po zakończeniu | 2026-03-26 | 40 000 |
+| [[PRJ_Animex_Szkolenie]] | Follow-up | ZIELONY | Brief wysłany 30.03, czekamy na odpowiedź Kamila | 2026-04-10 | 40 000 |
 | [[PRJ_Corleonis_Wdrozenie]] | Stabilne | ZIELONY | Audyt bezpieczenstwa Vault | 2026-04-15 | 35 000 |
-| [[PRJ_Kurs_n8n_Launch]] | Opoznienie | CZERWONY | Skrypt VSL — blokada na scenariuszu | 2026-03-31 | ~120 000 |
+| [[PRJ_Kurs_n8n_Launch]] | W trakcie | ZOLTY | VSL gotowy, nagranie 2.04, platforma do dokończenia | 2026-05-19 | ~120 000 |
+| [[PRJ_Sprzedaz_Kursy_Q2]] | NOWY | ZOLTY | Wielkanocna promocja PyStart+SQL 1-8.04, LMS musi działać | 2026-05-31 | 60-170 000 |
+| [[PRJ_Gibula_Faktury]] | Discovery | ZIELONY | Call 4.04 9:30, wycena po rozmowie | 2026-05-15 | 25-85 000 |
 
 **Legenda zdrowia:** ZIELONY = na torze | ZOLTY = ryzyko, wymaga uwagi | CZERWONY = zablokowane, interwencja CEO
 
