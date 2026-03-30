@@ -140,9 +140,10 @@ Publikacja o 20:30.
 
 ## Wtorek 31.03
 
+- [ ] **Platforma LMS** — dokończyć żeby kursanci mogli oglądać (BLOCKER sprzedaży!)
+- [ ] **Wrzucić prośbę o testimoniale na Discord PyStart** (tekst w PRJ_Sprzedaz_Kursy_Q2_2026.md)
 - [ ] **Napisać email W1** — "Wielkanocna promocja: Python za 599 PLN" → MailerLite draft
 - [ ] **Napisać email W2** — "Bundle Python + SQL za 999 PLN" → MailerLite draft
-- [ ] **Wrzucić prośbę o testimoniale na Discord PyStart** (tekst w PRJ_Sprzedaz_Kursy_Q2_2026.md)
 - [ ] **Nagrać Short** — "3 powody żeby nauczyć się Pythona w 2026" (45s)
 - [ ] LinkedIn Outreach: sprawdź kto zaakceptował zaproszenia → DM
 
@@ -157,6 +158,7 @@ Publikacja o 20:30.
 - [ ] Fryzjer
 - [ ] **Nagranie VSL kursu n8n** (po fryzjerze) — tekst w `VSL_Skrypt_v1.md`
 - [ ] **Nagranie Moduł 0 n8n** (Filozofia Automatyzacji, ~45 min) — skrypt gotowy
+- [ ] **Nagranie YT: Error Handling w n8n** (12-15 min) — struktura w BRAIN
 - [ ] **Wysłać email W2** — "Bundle Python + SQL za 999 PLN"
 - [ ] **Nagrać Short** — "SQL czy Python — czego uczyć się najpierw?" (30s)
 
@@ -170,7 +172,37 @@ Publikacja o 20:30.
 - [ ] **Wysłać email W3** — "Wesołych Świąt + ostatnie 4 dni promocji"
 - [ ] **Weekly Review** — `/brain-weekly-review`
 - [ ] **SEO Weekly** — `/seo-weekly`
-- [ ] **Plan następnego tygodnia** (focus: n8n early bird 9.04)
+- [ ] **Plan następnego tygodnia:**
+
+### Następny tydzień 7-11.04 (po Wielkanocy)
+
+- [ ] Pon 7.04: Wysłać email W4 (ostatni dzień promocji) + sprawdź LinkedIn akceptacje
+- [ ] Wt 8.04: Zamknięcie promocji wielkanocnej o 23:59
+- [ ] Śr 9.04: **LAUNCH early bird n8n** — email N1 "999 PLN, 20 miejsc" + post LinkedIn
+- [ ] Śr 9.04: Nagrać Short "Ile kosztuje Zapier vs n8n rocznie?"
+- [ ] Czw-Pt 10-11.04: **Nagranie BONUS 1 PyStart** (Python + AI asystent, ~4h)
+
+### Tydzień 14-18.04
+
+- [ ] Pon 12.04: Email N2 "Już X osób w early bird"
+- [ ] Wt 15.04: Webinar "Automatyzacja firmy w 60 min z n8n" (opcja)
+- [ ] Śr 16.04: Email N3 "Ostatnie miejsca early bird" + Short
+- [ ] Czw-Pt: **Nagranie Moduły 1-2 n8n** (~6h)
+- [ ] Pt: **Nagranie BONUS 2 PyStart** (API OpenAI/Anthropic, ~5h)
+
+### Tydzień 21-25.04
+
+- [ ] Pon 20.04: Email N4 "Early bird zamknięty, od jutra 1490"
+- [ ] Wt-Śr: **Nagranie Moduły 3-4 n8n** (~7h)
+- [ ] Czw-Pt: **Nagranie BONUS 3 PyStart** (Automatyzacja + AI, ~4h)
+- [ ] Pt: Nowa struktura cenowa PyStart na stronie (499/899/999)
+
+### Tydzień 28.04-2.05 (Majówka)
+
+- [ ] Pon 28.04: **PyStart Relaunch** — email M1 + film YT + post LinkedIn
+- [ ] Śr 30.04: Email M2 "Majówka za rogiem"
+- [ ] Pt 2.05: Email M3 "Siedzisz na kanapie? Zacznij kurs"
+- [ ] 1-4.05: Majówka — emaile zaplanowane, ludzie kupują
 
 ---
 
