@@ -80,8 +80,8 @@ Publikacja o 20:30.
 *Nie przypisane do godziny. Przesuwamy na bieżąco z backlogu do dnia.*
 
 ### P1 — Must do
-- [ ] **Skrypt VSL kursu n8n** — 800-1100 słów gotowego tekstu do nagrania (deadline: 31.03!)
-- [ ] **Animex follow-up** — zadzwoń/napisz: podziękuj za szkolenie, zapytaj o dalsze konsultacje. Draft case study: `Case_Study_Animex_2026.md`
+- [x] **Skrypt VSL kursu n8n** — GOTOWY, zatwierdzony 30.03 → `VSL_Skrypt_v1.md`
+- [x] **Animex follow-up** — brief wysłany mailem 30.03. Czekamy na odpowiedź.
 - [ ] **LinkedIn Outreach — 5 firm** — `/outreach` (VTS, Rossmann, Capital Service, UNIQA, Media Expert). Przed: zaktualizuj profil wg `LinkedIn_Profile_Optimization.md`
 
 ### P2 — Should do
@@ -90,6 +90,34 @@ Publikacja o 20:30.
 - [ ] **Blog: zoptymalizuj /blog/wdrozenie-ai-w-firmie** — przebuduj pod "automatyzacja AI dla firm"
 - [ ] **Blog: nowy artykuł /blog/automatyzacja** — brief: `Brief_Automatyzacja_Dla_Firm_2026-03-29.md`
 - [ ] **Lead magnet: AI Act Checklist** — MD → PDF, wrzuć na stronę z bramką emailową
+
+### PYSTART — Relaunch kursu (nowa inicjatywa)
+
+**Faza 1: Poprawki landing page (ten tydzień)**
+- [x] **LP: Naprawić sprzeczność dostępu** — ujednolicone na "1 rok" wszędzie (FAQ, pricing, schema)
+- [x] **LP: Dodać badge "14 dni gwarancji zwrotu"** — przy przyciskach zakupu + w hero
+- [x] **LP: Wywalić kurs OpenAI Dev z LP** — usunięty z pricing section, Pystart teraz jedyny produkt na stronie
+- [x] **LP: Nowy headline** — "Naucz się Pythona i buduj realne projekty — nawet jeśli nigdy nie programowałeś"
+- [x] **LP: Raty widoczne przy cenie** — "lub 3 raty × 233 PLN" obok 699 PLN
+- [x] **LP: Rozbudować bio Kacpra** — enterprise klienci (Animex, Corleonis), CEO Dokodu, styl nauczania
+- [x] **LP: Przeformułować obietnice zarobków** — usunięte kwoty, zamienione na opisy ścieżek bez obietnic finansowych
+- [x] **LP: Ujednolicić czas dostępu** — wszędzie "1 rok", usunięta sprzeczność FAQ vs pricing
+
+**Faza 2: Social proof (ten/następny tydzień)**
+- [ ] **Zebrać 10-15 prawdziwych testimoniali** — screenshoty Discord, wiadomości, zapytać kursantów
+- [ ] **2-3 video testimoniale** — nawet 30s na telefon
+- [ ] **Case study "Z X do Y"** — znaleźć kursanta który zmienił karierę i opisać historię
+
+**Faza 3: Moduły AI (2-4 tygodnie)**
+- [ ] **Nagrać Moduł BONUS 1: "Python + AI asystent kodowania"** (~3-4h) — Copilot, Claude Code, debugging z AI
+- [ ] **Nagrać Moduł BONUS 2: "API OpenAI/Anthropic z Pythona"** (~4-5h) — chatbot, structured outputs, projekt "Asystent CV"
+- [ ] **Nagrać Moduł BONUS 3: "Automatyzacja z Pythonem i AI"** (~3-4h) — scraping, Excel+AI, bot cenowy, webhook→n8n
+
+**Faza 4: Pricing i kampania**
+- [ ] **Nowa struktura cenowa** — Pystart Classic 499 / Pystart+AI 899 / Bundle 999
+- [ ] **Lead magnet: "Python + AI w 15 min"** — darmowa lekcja wideo, zbiera email
+- [ ] **Kampania 7 emaili** — pre-launch (3) → launch 5-7 dni (3) → close (1)
+- [ ] **Evergreen funnel** — lead magnet → nurture sequence → oferta
 
 ### P3 — Nice to have
 - [ ] **n8n MCP: podepnij + screenshoty do slajdów** — wygeneruj API Key (n8n.dokodu.it → Settings → n8n API), podaj Claude'owi → skonfiguruje MCP, zaimportuje 3 workflow JSON, zrobi screenshoty
@@ -103,26 +131,46 @@ Publikacja o 20:30.
 
 ## Poniedziałek 30.03
 
-- [ ] 9:00–11:30 — Deep Work: Skrypt VSL kursu n8n
+- [x] 9:00–11:30 — Deep Work: Skrypt VSL kursu n8n ✅
 - [ ] 11:30–12:00 — Dashboard review
-- [ ] 12:00–12:30 — Animex follow-up
+- [x] 12:00–12:30 — Animex follow-up ✅ wysłane
 - [ ] 13:00–14:00 — LinkedIn Outreach — 5 firm
 - [ ] 14:00–14:30 — SEO: sprawdź meta title
 - [ ] 14:30–15:00 — MailerLite: wklej 3 maile
 
 ## Wtorek 31.03
 
-*Uzupełnij na koniec poniedziałku — co nie weszło + nowe.*
+- [ ] **Napisać email W1** — "Wielkanocna promocja: Python za 599 PLN" → MailerLite draft
+- [ ] **Napisać email W2** — "Bundle Python + SQL za 999 PLN" → MailerLite draft
+- [ ] **Wrzucić prośbę o testimoniale na Discord PyStart** (tekst w PRJ_Sprzedaz_Kursy_Q2_2026.md)
+- [ ] **Nagrać Short** — "3 powody żeby nauczyć się Pythona w 2026" (45s)
+- [ ] LinkedIn Outreach: sprawdź kto zaakceptował zaproszenia → DM
 
 ## Środa 01.04
 
+- [ ] **Wysłać email W1** — Wielkanocna promocja PyStart 599 PLN (cała lista 15 404)
+- [ ] **Post LinkedIn** — promocja wielkanocna (edu styl)
+- [ ] **Opublikować Short** — "3 powody żeby nauczyć się Pythona"
+
 ## Czwartek 02.04
+
+- [ ] Fryzjer
+- [ ] **Nagranie VSL kursu n8n** (po fryzjerze) — tekst w `VSL_Skrypt_v1.md`
+- [ ] **Nagranie Moduł 0 n8n** (Filozofia Automatyzacji, ~45 min) — skrypt gotowy
+- [ ] **Wysłać email W2** — "Bundle Python + SQL za 999 PLN"
+- [ ] **Nagrać Short** — "SQL czy Python — czego uczyć się najpierw?" (30s)
+
+## Sobota 04.04
+
+- [ ] 9:30 — **Call z Jakubem Gibulą** (Administratiekantoor Gibula) — omówienie pytań do systemu fakturowego
+- [ ] **Wielkanoc 5-6.04** — cisza emailowa, odpoczynek
 
 ## Piątek 03.04
 
+- [ ] **Wysłać email W3** — "Wesołych Świąt + ostatnie 4 dni promocji"
 - [ ] **Weekly Review** — `/brain-weekly-review`
 - [ ] **SEO Weekly** — `/seo-weekly`
-- [ ] **Plan następnego tygodnia**
+- [ ] **Plan następnego tygodnia** (focus: n8n early bird 9.04)
 
 ---
 

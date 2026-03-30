@@ -15,7 +15,9 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - 2026-03-27 | SEO | Sprawdź CTR "Cursor Pro" po zmianie meta — było 0.1% na #8
 - 2026-03-27 | GA | Sprawdź czy reklamy sciezka_* generują kliknięcia (ad_click events) — wdrożono 2026-03-20
 - 2026-04-03 | SEO | Czy /blog/n8n awansował po poprawie internal linkingu dla frazy "n8n co to jest"?
-- 2026-03-27 | BIZNES | Animex: napisz do Kamila Kowalskiego (668 140 030 / Kamil.Kowalski@animex.pl) — umów 6 sesji konsultacyjnych (30 min każda) na początku kwietnia. Faktura 40 000 PLN netto idzie po ostatniej sesji (celowo kwiecień → Q2)
+- 2026-04-02 | INNE | Fryzjer + nagranie VSL kursu n8n (po fryzjerze)
+- 2026-04-04 | BIZNES | 9:30 Call z Jakubem Gibulą (Administratiekantoor Gibula) — pytania do systemu fakturowego, warianty cenowe. Przed callem: /brain-prep-call
+- ~~2026-03-27 | BIZNES | Animex: napisz do Kamila Kowalskiego~~ → DONE 2026-03-30, brief wysłany
 
 ## Wykonane
 

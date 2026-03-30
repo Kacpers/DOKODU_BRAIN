@@ -14,11 +14,17 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 
 | # | Firma | Osoba | Stanowisko | Score | Data zaproszenia | Status | Następny krok | Follow-up |
 |---|-------|-------|-----------|-------|-----------------|--------|---------------|-----------|
-| 1 | VTS Sp. z o.o. | — | *(szukaj: Dyrektor IT/CTO/Prezes)* | A | — | nowy | Znaleźć osobę na LinkedIn | 2026-03-31 |
-| 2 | Rossmann SDP | — | *(szukaj: Dyrektor IT/Head of Digital)* | A | — | nowy | Znaleźć osobę na LinkedIn | 2026-03-31 |
-| 3 | CAPITAL SERVICE S.A. | — | *(szukaj: COO/Dyrektor IT)* | A | — | nowy | Znaleźć osobę na LinkedIn | 2026-03-31 |
-| 4 | UNIQA | — | *(szukaj: Head of Automation/Dyrektor IT)* | A | — | nowy | Znaleźć osobę na LinkedIn | 2026-03-31 |
-| 5 | Media Expert / TERG | — | *(szukaj: CFO/Dyrektor Finansowy)* | A | — | nowy | Znaleźć osobę na LinkedIn | 2026-03-31 |
+| 1 | VTS Group | Rafał Wiatr | CTO | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 2a | Rossmann SDP | Małgorzata Kołodziejczyk | IT Director / Digital Transformation | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 2b | Rossmann SDP | Piotr Jugiel | IT Director / Consumer Systems & Data Analytics | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 2c | Rossmann SDP | Anna Hesiak | Analityk Procesów / Dział Technologii i Innowacji / RPA / AI | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 3 | CAPITAL SERVICE S.A. | Marzena Szulim | Head of Risk and Operations, Board Member | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 4a | UNIQA Polska | Błażej Misztal | Lider Zespołu Gen AI i Automatyzacji - PO | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 4b | UNIQA Polska | Piotr Brozio | IT Director of Systems Development | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 4c | UNIQA Polska | Marcin Tyrański | IT Manager / Digitalization | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 5a | Media Expert / TERG | Dawid Florkiewicz | IT Development Director / Head of PMO / Digital Transformation | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 5b | Media Expert / TERG | Przemysław Płaczek | Manager ds. raportowania i analiz | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 5c | Media Expert / TERG | Anna Frąckiel | Kierownik ds. Szkoleń | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-02 |
 
 ## Kolejka (Score A — następne w kolejności)
 
