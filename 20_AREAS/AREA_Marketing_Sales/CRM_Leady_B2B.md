@@ -18,8 +18,10 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 | :- | :--- | :--- | :--- | :--- | ---: | :--- | :---: |
 | 1 | Animex | [imie] | Ref. | WYGRANA | 18 000 | Faza realizacji | — |
 | 2 | Corleonis | [imie] | LinkedIn | WYGRANA | 35 000 | Faza UAT | — |
-| 3 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
-| 4 | ___ | ___ | ___ | Discovery | ___ | Wyslac propozycje | ___ |
+| 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Kontakt | ~20 000 | Czekamy na odpowiedzi techniczne → wycena | 2026-04-03 |
+| 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | Discovery | ~55 000 | Call sobota 04.04 9:30 → precyzyjna wycena | 2026-04-04 |
+| 5 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
+| 6 | ___ | ___ | ___ | Discovery | ___ | Wyslac propozycje | ___ |
 
 **Pipeline Value (otwarty):** ___ PLN
 **Weighted Pipeline (×proc. konwersji):** ___ PLN
@@ -126,6 +128,27 @@ Kacper
 ---
 
 ## NOTATKI O LEADACH
+
+### TenderScope sp. z o.o.
+```
+**Firma:** TenderScope sp. z o.o.
+**Branza:** GovTech / Przetargi publiczne
+**Wielkosc:** Startup (inkubowany w HugeTECH Revolution)
+**Kontakt:** Borys Kowalik | CEO/Founder | boryskowalik@gmail.com | 574 555 940
+**Adres:** ul. Stanisława Moniuszki 11, 35-015 Rzeszów
+**Zrodlo leadu:** Inbound — formularz biuro@dokodu.it
+**Data pierwszego kontaktu:** 2026-03-30
+**Problem klienta:** Moduł półautomatycznego uzupełniania danych wykonawcy w dokumentach przetargowych (DOCX + edytowalne PDF). Python, python-docx, pypdf. Integracja z ich istniejącą aplikacją.
+**Budzet orientacyjny:** Dofinansowanie UE (FEPW 2021-2027, "HugeTECH Revolution") — budżet przydzielony z góry
+**Decydent:** Borys Kowalik (prawdopodobnie jedyny decydent — startup)
+**Timeline klienta:** 28 dni roboczych od zlecenia. Wycenę potrzebują ASAP.
+**Historia rozmow:**
+- [2026-03-30 17:05]: Borys wysłał zapytanie ofertowe na biuro@dokodu.it — formalny RFQ z opisem przedmiotu zamówienia (2 zadania: mapowanie danych + integracja z aplikacją). Załącznik: "Formularz szacowania wartości zamówienia.docx"
+- [2026-03-31 ~12:00]: Alina rozmawiała telefonicznie z Borysem
+- [2026-03-31 12:48]: Alina wysłała email z 10 pytaniami technicznymi (typy dokumentów, API, mapowanie pól, kryteria odbioru). Obiecała ofertę do 03.04.
+**Status:** Kontakt — czekamy na odpowiedzi techniczne
+**Nastepny krok:** Po odpowiedziach Borysa → przygotować wycenę + wypełnić formularz szacowania
+```
 
 ### [Nazwa Firmy] — szablon notatki
 ```

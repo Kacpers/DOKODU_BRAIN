@@ -23,7 +23,7 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 | 4b | UNIQA Polska | Piotr Brozio | IT Director of Systems Development | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 4c | UNIQA Polska | Marcin Tyrański | IT Manager / Digitalization | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 5a | Media Expert / TERG | Dawid Florkiewicz | IT Development Director / Head of PMO / Digital Transformation | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
-| 5b | Media Expert / TERG | Przemysław Płaczek | Manager ds. raportowania i analiz | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 5b | Media Expert / TERG | Przemysław Płaczek | Manager ds. raportowania i analiz | A | 2026-03-30 | zaakceptowane | Wyślij DM | 2026-03-31 |
 | 5c | Media Expert / TERG | Anna Frąckiel | Kierownik ds. Szkoleń | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-02 |
 
 ## Kolejka (Score A — następne w kolejności)

@@ -43,7 +43,9 @@ _Tu trafiaja elementy, ktore wymagaja dluższej mysli niz 2 minuty._
 
 ## SZYBKIE AKCJE (<2 minuty — zrob od razu)
 
--
+- [ ] 🔴 **FAKTURA: AIHero** — 12 950 PLN netto za marzec. Wystawić ASAP (koniec miesiąca!)
+- [ ] 🔴 **UMOWA: Animex** — podpisać umowę. Nie odkładać.
+- [ ] LEAD: TenderScope / Borys Kowalik — czekamy na odpowiedzi techniczne, oferta do 03.04
 
 ---
 

@@ -28,7 +28,7 @@ tags: [dashboard, priorytety, kpi, projekty]
 | Projekt | Status | Health | Nastepny krok | Deadline | Wartosc (PLN) |
 | :--- | :---: | :---: | :--- | :---: | ---: |
 | [[PRJ_Animex_Szkolenie]] | Follow-up | ZIELONY | Brief wysłany 30.03, czekamy na odpowiedź Kamila | 2026-04-10 | 40 000 |
-| [[PRJ_Corleonis_Wdrozenie]] | Stabilne | ZIELONY | Audyt bezpieczenstwa Vault | 2026-04-15 | 35 000 |
+| [[PRJ_Corleonis_Wdrozenie]] | Odłożone | SZARY | Klient nie chce kontynuować (31.03) | — | 35 000 |
 | [[PRJ_Kurs_n8n_Launch]] | W trakcie | ZOLTY | VSL gotowy, nagranie 2.04, platforma do dokończenia | 2026-05-19 | ~120 000 |
 | [[PRJ_Sprzedaz_Kursy_Q2]] | NOWY | ZOLTY | Wielkanocna promocja PyStart+SQL 1-8.04, LMS musi działać | 2026-05-31 | 60-170 000 |
 | [[PRJ_Gibula_Faktury]] | Discovery | ZIELONY | Call 4.04 9:30, wycena po rozmowie | 2026-05-15 | 25-85 000 |

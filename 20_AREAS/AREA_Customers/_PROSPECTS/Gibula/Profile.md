@@ -3,13 +3,14 @@ type: prospect
 status: discovery
 owner: kacper
 created: 2026-03-30
+wartosc_est: 50 000–60 000 PLN netto
 tags: [prospect, holandia, faktury, webapp, custom-dev]
 ---
 
 # Administratiekantoor Gibula
 
 ## Dane kontaktowe
-- **Kontakt:** Jakub Gibula (właściciel)
+- **Kontakt:** Jakub Gibula (właściciel), Grzegorz Gibula
 - **Email:** adm.kantoor.gibula@gmail.com
 - **Telefon:** +31 616 951 592, +31 651 103 061
 - **Godziny:** Pn-Czw 9:00-17:30, Pt 9:00-16:00, Sob nieczynne
@@ -22,18 +23,70 @@ tags: [prospect, holandia, faktury, webapp, custom-dev]
 ## Projekt: System fakturowy (webapp)
 - **Cel:** Platforma webowa gdzie klienci Gibuli mogą wystawiać faktury
 - **Spec:** `Program_factuur_spec.xlsx` w tym katalogu
-- **Zakres:** Faktury, pro-formy, korekty, oferty, magazyn, godzinówka, kilometrówka, raporty, Peppol, wielojęzyczność
-- **Wycena wysłana:** 25-30k (min) / 50-60k (rozszerzona) / 70-85k (pełna) PLN netto
+- **Wybrany wariant:** MINIMUM + ROZSZERZONA (połączenie)
+- **Wycena wysłana:** 25-30k (min) / **50-60k (rozszerzona)** / 70-85k (pełna) PLN netto
 - **Reakcja klienta:** Pozytywna, błyskawiczna odpowiedź, chce się spotkać
 - **Uwagi programu reconciliation:** Działa, w maju mogą pojawić się dodatkowe uwagi gdy cały zespół zacznie z niego pracować
 
+### Odpowiedzi Jakuba na pytania (email 31.03.2026)
+
+**Model biznesowy:**
+- Na początek **tylko klienci Gibuli + oni sami**, później wejście na rynek dla innych przedsiębiorców i księgowych
+- **Abonament miesięczny** — automatyczna płatność z konta klienta (jeden pakiet na start)
+- Docelowo **500+ klientów**
+- **Bonusy za polecenie** — klient poleca przez swój link → dostaje zniżkę na abonament za księgowość
+
+**Faktury i dokumenty:**
+- Typy: **Factuur, pro-forma, creditnota** (paragon/bon NIE)
+- BTW: **21%, 9%, 0%, BTW verlegd, BTW vrijgesteld, BTW marge regel**
+- Waluta: **tylko EUR**
+- Szablony: klient musi mieć możliwość dodania **logo**
+- Numeracja: domyślnie 01-2026, kolejne numery, z możliwością ręcznej zmiany
+
+**Integracje:**
+- Peppol: na start **eksport UBL/XML** (nie pełna integracja)
+- "Połączenie z księgowym": **jednym przyciskiem auto-księgowanie** z danego kwartału do ich programu (ten sam, do którego Kacper zrobił reconciliation!)
+- Integracja z innym oprogramowaniem: **tak, na późniejszym etapie** (programy księgowe popularne w NL)
+- Płatności: **kod QR na fakturze** do szybkiej płatności
+
+**Funkcje dodatkowe:**
+- Magazyn: **na późniejszym etapie**
+- Godzinówka/kilometrówka: **proste**, bez GPS
+- **Przypomnienia o płatności + oficjalne wezwania do zapłaty**
+- Raporty: **obrót ze wszystkich faktur + koszty → kwota do opodatkowania**
+- Instrukcje video: linki do YouTube — tak
+
+**Języki:**
+- Interfejs: **polski na start**, później holenderski, angielski, ukraiński, rumuński, bułgarski
+- Język na fakturze: **holenderski**, później angielski
+
+**Użytkownicy:**
+- Każdy klient **jedno konto** z loginem
+- Weryfikacja przez **Holenderską Izbę Handlową (KVK)** — zabezpieczenie przed oszustwami
+
+### Wizja Jakuba (cytat kluczowy)
+> "Chcemy uprościć życie naszym klientom żeby nie musieli wysyłać do nas swoich wystawionych faktur tylko same koszty, a dwa sobie ułatwić tym że za pomocą jednego przycisku automatycznie wszystkie wystawione faktury księgują u nas w programie. Na etapie jak to będzie dobrze działało chcemy wyjść z tym produktem dla przedsiębiorców oraz księgowych."
+
 ## Następne kroki
-- [ ] **Sobota 04.04, 9:30** — Call z Jakubem, przejście przez pytania, dobór wariantu
-- [ ] Po callu: precyzyjna wycena na podstawie odpowiedzi
+- [ ] **Sobota 04.04, 9:30** — Call z Jakubem — przejść przez odpowiedzi, doprecyzować zakres min+rozszerzona, ustalić cenę
+- [ ] Po callu: precyzyjna wycena na podstawie ustaleń
 - [ ] Reconciliation: czekamy na feedback zespołu (maj)
 
-## Timeline
-- 2026-03-30 — Jakub przesłał spec (Program factuur.xlsx)
-- 2026-03-30 — Kacper wysłał pytania + wstępną wycenę w 3 wariantach
-- 2026-03-30 — Jakub potwierdził call na sobotę 04.04, 9:30
-- 2026-03-30 — Jakub: brak uwag do reconciliation na teraz, feedback w maju
+## Historia korespondencji
+
+### Email #1 — Jakub → Kacper (30.03.2026, 09:59)
+**Temat:** NOWY PROJEKT DO WYCENY
+Przesłał spec (Program_factuur_spec.xlsx) — opis systemu fakturowego.
+
+### Email #2 — Kacper → Jakub (30.03.2026, 12:11)
+20 pytań technicznych + wstępna wycena w 3 wariantach (25-30k / 50-60k / 70-85k). Propozycja podejścia etapowego.
+
+### Email #3 — Jakub → Kacper (30.03.2026, 12:17)
+Entuzjastyczna odpowiedź, propozycja calla na sobotę 04.04 9:30. Brak uwag do reconciliation na teraz.
+
+### Email #4 — Jakub → Kacper (31.03.2026, 13:08)
+**Pełne odpowiedzi na 20 pytań.** Wybrał połączenie wersji minimum + rozszerzonej. Kluczowe: auto-księgowanie jednym przyciskiem, 500+ klientów docelowo, abonament, KVK verification, QR na fakturze. Wizja: zacząć dla siebie → wyjść na rynek NL.
+
+### Email (osobny wątek) — Jakub → Kacper (30.03.2026, 15:15)
+**Temat:** Re: PYTANIA DO UMOWY (wątek reconciliation)
+Bug report: w zakładce "Do sprawdzenia" przyciski "Brak faktury"/"Brak dopasowania" nie da się cofnąć. Kacper naprawił tego samego dnia (30.03 10:59).
