@@ -14,14 +14,16 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 
 ## PIPELINE AKTYWNY
 
+<!-- SYNC:PIPELINE -->
 | # | Firma | Kontakt | Zrodlo | Etap | Wartosc (PLN) | Nastepny krok | Deadline |
 | :- | :--- | :--- | :--- | :--- | ---: | :--- | :---: |
-| 1 | Animex | [imie] | Ref. | WYGRANA | 18 000 | Faza realizacji | — |
+| 1 | Animex | Kamil Kowalski | Ref. | WYGRANA | 18 000 | Faktura za szkolenia (nr zamówienia!) → czekamy na decyzję ws. wdrożenia n8n (security review) | 2026-04-07 |
 | 2 | Corleonis | [imie] | LinkedIn | WYGRANA | 35 000 | Faza UAT | — |
 | 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Kontakt | ~20 000 | Czekamy na odpowiedzi techniczne → wycena | 2026-04-03 |
 | 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | Discovery | ~55 000 | Call sobota 04.04 9:30 → precyzyjna wycena | 2026-04-04 |
-| 5 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
-| 6 | ___ | ___ | ___ | Discovery | ___ | Wyslac propozycje | ___ |
+| 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Kontakt | ~25 000 | Czekamy na odpowiedź n8n ws. reseller → oddzwonić | 2026-04-07 |
+| 6 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
+<!-- /SYNC:PIPELINE -->
 
 **Pipeline Value (otwarty):** ___ PLN
 **Weighted Pipeline (×proc. konwersji):** ___ PLN
@@ -148,6 +150,25 @@ Kacper
 - [2026-03-31 12:48]: Alina wysłała email z 10 pytaniami technicznymi (typy dokumentów, API, mapowanie pól, kryteria odbioru). Obiecała ofertę do 03.04.
 **Status:** Kontakt — czekamy na odpowiedzi techniczne
 **Nastepny krok:** Po odpowiedziach Borysa → przygotować wycenę + wypełnić formularz szacowania
+```
+
+### Cichy-Zasada sp.j.
+```
+**Firma:** Cichy-Zasada sp.j.
+**Branza:** Automotive / Dealerzy samochodów (VW, Seat, Cupra, Audi, Porsche)
+**Wielkosc:** Średnia (dealer group, własny dział IT)
+**Kontakt:** Rafał Nawrocki | rafal.nawrocki@cichy-zasada.pl | +48 882 375 188
+**Zrodlo leadu:** Inbound — formularz dokodu.it (1.04.2026 06:31)
+**Data pierwszego kontaktu:** 2026-04-01
+**Problem klienta:** Chcą wdrożyć n8n Business. Obawy o KSEF-compliance faktur od n8n (firma zagraniczna). Szukają pośrednika w zakupie licencji + wsparcia merytorycznego przy wdrożeniu. Mają własne serwery i dział IT.
+**Budzet orientacyjny:** ~25 000 PLN (wdrożenie + szkolenie), licencja n8n Business osobno (~$660/mies.)
+**Decydent:** Rafał Nawrocki (do potwierdzenia — może być IT Manager, nie decydent budżetowy)
+**Timeline klienta:** Aktywnie szukają rozwiązania — szybki timeline
+**Historia rozmow:**
+- [2026-04-01 06:31]: Rafał wysłał zapytanie przez formularz dokodu.it — pytania o licencję n8n, wsparcie wdrożeniowe, koszty
+- [2026-04-01 ~09:00]: Kacper wysłał maila do n8n (formularz n8n.io) z pytaniem o reseller/partner program
+**Status:** Kontakt — czekamy na odpowiedź n8n ws. modelu licencyjnego
+**Nastepny krok:** Po odpowiedzi n8n → oddzwonić do Rafała z propozycją (wdrożenie + szkolenie + opcja licencji)
 ```
 
 ### [Nazwa Firmy] — szablon notatki
