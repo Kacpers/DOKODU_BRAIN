@@ -150,3 +150,6 @@ Dla kazdego elementu zadaj pytanie:
 ## Przypomnienia z 2026-04-03
 - [SEO] Czy /blog/n8n awansował po poprawie internal linkingu dla frazy "n8n co to jest"?
 - [BIZNES] DEADLINE Animex: certyfikaty + paczka z plikami szkoleniowymi — musi wyjść do piątku!
+
+## Przypomnienia z 2026-04-04
+- [BIZNES] 9:30 Call z Jakubem Gibulą (Administratiekantoor Gibula) — pytania do systemu fakturowego, warianty cenowe. Przed callem: /brain-prep-call
