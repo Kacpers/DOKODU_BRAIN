@@ -10,8 +10,8 @@ RUN npm run build
 FROM python:3.11-slim
 WORKDIR /app
 
-# Install nginx
-RUN apt-get update && apt-get install -y nginx && rm -rf /var/lib/apt/lists/*
+# Install nginx + libreoffice (for .doc → .docx conversion)
+RUN apt-get update && apt-get install -y --no-install-recommends nginx libreoffice-writer && rm -rf /var/lib/apt/lists/*
 
 # Install Python deps
 COPY backend/requirements.txt .

@@ -1,6 +1,7 @@
 """FastAPI app for TenderScope Document Filler."""
 import uuid
 import shutil
+import subprocess
 from pathlib import Path
 from fastapi import FastAPI, UploadFile, File, Query, HTTPException
 from fastapi.responses import FileResponse
@@ -8,6 +9,8 @@ from .models import AnalysisMode, AnalysisResponse, CompanyProfile, ErrorRespons
 from .engines.hybrid import analyze
 from .docx_writer import write_fields
 from .profile import load_profile, save_profile
+
+ALLOWED_EXTENSIONS = {".docx", ".doc"}
 
 app = FastAPI(title="TenderScope Document Filler", version="0.1.0")
 
@@ -23,10 +26,16 @@ async def upload_and_analyze(
     file: UploadFile = File(...),
     mode: AnalysisMode = Query(default=AnalysisMode.HYBRID),
 ):
-    if not file.filename or not file.filename.endswith(".docx"):
+    if not file.filename:
         raise HTTPException(
             status_code=400,
-            detail={"error": "Only .docx files are supported", "code": "INVALID_FORMAT"},
+            detail={"error": "No filename provided", "code": "INVALID_FORMAT"},
+        )
+    ext = Path(file.filename).suffix.lower()
+    if ext not in ALLOWED_EXTENSIONS:
+        raise HTTPException(
+            status_code=400,
+            detail={"error": "Only .docx and .doc files are supported", "code": "INVALID_FORMAT"},
         )
 
     doc_id = str(uuid.uuid4())
@@ -36,6 +45,20 @@ async def upload_and_analyze(
     source_path = doc_dir / file.filename
     with open(source_path, "wb") as f:
         shutil.copyfileobj(file.file, f)
+
+    # Convert .doc to .docx via LibreOffice
+    if ext == ".doc":
+        result = subprocess.run(
+            ["libreoffice", "--headless", "--convert-to", "docx", "--outdir", str(doc_dir), str(source_path)],
+            capture_output=True, timeout=30,
+        )
+        converted = source_path.with_suffix(".docx")
+        if not converted.exists():
+            raise HTTPException(
+                status_code=422,
+                detail={"error": f"Failed to convert .doc to .docx: {result.stderr.decode()[:200]}", "code": "CONVERSION_FAILED"},
+            )
+        source_path = converted
 
     profile = load_profile()
     fields = analyze(source_path, profile, mode)

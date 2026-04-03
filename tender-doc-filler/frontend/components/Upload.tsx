@@ -16,10 +16,9 @@ export default function Upload({ loading, onUpload }: UploadProps) {
       if (!file) return;
       if (
         !file.name.endsWith(".docx") &&
-        file.type !==
-          "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        !file.name.endsWith(".doc")
       ) {
-        alert("Akceptowane sa tylko pliki .docx");
+        alert("Akceptowane sa tylko pliki .docx i .doc");
         return;
       }
       onUpload(file);
@@ -77,15 +76,15 @@ export default function Upload({ loading, onUpload }: UploadProps) {
         />
       </svg>
       <p className="text-gray-600 font-medium">
-        Przeciagnij plik DOCX lub kliknij
+        Przeciagnij plik DOC/DOCX lub kliknij
       </p>
       <p className="text-gray-400 text-sm mt-1">
-        Formularz przetargowy (.docx)
+        Formularz przetargowy (.doc, .docx)
       </p>
       <input
         ref={inputRef}
         type="file"
-        accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        accept=".docx,.doc,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/msword"
         className="hidden"
         onChange={(e) => handleFile(e.target.files?.[0])}
       />
