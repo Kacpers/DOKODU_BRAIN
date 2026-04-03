@@ -22,6 +22,7 @@
 tender-doc-filler/
 ├── backend/
 │   ├── main.py                  # FastAPI app, endpoints, file handling
+│   ├── __init__.py
 │   ├── engines/
 │   │   ├── __init__.py
 │   │   ├── rule_engine.py       # Table + paragraph regex matching
@@ -33,6 +34,7 @@ tender-doc-filler/
 │   ├── requirements.txt
 │   └── default_profile.json     # Pre-filled company profile
 ├── backend/tests/
+│   ├── __init__.py
 │   ├── conftest.py              # Fixtures: sample DOCX, profile
 │   ├── test_rule_engine.py
 │   ├── test_ai_engine.py
@@ -57,6 +59,7 @@ tender-doc-filler/
 │   ├── tailwind.config.ts
 │   └── next.config.js
 ├── Dockerfile
+├── .dockerignore
 ├── nginx.conf
 └── README.md
 ```
@@ -70,7 +73,9 @@ tender-doc-filler/
 - Create: `tender-doc-filler/backend/default_profile.json`
 - Create: `tender-doc-filler/backend/profile.py`
 - Create: `tender-doc-filler/backend/requirements.txt`
+- Create: `tender-doc-filler/backend/__init__.py`
 - Create: `tender-doc-filler/backend/engines/__init__.py`
+- Create: `tender-doc-filler/backend/tests/__init__.py`
 - Create: `tender-doc-filler/backend/tests/conftest.py`
 
 - [ ] **Step 1: Create project directory structure**
@@ -199,10 +204,10 @@ def save_profile(profile: CompanyProfile) -> None:
     )
 ```
 
-- [ ] **Step 6: Write engines/__init__.py**
+- [ ] **Step 6: Write __init__.py files**
 
-```python
-# empty
+```bash
+touch tender-doc-filler/backend/__init__.py tender-doc-filler/backend/engines/__init__.py tender-doc-filler/backend/tests/__init__.py
 ```
 
 - [ ] **Step 7: Write tests/conftest.py with DOCX fixture builder**
@@ -211,6 +216,23 @@ def save_profile(profile: CompanyProfile) -> None:
 import pytest
 from pathlib import Path
 from docx import Document
+
+
+@pytest.fixture(autouse=True)
+def isolate_profile(tmp_path, monkeypatch):
+    """Redirect profile storage to tmp_path so tests don't mutate default_profile.json."""
+    import backend.profile as prof
+    test_profile_path = tmp_path / "test_profile.json"
+    import json
+    test_profile_path.write_text(json.dumps({
+        "nazwa_firmy": "TestFirma Sp. z o.o.", "nip": "1111111111", "regon": "222222222",
+        "krs": "0000333333", "adres": "ul. Testowa 5, 00-001 Warszawa",
+        "adres_korespondencyjny": "ul. Testowa 5, 00-001 Warszawa",
+        "email": "test@firma.pl", "telefon": "+48 111 222 333",
+        "osoba_kontaktowa": "Anna Testowa", "stanowisko": "CEO",
+        "status_przedsiebiorcy": "mikro", "miejscowosc": "Warszawa"
+    }, ensure_ascii=False))
+    monkeypatch.setattr(prof, "PROFILE_PATH", test_profile_path)
 
 
 @pytest.fixture
@@ -346,6 +368,7 @@ Create `backend/engines/rule_engine.py`:
 ```python
 """Rule-based engine: regex + table cell matching for known company fields."""
 import re
+from datetime import date
 from pathlib import Path
 from docx import Document
 from ..models import CompanyProfile, FieldResult, FieldSource, Confidence
@@ -377,7 +400,7 @@ def _build_label_map(profile: CompanyProfile) -> dict[str, str]:
         "osoba do kontaktu\n(imię i nazwisko)": p.osoba_kontaktowa,
         "status przedsiębiorcy": p.status_przedsiebiorcy,
         "wielkość przedsiębiorstwa": p.status_przedsiebiorcy,
-        "miejscowość i data": f"{p.miejscowosc}, {__import__('datetime').date.today().strftime('%d.%m.%Y')}",
+        "miejscowość i data": f"{p.miejscowosc}, {date.today().strftime('%d.%m.%Y')}",
     }
     return {k: v for k, v in entries.items() if v}
 
@@ -619,20 +642,47 @@ Dla każdego pola zwróć obiekt JSON z polami:
 Zwróć TYLKO tablicę JSON. Nie dodawaj pól, dla których nie ma danych w profilu (np. cena, specyfikacja techniczna)."""
 
 
+_EXTRACT_FIELDS_TOOL = {
+    "name": "extract_fields",
+    "description": "Return all detected company fields from the tender document.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "fields": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "location_id": {"type": "string", "description": "e.g. T0R3 or P13"},
+                        "location_type": {"type": "string", "enum": ["table_cell", "paragraph"]},
+                        "label": {"type": "string"},
+                        "current_value": {"type": "string"},
+                        "suggested_value": {"type": "string"},
+                        "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+                    },
+                    "required": ["location_id", "location_type", "label", "suggested_value", "confidence"],
+                },
+            }
+        },
+        "required": ["fields"],
+    },
+}
+
+
 def _call_claude(prompt: str) -> list[dict]:
     client = anthropic.Anthropic()
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
         max_tokens=4096,
         timeout=_TIMEOUT,
+        tools=[_EXTRACT_FIELDS_TOOL],
+        tool_choice={"type": "tool", "name": "extract_fields"},
         messages=[{"role": "user", "content": prompt}],
     )
-    text = response.content[0].text.strip()
-    if text.startswith("```"):
-        text = text.split("```")[1]
-        if text.startswith("json"):
-            text = text[4:]
-    return json.loads(text)
+    for block in response.content:
+        if block.type == "tool_use" and block.name == "extract_fields":
+            return block.input.get("fields", [])
+    return []
 
 
 def analyze_ai(docx_path: Path, profile: CompanyProfile) -> list[FieldResult]:
@@ -982,14 +1032,17 @@ async def upload_and_analyze(
     filled_path = doc_dir / f"FILLED_{file.filename}"
     write_fields(source_path, fields, filled_path)
 
+    filled = [f for f in fields if f.filled_value]
     response = AnalysisResponse(
         document_id=doc_id,
         filename=file.filename,
         mode=mode,
         fields=fields,
         total_fields=len(fields),
-        filled_fields=len([f for f in fields if f.filled_value]),
+        filled_fields=len(filled),
     )
+    # Note: total_fields == filled_fields for MVP (we only return matched fields).
+    # Future: add a detection pass to count all potential field slots in the doc.
     _results[doc_id] = response
     return response
 
@@ -1511,6 +1564,17 @@ git commit -m "feat: Next.js frontend — upload, preview, profile, mode toggle"
 - Create: `tender-doc-filler/nginx.conf`
 - Create: `tender-doc-filler/README.md`
 
+- [ ] **Step 0: Write .dockerignore**
+
+```
+node_modules/
+__pycache__/
+*.pyc
+.git/
+.env
+/tmp/
+```
+
 - [ ] **Step 1: Write Dockerfile (multi-stage)**
 
 ```dockerfile
@@ -1581,8 +1645,10 @@ server {
 
 ```js
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
-  output: "export",
+  // Static export for Docker (nginx serves files). Rewrites only work in dev.
+  ...(isProd ? { output: "export" } : {}),
   async rewrites() {
     return [
       { source: "/api/:path*", destination: "http://localhost:8000/api/:path*" },
@@ -1591,8 +1657,6 @@ const nextConfig = {
 };
 module.exports = nextConfig;
 ```
-
-Note: `rewrites` only works in dev mode. In production, nginx handles proxying.
 
 - [ ] **Step 4: Write README.md**
 
