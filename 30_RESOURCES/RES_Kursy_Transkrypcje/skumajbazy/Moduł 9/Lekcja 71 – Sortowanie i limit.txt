@@ -1,0 +1,109 @@
+W ten oto sposób dotarliśmy do lekcji 71, w której porozmawiamy o sortowaniu i limitowaniu.
+Co w tej lekcji? Sprawa prosta.
+Kolejny zwracany dokumentów i określenie ile tych elementów zobaczymy na ekranie.
+Jak się to robi?
+Jeżeli chodzi o sortowanie elementów, to za findem przekazujemy mu coś takiego jak sort, co też jako argument otrzymuje słownik.
+Słownik ten dostaje klucz, w kluczu podajemy nazwę kolumny, po której chcemy sortować,
+natomiast w wartości podajemy informację, czy ma być to sortowanie rosnące, czy malejące.
+Jeżeli ma być to sortowanie rosnące, to wpisujemy jedno.
+Jako liczbę dodatnią, wtedy będziemy mieli sortowanie od wartości najmniejszych do największych.
+Natomiast jeżeli interesuje nas sortowanie malejące, to wpisujemy minus jeden
+i wtedy będziemy nam sortował od wartości największych do wartości najmniejszych.
+Co w momencie, w którym te wartości nam się powtórzą?
+Na przykład mamy dwóch Józefów Konradów i teraz chcielibyśmy wtedy posortować sobie te dane po tytule książki na przykład.
+Nie ma sprawy?
+Jak pewnie się domyślacie, skoro jest to dokument, to tak samo jak i w przypadku filtrowania,
+mamy możliwość po prostu przekazania słownika, gdzie oczywiście pomiędzy last name a first name jest przecinek.
+Nie wiem, co się z nim stało. Uwaga, wywołuję przecinek.
+O! Z tym przecinkiem jest dużo lepiej.
+No i jak widać jest last name przecinek R2.1 przecinek first name 1, co po prostu powoduje, że będzie nam się sortowało rosnąco po nazwisku
+i rosnące po nazwisku.
+Rosnąco po imieniu ma znaczenie kolejność tych wyrażeń.
+Bo jeżeli bym zrobił odwrotnie, first name, później last name, no to sortowałby najpierw po imieniu, a potem po nazwisku.
+Jak miał na przykład kilku Józefów, to pierwszy byłby Konrad, a potem byłby inny Józef.
+Ok?
+No i jak ograniczać ilość elementów?
+Odpowiada za to limit.
+Jeżeli chcemy ograniczyć na przykład do 3 osób, no to robimy db students find i potem robimy kropkę limit i w nawiasie wpisujemy 3.
+Dostaniemy 3 osoby.
+Natomiast jeżeli chcielibyście posortować i ograniczyć ilość, to nie ma to absolutnie żadnego znaczenia.
+Można najpierw wpisać sort, później limit.
+Można wpisać najpierw limit, później sort.
+Jedna i druga operacja działa.
+I zawsze dostaniemy na przykład.
+Na przykład 3 pierwsze książki posortowane według kraju rosnącą.
+Czyli pierwsza będzie 3 książki na przykład z Algierii, a nie z Zimbabwe.
+Tak?
+No i ponownie.
+Nie byłbym sobą, gdybym nie dał wam możliwości przećwiczenia tej wiedzy.
+Poproszę was o to, abyście odpowiedzieli na pytanie, która z książek w języku angielskim została wydana najwcześniej, a która została wydana najpóźniej.
+Oczywiście zakładając teksty.
+Które książki, które mamy.
+I po drugie, która z książek znajdujących się w kolekcji ma najwięcej, a która ma najmniej stron.
+No i powiedzcie jaka jest to liczba.
+Oczywiście możemy sobie zwracać po jednym rekordzie posortowanym w takiej kolejności.
+No i widzimy się za 3 minuty.
+No i lecimy.
+Język angielski.
+DB Books Find.
+Language.
+English zakładam, ale się upewnię.
+Tak, jest ok.
+Następnie chcemy je sobie posortować najwcześniej, czyli rosnąco.
+Po roku wydania.
+Sort by year 1.
+No i mamy najpóźniejszą 1936, 1929, 1927.
+Ale ja nie chcę tak scrollować.
+Chciałbym zobaczyć tylko jedną.
+Więc kropka limit 1.
+I mam 1450.
+Autorem jest Jeffrey.
+I jest to The Canterbury Tales.
+Ciekawe.
+Muszę w ogóle przestudiować sobie listy tych książek.
+Mogłem to w sumie zrobić wcześniej.
+I rzucaj wam teraz tutaj ciekawostkami jeszcze o tych autorach z rękawa.
+Niestety tego nie zrobiłem.
+Może kiedyś zrobię.
+No i zadanie drugie.
+Która z książek znajdujących się w kolekcji ma najwięcej?
+Która ma najmniej stron?
+Jaka jest to liczba?
+No to zmieniamy sobie tylko i wyłącznie kolejność sortowania.
+Angielski nas już przestaje interesować.
+Zamiast year robimy pages.
+No i najmniej stron ma książka z Norwegii.
+The Doll's House.
+Czyli pewnie jakaś książka dla lalek.
+Książka dla lalek.
+Książka dla dzieci o lalkach.
+68 stron.
+Natomiast najwięcej.
+Zobaczymy w którym kraju jest najwięcej.
+Najwięcej piszą.
+Proust z Francji.
+In Search of Lost Time.
+W poszukiwaniu zagubionego czasu.
+2408 stron.
+Cóż.
+Chyba znalazłem miejsce gdzie mógłbym ten czas.
+Gdzie mógłbym znaleźć ten zgubiony czas.
+Jeżeli bym musiał całą tę książkę przeczytać.
+Czy też chciałbym tę całą książkę przeczytać.
+Ale no cóż.
+Dzisiaj nie będę jej czytał.
+Dzisiaj zakończymy tę lekcję w tym miejscu.
+Jeżeli macie ochotę poszukać więcej informacji.
+To oczywiście zachęcam was do tego.
+Aby na przykład zobaczyć w którym kraju są najdłuższe książki.
+Albo w którym kraju są najkrótsze.
+Ale zdecydowanie prościej będzie to zrobić.
+Wiedząc jak działa grupowanie.
+A całkiem dobrze się składa.
+Bo grupowanie będzie tematem naszej kolejnej lekcji.
+Więc bardzo serdecznie was zapraszam do tego.
+Żeby przejść.
+Zapoznać się z tym tematem.
+Nie czekać.
+I do zobaczenia.
+Trzymajcie się. Cześć.

@@ -1,0 +1,32 @@
+Jest nasza długo wyczekiwana praca domowa modułu drugiego.
+Zadanie domowe pierwsze brzmi
+Znajdź wszystkich pracowników z tabeli employees,
+których nazwisko zaczyna się od litery N, a imię kończy się na NE.
+Czyli nazwisko ma się zaczynać od litery N,
+natomiast imię ma się kończyć takimi dwiema literami NE,
+czyli na przykład any, tak?
+To tutaj powinno też nam się pokazać.
+Zadanie domowe numer dwa
+Znajdź wszystkie organiczne produkty,
+czyli wszystkie produkty, które w nazwie posiadają słówko organic.
+Zadanie domowe numer trzy
+Wyświetl listę wszystkich produktów, które obecnie są w sprzedaży,
+czyli takie, które mają discontinued z przypisaną wartością zero.
+Zadanie domowe czwarte
+Ilu mamy łącznie klientów pochodzących z jednej z trzech stolic?
+Berlin, Londyn i Madryt.
+I tutaj przypomnij sobie to, o czym rozmawialiśmy w pierwszym module,
+jak sprawić, żeby wyświetliła nam się liczba tych osób, a nie te osoby.
+I dodatkowo możesz zastosować alias, którego uczyliśmy się w tym module,
+tak żeby zamiast wyświetlana tego czegoś, pokazała nam się jakaś ładna etykieta przy kolumnie.
+Zadanie domowe piąte
+Ile łącznie przechowujemy produktów unit price, których kategorią jest condiments?
+I przygotuj to tak, żeby można było łatwo zmienić nazwę kategorii z condiments na dowolną inną
+i żeby zapytanie zwracało odpowiedni wynik.
+Czyli tutaj będziemy potrzebowali podpowiem pod zapytania.
+I to byłoby na tyle, jeżeli chodzi o ten moduł.
+Zapraszam do rozwiązania pracy domowej.
+No i już niedługo widzimy się w kolejnym module, w którym tę pracę domową sobie rozwiążemy.
+Dajcie znać, jak wrażenia z tego modułu, czy filtrowanie Wam się spodobało.
+Jeżeli macie z czymś trudność, to na Discordzie jak najbardziej czekam.
+Do zobaczenia, do usłyszenia, cześć!

@@ -1,0 +1,646 @@
+Witajcie moi drodzy, spotykamy się w kolejnym już module i tradycyjnie tak jak zawsze zaczynamy od pracy domowej.
+W zadaniu pierwszym mamy przygotować zestawienie, w którym wyświetlimy regiony oraz terytoria w takiej formie jak w tabelce poniżej.
+Czyli mamy region description oraz territory description i w tej postaci chcielibyśmy widzieć te wyniki.
+Rozwiążmy to.
+Czyli cóż, możemy sobie powiedzieć najpierw o tym, że mamy taką tabelę jak region.
+Jeżeli sobie wyświetlimy wszystkie wartości z regionu, to widzimy, że mamy eastern, western i northern i southern.
+Natomiast jeżeli chcemy wyświetlić sobie wszystkie terytoria, no to możemy wykonać select gwiazdka from territories.
+No i dostaniemy territory ID, territory description oraz region.
+W tym zadaniu, które zostało nam postawione, mamy wyświetlić region i terytorium.
+Więc ja będę chciał wyświetlić przede wszystkim, najpierw będę chciał pobrać sobie wszystkie terytoria, co już zrobiłem.
+I teraz do tych terytorium będę chciał dodawać.
+Pojojnować sobie regiony na podstawie tej kolumny region ID, która się tutaj znajduje.
+Jak to zatem będzie wyglądało?
+Select gwiazdka from territories, left, join.
+Left, no bo jeżeli jakieś terytorium nie miałoby regionu, to i tak chciałbym, żeby mi się ono wyświetliło.
+Czyli select gwiazdka from territories, left, join, regions, on.
+No i teraz z tabeli territories będziemy chcieli brać.
+Region ID i będziemy go chcieli wiązać z tabelą region, w której mamy kolumnę, również region ID.
+Jak sobie teraz robimy Ctrl, Enter, no to wówczas dostanę wszystkie terytoria, wszystkie regiony.
+Terytory description, region description wszystko jest pięknie.
+Jedyną rzeczą, która nie jest piękna jest to, że chcieliśmy sobie wyświetlić najpierw region, a później terytorium.
+Więc możemy wykonać region description,
+przecinek, territory description.
+Hops! I będziemy mieli wszystkie te wyniki.
+Łatwo i przyjemnie zadanie pierwsze rozwiązane.
+Idziemy sobie do zadania drugiego.
+A co w tym zadaniu drugim mieliśmy zrobić? Sprawdźmy to.
+W zadaniu drugim mamy przygotować zestawienie, w którym wyświetlimy kategorie
+oraz ilości produktów, które się w nich znajdują.
+I chcemy przefiltrować wynik tak, by pokazały się tylko kategorie,
+w których jest więcej niż 10 produktów.
+Tą drugą częścią zajmiemy się w drugiej części rozwiązania,
+gdyż na początek pobierzemy sobie kategorie oraz produkty,
+które się w tych kategoriach znajdują. Jak to zrobić?
+Oczywiście ponownie będziemy potrzebowali sobie pojojnować.
+Czyli select, gwiazdka from categories.
+Sprawdzam, że tutaj mam kolumnę kategorii ID.
+Select, gwiazdka from products.
+I tutaj też mam kolumnę kategorii ID.
+No to doskonale.
+Więc mogę sobie śmiało wykonać zapytanie.
+Select, gwiazdka from products.
+I analogicznie, jeżeli na przykład tym razem interesowałoby mnie tylko i wyłącznie
+te produkty, które mają kategorie i te kategorie, które są przypisane do produktów,
+no to wtedy użyłbym right.
+Natomiast jeżeli mnie interesują wszystkie kategorie i na przykład jeżeli jakaś kategoria
+nie będzie miała w środku produktów, to ja chcę i tak ją wyświetlić z zerem,
+no to wtedy użyję right joina, zakładając, że startuje z produktów, bo mam select,
+gwiazdka from products.
+Natomiast jeżeli bym zrobił select, gwiazdka from categories, no to wtedy użyłbym left joina.
+Ale jeżeli startuje z produktów, no to right join, żeby nie było tak, że tylko ciągle do tej lewej nas ciągnie.
+Czyli select, gwiazdka from products, right join, categories, on products, kropka, kategoria id,
+równa się categories, kropka, kategoria id.
+Wyświetlam, no i widzę, że mam chai i chung.
+Jeżeli chodzi o chai, to jest to beverages, soft drink, no i chai, chung, tak samo.
+Ok.
+Natomiast, tak jak wspomniałem, nas będzie interesowała,
+nazwa kategorii oraz ilość produktów.
+Więc to, co sobie mogę zrobić, to sobie oczywiście mogę moje zapytanie delikatnie przeformatować,
+tak, żeby było odrobinę czytelniej.
+No i teraz, jeżeli chcę nazwy kategorii mieć, no to potrzebuję kategorii name.
+Ok.
+Ale ja nie chcę, żeby te kategorie mi się powtarzały.
+Tylko jeżeli na przykład tutaj mam dwa razy beverages, to bym chciał, żeby było to beverages wymienione raz
+i obok, żeby była dwójka.
+Jak mam condiments?
+To tak samo ma to się zachować.
+Tu oczywiście te produkty mogą nam się powtarzać, a my nie chcemy, żeby się powtarzały,
+tylko żeby beverages było raz i obok była liczba.
+Jak to się robiło?
+Ktoś pamięta?
+Czy ja słyszę, że mówiliście o grupowaniu?
+Jeżeli tak, to bardzo dobrze, to była dobra odpowiedź.
+Więc chcemy sobie to pogrupować.
+Pogrupować chcemy to sobie na podstawie nazwy kategorii, ponieważ to jest ten, ta kolumna,
+dla której będziemy chcieli też te produkty zliczać.
+Więc możemy wykonać group bar.
+By, kategorii name, enter, ctrl, enter, no i wtedy te produkty przestały nam się powielać,
+ale my chcemy zliczać je, no to musimy sobie po kategorii name zrobić przecinek,
+no i napisać count, tak żeby on nam je zliczał.
+Czyli używamy funkcji agregującej, w tym przypadku jest nią funkcja count,
+bo chcemy zliczyć, ile wierszy zgrupowaliśmy.
+Przypominam, że tych funkcji mieliśmy kilka, tam był max, min, były też te funkcje statystyczne.
+Naprawdę jest ich całkiem sporo.
+Ale to nie koniec zadania, ponieważ w treści zadania zostało powiedziane, że chcemy jeszcze przefiltrować wyniki tak,
+by pokazało się tylko te kategorie, gdzie mamy więcej niż 10 produktów.
+Bo jakbyśmy sobie to posortowali, to okaże się, że mamy tutaj produktów 13, tu mamy 10, tu mamy 5.
+Czyli nie mamy żadnej kategorii z zerem, ok?
+Natomiast jeżeli chcemy wyświetlić tylko te, które mają 10, to nie możemy użyć where'a.
+No bo zobaczcie.
+Jeżeli bym chciał użyć where'a, to where występuje przed write joinem.
+Czyli jeżeli SQL interpretuje to po kolei, no to on nie wie, co to jest count z gwiazdką, jeżeli ten where wystąpi wcześniej.
+Jakby to, że możemy wykonać tego counta z gwiazdką, pozwala nam później to filtrować na podstawie wyrażenia having.
+Więc where nam nie zadziała, bo where wykonuje się przed grupowaniem.
+Więc to, co zrobię, to za write joinem dorzucę sobie właśnie wyrażenie.
+Nawet za grupem mogę to zrobić, żeby było jeszcze czytelniej.
+Having, no i interesuje mnie count z gwiazdką większe niż 10.
+Czyli różnica między where'em a having, zaznaczmy to sobie raz jeszcze, jest taka, że jeżeli używacie where'a, to wówczas mamy możliwość filtrowania wierszy przed grupowaniem.
+Natomiast za pomocą having'a.
+Możemy filtrować wiersze po zgrupowaniu.
+To jest bardzo, bardzo ważna różnica.
+No ale my tu gadu-gadu, a zadanie drugie praktycznie samo nam się rozwiązało.
+Co powoduje, że możemy z radością przejść do zadania trzeciego.
+Zapraszam.
+A w zadaniu trzecim chcemy przygotować zestawienie, w którym wyświetlimy nazwę dostawcy, czyli supplyera oraz sumę kosztów przesyłki tego dostawcy.
+Zapisz wyniki w widoku o nazwie freight-costs.
+Czyli chcemy zsumować wszystkie te wartości z kolumny freight.
+No i następnie chcielibyśmy stworzyć sobie jeszcze widok.
+Czyli po pierwsze stworzę sobie, co sobie stworzę?
+Stworzę sobie zapytanie, które wyświetli mi zamówienia, gdzie będę miał nazwę dostawcy i ten freight, ten koszt przesyłki.
+Następnie wykonam sobie sumę.
+A wtedy będę mógł stworzyć wynik.
+Czyli na takich trzech etapach sobie to zadanie będę rozwiązywał.
+Zacznijmy od początku.
+Select gwiazdka from orders.
+Select gwiazdka from orders powinna wyświetlić nam wszystkie zamówienia.
+Jeżeli pamięć mnie nie myli, a jak wiecie pamięć mam zawodną, to jedną z kolumn w zamówieniu jest supplier id.
+Jeżeli faktycznie tak jest.
+Wtedy będziemy mogli posłużyć się tabelą suppliers, gdzie też zapewne jest kolumna supplier id.
+I na podstawie właśnie tych dwóch rzeczy będziemy mogli sobie te dwie tabelki połączyć.
+Sprawdźmy, czy tak jest.
+Czyżby tak nie było?
+Coś zepsułem?
+Jest.
+Shipped via.
+Ship via to jest ten nasz supplier.
+Ach, bo to nie miał być dostawca w sensie dostawca supplier, tylko dostawca w sensie firma kurierska.
+Skąd o tym wiem?
+Wiem o tym.
+Bo jak sobie wszedłem na rozwiązanie zadania, to tu widzę, że jest Federal Shipping, Speedy Express i United Package.
+I z tego co pamiętam, to właśnie ship via 3.1.2 łączy nam się z dostawcą.
+A dostawca jak wtedy był?
+To sobie zostawmy.
+Bo dostawca wtedy nie był supplier zapewne, co?
+Tak, supplier to jest ten, co nam dostarcza coś innego, a my chcemy kuriera.
+Gdzie byli kurierzy?
+Ok, znalazłem.
+To było proste.
+Dostawcy są w tabeli shippers, czyli orders i shippers.
+Więc jeżeli chcemy to sobie połączyć, no to lecimy.
+Jeszcze tylko sobie zanotuję, że tutaj mamy ship via.
+Polecam wam robić też takie notatki, jeżeli macie jak i ja problemy z tego typu, znaczy z tego typu.
+Bo jeżeli macie tak jak ja problemy z pamięcią, ship via i shipper id.
+Ok.
+Shipper id.
+Ok.
+I teraz niech musi się przenieść tu.
+I teraz mogę lecieć z zapytaniem.
+Czyli select gwiazdka from orders.
+Mogę tym razem zrobić sobie innerjoina, czyli chcę mieć tylko i wyłącznie tych dostawców, którzy zrealizowali jakieś zamówienie.
+Nie interesują mnie zupełnie pozostali dostawcy.
+No i też interesują mnie zamówienia, w których ten dostawca został wskazany.
+Czyli select gwiazdka from orders, innerjoin shippers on.
+No i teraz orders.
+no i teraz orders.ship
+podkreślenie via
+równa się
+shippers
+.shipperid
+sztank
+no i mamy
+i teraz to co nas będzie interesowało
+to będą dostawcy i koszt
+dostawy, czyli kolumna
+która
+nazywa się
+company name
+oraz kolumna freight
+więc company name
+oraz freight
+hops i mam
+czyli wyświetliły mi się wszystkie firmy
+oraz te koszty dostawy
+i teraz te koszty dostawy ja będę chciał
+zsumować, czyli muszę
+użyć funkcji sum
+ale jeżeli użyję funkcji sum
+o tak
+to to nie wystarczy
+zobaczcie
+column shipper company name must appear in the group
+by, dzięki, no właśnie to jest to czego mi brakuje
+muszę sobie to jeszcze zgrupować
+czyli group by
+i mogę sobie to śmiało zgrupować
+za pomocą właśnie kolumny
+company name
+i w ten sposób dostanę informację, że
+united package ma 28
+i tak dalej, federal shipping ma tyle
+speedy express ma tyle
+wyniki mi się zgadzają
+natomiast prośba była taka
+żebym z tego stworzył jeszcze widok
+o nazwie freight costs
+jak się robiło widok, ktoś pamięta?
+ja pamiętam początek, wy powiecie mi koniec, dobra?
+create view
+nazwa widoku
+czyli freight costs
+from
+nie, as
+ctrl enter
+to bardzo dobrze
+jak to było?
+bardzo dobrze dopuszczające
+więc create view freight costs as
+i tu jest całe zapytanie nasze, które nam ten widok dał
+jeżeli sobie wtedy wykonamy select
+gwiazdka from freight costs
+hops, no to dostaniemy
+dokładnie ten widok, który był przed chwilą
+i będzie nam po prostu
+łatwiej z tym
+zarządzać, no i to co nam
+zostanie, i oczywiście też
+możemy sobie dalej później robić zapytania
+where sum jest większe niż
+dwadzieścia
+tysięcy pięćset
+o, to też
+jak najbardziej jest możliwe
+i możemy sobie przejść zatem
+płynnie do zadania
+czwartego, jeżeli dobrze pamiętam
+to w tej pracy domowej ilość zadań domowych
+to było pięć, więc przedostatnie
+zadanie domowe przed nami
+w zadaniu czwartym
+mamy przygotować zestawienie zawierające
+pracowników oraz obsługiwane
+przez nich terytoria
+u, tu już się chyba robi trochę
+poważniej
+bo mamy połączyć ze sobą pracownika
+czyli pracownika, który jest w tej pracy
+i terytorium
+jak to było
+jeżeli nie pamiętamy
+to przypominam
+że mamy taki ładny diagram
+i ja go sobie teraz włączę
+ten diagram znajduje się
+na naszym widoku, czyli na widoku public
+no i jeżeli wówczas klikniemy
+znaczy na widoku, na schemacie public
+wtedy możemy sobie kliknąć na er diagram
+i po chwili
+powinien nam się ładnie
+diagram narysować
+co mieliśmy ze sobą połączyć, mieliśmy ze sobą połączyć
+pracownika
+i terytorium
+pracownik to employee
+no to szukamy employee, gdzie jesteś employee
+jest tu employees
+czyli employees
+to jest ten nasz jeden punkt
+dalej mamy employee territories
+i później mamy territories
+okej
+no i tak naprawdę to co mamy pobrać
+to jest territory description
+czyli z pracownika bierzemy first name last name
+z territories bierzemy territory description
+a tym
+musimy się łączyć
+jest tabela employee territories
+i tutaj sposobów jest naprawdę kilka
+możecie zacząć w employees
+możecie zacząć w territories jeżeli bardzo chcecie
+ja zacznę w employee territories
+tak mi jest po prostu
+najłatwiej
+to nie jest tak, że to jest jedyne dobre wyjście
+ale chcę wam pokazać
+że z tego miejsca też jak najbardziej można
+się
+pobrać wszystko co jest nam potrzebne
+czyli select gwiazdka from employee
+territory
+territories
+o co ja zrobiłem źle
+employee territories
+jak to się nazywało
+employee
+territories wr
+czy to jest mój problem
+tak dzień dobry
+coś jeszcze
+a from coś dzisiaj tego froma zapominam
+i zobaczcie mamy employee id
+oraz territory id
+no to możemy sobie
+od razu sobie pojojnujemy co
+select gwiazdka from
+no i from left
+join
+employees
+on i tutaj już
+możemy polecieć sobie też aliasami
+żeby nie powtarzać tych wszystkich długich nazw
+przy okazji mamy ładną nazwę
+ładny alias et
+czyli et employee id
+równa się
+i kropka employee id
+no i to samo zrobię sobie
+z terytoriami
+przypominam że jeżeli
+mamy dwie tabele
+to musimy wykonać dwa joiny
+średnik oczywiście jest na samym końcu
+a joiny mogą być
+jeden pod drugim
+kolejność joinów
+w tym przypadku nie ma znaczenia
+natomiast jeżeli dołączacie coś
+i potem z tego czego chcecie pójść dalej
+to wtedy kolejność joinów ma znaczenie
+czyli na przykład jeżeli zaczynalibyście z employee
+to wtedy do employee
+dołączacie sobie employee territories
+do tego dołączacie sobie territories
+wtedy nie możecie zacząć joinować territories
+kiedy joinowaliście sobie
+employee territories
+zaraz to mogę pokazać nie ma sprawy
+czyli left join zrobiłem
+i robię jeszcze raz
+left join territories
+on et territory id
+równa się t kropka territory id
+pięknie control enter
+wszystko mam
+ale to co mnie interesuje
+to jest first name
+czyli i kropka first name
+i kropka last name
+oraz territory description
+t kropka territory
+description
+red lorry yellow lorry
+to takie łamaniec językowy
+po angielsku ale territory
+się mieści w tym
+jak widzicie wykonałem
+to zadanie pokazała mi się pani Nancy Davulio
+którą już dobrze znamy
+pierwszy rekord z pracowników
+no i pani Nancy Davulio
+pracuje w ramach
+terytorium o nazwie Wilton
+a Nancy Davulio
+niżej pracuje jeszcze w Newart
+jeżeli byście chcieli
+połączyć na przykład te territory description
+jeszcze to można byłoby
+to sobie zgrupować jest taka funkcja
+w MySQL nazywa się
+groupconcat
+szybki look do dokumentacji
+czy w Postgresie
+też nazywa się groupconcat
+nie w Postgresie nazywa się inaczej
+w Postgresie funkcja ta nazywa się
+arrayag
+i za jej pomocą można sobie zgrupować
+zgrupować
+te nasze
+stringag
+jeżeli byśmy chcieli połączyć
+żeby na przykład pani Nancy Davulio
+miała przecinki tutaj
+przy nazwach miejscowości
+to możemy sobie spróbować to zrobić
+czyli stringag
+to jest najpierw to co chcemy połączyć
+potem czym chcemy połączyć
+no i groupbylastname
+może być
+a jeszcze jest firstname
+będzie problemem
+tak się uda
+a udało się zobaczcie
+i mamy
+Margaret Peacock
+pracuje w Rockwill, Greensboro
+i Cary
+a gdzie jest nasza Nancy
+gdzieś tam pewnie jest
+jest Nancy Davulio
+Wilton i Newhart
+widzicie zadziałało
+a przy okazji pokazaliśmy sobie coś jeszcze
+więc jeżeli ktoś omija prace domowe
+to teraz tego nie zobaczył
+a w kolejnym odcinku
+będziemy chcieli sobie
+wykonać kolejną rzecz
+i w naszym przypadku będzie to
+załóżmy
+że wystąpił problem
+z jednym z naszych dostawców
+i sprzedawał wadliwe produkty
+o czym musimy powiadomić klientów
+przygotuj zestawienie wszystkich osób
+którzy zamówili coś
+od firmy
+Nesgaroz Noweau
+ok
+czyli będziemy chcieli pobrać sobie
+od firmy
+które zamówiły produkty
+w których dostawcą jest ta firma
+jak to się joinuje
+mówiąc szczerze nie pamiętam
+ale od tego mam ten diagram
+żeby sobie sprawdzić
+patrzymy
+orders mamy
+czy tu jest informacja kto kupił
+nie ma ale tu jest customer id
+ok
+czyli będziemy potrzebowali pobrać sobie
+order połączone z customer id
+a customer jest tutaj
+informacje o tym kto to zamówił
+czyli wszystko w porządku
+bo interesują nas tylko ci customerzy
+możemy się umówić że contact name
+nam w zupełności wystarczy
+czyli to są klienci
+to są zamówienia
+zamówienia gdzie mają supplierów
+mają kolumnę supplier id
+nie mieli kolumny supplier id
+kolumna supplier szła jakoś inaczej
+o zobaczcie order details
+order details ma products
+products ma suppliers
+trochę będziemy się musieli pojoinować
+ale do odważnych świat należy
+ja sobie tylko ten treść zadania
+tu ładnie skopiuję
+i w pozostałych zadaniach mieliśmy obrazki
+i wszystko dotyczyło obrazka
+więc nie chciałem ich tutaj jakoś przerysowywać
+natomiast
+w tym konkretnym przypadku jak najbardziej
+możemy sobie to po prostu wkleić
+ok no i lecimy od początku
+myślę że tym punktem
+na którym ja się skupię na początku
+będą zamówienia
+i połączę sobie zamówienia
+z zamówień pójdę
+czyli plan na teraz jest taki
+że wezmę sobie zamówienie
+następnie wezmę sobie
+order details
+i products
+i to jest na razie mi wystarczy
+to jest początek
+to lecimy select gwiazdka from orders
+to nie będzie jakoś strasznie trudne
+tylko będzie trzeba na podstawie tego grafu
+właśnie tego diagramu
+trochę sobie tutaj pokombinować
+left join order details
+on
+tu zrobię alias od razu
+o
+o.orderid
+równa się od.orderid
+dobra
+w ten sposób powiązałem się
+z order details
+czyli mam z orders
+połączenie do order details
+i lecę dalej
+kolejną rzeczą będą mnie interesowały produkty
+jak się do tych produktów dobrać
+tu mam product id
+widzicie to skoro tu mam product id
+i tu mam product id no to
+sprawa prosta
+left join products
+on
+sprawa prosta
+od.productid
+równa się
+p nie ma aliasu
+więc sobie dopiszemy
+p.productid
+doskonale
+czyli na chwilę obecną przeszliśmy
+z zamówienia przez order details
+do products
+a tu mamy wyświetlić supplierów
+na razie wyświetlmy sobie po prostu
+załóżmy
+stąd coś nas będzie interesowało
+no stąd w sumie to nic
+ship name może nas interesować
+chociaż myśmy chcieli tych klientów
+ale dobra to wyświetlmy sobie
+na przykład ship name
+wyświetlmy sobie
+nazwę produktu
+czyli z
+orders
+będę chciał wyświetlić
+sobie ship name
+tak na początek wiecie żeby tylko zobaczyć co tam
+się znajduje
+następnie z produktów będę chciał wyświetlić
+product name
+no i mogę sobie już powoli zacząć
+dowiązywać dostawców
+czyli left join suppliers
+on
+p.supplierid
+równa się
+s.supplierid
+no i wtedy nasi dostawcy
+będą mieli co
+company name
+no to bardzo proszę
+s.company name
+wykonuję sobie to zapytanie żeby
+usunąć potencjalne błędy
+zapomniałem przecinka to od razu sobie go
+dodaję od razu też sobie dodam
+średnik którego i tak będę musiał przenosić
+więc pewnie jeszcze parę razy o nim zapomnę
+ale mam zobaczcie product name
+jest jest company name
+i jest ship name
+gdzie to jest nasz dostawca
+czyli firma firma
+leka trading odpowiada za
+dostarczenie tych produktów
+ale nas interesowała
+informacja kto
+ten produkt odebrał
+czyli orders
+jest tutaj
+i orders bezpośrednio łączy się z customers
+i tutaj też sobie z customer wyświetlimy
+company name
+czyli
+left join
+kolejność tych joinów tutaj akurat tego jednego
+nie ma znaczenia mogłaby być on tutaj
+albo mógłby być bezpośrednio tutaj
+raczej nie wstawiałbym go tutaj
+pomiędzy bo wydaje mi się że to jest trochę
+bez sensu takie wstawianie go pomiędzy
+natomiast na końcu też może być
+left join
+customers
+c alias
+c jest jeszcze wolny
+zapraszam kto pierwszy ten lepszy
+on
+teraz orders kropka
+customer id równa się
+jakaś spacja się tutaj wkradła
+wyszedł nam ojciec
+c kropka customer id
+okej
+i zostanie nam tylko wyświetlenie jeszcze
+tego klienta z niego mieliśmy też wyświetlić
+company name no to bardzo proszę
+tak company name coś zepsułem
+missing
+from where
+cause
+c no oczywiście średnik
+o średniku też wam już
+wspominałem że na pewno będzie on problemem
+no okej problemy
+problem pierwszy jest taki że mamy
+tutaj dwa razy
+company name nie wiemy who is who
+więc tu zrobimy sobie
+as supplier name
+a tutaj as customer name
+i teraz już mamy ładnie
+ship name
+product name supplier name
+i customer name jest super
+no i jedyna rzecz którą jeszcze
+wypadałoby zrobić to trzeba ograniczyć
+supplier name
+a tylko do tej firmy
+as garrods
+noweau więc
+zarzucimy sobie zwykłego where a
+where supplier name
+company name równa się
+i teraz chwilę się nie będę odzywał
+...
+...
+Оп
+Hobs
+jejjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjmamy
+czyli tak naprawdę to jest
+nazwa naszego klienta
+jeżeli byście chcieli bande yo puedes
+tam na przykład wszystko z
+klientów to można serii po prostu
+zrobić tutaj
+ần
+to zakomentować
+a to też zakomentuje
+i zrobić c
+z gwiazdką
+i wtedy mamy wszystkich klientów
+...
+...
+nas coś od tamtej
+firmy. Troszkę ich jest,
+nawet jest Zbyszek
+Piestrzeniewicz,
+zbieżność imion nazwisk przypadkowa, jak coś
+to zażalenie do Microsoftu
+z Warszawy, ale jak widzicie
+wszystko nam tu ładnie
+działa. Potencjalnie
+można byłoby jeszcze pomyśleć o tym,
+żeby to było distinct, żeby
+na przykład, jeżeli Zbyszek by wystąpił dwa razy
+na tej liście, to żeby nie mówić
+słuchaj Zbyszek, jest sprawa, tak?
+Żeby nie napisać mu tego dwa razy.
+Ale to już zostawiam Wam.
+Jak macie ochotę jeszcze się pobawić tym
+zapytaniem dalej, to
+koniecznie się bawcie. Ja już
+po prostu nie mogę doczekać się kolejnego
+modułu. Chciałbym Wam przekazać trochę wiedzy,
+więc widzimy się
+tam.
+Do zobaczenia!

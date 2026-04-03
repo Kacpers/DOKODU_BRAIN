@@ -1,0 +1,169 @@
+I w ten oto sposób dotarliśmy do wstępu do nierelacyjnych baz danych.
+W tym module porozmawiamy sobie o tym, czym są nierelacyjne bazy danych,
+co to w ogóle oznacza, że baza danych jest nierelacyjna,
+właściwie to sobie powtórzymy, no i porozmawiamy o tym,
+jakie są przykłady takich baz danych.
+I w tym module, mówię o całym tygodniu, będziemy się skupiali głównie
+na bazie danych nierelacyjnej, jaką jest MongoDB.
+Natomiast wiele z tej wiedzy, którą tutaj poznacie,
+jest możliwa do zaaplikowania również na innych bazach danych nierelacyjnych.
+Zobaczcie, co przed nami.
+Czyli po pierwsze, czym jest NoSQL, co to znaczy, że baza danych jest nierelacyjna,
+dlaczego warto zwrócić uwagę na ten rodzaj danych,
+czyli co je wyróżnia, dlaczego jest dobre,
+no i który rodzaj baz danych jest lepszy.
+Jeżeli chodzi o NoSQL, to pytanie, czy NoSQL oznacza,
+że to jest brak SQL-a.
+No nie, NoSQL to jest skrót od Not Only SQL,
+czyli to nie oznacza, że musimy wykluczyć SQL-a,
+ale zaznacza nam to fakt, że nie tylko SQL w życiu programisty powinien się liczyć,
+bo inne bazy danych również istnieją i o nich również należałoby pamiętać.
+To nie oznacza, że one są jakąś poboczną wiedzą.
+Co prawda, na podstawie chociażby tego bootcampu możecie zwrócić uwagę na fakt,
+że no 80% do 20% to jest SQL do NoSQL-a,
+natomiast to wynika trochę też z mojej praktyki,
+czyli zdecydowanie w większej ilości projektów ten SQL jednak wjedzie prym,
+natomiast Not Only SQL, czy też NoSQL, warto wiedzieć, że takie bazy są
+i że też można z nich korzystać.
+W bardzo wielu przypadkach, o tych przypadkach również będziemy sobie rozmawiali
+podczas tego modułu.
+Jeżeli chodzi o to, jakie są...
+wyróżniamy bazy danych nie-SQL-owe, czy też nie tylko SQL-owe,
+to są to trzy takie podstawowe rodzaje.
+Po pierwsze, tak zwane klucz-wartość, czyli posiadamy,
+tak jak macie w SQL-u, macie ID-ka i do ID-ka są przyporządkowane jakieś wartości,
+natomiast tych wartości mamy bardzo wiele.
+Są też takie bazy danych, gdzie mamy tylko i wyłącznie klucz i jedna wartość,
+czyli to są takie bazy danych słownikowe.
+Można sobie wyobrazić właśnie słownik, gdzie mamy klucz i do klucza,
+jest przyporządkowana jakaś definicja.
+Czyli na przykład mamy jakiś identyfikator i do niego jest przyporządkowany jakiś cały obiekt,
+cała duża liczba informacji.
+I przykładem takiej bazy danych może być na przykład Redis.
+To jest taka baza, która jest używana bardzo często do cache'owania,
+czyli do przechowywania danych na jakiś krótki czas,
+gdzie my nie chcemy za każdym razem robić tych takich długich zapytań,
+łączyć sobie wielu różnych danych z różnych miejsc, tylko chcemy połączyć sobie to w jednym miejscu,
+zapisać to na jakiś czas do tego Redisa, do takiej pamięci tymczasowej
+i z tej pamięci sobie to korzystać.
+Czyli jakie są moje produkty, które mam w koszyku?
+Sprawdzam sobie w Redisie, bo akurat tam je sobie zapisałem.
+Do tego na przykład ten Redis może nam się przydać.
+Inny przykład to jest baza danych grafowa, między innymi Neo4j.
+Baza danych grafowe są wykorzystywane wszędzie tam,
+gdzie potrzebujemy sobie stworzyć jakiś graf i chcemy go zilustrować.
+Czyli mogą być to na przykład produkty,
+mogą być to hierarchia między produktami,
+hierarchia między kategoriami, drzewo genealogiczne, menu.
+No i Neo4j posiada również bardzo też ogólnie te bazy danych grafowe
+służą do wykonywania tak zwanych algorytmów predyspozycyjnych,
+nie predyspozycyjnych, tych sugerujących, o tak może powiem.
+Czyli w momencie, w którym lubisz góry i lubisz Polskę,
+jest dużo innych osób, które lubią góry i Polskę, a oni lubią Tatry,
+to tobie też te Tatry zostaną zasugerowane, tak?
+Czyli po prostu na przykład inaczej, lubisz określone produkty jeść,
+więc można na podstawie innych osób, które też lubią te produkty jeść,
+zbudować pewną zależność i powiedzieć, że to też będzie ci smakowało.
+Jeżeli jesteście przed obiadem, to przepraszam.
+No i ostatni rodzaj to są bazy danych, które przechowują dokumenty.
+O dokumentach powiemy sobie więcej za moment
+i przykładem tu właśnie może być MongoDB.
+Co to znaczy, że baza danych jest nierelacyjna?
+Zacznijmy od tego, co to znaczy, że baza danych jest relacyjna.
+I baza danych relacyjna jest wtedy, kiedy mamy określoną liczbę kolumn
+i każdy rekord spełnia tę samą, posiada tę samą liczbę kolumn.
+Tutaj mówi się o tym, ja wam cały czas mówiłem o tym,
+że bazy danych przechowują tak naprawdę rekordy,
+natomiast tak naprawdę to, co tutaj, to co przechowują bazy danych,
+to są tuple, czyli taki zbiór,
+zbiór wartości.
+Osoby, które były na szkoleniu z Pythona pewnie kojarzą tuple
+jako te niemutowalne czy niezmienialne zbiory danych
+i tutaj jest bardzo, bardzo podobnie,
+a mianowicie to, że mamy, pobieramy z bazy danych taką liczbę kolumn
+zawsze jest stałe, zawsze jest konstant.
+Bo jeżeli jakiejś wartości ktoś tam nie podał,
+to i tak tam jakaś wartość jest i zawiera po prostu wartość 0, czyli nic.
+Natomiast w przypadku baz danych nierelacyjnych
+my nie mamy nigdy pewności, jakie pola, bo tu nie mówimy o kolumnach,
+tylko o polach, posiadają nasze dokumenty.
+No i zobaczcie, mogę mieć dokument, który posiada kolumna 1, kolumna 2,
+a mogę mieć dokument, który posiada kolumny 1, 3 i 4.
+Czyli za każdym razem, kiedy przechowujemy takie pojedyncze cosie,
+pojedyncze dokumenty w naszej bazie, to one mogą posiadać bardzo różną ilość pól.
+I to jest zaleta MongoDB, czy też baz danych nierelacyjnych.
+To jest coś, co wyróżnia te bazy danych.
+A mianowicie, jeżeli będziecie chcieli przechowywać np. informacje o samochodach
+i niektóre samochody będą miały tyle informacji, niektóre mniej,
+to nie trzeba siedzieć i przygotowywać wielu tabel, wielu zależnych od siebie tabel.
+Nie trzeba tego rozbudowywać i tworzyć ogromnej struktury np. tylko po to,
+żeby dwa samochody miały jakieś dodatkowe informacje.
+To nie jest przeniesione, tylko dzięki temu, że przechowujemy właśnie dokumenty,
+czyli takie nieustrukturyzowane informacje,
+to możemy skorzystać z bazy danych nierelacyjnej.
+Dlaczego warto zwrócić uwagę na taką bazę?
+Przede wszystkim, tak jak wspomniałem, wygodnie jest przechowywać duże zbiory danych w kolekcjach.
+O kolekcjach jeszcze za moment, ale chodzi o to, że jeżeli mamy dużo tych danych
+i po prostu chcemy je przetrzymać, żeby np. później jeszcze je obracać,
+robić coś z nimi, wykonać, no to możemy użyć MongoDB.
+Druga rzecz, że w tym przypadku, kiedy pracujemy na bazach danych na dokumentach,
+to relacje pomiędzy danymi, czy też w ogóle asocjacje i łączenie tych danych ze sobą
+nie są tak istotne, ponieważ każdy dokument jest po prostu jedną całością.
+My możemy wykonywać asocjacje pomiędzy dokumentami,
+ale o tym sobie powiemy jeszcze później, natomiast zmiana tych właściwości nie jest problemem.
+Tak samo, jeżeli będziemy chcieli dodać nowe pola do dokumentów,
+to też z tym nie ma absolutnie żadnego problemu.
+W momencie, w którym pobieramy sobie dużo danych,
+to widzieliście, że niektóre z naszych zapytań miały tych joinów 6, 7, 8.
+To nie jest coś, co bardzo mocno ogranicza naszą pracę,
+wpływa w pewien sposób na spowolnienie,
+ale też daje nam możliwość wybierania, jakie dane nas interesują.
+Natomiast tutaj nie musimy tych joinów robić tak często,
+co też jest pewną wygodą, ale jest też pewnym minusem,
+bo tych danych w ten sposób obrabiamy więcej.
+No i trzecia rzecz, czwarta rzecz, to jest łatwa skalowalność,
+czyli w momencie, w którym każda z tych informacji znajduje się w osobnej kolekcji,
+w osobnym zbiorze, to też łatwiej jest nam takie zbiory podzielić na mniejsze części,
+niż w momencie, w którym występuje duża zależność pomiędzy naszymi kolekcjami.
+Więc skoro tyle jest zalec tego,
+mongodb, tych baz danych nierelacyjnych,
+no to może nie warto skupiać się w ogóle na SQL-u.
+Wiecie, to jest tak, że ja teraz chwalę te bazy danych nierelacyjne,
+ale to, że ja je chwalę, nie znaczy, że one są substytutem.
+Pamiętajmy o tym, że nazwa noSQL to znaczy not only SQL,
+co nie oznacza, że mamy ishtorem noSQL,
+ani też nie oznacza, że mamy ishtorem only noSQL, tak?
+Czyli, że chcemy robić tylko i wyłącznie bazy danych opierające się na dokumentach, grafach czy słownikach.
+Natomiast warto wiedzieć, że możemy jako programiści korzystać z całej palety tych możliwości
+i wszystko tak naprawdę sprowadza się do naszych wymagań.
+Jeżeli klient stawia przed nami wymaganie takie,
+że na przykład importujemy jakieś dane z jakiegoś crawlera,
+z jakiegoś robota, który chodzi po stronach, zbiera z nich informacje
+i my nie zawsze jesteśmy pewni, jaką strukturę te informacje będą miały,
+to wrzućmy je do bazy danych, taką jaką jest MongoDB.
+Jeżeli nie chcemy budować dużej struktury od razu,
+rozbudowywać wszystkich tabel, bo wiemy, że ta zróżnorodność tych danych jest ogromna,
+to też idźmy w stronę MongoDB.
+Jeżeli na przykład zbierałbym wyniki badań, tak, pacjentów,
+interesowała mnie na przykład morfologia
+i wiedziałbym, że ta morfologia może zawierać bardzo dużo różnych,
+mam nadzieję, że teraz nie przekręcam, ale bardzo dużo różnych parametrów,
+to może być przykładem właśnie, może zastosować, przechowywać mogę ją wówczas w bazie danych,
+nie relacyjnej, no bo może być to wygodniejsze,
+niż tworzenie dla każdego z parametrów osobnej wartości.
+Tutaj też zobaczycie, że jeżeli mamy większą strukturę,
+wszyscy kojarzycie pewnie JSON-a, czyli JSON to jest taki,
+nie człowieka, tylko wygląd, JSON to jest taki format,
+który przypomina trochę jakby obiekt, czyli mamy klamerkę, klamerkę,
+w środku jest klucz wartość, ale każda wartość może też być jakby takim zagnieżdżonym JSON-em
+i w przypadku baz danych nie relacyjnych też takie informacje można w ten sposób przechowywać.
+Czyli łatwiej jest nam budować takie też, przechowywać też takie hierarchiczne dane dzięki temu.
+No i to są takie zastosowania, gdzie ten NoSQL przewyższa SQL-a,
+a to znowu nie oznacza, że mamy się wybierać jedną albo drugą.
+Jak to mówią, why not both, tak, czemu nie możemy ich sobie połączyć,
+jednej z drugą, tak jak na obrazku.
+Więc mam nadzieję, że mniej więcej opowiedziałem wam o tym,
+dlaczego warto pomyśleć o NoSQL-u,
+a teraz porozmawiajmy o tym, co będzie nam potrzebne,
+żeby w kierunku tego NoSQL-a pójść.
+Zapraszam.

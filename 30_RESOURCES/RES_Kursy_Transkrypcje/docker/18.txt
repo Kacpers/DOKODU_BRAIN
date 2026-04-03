@@ -1,0 +1,210 @@
+Janie, skoro tak świetnie poszedł nam ten Python, to mam nadzieję, że z JavaScript pójdzie nam jeszcze łatwiej.
+Bo tak naprawdę mamy obraz, umiemy już budować, umiemy już wszystko tak naprawdę.
+Może co prawda nie znamy wszystkich poleceń, które mogą się pokazać w Dockerfile'u, natomiast wiele z nich już jest dla nas znane.
+Czy w tym pliku w Dockerfile'u będzie coś nowego?
+Tak, zaraz sobie do niego przejdziemy. Bardzo się cieszę, że teraz przerobimy sobie Javy w wersji skrypt, bo jest to mój ulubiony skrypt.
+Uwielbiam skrypty pisane w Javie. Oczywiście śmiejemy się tutaj, Java i JavaScript są osobnymi językami, jeśli ktoś miałby wątpliwości, nie są w ogóle ze sobą związanymi.
+Zacznijmy może od...
+Aplikacji.
+Dobra.
+Nasza aplikacja robi to samo, co robiła aplikacja w Pythonie, czyli wyświetla nam Hello World.
+Różnica jest taka, że działa na porcie 3000, więc będziemy używali innego portu podczas uruchamiania naszego kontenera zbudowanego z tego obrazu.
+No a raz dodatkowo mamy tutaj jeszcze informacje do logu.
+Express chyba domyślnie niczego nie loguje.
+Więc żebyśmy mogli cokolwiek zobaczyć, Kacper nam tutaj ładnie przygotował konsol loga i też go sobie podejrzymy.
+Zrobimy to, co robiliśmy w poprzednich lekcjach, w dużym skrócie, tak że nie będziemy tego kompleksowo omawiać.
+Natomiast przejdziemy sobie teraz do dockerfile'a.
+W dockerfile'u widzimy, że jest dość podobnie.
+Do tego, co mieliśmy w Pythonie.
+Różnica jest taka, że mamy tutaj Node jako inny obraz bazowy w wersji dwudziestej trzeciej.
+Takiego sobie wykorzystujemy tutaj w tym naszym małym projekcie.
+Ustawiamy sobie taki sam katalog roboczy.
+Różnicę mamy tutaj taką, że kopiujemy package.json.
+Różnicę mamy tutaj taką, że kopiujemy package.json.
+Różnicę mamy tutaj taką, że kopiujemy package.json.
+Różnicę mamy tutaj taką, że kopiujemy package.json.
+Ale są to po prostu tez zależności, więc jakby wychodzi na jedno, prawda?
+to jest dostosowana po prostu pod JavaScript'a.
+I tak naprawdę wykorzystaliśmy to, co było dostarczone w dokumentacji tego obrazu Pythona,
+dlatego że Node nie ma takiej instrukcji na Docker Hub'ie, jak można z niego skorzystać,
+nagło uruchomić, natomiast mamy bardzo proste aplikacje.
+Tutaj nie mamy żadnych dodatkowych zależności rozbudowanych, nie dodajemy
+rzeczy do systemu poza Vimem, którego tylko zainstalowaliśmy, żeby coś pokazać.
+Więc ten obraz jest tak naprawdę niemalże identyczny jak ten z Pythonu.
+I to też jest fajne, że
+znając podstawy tworzenia tych obrazów w Dockerze,
+dla prostych aplikacji jesteśmy w stanie bardzo szybko przejść z jednego języka na
+inny język i przygotować obraz do budowania po prostu w innym języku.
+Jeśli aplikacja jest bardziej rozbudowana, to wiadomo potrzebujemy mieć troszeczkę
+wiedzy i troszeczkę pojęcia o samej tej aplikacji, znać ekosystem, znać język.
+Natomiast tutaj w takich prostych przykładach,
+jeśli
+mamy tą bazową wiedzę o tym, jak uruchomić w ogóle projekt w jakimś języku,
+jesteśmy w stanie swobodnie z tego korzystać.
+I ja też to wykorzystuję w swojej pracy.
+Czasami potrzebuję sobie przetestować jakąś aplikację, nie wiem, chcę
+czymś się wspomóc, wykorzystać sobie aplikację z internetu, ale ona nie dostarcza
+swojego Dockerfile'a, a ja nie lubię instalować sobie rzeczy
+w systemie, gdzieś tam tego budować i zaśmiecać sobie.
+Więc często...
+No i też kwestia bezpieczeństwa, nie?
+Tak, kwestia bezpieczeństwa również, bo wtedy to, co jest w
+zbudowanym obrazie i uruchomionym kontenerze, nie ma poniekąd dostępu do mojego systemu,
+do mojego gospodarza.
+Dlatego nie muszę się martwić, jeśli coś tam by wydarzyło się niepożądanego w środku,
+bo jednak jest to przynajmniej do pewnego stopnia
+odizolowane.
+I ja w ten sposób zachowuję czystość w moim systemie.
+Nie muszę na przykład doinstalowywać kolejnych języków, bo zdarzało mi się
+pracować w jednym czasie z Pythonem, JavaScriptem, z Rubim oraz z Javą.
+No i musiałbym u siebie w systemie trzymać wszystkie cztery języki,
+jakieś może dodatkowe zależności.
+Później nie pamiętałbym nawet pewnie, co bym musiał sobie
+posprzątać, a w ten sposób mam ładnie wszystko uporządkowane i w systemie
+instaluje tylko to, co jest mi faktycznie potrzebne do robienia mojej pracy, a jeśli
+wiem, że coś potrzebne mi nie jest, wtedy nie muszę tego instalować.
+Dobrze, więc nasz dockerfile w zasadzie możemy przyjąć, że się nie różni.
+Tutaj widzimy tylko taki jeden komentarz.
+Ja robiłem sobie pewne testy jeszcze po drodze.
+Jest to taka dyrektywa Expose, o której parę miesięcy temu czytałem sobie głębiej.
+Ona często pojawia się w naszych dockerfile'ach teoretycznie po to, żeby
+uruchomić aplikację na jakimś konkretnym porcie.
+Natomiast przeczytałem dokładnie w dokumentacji i ta dyrektywa jest tak naprawdę
+tylko i wyłącznie dokumentacją.
+Ona jest
+dla osoby uruchamiającej, że ta nasza aplikacja będzie działała na takim porcie.
+Co z tego wynika?
+Dwie rzeczy z tego wynikają.
+Pierwsza,
+warto jest używać tej dyrektywy, jeśli
+programista np.
+chce DevOpsowi przekazać takiego dockerfile'a, pokazać i wtedy DevOps wie, jak ma
+przygotować infrastrukturę, żeby można było rozmawiać z tą aplikacją
+poprzez wszystkie warstwy sieciowe, przez które ruch musi przejść,
+żeby do tej aplikacji się dostać.
+Druga konsekwencja jest taka, że możemy tej dyrektywy w ogóle nie używać, bo jeśli jej
+nie użyjemy, to tak naprawdę nic się nie stanie.
+I dlatego też celowo ją tutaj zostawiłem w postaci zakomentowanej.
+Przetestowaliśmy sobie to ostatnio razem z Kacperem, żeby mieć 100% pewności, że to
+dokładnie tak działa, jak właśnie wam omówiłem.
+Dlatego zbudujemy sobie teraz obraz z właśnie zakomentowaną tą dyrektywą.
+W Pythonie też jej nie mieliśmy.
+I uruchomimy później kontener mapując port 3000 zamiast 5000.
+Zobaczymy wszystko to samo, co widzieliśmy wcześniej.
+Jeszcze ostatnia różnica w stosunku do poprzednich lekcji.
+Nasze CMD się zmieniło, dlatego że wcześniej uruchamialiśmy Pythona, a
+dokładniej Flask'a, a teraz uruchamiamy Node'a i wskazujemy, który plik chcemy uruchomić.
+Tutaj nie mam właściwie nic do dodania, mówiąc szczerze.
+Wszystko pięknie wyjaśniłeś.
+Super, to przechodzimy dalej.
+W kolejnych filmach nie będziesz mnie w ogóle potrzebował, się obawiam.
+Albo może jakieś pytania może mi się zrodzą, to wtedy...
+Ja myślę, że będę cię jak najbardziej potrzebował.
+Dlatego, że nie masz sygnału.
+Wiem, widzę. Ale to już myślę, że nasi widzowie nam wybaczą.
+Ja tutaj się jakoś wkleję awatarem, natomiast jestem z wami głosem.
+I to wcale nie ma żadnego związku z tym, że akurat w tym momencie, wiecie, powiedziałem,
+że Janek sobie poradzi beze mnie i nagle cyk, aparat mi zgasł.
+To wybaczcie.
+Wyszło co prawda zabawnie, natomiast
+będę cię jak najbardziej potrzebował, dlatego że dla mnie wiele rzeczy, które
+jest oczywistych, czasem nie wiem, o czym warto powiedzieć.
+Jasne, ja będę na pewno zadawał pytania,
+tak jak rozmawialiśmy i jestem tym adwokatem naszych uczestników.
+Ale wszystko pięknie wyjaśniłeś.
+OK, czyli tak naprawdę mamy app.js, mamy dockerfile, mamy pakiet.json.
+No i teraz musimy zbudować obraz?
+Tak.
+Budujemy sobie obraz, a może zapożyczę sobie tutaj
+stąd.
+Żebyśmy mieli
+zachowany schemat, budujemy sobie obraz z tagiem javascript.
+Obraz nam się buduje.
+Ponownie widzimy, że wykorzystał cache, mimo że obrazu tego wcześniej nie było, to
+gdzieś tam przez eksperymenty nie czyściłem wszystkiego, w związku z czym
+przebudowało nam się.
+Zobaczmy sobie.
+Widzowie też wiedzą, pamiętają jak wyłączyć ten cache.
+Tak.
+Także mamy obraz zbudowany z tego cache'a sprzed dwóch dni do kodu z tagiem javascript.
+A zatem możemy go uruchomić.
+I tutaj również sobie
+skopiuję z tego, co mieliśmy w Pythonie.
+Do tej części
+zmieniamy port na 3000, bo na takim działa nasz node.
+Tak, ekspres dokładnie rzecz ujmując.
+Czyli framework taki jak flask, tylko że od strony javascriptu.
+Mhm.
+, ok.
+I chcemy uruchomić obraz do kodu javascript.
+No to lecimy.
+Ok.
+Obraz uruchomiony, znaczy kontener uruchomiony.
+To teraz nic nie pozostaje nam innego, jak tylko wejść sobie na niego.
+Albo też od razu moglibyśmy zrobić curl'a z twojego lokalnego komputera.
+Tak.
+I upewnić się, że działa.
+Widzimy, że działa.
+Weszliśmy sobie do środka.
+Czemu dodałeś minus b, ten ukośnik slash b?
+Wiesz, to zrobił się glitch.
+A, ok, to jest glitch.
+Tak, bo tutaj zabrakło nam nowej litery na końcu Hello Worlda.
+No i czasami w Bashu pojawiają się takie
+krzaczki, że podczas uzupełniania coś tam się poprzesuwa i widzimy inne literki
+niż one tam pod spodem są.
+Natomiast dla was kursanci ważne jest to, że jest docker exec it do kodu javascript
+i tam jest Bash normalnie napisany z tego co rozumiem, tylko po prostu się
+zepsuła nam konsola.
+I wyświetlanie tego komunikatu.
+Tak, ale ja mogę nawet wyjść z tego obrazu
+i możemy zrobić to jeszcze raz, żeby nie było żadnych wątpliwości.
+O, to jest nasze polecenie.
+A, bo ty bin Bash wpisałeś.
+Ok, bo ja zawsze wpisuję samo Bash i to też funkcjonuje i wtedy jest krócej.
+Ale to na jedno wychodzi.
+To jest tak naprawdę kwestia przyzwyczajeń.
+Gdyby się zdarzył obraz taki bardziej powiedzmy okrojony, to mogłoby
+się wydarzyć z Alpine, tam mógłby sam Bash nie zadziałać.
+Wtedy musimy podać pełną ścieżkę do tej binarki, którą chcemy uruchomić.
+Widzimy tutaj, że też Hello World tam działa.
+Możemy sobie wyjść z obrazu,
+zobaczyć logi.
+Nie mamy tutaj informacji o tym odwołaniu.
+Bo automatycznie ekspres nam tutaj tego nie loguje.
+Także mamy to, co zostało wyprintowane konsol logiem.
+Jest to jedyny log, który jest dostępny z tej aplikacji.
+Natomiast nie jest to żaden problem, jeżeli byśmy dalej te aplikacje rozwijali, to
+moglibyśmy oczywiście też dodać więcej logów i tak naprawdę
+kontynuować w ten sposób naszą pracę.
+Jak najbardziej.
+I wydaje mi się, że to jest wszystko,
+co możemy powiedzieć o Javascriptie.
+Jak widzieliście, było to dosyć proste.
+Było to analogiczne do Pythona.
+Zachęcam do spróbowania stworzenia prostej aplikacji w dowolnym innym języku.
+Może to być Ruby, może to być Java.
+Może ktoś chciałby się pobawić jakimś
+Haskelem albo innym niszowym językiem.
+Docker świetnie się sprawdzi.
+Na przykład.
+Na przykład.
+Ja się śmieję a propos niszowych języków.
+Ja lubię PHP, ale...
+PHP wraca ostatnio do łask z tego, co słyszałem.
+Tak, oczywiście.
+Jak widzieliście, nowsze wersje zostały bardziej dopracowane i słyszałem, że
+przeżywa drugą młodość.
+Tak, zdecydowanie. Ale myślę, że to nie jest rozmowa na ten moment.
+Natomiast cieszę się bardzo, że udało nam się też odpalić już dwie aplikacje i tak
+naprawdę dzięki temu, że mamy Dockera, nie musieliśmy nic dokładać do systemu, a
+wszystko nam pięknie działa.
+Wiem, że jest wiele tematów, których nie
+możecie się doczekać, takich jak np.
+właśnie podmontowywanie wolumenów, już
+pracowanie z Dockerem itd. itd.
+Więc tutaj, jak powiedział Steve Jobs, stay hungry, stay foolished.
+Będziemy Wam na bieżąco dostarczać kolejne informacje w kolejnych lekcjach.
+Super. Widzimy się już wkrótce.
+Cześć.
+Cześć.

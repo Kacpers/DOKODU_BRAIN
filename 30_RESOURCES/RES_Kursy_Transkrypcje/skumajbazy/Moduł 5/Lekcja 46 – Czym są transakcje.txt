@@ -1,0 +1,263 @@
+DZIĘKI ZA OBSERWACIE
+Dlaczego to robi? Z pewnych względów. Po pierwsze, pozwalają one na współbieżny dostęp do danych, czyli jeżeli wykonuję sobie zapytanie i ktoś inny wykonuje takie samo zapytanie, no to mi zależy na tym, żeby nie okazało się w którymś momencie, że na przykład mam dwa ID-ki takie same, tak?
+Czy na przykład wykonujące się dwa zapytania w jednym czasie spowodują, że ta druga osoba dostanie błąd, bo ja operuję na bazie danych i ktoś w tym momencie też operuje na bazie danych i coś się zepsuje.
+Więc jeżeli używamy transakcji, to w ten sposób też się przed tym zabezpieczamy. Dodatkowo, jeżeli na przykład nasze zapytanie trwa długo, bo powiedzmy importujecie zbiór danych i ktoś inny uruchomiłby import w tym samym czasie,
+a import trwa dwie minuty, no to też zależy Wam na tym, żeby baza działała prawidłowo i dlatego też używamy właśnie transakcji.
+Po trzecie, transakcje pozwalają nam na grupowanie operacji zapisu odczytu w taką niepodzielną całość, zaraz zobaczycie, i to pozwala nam na przykład na to, żeby w momencie, w którym coś się zepsuje podczas wykonywania tych zapisów, móc to przerwać i żeby nic się nie zapisało.
+Przykład, załóżmy...
+Dodajemy, mamy zbiór insertów, no i w międzyczasie coś się stało i pięćdziesiąty insert dodał raz jeszcze jakiś rekord, też próbował dodać raz jeszcze jakiś rekord i złamał integralność, złamał unika na przykład, tak?
+Czyli dodał kolejny raz jakąś wartość, która miała być unikatowa. Co się w tym momencie dzieje? Jeżeli nie używamy transakcji, no to zagryzamy wargi, no i musimy...
+Proszę wcześniejsze 49 zapytań usunąć, żeby raz jeszcze to wykonać z poprawionym zapytaniem pięćdziesiątym.
+Jeżeli używamy transakcji, czyli wszystkie te nasze zapytania ujęliśmy w transakcji, no to nie musimy się tym przejmować, bo to, że transakcja nam się zepsuła, to, że jakieś zapytanie nam się zepsuło, spowoduje, że on usunie sam automatycznie wszystkie te pozostałe 49 rekordów.
+Przy 49, żaden problem.
+Gorzej, jeżeli na przykład wiele osób pisze w tym samym momencie do bazy danych.
+I musimy wtedy szukać w tej bazie tych rekordów, które myśmy dodali, a nie dodały się gdzieś z zewnątrz.
+Nie wiem, czy jest to możliwe, ale jest to na pewno bardzo problematyczne wtedy.
+Więc dlatego też możemy pracować z transakcjami, dlatego też pracujemy z transakcjami.
+No i o transakcjach możemy też powiedzieć, że wynikiem transakcji może być wyłącznie sukces lub porażka.
+Czyli albo transakcja zadziałała i jest super, albo transakcja nie zadziałała.
+I też jest super, bo dzięki temu, że mieliśmy transakcję, no to wszystkie te rekordy, które się nie dodały, wystąpiły jakieś problemy, to nam się po prostu ładnie usuną.
+No i tu ten pierwszy podpunkt, a mianowicie, że pojedyncze zapytania są automatycznie ujęte w transakcji.
+Tym się nie musimy za bardzo przejmować, ale warto wiedzieć, że tak jest.
+Czyli kiedy wykonujecie insert i ktoś inny wykona insert, to raczej nie powinno się nic zepsuć, ponieważ transakcje zapewniają nam współbieżny dostęp do danych.
+Czyli jednoczesny, równoczesny.
+No rozumiecie, współbieżny po prostu.
+Jeżeli chodzi ogólnie o transakcje, to transakcją przyświeca coś, co się nazywa ACID.
+ACID to jest kolejny akronim.
+Po pierwsze, A to jest atomicity, czyli niepodzielność.
+Czyli jeżeli transakcja nam nie przejdzie w całości, to po prostu się nie powiodła.
+Jeżeli przejdzie w całości, to się powiodła.
+Po drugie, consistency, czyli integralność z bazą danych.
+Jeżeli nasza transakcja w jakiś sposób gdzieś zadziałała, przejdzie, no to wiemy, że wszystkie dane są integralnie powiązane z bazą danych, wszystko jest ok.
+Natomiast jeżeli gdzieś ta integralność byłaby zachwiana, że na przykład złamalibyśmy unika, no to w tym momencie nic po prostu się nie doda.
+To też jest bardzo ważna cecha transakcji.
+Po trzecie, izolacja.
+Jeżeli pracujemy z, robimy transakcję, to możemy mieć pewność, że ona nie będzie miała wpływu na żaden inny insert w międzyczasie, albo na żaden inny update.
+Po prostu ta transakcja będzie się wykonywała.
+No i durability, zmiany, które wprowadzuje transakcja zostają trwale wprowadzone do bazy danych.
+To nie jest tak, że możemy sobie wykonać transakcję, która będzie działała tak tymczasowo, tylko ona po prostu dodaje nam rekordy do bazy danych, wykonuje update'y, wykonuje pewne czynności.
+To nie jest tak, że możemy sobie wykonać transakcję, która będzie działała tak tymczasowo, tylko ona po prostu dodaje nam rekordy do bazy danych, wykonuje update'y, wykonuje pewne czynności.
+To nie jest tak, że możemy sobie wykonać transakcję, która będzie działała tak tymczasowo, tylko ona po prostu dodaje nam rekordy do bazy danych, wykonuje pewne czynności.
+To nie jest tak, że możemy sobie wykonać transakcję, która będzie działała tak tymczasowo, tylko ona po prostu dodaje nam rekordy do bazy danych, wykonuje pewne czynności.
+I dzięki temu, że używamy transakcji, no to właśnie te cztery zasady są spełnione i możemy spać spokojnie, wykonując większą zmianę na bazie danych.
+I dzięki temu, że używamy transakcji, no to właśnie te cztery zasady są spełnione i możemy spać spokojnie, wykonując większą zmianę na bazie danych.
+na bazie danych. Jak wygląda transakcja? Zobaczcie najpierw przykład,
+gdzie można byłoby taką transakcję użyć. Na przykład chciałbym wykonać
+operację zakupu produktu, więc po pierwsze muszę dodać informacje
+do tabeli z zamówieniami. Ktoś ode mnie kupuje rower, więc ja pobieram
+te informacje o tym rowerze, no i dodaję nową informację do tabeli
+z zamówieniami. W międzyczasie tych zakupów różnych innych idzie też wiele,
+więc ja muszę mieć to na uwadze, ale jestem w transakcji, więc śpię spokojnie.
+Po dodaniu nowej informacji o zamówieniach muszę zmienić stan magazynowy,
+czyli tu dodałem, tam robię update, odejmuję. Kolejna rzecz, która się dzieje,
+no to aktualizuję raporty, informacje o raportach, o przychodach,
+czyli dodaję informacje, że sprzedałem ten rower, że tyle i tyle więcej
+zarobiliśmy, taką i taką osobę musimy obciążyć.
+Takimi i takimi kosztami i tak dalej, i tak dalej, no i w tym momencie
+następuje problem, bo się okazuje, że, nie wiem, że, no coś nie działa.
+Więc jeżeli coś by się zepsuło w tym momencie, tak, tory były złe,
+jeżeli coś by się zepsuło w tym momencie i nie mógłbym dodać tego zapytania,
+no to musiałbym zwiększyć stan magazynowy, czyli cofnąć tę czynność,
+no i usunąć informacje o tabeli z zamówieniami, no i zwrócić jakiś błąd użytkownikowi.
+Jeżeli używam transakcji, to po prostu mogę, dowiaduję się, że transakcja nie przeszła,
+ta informacja jest zwracana, no i można wyświetlić klientowi odpowiedni komunikat.
+Nie muszę niczym innym się martwić, gdyż za wszystko inne troszczy się za mnie transakcja.
+No i jest jeszcze jeden przypadek, o który też tutaj warto powiedzieć,
+a mianowicie, jeżeli mam te cztery, tam trzy zapytania, no to w momencie,
+w którym pierwsze z nich mi się zepsuje, to ja też chcę zakończyć,
+a nie przetwarzać kolejnych.
+Jeżeli używam transakcji i pierwsze się zepsuje, no to też te kolejne nie będą się wykonywały,
+bo transakcja po prostu z góry się zepsuje i pozostałe zapytania nie będą się wykonywały.
+Jeżeli natomiast tej transakcji bym nie miał, no to w momencie, w którym zepsułem dodawanie informacji
+do tabeli z zamówieniami, bo na przykład, nie wiem, nie ma takiego produktu,
+to i tak próbowałby później zmniejszać stan magazynowy, no i modyfikować raporty,
+czyli miałbym dużo więcej błędów.
+Nie jeden, ale...
+A trzy.
+Jak wygląda transakcja?
+Transakcja zaczyna się od słówka bedgin, a kończy się słówkiem commit.
+No i mam bedgin, update, insert, update i commit.
+No i jeżeli ta transakcja się gdzieś zepsuje, tak jak wspominałem,
+to od razu wracam do stanu początkowego.
+Jest też taka możliwość, jak stworzenie tak zwanego save pointa,
+czyli w momencie, w którym robicie transakcję i w tej transakcji wykonujecie więcej operacji
+i chcielibyście...
+i chcielibyście wrócić do któregoś przypadku, bo na przykład użyjecie jakiegoś ifa
+i jeżeli coś się źle zapisało, to wtedy, czy jeżeli czegoś nie ma,
+to chcecie przywrócić tak zwany save point, no to można sobie najpierw ten save point
+zadeklarować za pomocą wyrażenia save point, na przykład before insert.
+Następnie można wykonać insert i update, a następnie wykonać rollback to before insert.
+I to spowoduje, że w tym momencie wrócimy od razu do tego miejsca,
+on wycofa ten insert update, no i jeszcze raz spróbuje go wykonać, tak?
+W przypadku transakcji jest też bardzo wygodne to, że jeżeli pracujecie z DBWerem,
+to możecie na przykład zrobić bedgin, update, wykonać sobie ten save point,
+następnie spróbować wykonać jakieś operacje, sprawdzić, czy baza wygląda tak, jak miała wyglądać.
+Jeżeli nie, to wykonujecie rollback i wróciliście do tego miejsca.
+Nie musicie cofać tych dwóch czynności.
+Kiedy wykonacie commit, dopiero wtedy wszystkie wasze zmiany będą zaaplikowane,
+zostaną zapisane i będą widoczne dla wszystkich w bazie danych.
+No i oczywiście za pomocą tego wyrażenia rollback możemy też wracać do tego save pointa tyle razy, ile chcemy.
+Natomiast samo polecenie rollback cofnie nam transakcję w całości.
+No i mam dwa zadania dla was.
+Zadanie pierwsze, oczywiście wewnątrz transakcji, utwórz tabelę players z kolumnami id oraz names,
+name powinno być unikatowe, rozpocznij transakcję, dodaj do tabeli players nowy wpis,
+wyświetl wszystkie rekordy w tabeli players, czy widzisz nowy wpis, wykonaj polecenie rollback,
+no i wyświetl jeszcze raz te rekordy w tabeli players, no i pytanie brzmi, czy dalej widać ten nowy wpis.
+To jest pierwsza rzecz, a druga rzecz, rozpocznij transakcję, utwórz punkt przywracania o nazwie before first player,
+dodaj do tabeli players nowy wpis,
+utwórz punkt przywracania o nazwie before second player, dodaj drugiego gracza,
+no i spróbuj wrócić do któregoś punktu przywracania i sprawdź jaki to ma wpływ na tabelę players.
+Tutaj zależy mi na tym, żebyście się pobawili tym.
+Ja wam dałem taki motyw do zabawy i ten motyw oczywiście za chwilę odzwierciedlę.
+Natomiast zachęcam was do tego, żebyście to przetestowali i zobaczyli jak u was te transakcje działają.
+To co?
+Trzy minuty dla każdego i widzimy się za chwilę.
+Ja sobie zacznę od tego, że w ogóle stworzę sobie skimę na transakcję, tak żeby móc w ramach niej wykonywać to ćwiczenie.
+Czyli create schema transakcje.
+Ok. No i teraz chcę sobie stworzyć tabelę o nazwie players, czyli create table players id serial primary key.
+Name warchar unique.
+Aha i to miało być wewnątrz transakcji, więc transakcje players.
+No i select all from transakcje players.
+Ops. Jak widać.
+Tabela została stworzona.
+Mogę rozpocząć pracę z transakcją.
+Rozpocznij transakcję.
+Badging.
+Nic więcej nie robię.
+Zrobiłem sobie control enter w tym momencie.
+Dodaj do tabeli players nowy wpis.
+Insert into transakcje players name values.
+Kogo dodamy?
+Bońka.
+Control enter.
+Wyświetl wszystkie rekordy w tabeli players.
+Select gwiazdka from transakcje.
+Otóż mam tutaj nawet co?
+Ja będę pisał drugi raz jak mam.
+Players.
+Ops. Jest bońek.
+Ale transakcja trwa.
+Wykonaj polecenie rollback.
+Ops.
+Poszło updated rows zero.
+Wyświetl wszystkie rekordy w tabeli players.
+Nie ma.
+Widzicie?
+Zrobiłem insert.
+Jest.
+Zrobiłem.
+Już ma id 2 nawet.
+Zrobiłem rollback.
+Zrobiłem rollback.
+Ach bo po zrobieniu rollbacka muszę raz jeszcze zrobić badging.
+Dlatego nie zadziałało.
+Zobaczcie raz jeszcze.
+Teraz rollback już mi nic nie robi bo nie jestem wewnątrz transakcji.
+Zresztą tu widzę informację.
+There is no transaction in progress.
+Transaction in progress.
+Więc teraz jeszcze.
+Badging.
+Insert.
+Tu nawet już mam tą sytuację, że złamałem duplicated key.
+Więc muszę dodać jakiegoś innego pana.
+Czyli insert.
+Niech to będzie bońek był.
+To niech to będzie teraz lato.
+Robię select.
+Teraz jeszcze badging.
+Insert.
+Muszę.
+Dobra.
+Jak muszę zrobić jeszcze raz enda.
+Ok.
+I teraz badging.
+Tutaj mam bońka.
+Dodaję nowego pana.
+I jak wykonam polecenie commit.
+O.
+To wtedy transakcje players mam bońka i lato.
+Widzicie?
+Czyli wszystko mi zadziałało.
+Tylko ważne jest to, że jeżeli zrobicie rollback to później trzeba zrobić end i badging
+żeby znowu rozpocząć transakcję.
+Bo jak zrobiłem badging i robię rollback.
+Zobaczcie.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobę rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+Zrobię rollback.
+to możemy sobie zrobić podpunkt drugi, podpunkt drugi wygląda tak,
+mamy znowu rozpocząć transakcję, utworzyć punkt przywracania,
+spróbować wrócić do któregoś punktu i sprawdzić jaki ma to wpływ na tabelę players.
+No to lecimy, możemy sobie raz jeszcze rozpocząć transakcję,
+następnie utworzyć punkt przywracania o nazwie before first player,
+czyli save point before first player,
+dodać do tabeli players nowy wpis, no to insert into transakcję
+players values default smularek,
+ops, dodać, utworzyć punkt przywracania o nazwie before second player,
+no to save point,
+before second player,
+dodać do tabeli nowy wpis, no to jak był smularek to jeszcze możemy dodać Kowalskiego,
+no i teraz chcemy wrócić do któregoś punktu przywracania.
+Jeżeli ja sobie pobiorę wszystkich, czyli select gwiazdka from transakcje.players,
+no to zobaczę, że mam Boniek, Lato, Smularek i Kowalski.
+Jeżeli natomiast teraz przechodzę,
+przywrócę sobie, czyli wykonam rollback
+i na przykład before second player
+syntax error, rollback to, rollback to before second player
+i wtedy sobie wykonam tych, no to zobaczcie, nie mam pana Kowalskiego.
+Jeżeli natomiast sobie zrobię rollback to before first player,
+o, ops, no to też nie mam, nie mam już kolejnego, nie?
+Czyli jak najbardziej, jak najbardziej tak to działa.
+Możemy za pomocą rollbacków sobie właśnie to tak ładnie wycofywać,
+wykonywać i praca z bazą jest przyjemniejsza.
+Trochę tak jakbyśmy takie save'y robili w grze.
+Dokładnie tak to działa.
+Ja pod tym względem transakcje bardzo lubię
+i zawsze jeżeli wykonuję kilka zapytań, które się ze sobą łączą,
+zawsze w tej transakcji się one znajdują.
+Po prostu dlatego, że to jest,
+to jest forma zabezpieczenia takiego,
+a nie zamiast potem usuwać wiersze i zastanawiać się nad tym,
+które wiersze usuwamy, to po prostu zamykamy wszystko w transakcji
+i nie ma żadnego problemu.
+A już w ogóle nie wyobrażam sobie życia bez transakcji,
+jeżeli robię jakiś dłuższy skrypt, który ma wykonywać trochę więcej operacji,
+no bo wtedy, jeżeli nie korzystamy z transakcji,
+no to jest bardzo, bardzo ciężko.
+I to byłoby na tyle.
+Zapraszam Was do zapoznania się z pracą domową.
+Do zobaczenia.

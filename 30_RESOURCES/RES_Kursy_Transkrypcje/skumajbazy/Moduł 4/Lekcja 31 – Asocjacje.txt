@@ -1,0 +1,264 @@
+Więc jako kolejne na naszej liście omówimy sobie asociacje, czyli skoro już wiemy czym jest klucz główny, czym jest klucz obcy, to właśnie za pomocą klucza głównego i klucza obcego tworzy się asociacje, czyli takie powiązania pomiędzy naszymi tabelami.
+Zobaczcie. Jeżeli chodzi o rodzaje asociacji, to mamy takie rodzaje trzy, jeden do jednego, jeden do wielu i wiele do wielu. Na początek porozmawiajmy o jeden do jednego, czyli one to one.
+Ta asociacja polega na tym, że dokładnie jeden rekord w tabeli A odpowiada dokładnie jednemu rekordowi w tabeli B.
+Na przykład jeden użytkownik posiada dokładnie jeden rekord w tabeli profil, albo jeden użytkownik ma dokładnie jeden adres.
+Dlaczego takie asociacje są przydatne? Po pierwsze z tego powodu, że w ten sposób możemy rozdzielić informacje pomiędzy tabelami, czyli unikamy sytuacji, w której mamy po prostu zbyt dużo tabel.
+Czasem jest też tak, że na przykład chcemy część informacji przechowywać w osobnych tabelach. Na przykład w jednej tabeli chcemy przechowywać informacje dotyczące danych osobowych, w innej tabeli dotyczące informacji jakby na naszej stronie.
+Czyli tu mamy imię, nazwisko, adres i tak dalej.
+Czyli mamy takie informacje typowo urzędowe, a w innym miejscu mamy chociażby, nie wiem, ilość gwiazdek, ilość logowań, datę ostatniego logowania i coś tam jeszcze.
+Drugim powodem, dlaczego w ten sposób też warto sobie dzielić nasze rekordy, jest to, że jeżeli na przykład modyfikując jakąś tabelę chcielibyśmy, żeby wywołał się jakiś wyzwalacz, czyli żeby coś nastąpiło, na przykład, nie wiem, zaktualizowała się jakaś data, albo dodał się jakiś wpis w innej tabeli,
+to wówczas właśnie za pomocą takich, czegoś, co się nazywa triggery, o czym też sobie będziemy mówili w przyszłości, nie w tym module, możemy zarządzać taką zmianą.
+I teraz, jeżeli byśmy wszystkie dane posiadali w jednej tabeli, no to możliwe, że te triggery wywoływałyby się dużo częściej niż w przypadku, w którym mamy te dane rozbite pomiędzy tabelami.
+No i mówi się o tym, że jeden obrazek to więcej niż tysiąc słów, więc zobaczcie.
+Mamy sytuację user i profile, właśnie tą opisywaną wcześniej.
+I zwróćcie uwagę, że w tabeli profile posiadamy kolumnę user id, w której to kolumnie znajduje się właśnie identyfikator, czyli znajduje się klucz główny z tabeli user.
+I na podstawie tych kluczy właśnie te dane są ze sobą powiązane.
+Dzięki temu, jeżeli chcemy pobrać sobie na przykład wszystkie profile naszych użytkowników, to można to zrobić bardzo łatwo.
+Analogicznie w drugą stronę.
+Oczywiście na chwilę obecną pewnie wyobrażacie sobie, że to jest klucz główny.
+To może być sobie pod zapytanie, ale już niedługo też wprowadzimy sobie temat joinów i łączenia zapytań.
+To zobaczycie, że można też to robić jednym zapytaniem, a nie kilkoma.
+Kolejny rodzaj asocjacji to asocjacja jeden do wielu.
+Jeżeli chodzi o konstrukcję, to jest ona bardzo zbliżona do tej asocjacji jeden do jednego.
+Jedynie kwestią umowną jest to, że w tej drugiej tabeli mamy tylko i wyłącznie jeden wiersz.
+No bo tak jak dałem tam przykład mówiący o tym, że każdy użytkownik ma jeden adres.
+To jeżeli każdy użytkownik miałby mieć więcej adresów, no to po prostu dostawia się kolejne wiersze z adresami w tabeli adresy.
+Natomiast innej różnicy praktycznie zupełnie nie ma.
+Oczywiście sposób obsługiwania tego przez jakiś program, czy to będzie Python, PHP czy cokolwiek innego, no to będzie się to różniło.
+No bo w jednym przypadku przygotowujemy się na to, że odbierzemy tylko jeden wiersz.
+W innym, że odbierzemy tych wierszy wiele.
+I przykład jeden rekord w tabeli użytkownik.
+Użytkownik może posiadać wiele rekordów w tabeli zamówienie.
+No bo każdy użytkownik mógł zamówić coś wiele razy, ale każde zamówienie zawsze jest wykonywane przez tego jednego samego użytkownika.
+Czyli dobra, przez jednego użytkownika.
+I drugi przypadek.
+Każda kategoria ma wiele produktów.
+I tu mogę Wam opowiedzieć taką anegdotę.
+Kiedyś realizowałem właśnie projekt dla pewnej osoby.
+No i nie do końca dobrze zabrałem wymagania.
+W momencie, w którym przygotowywałem.
+Załóżmy, że to są właśnie kategorie i produkty.
+Czyli każdy produkt mógł mieć jedną kategorię.
+Ale jedna kategoria mogła mieć w sobie wiele produktów.
+Tak mi się wydawało.
+No i w momencie, w którym tak zaprojektowałem bazę danych.
+I zrealizowałem zgodnie z tym projektem program.
+Poszedłem do osoby, żeby już zdać, żeby oddać tą aplikację.
+No i tak sobie klikamy po systemie.
+Klikamy, wszystko się podoba.
+Po czym nagle dochodzimy do tego produktu.
+No i pada takie pytanie.
+A jeżeli ja będę chciał ten produkt przypisać do jeszcze dwóch innych kategorii.
+To jak to zrobić?
+Ja mówię.
+No to trzeba byłoby ten produkt już teraz sklonować.
+Bo nie mam takiej opcji tutaj.
+Ojej, to niemożliwe.
+Przecież podstawą tego systemu jest to.
+Że musi być wiele kategorii.
+To musi być zmienione.
+Na co mówię, ale to jest teraz bardzo dużo pracy.
+Jak to dużo pracy?
+Wystarczy tylko dodać jeszcze tutaj kilka tych pól.
+Wyświetlić, pozaznaczać.
+Przecież to w każdym systemie jest.
+No i to są takie powody, dla których
+mniej już pracuję z takimi klientami.
+Ale
+to nie jest wcale tak,
+że to jest tylko dodać kilka pól.
+Ponieważ po pierwsze zmienia nam się baza danych.
+Po drugie zmieniają nam się wszystkie wywołania.
+Wszystkie pobrania z tej bazy danych.
+Wszystkie zapytania, które wykonujemy.
+No bo zamiast
+posiadać właśnie ten klucz
+główny i klucz obcy.
+Musimy stworzyć asocjacje wiele do wielu.
+Które jak zaraz zobaczycie potrzebuje jeszcze
+dodatkowo tabeli pośredniczącej.
+Trochę nam się ta sytuacja komplikuje.
+No i jest to kilka dni przynajmniej,
+które trzeba przysiąść do projektu i to zrealizować.
+Więc ważną
+bardzo rzeczą jest to, żebyście zastanawiali się
+czy asocjacja to jest jeden do wielu
+czy może wiele do wielu.
+Czyli jak te rekordy tak naprawdę się ze sobą
+wiążą.
+Ja często sobie robiłem takie ćwiczenie
+nawet jadąc autobusem zastanawiałem się
+OK, jeden autobus ma wielu pasażerów.
+No to dobra, czyli
+każdy człowiek
+ma wpisany autobus ID załóżmy.
+A potem sobie myślałem, ale przecież zaraz
+ja wysiądę, wsiądę do innego.
+To czy ja będę chciał zmieniać tą wartość,
+czy ja będę chciał na przykład móc przechowywać historię.
+I w ten sposób właśnie jadąc autobusem
+nawet, obserwując otaczający mnie świat
+próbowałem sobie go
+zamodelować w bazie danych.
+Bardzo ciekawe ćwiczenie, jeżeli tylko macie
+ochotę, macie chwilę wolnego czasu jadąc
+to możecie też o tym pomyśleć właśnie w ten sposób.
+Czy jak
+stworzyć ulice i miasta, czy
+jakie indeksy można na ulicach dodawać
+i tak dalej i tak dalej.
+To nie są takie module, ale
+zachęcam was do tego, żebyście spróbowali
+o otaczającym was świecie chociaż przez chwilę
+pomyśleć w ten sposób. Bardzo to jest pouczające.
+I wówczas, jeżeli chodzi o
+asocjacje jeden do wielu
+no to oczywiście to co widzieliście
+na poprzednich slajdach
+unikamy powtórzeń, czyli to co było z miastami.
+Dzięki temu zmiany dotyczą tylko jednego
+miejsca, po prostu jest czytelniej.
+A po trzecie ułatwiamy też sobie
+operację pobierania danych. Co prawda
+będziemy musieli się
+połączyć z tą drugą tabelą, czy napisać
+do tego, jak to wygląda w bazie danych.
+No to tak jak mogliście się spodziewać
+wygląda identycznie jak w przypadku
+asocjacji jeden do jednego.
+No bo też mam user, który
+w ogóle nie zauważył, że
+dany dany dany dany dany dany
+dany dany dany dany dany dany
+dany dany dany dany dany
+dany dany dany dany dany
+dany dany dany dany
+dany dany dany dany
+dany dany dany dany
+dany dany dany dany
+dany dany dany dany dany dany
+no bo mam user i mam profil tylko po prostu
+to jest założenie, że jeden
+użytkownik miałby wiele profili.
+Czyli po prostu dołożyłbym sobie jeszcze jeden wiersz poniżej
+o inflammatory osoba
+prowadziłaby profil
+zarówno z Warszawy jak i Gdańska załóżmy
+.
+No i ostatnim rodzajem asociacji jest
+jest asociacja wiele do wielu.
+Czyli tak jak było z pasażerami
+z autobusami. Czyli mamy wiele
+autobusów i mamy wielu pasażerów.
+I każdy autobus co prawda
+w danej chwili może siedzieć tylko w jednym autobusie,
+no ale jeżeli chcielibyśmy cały ten ambaras wymodelować,
+no to tak naprawdę każdy pasażer ma wiele autobusów w swojej historii,
+no i każdy autobus ma wielu pasażerów.
+Więc zdecydowanie jest to asociacja wiele do wielu.
+No i tak jak widzicie, wiele wierszy w tabeli A
+odpowiada wielu wierszom w tabeli B, wiadomo.
+Na przykład, o, to też jest dobry przykład,
+jeżeli chodzi o pracę z systemem,
+no bo zakładamy, że robimy książkę,
+robimy taką bazę przechowującą książki,
+zakładamy, że autor ID występuje tylko raz,
+no to żaden problem, każdy book, każdy wpis w tabeli books
+posiada jeden autor ID powiązany z tabelą autors.
+Wydaje się prosto, ale w którymś momencie może się okazać,
+że będziemy mieli pracę zbiorową.
+I co robią twórcy takich systemów bardzo często wtedy?
+Bardzo często tworzą kolejny wpis w tabeli autorzy,
+gdzie mamy, załóżmy, jednego autora jako Jana Kronkowskiego,
+i drugiego autora jako Jan Kowalski i Krzysztof Nowak.
+Tak się czasem też to robi.
+No ale zdecydowanie lepiej byłoby, gdyby Jana Kowalskiego
+otrzymać w osobnym miejscu, Krzysztofa Nowaka w osobnym miejscu
+i po prostu do książki móc przypiąć dwóch autorów.
+I oczywiście, tak jak wspomniałem, w momencie, w którym mamy asocjacje
+wiele do wielu, potrzebujemy tabelę pośredniczącą.
+Tu jeszcze raz ta uwaga, o której powiedziałem,
+zamiana jeden do wielu na wiele do wielu jest bardzo czasochłonna,
+więc jeżeli tylko masz możliwość,
+to przemyśl to lepiej wcześniej, a nie później.
+No i na początku trudno jest rozróżnić jeden do wielu i wiele do wielu,
+ale to o tym też już Wam mówiłem.
+Naprawdę to ćwiczenie z modelowaniem świata jest całkiem fajne.
+Wyobraźcie sobie, że macie jakąś część świata zamodelować,
+przenieść do bazy danych, niech to będzie nawet lista zakupowa,
+niech to będzie ten autobus, niech to będzie spacer z punktu A do punktu B,
+niech to będzie bilet do kina.
+Pomyślcie, jak byście taki problem przechowywali w bazie danych
+i spróbujcie nad tym się zrozumieć.
+Niech to będzie coś, co możecie pogłowić.
+Wszelkie takie wątpliwości czy też wolne myśli
+śmiało możecie pisać na Discordzie,
+na pewno chętnie sobie razem podyskutujemy.
+I jeżeli chodzi o obraz w bazie danych,
+jak wygląda asocjacja wiele do wielu,
+no tutaj, jak wspomniałem, potrzebujemy mieć tabelę pośredniczącą.
+Czyli zobaczcie, mamy autor, mamy book.
+Tutaj autorów mamy trzech moich, jednych z ulubionych,
+czyli Zbigniewa Nienackiego, jest jeszcze z dzieciństwa,
+Adama Słodowego i Sępe Gościnnego.
+No i mamy książki, Pan Samochodzik, Wakacje Mikołajka,
+Lubię Majsterkować i Samochód bez tajemnic.
+To akurat nie dla mnie książka.
+No ale okej. I teraz zobaczcie,
+autor ID 1, czyli Zbigniew Nienacki,
+napisał Pana Samochodzika.
+Dodatkowo drugi autor, czyli Adam Słodowy,
+napisał Wakacje Mikołajka.
+O, tu jakiś błąd mamy, trzeba byłoby to zmienić.
+Po dalej, Sępe Gościnny napisał Lubię Majsterkować,
+czyli tutaj coś nam się nie zgadza,
+no ale mogłoby tak być.
+I autor ID 2, czyli Adam Słodowy,
+napisał Book ID 4,
+czyli Samochód bez tajemnic.
+Widzicie? Właśnie w ten sposób przechowujemy te dane.
+Czyli mamy taką jedną tabelę pośredniczącą,
+która przechowuje prawie tylko i wyłącznie klucze.
+Dlaczego prawie?
+Bo często dodajemy sobie jeszcze jakieś atrybuty do takiej relacji.
+Na przykład, jeżeli byśmy sobie w ten sposób chcieli wymodelować
+kontakty, które mamy,
+to na przykład można byłoby dodać informację,
+że ja mam kontakt z kimś z Was
+i dodatkowo przechowywać,
+dodać informację do kolumnie obok,
+kiedy ten kontakt się rozpoczął.
+Czyli na przykład tutaj można byłoby wykonać,
+dodać kolumnę Created Add,
+jako taką kolumnę mówiącą o tym,
+od kiedy ten kontakt jest.
+Albo często, jeżeli przechowujemy na przykład maile,
+czy wiadomości, czy też, zobaczcie na przykład,
+wysłane zaproszenia do dodania do znajomych,
+czyli ja na przykład wysyłam teraz Tobie
+zaproszenie dodania do znajomych na Facebooku.
+W momencie, w którym to robię,
+Ty masz możliwość zaakceptowania tego albo nie.
+Czyli do tego,
+do tego potrzebujemy mieć status jakiś obok,
+żeby później móc przechowywać właśnie informację,
+czy zaakceptowałeś moją prośbę,
+czy też nie zaakceptowałaś na przykład.
+Więc w ten sposób możemy sobie dokładać kolejne kolumny,
+które po prostu definiują tą naszą relację.
+Bardziej powinienem powiedzieć asocjacje,
+niż relacje, no bo o relacji już sobie mówiliśmy,
+że to chodzi o te tuple w tabelach.
+Ale często ze względu na to,
+że używa się angielskiego słówka relate,
+no to bardzo często tłumaczymy sobie słówko relation
+bezpośrednio na relacja i nazywamy asocjacje relacjami,
+co jest błędem w tłumaczeniu.
+I to byłoby na tyle, jeżeli chodzi o ten rozdział.
+Mam nadzieję, że trochę rozjaśniłem sprawę,
+jeżeli chodzi o projektowanie bazy danych.
+Przejdźmy teraz do kolejnego tematu bardzo ciekawego,
+związanego też z projektowaniem baz danych
+i nazywa się on postać normalna.
+Zapraszam.
+Dziękuje za oglądanie.

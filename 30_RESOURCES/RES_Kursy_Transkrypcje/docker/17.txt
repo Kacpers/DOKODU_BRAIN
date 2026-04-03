@@ -1,0 +1,224 @@
+No to cóż, skoro mamy taki piękny obraz stworzony i weszliśmy sobie w Docker Images
+i go zobaczyliśmy, to myślę, że wypadałoby teraz ten obraz uruchomić, co?
+Tak.
+Co ty na to?
+Już sobie ten obraz uruchomimy.
+Wykorzystamy do tego znane już nam polecenie docker run.
+Ja tutaj dodam do niego taki dodatkowy przełącznik minus minus rm.
+To jest przełącznik remove.
+To znaczy, że w momencie, kiedy kontener uruchomiony tym poleceniem zostanie zatrzymany,
+to zostanie też automatycznie usunięty.
+Aha, okej.
+Czyli na chwilę bez dądu nic nie robi, tylko dopiero przy zatrzymaniu
+i przemywaniu usuwa kontener.
+Tak.
+Różnica z tym przełącznikiem jest taka, że gdyby go nie było i zatrzymamy kontener,
+to możemy go ponownie uruchomić poleceniem docker start.
+I to już oglądaliśmy w poprzednich lekcjach.
+Natomiast jeśli podamy ten rm, bo na przykład wiemy, że chcemy, nie wiem,
+szybko coś przetestować, że to nie będzie kontener długo żyjący,
+tylko faktycznie chcemy, żeby on został później usunięty,
+żeby nie śmiecił w naszym systemie, to dodajemy sobie to polecenie,
+ale jednocześnie też jeśli się okaże, żebyśmy potrzebowali coś z tego kontenera,
+no to niestety już do tego nie wrócimy.
+Okej, czyli to nie jest też taka najbezpieczniejsza rzecz
+i trzeba na to by ostrożnie do tego podchodzić.
+Tak, jeśli się o tym nie pamięta, to można się czasem zaskoczyć.
+Ja też ostatnio byłem zaskoczony, bo chciałem sobie podejrzeć logi,
+a okazało się, że kontener nie wstał.
+Logów nie zostawił, nie było do czego zajrzeć.
+Jakbyś mógł raz jeszcze, bo ja nie pamiętam,
+minus rm to jest usunięcie obrazu po wyłączeniu,
+minus d to żeby był uruchomiony tak na stałe,
+żebyśmy nie czekali, żeby się uruchomił w tle,
+a minus p to porty.
+A minus p to porty.
+I teraz flask działa na porcie 5000,
+dlatego chcemy zmapować sobie taki port,
+ale najpierw to jest mapowanie po stronie naszego hosta,
+następnie jest to mapowanie wewnątrz kontenera.
+No i robimy sobie mapowanie 1 do 1,
+także i w środku w kontenerze flask jest uruchomiony na porcie 5000
+i dostępny będzie u nas na tym samym porcie.
+Wszystko zrozumiałem.
+Dobrze.
+Teraz chcielibyśmy sobie jakoś...
+nazwać ten nasz kontener, który uruchomimy.
+Do kodu python.
+No i oczywiście musimy wskazać obraz, który chcemy uruchomić.
+I tutaj działa tab completion,
+także możemy sobie zacząć wpisywać.
+I co? Fire?
+I fire.
+Także nasz obraz został uruchomiony.
+Możemy sobie podejrzeć.
+Nasz kontener został uruchomiony,
+bo obraz to jednak nie jest to, co jest uruchomione.
+Widzimy, że jest.
+Widzimy polecenie, które zostało uruchomione.
+Mamy informację o tym, że porty są zmapowane.
+Czyli?
+Także...
+Moglibyśmy mieć nadzieję taką cichą,
+że jak teraz byśmy weszli na localhost 5000,
+to zobaczylibyśmy w tej świecie.
+Tak. Możemy sobie wykonać takiego prostego perla.
+Jakby zasymulować pracę przeglądarki.
+Natomiast tu to, co ważne, to to, że jeżeli używalibyście przeglądarki,
+bo jak widać, DevOps i przeglądarek nie używają, od tego się już odchodzi,
+to wtedy można byłoby...
+Nabijam się troszkę, ale wiesz, że to jest z życzliwością.
+Wtedy można byłoby zobaczyć też ten komunikat w tej świecie.
+Wiesz, ja wychowałem się na takiej przeglądarce, która nazywała się Links.
+Nie mam niestety zainstalowanej, ale moglibyśmy też wejść na tę stronę z Terminala
+i mielibyśmy w zasadzie taką prawie przeglądarkę.
+Różnica jest tylko taka, że nie obsługuje JavaScriptu, który jest teraz na każdej jednej stronie.
+Tak, tak, tak, tak, tak.
+Jeszcze był W3M z tego, co pamiętam, więc to też funkcjonowało.
+Ale dobra, mniejsze o to nie wspominajmy.
+Nie mówimy tutaj o prehistorii naszej, tylko widzimy w tej świecie,
+więc możemy stąd mieć takie przekonanie, że ten obraz już funkcjonuje.
+Tak, obraz funkcjonuje, wszystko działa prawidłowo,
+także teraz sobie może do niego wejdziemy.
+Tak, ja tutaj chciałbym tylko się pokusić o taką małą dygresję,
+bo bardzo często osoby, które wywodzą się z rodu programistów,
+a nie DevOpsów, mają takie rozterki, że w takim razie,
+o, super, to teraz jest Witaj Świecie, to ja to Witaj Świecie zamienię na Żegnaj Świecie
+i potem odświeżają stronę i się okazuje, że nic się nie zmienia.
+Bo to, moi drodzy, jest bardzo istotna informacja,
+że myśmy tutaj nie podpieli sobie tego naszego pliku jako wolumen,
+tylko go skopiowaliśmy do środka.
+Więc jeżeli chcielibyście mieć możliwość z poziomu gospodarza edytować ten plik,
+no to właśnie musimy to zrobić.
+Musimy podpiąć sobie ten plik jako wolumen i to też jak najbardziej zrobimy,
+ale myślę, że już w późniejszym etapie, bo na razie po prostu budujemy obrazy, nie?
+Tak, oczywiście możemy ten plik też zmodyfikować wewnątrz obrazu,
+natomiast on będzie zmodyfikowany tylko przez ten czas, przepraszam, nie obrazu, tylko kontenera,
+przez ten czas, kiedy ten kontener żyje.
+To znaczy, jeśli ja sobie teraz wejdę...
+Do tego obrazu.
+Od razu widzimy, że jestem w naszym workdirze, czyli to, o czym rozmawialiśmy.
+Mogę sobie zobaczyć, że mamy tutaj nasze pliki.
+Możemy sobie zobaczyć nasz app.py.
+Ok, i tutaj z kolei edycja tego app.py.
+Też nie wpłynie na to, że się zmieni nam wygląd,
+bo musicie pamiętać, że w CMD uruchomiliśmy ten obraz nasz,
+to znaczy to nasze polecenie i podczas, jeżeli tam ta opcja debug nie jest włączona,
+a tu akurat jest, to może się okazać, że jak zmienicie witaj w świecie na coś innego,
+to to zadziała, natomiast jeżeli tego debuga czułby nie było,
+no to też tych zmian byśmy nie widzieli, bo to polecenie cały czas jest uruchomione, nie?
+Dokładnie tak.
+Także...
+Ominiemy sobie, myślę, modyfikację tego pliku.
+Tak, ja tylko tak mówię, jako takie rzeczy, z którymi wiem, że podczas konsultacji, które też często prowadzę,
+przychodzą właśnie do mnie osoby i mówią, Kacper, coś mi tutaj z tym Dockerem w ogóle nie działa
+i to są takie najpopularniejsze przypadki.
+Natomiast chcielibyśmy sobie też zainstalować Kerla w środku.
+Także zaczniemy sobie od update'u naszych paczek systemowych.
+I zainstalujemy sobie Kerla.
+Ładnie. Mamy już Kerla zainstalowanego.
+Był dostarczony z naszą paczką.
+Okej, to doinstalujmy coś innego, żeby też pokazać, że później to polecenie zniknie.
+Możemy na przykład wpisać apt install ping, zobaczycie wtedy, że są jakieś tam trzy, dwie paczki, które tego pinga dostarczają
+i wtedy wybierzemy sobie jedną z nich.
+Tak, możemy tak zrobić, aczkolwiek myślę, że tylko w celu
+pokazania tych paczek.
+Tak, tak, tak, mi chodzi tylko o tą jedną rzecz.
+Możecie wybrać na przykład tą API utils, a w Vimach też, może być też Vim, dobra.
+Tak, klasycznie Vim zawsze funkcjonuje dobrze, także lubię jak jest.
+Dobrze.
+Dzięki temu możemy sobie teraz nasz plik z flaska zmodyfikować, bo mamy czym.
+Okej, dobra.
+Dobrze.
+A to na razie może nie modyfikujmy, tylko albo dobra.
+Tylko chciałem pokazać, że Vim jest zainstalowany i działa, działa w nim też kolorowanie, tak samo jak na naszym komputerze.
+Dobrze i teraz chcielibyśmy sobie odpalić Kerla.
+I również zobaczyliśmy Hello World.
+Także wiemy, że mamy dostęp i do tej aplikacji z wewnątrz, i z zewnątrz.
+Także wiemy, że mamy dostęp i do tej aplikacji z wewnątrz, i z zewnątrz.
+Także wiemy, że mamy dostęp i do tej aplikacji z wewnątrz, i z zewnątrz.
+ponieważ nieChrist ASMR nie jest
+I teraz to, co chcielibyśmy Wam pokazać, to tak naprawdę,
+skoro dobiliśmy się do naszego flaska z wewnątrz i z zewnątrz,
+to możesz myślę, spróbować pokazać nam, jak wyglądają logi flaska.
+bo flask ma to do siebie,
+że on wyrzuca pewne informacje.
+Więc z poziomu gospodarza, jeżeli wykonamy polecenie docker logs.
+odwołamy się do konkretnego kontenera, to powinniśmy te logi zobaczyć.
+Dokładnie tak.
+I tak wyglądają nasze logi flaskowe.
+Mamy tutaj zestaw informacji a propos uruchomienia samego serwera.
+I także widzimy, że
+był nasz pierwszy curl, którego wykonaliśmy z hosta.
+Dlatego adres zaczyna się na 172.
+Taką sieć sobie docker utworzył do komunikacji pomiędzy hostem a
+kontenerami oraz później widzimy drugiego curla, który był wywołany już
+wewnątrz dockera i widzimy adres 127 001, czyli inaczej localhost.
+Dokładnie tak.
+I to chyba na tyle, jeśli chodzi o logi.
+Tutaj nie ma nic więcej do powiedzenia.
+Jedynie można wspomnieć, że gdybyśmy chcieli sobie logi podglądać cały czas, to
+tak samo jak możemy z polecenia tail skorzystać na linuksie z przełącznikiem minus f.
+Tutaj też mamy taki przełącznik i teraz jak widzimy tutaj nie pojawił się
+nasz prompt naszego terminala, tak jak miało to miejsce tutaj wyżej u góry.
+Natomiast ja sobie z bocznego terminala odpytam tego naszego flaska
+i zobaczymy, że
+kolejne wpisy w ramach kolejnych wywołań curla pojawiają się tutaj.
+Dlatego możemy sobie też podglądać tego
+loga, jeśli czekamy na coś konkretnego, jeśli coś testujemy, to jesteśmy w stanie
+na bieżąco te logi sobie uruchamiać, a nie musimy robić docker logs za każdym
+razem, kiedy wywołamy jakieś dodatkowe polecenie.
+Dokładnie tak. I to jest polecenie, przyznam, którego ja używam nagminnie i
+zawsze sobie na nie zerkam, żeby widzieć tak naprawdę co się wydarzyło, nie?
+Tak, myślę, że przy dewelopmencie aplikacji
+jest to jedno z najpopularniejszych poleceń dockerowych.
+Także na pewno każdemu się przyda.
+Okej, jak najbardziej.
+To co teraz, Janie? Chciałbyś nam pokazać, jak się zachowa nasz docker w momencie, w
+którym go przebudujemy, czy to chyba pokażemy w kolejnej lekcji, prawda?
+Tak, myślę, że pokażemy to w kolejnej lekcji.
+Teraz
+chciałbym jeszcze tylko
+nawiązując do logów pokazać, co się wydarzy, kiedy spróbujemy odwołać się do
+logów kontenera, który sobie usuniemy. Nasz kontener jest uruchomiony w tle,
+on sobie cały czas działa, także robiąc docker ps widzimy, że jest on działający.
+Mamy tutaj też jego container id.
+Zrobimy sobie teraz docker
+locks po tym id, żeby zobaczyć, czy tak też możemy się do nich odwołać.
+Robimy sobie docker
+stop do kodu python.
+Czyli zatrzymujemy kontener i tu pamiętamy o tym, że ten kontener miał tą
+przełączkę rm, czyli tak naprawdę w momencie, w którym zatrzymujemy go, to również go usuwamy.
+Tak, dlatego teraz spojrzymy sobie na docker ps z przełącznikiem all, który pokazuje
+także zatrzymane obrazy.
+Nie widzimy go tutaj, bo został usunięty,
+ale spróbujmy się odwołać do
+container id, żeby zobaczyć, czy jakieś logi nam zostały.
+I widzimy, że nie ma takiego kontenera.
+Dlatego ważnym jest, żeby o tym pamiętać.
+Jeśli używamy tego przełącznika minus minus rm podczas uruchamiania obrazu, jeśli
+coś pójdzie nie tak,
+i obraz się zakończy, on od razu wtedy się usunie.
+Jeśli on się zakończy jakimś niepowodzeniem, wtedy my nie robimy już
+docker stop, tylko on zatrzyma się samoistnie i tym samym stracimy logi.
+Co powoduje taki problem, że jeśli
+chcielibyśmy przeanalizować, dlaczego on się zatrzymał, to musimy uruchomić go na
+nowo, pamiętając o tym, żeby tej flagi rm się pozbyć przed uruchomieniem.
+Wiele razy zdarzyło mi się nie usunąć.
+I zastanawiać się przez kilkanaście minut, dlaczego dalej tych logów nie mam,
+dlaczego cały czas je gubię, aż przypomniało mi się, że aha, bo usuwam sobie kontener.
+Także o tym warto pamiętać, żeby używać tej flagi z ostrożnością.
+Jeśli mamy pewność, że obraz jest na pewno
+tymczasowy, nie będziemy do niego zaglądać, jak najbardziej w ten sposób trzymamy sobie
+porządek.
+Z tym obrazem na bieżąco pracujemy, będziemy go zatrzymywać, uruchamiać.
+On może się wysypać, może zakończyć pracę z powodu jakiegoś błędu.
+Warto wtedy z tej flagi nie korzystać, żeby właśnie tych logów nie utracić, bo
+dzięki temu nie będziemy musieli całej pracy powtarzać, żeby dojść do tego
+problemu, który gdzieś tam po drodze wystąpił.
+Dokładnie tak, dokładnie tak, absolutnie z Tobą zgadzam.
+Więc myślę, że te lekcje możemy sobie na tym etapie zakończyć.
+I przechodzimy wtedy do kolejnej, a w kolejnej lekcji pokażemy Wam, co tak
+naprawdę może się wydarzyć z Waszym kontenerem w momencie, w którym
+przebudujecie obraz.
+Tak, także widzimy się w kolejnej lekcji.

@@ -1,0 +1,653 @@
+Dzień dobry Janie.
+Cześć Kacprze.
+Ja tak naprawdę zaprosiłem Cię tutaj do tej rozmowy z pewnych względów.
+Po pierwsze dlatego, że mamy taką niespodziankę pewną dla moich widzów,
+a druga rzecz jest taka, że chciałem, żebyś opowiedział trochę,
+jak wygląda w tej chwili świat DevOps.
+Ja Ci powiem, dlaczego Cię o to pytam.
+Pytam Cię o to dlatego, że ja jestem programistą 20 lat, nieomal,
+i zauważam, że świat, jakim jest programowanie,
+przechodził przez różne kryzysy, różne historie,
+no i raz na jakiś czas wszyscy wieszczą, że programiści stracą pracę.
+I chciałem zapytać, czy w dobie obecnego czasu, przez który przechodzimy,
+kiedy wszyscy wieszczą też nam koniec pracy związany z AI,
+to czy w świecie DevOps jest podobnie i czy Ty też masz takie spostrzeżenia?
+Jeśli chodzi o świat DevOps, myślę, że tutaj AI nie zagraża nam w ogóle.
+Zresztą myślę, że deweloperom też nie.
+Natomiast faktycznie w świecie DevOpsów również był widoczny pewien zastój rynkowy.
+Teraz sytuacja się troszeczkę poprawia, natomiast też zmieniły się troszeczkę reguły gry.
+To znaczy, oprócz tego, że tych ofert jest troszeczkę mniej,
+są troszeczkę mniej intratne, są też bardziej wymagające.
+To, co ja obserwuję, co pojawia się,
+teraz bardzo często w ofertach o pracę na DevOpsa, to jest umiejętność programowania.
+I tutaj przede wszystkim królują dwa języki.
+Jest to głównie Python, dlatego że Python ma zdecydowanie dłuższą historię.
+Natomiast w świecie DevOpsowym bardzo popularny jest też Golang.
+I nie bez powodu.
+Tutaj taka ciekawostka a propos samego Golanga.
+Dowiedziałem się wczoraj, że język tak naprawdę powstał tylko i wyłącznie po to,
+żeby uczyć ludzi programowania.
+On nie miał nigdy stać się komercyjnym językiem.
+Natomiast tak się złożyło, że się stał.
+W Golangu mamy napisanego przede wszystkim Kubernetesa.
+Mamy napisanego Terraforma, które są głównymi narzędziami w świecie DevOpsowym w tym momencie.
+I teraz wszystkie prowajdery do Terraforma...
+Czyli chcemy rozmawiać z dowolną chmurą, są pisane w Golangu.
+Wszystkie operatory kubernetesowe, wydaje mi się, że też są pisane w Golangu.
+Także tutaj na pewno...
+Taki powiew świeżości, można powiedzieć, oddaje względem innych rozwiązań.
+Ok.
+Już ma też swoje specyficzne zastosowania.
+Natomiast sam Python i jego rola również bardzo mocno rośnie.
+Dlatego, że DevOpsi coraz więcej automatyzują rzeczy w swojej pracy.
+Dlatego, że DevOpsi coraz więcej automatyzują rzeczy w swojej pracy.
+Coraz więcej rzeczy potrzebują też gdzieś przetwarzać.
+Ja nawet sam miałem taki projekt u klienta, o którym kiedyś na pewno chcę szerzej opowiedzieć.
+Gdzie potrzebowałem zebrać informacje tak naprawdę z AWS-a, przetworzyć je w pewien sposób, wrócić do wizualizacji i zaprezentować.
+Żeby przed audytorami na przykład, czy przed naszymi wewnętrznymi menedżerami, dyrektorami, móc powiedzieć, że...
+Żeby przed audytorami na przykład, czy przed naszymi wewnętrznymi menedżerami, dyrektorami, móc powiedzieć, że...
+Żeby przed audytorami na przykład, czy przed naszymi wewnętrznymi menedżerami, dyrektorami, móc powiedzieć, że...
+Słuchajcie, nasza infrastruktura wygląda tak i tak.
+Taki jest jej obecny status. Taki na przykład status był 3 miesiące temu.
+Taka jest predykcja, jak to będzie wyglądało za 3 miesiące.
+Bo to, co gdzieś tam mój kod realizował, było związane z taką dużą inicjatywą, przez którą musi przejść cała organizacja.
+I to jest bardzo takie duże przedsięwzięcie, które gdzieś tam cały czas się toczy.
+I tak naprawdę, gdyby nie ten Python i gdyby nie te programowanie, to nie byłoby możliwe.
+Dlatego, że sama chmura AWS, w której to rozwiązanie, cała infrastruktura klienta jest oparta,
+ona nie dostarcza takiego kompleksowego narzędzia, które spełniałoby wszystkie oczekiwania klienta.
+Rozumiem.
+Tak naprawdę sprawdzałem tam kilka usług i każdej czegoś brakowało.
+I tak naprawdę po miesiącu takich bardzo intensywnych poszukiwań i analizy wszystkich usług,
+rozmawiałem z menedżerem, że słuchaj, sprawdziłem wszystkie te usługi, które AWS tutaj ma.
+Przejrzałem wszystkie nowinki, które są dostępne i nie ma wyjścia.
+Musimy kawałek kodu do tego...
+Napisać sami po prostu.
+Tak, dokładnie.
+Albo zlecić, albo po prostu się też nauczyć.
+I tu a propos tej nauki, za moment też będę chciał cię o to zapytać, ale mam jeszcze jedno pytanie.
+Czy uważasz, że AI i ten cały...
+Cały vibe coding, czyli możliwość tworzenia oprogramowania przez osoby mniej techniczne,
+albo przez osoby, które tak naprawdę mają jakąś wiedzę programistyczną,
+ale chcą wytwarzać oprogramowanie szybciej, korzystają z aplikacji typu Cursor,
+czy korzystają z aplikacji typu ChatGPT i przeklejają ten kod, korzystają z gotowych fragmentów.
+To jest coś, co sprawi, że DevOpsi będą mogli mieć więcej pracy w przyszłości,
+bo tak naprawdę ktoś będzie musiał ten program gdzieś utrzymywać, prawda?
+Te projekty.
+Tak. Tutaj tak naprawdę mam kilka wątków, o których chciałbym opowiedzieć.
+Pierwszy wątek to jest mój własny w tym jakby projekcie, o którym już wspomniałem,
+dlatego że to była moja pierwsza taka styczność z programowaniem w Pythonie,
+realizując tutaj ten konkretny projekt.
+I tutaj dzięki temu, że mogłem wspierać się narzędziem, ja wiedziałem, co potrzebuję zbudować,
+wiedziałem, jakie są założenia, potrafiłem sobie to sprawdzić,
+no ale jakby warstwa samego kodu była dla mnie nowością.
+I tutaj dzięki temu, że wspomagałem się narzędziem zewnętrznym w postaci modelu językowego,
+mogłem stworzyć kod, który działał.
+Oczywiście musiałem go testować, musiałem go sprawdzać i poprawiać,
+walidować, czy on robi to, co ja bym chciał, żeby robił,
+ale dzięki temu byłem w stanie w ogóle projekt przygotować i dowieźć,
+co byłoby na pewno trudniejsze i na pewno dużo bardziej czasochłonne,
+gdybym się takim narzędziem nie wspomagał.
+Także uważam, że musimy z tymi narzędziami się zaznajomić i zaprzyjaźnić,
+żeby nasza praca była bardziej efektywna.
+Natomiast druga strona,
+druga jakby...
+Warstwa tego problemu, tej sytuacji?
+Tak, druga strona medalu, o której chciałbym tutaj opowiedzieć,
+to tak, jest coś takiego jak vibe coding,
+czyli pisanie aplikacji przez osoby często nietechniczne albo mało techniczne
+z wykorzystaniem właśnie takich narzędzi, żeby zrobić jakiś produkt.
+I to ogólnie fajnie wygląda.
+Można zrobić ciekawe rzeczy,
+mogą być ciekawe aplikacje, one mogą się ciekawie prezentować.
+Jest nawet paru propagatorów nawet tutaj na naszym polskim poletku,
+którzy faktycznie bardzo mocno zachwalają AI i vibe coding
+do wykorzystania takich rzeczy.
+Natomiast to, co myślę, że będzie miało miejsce,
+to w momencie, kiedy te aplikacje zaczną faktycznie trafiać na produkcję,
+kiedy zaczną zyskiwać klientów i zacznie się na nich wydarzać ruch,
+wtedy pracy przede wszystkim dla devopsów,
+ale także dla doświadczonych programistów będzie więcej.
+Dlatego, że vibe coding jest na pewno super do stworzenia prototypu naszej aplikacji,
+pierwszej wersji, zwalidowania.
+Nasz pomysł ma sens, tak?
+Od strony biznesowej jest to super koncepcja,
+bo możemy w pojedynkę łatwo, w miarę szybko napisać coś,
+co będzie robiło coś i możemy zobaczyć,
+czy to coś jest wartościowe dla kogokolwiek.
+Jeśli okaże się, że tak, wtedy warto raczej szybciej niż później
+zacząć pracować nad tym przynajmniej w mikrozespole dwu-, trzyosobowym,
+jakiegoś jednego devopsa, dwóch programistów,
+którzy będą tę aplikację rozwijać.
+I optymalizować.
+Którzy będą nie tylko jakby generować pomysły przy pomocy EIA,
+ale będą rozumieli, co robią i będą w stanie ustrzec tą aplikację
+przed potencjalnymi różnymi problemami.
+A to, o czym już bardzo jest głośno w branży,
+to, że te aplikacje, jeśli chodzi o na przykład bezpieczeństwo,
+są mega dziurawe.
+Dzisiaj aplikacje, które są dla użytkowników,
+mają dane tych użytkowników, tak?
+Mamy login, mamy hasło.
+Login zazwyczaj jest mailem, mail jest daną osobową.
+Więc na terenie Unii Europejskiej podpadamy pod przepisy ochrony danych osobowych,
+które tutaj oczywiście muszą być spełnione,
+za tym idzie bezpieczeństwo.
+Jeśli chodzi o bezpieczeństwo, to my ogólnie jako branża
+mamy duży problem z bezpieczeństwem
+i to było widoczne przed EIA.
+Teraz w momencie, kiedy aplikacji będzie powstawało więcej,
+będą powstawały szybciej,
+próg wejścia jest niższy
+i tak naprawdę dzisiaj każda osoba, która ma pomysł
+i troszeczkę pokombinuje, jak z tym czatem sobie porozmawiać...
+Obejrzy trochę tutoriali na YouTubie, prawda?
+Tak.
+Tak naprawdę myślę, że dzisiaj w dwa tygodnie osoba,
+która jest kompletnie zielona w temacie,
+ale jest super zajarana, że ma jakiś pomysł biznesowy
+i chce go zrobić,
+jeśli faktycznie poświęci dwa tygodnie na edukację,
+jak te narzędzia działają, jak z nich korzystać,
+jest w stanie zrobić prosty produkt,
+z którego ludzie będą mogli zacząć korzystać.
+No właśnie i tutaj chciałem powiedzieć
+o bardzo ważnej rzeczy też a propos tego.
+Przepraszam, że ci przerywam.
+Na pewno jeżeli ten film wam się podoba,
+to zostawcie łapkę w górę,
+to chętnie Jana będę zapraszał częściej,
+bo jak widzicie filmy robią się same.
+Ja tylko podrzucam temat, Jan opowiada
+i Jan bardzo kwiecistie potrafi opowiadać na wiele tematów.
+Natomiast powiedziałeś słowo klucz,
+które mnie tutaj bardzo zainteresowało,
+jest to edukacja.
+I chciałbym spleść takie dwa wątki,
+bo już mniej więcej dochodzimy gdzieś pewnie
+do połowy naszego filmu,
+a mianowicie ten kryzys,
+czy ta chwilowa stagnacja na rynku,
+ten AI, który się pojawia i edukacja.
+Czy ty uważasz, że jako DevOps,
+poza tą umiejętnością programowania w Pythonie,
+taki w ogóle czas na edukację,
+obecnie to jest dobry czas,
+czy raczej warto się wycofywać,
+się w ogóle tym nie interesować,
+szukać sobie czegoś innego?
+Tak, uważam, że jest to najlepszy czas na naukę,
+właśnie taka stagnacja,
+dlatego że tak,
+teraz mamy bardzo specyficzną sytuację,
+gdzie jesteśmy po wysypie różnego rodzaju bootcampów.
+Dużo osób te bootcampy robiło,
+skończyło, nie skończyło z różnym skutkiem,
+natomiast mieliśmy też zapaść w branży,
+przez co wiele osób poddało się,
+dlatego że nie było w stanie znaleźć pracy.
+Nawet osoby z doświadczeniem
+miały problem gdzieś tą pracę znaleźć.
+Natomiast myślę, że górka jest jeszcze przed nami.
+Myślę, że kolejna górka to są dwa, trzy,
+może pięć lat,
+gdzie może się powtórzyć przełom od połowy 2022 roku,
+gdzie naprawdę mieliśmy szczytowe zapotrzebowanie
+i pracę w IT mógł dostać naprawdę każdy po dosyć krótkim kursie.
+To się faktycznie działo.
+Uważam, że osoby, które teraz poświęcają czas na naukę
+i to na taką rzetelną naukę,
+że tworzą gdzieś tam te projekty,
+rozwijają, uczą się, rozbudowują te swoje projekty,
+czyli jakby troszeczkę tak sobie,
+chociażby na własną rękę samodzielnie,
+ale symulują sobie coś,
+nad czym potencjalnie mogłyby pracować po prostu,
+w pracy zawodowo.
+I rozwijają sobie taki projekt.
+Uważam, że te osoby w momencie,
+kiedy pojawi się kolejny boom,
+jeśli nie znajdą pracy przed tym boomem,
+to to będą pierwsze osoby,
+które będą załatwiały kolejny boom,
+bo to będą osoby,
+które będą miały doświadczenie w boju.
+I nawet jeśli to doświadczenie nie będzie komercyjne,
+to będą w stanie przyjść na rozmowę,
+pokazać swój projekt na GitHubie, portfolio,
+że zrobiły to, to i tamto,
+rozwijały to tak i tamto.
+Ten kod może być nawet kiepskiej jakości,
+ale on będzie pokazywał,
+że rozwiązałem jakiś problem biznesowy.
+Niech to będzie kolejna to-do-lista.
+Niech to będzie kolejny content management system.
+Dobra, tu mam kolejne pytanie do ciebie od razu.
+Będę tak cię przepauzował odrobinkę.
+Mam nadzieję, że mi wybaczysz.
+Bo załóżmy, że ktoś, kto nas ogląda teraz,
+potrafi programować i sobie myśli,
+kurczę, ten Jarek fajnie gada.
+Ja myślę o tym, że może zająłbym się gdzieś
+tym tematem trochę też DevOps,
+bo w sumie mi to nie zaszkodzi.
+Nawet jeżeli nie będę DevOpsem,
+to później przed pracodawcą będę mógł się pochwalić większą wiedzą,
+że mam trochę wiedzy programistycznej,
+mam trochę wiedzy DevOpsowej,
+to mogę w ten sposób zaplusować.
+Jakie rady dałbyś takiej osobie,
+albo jakich rzeczy radziłbyś,
+żeby taka osoba się pouczyła w tym momencie?
+Co może jej się przydać?
+No bo nie każdy, podejrzewam,
+po tym obejrzeniu nas,
+po tym obejrzeniu naszego filmu,
+by usłyszał gdzieś hasło Kubernetes,
+wpisze Kubernetes,
+stwierdzi, o la Boga,
+to wszystko jest strasznie trudne,
+odpuszczam.
+Wiem, że są roadmapy różnego rodzaju,
+ale może coś byś ty polecił,
+tak ze swojego własnego doświadczenia.
+Jasne.
+Przede wszystkim to,
+co na pewno chciałbym polecić,
+to zapraszam na mój newsletter,
+gdzie można się zapisać pod adresem jantymiński.pl.
+Ja w tym momencie jestem w trakcie omawiania właśnie
+roadmapy DevOpsowej,
+takiej publicznie dostępnej.
+I mówię o tym,
+co w tej roadmapie mi się podoba,
+a co w tej roadmapie mi się nie podoba,
+bo też uważam,
+że ona niekoniecznie dobrze odzwierciedla to,
+jaką ścieżką DevOps powinien podążać.
+Natomiast jeśli nasz słuchacz rozważa ścieżkę,
+może niekoniecznie DevOpsową,
+ale ścieżkę poszerzenia tych kompetencji,
+to uważam, że kluczowym narzędziem,
+które wyszło z świata DevOpsowego,
+z podejścia DevOpsowego,
+ale tak naprawdę jest narzędziem,
+moim zdaniem głównie programistycznym,
+to jest Docker.
+I dlaczego uważam,
+że jest to narzędzie głównie programistyczne?
+Dlatego, że to,
+że my możemy wziąć jakąś aplikację,
+wsadzić w kontener i uruchomić,
+OK, jest to część powiedzmy DevOpsowa,
+jasne.
+Natomiast to,
+że ta aplikacja tam działa w jakiś sposób,
+to, że ona musi być jakoś tam zbudowana,
+ona ma jakieś tam zależności,
+to są rzeczy tak naprawdę,
+które programista robi od samego początku,
+przygotowując tą aplikację u siebie.
+Przecież w momencie, kiedy piszesz aplikację,
+musisz ją uruchomić,
+żeby ją móc u siebie przetestować.
+W związku z czym musisz sobie zainstalować
+wszystkie zależności,
+wszystkie biblioteki,
+których w tej aplikacji używasz.
+I teraz możesz to robić na swoim laptopie,
+jasne, programiści tak często robią.
+W przeszłości to była jakby jedyna droga,
+jak można to było robić,
+żeby tą aplikację rozwijać.
+Natomiast dzisiaj można dzięki Dockerowi
+po pierwsze od razu zrobić obraz,
+który jesteśmy w stanie uruchomić
+w różnych miejscach,
+bo też nie oszukujmy się,
+programista nie pracuje w projekcie sam.
+Bardzo rzadko zdarza się,
+żeby ktoś pracował w projekcie sam.
+Może na początku,
+ale jak projekt rośnie,
+dochodzą kolejne osoby.
+I teraz hipotetyczna sytuacja
+i tak jak wyglądało to w przeszłości,
+jest osoba, która sobie przygotowała środowisko,
+zainstalowała sobie wszystkie te zależności,
+u niego lokalnie działa.
+Tak, ale przychodzi nowa osoba do projektu
+i ta osoba nie wie, jakie są zależności.
+Nie ma do tego dokumentacji,
+nie ma żadnych informacji,
+ma sobie postawić środowisko
+i nie wie tak naprawdę,
+co w tym środowisku powinno się znaleźć.
+Więc musi pytać tamtą osobę,
+może tej osoby już nie ma,
+może odeszła z firmy,
+nie wiem, może jest na urlopie,
+może coś się stało,
+jest niedotępna.
+Dokładnie.
+Więc takie sytuacje mają miejsce.
+Czasami taka osoba jest mega doświadczona
+i okej, ona jest dalej w firmie,
+ale dostała jakiś mega ważny projekt,
+któremu musi się poświęcić w 100%
+i nie ma nawet czasu,
+żeby przekazać informację,
+jak ta aplikacja ma być uruchomiona
+tej nowej osobie,
+która właśnie do tego projektu dołączyła.
+A Docker rozwiązuje nam ten problem,
+dlatego że w momencie,
+kiedy osoba, która zaczyna z tym projektem
+przygotuje obraz,
+który od razu jest uruchamiany
+i sobie testuje lokalnie w tym obrazie,
+to w ramach opisu tego obrazu
+są ujęte te zależności
+i teraz nie ma znaczenia,
+czy ten obraz dostanie inny programista,
+który właśnie dołącza do zespołu,
+czy dostanie go DevOps
+do uruchomienia na jakimś środowisku,
+testowym, integracyjnym, produkcyjnym może nawet.
+Mając taki obraz,
+to uruchomienie jest dużo łatwiejsze.
+To zdecydowanie tak.
+Ja mogę z własnego doświadczenia powiedzieć,
+że kiedyś, kiedy nie pracowałem jeszcze z Dockerem,
+to stawianie projektu
+takiego bardziej rozbudowanego
+to naprawdę były 3-4 dni robocze
+i ja tutaj zupełnie nie żartuję.
+Opcja przeinstalowania systemu
+to była opcja, za którą
+właściciel firmy był niezbyt zadowolony,
+że taka sytuacja się pojawiła,
+bo wiedział, że musi kolejne 3-4 dni robocze
+ode mnie zdjąć.
+Później kolejnym etapem,
+o którym myśleliśmy
+i który poszliśmy,
+to był Virtual Box,
+czyli po prostu maszyna wirtualna
+i kopiowaliśmy sobie gotowe maszyny wirtualne.
+Później pojawił się Vagrant,
+czyli takie rozwiązanie,
+które pozwalało na zarządzanie tą wirtualizacją.
+No a później właśnie,
+kiedy na salonach pojawił się Docker,
+okazało się, że praca na kilku projektach naraz
+nie odbywała się.
+To też jest taki dobry moment na to,
+już 21 minut rozmawiamy,
+żeby przedstawić wam sponsora dzisiejszego odcinka,
+a mianowicie kurs,
+który wraz z Janem stworzyliśmy
+i to jest kurs, który tak naprawdę
+moim zdaniem jest wyjątkowy
+z tego względu, że pokazujemy wam
+tam tak naprawdę podwójne podejście.
+Czyli dla mnie Docker
+zawsze był takim młotkiem,
+czyli jak ja potrzebowałem wbić gwóźdź,
+to brałem młotek,
+a jak młotka akurat nie było pod ręką właściwego,
+i czasem na zasadzie takiego właśnie
+wbijania gwoździa,
+niezależnie czym się wali w końcu ten gwóźdź się wbije,
+albo się zegnie,
+udawało mi się gdzieś ten gwóźdź wbić.
+Natomiast Jan ma podejście bardzo akademickie,
+ma podejście bardzo takie
+dokładne
+i pięknie jako DevOps
+tłumaczy też te wszystkie trudne rzeczy
+z punktu widzenia właśnie DevOpsowego.
+Więc moim zdaniem takie połączenie
+jest czymś, co nie tylko pozwoli wam
+z tej nogi programistycznej
+odrobinę sobie zejść
+na tę nogę DevOpsową,
+ale tak jak sam Jan też wspomniał,
+zyskacie kompetencje, które tak naprawdę
+każdy programista powinien posiadać
+i z mojego punktu widzenia
+jest to też wiedza, która jak najbardziej
+przyda się też osobom, które
+mają jakąś wiedzę o Dockerze,
+do tej pory korzystały z gotowych obrazów,
+ale nigdy takiego obrazu
+nie budowały same,
+albo nigdy nie konfigurowały go,
+nigdy niczego nie zmieniały,
+bo tematów jest tam wiele.
+I tutaj Janie, jeżeli chcesz powiedzieć coś o kursie,
+bo tutaj droga wolna,
+ale mam też do ciebie takie pytanie,
+czy twoim zdaniem, jeżeli ktoś myśli o karierze DevOpsa,
+to taki kurs Dockera,
+to też jest coś dla niego,
+czy tam jest za dużo wiedzy programistycznej
+i jego to zupełnie nie powinno interesować?
+Tak, myślę, że jak najbardziej
+jest to dobry kurs także dla osoby,
+która rozważa karierę DevOpsa,
+dlatego, że my nie skupiamy się
+w tym kursie na programowaniu
+i jako tak o budowaniu
+aplikacji jakiejś konkretnej,
+tylko pokazujemy,
+sam sposób
+budowania takiego obrazu
+konstrukcji pod dowolną
+tak naprawdę aplikację,
+bo każda aplikacja ma
+gdzieś swoją specyfikę
+i
+może na razie tyle o kursie,
+ale zrobiłbym tutaj małą dygresję,
+coś o czym też w kursie
+wydaje mi się wspominam.
+To znaczy,
+dlaczego uważam, że Docker
+jest świetnym narzędziem
+i dlaczego Docker
+w ogóle się spopularyzował,
+bo Docker to nie jest pierwsze narzędzie,
+które służy do konteneryzacji.
+Co więcej,
+to nie jest narzędzie,
+które wykorzystuje jakieś nowe mechanizmy.
+Nie, tak naprawdę
+mechanizmy, które leżą
+u podstawy Dockera
+i które pozwalają jego działanie
+istnieją w jądrze
+Linuxa od wielu, wielu lat.
+Nie wiem, czy od
+dwudziestu nawet, czy może od
+trzydziestu,
+ale pierwsze mechanizmy sięgają
+jeszcze jądra 2.4,
+jak się dzisiaj dowiedziałem,
+więc naprawdę bardzo, bardzo
+dawno temu,
+ale
+dowiedziałem się tego z pewnego podcastu
+mojego w zasadzie
+ulubionego
+i naprawdę świetni fachowcy,
+od których ja sam chciałbym się uczyć,
+powiedzieli dokładnie to,
+co ja też chcę wam teraz
+powiedzieć i o czym wspominam w kursie.
+Docker został tak
+świetnie przygotowany,
+ktoś włożył taki kawał pracy
+w to, żeby to narzędzie było
+wygodne i żeby się z niego super
+korzystało, żeby
+jakby praca z nim była naprawdę
+wygodna i żeby
+tak zwany developer experience
+był na możliwie jak najwyższym poziomie
+i Docker cały czas o to dba
+i cały czas inwestuje
+w ten developer experience, żeby
+to jakby cały czas się rozwijało,
+żeby było narzędzie i żeby było
+cały czas użyteczne i jak najłatwiejsze
+w wykorzystaniu,
+to tak naprawdę
+zaważyło o sukcesie
+Dockera, bo naprawdę
+metod konteneryzacji wcześniej było wiele,
+ale one były
+trudne,
+one były ograniczone,
+nikt nawet nie próbował
+wyjść poza to,
+żeby te narzędzia były dostępne
+poza Linuxem
+i sam jakby
+Docker też działa tylko i wyłącznie
+na Linuxie jako jakby
+ta baza.
+O, zaraz, zaraz.
+Ja tu muszę zanegować,
+bo od razu ktoś sobie myśli,
+ja nie będę instalował Linuxa.
+Spokojnie, ja mam Windowsa i też mam
+Dockera i nie dlatego, że mam drugi komputer
+z Linuxem, z tego względu, że tak jak Jan
+wspominał, Docker bardzo wychodzi
+naprzeciw i mamy też
+Docker for Windows,
+jest to cały fajny klikalny
+interfejs też dla takich
+noobów, którzy nie instalują
+Linuxa.
+Tak i to co
+Docker zrobił, Docker
+wziął jako firma,
+wziął to swoje narzędzie o nazwie
+Docker, spakował
+z całą taką maszyną
+wirtualną, przygotował do tego
+troszeczkę tak
+zwanego kleju, który
+pozwala korzystać z tego
+Dockera w sposób
+dla nas nierozróżnialny.
+Jakby z tym Dockerem pracuje się
+tak samo na Linuxie, tak samo
+na Macu i tak samo na
+Windowsie i właśnie to co Docker zrobił
+to przygotował te maszyny
+wirtualne, przygotował
+tą warstwę kleju, zrobił
+do tego cały instalator, który to
+wszystko konfiguruje w naszym systemie,
+dzięki czemu my uruchamiamy
+Dockera i zaczynamy z niego korzystać
+i właśnie to przede wszystkim
+zaważyło na sukcesie
+Dockera, że takie narzędzia zostały
+przygotowane, bo ta wcześniejsza
+konteneryzacja przez to, że była
+tak bardzo ograniczona, to tak
+naprawdę administratorzy mogli
+sobie wykorzystywać, jak
+potrzebowali, do czegoś tam sobie
+zrobić na serwerach,
+ale żeby współpracować z programistami
+i przenosić aplikacje, to
+byłoby podobnie karkołomne wyzwanie
+jak z maszynami
+wirtualnymi i nikt nie widział
+wartości w tej inwestycji,
+a Docker pokazał, że można to zrobić
+inaczej, można to zrobić lepiej
+i to zrobił.
+I tutaj ja też powołam się na
+Maca, a mianowicie na jednego
+ze znanych
+takich osobistości kojarzących
+się z Maciem, a mianowicie na
+pana Steve'a Jobsa, świętej pamięci,
+który powiedział, stay hungry, stay foolish.
+Więc myślę, że dobrze byłoby,
+pomimo tego, że jak widzicie Jan się
+dopiero rozkręca, jeżeli macie ochotę
+posłuchać więcej o Dockerze, jeżeli macie
+ochotę więcej się dowiedzieć na jego temat,
+to bardzo serdecznie zachęcam was do wszystkich
+linków, które znajdziecie w opisie.
+Znajdziecie tam nie tylko linki do
+sociali Jana, ale znajdziecie też link do
+naszego kursu i parę innych
+rzeczy, więc jeżeli tylko macie ochotę
+spędzić trochę więcej czasu, to koniecznie
+zostawcie tę łapkę w górę, zostawcie
+subskrypcję, napiszcie komentarz
+więcej Jana, to jest szansa, że może
+Jana jeszcze się uda kiedyś zaprosić
+i porozmawiamy sobie też na inne ważne tematy,
+nie tylko związane z Dockerem, ale około
+Dockerowe. Piszcie w komentarzach
+najlepiej też informacje o tym,
+co chcielibyście, czego chcielibyście
+się tak naprawdę dowiedzieć ze świata DevOps,
+to łatwiej będzie mi tutaj też Jana
+zaprosić, jak już jakiś konkret też się
+pojawi. To co Janie,
+jeszcze dwa słowa od Ciebie, gdzie
+się można znaleźć, w razie czego jakby ktoś
+nie kliknął w link?
+Tak, przede wszystkim
+jak już wspominałem wcześniej,
+zachęcam do mojego newslettera,
+serdecznie zapraszam,
+jantymiński.pl,
+oprócz tego można mnie znaleźć
+na
+Instagramie, profil
+diving.devops,
+podobnież na YouTube,
+dokładnie ta sama nazwa,
+oczywiście także jestem
+do znalezienia na LinkedIn,
+nazywam się Jan Tymiński,
+także serdecznie też zapraszam
+do obserwacji.
+Prowadzę także bloga na takie
+bardziej zaawansowane tematy
+DevOpsowe, dostępnego pod
+adresem tymic.me,
+gdzie od czasu do czasu pojawia się
+jakiś artykuł, najczęściej
+związany z tym, nad czym
+aktualnie pracuję,
+co uważam za
+wartościowe, nawet jeśli nie jest to
+jakieś nowe, ale może
+nie wiem, zgłębiłem temat bardziej,
+to staram się czasami coś
+napisać, żeby też
+inne osoby miały łatwiejszą
+ścieżkę, którą ja właśnie
+gdzieś tam przecierałem szlak.
+Super, to już
+wiecie, gdzie można Jana znaleźć,
+wiecie też, gdzie
+można się nauczyć Dockera, wiecie też
+co zrobić, żeby było więcej filmów, to mi
+nie pozostaje nic innego, jak tylko podziękować Wam
+za cierpliwość i do zobaczenia w kolejnym
+materiale. Cześć!
+Trzymajcie się, cześć!
+No i pięknie.
+No i super.

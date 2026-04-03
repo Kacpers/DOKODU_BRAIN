@@ -1,0 +1,254 @@
+No to mała checklista. Był find, był. Był create, był. Czas na update i delete.
+Jeżeli chodzi o usuwanie dokumentów, czyli o deleta, to wygląda on następująco.
+Wskazujemy mu delete one i tu jest tak samo, jak i w przypadku finda, ten filtr, który należy przekazać.
+Filtr przekazujemy w ten sposób, dbstudents.deleteone, jest na klamerka, klamerka, w środku jest first name dwukropek Jan,
+co spowoduje, że usuniemy tylko i wyłącznie osobę jedną, która będzie miała na imię Jan.
+Jeżeli takich osób mielibyśmy więcej, no to to polecenie delete one należałoby wykonać więcej.
+Natomiast to, co jest w środku, tak jak widzicie, to jest właśnie ten filtr.
+Więc można sobie również do tego dołożyć drugie kryterium.
+Na przykład zrobić po first name dwukropek Jan, zrobić przecinek last name dwukropek Kowalski,
+co spowoduje, że tylko i wyłącznie Jan Kowalski zostanie usunięty z naszej kolekcji.
+No i zadanko. Tu nie ma zbyt dużo wiedzy, więcej jest potrzeba praktyki niż wiedzy,
+więc poprosiłbym was o to, abyście dołożyli.
+Do kolekcji ze studentami dodali pięć osób.
+Te osoby mają imię A, B, B, C, C, D, D i E, E.
+No i lata, na których studiują to jest rok pierwszy i rok drugi, jak widzicie.
+Dwie osoby na roku pierwszym, trzy osoby na roku drugim.
+I mam do was prośbę. Jak już dodacie sobie te osoby, to poproszę, abyście korzystając z delete one
+usunęli studentów studiujących na pierwszym roku.
+Czyli zbudujcie tak filtr, aby usunął wam tylko tych,
+którzy mają rok pierwszy, ale używamy delete one'a,
+więc powinniśmy się spodziewać, że usunięty zostanie tylko student AA.
+Natomiast później możemy to sprawdzić właśnie za pomocą polecenia find.
+A po drugie możemy zrobić test i sprawdzić, co się stanie,
+jeżeli usuniemy wszystkich studentów na drugim roku za pomocą delete many.
+Spodziewamy się tego, że usuniemy wszystkich C, D, E, ale warto to jak najbardziej sobie też sprawdzić,
+żeby też się z tymi poleceniami sprawdzić.
+Troszkę otrzaskać.
+No i wówczas sprawdźcie, jak wygląda stan waszej kolekcji.
+I to byłoby na tyle na tę chwilę.
+To nie jest jeszcze koniec tej lekcji.
+Widzimy się za chwilę w rozwiązaniu, a wtedy porozmawiamy o update'cie.
+Do zobaczenia.
+No to cóż, nie może być inaczej niż insert many.
+Czyli db, kursor db, kropka students, kropka insert.
+Insert many.
+Insert many potrzebuje otrzymać listę w środku.
+Jeżeli chcecie wprowadzić sobie tutaj trochę więcej danych,
+to można to zrobić za pomocą skrótów klawiszowego shift enter.
+No i pierwsza osoba, którą będę chciał dodawać, będzie miała first name a, last name a.
+Tam był year, z tego co pamiętam, prawda?
+Jeszcze sobie to zweryfikuję.
+Tak, year 1.
+Ok, year 1, year 1, a potem year 2, year 2.
+Ok, year 2.
+Trzy razy.
+Czyli first name a, last name a.
+A to oczywiście string, stąd też muszę dodać mu tutaj apostrofy.
+Last name a, year.
+Wstyd byłoby, bym zapomniał znowu.
+Ale no, kto mnie ogląda dłużej, to wie, że niestety tak czasem mam.
+Oho.
+Czyżby nasz kompas miał defekt związany z kopiowaniem i wklejaniem?
+No to nic, dodajmy sobie ręcznie dwie osoby,
+a pozostałe dodamy innym sposobem.
+First name to jest b, last name to jest b.
+Znowu year to jest 1.
+Mnie osobiście tak to wpisywanie tak bardzo nie przeszkadza, ale wiem, że wielu osobom z was może przeszkadzać.
+Zobaczcie, dodaliśmy sobie a i b.
+W ten sposób dostaliśmy dwa obiekty.
+Jeżeli chcielibyście je do tej osoby dodawać też innym sposobem,
+myślę, że może trochę szybszym,
+to można też tutaj wcisnąć przycisk add data.
+Zobaczcie, jestem na studentach, robię add data.
+Można wykonać albo import file, albo insert document.
+I teraz po prostu, no, z jakiegoś powodu tego nie mogę skopiować,
+ale to u góry udało mi się skopiować, więc sobie po prostu to powklejam.
+Czyli mam a, b, c.
+I tu już mamy rok drugi.
+D rok drugi.
+I zostanie nam jeszcze e, też na roku drugim.
+OK.
+I w ten sposób, jeżeli sobie wykonam db students find,
+to dostanę informację, że mam właśnie tak jak tam,
+oprócz oczywiście borowczyków i innych,
+mamy jeszcze a, b, c i d, e.
+Wszystko, wszystko gra.
+No i przyszedł czas na drugą część pracy domowej,
+czyli korzystając z delete one,
+z pracy domowej, z pracy, z zadania,
+korzystając z delete one, chcemy spróbować usunąć studentów na pierwszym roku.
+No to lecimy.
+Ale find one pamiętajmy.
+Czyli db.students.deleteone.
+No i mówimy, że to jest rok drugi.
+Na drugim czy na pierwszym?
+Na pierwszym.
+Czyli delete one, jeden.
+Robię enter.
+Dostałem informację, że delete count jest jeden,
+czyli usunął mi dokładnie jeden element,
+no ale to jest delete one.
+No to nie ma co się dziwić.
+Natomiast drugie polecenie, które wykonamy,
+to wykonamy po prostu delete many
+dla studentów z drugiego roku.
+Db.students.delete many, rok jest drugi.
+I dostałem delete count zero.
+O, a co ciekawe, dlaczego zero?
+A, bo wcześniej już wykonałem tutaj delete count drugi rok,
+delete count trzy.
+Więc jeżeli teraz wykonam db.students.find,
+no to okaże się, że mam tylko jednego studenta,
+który został mi na roku pierwszym.
+Wszyscy pozostali zniknęli.
+Tak to właśnie działa.
+Czyli działa dokładnie zgodnie z tym,
+co już my sobie przygotowaliśmy.
+Przewidywali przed momentem.
+Jeżeli chodzi natomiast o edytowanie dokumentów,
+no to tak jak wam wspomniałem,
+sprawa jest odrobinę bardziej skomplikowana,
+ale w dwóch aspektach.
+Jeden to jest ten, o którym już tutaj powiedzieliśmy.
+Czyli oprócz update one mamy też update many
+i mamy jeszcze polecenie replace one,
+które nam podmieni cały dokument,
+a nie zmieni pojedyncze pole.
+Ale zobaczcie, że jest coś jeszcze.
+A mianowicie ten dokument przyjmuje,
+to polecenie przyjmuje dwa argumenty.
+Pierwszym jest to,
+po czym chcemy znaleźć określony obiekt,
+określony dokument.
+I to wskazujemy mu w ten sposób,
+że robimy update one
+i tu przekazujemy mu ten filtr.
+Czyli mówię, drogie Mongo,
+interesuje mnie książka,
+której tytuł to W pustyni i w puszczy.
+Natomiast drugi argument
+to jest to, co chciałbym zmienić.
+Jeżeli chcemy coś zmienić,
+to musimy użyć czegoś takiego jak $set.
+To są jakby takie funkcje,
+które są zapisane w Mongo.
+Zobaczycie w kolejnych lekcjach tego modułu,
+że takich funkcji jest przynajmniej kilka.
+No i między innymi funkcja set
+jest konieczna do tego, żeby podmienić rekordy
+wstawiane do Mongo.
+I wykonując sobie $set autor Henryk Sienkiewicz,
+ja właśnie spowoduję, że ta moja książka
+będzie miała taki, a nie inny tytuł.
+$set, czyli jakby mamy klamerki w klamerkach.
+Ważna sprawa.
+Natomiast w przypadku update one
+i update many jest jedna mała różnica
+względem replace one.
+Zarówno w update one, jak i w update many
+korzystaliśmy z tego $set.
+Natomiast jeżeli używamy replace one,
+to wówczas tego $set nie ma.
+Po prostu wskazujemy mu, jaki obiekt
+podmieniamy na jaki obiekt.
+Set to jest taka funkcja, która jakby powoduje,
+że weź to, co było wcześniej
+i podmień tą jedną właściwość na tą.
+Natomiast kiedy używamy replace,
+to wówczas nie możemy wstawiać tego replace'a.
+I to byłoby na tyle.
+Zapraszam Was do zadanka.
+I przyszedł czas, żeby też sobie to przećwiczyć.
+Poproszę, abyście sprawdzili,
+jaki jest identyfikator studenta,
+którego dane to BB,
+a następnie zmienili jego imię i nazwisko
+na podstawie tego identyfikatora
+na nazwisko Beata Boruc.
+To jest pierwsze zadanie.
+Natomiast drugie zadanie,
+podmień cały rekord osoby o nazwisku Nowak
+na następujące dane.
+Ma być on Paweł Jana,
+ma być on Pawłem Janasem,
+który jest na roku drugim na semestrze czwartym.
+Trzy minuty dla Was
+i do zobaczenia za chwilę.
+No to cóż, wypadałoby zacząć od tego,
+żebyśmy znaleźli studenta,
+który ma na imię B i na nazwisko B.
+No to db.students.find1
+No interesuje nas first name jako B.
+Ja wiem, że takich studentów jest tylko jeden,
+więc wykonam po prostu to polecenie.
+I dzięki temu znajdę jego id.
+I to jest to id.
+No i następnie, jeżeli chcemy znaleźć tego studenta
+i chcielibyśmy go znaleźć na podstawie tego klucza,
+no to też można tak zrobić.
+object.id.students.find1
+No i teraz sobie przenosimy jako te kategorie
+to id i object.id.
+To wystarczy, ja to sobie zaznaczę,
+skopiuję, wkleję.
+Ops. Widzicie? To działało.
+Pokazał mi tę osobę.
+I teraz zadaniem naszym jest zamienić tej osobie,
+jej dane tak, żeby miała na imię Beata,
+a na nazwisko Borut.
+Czyli zamiast wykonywać find1
+będziemy potrzebowali użyć polecenia update1.
+Nasze polecenie będzie odbierało,
+będzie odbierało jako ten argument,
+jako ten to kryterium, to id podkreślone.
+Natomiast wartością będzie druga osoba,
+a wartością będzie drugi obiekt.
+Ok?
+I ten drugi obiekt potrzebuje mieć to polecenie set.
+Więc tutaj przekazujemy mu $set,
+robimy dwukropek, klamerka.
+$set, dwukropek, klamerka.
+No i przekazujemy mu first name,
+to jest Beata.
+I last name, to jest Borut.
+Robimy enter.
+No i wyjdzie nam acknowledge true,
+match count 1, modify count 1.
+Jeżeli więc spróbujemy raz jeszcze sobie znaleźć tę osobę,
+no to już dowiemy się, że ma ona na imię Beata Borut.
+Wszystko gra.
+I w zadaniu drugim mamy podmienić cały rekord o nazwisku Nowak
+na dane Paweł Janas, rok drugi, semestr czwarty.
+Czyli będziemy korzystali z polecenia replace,
+które służy do podmieniania wpisu.
+Czyli db.students.replace1.
+I tutaj tak samo.
+Najpierw przekazujemy mu ten filtr.
+Czyli chcemy znaleźć osobę o nazwisku Nowak.
+Czyli last name.
+To ma być Nowak.
+I chcielibyśmy, aby ta osoba nazywała się Paweł Janas,
+rok drugi, semestr czwarty.
+Czyli w ramach tego robimy $set,
+dwukropek, klamerka, first name.
+Tu muszę przekazać wszystkie dane,
+z tego względu, że ja robię właśnie tego replace'a.
+Jeżeli bym coś usunął, to on by tego nie nadpisał.
+Paweł Janas, rok drugi, semestr czwarty.
+Enter.
+O, coś jest nie tak.
+Replacement document must not contain atomic operator.
+Ach, tutaj bez tego setup przecież.
+No tak.
+Tu od razu mu przekazujemy to, co chcielibyśmy mu podstawić.
+Enter.
+No i wtedy wykonamy polecenie dbstudents.find.
+No i będziemy mieli Beatę Boruc, jest.
+No i powinien być Paweł Janas.
+Jest Paweł Janas.
+I to byłoby na tyle w tej lekcji.
+Bardzo wam dziękuję za nią.
+I do zobaczenia w kolejnej.
+Trzymajcie się. Cześć.
+Cześć.

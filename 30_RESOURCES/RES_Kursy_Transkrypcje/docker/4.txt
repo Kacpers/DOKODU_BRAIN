@@ -1,0 +1,328 @@
+Ok, ja mam taką jedną obawę, no bo jak uruchomiliśmy sobie jedno Ubuntu i teraz gdzieś uruchomię kolejne Ubuntu i gdzieś uruchomię kolejne Ubuntu, to ja mam taką tendencję, że kart w Chromie mam 500 i potem się zastanawiam, czemu mój komputer tak wolno działa.
+Jak ja sobie poruchamiam te wszystkie Ubuntu, to będę miał na pracy 10 Ubuntu działających razem z moim systemem? Albo jak zobaczyć, ile w ogóle działa tych Ubuntu razem?
+Tak, dokładnie tak będzie. Ja sobie pozwolę otworzyć tutaj nowy terminal. Doskonale znam Twój problem z kartami, u mnie one idą też w setki. Możemy sobie zobaczyć, jakie kontenery w danym momencie są uruchomione w naszym systemie.
+Aby to zrobić, mamy takie polecenie docker.ps i mamy informację, że jest sobie nasz kontener.
+Ma takie id, jest uruchomiony z takiego obrazu, jest w nim uruchomione takie polecenie, został stworzony 10 minut temu, od tych 10 minut działa, także nie wyłączyliśmy tego naszego systemu oraz dostał automatycznie przydzieloną losową nazwę, którą docker mu tam przydzielił.
+Doker sobie, jeśli nie podamy nazwy dla obrazu, to on przydziela, w sensie dla naszego kontenera uruchomionego,
+to on przydziela tym kontenerom jakieś losowe nazwy składające się zazwyczaj z dwóch przypadkowo dobranych słów.
+Bardzo ładne słowa, ale zwracam uwagę na jeszcze jedną rzecz taką, która mnie zainteresowała, a mianowicie w poprzedniej lekcji zapytałem Cię o to 3ec58 i tak dalej i tu faktycznie widzimy, że to się pokrywa z tym container id, czyli tak naprawdę ja też wiem, który proces dockera jest,
+w którym procesie dockera.
+Tak naprawdę jestem, nie? Zawsze mogę sobie to po tym pożenić.
+Dokładnie, dzięki temu jesteś w stanie sobie odnaleźć, że ten obraz, który jest, ten kontener, który jest uruchomiony tutaj z naszego obrazu Ubuntu, to jest ten kontener, który ma właśnie to tutaj nasze id widoczne dzięki poleceniu docker.pl.
+Dobra, super, ekstra, podoba mi się. I do czego to id służy? Ono ma jeszcze jakieś inne zastosowania?
+Tak, dzięki temu id możesz sobie zarządzać cyklem życia tego naszego kontenera, jeśli nie dałeś mu żadnej nazwy, to wtedy jakby możesz też korzystać z tej nazwy losowej, możesz korzystać z container id, tutaj w środku wydaje mi się, że zawsze jest to container id.
+Tak, to ja mogę powiedzieć, że zawsze.
+Także możemy dla wygody korzystać.
+Możemy korzystać z tej naszej nazwy, ale jak potrzebujemy wiedzieć właśnie co jest w środku, to korzystamy z container id i możemy zamiennie wykorzystać albo to id, albo tą nazwę.
+Sweet Antonelli, tak?
+Tak, Sweet Antonelli, ale możemy też, jeśli nadamy naszą nazwę, to możemy korzystać z naszej. Możemy tym kontenerem zarządzać tak naprawdę pełną gamą poleceń, które docker nam oferuje, czyli możemy.
+Ok.
+Możemy to zatrzymać, możemy do niego wejść.
+Czy chcesz pokazać tych rzeczy, bo tak opowiadamy, opowiadamy, a może byśmy coś użytkownikom pokazali, naszym słuchaczom.
+Tak, co prawda, nasz kontener, który mamy uruchomiony tutaj, jest uruchomiony w taki sposób, że jeśli tutaj z niego wyjdę, to on się wyłączy, dlatego że nie przekazaliśmy mu informacji, żeby działał sobie w tle, zresztą tam zakończy się na pewno.
+Ok.
+Natomiast, żeby podłączyć się do takiego kontenera, albo w drugiej sesji, albo do kontenera, który właśnie działa sobie w tle, w związku z czym nie mamy tutaj takiego do niego dostępu, możemy się podłączyć do kontenera, który jest uruchomiony.
+Ok.
+Teraz, żeby operować z kontenerem już uruchomionym, nie korzystamy z polecenia docker run, tylko korzystamy.
+Tak, coś czułem, że będzie trudniej.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+skorzystać z tej albo
+z ID. Ja bym sobie
+skorzystał tym razem z ID.
+Ja mogę też od siebie, żeby nie było, że
+tak tylko zadaję pytania,
+które dla części z Was mogą się wydawać głupie,
+to od razu odpowiem.
+Tak po chwale się wiedzą, że nie musimy
+zawsze wklejać całego kontener ID.
+Wystarczą nam tak naprawdę
+jakieś trzy pierwsze znaki i on też wtedy sobie
+rozpozna, jaki to
+kontener ID, jeżeli oczywiście nie mamy
+innego kontenera zaczynającego się od tych
+samych trzech znaków.
+Tak, to za chwilę
+też pokażę, odpalimy sobie
+jeszcze jedną... Ale musiałem się pochwalić.
+Jasne. Ja coś wiem.
+Na tym etapie jeszcze wszystko wiem,
+a dopiero później będę zadawał pytania
+szczerze zupełnie. Dobrze.
+Także tutaj patrzymy sobie na
+LS i myślę, że możemy
+sobie wziąć
+LS z ruta,
+z jakby głównej...
+No ciekawe, czy tam się da wejść.
+Powinno się dać,
+a jeśli byśmy zrobili LS
+bez niczego, zrobi się w hołmie
+naszego użytkownika,
+gdzie będzie to użytkownik root
+i najprawdopodobniej nic w tym hołmie nie mamy.
+Najprawdopodobniej nic.
+Tak. Okej, czyli zadziałało.
+Widzimy, zadziałało.
+Możemy zobaczyć samo LS.
+O, też pokazało nam ruta,
+czyli jego hołm jest ustawiony
+akurat w tym obrazie na ruta,
+ale nie zawsze tak musi być.
+Tak, to też Wam
+pokażemy później. Okej, to
+fajnie. Czy w takim razie zamiast
+LS ja mogę też napisać bash
+i wtedy wejdę jakby do dwóch baszy
+naraz? Tak. I teraz
+przy okazji pokażę to, o co mówiłeś.
+Jeśli mamy docker exec minus
+it, to możemy sobie dwa razy
+kliknąć tab, wystarczy raz
+i podpowiada nam nazwę.
+Aha. Zobaczmy, czy podpowie
+nam też numer, jeśli zaczniemy
+od trójki. Numeru
+nam id nie podpowiada, ale zawsze
+podpowiada nam nazwę,
+co jest szczególnie przydatne, jeśli to
+są nazwy, które my nadamy i je znamy.
+Bo wtedy to jest naturalne,
+że masz na przykład obraz, który się
+nazywa do kodu
+i możesz
+wpisać sobie do, zrobić tab i masz
+uzupełnione, nawet jeśli tych obrazów
+masz tam kilkanaście.
+Piękna nazwa obrazu przy okazji. Natomiast
+tu chcę tylko
+zaznaczyć, że to, co pokazujemy Wam
+w przypadku tego taba, to jest
+Linux i tak jak wspominał
+Jan na początku, to Linux jest jakby
+takim środowiskiem
+najbardziej wskazanym do używania
+Dockera. Natomiast
+nie jest to pewne, czy ten tab
+zadziała Wam również na przykład w
+CMD, nie? To też zaznaczam, że
+tutaj, jeżeli macie Windowsa
+i to nie zadziałało, to być może po prostu
+na Windowsie nie jest to funkcjonalność wspierana.
+Ja przyznam, że nie pamiętam, bo zawsze wpisuję
+z palca po prostu trzy pierwsze znaki
+i robię tyle i basz.
+Tak.
+Czyli możemy sobie teraz wejść do tego
+obrazu poleceniem basz
+i mamy ten
+sam obraz, który widzimy.
+Możemy tutaj, możemy
+też sobie w nim na przykład zobaczyć.
+Tutaj mamy teraz kolorowanie,
+dlatego, że są
+pewne parametry ustawione w samym tym
+Linuxie, które te kolorowanie
+robią. Możemy sobie nawet
+utworzyć tutaj plik.
+No właśnie to chciałem zrobić, żebyśmy stworzyli sobie
+jakiś plik i zobaczyli, czy w tym drugim też się
+pojawi.
+I patrzymy w drugim,
+robimy sobie ls i widzimy,
+że jest nasz plik do kodu.
+Okej, czyli tak naprawdę
+podłączyliśmy się do tego samego
+kontenera
+i te same dane
+współdzielimy. To super, okej.
+I mówisz, że jeżeli teraz
+jeden z tych kontenerów zamknę, to też te pliki
+przestaną istnieć? Czy one
+tam będą?
+Pliki
+przestaną istnieć
+w momencie, kiedy usuniemy
+kontener.
+Samym wyjściem z niego
+nie usuwamy go,
+natomiast
+może tak, chciałbym pokazać,
+że w obie strony możemy działać, czyli
+teraz z tego pierwszego uruchomionego
+usuniemy sobie ten plik utworzony.
+Najpierw zobaczmy, że tutaj
+on jest, żebyśmy mieli pewność.
+Jest, tu go usuwamy
+i jeszcze raz
+i go nie mamy.
+I teraz tak, lewy terminal
+to jest terminal, w którym uruchomiliśmy
+nasz obraz poleceniem
+run, dlatego, że
+nie uruchomiliśmy tamtego obrazu w tle.
+Gdy zamkniemy obraz
+w lewym terminalu, gdy wyjdziemy
+w lewym terminalu z tego naszego kontenera,
+on się wtedy
+wyłączy.
+Czyli ten lewy jest takim hiperterminalem.
+Tak, wychodząc
+w prawym terminalu, on będzie dalej działał.
+Czyli jeśli tutaj sobie zrobimy
+ctrl-d i wyszliśmy,
+mamy informację exit,
+zrobimy jps,
+to widzimy, że ten nasz obraz działa,
+minęło trochę,
+ale on gdzieś dalej
+jest uruchomiony.
+Natomiast wracając tutaj,
+pamiętamy, że tu był uruchomiony jako
+docker run i nie przenieśliśmy
+go w tło.
+Wychodząc z niego ctrl-d,
+obraz zostanie, kontener
+zostanie wyłączony.
+Też jest informacja exit,
+natomiast on w tym momencie przestał
+sobie działać.
+I jak wyszliśmy do krps, to widzimy,
+że żaden obraz nie jest
+uruchomiony.
+Ok.
+I takie szczere pytanie.
+Czy jeżeli byłbym podłączony do tego
+kontenera w lewym i w prawym, to
+zamykając go w lewym,
+to w prawym dostanę wtedy informację,
+że tam kill, sick term
+i koniec i nie mam?
+Nie jestem pewien, czy dostaniesz
+informację. Możemy to sprawdzić.
+Na pewno wyjdziesz w drugim
+terminalu też z tego obrazu.
+A sprawdźmy, co? Bo to chwila, moment tylko.
+A ja tego nigdy nie miałem
+czasu zrobić, więc teraz możemy też przy okazji
+tak
+można powiedzieć kierowani
+akademicką ciekawością przetestować
+to. Czyli tu robimy enter.
+Tak, może ja bym nazwał, nadał
+nazwę naszemu obrazowi, zobaczmy.
+To nauczymy się czegoś jeszcze nowego.
+Pewnie możemy zrobić
+sobie.
+Chyba w tym miejscu.
+Tak.
+Uruchomiliśmy nasz obraz.
+Jak widzisz,
+widać w środku, widzimy
+zawsze to jego ID.
+Tak, jest inny niż poprzednio.
+To też ważna uwaga, bo tak naprawdę
+teraz stworzyliśmy nowy obraz.
+Tak, i teraz widzimy,
+że jest uruchomiony 10 sekund
+temu, że jego nazwa to do kodu.
+Nie mamy już naszego
+słodkiego Antonelliego.
+Szkoda, bo bardzo sympatyczna nazwa,
+ale do kodu jest równie dobra.
+Ok.
+I teraz możemy wejść
+do tego obrazu.
+Już tutaj
+daje nam do kodu
+bash.
+I teraz
+wracamy do naszego
+pierwszego. Jeszcze jedno pytanie mam.
+Jak zrobimy ls?
+To widzimy,
+że nie ma pliku do kodu.
+Tak.
+Dlatego, że jest to
+osobny kontener.
+Super.
+Dobra.
+Dobrze, czyli
+zamykamy.
+Ten yber.
+Ten ważniejszy.
+Czyli nie ten, gdzie robiliśmy docker.exec,
+tylko ten run. Czyli to ten właśnie, no.
+Tak, zamykamy run.
+Możemy sobie zobaczyć,
+że nie jest uruchomiony.
+I przechodzimy na prawy tab.
+I po prostu nas wyrzucił.
+Zadziało się coś takiego.
+Wyrzuciło nas z obrazu, bo został on zamknięty.
+Również możemy tutaj
+sprawdzić, że nie jest on
+uruchomiony. W tej sytuacji
+też, jeśli byśmy chcieli do niego wejść,
+no to się nie da.
+Mamy informację, że nie jest uruchomiony.
+Super.
+Czyli co? Możemy uznać, że
+wchodzenie do kontenerów
+mamy mniej więcej opanowane.
+Uruchamianie kontenerów mamy mniej więcej opanowane.
+Więc myślę, że lekcje
+powoli możemy kończyć. I cieszę się, że
+też trafiają się takie gratisy czasem,
+a mianowicie właśnie
+prowadzenie akademicką ciekawością.
+I do tego też serdecznie Was zachęcamy.
+Myślę, że obaj, że jeżeli
+macie ochotę coś sobie potestować,
+pobawić się i popróbować,
+to jest to świetny moment, żeby właśnie
+podczas nauki takie rzeczy
+wykonywać. I jak widzicie,
+nie musimy się wcale tego bać. Nic tutaj
+nie wybucha. Zawsze można popróbować
+i dzięki temu wiedzieć więcej.
+Jak najbardziej.
+Ja gorąco zachęcam do eksperymentów,
+bo wtedy najwięcej się uczymy,
+jeśli mamy w sobie tą ciekawość.
+Próbujemy zrobić jakieś rzeczy,
+widzimy, jakie są efekty,
+a nie tylko patrzymy, jak robi to ktoś inny.
+Wtedy ta wiedza,
+najlepiej się utrwa.

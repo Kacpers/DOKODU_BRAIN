@@ -1,0 +1,333 @@
+I nadszedł czas na obiecane funkcje logiczne.
+Jeżeli ktoś z Was pracował wcześniej więcej z Excelem,
+no to tutaj na ideę idzie taki moment,
+że będziemy korzystali z czegoś na kształt jeżeli.
+Natomiast osoby programujące, a nie korzystające z Excela,
+mogą kojarzyć troszeczkę tę konstrukcję z ifem.
+Z ifem, czyli w takim przypadku, gdzie mamy jakiś warunek
+i w zależności od tego, czy ten warunek jest spełniony,
+czy też niespełniony, coś ma się wydarzyć.
+Dlaczego te funkcje nam się przydają?
+Bo oczywiście przecież moglibyśmy skorzystać z WER-a
+i też byłoby dobrze.
+Załóżmy, że szukamy osób, które powinny dostać dodatek
+w zależności od stażu pracy,
+no i teraz osoby, które przepracowały 10 lat
+powinny dostać tyle procent, 20 lat tyle procent,
+a mniej niż 10 wcale.
+Jeżeli takie zadanie przed nami staje,
+to oczywiście możemy sobie najpierw wyfiltrować
+wszystkie te osoby, które przepracowały,
+które przepracowały 20, im policzyć po jednej skali,
+potem te, które przepracowały więcej niż 10,
+dla nich policzyć po drugiej skali,
+no i później dla pozostałych wpisać 0.
+Tyle tylko, że jeżeli tych przedziałów jest więcej,
+to nagle to dzielenie i łączenie robi się męczące.
+Szczególnie jeżeli te kryteria nie są takie proste
+jak pojedyncza skala, tylko są troszeczkę skomplikowane.
+Wtedy przydają nam się właśnie takie instrukcje,
+takie funkcje, jak funkcje logiczne,
+gdzie właśnie za ich pomocą możemy sobie to obsługiwać.
+Dodatkowo niedługo znajdziemy się też w takiej sytuacji,
+gdzie po grupowaniu będziecie widzieli, że pojawiają się nule
+i tutaj też funkcje logiczne bardzo nam ułatwiają sprawę
+i pozwalają na ładne ułożenie tych danych po zjojnowaniu ich.
+Ale to jest temat trochę przyszłościowy,
+natomiast musimy sobie o te funkcje zahaczyć,
+żebyście wiedzieli, z czym to się je.
+Zobaczcie.
+Zobaczcie.
+Zobaczcie.
+W zgresie nie ma czegoś takiego jak taki if,
+który nam będzie sprawdzał warunki.
+Zamiast ifa jest case, na końcu którego musi znaleźć się zawsze end.
+Natomiast to, co jest w środku case'a, to jest when.
+Czyli case when warunek, then wynik.
+Czyli na przykład case when age jest większy niż 18,
+then wynik jest taki i taki.
+Jeżeli chcecie dać więcej whenów, to wówczas można te wheny po prostu
+wypisywać jeden pod drugim.
+Czyli case when warunek, then wynik, when warunek, then wynik.
+I tak można sobie robić pełną wyliczankę zakładającą, co ma się stać jeżeli.
+Natomiast jeżeli żaden z tych whenów nam nie zadziała,
+to wówczas mamy też możliwość dodania czegoś, co się nazywa else.
+No i to spowoduje, że wykona nam się ta instrukcja tylko wtedy,
+jeżeli żaden z whenów nam nie zadziałał.
+Załóżmy, chcemy w zależności od tego, w jakim ktoś jest w województwie,
+przypisać mu jakąś literkę.
+No i wtedy case when województwo to pomorskie,
+then wynik równa się, then zwróć p.
+Jeżeli to podkarpackie, to zwróć po.
+Jeżeli to mazowieckie, to zwróć mo.
+I tak dalej, ma, i tak dalej, i tak dalej.
+Natomiast jeżeli nie jest to żadne z tych, które wymieniłem,
+to wówczas zwróć jakiś konkretny wynik.
+Tak to funkcjonuje.
+Przykład, bardzo proszę.
+Na przykład możemy sobie pobrać first name
+oraz jeżeli age jest większy niż 18, to wtedy zwróć adult.
+W przeciwnym wypadku zwróć child.
+Zakończ i ten end, który widzicie w tym miejscu,
+to jest end właśnie obsługujący sytuację,
+w której kończy nam się nasze zapytanie,
+kończy nam się nasza instrukcja.
+Natomiast to as is adult powoduje,
+że po prostu wyświetla nam się ta informacja
+jako tytuł nowej kolumny.
+I w ten sposób dostajemy kolejną kolumnę
+na której, na warstwie naszej prezentacji.
+Jak widać, dostajemy first name,
+no i informację is adult.
+Oczywiście to wszystko działa na jakiejś tabeli,
+którą sobie gdzieś tam wymyśliliśmy,
+from students, ale to nie ma żadnego znaczenia.
+Znaczenie ma tylko to, żebyście wiedzieli,
+jak działa case, że za casem jest when,
+potem jest warunek, then, wtedy jest wynik,
+potem jest może być else, ale nie musi,
+no i na końcu jest end is adult.
+Jeżeli stałoby się tak, że żaden warunek
+nie zostanie spełniony i nie macie else'a,
+to w tym momencie oczywiście w danej komórce
+pojawi się 0.
+I jeszcze jedna ważna sprawa,
+te warunki warto też sobie układać
+w miarę sensownie, ponieważ jeżeli
+pierwszy warunek zostanie spełniony,
+pierwszy when zostanie spełniony,
+to żaden pozostały when nie będzie już sprawdzany.
+Więc przygotujcie się na to, żeby właśnie one były
+od tych bardziej rygorystycznych
+do tych mniej rygorystycznych, no bo jeżeli
+na przykład chcielibyśmy dać komuś promocję,
+kto by pochodził z pomorskiego i miał coś tam jeszcze,
+a poniżej mielibyśmy osobny warunek
+tylko dla pomorskiego, no to byłoby ok,
+ale jeżeli byśmy zamienili kolejność tych sprawdzeń,
+no to wystarczyłoby, że ktoś byłby z pomorskiego
+i już ta wartość by się wypełniła,
+zostałaby spełniona, natomiast pozostałe warunki
+by się nie spełniały.
+Drugą funkcją, którą chciałbym wam pokazać,
+to jest funkcja, która nazywa się callless
+i ta funkcja zwraca pierwszy nie będący nulem element.
+Ta funkcja case to jest jakby taki rdzeń
+do wykonywania wszelkich testów logicznych
+i operacji logicznych, natomiast jest kilka takich funkcji,
+które właśnie nam upraszczają życie,
+między innymi callless i callless po prostu pomaga nam,
+żeby nie pisać za każdym razem case is null,
+to wtedy coś tam i tak zwróć kolejny, zwróć kolejny.
+W przypadku funkcji callless,
+ona bardzo przydaje na przykład wtedy,
+kiedy potrzebujemy pobrać posty,
+czyli mamy stronę jakąś internetową,
+mamy w niej na przykład aktualności,
+no i w ramach tych aktualności może być
+taki tekst streszczenia widoczny,
+a może być po prostu ucięte, ucięty description,
+ucięty wstęp, więc wtedy ja sobie mogę na przykład
+za pomocą callless sprawdzić,
+czy został podany ten skrócony, ten skrócony zapis,
+ten skrócony tekst został podany,
+jeżeli natomiast w tym miejscu jest null,
+to wtedy automatycznie przechodzę do kolejnego przypadku
+i pobieram sobie description.
+Inny przykład, zobaczcie,
+jeżeli ktoś ma wiele adresów mailowych w wierszu
+i mnie interesuje wysłanie do niego maila,
+to mogę najpierw sprawdzić,
+czy został podany personal email,
+jeżeli go nie ma, to może jest work email,
+a jeżeli nie, to jest office mail,
+czyli w momencie, w którym ktoś podałby swój prywatny mail,
+no to od razu wysyłam na niego wiadomość,
+jeżeli w tej kolumnie jest nie ma nic,
+to wtedy sprawdzam jego pracowy mail,
+jeżeli znowu nie ma nic,
+to wtedy wysyłam na jakąś ogólną skrzynkę mailową informację,
+no i tak też mogę sobie pracować.
+Więc funkcja może nie jest zachwycająco wspaniała,
+ale bardzo często jest przydatna
+i nie należy jej tutaj dyskryminować.
+I czas na przykład, czas na wykorzystanie tych dwóch funkcji.
+Wiedząc, że extract dov from order date
+zwraca dzień tygodnia,
+gdzie poniedziałek to 1, a niedziela to 7,
+przygotuj zapytanie, które wyświetli datę zamówienia
+oraz informację uwaga,
+jeśli w kolumnie order date będzie piątek.
+No bo zakładam, że jeżeli ktoś zamówił w piątek,
+no to może się okazać,
+że będzie trzeba go poinformować,
+że pamiętaj człowieku, że jest weekend,
+w weekend nie każdy pracuje,
+więc zamówienie będzie w piątek,
+zamówienie będzie odrobinę przesunięte.
+W ten sposób właśnie możemy sobie taki raport
+z zamówieniem oraz tą informacją przygotować.
+No i zadanie drugie.
+Przygotuj zapytanie, które z tabeli orders
+wyświetli kolumnę freight
+wraz z informacją według tabeli poniżej nazwaną status.
+Czyli jeżeli w kolumnie freight mamy wartości
+większe od 0 oraz mniejsze lub równe 100,
+to wtedy ma się pokazać opis jako mało.
+Jeżeli mamy więcej niż 100, a mniej niż 500,
+mniejsze, równe 500, ma się pojawić średnio,
+a jeżeli większe niż 500, ma się pojawić dużo.
+Zadania troszkę skomplikowane,
+więc zamiast standardowych 3 minut daję Wam 4
+i do zobaczenia za chwilę w rozwiązaniu.
+No to lecimy.
+Wiedząc, że extract zwraca dzień tygodnia,
+to ok, przygotuj zapytanie, które wyświetli order date.
+Dobra, czyli pobieramy sobie wszystko z zamówień najpierw.
+First select, gwiazdka, from, orders.
+Robię to od razu w ten sposób, bo wiem, że trochę będę pisał,
+a chcę, żeby to było ładnie sformatowane,
+a nie żebym miał takie długaśne zapytanie,
+z którego nic nie będę później rozumiał.
+Ok, i teraz będzie nas interesowało wyciągnięcie dnia tygodnia.
+Możemy więc sobie wyświetlić ten order date
+oraz możemy wykonać extract,
+dot, bo to jest day of week,
+from, order date.
+Ops, no i mamy.
+Gdzie 4 to jest czwartek, 5 to jest piątek, 1 to poniedziałek.
+Ok, i teraz chcielibyśmy,
+ja sobie zrobię przecinek, żeby ten dzień od tygodnia też cały czas mieć,
+żeby w momencie, w którym to zapytanie,
+czyli ten fragment zwróci nam piątek,
+to żeby wtedy pojawiła się informacja uwaga gdzieś obok.
+No to lecimy.
+Case when,
+czyli case, jeżeli ten extract zwrócił nam piątek,
+wtedy napisz uwaga end.
+Coś jest nie tak?
+Ach, tu jest then, a nie when, o tak.
+Czyli when extract dot order date równa się 5,
+then, uwaga, koniecznie w pojedynczych apostrofach,
+no i end.
+Tutaj else nam nie jest potrzebny,
+bo potrzebujemy mieć tylko komunikat jeżeli.
+No i tak jak widzicie, w momencie,
+w którym pojawiła nam się piąteczka,
+to faktycznie pojawiła nam się też obok uwaga.
+Możemy sobie to posortować i jak widać,
+ładnie zadziałało.
+Osoba, która będzie obsługiwała te zamówienia,
+będzie wiedziała, że uważaj, to jest piątek.
+Ok, to lecimy dalej.
+Przygotuj zapytanie, które z tabeli orders,
+czyli znowu orders,
+wyświetli informację, wyświetli kolumnę freight
+wraz z informacjami według tabeli poniżej,
+nazwaną jako status.
+No to ok.
+Select, znowu możemy sobie zrobić select,
+pobierz mi wszystko z tabeli orders.
+No i teraz interesować nas będzie freight.
+No to,
+oczywiście przecinek dopisałem już za szybko.
+Ok, jest.
+I teraz, w zależności od,
+ja oczywiście tutaj wyświetlam te kolumny,
+bo już można później je usunąć.
+Mi chodzi tylko o to, żeby mieć pewność,
+że to zadziałało na podstawie dobrych danych.
+Zazwyczaj jak pracuję, też tak robię,
+potem sobie po prostu usuwam to, czego nie potrzebuję.
+I to jest tak samo.
+Też z tego powodu właśnie wyświetliłem sobie
+freight nie dlatego, że według treści zadania
+jest on potrzebny,
+tylko dlatego, chociaż jest,
+tylko dlatego, żeby wiedzieć, co się pokazuje.
+Ok.
+No i teraz będę przygotowywał sobie te testy.
+Czyli sobie sprawdzę,
+czy moje zamówienie jest większe niż 500.
+Bo wolę w ten sposób.
+Zrobię to takim małym haczykiem,
+czyli sprawdzę, czy jest większe niż 500.
+Następnie sprawdzę, czy jest mniejsze lub równe 100.
+I wtedy nie będę musiał robić tego oraz,
+które wydaje mi się takie może kłopotliwe,
+a może nie jest kłopotliwe.
+Po prostu wykluczam jeden przedział, drugi przedział,
+to wtedy wiem, że jestem na środku.
+Case when.
+Czyli jeżeli wartość zamówienia jest większa niż 500,
+to wtedy wypisz dużo.
+O.
+No i tutaj pewnie na samej górze
+takich przypadków nie będziemy mieli,
+ale gdzieś tam na pewno też takie przypadki są.
+Możemy sobie zawsze to posortować.
+Malejąco też klikając.
+A chciałem malejąco.
+Malejąco.
+O.
+I widzicie, są zamówienia powyżej,
+ten koszt dostawy powyżej 500,
+więc wyświetliło nam się dużo.
+Idę dalej.
+Pamiętamy o tym, że tych whenów
+może być tutaj bardzo dużo.
+And jest zawsze na samym końcu.
+Więc dorzucam sobie tabulator, robię when.
+Jeżeli fracht,
+jest mniejszy lub równy od 100,
+wtedy mało.
+O.
+I mam mało.
+Mam dużo.
+I powinienem mieć też nulę.
+Widzicie?
+Nule są zawsze wtedy,
+jeżeli jest więcej niż 100,
+bądź mniej niż 500.
+Teraz dla pozostałych mogę zawsze zrobić else,
+średnio.
+Hops.
+I już teraz będę miał wszystko.
+Mało, średnio i dużo.
+Wszystko zostało ładnie zrobione.
+Mógłbym sobie za chwilę
+to też zgrupować po tej kolumnie.
+Wszystko byłoby ładnie.
+To oczywiście w przyszłości.
+Natomiast jeżeli ktoś
+tutaj się nam nie obraża,
+że zrobił ten
+tego case'a bardziej rozszerzonego,
+to oczywiście nie ma sprawy.
+Mogę też go zapisać.
+Czyli when.
+Jeżeli zamówienie jest większe niż 100,
+to bardzo ważne, żeby użyć enda.
+Fracht jest mniejszy niż lub równy.
+Mniejszy lub równy, jak to było?
+Mniejszy lub równy 500.
+To można byłoby
+oczywiście zrobić też tak.
+Wtedy bez else'a
+też nam to powinno zadziałać.
+Natomiast else też nam sytuację rozwiązuje.
+Tutaj pamiętać należy tylko i wyłącznie
+o kolejności tych warunków.
+Żeby nie zrobić
+na przykład pojedynczych,
+tylko żeby
+w sensie, żeby przez przypadek
+dla średniego nie wyświetlić mało albo dużo.
+To tylko tyle.
+Czy też zamiast wyświetlać mało, wyświetlić średnio.
+To takie tam
+drobiazgi. Ale jak widać
+zadziałało. Przy okazji przećwiczyliśmy sobie
+funkcje logiczne.
+Jeżeli chodzi o te lekcje, to byłoby to na tyle.
+Zapraszam Was do kolejnej lekcji.

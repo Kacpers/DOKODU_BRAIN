@@ -1,0 +1,29 @@
+Kolejnym pojęciem na naszej liście jest volumen i volumen to jest taki wirtualny dysk twardy.
+Wcześniej mówiąc o tym czym jest kontener wspomniałem, że kontener jest ulotny.
+To co w nim się wydarzy jest tracone po zakończeniu jego pracy.
+I teraz aby zachować dane, które zostaną wytworzone w kontenerze, bo na przykład korzystamy z bazy danych
+i w bazie danych chcemy, żeby nawet jeśli nasze dane są testowe, żebyśmy nie potrzebowali tej bazy inicjalizować za każdym razem od nowa,
+tylko żebyśmy mogli do niej wracać i działać w oparciu o te dane, które już tam włożyliśmy,
+które być może w cyklu rozwoju aplikacji sobie zmodyfikowaliśmy.
+Bo taka też była nasza potrzeba.
+I aby właśnie wszystkie te zmiany zachować z pomocą przychodzi nam volumen, który podłączamy do naszego kontenera.
+Czyli takie dwa najpopularniejsze chyba przykłady, w których przynajmniej ja używam volumenów.
+Pierwszy dotyczy bazy danych.
+Czyli jeżeli chcę mieć bazę danych i chcę, żeby te dane, które znajdują się w tej bazie danych w żaden sposób nie znikały,
+to mogę sobie wówczas stworzyć taki volumen.
+Podpiąć go do bazy danych.
+A drugi też dosyć popularny sposób na to, żeby na przykład podczas developmentu na swoim komputerze mieć te same pliki,
+które znajdują się w ramach kontenera, to też tworzymy sobie taki volumen z plikami aplikacji,
+żeby móc na swoim komputerze, kiedy piszesz aplikację, bezpośrednio uruchamiać ją też wewnątrz kontenera.
+Kropka.
+Tak.
+Dzięki temu możemy zachować porządek w naszym systemie.
+Na naszym komputerze, laptopie.
+Nie musimy instalować wszystkich zależności u siebie.
+Mogą one być w obrazie, a jednocześnie nie musimy być w obrazie, żeby pracować nad tym kodem.
+Tylko rozwijamy go na naszym dysku twardym.
+A ten dysk twardy, te nasze konkretne katalogi są zmapowane, podmontowane w postaci volumenu właśnie do naszego kontenera.
+Oczywiście więcej informacji na ten temat znajdziesz też w kursie.
+Więc jeżeli na chwilę obecną o sobie myślisz diabelstwo, to się nie przejmuj.
+Zobaczysz jak to działa w praktyce.
+Dokładnie.

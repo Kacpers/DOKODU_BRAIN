@@ -1,0 +1,88 @@
+DZIĘKI ZA OBSERWACIE
+DZIĘKI ZA OBSERWACIE
+DZIĘKI ZA OBSERWACIE
+DZIĘKI ZA OBSERWACIE
+Jeżeli chcemy przenosić część logiki do bazy danych,
+to możemy korzystając z procedur, czy też z funkcji właśnie,
+programować na bazie danych, korzystając z różnych języków programowania.
+Można to robić na przykład w C, można też to robić w Pythonie,
+o czym też sobie tutaj powiemy.
+No i ostatnia rzecz, procedury też przydają nam się wtedy,
+kiedy chcemy stworzyć tak zwany wyzwalacz.
+I o tych wyzwalaczach też będziemy sobie w tej lekcji, w tym module mówili.
+A mianowicie wyzwalacz to jest coś takiego, co dzieje się
+automatycznie w przypadku, w którym następuje jakaś zmiana w bazie danych.
+Na przykład za każdym razem, kiedy ktoś usuwa rekord,
+chcemy gdzieś zapisać, nie wiem, identyfikator tego rekordu.
+Bo na przykład mamy zbiór też innych baz, innych miejsc w naszej aplikacji,
+które na podstawie tego ID-ka będą miały jakieś czynności wykonać.
+Tutaj właśnie na te wyzwalacze należy uważać.
+Z jednej strony one są świetne, bo pozwalają nam nawet wysłać maila,
+ktoś zajrzy do jakiegoś rekordu, wykona SELECT na danym rekordzie czy też usunie dany rekord.
+No ale z drugiej strony trzeba też na to uważać właśnie dlatego,
+że może nam się trochę zbyt dużo rzeczy wyzwalać.
+A wiecie, jak to jest z tymi wyzwolonymi rzeczami.
+O różnicach między procedurą a funkcją wstępnie powiedziałem.
+Czyli w skrócie jest tak, że funkcja potrafi coś zwrócić,
+natomiast procedura nic nie zwraca, po prostu spod spodem wykonuje nam jakąś rzecz.
+Czynność.
+Druga rzecz jest taka, że jeżeli tworzymy sobie funkcję,
+to tworzymy ją za pomocą wyrażenia CREATEFUNCTION,
+natomiast procedurę CREATEPROCEDURE.
+To jest druga rzecz.
+Jeżeli chodzi o używanie, no to w przypadku funkcji możemy je wywoływać w SELEKCJE,
+możemy używać ich w przypadku WHERE,
+tak jak używaliśmy do tej pory tych funkcji, które już poznaliście.
+Natomiast procedurę wywołuje się za pomocą instrukcji CALL.
+Czyli CALL, spacja, nazwa procedury.
+Spowoduje, że wywołamy sobie jakąś procedurę pod spodem.
+I tu należy też o tym wspomnieć,
+że będziemy momentami odchodzili od SQL-a.
+Nie na rzecz jakiegoś innego języka jak Python,
+ale na rzecz języka, którym jest PL-SQL.
+To jest temat na osobne programistyczne szkolenie
+i tutaj w ramach tego modułu nie dałbym rady zrobić Wam takich podstaw PL-SQL-a.
+Natomiast kilka tematów, które możemy zrobić.
+I kilka takich rzeczy Wam pokażę
+i w kilku miejscach ten język nam będzie po prostu potrzebny.
+Co to znaczy do bardziej zaawansowanych i kiedy właśnie nam będzie potrzebny?
+Na przykład, jeżeli chcemy w ramach jednej procedury wykonać więcej zapytań.
+Jeżeli procedura ma pobrać, załóżmy CREATE,
+stworzyć tabelę, bez problemu.
+Stworzyć widok, wydaje mi się, że też taki przykład tutaj w tym zadaniu naszym będzie.
+W tym kursie naszym będzie.
+Natomiast jeżeli będziecie chcieli pobrać sobie jakieś wartości z jednej tabeli,
+pobrać sobie z drugiej, coś połączyć i to gdzieś wrzucić,
+to już wykonujemy kilka instrukcji.
+Wtedy potrzebny nam będzie PL-SQL.
+Z tego względu, że w PL-SQL-u jest trochę więcej rzeczy niż w SQL-u.
+Ja go nazywam PL-SQL-em, ale tak naprawdę jest PLPGSQL,
+gdyż PL-SQL to jest, odczytam Wam definicję, PL-SQL oznacza proceduralny SQL,
+rozszerzenie języka SQL.
+Jest używany w oraklu.
+Natomiast jeżeli chodzi o inne bazy danych,
+to one mają swoje odpowiedniki.
+W przypadku Postgresa jest to PLPGSQL.
+Więc jeżeli gdzieś się przejęzyczę, mówiąc PLSQL,
+oczywiście mam na myśli PLPGSQLA.
+Czyli ten nasz język do programowania.
+Ten język zawiera też takie funkcjonalności jak ify.
+Myśmy do tej pory sobie ifa zrobili na przykładzie case'a jednego prostego,
+ale w przypadku programowania w SQL-u możemy normalnie też korzystać,
+możemy korzystać ze zwykłych ifów, czyli normalnych wyrażeń warunkowych.
+Mamy też pętle, więc po prostu jest to język normalny,
+prawdziwy język programowania.
+Do tego możemy sobie na przykład tworzyć też zapytania bezpośrednio w procedurze.
+Na przykład jeżeli chcecie umieścić, zapytać jakąś tabelę,
+której nazwa będzie miała się zmieniać dynamicznie,
+na przykład w zależności od tego, jaki trigger został uruchomiony,
+też w tym języku można to zrobić.
+No i ostatnia rzecz, za każdym razem, kiedy będziemy chcieli używać triggerów,
+też ten język będzie nam potrzebny.
+Nie da się tworzyć triggerów w SQL-u.
+One po prostu nie działają.
+I to byłoby tyle słowem takiego wstępu.
+Zapraszam Was do kolejnej lekcji, w której porozmawiamy sobie o funkcjach,
+jak te funkcje wyglądają, jak się je tworzy i co za ich pomocą można robić.
+Zapraszam.
+www.youtube.com

@@ -1,0 +1,66 @@
+No to cóż, dochodzimy do okrągłej liczby lekcji, jest nią lekcja 20 i w tej lekcji zajmiemy się operatorem jakim jest Btwin.
+Jest to kolejny z operatorów, który pozwala nam skracać nasze zapytania, sprawiając, że zapytania wyglądają troszeczkę bardziej profesjonalnie
+i może nie przedłużając, zobaczcie jak to wygląda.
+W przypadku operatora Btwin, oczywiście pozwala nam on na sprawdzenie, czy dana wartość kolumny znajduje się pomiędzy dwiema innymi wartościami.
+No i zobaczcie, jeżeli sobie zrobimy zapytanie where weekday jest większe lub równe od 1 and weekday jest mniejsze lub równe od 5,
+to taki sam zapis można zapisać wykonując where weekday between 1 and 5, czyli 1 and 5.
+Co jest bardzo ważne, to to, że w tym przypadku,
+zarówno 1, jak i 5 się zaliczają, czyli po prostu zamiast wpisywać jedynki, jedynkę i piątkę, mogę sobie napisać weekday between 1 and 5, widzicie?
+Czyli po prostu nie muszę powtarzać nazwy kolumny i bardzo ważnym jest to, żebyście pamiętali, że właśnie w Btwinie mamy też ten warunek równe.
+Innym przykładem może być skorzystanie z dat.
+Zobaczcie, jeżeli sobie zrobimy where start at jest większe lub równe od 1 listopada,
+i mniejsze lub równe od 31 listopada, to to też można zapisać where start at Btwin i podać mu te same daty.
+W ten sposób również będziemy mogli wykonywać operacje na czasie, na datach i porównać sobie określone daty.
+Tutaj musimy pamiętać o tym, że jeżeli korzystamy z Btwina, to te wartości graniczne nam się zawierają,
+czyli w momencie, w którym wykonam sobie operację Btwin, no to bez problemu te wartości będą zawarte.
+Jeżeli chcecie użyć not Btwin, ponieważ not Btwina można sobie również stosować i analogicznie blokować wartości,
+not Btwina można stosować analogicznie zaprzeczać temu Btwinowi, to w tym momencie te wartości graniczne nie będą się zawierały.
+Czyli Btwin bierze pod uwagę granice, a not Btwin nie bierze tego pod uwagę.
+No i zdecydowanie najlepiej będzie to przećwiczyć.
+Jeżeli to sobie...
+Jeżeli to sobie samodzielnie zakodujemy, więc tutaj mam dla Was znowu kilka zadań.
+Po pierwsze, pobierz wszystkie produkty, których sprzedaż się zakończyła, czyli w kolumnie Discontinued mamy wartość 1,
+dodatkowo których ilość w magazynie, czyli kolumna Units in Stock jest większa lub równa 15 oraz mniejsza lub równa 25.
+Po drugie, chcemy pobrać wszystkich pracowników, których zatrudniliśmy w roku 94.
+I po trzecie, chcemy pobrać wszystkie...
+Gwiazdki zamówienia z tabeli Order Details, w których ilość zamówionych produktów mieści się w przedziale od 30 do 60.
+No to co? Chwila dla każdego i do zobaczenia w rozwiązaniach.
+Jeżeli chodzi o zadanie pierwsze, no to mamy pobrać sobie wszystkie produkty, gdzie sprzedaż się zakończyła, czyli Select, gwiazdka From Products, Where, Discontinued...
+...Discontinued...
+...Discontinued...
+...Discontinued...
+...Discontinued...
+Krenne się 1. Chyba jakoś zadziałało.
+Dodatkowo, których ilość w magazynie, Anhunits in Stock, jest większa lub równa 15 oraz mniejsza lub równa 25.
+No to mógłbym to zapisać –
+''Anhunits in Stock.''
+Jest większe lub równa 15.
+Anhunits in Stock jest mniejsze lub równa 25.
+Ale jak widać bound
+... Ledwo się mieszcza na ekranie, musiałbym sobie zrobić delikatnego zoom 30, więc ze attempts zakończyk mindfulness, a zawsze popracuję bezford성이.
+ale jak widać, ledwo się mieszcza na ekranie, musiałem sobie zrobić delikatnego, never bother a bitteium, avo a lot please, 27.
+delikatnego z auta ale okej o i mógłbym to sobie wykonać pewnie
+by mi zadziałało mam takie dwa produkty jak to zapisać krócej
+dzięki tej lekcji już wiemy że bez problemu można zapisać
+Units in Stock between 15 and 25 hops jak widać nie ma
+różnicy a skoro nie ma różnicy to po co przepłacać tak po
+czymś więcej tekstu pisać w zadaniu drugim chcemy pobrać
+wszystkich pracowników których zatrudniliśmy w 94 roku
+to najpierw pobierzmy sobie wszystkich pracowników o no
+i możemy zwrócić uwagę na fakt iż mamy tutaj hired date
+hired date i ten hired date ma być na 94 rok czyli
+select gwiazdka from employees where hired date jest between
+1994 01 01 and 1994 o i coś dzisiaj się z klawiaturą nie
+dogaduję 12 31 hops i mamy trzy takie osoby zatrudnione widzicie
+w 94 roku No i ostatnie zadanko to pobierz wszystkie zamówienia
+z tabeli order details w których ilość zamawianych produktów
+mieści się w przedziale od 30 do 60 czyli select gwiazdka
+from order details No i chcemy żeby ilość czyli quantity
+czyli where quantity jest between 30 and 60 hops i jak widać
+zadziałało więc od tej lekcji już wiecie że kiedy chodzi o
+szukanie w przedziałach bez problemu możemy też używać
+operatora between Mam nadzieję że lekcja wam się podobała
+Zapraszam do lekcji kolejnej
+Nie zapomnijcie zasubskrybować oraz zafollowować mnie na Facebooku
+i Facebooku
+Wszystkie prawa zastrzeżone

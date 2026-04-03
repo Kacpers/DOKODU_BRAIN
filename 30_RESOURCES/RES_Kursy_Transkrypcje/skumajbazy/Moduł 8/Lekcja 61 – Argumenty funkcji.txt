@@ -1,0 +1,249 @@
+W tej lekcji porozmawiamy o argumentach funkcji, no bo wpisywanie tam tylko warczarów, intów, a potem używanie dolara i dolar dwa to trochę mało.
+Warto byłoby zastanowić się nad tym, co jeszcze może się tam znaleźć i tym tematem zajmiemy się właśnie teraz. Zapraszam.
+Przede wszystkim o argumentach warto sobie powiedzieć, że one mogą przechowywać tylko wartości, czyli to co zostanie przekazane w argumentach w ten sposób może być używane tylko i wyłącznie jako values albo tylko i wyłącznie jako where.
+Nazwy tabel w argumentach wymagają trochę sztuczek, to też Wam jeszcze pokażę. Zobaczcie, insert into dolar jeden values to nam nie zadziała, natomiast insert into users values jeden,
+jak najbardziej zadziała. Po drugie, jeżeli używamy argumentów, to nie zawsze musimy pilnować się tego dolar jeden, dolar dwa.
+Czasem możemy też zrobić tak, żeby argument miał też swoją nazwę i wtedy robimy create or replace function sumuj liczby a integer, b integer.
+Wygląda to trochę inaczej niż w językach, które mogliście poznać wcześniej, chociaż z drugiej strony w niektórych językach, jak w Pythonie jest tak, że jest a dwukropek integer, b dwukropek integer.
+W PHP w sumie.
+Teraz zapomniałem, jak jest w PHP, ale chociażby w C, z tego co pamiętam, najpierw jest typ, potem jest liczba.
+Dobra, nieważne, zostawmy to, nie porównujemy tych języków.
+Ważne jest dla nas to, że w tym przypadku trzymamy się nazwy zmiennej, a następnie typu zmiennej.
+I w ten sposób, jeżeli najpierw podajemy nazwę zmiennej, a potem jej typ, to wtedy może będziemy zamiast korzystać z tego dolar jeden, dolar dwa, mogli skorzystać z literek a i b.
+Dlatego też ważna sprawa, musimy się pilnować.
+Żeby te nazwy zmiennych nie były ani zarezerwowanymi słowami typu select, where, from i tak dalej.
+Po pierwsze.
+Po drugie, żeby nie były nazwami tabel, no bo to też, czy też schematów, bo to też może nam poknocić nasze zapytanie.
+Zobaczcie.
+Create or replace function, sumą liczby a integer, b integer, returns integer, language to SQL, s, select a plus b.
+Czyli to samo, co zrobiliśmy sobie na początku, tylko tu mamy taką zmianę.
+Że dodajemy do siebie a i b.
+Trochę inaczej, ale też zadziała.
+Natomiast, jeżeli się uprzemy, albo nie będziemy mogli uniknąć sytuacji, w której nasze nazwy wyglądają tak samo, jak nazwy tabel czy schematów, to możemy używać kropek.
+Zobaczcie.
+I nazwę funkcji.
+Create or replace function, sumą liczby a integer, b integer, returns integer, language to SQL, s dolary.
+No i robimy select.
+I w ten sposób on będzie wiedział, że to a to jest to, a to b to jest to.
+Nie będzie szukał nazwy tabeli o nazwie b czy a, tylko będzie wiedział, że to jest konkretny ten argument.
+Można tak zrobić, ale lepiej pamiętać o tym, żeby te nazwy nam się nie powielały.
+Kolejne, o czym warto powiedzieć w przypadku argumentów to to, że mogą mieć one wartości domyślne.
+Czyli w momencie, w którym wywołujemy...
+Czyli w momencie, w którym wywołujemy sobie jakąś funkcję i chcemy, żeby ta funkcja miała wartość domyślną argumentu.
+Dlaczego?
+Żeby na przykład móc ten argument pominąć, to możemy sobie określić w ten sposób.
+Tutaj zastosowałem też inne formatowanie.
+Takie formatowanie też możecie spotkać wtedy, kiedy tych argumentów jest więcej i treść dotycząca tych argumentów też jest trochę dłuższa.
+No a mianowicie create or replace function, sumujemy a integer default 1, b integer default 2, returns integer.
+No i jak widzicie w środku jest dalej.
+To samo.
+Zachęcam was w ogóle do tego, żebyście spróbowali ten kod uruchomić też u siebie w DBWerze, następnie wywołać te funkcje dla sprawdzenia, czy wszystko działa.
+A nóż znajdziecie może coś jeszcze ciekawego.
+Oczywiście wtedy podczas wywoływania możemy sobie pominąć drugi argument lub pierwszy.
+Natomiast nie da się pominąć, przynajmniej ja o tym nie wiem, nie da się pominąć pierwszego podając tylko drugi.
+Kolejność argumentów musi być wtedy zachowana.
+No i co?
+No i dochodzimy sobie do zadanka.
+A mianowicie w zadaniu 61.1 poproszę was o to, abyście przygotowali funkcję generującą adresy e-mail naszych pracowników.
+Funkcja ta ma odebrać imię, nazwisko oraz domenę.
+Jeśli argument trzeci zostanie pominięty, to wartością domyślną powinno być do kodu .dev.
+Na przykład, jeżeli ktoś wykona select getEmail w nawiasie podaj jankowalski,
+to to powinno zwrócić j.kowalski.
+Małpa do kodu .dev.
+Natomiast jeżeli ktoś poda jankowalski.wp.pl, to powinno być j.kowalski.małpa.wp.pl.
+Wszystko jasne?
+To do zobaczenia za chwilę w rozwiązaniu.
+A wy macie chwilę, żeby samodzielnie to rozwiązać.
+Zapraszam.
+No to co?
+Przyznam się, że zadanie wymyślałem już jakiś czas temu.
+Nie pamiętam dokładnie jakie miałem wtedy rozwiązanie tego zadania.
+Nie pamiętam dokładnie jakie miałem wtedy rozwiązanie tego zadania.
+Nie pamiętam dokładnie jakie miałem wtedy rozwiązanie tego zadania.
+Ale to tym lepiej, bo będę myślał, razem z wami, a nie tak wiecie z pamięci wszystko wyklepywał.
+Więc tak, ja sobie myślę, że jak patrzę na to imię i nazwisko,
+Czyli najpierw zrobię sobie argumenty, bo my mamy funkcję, czyli create function.
+Wiemy o niej jak ma się nazywać. Ma się nazywać getEmail.
+I wiemy, że ma oczekiwać, że będą trzy argumenty.
+Pierwszy argument to jest imię, drugi argument to jest nazwisko,
+a trzeci argument to jest domena, która domyślnie ma być ustawiona na do kodu .dev.
+To będę robił to małymi krokami.
+Czyli first name to jest warchar, nie ma wartości domyślnej.
+Last name to też jest warchar, nie ma wartości domyślnej
+i domain to jest warchar default do kodu .dev.
+Ok, to jest taki początek, który myślę, że wszyscy rozumiemy.
+Dalej, returns, co ma funkcja zwracać?
+Ma zwracać warchar.
+Language, SQL, S, dolary, dolary.
+Patrzę, czy wszystko pamiętałem, wydaje mi się, że tak.
+Czyli taką podstawową, można powiedzieć, makietę tej funkcji mamy przygotowaną.
+I teraz, jeżeli chodzi o to, co będziemy chcieli robić,
+to będziemy chcieli przede wszystkim zamieniać,
+będziemy przede wszystkim,
+przede wszystkim chcieli zwracać, ale to za chwilę,
+będziemy chcieli zamieniać wielkie litery na małe,
+bo musimy o to zadbać z first name i last name,
+żeby były wielkie litery i małe ze sobą wycięte.
+I trzecia rzecz, to właściwie my będziemy zwracali połączone first name, last name i domain.
+Czyli domain już tutaj widzę, że jest zajęte,
+więc sobie wezmę domain name z jakiegoś powodu, ok.
+I będzie first name.
+Łączymy w Postgresie za pomocą...
+First name, last name i domain name, ok.
+Zobaczmy, co się stanie, jeżeli zacznę od tego.
+Czyli tworzę sobie taką funkcję.
+On mi tutaj wtedy powie, że syntax error at near first name.
+Co ci tutaj nie podoba, dobry człowieku?
+Aha, language, sql, tu tu tu tu tu tu tu, s, dolar, średnika nie ma i selecta brakuje oczywiście.
+O tak, ctrl, enter, działa.
+Czemu do niego mówię, człowieku, nie wiem, ale select, get email.
+No i załóżmy, że to będzie Kacper Sieradziński.
+Miałem przez ni, ale tutaj już ten znak polski sobie podaruję.
+Ctrl, enter, zrobiło się Kacper Sieradziński do kodu def, ok.
+A jak sobie wpiszę get email Kacper...
+Kacper Sieradziński gmail, to robi się gmail.com, ok.
+Czyli to nam na razie działa.
+Idziemy dalej.
+Tu kolejną rzeczą, którą musimy sobie dodać jest małpa przed domeną.
+No to sobie robimy jeszcze jedne, jeszcze jedne pipe'y, add małpa.
+Wywołujemy.
+No i teraz mamy błąd.
+Function get email already exists.
+No to create or replace function.
+Mhm.
+Teraz raz jeszcze.
+Get email, jest.
+Małpa się dodała, dobra.
+Drugi element układanki jest taki, że potrzebujemy małe literki.
+No to lower.
+No to lower.
+I w wyniku jest jeszcze chyba coś takiego.
+Teraz muszę tylko sobie na to zerknąć.
+Że tam jest kropka.
+Nie?
+Wy to pewnie mieliście cały czas przed oczami.
+Ja teraz nie mam tego przed oczami, więc sobie muszę zerknąć.
+Tu, tu, tu, tu, tu, tu, tu.
+Gdzie ja jestem?
+Zadanie.
+Ok.
+To nie to zadanie.
+Gdzież ja jestem?
+Argumenty funkcji.
+To zadanie.
+Ok.
+Tak, jest kropka.
+Czyli do tego trzeba jeszcze dokleić kropkę.
+Ok.
+Wywołujemy.
+Kacper kropka średnickie do kodu def.
+Ok.
+Jest coraz lepiej.
+Tyle tylko, że my będziemy potrzebowali wziąć tylko i wyłącznie pierwszą literę z tego wyrażenia.
+I wyciąganie pierwszej litery też już sobie robiliśmy.
+I mówiłem wam, że mamy parę funkcji.
+Dlatego chociażby, jeżeli chcemy ściągnąć sobie coś od lewej, to mamy funkcję left, więc czy zrobimy to na lower, czy na zewnątrz, czy środku nie ma znaczenia, ale funkcja nazywa się left i drugim argumentem jest ilość znaków ops i jest ksieradziński do kodu def, ksieradziński do kodu def, gmail.com działa w razie czego, jakbyście chcieli do mnie napisać, to kacper małpa do kodu def, a nie ksieradziński, ale może warto byłoby taki alias zrobić.
+Tyle.
+Jeżeli chodzi o nasze zadanie, możemy śmiało kontynuować i zobaczyć, co tam dalej się przed nami czai.
+Zapraszam.
+A czai się świat piękny?
+Pytanie zobrazowane w pytaniu, czy do funkcji można przekazać cały rekord?
+Czyli załóżmy, że mamy na chwilę obecną jakąś funkcję, do której przekazujemy sobie poszczególne teksty, ale czasem zdarza się tak, że my nie chcemy przekazywać 50 argumentów, bo po prostu chcemy zrobić tak, żeby nasza funkcja pracowała na całym rekordzie.
+Odpowiedź brzmi, oczywiście można.
+A robi się to tak.
+Po prostu w momencie, w którym przekazujemy, tworzymy sobie funkcję, możemy mu powiedzieć, że to jest students, jakimś tam większym takim zbiorem, no i wtedy wykonujemy return z Varchar S i tu jest select $1.firstname, $2.lastname.
+Czyli w momencie, w którym pracujemy na całym rekordzie, to po prostu on nam się w całości tutaj przekazuje.
+I wtedy można zrobić $1. i po kropce wskazujemy sobie ten konkretny element.
+No i wtedy, jeżeli byśmy chcieli pobrać tylko i wyłącznie imię i nazwisko, no to można zrobić select get details students from students i będziemy mieli tylko imiona i nazwiska.
+Tylko wtedy musicie zwrócić uwagę na to, czym jest to students, bo to students, tutaj ja o tym nie powiedziałem, to jest nazwa tabeli.
+Czyli w tym miejscu, zobaczcie, tu jest informacja ta u góry.
+Zakładając, że tabela students posiada firstname oraz lastname, to wtedy można tak zrobić.
+Bo tu.
+Znajduje się jakby nazwa obiektu.
+Czyli nie będzie można tego zrobić z każdą dowolną tabelą, tylko po prostu z tabelą students.
+Okej, no i wobec tego możemy sobie zrobić jeszcze jedno zadanko, w którym będziecie mogli też tę funkcjonalność przećwiczyć.
+Przygotuj funkcję pobierającą adresy klientów z tabeli customers.
+Na podstawie kolumn adres, city, postal code oraz country wykorzystaj argument złożony w ten sposób.
+I chcielibyśmy.
+Właśnie skorzystać z takiego argumentu, gdzie będziemy mogli przekazać całe customers i chcielibyśmy z tego zbudować adres.
+Czyli tak, żeby było w jednej.
+Tak, żeby było w jednym polu nam się wyświetliło właśnie contact name oraz żeby obok nam się wyświetliło tego w jednym, w jednej kolumnie adres city postal code oraz country.
+Daję wam chwilę.
+Do zobaczenia.
+Jak macie chęć, to możecie jeszcze spróbować rozdzielić to znakiem nowej linii.
+Takie wymaganie dodatkowe.
+Żeby na przykład u góry było adres, potem wiersz niżej było city postal code i jeszcze niżej country.
+Tak jak na listach się pisze albo pisało.
+Do zobaczenia za 30 sekund.
+Cześć.
+No to co?
+Create or replace function i tę funkcję ma się nazywać get details.
+To było zadanie.
+Get address.
+No to lecimy.
+Get address.
+Argument to może być tylko i mogą być tylko i wyłącznie rekordy z tabeli customers.
+Więc możemy sobie śmiało tutaj wpisać customers.
+Okej.
+To ma nam zwrócić warczara.
+Language póki co to jest wciąż jeszcze SQL.
+I dolary i dolary.
+Okej.
+I teraz jeżeli chodzi o to co w środku.
+No to my będziemy chcieli zwrócić połączone ze sobą adres.
+Czyli to będzie customers.
+Czyli to będzie dolar jeden kropka adres.
+Co tam jeszcze było?
+City.
+Czyli adres.
+To miało być w jednym wierszu.
+To bez słówka return oczywiście.
+Tylko słówko select powinno być.
+Select adres.
+Do tego mamy dołączyć sobie.
+Na razie ja tylko będę wyświetlać wszystko razem połączone.
+Może to połączę nowym wierszem.
+Na razie.
+No chodź.
+Addres.
+Okej.
+Do tego dołączę sobie.
+Adres.
+Do tego dołączę sobie Co?
+City postal code.
+No to city.
+Do tego dołączę sobie postal code.
+I do tego dołączę sobie country.
+w ten sposób moja tabela powinna tabela moja funkcja powinna
+wyglądać o tak i teraz jeżeli sobie wykonam select contact name
+przecinek get address customers from customers o no to dostanę te
+znaki połączone świetnie ale umówialiśmy się że chcielibyśmy
+tutaj mieć spację przynajmniej jakiś pomiędzy a tych spacji nie
+ma ale to spację za chwilę jeżeli chodzi o znak nowego wiersza
+to można go sobie stawić w ten sposób jako znak nowego wiersza
+tylko że normalnie on będzie starał się to jakby jak jest
+backslash n to trzeba mu żeby on to potraktował jako backslash
+n jako właśnie znak nowego wiersza trzeba dorzucić coś co
+się nazywa escape constant takie e z przodu tak jak w Pythonie
+jest fka
+tak samo tutaj w Postgresie jest e i to e będzie oznaczało że on
+właśnie przejdzie nam do nowego wiersza tylko ja tutaj nie chcę
+mieć nowego wiersza a tutaj chciałbym mieć o i bez m i wówczas jeżeli
+sobie to wywołam to zobaczcie co się stało obok Marie Anders
+wyświetla mi się tam Oberstrasse 57 Berlin do kod portowej
+Germany czyli działa ja bym to gdzieś tam pobrał i bym to wyświetlił
+to tu ewidentnie widać mam znak paragrafu dajcie znać czy u
+was też działa to mnie przypominam o tym dosyć często ostatnio
+ten Discord trochę nam przysypia też ze względu na to że
+wakacje są pewnie oglądacie ten materiał możesz po wakacjach
+może w trakcie więc w razie czego przypominam że jeżeli macie
+chęć zapytać o coś to na tym Discordzie jest wiele chętnych
+osób ja też do pomocy więc serdecznie zapraszam do pytania okej
+jeżeli sobie wywołamy get address i zrobimy sobie tego typu zapytanie
+jak widać wszystko nam funkcjonuje możemy lecieć dalej zapraszam
+a dalej już wielu rzeczy przed nami nie ma jeżeli chodzi o te lekcje
+właściwie to niczego przed nami nie ma w tej lekcji ale w
+kolejnej lekcji porozmawiamy sobie już o procedurach więc nie
+przedłużając tego rozstania zapraszam was na kolejną lekcję
+do zobaczenia cześć
+Cześć

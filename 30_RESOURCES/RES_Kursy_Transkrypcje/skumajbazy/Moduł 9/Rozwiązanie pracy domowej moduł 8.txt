@@ -1,0 +1,865 @@
+Witajcie moi drodzy, ten moduł jest takim pożegnaniem z SQL-em, gdyż przechodzimy do baz danych nierelacyjnych, ale zanim się już pożegnamy z SQL-em na dobre w naszej treści, no to powinniśmy rozpocząć sobie od rozwiązania pracy domowej, więc tym zajmiemy się w pierwszej kolejności.
+No i zadanie domowe pierwsze brzmi tak, przygotuj funkcję, która zwróci tabelę zawierającą customer ID oraz order ID dla określonego argumentami date start oraz date end, czyli z zakresu dat, jakieś tam order date.
+I teraz zobaczcie, jeżeli sobie chcemy pobrać wszystkie informacje, no to robimy select gwiazda from get customers od daty do daty i w ten sposób on powinien nam zwrócić wszystkich klientów, którzy zakupili coś.
+Pomiędzy tymi dwiema datami.
+Zapraszam, zobaczcie jak to rozwiązałem.
+Więc jak ja to sobie rozwiązuję?
+Rozwiązuję to w ten sposób, że zaczynam sobie zawsze od tego, że sobie przygotowuję zapytanie, które będzie mi zwracało interesujące mnie informacje, a później przekuwam sobie to zapytanie do postaci funkcji.
+Jeżeli mam przygotować funkcję, która zwróci tabelę zawierającą customer ID oraz order ID dla date start oraz date end, no to zacznę sobie odpoczynać.
+Zacznę sobie od pobrania wszystkich zamówień, czyli select gwiazdka from orders.
+Jak to sobie wykonam? No to dowiem się, że tutaj mam customer ID, tu mam order ID, no i mam teraz trzy kolumny z datami.
+Interesuje mnie date start oraz date end.
+W przykładzie były też trzy daty, więc ja sobie po prostu to zapytanie napiszę, czyli zamiast select gwiazdka będę miał customer ID i order ID.
+I to jest pierwsza rzecz, którą muszę.
+Pierwsze dwie rzeczy, które muszę zwrócić.
+From orders.
+No i teraz wiem, że będą mnie interesowały date start oraz date end, czyli where i wiedzę, że chodzi o kolumnę order date, czyli where order date.
+No i możemy sobie użyć na przykład operatora, moglibyśmy between, albo możemy zrobić większe lub równe.
+No i tutaj będzie data początkowa 1996 01 01.
+I order date ma być mniejsze lub równe 96 01 grudnia.
+OK, wywołuję.
+No i mam winet, tak, wygląda na to, że jest OK.
+I teraz druga rzecz, którą sobie zrobię, to sobie z tego stworzę po prostu funkcję.
+Jak stworzyć taką funkcję?
+Myślę, że pamiętacie.
+Create or replace function.
+No i tutaj jest.
+Nazwa tej funkcji.
+Myśmy sobie w treści naszego zadania domowego nazwali tę funkcję.
+Już zaraz wam powiem, jak.
+Get customers.
+No to możemy z tej nazwy skorzystać.
+Get customers.
+No i wiemy, że nasza funkcja będzie przyjmie, będzie przejmowała dwa argumenty.
+Będzie nią data początkowa i data końcowa.
+No to możemy to nazwać date start.
+To jest oczywiście date time.
+No i date end.
+I to też będzie date time.
+Ok, druga rzecz, co musimy napisać, to musimy napisać, co nasza funkcja będzie zwracała.
+I nasza funkcja będzie zwracała tabelę, która będzie zawierała customer id jako string i order id jako integer.
+Czyli customer id jako warchar.
+No i order id, które będzie integerem.
+Co dalej?
+Dalej dopisujemy sobie language.
+Sql, s, dolary, dolary, wcięcie.
+Sprawdźmy to.
+Coś mi się nie podoba.
+Error date time is not set.
+Tu standardowo już zrobiłem taki błąd, który mi się zdarza podczas tego kursu dosyć często.
+Czyli timestamp, oczywiście, a nie date time.
+Nie mamy takiego typu jak date time.
+To nie ten język.
+Control enter.
+Przeszło.
+No to sobie wykonajmy.
+To nasze zapytanie.
+Ach, przeszło, ale z błędem.
+Bo my chcemy date start i date end użyć.
+Czyli zamiast tego używamy date start.
+Ja sobie tylko zapiszę te data, żeby już ją mieć.
+I to jest date start.
+No i tutaj jest date end.
+Ok.
+Jeszcze raz to sobie wykonam.
+Zaktualizowałem.
+Zaktualizował.
+Select gwiazdka from get customers.
+I to jest nasza data początkowa.
+To jest nasza data końcowa.
+Czy zadziałało?
+Nie zadziałało.
+Coś mi się nie podoba.
+Nie spodobało mu się to, że on nie wie jakie to są typy.
+Więc ja sobie tutaj powiem mu, że to jest, słuchaj, date time.
+Jakbyś szukał.
+Znowu to samo.
+Timestamp.
+I to też jest Timestamp.
+O, jak widać, jak widać poszło.
+Nie wiem, czy błąd nie wynikał z tego, że wcześniej spróbowałem to zapytanie wykonać i tutaj był ten date time, ale wtedy nie przeszło, więc powinno nie być tego błędu.
+Natomiast jak widzicie, w momencie, w którym rzuciłem mu to na Timestamp, to już sobie z tym poradził.
+Idziemy do zadania drugiego.
+Przygotuj funkcję, która zwróci następujący wynik na podstawie identyfikatora zamówienia.
+A ten wynik wygląda tak, czyli funkcja getOrderSummary dla takiej liczby ma zwrócić, czyli to jest konkretny identyfikator, ma zwrócić nam całe zamówienie zawierające tę wartość.
+Czyli mamy orderID, total, discount i discounted price.
+No to co?
+Siadamy i piszemy.
+Tutaj również będziemy sobie zaczynali to zapytanie od wykonania zapytania select.
+Gwiazdka from orders.
+No i jak sobie to obejrzymy, to okaże się, że te nasze zamówienia, one tutaj nie posiadają tych informacji, które nas interesują.
+Informacje, które nas interesują, znajdują się w innej tabeli, która nazywa się orderDetails.
+Czyli na podstawie tego naszego jednego zapytania musimy zjojnować się z tym drugim zapytaniem, gdzie kolumną wiążącą jest kolumna orderID.
+No to co?
+To select, gwiazdkę sobie od razu przerzucę, bo za chwilę będę chciał to wymienić, tę gwiazdkę na coś innego.
+No i robię left join order details on orders, albo sobie dodam jeszcze aliasik, żeby nie mieć potem problemów.
+On order.orderID równa się orderDetail.orderID.
+Jak to sobie wywołam, to wtedy mam wszystko.
+Kolumny, które zawiera moje zapytanie, to jest orderID.
+I muszę mu powiedzieć skąd, bo mamy dwie kolumny.
+OrderID, więc on musi wiedzieć, że chodzi mi na przykład o tabelę orders.
+One oczywiście w obu tabelach są takie same dla danego rekordu.
+Dalej jest total.
+Total to będzie quantity razy unit price.
+Czyli quantity razy unit price as total.
+Przecinek.
+Jest 168.
+10, 10, 2, 5, 2.
+Ach, tu jest jeszcze, a nie, dobrze.
+Tak, wszystko się zgadza, wyniki są OK.
+Do tego jest discount.
+OK.
+Patrzę na te wartości, wygląda na to, że wszystko jest OK.
+Możemy sobie od razu dorzucić, potem wskazujemy konkretne zamówienie.
+Czyli możemy zrobić where orderID równa się 10, 2, 5, 2.
+To od razu będziemy mieli.
+Te informacje.
+I orderID to jest o.orderID.
+OK.
+No i teraz już mogę sobie też porównywać te informacje.
+Mam.
+No i powinienem jeszcze zrobić discounted price.
+A discounted price to będzie ten total pomniejszony o discount.
+Czyli będzie to to minus to razy discount as discounted price.
+Tak.
+I wychodzi na to, że wyniki mam takie same jak na serwisie.
+Czyli mogę mieć nadzieję, że mi zadziała.
+Co dalej?
+Dalej muszę sobie z tego zrobić funkcję.
+Znowu identycznie tak jak robiliśmy sobie poprzednio.
+Musimy stworzyć sobie funkcję.
+No i w tej funkcji też jest przygotować konkretne argumenty.
+Czyli create or replace function.
+Nazwa tej funkcji to getOrderSummary.
+Argument to jest integer, którym jest orderID.
+Ale użycie kolumny orderID.
+Sprowadziło mnie donikąd z tego względu, że już nazwę tej kolumny tutaj mam.
+Więc search, a może...
+Niech będzie po prostu summary orderID powiedzmy.
+I to jest oczywiście integer.
+To co będę chciał zwrócić to jest to również tabela.
+No i musimy sobie tę tabelę opisać.
+Nasza tabela będzie zawierała orderID, która jest integerem.
+Będzie zawierała total.
+Który jest floatem.
+Będzie zawierała discount, który jest floatem.
+Będzie zawierała discounted price.
+Które jest floatem.
+Language to SQL, S, dolary, dolary.
+No i jeszcze wypadałoby sobie podmienić tą naszą zmienną.
+Czyli summaryOrderID wstawić tutaj.
+Control Enter.
+Nie zwrócił mi nic.
+Już sobie tylko zerknę tutaj do wyników.
+Ok. Widzę, że wszystko przeszło.
+Więc mogę sobie to sprawdzić.
+Select gwiazdka from getOrderSummary.
+I to był argument 10.2.5.2.
+Czegoś mi tutaj zabrakło?
+Nie. Wszystko jest.
+OrderID, total, discount i discounted price.
+Myślę, że jest ok.
+Tu ewentualnie, jeżeli chcesz, możesz sobie to sprawdzić.
+Zobaczmy jak to wygląda.
+Zobaczmy jak to wygląda.
+Zobaczmy jak to wygląda.
+Zobaczmy jak to wygląda.
+Tu ewentualnie jeszcze można byłoby to zaokrąglić.
+Widzę, że discount jest zaokrąglony.
+Nie wiem czemu on tutaj nam się nie zaokrąglił.
+No ale to już tam.
+Zobie to podarujmy.
+W zadaniu trzecim mamy przygotować procedurę, która stworzy widok zawierający wszystkie zamówienia realizowane pomiędzy dwiema datami przekazanymi w argumencie.
+No i jeżeli chcemy stworzyć procedurę, która stworzy nam widok, to już jest ten moment, gdzie potrzebujemy mieć plpgSQL.
+Czyli createAllReplaceProcedure.
+Czyli createAllReplaceProcedure.
+GetOrdersBetweenDates.
+GetOrdersBetweenDates.
+GetOrdersBetweenDates.
+GetOrdersBetweenDates.
+GetOrdersBetweenDates.
+No i przekazujemy jakieś dwie daty.
+To będzie dateStart.
+Niech to będzie date.
+I dateEnd. Niech to będzie date.
+Widzicie, tu jest prościej.
+Nie ma datetime, a zamiast tego jest date, więc ja nie pomylę.
+Dalej potrzebujemy powiedzieć jaki to jest język.
+Dalej potrzebujemy powiedzieć jaki to jest język.
+Czyli language.plpgSQL.
+Czyli language.plpgSQL.
+S$$.
+S$$.
+Jak będzie nasza procedura wyglądała?
+Nasza procedura będzie miała stworzyć nam widok.
+Nasza procedura będzie miała stworzyć nam widok.
+Ale jeżeli jest to plpgSQL,
+no to potrzebujemy jeszcze te dwa nasze słówka.
+No to potrzebujemy jeszcze te dwa nasze słówka.
+Czyli bedgin end.
+I teraz do tych słówek możemy wstawić naszą procedurę.
+I teraz do tych słówek możemy wstawić naszą procedurę.
+Jak pamiętacie, mam nadzieję,
+że nie da się tego,
+przynajmniej ja nie znalazłem sposobu innego na to,
+żeby stworzyć sobie
+widok na podstawie właśnie takiego zapytania,
+gdzie mamy te dwa wyrażenia,
+gdzie mamy te dwa wyrażenia,
+nie korzystając z wyrażenia
+execute i format
+do tego.
+Więc to jest takie coś,
+czego musimy użyć.
+To będzie służyło do tego, żeby wykonać zapytanie,
+które zostanie zbudowane za pomocą
+tej funkcji format, zostanie zwrócone
+za pomocą funkcji format,
+z której funkcji będziemy mogli też przekazać
+jakieś parametry do widoku.
+Ok.
+I jak nasze zapytanie będzie wyglądało?
+Create or replace view.
+Ten widok nazywa się orders
+between dates.
+Czyli create or replace
+view orders between dates
+as.
+No i tutaj powinniśmy sobie określić
+to zapytanie, czyli select
+from orders.
+Zerknę sobie jeszcze
+na górę, tylko żeby mieć pewność.
+Select from orders.
+I tu będziemy mieli
+dokładnie to samo,
+więc możemy sobie to wkleić
+w to miejsce. Ok?
+Z tą różnicą,
+że nie możemy tu wpisać
+date start i date end,
+tylko musimy użyć %l.
+Bo jeżeli chcemy, żeby te wartości były
+podstawione jako stringi, no to właśnie
+%l jest rozwiązaniem.
+I wtedy w kolejnych dwóch
+argumentach przekazujemy mu
+date start i date end.
+Dzięki temu
+on nam tworząc ten...
+Chciałem powiększyć, pomniejszyć, żebyście
+widzieli, a wyjechałem.
+Dzięki temu on nam tworząc ten widok
+wstawi
+w to miejsce oraz w to miejsce
+date start i date end z góry. Po prostu
+te zmienne, one nam będą się uzupełniały
+w poszczególnych miejscach.
+Czyli mamy średnich
+miejscach, więc jeszcze sprawdźmy. Nie mamy, to dodajmy.
+Możemy to sobie wykonać.
+Jak widać, zapytanie poszło.
+Get orders between
+dates.
+Chcemy to wykonać, więc dodajemy słówko
+call, które służy do wykonywania
+procedur i wskazujemy mu
+dwie daty.
+Czy w zadaniu były wskazane daty? Były.
+1996
+07 01
+przecinek
+1996
+07 31
+Zaraz zobaczymy, czy on sobie z tym poradzi,
+czy to są daty, bo chyba sobie poradził.
+Select gwiazdka
+from orders between
+dates. Ogarnął,
+że mamy też taki widok.
+No data. Nie mamy żadnych danych
+w tym miejscu. Cóż,
+sprawdźmy, czy w ogóle takie rekordy
+są. Select
+gwiazdka from orders
+where order date
+jest większe lub równe
+od
+tego
+i
+jest
+mniejsze lub równe od tego.
+Dobra, są takie rekordy. Czyli coś tutaj
+wyszło nam nie tak. Teraz procedura
+nie tworzy nam
+widoku. No data.
+Widok stworzyła, ale w tym miejscu
+nie zwracane są te dane. Czyli
+problem może dotyczyć tego naszego
+%l.
+Wróciłem do Was po jakimś
+30, może 40 minutowym
+cięciu, podczas którego szukałem
+błędu. No bo zobaczcie,
+mamy to nasze zapytanie
+create or replace view, create or
+replace procedure, get order between
+dates, date start, date end.
+No i wszystko wydawać by się mogło, że
+działa. Ale to jest
+nieprawda teraz. W momencie, w którym ja to sobie
+wywołam,
+już ręce mi się
+trzęsą, bo znalazłem wynik.
+Jak ja to sobie wywołam, następnie
+wywołam sobie tę procedurę.
+Okej, muszę najpierw
+usunąć widok.
+Drop view orders between
+dates. Chcę Wam pokazać, jakie programowanie
+czasem bywa bezczelne.
+Usunąłem sobie widok, wywołam
+procedurę, zrobię select i zobaczcie
+no data.
+No i przez ten czas, to mnie nie widzieliście,
+szukałem
+wielu rzeczy. Przede wszystkim
+szukałem tego, co tu jest nie tak
+z tą elką. Bo jak widzicie,
+nawet zostawiłem coś. Dorzuciłem jakieś
+rzutowanie na date. Myślałem,
+że coś jest bardzo nie tak,
+ale
+szukałem przyczyny błędu w złym miejscu.
+Bo cały czas, po każdej
+mojej zmianie, pokazywało się to samo.
+No data.
+Więc zostawiłem
+to w ten sposób i
+szukałem przyczyny, co
+jest nie tak z tym literałem. Czy
+przypadkiem, jeżeli wkładam tutaj
+literał, który jest czymś innym niż
+string, to może coś muszę jeszcze zrobić.
+Więc szukałem drzutowania, szukałem innych
+literałów. Nic mi z tym nie działało.
+I zacząłem
+się powoli poddawać. Więc poszedłem
+sobie do widoku. No i w widoku
+zacząłem sprawdzać, co tutaj się dzieje.
+I w widoku jest taka opcja, jak
+sprawdzenie source'a. Z czego ten widok
+pochodzi. No i patrzę. Create, replace,
+view, select, from more. No i sobie
+myślę, kurczę, zobaczmy to zapytanie.
+Wziąłem to zapytanie sobie stąd, ładnie skopiowałem.
+Wróciłem do
+tego mojego tego. Tutaj sobie to pięknie
+wkleiłem.
+O!
+Wykonałem
+i mówię, ha! Też jest no data.
+No to gdzieś mam błąd. Gdzieś to jest
+błąd. No i szukałem, szukałem,
+szukałem, po czym okazało się, że tu nie
+napisałem gwiazdki. Jak zrobiłem z gwiazdką,
+nagle wszystko się pokazało.
+Trochę się zrobiłem smutny.
+Te 40 minut gdzieś trochę
+mnie zaczęły boleć. No ale dobra. Jak spojrzałem
+na to, że tu jest select i
+napisałem tę gwiazdkę. Następnie
+wywołałem to. Tu dostałem
+informację, że poszło. Zrobiłem
+calla. Wtedy dostałem informację, że
+poszło. Zrobiłem select. Wtedy okazało się,
+że wszystko działa. Jednej gwiazdki
+nie napisałem, a wszystko było ok.
+No głupi
+błąd, ale cieszę się, że udało mi się
+znaleźć takiego rozwiązanie po
+40 minutach, a nie po 40 godzinach.
+Pewnie aż tak długo by to nie
+trwało. Ale
+chciałem wam się przyznać, że no jak widzicie
+i mi zdarzają się literówki. Często te
+też czasem takie, gdzie nawet głupio
+jest mi kogokolwiek pytać o to, co jest tutaj
+nie tak. Ale no po chwili
+udało się do tego dojść.
+Lecimy do zadania czwartego
+i kończymy naszą pracę domową.
+Jest czwarte, piąte i będziemy wszystko mieli.
+Przygotuj trigger, który zweryfikuje
+wartości wpisywane do tabeli orders,
+tak by wartości w kolumnie order
+date zawsze były wyższe niż
+required date. Ok.
+No to cóż. Będziemy potrzebowali procedurę.
+Procedurę w PLSQL-u.
+Więc możemy sobie od razu ją
+zdefiniować. To sobie ukryję,
+bo nie będzie mi potrzebne i lecę.
+Create or
+replace procedur
+check
+a może verify
+verify
+order date.
+Ok.
+Language to będzie
+PLPGSQL. Na razie piszę
+to, co wiem, co będzie dobre.
+Właściwie to w pewien sposób przepisuję to
+z góry, żeby nie
+zrobić już żadnego błędu.
+Bo potem znowu zapomnę o
+jakiejś jednej małej gwiazdce
+i okaże się, że
+nic nie działa i będzie mi bardzo smutno.
+No.
+I już o czymś zapomniałem. Ponieważ jeżeli
+tworzę sobie funkcję, która będzie miała być
+później triggerem, to ta funkcja musi mi zwracać
+trigger, czyli
+create or replace procedur
+returns, nie tutaj, tutaj
+returns
+trigger.
+Ok. Wtedy jest jeszcze
+s, a language jest
+na końcu, ale to też powinno zagrać.
+Ok. A może zróbmy tak samo, jak
+było w moich przykładach.
+Ale myślę, że ta kolejność
+nie powinna mieć znaczenia.
+Dobra. I co teraz? No i teraz będziemy
+chcieli sprawdzić, czy nowa wartość
+tego naszego
+tego wartości w kolumnie
+order date były zawsze wyższe niż require date.
+Czyli będziemy chcieli sprawdzić, czy nowa wartość
+order date
+ma być większa. Czyli sprawdzimy, czy jest
+mniejsza lub równa
+od new required
+date.
+I jeżeli tak się stanie, czyli jeżeli
+będziemy mieli taką sytuację, to wtedy
+chcemy wyrzucić wyjątek
+fro
+nie, to nie fro, tylko rise.
+Rise exception
+no invalid
+order date
+or required date.
+Syntax error
+Ach, oczywiście, bo to jest
+dobrze mówiłem, to ma być funkcja, a nie
+procedura.
+O.
+I wtedy ten błąd nam zniknął.
+Natomiast rise exception nie ma
+nawiasów, tylko jest string. O tak.
+Coś jeszcze. And if
+średnik i
+and if średnik. O tak.
+Za dużo Pythona. Czyli podsumowując
+to, co było źle, to przede wszystkim trigger
+to jest funkcja, a nie procedura, no bo coś
+zwraca, a zwracają tylko funkcje,
+a nie procedury, to po pierwsze.
+Po drugie średnik za
+rise'em, średnik za and if'em.
+Zawsze o tych średnikach zapominam. And nie musi
+mieć średnika. Tu jest ok.
+I teraz, jeżeli to sobie zrobimy,
+to będziemy chcieli stworzyć teraz tego
+trigger, czyli create
+trigger
+i możemy go sobie nazwać, skoro
+ma sprawdzać orders, to może być orders
+podkreślenie
+check
+czy tam verify
+order date.
+Before insert
+or update, jeżeli chcemy, żeby się wykonywał
+za każdym insertem i za każdym update'em
+na,
+no i teraz musimy mu powiedzieć na jakiej tabeli.
+My chcemy to robić na tabeli orders, więc
+możemy napisać mu orders.
+No i dla każdego
+wiersza
+chcemy wykonać
+funkcję
+verify order
+date.
+Czyli to co sobie zrobiliśmy
+w pierwszej kolejności, to najpierw
+stworzyliśmy sobie ten trigger,
+następnie go sobie spięliśmy
+z naszą tabelą. Tu zapomniałem jeszcze o tym
+return new, bo muszę zwrócić ten nowy
+obiekt, no bo w końcu
+zwracam trigger, więc wykonam sobie
+teraz jeszcze
+tego nie muszę spinać, bo już
+to spiąłem, no i wtedy
+mogę sobie zaktualizować
+moje zamówienie,
+czyli select gwiazdka from orders
+i teraz
+mogę sobie zrobić update'a
+i na przykład spowoduję, że ten
+tomsp będzie miał
+required date.
+On ma być zawsze większy
+niż ordered date.
+To jest ordered date jest mniejszy lub
+równy, momencik, który zweryfikuje
+wartości, tak by wartości w kolumnie
+ordered date zawsze były wyższe niż
+required date. Aha, ok.
+Czyli ja teraz zrobię tak, żeby
+ordered date tutaj był
+odwrotnie.
+Order date powinny być
+niższe
+niż required date, jeżeli chodzi,
+jeżeli chcemy zrobić poprawnie.
+Czyli poprawnie powinno być tak,
+czyli jeżeli ordered date
+jest późniejsze niż required date,
+mówmy późniejsze niż równe.
+Poprawiam ten błąd,
+ale wiecie o co chodzi, to jest logika.
+Więc teraz to, co mogę zrobić,
+żeby zobaczyć błąd, to mogę sobie
+ustawić datę
+tego ordered date, datę tego
+wymówienia na późniejszą niż tą
+required date i wtedy powinienem mieć błąd.
+Czyli update ordered date
+równa się
+update,
+przepraszam, update orders
+set ordered date
+równa się
+1997
+0101
+where ordered date
+where ordered id równa się
+10249
+ops, no i dostaję
+błąd. Error invalid
+czyli
+rys mi wyszedł.
+A jeżeli wezmę datę
+prawidłową, czyli
+w przypadku tego zamówienia to musiałaby być
+data na przykład
+z 96
+z lipca
+z 1 lipca niech będzie.
+To tego komunikatu nie mam
+i mam
+czy mam 1 lipca?
+Sprawdźmy to.
+Powinien być.
+I ordered date jest
+1 lipca, czyli zadziałało.
+I zostaje nam tylko i wyłącznie
+ostatnia rzecz, czyli przygotuj
+nową tabelę shipment, która będzie
+zawierała etykiety do wysyłki i do
+wydrukowania. Za każdym razem, gdy zostanie
+dodane nowe zamówienie do wartości
+wszystkich kolumn z prefiksem ship
+powinny być do niej kopiowane.
+Czyli cóż, jeżeli sobie weźmiemy
+select all from orders
+to zobaczymy, że takich
+kolumn z shipem mamy kilka.
+Mamy ship name,
+ship address, ship city
+ja je sobie od razu wypiszę,
+czyli ship name
+a to jest przecież SQL
+ship name
+ship address
+ship city
+ship region
+i ship postal code
+i jeszcze jest ship country
+I naszym zadaniem
+jest stworzenie tabeli, która będzie się
+nazywała shipments, która będzie
+zawierała te informacje.
+Czyli create
+table
+shipment
+Dobra.
+I potrzebujemy w naszej tabeli shipment
+mieć wszystkie te kolumny, one wszystkie
+będą voucherami, więc możemy
+je sobie tutaj stworzyć.
+Hops
+255
+256
+257
+258
+259
+251
+252
+253
+254
+255
+255
+256
+257
+258
+259
+251
+252
+253
+254
+255
+256
+257
+258
+259
+251
+252
+253
+254
+255
+256
+257
+257
+258
+258
+259
+2510
+2511
+2512
+2513
+2514
+2515
+2516
+2517
+2518
+2519
+2521
+2522
+2523
+2524
+2525
+2525
+2526
+2527
+2528
+2529
+2531
+2532
+2534
+2535
+2546
+2547
+2539
+2540
+2541
+2542
+2543
+2545
+2546
+2547
+2548
+2549
+2550
+2551
+2552
+2553
+2554
+2556
+2557
+2558
+2559
+2560
+2561
+2562
+2563
+2564
+2565
+2567
+2568
+2569
+2570
+2570
+2571
+2572
+2572
+2573
+2574
+2575
+2578
+2578
+2579
+2589
+2510
+2511
+2512
+2513
+2514
+2515
+2516
+2517
+2518
+2519
+2520
+2521
+2522
+2523
+2524
+252526
+2527
+2528
+2529
+2530
+2531
+2532
+2533
+2534
+2545
+2546
+2547
+2549
+2551
+2552
+2553
+2554
+2556
+2557
+2558
+2559
+2559
+2560
+2561
+2562
+2563
+2564
+2565
+2567
+2568
+2569
+2570
+2570
+2571
+2572
+2572
+2573
+2574
+2574
+2575
+2578
+2578
+2579
+2589
+2590
+2590
+2591
+2592
+2593
+2554
+2556
+2557
+2558
+2559
+2559
+2560
+2561
+2562
+2563
+2564
+2565
+2567
+250
+250
+250
+250
+250
+220
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+recycled
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+250
+ship wianier będzie 2
+write 10 ship
+i tutaj te ship name
+no to ship name
+sobie po prostu napiszmy
+ship address
+czy możemy to wykorzystać? nie możemy
+bo to nie są stringi
+no i pozostałe możemy już pisać jako
+ship ship ship, czyli będziemy mieli
+po adresie
+1, 2, 3, 4
+shipy, no to lecimy
+ship
+2, 3, 4
+ctrl enter
+order date or required date
+jest nieprawidłowy
+nie zrobiliśmy
+mniejszego chyba, co?
+to pierwszy był order date
+drugi był required date
+dobrze pamiętam? tak, najpierw był order date
+i on miał być mniejszy niż required
+to zróbmy to dzień wcześniej
+poszło
+teraz jeżeli sobie sprawdzimy
+nasze ordery
+to mamy do bonapa
+11.08, 11.09
+no i select gwiazdka from
+shipment
+i jest nasz
+ship ship ship
+czyli zadziałało, tym samym
+zakończyliśmy pracę domową
+zakończyliśmy również naukę
+SQL-a, bardzo Wam za to dziękuję
+i zapraszam Was
+do
+modułu, już do lekcji
+do zobaczenia, trzymajcie się, cześć
+i do zobaczenia

@@ -1,0 +1,683 @@
+Witajcie moi drodzy, rozpoczynamy moduł 8, który jest ostatnim modułem SQL-owym,
+później już tylko NoSQL.
+A czym jest NoSQL? O tym porozmawiamy sobie już za tydzień, a teraz jeszcze o SQL-u.
+Ale zanim porozmawiamy o tym SQL-u, warto byłoby zająć się tematem pracy domowej,
+więc zacznijmy.
+W zadaniu pierwszym mamy utworzyć tabelę Subjects oraz Lessons, według przykładu poniżej.
+Mamy pamiętać też o Constraintach.
+Sprawdź jak zadziała Restrict, gdy spróbujesz usunąć temat, który posiada lekcje
+oraz co się stanie, gdy usuniesz Constraint i zamienisz go na Cascade.
+Więc zapraszam.
+Ja sobie jak widzicie już zawczasu przygotowałem takie miejsce,
+w którym właśnie te zadania już mam wypisane,
+też żeby tak nie skakać między tą prezentacją a zadaniami.
+Więc możemy sobie zacząć wszystko od tego, że stworzymy sobie jakąś skimę, taką do zabawy.
+Czyli Create do pracy domowej.
+Schema, Homework, Homework, może być 8.
+Okej, więc tworzę sobie taką skimę, skima się utworzyła
+i teraz w ramach tej skimy będę chciał stworzyć te dwie tabele,
+póki co bez Constraintów, znaczy ja przygotuję po prostu te tabele
+i zaraz sobie o Constraintach porozmawiamy.
+Czyli Create Table Subjects.
+I Create Table Lessons.
+Co w tych tabelach jest?
+Tutaj oczywiście muszę sobie wrócić do zadania, żeby to widzieć.
+Już sobie otwieram.
+I tak, jeżeli chodzi o Subjects, to mamy ID oraz Title.
+No to lecimy.
+ID, Serial, Primary Key.
+Subjects.
+Subjects.
+Subjects.
+Subjects.
+Tak, wymówimy jakby będzie VARCHAR 255.
+OK.
+Czyli te tabele sobie utworzyłem.
+Natomiast jeżeli chodzi o lessons, to mamy ID.
+To mamy ID.
+Mamy Subject ID.
+Oraz mamy Title jako Varchar.
+hops, dobra
+i obie te tabele sobie już utworzyłem
+oczywiście mógłbym w trakcie
+tworzenia tych tabel teraz określić sobie
+constraint'a, ale jeżeli tego
+nie zrobiłem, no to nie ma sprawy, bo
+tak jak wam mówiłem, constraint'y możemy dodawać
+albo podczas tworzenia tabeli
+albo możemy constraint'a
+dodać sobie już po tym, jak tabela jest utworzona
+za pomocą polecenia alter table
+więc do czego będę
+dodawał constraint'a? Constraint'a będę
+dodawał do subject id
+więc alter table
+no chodź
+alter table lessons
+add constraint
+no i ten constraint może się
+nazywać lessons
+lessons subject
+foreign key
+na przykład tak
+ok, i teraz foreign
+key
+otworzyłem sobie dokumentację
+akurat tego dodawania constraint'a
+nie mam w głowie w całości, więc sobie
+to otworzyłem
+czyli tak, add constraint foreign key
+dalej wskazujemy mu
+wskazujemy mu
+która kolumna jest tym constraint'em
+czyli która kolumna ma być
+jest tym foreign key'em, jest to subject
+id
+po czym mówimy, że to ma się
+odnosić do
+subject
+id
+no i tutaj jest to
+co ma się wydarzyć w momencie, w którym
+będziemy chcieli coś zmieniać
+no i tu jest propozycja, żeby ustawić on delete restrict
+no to bardzo proszę
+on delete restrict
+ctrl enter
+constraint nam się dodał
+jeżeli teraz będę
+chciał dodać sobie coś do tych
+do tych rekordów, no to zobaczcie
+co się stanie, jeżeli dodam coś do
+insert into lessons
+i załóżmy dodam
+sobie coś na
+subject id 1
+aha, zrobiłem create schema
+a nie zrobiłem
+nie zrobiłem, wiecie czego
+najpierw muszę
+usunąć lessons, nie zrobiłem
+nie wskazałem mu, że to ma być w skimie
+więc ja sobie na szybko to usunę
+a na szczęście jest to dbiver, więc
+3 minuty i będzie po sprawie, uwaga
+tutaj tylko dorzucamy homework
+8
+o tak
+i tutaj też homework 8
+ok
+i tutaj wtedy też homework 8
+alter table homework
+8
+reference homework
+8
+dobra, poszło
+i teraz jeżeli będę chciał coś dodać
+oczywiście do lessons jako homework 8
+i będę chciał to dodać
+do
+subject id, który nie istnieje
+no to on mi się w tym momencie
+powinien nawet wysypać
+o, syntax error
+a values
+o tak, widzicie
+insert or update on table lessons
+violets
+foreign key
+constraint, czyli się nie da dodać
+jeżeli nie ma takiego elementu
+to też jest przydatna sprawa
+natomiast ja sobie oczywiście
+zacznę od tego, że dodam sobie
+dodam sobie
+dodam sobie temat
+żeby móc dodać lekcje
+insert into
+homework8.subjects
+no i jakiś temat sobie dodamy
+values, niech to będzie
+dżango
+i
+python
+ctrl enter
+dodał nam się
+i teraz jeżeli będziemy chcieli
+stworzyć sobie na przykład lekcję pod tytułem
+wstęp do pythona
+jedną lekcję
+jedni na tym całego bootcampy robią
+ctrl enter
+o, to jak widzicie wszystko nam zadziałało
+jeżeli teraz bym chciał sobie to pobrać
+to zobaczcie co się stanie
+select gwiazdka from homework
+8 lessons
+i tutaj widzimy, że ten subject id
+nam się ładnie wpisał
+i też nie można go edytować na taki
+którego nie ma
+ale ok, treść zadania była inna
+myśmy na razie sobie tylko przećwiczyli to
+jak się to tworzy
+ale sprawdź jak zadziała restrict
+gdy spróbujesz usunąć temat
+ok, myśmy tutaj zrobili właśnie on delete restrict
+czyli jeżeli chcemy sprawdzić to
+no to trzeba byłoby to usunąć
+czyli delete
+from subjects
+where id
+równa się 1
+i to okaże się
+homework 8
+i to powinno nam wyświetlić komunikat jak widać
+update or delete on table subjects
+ja bym ten komunikat wkleje tutaj
+o, zobaczcie
+zresztą wy skoro to jest praca domowa
+to pewnie już to wykonaliście samodzielnie przed chwilą
+tylko się upewniacie czy ja mam tak samo
+więc tak to wygląda
+i mamy błąd
+co my musimy zrobić żeby można było usunąć ten rekord
+musimy najpierw usunąć
+te lekcje
+która jest w środku
+czyli delete from homework
+8.lessons
+where subject id
+równa się
+1
+o poszło
+i teraz usuwam
+poszło
+czyli wszystko się zgadza
+a teraz zrobimy sobie taką zmianę
+bo tutaj mieliśmy się pobawić
+co się stanie jeżeli zamienimy sobie
+constraint na cascade
+bo jak byłby constraint
+ustawiony jako restrict
+to jak widzieliście
+nie udało nam się tego zmienić
+natomiast jeżeli wybierzemy cascade
+no to wtedy powinny nam usunąć
+przy usuwaniu tematu
+usunąć też wszystkie lekcje które znajdują się
+w środku
+jak usunąć constraint
+alter table
+sobie trochę pokopiuję
+homework 8 lessons
+drop constraint
+co ty piszesz
+constraint
+i tutaj będzie nazwa tego constraint
+constraint nam się usunął
+no i teraz będę chciał dodać go raz jeszcze
+więc sobie po prostu
+ten treść skopiuję
+wkleję
+no i alter table homework 8 lessons
+może być ten sam constraint
+tylko on delete cascade
+ok
+no i teraz to co robię to dodaję
+lekcje i tematy
+nie będę tego kopiował wklejał
+po prostu wykonam te dwa inserte
+a bo wiecie co
+skopiuję wkleję
+lepiej żebyście mieli wszystko po kolei
+zaraz też dodam komentarze
+jeżeli będą były potrzebne
+czyli tutaj robię insert
+o coś się zepsuło
+aha bo teraz
+ta lekcja będzie miała już id 2
+pamiętacie mamy auto increment
+więc jeżeli sobie podbiorę wszystkie
+ten temat wszystkie tematy
+wszystkie subjecty
+to okaże się że
+mam id o numerze drugim
+stąd też w tym miejscu muszę wpisać
+dwójeczkę
+ok no i teraz
+jeżeli będę bym chciał to usunąć
+to mogę sobie jeszcze sprawdzić
+tylko tu mi się dodało
+czyli select all from lessons
+jak widać jest
+no i usuwamy delete
+i tutaj mam homework
+8 subjects
+where
+subject id
+równa się 2
+where
+subject id równa się 2
+where id równa się 2
+tak się nazywa ta kolumna
+w tabeli subjects
+ctrl enter
+poszło updated rows 1
+ale czy na pewno subject
+nie mam lessons
+też nie mam
+to znaczy
+czy to jest dobre
+to zostawiam wam
+w sensie znam ludzi którzy nie lubią
+używać w ogóle tych constraintów
+z tego powodu
+bo wolą nad tym panować samodzielnie
+nie chcą żeby baza im
+cokolwiek sama robiła
+ale czy to jest dobre podejście
+no to jak zawsze
+musimy wiedzieć jakie są wady zalety
+danego podejścia
+no i na tej podstawie musimy podejmować
+świadomy wybór czy chcemy iść taką drogą
+inną
+i to tyle
+dzięki za to zadanie zapraszam was
+do zadania kolejnego
+w drugim zadaniu mamy skorzystać z obrazu dockerowego
+niestety nie mam możliwości nadania wam
+uprawnień administratorskich na tym serwerze
+zdalnym
+stąd też żeby rozwiązać ten ambaras
+zaproponuję wam abyśmy
+zainstalowali sobie dockera
+opisu instalacji nie będę wam pokazywał
+natomiast wszystko jest opisane
+na stronie docker.com
+dużo zależy od tego na jakiej platformie pracujemy
+bo inaczej się to robi na osx
+inaczej na linuxie inaczej na windowsie
+na windowsie trzeba jeszcze coś włączyć z wirtualizacją
+trochę jest z tym roboty
+natomiast finalnie
+finalnie jeżeli
+uruchomimy dockera
+to zainstalujemy dockera i będzie on
+można będzie go uruchomić
+to tym poleceniem docker run
+powinniśmy spowodować że będzie nam się
+uruchamiała nasza
+maszyna z naszym
+northwindem
+czyli northwind to jest ta nazwa bazy danych
+na której pracujemy
+na której wykonujemy ćwiczenia
+i tak
+tu zobaczcie oni nam nawet mówią
+jak możemy się połączyć do tej bazy danych
+z poziomu linii command
+ale my używamy dbvera
+więc żeby się podłączyć do tej bazy
+musicie skorzystać z tego stringa
+i tu wprost mówią nam
+że nie ma hasła
+jest to
+baza danych o nazwie northwind
+a nazwa użytkownika to jest northwind
+i korzystając właśnie z tych
+ustaleń będziemy mogli
+podłączyć się do tej
+naszej bazy danych lokalnie
+ja w międzyczasie już też
+sobie tutaj tego
+northwinda odpaliłem
+więc już się do niego przełączam
+i widzimy się za moment
+czyli tak
+korzystając z obrazu dockera
+pod adresem docker postgres northwind
+to już zrobiłem
+spróbuj postawić dockera na swoim komputerze
+sprawdź co się stanie
+jeśli utworzysz nowe konto użytkownika
+i zabierzesz mu uprawnienia
+do dodawania treści
+a następnie podłączysz się do bazy danych
+z tego konta i spróbujesz dodać nowy wpis
+sprawdź co się dzieje
+gdy inny użytkownik nie będzie mógł
+nawet czytać z danej tabeli
+no to cóż
+zaczniemy sobie od tego że stworzymy
+nowe konto użytkownika
+no i w tym celu wykonujemy sobie polecenie
+create user
+ja nazwę użytkownika mam na imię
+czyli kacper
+with password
+użyję tego hasła którego używam wszędzie
+stworzę sobie też
+mogę stworzyć bazę jeżeli bym chciał
+create db ale nie muszę
+no i valid until też mnie nie interesuje
+więc robię ctrl enter
+tu był mały błąd
+wokół kacper zrobiłem apostrofy
+bez apostrofów to działa
+jak widzicie create user kacper
+się tutaj nam wykonał
+updated rows 0
+tutaj należy po prostu
+sobie dodać nowe połączenie
+czyli create connection
+wybrać postgresa
+no i wskazać mu te dane
+to będzie localhost
+5 4 3 2
+database niech będzie postgres
+chociaż chyba do postgresa nie będę miał dostępu
+zostawię puste
+to może być spokojnie puste
+nazwa użytkownika to jest kacper
+no i hasło to jest to którego używam wszędzie
+czyli kacper 1 2 3
+przeniosę sobie to pod skumaj
+żeby wiedzieć
+no i zmienię sobie nazwę
+czyli rename rename rename
+skumaj bazy
+kacper
+kacprze powinno być
+ok i zobaczcie
+i teraz mam taką sytuację
+że tu jestem podłączony do skumaj bazy
+i mam ten mój
+moje połączenie administratorskie
+a tutaj mam połączenie
+nazwijmy je kacprowe
+co mam zrobić
+idę od początku
+korzystając z obrazu docker ok
+sprawdź co się stanie jeśli utworzysz nowe konto użytkownika
+zabierzesz mu uprawnienia do dodawania treści
+czyli utworzyłem sobie konto o nazwie kacper
+i teraz mogę tego kacpra podłączyć
+do tej samej bazy danych
+no bo tutaj mam northwind
+a tu mam postgresa
+więc tak naprawdę nie powinienem tego pola co wam powiedziałem
+że może zostać puste zostawić pustego
+tylko powinienem tutaj wpisać postgres
+nie postgres northwind
+robimy
+sobie ok
+chcę się przełączyć
+no i teraz jako kacper powinienem być podłączony
+no i możecie zwrócić uwagę na to
+że w tym momencie
+widać
+w jednym i drugim oknie wszystko
+czyli jako kacper widzę wszystkie rzeczy
+które są w tym schemacie public
+no i oczywiście jako administrator
+też to wszystko widzę
+teraz jako administrator
+będę chciał stworzyć nowe konto
+nowe konto nie
+nową tabelę
+nazwijmy ją na przykład gifts
+no to create
+table gifts
+gifts
+będzie nas interesowało id
+primary key
+i serial
+no i
+nazwa tego
+czyli jakiś tam name
+varchar 255
+hops
+w ten sposób dodaliśmy sobie nową tabelę
+jeżeli sobie odświeżę ten schemat
+to tabela gifts
+pokazała
+i jak odświeżę sobie ten schemat
+to też ta tabela powinna się pokazać
+jest jest no to super
+i teraz do tej tabeli
+chciałbym żeby kacper
+czyli
+w tym oknie tutaj drugim
+utworzę sobie nowy skrypt
+i chciałbym żeby tutaj skumaj bazy kacper
+nie mógł robić select gwiazdka from
+gifts
+bo możecie zwrócić uwagę
+że teraz kiedy to wykonam
+to zresztą nawet on nie może jest permission denied for table gifts
+to dajmy
+czyli dajmy mu select
+możliwość wykonywania zapytania select
+w tym celu wykonujemy polecenie
+grant select
+on table
+on table nie wpisujemy tylko on gifts
+to
+kacper
+control enter
+no i wtedy tutaj select gwiazdka from gifts
+już zadziałała widzicie
+teraz wykonuję insert into gifts
+jako kacper
+jakiś przykład
+jakiś przykładowy prezent
+no taki jaki nie wiem codziennie komuś dajemy
+a tak niech to będzie porsche
+robimy control enter
+no i mamy syntax error
+ahem values
+ops
+no i znowu permission denied
+jeżeli chcemy dać mu insert jeszcze
+no to możemy zrobić drugie polecenie
+grant insert
+on gifts
+to kacper
+jak wtedy spróbujemy dodać insert
+o to jeszcze wychodzi na to
+że mamy
+nie mamy uprawnień
+do widzenia tej sekwencji
+czy tej która generuje nam
+kolejne id key
+więc jeszcze musimy do tej sekwencji
+dać mu uprawnienia
+czyli grant all on sequence
+to kacper
+okej
+no i wtedy insert powinien nam się już powieść
+możemy już pobierać
+możemy dodawać
+możemy pobierać
+ale jeżeli spróbujemy usunąć
+o
+to już to się nie uda
+i tak można się bawić w nieskończoność
+dodając usuwając
+nowe elementy
+mam nadzieję że wam się podobało
+spróbujcie też sami
+możecie dać wszystkie uprawnienia
+potem spróbować zabrać
+wszystkie te polecenia
+które pokazywałem wam poprzednio
+powinny działać
+idziemy dalej
+w zadaniu trzecim
+i teraz będziemy pracowali już praktycznie cały czas
+na tym northwindzie
+będąc podłączeni do tej wersji localhost
+z tego względu że te zadania
+jak pamiętacie z opisów
+możemy wykonywać w większości jako administrator
+przygotuj strukturę bazy danych
+dla listy to do
+zawierającą kolumny
+remind me at title oraz done
+tu oczywiście tabeli
+kolumny remind me at
+title
+oraz done
+i będziemy przygotowywali w ramach tego
+partycję
+więc ja w pierwszej kolejności sobie stworzę tę tabelę
+może być też w tym northwindzie
+create table
+to do
+no i standardowo
+id
+serial primary key
+remind
+me at to jest timestamp
+title to będzie
+warchar
+no i done
+to będzie boolean
+możemy zmienić to jako
+is done
+czy tam jest zrobione
+podczas nagrywania
+wkradł się mały chochlik
+ja się tutaj odrobinę zamotałem
+i ten wiersz w którym jest id
+powinien być z nich usunięty
+z tworzenia tabeli
+bo jeżeli robimy partycję to nie możemy mieć
+primary key'a
+i dalej za moment zobaczycie że ja ten wiersz usunąłem
+natomiast o tym nie powiedziałem
+więc bardzo poproszę żebyście i wy go usunęli
+dzięki wielkie do zobaczenia cześć
+zdefiniowaliśmy że będziemy chcieli
+partycjonować kolumnę is done
+no i teraz będziemy chcieli dla niej
+stworzyć partycję dla zadań wykonanych
+i dla zadań niewykonanych
+czyli create table
+to do done
+partition
+of
+to do
+for values
+no i teraz tutaj
+for values in
+możemy zrobić true po prostu
+no i not done
+create table
+not done
+for partition in
+tutaj wpisać sobie false
+no i teraz możemy dodać
+przykładowe zadania
+już te zadania sobie wcześniej przygotowałem
+więc sobie wykonam pierwsze, drugie, trzecie
+czwarte
+no i jeżeli teraz wykonam select all from to do
+to okaże się że wszystko
+jest ok
+select all from to do
+done
+no to wtedy będę miał tylko te które mają tick
+które są zrobione
+no i analogicznie
+not done
+też mi zadziała
+no i to że chodzi o partycję
+to byłoby na tyle
+przećwiczyliśmy sobie
+zadanie ostatnie zadanie czwarte
+przygotuj zapytanie
+znaczy zadanie ostatnie zadanie czwarte
+przygotuj zapytanie które zwróci nam zamówienia
+wraz z informacją jaki jest udział procentowy
+kwoty tego zamówienia
+w całym miesiącu
+czyli zamówienie podzielone przez sumę zamówień
+z danego miesiąca dla klienta winet
+czyli będziemy potrzebowali sobie
+zrobić window function
+czyli select
+gwiazdka
+from orders
+na początek przygotowujemy sobie
+pytanie interesuje nas tylko
+ten pan
+czy ta firma winet
+czyli select gwiazdka from orders
+where customer id
+to winet
+ok
+i teraz
+z tego będziemy chcieli powiedzieć
+udział procentowy kwoty całego zamówienia
+ok czyli do tego musimy sobie dołączyć
+kwotę
+naszego zamówienia
+czyli przed wherem jeszcze
+dorzucamy left
+równa się
+to jest
+order detail
+czyli to jest
+od kropka
+add
+na to średni
+bo
+no i w ten sposób
+możemy wykorzystać
+custom lady
+a także
+zbieranie
+wartość zamówienia, czyli unit price razy quantity
+ok, jeszcze order id by nam się przydało
+order id jest ambiguous, więc weźmy z orders
+i wtedy mamy, czyli widzimy
+jeszcze możemy sobie to posortować po order id
+czyli widzimy, że w ramach tego zamówienia
+jednego, no choć
+10248
+tam 10248
+takie zamówienia wyszły, potem 10274
+takie, no i tak dalej
+w 10295 mamy tylko jedno
+więc ładnie będzie widać to o czym mówiłem
+i teraz nasze zadanie polega na tym, że będziemy chcieli sobie z tego
+wyciągnąć informacje
+o tym jaki jest udział, czyli po prostu będziemy chcieli sobie
+podzielić tę jednostkową wartość
+przez sumę, więc możemy sobie zrobić
+przecinek
+i to podzielić
+ja to wziąłbym w nawias na wszelki wypadek
+podzielimy sobie to przez
+sumę, czyli sum
+sumować będziemy chcieli też to
+over
+partition
+by
+order id
+to możemy sobie jeszcze to partition by
+wziąć w nawias
+okej, no i wtedy nam wyjdzie, że
+tam gdzie jest tylko jedno zamówienie, to jest to jeden
+natomiast jeżeli mamy w ramach tego
+kilka zamówień, no to to jest 38%
+22% i 39%
+i tak nam się to ładnie podliczyło
+to co poćwiczyliśmy
+możemy zatem przejść
+do wiedzy
+zapraszam do modułu
+do zobaczenia

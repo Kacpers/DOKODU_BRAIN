@@ -1,0 +1,145 @@
+Okej no i skoro indeksy już za nami to
+przyszedł czas na wstęp do modelowania
+danych czyli sobie pomodelujemy i zastanowimy
+się jak to zrobić żeby te kolekcje nam
+ładnie wyglądały porozmawiamy sobie o
+Flexible Schema czy dowiemy się co to
+takiego jest chociaż już to wiem ale
+jeszcze raz sobie to zaznaczymy powiemy
+sobie o tym jakie ona ma zalety powiemy
+sobie ogólnie rzecz biorąc o tym jak
+takie dane należy modelować w kolekcjach
+wspomnimy sobie też o embedach czyli
+pokażę wam jakie są różne podejścia do
+umieszczania obiektów w obiektach no i
+porozmawiamy o czymś co nazywa się
+Kept Collection i Time Series Collection
+to są takie dwa rodzaje kolekcji które
+też pozwalają nam na całkiem ciekawe
+operacje okej jeżeli chodzi o skimę no
+to po polsku możemy to sobie tłumaczyć
+jako schemat czyli taką strukturę
+jak wiecie w momencie w którym
+pracujemy z bazą danych relacyjną no to
+wówczas mamy tabele tabela ma kolumny
+kolumnie jest ograniczona ilość i tak
+wygląda nasza praca natomiast kiedy
+mówimy o dokumencie no to mówiliśmy
+też sobie o tym że ilość tych
+właściwości bardzo nam się może
+zmieniać w tej lekcji też dowiecie się
+między innymi jak sprawdzać poprawność
+w tej lekcji może nie ale w tym module
+jak sprawdzać poprawność naszych danych
+więc trochę zaczynamy sobie wtedy tą
+schemę naszą no zamurowywać natomiast
+jest ona wciąż flexible czy wciąż
+można ją zmieniać czy wciąż możemy
+sobie dokładać nowe pola usuwać pola
+w różnych dokumentach czyli tak naprawdę
+schemat żaden nie istnieje każdy
+dokument może mieć inną strukturę co
+ważne też dokumenty mogą się w sobie
+zawierać czy możemy mieć też te
+mbd Zobaczcie to na przykład mamy
+first name Jan last name Kowalski i on
+ma lessons 1 2 z jakimiś różnymi
+opisami czy to dobre czy to złe
+kiedy można tego używać też sobie
+teraz powiemy No i podstawowe pytanie
+jest takie jak zatem projektować naszą
+aplikację czy co zrobić żeby ta
+aplikacja nam funkcjonowała dobrze no
+i podejście jest następujące a mianowicie
+Mongo ogólnie rzecz biorąc chwali się
+tym że przy budowaniu aplikacji w
+oparciu o tę bazą danych tak naprawdę
+najpierw powinno się budować aplikację
+a dopiero potem projektować kolekcje
+i dokumenty zupełnie odmienne podejście
+jeżeli pracujemy z tabelami i z
+bazami danych relacyjnymi to tam
+najczęściej zaczynamy pracę od to
+właśnie zaprojektowania struktury
+naszych dokumentów tutaj to podejście
+jest zupełnie odwrotne najpierw apka
+potem dane oni się tym szczycą mówiąc
+że właśnie to wyróżnia ich i to
+jest to najlepsze podejście No bo
+tak naprawdę nie wiąże się żaden
+schemat jedni lubią być związani może
+a może nie no nie wiem więc tak naprawdę
+Tutaj najpierw pracujemy nad widokami, nad interfejsem,
+nad tym, żeby nasza aplikacja działała, a dopiero później przekazujemy
+konkretne dane, które chcemy przechowywać.
+No i tutaj, jeżeli chodzi o to,
+to też pod tym względem jest łatwiej, no bo tak naprawdę aplikacja
+nam mówi, jakie dane chcemy zapisywać,
+jak chcemy te dane zapisywać, nie musimy niczego wcześniej
+przechowywać, po prostu przygotowujemy sobie taki kubeł na te dane,
+które mamy. No i dopiero wtedy, jak dodamy te dane,
+to zaczynamy się martwić i optymalizować.
+Takie zupełnie inne podejście niż w przypadku baz danych
+relacyjnych. Natomiast
+przejdźmy sobie teraz jeszcze do tego powtarzania.
+Pokazałem wam ten lessons, gdzie mieliśmy taką listę
+powtarzających się obiektów. No i tutaj
+takie pytanie, które mnie bardzo często bolało.
+Czy to jest dobre, że właśnie mamy chleb, masło, mleko, ser
+i za każdym razem powtarzają nam się te kategorie?
+No bo mnie to bolało. I oczywiście
+można od tego odejść i też podczas tego modułu zobaczycie,
+jak od tego się odchodzi. Natomiast Mongo wyznaje taką zasadę,
+że te dane mogą się powtarzać, ale nie muszą.
+Dlaczego nie muszą, to jeszcze wam zaraz opowiem.
+Ale właśnie to, co widzieliście przed chwilą,
+to są embedy, czyli jeden dokument umieszczony
+wewnątrz innego dokumentu. I teraz
+Mongo w swojej dokumentacji, to jest zrzut ekranu
+z tej dokumentacji, żebyście wiedzieli, dlaczego mogą,
+mówi o tym, że Embedded Document Pattern, to jest coś takiego,
+że jest to taki ogólny wzór, jak przechowywać nawet bardziej
+skomplikowane podstruktury, tak, jak umieszczać te podstruktury,
+łączyć te dokumenty ze sobą, żeby to miało sens.
+I zasada jest bardzo prosta.
+What you use together, store together.
+Czyli oni nas trochę rozgrzeszają jakby z tego powtarzania.
+Oni nam mówią, że jeżeli chcesz używać te dane razem, no to rób je,
+razem. Ja widzę w tym niebezpieczeństwo,
+a tym niebezpieczeństwem jest to, że jeżeli będę chciał zmienić kategorię
+ze spozywczej na spożywczą albo na cokolwiek innego,
+to będę musiał to zmieniać we wszystkich dokumentach.
+Mając tych dokumentów bardzo dużo, będzie to trwało bardzo długo.
+Więc no jest to pewien dyskomfort, ale też pokażę wam,
+jak za pomocą referencji możemy też sobie takimi danymi zarządzać.
+To też jeszcze w tym module. Jeżeli chodzi o embeddy,
+no to jak widać, mamy taką sytuację,
+że mamy w pustyni i w puszczy autor first name last name Henryk
+Cienkiewicz. Możemy mieć też chleb, kategorie spożywcze,
+slag spożywczy. Możemy sobie to też rozszerzać w ten sposób,
+ale możemy też tworzyć taki embed wyglądający w ten sposób,
+jak widzicie po lewej stronie. Czyli dyrektor, czyli reżyser Quentin
+Tarantino nakręcił takie i takie filmy. Mamy film Wściekłe psy.
+Jak widać jest title English title year, czyli tak naprawdę
+tutaj mamy taką strukturę. Niżej jest Pulp Fiction,
+która ma trochę inną strukturę, a poniżej jest jeszcze title Kill Bill.
+No i mamy jakieś powiązane filmy. Więc z jednej strony oczywiście
+powtarzanie tych rzeczy może być denerwujące, tak jak po prawej,
+bo może nam się wydawać, że za każdym razem mam powtarzać wszędzie
+tego Henryka Cienkiewicza, no ale może się okazać, że gdzieś
+w przyszłości będziemy chcieli te dane dodać. No i wiecie, to nie jest tak,
+że my sobie mówimy, która baza jest lepsza, która jest gorsza,
+czy relacyjne, czy nierelacyjne. Myślę, że tutaj powinniśmy po prostu
+zastanowić się nad użyciem i wtedy, kiedy chcemy używać takich bardziej
+dynamicznych struktur, to wybieramy nierelacyjne. Jak chcemy używać
+dynamicznych, używamy relacyjne. A czy można zrobić tak samo jak
+w SQLu, czyli przechowywać tylko klucz do jakichś tam obiektów w jednej kolekcji.
+Jak najbardziej możemy tak zrobić. Zobaczcie, jeżeli mamy książkę
+w pustyni i w puszczy i tę książkę napisał Henryk Cienkiewicz,
+no to jak najbardziej możemy zrobić autor1 i tyle. I w ten sposób
+też można żyć. Po prostu, jeżeli będziemy chcieli pobrać sobie
+książkę napisaną przez autora pierwszego, no to robimy db.books.find.autor1,
+a jak chcemy pobrać tego autora, to robimy db.authors.find1,
+a podkreślenie id 1. Tak jak najbardziej też można
+robić, ale też można użyć lookup'a i później te dane sobie połączyć,
+ale nie chcesz tak wybiegać, bo jak użyć lookup'a pokażę wam już w kolejnej lekcji.

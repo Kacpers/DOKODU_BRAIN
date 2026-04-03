@@ -1,0 +1,48 @@
+Dockerfile to nie jest prosta sprawa.
+Tych poleceń, które w Dockerfile'u się pojawiają, jest dużo.
+I przyznam szczerze, że nie pracuję z Dockerem na co dzień,
+znaczy używam go na co dzień, ale nie tworzę takich Dockerfile'i na co dzień.
+Często zdarza mi się, że zerkam sobie na jakieś polecenie
+i bywa, że mam z nim problem.
+Oczywiście w czasie, w którym obecnie żyjemy,
+czyli w czasach czata GPT i innych LLM-ów,
+łatwo jest zapytać go o znaczenie danego polecenia,
+ale nie zawsze też mamy taką możliwość.
+Stąd też chcielibyśmy Wam przedstawić coś, co nazywa się Dockerfile Reference.
+I zawsze, kiedy jest z czymś problem, czy chcesz się dowiedzieć,
+jak użyć danego polecenia, to taki Dockerfile Reference będzie dla Ciebie pomocą.
+I te filmy, które tutaj zobaczysz, to jest zbiór samych takich pojęć
+dotyczących właśnie Dockerfile'a i tych poleceń, które możemy w nim znaleźć.
+Jak u Ciebie, Janie? Często zerkasz do Reference'a, czy po prostu wszystko masz w głowie?
+W zasadzie wtedy, kiedy czegoś potrzebuję.
+Czasem pojawiają się nowe polecenia, z których można skorzystać.
+Czasem są polecenia, z których nie korzystam na co dzień, korzystam z nich rzadko.
+Chcę zobaczyć, co one dokładnie robią, w jaki sposób działają,
+czy może mają jakieś ciekawe możliwości, o których nie wiem.
+Warto też sobie zerknąć do tych popularniejszych poleceń od czasu do czasu.
+Bo czasem Docker wprowadzi coś nowego, poszerzy możliwości danego polecenia
+i możemy nie wiedzieć o tym, że pojawia się nagle coś,
+co w znaczny sposób uprości nasze dalsze życie i korzystanie z Dockera.
+Natomiast na co dzień nie zaglądam, raczej sporadycznie wtedy,
+kiedy albo potrzebuję coś nowego zrobić, albo trafię na jakiś przykład,
+którego zwyczajnie nie rozumiem, jest jakiś zapis bardzo zaawansowany.
+I żeby się upewnić, co autor miał na myśli, wtedy sobie sprawdzam właśnie dokumentację,
+Docker File Reference, patrzę, co tam jest napisane do danego polecenia
+i dzięki temu mogę zrozumieć, co tak naprawdę dzieje się w naszym obrazie.
+Zdecydowanie tak.
+Czym w ogóle jest ten Reference, jak z nim pracować?
+Już pokazuję i objaśniam.
+Na samej górze mamy tytuł, później jest Overview i pod tym Overview macie listę
+wszystkich tak naprawdę tych słów kluczowych, które mogą się pojawić, czy może najpoczątkowo,
+które mogą się pojawić, czy może najpoczątkowo, które mogą się pojawić, czy może najpoczątkowo,
+czy może najpopularniejszych, które mogą się pojawić w Docker File'u.
+I my teraz w kolejnych filmach też te listę sobie troszeczkę zawęzimy,
+skupimy się na takich najważniejszych, które naszym zdaniem są istotne,
+żeby je wiedzieć, pamiętać i też do których możemy coś dopowiedzieć
+i Wam też coś ciekawego pokazać.
+Tak, jednym słowem omówimy te, które są najpopularniejsze, najbardziej przydatne
+i te, z których też będziemy w kursie korzystać, albo jeśli nie pojawią się
+w kursie, to jest spora szansa, że natrafisz na takie polecenie w swoim projekcie,
+w pracy, może na uczelni pracując w grupie, gdziekolwiek będziesz z tego Dockera korzystać,
+tam jest spora szansa, że właśnie któreś z tych poleceń, które dzisiaj omówimy, się pojawi.
+Zaczynamy.

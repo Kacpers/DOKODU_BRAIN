@@ -149,16 +149,18 @@ Publikacja o 20:30.
 
 ## Środa 01.04
 
+- [x] **Cichy-Zasada (dealer VW/Audi/Porsche)** — inbound lead, wysłano maila do n8n ws. reseller program. Czekamy na odpowiedź → oddzwonić do Rafała Nawrockiego
+- [ ] **Animex: wystawić fakturę za szkolenia** — nr zamówienia: Z1089/10377/1 - [ZAK/2025/002198]
 - [ ] **Wysłać email W1** — Wielkanocna promocja PyStart 599 PLN (cała lista 15 404)
 - [ ] **Post LinkedIn** — promocja wielkanocna (edu styl)
 - [ ] **Opublikować Short** — "3 powody żeby nauczyć się Pythona"
 
 ## Czwartek 02.04
 
-- [ ] Fryzjer
-- [ ] **Nagranie VSL kursu n8n** (po fryzjerze) — tekst w `VSL_Skrypt_v1.md`
-- [ ] **Nagranie Moduł 0 n8n** (Filozofia Automatyzacji, ~45 min) — skrypt gotowy
-- [ ] **Nagranie YT: Error Handling w n8n** (12-15 min) — struktura w BRAIN
+- [ ] **Fryzjer 15:30**
+- [ ] **Nagranie VSL kursu n8n** (~20:00, po fryzjerze) — tekst w `VSL_Skrypt_v1.md`
+- [ ] **Nagranie Moduł 0 n8n** (~20:00+, jeśli starczy czasu) — skrypt gotowy
+- [ ] **Nagranie YT: Error Handling w n8n** (opcja, 12-15 min)
 - [ ] **Wysłać email W2** — "Bundle Python + SQL za 999 PLN"
 - [ ] **Nagrać Short** — "SQL czy Python — czego uczyć się najpierw?" (30s)
 
@@ -169,6 +171,8 @@ Publikacja o 20:30.
 
 ## Piątek 03.04
 
+- [ ] **DEADLINE: Animex certyfikaty** — wystawić wszystkie certyfikaty (lista w załączniku od Kamila, hasło SMS)
+- [ ] **DEADLINE: Animex paczka szkoleniowa** — przygotować paczkę z plikami ze szkolenia do wysyłki
 - [ ] **Wysłać email W3** — "Wesołych Świąt + ostatnie 4 dni promocji"
 - [ ] **Weekly Review** — `/brain-weekly-review`
 - [ ] **SEO Weekly** — `/seo-weekly`
@@ -176,11 +180,19 @@ Publikacja o 20:30.
 
 ### Następny tydzień 7-11.04 (po Wielkanocy)
 
+- [ ] **EPALE — rejestracja i setup** (30 min, darmowe):
+  - [ ] Załóż konto na epale.ec.europa.eu
+  - [ ] Dodaj kurs n8n + PyStart do Course Catalogue
+  - [ ] Opublikuj 1 artykuł (repurposing z bloga, np. "AI w edukacji dorosłych")
+  - [ ] Sprawdź Partner Search pod kątem grantów Erasmus+
 - [ ] Pon 7.04: Wysłać email W4 (ostatni dzień promocji) + sprawdź LinkedIn akceptacje
 - [ ] Wt 8.04: Zamknięcie promocji wielkanocnej o 23:59
 - [ ] Śr 9.04: **LAUNCH early bird n8n** — email N1 "999 PLN, 20 miejsc" + post LinkedIn
 - [ ] Śr 9.04: Nagrać Short "Ile kosztuje Zapier vs n8n rocznie?"
-- [ ] Czw-Pt 10-11.04: **Nagranie BONUS 1 PyStart** (Python + AI asystent, ~4h)
+- [ ] **Pt 10.04: 15:30 Rotunda** — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak)
+- [ ] **Sob 11.04: Bank&InsurHack dzień 1** (9:00–20:00, Rotunda) — mentoring + jury
+- [ ] **Ndz 12.04: Bank&InsurHack dzień 2** (9:00–17:00) — pitchowanie MVP od 15:00, jury, nagranie filmu ze zwycięzcami
+- [ ] Nagranie BONUS 1 PyStart — przesunąć na inny termin (weekend zajęty hackathonem)
 
 ### Tydzień 14-18.04
 

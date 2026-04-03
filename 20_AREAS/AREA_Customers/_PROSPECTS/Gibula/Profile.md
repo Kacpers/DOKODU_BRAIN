@@ -3,7 +3,7 @@ type: prospect
 status: discovery
 owner: kacper
 created: 2026-03-30
-wartosc_est: 50 000–60 000 PLN netto
+wartosc_est: 62 000–66 000 PLN netto
 tags: [prospect, holandia, faktury, webapp, custom-dev]
 ---
 
@@ -23,8 +23,8 @@ tags: [prospect, holandia, faktury, webapp, custom-dev]
 ## Projekt: System fakturowy (webapp)
 - **Cel:** Platforma webowa gdzie klienci Gibuli mogą wystawiać faktury
 - **Spec:** `Program_factuur_spec.xlsx` w tym katalogu
-- **Wybrany wariant:** MINIMUM + ROZSZERZONA (połączenie)
-- **Wycena wysłana:** 25-30k (min) / **50-60k (rozszerzona)** / 70-85k (pełna) PLN netto
+- **Wybrany wariant:** MINIMUM + ROZSZERZONA (połączenie) + bramka płatności
+- **Wycena wysłana:** 25-30k (min) / **62-66k (rozszerzona + płatności)** / 70-85k (pełna) PLN netto
 - **Reakcja klienta:** Pozytywna, błyskawiczna odpowiedź, chce się spotkać
 - **Uwagi programu reconciliation:** Działa, w maju mogą pojawić się dodatkowe uwagi gdy cały zespół zacznie z niego pracować
 
@@ -68,8 +68,8 @@ tags: [prospect, holandia, faktury, webapp, custom-dev]
 > "Chcemy uprościć życie naszym klientom żeby nie musieli wysyłać do nas swoich wystawionych faktur tylko same koszty, a dwa sobie ułatwić tym że za pomocą jednego przycisku automatycznie wszystkie wystawione faktury księgują u nas w programie. Na etapie jak to będzie dobrze działało chcemy wyjść z tym produktem dla przedsiębiorców oraz księgowych."
 
 ## Następne kroki
-- [ ] **Sobota 04.04, 9:30** — Call z Jakubem — przejść przez odpowiedzi, doprecyzować zakres min+rozszerzona, ustalić cenę
-- [ ] Po callu: precyzyjna wycena na podstawie ustaleń
+- [ ] **Sobota 04.04, 9:30** — Call z Jakubem (WhatsApp) — potwierdzić zakres, omówić bramkę płatności (Stripe vs Mollie), ustalić finalną cenę
+- [ ] Po callu: precyzyjna wycena + umowa
 - [ ] Reconciliation: czekamy na feedback zespołu (maj)
 
 ## Historia korespondencji
@@ -86,6 +86,19 @@ Entuzjastyczna odpowiedź, propozycja calla na sobotę 04.04 9:30. Brak uwag do 
 
 ### Email #4 — Jakub → Kacper (31.03.2026, 13:08)
 **Pełne odpowiedzi na 20 pytań.** Wybrał połączenie wersji minimum + rozszerzonej. Kluczowe: auto-księgowanie jednym przyciskiem, 500+ klientów docelowo, abonament, KVK verification, QR na fakturze. Wizja: zacząć dla siebie → wyjść na rynek NL.
+
+### Email #5 — Jakub → Kacper (01.04.2026)
+Potwierdzenie calla sob 9:30. Dodatkowe uwagi:
+- Oferty = faktury z opisem "OFERTA", oferta → faktura jednym kliknięciem
+- Chce bramkę płatności już w v1.0 (nie v2) — pełna automatyzacja, blokada dostępu przy braku wpłaty
+- Lista programów księgowych NL: Exact Online, AFAS, Twinfield, Moneybird, e-Boekhouden.nl, SnelStart, Yuki — wszystkie obsługują import z Excela
+
+### Email #6 — Kacper → Jakub (01.04.2026)
+Potwierdzenie calla sob 9:30 (WhatsApp). Odpowiedzi:
+1. Moduł ofertowy w v1.0 — oferta → faktura jednym kliknięciem
+2. Bramka płatności dodana do v1.0 — sugestia Stripe lub Mollie (iDEAL), Gibula zakłada własne konto, prowizja ~1-2%
+3. Zaktualizowana wycena: **62 000 – 66 000 PLN netto** (było 50-60k)
+4. Uniwersalny generator Excel dla programów NL (Exact, AFAS, Yuki itd.)
 
 ### Email (osobny wątek) — Jakub → Kacper (30.03.2026, 15:15)
 **Temat:** Re: PYTANIA DO UMOWY (wątek reconciliation)

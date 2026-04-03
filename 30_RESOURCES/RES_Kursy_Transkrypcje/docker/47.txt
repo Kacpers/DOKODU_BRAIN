@@ -1,0 +1,10 @@
+Dużo tych poleceń, Janie, powiem Ci, że tak jak sobie o tym rozmawiamy, o tych
+wszystkich tematach, to jest tego całkiem sporo, ale wciąż mam takie poczucie, że
+jeszcze nie wszystko mówiliśmy i pewnie znajdzie się ktoś, kto będzie chciał jeszcze
+o coś dopytać.
+Tak, poleceń niewątpliwie jest wiele.
+Tutaj jak najbardziej zachęcam zawsze do zaglądania do Docker File Reference.
+A jeśli jakieś polecenie sprawi Ci szczególną trudność, to oczywiście
+zostaw nam informację w komentarzu pod tym filmikiem.
+Postaramy się uzupełnić tutaj słowniczek z dyrektywami, żeby był on też jak
+najlepszą, najobszerniejszą bazą wiedzy.

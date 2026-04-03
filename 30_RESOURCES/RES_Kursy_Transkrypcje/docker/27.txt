@@ -1,0 +1,18 @@
+W kontekście kontenera możemy też spotkać się czasami z pojęciem gościa,
+dlatego że czasem o dockerze rozmawiamy z perspektywy gospodarz-gość,
+w zależności od tego, czy mówimy o miejscu, gdzie uruchamiamy nasze kontenery poszczególne,
+czy mówimy o konkretnym uruchomionym kontenerze.
+Jeśli mówimy o miejscu, gdzie kontenery uruchamiamy, wtedy jest to gospodarz,
+a jeśli mówimy o już końcowym uruchomionym kontenerze, wtedy jest to gość.
+Tu ja nazmieniłbym jeszcze jedną ważną rzecz, bo zakładam, że wielu z Was, naszych kursantów,
+to są programiści, więc jeżeli tworzysz taką aplikację, to w Twoim projekcie możesz mieć wiele kontenerów.
+Czyli zakładając, że taka aplikacja potrzebuje mieć jakiś kod aplikacji
+i na przykład ten kod jest interpretowany przez Pythona, czy też uruchamiany przez Pythona,
+to wówczas Python będzie jednym z takich kontenerów.
+Jeżeli do tego będzie Ci potrzebne MongoDB, PostgreSQL, MySQL,
+to każda z takich baz danych też może być osobnym kontenerem.
+Jeżeli tę aplikację będziesz chciał sobie dodatkowo w jakiś sposób skeszować,
+to też Redis, czy jakiś inny Memcache mogą również być osobnymi kontenerami.
+Czyli każda aplikacja, którą będziemy sobie tworzyli, będzie składała się z wielu takich kontenerów.
+Dokładnie.
+Tak.

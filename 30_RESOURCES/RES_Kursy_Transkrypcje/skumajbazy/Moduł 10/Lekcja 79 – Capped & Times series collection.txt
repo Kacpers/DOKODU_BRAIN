@@ -1,0 +1,282 @@
+Skoro nauczyliśmy się już pobierać dane, mam nadzieję, że wam się podobało,
+to porozmawiajmy jeszcze o tym, co obiecałem, że poruszymy w poprzedniej lekcji,
+a mianowicie o tych naszych dwóch rodzajach kolekcji.
+Po pierwsze o kolekcjach ograniczonych, co to takiego jest,
+a po drugie Time Series Collections.
+Jeżeli chodzi o te drugie, to myślę, że się spodziewacie.
+Co będziemy, czego się nauczymy.
+Natomiast jeżeli chodzi o te pierwsze, to zapraszam.
+Caped Collections. Określona ilość elementów.
+Czyli w momencie, w którym tworzę sobie tego typu kolekcję,
+to ja wprost mówię, ile elementów moja kolekcja będzie miała.
+To wiąże się z tym, że w momencie, w którym dodam kolejny,
+załóżmy, stworzyłem sobie kolekcję, która ma mieć 100 elementów,
+dodaję 101, to wówczas najstarszy wpis zostanie nadpisany.
+Czyli taka rotacja elementów będzie miała miejsce.
+Te kolekcje mają taką charakterystykę, że mają bardzo wysoki zapis i odczyt.
+Edycja jest trochę gorsza, natomiast zapis, odczyt jest całkiem, całkiem dobry.
+No i tak jak wspomniałem, nowe dokumenty zawsze nadpisują nam te najstarsze.
+Gdzie to można wykorzystać?
+No, jeden z przykładów to może być przechowywanie logów.
+Czyli na przykład właśnie mamy jakieś dane, tylko jak czasowe,
+to już Time Series trochę może nam się przydać, aczkolwiek podejrzewam, że Time Series
+i Caped można byłoby łączyć, to dojedziemy.
+Natomiast jak widać, no przechowywanie logów jest takim przykładem, tak?
+Jeżeli nie chcemy wiedzieć, chociaż w Time Series chodzi o coś trochę innego,
+chodzi o to występowanie w czasie, ale tutaj, jeżeli chcemy się po prostu przechowywać
+określoną ilość wierszy zawsze, no to można to zrobić właśnie za pomocą tego Caped.
+Albo można użyć jej też do jakiegoś cache'owania, czyli stworzyć sobie jakiś bufor,
+który przeszukujemy pod kątem występowania jakiegoś obiektu,
+jeżeli on nie występuje, to go sobie gdzieś skądś pobieramy,
+ale nie chcemy mieć tych danych zbyt wiele, tak?
+No to można wówczas też właśnie użyć cache'a.
+Pytanie, jak taką kolekcję utworzyć?
+Podczas tworzenia kolekcji normalnie wykonujemy DB Create Collection,
+podajemy nazwę tej kolekcji, na przykład history i następnie zaznaczamy,
+że chcielibyśmy, aby ta kolekcja była ograniczona, czyli Caped True.
+No i dodajemy sobie dodatkowo size, tu akurat jest 1000,
+czyli chcemy, żeby ta kolekcja miała 1000 elementów.
+Jeżeli chcemy sprawdzić, czy ta kolekcja jest ograniczona,
+to po prostu możemy sobie wykonać DB History Escaped i to jest takie wyrażenie,
+które będzie nam zwracało True albo False w zależności od tego,
+czy jest ona ograniczona, czy też nie.
+No i znowu zadanie 79.1.
+Utwórz kolekcję ograniczoną o nazwie kolejka.
+Wielkość kolekcji utworzył się w zależności od tego, czy jest ona ograniczona, czy też nie. No i znowu zadanie 79.1. Utwórz kolekcję ograniczoną o nazwie kolejka.
+Wielkość kolekcji ustaw na 10, a następnie dodaj do kolekcji 10 osób.
+Wyświetl zawartość, dodaj dwie dodatkowe osoby, wyświetl zawartość.
+Sprawdźcie, czy faktycznie te najstarsze wpisy nam się podmieniają.
+Trzy minuty dla każdego, do zobaczenia.
+No i przyszedł czas na przetestowanie tej naszej kolekcji ograniczonej, tej naszej Caped Collection.
+Jak to będzie działało?
+Przede wszystkim musimy sobie ją stworzyć.
+Przede wszystkim musimy sobie ją stworzyć.
+I określić ją jako kolejkę.
+No to lecimy.
+db.createCollection
+No i chcemy, żeby ona była określona i miała 10 miejsc.
+No to caped.true
+size 10
+Enter
+Ok, i teraz do mojej kolekcji dodaję 10 elementów, czyli db.kolejka.insertMany
+I poza kamerą sobie te 10 obiektów przygotowałem.
+Po prostu od 1 do 10 konkretne literki.
+Obs, i poszło, zobaczcie.
+I poszło nam.
+Ładnie wyświetlił nam te idki.
+Więc jak wykonamy db.find
+db.kolejka.find
+No to zobaczymy, że tych elementów mamy.
+Ale właściwie, pierwszy element już nam przepadł.
+Dlaczego tak jest?
+1, 2, 3, 4, 5, 6, 7, 8, 9
+Czyżby on, się pomyliłem i on musi mieć zawsze o ten jeden mniej?
+No zobaczmy.
+Co się stanie, jak dodamy jeszcze jeden element.
+Czyli id, tym razem będzie 11.
+name ghijk
+Czyli to będzie literka k.
+Ok.
+Dostaliśmy informację, że insert ok.
+Mogę użyć insert1.
+Nie ma problemu.
+Ale jeżeli wykonam db.kolejka.find
+Ok.
+Jest k i c.
+Czyli tak.
+Czyli jeżeli mówimy size jest 10,
+to ja tego nie wiedziałem.
+Widzicie?
+Uzupełniłem swoją wiedzę.
+Widocznie zawsze gdzieś musiałem gubić jeden element.
+To wówczas on nam zapisuje 9 elementów.
+Ale dzieje się dokładnie tak jak powiedziałem.
+Czyli kiedy dodajemy kolejny,
+no to ten poprzedni nam znika.
+Przetestowaliśmy to sobie.
+No i jeżeli byśmy jeszcze chcieli sprawdzić,
+czy ta kolejka jest ograniczona,
+to możemy zrobić kolejka iscappedops
+i dostaniemy informację,
+że taka jest prawda, jest ograniczona.
+No to cóż.
+Zapraszam was do time series collection.
+I drugim rodzajem kolekcji,
+o których możemy sobie porozmawiać,
+jest time series collection.
+Czyli ta kolekcja,
+w której tym kluczem przechowującym nasze dane jest czas.
+Czyli zawsze wtedy,
+kiedy czas jest dla nas ważny,
+przy zarządzaniu danymi dokumentami,
+możemy sobie wówczas taki właśnie rodzaj kolekcji stworzyć.
+Co by to mogło być?
+Statystyki.
+Na przykład ilość odsłon filmu,
+ilość, mówię o YouTubie na przykład,
+albo ilość wejść,
+gdzie chcemy mieć czas
+i chcemy rejestrować wejście, wejście, wejście, wejście,
+wejście, wyjście i tak dalej.
+To można byłoby też tak robić.
+Dane giełdowe,
+czyli stan dla danej akcji na dany dzień.
+To jest też przykład,
+gdzie time series collection mogłoby nam się sprawdzić.
+Albo chociażby przebieg samochodu.
+No bo w czasie to jest wartość,
+która wzrasta adydatywnie zawsze,
+o ileś kilometrów,
+więc też można tym w ten sposób zarządzać.
+Jak to utworzyć?
+No po prostu potrzebujemy najpierw mieć kolekcję,
+w której będziemy wiedzieli,
+że będziemy mieli jakąś datę.
+I co ważne,
+ta data staje się wówczas polem wymaganym.
+Nie można tego pola absolutnie pominąć.
+I wykonujemy sobie wtedy db.createCollection.
+Pierwszym argumentem jest nazwa tej kolekcji.
+Czyli na przykład measurements,
+jakieś pomiary.
+No i mówimy słuchaj,
+ta kolekcja ma być kolekcją tą time series,
+więc podajemy time series.
+I mówimy jaki będzie time field,
+czyli że createdAt to jest nasz time field.
+Ten, który jest dla nas tym indeksem,
+tym wyznacznikiem.
+Mongo wówczas też zajmie się tym,
+żeby ten czas nam w tamtym miejscu był
+i żeby wszystko było z tym czasem okej.
+Dlatego też musimy pamiętać o tym,
+że kiedy tworzymy sobie ten,
+dodajemy ten dokument,
+to tamten czas musi być typem czas.
+To pokażę wam na kolejnym slajdzie.
+Natomiast tu chciałem jeszcze wspomnieć o dwóch rzeczach,
+a mianowicie ten czas,
+te ustawienia tej kolekcji
+zakładają również podanie czegoś takiego jak meta,
+czyli jeżeli wiemy,
+że mamy dla danego czasu jakiś konkretny opis,
+czy też konkretną wartość,
+to wówczas można to dodać właśnie do tego meta field.
+Natomiast granularity to jest taka jakby częstotliwość.
+W jakiej częstotliwości ten nasz dokument będzie tworzony.
+Warto tutaj trzymać się tego w miarę dobrze,
+w miarę tak wiecie określić to tak,
+żeby to faktycznie miało ręce i nogi,
+no bo on też na tej podstawie wykonuje optymalizację
+i dopasowuje kolekcję do naszych potrzeb.
+No i jeszcze jedna ciekawostka.
+Można też określić taką właściwość
+jak expire after seconds
+i wówczas na przykład po określonej liczbie sekund
+dane z kolekcji mogą nam wygasać.
+No i tu ta ważna sprawa właśnie,
+jeżeli chodzi o określenie tego czasu,
+to nie możemy go sobie tak po prostu z bomby wpisać.
+Trzeba skorzystać z takiej funkcji,
+która nazywa się isodate
+i do tej funkcji przekazujemy czas właśnie w takim formacie.
+Czyli 2020 11.09, godzina 6.00,
+16.30, wyświetli się wówczas nam taki czas
+i zostanie on wówczas wprowadzony
+jako created at.
+Można też oczywiście to dodawać
+od razu podczas tworzenia,
+czyli db measurements insert one,
+no i tu mu wskazujemy w tym obiekcie
+opis pomiaru, wartość i created at.
+Tą metą też może być obiekt,
+więc jeżeli byście chcieli,
+żeby metafildem nie było title,
+tylko było na przykład information
+i to information byłoby obiektem,
+który miałby tytuł i value,
+to też jak najbardziej można tak zrobić,
+też jak najbardziej to zadziała.
+No i tutaj mam dla was związane z tym zadanko.
+Utwórz kolekcję czasową o nazwie events,
+która będzie przechowywała czas i nazwę zdarzenia.
+Granularność zdarzenia ustaw na minuty,
+a następnie dodaj do kolekcji 5 następujących po sobie zdarzeń.
+Dodajcie, możecie wtedy to sprawdzić.
+Tu chciałem jeszcze jedną tylko taką rzecz,
+powiedzieć, że te kolekcje,
+one służą po prostu do przechowywania danych,
+gdzie ten czas dla nas jest ważny,
+ale to nie jest tak,
+że one mają jakieś supermoce dodatkowe.
+One są zoptymalizowane pod to,
+żeby przechowywać takie zdarzenia,
+ale grupowanie po dacie, czasie,
+czy wszelkie tego typu operacje
+też są oczywiście możliwe na innych kolekcjach.
+Tutaj żadnych supermocy innych niż przyśpieszenie,
+co też jest supermocą,
+flash był szybki, nie ma.
+I to byłoby na tyle w tej lekcji.
+Zapraszam was do rozwiązania
+i do zobaczenia za moment.
+Cześć.
+
+
+No i mamy pustą kolekcję.
+Wszystko jest OK.
+No i teraz znowu dodamy sobie do niej,
+tam chcieli trzy, pięć następujących po sobie zdarzenia.
+OK.
+Więc db.insertmany,
+db.events,
+insertmany.
+No i ponownie, żeby nie tracić czasu,
+już dodałem poza kamerą sobie pięć zdarzeń,
+czyli o dziewiątej punktualnie ktoś wszedł na stronę,
+o dziewiątej jeden zobaczył produkt,
+o dziewiątej dwa dodał go do koszyka,
+o dziewiątej cztery,
+tu akurat dwie minuty przerwy,
+przeszedł do strony z zakupem,
+no i o dziewiątej pięć już miał ten produkt kupiony.
+I jeżeli teraz byśmy chcieli zobaczyć,
+to sobie dodać.
+O, hura, jeszcze jakiś błąd.
+No tak, tu jest niepoprawny ten apostrof.
+Jeżeli kopiowaliście też takie i ja z prezentacji,
+to pewnie też mieliście gdzieś kiedyś taki problem,
+ale ja ten problem zaraz naprawię.
+Będzie ze mną te numery.
+Chociaż też nie zauważyłem wcześniej.
+Już, już, już.
+Ops.
+I robimy raz jeszcze.
+db.events.insertMany.
+O, i zobaczcie.
+Wydarzenia nam się ładnie dodały.
+No i tak jak mówiłem,
+no tutaj nie będzie żadnych sensacji.
+Po prostu db.events.find.
+Jeżeli sobie wykonamy,
+to on nam po prostu wszystkie te wydarzenia wyświetli.
+Pokaże nam, kiedy one się,
+kiedy one się działy.
+Tu jak widać dodatkowo jeszcze jest strefa czasowa.
+To jest jasne,
+no bo korzystamy z tego UTC.
+Znaczy korzystamy z tego Isodate.
+No i tak to,
+tak to właśnie wygląda.
+Ale przechowujemy te dane w kolekcji.
+I to też można zobaczyć tutaj.
+Zobaczcie, jeżeli sobie ja to odświeżę,
+to wówczas w szkoleniu zobaczę,
+że o, event start.
+To jest taka kolejka właśnie,
+która jest time series.
+Czyli tak mi to będzie właśnie wyglądało.
+Okej, bardzo dziękuję
+i zapraszam was do kolejnej lekcji,
+w której zajmiemy się sprawdzaniem poprawności
+i walidacją naszych danych.

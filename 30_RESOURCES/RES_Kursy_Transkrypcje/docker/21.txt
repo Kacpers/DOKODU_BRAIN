@@ -1,0 +1,563 @@
+Dobrze, to spotykamy się ponownie, tym razem w terminalu i w tymże terminalu będziemy rozmawiali o tym właśnie docker-composie, ale poza samym docker-composem jest tutaj trochę więcej plików, nie?
+Jak zrobisz ls, to widzimy, że jest też plik .env, jest katalog HTML, o tym katalogu dwa słowa na sam koniec, mamy initdata.sh, mamy nginx.conf, ale ja wiem, że czasem też jeżeli mamy docker-compose, to i tak docker-file tutaj też czasem może się pojawić, nie?
+Jeżeli chodzi o taką strukturę plików.
+Tak, docker-file jak najbardziej.
+Czyli może się tutaj pojawić dlatego, że w ramach docker-compose możemy zdefiniować albo gotowe obrazy, z których chcemy korzystać, tak jak na przykład postgres, którego tutaj za chwilę zobaczymy, ale możemy mieć też nasz własny obraz z naszą aplikacją, który jest gdzieś tam budowany.
+O tym budowaniu też możemy poinformować kompoza, że to jest to, co chcemy zrobić z tym naszym obrazem i z którego...
+docker-file'a tak naprawdę go budujemy, w jakim kontekście go budujemy, także jak najbardziej docker-file też może się znaleźć w takiej strukturze.
+Tak, dokładnie tak i nawet może być kilka docker-file'i, bo jeżeli okazałoby się, że macie aplikację, która wymaga kilku różnych własnych obrazów, to wtedy też kilka takich docker-file'i mogłoby się tutaj znaleźć, albo popakowanych w jakieś foldery, albo po prostu pod różnymi nazwami, bo to wszystko w docker-compose'ie też może być ustawione.
+Jeżeli wystarcza nam po prostu to, że konfigurujemy sobie jakąś aplikację, dodając do niej nasz kod, powiedzmy, trzymając go załóżmy w katalogu HTML, no to wtedy tak naprawdę to nam wystarcza.
+Okej, to mnie interesuje, co jest w pliku .env, bo myślę, że ten plik raz na jakiś czas może gdzieś tam nam się przydać, więc fajnie byłoby, jakbyś ja nie skatował ten plik, albo zwimował.
+Tak, w pliku .env jest nasza konta.
+Konfiguracja środowiska do aplikacji, które będziemy wykorzystywać i w naszym docker-compose'ie konfigurować.
+Do tego pliku będziemy się odwoływać w naszym docker-compose'ie.
+Dokładnie tak.
+Twórcy Heroku stworzyli kiedyś taki manifest, w którym powiedzieli, że tak naprawdę to, nad czym powinniśmy się skupiać, to są zmienne środowiskowe i nasza aplikacja powinna istnieć w ramach jakiegoś ekosystemu,
+w którym ustawiamy...
+Zmienne środowiskowe.
+Dlatego też tutaj, jak widzicie, mamy pięć zmiennych na początek, dla zmyłki rozdzielone pustym enterem, gdzie znajdziecie Postgres User, Postgres Password, Postgres DB, Postgres Non-User i Postgres Non-Root Password.
+I to są zmienne, z których korzysta Postgres.
+Poniżej macie zbiór zmiennych, z których korzysta n8n.
+I tych zmiennych jest bardzo, bardzo wiele.
+Natomiast my oczywiście nie musimy...
+Wszystkich tych zmiennych deklarować, bo niektóre będą wynikały już jakby z domyślnych ustawień.
+No i przy okazji też zdradziliśmy troszeczkę to, do czego służy ta aplikacja, bo sam Postgres to jest oczywiście baza danych, natomiast n8n w dobie AI, w dobie automatyzujących programów, które ułatwiają naszą pracę, to n8n jest właśnie takim sposobem na to, żeby w graficzny sposób poukładać sobie pewne procesy biznesowe, żeby później móc je wykonywać.
+Ale więcej.
+Więcej o n8n znajdziecie w innych kursach, podejrzewam, lub też gdzieś na YouTubie, więc samo ogół tego enva możemy zostawić.
+Myślę, że możemy z niego spokojnie sobie wyjść.
+I tak naprawdę przechodzimy teraz do tej esencji, do tego najważniejszego elementu, czyli do Docker Composa.
+Ja po to robiłem taki długi wstęp, żebym też mógł coś w tym odcinku powiedzieć, bo teraz pewnie nagadać się będzie chciał Jan, więc śmiało.
+Tutaj faktycznie może mnie czekać troszeczkę więcej omawiania niż Kacpra, natomiast Kacper jest jakby autorem tutaj tego pliku w ramach swoich potrzeb tak naprawdę automatyzacyjnych, przygotował takie środowisko i dzisiaj możemy z niego skorzystać.
+Jest to bardzo fajny przykład do omówienia, bo jest też takim przykładem bardzo życiowym i czymś, co możecie wykorzystać.
+Dla siebie i możecie wykorzystać to od razu, nawet nie mając jeszcze jakiejś gotowej, jakiejś własnej aplikacji, którą można by było skonteneryzować i zbudować dla niej takie środowisko.
+I przechodząc do mięska, nasz Docker Compos składa się z wielu rzeczy.
+Przede wszystkim zazwyczaj zaczyna się deklaracją wersji.
+Tutaj mamy wersję 3.8.
+To jest wersja...
+To jest wersja samego Composa i tego, jakie w tej wersji on wspiera konfiguracje, dokładnie.
+Zazwyczaj stosuje się wersję po prostu 3.
+Wtedy to oznacza wersję 3 najnowszą, ale czasami możemy chcieć korzystać z konkretnej wersji, żeby mieć pewność, że operujemy w ramach konkretnego zestawu reguł konfiguracyjnych,
+dlatego że czasami pewne reguły mogą zostać wycofane w kolejnych wersjach.
+I Docker Compos, który na przykład w wersji 3.8 działa, w wersji 3.9 bez pewnych zmian mógłby już niestety nie działać.
+Dlatego czasami dla bezpieczeństwa warto jest w ten sposób sobie tą wersję przypiąć.
+Z tego co pamiętam, można wersji w ogóle nie deklarować.
+I wtedy jest używana zawsze wersja...
+Wersja najnowsza.
+Natomiast w praktyce chyba nie spotkałem się nigdy, żeby ta wersja nie była w ogóle zdeklarowana, zawsze była przynajmniej przypięta do tej naszej trójeczki.
+Okej, to bardzo fajnie.
+Ja się bardzo często spotykałem, bo sam nigdy nie pisałem wersji, więc to dobra informacja też dla mnie, żeby tutaj jakby pozyskać tę wiedzę, że warto tę wersję dodawać.
+Natomiast o samym YAML-u chciałbym jeszcze tylko powiedzieć dwa słowa dla osób, dla których może być on troszkę nowy,
+albo czymś, co gdzieś widzieli, żebyście też się tym nie przerazili, kiedy będziecie sami tego YAML-a sobie tworzyli.
+Szczególnie jeżeli na przykład będziecie używali Vim-a.
+Bo w YAML-u ważne jest to, żeby wszystkie te wcięcia, które widzicie, były wielokrotnością dwóch spacji.
+Czyli pomiędzy Services a Postgres to wcięcie to są dokładnie dwie spacje.
+Później pomiędzy Postgres a Image to też są dwie spacje.
+Jeżeli gdzieś zrobicie trzy spacje, no to nie zadziała, to pojawi się błąd.
+To jest jedna rzecz.
+Druga rzecz, o której chciałem tylko powiedzieć, że właśnie te spacje determinują to, czy coś jest w czymś.
+Czyli Services, Postgres, Image to są jakby trzy następujące po sobie elementy.
+Natomiast Image, Restart and File to są rzeczy, które są już w środku, w ramach tylko tego Postgresa.
+I ostatnia rzecz, którą chciałem powiedzieć, to są jakby typy danych.
+Bo dla programistów typy danych są całkiem istotne.
+A mianowicie możemy w przypadku YAML-a mieć takie typy danych.
+A mianowicie możemy w przypadku YAML-a mieć takie typy danych.
+Na przykład właśnie jak Image Postgres to będzie jakby wartość, do której jest przypisany string.
+Ale ten string też jest o tyle szczególny, że w nim jest dwukropek.
+Więc moglibyśmy powiedzieć, że to...
+Nie wiem jak to jest dokładnie, ale że dla YAML-a to jest powiedzmy jakaś forma słownika, czy jakieś listy, która ma dwa elementy.
+Więc ten dwukropek tutaj oznacza, że my będziemy używali Postgresa w wersji szesnastej.
+Na przykład poniżej, tam gdzie macie Restart Always, to jest to jakby tylko przypisany string.
+Natomiast do niektórych opcji możemy też przypisywać listy, czyli kilka elementów.
+I tak jest na przykład w n-file'u.
+Bo n-file domyślnie przyjmuje listę elementów.
+Dlatego też mamy ten myślnik.
+I ten myślnik też jest wcięty dwiema spacjami.
+Natomiast po nim jest jedna spacja, kropka n-f.
+A w volumenach już macie znowu ten przypadek z dwukropkiem.
+Gdzie ten dwukropek znowu będzie oddzielał dwie wartości.
+Czyli będziemy mieli, że dbStorage.
+Łączy się, czy wskazuje na coś konkretnego.
+Ja tylko tak chciałem odnośnie samego tego zapisu.
+Bo wiem, że dla mnie osobiście, kiedy zobaczyłem Jamla po raz pierwszy,
+to był on dosyć trudny do zrozumienia.
+Więc pozwoliłem sobie ja nie tak się wtrącić i tylko samą taką obudowę wyjaśnić.
+Natomiast już poszczególne opcje to zapraszam.
+Jasne. Cieszę się, że zrobiłeś takie wprowadzenie.
+Dlatego, że dla mnie te pewne rzeczy są oczywiste, bo pracuję z nimi na co dzień.
+I być może dla naszych kursantów one tak oczywiste nie będą jak dla mnie.
+Także bardzo dziękuję za to tutaj uzupełnienie.
+A teraz możemy przejść sobie do już konkretnych deklaracji.
+Po wersji praktycznie zawsze pierwsza opcja konfiguracyjna, która występuje to jest Services.
+Która zbiera podstawa.
+Wszystkie te nasze kontenery, które będziemy wykorzystywać w danym projekcie.
+W zasadzie można powiedzieć, że to jest to samo co w architekturze mikroserwisowej.
+Każdy pojedynczy serwis.
+Też można na to w ten sobie sposób spoglądać.
+To co widzimy tutaj dalej to pierwszy serwis, który konfigurujemy to jest Postgres.
+To co widzimy tutaj.
+To jest nasza nazwa, którą nadajemy temu serwisowi.
+Nadaliśmy tutaj Postgres, bo będziemy tutaj korzystać z Postgresa.
+Ale jeśli byśmy chcieli sobie na przykład nazwać to DB albo Baza.
+Też możemy tak zrobić.
+To jest nazwa, dzięki której my rozpoznajemy, który to jest kontener w naszym projekcie.
+I później jeśli potrzebujemy coś dodatkowego z nim zrobić.
+Na przykład zalogować.
+Sprawdzić jego logi.
+Zrestartować go.
+Nie wiem.
+Coś innego z nim jeszcze zrobić.
+To odwołujemy się przez tą nazwę, którą mamy tutaj zdefiniowaną.
+Następnie w obrębie już właśnie naszego konkretnego serwisu.
+Czyli to co widzimy tutaj.
+Konfigurujemy sobie zawsze nasz obraz.
+Z którego chcemy korzystać.
+No i tutaj korzystamy z obrazu dostarczanego przez społeczność.
+Czy przez samego Postgresa.
+Który jest dostępny bezpośrednio na Docker Hubie.
+Więc odwołujemy się do Postgresa.
+Konkretnie w wersji 16.
+Taki Postgres będzie w naszym projekcie używany.
+Następnie mamy dyrektywę restart.
+Która mówi o tym.
+Co Docker powinien zrobić z kontenerem.
+Jeśli ten kontener się zakończy.
+Z błędem, bez błędu, ale nam przestanie z jakiegoś powodu działać.
+To jest informacja co Docker powinien w takiej sytuacji zrobić.
+I jeśli chcemy, żeby nasz kontener automatycznie się uruchamiał.
+Co jest najczęściej wykorzystane.
+Częściej wykorzystywaną opcją.
+Wtedy dajemy restart always.
+I wtedy zawsze kiedy z dowolnego powodu ten kontener przestanie działać.
+Docker go restartuje, uruchamia go ponownie.
+I on znowu wraca do działania.
+I tak będzie w nieskończoność robił?
+Tak będzie robił w nieskończoność.
+Przy czym jeśli nasz kontener nigdy nie działał.
+Na przykład jest nasz własny autorski kontener.
+I jeszcze go nie do końca dobrze skonfigurowaliśmy.
+Z jakiegoś powodu on działać przestaje.
+Kończy się jakimś błędem.
+To on będzie w nieskończoność kończył się tym błędem.
+Oczywiście jeśli powiemy Dockerowi.
+Temu Composowi, że ma zatrzymać całe to środowisko.
+Wszystkie te usługi.
+Wtedy to się przestanie dziać.
+No bo z automatu wszystko nam się zatrzyma.
+Natomiast dopóki to będzie uruchomione.
+To on będzie cały czas próbował ten kontener restartować.
+Kolejną opcją jest tutaj wspomniany też przez Kacpra n-file.
+Który przed chwilą oglądaliśmy.
+A który ma konfigurację naszych zmiennych środowiskowych.
+Które następnie Postgres sobie wykorzystuje.
+I teraz skąd Postgres wie jakich zmiennych chce użyć.
+Te zmienne są przygotowane.
+W Dockerfile do budowania tego właśnie obrazu.
+Który w Docker Hubie jest dostępny.
+Także gdybyśmy sobie podejrzeli definicję tego Postgresa.
+To jesteśmy w stanie zobaczyć, że tam w jego konfiguracji.
+Te zmienne są wykorzystywane.
+I w oparciu o te zmienne.
+Coś dalej jest robione.
+Zazwyczaj Postgres sobie tworzy po prostu bazę.
+W oparciu o tą konfigurację.
+To jest trochę tak samo.
+Ja tylko tutaj wejdę w słowo.
+Jak kiedy wykonywaliśmy Docker Runa.
+Tam też przekazywaliśmy zmienne środowiskowe.
+Więc tak naprawdę tutaj my mówimy z jakiego pliku on ma skorzystać.
+I to spowoduje, że jakby wszystkie te zmienne.
+Które widzieliście jako klucz wartość, klucz wartość, klucz wartość.
+Byłyby umiejscowione w tym poleceniu.
+Przy uruchamianiu, nie?
+Tak, one wszystkie będą dla tego naszego kontenera dostępne.
+Dobrze, idąc dalej.
+Następnie definiujemy wolumeny.
+O wolumenach już sobie rozmawialiśmy.
+To co się dzieje w tym konkretnym przypadku dla Postgresa.
+To są tak naprawdę dwa wolumeny.
+Pierwszy wolumen.
+To jest.
+To jest wolumen nazwany DB Storage.
+Którym zarządza sobie bezpośrednio sam Docker.
+Przechowuje go sobie w swojej strukturze na naszym systemie gospodarza.
+A następnie jest ścieżka już w naszym kontenerze.
+Ścieżka, którą tutaj widzimy.
+To jest ścieżka, pod którą Postgres w domyślnej konfiguracji.
+Przechowuje wszystkie dane w bazach danych.
+Które zostały w tym Postgresie zdeponowane.
+Także cała linijka mówi nam o tym, że drogi Dockerze.
+Pod takim wolumenem, którym Ty sobie sam zarządzasz.
+Chcemy mieć pliki, które w kontenerze dostępne są pod tą ścieżką.
+Dzięki temu, jeśli na przykład ten nasz obraz by się zrestartował.
+To my tych danych nie utracimy.
+Tylko one będą zapisane.
+I po restarcie zostaną przywrócone w to samo miejsce.
+Do ponownie uruchomionego kontenera.
+Co zapewnia nam dostępność tych danych pomiędzy restartami.
+Ich nieulotność.
+Tu ważnym takim elementem do zapamiętania jest to.
+Że tak naprawdę to co jest po lewej stronie.
+To jest bliżej gospodarza nazwijmy to.
+A to co jest po prawej to jest bliżej kontenera.
+To co będziemy po stronie dwukropka oczywiście mam na myśli.
+To też będzie nam przydatne później.
+Jak będziemy rozmawiali na przykład o forwardingu portów.
+O przekierowaniu portów.
+Czy o jakiś innych tego typu rzeczach.
+Dokładnie tak.
+I drugi wolumen, który tutaj widzimy.
+Też skonfigurowane dla naszego Postgresa.
+Już nie jest typowym wolumenem nazwanym.
+Tylko widzimy tutaj.
+Ścieżkę do pliku.
+Jest to ścieżka do pliku w naszym systemie gospodarza.
+W naszym tak naprawdę katalogu, w którym tego Composa uruchomiliśmy.
+Widzimy, że mamy tutaj jakiś skrypt initdata.sh.
+Który później będziemy gdzieś sobie wykonywać.
+Mówimy w jakim dokładnie miejscu chcemy ten skrypt uruchomić.
+I w dalszej części zobaczymy sobie co w tym naszym skrypcie się znajduje.
+Żeby też zrozumieć co tam się dzieje.
+Następnym punktem konfiguracji dla naszego serwisu jest networks.
+Które mówi o tym jakie sieci są dostępne dla tego naszego kontenera.
+I same sieci, które w ogóle są dostępne w ramach całej konfiguracji Composa będą zdefiniowane niżej.
+I porozmawiamy sobie o nich za chwilę.
+Tutaj chciałem tylko pokazać, że każdy kontener może dostać konfigurację jednej lub wielu sieci.
+Albo może nie dostać w ogóle takiej konfiguracji.
+I wtedy działa w jakiejś tam sieci domyślnej.
+Która jest jakby dostępna dla wszystkich kontenerów.
+Uruchamianych standardowo bez określania w jakiej sieci mają działać.
+I tu jedno tylko mam pytanie.
+Bo tego jakby odpowiedzi na to pytanie nie pamiętam.
+Bo jakby same sieci ja sobie wyobraziłem tak, że to są jakby kabelki, które łączymy pomiędzy tymi kontenerami.
+To może takie głupie, ale tak sobie to zilustrowałem w głowie.
+Więc jeżeli mam backend to znaczy, że ta sieć ona wie backend jest wpięta do tego mojego kontenera.
+I wszystkie sieci, które będą miały to network.
+O nazwie backend.
+Też będą to wpięcie miały.
+I teraz czy my te sieci musimy sobie wcześniej stworzyć za pomocą jakiegoś osobnego polecenia?
+Czy Docker Compose robi to za nas?
+Mając te sieci określone w naszym pliku Compose zostaną one utworzone za nas.
+I za chwilę sobie zobaczymy jakie tutaj mamy w ogóle sieci zdefiniowane.
+Omówimy sobie też dlaczego, po co one są.
+Ale to też jak zobaczymy wszystkie pozostałe serwisy.
+Żeby mieć takie lepsze zrozumienie o samych tych sieciach.
+Kiedy będziemy wiedzieli do czego je chcemy wykorzystać.
+Ok.
+Dobrze.
+Następnym serwisem, który sobie konfigurujemy.
+Czyli następnym kontenerem, który będzie uruchamiany jest właśnie N8n do automatyzacji.
+Tutaj widać, że korzystamy z obrazu, który jest dostępny pod takim konkretnym,
+takim konkretnym adresem.
+Tutaj już nie korzystamy bezpośrednio z Docker Huba.
+Co widać po tym, że mamy tutaj dostępne pewne ścieżki.
+I adres pod którym jest ten rejestr obrazów dostępny.
+Bo nie musimy zawsze korzystać z Docker Huba.
+Możemy korzystać z innych rejestrów.
+Tutaj widać N8n ma swój dedykowany rejestr.
+Do którego publikuje.
+Ale możemy też w ramach organizacji mieć swój własny rejestr.
+Na przykład ECR dostępny w AWS.
+Bo jeśli są to nasze obrazy nad którymi pracujemy dla organizacji.
+To chcemy żeby one były dostępne w jakimś naszym rejestrze.
+A nie żeby były dostępne publicznie na Docker Hubie.
+A to jest ciekawe.
+Bo w sumie N8n.
+Jakby mi się wydawało, że to jest długa nazwa po prostu obrazu.
+I teraz byłem ciekaw co się stanie jak wejdę na Docker Compose.
+I wpiszę N8n.
+I tam faktycznie można też N8n pobrać z czegoś co się nazywa N8n.no.
+Tak samo jak jest tutaj.
+I później jest slash N8n.
+Czyli tak naprawdę u nich jest kilka jakby tych repozytoriów.
+Jak rozumiem z których można pobrać te obrazy.
+Ciekawa sprawa.
+Mhm.
+No i tutaj też widzimy, że restartujemy za każdym razem ten nasz kontener.
+No bo chcemy żeby usługa cały czas działała.
+Więc jeśli z jakiegoś powodu zakończy się błędem.
+Nie wiem skończy się na przykład pamięć.
+I OOM Killer wiedzie żeby nasz kontener, że tak brzydko powiem ubić.
+No to chcemy żeby on jednak z powrotem działał dalej.
+Żeby mógł pełnić funkcję dla której my go sobie tutaj skonfigurowaliśmy.
+I stąd też jest restart always.
+Widzimy ponownie podmontowany wolumen.
+Jakby nazywamy go też oczywiście inaczej po stronie gospodarza.
+Chyba, że chcielibyśmy montować ten sam wolumen z którego korzystamy wcześniej.
+No ale montowanie wolumenu postgresa jako wolumenu dla N8n.
+Trochę mijałoby się z tym.
+Oczywiście technicznie możemy to zrobić.
+Jednak wolimy żeby nasze dane były względem siebie odseparowane w jakiś logiczny sposób.
+Żeby się nie mieszały bo tak po prostu się łatwiej żyje.
+I widzimy tutaj też ścieżkę pod którą jest montowany do naszego kontenera.
+Oraz pojawia się nowa opcja konfiguracyjna depends on.
+Czyli zależy od.
+I ta opcja konfiguracyjna mówi nam, że nasz N8n potrzebuje do działania tego postgresa.
+Tutaj odwołujemy się do nazwy użytej wcześniej.
+Czyli tej.
+Gdybyśmy tutaj użyli DB to tutaj też użylibyśmy DB.
+Po co to stosujemy?
+Nie zawsze tak jest.
+Ale zdarza się, że aplikacja nie uruchomi się jeśli baza danych nie jest dostępna.
+Są aplikacje, które inicjalizują połączenie do bazy danych tylko i wyłącznie przy starcie.
+I później mają problem z reinicjalizacją tego połączenia.
+Co prawda dzisiaj raczej już się takich aplikacji nie spotyka.
+Raczej już są pisane w taki sposób, że potrafią sobie to połączenie ponawiać po czasie.
+Natomiast.
+Gdybyśmy pracowali z jakąś taką starszą aplikacją.
+No to wtedy to pozwala nam wymusić, że najpierw uruchomi nam się ten postgres.
+I dopóki on się nie uruchomi.
+To nasze N8n również się nie uruchomi.
+To jest bardzo ważne.
+Ja przyznam szczerze, że z tej opcji bardzo często korzystam.
+Bo mam troszkę inne doświadczenia właśnie, że te aplikacje często mają z tym problem.
+Dlatego też i tutaj to dodałem.
+Nie pamiętam.
+Nie pamiętam jeszcze czy to po prostu z przyzwyczajenia czy jak.
+Ale faktycznie było to potrzebne.
+O i tu dochodzimy do czegoś.
+A propos tak jak Jan wspomniał, że to ja jestem autorem tego obrazu.
+To myślę, że ten environment taki przedziwny mogę wyjaśnić ja.
+Żeby Janowi też trochę głos odpoczął.
+A mianowicie tu mamy przykład inny niż ten powyżej.
+Bo powyżej mieliśmy sytuację, w której po prostu chcieliśmy cały plik przekazać.
+Z tego względu, że nazwy zmiennych.
+Zmiennych, które zostały użyte w tym pliku.
+Były właściwe dla tego co rozumiał Postgres.
+Ale n8n też wymaga pewnych zmiennych.
+Czyli np. n8n musiał wiedzieć z jakiej bazy chcemy, żeby on korzystał.
+I tutaj też wskazałem mu db-type postgres-db.
+I to jest konkretna nazwa.
+To znaczy, że to jest konkretna jakby stała z konkretny tekst, który został wpisany przeze mnie w tym miejscu z palucha.
+Tak samo będziemy mieli też w przypadku db-postgres-host.
+Czyli w tej drugiej opcji.
+Tutaj też z palca wpisałem postgres.
+No i tu ważna też informacja dlaczego postgres.
+Zwróćcie uwagę tylko tak na moment, że poniżej networks też jest backend.
+Czyli dokładnie ta sama sieć, która była dostępna w postgresie.
+I teraz jeżeli tamten nasz kontener nazywa się postgres.
+To te dwa kontenery widzą się wzajemnie właśnie pod tymi nazwami.
+Czyli z poziomu postgresa.
+Ja mogę się podłączyć do n8n wpisując n8n.
+Natomiast taki host.
+Natomiast z poziomu n8n mogę podłączyć się z postgresa do podgresa za pomocą słowa postgres.
+Port to jest standardowy port postgresa.
+Ja tutaj tego w żaden sposób nie konfigurowałem.
+Natomiast później mamy wiele zmiennych.
+Ja wam nie będę wszystkich po kolei tłumaczył, bo myślę, że ich nazwy są bardzo wskazujące.
+Natomiast te nazwy tych zmiennych były mi potrzebne do tego,
+że nie wszystkie one miały te same nazwy, które były w pliku env.
+Czyli na przykład db postgres db database.
+To jest nazwa zmiennej, która pochodzi znowu z pliku n8n.
+Jakby dla konfiguracji jest n8n.
+Natomiast ja chciałem, żeby ona miała taką samą wartość ustawioną,
+jak wartość zmiennej z pliku env o nazwie postgres db.
+I właśnie ta linia i wszystkie te kolejne linie mi to załatwiają.
+Czyli pobieram sobie konkretną wartość z pliku env
+i mówię, że tę konkretną wartość chciałbym umieścić pod tą zmienną.
+No i tak mamy szereg zmiennych dotyczących właśnie ustawienia bazy danych.
+Później mamy szereg zmiennych dotyczących smtp i podłączenia do maila.
+I później mamy tak naprawdę tylko i wyłącznie ustawienie jeszcze hosta
+i webhook URL, który został ustawiony wprost.
+I to tyle, jeżeli chodzi o n8n.
+I networks, też tutaj o nim wspomniałem,
+więc Janie, jeżeli chcesz uzupełnić moją wypowiedź, to śmiało, nie obrażę się.
+Tak, właśnie czekałem, żeby móc tutaj tę część też uzupełnić.
+I teraz tak, to co widzimy tutaj jako host naszego postgresa,
+to co jest porówna się, to jest dokładnie ta nazwa,
+którą my nadaliśmy temu naszemu serwisowi postgresa.
+Czyli dokładnie to, co widzimy tutaj.
+I teraz jak widzimy, postgres jest w tej sieci backend
+oraz nasz n8n też jest w sieci backend.
+Jest też w innej sieci, ale na razie skupimy się na tej sieci backend.
+Dzięki temu, że te dwa kontenery są w tej samej sieci,
+to tak jak Kacper wspomniał, one ze sobą mogą w obrębie tej sieci rozmawiać.
+Natomiast postgres nie ma zdefiniowanej innej sieci dodatkowej.
+I teraz, jeśli spojrzymy sobie na chwilę tylko na konfigurację sieci dla naszego nginxa,
+on ma tylko i wyłącznie sieć proxy.
+Co powoduje, że nasz nginx do naszego postgresa się nie dostanie
+i w drugą stronie również postgres do nginxa też się nie dostanie.
+Natomiast n8n korzysta z obydwu tych sieci, dlatego że w pierwszej kolejności on łączy się z n8n,
+natomiast n8n korzysta z obydwu tych sieci, dlatego że w pierwszej kolejności on łączy się z n8n,
+on łączy się do tej naszej bazy danych, więc musi być w tej samej sieci, żeby móc z tą bazą danych rozmawiać,
+ale korzysta też z osobnej sieci, żeby rozmawiać z tym nginxem,
+dlatego że przez nginxa my wysyłamy komunikację do tego naszego n8n.
+Dlaczego korzystamy z nginxa, a nie bezpośrednio z n8n?
+Dlaczego korzystamy z nginxa, a nie bezpośrednio z n8n?
+Powodów jest tak naprawdę wiele.
+Jednym z nich jest to, że nginx jest bardzo dobrym serwerem służącym m.in. jako proxy,
+jest bardzo szybkim serwerem, w związku z czym on bardzo efektywnie zarządza tymi połączeniami
+i teraz gdybyśmy mieli na przykład kilka instancji tego n8n rozproszonego nawet po różnych serwerach,
+albo po prostu chcielibyśmy, żeby było wiele instancji nawet na tym serwerze,
+albo po prostu chcielibyśmy, żeby było wiele instancji nawet na tym serwerze,
+albo po prostu chcielibyśmy, żeby było wiele instancji nawet na tym serwerze,
+to nginx byłby w stanie kierować po prostu do wszystkich tych instancji i byłby wtedy takim load balancerem,
+czyli komponentem, który tak naprawdę też stosujemy dzisiaj w wielu miejscach tworząc nasze infrastruktury,
+żeby te aplikacje działały wydajniej, żeby były w stanie poradzić sobie z nadchodzącym ruchem,
+żeby były w stanie poradzić sobie z nadchodzącym ruchem,
+żeby były w stanie poradzić sobie z nadchodzącym ruchem,
+i się do tego ruchu też skalować.
+Dokładnie tak. Ja to mogę powiedzieć wprost, że użyłem go przede wszystkim dlatego,
+że nie umiałem inaczej zrobić SSL-a, czyli certyfikatu SSL,
+więc w tej mojej konfiguracji tego jest jeszcze parę innych właśnie komponentów,
+natomiast myśmy je tutaj wycięli, bo nie chcieliśmy tak mocno jakby zaciemniać tutaj tego obrazu.
+Niemniej faktem jest, że tutaj ten nginx głównie po to był mi wtedy potrzebny,
+natomiast potem jeszcze znalazłem opcje, które umożliwiają poradzenie sobie bez niego,
+ale to już temat na inną pogawędkę.
+Tak. Także faktycznie w tej konfiguracji może i nginx nie byłby niezbędny,
+bylibyśmy w stanie sobie bez niego poradzić,
+natomiast też jest fajnym takim rodzajem zabezpieczenia, bo jeśli chcielibyśmy sobie wystawiać do innych,
+do internetu taką usługę, to nginx daje nam też pewne takie zabezpieczenie,
+że jeśli ktoś będzie się komunikował z tym naszym n8n, nie będzie robił tego bezpośrednio.
+W związku z czym przynajmniej część podatności, które mogą się w takim n8n znaleźć,
+są za tym nginx-em schowane.
+Oczywiście nie powinniśmy tego traktować jako sposób rozwiązywania problemów bezpośrednich,
+rozwiązywania problemów bezpieczeństwa w naszej aplikacji,
+bo to oczywiście trzeba adresować we właściwy sposób,
+natomiast na pewno pozwala nam to ograniczyć wektory ataków
+i jest to pożądane, kiedy uruchamiamy już takie aplikacje produkcyjne,
+no bo jednak zawsze ten wektor ataku, kiedy jest zmniejszony,
+to jest trudniej tą naszą aplikację zaatakować.
+A też jeśli chcemy faktycznie korzystać z SSL-a,
+w samym n8n pewnie potrzebowalibyśmy zrobić jakieś dodatkowe modyfikacje tego obrazu,
+możliwe, że musielibyśmy zrobić własnego dockerfile'a,
+przygotować tą konfigurację, trzeba to później utrzymywać,
+certyfikaty trzeba też regularnie wymieniać, rotować,
+więc bywa to troszeczkę problematyczne.
+A jeśli mamy osobny serwis, który zajmuje się tylko tym,
+to jest o wiele łatwiej tutaj z tym działać
+i nie potrzebujemy robić takich dodatkowych modyfikacji.
+Zdecydowanie tak.
+Tutaj odnośnie samego NGINX-a myślę, że nie ma już zbyt wiele do omawiania,
+to co już omawialiśmy pozwolę sobie pominąć,
+natomiast to co tutaj możemy zobaczyć,
+to w wolumenach jest pewna dodatkowa rzecz,
+bo możemy zaobserwować, że mamy tutaj jeden dwukropek,
+ale mamy też drugi dwukropek w tym miejscu.
+I teraz co to oznacza?
+Tutaj standardowo to jest plik, który znajduje się na systemie gospodarza,
+który następnie sobie montujemy w naszym kontenerze w takiej ścieżce,
+jak tutaj zaznaczyłem,
+natomiast to co znajduje się po drugim bloku,
+w tym dwukropku,
+to jest sposób dostępu,
+to jest flaga z jakimi uprawnieniami ten plik jest dostępny w tym naszym kontenerze.
+I tutaj RO pochodzi od read only,
+czyli tylko do odczytu.
+Co nam to daje?
+Daje nam to taką korzyść,
+że z wewnątrz tego pliku,
+z wewnątrz tego kontenera,
+z wewnątrz samego NGINX-a
+nie możemy zmienić tej konfiguracji.
+I gdyby doszło do takiej sytuacji,
+że komuś udałoby się zaatakować ten kontener,
+dostać się do wnętrza tego kontenera i tego NGINX-a,
+to wtedy nie jest w stanie w prosty sposób zmienić nam tej konfiguracji
+i położyć naszej usługi,
+dlatego że nie ma możliwości edycji tego pliku,
+tego pliku konfiguracyjnego.
+Dobrze.
+Drugi katalog, drugi wolumen montowany.
+Myślę, że nie ma większego sensu go omawiać,
+chyba że chcesz Kacprze coś konkretnego.
+Nie, tu po prostu chodzi o informacje jakby...
+Ja tego katalogu potrzebowałem po to,
+że w momencie, w którym wygenerowany jest certyfikat SSL,
+przez Let's Encrypt'a w tym przypadku,
+to Let's Encrypt musi się połączyć z danym adresem,
+na którym jest wygenerowany ten certyfikat
+i ten adres nie może zwracać błędu 404 albo innego błędu,
+musi być to po prostu 200 i poprawna odpowiedź.
+Dlatego też tutaj jakby utworzyłem ten katalog HTML
+i na niego też kierował ten domyślny adres jakby w NGINX-ie też.
+Czyli wychodzi na to, że nie wyczyściłem tego,
+czego pozbywaliśmy się tutaj, żeby...
+Nie, ale to bardzo dobrze, bo też pokazujemy właśnie,
+w jaki sposób można coś jeszcze podmontować,
+jeżeli byśmy potrzebowali.
+To myślę, że bardzo słuszna i dobra dawka wiedzy.
+Też, także można zawsze z tego skorzystać.
+Jeszcze słowem komentarza.
+Let's Encrypt to jest taki projekt,
+o który zabiegało tak naprawdę wiele dużych firm,
+żeby poprawić bezpieczeństwo,
+bezpieczeństwo w sieci polegający na tym,
+że możemy wygenerować sobie bezpłatny,
+zaufany przez przeglądarki certyfikat,
+który wygasa po trzech miesiącach.
+Standardowe certyfikaty, które kupujemy są ważne na rok.
+Można sobie kupić też bardziej takie enterprise certyfikaty,
+które z tego co kojarzę mogą być ważne do chyba trzech lat.
+Natomiast Let's Encrypt
+jest bardzo takim fajnym projektem,
+celem poprawy bezpieczeństwa właśnie w sieci
+i pozwala korzystać z tych bezpłatnych certyfikatów
+tak naprawdę każdemu.
+Obecnie bardzo wiele stron z tych certyfikatów też korzysta,
+no bo jeśli nie trzeba za to płacić,
+no to wiadomo jest łatwiej,
+a już od wielu, wielu lat przeglądarki
+krzyczą bardzo głośno.
+Wymuszają.
+Dokładnie.
+Zawsze pojawia się ostrzeżenie,
+jeśli jest strona, która tego certyfikatu nie ma w ogóle,
+albo ma nieprawidłowy certyfikat,
+to zawsze dostajemy ostrzeżenie,
+zawsze musimy potwierdzić,
+czy na pewno chcemy na taką stronę wejść.
+Dla bezpieczeństwa, jeśli nie mamy pewności,
+lepiej na taką stronę nie wchodzić,
+a właśnie dzięki temu projektowi Let's Encrypt
+jesteśmy w stanie pokazać,
+że ten certyfikat jest tym prawidłowym certyfikatem
+i że ta strona, przynajmniej z perspektywy komunikacyjnej,
+jest bezpieczna.
+Tak, zdecydowanie tak.
+No i cóż, możemy powiedzieć,
+że w tak bardzo długiej jednej lekcji,
+której pewnie nie potnę,
+zostawię ją w takiej długiej formie,
+udało nam się omówić cały Docker Compose
+i tak naprawdę w kolejnych lekcjach
+pokażemy wam, jak takiego Docker Compose uruchomić,
+jakie polecenia są dostępne,
+w ramach samego tego CLI Docker Compose
+i co tak naprawdę z nim możemy zrobić
+i czy ta wiedza, którą zbieraliśmy do tej pory,
+była nam przydatna, czy też nie.
+Spoiler, była.
+Tak, zanim natomiast jeszcze zakończymy tę lekcję,
+chciałbym tutaj wspomnieć też o tym,
+że mamy konfigurację portów dla naszego Linuxa,
+bo to jest dosyć istotna informacja,
+jeśli z czegoś chcemy korzystać też w sieci,
+także mapujemy sobie port na hoście,
+port 80 na port 80 w naszym kontenerze,
+port 80 to jest port standardowo używany przez HTTP,
+czyli akurat przez połączenie bez certyfikatu,
+z certyfikatem mielibyśmy jeszcze tutaj port 443,
+natomiast tą właśnie opcją konfiguracyjną ports
+możemy sobie zdefiniować,
+jakie porty ten konkretny kontener ma wystawiać.
+No i to, co zostało jeszcze na sam koniec,
+czyli określenie, jakie sieci są w ogóle tutaj dostępne,
+czy dzięki temu, że tutaj na tym jakby głównym poziomie networks
+mamy te sieci określone,
+to też Docker Compose je sobie utworzy
+i to samo w przypadku wolumenów,
+mamy tutaj określone te networky,
+nasze wolumeny,
+tutaj pierwsze dwa to są wolumeny,
+które widzieliśmy wyżej,
+były wykorzystane w przykładzie,
+pozostałe dwa to jest pozostałość po tym,
+czego tutaj dzisiaj nie zaprezentowaliśmy,
+ale nie zaprezentowaliśmy tego też celowo,
+bo ta lekcja już i tak jest długa,
+a byłaby to tylko niepotrzebna komplikacja na tym etapie.
+Otóż to.
+Więc nie przedłużając,
+kończymy tę lekcję.
+Cześć.
+Cześć.

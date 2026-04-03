@@ -1,0 +1,90 @@
+Wspominałem w poprzedniej lekcji, że Python to świetny język.
+Świetny język ze względu przede wszystkim na jego wszechstronność
+i na to, że Pythona można używać praktycznie wszędzie.
+Dobra, już słyszę jak wypominacie mi te miejsca,
+w których Python nie znajdzie zastosowania,
+ale okej, w Postgresie zastosowanie znajduje.
+Jedynym minusem jest to, że znowu trzeba być administratorem
+i najpewniej trzeba też doinstalować to rozszerzenie PL-Python.
+U nas na serwerze nie jest ono włączone
+i może je włączyć tylko administrator.
+Natomiast, jeżeli byście chcieli, to możecie sobie oczywiście potestować to na Dockerze.
+Jest takie polecenie create-extension-pl-python-3-for-you,
+żeby to wykonać.
+Jak to wygląda?
+Uściśnijmy.
+Ja ten moduł, te lekcje pokazuję wam tylko, żebyście wiedzieli,
+że można coś takiego zrobić właśnie,
+jeżeli byście chcieli łączyć Pythona z Postgresem,
+ale niekoniecznie do tego, żebyście to zaraz łączyli.
+Bardziej chodzi mi o to, żebyście wiedzieli,
+że można, żebyście spróbowali to wykonać.
+Czyli jak to wygląda?
+Robimy create-or-replace-function-python-test,
+jakaś tam zmienna, returns, trigger-s, dolary, dolary.
+No i language to jest PL-Python.
+I co się wówczas dzieje?
+Możemy skorzystać sobie z zmiennej a, b i możemy zrobić return a plus b plus c.
+Dodatkowo można też instalować wszystkie biblioteki z pipa,
+czyli z takiego repozytorium bibliotek.
+Można używać modułu requests, można wysyłać strzały do API,
+można wysyłać maile, można naprawdę bardzo, bardzo dużo.
+Myślę, że jest to bardzo ciekawe zastosowanie Pythona.
+Nie wiem,
+czy bardzo mocno życiowe sam z tego nigdy nie korzystałem.
+Mówię nigdy z całą mocą, po prostu nigdy tego nie potrzebowałem jeszcze do tej pory,
+ale wiedziałem, że tak faktycznie zrobić można.
+Dlaczego warto?
+No warto z tego powodu, mówię na podstawie tych danych,
+które wyczytałem w internecie i też potrafię sobie wyobrazić,
+że no korzystanie z właśnie na przykład jak widzicie z
+biblioteki requests, gdzie będziemy mogli wysłać jakieś zapytanie
+na zewnętrzny adres, pobrać sobie jakieś dane, później je zwrócić,
+albo na przykład zaktualizować kursy walut w naszej jakiejś tabeli
+bezpośrednio wewnątrz Pythona, albo no robić,
+pobierać sobie z jakiejś zewnętrznej usługi ceny produktów,
+albo kalkulować cenę dojazdu.
+No tu można naprawdę bardzo, bardzo dużo, jeżeli sobie wyobrazimy
+właśnie samą tą opcję, że możemy.
+Wysłać coś do zewnętrznego serwera, a następnie z tego serwera możemy
+to odebrać konkretną odpowiedź, no to po tej stronie Python
+sprawdza się nieziemsko.
+No i tak jak wspomniałem opcje, gdzie to się może przydać.
+Jedna z opcji komunikacja z zewnętrznym API, na przykład żeby
+uzupełnić bazę danych, inna opcja wysłanie smsa czy wysłanie
+maila, jeżeli coś się stanie, no i oczywiście możemy też pracować
+z obrazem, możemy przetwarzać teksty, wyciągać tagi, wykonywać
+analizę, używać, jeżeli chodzi o Pythona, to możemy używać na
+przykład tak zwanej sztucznej inteligencji, naprawdę zasilać od
+razu tę sztuczną inteligencję jakimi danymi, albo wysyłać coś i
+odbierać dane, więc naprawdę, naprawdę można wiele.
+Natomiast pytanie, które powinniśmy sobie zadać jest takie, czy
+na pewno wszystkie te operacje powinny znajdować się w bazie
+danych, no bo tak naprawdę w tym momencie przerzucamy bardzo
+dużo odpowiedzialności do bazy danych, jeżeli baza danych padnie,
+my padniemy, jeżeli coś w tym kodzie się zepsuje, to szukanie tego,
+tej przyczyny zajmie naprawdę bardzo długo.
+Uwierzcie mi, wyobrażam sobie taką sytuację, że klient do mnie
+dzwoni, mówi dzień dobry panie Katrze, coś tam się zepsuło,
+przestał klient dostawać maile, ja mówię ojej, przestał
+dostawać maila, dlaczego?
+No tak, tak poprzedni programista zrobił taki system, polegało
+to na tym, że klient dostawał maile przy każdym nowym zamówieniu,
+no i teraz tych maili nie dostaje.
+Dam sobie rękę uciąć, albo nawet może coś innego, że ostatnim
+miejscem, do którego bym zaglądał, jest trigger na bazie danych.
+W sensie szukałbym jakichś funkcji w Pythonie, jakiegoś Pythona
+właśnie, jakiegoś innego języka, jakiś wpisów w cronie, czy w
+takim miejscu, w którym są uruchamiane cykliczne zdarzenia i
+jest coś sprawdzane.
+Nie wiem, czy znalazłbym
+trigger na bazie danych wysyłający powiadomienie.
+Obawiam się, że nie, znaczy pewnie po jakimś czasie bym znalazł, chociażby
+ze względu na to, że się tutaj przygotowywałem do tego kursu i tak
+patrzyłem po tych zastosowaniach i mi się oczy świeciły, wyobrażając sobie te
+rzeczy, a potem sobie właśnie wyobraziłem, że coś takiego robię i
+ktoś po mnie ma to znaleźć.
+Czy ten ktoś by to znalazł?
+Nie wiem, ale na pewno jako triggery pracujące tylko na bazie danych,
+triggery są super, polecam używanie ich.
+Zapraszam Was do pracy domowej.

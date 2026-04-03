@@ -1,0 +1,52 @@
+Dobrze, myślę, że czas zadbać o środowisko, bo teraz ENF przed nami, a ja wiem, że ENF to jest Environment i przyznam Ci szczerze, że z tego czasem korzystam.
+Dopisuję to sobie do Dockerfile'a i wiem, że możesz też mieć ENF file, czyli taki pliczek z kropka ENF i możesz też przekazywać coś przy uruchamianiu.
+I tymi zmiennymi środowiskowymi nawet się trochę pobawiłem i używam ich, więc bardzo jestem ciekaw, co tutaj o nich opowiesz, bo pewnie też czegoś nowego i tak dowiem.
+Tak, instrukcja ENF w naszym Dockerfile'u służy ustawieniu właśnie zmiennej środowiskowej i zmienna ustawiona za jej pomocą będzie dostępna dla wszystkich kolejnych instrukcji,
+w danej instancji, czyli w danym stage'u tego naszego obrazu.
+Gdzieś tam po drodze wspominałem o tym, że możemy mieć jakby multistage'owe te nasze obrazy, te całe Dockerfile, które składają się z wielu tych poszczególnych instancji
+i teraz ENF jest dostępny od momentu zdefiniowania do końca danej tej instancji, czyli do końca danego stage'a.
+Co znaczy?
+Że jeśli mamy tych stage'y kilka i potrzebujemy używać tej samej zmiennej środowiskowej i nawet z tą samą wartością w poszczególnych stage'ach,
+wtedy w każdym musimy ją osobno sobie zdefiniować.
+Natomiast operując w obrębie danego stage'a możemy sobie dowolnie tą instrukcję jakby nadpisywać tego naszego ENF'a,
+tą naszą zmienną.
+Jeśli w danym momencie potrzebujemy mieć jedną wartość, coś sobie robimy, później potrzebujemy mieć inną wartość,
+możemy ją jak najbardziej sobie w kolejnych krokach nadpisywać i jej wartość będzie też interpretowana dla innych zmiennych środowiskowych.
+Dlatego wszelkie znaki specjalne,
+w tej zmiennej trzeba eskejpować, to znaczy trzeba wstawić przed każdym znakiem specjalnym backslash,
+żeby prawidłowo nam się taka wartość w innych zmiennych zachowywała.
+Teraz w ramach pojedynczej instrukcji możemy ustawiać sobie wiele zmiennych naraz.
+Doker File bez problemu to obsługuje, także można to w ten sposób zrobić.
+Co jeszcze jest istotne, to zmienne ustawione przy użyciu instrukcji ENF będą zachowane w uruchomionym kontenerze.
+Jeśli w naszym obrazie je ustawimy, to kontener, który zostanie z tego obrazu uruchomiony, będzie też miał,
+te zmienne, ustawione.
+O, okej.
+No, w sumie to logiczne.
+Teraz, jeżeli mamy państwo plik kroka .enf,
+to on będzie też oddziaływał na ten działający kontener?
+Będzie oddziaływał, nie?
+Plik kroka .enf będzie oddziaływał w uruchomionym kontenerze,
+natomiast wydaje mi się, nie jestem na 100% pewien, ale wydaje mi się, że na etapie budowania,
+plik kroka .enf będzie...
+ENV nie będzie brany pod uwagę.
+Natomiast to na pewno warto sobie doczytać właśnie w Docker File Reference,
+jak to będzie wyglądało, czy te zmienne zostaną załadowane podczas budowania,
+czy one będą wykorzystywane tylko w momencie uruchomienia.
+Wydaje mi się, że przy momencie uruchomienia, bo jak robimy
+Docker Compose App chociażby, to my też korzystamy tylko i wyłącznie z pliku
+ENV już na działających kontenerach, nie?
+Tak.
+Ok, super. Czyli w ten sposób dowiedzieliśmy się kolejnych ważnych informacji.
+Tutaj też przy okazji
+w Docker File Reference warto zwrócić na to, że tak samo jak w Linuxie można też
+przekazywać mu zmienne środowiskowe podczas uruchamiania pojedynczych poleceń.
+To tutaj też mamy taką możliwość.
+Myślę, że całkiem przydatna instrukcja,
+szczególnie jeżeli będziemy chcieli poprzez środowisko sterować naszymi obrazami, czy
+może obrazami też, ale też kontenerami.
+Tak, jeszcze chciałbym dodać, że zachowywanie zmiennych w naszym obrazie
+może prowadzić do niespodziewanych efektów ubocznych, które mogą też mylić
+użytkowników, dlatego warto używać ich z rozwagą.
+Jeśli nie potrzebujemy zapisywać jakiegoś ENV-a na stałe w naszym obrazie,
+lepiej jest wtedy wykorzystać faktycznie plik .env i zdefiniować te wartości bezpośrednio
+w nim, niż w ramach dockerfile'a na etapie budowania obrazu.

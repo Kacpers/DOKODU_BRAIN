@@ -1,0 +1,332 @@
+Jak widzieliście w poprzedniej lekcji za operatorem
+może stać więcej rzeczy niż tylko nazwa kolumny operator
+i konkretna wartość tych operatorów jest trochę więcej
+i teraz przyszedł czas na to aby o tym więcej sobie
+porozmawiać na pierwszy ogień operator in jak ten operator
+in pozwala nam na skracanie zbyt długich wyrażeń w
+momencie w którym na przykład chcemy porównać sobie jedną
+kolumnę z wieloma różnymi wartościami Zobaczcie zamiast
+napisać where city równa się Gdynia or city równa się
+Gdańsk or city równa się Sopot mogę napisać where city
+in i wtedy bardzo ważne jest to że pojawiają się nawiasy
+okrągłe i te nawiasy okrągłe będą absolutnie zawsze po
+czym w apostrofach mamy Gdynia Gdańsk Sopot i w ten sposób
+SQL sprawdzi czy nasze miasto jest jednym z tych trzech
+jeżeli jest jednym z tych trzech to wszystko nam przejdzie dalej
+i zadziała taka milsza skrócona forma i tutaj przyszedł czas
+na to żeby sobie to przećwiczyć w zadaniu 19 chcemy pobrać
+wszystkich klientów customers których państwo country to
+USA Brazylia lub Hiszpania w zadaniu drugim chcemy pobrać
+wszystkich klientów pochodzących z USA których tytuł
+i kontakt title to sales manager lub marketing manager 3
+minuty dla każdego i widzimy się po krótkiej przerwie okej
+no i cóż jeżeli chcemy pobrać wszystkich klientów no to
+select gwiazdka from customers których państwo czyli country
+czyli where country in i w apostrofach Brazil
+or Spain tutaj jeżeli chodzi o kolejność występowania tych
+elementów wewnątrz i na to absolutnie nie ma ona żadnego
+znaczenia znaczenie ma tylko to żeby dobrze napisać zapytanie
+natomiast racji tego że tutaj sprawdzamy sobie po prostu czy
+jest jednym z to tak naprawdę kolejność nam nie przeszkadza
+jak widzicie mamy Hiszpanię mamy Brazylię i mamy też USA
+i zadaniu drugim chcemy pobrać wszystkich klientów pochodzących z USA
+i w zadaniu drugim chcemy pobrać wszystkich klientów pochodzących z USA
+czyli select all from customers where country to USA
+i dodatkowo ich tytuł ma być jednym z tych trzech
+czyli skoro dodatkowo no to end i teraz kontakt title in sales manager lub marketing manager
+już wam mówiłem że jak się coś wydarzy to zacznijmy od marketingu
+się coś nie mieści, chcecie się pozbyć
+tego i chcecie to ładniej zapisać
+to zawsze można zrobić tak,
+że tutaj sobie wstawimy Enter
+Enter
+Enter
+Enter
+Enter
+Tu niestety chyba żadnego formatowania nie ma,
+ale jak sobie zrobimy po prostu wcięcia to będzie
+też ładnie i będzie
+działało. Jeszcze średnik. O!
+I cóż? Sprawdźmy.
+Country to USA. To działało.
+No i Sales Manager, Marketing Manager.
+Wygląda na to, że jest ok.
+5 rekordów. To jeszcze nie koniec
+tego modułu. Zapraszam
+z powrotem do kolejnej porcji materiałów,
+ponieważ z Inem
+można zrobić coś jeszcze.
+Jeżeli chodzi o to, do czego
+In przydaje się również, to przydaje się
+także do podzapytań tak zwanych.
+Tutaj pokażę Wam jak możemy
+zagnieżdżać zapytania, tak żeby
+w jednym zapytaniu pojawiło się drugie
+zapytanie. Zobaczcie.
+Mamy dwie tabele. Drivers
+oraz Cars. Czyli
+kierowcy i samochody. Zakładamy,
+że każdy jeden kierowca może
+prowadzić w danym momencie jeden
+samochód. Czyli mamy Pana Aleksandra
+Dworcowa, który prowadzi Ładę
+i na przykład Hansa Schlosa, który prowadzi
+Audi. Ok?
+Skąd to wiem? Wiem o tym dlatego, że
+przy Aleksandrze Dworcowie w tym miejscu
+mam Car ID,
+które mi mówi jakim
+samochodem w danym momencie
+zarządza, prowadzi, jaki samochód
+Aleksander Dworcow. Ok.
+I teraz, jeżeli chciałbym
+pobrać sobie wszystkie samochody,
+które prowadzi Pan Dworcow, czy też
+pobrać wszystkich kierowców, którzy na przykład
+kierują w danym momencie
+Ładą, no to ja bym musiał wykonać
+zapytanie. Select, powiedzmy tam
+gwiazdka from drivers,
+where Car ID równa się
+i teraz sprawdzam. Tu jest Łada
+1, czyli Car ID równa się
+1. Tyle tylko,
+że wykonanie tego zapytania w taki
+sposób nie jest zbyt wygodne.
+Dużo ładniej byłoby, gdybyśmy
+użyć nazwy Łada
+w tym zapytaniu. Z tego względu, że
+jeżeli nie mamy tej informacji,
+jaki to jest ID, no to trzeba
+byłoby tę informację najpierw pobrać.
+I tutaj też będziemy musieli tę informację
+najpierw pobrać, natomiast będzie to
+wyglądało bardziej elegancko.
+Zobaczcie.
+Zapytanie może wyglądać tak.
+Select name from drivers
+where Car ID in.
+I tutaj w momencie, w którym
+robię sobie Car ID in,
+to ja zakładam, że będę mógł też zwrócić
+sobie kilka, stworzyć zapytanie, które
+zwróci mi kilka różnych ID-ków
+samochodów. Tu akurat w naszym przypadku
+mamy taką sytuację, że po prostu podbieramy
+sobie jeden ID,
+natomiast jeżeli to zapytanie zwróciłoby wiele
+ID-ków, czy też wiele wartości,
+no to jak najbardziej można byłoby też to
+wykorzystać w ten sam sposób w IN-ie.
+No i w ten sposób
+to zapytanie ze środka pobierze nam
+ID z samochodów, gdzie
+firmą jest Łada.
+Dostaniemy wówczas informację, że Łada
+była chyba tam na pierwszym ID-ku,
+więc wtedy wykona zapytanie na zewnątrz,
+czyli pobierze nam wszystkie nazwy
+kierowców, których Car ID jest
+jedynką. Jakbyśmy zrobili to
+w drugą stronę, to też
+zdecydowanie by nam to
+zadziałało i też można byłoby wówczas
+tutaj sobie to podmienić.
+To się bardzo często przydaje,
+na przykład jeżeli mamy właśnie zapytanie,
+które zwraca nam dużo
+identyfikatorów i później
+chcemy wiele identyfikatorów
+wyszukać w jakiejś innej
+tabeli. Tak jest czasem po prostu łatwiej.
+niż korzystać ze złączeń, ale o złączaniach
+też będziemy sobie mówili za moment.
+Jeżeli korzystacie,
+jeżeli
+kojarzycie na przykład taki
+jeżeli kojarzycie na przykład
+WordPressa, to WordPress pod
+spodem bardzo dużo zapytań wykonuje
+właśnie w tej formie. Czyli najpierw
+sobie pobiera, napisany to jest taki
+CMS napisany w PHP. Najpierw
+pobiera sobie dużo różnych elementów.
+Te elementy posiadają
+konkretne ID-ki i później
+z innej tabeli, w tym przypadku jest to post,
+pobiera sobie te konkretne
+posty, które
+zmieszczą się w danym
+zapytaniu. Więc jak najbardziej
+można też tak sobie to robić. No i
+uczymy się czegoś nowego, czyli pod zapytań.
+To jest też ciekawy
+temat, któremu też poświęcimy w przyszłości
+jeszcze troszeczkę więcej czasu.
+OK. I zwróćcie
+uwagę też na to, że IN
+można też używać z zaprzeczeniem. Czyli tak samo
+jak do tej pory wykonywaliście zapytanie
+city, załóżmy nierówna się
+Gdynia or city nierówna się Gdańsk or city
+nierówna się Sopot, to również
+można napisać not in.
+No i wtedy będzie where city not in
+Gdynia Gdańsk Sopot. I to
+też nam absolutnie zadziała.
+No i cóż, jeżeli doszliśmy
+do tego momentu, no to wypadałoby sobie to jeszcze
+przećwiczyć.
+W zadaniu pierwszym chcemy pobrać wszystkie
+produkty z tabeli products
+z kategorii seafood oraz
+produce. Czyli mamy dwie kategorie.
+Zwróćcie uwagę
+na to, w jaki sposób produkty łączą się
+z kategoriami. To jest nawet taka mała podpowiedź.
+Może możemy użyć kolumny
+kategory id, która znajduje się w
+tabeli products. Pobierzcie sobie
+więc najpierw produkty, pobierzcie sobie kategorię.
+Zobaczcie jak to wygląda. Spróbujcie przygotować
+takie zapytanie. A w drugim
+podpunkcie na podstawie
+tabeli order details
+chcemy pobrać unikatową
+listę nazw produktów, czyli bez
+duplikatów, czyli to będzie distinct,
+które zostały kiedykolwiek zamówione
+w liczbie sztuk większej niż
+100.
+No to cóż, tu myślę, że chwilę trzeba
+będzie się nad tym zastanowić. To będzie takie
+trudniejsze zadanie, więc no może
+nie 3 minuty, tylko 4 dzisiaj.
+Do zobaczenia w rozwiązaniu.
+No dobra, to lecimy.
+Chcemy pobrać wszystkie produkty
+z kategorii seafood oraz produce.
+No to najpierw pobierzmy sobie te dwie kategorie.
+Select
+gwiazdka from categories
+where
+name, kategorię name
+nie pamiętam, nazwy kolumny
+podpowiada mi i to zrobię sobie tak.
+Chwileczkę zaczekam, zapytanie mi się
+przetworzy i zaraz zobaczę.
+Korzystam już z serwera zdalnego, więc chwilę
+to trwa, zanim się podłączy.
+OK. Z wykonałem
+select gwiazdka from categories i w ten
+sposób dostałem informację, że mam beverages,
+condiments, confections, wow, wow, wow,
+cała lista kategorii.
+Mnie interesują dwie, seafood,
+seafood oraz
+produce. Seafood, oczywiście
+seafood przez a, sea food
+oraz produce. I teraz jeżeli chciałbym
+pobrać sobie te seafood oraz
+produce, no to wówczas tutaj widzę,
+że mam taką kategorię. No to select
+gwiazdka from categories, where,
+kategory, name.
+No i skoro mam dwie kategorie,
+no to używam operatora in.
+Seafood
+i produce.
+Hops. No i dostałem takie dwie,
+taki wynik.
+No i teraz chcę pobrać wszystkie produkty
+z tych kategorii, czyli ja będę
+chciał pobrać sobie, jest ta podpowiedź,
+czyli kategoria id w tabeli products.
+Co oznacza, że jak sobie wezmę select gwiazdka
+gwiazdka
+from products, to zapewne
+w tym select gwiazdka from products
+zobaczę, że mam
+kategorię id. No właśnie.
+Skoro to mi zwraca konkretne
+kategorie, to ja muszę spowodować,
+żeby to zapytanie u góry zwracało
+mi konkretne idki kategorii,
+a następnie będę robił
+select gwiazdka from products,
+where kategory id
+in
+i tutaj będę miał to pod zapytanie.
+Czyli tu powinienem to zmienić
+na kategorię id
+i wówczas tą
+zawartość powinienem sobie wstawić
+do środka. Wykonuję
+zapytanie. Ojej
+i mam średnik. Ten średnik tu nie
+może być, bo średnik jest tylko na końcu
+zapytania, ale to jest tak jak się kopiuje
+i wkleja. Okej? No i powinniśmy
+mieć dwa idki, siódemka, ósemka,
+czyli seafood i kategorię id
+zadziałało.
+Seafood i produce zadziałało.
+Okej. No i w zadaniu drugim.
+Na podstawie tabeli
+order details pobierz
+unikatową listę nazw produktów
+bez duplikatów, które zostały kiedykolwiek zamówione
+w liczbie sztuk więcej
+niż sto.
+No to zobaczmy co się znajduje w order details.
+Select gwiazdka from
+order details
+i w order details
+mamy coś takiego jak quantity
+i tutaj siedzi właśnie
+wielkość zamówienia.
+Więc select gwiazdka from order details
+where quantity
+jest większa
+niż sto.
+Hops! Mamy
+listę tych produktów
+i tutaj w tej tabeli mamy
+taką kolumnę jak product id
+a nas interesują właśnie
+nazwy produktów.
+Czyli możemy sobie od razu powiedzieć,
+że stąd będziemy chcieli pobierać
+product id
+no i select gwiazdka from
+order details.
+Hops!
+I mamy. Czyli tak naprawdę będziemy
+chcieli pobierać wszystkie produkty
+gdzie, w których
+product id
+jest jednym z
+tych, które sobie pobraliśmy
+tutaj.
+Hops! I znowu
+średnika nie usunąłem, usuwam
+i zadziałało.
+Tak to właśnie funkcjonuje
+jeżeli chodzi o podzapytania.
+Jak widzicie w jednym i w drugim
+przypadku najpierw wykonałem to
+podzapytanie, potem sprawdziłem
+sobie jakie kolumny są
+wspólne i dopiero później wklejałem
+to podzapytanie do zapytania.
+Jeżeli nie znamy
+nazw kolumn, tabel
+i nie wiemy tego wszystkiego tak wiecie od razu
+no to zdecydowanie myślę, że jest to
+dobry pomysł, żeby zrobić to tak
+a nie kombinować i denerwować
+się, że gdzieś tam mamy jakiś błąd, coś mi
+nie działa. To taki hint,
+taka wskazówka ode mnie.
+To tyle jeżeli chodzi o ten rozdział.
+Zapraszam Was serdecznie do kolejnego rozdziału.

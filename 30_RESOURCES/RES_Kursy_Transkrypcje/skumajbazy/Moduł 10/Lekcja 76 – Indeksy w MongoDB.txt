@@ -1,0 +1,469 @@
+No to cóż, przyszedł czas na to, abyśmy kontynuowali nasze zmagania z Mongo.
+Na pierwszy ogień idą indeksy.
+Indeksy nie różnią się praktycznie niczym w Mongo od tych, które znacie z Postgresa,
+tych, o których sobie rozmawialiśmy w Postgresie, no bo po prostu indeks to jest indeks.
+Coś, co ma za zadanie przyspieszyć nam wyszukiwanie, ułatwić to wyszukiwanie.
+W przypadku Mongo też tak samo jak i w Postgresie mogą być używane dokładne te hasze,
+jak i zakresowe, czyli range.
+Czyli na przykład jeżeli wiemy, że coś jest liczbą i będziemy wyszukiwali zakresami,
+no to wtedy dajemy indeks typu range, natomiast jeżeli szukamy konkretnej wartości,
+no to wówczas dajemy indeks typu hash.
+Co ważne, tak samo jak i w Postgresie indeksy określa się na poziomie
+tabeli, tak tutaj indeks określa się na poziomie kolekcji,
+czyli on po prostu nam indeksuje poszczególne dokumenty.
+No i przykładem jednego takiego indeksu, który już widzieliście w poprzednim module,
+był indeks ID, który upewniał nas o tym, że dany dokument jest unikatowy.
+No i ten indeks też tą unikatowość w sobie miał.
+Tam akurat był UID, czyli coś, co praktycznie zawsze jest unikatowe,
+no ale jeżeli byście chcieli na sztywno dla ID dodać dwa razy dokument,
+no to ten sam, tę samą wartość, no to też dostaniecie błąd.
+Jak sprawdzić, jakie mamy indeksy?
+Tak jak mówiłem, indeksy dodajemy na kolekcji,
+więc bez problemu można wykonać dbstudents.getindexes,
+no i w ten sposób on nam po prostu wyświetli wszystkie indeksy, które są dodane,
+więc na takich czystych, pustych kolekcjach powinniście widzieć tylko i wyłącznie indeks ID.
+Usuwanie indeksu za pomocą polecenia dropindex,
+gdzie argumentem jest
+nazwa tego indeksu,
+tudzież możemy też skorzystać z metody dropindexes,
+która po prostu usunie nam wszystkie indeksy, jakie mamy.
+Co ważne jeszcze, jeżeli usuwacie indeks i tych danych w danej kolekcji macie sporo,
+no to wówczas tego, to może potrwać trochę długo.
+I żeby pobrać nazwę indeksu, oczywiście możemy wykonać polecenie getindexes
+i zobaczycie, że te indeksy mają z góry nadawane nazwy.
+Natomiast jeżeli nie wiemy, jaką indeks ma nazwę,
+to można też go usunąć, korzystając z dropindex,
+w nawiasie wpisując ten obiekt, który ten indeks nam tworzył.
+A co to za obiekt?
+Obiekt wygląda tak.
+Czyli indeks tworzymy w następujący sposób.
+db.students.create.index
+i w nawiasie jest właśnie ten obiekt.
+No i zobaczcie, jeżeli podam mu semestr 1 added at minus 1,
+to będzie oznaczało, że ta moja kolekcja jest zaindeksowana w taki sposób,
+że semestr jest rosnący,
+a added at będzie malejąco.
+Czyli najszybciej znajdziemy osobę, która będzie miała najniższy semestr
+i była dodana najwcześniej.
+Ostatnio była dodana.
+W ten sposób to zadziała.
+Jeżeli chcielibyśmy stworzyć inny indeks, tylko dla jednej kolumny,
+to też jak najbardziej można to zrobić,
+po prostu na przykład podając register number 1.
+Tak to wówczas działa.
+Czyli students to nasza kolekcja,
+natomiast semestr, added at, register number,
+to są po prostu kolumny, na których takie indeksy sobie dodajemy.
+Warto to robić.
+Jeżeli wiecie, że szukacie często po określonych danych,
+no to warto to zdecydowanie robić.
+No i warto się zastanowić właśnie,
+jak kiedy chcemy indeksy sortowane rosnąco, kiedy malejąco.
+Na przykład ostatnio dodane książki,
+no to wiadomo, że zakładam indeks na created at malejący.
+Ale na przykład, jeżeli chciałbym najniższą jakąś wartość zawsze wyciągać,
+no to wtedy mogę zrobić, najwyższą wartość wyciągać,
+odwrotnie powiedziałem.
+Czyli jeżeli chcę ostatnio dodane,
+to wtedy robię added at właśnie minus 1,
+natomiast jeżeli chcę jakąś najniższą wartość,
+no to wtedy robię malejąco, rosnąco, czyli 1 podaję.
+Wartość dodatnia to jest sortowanie rosnące,
+wartość ujemna sortowanie malejące.
+Ale to nie są jedyne rodzaje indeksów,
+jakie mamy i znamy w MongoDB.
+Ponieważ do tego dochodzą jeszcze indeksy geoprzestrzenne,
+czyli geospatial, tak, geospatial.
+To są indeksy, które służą do przechowywania współrzędnych geograficznych.
+One nam, też zobaczycie później,
+pozwolą na wyszukiwanie na przykład punktów,
+które są blisko tego punktu,
+albo posortowanie względem odległości ode mnie.
+Natomiast drugi rodzaj indeksu to są indeksy tekstowe,
+które służą do wyszukiwania tekstu,
+czyli takiego full text search'a, tak.
+Jeżeli chcę znaleźć wszystkie opisy,
+w których występuje sło... formułowanie dobra książka,
+no to wówczas dla takich indeksów,
+dla takiego opisu powinienem właśnie dodać indeks tekstowy.
+Jak taki indeks dodać?
+Wskazujemy mu tak jak poprzednio,
+czyli db points create index,
+a następnie określamy location to this sphere,
+to this sphere.
+I to spowoduje, że on nam właśnie taki indeks założy.
+I w ten sposób będziemy mogli sobie na przykład utworzyć nowy punkt.
+I zobaczcie, robię db points insert,
+name to jest jakiś tam home1,
+to jest obiekt.
+Musimy określić, że obiektem jest typ punkt,
+że tą lokalizacją jest punkt,
+no i przekazujemy mu współrzędne geograficzne,
+czyli długość i szerokość geograficzną.
+Jeżeli natomiast później będziemy chcieli wyszukać punkty w pobliżu,
+no to możemy sobie śmiało wykonać db points,
+to jest nazwa kolekcji.
+Następnie są klamerki,
+czy jak pamiętacie z poprzedniej lekcji,
+jeżeli szukaliśmy czegoś,
+to tutaj podawaliśmy właśnie nazwę kolumny,
+nazwę pola i po dwukropku była wartość,
+natomiast tutaj po dwukropku nie ma wartości,
+tylko jest coś takiego jak near,
+czyli znajdź mi wszystkie lokalizacje w pobliżu,
+no i tutaj mówimy punktu,
+znowu określamy to jako punkt 1,1,
+no i interesuje nas minimalny dystans 10,
+maksymalny dystans 20.
+I on sobie na tej podstawie będzie liczył
+te punkty, które znajdują się od 10 do 20 metrów.
+Tak?
+Więc w ten sposób możemy też sobie śmiało
+tego typu rzeczy robić
+oraz, tak jak wspomniałem,
+możemy też w ten sposób sortować sobie nasze dane.
+Czyli jeżeli wykonamy db points aggregate,
+geo near, a następnie near,
+możemy mu wskazać w jakim punkt nas interesuje,
+możemy określić, że szukamy sferycznie
+i chcemy, żeby to było zapisane jako dystans field.
+On nam w ten sposób nie tylko policzy
+odległość każdego punktu,
+ale też od razu po tym będzie,
+pozwoli nam później posortować.
+Widzicie? Dystans field, nazwa pola,
+do którego zostanie przypisana odległość.
+Jeżeli chodzi o indeksy tekstowe,
+no to tutaj nie ma zbyt wielu
+ciekawych rzeczy dla nas, Polaków,
+jeżeli tworzymy systemy polskie,
+no bo niestety nie wspierają one
+języka polskiego.
+To znaczy tak jak łapanie słów,
+tak jak mówiłem, tekstu zawierającego się
+jak najbardziej nam zadziała
+i będzie działać szybciej,
+natomiast w języku angielskim
+ten rodzaj indeksu pozwala także
+obsługiwać odmiany.
+Czyli cat, cats i tam różne inne
+tego typu rzeczy.
+Natomiast tutaj tego po prostu
+mieć nie będziemy.
+No i ważna uwaga jest taka,
+że jeżeli robicie jakąś kolekcję
+i w tej kolekcji macie kilka różnych
+pól, które mogłyby przechowywać,
+mogłyby mieć indeks tekstowy,
+to niestety MongoDB pozwala tylko
+i wyłącznie dla jednego pola
+taki indeks nadać.
+Jeżeli chcielibyście na przykład
+spróbować dodać sobie taki indeks,
+do czego zachęcam.
+Tutaj jeżeli chodzi o indeksy trudno jest
+wymyśleć takie wiecie wprost zadanie,
+ale bardzo ciekawym takim dla edukacji
+może być wykonanie zapytania
+z dodanym indeksem
+i bez dodanego do indeksu.
+Więc jeżeli chcielibyście sprawdzić
+jak długo wykonuje się to zapytanie,
+to można wówczas
+tym naszym findem dorzucić explain,
+czyli tak samo jak było w Postgresie,
+tam też był explain
+i wówczas jako argument tego explaina
+przekazujemy execution stats
+i to spowoduje zobaczcie,
+że on pokaże basic cursor
+i powie ile obiektów
+przeskanował
+i w tym obiekcie co prawda tutaj
+to nie jest wyświetlone,
+ale w tym obiekcie powinna być też
+taka właściwość jak execution time millis
+i to powinno założyć ile czasu
+to zapytanie będzie się wykonywało.
+Polecam Wam pobawić się tym explainem
+z indeksami, bez indeksów
+tak najłatwiej jest zobaczyć,
+że te indeksy tak naprawdę mają
+bardzo dużo sensu
+i bardzo nam ułatwiają życie.
+Natomiast należy mieć też na uwadze,
+że im więcej tych indeksów dodamy
+tym też wolniej będziemy wykonywali
+operacje aktualizacji i insertu
+na bazie.
+To jest zawsze coś kosztem czegoś.
+Tak jak zawsze Wam to powtarzam,
+jeżeli gdzieś zyskujemy
+to najczęściej gdzieś tracimy.
+Tutaj dodając indeksy zyskamy
+na czasie wykonywania zapytania
+fetchującego, pobierającego,
+ale stracimy na takich operacjach,
+które zmieniają stan,
+czyli insert, update, delete.
+To tak niestety wygląda.
+No i możecie sobie też to przećwiczyć.
+Możecie utworzyć kolekcję przechowującą
+numery rejestracyjne oraz lokalizację
+wszystkich Waszych samochodów.
+Możecie sobie tutaj kilka samochodów
+dodać do Waszej kolekcji.
+Mamy odpowiednie indeksy na numerach
+rejestracyjnych oraz na lokalizacji.
+Chcemy też wyświetlić samochody
+w kolejności od najbliższego
+do najdalszego, a także
+przetestować wyszukiwanie samochodów
+w naszej okolicy.
+No i to byłoby na tyle.
+Zapraszam Was
+do rozwiązania.
+Czyli co?
+Możemy sobie śmiało wykonać
+tb.cars
+.insertmenu
+.insertmenu
+.insertmenu
+No i tak.
+Numery rejestracyjne.
+Myślę, że numery rejestracyjne
+spokojnie mogą pełnić funkcję
+mojego klucza głównego.
+Gdy raz, dwa, trzy, cztery.
+Niech będzie taki.
+No i lokalizacja.
+Jak widzieliście ta lokalizacja
+musi być punktem.
+Musi w danym momencie być
+punkt, więc powinniśmy sobie
+też ją w ten sposób właśnie
+przekazać. Czyli location
+.type
+jako punkt.
+No i dalej coordinates
+jakieś współrzędne.
+Niech to będzie
+123, 221
+Nie mam pojęcia gdzie ten punkt
+będzie na mapie.
+Jeżeli wskazałem na czyjś Wasz dom
+to przepraszam.
+No i takich samochodów
+mogę sobie dołożyć
+kopiowanie, wklejanie. Niestety
+to nie działa tak jak bym chciał.
+Ale takich samochodów mogę sobie
+dołożyć jeszcze ze dwa.
+id
+gda
+Niech będzie Gdańsk.
+Point
+222333
+No i zrobię sobie Enter.
+O i coś mu się nie podoba.
+Ale ekspertytokon przecinek.
+Gdzież przecinek się wkradł?
+Location type.
+Tu coś za mało.
+A tu zabrakło. Oczywiście, że zabrakło.
+Przecież to muszą być obiekty.
+Muszę dodać jeszcze wokół tego
+klamerki. O i teraz mam
+dwa samochody. Jeden na rejestracji
+gdańskiej, drugi na rejestracji
+gdyńskiej. I w treści zadania
+żeby założyli odpowiedni indeks.
+No to na idku nie muszę zakładać indeksu.
+Natomiast jak najbardziej na
+lokalizacji, na lokacji
+założę. Czyli db
+db.cars
+korobka create
+index. No i mój
+indeks to będzie location
+i to będzie
+to location oczywiście bez tego.
+To this sphere.
+Ops.
+Index build failed.
+Musiałem to powtórzyć, bo to
+lokalizacje, które wpisałem były zdecydowanie
+niepoprawidłowe. Natomiast zobaczcie jak
+zmieniłem na minus 20, 20, a minus 30,
+30 to już jak najbardziej przeszło.
+No i wykonałem sobie wówczas
+dodanie indeksu. Zadziałało.
+Więc jeżeli teraz jeszcze chciałbym sprawdzić
+czy moje indeksy się
+tutaj cały czas znajdują, no to oczywiście
+mogę wykonać show indexes
+żeby to sobie, get indexes
+żeby to sobie sprawdzić. Czyli db.cars
+get indexes
+Ops. I zobaczymy, że faktycznie
+taki indeks się
+znajduje. Jak macie chęć możecie
+sprawdzić gdzie te moje samochody stoją.
+Zupełnie tak, wiecie, for fun.
+Do Google Maps
+można wysłać zawsze też te
+współrzędne i wówczas on nam też
+pokazuje w jakim momencie się one
+w jakim miejscu się one
+znajdują. I obecnie
+moja lokalizacja
+jeżeli chodzi o Gdynię
+a Gdynia
+współrzędne geograficzne
+Gdynia współrzędne geograficzne
+Współrzędne geograficzne Gdyni są
+takie, że to jest 54, 5,
+1, 8, 8, 9
+i 18, 53.
+Ok, więc możemy sobie śmiało też
+sprawdzić, który
+z tych samochodów jest bliżej.
+Albo chociaż najpierw możemy sobie policzyć
+jaka jest odległość
+ode mnie
+do tych samochodów.
+W tym celu możemy sobie wykonać
+db.cars.aggregate
+db.cars.aggregate
+db.cars.aggregate
+db.cars.aggregate
+db.cars.aggregate
+db.cars.aggregate
+No i mówimy mu, słuchaj
+interesuje mnie near
+gdzie type to point
+którego współrzędne
+to
+i te współrzędne
+podajemy najpierw jako długość
+a potem szerokość geograficzną
+czyli moja długość
+to jest 18,53
+trochę zaokrąglam
+dobra, podam całe
+8,8, 0, 0
+to nie wiem czy muszę, chyba nie muszę
+będzie 54,51889
+będzie 54,51889
+i to jest
+lokalizacja Gdyni
+znaleziona na stronie date&time.info
+znaleziona na stronie date&time.info
+natomiast co dalej
+dalej muszę mu powiedzieć, że interesuje mnie to
+w charakterze sfery
+tak żeby szukał dookoła
+spherical true
+spherical true
+no i distance field
+no i distance field
+to jest jakiś tam calculated distance
+to jest jakiś tam calculated distance
+ops
+teraz pewnie mi się wszystko pięknie wysypie
+a wkleiło mi się coś nie tak
+dobra
+enter
+wyszło, zobaczcie calculated distance
+to tylko i wyłącznie tyle
+czyli bliżej faktycznie jestem
+samochodu z Gdańska
+niż samochodu z Gdyni
+gdzie to było powiedziane
+że jest wyrażone w metrach
+czyli to jest raz, dwa, trzy
+czterdzieści siedem tysięcy
+cztery tysiące siedemset pięć
+kilometrów
+jest mój samochód ode mnie
+ten co sobie tutaj wymyśliłem
+wiecie, tak można się bawić, można to jeszcze sobie
+potestować, posprawdzać, ale
+nie wiem, ja tak lubię
+zabawa dla mnie przednia
+no i przetestuj
+wyszukiwanie samochodów w twojej okolicy
+no to zupełnie analogicznie do tego
+co robiliśmy
+w zadaniu, czyli po prostu trzeba byłoby mu
+wskazać db.com
+.cars
+.find
+.find
+.find
+.find
+.location
+.location
+.near
+no i tutaj te parametry
+geometry
+type to jest point
+coordinates
+to może gdzieś będę bliżej
+niech nie będę na minus 10
+minus 10 10
+coordinates minus 10 10
+coordinates minus 10 10
+tylko to i tak będzie pewnie strasznie daleko
+nic mi nie zwróci
+ale się pobawimy
+a min distance
+niech będzie
+zero
+a max distance
+to niech będzie
+300
+a to 300 to 3000 bardziej
+no mówiłem, nic mi nie zwrócił
+ale nie ma tego całego, bo zaraz sobie zrobimy
+taką małą zmianę, zobaczcie
+ja się zupełnie magicznie przeniosę
+z Gdyni na minus 10
+na minus 10 10
+o
+w ten sposób się dowiem
+a to w sumie jeszcze dalej jakbym był
+jeszcze dalej jestem
+a jak będę na minus 20
+19
+ok
+to było
+150
+tu się zbliżam, dobra
+to zobaczymy czy uda mi się znaleźć
+lokalizację mniejszą od tego
+większą od tego, a mniejszą od tego
+czyli wtedy
+przeniosę się na co
+przeniosę się na
+tę lokalizację, którą podałem przed chwilą
+czyli minus 20 19
+bo to w ułamku musiałam podać
+tutaj, żeby być bliżej
+zanim distance niech będzie
+10
+raz, dwa, trzy
+cztery, żebym, dobrze, zaraz policzył
+jeden, dwa, trzy
+cztery, pięć, jeden
+dwa, trzy, cztery, pięć, dobra
+natomiast max distance
+będzie 15
+ops, i zadziałało
+zwrócił tylko jeden samochód
+więc jak najbardziej szukać samochodu
+można, nawet oddalonego od ciebie
+bardzo, bardzo
+skoro to udało nam się zrobić
+to przejdźmy do kolejnej lekcji
+zapraszam

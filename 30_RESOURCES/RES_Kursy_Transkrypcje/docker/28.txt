@@ -1,0 +1,25 @@
+Kolejnym pojęciem na naszej liście jest obraz dockerowy.
+I obraz dockerowy jest to artefakt zbudowany w oparciu o plik dockerfile.
+Takie obrazy będziemy budowali w kursie.
+Natomiast żeby zarysować czym to jest, jest to właśnie taki nasz zbudowany artefakt,
+który możemy uruchomić.
+Taka gotowa paczka, tak jak Kacper wspomniał wcześniej,
+może to być np. baza danych, może być gotowy obraz z Mongo, z Redisem, z Postgresem.
+Takie obrazy są dostępne, gotowe w sieci.
+Może to być też obraz, który budujemy w oparciu o nasz plik, który go opisuje.
+Czyli tworząc naszą aplikację, np. w Pythonie,
+bazujemy ją na jakimś gotowym obrazie, który się nazywa Python
+i dodajemy do niej nasze dodatkowe rzeczy.
+Następnie całość budujemy i to, co zbudujemy, nazywamy naszym obrazem dockerowym.
+Tak, ja tutaj w przypadku obrazu i kontenera bardzo lubię posługiwać się taką analogią do obiektowości.
+Czyli możemy sobie powiedzieć, że kontener to jest tak naprawdę już obiekt,
+a obraz to jest taka jakby klasa, z której ten...
+kontener budujemy, czyli taki wzór tego, jak nasz kontener docelowo ma wyglądać.
+I lubię używać tej analogii do obiektowości też z tego względu, że tak jak Jan wspominał,
+my możemy obraz tworzyć na podstawie jakiegoś obrazu,
+czyli np. mamy aplikację w Pythonie, więc mówimy mu na górze,
+że ten obraz będzie tworzony na podstawie from Python i tutaj jakaś wersja,
+ale też finalnie cała ta nasza aplikacja też może być gotowym obrazem,
+który gdzieś później będziemy chcieli np.
+pobrać sobie na serwerze i po prostu z tego obrazu tę aplikację uruchomić.
+Dokładnie tak.

@@ -1,0 +1,99 @@
+W poprzednich lekcjach mówiliśmy sobie już jak szukać jeżeli chodzi o liczby, jak szukać jeżeli chodzi o daty, jak szukać jeżeli chodzi o tekst, też sobie mówiliśmy, ale bardziej skupialiśmy się na takich przypadkach kiedy chcemy porównać dokładną wartość tekstową z dokładną wartością tekstową.
+Natomiast dzisiaj w tej lekcji porozmawiamy o tym jak możemy szukać tekstu podobnego pod jakimś względem.
+Jeżeli chodzi o szukanie tekstu to mamy do dyspozycji operator, który nazywa się like.
+Jest też jeszcze jeden, ale to za chwilę.
+Jeżeli chodzi o like'a to tak jak wspomniałem wcześniej operator równości pozwala nam szukać tekstu identycznego.
+Natomiast jeżeli chcemy szukać tekstu podobnego to mamy do dyspozycji właśnie like.
+I zobaczcie.
+Where first name like k or first name like k.
+Dlaczego tak napisałem?
+Napisałem tak dlatego, że operator like szuka tekstu zgodnie z wielkością liter.
+Czyli jeżeli chcemy znaleźć tekst podobny no to musimy zwrócić uwagę na wielkość liter jeżeli używamy operatora like.
+Ale zobaczcie, że mamy też operator, który nazywa się ilike i i oznacza in case sensitive.
+Czyli nie zwraca uwagę na wielkość liter.
+I w ten sposób niezależnie od tego czy napiszecie ilike k czy wielkie k, w jednym i w drugim przypadku Wam znajdzie ten konkretny element.
+Ten dziwny procent, co to właściwie jest?
+To pokażemy sobie za moment.
+Na początek tylko jeszcze raz sobie powtórzmy, że case sensitive wielkość liter ma znaczenie, in case sensitive wielkość liter nie ma znaczenia.
+Stąd też case sensitive używa like'a, a in case sensitive używa ilike'a.
+Jeżeli chodzi o ten dziwny operator, jaki mówię sobie.
+Jakim jest procent czy znak podkreślenia, to są to takie teksty, symbole zastępcze.
+Symbol procent zastępuje dowolną ilość znaków, natomiast symbol podkreślenia zastępuje tylko i wyłącznie jeden znak.
+W Excelu jest też coś podobnego, jeżeli chodzi o filtrowanie, ale mniejsza o Excela.
+Zobaczcie, dla przykładu mamy Kowalsk ze znakiem podkreślenia.
+No i w tym przypadku wyszukamy sobie wszystkie osoby takie jak Kowalski czy też Kowalska.
+Jeżeli natomiast napiszemy Kowalsk, to wyszukamy sobie wszystkie osoby takie jak Kowalski czy też Kowalska.
+Jeżeli natomiast napiszemy Kowalsk, to wyszukamy sobie wszystkie osoby takie jak Kowalski czy też Kowalska.
+no to dopasujemy się do Krakowa, czyli do miejscowości Kraków.
+Jeżeli ktoś nie będzie używał polskich literek, tylko będzie Krakow, to też nam zadziała.
+Natomiast z racji tego, że jest procent to znaczy, że w tym miejscu może być dowolna ilość znaków.
+Czyli kajaków też nam zadziała.
+No i ostatni przypadek to jest szukanie Gdańska i Gdyni.
+Zobaczcie, możemy napisać Gd% no i dostaniemy Gdańsk, Gdynię,
+ale wszystkie inne miejscowości, zaczynające się od GD, również nam w ten sposób się wyszukają.
+No i ponownie, to są takie lekcje, gdzie tylko pokazuję Wam zajawkę,
+a później duża część leży po Waszej stronie, gdzie po prostu trzeba to sobie przećwiczyć.
+No bo wzór jest jeden, myślę, że dosyć prosty, kwestia po prostu wbicia i zapamiętania,
+a najlepiej to zrobić poprzez ćwiczenie.
+Więc w zadaniu pierwszym chcemy znaleźć wszystkie produkty,
+które zawierają wyrażenie kilogramy w kolumnie Quantity Per Unit.
+W zadaniu drugim chcemy znaleźć wszystkie produkty,
+które w tej samej kolumnie posiadają coś tam, coś tam, boxes, coś tam, coś tam, pieces.
+I zobaczcie, że mamy takie produkty właśnie też wyszukane.
+No i w zadaniu trzecim chcemy znaleźć wszystkie osoby,
+których contact name kończy się na literę I.
+Czyli w kolumnie contact name mamy różne wartości,
+gdzieś są też takie, które kończą się na I,
+więc trzeba sprawić, żeby tylko te, które kończą się na I, nam się pokazały.
+W tych przykładach praktycznie nie ma znaczenia, czy użyjecie like'a czy ilike'a,
+natomiast w Waszym życiu, takim mówmy zawodowym, przy wykorzystywaniu baz danych,
+ma to bardzo duże znaczenie.
+Więc tutaj się umówmy, że po prostu użyjcie tego, co Wam wygodniej,
+natomiast proszę, żebyście pamiętali o tym, że like to jest zgodnie z wielkością,
+więc proszę, żebyście pamiętali o tym, że like to jest zgodnie z wielkością,
+więc proszę, żebyście pamiętali o tym, że like to jest zgodnie z wielkością,
+i like nie ma znaczenia wielkość liter.
+Do zobaczenia!
+Ok, w takim razie mamy znaleźć wszystkie produkty,
+które zawierają wyrażenie kilogramy w kolumnie quantity per unit.
+No to lecimy, select, gwiazdka, from products.
+No i tutaj mamy quantity per unit i chce interesować nas KG.
+Są takie produkty, tylko musimy najpierw sobie znaleźć.
+Zobaczcie, KG występuje wewnątrz tego, czyli jest w środku.
+Czyli select all from products where quantity per unit like,
+przyzwyczajenie cały czas piszę wielkimi literami KG, ops.
+Jak widać, pokazało się to nam.
+Tutaj mamy od razu też PKG gdzieś.
+Jeżeli wobec tego PKG nie chcemy, a chcemy samo KG,
+no to wypadałoby sobie powiedzieć, że z przodu ma być spacja.
+I wtedy będziemy mieli ładniej.
+Za KG też można byłoby dać spację, bo widzę, że zawsze ona jest.
+Tak, dla pewności.
+W zadaniu drugim chcemy znaleźć wszystkie produkty,
+które w tej samej kolumnie, czyli w kolumnie quantity per unit,
+posiadają słówko boxes coś tam, coś tam, pieces.
+No to sobie to zapytanie skopiuję.
+I jedyne, co będę zmieniał, to będę zmieniał to wyrażenie.
+Czyli mam procent boxes, x, procent pieces.
+Tutaj ważna sprawa jest taka,
+że nie należy bardzo szaleć z dopasowaniem.
+Teoretycznie, zobaczcie, mógłbym powiedzieć,
+że interesuje mnie spojrzeć tylko na to i stwierdzić,
+aha, czyli tu będą dwie wartości boxes, dwie wartości pieces.
+To pewnie chodziło mu o to, że zrobię dwa podkreślenia boxes, x,
+dwa podkreślenia pieces i dostanę te same rekordy.
+Ale jak widać, nie.
+Mamy w naszym zadaniu też takie przypadki, gdzie jest pojedynczy,
+gdzie jest tylko pojedyncza wartość,
+więc w ten sposób też trzeba mieć to na uwadze.
+Zawsze dużo lepiej jest sobie później coś jeszcze odfiltrować,
+niż przefiltrować za dużo.
+To bardzo ważna zasada.
+No i w ostatnim przypadku chcemy znaleźć wszystkie te osoby,
+których contact name kończy się na literę i.
+Czyli szukamy sobie wszystkich klientów,
+czyli select gwiazdka from customers,
+where contact name, like,
+i jak widać mamy Paolo Accorti, Daniel Tonini,
+Yoshi Tanamuri i tak dalej i tak dalej.
+Działa.

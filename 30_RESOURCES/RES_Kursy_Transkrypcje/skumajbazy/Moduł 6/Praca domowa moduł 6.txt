@@ -1,0 +1,29 @@
+A co w naszej pracy domowej? Zobaczcie sami.
+Po pierwsze poproszę abyście przygotowali zestawienie, w którym wyświetlone będą regiony oraz terytoria w formie takiej jak w tabeli.
+Celowo nie podaję wszystkich informacji, zachęcam was do tego żebyście popatrzyli jak wygląda nasz schemat naszej bazy danych,
+żebyście pomyśleli jak te dane można z tej tabeli wyciągnąć i spróbujcie to zrobić.
+W zadaniu domowym drugim mamy przygotować zestawienie, w którym wyświetlone zostaną kategorie oraz ilości produktów, które się w tych kategoriach znajdują.
+Chcemy przefiltrować wynik tak by pokazały się tylko te kategorie, w których jest więcej niż 10 produktów.
+Czyli takie połączenie selecta z grupą, z joinem i z having.
+Zapraszam.
+Zadanie domowe trzecie.
+Przygotuj zestawienie, w którym wyświetlisz nazwę dostawcy oraz sumę kosztu przesyłki.
+Zapisz wynik w widoku o nazwie freight costs, czyli chcemy się dowiedzieć którym dostawcom zapłaciliśmy najwięcej za przesyłkę.
+No i z racji tego, że przełożony pyta nas o to bardzo często, chcemy stworzyć sobie odpowiedni widok, który pomoże nam przywoływać te dane szybciej na życzenie.
+Zadanie domowe cztery.
+Przygotuj zestawienie zawierające pracowników oraz obsługiwane przez nich terytoria.
+Jak popatrzycie, to każdy pracownik ma swoje terytorium, które obsługuje.
+No i niektórzy obsługują kilka terytoriów, dlatego na przykład pani Nancy jest dostępna w Wilton oraz w Newhart.
+No i zachęcam was do tego, żebyście właśnie przejrzeli tę bazę i przygotowali zapytanie, które zwróci nam właśnie tylko pracowników i terytoria.
+Przez nich obsługiwane.
+No i zadanie domowe piąte.
+Załóżmy, że wystąpił problem z jednym z naszych dostawców i sprzedawał wadliwe produkty, o czym musimy powiadomić klientów.
+Przygotuj zestawienie wszystkich osób, czyli wszystkich klientów, którzy zamówili coś od firmy Escargotts Novoa.
+Poproszę was o to, żebyście przygotowali zestawienie, które wyświetli wszystkich dostawców, którzy cokolwiek dostawców, wszystkich klientów,
+którzy cokolwiek, kiedykolwiek zamówili od tej firmy.
+Musimy wysłać im maila z informacją, że ich przepraszamy, ale produkty sprzedawane przez tą firmę niestety już nie będą nigdy sprzedawane,
+a jeżeli mają zastrzeżenia, mogą się z nami kontaktować.
+I to byłoby na tyle.
+Życzę wam miłego tygodnia, wspaniałych doznań przy rozwiązywaniu prac domowych i do zobaczenia w kolejnym module.
+Cześć.
+www.youtube.com

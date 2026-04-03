@@ -1,0 +1,261 @@
+I tak jak rozmawialiśmy, mamy różnego rodzaju obrazy, żeby później na podstawie tych obrazów tworzyć kontenery.
+I Docker Hub to jest takie miejsce, gdzie mamy jakby katalog wszystkich tych naszych obrazów.
+I wraz z Janem, kiedy otworzyliśmy tę stronę, uznaliśmy, o, tu trochę się zmieniło,
+bo jak ma się swoje projekty, które cały czas hulają na tych samych obrazach,
+to na Docker Huba nie zagląda się aż tak często. Prawda, Janie?
+To prawda. Na ogół korzysta się z tych najpopularniejszych obrazów,
+które nazywają się Ubuntu, Python, Postgres, w związku z czym nie ma konieczności wchodzenia tam.
+Te nazwy są proste, one są intuicyjne, czasami warto nawet po prostu zaryzykować jakąś nazwę
+z bardzo popularnego narzędzia. I wizyta na samym Docker Hubie nie jest konieczna.
+Czasami korzysta się do dokumentacji.
+Dokumentacji, ale to też często w moim flow wygląda to tak, że ja sobie wyszukuję konkretny obraz,
+do tego dopisuję Docker Hub i bezpośrednio z Google wchodzę już w konkretny obraz,
+a nie na samą stronę główną Docker Huba.
+Dlatego też dzisiaj byłem troszeczkę zaskoczony nowościami, które się pojawiły.
+Niemniej zwróćcie uwagę, że ta strona główna, ten katalog wygląda całkiem sympatycznie,
+z tego względu, że oni nam podzielili obrazy już na poszczególne grupy też.
+Więc mamy na przykład grupę Machine Learning.
+I tak samo jak na przykład zajmujemy się jakimś tematem typu Python,
+to może się okazać, że zerkanie sobie na taką grupę jak Machine Learning
+może spowodować, że znajdziemy jakiś obraz, który docelowo nas gdzieś zainteresuje.
+Niżej mamy Trending This Week, Most Pulled Images, czyli takie najczęściej pobierane obrazy,
+Database and Storage i tak dalej, i tak dalej.
+Więc myślę, że też patrząc na te obrazy możemy zawsze się zastanowić nad tym,
+czego warto byłoby się uczyć, albo jaką technologię warto poznać,
+bo się może okazać, że na przykład w temacie właśnie Machine Learningu
+ten obraz TensorFlow jest najpopularniejszy.
+Jak sobie wybierzemy któryś z tych obrazów, no to możemy w niego po prostu kliknąć.
+Natomiast myślę, że my możemy się skupić tutaj na obrazie jakim jest Python,
+bo zakładam, że większość osób, które uczestniczą w tym kursie to są osoby ze świata Pythona,
+natomiast docker jest tematem multi-kulti.
+Więc jeśli programujesz w innym języku, to też się zupełnie tutaj nie musisz tym przejmować.
+I to, na co ja często zwracam uwagę, to jest to informacja, czy jest to docker official image.
+Bo często osoby, które na przykład tworzą jakieś swoje obrazy Pythonowe,
+dokładają do nich jakieś kolejne chocki, klocki i wtedy to nie są te,
+jak taki Jan wspomniał, że wchodzi się z Google'a, to nie są to obrazy dockerowe,
+tylko to są obrazy, które mają na przykład małą liczbę gwiazdek, małą liczbę pobrań,
+bo ktoś sobie połączył Pythona z kilkoma narzędziami,
+i stworzył też z tego gotowy obraz.
+Na co tutaj warto, Janie, zwrócić uwagę, na tej stronie, twoim zdaniem?
+Tak, może jeszcze nawiążę do tego, o czym powiedziałeś.
+Tak, możemy stworzyć własny obraz, możemy mieć jakby konto organizacyjne,
+które pozwala nam tutaj wgrywać obrazy, i są firmy, które też udostępniają swoje oficjalne obrazy,
+na przykład dla swoich narzędzi, ale również jako taki pojedynczy,
+kontrybutor możemy sobie swój jeden czy dwa obrazy w ramach bezpłatnego konta
+także na tego dockerhuba udostępnić.
+I ja chyba nawet kiedyś taki obraz udostępniałem, ale nie jestem teraz pewien,
+także może niekoniecznie będę go szukał.
+A na co warto zwrócić tutaj?
+Na pewno tak, w ramach quickreference mamy informacje, gdzie możemy sobie zerknąć po...
+community do danego obrazu, gdzie możemy znaleźć jakieś użyteczne informacje w formie pomocy,
+natomiast to, z czego korzystać będziemy zdecydowanie najczęściej,
+to jest supported tags and respective dockerify links,
+dlatego że dzięki tagom, które są przypisane do obrazów,
+my jesteśmy w stanie wykorzystywać konkretną wersję, która jest nam w danym momencie potrzebna.
+Przykładowo, chcemy mieć obraz bardzo lekki, bo jest to już obraz produkcyjny,
+wtedy możemy sobie wybrać na przykład Python z tagiem alpine.
+I teraz możemy chcieć najnowszy, ale możemy chcieć w jakiejś konkretnej wersji,
+więc możemy sobie na przykład wybrać, że chcemy mieć Pythona w wersji 3.11,
+ale alpine zawsze, żeby był najnowszy.
+I możemy wtedy wybrać 3.11 myślnik alpine.
+To będzie oznaczało wersję Pythona 3.11, na alpine zawsze najnowszy.
+A jeśli będzie nas interesował konkretny alpine,
+to możemy do tego alpine też dopisać wersję na przykład 3.20
+i wtedy decydujemy, jaką wersję Pythona udostępniamy w ramach tego obrazu, jaką wykorzystujemy,
+oraz jaką wersję alpina możemy wykorzystać.
+Alpina też chcemy wykorzystać.
+To ma znaczenie takie, żeby nasze zależności w ramach projektu się zgadzały,
+dlatego że może zdarzyć się taka sytuacja, że zmiana wersji systemu albo zmiana wersji Pythona
+spowoduje problem zależności w naszym obrazie.
+I nie chcielibyśmy, żeby stało nam się to przypadkowo w naszym projekcie,
+bo moglibyśmy sobie na przykład wyłożyć aplikację produkcyjną,
+co zdecydowanie nie jest pożądane.
+A jeśli mamy przypiętą konkretną wersję, zarówno Pythona, jak i alpina,
+wtedy mamy tą pewność, że zawsze korzystamy z tego samego obrazu,
+dlatego w samym obrazie nie będzie ważnych zmian.
+Jeśli my na przykład wprowadzamy dużą zmianę w kodzie,
+to w razie wystąpienia problemów mamy pewność, że te problemy wynikają tylko i wyłącznie z naszego kodu,
+a nie, że przy okazji wydarzyła się jakaś inna zmiana,
+jakaś aktualizacja, której się nie spodziewaliśmy
+i ona dołożyła jakichś problemów albo wygenerowała sama z siebie te problemy,
+bo może nasz kod jest w porządku,
+ale może właśnie różnica w zależnościach powoduje,
+że po uruchomieniu obrazu z takimi aktualizacjami,
+to nasza aplikacja się nie uruchomi.
+Ja tu chciałem nadmienić tylko jeszcze dwie rzeczy,
+bo my nagrywamy ten film w styczniu 2025 roku
+i wersja 3.14 na stronie Pythona,
+jest w tej chwili jako pre-release
+i first release tej wersji to był 1 października 2025,
+to jest zaplanowana,
+ale ten pre-release gdzieś już został wydany,
+więc jeżeli na przykład oglądasz ten film, nie wiem, w grudniu 2025,
+to może się okazać, że wersja 3.14 jest już Ci bardzo dobrze znana
+i jest wersją stabilną,
+natomiast warto o tym wiedzieć, że ona jest w tej chwili jako pre-release,
+bo zwróćcie uwagę na fakt, że ona już jest dostępna na Docker Hubie,
+więc jeżeli na przykład chcielibyście zobaczyć, że ona jest dostępna na Docker Hubie,
+więc jeżeli na przykład chcielibyście zobaczyć,
+jak Wasza aplikacja będzie się zachowywała na wersji pre-release,
+to już można też o tym się przekonać.
+I jeszcze jedno uzupełnienie do tego, o czym mówił Jan.
+Jeżeli wcześniej nie używaliście nigdy Dockera,
+to być może ten Alpine jest dla Was też takim słowem nowym.
+Co to jest?
+Więc ja tylko nadmienię, że Alpine to jest taka bardzo lekka wersja Linuxa,
+która jest dużo lżejsza, dużo mniej plików zawiera
+i pod tym względem jest dużo bardziej preferowana
+do budowania obrazów dockerowych,
+bo tam też zależy nam na tym, żeby było to lekkie,
+niż takie dystrybucje jak na przykład Ubuntu.
+Natomiast z tego, co pamiętam, niektóre wersje z tych też korzystają z Ubuntu pod spodem,
+więc tylko tak nadmienię.
+Raczej chyba Alpine to nie jest dystrybucja,
+którą ktoś sobie stawia na swoim komputerze osobistym.
+Raczej się nie zdarza.
+W zasadzie Alpine spopularyzował się właśnie wtedy,
+kiedy Docker zaczął się popularyzować,
+dzięki temu, że jest dystrybucją taką bardzo nową,
+lekką i może nie jest najłatwiejszą
+i najbardziej intuicyjną dystrybucją.
+Może nie był wcześniej specjalnie mocno znany,
+natomiast nie było dużego problemu w branży,
+żeby się do niego przyzwyczaić,
+pewne rzeczy zaadaptować,
+a dzięki dużej minimalizacji rozmiaru tych obrazów wynikowych
+w dużej skali gdzieś tam przy infrastrukturach
+to prowadzi do naprawdę sporych oszczędności,
+z których naprawdę nie zdajemy sobie sprawy w pierwszej chwili.
+Pewnie, że tak.
+Więc to, co musicie wiedzieć, to są właśnie tagi.
+I do czego te tagi służą?
+Też za moment wam powiemy.
+Z tego względu, że tu po prawej stronie jest Docker Pool Python.
+I polecenie Docker Pool Python już niedługo poznacie,
+bo będziemy używali tego polecenia,
+żeby pobierać dany obraz do siebie na komputer,
+żeby na bazie danego obrazu móc tworzyć,
+wstawiać swoje pierwsze kontenery.
+Natomiast te tagi, które się tutaj znajdują,
+one pozwalają na to, żeby na przykład pobrać
+dany obraz konkretnej jakby wersji.
+Czyli mogę zrobić docker pool python dwukropek
+i tu mu podać 3.14a załóżmy
+i wtedy on pobierze mi dokładnie ten obraz w tej konkretnej wersji.
+Tak.
+Jeszcze może słowem tagów do tego, co mówiłeś o pre-release.
+Tutaj po tych tagach można też zauważyć,
+że one się troszeczkę wyróżniają,
+dlatego że pierwsze tagi dostępne na stronie z obrazem 3.14
+mają taką literkę a w nazwie,
+która sugeruje, że jest to wydanie alfa,
+albo mają takie literki rc oznaczające release candidate,
+czyli właśnie taką wersję pre-release,
+która być może wkrótce zostanie udostępniona.
+Także widząc po jakby numerze wersji,
+naszego pythona czy innego obrazu,
+widząc literkę a albo widząc w nazwie literki rc,
+jest to też dla nas taka informacja,
+że to najprawdopodobniej są obrazy jeszcze z tą wersją,
+która nie jest oficjalnie wydana,
+nie jest jeszcze wydana jako wersja stabilna.
+I wtedy widząc właśnie takie oznaczenia,
+warto sobie sprawdzić dane narzędzie,
+czy w tej wersji ono już wyszło,
+czy jest wydane, czy jeszcze nie.
+Jak najbardziej.
+I tak naprawdę na docker hubie szukamy sobie konkretnych
+albo takich narzędzi jak python,
+albo też możemy poszukać konkretnych narzędzi,
+takich jak na przykład dżango,
+to o czym wspominał Jan wcześniej.
+Czyli zakładając, że na przykład chcielibyście od razu
+postawić sobie kontener z dżango,
+to nie musicie instalować obrazu pod tytułem python
+i na nim wykonywać szeregu poleceń stawiających to narzędzie,
+tylko na przykład dżango,
+i wtedy zobaczycie, akurat tu nie trafiłem,
+dżango jest deprecated,
+czyli już dżango tutaj nie jest pod tym względem wspierane,
+ale inne narzędzia też na pewno tutaj znajdziemy,
+takie jak na przykład flask.
+Jak widać tutaj flaska nie ma oficjalnie wydanego,
+ale jakiś człowiek sobie tego flaska wytworzył.
+Możemy też wpisywać jakieś inne narzędzia
+typu powiedzmy sobie fastapi
+i też będziemy znajdowali kolejne obrazy.
+Akurat fastapi tu widać,
+że jest całkiem niedawno nawet był aktualizowany,
+całkiem dużo ma pobrań,
+więc można zawsze też na podstawie tych informacji
+tak jak na githubie zerkać sobie i sprawdzać.
+I tak naprawdę jest jeszcze jedna rzecz,
+na którą myślę, że warto zwrócić uwagę,
+a mianowicie jak ten obraz wygląda,
+bo da się zobaczyć kod takiego obrazu, prawda?
+Jakbym chciał na przykład sobie sprawdzić co ten pan zrobił,
+co ten obraz zrobi na moim komputerze,
+bo on nie ma żadnego overview,
+ma tam jakieś tagi,
+ale chciałbym dowiedzieć się co ten obraz dokładnie zawiera,
+to co muszę zrobić, a nie wtedy w co klikać?
+Chcąc sobie zobaczyć co ten obraz zawiera,
+możemy wejść do sekcji tagi
+i w sekcji tagi wybrać konkretny nasz tag,
+który jest tam dostępny.
+W ramach tego będziemy widzieli co się w danym obrazie znajduje,
+będzie informacja o tym jak jest hash tego obrazu,
+czyli wymieniony u góry digest.
+Potem możemy sobie zweryfikować też nasz obraz
+po pobraniu do naszego systemu,
+ale też możemy sobie zobaczyć warstwy tego obrazu.
+O warstwach będziemy szczegółowo mówić w dalszej części kursu.
+Na tym etapie wystarczy nadmienić,
+że to jest informacja,
+a kolejność się w tym naszym obrazie znajduje.
+Czyli możemy sobie zobaczyć co jest w nim zainstalowane,
+w jakiej kolejności to jest instalowane,
+jakie dodatkowe parametry konfiguracyjne tam wchodzą w wersję,
+jaka jest na przykład wersja Pythona użyta,
+bo też można taką informację znaleźć przeglądając taki obraz.
+Także wszystkie te informacje gdzieś tam są dostępne
+i to nam pozwala przeanalizować sobie co jest w środku,
+ale także w przypadku obrazów takich jak na przykład ten z Django,
+który jest deprecated,
+jesteśmy w stanie sobie zobaczyć jak on został zbudowany,
+że nawet jeśli on już nie jest dostępny,
+to my mamy szansę odtworzyć sobie ten obraz po naszej stronie
+wykorzystując instrukcję już przez kogoś wcześniej napisane.
+Dokładnie tak. Pięknie.
+Wydaje mi się, że jeżeli mielibyście jakieś pytania jeszcze do tego,
+dotyczące Docker Huba,
+to zawsze możecie je zostawiać na platformie w sekcji komentarzy,
+natomiast tą formą takiego może zadania domowego po tej lekcji
+polecam wam wejść na Docker Huba.
+Możecie też sobie na nim założyć konto, zalogować się,
+przejrzeć dostępne obrazy, zobaczyć jakie narzędzia tak naprawdę są tutaj dostępne,
+bo z mojego doświadczenia wynika,
+że posiadanie takiej listy obrazów, których najczęściej używam,
+jest bardzo wygodne, bo później po prostu jak tworzę sobie jakiś projekt,
+to tylko metodą copy-go-pasta przenoszę określone definicje
+i wszystko mi pięknie działa.
+Jest to też dobre podejście, bo jeśli w jednym projekcie mamy sprawdzone obrazy,
+to też wiemy czego możemy się spodziewać po nich,
+wykorzystując je w kolejnych projektach
+i moje doświadczenie zawodowe też pokazuje,
+że właśnie często wykorzystujemy metodę copy-go-pasta
+do czasami stawiania nawet całych projektów,
+które są w tej samej technologii,
+zmieniają się tylko niektóre zależności w takich obrazach,
+bo czasami mamy jakąś bibliotekę, czasami jej nie mamy,
+ale jakby ta baza wokół aplikacji,
+na przykład pisanych w Pythonie,
+często jest dosyć podobna,
+w związku z czym, mając taki Dockerfile definiujący nasz obraz,
+możemy go wykorzystywać z drobnymi zmianami,
+pomiędzy różnymi projektami.
+Dobrze.
+Jeszcze tylko najważniejsza informacja,
+jeżeli ten ciemny tryb Wam się nie podoba,
+to tu możecie przełączyć na jasny.
+I myślę, że możemy przejść do kolejnej lekcji.

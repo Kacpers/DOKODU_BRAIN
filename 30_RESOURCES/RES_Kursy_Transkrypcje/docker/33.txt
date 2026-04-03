@@ -1,0 +1,4 @@
+Dockerfile jest to plik, który definiuje w jaki sposób ma zostać zbudowany nasz obraz dockerowy i co ma znaleźć się w środku, czyli jest to taki przepis jak ten nasz wynikowy obraz ma wyglądać.
+W takim przepisie zawsze znajduje się polecenie w prom, które mówi o tym z jakiego obrazu bazowego chcemy skorzystać i później są dalsze polecenia, które pozwalają zbudować na przykład nasz gotowy artefakt z naszą aplikacją w sposób taki, żeby ona działała,
+czyli dodajemy sobie odpowiednie zależności, dodajemy sobie kod naszej aplikacji, całość.
+Budujemy, powstaje nam z tego nowy obraz, który możemy uruchamiać i właśnie opis tego jest robiony w pliku dockerfile, który służy do dalszej budowy tych obrazów.

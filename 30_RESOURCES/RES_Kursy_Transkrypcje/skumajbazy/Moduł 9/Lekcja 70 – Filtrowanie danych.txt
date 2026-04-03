@@ -1,0 +1,511 @@
+Mówiliśmy sobie o pobieraniu danych, ale nie mówiliśmy o tym jak, w jaki sposób te dane możemy filtrować, a tutaj jeżeli chodzi o opcje filtrowania to jest ich całkiem sporo i nie przypominają one za bardzo tego co znacie z SQL-a,
+bo na razie robiliśmy tylko takie proste filtry dotyczące konkretnych kolumn, takie w których odwołujemy się do konkretnych wartości, natomiast w tej lekcji zajmiemy się również takimi trochę bardziej zaawansowanymi filtrami.
+Ponadto chciałem Wam pokazać jak możemy importować dokumenty z pliku JSON do nowej kolekcji, oprócz tego pokażemy sobie jak filtrować konkretne informacje właśnie oraz porozmawiamy o tych operatorach, bo każdy typ danych ma swoje operatory,
+inne operatory będą miały liczby, inne operatory będzie miał tekst, porozmawiamy sobie o tym abyście wiedzieli jak z tych operatorów korzystać. Zapraszam.
+Jednakże aby rozpocząć pracę przy naszych filtrach wypadałoby mieć chociaż troszeczkę więcej danych, więc zapraszam Was do tego abyście weszli na ten link, który dla Was przygotowałem,
+czyli row github users content itd. i pod tym linkiem znajdziecie 100 najlepszych książek. Nie wiem w jakim kryterium one są najlepsze, ale są tam faktyczne.
+Ciekawe pozycje. Można albo skorzystać w naszym kompasie z takiego narzędzia, które tutaj jest służącego do dodawania nowych w kolekcji, create collection i stworzyć sobie kolekcję books,
+a następnie tam jest też taki przycisk jak import, ale można też skorzystać ze starego, dobrego shella, który nam również umożliwi dodanie tych książek, a procedura jest prosta.
+Wchodzimy na link, kopiujemy zawartość z tego linka.
+Następnie przechodzimy sobie do shella, wpisujemy insert books, insert menu.
+W miejsce tych kropek wklejamy to, co skopiowaliśmy z pliku JSON i po prostu wykonujemy zapytanie.
+Sprawdziłem, działa.
+Czyli wchodzę na link, zaznaczam wszystko, kopiuję.
+Czyli przechodzę do mojego starego, dobrego shella, wykonuję db.books.
+Tej kolekcji jeszcze oczywiście nie ma,
+ale w momencie, w którym dodajemy do niej rekordy,
+po prostu ją sobie stworzymy.
+Insert menu.
+Otwieramy nawias i w ten nawias wklejamy nasz wynik.
+Następnie robimy Enter.
+I po chwili powinniście zobaczyć, że 99 książek.
+Czemu napisali 100, jak jest 99?
+Czyżby zaczynały się od zera?
+Tak, zaczynały się od zera.
+Dobra, są usprawiedliwieni.
+Ale jeżeli teraz wykonacie sobie db.books.find,
+to zobaczycie, że faktycznie te książki nam się tutaj dodały.
+Każda z nich, tak jak wspomniałem,
+ma osobne id wygenerowane automatycznie.
+Jak widzicie, książki posiadają autorów, kraje, linki do obrazków.
+Te linki nas nie interesują.
+Kraj, link do opisu książki, czy też opisu autora.
+No i ilość stron, tytuł i rok wydania.
+Bardzo ciekawe są tutaj książki,
+więc mam nadzieję, że filtrowanie tych książek
+również dla was będzie ciekawe.
+Bo skoro mamy już te książki,
+to nie pozostaje nam nic innego,
+jak tylko przejść do praktyki.
+No i na przykład, jeżeli mamy tych autorów,
+których dodaliśmy sobie wcześniej
+i chcielibyście pobrać autorów, którzy mają na imię Jan,
+to można skorzystać z polecenia find,
+czyli db.autors.find
+i przekazując w filtrze first name Jan,
+dostaniemy po prostu wszystkich Janów.
+Jeżeli chcemy szukać według dwóch kryteriów,
+bo na przykład interesuje nas kategoria spożywcze
+i rodzaj to śniadanie, tylko takie produkty,
+no to przekazujemy je też obok siebie.
+Tak jak gdybyśmy dodawali sobie te elementy osobno.
+W dokumentacji Mongo jest napisane,
+że po prostu filtry są dokumentami.
+Więc tak samo jak definiujemy sobie dokumenty,
+tak samo definiujemy sobie też filtr,
+który pozwoli nam na wyszukanie interesujących nas informacji.
+Może nie tyle problem, co wyzwanie zacznie się wtedy,
+kiedy będą nas interesowały na przykład osoby
+spełniające dwa kryteria.
+Na przykład kategoria taka i taka,
+albo typ taki i taki, albo to i to lub to i to.
+Z tym jest trochę większe wyzwanie.
+Trochę trudniejsze filtry poznacie za chwilę,
+ale najpierw sobie to jeszcze przećwiczmy.
+Zobaczmy, jakie książki mamy w naszej kolekcji.
+Poprosiłbym was więc o to, abyście
+znaleźli wszystkie książki napisane w 1959 roku
+oraz abyście znaleźli wszystkie książki,
+które zostały napisane po niemiecku
+oraz których krajem wydania są Niemcy.
+Czyli takie dwa kryteria.
+Jedno kryterium jest takie, że interesują nas
+wydane w określonym roku,
+a drugie sprawdzamy kraj oraz sprawdzamy język.
+Widzimy się za 3 minuty w rozwiązaniu.
+I to, co chciałem zrobić, to chciałem tylko wam nadmienić,
+że oczywiście, jeżeli sobie odświeżycie w tym miejscu
+wasze bazy danych,
+to zobaczycie, że są tutaj książki
+i również korzystając z tego miejsca
+można też je sobie filtrować.
+Nie trzeba wpisywać całego polecenia.
+Można tutaj wpisywać sobie na przykład
+Country, dwukropek,
+Denmark.
+Zrobić Find
+w celu znalezienia wszystkich książek wydanych w Danii.
+Tych możliwości jest tutaj całkiem sporo,
+jeżeli chodzi o te,
+o te filtry.
+Można też kliknąć sobie w opcję.
+Można poszukać od razu Sort.
+Można zrobić jakieś konkretne Collation,
+tam kodowanie. Można zrobić Limit.
+Trochę tego jest.
+To też jest dobra opcja do nauki.
+Jeżeli będziecie chcieli znaleźć jakieś konkretne elementy
+posortowane w jakiś sposób,
+to można też patrząc na to mniej więcej podpatrzeć,
+jak będzie musiał wyglądać ten obiekt,
+który będziemy musieli przekazać.
+Ale może to, tym zajmiemy się za moment.
+Natomiast teraz to, co chciałbym zrobić,
+to chciałbym skorzystać z tego naszego mongusza,
+z tego naszego shella
+i w tym naszym shellu wykonać polecenia,
+które będą nam potrzebne do znalezienia tych autorów.
+A przypomnijmy,
+na początek mamy się zająć
+wszystkimi książkami
+napisanymi w 1959 roku.
+No to co?
+db.books.find
+no i year 1959.
+Enter.
+No i tych książek tutaj nam wyszły dwie.
+Günter Grass
+z Niemiec napisał The Tin Drum
+oraz
+Nagib Mahfouz z Egiptu
+napisał Children of Gebelawi.
+Ok.
+I drugie zadanie
+znajdź wszystkie książki, które zostały napisane po niemiecku
+oraz których krajem wydania są Niemcy.
+Więc
+strzałka do góry
+i możemy sobie zmienić country
+to będzie Germany
+jak widzicie tych książek trochę tutaj jest
+a teraz chcielibyśmy z nich wybrać
+tylko te, które są wydane po niemiecku
+no bo tutaj pewnie to będzie ich całkiem sporo
+pewnie będzie ich prawie większość
+nawet chyba wszystkie
+ale dodajmy to kryterium
+czyli country to German
+przecinek language
+to jest German
+Enter
+i mam tylko i wyłącznie
+te książki.
+Działa?
+Ok.
+Mówiłem no w momencie
+w którym interesują nas
+spełnianie dwóch kryteriów
+to no sprawa jest prosta
+w pewien sposób można przyjąć
+że budowanie
+tego naszego kryterium jest
+filtra jest w miarę oczywiste
+trochę bardziej robi się
+skomplikowanie wtedy kiedy chcemy
+na przykład zrobić spełnienie dwóch kryteriów
+tego lub tego
+i zobaczcie wtedy też trzeba skorzystać
+z funkcji
+taką funkcję już poznaliśmy wtedy kiedy wykonywaliśmy update
+no i teraz też musimy z takiej funkcji skorzystać
+jeżeli chcemy użyć operatora or
+zobaczcie db students find
+klamerka
+i jest or czyli jest funkcja
+dwukropek
+lista first name to Leszek
+first name to Lech
+no i w ten sposób wyświetlą nam się wszystkie osoby
+których imię to będzie albo Lech albo Leszek
+te kryteria
+to są zwykłe filtry
+więc możecie budować je dokładnie
+tak jak tylko chcecie
+natomiast musicie pamiętać o tym że one muszą być
+nazywającej się or
+no i dzięki temu
+możecie też sobie to przećwiczyć
+znajdując wszystkie książki które napisał
+Fiodor Dostojewski
+to jest taka pisownia jaką powinniście
+użyć żeby znaleźć jego książki
+lub Homer
+no i zadanie drugie
+znajdź wszystkie książki które zostały wydane w Grecji
+tu będzie oczywiście kraj Greece
+lub we Włoszech czyli Italii
+i znowu 3 minuty dla was
+widzimy się za moment
+czyli jak to będzie
+db.books.find
+db.books.find
+db.books.find
+no i tutaj potrzebujemy użyć tego naszego
+operatora or który jest kluczem
+czyli klucz
+or dwukropek lista
+i w ramach tej listy interesuje nas
+autor
+Fiodor Dostojewski
+Fiodor Dostojewski
+Fiodor Dostojewski
+dziwnie co polskie
+rosyjskie
+imię i nazwisko a tak dziwnie napisane
+chociaż pewnie jak Rosjanie by popatrzyli
+byłoby napisane bukwami
+a my byśmy to
+napisali po polsku to pewnie tak samo to odbierają
+jeszcze tylko się upewnię czy wszystko jest okej
+Fiodor Dostojewski
+wygląda dobrze
+sprawdźmy czy mamy
+jest Odyseja więc jest Homer
+i jest dypozest
+czyli jest Dostojewski
+okej no i
+słynna zbrodnia
+Ikara tak jaką zbrodnię
+popełnił Ikara dobra i teraz
+chcemy jeszcze znaleźć książki
+które zostały wydane w Grecji lub we Włoszech
+czyli DB books
+find
+obiekcik dolar
+or
+country
+to jest Grecja
+i drugi element
+country
+to są Włochy
+tutaj ciężko się to formatuje trochę
+żeby to było czytelniejsze
+ale chodzi o to że to jest lista
+tu jest znaczek listy
+o zobaczcie
+tu jest znaczek listy
+po której mamy
+po której mamy
+obiekt jeden country to jest Grecja
+przecinek country to jest Italia
+robimy sobie enter
+tutaj mamy
+language Italian country Italy
+i mamy country Greece language Greek
+czyli zadziałało
+to napisał Sofocles
+też napisane w taki sposób
+a tu mamy Italo Svevo
+chyba nie znam człowieka
+chociaż może
+jak spojrzę na niego po polsku to by się okazało
+że znam go i to całkiem dobrze
+no ale dobra dajcie znać
+czy wy znacie na Discordzie
+albo ile z tych książek z tu najlepszych
+przeczytaliście okej
+a teraz wracając do naszego
+Mongo
+tu robiliśmy zadanie
+czas powiedzieć sobie jeszcze o paru innych funkcjach
+bo tych funkcji jest całe mnóstwo
+ja chciałbym żeby ten kurs był taki
+lekki zjadliwy i żeby tu nie było
+mnóstwa tego wykorzystania
+bo uważam że jeżeli chodzi o Mongo
+to zdecydowanie lepiej jest
+mi przynajmniej
+wykorzystywać je zawsze tak że mam
+gdzieś dokumentację oboką twardą
+i sobie zerkam na to jak są używane
+poszczególne funkcje
+zobaczcie mamy na przykład
+eq, ne to jest equals
+not equal możemy w ten sposób sprawdzić
+czy jest równe, nierówne
+gt, gte, lt, lte
+to nie są reklamy jakich tam
+zasięgów internetowych tylko
+gt to jest greater than, greater than or equal
+less than i less than or equal
+po prostu
+no i tak samo in i not in
+czyli w albo poza
+przedziałem jeżeli chcielibyśmy sobie
+zobaczyć przykład jak to może wyglądać
+to zobaczcie
+studenci którzy są na roku większym
+lub równym 2 to jest
+year i wówczas zapisujemy
+te kryteria które ma spełniać
+nasz rok tak samo jak
+poprzednio
+no nie tak samo jak poprzednio bo poprzednio
+tylko wpisywaliśmy wartość natomiast tutaj
+kiedy tych kryteriów ma być więcej
+chcemy jakoś określić to po prostu
+w tych nawiasach klamrowych wpisujemy
+greater than or equal 2 i wtedy będą
+więksi bądź
+na 2
+, na większym lub równym 2
+jeżeli natomiast chcemy połączyć
+sobie więcej warunków
+to można po prostu te warunki rozdzielić
+przecinkiem czyli interesują
+nas studenci którzy są na roku
+większym lub równym 2 a ich koszt
+jest większy lub równy większy lub
+większy po prostu od tysiąca bo nie ma
+e czyli greater than
+i tak można budować cały ten
+dokument zawierający
+kryteria oczywiście jeżeli chcemy połączyć
+naprawdę zmieścić kogoś w przedziale
+rok
+od drugiego do piątego to można
+zrobić greater than or equal 2
+i niżej less than or equal 5
+i wtedy będziemy mieli od drugiego do
+piątego bo tak działa end
+natomiast jeżeli byśmy chcieli ora no to znowu
+trzeba użyć tego dolar
+or i tak się konstruuje
+te zapytania
+ale tak jak mówię nie będziemy bardzo
+głęboko w to wchodzili zależy mi na tym
+żebyście mniej więcej wiedzieli jak to działa
+żebyście mniej więcej potrafili z tego korzystać
+jeżeli uznacie że
+mongo chcecie wykorzystać w swoich
+projektach to na początek
+wydaje się takie mało intuicyjne potem
+robi się coraz przyjemniejsze
+no i zadanka
+i to są ostatnie
+zadania w tym rozdziale
+w kolejnym rozdziale porozmawiamy
+o sortowaniu i o ograniczaniu
+ilości wierszy jeżeli
+chodzi o ten filtr to poproszę was
+o to abyście znaleźli wszystkie książki
+których ilość strony jest większa
+od 200 oraz rok
+wydania jest większy niż 1950
+to zadanie pierwsze
+następnie
+w zadaniu drugim poproszę abyście znaleźli
+wszystkie książki których autorem jest
+Joseph Conrad lub
+Albert Camus
+użyjcie operatora INN
+wiem że jego nie było tam poprzednio
+ale właśnie zachęcam was do tego żebyście
+robili tak jak ja żebyście zerkali do
+dokumentacji i w dokumentacji sprawdzali
+czego to mongo od was wymaga
+no i podpunkt trzeci
+znajdź wszystkie książki które mają
+mniej niż 100 lub więcej niż 900
+książek czyli mamy
+więcej niż 900
+czyli musimy użyć ORA
+to co może nie 3 minuty tylko 3,5
+do zobaczenia trzymajcie się
+cześć
+nie wiem czy mnie o to pytaliście
+czy ktoś z was się nad tym zastanawiał
+ale czasem pojawia się
+zachęta żeby wyczyścić ten terminal
+czyścimy go u mnie
+przynajmniej pod Windowsem za pomocą
+polecenia CLS i jeżeli
+teraz chodzi o użycie
+zadanie pierwsze to mamy
+znaleźć wszystkie książki których
+ma ilość stron jest większa od 200
+oraz rok wydania jest większy niż 1950
+no to zobaczmy kto tyle pisze
+db.books.find
+db.books.find
+no interesować nas będzie
+ilość stron
+ilość stron to jest pages
+i pages ma być
+greater than 200
+a drugi wymóg
+to rok wydania czyli year
+ma być większy niż 1950
+czyli greater than
+1000
+1950
+enter
+no i mam 1951
+408
+marguerite
+jorcenar
+nie wiem
+memoria
+memoria of hadrian
+a mi głupio
+nie wiem co to są za książki
+mam nadzieję że nikt z was nie jest
+na przykład anglistą
+który bardzo dobrze zna tego pana
+o lolitę znam
+proszę napkowa
+nie czytałem
+ale słyszałem
+chyba kiedyś oglądałem
+film no jak widać
+są książki
+idziemy dalej
+zadanie drugie
+znaleźć wszystkie książki których autorem jest
+josef konrad lub albert kamus
+użyj operatora in
+czyli db.books.find
+db.books.find
+klamerka
+no interesuje nas autor
+ten nasz autor ma być
+jednym z dwóch
+czyli in
+i lista
+josef
+konrad
+to w którymś momencie robi się bardzo intuicyjne
+albert
+kamus
+jak jest kilku i coś tam to lista
+jak jest pojedynczy to słownik
+i już
+i zobaczcie mamy josefa konrada
+i mamy też alberta kamusa
+są dwie książki
+no stromo
+i w trzecim zadaniu chcemy znaleźć wszystkie książki
+które mają mniej niż 100 lub więcej niż 900 stron
+czyli db
+no chodź
+db.books.find
+i teraz jeżeli
+to są dwa przedziały
+no to musimy zrobić
+$OR
+i teraz będą nas interesowały osoby
+książki
+które będą miały
+to są dwa warunki
+więc tutaj będziemy musieli wstawić
+nawiasy kwadratowe
+bo to jest lista
+no i pierwszy obiekt
+to będzie
+pages
+greater than
+od 900
+teraz żeby się nie pomylić
+idziemy do listy
+robimy przecinek
+i pages
+less than 100
+enter
+i zobaczcie
+mamy 92 strony
+86 88
+działa
+tutaj dużo jest bardzo tych nawiasów
+ale zobaczcie
+o najpierw mamy nawias klamrowy
+on się zamyka mi w tym miejscu
+no bo jest kilka określam jakie kryteria mnie interesują
+czyli tu mogę sobie zrobić shift enter
+i tu mogę sobie zrobić
+shift enter
+wtedy będę opisywał książki
+jakie mnie interesują
+teraz ten $OR
+będzie miał dwa kryteria
+mogą być to strony
+w tym przedziale
+znowu zrobiłem
+strzałkę na dół
+już mi się to zdarzyło parę razy
+i przez to uciekły mi te rzeczy
+nad którymi ciężko tak pracowałem
+ale no dobra
+niech zrobię też raz jeszcze
+chciałem strzałką na dół
+przesunąć widok
+a strzałka na dół przesuwa polecenia
+i mi one uciekają
+teraz strzałki do góry nie wcisnę
+nie ma mowy
+bo skończy się tak samo o zobaczcie
+czyli find
+nawias klamrowy $OR
+i teraz strony więcej niż 900
+strony mniej niż 100
+i to jest zapytanie które nam
+zwraca dokładnie taki
+wynik
+może być
+jeżeli być może
+to bardzo serdecznie dziękuję wam za te lekcje
+zapraszam do kolejnej tak jak wspominałem
+w której porozmawiamy sobie o tym jak
+sortować nasze dane
+oraz jak ograniczać ilość danych
+pokazujących się naraz na ekranie
+do zobaczenia

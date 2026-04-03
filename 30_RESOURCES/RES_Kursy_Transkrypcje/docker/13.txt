@@ -1,0 +1,85 @@
+Nie wiem, czy się tego spodziewacie, ale my ten kurs nagrywamy tak trochę na raty.
+No i ten dzisiejszy, właściwie nie dzisiejszy, ale teraz ta lekcja jest ostatnią, którą nagrywamy dzisiaj.
+No i przed momentem zapytałem Jana, czy tutaj będziemy dużo mówili na ten temat.
+Jan mi powiedział, że nie bardzo, bo tak naprawdę, możesz sam powiedz, co powiedziałeś?
+Tak. Pytanie na tą lekcję brzmi, dlaczego Docker działa najlepiej na Linuxie?
+I odpowiedź jest może nieco zaskakująca, bo w zasadzie mówiliśmy troszeczkę o innych rzeczach wcześniej,
+ale Docker działa tylko na Linuxie.
+Docker jest w całości zbudowany w oparciu o mechanizmy istniejące w jądrze linuksowym.
+Z tych mechanizmów korzysta.
+Całą jakby zasadę działania, separację pomiędzy kontenerami opiera właśnie o te mechanizmy
+i on tak naprawdę...
+On tak naprawdę nie działa ani na Windowsie, ani na Macu, mimo tego, że być może już korzystacie
+właśnie na tych platformach z Dockera.
+I teraz, dlaczego tak jest?
+Jest tak dlatego, że firma Docker przygotowała narzędzie, które nazywa się Docker Desktop.
+Docker Desktop na Macu i na Windowsie instaluje maszynę wirtualną z Linuxem.
+No, swoim.
+O instalacji to trochę już mówiliśmy, zaczekaj, muszę ci wejść słowo,
+bo o instalacji już rozmawialiśmy Dockera, już instalowaliśmy Dockera
+i nasi widzowie już wiedzą, że czasem trzeba sobie trochę pokonfigurować i posiedzieć,
+przepraszam, o instalacji dopiero będziemy rozmawiali, to właśnie.
+Jeszcze raz muszę to powiedzieć, czekaj.
+Tak mi się wydawało, że nie rozmawialiśmy.
+Ale zaczekaj, to nie strasz, bo ktoś, kto teraz ten film ogląda,
+a jeszcze nie rozmawialiśmy o instalacji.
+To może stwierdzić, o rany, a ja już tak się przyzwyczaiłem do Windowsa,
+oddaję ten kurs i z głowy, już nie potrzebuję.
+A tu warto powiedzieć, że Docker Desktop to jest polecenie, to jest rozwiązanie,
+które tak naprawdę nie do końca samo z siebie instaluje tego Linuxa,
+tylko my musimy sami najpierw skonfigurować w przypadku Windowsa coś, co się nazywa WSL,
+co uruchamia tego Linuxa na komputerze.
+Że tak jakby to nie jest tak, że ono robi to samo, tylko my musimy najpierw to przygotować.
+To bardziej chodziło mi o to sformułowanie.
+Tak, o ile dobrze pamiętam, w przypadku Windowsa mamy troszeczkę dwie możliwości,
+które możemy wykorzystać przy Dockerze.
+Natomiast sens jest taki, że Docker, jako narzędzie Docker Desktop,
+dostarcza nam to, co potrzebujemy z Linuxa, żeby móc tego Dockera uruchamiać i wykorzystywać,
+plus taką warstwę konfiguracyjną dla naszego Windowsa, czy dla naszego Maca,
+która powoduje, że praca z tym Dockerem wygląda tak samo, jak na Linuxie.
+Dlatego jako użytkownik my nie mamy świadomości, że to w ogóle wygląda inaczej.
+Jeśli ktoś nie zajmuje się tym na takim poziomie, na jakim ja czasami muszę się zajmować,
+może tak naprawdę nie mieć pojęcia, że to jest coś, co musi się zajmować,
+że to nie jest to samo.
+I to jest jak najbardziej ok.
+Bo jeśli ktoś nie potrzebuje mieć tej wiedzy faktycznie w pracy,
+czy w zadaniach, które gdzieś tam nawet dla siebie realizuje,
+jak najbardziej można przyjąć, że jest to dokładnie to samo.
+Natomiast myślę, że kurs nie byłby pełen bez powiedzenia tego,
+że tak naprawdę Docker tylko i wyłącznie na Linuxie.
+I to może być istotne, gdybyśmy się spotkali z serwerami,
+które są UNIXem.
+UNIXy działają troszeczkę inaczej.
+I o ile mi wiadomo, nie ma Dockera dostępnego dla UNIXów.
+Albo jeśli jest, to będzie on troszeczkę inaczej działał,
+dlatego że jednak te systemy troszeczkę się różnią.
+One też wykorzystują troszeczkę inne jądro niż jądro Linuxa.
+Więc pewne rzeczy mogą wyglądać tam inaczej.
+Ja zerknąłem od razu do Google'a i na przykład FreeBSD,
+który też jest systemem UNIXowym, ma pewne wsparcie dla Dockera,
+jednak Docker nie działa natywnie.
+Czyli tu będziemy mieli podobną sytuację jak w przypadku Windowsa i Maca,
+że jest potrzebna emulacja.
+Tak samo jest też na Solarisie i AX od IBM.
+Tak, to też są UNIXy i mechanizm jest ten sam.
+Właśnie dlatego, że Docker korzysta stricte z tego UNIXa,
+czyli z tego jądra Linuxa,
+no to potrzebujemy mieć Linuxa w jakiejkolwiek formie na docelowym innym systemie
+plus warstwę, która wspomaga obsługiwanie Dockera
+i wtedy to nasze doświadczenie jest takie płynne i nierozróżnialne pomiędzy różnymi systemami.
+I to też bardzo silnie wpłynęło na to, że Docker tak bardzo się spopularyzował,
+o czym zresztą już rozmawialiśmy.
+Właśnie dostarczenie tych narzędzi i dostarczenie możliwości,
+a nie zamknięcie się tylko na rozwiązanie, które działa na samym Linuxie.
+Bo właśnie wcześniejsze rozwiązania operowały tylko na tym,
+że korzystały z tych mechanizmów Linuxowych,
+nie dostarczyły rozwiązań dla łatwej adopcji przez użytkowników,
+przez co nie stały się popularne.
+Dokładnie tak.
+Czyli reasumując, nie ma problemu, możecie zainstalować Linuxa,
+natomiast jeżeli nie chcecie, to też sobie z tym kursem poradzicie.
+To nie jest jedno z wymagań, które ukryliśmy przed Wami do tego momentu,
+więc jak to mówił Steve Jobs,
+stay hungry, stay foolish, nie instalujcie Linuxa, jeżeli nie musicie.
+Dokładnie tak.
+Dobra.

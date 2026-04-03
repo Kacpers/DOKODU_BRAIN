@@ -1,0 +1,32 @@
+Witajcie, witaj, bo ty już dołączyłeś do tego kursu z tego względu, że chcesz się nauczyć Dockera i moim zdaniem jest to jeden z lepszych kursów, ponieważ mamy już go praktycznie w całości nagranego, więc to co widzisz teraz nagrywamy tak naprawdę na sam koniec,
+z czego też dowodem są nasze szczęśliwe i zadowolone miny, które właśnie teraz obserwujesz, więc tworząc ten kurs, tak naprawdę ja powiem o swoim punkcie widzenia, później Jan powie o swoim, tworząc ten kurs, tworzyliśmy kurs z dwóch podejść.
+Z podejścia DevOpsa, o tym podejściu na razie nie będę mówił, ale też z podejścia programisty, bo ja mam takie doświadczenie z DevOpsami, że są to zawsze zajęci ludzie i nie zawsze mają czas na to, żeby odpowiedzieć na wszystkie pytania,
+albo po prostu biorą ode mnie klawiaturę i mówią, wiesz co, ja to zrobię, czy też biorą kod do siebie i mówią, ja to zrobię i dostaję później kod, który działa, czy też środowisko, które działa i nie zawsze mogę się wszystkiego od nich dowiedzieć.
+Dlatego też zacząłem uczyć się Dockera na własną rękę, ale kiedy poznałem Jana, czyli Diving DevOpsa, okazało się, że jest ktoś, kto ma czas, chęci i umiejętności do tego, żeby mi tego Dockera wyjaśnić od A do Z.
+I tak właśnie powstał pomysł na ten kurs, żeby...
+Nie tylko mi wyjaśnić tego Dockera od A do Z, nie tylko uzupełnić moje braki, ale również, żebym ja mógł odpowiedzieć o tej swojej perspektywie programistycznej, czym dla mnie jest Docker, jak ja Dockera rozumiem, jak ja z Dockerem pracuję.
+I to wszystko tutaj skonfrontowało się z tym takim rzeczowym podejściem Jana do tematu, gdzie moja gorąca głowa wielokrotnie jest chłodzona, wielokrotnie jest wyjaśniane mi to, czego nie wiedziałem.
+Więc tak naprawdę macie podejście...
+Tak, podejście z dwóch różnych frontów do zagadnienia, które jest moim zdaniem niezwykle ważne.
+Tak, jako że Docker jest podstawowym narzędziem tak naprawdę nie tyle dla DevOpsów, co dla deweloperów, to jednak deweloperzy najczęściej z tego narzędzia korzystają w takiej swojej codziennej pracy.
+Dla DevOpsów jest bardziej platformą, którą muszą zadbać, utrzymywać, zoptymalizować, żeby działała wydajnie i efektywnie.
+Ja też przez wiele lat swojej kariery przygotowywałem programy.
+Programistów w organizacjach, w których pracowałem, w projektach i w zespołach, które gdzieś tam prowadziłem czy wspierałem w efektywnym wykorzystywaniu tego Dockera.
+Czyli uczyłem, jak optymalizować sobie te obrazy, jak efektywnie z tego korzystać, jak ułatwić sobie codzienną pracę, korzystając z tego Dockera do rozwijania aplikacji.
+I tutaj też ta perspektywa na pewno będzie w kursie pokazana.
+I moim zdaniem to jest kurs inny niż wszystkie.
+Na pewno kurs, który pokazuje tego Dockera z dwóch różnych perspektyw.
+Z perspektywy mojego zrozumienia Dockera, ale właśnie też z tego podejścia bardzo mocno rzeczowego, bardzo mocno ustrukturyzowanego, który tutaj reprezentuje Jan.
+Więc ja, jeżeli miałbym komuś polecić kurs, który sam bym z przyjemnością obejrzał, to myślę, że byłby to właśnie ten kurs.
+Ponieważ mierzycie się naprawdę z bardzo dużą dawką wiedzy.
+Wiedzy ustrukturyzowanej.
+I też nie ma co się bać tego, że ja jestem programistą, Jan jest devopsem i teraz my będziemy w bardzo techniczny sposób przekładali na was bardzo skomplikowaną wiedzę.
+Bo kurs zaczyna się od zupełnych podstaw.
+Pokazujemy wszystko łącznie z tym, jak zainstalować Dockera u siebie w systemie.
+Więc myślę, że nie ma co przedłużać dalej.
+Jeszcze jeden taki film wprowadzeniowy, gdzie opowiemy trochę więcej o sobie.
+Powiemy, czym się zajmujemy na co dzień, gdzie możecie nas znaleźć.
+Więc zachęcamy was do tego, żeby ten film obejrzeć.
+A później już będzie tylko i wyłącznie mięcho.
+I mam nadzieję, że kurs będzie wam się podobał.
+Ja też mam taką nadzieję.

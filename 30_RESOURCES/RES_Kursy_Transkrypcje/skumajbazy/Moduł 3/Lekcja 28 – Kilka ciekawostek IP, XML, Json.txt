@@ -1,0 +1,55 @@
+W tej lekcji powiemy sobie o kilku ciekawostkach, ponieważ w Postgresa wbudowane jest też kilka modułów,
+m.in. są to moduły do przetwarzania adresów IP, czy też do pobierania czegoś na podstawie tych adresów.
+Tak samo możemy też przetwarzać sobie pliki XML, albo też pliki JSON,
+czy też może nie tyle pliki, co wartość wklejoną będącą XML-em, albo będącą JSON-em.
+Czy też możemy sobie tworzyć zarówno XML-a, jak i JSON-a, co się przydaje szczególnie wtedy,
+kiedy tworzycie sobie swoje własne funkcje, a tworząc swoje własne funkcje,
+można bez problemu używać funkcji już wbudowanych w Postgresa.
+Jeżeli chodzi o sieć i adresy IP, to tutaj też tylko tak Wam, też tak zajawię temat.
+Znowu podałem Wam link, kto ma ochotę, może sobie ten link kliknąć.
+I poczytać więcej, ale można np. sprawdzić, czy adres należy do jakiejś podsieci,
+można znaleźć adres broadcastowy dla dowolnej sieci,
+można wyciągnąć rodzaj, czy jest to IPv4, czy IPv6, jest tego naprawdę bardzo, bardzo dużo.
+Osoby związane z sieciami, które będą przetchowywały bazy swoich użytkowników w Postgresie,
+na pewno wiedzą, co z tym zrobić.
+Inne zastosowanie to jest XML, i tutaj jeżeli chodzi o XML,
+jeżeli potrzebowalibyście stworzyć sobie drzewo XML i wstawić je do jakiejś komórki,
+no to oczywiście jeszcze przydałby nam się insert i update, o których będziemy mówili już niedługo.
+Natomiast takie funkcje są i są to funkcje dedykowane po prostu XML-owi.
+Za pomocą tych funkcji można właśnie tworzyć sobie content XML-owy,
+albo wyciągać z komórki, w której macie XML-a, jakąś konkretną treść.
+Nie jest to wynajmniej,
+najwygodniejsze, moim zdaniem, nigdy tego nie robiłem,
+raczej tego typu działania zrzucałem na jakiś język,
+którym łączyłem się do Postgresa i wykonywałem później na tym operację.
+Natomiast warto wiedzieć, że się da, no bo a nóż, kiedyś nam się to przyda.
+Tak to jest z tymi takimi rzeczami, jak na przykład tablice w Postgresie.
+U mnie tak było, o tablicach też już niedługo, że nie wiedziałem o tym, że są,
+ale nigdy ich nie używałem.
+Tak to jest z tymi takimi rzeczami, jak na przykład tablice w Postgresie. U mnie tak było, o tablicach też już niedługo, że nie wiedziałem o tym, że są, ale nigdy ich nie używałem.
+Natomiast w którymś momencie nagle stwierdziłem,
+o, to jest świetny przypadek, żeby użyć tablic w Postgresowych.
+I nagle ich zacząłem używać i bardzo mi się w tym momencie sprawdzały.
+I myślę, że tak samo jest właśnie z takimi funkcjami jak XML czy sieci,
+bo jeżeli ktoś by mi powiedział, słuchaj, zbieraj adresy IP i potem,
+nie wiem, zgrupuj je pod względem rodzin, czy sortuj je pod względem, nie wiem, odległości, czy czegoś tak jakkolwiek takiego,
+no to właśnie Postgres w tym momencie bardzo się przydaje.
+Jeżeli macie
+doświadczenie w korzystaniu z tego typu funkcjami, czy też funkcjami dotyczącymi
+adresów IP, czy dotyczącymi plików XML,
+czy na przykład dotyczącymi plików JSON
+wewnątrz bazy danych, to koniecznie napiszcie na Discordzie.
+Mam nadzieję, że rozpoczniemy ciekawą dyskusję w tym temacie.
+Jeżeli chodzi o pliki JSON, to analogicznie jak w plikach XML, po prostu możemy sobie tworzyć
+takie pliki i dodawać je gdzieś w naszej bazie,
+ale też możemy wyciągać informacje.
+Czyli żeby nie pobierać sobie całego tego pliku, żeby nie pobierać sobie całej zawartości z bazy danych,
+możemy już na podstawie zapytania, korzystając z niektórych funkcji,
+po prostu wyciągnąć sobie interesującą nas zawartość z pliku JSON.
+To oczywiście będzie wymagało, żeby te pliki były w miarę usystematyzowane
+i żeby każdy w swojej komórce miał podobną zawartość, ale funkcje też do tego są i też jeżeli potrzebowalibyście,
+ale funkcje też do tego są i też jeżeli potrzebowalibyście, ale funkcje też do tego są i też jeżeli potrzebowalibyście,
+to zachęcam Was do tego, żebyście otworzyli sobie tę stronę w dokumentacji
+i zobaczyli, jak to wygląda i co możecie zrobić z tymi plikami.
+Jeżeli chodzi o ten moduł, to byłoby to na tyle.
+Zapraszam Was do pracy domowej.

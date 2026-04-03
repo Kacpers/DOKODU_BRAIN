@@ -1,0 +1,159 @@
+Dość gadania, w końcu przyszedł czas kodowania, czyli w końcu będziemy mogli coś sobie pokodować i będę mógł odkryć przed wami kolejne elementy z naszych zapytań i zaczniemy sobie od tego jak tworzyć tabelę, no i jeszcze raz porozmawiamy sobie o tym jakie typy mogą mieć nasze kolumny.
+Czyli po prostu wracamy do poznawania pięknego języka jakim jest SQL.
+Jeżeli chodzi o tworzenie tabel, to spójrzcie teraz na szary prostokąt, tworzenie tabel wygląda zawsze tak samo, najpierw mamy create table, dalej może, ale nie musi znaleźć się if not exists, po czym jest nazwa tabeli.
+Tak jak już wspominałem nazwy tabeli najczęściej nazywane są od liczby mnogiej, czyli products, users itd.
+Natomiast if not exists, tak jak wspomniałem, ono nie musi być tam widoczne, jeżeli jest, to nic się nie stanie, jeżeli natomiast go nie będzie, a tabela będzie istniała w bazie danych, to dostaniecie błąd, po prostu wasz skrypt się zatrzyma, no i w tym momencie nie będziecie mogli iść dalej.
+Warto więc to if not exists sobie dodawać, tylko że wtedy też, jeżeli będzie już ta tabela istniała, na przykład będziecie ją dodawali z innymi kolumnami,
+to nie zobaczycie błędu, więc jak zawsze z rozsądkiem i z umiarem.
+Jeżeli chodzi o to, co jest niżej, no to niżej mamy nawiasy okrągłe i wewnątrz tych nawiasów okrągłych jest taki komplet składający się z nazwy kolumny, typu i z atrybutu.
+Nazwa kolumny, no to wiadomo, po prostu jest to tytuł tej kolumny, zasady są takie same jak w przypadku robienia aliasów, czyli są pewne słowa, których nie powinniśmy stosować,
+ale raczej zapisujemy snake casem, czyli z podkreśleniem niż camel casem, dalej jest typ, no typy dobieramy w zależności od tego, co w danej kolumnie ma się znajdować,
+najczęściej normalizacja nam też takie informacje daje, czyli tak jak sobie wcześniej znormalizowaliśmy dane, no to już najczęściej będziemy właśnie mieli intedgery i stringi,
+ewentualnie jakieś floaty i tak to będzie funkcjonowało, czasem buliny.
+Takie atrybuty jak na przykład not null, czyli w ten sposób kolumna nie będzie mogła być nigdy pusta, albo na przykład unique, czyli kolumna będzie musiała zawierać tylko i wyłącznie wartości unikatowe,
+o tym jeszcze sobie będziemy mówili przy okazji indeksów, albo default, jakaś konkretna wartość, czyli na przykład created at default current timestamp spowoduje, że będziemy mieli w komórce po prostu bieżącą datę i bieżący czas,
+czy też default 4.
+To też można w ten sposób sobie zapisywać i definiować, jakie wartości mają być tymi wartościami domyślnymi, które mogą się znaleźć w danej kolumnie.
+Przykłady.
+Zobaczcie, create table if not exists students, czyli tworzymy sobie tabelę ze studentami, id to jest serial primary key,
+serial to jest taki szczególny typ danych, który po prostu powoduje, że będziemy mieli każdorazowo zwiększaną wartość o 1,
+czyli pierwszy wiersz będzie miał się w tym kolumnie, a następny wiersz będzie miał się w tym kolumnie, a następny wiersz będzie miał się w tym kolumnie,
+a następny wiersz będzie miał się w tym kolumnie, a następny wiersz będzie miał się w tym kolumnie,
+jeden, drugi, dwa, trzeci, trzy i tak dalej, i tak dalej.
+Tutaj też padło pytanie w międzyczasie, czy można spowodować, żeby te klucze główne na nowo były przeliczone.
+Na przykład dodałem sobie trzy rekordy, usunąłem dwa, dodałem kolejny, to dlaczego mam teraz w bazie danych 1 i 4?
+To jest jak najbardziej ok.
+Pamiętajmy o tym, że klucz główny to jest taka wartość, która nie powinna się absolutnie nigdy zmieniać w czasie życia obiektu,
+więc nie powinno się na nowo nadawać kluczy głównych.
+I też raczej nie restartuje się serialu po dodaniu kolejnego elementu.
+Raczej takie przerwy 1, 4, 6, 8, 9 są jak najbardziej ok.
+Tym się zupełnie też nie przejmujcie.
+Primary key to jest wskazanie, że ta kolumna będzie zawierała właśnie klucz główny.
+No i poniżej mam first name, last name.
+Z informacją zobaczcie, że obie te wartości mają być not null,
+czyli nie mogą być puste.
+Varchar 255 mówi o tym, że to będzie kolumna zawierająca tekst.
+Którego to tekstu może być maksymalnie 255 znaków.
+Jeżeli byście mieli ochotę, zawsze można też tę wartość oczywiście zmniejszać.
+No i tam poniżej mamy jeszcze drugą tabelę.
+Create table if not exist, articles, id serial primary key, nic nowego,
+title varchar 255 i tu jest takie słówko jak unique.
+I to słówko właśnie determinuje, że ten tytuł zawsze będzie musiał być unikatowy.
+Jeżeli natomiast okaże się, że ten tytuł na przykład byłby powtarzający,
+no to wtedy też dostaniemy błąd.
+Z tego względu, że dodanie takiego słówka właśnie jak unique
+powoduje po pierwsze, że na tej kolumnie tworzy się indeks, to już za moment,
+oraz tworzy się też constraint, czyli taki wymóg,
+że ta wartość po prostu musi być zawsze unikatowa,
+co prowadzi do tego, że jeżeli nie jest, to pojawia się błąd.
+Content text natomiast, który widzicie w ostatnim wierszu,
+to jest też taki typ tekstowy, tylko że o nieograniczonej długości.
+Więc jeżeli chcecie przechowywać bardzo dużo tekstu,
+no to typ tekst jest jak najbardziej do tego wskazany.
+Typów danych jest całe mnóstwo, więc jeżeli macie ochotę,
+to zachęcam was do tego, abyście zagłębili się w dokumentację
+i zobaczycie wówczas, że tych typów jest całkiem sporo.
+Ale przyznaję się bez bicia, albo może trochę z biciem,
+że używam głównie string, czyli varchar, tekst,
+integera, seriala, daty i czasu.
+I w sumie to tyle.
+Nawet jeżeli chodzi o typy boolowskie, czyli prawda i fałsz,
+to częściej jakoś zapisuję je jako 1 i 0, po prostu robiąc tiny inta,
+a nie true, false, no bo wydaje mi się, że to są też wartości
+po prostu mniejsze i szybsze niż przechowanie prawdy i fałszu.
+No i tu w końcu przyszedł czas na to, żeby móc też poćwiczyć.
+I tu mam dla was zadanie.
+Poproszę was o to, abyście stworzyli nowy schemat, nową skimę,
+o nazwie library.
+Jeżeli chodzi o tworzenie nowej skimy,
+no to po prostu robimy to za pomocą create schema i nazwa skimy.
+Oczywiście średnik.
+I po utworzeniu tej skimy library mamy stworzyć nową tabelę o nazwie books
+z następującymi kolumnami.
+id to klucz główny zwiększający się automatycznie,
+autor id to typ liczbowy.
+Tutaj myślę, że integer będzie jakiś krótki, jak najbardziej wskazany.
+Title unikatowy, maksymalnie 50-oznakowy.
+Description jako tekst.
+No i created add data, dodania książki.
+Jak macie ochotę, ustawcie jeszcze, żeby domyślnie była to bieżąca data i czas,
+ale nie trzeba.
+No i w podpunkcie trzecim mamy utworzyć tabelę o nazwie authors
+z kolumnami id, first name i last name.
+No to co?
+Do dzieła.
+Trzy minuty dla was.
+Więc zadanie pierwsze.
+Utwórz skimę o nazwie library, czyli create schema library.
+Ops.
+Control enter.
+Tu muszę chwilę zaczekać, bo mnie rozłączył.
+Zaraz mi to mnie podłączy.
+Po drugie utwórz tabelę o nazwie books z kolumnami,
+czyli create table library kropka books.
+Następnie otwieramy nawiasy okrągłe.
+W środku na początek jest id, który ma się zwiększać o jeden
+i ma być to primary key.
+Primo.
+Secondo.
+Id jako typ liczbowy, czyli author id jako typ wyrażony liczbami
+całkowitymi, więc integer.
+Dalej mamy tytuł książki, czyli title, gdzie tytuł książki ma być
+unikatowy, czyli unik, ale unik podajemy na końcu, bo najpierw
+potrzebujemy typ kolumny, a jest to warchar o długości maksymalnie
+50 znaków, więc o tak.
+Dalej mamy description jako tekst.
+No i created at jako timestamp, no bo ma być data i czas.
+Następnie robię control enter.
+No i dostałem informację, że nic się nie zrobiło, ale jeżeli
+wykonam select gwiazdka from library kropka books.
+O, to dostanę informację, że taka tabela istnieje.
+No i zadanie trzecie to mamy utworzyć sobie tabelę, gdzie mamy
+id, first name i last name.
+No to created at create table library kropka authors i interesować
+nas będzie id, które jest kluczem głównym, czyli z pamięci.
+Dalej mamy first name, to jest warchar 50 znaków, ma być wymagane,
+czyli nie może być nulem.
+No i analogicznie robimy to samo z last name, czyli last name
+tylko bez tego przecinka na końcu.
+Control enter.
+Poszło.
+Select all from library kropka authors.
+Ops.
+No i widać, że zadziałało.
+Możemy iść dalej.
+W momencie, w którym dana tabela stała się dla was niewygodna,
+możecie ją sobie bez problemu dropnąć.
+Ukorzystając polecenia drop table.
+I drop table jako za tym wyrażeniem znajduje się nazwa tabeli,
+czyli na przykład drop table posts.
+Jeżeli nie chcecie zobaczyć komunikatu o błędzie w momencie,
+w którym usuwacie tabelę, której nie ma, to można dorzucić
+jeszcze wyrażenie if exists.
+No i oprócz tego, że możemy też sobie tabelę usuwać, możemy
+też sobie tabelę czyścić, czyli możemy pozbywać się wszystkich
+wierszy w tych tabelach czy w tej tabeli.
+I czyszczenie tabeli to jest polecenie truncate.
+I teraz, jeżeli chcielibyście usunąć zawartość tabeli,
+no to można wykonać właśnie polecenie truncate posts na przykład.
+I to spowoduje, że wszystkie posty zginą.
+Alternatywą jest też wykonanie polecenia truncate nazwa tabeli
+z wyszczególnieniem restart identity, co spowoduje, że
+restartujemy sekwencję tworzącą tę tabelę.
+Czyli na przykład, jeżeli stworzyliśmy sobie 10 postów i teraz
+stwierdzamy, że żaden z nich się nie nadaje.
+Możemy wszystkie usunąć.
+To wykonujemy właśnie polecenie truncate, co czyści nam naszą tabelę.
+No i jeżeli dodamy restart identity, to kolejny dodawany post
+będzie miał właśnie id 1.
+Co jest w tym niebezpieczne, to jest to, w przypadku SQL-a
+niezależnie od tego, czy czyścimy, czy usuwamy zawartość naszych
+danych, to te dane po prostu giną bezpowrotnie.
+Czyli ludzie dzielą się na tych, którzy mają backupy i tych,
+którzy będą je robić.
+Więc życzę Wam, żebyście zawsze mieli backupy w momencie, w którym
+wykonujecie truncate, a później chcecie go cofnąć.
+Jeżeli chodzi o tworzenie tabel, to byłoby tyle.
+Czyli potrafimy sobie stworzyć tabelę, wiemy jak ją usunąć,
+wiemy jak ją wyczyścić, ale nie wiemy jak coś do niej dodać.
+Zajmijmy się tym w kolejnej lekcji.

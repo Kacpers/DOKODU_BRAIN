@@ -1,0 +1,762 @@
+To chyba na razie bez tego
+Okej
+Janie, czy ty już
+Dockera zainstalowałeś?
+Nie
+Dockera będziemy instalować dzisiaj
+Jak to taki
+DevOps bez Dockera? Nie, oczywiście to
+żarty z tego względu, że myśmy tutaj
+znaczy myśmy, przepisuję sobie
+Jana zasługi, Jan przygotował
+dla was specjalnie maszynę
+wirtualną, tak, na Ubuntu
+Dokładnie tak
+I na takiej czystej maszynie pokażemy wam
+jak zainstalować
+Dockera, tak, żeby
+zadziałał
+Dokładnie tak, celem tej lekcji
+jest zaprezentowanie
+tego, z czym wy najprawdopodobniej
+zetkniecie się podczas pierwszych
+swoich kroków z Dockerem
+przy założeniu, że waszym
+Linuxem jest Ubuntu
+Dokładnie tak
+I teraz taką
+rekomendację, jaką mamy, to tak naprawdę
+najprościej byłoby na początek wejść
+sobie na stronę docker.com
+i tam wejść w
+manuals, docker engine
+install i Ubuntu
+Już wam pokazujemy jak ta strona dokładnie wygląda
+Przejście jest w ten
+sposób, czyli manuals, install, Ubuntu
+I tu jeszcze jedna uwaga
+Bo my otwarcie zaznaczamy
+że tę lekcję
+nagrywamy pod koniec
+stycznia 2025
+roku, więc jeżeli
+okazałoby się, że w trakcie tej
+instalacji coś wygląda u ciebie inaczej
+to koniecznie zostaw albo komentarz
+pod tym filmem, albo odezwij się do nas
+żebyśmy my ten film mogli zaktualizować
+bo może się zdarzyć, że ta
+instalacja gdzieś będzie wyglądała
+ciut inaczej w przyszłości
+Tak, ona
+oczywiście zawsze powinna być na
+bieżąco opisana właśnie na tej
+stronie i przejście krok po kroku
+ze stroną instalacji z Dockera
+powinno zawsze działać
+dobrze, natomiast
+to co my teraz nagrywamy może
+z biegiem czasu zacząć odbiegać
+od tego co tam będzie dlatego, że
+nie jesteśmy w stanie tak
+w 100% na bieżąco
+aktualizować tego nagrania
+Okej, dobra
+no to cóż, możemy wspomnieć o tym
+jakie są pierwsze kroki z tej instrukcji
+wydaje mi się
+Tak, przechodząc
+pokrótce po instrukcji, ona na początku
+informuje nas o tym, że
+mamy pewne
+ograniczenia związane z konfiguracją
+FireWalla i to
+raczej nie będzie dla nas istotne
+na potrzeby samego tego kursu i pracy
+z Dockerem na swojej stacji roboczej
+natomiast przygotowując serwer
+który miałby uruchamiać
+kontenery dockerowe
+w środowisku
+na przykład produkcyjnym, testowym
+ale jednak na jakimś serwerze
+konfiguracja FireWalla może okazać się
+niezbędna po to, żebyśmy mogli się
+z sieci, z internetu
+z naszych stacji roboczych
+dostać do tego środowiska
+i z tego
+zdalnego Dockera
+z tych aplikacji uruchomionych
+w tym Dockerze, żebyśmy mogli
+korzystać
+natomiast dzisiaj nie jest nam to potrzebne
+dlatego tylko o tym wspominam
+nie będziemy się na tej części
+na pewno skupiać, w instrukcji
+są linki do odpowiednich
+konfiguracji, jeśli
+Ty będziesz potrzebował
+potrzebowała
+taką konfigurację FireWalla
+wykonać, serdecznie
+zachęcam do skorzystania z tych linków
+i w razie problemów
+odezwij się do nas, na pewno Ci pomożemy
+Ok, dobra
+to to rozrozumiałem
+i teraz niżej mam OS Requirements
+czyli takie wymagania
+informacje o tym, jakie systemy operacyjne
+są wspierane, ale z tego co widzę
+tak naprawdę są to wszystkie nowsze Ubuntu
+z tego co wiem też na starszych
+też bez problemu te rzeczy działały
+natomiast one też już nie są, te wersje Ubuntu
+wspierane w tej chwili
+wydaje mi się, że niżej niż 20.04
+więc stąd też nie zostały tutaj wymienione
+tak, z tego co widzę
+po wymienionych właśnie
+wersjach Ubuntu, to jest to wersja Ubuntu
+najnowsza oraz wszystkie
+wersje LTS, które mają
+aktualnie w tym momencie
+wsparcie, wsparcie Ubuntu
+jest na 5 lat, także
+Ubuntu 20.04
+jeszcze w tym momencie jest wspierane
+ale za 3 miesiące już najprawdopodobniej
+może z tej listy zniknąć
+Ok
+no i niżej mamy informacje o tym, żeby
+odinstalować w pierwszej kolejności
+starsze wersje
+to też jest bardzo istotny krok, prawda?
+bo ten docker mógł pochodzić z różnych miejsc
+tak, już tłumaczę
+w Ubuntu mamy coś takiego
+jak manager pakietów
+i oficjalne repozytoria
+dostarczane przez Canonicala
+czyli wydawcę Ubuntu
+w tych repozytoriach znajduje się docker
+ale ten docker nie jest
+w najnowszych wersjach, on jest troszeczkę
+do tyłu, być może troszeczkę
+bardziej, ja też nie korzystam
+z tych repozytoriów, dlatego właśnie
+docker zaleca
+korzystanie z ich własnego repozytorium
+i jeśli próbowałaś
+próbowałeś zainstalować sobie
+dockera wcześniej
+nie podążając za tą instrukcją
+możesz mieć taką starszą wersję
+a ona może zachowywać się troszeczkę inaczej
+albo może nie wspierać pewnych funkcjonalności
+plus jeśli pojawi się aktualizacja
+najprawdopodobniej
+nie dostaniesz od razu tej najnowszej aktualizacji
+tylko będziesz zawsze troszeczkę
+do tyłu
+i stąd docker zaleca, żeby
+zawsze korzystać
+z ich oficjalnego repozytorium
+i na wszelki
+wypadek, jeśli ktoś już właśnie zaczynał
+z instalacją
+z tych repozytoriów ubuntowych
+prowadzą przez to
+jak usunąć sobie tamte wersje
+żeby nie pojawiły się konflikty
+pomiędzy wersją, którą dzisiaj
+będziemy instalowali, a tą
+którą ktoś już mógł wcześniej zainstalować
+okej, dobra
+to tutaj myślę, że wszystko jest jasne
+oczywiście za moment wam pokażemy to
+od instalowania nie pokażemy
+bo tak jak wspomnieliśmy ta instalacja jest
+czysta, no i tutaj też mówią jakie
+polecenie wykonać i przechodzimy sobie
+do tak naprawdę najważniejszej rzeczy
+czyli tak naprawdę do różnych metod
+w jaki to sposób
+można zainstalować dockera
+i tak naprawdę sugerują nam tutaj
+cztery metody, tak?
+czyli można albo skorzystać
+z tego widzę docker desktop for linux
+albo zainstalować docker engine
+po prostu za pomocą apta
+i wydaje mi się, że to jest najlepsze rozwiązanie
+albo zainstalować manualnie
+i zarządzać upgrade'ami
+manualnie, albo skorzystać
+z convenience script
+i to jest tylko dedykowane
+dla testowania i dla środowisk
+deweloperskich, więc tak naprawdę
+myślę, że ten ostatni podpunkt sobie
+pomijamy, ja przyznam szczerze, że najczęściej
+używałem tego z zastosowania i z tego co
+rozmawialiśmy to Jan mówił, że tak samo
+tak, dokładnie dzisiaj
+z tej samej wersji skorzystamy
+przyznam szczerze, że
+nie wiedziałem, że pojawiła się też
+wersja docker desktop for linux
+wydaje mi się, że
+nie było wcześniej takich planów
+natomiast jeśli teraz już jest
+to można skorzystać z
+tego dockera także z wersją
+graficzną, natomiast my sobie przejdziemy
+dzisiaj przez instalację
+z wykorzystaniem apta
+czyli tego mechanizmu
+w Ubuntu korzystającego
+z różnego rodzaju repozytorium
+i zrobimy to dlatego
+że
+w ten sam sposób będziemy
+instalować dockera na
+serwerach, to znaczy
+na serwerach nie będziemy nigdy korzystać
+ze środowiska docker desktop
+dlatego, że nie ma to sensu
+i żeby ta dzisiejsza lekcja
+była wartościowa
+nie tylko na
+twoim komputerze osobistym
+ale jeśli będziesz mieć potrzebę
+instalacji na serwerze, żebyś też
+mogła, mógł skorzystać z tego
+z tej naszej dzisiejszej lekcji
+przejdziemy przez tą
+instalację, która działa i w jednym
+i w drugim środowisku
+ok, wyobraziłem sobie
+admina, który instaluje środowisko graficzne
+tylko po to, żeby korzystać z docker desktop
+for linux i mnie to rozbawiło odrobinkę
+ale dobra, mniejsza oto
+i przechodzimy właśnie teraz do
+install using the apt repository
+i tutaj pierwsze co trzeba zrobić
+to trzeba dołożyć
+dodatkowe sources list, dodatkowe
+repozytorium pakietów do
+ubuntu, z tego względu, że
+w podstawowych
+pakietach tego dokera nie ma
+no i jak widzicie
+na początek oni sugerują, żeby
+wykonać update, następnie
+zainstalować sobie CA certificates oraz
+curl'a, jeżeli macie te rzeczy
+zainstalowane to po prostu nic dodatkowego się
+nie zainstaluje
+po czym dorzucamy sobie tak naprawdę
+określony
+zbiór
+pakietów do naszego
+do naszego repozytorium
+i po chwili
+instalujemy
+instalujemy dokera
+coś byś tutaj dodał jeszcze, jeżeli chodzi o to
+bo wiem, że tak ogólnie powiedziałem
+może coś też doprecyzować?
+tak, na tym etapie jeszcze nie chciałbym tego precyzować
+natomiast mimo wszystko zaczniemy sobie
+od tego kroku związanego
+z odinstalowaniem wcześniejszych
+wersji, dlatego też
+że ja nie mam pewności czy
+w takim bazowym ubuntu
+doker nie jest zainstalowany
+a przyznam szczerze, że robiłem instalację nie
+nadzorowaną
+także pozwoliłem temu ubuntu zainstalować
+się po prostu tak jak jest domyślnie
+bez żadnej dodatkowej konfiguracji
+może się okazać, że podstawowo
+któreś te pakiety są zainstalowane
+a to jest tak naprawdę
+jedna linijka, którą mamy w instrukcji
+wklejamy i patrzymy na wynik
+także myślę, że nic się nie stanie
+jeśli sobie też przez ten rok
+przejdziemy
+to przełączamy się teraz na Twój ekran
+i lecimy z pokazywaniem
+tak, także
+zaczynamy właśnie od odinstalowania
+tutaj
+mamy pętlę for
+która w baszu sobie sprawdza
+paczki wymienione właśnie
+przez dokera, które mogą się pojawiać
+i
+zapewni nas, żeby one wszystkie
+zostały usunięte jeśli się takie
+znajdują
+tutaj notka z mojej strony
+zawsze warto sobie sprawdzić
+co się wkleja z internetu zanim się to wykona
+na swoim komputerze
+bo czasami mogą tam być
+różne wirusy pozaszywane
+szczególnie dotyczy to skryptów
+tutaj to jest dosyć proste
+bo tutaj wszystko widzimy
+ale nawet w tej naszej dzisiejszej instalacji
+będzie skrypt
+który będziemy wykonywać
+kerlem, po prostu ściągniemy go z internetu
+i wykonamy tak jak jest
+i w takich sytuacjach
+zawsze warto uważać
+i goryfikować co się
+uruchamia
+my dzisiaj tego nie zrobimy dlatego, że mamy
+zaufanie do tego co tam w tym dockerze jest
+ale
+zawsze warto sobie to zrobić
+szczególnie jeśli korzystamy ze źródeł
+które nie są zaufane
+okej, to co? fire?
+fire
+i jeszcze
+hasełko
+okej, czyli
+tak jak się spodziewaliśmy
+nie ma żadnych pakietów
+zainstalowanych, dostaliśmy
+każdego jednego informację, że takiego nie było
+nie został usunięty
+wszystko jest tak jak powinno
+i możemy postępować
+z instalacją
+dobra, czyli tak naprawdę pierwszy krok
+instrukcji, który widzieliście przed momentem
+to jest wykonanie
+sudo apt-get update, czyli tak naprawdę
+pobranie listy repozytoriów
+na nowo
+zaktualizowanie listy repozytoriów
+dokładnie tak, i od tego sobie
+zaczynamy
+dobra
+tu takie standardy
+co dalej? dalej mamy
+wykonanie polecenia apt-get install
+ca-certificates i curl
+czyli po prostu pobieramy
+te dwie dodatkowe paczki
+i ta druga, szczególnie o której Jan wspominał przed momentem
+jest potrzebna do tego, żeby później
+wykonać ten skrypt
+dockerowy, instalujący
+dockera poniżej
+tak, a ta pierwsza jest potrzebna do tego
+żeby mieć na pewno
+aktualne certyfikaty w naszym systemie
+żebyśmy podczas pobierania
+nie napotkali żadnych trudności
+okej, to też chwilę moment
+jest, no i kolejne polecenie
+które pojawia się
+na naszej liście, to jest
+sudo install-m
+minus-d
+etc apt-keyrings
+tak
+jeśli chodzi o keyringi
+one przechowują w systemie
+klucze, które podpisują nasze repozytoria
+w ten sposób system upewnia się
+czy
+repozytorium, z którego chcemy
+pobierać nasze paczki
+jest zaufane
+i za każdym razem sprawdza, czy to repozytorium
+do którego się odwołujemy w danym momencie
+jest dokładnie tym repozytorium
+które zaufaliśmy
+zdarza się, że takie repozytorium
+w międzyczasie może się zmienić
+i wtedy jeśli ono nadal jest zaufane
+często musimy sobie zaktualizować taki klucz
+ok, super
+i kolejny krok
+to jest właśnie wykonanie tego skryptu
+o którym wspominałeś
+czyli za pomocą curl'a
+pobieramy sobie tak naprawdę skrypt
+naszym outputem jest docker
+asc
+czyli to chyba tylko go pobiera na razie
+nie uruchamia go jeszcze, bo widzę, że poniżej
+jest cecha mod
+tak, on w tym momencie
+jeszcze właśnie pobiera ten nasz klucz
+żebyśmy mogli go
+zaufać
+zanim go zaufamy
+tak, to jest klucz
+następne polecenie służy
+nadaniu
+odpowiednich uprawnień do tego pliku
+ok
+i później
+mamy takiego
+dużego potworka
+ten
+duży potworek
+to co robi
+to dodaje w oparciu
+o ten wcześniej pobrany klucz
+i weryfikuje, że to repozytorium
+jest podpisane
+dodaje do naszej listy repozytorium w systemie
+oficjalne repozytorium
+które jest dostarczone
+przez dockera
+także to się zaczyna od echo
+i następne trzy linijki
+to jest dokładnie to
+co będzie dodawało te nasze
+repozytorium
+do naszego systemu
+jakby celem jest to żeby stworzyć
+nowe repozytorium tutaj w sources list
+żeby później po wykonaniu
+apt get update
+móc pobrać te pakiety
+tak, dzięki temu
+to repozytorium będzie w naszym systemie
+zapamiętane, także oprócz
+tego, że zainstalujemy sobie
+dockera z oficjalnego
+źródła
+to też apt podczas standardowych
+aktualizacji będzie sprawdzał
+właśnie to repozytorium
+będzie sprawdzał czy pojawiła się
+nowsza wersja tego dockera
+i też jeśli mamy odpowiednią konfigurację
+będzie nam automatycznie tego
+dockera aktualizował
+i to jest rzecz
+z której korzystać chcemy
+dlatego, że wpływa ona
+na naszą wygodę
+okej i następnym poleceniem
+które mamy do wykonania jest
+apt get update
+czyli po prostu pobranie nowej listy
+repozytoriów
+bo dodaliśmy sobie to nowe repozytorium dockerowe
+więc jakby musimy zaktualizować
+indeks
+żeby apt wiedział
+że jest jeszcze dodatkowe repozytorium
+dokładnie tak, bo apt sobie przechowuje
+informacje o repozytoriach
+i pakietach z tych repozytoriów
+w cache systemowym
+żeby odpytywanie o nie
+gdzieś tam było szybsze
+bardziej krótkotrwałe
+dlatego jeśli dodajemy nowe repozytorium
+musimy ten update wykonać
+żeby paczka, którą chcemy
+zainstalować została
+cały czas instalacji znaleziona
+działa to tak, że
+żeby apt nie odpytywał internetu
+o każdą paczkę, o którą zapytamy
+to właśnie robi listę tych paczek
+i on sprawdza w systemie
+jeśli tego cache w systemie nie ma
+to on wtedy powie, że takiej paczki nie zna
+zwróćcie uwagę
+na ten get2 i get3
+tam jest właśnie odniesienie do dockera
+okej
+ale to nie oznacza, że docker został już zainstalowany
+ponieważ przed nami teraz
+jest to najważniejsze polecenie, czyli
+get install docker
+i tu jest całe to długie
+polecenie, które
+tak naprawdę z tego repozytorium będzie
+pobierało nam dockera
+i instalowało go w systemie
+dokładnie tak
+tutaj docker dostarcza nam już wszystkie
+paczki, które będziemy
+wykorzystywać w naszej pracy
+z dockerem
+także nie musimy się zastanawiać co dokładnie
+jest nam potrzebne, mamy wszystko
+dostarczone co na pewno nam się przyda
+i nawet jeśli z czegoś nie będziemy
+w tym momencie korzystać
+to jeśli okaże się, że potrzebujemy
+skorzystać z tego w przyszłości
+albo dostaniemy konfigurację
+czy to obrazu, czy całego
+docker composa, o którym opowiemy
+w przyszłości od naszych
+znajomych albo w firmie
+bo dołączymy do jakiegoś projektu
+nie będziemy musieli się martwić, że czegoś
+nam brakuje, bo instalujemy to właśnie
+od razu na początku
+i to jest podstawowy zestaw narzędzi, który jest
+potrzebny do efektywnej pracy z dockerem
+dokładnie
+dokładnie tak
+no i tak naprawdę tu moglibyśmy
+urwać ten nasz film
+ponieważ kolejnym krokiem jest już
+uruchomienie przykładowego
+obrazu, czy też postawienie
+z obrazu kontenera
+więc myślę, że ostatnim krokiem
+który będzie tylko taką wisienką na torcie
+będzie wykonanie docker myślnik myślnik help
+albo samego polecenia docker
+żeby zobaczyć czy to polecenie już istnieje
+jeżeli zaistnieje
+to będziemy
+mogli przejść dalej
+tak
+także widzimy, że docker
+jest prawidłowo zainstalowany
+w naszym systemie
+polecenie, które w tym momencie
+jeszcze widzieliście przed chwilą na końcu instrukcji
+będziemy pokazywać
+w kolejnych lekcjach
+a służy ono przede wszystkim
+weryfikacji naszej
+instalacji
+no i omówimy troszeczkę szerzej
+w kolejnych lekcjach
+żeby troszeczkę
+zobrazować wam tego dockera
+natomiast
+typowo
+to konkretne polecenie
+wykonujemy już później automatycznie
+żeby sprawdzić naszą instalację
+jeśli zadziała prawidłowo
+to wtedy wiemy, że nasz docker na pewno jest
+w 100% prawidłowo zainstalowany
+i że daemon
+dockera jest też prawidłowo uruchomiony
+w naszym systemie
+to w sumie też jest ważna informacja
+że daemon musi być uruchomiony
+jeżeli on by nie wystartował
+to też trzeba go uruchomić
+jeżeli z jakiegoś powodu
+okazałoby się, że on nie działa
+możemy też to pokazać?
+jak go zatrzymać, jak go uruchomić?
+jeżeli komuś ktoś by tak potrzebował?
+tak, możemy zrobić
+service docker stop
+tak
+i w tym momencie
+dockera mamy zatrzymanego
+możemy zobaczyć poleceniem
+status
+widzimy, że jest enabled
+czyli będzie się uruchamiał razem z systemem
+o to też jakby zadbała nasza instalacja
+i te skrypty instalacyjne
+które się wykonywały po drodze
+ale widzimy w sekcji active
+że inactive jest dead
+i czas
+do wykonania polecenia status
+od momentu kiedy zatrzymaliśmy
+tego naszego dockera
+gdybyśmy teraz chcieli
+uruchomić polecenie
+które jest widoczne
+w instrukcji, czyli nasz obraz
+hello world
+dostaniemy komunikat o tym
+że prawdopodobnie docker nie jest
+uruchomiony i nie jest w stanie
+wystartować kontenera
+czy chcemy pokazać?
+nie, zostawmy to na kolejną lekcję
+ale możemy zrobić start
+żeby już nas to nie zaskoczyło jak będziemy
+dalsze odcinki nagrywać
+za szybko skończyliśmy nagrywać poprzednią lekcję
+bo zapomnieliśmy o jeszcze jednej bardzo
+ważnej rzeczy, tu chodzi o to żeby
+docker mógł być uruchamiany przez
+użytkowników, którzy nie są rootem
+prawda?
+dokładnie tak
+myśleliśmy, że nie pokażemy
+uruchomienia naszego obrazu od razu
+ale myślę, że wrócimy
+do tego, żeby pokazać jak wygląda błąd
+który się pojawi
+i dodamy jeszcze do tego też parę słów
+komentarzy za chwilę
+dobra, więc teraz przechodzimy do
+podpunktu B w naszej instrukcji
+a mianowicie post installation steps
+for linux
+i tak naprawdę musimy przejść przez
+zbiór poleceń, które są tutaj opisane jako
+manage docker as non root user
+to co? idziemy do błędu?
+idziemy do błędu
+także jeśli
+chcemy bez tych kroków
+dodatkowych uruchomić
+sobie naszego hello world
+instrukcja mówi, żeby zrobić go
+sudo, ale jeśli
+spróbujemy uruchomić dowolny kontener
+bez sudo, to nie mamy
+do tego uprawnień
+i tutaj właśnie
+na ratunek przychodzą post installation steps
+więc tak naprawdę wszystko zależy od tego
+czy my chcemy właściwie uruchamiać
+dockera jako
+nie root, ale wydaje mi się, że chcemy
+no bo raczej pracujemy na komputerze
+dewelopujemy niekoniecznie po to, żeby
+wszystko uruchamiać sudo, nie?
+tak
+i tutaj warto na pewno
+wspomnieć o tym, że jeśli robimy
+instalację na serwerze, który
+będzie testowy, produkcyjny
+już mniejsza z tym, ale dowolny serwer
+do którego będzie miało dostęp większa
+liczba osób, wtedy
+na pewno nie chcemy
+dodawać dockera
+do grupy, która może korzystać
+bez tego sudo
+bo wtedy mamy większą kontrolę nad tym
+kto może tym
+dockerem na danym serwerze
+zarządzać, natomiast
+w naszym komputerze chcemy mieć
+wygodnie, w związku z czym
+chcemy dodać się do
+tej grupy, żeby nie musieć
+sudo za każdym razem
+wpisywać przed operacją
+z kontenerem, bo to tak naprawdę dotyczyłoby
+nie tylko uruchamiania
+naszego kontenera
+ale dowolnej operacji, którą chcielibyśmy
+na tym kontenerze wykonać
+okej
+i z tego co widzę tutaj pierwsze polecenie to jest
+dodanie grupy docker, czyli tak naprawdę
+tutaj też moglibyśmy to zrobić
+na serwerze i wtedy moglibyśmy
+zdecydować jakich użytkowników chcemy
+dodać do tej grupy docker, nie?
+więc pod tym względem to też jest
+chyba opcja ciekawa
+w zasadzie tak, masz rację
+możemy w ten sposób
+też sobie to zrobić i użytkowników
+dodać
+faktycznie tutaj podczas
+dodawania wskazujemy
+naszego użytkownika poprzez
+zmienną user
+także
+w analogiczny sposób rzeczywiście
+wykorzystalibyśmy to polecenie
+na serwerze
+z taką różnicą, że wskazalibyśmy
+konkretnego użytkownika, którego
+do tej grupy chcemy dodać
+gdybyśmy oczywiście nie dodawali samych siebie
+okej, dobra
+to przechodzimy myślę do ciebie
+i możesz spokojnie pokazać
+dodanie tej grupy
+czyli to co jest istotne
+no to właśnie, że to jest
+tylko i wyłącznie polecenie, które dodaje
+grupę, tak naprawdę ono jeszcze nie dodaje
+żadnego użytkownika do tej grupy
+i teraz jeżeli chcemy dodać użytkownika do grupy
+to musimy tak naprawdę skorzystać z polecenia
+usermod
+i ta przełączka minus g
+właśnie służy do tego, żeby dodać
+żeby zarządzać tak naprawdę grupami
+użytkownika
+dokładnie tak
+i w tym momencie
+nasz użytkownik jest już
+do
+grupy dodany
+teraz
+jako, że już jesteśmy zalogowani
+w momencie kiedy dodajemy
+siebie
+najlepiej jest
+albo wylogować się
+albo tutaj instrukcja podaje nam jeszcze
+takie polecenie
+dodatkowe, z którego możemy skorzystać
+żeby nie musieć się
+wylogowywać z tego naszego
+serwera, tylko żeby nowe
+uprawnienia załadować do tej
+istniejącej już sesji
+piekło zamarzło
+nie trzeba wyłączać i wyłączać
+tak
+dlatego jestem wielkim fanem
+linuxa, bo jest
+prościej pod tym względem bardzo często
+niż na
+windowsie
+raz, dwa, trzy, cztery razy strzałka do góry
+i enter
+a nie
+ojej
+nie szkodzi
+to docker run hello world i powinniśmy
+zobaczyć przywitanie
+świata
+ok
+i to co teraz widzicie
+tak naprawdę my celowo
+zakryjemy
+wpuścimy nad to kurtynę milczenia
+bo o tym dokładniej mówimy później
+ale zobaczcie, że pojawił się bardzo ważny
+komunikat w trzeciej linii od góry
+hello from docker
+więc możemy mieć nadzieję, że
+coś się wydarzyło, a co
+to już teraz zobaczycie
+w kolejnym filmie
+zapraszamy serdecznie

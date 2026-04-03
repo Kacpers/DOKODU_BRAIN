@@ -1,0 +1,122 @@
+Cześć, znowu się widzimy, temat ciekawy, bo partycjonowanie, partycje, tak jak na dysku są partycje, chociaż znam ludzi, którzy do tej pory nazywają je patricjami, więc wszystkie patricje serdecznie z tego miejsca pozdrawiam.
+O co chodzi z tymi partycjami? Wyobraźcie sobie, że mamy bardzo duży dysk i chcemy go podzielić na mniejsze dyski, no to wykonujemy właśnie partycję, czyli tworzymy sobie taką przestrzeń, w której to przestrzenie możemy przechowywać na przykład dane związane z pracą, a na innej partycji przechowywać dane związane z inną pracą albo z zabawą, jeżeli się bawimy na komputerze.
+Jak to jest natomiast w przypadku baz danych?
+W przypadku baz danych możemy sobie wyobrazić, że czasem przetwarzamy właśnie bardzo duży zbiór danych i częściowo, jeżeli chcecie wykonać selekta na takim dużym zbiorze, no to jest to coś, co może działać wolno, znaczy też grupa.
+Natomiast, jeżeli korzystamy z partycji, to jakby wydzielamy sobie kawałek tych danych i zapisujemy go w takiej jakby tabeli.
+Zobaczcie.
+Jeżeli chodzi o to, to właśnie partycje pozwalają nam podzielić tabele na mniejsze kawałki według jakiegoś klucza, o tym kluczu za chwilę sobie jeszcze powiemy, no i dzięki temu też to jest dosyć logiczne.
+Jeżeli będziemy chcieli wykonać jakieś zapytanie, no to Postgres będzie wiedział, że te dane są jakąś odrębną całością, one oczywiście będą też częścią tej dużej tabeli, ale dzięki temu te zapytania będą wykonywały nam się szybciej.
+Jak to zrobić?
+Tak, tak, tak.
+Partycjonować możemy za pomocą dwóch kluczy.
+Jeden klucz to jest zakres, czyli na przykład stosuje się go do dat.
+Jeżeli mamy daty, to daty są jakimś zbiorem liczb tak naprawdę i możemy chcieć, czy też właśnie do liczb możemy też go zastosować, możemy chcieć sobie partycjonować fragmenty tabeli właśnie na podstawie takich zakresów.
+Natomiast, jeżeli chodzi o partycjonowanie to w drugim rodzaju, to to jest partycjonowanie.
+To jest partycjonowanie na podstawie listy, czyli załóżmy, wyobraźcie sobie, że mamy sklep internetowy, w tym sklepie internetowym mamy milion produktów, ale sklep internetowy tak naprawdę, jeżeli wyświetla produkty, to on wyświetla tylko te produkty, które w danym momencie są w sprzedaży, a tych mamy tylko 500.
+To po co mamy za każdym razem analizować te milion produktów, jeżeli nas interesuje tylko 500?
+Bo załóżmy, ktoś robi wyszukiwarkę, chce pobrać wszystkie produkty o cenie wyższej niż 100, mniejszej niż 50.
+Wyższej niż 100, mniejszej niż 50, dobra, może być, or.
+Dodatkowo kategoria taka, coś jeszcze, coś jeszcze, coś jeszcze, coś jeszcze i teraz baza danych musi na podstawie tych indeksów każdy wiersz sobie przeskanować, sprawdzić, czy spełnia on takie warunki.
+To robić takie coś dla miliona, a robić takie coś dla 200, no to jest bardzo duża różnica.
+Więc wtedy na podstawie listy właśnie na przykład można sobie stworzyć partycję określającą tylko produkty w sprzedaży.
+Natomiast jeżeli chodzi o te daty, to wyobraźcie sobie tą sytuację, o której ja mówiłem.
+Załóżmy, firma powiedziała, my chcemy mieć raporty ze wszystkich danych, ale najczęściej robimy je z dwóch lat wstecz.
+No to ja mówię, okej, to robię partycję zawierającą dwa lata wstecz i na tej partycji wykonuję te raporty.
+Czyli Postgres w tym momencie nie będzie musiał przyjmować się tymi danymi, które są dalej.
+Co ciekawe, partycje działają też tak, że to jakby tworzą nam taką osobną tabelę.
+Ale plusem tego jest to, że kiedy wprowadzamy jakąś modyfikację albo też dodajemy nowy wiersz, to ten nowy wiersz doskakuje nam do tej tabeli.
+Są pewne limity, ograniczenia, ale o tych powiemy sobie za chwileczkę.
+No właśnie, pierwszym ograniczeniem jest to, że w momencie, w którym chcemy partycjonować jakąś tabelę, to ta tabela nie może posiadać klucza głównego.
+Po prostu, jeżeli nie jest po nie partycjonowana. O co chodzi?
+Mogę sobie partycjonować tabelę na przykład po produktach, ale wtedy z tymi produktami będę miał właśnie ten problem, że nie mogą posiadać one klucza głównego.
+Czyli muszę sobie tworzyć jakąś wersję tych produktów.
+Więc to już może być problem.
+Ale na przykład, jeżeli byłyby to te wpisy, o których wam mówiłem, takie logi, no to w logach nie potrzebuję mieć klucza głównego.
+Tam po prostu mam datę, godzinę, nazwę zdarzenia.
+Wtedy mogę sobie to bez problemu partycjonować.
+Więc, no widzicie, jest tu pewne ograniczenie.
+No bo jeżeli spróbujemy partycjonować po czymś, co nie jest kluczem, to wtedy dostajemy właśnie taki błąd.
+Unique constraints on partition table must include all partitioning columns.
+Czyli po prostu trzeba byłoby to partycjonować na przykład zarówno po aktywne, nieaktywne, jak i po IDQ.
+Ale tutaj jest to, widzicie, możecie się domyślać, pewien problem.
+Jak to się robi?
+Ja sobie na początek, i was też do tego zachęcam, jeżeli macie ochotę, możecie wraz ze mną takie partycje utworzyć.
+Czyli stworzyłem sobie schema o nazwie partitions, create schema partitions, a następnie stworzyłem sobie tabelę o nazwie logs w ramach tej skimy.
+Czyli create table partitions logs, no i ta tabela zawiera created at jako datę utworzenia tego logu, tego wpisu, no i content jako treść.
+I teraz chcę to partycjonować na podstawie zakresu.
+Więc określiłem partition by range.
+Czy to wystarczy?
+Absolutnie nie.
+Bo w momencie, w którym określimy sobie, że tę tabelę będziemy chcieli partycjonować na podstawie daty, to jeszcze musimy sobie te partycje do tego stworzyć.
+A partycja tworzy się tak.
+Create table, i tutaj wskazujemy mu nazwę tabeli.
+Następnie partition of portions logs for values from, i tu są daty.
+Skąd on wie, że będziemy chcieli partycjonować to na podstawie created at?
+Bardzo prosto.
+Wie to, bo wie, że ta tabela jest partycjonowana właśnie po created at.
+Natomiast, jeżeli stworzymy sobie wtedy partycję, no to de facto te dwie daty będą tylko mogły dotyczyć created at.
+Proste?
+Proste.
+Słyszałem.
+Chyba.
+I wtedy, jeżeli robimy insert into partitions logs.
+Proste.
+I wtedy, jeżeli robimy insert into partitions logs values, i tu podajemy mu konkretną datę, to on będzie wiedział, do jakiej partycji te dane ma dodać.
+Bo po prostu doda nam nie tylko to, co raz jeszcze.
+My dodajemy do partitions logs, ale ta zmiana spowoduje, że on doda to zarówno do partitions logs, jak i do tego naszego partitions logs 2020.
+Zresztą, wyście już to pewnie przetestowali, więc widzicie, że tak się stało, bo jesteście ciekawi świata.
+Ale to jest jak najbardziej dobrze.
+I co ciekawe, jeżeli wykonacie select gwiazdka from partitions logs, a następnie select gwiazdka from partitions logs 2020,
+to zobaczycie, że w tych dwóch, nazwijmy obie te rzeczy tabelami, no bo tutaj zrobiłem też create table,
+mamy ten sam wiersz zduplikowany.
+Bo zarówno jest to log, jak i log z 2020, z roku 2020.
+Natomiast, jeżeli dodalibyście nową partycję, na przykład do lat 2021,
+natomiast, jeżeli dodalibyście nową partycję, na przykład do lat 2021,
+to też oczywiście mielibyśmy dwie jakby takie w cudzysłowie podtabele i jedną tabelę główną.
+I to właśnie o to chodzi, że możemy sobie bardzo ładnie te dane dzielić,
+tak, żeby naraz nie trzeba było wykonywać zapytań pobierających dane z dużych zbiorów.
+No i ważna sprawa, bardzo ważna.
+Jeżeli spróbujecie zrobić update na kolumnie created at, to nie możecie spodziewać się tego,
+że wiersz przeskoczy wam z jednej partycji na drugą.
+Bo update, który przeniesie wartości z jednej partycji do drugiej nie zadziała.
+Na przykład zmiana roku we wpisie, tak?
+To niestety tak nie działa.
+Trzeba będzie usunąć rekord i go dodać.
+Więc partycjonować bardziej możemy takie dane, wiecie może trochę bardziej luźne.
+Jeżeli te dane miałyby posiadać wiele referencji jeszcze do siebie, jakiś tam do innych tabel,
+no to pewnie byłoby to trochę kłopotliwe, żeby usuwać, dodawać, no trzeba się z tym liczyć.
+Jest to jakaś opcja, ale jest też pewna strata za tym.
+W ogóle partycjonowanie może wam się bardzo skojarzyć, jeżeli pamiętacie ten rozdział,
+mówiliśmy o inheritance, o dziedziczeniu.
+Więc można dziedziczyć też, tabela może dziedziczyć po innej i to też jest taka forma partycjonowania.
+W ogóle, jeżeli zerkniecie sobie do dokumentacji, do działu poświęconego partycjonowaniu,
+jeżeli to was zaciekawiło, to tam też zobaczycie jak można osiągnąć właśnie to samo za pomocą dziedziczenia.
+Ale myślę, że partycje są fajną sprawą i warto też im się bliżej przyjrzeć.
+Jeżeli natomiast chcielibyście partycjonować względem jakichś wartości,
+na przykład wpisy danego handlowca trzymać w osobnym miejscu, wpisy o danej kategorii trzymać w danym miejscu,
+czy w ogóle zarządzać takimi danymi, no to wówczas ważna sprawa, nie podajemy mu partition by range,
+tylko partition by list.
+Czyli na przykład zobaczcie, stworzyłem sobie partitions products, mam created at state,
+i teraz jeżeli sobie partycjonuję te na podstawie statusu,
+no to wtedy mogę sobie stworzyć create table partitions dead products, partition of partition products,
+for values dead, out of stock i discontinued.
+Czyli na przykład stworzyłem sobie partycje dla trzech rodzajów produktów, które nie są już w sprzedaży.
+Natomiast jeżeli chcę stworzyć partycje dla aktywnych, no to mogę zrobić nothing i też min.
+I zadziała.
+Jeżeli macie chęć pobawić się partycjami, to zachęcam was do tego, żebyście spróbowali.
+Jest to naprawdę rzecz, która daje dużo radości.
+Szczególnie, może nie tak, wiecie, dla zabawy, kiedy dodaje się te dane,
+ale jeżeli macie tabele właśnie, no taką jak ja miałem, gdzie aktualizowałem różne informacje,
+to akurat była taka, ja robiłem coś, co służyło do śledzenia zmian produktów.
+Czyli interesowały mnie zmiany ceny, zmiany opisu,
+zmiany nazwy i zagadnienie polegało na tym, że potrzebowaliśmy tworzyć sobie na przykład raport,
+który pokazywał tę zmienność.
+O ile procent względem zeszłego kwartału zmieniła się w tym kwartale cena produktu o takiej kategorii.
+Więc nie potrzebowałem tak naprawdę mieć klucza głównego, bo to były tylko takie logi jakby.
+No i jedynym, po czym szukałem, to były daty, id produktu i tyle.
+Ale robienie partycji, zakładanie indeksów i ten moment, w którym te dane tak naprawdę przyspieszyły,
+to było bardzo, bardzo pożyteczne, bardzo fajna sprawa.
+Zachęcam Was do tego.
+A wielu programistów nie korzysta z partycji.
+Możecie być pierwszymi u Was w zespole.
+Do zobaczenia w kolejnej lekcji. Cześć!

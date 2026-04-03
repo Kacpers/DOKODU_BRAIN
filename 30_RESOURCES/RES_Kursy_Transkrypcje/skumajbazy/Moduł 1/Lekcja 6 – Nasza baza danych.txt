@@ -1,0 +1,29 @@
+W tej lekcji chciałbym jeszcze raz pokrótce pokazać Wam, jak poruszać się po DBWerze, w jaki sposób wykonywać proste zapytania, jak możemy sobie podglądać, co jeszcze w tym DBWerze siedzi.
+Zobaczcie, jeżeli chodzi o to, co widzimy tutaj, no to przede wszystkim w samym DBWerze, jak widzicie, ja mam utworzonych kilka różnych katalogów.
+Jeżeli i Wy chcielibyście udzielić sobie właśnie połączenia i przechowywać je w różnych takich kategoriach, to można sobie kliknąć prawym na connection, wybrać create i tu jest new folder.
+U mnie to takie jest, bo po prostu tych połączeń mam całkiem sporo.
+Dalej mam to połączenie, o którym mówiliśmy, tyle tylko, że u mnie ono nazywa się skumaj bazę, u Was zapewne inna jest nazwa.
+Jeżeli chcecie tę nazwę zmienić, to nie ma problemu, wystarczy sobie kliknąć prawym przyciskiem myszy na tym połączeniu,
+a następnie tutaj jest przycisk.
+Warto uważać z przyciskiem delete, żeby przypadkiem tego guzika nie wciskać i żeby z tego połączenia nie usuwać.
+Wtedy wszystkie te dane, które wykonywaliśmy sobie wcześniej, po prostu trzeba by powtórzyć.
+Co jeszcze na bazie danych możemy zrobić?
+Przede wszystkim możemy sobie kliknąć po prostu na nazwę tej bazy, możemy wówczas sobie wybrać skimę, możemy kliknąć na kategorie
+i tak jak widzieliście poprzednio, możemy sobie podejrzeć, jakie są kolumny, jaką ma ta baza strukturę, ta tabela strukturę.
+Ale poza tym możemy też kliknąć sobie w kartę data i wówczas pokażą nam się wszystkie dane, które zostały wpisane do tej konkretnej tabeli.
+Tutaj mam wszystkie kategorie, jeżeli sobie kliknę na orders, to zobaczę wszystkie zamówienia, które zostały zrealizowane.
+Mogę zauważyć, że tutaj mam customer id, czyli to jest jakiś klucz wyróżniający pracownika, mam też employee id, więc mógłbym sobie zerknąć do customers
+i poszukać tego winet, żeby znaleźć informację, cóż to jest za klient, albo też do employees i znaleźć tego pracownika, który ma numer piąty.
+Tu pod spodem jeszcze, jeżeli nie będziecie pisali zapytań SQL-owych, to poniżej macie jeszcze taką możliwość, o tu na dole, macie też możliwość przełączania się pomiędzy poszczególnymi stronami,
+no bo tutaj na chwilę obecną ilość tych wierszy jest ograniczona, więc jeżeli chcielibyście przejść dalej, to po prostu można klikać na ten slajd.
+Będziecie widzieli kolejne strony z wynikami, jak widać, te strony są wyświetlane po dwieście.
+No i warto też zwrócić uwagę na jeszcze jedną rzecz, a mianowicie w tym miejscu macie możliwość sprawdzenia, jak długo wykonywało się Wasze zapytanie dla tej liczby wierszy.
+Poza wyświetlaniem wyłącznie danych, w DBWerserze możecie wyświetlić też trochę innych informacji.
+Zobaczcie, tutaj macie na przykład widoki, na chwilę obecną to jest puste, są też indeksy.
+O wszystkich tych rzeczach będziemy sobie mówili później, ale warto wiedzieć, że tutaj one właśnie się znajdują.
+Więc zachęcam Was do tego, żebyście w ramach takiego prostego ćwiczenia sobie chwilę poklikali po tej bazie danych,
+poklikali sobie po tych tabelach, zobaczyli, jak mniej więcej te dane się prezentują, no tak zapoznali się z nimi po prostu.
+I widzimy się w kolejnej lekcji, gdzie porozmawiamy sobie już o tym, czym jest SQL, jak za jego pomocą możemy wykonywać zapytania,
+żeby tutaj, wiecie, nie klikać sobie na lejek, czy też nie klikać sobie na strzałki, o, żeby sortować,
+tylko żeby móc pisać te zapytania z palca i pokażemy też sobie, jak te zapytania wykonywać w DBWerserze.
+Do zobaczenia.

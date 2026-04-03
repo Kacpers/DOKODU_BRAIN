@@ -1,0 +1,152 @@
+Zapraszam Was do modułu, w którym zadamy sobie jedno podstawowe pytanie.
+Czyli skoro znaleźliśmy zapytanie, które działa wolno, określiliśmy już, co jest przyczyną naszego spowolnienia,
+no to chcielibyśmy wiedzieć, dlaczego wykonuje się to tak wolno.
+Co właściwie Postgres robi pod spodem?
+Więc możemy sobie zadać jedno podstawowe pytanie.
+Postgres, co Ty robisz tyle czasu?
+No właśnie, czyli co powinniśmy zrobić wtedy, kiedy znajdziemy już wolne zapytanie?
+Jest taka procedura, taka kwerenda, która nazywa się Explain.
+Jeżeli przed zapytaniem wprowadzicie słówko Explain, to Postgres w formie takiej ładnej rozpiski
+i powiadomi Was o tym, jaki jest koszt.
+Zobaczcie, Explain select gwiazdka from employees powodowało, że on napisał, że koszt wynosi od 0 do 1, zwróci nam to 9 wierszy.
+Ale nie jest to najciekawsze.
+Zobaczmy, co zwróci nam Postgres, jeżeli zapytamy go o coś bardziej skomplikowanego.
+No i tutaj mam zapytanie składające się z dwóch joinów.
+Czyli pobieram sobie zamówienia, pobieram sobie produkty, no i pobieram sobie też kilka kolumn i dodałem z przodu Explain.
+Jeżeli macie jakieś zapytania ostatnie, które wykonywaliście, to też jak najbardziej możecie sobie przed nimi dorzucić tego Explain'a
+i zobaczcie, co wtedy zwróci Wam Postgres.
+On wtedy to zapytanie rozbije, stworzy tzw. plan zapytania i rozbije go na poszczególne elementy.
+No i jak widać, query plan zawiera wykonanie left join'a, wykonanie condition'a, czyli warunku, że product id musi się równać product z product id.
+Następnie jakby to powoduje, że już ilość wierszy nam się zwiększa, prawda?
+To pamiętacie, że jak robiliśmy left join'a jednego, to nagle mieliśmy powiedzmy z jednego wiersza robiło nam się cztery, bo dojoinowywaliśmy sobie cztery wiersze.
+I wtedy kolejny join musi dojoinować znowu do tych wszystkich wierszy kolejne dane, czyli jest tego trochę więcej.
+Dlatego też jak widzicie te join'y, one nam tak schodzą właśnie kaskadowo.
+I najpierw tutaj w zapytaniu joinowaliśmy sobie orders, order id równa się order id, a następnie products, product id, product id.
+I to widać tutaj jest order id równa się order id, a następnie gdzieś tutaj poniżej, a wyżej nawet widzicie products, product id, product id.
+Ok, czyli on nam to, on nam tutaj wypisał jaki jest koszt, jak wygląda plan tego zapytania.
+Zachęcam was też do tego, żebyście wykonali to samodzielnie i zobaczyli jak to wygląda.
+Ale to co tutaj widzicie nie jest pełnią, nie daje nam pełni informacji.
+Jest możliwość wywołania jeszcze jednego, dodania jeszcze jednego systemu, który będzie nam to wywołać.
+Jest możliwość wywołania jeszcze jednego, dodania jeszcze jednego systemu, który będzie nam to wywołać.
+Jest możliwość wywołania jeszcze jednego, dodania jeszcze jednego systemu, który będzie nam to wywołać.
+Gdzie słówka jest w nim analyze i jeżeli wykonacie wtedy explain analyze i tam dalej będzie ten select to wówczas on wam wypisze trochę więcej informacji.
+Gdzie słówka jest w nim analyze i jeżeli wykonacie wtedy explain analyze i tam dalej będzie ten select to wówczas on wam wypisze trochę więcej informacji.
+Bo dorzuci nam jeszcze informację Jaki jest koszt wykonania danego zapytania, jeżeli chodzi o zużycie pamięci.
+Zobaczcie tu wyświetlił memory usage 39kB tu wyświetlił memory usage 14kB.
+Dodatkowo napisał jakie jest execution time, planning time.
+Te wszystkie informacje pozwalają nam właśnie z takiego dużego zapytania wy crise narzucić racism family management.
+Te wszystkie informacje pozwalają nam właśnie z takiego dużego zapytania narzucić racism family management.
+z takiego dużego zapytania narzucić racism family system.
+zapytania, wyciągnąć te rzeczy, które je bardzo spowalniają.
+U nas, no tak jak mówiłem, nie mamy wielu danych oraz nie mamy też takich
+zapytań, które miałyby działać wolno, natomiast w przeszłości,
+kiedy miałem takie problemy, czy też teraz, kiedy te problemy mam,
+to wówczas ten analizm właśnie pozwala znaleźć tą część.
+I wtedy jeżeli, bo tu nie chodzi o to, żeby jakby przyspieszyć tym analizem,
+to absolutnie nie, ale jeżeli wiemy, że nasze zapytanie wykona się długo,
+a zapytanie jest takie, no to robi się problem, co sprawiło,
+że to zapytanie działa tak wolno. W tym zapytaniu mam cztery podzapytania.
+Kopiowanie i wklejanie tych podzapytań gdzieś i sprawdzanie w ten sposób
+na zasadzie takiej, wiecie, to się wykonało w sumie szybko,
+a ciekawe, ile to się wykona. No, poprzednio chyba to trwało tak,
+czy ze stoperem w telefonie, bez sensu. Dużo lepiej jest skorzystać właśnie
+z X-Plane'a, z tym analizem najlepiej i wtedy widzimy dokładnie,
+jaki jest czas wykonywania.
+No i teraz pytanie, co możemy zrobić, żeby to było trochę czytelniejsze?
+No, bo tak jak tutaj patrzymy na to, no to możemy stwierdzić,
+kurczę, te koszty, jakaś szerokość, actual time, nie wygląda to zbyt ładnie,
+ale przecież korzystamy z Dbivera. Może Dbiver potrafi nam pomóc?
+Otóż oczywiście, Dbiver potrafi wam pomóc, czy nam pomóc.
+Wystarczy na zapytaniu kliknąć sobie prawym przyciskiem myszy
+i wówczas, jak widzicie, to się wykona.
+I wówczas, jeżeli wejdziecie do Executa, to znajdziecie coś takiego,
+co nazywa się X-Plane Execution Time.
+I to sprawi, że nie tylko będziecie mogli zobaczyć te wyniki
+w troszkę bardziej czytelnej formie, ale będzie można też kliknąć
+na każdy pojedynczy element tego zapytania i zobaczyć sobie,
+że tu jest koszt od 0 do 1, koszt 22, koszt 32, aż do 71.
+Czyli to już jest, świadczy o tym,
+że to jest zapytanie, które ta część zapytania, czy też jest po prostu
+bardziej czasochłonna, czyli porównanie te joiny, no tu mamy joiny i joiny,
+to można byłoby się spodziewać, że joiny będą bardziej czasochłonne
+niż to, co jest w środku. Ale okej, i tu może paść takie pytanie,
+co to właściwie jest ten koszt? To jest ileś złotówek? Nie.
+Koszt to jest informacja o tym, ile razy to zapytanie jest wolniejsze
+niż zwykłe zapytanie. Zwykłe zapytanie to taki select gwiazdka from coś tam.
+Więc to nie jest wartość, która nam wprost powie, że to jest bardziej czasochłonne,
+bardziej pracochłonne, że więcej pamięci potrzebuje, tylko możemy sobie
+w ten sposób porównać, pewną skalę przyjąć, że 1 to jest zapytanie,
+które wykonuje się bardzo szybko i im większa będzie ta liczba,
+tym zapytanie będzie wykonywało się wolniej. I na przykład możecie
+w ramach takiej próby sobie poćwiczyć, co się stanie, jeżeli wykonacie
+explaina z intersectem na przykład, a co się stanie, jeżeli wykonacie
+explaina z joinami. Czasem pytacie mnie na przykład, czy szybciej byłoby
+zacząć od produktu, czy szybciej byłoby zacząć od product details.
+Z której strony to tego joina zrobić? To nie ma sprawy. Wstarczy sobie zrobić
+explaina z przodu i można zobaczyć, jaki jest łączny czas wykonywania
+tego zapytania, jaki jest łączny koszt. Czyli widać, że całe zapytanie ma
+łączny koszt szacowany między 35 a 80. To nie są takie ogromne wartości,
+no ale one nam dają właśnie to pojęcie. Więc explain właśnie ma przynieść
+nam te informacje i nam pomóc nasze zapytania zoptymalizować.
+Może nie zoptymalizować, a znaleźć przyczynę, dlaczego te zapytania są
+wolniejsze. Co możemy zrobić, jeżeli znaleźliśmy zapytanie, które jest
+zapytaniem wolnym i co możemy zrobić, żeby je przyspieszyć? No oczywiście
+rozwiązań jest wiele. Jedno z nich to usunąć część danych, co nie zawsze
+można. W kolejnej lekcji pokażę Wam, co możemy zrobić, żeby operować
+na trochę mniejszych zbiorach danych, nie usuwając ich. No ale logicznie
+rzecz biorąc, indeksowanie, pierwsza rzecz, czyli jeżeli dodajemy sobie
+indeks na jakiejś kolumnie, no to szukanie po tej kolumnie będzie szybsze.
+Po drugie, no zmniejszenie ilości wierszy, nie tylko poprzez usuwanie,
+nie tylko poprzez to, co chcę Wam pokazać zaraz, ale też poprzez po prostu
+dodawanie where'a, czyli jeżeli nie muszę grupować całej tabeli, no to lepiej
+zastanowić się dobrze nad tym, co jest mi tak naprawdę potrzebne. Po trzecie,
+jeżeli robicie nawet left join'a i tych danych też macie bardzo dużo, to możecie
+zawsze sobie to ograniczyć. Na przykład zobaczcie, left join fields on user id
+równa się fields user id and fields type równa się tekst. W ten sposób dojoinujecie
+sobie nie wszystkie pola, tylko te pola, które mają typ tekst. Dzięki powiedzmy
+dołączeniu z każdego jednego użytkownika robi nam się 40 wierszy, to możemy sobie
+zrobić, z każdego jednego zrobi nam się 4 wiersze. Dlaczego mówię o robieniu się
+tych wierszy? No bo jeżeli do jednego mamy jeden user id i do niego dojoinowujemy
+sobie tabelę, w której ten sam user id powtarza się 4 razy, no to praktycznie
+będziemy mieli 4 razy user id dla jednego użytkownika. Jeżeli mamy 1000 użytkowników,
+no to nagle będziemy pracowali na 4000 wierszy. A jeżeli na przykład interesuje
+nas tylko jedna wartość, no to zawsze można sobie właśnie w ten sposób tym
+pozarządzać.
+Po trzecie, warto wyeliminować zapytania o wysokim koszcie. Czyli jeżeli widzimy,
+że jakieś zapytanie ma bardzo wysoki koszt, to może nie zawsze musimy sobie to
+przeliczać. Na przykład można zrobić osobne zapytanie, gdzieś zapisać je w jakiejś
+zmiennej, to oczywiście jest już praca przy programie, ale wyobraźcie sobie,
+że robicie select i w tym selekcie jest where, w którym jest pod zapytanie i w nim
+jest jakiś in na przykład. Czyli to by powodowało, że po prostu
+za każdym razem on musiałby sobie na przykład tego selecta przeliczać.
+To dużo prościej mogłoby być, na przykład tego selecta wyrzucić do osobnego
+zapytania, zapamiętać sobie jakie są te idki załóżmy, w które chcemy przetwarzać.
+No i w ten sposób będziemy je po prostu używali w zapytaniu, tak jakby były tam
+wpisane. Nie będziemy mieli potrzeby przeliczania ich za każdym razem.
+Taka rada może, czy też to co możemy poprawić. Co jeszcze? Można jeszcze
+cashować pewne rzeczy.
+Czyli na przykład jeżeli pobieramy sobie, pobieramy sobie produkty z określonych
+kategorii i żeby to zrobić musimy za każdym razem pobierać idki tych kategorii,
+no to może warto byłoby gdzieś właśnie też programistycznie zapisać sobie to w jakiejś
+zmiennej, tak żeby nie trzeba było za każdym razem tych danych zapisywać.
+Albo w ogóle, jeżeli chodzi o przyspieszenie działania aplikacji, to może warto w ogóle
+pomyśleć o tym, czym jest cashowanie i nie wykonywać tych zapytań do bazy danych
+za każdym razem.
+To są takie, wiecie, no rady, takie rzeczy, które ja pamiętam, które mi pomogły bardzo,
+jeżeli chodzi o wolne zapytania. No często to było, często to się wiązało właśnie z tym,
+że pobierałem tych danych zbyt dużo. O tym już wspominałem. Ten problem z tą częścią
+wspólną ostatecznie rozwiązałem tak, że po prostu pobrałem sobie tam te cztery zapytania
+i programistycznie porównałem sobie te kolumny. No tak po prostu było mi łatwiej.
+Czasem można też na przykład.
+Dygresa wykorzystywać do przechowywania danych na przykład, a jeżeli chodzi o wyszukiwanie,
+to przenieść sobie część danych do jakiegoś innego silnika służącego do wyszukiwania
+typu Elasticsearch chociażby. Ale to już temat na zupełnie inną rozmowę.
+No takie no dygresje na temat tego, co się dzieje, jeżeli nasza aplikacja działa wolno,
+jak możemy ją sobie przyspieszyć. No i koniecznie, jeżeli wy macie też jakieś wasze typy
+odnośnie przyspieszania aplikacji albo też wasze aplikacje działały wolno, a później ktoś coś zrobił,
+że zaczęły działać szybko.
+To też koniecznie dajcie znać na Discordzie, żebyśmy mogli wzajemnie się też czegoś nauczyć.
+I to byłoby na tyle, jeżeli chodzi o pytanie Postgres.
+Co ty robisz tyle czasu?
+Explain przyniósł nam odpowiedź i zapraszam was do kolejnej lekcji.
+Cześć.

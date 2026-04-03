@@ -1,0 +1,221 @@
+No to cóż było dodawanie było było
+tworzenie było czas na edytowanie i
+usuwanie edytowanie oczywiście update
+usuwanie delete delete ten delete mi
+się będzie śnił po nocach żartuję
+oczywiście ale pamiętam takie szkolenie
+gdzie właśnie na tym szkoleniu przestałem
+delete i zacząłem mówić delete bo mi
+jedna osoba zwróciła uwagę że uczy
+języka angielskiego i mówi się delete
+a nie delete więc dziękuję tej osobie
+jeżeli ogląda ten film też pewnie nie
+ogląda ale was też uczulam delete a nie
+delete bo delete to jest spóźniony więc
+dodawanie danych update nazwa tabeli
+może nie tyle dodawanie co zmienianie
+danych ale to możemy sobie szybko
+poprawić uwaga magia montażu o tak jest
+dużo lepiej zmienianie
+aktualizowanie danych czyli żeby zmienić
+sobie rekord w tabeli wykonujemy
+zapytanie update po którym następuje
+nazwa tabeli czy na przykład żeby
+zmienić jakiś rekord musimy wskazać
+najpierw nazwę tabeli w jaki ten rekord
+się znajduje czyli wykonujemy update
+wskazujemy nazwę tabeli po czym
+następuje instrukcja set instrukcja set
+to jest taka instrukcja po której
+przekazujemy w parach klucz równa się
+wartość przecinek klucz równa się wartość
+i takich par czy takich kompletów
+możemy dawać dowolną ilość i postgres
+wówczas będzie wiedział o wszystkich
+wartościach jakie mamy jakie chcemy
+nadać naszym kolumnom na koniec za
+setem znajduje się słówko where po
+którym wprowadzamy warunki czyli update
+nazwa tabeli set gdzie co gdzie co gdzie
+co i później where po którym to
+znajdują się konkretne warunki które
+mówią nam o tym jakie wiersze chcemy wytłumaczyć.
+zmienić bo zapytanie update też jest
+zapytaniem takim po trochu niebezpiecznym
+bo jeżeli tego wiera by zabrakło to
+wtedy on nie wyświetli błędu on po
+prostu zaktualizuje wszystko czyli na
+przykład update student set imię równa
+się Jan zapominamy dodać wiera
+kontrol enter Bach poszło i nagle się
+okazuje że nie ma nikogo innego są
+mamy tylko panów Janów więc bardzo
+ważna sprawa żeby o tym łeże pamiętać
+No bo znowu podjadę do tego jak to jest.
+Będzie nam potrzebny backup i przywracanie
+danych z backupu No i dla przykładu
+Zobaczcie update student set semestr
+równa się 400 równa się plus 1
+równa się 5002 czyli jak widać na
+załączonym obrazku my możemy nie tylko
+zmodyfikować sobie dane przypisują im
+inne wartości ale również bez problemu
+możemy modyfikować wartości poszczególnych
+kolumn odwołując się do tych wartości które te kolumny miały wcześniej.
+Czyli właśnie na przykład set semestr
+równa się 400 równa się plus 1
+czyli to spowoduje że dla każdego wiersza
+on sobie weźmie kolumnę rok weźmie sobie
+tę kolumnę i do niej przypisze to co było
+wcześniej powiększone o jeden i takie
+operacje możecie robić absolutnie dowolne
+jakie tylko wam są potrzebne Jakie tylko
+aktualizacje chcielibyście wprowadzać
+w waszych tabelach Natomiast jeżeli chodzi
+o usuwanie danych to tutaj również możemy zrobić to co było wcześniej.
+Natomiast jeżeli chodzi o usuwanie danych to tutaj również możemy zrobić to co było wcześniej.
+Również trzeba pamiętać o tym że
+jeżeli nie podamy konkretnych warunków
+to on nam po prostu usunie wszystko tutaj
+Dbiver już jest trochę bardziej o nas
+troskliwy bo w momencie w którym wykonamy
+takie polecenie dostaniecie wówczas taki
+achtung pytanie alert czy na pewno jesteś
+pewny że chcesz zrobić to co chcesz
+zrobić więc jeżeli odpowiecie tak to
+dopiero wtedy usunie wam wszystkie dane
+Natomiast jeżeli odpowiecie nie no to
+możecie jeszcze dodać WERA.
+Bardzo przydatna funkcja parę
+razy uratowała mi życie jeżeli chodzi
+o zastosowanie tego no to jest
+analogicznie jak z update'em tylko tyle
+że ten delete jest trochę krótszy
+Zobaczcie że nie wskazujemy mu w ogóle
+żadnych kolumn które chcemy usunąć
+gdyż on po prostu usuwa całe wiersze
+więc delete from nazwa tabeli
+WER i tutaj podajemy warunki warunki
+i w update'cie i w delete'cie mogą
+wyglądać dokładnie tak samo jak te
+które używaliście w selekcie.
+Mogą być to absolutnie najróżniejsze
+warunki i nie będziemy tutaj powtarzali
+jak to zrobić jak działa between i
+inne tego typu więc jeżeli macie ochotę
+to po prostu po prostu możecie się
+cofnąć do poprzedniego rozdziału i
+sobie to jeszcze przypomnieć Natomiast
+jeżeli chodzi o update to w update'cie
+też ciekawa sprawa tutaj może się
+również znaleźć pod zapytanie czyli
+na przykład update student set czesne
+równa się select all from czesne where
+studiów jest taki jaki tam czy wiecie
+można byłoby po prostu wstawić sobie
+pod zapytanie Chociaż już teraz po lekcji
+o redundancji powinniście wiedzieć że
+takie czesne powinno być raczej w innym
+miejscu a nie bez nie w studentach ale
+okej więc to są takie dwie uwagi że
+jeżeli chodzi o te warunki natomiast
+ważna sprawa jest też taka że bardzo
+często kursanci do mnie przychodzili i
+mówili słuchaj Kacper wiesz bo ja
+zrobiłem takiego delete'a i teraz jak te dane przywrócić z kosza a tu jest to dalsza sprawa.
+jak te dane przywrócić z kosza a tu jest to dalsza sprawa.
+jak te dane przywrócić z kosza a tu jest to dalsza sprawa.
+tutaj kosza żadnego nie ma jeżeli
+usuwamy sobie przynajmniej ja o takim koszu nic nie wiem
+jeżeli usuwamy sobie rekordy to te
+rekordy giną bezpowrotnie więc jeżeli
+będziecie chcieli przywrócić te dane
+z kosza to tak naprawdę trzeba je
+przywrócić z backupu z kopii zapasowej
+a nie z kosza bo nie ma możliwości
+przywrócenia ich w żaden sposób no i
+dla przykładu jeżeli chcielibyśmy
+usunąć konkretnego studenta to
+wykonujemy zapytanie delete from
+students where id równa się 5002
+no i to usunie nam jeden rekord ale
+oczywiście możemy też usunąć więcej
+rekordów wykonując na przykład delete
+from students where id in i tutaj
+podajemy te konkretne identyfikatory no
+i dlatego też możemy sobie to odrobinę
+przećwiczyć a mianowicie pan gościnny
+nie nazywał się Sempe oczywiście tylko
+nazywa się René i teraz jeżeli
+chcielibyśmy zmienić no to oczywiście
+potrzebujemy zapytanie update i
+zmieniamy zapytanie zmieniamy imię
+zapytanie zmieniamy imię pana studenta
+gościnnego na René no i zmniejszamy
+datę dodania o 3 miesiące i 2 dni
+to takie drugie zadanie dla was
+drugi podpunkt do pierwszego zadania
+w zadaniu drugim natomiast chcemy
+napisać zapytanie które doda do opisu
+książki dodatkowe zdanie na końcu
+czyli każdy opis ma posiadać dodatkowe
+takie zakończenie jest to skrócony
+opis aby przeczytać więcej przejdź
+dalej coś takiego chcielibyśmy żeby
+znalazło się w każdym opisie na końcu
+te moje opisy są bardzo skrócone ale
+wiadomo o co chodzi no i podpunkt
+trzeci chcemy usunąć wszystkie książki
+z tabeli books których tytuł zawiera
+wyrażenie mum czyli niestety wszystkie
+muminki nam powinny po tej operacji
+zginąć czyli co 3 minuty 4 do
+zobaczenia tu małe uściślenie jeżeli
+ktoś widział bo wiem że czasem się w tym miejscu
+odnosi podnoszą się głosy że przecież
+na Mikołajku było napisane że to robił
+pan Sempe gościnny nie to robiło dwóch
+panów jeden nazywał się Sempe a drugi
+nazywał się gościnny jeżeli chodzę tak
+samo jak z natęcza z Wojski jeżeli chodzi
+o pana gościnnego to miał on na imię
+René natomiast pan pan Sempe to jest
+Sempe Jean-Jacques.
+Uściślając już nie przeszkadzam rozwiązujcie
+no to co jeżeli chcemy zamienić imię
+pana gościnnego w tabeli autors na René
+no to możemy sobie pobrać wszystkich
+autorów no i będziemy posługiwali się
+albo nazwiskiem albo id-kiem czyli update
+authors
+first name równa się René
+where no i tutaj albo last name like
+last name równa się gościnny albo id
+równa się 1 a teraz szybciej będzie id
+równa się 1 hop
+hop hop
+hop hop
+hop hop hop hop hop hop
+hop hop痛
+błąd autorów nie ma no bo to są to jest
+biblioteka autorów no to library
+authors
+control enter no i się zamieniło
+i mamy René gościnny czyli działa
+zadanie drugie napis zapytanie które
+doda do opisu książki dodatkowe zdanie
+na końcu no to select all from library
+books
+no i teraz update
+update library books set description równa się i musimy moi
+drodzy użyć konkatenacji czyli description hops i tutaj jest to
+skrócony opis przejdź dalej wywołuję no i tu też przy update zobaczcie
+adnotacje you are about to execute update statement without a where
+ale to jest jak najbardziej okej dla nas w tym momencie więc nas o
+tym uprzedził no i jak sobie pobierzemy wszystko to jak widać na
+końcu dostaniemy zawsze jest to skrócony opis zadziałało no i
+ostatni podpunkt usuń wszystkie książki z tabeli books których tytuł
+zawiera wyrażenie mum no to delete from library books where
+title like mum mum select all from library books i mamy tylko dwie
+działa a skoro udało nam się ten te zadania schakować to warto
+przejść do kolejnej lekcji zapraszam

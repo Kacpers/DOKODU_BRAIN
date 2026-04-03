@@ -14,6 +14,8 @@ tags: [inbox, capture, wrzutki]
 
 ## NOTATKI Z TELEFONU / MYS LOT
 
+- [ ] SPRAWDZ: z.ai, gllm, kimmi — narzędzia AI do sprawdzenia — 2026-04-03
+- [ ] POMYSL: Pakietyzacja usług prawnych Aliny — 3 pudełkowe produkty (Polityka AI ~4.5k, Legal SaaS Setup ~6k, Audyt AI Act ~8k), compliance jako standard w każdej wycenie, Alina jako opener leadów B2B. Przegadać z Aliną zanim cokolwiek wdrażamy. — 2026-04-03
 - [ ] Pomysl: seria "AI w 60 sekund" na LinkedIn — mikrotresci dla managerow
 - [ ] Lead: Firma Logistyczna z Trojmiasta — Przemek, poznal mnie na konfie Digital Economy
 - [ ] Sprawdzic: Anthropic wypuscilo Claude 3.7 — co nowego dla promptow?
@@ -77,3 +79,74 @@ Dla kazdego elementu zadaj pytanie:
 - [SEO] Sprawdź CTR "Cursor Pro" po zmianie meta — było 0.1% na #8
 - [GA] Sprawdź czy reklamy sciezka_* generują kliknięcia (ad_click events) — wdrożono 2026-03-20
 - [BIZNES] Animex: napisz do Kamila Kowalskiego (668 140 030 / Kamil.Kowalski@animex.pl) — umów 6 sesji konsultacyjnych (30 min każda) na początku kwietnia. Faktura 40 000 PLN netto idzie po ostatniej sesji (celowo kwiecień → Q2)
+## TODO: Pre-release — Jutro (2026-04-01)
+
+### Rano:
+- [ ] Sprawdzić Whisper — `tail -20 /tmp/whisper-skumajbazy.log` (powinno być 96/96)
+- [ ] Wygenerować wyzwania SQL dla Skumajbazy z transkrypcji
+
+### Stripe sync:
+- [ ] Odpalić sync: `curl -X POST https://dokodu.it/api/admin/products/sync-stripe` (zalogowany jako admin)
+- [ ] Endpoint automatycznie tworzy Products + Prices w Stripe i zapisuje IDs w DB
+- [ ] Sprawdzić w Stripe Dashboard czy produkty się pojawiły
+
+### iFirma:
+- [ ] Zalogować się do ifirma.pl → Ustawienia → Integracje → API
+- [ ] Skopiować API key + login
+- [ ] Na serwerze: `ssh dokodu-vps "nano /srv/dokodu-app/app/.env"` → uzupełnić IFIRMA_API_KEY, IFIRMA_USERNAME, IFIRMA_LOGIN
+- [ ] Restart: `ssh dokodu-vps "cd /srv/dokodu-app/app && docker compose restart app"`
+
+### Test end-to-end:
+- [ ] Sprawdzić STRIPE_WEBHOOK_SECRET (Stripe Dashboard → Developers → Webhooks)
+- [ ] Testowy zakup Tpay (BLIK) za prawdziwą kwotę lub zmienić cenę na 1 PLN na chwilę
+- [ ] Sprawdzić: enrollment utworzony? Email przyszedł? Faktura w iFirma?
+- [ ] Landing pages: `/kursy/pystart` i `/kursy/skumajbazy` — przepiąć CTA z crm.dokodu.it na `/checkout?product=pystart-kurs`
+
+## Platform Feedback — 2026-04-01 (po testach Kacpra)
+
+### SZYBKIE FIXY:
+- [ ] Feed: autor nie może usunąć/edytować posta
+- [ ] Komentarze: brak edycji + sprawdzić security
+- [ ] Rozwiń/zwiń bug po dodaniu komentarza
+- [ ] Snippet bez kolorowania, treść widoczna dopiero po kliknięciu
+- [ ] Film YT w poście — tekst po kliknięciu (powinien od razu)
+- [ ] Usunąć progress bar (0% 0:00/8:02) z LessonPlayer
+- [ ] Stats card Nowicjusz — ciemniejsze kolory
+- [ ] Avatar: podgląd pełnego zdjęcia po kliknięciu
+- [ ] Admin sidebar: scroll + mniejsza czcionka + zwinięcie kategorii
+
+### ŚREDNIE:
+- [ ] Punkty za komentarze + lajki
+- [ ] Access level "Kursant" (dowolny kurs)
+- [ ] Paginacja feedu
+- [ ] "Oznacz jako ukończoną" — przenieść niżej
+- [ ] Wyzwania bardziej widoczne
+- [ ] Pliki/załączniki per lekcja
+- [ ] Odznaki per kurs
+
+### DUŻE (osobne sesje):
+- [ ] Profile użytkowników (klikalne, bio, badge'e)
+- [ ] Wiadomości prywatne (DM)
+- [ ] Forum/dyskusje per kurs
+- [ ] Program afiliacyjny — naprawić /application/affiliate
+- [ ] Powiadomienia — rozszerzyć
+- [ ] Ścieżki edukacyjne — zbadać co robią
+
+### EASYTOOLS BACKLOG:
+- [ ] BNPL/Raty (PayPo/Klarna)
+- [ ] One-Click Upsell (saved card)
+- [ ] Magic Links (passwordless)
+- [ ] Notatki/zakładki pod lekcjami
+- [ ] Scarcity Engine (countdown + auto-zamiana)
+- [ ] Lead magnety (1-2 moduły free za email)
+- [ ] Portal klienta (faktury, dane, karta)
+- [ ] Auto-korekty faktur
+
+### DOCKER KURS:
+- [ ] Import do platformy (50 lekcji, Vimeo IDs gotowe)
+- [ ] Wyzwania Docker z transkrypcji
+- [ ] Product + cena
+
+## Przypomnienia z 2026-04-03
+- [SEO] Czy /blog/n8n awansował po poprawie internal linkingu dla frazy "n8n co to jest"?
+- [BIZNES] DEADLINE Animex: certyfikaty + paczka z plikami szkoleniowymi — musi wyjść do piątku!

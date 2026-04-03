@@ -1,0 +1,75 @@
+O cóż chodzi z typami danych?
+Jeżeli chodzi o typy danych, to tak jak Wam wspomniałem, w ramach tabel mamy kolumny, no i kolumny to jest jakby określają nam ilość informacji, jaką będą zawierały poszczególne rekordy.
+I tu bardzo ważną sprawą jest to, że każda ta kolumna musi posiadać swój własny typ, czyli może być np. liczbą, może być tekstem, może być wartością logiczną, może być tablicą.
+Jest to bardzo istotne z tego powodu, że w zależności od tego, o jakich typach kolumn mówimy, też inne rzeczy z poszczególnymi kolumnami będziemy mogli robić.
+I tutaj jeżeli chodzi o typy liczbowe, to mamy np.
+liczby całkowite, czyli SmallInt, Integer i BigInt.
+To czy mamy Small czy Big określa nam, jak dużą liczbę będziemy chcieli przechowywać w ramach danej kolumny, o tym za chwilę.
+Poniżej mamy typ zmiennoliczbowy, czyli typ, gdzie możemy mieć jakieś wartości po przecinku, no i mamy m.in. decimal, numeric i real.
+No i poniżej mamy SmallSerial, Serial i BigSerial, czyli to jest taki typ, który się inkrementuje, który nam określa, że nam się zwiększa o jeden,
+który po prostu jest jakimś zbiorem danych, gdzie wiemy, jaka będzie kolejna wartość.
+I tutaj jeżeli chodzi o różnice pomiędzy poszczególnymi typami, no to zobaczcie, że SmallInt to są dwa bajty, czyli od minus 32768 do plus tylu.
+Integer, no i tak dalej, i tak dalej.
+Ja najczęściej wybieram Integer, ewentualnie BigInta.
+Z taką ciekawostką mogę powiedzieć, że kiedyś, nie pamiętam, czego to dotyczyło, ale jak pamiętacie, możecie napisać w komentarzu, że jest to BigInt.
+Ale jak pamiętacie, możecie napisać w komentarzach, jakaś wartość taka była na tyle znana, że wiedzieli, że przekręci się wówczas BigInteger,
+czyli już wyczerpiemy ten zasięg tego BigIntegera, no i w tym momencie faktycznie część systemów może paść.
+I faktycznie część systemów padło.
+W grze Gwint, z tego co pamiętam, też był taki błąd, że udało się grupie, nazwijmy to hakerów, czy tam takiej grupie testerów, przekręcić ilość punktów zdobytych,
+przez jednego gracza, właśnie przez tego BigIntegera, no i w tym momencie całe serwery Gwinta padły.
+Więc tutaj, mówiąc szczerze, nie polecam Wam po prostu zapamiętywać tych liczb, po prostu jeżeli będziecie projektowali sobie swoją własną tabelę,
+to pamiętajcie o tym, że takie mamy ograniczenia.
+Drugim typem danych, który możemy przetwarzać, są typy tekstowe.
+Jeżeli chodzi o typy tekstowe,
+to mamy warczar, czar i tekst.
+Jeżeli chodzi o warczar, to jest to typ najczęściej używany.
+On się nadaje wtedy, jeżeli chcemy na przykład przechowywać imię, nazwisko,
+no bo zakładamy, że powiedzmy imię będzie miało zawsze mniej niż 50 znaków.
+Natomiast różnica między warczarem a czarem jest taka,
+że czar będzie zawsze miał taką ilość znaków, jaką zadeklarowaliśmy,
+po prostu uzupełni się do pożądanej ilości, wypełniając się blankami.
+Będzie zawierał po prostu tyle, ile sobie założyliśmy.
+Natomiast ostatnim typem jest typ tekstowy.
+On w nim nie określamy długości.
+On po prostu zawiera tyle tekstu, ile do danej kolumny wrzucimy.
+Czyli na przykład wpis, treść wpisu, artykuł, jakaś wypowiedź, e-mail,
+to wszystko należałoby trzymać w tekście.
+Natomiast imiona, nazwiska, wszystkie takie dane, które wiecie są tekstem,
+czy kod pocztowy, PESEL, możemy jak najbardziej trzymać w warczarze.
+Tutaj, jeżeli chodzi o PESEL, to na przykład, jeżeli chodzi o warczar,
+to na przykład PESEL może zawierać zero z przodu,
+więc jeżeli przechowywałbym go w formie numerycznej,
+no to gdzieś to zero mogłoby mi umknąć i potem bym bardzo za tym zerem płakał.
+No i zobaczcie, jeżeli chcielibyśmy sprawdzić, jakie typy mają nasze dane w tabelach,
+no to możemy sobie zawsze kliknąć tutaj na Northwind, kliknąć sobie na public,
+kliknąć sobie na tables, wybrać jakąś tabelę, no i wówczas on nam tutaj pięknie mówi o tym,
+jakie to są typy.
+Czy wybiorę categories, czy wybiorę customers, to wówczas takie informacje tutaj będziemy właśnie mieli.
+A dlaczego to jest ważne?
+Tak jak wspomniałem, na niektórych kolumnach można wykonywać określone operacje,
+a na innych robić tego po prostu nie można.
+Na przykład inne operacje wykonamy na dacie i czasie, a inne operacje na liczbach,
+typu zaokrąglanie albo obliczanie różnicy między datą i czasem.
+Tak?
+Jeżeli chodzi o typy, to oczywiście jest ich tutaj dużo, dużo więcej.
+Myśmy sobie wspomnieli o typach numerycznych i typach tekstowych.
+Natomiast wymienianie teraz każdego jednego typu, jeden po drugim,
+mam wrażenie, że trochę nie miałoby sensu i byłoby takie dosyć nudne.
+Dlatego też będziemy te typy omawiali sobie każdorazowo,
+podczas po prostu projektowania tabel, podczas pracy z danymi.
+Więc chciałem wam tylko zaznaczyć, że oczywiście poza numerycznymi i typami tekstowymi
+mamy też typy binarne, oczywiście mamy typy datetime,
+z którymi też będzie związane jedno ćwiczenie w tym rozdziale,
+boolean, czyli wartość, prawda, fałsz,
+enumerated, czyli do takiej kolumny możemy wprowadzić tylko dane jakiejś konkretnej wartości,
+jakieś typy geometryczne, jak widzicie, adresy internetowe, IP i inne tego typu rzeczy.
+Więc dużo wiele z tych typów, między innymi tablice,
+to jest zupełnie osobny rozdział, który jest przewidziany w naszej agendzie.
+Dlatego też teraz wszystkich tych typów nie omawiam,
+ale oczywiście to nie jest tylko tak, że kończymy na liczbach,
+kończymy na tekście, bo tego wszystkiego będziemy się jeszcze uczyli,
+będziemy te tematy poznawali.
+To takie uzupełnienie ode mnie.
+Do zobaczenia i życzę dalszego miłego oglądania.
+Okej, i to byłoby na tyle, jeżeli chodzi o typy kolumn.
+Zapraszam was serdecznie do kolejnej lekcji.

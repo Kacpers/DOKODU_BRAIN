@@ -1,0 +1,133 @@
+Dobrze Janie, obiecałeś nam, że pokażesz nam jeszcze jakiś drugi sposób tworzenia wolumenów i tylko ten sposób jest trochę inny, bo do tej pory tworzyliśmy sobie katalog i udostępnialiśmy ten katalog do wnętrza kontenera, a tutaj mamy trochę inny przykład, inne zastosowanie, ale też rozmawiamy wciąż o wolumenach, prawda?
+Tak, rozmawiamy wciąż o wolumenach, jeśli nie chcemy w naszym systemie tworzyć katalogu, bo na przykład chcemy sobie zachować porządek, możemy użyć takiego polecenia jak docker volume create, jakaś nazwa wolumenu, niech będzie wol1
+i to polecenie sprawi, że wolumeny...
+wolumen zostanie utworzony gdzieś w przestrzeni dockera, nie musimy się martwić gdzie.
+Ok, a to jest bezpieczne, w sensie to nie jest tak, że np.
+utracimy te pliki albo, bo wiesz, jak ktoś by mi powiedział
+zabezpieczyłem te pliki, ale nie powiem Ci gdzie są, to trochę bym się może poczuł mniej pewnie.
+Więc tak,
+to jest w zasadzie bezpieczniejszy sposób, dlatego że
+przestrzeń dockera w każdym systemie jest chroniona, więc musimy wejść na konto ruta, żeby móc się dostać do tych plików.
+Tam są m.in. wolumeny, ale są też logi dockera, do których możemy mieć dostęp przez narzędzie, ale nie możemy mieć dostęp bezpośrednio z systemu plików.
+Dobrze, także tworzymy swój wolumen.
+Możemy sobie zobaczyć teraz listę naszych wolumenów.
+Widzimy, że mamy utworzony ten nasz jeden wolumen.
+I teraz, jeśli chcemy sobie
+utworzyć
+kontener z wykorzystaniem tego wolumenu,
+to podobnie jak poprzednio, używamy polecenia
+docker run it.
+Składnia jest w zasadzie taka sama, tylko że tym razem nie podajemy ścieżki, tylko
+używamy nazwy tego naszego wolumenu.
+I ponownie wskazujemy, gdzie on ma się znaleźć w naszym kontenerze.
+Nie będziemy tutaj kombinować.
+Też podajemy mu ścieżkę mnt.
+To może Ubuntu teraz dla odmiany.
+A może być i Ubuntu.
+Nawet nie dam teraz name'a, bo chyba mamy wszystkie niewyczyszczone, pozajmowane.
+Zobaczmy, co docker wymyśli tym razem.
+Ja stawiam, że to będzie znowu coś pociesznego.
+Dobrze i teraz możemy sobie zobaczyć.
+Nasz wolumen jest pusty, dlatego że nic w nim nie utworzyliśmy.
+Nie byliśmy w stanie, bo nie mieliśmy wcześniej kontenera, który miałby tam
+dostęp, a dla nas z poziomu systemu głównego, systemu gospodarza ten dostęp
+jest ograniczony, ale możemy sobie tutaj teraz utworzyć
+jakiś plik. Może być nawet pusty.
+OK.
+A, nie tutaj.
+W mnt musi być, nie?
+Tak, musi być w mnt.
+No właśnie, ale to ciekawe, bo teraz jaka jest różnica między nimi?
+Bo rozmawialiśmy o tym, że jeżeli mamy kontener, to w środku możemy mieć pliki.
+Pokazaliśmy też sobie, że jak wrócimy do tego kontenera, na nowo go uruchomimy,
+to ten plik dalej tam będzie.
+A teraz tworzymy kontener.
+Tworzymy kontener z wolumenem, wrzucamy tam jakiś plik.
+I teraz jaka jest zaleta tego, że to jest
+jakiś osobny byt po prostu, ten jakby taki dysk, ta przestrzeń?
+Tak, normalnie jeśli nie mamy żadnego
+wolumenu podmontowanego do naszego kontenera, to wszystko co stworzymy w
+obrębie tego kontenera żyje z tym kontenerem tak długo, jak długo żyje ten kontener.
+Czyli w momencie, kiedy my go usuniemy, wszystkie rzeczy na nim utworzymy.
+Będą utracone, nie jesteśmy w stanie dostać się do nich ponownie.
+Ale czasami mamy sytuację, kiedy my nasze dane pomiędzy
+kolejnymi kontenerami chcielibyśmy móc przenosić.
+Bo na przykład robimy aktualizację Pythona w wersji 3.9 do 3.11
+i on tworzył sobie jakieś dane lokalne na dysku.
+Albo mamy
+Postgresa czy inną bazę danych uruchomioną w naszym dockerze i nie
+chcielibyśmy za każdym razem startować z tej bazy od zera, bo rozwijamy sobie
+aplikację, która z tych danych korzysta, mamy jakieś testowe dane w bazie i nie
+chcielibyśmy za każdym razem musieć tej bazy od nowa inicjalizować, tylko chcemy z
+tych danych po prostu na bieżąco korzystać.
+Rozumiem, ok, przyjąłem.
+Czyli teraz jak zrobimy, zrobię exit na przykład,
+zrobimy exit i zrobimy docker ps, to nie mamy kontenera, nie?
+Tak, nie mamy kontenera.
+Zrobimy docker ps-a, ja utrwalam wiedzę,
+której się nauczyłem, to zobaczę, że mamy wtedy głodnego Turinga.
+Tak, mamy to nasze najnowsze Ubuntu, które było tutaj uruchomione.
+Możemy je sobie uruchomić ponownie i zajrzeć do niego, że ten plik tam jest.
+Nie musimy, możemy od razu usunąć.
+Usuwamy.
+Także nie ma takiej potrzeby, także.
+docker rm hungry-turing.
+Hungry-Turing. Usuwamy.
+Sprawdzamy, że na pewno go nie ma.
+I gdybyśmy nie wykorzystali wolumenu, to te dane nasze byłyby stracone.
+Ale możemy sobie teraz.
+Debian teraz z tym wolumenem.
+Możemy.
+Możemy Pythona.
+Co chcesz tak naprawdę.
+Debiana chce, bo Debiana jeszcze nie pobieraliśmy.
+I w ramach tego jeszcze taka mała dygresja, bo z tego co pamiętam, jak robimy.
+Tu możesz Enter sobie spokojnie zrobić, bo Debian będzie się chwilę pobierał.
+To jest stary system, to on się długo pobiera.
+Aha, already exists.
+No tak, widać, że Debiana to miał, Ubuntu to nie miał.
+Nieważne.
+Chodzi mi o to, że jak robimy docker rm, to tam też jest opcja zrobienia docker rm
+minus minus volumes, nie? Z tego co pamiętam, że można usunąć.
+Kontener razem z wolumenami.
+Wydaje mi się, że jest taka opcja, żeby
+przełączyć, że przy wykonywaniu rm, on od razu też mówi
+o wolumenach.
+Jest, widzisz?
+Na samym dole. To taka też ciekawostka.
+Znowu musiałem się pochwalić, że coś wiem, że to nie jest tylko tak, że tu siedzę i
+zadaję pytania. Dobra, a teraz wracamy do tej pierwszej karty,
+bo tam ciekawostka na nas czeka.
+Czy jest nasz pusty plik w MNT?
+Czy jest nasz pusty
+plik w MNT?
+Nie mogę się doczekać.
+Hura, jest.
+Brawo. Czyli tak naprawdę przełączamy sobie,
+przełączyliśmy sobie system, zmieniliśmy system, a dalej mamy ten wolumen.
+To jest dobre.
+Tak.
+W ramach tego kursu nie sprawdzamy, czy można wolumen
+współdzielić między różnymi kontenerami. W jednym czasie. Takie utworzone, bo na pewno
+można ścieżkę z systemu, czyli poprzednią metodę, na pewno można w ten sposób
+wykorzystać, ale zachęcam w ramach eksperymentów i zabawy do spróbowania
+podmontowania tego samego wolumenu utworzonego metodą Docker Volume Create
+do podmontowania do dwóch obrazów.
+Tak, to będzie bardzo, bardzo, bardzo pouczające.
+I jeszcze się zastanawiam nad jedną rzeczą, którą sobie sprawdzę poza kadrem.
+Czy wolumeny mogą mieć nazwy?
+Bo to też byłoby ciekawe, żeby zamiast tych...
+A nie, w sumie mogą, bo mają nazwy przecież.
+Tak, tak, tak. WOL1 to jest nazwa naszego wolumenu.
+Ja wybrałem taką dosyć generyczną, ale możemy go nazwać tak naprawdę jak nam odpowiada.
+O wolumenach też będziemy rozmawiali przy okazji dalszych naszych lekcji.
+Natomiast to też jest bardzo wygodne, że możemy mieć aplikacje w jednym wolumenie,
+zdjęcia czy pliki statyczne w innym wolumenie.
+Te wolumeny też są istotne na późniejszych etapach, jeżeli chodzi o jakieś
+robienie backupów czy innych takich rzeczy, to jest bardzo istotna sprawa.
+Natomiast już teraz myślę, że nie ma co wyprzedzać.
+Nie ma co opowiadać o tym, co będzie.
+Skupmy się na tym, co jest, a jest chyba koniec lekcji?
+Tak, widzimy się na kolejnej lekcji.
+Dokładnie tak. Do zobaczenia.
+Cześć.

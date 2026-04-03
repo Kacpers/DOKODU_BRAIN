@@ -1,0 +1,55 @@
+Janie, powiem Ci tak. To wszystko, co pokazałeś do tej pory, to mi się wydawało znajome, ja to znałem, używałem, ale pamiętam, że to były takie momenty, z którymi miałem ogromny problem z Dockerem, no bo za każdym razem mam sobie wchodzić do tej konsoli, wpisywać te wszystkie takie długie linie kodu.
+To było strasznie wkurzające. Jak sobie pomyślałem o tym, że przecież będę z tym Dockerem miał pracować na wielu projektach, to za każdym razem wszystkie te linie kodu i sobie pomyślałem, że musi być jakiś sposób na to, żeby to jakoś ułatwić, jeżeli pracujemy z projektami. I jest taki sposób, nie?
+Tak, jest taki sposób. Tutaj z pomocą przychodzi nam takie narzędzie udostępniane też przez Dockera, które nazywa się Docker Compose.
+I Docker Compose jest takim sposobem opisu uruchamiania naszego zestawu kontenerów. To znaczy, wcześniej uruchamialiśmy sobie pojedyncze kontenery z użyciem polecenia Docker Run.
+Jeśli trzeba było podać więcej parametrów, to to polecenie robiło się coraz dłuższe, więc samo czytanie tego polecenia było trudne.
+Nawet jeśli ktoś jest w tym biegły, to nie jest łatwe do czytania, nie jest to komfortowe. Na pewno nie jest to fajny sposób, żeby używać go na co dzień w projekcie, bo w projekcie zmieniają się członkowie zespołu, czasami dochodzą, odchodzą, bo ktoś na przykład zmienia pracę albo potrzebujemy po prostu powiększyć zespół, bo na przykład aplikacja nam urosła i trzeba więcej rąk do pracy, żeby nad tym zapanować.
+I gdybyśmy chcieli korzystać z Docker Runa, to przede wszystkim tak. Możemy sobie uruchomić naszą aplikację, ale nasza aplikacja zazwyczaj czegoś dodatkowego potrzebuje.
+Jakieś bazy danych, może jakiegoś kesza w postaci Reddisa, czy czegokolwiek innego, ale będzie potrzebowała więcej niż jednego komponentu.
+Ideą kontenerów jest uruchamianie jednej aplikacji.
+Więc nie robimy sobie takich kombajników, że jest wszystko wpakowane w jeden kontener.
+To może się zdarzyć, jeśli przechodzimy ze świata maszyn wirtualnych, czy maszyn fizycznych, gdzie faktycznie wszystkie komponenty przynajmniej w mniejszych projektach były na jednym serwerze i komunikowały się ze sobą w obrębie tego serwera.
+W Dockerze jest to antywzorzec, dlatego w ten sposób nie działamy, bo my jednak chcemy, żeby każdy ten nasz kontener był swoją dedykowaną i odrębną aplikacją.
+I Docker bardzo fajnie piera ten sposób działania właśnie z wykorzystaniem Docker Compose.
+I Docker Compose tak naprawdę jest opisem dla każdego komponenta.
+Do kontenera, który potrzebujemy, czyli przyjmijmy dla naszej aplikacji i dla jakiejś bazy danych, niech to będzie Postgres.
+Wystarczą nam na początek dwa takie kontenery.
+Parametryzujemy sobie uruchomienie naszej aplikacji, parametryzujemy sobie uruchomienie tego Postgresa.
+Mówimy na przykład, że Postgres ma się uruchomić pierwszy, bo jeśli nasza aplikacja się uruchomi przed nim, to nie będzie w stanie...
+Nawiązać połączenia z bazą danych, więc możemy sobie też takie zależności poustawiać pomiędzy poszczególnymi kontenerami i mamy jeden usystematyzowany sposób opisu, jak to powinno być uruchomione.
+Robimy proste Docker Compose App i wstaje nam całe środowisko i takie środowisko możemy przekazać członkom naszego zespołu, czy to innym pracownikom.
+Programistom, czy na przykład możemy przekazać testerom.
+Tester też może u siebie uruchomić takie środowisko i może u siebie na takim lokalnym setupie, na lokalnej konfiguracji, może sobie też naszą aplikację testować.
+Co może być bardzo pomocne, kiedy projekt dopiero zaczyna.
+Często problemem jest uzyskanie DevOpsa od razu.
+Przynajmniej w moim doświadczeniu tak to wyglądało.
+Jednej z organizacji szukaliśmy sposobu na rozwiązanie tego problemu.
+Często było tak, że ten DevOps nie był dostępny od razu wtedy, kiedy był potrzebny.
+Trzeba było na niego poczekać, a projekt już musiał sobie ruszać.
+W związku z czym wykorzystanie tego Docker Compose'a pozwalało bardzo łatwo przygotować i sparametryzować uruchomienie środowiska deweloperskiego, ale także przekazać właśnie testerom tej konfiguracji,
+żeby mogli uruchomić u siebie i nie musieli czekać na środowisko, które jest gdzieś tam już dostępne.
+Dokładnie tak.
+Jeszcze jedną rzecz mogę od siebie powiedzieć, że teraz na test DevOps'ów aż tak bardzo czekać nie musimy, bo też jest chat GPT, który w tym pomaga.
+Natomiast to do końca nie jest prawda, bo jak pokazałem Janowi pewien Docker Compose, który przygotowałem, to powiedział, no nie jest źle, ale można byłoby to zapisać trochę ładniej.
+Więc chat GPT w świecie.
+W świecie DevOps'owym pomaga tak samo jak w świecie programistycznym, czyli trzeba wiedzieć, jak się z niego korzysta, żeby móc z nim pracować.
+Natomiast do twojej opowieści dodałbym tylko jeszcze jedną rzecz, a mianowicie jeżeli ja jako programista miałbym wybrać jakiś format pliku, w którym przechowywał bym taką konfigurację,
+no to pewnie pomyślałbym sobie o jakimś JSON-ie, pomyślałbym sobie o jakimś może pliku CSV, może o jakimś XML-u.
+Natomiast Docker jest ewidentnie stworzonym produktem przez DevOps'ów, moim zdaniem, bo ci DevOps'i wybrali jaki format, Janku, powiedz, pochwal się naprzed nami, przed milionami słuchaczy.
+Jest to format YAML i czasami DevOps'i śmieją się sami z siebie w taki sposób, że zostali YAML developerami.
+Wzięło się to z tego, że nie tylko konfigurację Dockera, właśnie Docker Compose'a opisujemy.
+YAML'em, ale też tak naprawdę całą konfigurację dla Kubernetes'a również opisuje się YAML'em.
+Co prawda są dostępne inne formaty, z których można się korzystać, jednak one nie są popularne i są stosowane bardzo, bardzo rzadko.
+A YAML jest jednak takim wiodącym formatem.
+I to jest nie tylko Docker, to jest nie tylko Kubernetes, ale też na przykład Ansible, który jest takim narzędziem do konfiguracji,
+fizycznych serwerów, czy maszyn wirtualnych, do zarządzania nimi, który był bardzo popularny jeszcze przed Dockerem,
+przed konteneryzacją i przed podejściem chmurowym, też właśnie bazuje na YAML'u, też ta konfiguracja jest opisywana w YAML'u.
+Tak, więc YAML jest takim rozwiązaniem, które lubią DevOps'i, więc jeżeli za chwilę zobaczycie tego YAML'a i my wam parę rzeczy o tym YAML'u opowiemy, to się nie zdziwcie,
+że jest to dosyć takie, no...
+Nietypowe podejście, chociaż ludzie, którzy programują w Pythonie tego YAML'a całkiem rozumieją lepiej niż ci, którzy przywykli do rysowania klamerek i zamykania klamerkami.
+Ale o tym już porozmawiamy za chwilę, kiedy zmierzymy się z takim przykładowym właśnie Dockerfilem, który dla was przygotowaliśmy i omówimy wam, co w tym Dockerfile'u siedzi,
+jak ten Dockerfile wygląda, jakie sekcje w tym Dockerfile'u są ważne, no i może nie uprzedzając faktów, zapraszamy was do kolejnej lektury.
+No i może nie uprzedzając faktów, zapraszamy was do kolejnej lektury.
+No i może nie uprzedzając faktów, zapraszamy was do kolejnej lektury.
+No i może nie uprzedzając faktów, zapraszamy was do kolejnej lektury.
+Zapraszamy.

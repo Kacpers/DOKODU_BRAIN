@@ -1,0 +1,30 @@
+A praca domowa w tym tygodniu wygląda następująco.
+Zadanie pierwsze. Przygotuj funkcję, która zwróci tabelę zawierającą Customer ID oraz Order ID
+dla określonego argumentu Date Start oraz Date End, czyli zakres dat, na Order Date.
+Na przykład, jeżeli wykonamy SELECT gwiazdka FROM GET CUSTOMERS na takich datach,
+powinniśmy dostać Customer ID oraz Order ID zwrócone, tak jak widzicie.
+W zadaniu drugim. Przygotuj funkcję, która zwróci następujący wynik na podstawie identyfikatora zamówienia.
+Czyli mamy jakiś identyfikator, w wyniku dostajemy Total, Discount, no i Discounted Price.
+Czyli chcemy sobie przeliczyć po prostu wartość jednego wiersza, no i odjąć od niego również ten discount.
+Czyli tę obniżkę.
+Zadanie domowe trzecie. Przygotuj procedurę, która stworzy widok zawierający wszystkie zamówienia realizowane
+pomiędzy dwiema datami przekazywanymi w argumencie.
+Czyli ja pokazuję GET ORDERS BETWEEN DATES, no i w ten sposób ma mi się tworzyć widok pomiędzy tymi dwiema datami.
+Zadanie domowe czwarte. Przygotuj trigger, który zweryfikuje wartości wpisane do tabeli ORDERS tak,
+by wartość w kolumnie ORDERS została zweryfikowana.
+Zadanie domowe czwarte. Przygotuj trigger, który zweryfikuje wartości wpisane do tabeli ORDERS tak, by wartość w kolumnie ORDERS została zweryfikowana.
+W kolumnie ORDER DATE zawsze była wyższa niż w kolumnie REQUIRED DATE.
+Możecie po prostu te daty sobie raz jeszcze przećwiczyć.
+No i zadanie domowe piąte. Przygotuj nową tabelę SHIPMENT, która będzie zawierała etykiety do wysyłki i do wydrukowania.
+Za każdym razem, gdy zostanie dodane nowe zamówienie, to wartość wszystkich kolumn z prefiksem SHIP powinny być do niej kopiowane.
+Czyli jeżeli mamy kolumny SHIP COUNTRY, SHIP CITY itd.,
+to chcielibyśmy te kolumny wykorzystać i przenieść je do tabeli Shipment,
+tak żeby później ktoś wiedział, że z tej tabeli może wydrukować sobie etykiety.
+No i możemy się umówić też, że za każdym razem po prostu te dane
+powinny być usuwane, tak żeby mieć przy uruchomieniu takiej,
+a nie, przepraszam, to będzie trigger, więc absolutnie nie usuwamy reszty danych.
+I to byłoby na tyle. Bardzo dziękuję Wam za udział w tym module.
+Zapraszam Was już niedługo do kolejnego modułu,
+w którym zderzymy się z bazą danych nierelacyjną
+i porozmawiamy sobie o bazach nierelacyjnych.
+Do zobaczenia w nierelacyjnym świecie. Trzymajcie się. Cześć.

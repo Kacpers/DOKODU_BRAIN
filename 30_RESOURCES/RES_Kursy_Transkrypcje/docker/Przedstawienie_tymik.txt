@@ -1,0 +1,27 @@
+Czyli spotykamy się w drugiej lekcji, w której opowiemy wam coś o Janie, a później w trzeciej lekcji będziecie mogli posłuchać chwilę o Kacprze.
+Z racji tego, że żaden z nas nie lubi zbyt dużo mówić o sobie, bo też skromne z nas chłopaki, ja będę Janowi pomagał, a Jan będzie pomagał mi.
+Więc na początek może tak zacznę od czegoś prostego. Imię i nazwisko?
+Nazywam się Jan Tymiński.
+Gdzie można cię znaleźć w internecie?
+Można mnie znaleźć na mojej stronie jantymiński.pl, na której są odnośniki do pozostałych miejsc moich w sieci,
+czyli do mojego LinkedIna, do mojego Instagrama pod pseudonimem diving.devops, do mojego bloga technicznego dostępnego pod adresem tymic.me,
+a także można się zapisać na newsletter, który prowadzę i mam nadzieję w przyszłości znajdzie się tam także link do kanału,
+na YouTubie, gdzie chcę się dzielić wiedzą z zakresu chmury AWS-owej.
+Dlaczego zacząłeś dzielić się wiedzą w internecie?
+Dlatego, że pracując z ludźmi w zespołach widziałem, że jest taka jakby uniwersalna wiedza, która może się przydawać osobom, czy to początkującym w danym obszarze,
+czy cross-zespołowo, na przykład z Dockera, któremu poświęcony jest.
+Jest ten kurs, gdzie to jednak najwięcej korzystają z niego programiści, żeby mogli korzystać z niego w bardziej efektywny sposób, w lepszy, bardziej przystępny,
+co też poszerza możliwości dalszego rozwoju kariery i myślę, że jest to po prostu wartościowa wiedza, z której warto korzystać, żeby gdzieś tam te swoje umiejętności podnosić i stawać się coraz lepszym w naszej pracy.
+W którym roku zacząłeś pracę?
+W 2012 rozpocząłem swoją karierę tak naprawdę stażem na uczelnie, który był stażem wtedy jeszcze bezpłatnym, ale po tym stażu od razu podjąłem pracę zarobkową w tej firmie,
+pracując na początku jako wsparcie użytkownika, rozwijając się też jako administrator systemów informatycznych, Linuxa, sieci.
+No i gdzieś to ukierunkowało dalszą moją karierę, że związałem się na stałe z tymi środowiskami linuxowymi, z serwerami, później naturalnie poszedłem w kierunku już takiego pełnoprawnego devopsa.
+Okej i ostatnie pytanie. IT przestało istnieć. Czym się zajmujesz dzisiaj?
+To jest bardzo trudne pytanie. Najchętniej nurkowałbym zawodowo, natomiast w tej chwili nie mam jeszcze wystarczająco kompetencji,
+żeby na tym zarobić dobrze. Pewnie bym się zastanawiał, co byłoby zrobić najlepiej.
+Jednak trudno mi powiedzieć, bo jednak IT to jest ten wiodący obszar, w którym się specjalizuję, także nie wiem.
+Alternatywnie prawdopodobnie nurkowanie, ale 3 na 100% trudno mi w tym momencie powiedzieć.
+Czyli nie hodowla owiec w Bieszczadach?
+Zależy jak bardzo żona by naciskała. Myślę, że ona byłaby zachwycona z tytułu hodowli owiec w Bieszczadach.
+Natomiast mnie troszeczkę jednak taka wizja przeraża.
+Dziękujemy.

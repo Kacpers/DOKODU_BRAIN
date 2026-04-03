@@ -1,0 +1,71 @@
+I kolejna już lekcja, czyli lekcja 26 to funkcje matematyczne.
+Tych funkcji matematycznych jest całkiem sporo i tak jak przekazałem wam w zapowiedzi,
+tutaj nie będziemy się bardzo mocno nad nimi skupiali.
+Nie zależy mi na tym, żeby pokazać wam każdą jedną funkcję,
+tylko żeby pokazać przynajmniej te, z których ja najczęściej korzystam.
+Natomiast też oczywiście pokażę wam listę, gdzie możemy te funkcje wyszukać
+i jeżeli będą was interesowały, to jak najbardziej możecie też doczytać sobie po prostu o konkretnych funkcjach.
+Na początek ABS, czyli absolut, czyli wartość bezwzględna.
+Tu no oczywiście jeżeli chodzi o działanie, no to przekazujemy sobie 1 czy też minus 1,
+zawsze dostaniemy w wyniku 1.
+Użycie tej funkcji bardzo często polega na tym, że do jej środka wkładamy inną funkcję
+i po prostu w wyniku dostajemy wartość.
+Czyli zamienioną na wartość bezwzględną.
+Inne funkcje, których bardzo często używam, to są funkcje służące do zaokrąglania.
+Czyli funkcje seal, floor, round oraz truncate.
+Jeżeli chodzi o użycie funkcji seal, no to funkcja seal po prostu nam coś zaokrągli do góry.
+Nazwa seal wzięła się od słówka ceiling, czyli sufit, czyli zaokrąglenie do góry.
+Floor to jest zawsze zaokrąglenie w dół.
+Natomiast round to jest zaokrąglenie matematyczne.
+Czyli wszystko zależy od tego, jak chcielibyśmy sobie zaokrąglić daną liczbę,
+wtedy wybieramy odpowiednią funkcję.
+Jeżeli chodzi o truncate, czyli o wyczyszczenie, to truncate zawsze pozbywa się części dziesiętnej.
+No i tutaj kiedyś padło takie, pamiętam, zarzut na kursie.
+Ktoś mówi, to czym to się różni od flora, skoro ucina tylko część dziesiętną.
+No bo floor, jeżeli zaokrąglimy sobie w dół,
+wartość ujemną, to dostaniemy jakby minus 2,6 zaokrąglone w dół,
+da nam minus 3 w przypadku flora.
+Natomiast w przypadku z truncata dostaniemy minus 2,
+bo on po prostu zawsze ucina to, co jest po przecinku.
+Trzeba pamiętać o tym, że mamy też wartości ujemne,
+ale mówiąc szczerze, nie korzystam z tego truncata zbyt często.
+Dużo częściej korzystam z seala, flora i zwykłego rounda.
+Wszystkie te funkcje.
+Pozwalają nam również na zaokrąglenie do określonej dokładności,
+czyli do określonej liczby miejsc po przecinku.
+Ta dokładność jest drugim argumentem.
+Zobaczcie tutaj po prawej stronie.
+Jeżeli chciałbym sobie zaokrąglić coś do jednego miejsca po przecinku,
+to po prostu po przecinku wpisuję wartość 1.
+No i w ten sposób sobie to zaokrąglę.
+Kolejna funkcja matematyczna, która mi osobiście często przypada do gustu,
+to funkcja random.
+To jest określenie pseudolosowej wartości.
+Skąd to pseudo?
+No, ponieważ chyba nie tylko w Polsce, ale na całym świecie jest tak,
+że żeby powiedzieć, że coś zwraca losową wartość,
+trzeba mieć na to papiery.
+Dlatego jest to pseudolosowa wartość.
+Ale z punktu widzenia programistycznego jest to informacja zupełnie wystarczająca.
+Co prawda, no nie możecie na podstawie tej funkcji stworzyć kasyna,
+ale możecie losować wartości wtedy, kiedy będą potrzebne.
+A potrzebne mogą być na przykład wtedy,
+kiedy będziemy chcieli ułożyć sobie elementy w losowej kolejności.
+Czasem tak się zdarza.
+Ktoś mówi, słuchaj, posortuj mi to, zrób mi z tego jakąś losowość.
+I wtedy wykonujemy sobie order by random
+i właśnie dostajemy losową kolejność.
+Całkiem wygodna sprawa.
+Jeżeli chodzi o inne przykłady funkcji matematycznych,
+tak, to będzie taki bardzo krótki rozdział,
+to macie do dyspozycji ten link,
+czyli postgresql.org.doc.currentfunctions.math
+i tam zobaczycie,
+że tych funkcji jest bardzo dużo.
+Między innymi sinus, cosinus, tangens, cotangens,
+albo gcd, czyli greatest common divisor,
+czyli największy wspólny dzielnik,
+logarytm naturalny albo funkcja pi.
+Tych funkcji jest naprawdę sporo,
+no ale teraz tutaj nie chciałem się nad nimi skupiać.
+Zapraszam do kolejnej lekcji.

@@ -1,0 +1,4 @@
+Przechodzimy do sedna, zaczynamy omawianie pojęć i pierwszym pojęciem, które przygotowaliśmy sobie w naszym słowniczku jest kontener.
+I kontener jest to taka uruchomiona instancja aplikacji, na przykład pochodząca z naszego obrazu dokerowego, ale może być też z jakiegoś zewnętrznego obrazu i o tym będziemy w kursie rozmawiać.
+Jest to taka jednostka, która jest domyślnie ulotna.
+To znaczy wszystko co wydarzy się w środku takiego naszego kontenera znika po zakończeniu jego działania.

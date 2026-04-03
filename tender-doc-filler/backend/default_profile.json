@@ -1,14 +1,14 @@
 {
-    "nazwa_firmy": "Przykładowa Firma Sp. z o.o.",
-    "nip": "1234567890",
-    "regon": "123456789",
-    "krs": "0000123456",
-    "adres": "ul. Przykładowa 1, 00-001 Warszawa",
-    "adres_korespondencyjny": "ul. Przykładowa 1, 00-001 Warszawa",
-    "email": "biuro@firma.pl",
-    "telefon": "+48 123 456 789",
-    "osoba_kontaktowa": "Jan Kowalski",
-    "stanowisko": "Prezes Zarządu",
-    "status_przedsiebiorcy": "mikro",
-    "miejscowosc": "Warszawa"
+  "nazwa_firmy": "DOKODU Sp. z o.o.",
+  "nip": "5882473305",
+  "regon": "520149113",
+  "krs": "0000925166",
+  "adres": "ul. Kosynierów 76/22, 84-230 Rumia",
+  "adres_korespondencyjny": "ul. Kosynierów 76/22, 84-230 Rumia",
+  "email": "biuro@dokodu.it",
+  "telefon": "+48 508 106 046",
+  "osoba_kontaktowa": "Kacper Sieradziński",
+  "stanowisko": "CEO",
+  "status_przedsiebiorcy": "mikro",
+  "miejscowosc": "Rumia"
 }

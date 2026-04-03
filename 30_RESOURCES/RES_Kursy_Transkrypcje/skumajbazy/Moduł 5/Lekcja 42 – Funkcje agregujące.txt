@@ -1,0 +1,130 @@
+Funkcje agregujące
+Funkcje agregujące, czyli funkcje służące do tego, żeby wykonywać, które służą do tego, żeby wykonywać agregowanie danych, czyli count to było wynik do agregatu, czyli po prostu zagregowaliśmy sobie wiersze i powiedzieliśmy ile tych wierszy jest.
+Tylko, że wtedy agregowaliśmy nie po konkretnych grupach, tylko po całej tabeli, natomiast w momencie, w którym mówimy sobie już o grupowaniu, tak najbardziej możemy tych funkcji agregujących używać na poszczególnych grupach, na poszczególnych fragmentach.
+No i pierwszą funkcją, którą już poznaliśmy była funkcja count, oprócz tego używaliśmy też funkcji sum, ale oprócz tego mamy też, jak widzicie, taką funkcję jak average, która pozwala nam policzyć średnią arytmetyczną.
+Istnieją również funkcje max oraz min, które pozwalają nam znaleźć najmniejszą i największą wartość zestawienia.
+No i tutaj jeszcze taka ciekawostka, jest też taka funkcja, która nazywa się bool and oraz bool or i te funkcje sprawdzają, czy w danej grupie istnieje chociaż jedna prawda albo chociaż jeden fałsz.
+Oczywiście tam można dodawać warunki, testy logiczne, ale o tym dowiecie się już za moment.
+Najpierw porozmawiajmy.
+Mówimy sobie chwilę o tych prostszych funkcjach, czyli average, count, max, min i sum.
+To są funkcje, których używam zdecydowanie najczęściej.
+Więc, jeżeli chciałbym użyć na przykład funkcji max i odpowiedzieć na pytanie, jaka jest najwyższa cena produktów wewnątrz poszczególnych kategorii, no to mógłbym sobie wykonać zapytanie select category ID, przecinek z max na price, from products, group by category ID.
+Dzięki temu właśnie dostanę liczbę przedstawiającą ID kategorii, najwyższą cenę, jaka w tych kategoriach istnieje, no i wszystko jest zgrupowane po kategorii ID.
+Jeżeli interesowałaby mnie średnia cena metra, czyli jednostki miały w Paryżu w podziale na poszczególne dzielnice, to zobaczcie, mogę napisać zapytanie select district, nazwa dzielnicy, average price, from places to rent, where city równa się Paris, group by district.
+Zwróćcie szczególną uwagę na kolejność, czyli najpierw mamy where'a, później używamy polecenia group, to jest bardzo ważne.
+Jeżeli tego where'a by nie było, no to wtedy byśmy odnieśli się do wszystkich miast, nie tylko i wyłącznie Paryża.
+No i dzięki temu właśnie dostaniemy średnią cenę metra wewnątrz poszczególnych dzielnic, uwzględniając tylko i wyłącznie Paryż.
+Oczywiście, jeżeli chodzi o filtrowanie grup.
+To również jest to możliwe, ale za to odpowiada troszeczkę inna, inny element selekta, o którym też sobie dzisiaj jeszcze powiemy.
+Znaczy dzisiaj, nie wiem kiedy będziecie to oglądali, ale już niebawem.
+W kwestii bull and oraz bull or, zobaczcie, to wygląda tak.
+Select city, czyli wyświetl mi miasto.
+No i chcę odpowiedzieć na pytanie, czy wszystkie osoby z podanego miasta są pełnoletnie.
+Więc mogę wykonać select city, bull and.
+Age jest większe lub równe od osiemnastu.
+From friends, group by city.
+Czyli ja sobie to zgrupowałem na podstawie miasta, a on mi ma sprawdzić, czy wiek jest większy lub równe od osiemnastu.
+I to, co on zrobi, to on będzie brał tą jedną kolumnę dla każdej, dla każdego jednego wiersza w ramach jednej grupy, będzie sprawdzał ten warunek.
+I jeżeli ten warunek będzie zwracał za każdym razem true, no to z racji tego, że jest to and.
+To zwróci nam prawdę, jeżeli wszystkie wiersze zwrócą prawdy.
+Jeżeli chociaż jeden wiersz nie zwróci nam prawdy, no to niestety dostaniemy fałsz.
+Natomiast alternatywą do tego jest korzystanie z bull or, czyli czy ktokolwiek z danego miasta jest pełnoletni.
+Możemy to wykonać robiąc bull or age jest większe lub równe osiemnaście.
+From friends, group by city.
+Czyli dokładnie tak samo, tylko używamy innej funkcji.
+Bardzo przydatna sprawa, jeżeli na przykład, nie wiem.
+Szukamy kogoś, kto bardzo dobrze sprzedaje i teraz chcemy dowiedzieć się, czy ktoś osiągnął, czy ktokolwiek osiągnął wartość sprzedaży.
+A może czy ktokolwiek nie osiągnął tego tam progu sprzedaży.
+Albo czy jakakolwiek aplikacja nam się wysypała.
+Czy w ramach jakiegoś przedziału dat mamy jakikolwiek jeden czas odpowiedzi, który jest wyjątkowo wysoki.
+Albo wyjątkowo niski.
+Więc w ten sposób można naprawdę wykonywać wiele zapytań.
+Bardzo jest to pod tym względem przydatne.
+Polecam z całego serca.
+Ja zawsze mam problem z tym, żeby zrozumieć ten age, żeby sobie na niego spojrzeć.
+Ale w głowie bardzo mi pomaga to, że sobie właśnie wyobrażam, że on w każdej grupie wykonuje ten test.
+Potem z tych testów sprawdza, jakie są wartości.
+No i jeżeli jest wszędzie prawda, no to prawda.
+Jeżeli jest gdzieś fałsz, to fałsz.
+Oczywiście zależnie od tego, jakie funkcje używamy.
+Ale to takie wyobrażenie, jak te wiersze się zachowują, bardzo mi ułatwia.
+Czyli sobie po prostu wyobrażam, że najpierw to, co się dzieje, to najpierw dzieje się to.
+Czyli jakby przed zgrupowaniem on mi wykonuje te testy.
+Sprawdza mi te informacje.
+To oczywiście nie jest do końca prawda, ale tak sobie to sobie wyobrażam.
+Następnie później sobie to filtruje jakby.
+Sprawdza, czy wszędzie są same prawdy.
+No i wtedy to scala, porównując jeden, każdy kolejny rekord.
+Trochę sobie wyobrażam to, tak jakbym to pisał po prostu programując.
+Natomiast no, tak po prostu mam.
+Może Wam też to pomoże.
+Jeżeli chodzi o inne funkcje, w których nie będziemy się za mocno tutaj zagłębiali.
+Tylko ja nie jestem mocny ze statystyki.
+Tylko wiem, ale wiem, że część z Was może tego potrzebować.
+To zaznaczam, że są takie funkcje, które nazywają się funkcjami statystycznymi.
+Na samym dole widzicie tutaj link do dokumentacji, gdzie są one wszystkie opisane.
+Jest ich bardzo, bardzo dużo.
+Ale są jakieś kowariancje, korelacje i inne tego typu rzeczy.
+Wszystko to, co zawsze mnie przerażało na studiach w statystyce, tutaj też jest.
+Więc jeżeli komuś jest to potrzebne, to tylko zaznaczam, że też można jak najbardziej tego używać.
+I w ramach zapytań na Postgresie.
+Do Postgresa też można tego typu informacje zwracać.
+No i cóż, możemy sobie to przećwiczyć.
+Zadanie pierwsze.
+Chcemy znaleźć pierwsze i ostatnie zamówienie OrderDates z tabeli Orders.
+Pogrupowane według kraju.
+Czyli zobaczcie, mamy tabelę Orders.
+Interesuje nas najmniejsza i największa data.
+OrderDate z tabeli Orders.
+Chcemy, żeby wynik wyglądał mniej więcej tak.
+No i w zadaniu drugim.
+Chcemy znaleźć średni.
+Średnią ilość, czyli kolumna Quantity zamawianych produktów w tabeli OrderDetails dla poszczególnych ProductID.
+Czyli nie interesują nas nazwy produktów na razie, bo do tego musielibyśmy joinować.
+Tylko interesują nas średnie ilości.
+Czy to jest Average na Quantity.
+Ok.
+To 3 minuty dla każdego.
+I do zobaczenia w rozwiązaniu.
+No to co? Rozwiązujemy.
+Znajdź pierwsze i ostatnie zamówienie OrderDates z tabeli Orders.
+Pogrupowane według kraju.
+Czyli będzie nas interesowało na pewno OrderDate z Orders.
+No i interesuje nas jeszcze kraj.
+O tym nie możemy zapominać.
+Więc możemy sobie od razu też ten kraj tutaj dorzucić.
+ShipCountry. Ok.
+I teraz interesować nas będzie najmniejsze zamówienie, czyli MinOrderDate.
+I największe zamówienie, czyli MaxOrderDate.
+I to sobie grupujemy na podstawie kraju.
+Ops.
+Voila.
+Chociaż Voila to nie będzie po chyba w Argentynie.
+W Argentynie nie powiedzieliby Voila.
+W Argentynie powiedzieliby jakoś inaczej.
+No ale cóż.
+Nie wiem jak to będzie po hiszpańsku.
+Chyba tam jest hiszpański, nie?
+Więc możemy przejść do drugiego zadania.
+Znajdź średnią ilość quantity zamawianych produktów w tabeli OrderDetails dla poszczególnych ProductID.
+No to lecimy.
+Select OrderID.
+Oj, OrderID.
+I quantity.
+From OrderDetails.
+O.
+Tylko, że my chcemy średnią.
+Czyli Average.
+I to Average ma być liczone względem OrderID.
+No to GroupByOrderID.
+Prościzna?
+No.
+Jeżeli byście chcieli to jeszcze zaokrąglić, no to Round.
+Do dwóch miejsc po przecinku. O.
+Proszę uprzejmie.
+I jest.
+Udało się?
+To jeżeli się udało, to zachęcam was do tego, żebyśmy przeszli dalej,
+gdzie porozmawiamy sobie o tym, jak takie wartości możemy filtrować.
+Na przykład, co zrobić, jeżeli interesują mnie tylko średnie powyżej 10.
+Zapraszam do kolejnej lekcji.

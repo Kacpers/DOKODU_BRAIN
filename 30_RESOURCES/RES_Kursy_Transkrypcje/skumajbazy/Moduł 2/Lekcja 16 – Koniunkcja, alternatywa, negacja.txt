@@ -1,0 +1,118 @@
+I w tej lekcji porozmawiamy sobie o trzech trudnych słowach,
+gdzie przynajmniej dla mnie trudne słowo to takie, które ma więcej niż dwie sylaby.
+Koniunkcja, alternatywa oraz negacja.
+O co chodzi?
+Jeżeli chodzi o koniunkcję, no to koniunkcja to jest end,
+czyli łączenie dwóch wyrażeń słówkiem i czy też słówkiem oraz,
+jeżeli używamy ekscelowej nomenklatury.
+Drugie słówko to jest słówko or, czyli lub, alternatywa.
+Natomiast negacje na razie sobie zostawmy, to jest słówko nie.
+Więc jeżeli sobie założę, że wygram w Totolotka,
+no to wytypowałem takie dwa zdarzenia, które są mi potrzebne.
+Pierwsze to muszę wysłać kupon, natomiast drugie zdarzenie,
+no to muszą paść moje liczby.
+Moje napisałem w cudzysłowie, wiecie, chodzi o te, które wymyśliłem.
+No i w świecie mogą się stać cztery.
+Warianty.
+Pierwszy wariant jest taki, że wysłałem kupon i padły moje liczby.
+Drugi wariant, nie wysłałem kuponu, ale padły moje liczby.
+To chyba najgorszy z możliwych.
+Trzeci wariant to wysłałem kupon, ale nie padły moje liczby.
+Byłem tam wielokrotnie.
+No i ostatni, nie wysłałem kuponu, nie padły moje liczby.
+I jeżeli teraz założymy sobie, że żeby wygrać w Totolotka,
+potrzebujemy spełnić oba te wyrażenia,
+no to znaczy, że potrzebujemy pomiędzy tymi wyrażeniami postawić koniunkcję,
+czyli AND.
+Bo koniunkcja, no to jest właśnie, zwraca nam prawdę wtedy,
+kiedy wszystkie wyrażenia są prawdziwe.
+Natomiast OR, czyli alternatywa, zwraca prawdę,
+gdy przynajmniej jedno wyrażenie jest prawdziwe.
+No i zobaczcie, tak, tak, w obu przypadkach mam tak,
+no bo przynajmniej jedno się sprawdziło, no i oba się sprawdziły.
+No i zobaczcie, tak, tak, w obu przypadkach mam tak, no bo przynajmniej jedno się sprawdziło, no i oba się sprawdziły.
+W kolejnych wariantach tego AND-a już nie będę omawiał,
+bo jak widzicie, za każdym razem mamy NIE,
+gdyż on jest wymagający, on potrzebuje samych prawd.
+Natomiast OR, jak tutaj widzicie, w momencie, w którym nie wysłałem kuponu,
+ale padły moje liczby, to wygrałem.
+Jeżeli wysłałem kupon, nie padły moje liczby, to też wygrałem.
+No i tylko wtedy, jeżeli nie padły moje liczby i nie wysłałem kuponu, to nie wygrałem.
+Czyli tak naprawdę jest dużo łatwiej,
+bo wystarczy wysłać kupon,
+i mamy pewność, że nam będzie dane, tak?
+Podatek od marzeń tym razem okaże się zyskiem.
+Więc w tej lekcji ważna rzecz do zapamiętania jest taka,
+że jeżeli używamy OR, to wtedy musimy mieć przynajmniej jedną prawdę,
+natomiast jeżeli używamy AND-a, no to musimy mieć wszystkie testy prawdziwe.
+Jak to wygląda w SQL-u?
+Dokładnie tak samo, jak robiliśmy to dla jednego testu, dla jednego sprawdzenia.
+Na przykład select-product-name-supplier-id-category-id-from-products-where,
+no i tutaj mam dwa testy.
+Po pierwsze, supplier-id równa się 1, a po drugie, category-id równa się 1.
+I pomiędzy tymi dwoma wyrażeniami wstawiam właśnie słówko AND,
+żeby mieć pewność, że oba te wyrażenia zaszły.
+Te dwa słówka, czyli rodzaj łączenia testów, czy też używamy AND-a, czy OR-a,
+ma też niebagatelne znaczenie w momencie, w którym mówimy o przedziałach.
+No bo bardzo często, kiedy wykonujemy jakieś zapytanie, interesują nas osoby,
+które, które, nie wiem, data zatrudnienia mieści się w jakimś przedziale,
+albo które kupiły produkt w danym przedziale czasu,
+albo które kupiły produkty w określonej ilości.
+Wszystkie takie przypadki, zależnie od tego, czy interesują nas,
+interesuje nas część wspólna przedziałów, czy też suma przedziałów,
+są bardzo ważne, czy wybierzemy właśnie słówkę, słówko OR, czy wybierzemy słówko AND.
+Zobaczcie, jeżeli interesuje mnie, interesują mnie wartości mniejsze niż 50 lub większe niż 150,
+to tutaj koniecznie muszę używać słówka OR.
+Natomiast, jeżeli interesuje mnie część wspólna dwóch przedziałów,
+czyli wartości większe od 50 i wartości mniejsze od 150,
+no to wtedy muszę użyć słówka AND.
+Jeżeli bym się pomylił, no to w przypadku słowa OR nie mam takiej jednej liczby naturalnej,
+która by się zmieściła,
+w tym samym czasie mniejsza niż 50 i większa niż 150, ok?
+Bo minus 10 będzie zawsze po lewej stronie, no a plus 10 będzie też po lewej stronie,
+a powiedzmy 160 będzie po prawej.
+Nie mam takiej jednej liczby, która byłaby w obu miejscach jednocześnie.
+Natomiast w drugim przypadku, jeżeli się pomylę, dostanę absolutnie wszystko.
+Jeżeli na przykład wezmę sobie liczbę 20, no to liczba 20 nie jest większa niż 50,
+ale jest mniejsza niż 150.
+Czyli jeden z testów przechodzi.
+Ale czy to oznacza, że nas interesuje ta liczba 20?
+Nie, bo nas interesuje część wspólna dwóch przedziałów.
+Stąd też bardzo ważnym jest to, żeby właśnie takie warunki łączyć sobie AND-em,
+a w pierwszym przypadku łączyć OR-em.
+Zawsze warto się zatrzymać, jeżeli pracujemy z liczbami i chwilę się nad tym zastanowić,
+no bo jak zrobimy babola, to widzicie, że możemy dostać zupełnie niepożądane wyniki.
+Poznaną wiedzę trzeba sobie utrwalić i przećwiczyć,
+dlatego też przygotowałem dla Was tutaj dwa zadanka.
+W zadaniu pierwszym chcemy pobrać wszystkie produkty z tabeli PRODUCTS,
+których sprzedaż się zakończyła.
+No i żeby znaleźć te produkty, których sprzedaż się zakończyła,
+możemy użyć kolumny DISCONTINUED, no i ta wartość DISCONTINUED powinna być równa 1.
+Oraz takie, które pochodzą z kategorii, możemy użyć kolumny kategorii ID,
+właściwie te powinniśmy, o numerze 1.
+Natomiast w zadaniu drugim interesują nas wszyscy klienci,
+którzy pochodzą z miast Berlin lub Aachen.
+Do zobaczenia za chwileczkę.
+Okej, no to nie śpimy, lecimy, tylko kodujemy.
+Pobierz wszystkie produkty PRODUCTS, no to SELECT gwiazdka FROM PRODUCTS,
+których sprzedaż się zakończyła, czyli WHERE DISCONTINUED równa się 1,
+oraz pochodzą z kategorii, kategorii ID o numerze 1, czyli AND,
+kategorii ID równa się 1.
+Hops, i mamy 3 produkty.
+Kategoria ID 1 jest, DISCONTINUED, jeszcze sobie sprawdźmy, 1 jest.
+Zadziałało.
+W zadaniu drugim chcemy pobrać wszystkich klientów, czyli z tabeli CUSTOMERS,
+którzy pochodzą z miast Berlin lub Aachen.
+Więc SELECT ALL FROM CUSTOMERS,
+WHERE CITY równa się Berlin,
+OR, no bo LOOP,
+CITY równa się Aachen.
+Hops, no i mamy takich klientów dwóch,
+Alfreda i Drachenblata.
+Udało się.
+No to co, lecimy dalej.
+Równa się nie jest nam wystarczające, żeby wykonywać wszystkie zapytania,
+dlatego w kolejnej lekcji zobaczymy, z jakimi innymi operatorami możemy się tutaj mierzyć
+w przygotowywaniu naszych warunków.
+Chodźcie, zapraszam.
+Dzięki za uwagę.

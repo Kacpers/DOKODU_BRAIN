@@ -1,0 +1,47 @@
+Tyle mówiłem o tym sprzątaniu, oczyszczeniu, czas na odkurzanie, vacuum, czyli odkurzanie naszej bazy danych.
+O co z tym tematem chodzi i dlaczego warto raz na jakiś czas naszą bazę danych odkurzyć?
+Otóż, jeżeli pamiętacie odcinek o transakcjach, to wspominałem Wam o tym, że transakcje służą do tego, żeby wykonywać zapytania.
+I tak naprawdę w Postgresie jest tak, że każde jedno zapytanie jest opakowywane w transakcję.
+Co ciekawe, w momencie, w którym dwóch użytkowników wykona takie samo zapytanie, te zapytania są przechowywane też w dwóch użytkowników.
+W momencie, w którym w jednym czasie wykonamy dwa zapytania, to każde z tych zapytań też jest opakowane.
+To może spowodować, że w pewnym momencie ilość A, jeszcze jedna ważna rzecz, kiedy wykonuje się transakcja, to tak naprawdę to nie pracujemy na głównym rekordzie, tylko działa to inaczej.
+Działa to tak, że pracujemy na kopii, czyli dwóch użytkowników edytuje sobie na przykład jakąś rzecz w bazie danych, w tym momencie oni edytują kopię,
+a później te dwie kopie są po prostu scalane z...
+z naszą tabelą główną.
+Jeżeli natomiast w jakiś sposób zostanie przerwany ten proces, no to wówczas taka kopia tego rekordu gdzieś tam sobie wisi.
+I ona nam wisi i tą kopię trzeba właśnie odkurzyć.
+Jeżeli chodzi o odkurzenie, to no właśnie, po pewnym czasie zostajemy ze sporą ilością martwych wierszy, które trzeba odkurzyć.
+Jeżeli chodzi o to odkurzenie, to nie musicie się martwić, jeżeli na przykład...
+przed tym kursem już pracowaliście wcześniej z Postgresem i teraz nagle pada na was blady strach.
+Co się stało? Czy to znaczy, że moja tabela, moja baza może być wiele megabajtów chudsza?
+Może tak, ale nie zawsze.
+Od wersji 8.1 Postgresa wszystkie... a teraz pracujemy na 13.
+Wszystkie wasze bazy będą miały tak zwany autowacuum i autowacuum powoduje, że baza danych sama powinna się odkurzać z tych martwych transakcji.
+No oczywiście, tak jak mówiłem wcześniej, amarstwe dany, martwe transakcje, to jest coś, co trzeba też przetwarzać, więc to też nam spowalnia naszą bazę danych.
+Jeżeli chodzi o... o wacuum i o sprawdzenie, jak wygląda nasza sytuacja...
+no to mamy taką opcję, jak VacuumVerbose.
+Jeżeli wykonacie VacuumVerbose, to on wówczas przejrzy sobie bazy danych waszą...
+i wyświetli informacje, ile mamy tych wierszy tam, czy w wersji sobą.
+jeśli wykonacie billiub, to on wówczas przejrzy sobie bazę danych waszą i wyświetli informacje, ile mamy tych wierszy mają.
+Jeżeli wykonacie billiub, to on wówczas przejrzy sobie bazę danych waszą i wyświetli informacje, ile mamy tych wierszy mają.
+martwych tak tych tych rzeczy które możemy usunąć możemy albo sprawdzać
+całą bazę albo pojedynczą tabelę po prostu wpisując jej nazwę jeżeli
+natomiast chcielibyśmy opróżnić tę tabelę to ważne że to też musimy
+zrobić jako administrator i możemy to zrobić za pomocą polecenia vacuum
+full ale mówiąc szczerze mogę wam się przyznać że kiedyś zapuściłem to
+pytanie vacuum full bo chciałem wyczyścić bazę danych z tych martwych
+wierszy bo wiedziałem że jest ich bardzo dużo i okazało się że ta baza
+trochę zaczęła wolno działać bo po pierwsze właśnie to trwa długo a po
+drugie to kosztuje czyli na przykład dużo lepiej jest czyścić tabelę
+bazę tabela po tabeli i zapuścić powiedzmy to dla kilku tabel w nocy
+kiedy wiemy że użytkowników nie ma tak wielu niż sobie w środku dnia
+w największym piku działania aplikacji a gdy mi smutno jest i źle
+w vacuum full odpalam se to nie można tak robić no bo wasi użytkownicy
+będą na was bardzo bardzo źli że robicie coś takiego no bo nagle
+przestaną mieć możliwość pracy z danymi więc vacuum verbose wyświetla
+informacje o tym jaki jest stan waszej tabeli waszej bazy natomiast
+vacuum full czyści te bazę i usuwa wszystkie martwe transakcje
+jeżeli macie nowszą wersję postgresa tak jak wspomniałem aż tak bardzo
+tym się przejmować nie trzeba ale warto tego vacuum verbose zaraz na
+jakiś czas sobie odpalić i sprawdzić krótka lekcja ale jakże ważny temat
+więc nie przedłużam tego rozstania zapraszam was do kolejnej cześć

@@ -1,0 +1,344 @@
+A w tej lekcji porozmawiamy sobie o tym, co to są indeksy i jak się z nimi pracuje.
+Ogólnie, jeżeli chodzi o to, czym są indeksy, no to możecie sobie wyobrazić spis treści, który macie w książce.
+Jeżeli mielibyście znaleźć odcinek, no odcinek, rozdział w książce poświęcony bazom danych,
+a ta książka nie posiadałaby spisu treści, no to trzeba byłoby lecieć za każdym razem strona po stronie
+i poszukiwać tego konkretnego rozdziału.
+Co gorsza, nie moglibyście wtedy sobie zrobić zakładki, czy też, nie wiem, zagiąć kartki,
+chociaż nie pochwalam, ale nie moglibyście zrobić zakładki, bo to też jest forma indeksu.
+Czyli jeżeli wyobrażamy sobie świat bez indeksów, to za każdym razem musimy przeglądać tę książkę
+i szukać tego rozdziału, który nas interesuje.
+Bardzo męczące, co? No właśnie.
+I dzięki temu, że mamy indeksy, my możemy sobie stworzyć taką jakby,
+wyobraźcie sobie, że indeks to jest taka lista gdzieś obok, która zakłada, że bazę danych to jest właśnie strona 30,
+więc jak ktoś mówi, hej, pokaż mi bazę danych, to strona 30.
+Tylko tutaj nie chodzi o konkretne wartości, no bo bazę danych to jest rozdział.
+Jeżeli ja bym założył sobie indeks, to raczej zakładam sobie indeks dla konkretnego typu,
+czy na przykład dla wszystkich rozdziałów.
+Więc wtedy, jeżeli sobie założę indeks dla wszystkich rozdziałów, no to też łatwiej będzie mi szukać po rozdziałach.
+Ale na przykład, jeżeli bym chciał znaleźć podrozdział, no to musiałbym mieć drugi indeks dla podrozdziałów.
+To zobaczycie, że jak będziecie my wchodzili w głębie indeksy, jest taka półprawda, bo można też zrobić coś jeszcze.
+Natomiast te indeksy podstawowe właśnie wyglądają tak.
+No i najczęściej właśnie taka praca z indeksami, dzięki temu, że indeksy służą do przyspieszania,
+naszych zapytań, właśnie do tego służy i jest po prostu przedmiotem optymalizacji.
+Czyli bardzo często osoba, która zajmuje, programista, który zajmuje się przyspieszeniem bazy danych,
+najpierw robi sobie jakieś coś, co będzie miało za zadanie logować wszystkie na przykład wolne zapytania.
+Administratorzy mają takie różne sztuczki, które pozwalają na przykład do osobnego pliku z logami zrzucać wolne zapytania.
+Dzięki temu...
+Dzięki temu mają później możliwość sprawdzenia, jakie zapytania są tymi najwolniejszymi i na przykład dzięki temu, że dodają konkretne indeksy,
+te zapytania zaczynają działać szybciej.
+Jak działa dodawanie indeksów?
+Załóżmy, że bardzo często szukamy studentów studiujących na konkretnym semestrze, czyli wywołujemy zapytanie
+SELECT gwiazdka FROM STUDENTS WHERE semestr równa się 3, albo semestr równa się 4, albo semestr równa się jakikolwiek.
+I żeby to sobie przyspieszyć,
+możemy wykonać zapytanie CREATE INDEX
+gdzie jest nazwa indeksu
+ON nazwa tabeli
+w nawiasie nazwa kolumny.
+Czyli
+to zapytanie sprawi,
+że ono się oczywiście może wykonywać chwilę.
+Zależnie od tego,
+jak dużo mamy danych,
+to on będzie musiał je sobie tutaj przewertować i będzie musiał sobie ten indeks stworzyć.
+Natomiast to zapytanie właśnie spowoduje, że taki spis treści dla poszczególnych semestrów nam się stworzy.
+Skoro się stworzy, to gdzieś musi się on stworzyć.
+Może on też zawierać. O minusach takich posiadania indeksów też sobie zaraz powiemy.
+Natomiast
+to, co na razie musicie wiedzieć, to to, że właśnie ten spis nam się dzięki temu stworzy.
+Jeżeli
+to ma nam przyspieszyć wykonywanie zapytań,
+to dlaczego
+nie dodawać indeksów do wszystkich kolumn? Przecież
+potencjalnie możemy szukać po wszystkich.
+Jeżeli chodzi o te spisy, no to możecie sobie wyobrazić, że każdy taki spis zajmuje jakąś przestrzeń
+w pamięci.
+Czy też na dysku, czy w pamięci.
+Zależnie od tego, gdzie jest
+on przechowywany.
+Ale skoro zajmuje jakąś przestrzeń, no to
+trzeba tą przestrzeń dla niego przygotować.
+Nie jest to
+rekomendowane, żeby dodawać indeksy do wszystkich kolumn.
+Dodatkowo wyobraźcie sobie, co się stanie, jeżeli będziemy chcieli zmienić coś w naszej bazie danych, wykonać zapytanie update,
+albo wykonać zapytanie insert.
+Załóżmy, że w danej tabeli mamy
+50 000 indeksów, bo mamy tyle kolumn.
+No i w tym momencie okazuje się, że cała ta baza danych musi te 50 000 indeksów
+poprzerabiać.
+Oczywiście to za dużo, niech będzie 50 indeksów, a wierszy bardzo dużo.
+To za każdym razem trzeba te dane poprzerabiać i okazuje się, że te zapytania insert
+potrafią działać straszliwie
+wolno wtedy.
+Więc indeksy
+dodajemy tylko dla tych kolumn, które faktycznie często wykorzystujemy
+podczas zapytań.
+I tutaj
+też macie możliwość wybrania,
+jaki rodzaj indeksu was będzie interesował.
+Dokumentacja mówi tak.
+Each index
+type uses a different algorithm that is best suited to different type of queries.
+Czyli każdy
+rodzaj indeksu
+zawiera różne
+algorytmy,
+które służą, które pasują
+do różnych rodzajów zapytań.
+By default,
+czyli domyślnie, the create index command creates
+B3 indexes.
+Czyli domyślnie, jeżeli nie wskażemy rodzaju indeksu, to wówczas tworzy nam się ten indeks w rodzaju
+B3,
+which fit
+the most common situations,
+który pasuje do większości
+przypadków, do takich najbardziej standardowych przypadków.
+I ten B3
+jest bardzo podobny do indeksu hash.
+Je się zakłada
+w ten sam sposób, czyli właśnie create index bla bla bla.
+Tylko, że jeżeli chcemy stworzyć indeks, który jest w rodzaju hash,
+no to wówczas musi wystąpić słówko hash
+po nazwie.
+Widzicie, tu jest w drugim wierszu taka różnica. Create index bla bla bla on bla bla bla.
+Natomiast to te
+w przypadku hasha
+to wygląda dokładnie tak samo, tylko jest create index hash.
+Dlaczego indeks hash jest lepszy, czy też gorszy
+od indeksu B3?
+Indeks B3 służy do tego, żeby przyspieszyć działanie operatorów wszystkich,
+czyli większości, mniejszości, równości, mniejsze lub równe,
+between, is null i tak dalej.
+Dlatego też jest to,
+jest on domyślny.
+Natomiast hash
+przyspieszy tylko i wyłącznie operator równości.
+Czyli na przykład, jeżeli szukałbym po kategorii id,
+to raczej bym zrobił indeks hash,
+na przykład.
+No bo to jest klucz
+obcy,
+mogę więc założyć, że najczęściej będę przyrównywał wartości równe.
+Jeżeli natomiast jakaś wartość bierze udział przy wyszukiwaniu
+i chcę na przykład szukać po tych wartościach i szukam bardzo często,
+to warto wówczas założyć indeks B3.
+Nie chcę wam mówić,
+ile indeksów dodawać lepiej, ile indeksów dodawać gorzej, a liczba 4 to dużo czy mało,
+bo to zależy też od tego, ile macie wierszy i jak jest skonfigurowana wasza tabela.
+Wszystko
+trzeba robić
+z rozsądkiem
+i sprawdzając po prostu, czy
+szybkość zapytań nam się zwiększa, czy zmniejsza.
+O tej szybkości jeszcze też będziemy sobie rozmawiali w kolejnych modułach.
+I tutaj, jeżeli chodzi o B3,
+to on działa odrobinę wolniej.
+Czyli dodając indeks i tak zrobimy, będziemy mieli
+przyspieszenie,
+natomiast to przyspieszenie będzie mniejsze
+niż w przypadku indeksu hash.
+Natomiast oczywiście indeks hash nie pozwala wykonywać innych operatorów niż te,
+które wymieniłem.
+Czyli niż równa się,
+więc no to też jest jego
+pewien minus.
+Poza B3 oraz hash
+mamy takie dwa jeszcze operatory jak
+GIST i SPGIST.
+Jeszcze jest BRIN.
+GIST i SPGIST
+to są operatory, które służą do wykonywania operacji takich
+geograficznych,
+takich
+no dotyczących
+map, mówmy, geometrycznych.
+Na przykład możemy dostać, dostajemy też w ogóle dodatkowe operatory.
+Jeżeli chcielibyście znaleźć najbliższe
+punkty jakich
+lokalizacji,
+to można właśnie zrobić select
+gwiazdka from friends,
+na przykład najbliższych przyjaciół sobie szukamy.
+Select gwiazdka from friends,
+order by location, jest taki operator,
+no i wskazujemy jakiś konkretny punkt
+i on wtedy na podstawie tej bazy danych
+będzie w naszej tabeli friends
+będzie wyszukiwał tych przyjaciół, które są
+najbliżej nas.
+Nie chcę tak tego teraz tutaj szczegółowo omawiać, bo jakby nie jest to tematem tej lekcji,
+natomiast jeżeli ktoś z was ma ochotę poczytać sobie więcej,
+wiem, że też część z was siedzi w tych tematach gistowych,
+to
+po prostu zachęcam do tego, żebyście sobie otworzyli ten
+adres.
+No i jeżeli chodzi o dodawanie indeksów, to można je również dodawać do wielu kolumn.
+Dodawanie indeksów do wielu kolumn przydaje się wtedy, kiedy szukamy
+po wielu kolumnach.
+Na przykład
+select gwiazdka from students, where first name równa się coś tam and last name równa się coś tam,
+to jest takie zapytanie, które nam służy do szukania
+osób,
+po imieniu i po nazwisku.
+Jeżeli chcemy przyspieszyć tego typu zapytanie, możemy stworzyć indeks dla imienia i nazwiska naraz.
+Co będzie wyglądało tak?
+Create index
+student details index,
+a o tym wam nie powiedziałem, ale ta nazwa może być zupełnie dowolna.
+Możecie nadać taką nazwę, jaką tylko
+macie chęć tutaj dodać.
+On students
+i w nawiasie podajemy first name
+i last name.
+To jest takie wyrażenie, które spowoduje, że dla tych dwóch kolumn ten indeks zostanie dodany.
+Co ciekawe,
+to zapytanie
+przyspieszy wszystkie zapytania, w których bierze udział first name, last name.
+Jeżeli na przykład bierze udział first name, last name i jeszcze rok,
+to też, rok studiów,
+czy semestr,
+to też warto wtedy ten rok umieścić dalej,
+żeby najpierw wykonał po first name, last name, a potem jeszcze te dane przefiltrował sobie po roku.
+Takie zapytania działają szybciej niż zapytania, w których rok byłby na przykład na początku.
+Kolejnym rodzajem indeksów są indeksy unikalne, czyli to, co widzieliście wcześniej,
+gdzie dopisywaliśmy sobie słówko unique
+za nazwą kolumny, które powodowało, że nie można było
+wpisać drugi raz tej samej wartości.
+Jeżeli chcielibyście to zrobić
+po stworzeniu takiej kolumny,
+to nie ma problemu.
+Wystarczy wydać polecenie
+create unique index,
+to jest nazwa tego indeksu,
+on
+nazwa tabeli
+i nazwa kolumny,
+dla której chcemy, żeby ten indeks zadziałał.
+W ten sposób właśnie, jeżeli
+wykonamy takie polecenie i spróbujemy na przykład drugi,
+raz dodać taką samą osobę,
+to dostaniecie błąd mówiący o tym, że jest
+zduplikowany klucz
+i taki adres e-mail nie może zostać dodany drugi raz,
+skoro już raz dodany
+został.
+Inny przypadek
+to są indeksy częściowe, czyli też jest to nazywane indeksy filtrowe,
+czyli to jest partial index po angielsku.
+One służą do tego, żeby
+dodać, żeby przyspieszyć filtrowanie konkretnych wartości.
+To, o czym wam mówiłem na początku, że tworząc indeks my sobie przyspieszamy
+szukanie na przykład rozdziałów
+i wtedy dodajemy indeks dla rozdziału jako dla rodzaju.
+Ale jeżeli na przykład z tych wszystkich rozdziałów
+bardzo często szukamy rozdziału
+o indeksach,
+to można założyć też drugi indeks dodatkowo
+wskazujący konkretnie szukanie po indeksach.
+I wtedy Postgres gdzieś sobie w swojej pamięci
+zapisze, że jeżeli ktoś szuka
+rozdziałów, to wtedy
+takie i takie dane go
+najbardziej interesują.
+Tego typu indeksy często się przydają na przykład
+jeżeli mamy
+jakieś ogłoszenia
+i wiemy, że z większych miast zapytania idą częściej niż z mniejszych miast,
+to możemy sobie wyszukać te zapytania,
+które dotyczące miast, które występują najczęściej
+i dla tych konkretnych miast te zapytania dodać.
+Zdecydowanie nie ma sensu dodawać indeksów
+do zapytań, które występują raz dziennie.
+To byłoby zupełnie bez sensu.
+No i na przykład, jeżeli sobie wykonamy właśnie zapytanie
+Create index active users on users
+w nawiasie active, where active
+równa się 1,
+to będzie to zapytanie, które przyspieszy nam
+select gwiazdka from users, where active równa się 1, ale też przyspieszy nam
+where active równa się 1, and city równa się Gdynia.
+To samo
+co mówiłem przy tym poprzednim indeksie
+zakładanym na dwóch
+kolumnach.
+Odnośnie indeksów
+dostępne są też indeksy funkcyjne.
+Między innymi bardzo często osoby,
+żeby porównać sobie dwa
+stringi ze sobą
+używają operatora lower,
+używają funkcji lower,
+żeby zamienić
+daną wartość na małe
+litery.
+Ale tutaj
+czai się malutki haczyk.
+Zobaczcie,
+załóżmy, że ja sobie wymyśliłem, że bardzo często ludzie będą szukali po imieniu i po nazwisku naraz.
+Więc
+jeżeli szukają po imieniu i nazwisku, to wówczas ten mój indeks jest zależny od dwóch
+kolumn.
+Ale jeżeli któraś z tych kolumn się zmieni,
+to indeks powinien zostać przeładowany.
+To jest trochę skomplikowane dla Postgresa.
+Dlatego też jeżeli wykonacie zapytanie create index user first name last name on users concat first name last name,
+to on wyrzuci Wam błąd
+functions in index expression must be marked immutable.
+I to oznacza,
+że każda funkcja, czy też to jest concat, czy lower, czy initcap, czy jakakolwiek inna,
+ona jest,
+ma swój rodzaj
+i albo będzie właśnie immutable, czyli będzie uznana za niezmienialną,
+albo będzie mutable, czyli uznawana za zmienialną.
+I tutaj
+jeżeli
+concat jest oznaczony jako mutable,
+no to wówczas nie można dla tej funkcji dodać indeksu.
+To tak zaznaczam,
+po prostu, że może się zdarzyć, że taki błąd gdzieś zobaczycie.
+Natomiast dla funkcji initcap,
+czyli to jest ta funkcja, która zmienia nam wszystkie pierwsze litery w zdaniu
+na wielkie,
+już jak najbardziej można to zrobić.
+Czyli create index user upper first name on contacts, initcap first name.
+Jeżeli ktoś będzie się nazywał na przykład first name Anna Maria, załóżmy,
+to zarówno Anna, jak i
+Maria zapisałoby się
+wielkimi literami
+i dzięki temu, że używamy takiego indeksu, taka operacja działałaby
+szybciej.
+Jeżeli chodzi o indeksy,
+to byłoby to na tyle.
+Mam nadzieję, że temat wam się podobał. Polecam wam w ogóle to, żebyście zerknęli sobie w DBevera
+i tam
+są indeksy już na naszej tabeli Northwind
+pododawane.
+Więc jeżeli macie ochotę, to możecie sobie śmiało
+rozwinąć
+listę wszystkich tabel,
+możecie rozwinąć sobie
+public,
+rozwinąć sobie indeksy
+i zobaczyć, jakie indeksy tutaj zostały
+pododawane.
+Analogicznie też, jeżeli rozwinięcie sobie konkretną tabelę,
+to też tutaj indeksy dla konkretnej tabeli będą
+wylistowane.
+To często jest takie dosyć pouczające, bo możemy spojrzeć na ciekawie stworzoną tabelę i o, a tutaj dodali taki indeks,
+dodali taki indeks,
+znaczy tego typu zapytania mogą się wykonywać częściej niż
+inne.
+Jak te indeksy zobaczyć
+później? Jak zobaczyć ich wpływ?
+Powiemy sobie w kolejnych modułach
+przy okazji
+instrukcji explain.
+Na razie się na tym nie skupiamy, na razie zależy mi na tym, żebyście wiedzieli, że coś takie jak indeksy są.
+One bardzo często są używane też po prostu dlatego, żeby nawet zachować
+unikatowość kolumny,
+ale skoro już
+zaczęliśmy temat, to chciałem też powiedzieć o nim
+szerzej.
+Bardzo Wam dziękuję za te lekcje
+i do zobaczenia w kolejnej.
+Cześć!

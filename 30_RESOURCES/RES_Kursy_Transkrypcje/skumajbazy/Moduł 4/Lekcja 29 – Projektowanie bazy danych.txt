@@ -1,0 +1,114 @@
+Witajcie moi drodzy, przyszedł czas o rozmowie o naszych danych i tutaj nie chodzi mi o to, że te dane już sobie zgromadziliśmy i teraz chcemy na nich pobierać jakieś zapytania, tylko co zrobić, jeżeli chcielibyśmy zaprojektować naszą bazę danych i co zrobić, żeby to działało naprawdę, naprawdę dobrze.
+Ponieważ ja w swoim życiu widziałem bardzo wiele baz danych, które były po prostu zaprojektowane źle i pobieranie danych z tych baz danych było mega utrudnione, więc tutaj w tej lekcji chciałem Wam sprzedać kilka takich sztuczek, kilka takich pomysłów, co należy zrobić, żeby działało i żeby się za bardzo nie narobić.
+Więc po pierwsze, moja taka sugestia to jest dobrze poznaj wymagania danego fragmentu projektu.
+O czym mówię? Mianowicie nie ma sensu.
+Najczęściej nie ma sensu od razu siadać i projektować całej bazy danych dla całego projektu.
+Dużo lepiej jest się skupić na tym, żeby zaprojektować sobie jakiś wycinek, czyli na przykład, jeżeli wiem, że będę zarządzał teraz produktami, bo robię sklep internetowy, no to biorę sobie na tapetę tabelę products i tutaj, jeżeli chodzi o układanie tych danych i w tym module też zobaczycie, jeżeli sobie stworzycie na przykład Excela, to jak za pomocą normalizacji,
+czyli takiego upraszczania, można spowodować, żeby ten Excel został, no trochę tak automatycznie zamieniony na prawdziwą, bardzo dobrze działającą bazę danych.
+Dlaczego warto poznać dobrze wymagania projektu? Bo zobaczycie, że tutaj, jeżeli coś zapiszemy źle na początku, coś zaprojektujemy źle, to potem może się okazać, że ta decyzja ciągnie się za nami i ciągnie.
+I trudno jest, jeżeli już mamy jakiś sklep internetowy, to może się okazać, że ta decyzja ciągnie się za nami i ciągnie.
+I trudno jest, jeżeli już mamy jakiś sklep internetowy, to może się okazać, że ta decyzja ciągnie się za nami i ciągnie.
+Jeżeli mamy jakąś ilość danych w bazie, czy też już napisaliśmy program do tego, to później trudno jest tę część przemodelować.
+To jest trochę tak, jak z projektem domu. Jeżeli sobie zaprojektujemy przechodnią łazienkę, no to później z tą przechodnią łazienką trzeba będzie żyć.
+Nie mam przechodni łazienki.
+Po drugie nie staraj się ogarnąć wszystkiego naraz.
+Mam wrażenie, że w momencie w którym ktoś patrzy na bazę danych i od razu próbuje całą tę wielką część zaprogramować t,
+Mam wrażenie, że w momencie, w którym ktoś patrzy na bazę danych i od razu próbuje całą tę wielką część zaprogramować Louis,
+że nie skupia się na wycinku, to po prostu i tak w wielu miejscach zachodzą problemy,
+później są różnice, no i później trzeba z tego wychodzić.
+Lepiej jest się skupiać zdecydowanie na fragmencie, dobrze go poznać
+i w ten sposób sobie radzić.
+Po trzecie, jeżeli tak jest Ci wygodniej, to jak najczęściej możesz rysować ERD.
+ERD to są takie diagramy, te, które widzieliście w momencie,
+w którym klika się na pokaż mi schemat, to pokazują się takie tabele
+w formie takich prostokątów i między nimi są strzałki.
+O tych strzałkach też sobie będziemy dzisiaj mówili,
+natomiast ważne jest to, żebyście też często sobie to wizualizowali
+i na przykład u mnie było tak, że na początku po prostu,
+jak miałem zaprojektować sobie jakąś bazę danych,
+to brałem dużą kartkę w kratkę i sobie rysowałem wszystkie te rzeczy odręcznie.
+Nie wiem dlaczego, jakoś tak było mi łatwiej.
+Po prostu wypisywałem sobie nazwy kolumn, później sobie rysowałem te strzałki,
+wiecie, tak z linijką, ładnie wszystko,
+kolorowo i później od razu miałem też taką formę dokumentacji,
+którą mogłem przerysować w komputerze i się z kimś podzielić,
+ale jakoś tak łatwiej było.
+Po prostu kładłem się na podłodze na brzuchu i sobie wszystko to rozrysowywałem.
+No i po czwarte, warto podchodzić do projektu iteracyjnie,
+czyli w momencie, w którym zaprojektujemy bazę danych,
+danego fragmentu, warto sobie zrobić przerwę, zająć się czymś innym,
+po chwili wrócić do tej bazy danych i raz jeszcze zweryfikować,
+a to, co zrobiliśmy.
+Tutaj jest takie trudne słowo, redundancja.
+Redundancja to są powtórzenia.
+O redundancji będziemy mówili też więcej, jak będziemy rozmawiali o postaci normalnej,
+natomiast tutaj taka rada ode mnie, żeby nie zakładać,
+że coś jest zrobione po pierwszej sesji,
+bo bardzo często takie rzeczy wychodzą w kolejnych sesjach.
+No i też w momencie, w którym zaprojektujecie jakąś bazę danych,
+warto się skonsultować z innymi osobami, które są w projekcie,
+bo ta decyzja naprawdę jest bardzo ważna.
+I często osoba, która ma większe doświadczenie,
+w ramach danej domeny, może wam powiedzieć,
+że słuchaj, ale to jest źle, bo w tym przypadku będzie jeszcze to i to i to.
+Nie możesz tak zrobić, bo musisz to przewidzieć,
+że na przykład tutaj założyłeś, że to zawsze będzie warczar,
+ale czasem może być integer, więc lepiej byłoby to jakoś tam porozbijać,
+tak żeby później efektywniej z tych danych korzystać.
+To takie kilka rad ode mnie.
+Jeżeli chodzi o to, czym jest redundancja, to już wstępnie o tym powiedziałem.
+Redundancja to jest powtarzanie tych samych informacji.
+Bardzo często w naszych bazach danych powtarzamy się.
+Używamy, na przykład zamiast tworzyć sobie słowniki,
+czyli takie zbiory danych, z których później będziemy mogli korzystać,
+po prostu na sztywno wbijamy sobie tekst do bazy danych.
+To ma swoje minusy.
+Minusem, na przykład w Excelu, spójrzcie na Excela.
+W Excelu jest tak, że w momencie, w którym patrzymy sobie na tabelę,
+to w każdym wierszu wszystkie dane nam się powtarzają.
+I teraz wyobraźcie sobie, że chcemy zmienić, poprawić jakąś literkę zamiast,
+nie wiem, miasta,
+Warszawa, chcielibyśmy mieć miasto Warszawa z wielkiej litery.
+No i teraz okazuje się, że jedynym w sumie sposobem, żeby zrobić to szybko,
+to jest użycie edycja Znajdź Zamień i po prostu na podstawie tego szukamy tej Warszawy.
+Natomiast jeżeli byśmy stworzyli sobie zupełnie osobny zbiór miast,
+w którym pojawiłaby się też ta Warszawa i byśmy korzystali z tego zbioru,
+no to zdecydowanie moglibyśmy korzystać z tych danych efektywniej,
+no bo po prostu zmienilibyśmy to w jednym miejscu.
+Jeżeli tego nie zrobimy w ten sposób,
+to po pierwsze nasze dane zważą znacznie więcej, no bo po prostu powtarzamy się.
+No i to przekłada się też na to, że nasza baza pracuje coraz wolniej.
+Dodatkowo, jeżeli też w tej lekcji rozmawiamy o indeksach,
+więc jeżeli dowiecie się o tym, że założycie indeks na jakąś dużą kolumnę
+tekstową, no to też znacząco wpłynie to negatywnie na waszą bazę danych.
+Po drugie, ciężej o zmiany.
+To jest to, o czym powiedziałem przed chwilą, że jeżeli będziemy chcieli zmienić
+obszar z małej litery na wielką, to nagle okaże się, że trzeba zmienić absolutnie
+wszystko. No i zobaczcie tutaj mały przykład.
+Załóżmy, mamy taką sytuację jak właśnie ID, Personal Name, City i Gender,
+czyli stworzyliśmy sobie taką tabelkę z osobami.
+No i możemy równie dobrze zrobić rzecz
+następującą, a mianowicie w opcji drugiej Personal Name zostawiamy.
+Natomiast City ID i Gender ID przechowujemy w tej postaci, w postaci liczb,
+które jest dużo lżejsze.
+Natomiast miasta i płucie przesuwamy do osobnych tabel.
+Nie bójmy się tworzyć tabel.
+Tworzenie takich tabel słownikowych jest bardzo, bardzo dobre.
+Zdarzały mi się projekty, gdzie np.
+była jedna tabela słownikowa, gdzie
+dodatkowa kolumna mówiła o tym, co przechowujemy w tej tabeli.
+Czyli np.
+miałem tabelę Dictionary, w której do tabeli miałbym ID, Type i Value, gdzie Type to
+byłoby City i Gender, natomiast Value to byłoby Warszawa i Kobieta.
+To oczywiście przełożę się na to, że tabela będzie działała wolniej.
+Kiedy tych danych będę miał strasznie dużo, to nie jest zbyt efektywne, ale też
+jeżeli boimy się wielu tabel albo wiemy, że takie słowniki chcemy tworzyć sobie
+dynamicznie, to też w pewien sposób może być nam łatwiej.
+Tu jest jeszcze jedna rzecz do poprawy
+ewidentnie, a mianowicie to, co powinienem zmienić, to Personal Name powinienem
+rozbić na First Name i na Last Name. Tego typu dane też powinny być podzielone,
+ale o tym też sobie będziemy jeszcze mówili przy okazji postaci normalnej.
+Ten temat projektowania baz danych tak
+sobie krok po kroku, więc skoro widzicie, że parę razy pojawiło nam się słowo ID, to
+warto byłoby sobie powiedzieć, czym to ID czy też City ID jest.
+Zapraszam Was do kolejnej lekcji, w której porozmawiamy o kluczach.

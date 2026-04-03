@@ -1,0 +1,128 @@
+I tak jak obiecałem, no wiemy już jak ograniczać wyświetlane kolumny,
+potrafimy już sobie zastosować jakieś działania matematyczne na tych kolumnach,
+potrafimy zdecydować o sortowaniu, o tym jakie rekordy w jakiej kolejności
+mają nam się wyświetlić. Teraz przyszedł czas na to, żebyśmy porozmawiali sobie
+o tym jak filtrować dane, czyli co możemy zrobić, żeby wyświetlały nam się
+mniej danych, a nie wszystkie. Więc pierwsze, co musimy wiedzieć,
+żeby zacząć filtrowanie jest to to, jak wygląda takie zapytanie.
+Nawet się zremowało. Czyli select co, to już wiemy, from skąd, to już wiemy
+i dochodzi nam kolejny punkt naszego programu, a mianowicie where, czyli gdzie.
+Czyli filtrowanie. Jeżeli chcielibyście później zastosować zmianę kolejności,
+czyli order, no to właśnie order znajduje się również za where.
+I teraz, jeżeli chodzi o filtrowanie, to filtrować możemy tak, że wygląda ono
+poprzez kolumna, operator, wartość. Jeżeli chodzi o kolumnę, no to może być to
+po prostu nazwa kolumny, czyli na przykład first name, last name, age, birth date, tak?
+Wszystkie te dane, które...
+które przetwarzaliście w kolumnach właśnie występują na samym początku.
+Później jest operator. Poprzez operator rozumiem operator logiczny, który stwierdzi,
+czy na przykład wartość jest równa, albo czy wartość jest większa, albo czy wartość
+jest mniejsza i tak dalej, i tak dalej. Za operatorem wstawiamy wartość.
+I teraz uwaga, pamiętajmy o tym, że jeżeli wartość ma być stringiem,
+no to musimy użyć pojedynczych apostrofów wokół tej wartości.
+Czyli na przykład, jeżeli chciałbym sprawdzić, czy moje imię to Jan, a to drugie imię,
+ale to mniejsze o to, to wtedy wykonujemy first name, równa się, tutaj uwaga,
+pojedyncze równa się, no i w apostrofach wpisujemy Jan. Jeżeli chciałbym stwierdzić
+coś liczbowego, na przykład numer buta, to czy numer buta równa się 46?
+Jeżeli tak, to prawda, jeżeli nie, to nie. I to spowoduje, że tylko dostanę te rekordy,
+które spełniają ten wymóg.
+To zostanie wykonane w taki sposób, że on po prostu przejdzie sobie po rekordach,
+rekord po rekordzie i będzie stwierdzał, dla których rekordów to wyrażenie,
+które znajduje się za where'em zwraca prawdę. Jeżeli wyrażenie za where'em zwraca prawdę,
+no to wtedy taki rekord nam zostanie. Jeżeli zwraca fałsz, no to taki rekord zostanie ukryty,
+schowany, po prostu go nie będzie. Bardzo ważne jest to, żebyście też wiedzieli,
+jak działa kolejność wykonywania zapytania SELECT.
+Ponieważ zapytanie SELECT wykonuje się w określonej kolejności.
+I znając tę kolejność, też troszeczkę łatwiej jest nam je zrozumieć.
+Do tej układanki, którą widzisz teraz na ekranie, będziemy sobie sukcesywnie dodawali jeszcze kolejne podpunkty.
+Jeżeli myślimy o tym w ten sposób, no to też nam jest trochę łatwiej to później zrozumieć,
+dlaczego zapytania wykonują się tak, a nie inaczej.
+Na początek bierzemy słówko FROM, no bo zapytanie musi wiedzieć skąd, z jakiej, na jakiej tabeli działa, jaka tabela jest tą tabelą, która ma się.
+No bo zapytanie musi wiedzieć skąd, z jakiej, na jakiej tabeli działa, jaka tabela jest tą tabelą, która ma się.
+No bo zapytanie musi wiedzieć skąd, z jakiej, na jakiej tabeli działa, jaka tabela jest tą tabelą, która ma się.
+Następnie używamy słówka WHERE.
+Czyli ja muszę wykonać operacje na wszystkich kolumnach, które znajdują się w tym zapytaniu.
+I skoro wykonałem FROM, no to WHERE świadczy o tym, że znam wszystkie kolumny, absolutnie.
+Kolejnym słówkiem jest słówko SELECT.
+Czyli w momencie, w którym wskażę mu nazwę tabeli, na której chce pracować,
+określiłem filtr, to już teraz wiem, że moje zapytanie będzie działało szybciej,
+Określiłem filtr, to już teraz wiem, że moje zapytanie będzie działało szybciej,
+ponieważ będzie wskazywało określone kolumny tylko z nadanych, które już sobie pobrałem.
+To jest całkiem logiczne.
+Jeżeli chciałbym przekazać jakąś ważną informację i nie chciałbym powtarzać je wielokrotnie,
+no to najpierw bym starał się zmniejszyć ilość osób, którym te informacje muszę przekazać,
+a nie chodzić po wszystkich i dopiero wtedy sprawdzać, czy mogę im taką informację przekazywać.
+Więc później mamy select.
+No i na samym końcu mamy order by.
+Czyli jeżeli już wykonaliśmy pracę związaną ze wskazywaniem konkretnych informacji,
+filtrowaniem oraz wybieraniem kolumn,
+no to dopiero wtedy możemy sobie te dane właśnie posortować,
+tak żeby zapytania działały wydajnie.
+Ale oczywiście, tak jak wspomniałem, to jeszcze nie koniec tej układanki.
+Do tego będziemy dodawali sobie jeszcze kolejne jej elementy.
+I tutaj, jeżeli chcielibyście sprawdzić, czy właśnie wartość pokrywa nam się ze stringiem,
+no to można wykonać studenci, gdzie imię równa się Jan
+i tutaj pamiętamy o tych ciapkach, jak to mówią zawsze moi kursanci,
+muszą być zawsze apostrofy.
+Jak gdzieś użyję słowa ciapki, to przepraszam, to nie wynika z mojego braku profesjonalizmu,
+czy też z tego, że nie wiem, czy to jest apostrof,
+tylko po prostu wszyscy zawsze na kursach mówili ciapki, więc jakoś tak się nauczyłem.
+To wszystko przez stu kursantów.
+Więc drugie zadanie jest pozbawione tych apostrofów,
+no bo porównujemy sobie coś z liczbą.
+I to ważna sprawa, pamiętajcie o tym, że jeżeli porównujemy coś z liczbą,
+to te apostrofy nie są namalowane.
+Nie są nam potrzebne.
+No i w ten sposób właśnie pobierzemy sobie osoby studiujące na trzecim semestrze,
+no a w pierwszym przypadku podejmiemy sobie tylko te osoby, które mają na imię Jan.
+W kolejnych przykładach, które będą troszeczkę bardziej rozbudowane,
+ja będę odpuszczał sobie ten początek.
+Czyli to, co widzisz teraz, select from,
+będzie zamienione na trzy kropki,
+więc po prostu tam trzeba będzie sobie wyobrazić, że coś jest.
+Tak uprzedzam, żebyście wam się nie wydawało, że to jest,
+nagle pomijam te wartości,
+to całość jest potrzebna,
+dlatego po prostu nie ma sensu tylko za każdym razem powtarzać,
+czy też wymyślać jakichś konkretnych danych, które pobieram,
+jeżeli to, co jest kluczowe, to jest to, co jest w łeże.
+No i tu, żeby nie było, że tylko ja gadam,
+a wy nie macie okazji się wykazywać,
+no to daję wam taką okazję, daję wam taką szansę.
+W zadaniu pierwszym mamy pobrać wszystkich klientów,
+czyli customers pochodzących z miasta, kolumna city, London,
+posortowanych według contact title.
+Następnie w zadaniu drugim mamy pobrać wszystkich klientów o stanowisku,
+czyli jakimś contact title, które nazywa się sales representative,
+posortowanych według miasta, city.
+Jeżeli mówię gdzieś o tym, że mają być posortowani,
+no to tak samo jak SQL uważam, że domyślnie jest to sortowanie rosnące,
+więc poproszę was o posortowanie rosnące.
+Trzy minuty dla każdego i do zobaczenia.
+Okej, jak to będzie wyglądało?
+Pobierz wszystkich klientów, no to select all from customers pochodzących z miasta city,
+no to where city równa się, city ma być London, no to London.
+Jak sobie to wykonam, no to mam ich wszystkich.
+I jeszcze ważna sprawa, mają być posortowani według contact title,
+czyli order by, no chodź, contact title, ops, zadziałało.
+W drugim zadaniu natomiast mamy pobrać wszystkich klientów
+o stanowisku contact title, sales representative
+i mają być posortowani według miasta.
+No to znowu select gwiazdka from customers where contact title
+równa się sales representative, order by city, ops, zadziałało.
+I tutaj bardzo ważna sprawa,
+która różni, wyróżnia Postgresa na tle innych tabel.
+Postgres zwraca uwagę na wielkość liter.
+Jeżeli sales representative ma oba wyrażenia zapisane z wielkiej litery,
+to i tutaj muszę zastosować wielką literę.
+Jeżeli zastosuję małą, to nie dostanę nic.
+Jeżeli zastosuję wielką, to dostanę wszystko.
+Bardzo ważna uwaga.
+Jeżeli chcielibyśmy tę uwagę ominąć,
+czyli chcielibyśmy pobierać te dane niezależnie od wielkości liter,
+no to trzeba byłoby zarówno
+kontakt title jak i to, co przekazujemy po prostu zamienić sobie na małe litery.
+Tak byłoby najprościej, ale to dopiero jest kolejny moduł.
+I w tej części wszystko zostało już powiedziane.
+Zapraszam was do kolejnej lekcji,
+w której porozmawiamy sobie o różnych łączeniach naszych warunków.
+Do zobaczenia.

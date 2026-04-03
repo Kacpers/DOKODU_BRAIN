@@ -1,0 +1,10 @@
+Pierwszym poleceniem z naszego słowniczka jest polecenie from i zaczynamy z nim nieprzypadkowo,
+dlatego że tak naprawdę każdy dockerfile rozpoczyna się właśnie tym poleceniem, tą instrukcją, dyrektywą.
+Pewnie tych słów będziemy tutaj używać zamiennie.
+Dzieje się tak dlatego, że from jest wykorzystywany do powiedzenia naszemu dockerfile'owi, z czego chcemy budować nasz obraz, co jest bazą tego naszego obrazu.
+I tutaj już wspominaliśmy o tym, że bazą mogą być obrazy dostępne już w sieci.
+Może to być Python, może...
+Może to być, nie wiem, Postgres, dowolny obraz tak naprawdę, który jest dostępny na dockerhubie.
+Może to być nasz obraz już przygotowany, zabezpieczony na przykład zgodnie z wymaganiami naszej organizacji, na bazie którego możemy dalej budować.
+I właśnie polecenie from wyznacza ten bazowy obraz, z którego korzystamy, żeby na jego podstawie zbudować,
+nasz gotowy, docelowy obraz, taki jaki chcemy, żeby on był.

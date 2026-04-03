@@ -1,0 +1,51 @@
+W kolejnym module czeka nas casting i poprzez casting nie spodziewajcie się,
+że tutaj będę was nagrywał, czy będę was prosił o próbkę waszego głosu,
+tylko casting w tym przypadku, w przypadku Postgresa dotyczy zmieniania typów,
+czyli coś co jest integerem, coś co jest liczbą całkowitą może nagle stać się tekstem,
+coś co jest tekstem może stać się liczbą i tak dalej.
+Jest parę momentów, w których nam się to przydaje,
+chociażby w momencie, w którym trzeba wykonać jakąś operację,
+na przykład właściwą dla tekstu, a to co mamy w kolumnie to jest liczba.
+Wówczas najpierw trzeba właśnie wykonać takie rzutowanie, taki casting
+i następnie można wykonać określoną operację.
+Ale okej, dość gadania, przejdźmy do lekcji.
+Więc, no tak jak już wspomniałem przed momentem,
+casting jest to zadanie, działanie, które służy do zamieniania jednego typu w inne.
+Na przykład możemy zamienić string, bo pobraliśmy sobie dane jako string
+i chcemy je zamienić na datę, albo na przykład wycięliśmy ten string z czegoś,
+czy wykonaliśmy jakąś operację i dopiero wtedy chcemy z tego zrobić datę.
+I na wykonanie takiego castingu są dwa sposoby.
+Sposób pierwszy jest taki, że można użyć funkcji, która nazywa się cast.
+Zobaczcie, mamy funkcję, która w nawiasie przyjmuje jakiś argument,
+na przykład raz, dwa, trzy, które jest stringiem, bo widzimy apostrofy,
+więc wiemy, że jest string.
+No i dodajemy słówko sInteger.
+W ten sposób będziemy wiedzieli, że funkcja ta jest i będzie,
+ta funkcja zwróci nam po prostu liczbę całkowitą.
+Polecam wam tutaj uruchomić sobie DBWare'a, ja tego nie będę robił,
+ale możecie śmiało te kwerendy wpisywać w pole do kwerend,
+wykonywać Ctrl Enter i za każdym razem będziecie widzieli, co jest zwracane.
+Natomiast u góry w etykiecie column wyświetli wam się w tym miejscu po prostu typ.
+Na jaki zamieniliście daną wartość.
+Innym przykładem wykonania rzutowania na Integer może być taki operator,
+który składa się z dwóch dwukropków.
+Czyli jeżeli sobie wykonam raz, dwa, trzy, dwukropek, dwukropek Integer,
+to również zamienię taką wartość na liczbę całkowitą.
+Innymi przykładami może być właśnie wspomniane wcześniej zamienianie stringa na datę,
+które będzie wyglądało dokładnie tak samo, czyli mamy w apostrofach podane coś,
+co bardzo przypomina datę.
+Następnie robimy dwukropek, dwukropek, wpisujemy date i od tej pory będzie to data.
+Albo jeżeli chcemy zrobić liczbę z dwoma miejscami po przecinku,
+możemy taką liczbę sobie zrzutować, zamienić na double, wykonując dwukropek, dwukropek, double.
+No i ostatnia opcja, na przykład jeżeli pobraliśmy sobie rok
+i na przykład teraz ten rok chcielibyśmy zamienić na string,
+no to żaden problem, po prostu wykonujemy sobie year, dwukropek, dwukropek, string from students,
+i ten rok odebrany właśnie stanie się wówczas stringiem.
+To się przydaje też szczególnie wtedy, kiedy na przykład za pomocą określonych funkcji
+wycinamy sobie fragment tekstu z kolumny.
+No bo jeżeli wycinam fragment tekstu z kolumny, to w tym momencie wycinam tekst z tej kolumny.
+Natomiast ten fragment jak najbardziej może być liczbą, więc wtedy, żeby zamienić to na liczbę,
+po prostu potrzebujemy sobie właśnie to castnąć.
+I to byłoby na tyle, jeżeli chodzi o tę krótką lekcję.
+Zapraszam Was do kolejnego modułu, gdzie sobie trochę pofiltrujemy.
+Do zobaczenia!

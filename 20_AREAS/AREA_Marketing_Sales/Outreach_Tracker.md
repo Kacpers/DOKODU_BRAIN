@@ -20,11 +20,11 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 | 2b | Rossmann SDP | Piotr Jugiel | IT Director / Consumer Systems & Data Analytics | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 2c | Rossmann SDP | Anna Hesiak | Analityk Procesów / Dział Technologii i Innowacji / RPA / AI | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 3 | CAPITAL SERVICE S.A. | Marzena Szulim | Head of Risk and Operations, Board Member | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
-| 4a | UNIQA Polska | Błażej Misztal | Lider Zespołu Gen AI i Automatyzacji - PO | A | 2026-03-30 | dm_wysłany | Czekaj na odpowiedź → cold email dzień 3 (02.04) | 2026-04-02 |
+| 4a | UNIQA Polska | Błażej Misztal | Lider Zespołu Gen AI i Automatyzacji - PO | A | 2026-03-30 | dm_wysłany | Cold email po świętach | 2026-04-08 |
 | 4b | UNIQA Polska | Piotr Brozio | IT Director of Systems Development | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 4c | UNIQA Polska | Marcin Tyrański | IT Manager / Digitalization | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 5a | Media Expert / TERG | Dawid Florkiewicz | IT Development Director / Head of PMO / Digital Transformation | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
-| 5b | Media Expert / TERG | Przemysław Płaczek | Manager ds. raportowania i analiz | A | 2026-03-30 | dm_wysłany | Czekaj na odpowiedź → cold email dzień 3 (03.04) | 2026-04-03 |
+| 5b | Media Expert / TERG | Przemysław Płaczek | Manager ds. raportowania i analiz | A | 2026-03-30 | dm_wysłany | Cold email po świętach | 2026-04-08 |
 | 5b-note | ↳ Płaczek poinformowany 01.04 | | | | | | |
 | 5c | Media Expert / TERG | Anna Frąckiel | Kierownik ds. Szkoleń | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-02 |
 
@@ -33,11 +33,14 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 | 6c | Volkswagen FS | Sabina Laszkiewicz | HR Manager / Senior HR BP | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
 | 6d | Volkswagen FS | Izabela Goldewicz | HR Manager / Kierownik Działu HR | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
 | 7a | CUK Ubezpieczenia | Ireneusz Dęboski | Kierownik Działu Wsparcia IT | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
-| 7b | CUK Ubezpieczenia | Krzysztof Łosiakowski | Kier. Operacji Sprzedaży / Trainer | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
+| 7b | CUK Ubezpieczenia | Krzysztof Łosiakowski | Head of Sales Operations / Trainer | A | 2026-04-01 | dm_wysłany | Czekaj na odpowiedź → cold email dzień 3 (05.04) | 2026-04-05 |
 | 7c | CUK Ubezpieczenia | Piotr Radka | Dyrektor działu IT | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
-| 8a | Scania Polska | Agnieszka Biczyk-Siembab | Kier. działu automatyzacji i danych | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
+| 8a | Scania Polska | Agnieszka Biczyk-Siembab | Kier. działu automatyzacji i danych | A | 2026-04-01 | dm_wysłany | Czekaj na odpowiedź → cold email dzień 3 (05.04) | 2026-04-05 |
 | 8b | Scania Polska | Julia Wojnarowska | Team Manager Learning Support | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
 | 8c | Scania Polska | Wiktoria Jarecka | P&C Operations / AI w HR | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
+| 9a | Miele Global Services | Katarzyna Kubicka | Continuous Improvement Team Leader | A | 2026-04-02 | zaproszenie_wysłane | Czekaj na akceptację → DM (O2C/automatyzacja) | 2026-04-05 |
+| 9b | Miele Global Services | Katarzyna Zak-Jankowska | Head of Reporting & Controlling | A | 2026-04-02 | zaproszenie_wysłane | Czekaj na akceptację → DM (O2C/automatyzacja) | 2026-04-05 |
+| 10 | GAIA Institute | Damian Ciachorowski | CEO, Digital Transformation | B | 2026-04-03 | dm_wysłany | Networking — relacja, nie pitch. Czekaj na odpowiedź | 2026-04-08 |
 <!-- /SYNC:OUTREACH -->
 
 ## Kolejka (Score A — następne w kolejności)

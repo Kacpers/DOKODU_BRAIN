@@ -1,0 +1,150 @@
+W jednym z poprzednich filmów, może nawet był to ostatni film,
+wspominałem o vagrancie.
+I tutaj wspomnieliśmy też o tym, że wkraczamy trochę w taki temat
+wirtualizacja versus konteneryzacja.
+I powiem Ci szczerze, że jak z kimś rozmawiam o dokerze,
+kto tego dokera jeszcze nie znał, a wbrew pozorom takich osób jest jeszcze sporo,
+więc mam nadzieję, że nasz kurs do takich osób też trafi,
+to słyszę, a to coś takiego jak ten Virtual Box cały na przykład,
+albo a, coś takiego jak vagrant.
+I wtedy ja mówię, nie, nie, nie, bo tu chodzi o wirtualizację,
+a doker działa na zasadzie kontenerów.
+I ta osoba wtedy mówi mi, aha, a jaka jest różnica?
+Ja wtedy coś zaczynam zawsze kleić, mówię, a, bo wie Pan, czy wiesz,
+bo kontenery to są jakby takie pojedyncze usługi,
+a wirtualki to są takie całe systemy i to wychodzi zazwyczaj pokracznie.
+Ja się do tego przyznaję, mam nadzieję, że nikt mnie za to nie zbije,
+ale czy Ty mógłbyś mi tak ładnie i naszym słuchaczom, naszym kursantom
+tutaj zaserwować takie wytłumaczenie.
+Co mówić takim ludziom, jak ktoś Ci mówi, a, bo doker to też jest wirtualizacja,
+a nie konteneryzacja, a tam wiesz, coś tam.
+Tak, w zasadzie tematy są bardzo podobne, różnice między nimi są subtelne,
+natomiast jest kilka różnic, które faktycznie są istotne.
+Kluczowe.
+Kluczowe.
+Przede wszystkim wirtualizacja to jest taki pełny system, który mamy razem z jądrem tego systemu.
+To jest jakby cała taka odseparowana jednostka tego systemu,
+któremu przydzielamy z naszego hosta, gdzie jest uruchomiona ta maszyna wirtualna,
+przydzielamy jakiś tam RAM, jakiś tam dysk, jakąś tam ilość,
+rdzeni procesora, między innymi jakąś tam sieć.
+To są rzeczy, które musimy zawsze zrobić.
+Jeśli chodzi o kontenery, czy to jest doker, czy to są inne rozwiązania,
+to kontenery bazują na współdzieleniu jądra Linuxa i operują na jego mechanizmach,
+dzięki czemu nie potrzebują alokować sobie zasobów,
+które dla konkretnej tak jakby maszyny, dla tego naszego konkretnego serwera,
+one są w stanie bardziej dynamicznie te zasoby współdzielić.
+Oczywiście możemy im przydzielić jakieś limity, ale nie musimy tego robić,
+co już jest odróżnieniem do maszyny wirtualnej, której zawsze trzeba ten górny limit,
+w zależności od narzędzia są soft i hard limity, czyli takie, które można przekroczyć i których nie można przekroczyć,
+ale zawsze musimy to określić, więc jest to pewnego rodzaju konfiguracja,
+którą musimy wykonać, której nie wykonujemy, nie mamy obowiązku wykonywać w przypadku kontenerów.
+Druga rzecz jest taka, że na maszynie wirtualnej musimy zainstalować ten nasz system operacyjny.
+Co prawda mamy troszeczkę więcej możliwości, bo możemy sobie na przykład zainstalować Windowsa,
+czego w przypadku kontenerów.
+Jest pewna opcja, żeby mieć kontenery z Windowsem, natomiast jest to tak rzadko stosowane,
+że ja osobiście nie mam z tym żadnego doświadczenia, a osoby, które miały okazję...
+Usunąłem ze znajomych.
+Nie, nie usunąłem, dlatego że są to bardzo wartościowe kontakty i byłoby je bardzo przykro stracić,
+natomiast są to osoby, które nie wspominają tej przygody sympatycznie.
+Także nie pytałem, nie jestem fanem Windowsa, więc niekoniecznie byłem zainteresowany poznaniem szczegółów,
+natomiast znając te osoby, podejrzewam, że było bardzo dużo problemów z samymi tymi kontenerami
+i nie było po prostu warto w nie inwestować.
+I to też pokazuje Microsoft ruchami, które robi,
+że na przykład nowsza wersja...
+Wersja dotnetu jest już w pełni działająca pod Linuxem.
+Myślę, że zrobili to dlatego, żeby właśnie móc wykorzystywać bezproblemowo kontenery,
+bo chociażby, żeby korzystać z kontenerów Windowsowych, my musimy mieć wykupionego Dockera Enterprise
+i nie wiem, czy jakiekolwiek inne narzędzie niż Docker, bo jest jeszcze kilka, czy w ogóle wspierają takie kontenery z Windowsem.
+Także podejrzewam, że...
+Microsoft, między innymi dlatego, żeby łatwiej było pracować z dotnetem,
+właśnie przygotował wersję pod Linuxa po to, żeby móc też korzystać z dobrodziejstw,
+jakie płyną z konteneryzacji i tutaj z wykorzystania Dockera jako narzędzia.
+Okej, ale uważasz, że konteneryzacja zniszczy jakby wirtualizację?
+Wirtualizację? Bo ja mam wrażenie, że to jest jakby tak, że...
+Czymś innym jest wirtualizacja, czymś innym jest konteneryzacja i ja przynajmniej jako deweloper do tej pory dostawałem,
+czy przez długi czas, jak nie było Dockera, dostawałem maszyny wirtualne i pracowałem na wirtualkach,
+a potem nagle pojawił się Docker i okazało się, że tak naprawdę te wirtualizacja to nie jest to, co jest mi potrzebne,
+bo ja potrzebowałem konteneryzacji, po prostu pojawiło się jakby nowy obszar, który mogłem zastosować
+i to doprowadziło do faktu, że dla mnie...
+Maszyna wirtualna to jest tylko coś, co ktoś mi udostępnia na jakimś gotowym serwerze, powiedzmy,
+bo ma dedyka i na nim tworzy wirtualki, załóżmy, czy też używam jakiegoś Elastic Beanstalka, powiedzmy, nie?
+Tak. Myślę, że wirtualizacja zostanie z nami raczej na stałe, a na pewno na bardzo długo,
+chyba, że pewne mechanizmy się jakoś bardzo istotnie zmienią, natomiast przez to, że możemy sobie jeden fizyczny serwer,
+w prosty sposób podzielić na mniejsze, właśnie wykorzystując maszyny wirtualne,
+to chociażby wszystkie serwery, które dostajemy w chmurach, które są serwerami wirtualnymi, z tego korzystają.
+Co prawda dla nas troszeczkę inaczej wygląda konfiguracja takiego serwera wirtualnego w chmurze,
+niż wygląda na takim hoście fizycznym, którym zarządzalibyśmy samodzielnie, natomiast idea jest ta sama
+i to, co my możemy zrobić...
+Zrobić na takim hoście, to możemy na nim właśnie uruchomić sobie Dockera dla naszych kontenerów,
+dla wielu naszych kontenerów, możemy uruchomić Kubernetesa, myślę, że to będzie wiodące zastosowanie dla maszyn wirtualnych,
+właśnie uruchamianie kontenerów, przede wszystkim uruchamianie na tych maszynach wirtualnych Kubernetesa,
+który później będzie służył dalej do uruchamiania tych naszych kontenerów.
+Mhm.
+Przez to, że Kubernetes daje wiele możliwości upodabniających trochę się do tego, jak działają chmury
+i wiele bardzo fajnych mechanizmów, jest bardzo chętnie wykorzystywany też w środowiskach on-premise na infrastrukturze własnej,
+czy to jest infrastruktura, którą faktycznie my fizycznie posiadamy, nie wiem, u nas w firmie, może w domu, czy może korzystamy z...
+firm dostarczających tą infrastrukturę dla nas.
+W Katowicach na przykład jest duża firma 3S, ale taką bardzo znaną w naszym regionie jest niemiecka firma Hetzner,
+w której możemy sobie kupić serwer wirtualny, ale możemy też kupić sobie serwer fizyczny,
+gdzie on sobie stoi w serwerowni Hetznera, gdzieś w Niemczech albo w Finlandii, ale możemy z niego korzystać...
+To właśnie to, o czym mówiłem.
+Tak.
+Możemy z niego korzystać tak, jak gdyby był to nasz własny serwer.
+Możemy z niego korzystać tak, jak gdyby był to nasz własny serwer.
+Możemy z niego korzystać tak, jak gdyby był to nasz własny serwer.
+Możemy z niego korzystać tak, jak gdyby był to nasz własny serwer.
+Możemy z niego korzystać tak, jak gdyby był to nasz własny serwer.
+I jeśli z różnych powodów wolimy mieć takie rozwiązanie, niż korzystać z całej chmury, jak na przykład AWS, Azure czy GCP,
+wtedy też możemy kupić sobie kilka takich serwerów, podzielić je na wiele mniejszych,
+żeby mieć wiele node'ów Kubernetesa do naszego klastra i odpowiednio tym zarządzać.
+Natomiast to już jest taki obszar, który zdecydowanie wykracza poza zakres naszego...
+obecnego kursu, także myślę, że nie będę tutaj wchodził bardziej w szczegóły.
+Pewnie. I tu do tego pojawia mi się jeszcze jedno tylko takie pytanie, związane stricte z Dockerem.
+Bo ktoś mi kiedyś powiedział, że Dockera nie da się odpalić wszędzie.
+Są takie rodzaje wirtualizacji, które powodują, że nie da się tam odpalić Dockera.
+Bo wydaje mi się, że to się miało w związek jakiś z LXC i z tym, czy tu chodzi o to, że jeżeli jest coś jakby kontener,
+to na kontenerze nie postawisz Dockera? Bo o to też ktoś może zapytać, nie?
+Czy na prawdę, jeżeli mam taką wirtualkę, to czy na każdej wirtualce będę mógł postawić sobie Dockera?
+Tak, raczej na każdej wirtualce będziesz mógł postawić sobie Dockera.
+LXC jest kontenerem, więc nie jest pełną taką wirtualką, jest część na wzór Dockera.
+I tutaj istotnie spodziewałbym się problemów, dlatego,
+że to jest trochę jakby wykorzystanie tych samych mechanizmów drugi raz wewnątrz siebie.
+Taką trochę rekurencję byśmy robili.
+Natomiast jest coś takiego, co się nazywa Docker in Docker.
+Można uruchomić Dockera wewnątrz Dockera i podobno ma to jakieś zastosowania.
+Ja co prawda czytałem kiedyś na temat tych zastosowań.
+Jednym z takich zastosowań jest,
+że budowanie obrazów w jakichś specyficznych okolicznościach.
+Chyba chodziło o to, żeby w samym Kubernetesie można było uruchomić budowanie obrazów,
+bo jakby w samym Kubernetesie obrazu dockerowego zbudować się nie da.
+Jego musimy wcześniej i do Kubernetesa dostarczyć.
+I chyba takie było zastosowanie właśnie Docker in Docker.
+Natomiast są inne projekty, które to rozwiązują.
+Jest taki projekt, który nazywa się Canico, projekt od Google,
+który pozwala nam zbudować obraz dockerowy, nie posiadając Dockera.
+I to jest super sprawa, bo to nam tak naprawdę rozwiązuje ten problem.
+Gdybym ja projektował takie rozwiązanie pod Kubernetesa,
+to zdecydowanie szedłbym w wykorzystanie właśnie Canico do budowania tych obrazów,
+niż próbował eksperymentować z Dockerem w Dockerze.
+Rozumiem. Niemniej też tutaj naszych widzów chciałbym uspokoić, że to, o czym mówiłeś, to to, o czym mówiłeś.
+Rozumiem. Niemniej też tutaj naszych widzów chciałbym uspokoić, że to, o czym mówiłeś, to to, o czym mówiłeś.
+Rozumiem. Niemniej też tutaj naszych widzów chciałbym uspokoić, że to, o czym mówiłem, to to, o czym mówiłeś.
+To, o czym teraz rozmawiamy, to są takie aspekty, trochę bardziej zaawansowane.
+Ja pozwoliłem sobie na takie pytanie, bo i tak już wdepnęliśmy trochę ten temat,
+Ja pozwoliłem sobie na takie pytanie, bo i tak już wdepnęliśmy trochę ten temat,
+więc przeszedłem jeszcze jeden krok dalej, bo też –
+prowadzony ciekawością, faktem, że jestem profesjonalcą po drugiej stronie,
+prowadzony ciekawością, faktem, że jestem profesjonalcą po drugiej stronie,
+od którego też i ja mogę się czegoś nauczyć.
+To, co jest najważniejsze dla Was z tej lekcji, to jest to, że konteneryzacja i wirtualizacja, pomimo tego, że są tematami, można powiedzieć, pokrewnymi, to zdecydowanie nie są tym samym.
+Czyli stricte z tego, co powiedział Jan, ja zrozumiałem tyle, znaczy zrozumiałem więcej, ale to jest to najważniejsze, że jeżeli używamy wirtualizacji, to mamy jakby serwer w serwerze, czyli zupełnie osobny, znaczy osobny komputer w osobnym komputerze, jakby jak matrioszka.
+Natomiast jeżeli używamy konteneryzacji, to te dwa komputery mają wspólne jądro, czyli tak naprawdę mniejszy trochę poziom jest tej izolacji.
+Tak. I tu bym jeszcze dodał, że pytanie o różnicę między maszyną wirtualną a kontenerem to jest pytanie bardzo często pojawiające się na rekrutacjach na stanowiska DevOpsowe, szczególnie te o niższym seniority, czyli stanowiska juniorskie.
+I midowe. Ale na stanowiskach seniorskich też czasami pojawia się jako pytanie chociażby rozgrzewkowe, żeby zacząć rozmowę właśnie o to, czym różni się wirtualizacja od konteneryzacji.
+I najczęstsza taka odpowiedź na to, pokazująca, czy ktoś wie, o co chodzi, to jest właśnie powiedzenie, że maszyna wirtualna ma swój odseparowany kernel, a w przypadku kontenerów ten kernel...
+jest współdzielony pomiędzy wszystkie kontenery uruchomione w ramach danego systemu.
+Czyli rozmowa rekrutacyjna zaczyna się od rozmowy o jądrach.
+To jeżeli chodzi o ten temat, to wydaje mi się, że ta lekcja została wyczerpana, natomiast podczas tej lekcji pojawiło się też wiele takich sformułowań jak Kubernetes,
+Nody kubernestesowe, Cluster, więc LXC, więc jeżeli którykolwiek z tych tematów bardziej by Was interesował, bo np. dotyczy Waszej pracy, to pamiętajcie o tym, że zarówno
+Jan jak i ja prowadzimy też konsultacje, więc jeżeli chodzi o te tematy kubernestesowe, to na pewno na LinkedIn możecie odezwać się do Jana, czy też na Instagramie, dać znać,
+a być może jeżeli pytań będzie więcej, to też na ten temat stworzymy dedykowany kurs. Natomiast w tym kursie skupiamy się na Dockerze i wydaje mi się, że ten temat wyczerpaliśmy, więc lecimy dalej.

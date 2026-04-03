@@ -1,0 +1,25 @@
+Ja nie. To powiem Ci tak. CMD jest kolejnym poleceniem na tapecie i przyznam, że CMD dla mnie jest kolejną zagadką, bo to jest jedno z tych poleceń, które też służy do uruchamiania, dla mnie przynajmniej, i też mogę coś w nim uruchomić.
+Widzę, że mam takie sposoby różne na uruchomienie, ale nie mam żadnego pojęcia, może bardzo błędnie, czym różni się ono od polecenia RUN, no bo jedno i drugie coś uruchamia, tylko różnica jest chyba i chyba jest znaczna, co?
+Tak, różnica między nimi jest znaczna i zasadnicza, dlatego że dyrektywa CMD służy wykonania jakichś instrukcji, jakichś operacji.
+I podczas uruchamiania kontenera z naszego obrazu, czyli to jest instrukcja, która nie wykonuje się podczas budowania tego obrazu, ona wykonuje się tylko wtedy, kiedy ten obraz jest uruchamiany już w postaci kontenera i to jest istotne.
+Możemy dzięki niej wskazać domyślne polecenie, jakie ma się uruchamiać.
+Czyli jeśli nie przekażemy żadnego innego, to wtedy jest jakaś domyślna operacja, która ma się wykonać, kiedy ten nasz kontener uruchamiamy.
+Można ją zawsze nadpisać w konfiguracji, to znaczy możemy sobie zbudować obraz z tym poleceniem domyślnym, ale w ramach jakby uruchamiania, czy poprzez polecenie w wierszu poleceń DOCKER RUN z parametrami,
+czy w ramach pliku DOCKER COMPOSE, możemy sobie to polecenie nadpisać.
+I teraz polecenie CMD może być w formie tak zwany EXEC, albo w formie tak zwany SHELL.
+One też tutaj są widoczne w dokumentacji.
+EXEC to są te dwie pierwsze formy.
+SHELL to jest ta trzecia.
+I jeszcze będziemy na pewno rozmawiali za chwilę o dyrektywie ENTRYPOINT, która jest troszeczkę bardziej zaawansowaną formą, służy do bardziej zaawansowanych rzeczy.
+Jeśli ENTRYPOINT znajduje się w naszym obrazie, wtedy CMD zmienia też swój sposób działania, dlatego że
+Wtedy, tak jak mamy tutaj w środkowej linijce przykładu opisane, przyjmuje parametry dla naszego ENTRYPOINTA, a nie wykonuje już jakby tego
+OK
+Termina bezpośredniego, który znajduje się w CMD.
+Super. I mówi, że CMD może być tylko jeden w DOCKER FILE'u, tak? No bo to nie miałoby sensu, żeby mieć więcej CMD, chyba że tam byłaby jakaś infologia na przykład.
+W sensie technicznie najprawdopodobniej.
+W sensie technicznie najprawdopodobniej.
+W sensie technicznie najprawdopodobniej.
+W sensie technicznie najprawdopodobniej możesz umieścić wiele dyrektyw CMD w jednym DOCKER FILE'u, natomiast pod uwagę zawsze będzie brana ta ostatnia.
+W sensie technicznie najprawdopodobniej.
+W sensie technicznie najprawdopodobniej możesz umieścić wiele dyrektyw CMD w jednym DOCKER FILE'u, natomiast pod uwagę zawsze będzie brana ta ostatnia.
+OK. Super. Wszystko zrozumiałem i bardzo dziękuję, bo w końcu wszystkie te rzeczy, których nie rozumiałem, zdają się dla mnie jasne.

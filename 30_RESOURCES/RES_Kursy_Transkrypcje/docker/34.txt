@@ -1,0 +1,34 @@
+Plik Compose jest to taki plik pozwalający w bardzo czytelny sposób opisywać sposób uruchamiania poszczególnych kontenerów.
+I tutaj zobaczysz na pewno przykłady w kursie, gdzie uruchomienie bez wykorzystania pliku Compose danego obrazu zaczyna się komplikować, kiedy chcemy więcej parametrów do niego dodać.
+Chcemy zdefiniować wolumeny, chcemy dodać sieci, może jakieś zmienny środowiskowe pokonfigurować.
+To wszystko musielibyśmy podać w pojedynczym poleceniu i tracimy czytelnością.
+Natomiast ciężko jest w pewnym momencie zrozumieć, co tak naprawdę się dzieje, a plik Compose przychodzi z pomocą, pozwala w postaci Jamla opisać konfigurację każdego poszczególnego kontenera, który chcemy uruchomić.
+Jednocześnie pozwala nam zbudować cały projekt, bo tak jak mówiliśmy wcześniej,
+można korzystać z wielu kontenerów, możemy mieć naszą aplikację w Pythonie czy w innym języku, do tego bazę danych, może jakiś cache.
+I żeby to wszystko ze sobą działało, musimy mieć uruchomionych wiele kontenerów.
+Plik Compose pozwala nam opisać uruchomienie wszystkich kontenerów w ramach pojedynczego takiego pliku i później jednym poleceniem wszystkie naraz uruchomić.
+Ja przyznam się tutaj bez bicia, że w momencie, w którym pierwszy raz zetknąłem się z Dockerem i zobaczyłem, jak wiele poleceń trzeba przekazywać przez linię poleceń,
+to było to dla mnie przerażające i w momencie, w którym zobaczyłem, że jest coś takiego jak Docker Compose,
+to już nawet jeżeli potrzebowałem uruchomić sobie tylko jeden kontener, to i tak tworzyłem ten plik Docker Compose,
+bo było to dla mnie po prostu dużo bardziej czytelne zbudowanie tego, przygotowanie sobie tego środowiska w ten sposób.
+Niż pamiętanie wszystkich tych przełączników, flagi i innych tego typu rzeczy.
+Ale to jak kto lubi.
+Ja też tak bardzo często robię.
+Wyjątkiem tak naprawdę są sytuacje, kiedy uruchamiam kontener dosłownie na chwilę.
+Nie wiem, potrzebuję coś przetestować, wiem, że uruchomię go raz, może dwa razy.
+Nie będę mu dokładał dodatkowych parametrów, tylko uruchomię go na przykład tak, jak ktoś mi przekazał instrukcję,
+żebym mógł sobie coś przetestować.
+Nie będę mu dokładał dodatkowych parametrów, tylko uruchomię go na przykład tak, jak ktoś mi przekazał instrukcję, żebym mógł sobie coś przetestować.
+I później nie będę już z niego korzystał.
+Ale jeśli potrzebuję go wykorzystać więcej razy, nie wiem, wiem, że będę coś w nim rozwijał, coś może dodawał, może coś zmieniał,
+bo potrzebuję to dostosować do swojej konfiguracji, wtedy zawsze wybiorę Docker Compose,
+bo jest to prostsza wersja, żeby taką konfigurację utrzymywać.
+Plus, jeśli mam już gotowy plik Compose dla swojego środowiska, dla swojej aplikacji
+i chcę dodać nowy kontener, który, nie wiem, będzie coś testował, może będzie na chwilę w tym środowisku,
+może będzie w nim na stałe, też łatwiej jest mi go dopisać do tego pliku Compose,
+dlatego że jestem w stanie zarządzać całym po prostu stosem aplikacyjnym, wykorzystując jedno polecenie.
+Mhm, to jest tak. U mnie praktyka jest dokładnie taka sama.
+I ważne jest też to, żebyście wiedzieli, że wszystkie aplikacje, które mam,
+żebyście wiedzieli, że wszystko to, o czym rozmawialiśmy też wcześniej,
+a propos sieci, a propos wolumenów, też są to opcje, które można sobie właśnie w pliku Docker Compose ustawić.
+Dokładnie tak. Wszystko to, co jest w wierszu poleceń, jest w pliku Docker Compose również dostępne.

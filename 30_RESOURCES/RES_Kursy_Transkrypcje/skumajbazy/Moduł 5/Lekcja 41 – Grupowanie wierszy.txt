@@ -1,0 +1,284 @@
+No to hej, zaczynamy sobie od grupowania danych.
+Grupowanie danych, które jest jedną z takich ulubionych moich funkcjonalności,
+jeżeli chodzi o bazę danych, bardzo tę funkcjonalność lubię.
+Kiedyś grupowałem tylko korzystając właśnie z PHP albo z czegoś,
+czyli robiłem sobie duże zapytanie, pobierałem bardzo dużo danych
+tylko po to, żeby jakimiś pętlami w ramach tego zapytania te dane pogrupować.
+A baza danych robi to po prostu genialnie i dzięki temu możemy pobrać
+dużo, dużo mniej informacji, nasze aplikacje mogą działać dużo, dużo szybciej.
+Ale już nie przedłużając, o zobaczcie o co chodzi.
+Jeżeli chodzi o grupowanie wierszy, no to możemy mieć jakąś tabelę,
+która zawiera takie informacje, czyli mamy 10 października, 9 października,
+12 października, 14, czy tam 12 listopada, 14 listopada i mam dodatkowo jakieś wartości.
+No a klient czy też aplikacja wymaga ode mnie tego, żebym sobie te dane pogrupował
+i na przykład odpowiedział jaka jest suma dla poszczególnych miesięcy
+albo jaka jest suma w roku 2021 albo cokolwiek takiego.
+Więc dzięki grupowaniu ja sobie mogę z takiego stanu, jaki miałem przed,
+doprowadzić ten mój wynik do takiego stanu, jaki mam po.
+Co do grupowania, to ja sobie mogę z takiego stanu, jaki miałem przed,
+doprowadzić ten mój wynik do takiego stanu, jaki mam po.
+I to, co pokazuje nam się w kolumnie ilość i to, co pokazuje nam się w kolumnie suma,
+no to jak widzicie, to jest wynik funkcji count oraz wynik funkcji sum po prostu.
+Tych funkcji agregujących jest kilka i też tym funkcjom poświęcimy osobną lekcję.
+Więc jeżeli chodzi o inny przykład, zobaczcie, możemy mieć, bo tam były daty,
+ale możemy też mieć dane na przykład w takiej postaci, gdzie mam id, miasto i wartość.
+No i teraz staję przed dylematem, jaka jest łączna wartość dla poszczególnych miast.
+No to korzystając z dowolnego języka programowania, mógłbym to pobrać,
+stworzyć sobie jakiś słownik czy stworzyć sobie jakąś tablicę, no i te dane sumować.
+Ale po co, skoro mogę użyć bazy danych?
+Jeżeli nie wiedziałbym, jak działają grupy, no to zawsze miałbym też taką możliwość,
+żeby po prostu napisać zapytania.
+SELECT COUNT FROM CITIES WHERE CITY równa się Gdynia.
+SELECT COUNT FROM CITIES WHERE CITY równa się Warszawa.
+I tak musiałbym napisać zapytania dla każdego miasta.
+No ale to wiązałoby się z tym, że jeżeli miast mam tysiąc, no to muszę zrobić tysiąc zapytań.
+Tysiąc zapytań trwa i kosztuje.
+Kosztuje oczywiście, jeżeli chodzi o zasoby.
+Jak to zrobić wydajniej?
+Skoro wiemy, że za każdym razem wybieramy sobie SELECT COUNT FROM CITIES WHERE CITY,
+WHERE CITY równa się Gdynia, to tak naprawdę naszą operację będziemy chcieli wykonać dla każdego miasta.
+A skoro chcemy ją wykonać dla każdego miasta, to tak naprawdę możemy sobie najpierw te dane po prostu zgrupować po miastach,
+no i użyć funkcji agregującej, jaką jest COUNT.
+I nasze zapytanie wówczas będzie wyglądało tak.
+I będzie to jedno zapytanie, które będzie dużo, dużo prostsze.
+SELECT CITY, COUNT.
+Tutaj jest COUNT z gwiazdką, ale czym się różni COUNT?
+COUNT z gwiazdką od COUNTA bez gwiazdki czy tam z pisaną kolumną już wiecie, bo liczy nam po prostu wartości, które nie są nulami.
+Natomiast SELECT CITY, COUNT FROM CITIES GROUP BY CITY.
+I w ten sposób dostaniemy wyniki, które będą wyglądały o tak.
+Czyli będziemy mieli Gdynia 30, Warszawa 30, Zakopane 40, Kraków 55.
+Czyli nasze dane się znacznie uproszczą i on nam od razu zsumuje wartości w kolumnie CITY,
+które są identyczne.
+To jest bardzo istotne.
+Każda najmniejsza spacja czy inna litera powodują już, że będziemy mieli nowy wynik po prostu.
+Czyli byłaby Gdynia i Gdynia ze spacją na końcu.
+Albo Kraków i Krakow, albo Kraków i Krekow.
+Czyli cokolwiek takiego, tak?
+Jeżeli byśmy mieli więcej wierszy, no to po prostu tak by to wyglądało.
+Więc tutaj bardzo ważne jest to, żebyście ujednolicili te dane.
+No i warto też po prostu pomyśleć sobie nad tym,
+czy w CITY nie lepiej mieć CITY ID, no bo w ten sposób też się takimi danymi łatwiej zarządza.
+Oczywiście na potrzeby prezentacji byłoby mniej czytelnie, tak mi się wydaje.
+Natomiast w tej postaci dokładnie tak to wygląda.
+Czyli SELECT CITY przecinek COUNT z gwiazdką FROM CITY z GROUP BY CITY.
+Co ważne, jeżeli po czymś grupujemy,
+to czy jeżeli coś wyświetlamy sobie, tak jak jest SELECT CITY,
+to musimy też potem grupować.
+Jak to działa?
+Zobaczcie, załóżmy, że nasza aplikacja wykonuje takie zapytanie.
+SELECT CITY przecinek COUNT CITY FROM CITY z GROUP BY CITY.
+No i w wyniku dostajemy właśnie Warszawę, Gdańsk, Gdańsk i Warszawę.
+SELECT CITY COUNT na CITY FROM CITY z GROUP BY CITY.
+Strasznie dużo tego CITY.
+Mnie interesuje, jak widzicie, ile razy wystąpiło dane miasto.
+Więc jeżeli wykonuję sobie SELECT CITY, no to dostaję kolumnę, w której te miasta się wyświetlają.
+Jeżeli obok jako drugą kolumnę wyświetliłem,
+COUNT na CITY, no to mi ładnie policzy, że Warszawa wystąpiła dwa razy,
+Gdańsk wystąpił dwa razy.
+FROM CITIES, no to wiadomo, nazwa tabeli.
+I GROUP BY to jest właśnie bardzo ważne, że tutaj mamy informację, po czym chcemy grupować.
+Czyli on tak naprawdę, jeżeli grupujemy, to on nam połączy te dane,
+no i w ten sposób pozwoli nam na wyświetlenie tego, po czym zgrupowaliśmy oraz tego COUNTA obok.
+Jeżeli chodzi o kolejność,
+występowania naszych tych elementów,
+wykonywania właściwie naszych elementów,
+tutaj, jak wspomnieliśmy sobie wcześniej, najpierw mamy FROM,
+później mamy WHERE, SELECT jest na końcu
+i GROUP BY wchodzi nam jeszcze za WHERE.
+To jest ważna informacja,
+bo jeżeli sobie wyobrazicie, że chcecie ograniczyć ilość rekordów,
+które wam się pokazują,
+to to oznacza, że nie możecie tego, że ten WHERE zadziała przed GROUP BY,
+czyli my nie możemy, na przykład w WHERE,
+używać wyników tych, które wyświetliły nam się w GROUP BY.
+Czyli nie zadziała nam coś takiego, jak WHERE COUNT na CITY jest większe niż 2.
+Czegoś takiego nie zrobimy, ponieważ ten WHERE wykonuje nam się przed GROUP BY.
+My za pomocą WHERE możemy zdecydować o tym, żeby mniej informacji było grupowanych,
+dzięki czemu zapytanie na pewno będzie działało szybciej.
+Więc nad tym zawsze warto się zastanowić.
+Co zrobić, żeby baza musiała
+mniej myśleć nad tym, co grupuje.
+Więc jeżeli interesuje cię tylko na przykład jakieś jedno miasto,
+czy interesuje cię tylko kilka osób,
+czy interesuje cię tylko jakiś jeden konkretny produkt,
+który chcesz sobie zgrupować w ramach na przykład dat,
+ale tylko z jednego roku,
+to zawsze te wszystkie takie filtry lepiej umieścić w WHERE,
+zanim zaczniemy grupować dane.
+Więc robię sobie FROM WHERE,
+następnie wykonuję GROUP BY
+i dopiero wtedy za pomocą zapytania SELECT określam,
+co tak naprawdę mnie interesuje.
+I tu pamiętajcie, że jeżeli na przykład zgrupowalibyście dane na podstawie miasta
+i, czy nawet nie zgrupowalibyście tych danych,
+tylko wyświetlalibyście dane zgrupowane na podstawie miasta,
+to on wam nie pozwoli zrobić SELECT COUNTRY, CITY
+FROM coś tam GROUP BY CITY,
+tylko on wtedy też będzie was zmuszał do tego, żebyście również wykonali GROUP BY COUNTRY.
+Jak najbardziej grupować po dwóch kryteriach,
+czy nawet po wielu kryteriach też można.
+To po prostu będzie prowadziło do tego,
+że będziemy mieli trochę więcej tych rekordów.
+Czyli na przykład wykonywanie SELECT gwiazdka tam GROUP BY
+i zgrupowalibyśmy sobie to po województwie, a następnie po mieście
+spowodowałoby, że jeżeli miasto, nie wiem, Londyn
+byłoby w kilku różnych województwach,
+to ono po prostu tyle razy nam się wyświetli.
+Bo w tym momencie on będzie brał pod uwagę województwo i miasto,
+bo w tym momencie on będzie brał pod uwagę województwo i miasto,
+bo w tym momencie on będzie brał pod uwagę województwo i miasto,
+czyli na przykład nazwisko i imię.
+Jeżeli ja sobie pogrupuję dane po nazwisku i po imieniu,
+jeżeli ja sobie pogrupuję dane po nazwisku i po imieniu,
+no to będę miał sytuację taką, że Kowalski Jan będzie występował w tabeli po zgrupowaniu,
+no to będę miał sytuację taką, że Kowalski Jan będzie występował w tabeli po zgrupowaniu,
+no i Kowalski Zbigniew również.
+No i Kowalski Zbigniew również.
+Jeżeli natomiast zgrupowałbym to sobie tylko po nazwisku,
+no to wtedy wszystkich Kowalskich miałbym zapisanych w formie jednego rekordu,
+no to wtedy wszystkich Kowalskich miałbym zapisanych w formie jednego rekordu,
+po prostu byłoby Kowalski i imię nie miałoby żadnego znaczenia.
+po prostu byłoby Kowalski i imię nie miałoby żadnego znaczenia.
+W przypadku zgrupowania po imieniu,
+no to też miałbym jednego Kacpra, a nie wielu Kacprów.
+no to też miałbym jednego Kacpra, a nie wielu Kacprów.
+Ok? Więc zgrupowanie po kilku kolumnach też ma jak najbardziej rację bytu,
+Ok? Więc zgrupowanie po kilku kolumnach też ma jak najbardziej rację bytu,
+po prostu wszystko zależy od tego, co chcemy zobaczyć.
+po prostu wszystko zależy od tego, co chcemy zobaczyć.
+Możemy chcieć zgrupować sobie poszczególne produkty,
+Możemy chcieć zgrupować sobie poszczególne produkty,
+ale też w taki sposób, żeby widzieć jakie wartości są w kategoriach,
+ale też w taki sposób, żeby widzieć jakie wartości są w kategoriach,
+do których te produkty należą.
+Wtedy możemy sobie coś zgrupować po kategorii id, przecinek,
+Wtedy możemy sobie coś zgrupować po kategorii id, przecinek,
+i po nazwie produktu, na przykład, tak?
+Więc za chwilę sobie to przećwiczymy,
+ale już tutaj zaznaczam Wam, że jak najbardziej
+Ale już tutaj zaznaczam Wam, że jak najbardziej
+grupować po kilku rzeczach możecie,
+bardziej pobawić i zobaczyć, jak to działa też na waszych danych.
+No i tak jak mówiłem, jak obiecałem, czas na ćwiczenie.
+Policz ilość osób posiadających ten sam kontakt title w tabeli customers,
+czyli jeżeli zerkniecie sobie do tabeli customers, to tam mamy kontakt title,
+no i chcemy odpowiedzieć na pytanie, ile jest osób, które mają ten sam kontakt title.
+W zadaniu drugim chcemy odpowiedzieć na pytanie, w którym roku,
+patrząc na kolumnę order date, zostało zrealizowanych najwięcej zamówień
+w tabeli orders. No i w zadaniu trzecim chcemy napisać zapytanie,
+które zwróci taki wynik z tabeli orders, czyli będziemy mieli ship country,
+ship city oraz ilość, czyli jak widzicie tutaj znowu, to jest to, o czym mówiłem
+przed chwilą, grupowanie po kilku kolumnach. Mam USA, USA i mam Albuquerque
+i mam Anchorage, jakoś tak, nie? Czyli widzimy, że mamy,
+dwa miasta w jednym kraju, nie? Jeżeli bym tylko zgrupował po country,
+no to wtedy miałbym jedno USA i tyle, natomiast jeżeli bym zgrupował sobie
+po city, no to miałbym to samo, ale tego country nie mógłbym wyświetlić,
+bo on nie grupował po tym, więc nie pozwoli nam na wyświetlenie tego.
+No to co? Trzy minuty dla każdego i do zobaczenia za chwilę.
+No to cóż, moi drodzy, policz ilość osób posiadających ten sam kontakt title
+w tabeli customers. No to pierwsze, co zrobię, to wykorzystuję,
+to nam zapytanie select gwiazdka from customers, chwilę poczekam,
+bo mnie rozłączył w międzyczasie, za długo gadałem, no i zobaczę
+wszystkich klientów, ale już teraz mogę zacząć pisać zapytanie dalej,
+zrobię sobie małe formatowanie, o tak, no i teraz wiem, że będę chciał
+policzyć osoby, czyli będę potrzebował counta, posiadające ten sam kontakt title,
+więc na pewno będę chciał kontakt title sobie wyświetlić,
+na pewno będę chciał je policzyć, no i skoro chcę wyświetlić osoby posiadające
+ten sam kontakt title, to znowu myślimy o tych wielu selectach.
+No to by wyglądało tak, select count gwiazdka from customers where kontakt title
+równa się sales representative na przykład, nie? Bo patrzę, że to jest pierwszy.
+Więc ja chcę grupować właśnie po tym kontakt title, czyli group by kontakt title.
+Hops, no i widzę, że sales managerów mamy 11. Tu jak najbardziej możecie też po tym sortować,
+strzałkę, albo wykonując po prostu order by count z gwiazdką, descending, hops,
+i dostaniemy też taką informację, że ownerów mamy najwięcej, a najmniej mamy kogo?
+Ownerów marketing assistant, akurat tutaj tak jest, albo assistant sales agent,
+mamy dwóch, nie? Okej. Idziemy dalej. W którym roku, jeżeli chodzi o order date,
+zostało zrealizowanych najwięcej zamówień? Czyli select,
+gwiazdka from orders. To już na dobry początek wiem, że będę tego potrzebował.
+Jeżeli pytany jestem o rok, no to ten rok muszę sobie wyciągnąć.
+Tutaj mam order date, więc sobie wyciągnę. Jak wyciągnąć? Pamiętacie?
+Możemy użyć date part na przykład i powiedzieć, że interesuje nas rok.
+Chyba było odwrotnie, co? Order date.
+Rok? Nie.
+Tak, odwrotnie. Widzicie? Tak to jest. Jak się chwilę nie popisze, to się potem zapomina.
+O, i mamy rok. W ten sposób dostałem same tylko i wyłącznie lata,
+a ja nie chcę mieć tych lat, tylko ja bym chciał się dowiedzieć,
+ile razy ten 96 mi tutaj wystąpił, a ile razy wystąpił 97.
+Więc do tego będę potrzebował mieć counta i będę chciał to sobie zgrupować,
+a grupuję sobie.
+Widzicie? Po tym, co wyciągnąłem, czyli group, buy.
+I w grupowaniu możemy też jak najbardziej używać takich wyrażeń.
+Hops. I zobaczcie, w 96 były 152 zamówienia, w 98 270, a w 97 408.
+Czyli w 97 było najlepiej, a później nam sprzedaż spadła.
+To niedobrze. Jakby wzrastała, to byłoby lepiej zdecydowanie.
+No i ostatnie.
+To jest pytanie, które zwróci taki wynik z tabeli orders.
+Wy tego teraz nie widzicie, ale taki wynik to jest tabelka,
+która zawiera ship country, ship city oraz counta z tabeli orders.
+Czyli ponownie select gwiazdka from orders.
+I tutaj na tej liście posiadamy takie wartości jak ship city oraz ship country.
+No to wyświetlmy.
+Wyświetlmy sobie tylko te dwie wartości.
+Ship country przecinek ship city.
+O, super.
+I teraz, tak jak wspomniałem, no jeżeli ja sobie bym to posortował po ship country,
+no to zobaczę, że mam w Argentinie dużo rekordów,
+ale mnie interesuje Argentina i Buenos Aires.
+Czyli ja chcę dowiedzieć właściwie, ile jest Buenos Aires.
+Więc jeżeli bym się upył,
+to mogę zrobić z counta tutaj.
+Mogę zrobić group by ship city.
+Ale zobaczcie.
+Error.
+Column orders ship country must appear in the group by clause or be used in an aggregated function.
+Czyli ja nie mogę tutaj sobie pozwolić na to, żeby tak po prostu to zostawić.
+Ja muszę użyć tego.
+Tej kolumny ship country.
+Muszę ją użyć, muszę ją wykorzystać.
+Więc mogę po prostu usunąć ją stąd, jeżeli jej nie chcę, wtedy wszystko zadziała,
+ale jeżeli chcę ją wyświetlić, to muszę też po niej grupować.
+No i jak po niej grupować?
+Jak ją sobie dorzucę tutaj, to mi zadziała, ale moje ship city zawiera USA.
+Coś jest nie tak.
+tak, kolejność jest ważna
+najpierw grupujemy po krajach
+a wewnątrz krajów mamy
+miasta, więc ship country
+a następnie ship city
+i wtedy
+to już nam powinno
+zadziałać jak dorzucimy przecinek
+czyli
+możliwe, że wcześniej też by coś zadziałało
+jakbym miał kolejność inną
+o widzicie
+też coś poszło, natomiast no zdecydowanie
+ja się nauczyłem, że używamy
+tej samej kolejności jaka jest powyżej
+więc zostawiam taką
+syntax error ship country, co teraz
+się nie podoba, a wszystko jest ok
+czyli ship country German Leipzig
+5 i tak oczywiście
+możemy sobie to sortować
+na przykład po ship country, nie nie nie chcę filtrować
+chcę sortować, o i mam
+Argentina, Buenos Aires 16
+Austria, Kras 30
+Austria, Salzburg 10 i tak dalej
+wszystko ładnie mi
+policzyło
+jak tam u was? Udało się?
+Pamiętajcie, że jeżeli tylko
+coś by sprawiało wam problem
+możecie śmiało pytać o to na Discordzie
+natomiast jeżeli chodzi o mnie
+to w tej lekcji już powiedziałem wam wszystko
+idziemy do lekcji kolejnej
+w której zastanowimy się
+co możemy umieścić tutaj
+zamiast counta
+czyli porozmawiamy o innych funkcjach
+agregujących
+Zapraszam
+

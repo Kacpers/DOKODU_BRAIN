@@ -1,0 +1,173 @@
+Jeżeli przyjdzie taka potrzeba, że będziemy chcieli z tej bazy sobie
+pokorzystać, no to oczywiście bardzo popularnym rozwiązaniem jest
+łączenie się w MongoDB z poziomu jakiejś aplikacji javascriptowej,
+czy też napisanej w TypeScript, czy też może napisanej w PHP,
+no ale obiecałem, że pokażę to w świetle Pythona, bo jakby ten
+kurs jest też częścią kursów poświęconych Pythonowi, więc zobaczcie.
+Jeżeli chcielibyśmy coś takiego wykonać, no to przede wszystkim
+będziemy potrzebowali mieć Pythona, oczywiście interpreter,
+będziemy potrzebowali mieć też projekt.
+Tutaj zapraszam serdecznie, kto ma ochotę na pystart.pl, żeby zobaczyć,
+może akurat kurs jest w sprzedaży i porozmawiamy sobie właśnie
+o tym, jak z poziomu Pythona podłączyć się do MongoDB, jak
+stworzyć kolekcję, taką nową, no i jak na takiej kolekcji wykonywać
+zapytania typu dodać dokumenty, pobrać, usunąć.
+Więc będziemy używali biblioteki, która nazywa się py-mongo.
+Bibliotekę tę instalujemy za pomocą pipa, takiego menadżera pakietów
+dla Pythona, czyli robimy pip install py-mongo, no i następnie po
+wykonaniu tej instalacji możemy sobie śmiało tę bibliotekę zaimportować,
+czyli from py-mongo import mongoclient i mongoclient to jest taka
+klasa, która właśnie służy do tego, żeby wykonywać zapytania
+na naszej bazie danych.
+Ale zanim te zapytania wykonamy, do tej bazy trzeba się podłączyć,
+więc wykonujemy client równa się mongoclient, w nawiasie przekazujemy
+mu ścieżkę do połączenia, następnie mówimy, słuchaj db to jest
+client db name i tutaj w miejscu tego db name wskazujemy konkretną
+nazwę bazy danych, czyli na przykład test albo books albo
+cokolwiek takiego. No i dalej, jeżeli w naszej bazie danych books,
+no i dalej, jeżeli w naszej bazie danych books, no i dalej, jeżeli w naszej bazie danych books,
+mamy na przykład kolekcję o nazwie
+authors, no to wtedy możemy wykonać
+collection równa się db.authors
+albo na bieżąco
+wszędzie można korzystać po prostu z db.authors
+wszędzie tam gdzie tego
+potrzebujemy
+a jak już mamy kolekcję
+no to możemy na tej kolekcji
+bardzo wiele rzeczy zrobić
+bo jeżeli mamy kolekcję
+no to na przykład dodanie
+jednego elementu czy też dodanie wielu
+jak pewnie się domyślacie będzie wyglądało
+bardzo do siebie podobnie
+czyli collection.insert1
+i w nawiasie przekazujemy
+słownik, w którym
+mówimy to jest tytuł, to jest page, to jest
+ile stron, to jest data
+możemy tutaj bez problemu przekazywać
+dowolną strukturę w postaci
+słownika albo jeżeli robimy
+insert menu to w postaci listy słowników
+tak naprawdę
+wszystko to co widzieliście do tej pory
+jak widzicie bardzo ładnie nam się
+po prostu tłumaczy na kod napisany w Pythonie
+to trochę wyglądało tak jak taki
+kod, nie? to cały czas
+nie oszukujmy się, ten kod db.collection
+db.books.insert1
+to wszystko wygląda trochę
+jakby to był język programowania
+więc twórcy tej biblioteki
+PyMongo po prostu poszli w tę stronę
+żeby wykorzystywać te same
+konstrukcje do
+wykonywania zapytań na Mongo
+bardzo przyjemna sprawa
+czyli insert1 dodaje nam
+jeden dokument
+jeżeli chcemy pobrać dokument z kolekcji
+no to robimy document collection find1
+i pobieramy sobie
+ten jeden jedyny dokument z kolekcji
+albo jeżeli chcemy mieć ich więcej
+to robimy document
+równa się collection.find
+i przekazujemy mu też te parametry
+oczywiście no analogicznie wszystkie agregaty
+i inne tego typu rzeczy też za pomocą
+PyMongo możecie śmiało
+wywoływać
+i to byłoby tak naprawdę na tyle
+bardzo dziękuję wam
+za udział w tym kursie
+jeżeli doszedłeś do tego momentu
+to napisz mi na Discordzie takie
+chociaż dwa zdania czy ci się podobał
+czy coś byś poprawił
+czy coś być może dodał
+dodała tak do tego kursu
+będzie mi bardzo miło jeżeli dostanę od ciebie
+taki feedback
+porozmawiajmy po prostu o tym
+i tyle
+podsumowując jeszcze
+Discord pozostaje na zawsze
+czyli to że dostałeś dostęp
+do tego serwera
+do tych zamkniętych kanałów
+tego nigdy nie wycofam
+chyba że nam Discord padnie
+na to nie mam wpływu
+to jest przez minimum dwa lata
+no i we wszelkich sprawach
+pamiętaj że możesz zawsze napisać
+do mnie na adres
+kacpermopa.def jeżeli na przykład
+z tego Discorda gdzieś uciekniesz
+a uciekanie z Discorda to nie jest dobry pomysł
+gdyż na Discordzie coraz więcej
+się dzieje
+szykują się różne konkursy
+szykują się też oczywiście
+kolejne bootcampy
+więc będzie mi miło jeżeli wraz ze mną i z nami
+będziesz dalej tworzyć tę społeczność
+i to byłoby na tyle
+często
+pytacie mnie jeszcze po takich bootcampach
+co dalej jaki jest kolejny krok
+że były te
+filmy
+uczyłem się czy uczyłam się
+teraz filmów zabrakło
+a głupio byłoby tej wiedzy nie wykorzystywać
+i tutaj absolutnie się zgadzam
+głupio byłoby tej wiedzy
+nie wykorzystywać
+w tym miejscu serdecznie zachęcam Cię do tego
+żeby zacząć pisać projekt
+skoro już umiesz programować w jakimś języku
+no bo zakładam że tak jest
+a jeżeli nie no to
+Pajstart zapraszam
+albo Ucz się zapraszam
+to wypadałoby połączyć teraz
+tę wiedzę
+czyli pisaliśmy już tutaj bardziej skomplikowane
+zapytania na bazie danych
+relacyjnej, nie relacyjnej
+wybierz jakąś bazę
+połącz może dwie rzeczy
+może napisz aplikację która obsłuży
+tych naszych piłkarzy
+czy tam graczy NBA
+tych naszych autorów
+żeby tą wiedzę ulatywać
+no bo prawda bolesna jest taka
+że ta wiedza ulatuje
+a jeżeli obiecasz sobie
+że za ileś dni wrócę do kursu
+i dalej od początku go zacznę
+i spróbuję go zrobić
+to będziesz musiał, musiała mieć
+bardzo tutaj twardy kręgosłup
+no bo doświadczenie uczy
+że często w takich przypadkach
+jeszcze częściej porzucamy
+niestety tę edukację
+więc nie warto robić przerw
+warto kontynuować
+warto dalej się rozwijać
+i tyle
+wszystkiego dobrego Ci życzę
+do zobaczenia, do usłyszenia
+ostatni raz już w tym kursie
+a może jakiś bonus kiedyś dogram
+to zależy co mi napiszecie
+w tych
+w naszej komunikacji
+nie wiadomo
+do zobaczenia, trzymajcie się, cześć

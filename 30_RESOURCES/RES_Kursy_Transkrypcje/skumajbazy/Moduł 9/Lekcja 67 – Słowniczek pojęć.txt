@@ -1,0 +1,127 @@
+Kim, żebym był, gdybym tak szybko omówił Wam bazy danych, kolekcje, dokumenty, pola itd.
+Wypadałoby sobie powtórzyć to jeszcze trochę wolniej, bo jest to wiedza ważna,
+a ta różnica między SQLem a MongoDB jest znaczna, więc zawsze warto sobie w głowie to jakoś zmapować.
+A, czyli to, to jest to samo, co było tam, tylko, że nazywa się tak i działa trochę inaczej.
+Wiecie, o co mi chodzi. Więc w tej lekcji porozmawiamy sobie o tzw. słowniczku pojęć,
+czyli o tym, co nas czeka i z jakimi pojęciami będziemy się mierzyli.
+Po pierwsze, będziemy mierzyli się z poleceniem, z poleceniem, z pojęciem baza danych.
+Baza danych jako Mongo, no to wiadomo, ale w tym Mongo też możemy mieć więcej baz danych.
+O tym za chwilę. Później kolekcja, dokument.
+I pole. W skrócie opowiedziałem wam o tym przed momentem, ale raz jeszcze.
+Baza danych. Baza danych to jest taki pojemnik na kolekcję.
+No i tak jak MongoDB to jest baza danych, ale w ramach tej naszej bazy,
+tego naszego programu, jakim jest MongoDB, możemy mieć wiele pojedynczych baz danych.
+Możemy o nich myśleć, czyli możemy traktować je tak samo, jak w przypadku baz relacyjnych.
+Czyli tak jak w przypadku baz danych relacyjnych mieliśmy bazę danych o nazwie, nie wiem, biblioteka,
+w niej mieliśmy później jakieś schematy, schematów tu nie ma, ale w niej były schematy,
+w środku były tabele, tak samo możecie tutaj pomyśleć, że baza danych, biblioteka,
+to jest jak najbardziej dobry pomysł.
+Warto też wiedzieć, że każda baza stanowi swój własny, odrębny zestaw plików,
+więc w momencie, w którym będziecie chcieli robić jakąś kopię zapasową na przykład tych plików,
+no to na to trzeba zwrócić uwagę.
+I oczywiście, jeżeli mówimy o pojedynczym projekcie, to każdy pojedynczy projekt, którego używamy,
+może posiadać wiele baz danych.
+Czyli możemy niekoniecznie mieć bazę danych pod tytułem nazwa projektu,
+ale możemy mieć osobną bazę danych zawierającą CRM na przykład dla kontaktów z klientami,
+jakąś osobną bazę danych o nazwie sklep, osobną bazę danych o nazwie produkty,
+chociaż produkty to lepiej w sklepie, ale wiecie o co mi chodzi.
+Tu warto wiedzieć o tym, że w MongoDB, tak jak wspomniałem, nie ma schematów,
+więc jeżeli chcecie dokonywać podziałów na takie osobne całości,
+no to wówczas trzeba ten podział dokonywać na poziomie baz danych.
+Ale oczywiście baza danych też się dzieli.
+Wspominałem o tym w pierwszym punkcie, że baza danych to jest taki pojemnik na kolekcję,
+a kolekcja to takie coś jak tabela w przypadku baz danych relacyjnych.
+Czyli w baza danych biblioteka posiadałaby tabelę książki, autorzy, zamówienia i coś tam jeszcze,
+natomiast kolekcja to jest taka jakby tabela, która może przechowywać właśnie książki, autorów czy zwroty.
+Różnica między tabelą a kolekcją jest tylko taka, to wynika nam też z pierwszej lekcji,
+że każda kolekcja może posiadać różną ilość kolumn i każda kolumna może mieć różne typy.
+Czyli w ramach kolekcji mamy dokumenty, które mogą posiadać właśnie te różne ilości.
+Czyli jakby kolekcja nie określa nam schematu.
+W momencie, w którym kiedy robiliśmy tabelę, mówiliśmy o tabeli,
+no to w ramach definicji tabeli mówiliśmy, każdy rekord będzie posiadał to, to, to i to.
+Natomiast w przypadku kolekcji my mówimy tylko, hej, nazywaj się tak,
+a dopiero później będziemy wkładać do niej dokumenty, które będą mogły mieć różną strukturę,
+no bo tak jak wspominałem wcześniej, tak też wspominałem i tutaj,
+że dokumenty pakujemy do kolekcji, kolekcje stanowią pojemnik na dokumenty.
+A dokument to najprościej rzecz ujmując taki właśnie dżek.
+Jak wspominałem.
+Generalnie, jeżeli chodzi o dokumenty, to mogą posiadać one dowolną strukturę.
+Możecie w dokumentach mieć dowolną ilość kluczy, dowolną ilość wartości.
+Poprzez klucze ja rozumiem first name, last name, birthdate, date i weekday.
+Natomiast jak możecie zwrócić też uwagę na to, że na przykład birthdate to jest taki obiekt,
+który w środku też posiada jeszcze date i weekday.
+Czyli ta struktura nie tylko może być, mówmy, pozioma, jakbyśmy mówili o kolumnach,
+ale możemy też w ramach każdej takiej kolumny jeszcze głębiej dzielić ją na mniejsze kawałeczki.
+Czyli na przykład, jeżeli mamy książkę, to książka nie musi mieć asocjacji do jakiejś innej tabeli,
+gdzie mamy autora, tylko książka może mieć autora, który z kolei to autor może mieć first name i last name.
+Albo książka może mieć kategorie, która w środku może mieć nazwę,
+która może mieć jeszcze dodatkowo podkategorie i tak można sobie te dokumenty rozbudowywać.
+Oczywiście to jest wielka zaleta.
+A jak wiecie, zawsze kiedy mówię o takich zaletach, no musimy mieć też na uwadze ryzyko.
+Jeżeli pójdziemy za daleko i to wszystko sobie porozbudowujemy w głąb, no to sobie utrudnimy pracę.
+Warto sprowadzić wszystko do tego, żeby tych poziomów było jak najmniej.
+Ale jeżeli gdzieś warto będzie je dodać z korzyścią, no to jak najbardziej trzeba to dodać.
+Jeżeli chodzi o ilość dokumentów, to nie ma żadnego limitu,
+ile dokumentów możemy trzymać w jednej kolekcji.
+Natomiast o pojedynczym dokumencie możecie myśleć dokładnie jak o plikach JSON.
+Tutaj jest tylko taka różnica, że w przypadku plików JSON,
+klucze, czyli first name, last name, birthday, date i weekday, one zawsze muszą być podane w cudzysłowie.
+Czyli musimy zastosować cudzysłów wokół.
+Natomiast jeżeli chodzi o MongoDB, to tutaj jest taka mała różnica,
+że ten cudzysłów nie jest nam potrzebny.
+Można go sobie spokojnie skipować i używać po prostu first name, dwukropek, w cudzysłowie jan.
+I to też nam zadziała. Czyli wokół kluczy nie trzeba tego dodawać.
+No i omówiliśmy sobie o polach. Ja tutaj mówiłem o kluczach,
+natomiast tak naprawdę każdy ten pojedynczy wpis, który tam mieliśmy,
+to first name i last name, to jest pojedyncze pole.
+No i każde pole może mieć swój własny typ.
+Możemy mówić o liczbach, tekście, wartościach, true, false.
+Możemy mówić też o obiektach.
+Czyli mogą być to kolejne obiekty, jak widzieliście przed chwilą w birthdate,
+ale mogą być też to stringi, czyli jakiś tekst.
+Jeżeli chodzi o to, co wyróżnia pojedyncze obiekty,
+no to w przypadku SQL-a zawsze tworzyliśmy sobie tzw. id, on był primary key,
+tam był auto-increment i tak dalej.
+Natomiast MongoDB ceni sobie bardzo tą skalowalność, o której mówiłem.
+To, że można też nasze nawet pojedyncze kolekcje dzielić pomiędzy więcej tzw. nodów.
+O tym nie będziemy absolutnie rozmawiali.
+Chodzi o to, że możemy jakby powiedzieć, słuchaj, odtąd dotąd pilnujesz ty,
+odtąd dotąd pilnujesz ty, odtąd dotąd pilnujesz ty
+i to jest taki klaster, który przechowuje nasze dokumenty.
+Natomiast w ten sposób nakładamy na siebie obowiązek taki,
+że musielibyśmy pilnować kolejności id-ków, czyli odtąd dotąd faktycznie mam id-ki od 1 do 50,
+tu mam od 1 do 100, tu mam od 50 do 100, a tu mam od 100 do 150.
+Ale wyobraźcie sobie sytuację, że nagle usuwamy wszystkie 51 elementów.
+No to mielibyśmy jeden klaster, gdzie byłyby dwa elementy, jeden, w którym byłoby 50,
+jeden, w którym byłoby na przykład 5000. Żadna wydajność.
+Więc w Mongo domyślnie jest tak, że tymi naszymi kluczami jest tzw. UUID,
+czyli Universal Unique Key Id chyba, czy coś takiego, czy Unique...
+No nieważne. Chodzi o to, że id-kiem, tym kluczem głównym jest taki hash, taka suma.
+MongoDB zapewnia nas o tym, że ten hash nigdy się nie powtórzy w ramach danej kolekcji,
+ale o tym trzeba wiedzieć i te klucze, te id-ki z podkreśleniem id,
+one zawsze są generowane, kiedy dodajemy sobie nowy element.
+Więc mnie doświadczenie nauczyło tego, że robienie duplikatu dla takiego id-ka
+czy robienie jeszcze jakiegoś auto-inkrement samodzielnie, to raczej nie jest dobry pomysł.
+Raczej używa się właśnie tych UUID jako tych naszych kluczy i tyle.
+Czyli podsumowując naszą wiedzę, jeżeli chcielibyśmy sobie zbudować naszą bazę danych,
+to możemy powiedzieć, że mamy bazy danych, którymi będą sklep i CRM.
+W ramach tych baz danych możemy sobie utworzyć różne kolekcje.
+I takimi kolekcjami w ramach bazy danych sklep mogą być produkty zamówienia,
+w ramach CRM mogą być kontakty.
+Każda kolekcja będzie posiadała konkretne dokumenty.
+My tutaj nie definiujemy sobie, jakie pole mają te dokumenty,
+ale normalnie jakbyśmy je dodawali, to mogłoby być name chleb,
+ile ma cena, masło, mogłoby mieć informacje o tym, ile ma zawartości masła w maśle,
+a pomidor mógłby mieć jeszcze jakąś kategorię, cechę, coś innego.
+Nie musimy zupełnie przywiązywać się do tego, jakie właściwości będą miały
+poszczególne nasze dokumenty.
+One mogą mieć zupełnie, zupełnie różne.
+I tak może wyglądać właśnie struktura naszej bazy danych.
+Mam nadzieję, że w ten sposób już zrozumieliście, jaka jest różnica
+między bazą, kolekcją, dokumentem, a polem.
+Bo to są takie pojęcia, które będę tutaj stosował,
+no i wszyscy powinni te pojęcia rozumieć.
+Więc bardzo dziękuję Wam za tę lekcję.
+Zapraszam Was do kolejnej, gdzie zaczniemy już sobie coś pisać, kodować.
+Do zobaczenia.
+Dziękujemy.

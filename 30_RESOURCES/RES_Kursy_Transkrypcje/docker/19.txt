@@ -1,0 +1,300 @@
+Co bym chciał zobaczyć w tej lekcji, Janie?
+Tak naprawdę instalowałeś Vim'a.
+Mówiliśmy o tym, że w momencie, w którym kontener nam się usunie,
+to tak naprawdę tego Vim'a już nie będzie.
+Tak naprawdę, jeżeli byśmy przebudowali ten kontener,
+to też nie do końca wiem, czy Vim by był, czy by go nie było.
+Więc chciałem dzisiaj zrobić sobie takie małe poszukiwanie Vim'a.
+Czy jest, czy go nie ma?
+To jest coś takiego, jak gdzie jest Wall-E, co się go szukało.
+Zobaczmy, w jakich przypadkach Vim jest, w jakich przypadkach go nie będzie.
+I co możemy zrobić, żeby był na stałe tak naprawdę?
+I czy to na pewno jest dobry pomysł?
+Jasne.
+Także zaczniemy sobie od sprawdzenia, że nasz obraz nie jest uruchomiony ani zatrzymany.
+Nasz kontener, z którym pracowaliśmy poprzednim razem.
+Patrzymy sobie, że mamy zbudowany obraz, który ostatnio budowaliśmy.
+Pięćdziesiąt minut temu, to by się mniej więcej zgadzało.
+Także uruchomimy sobie ten nasz kontener z dokładnie tego obrazu jeszcze raz.
+Ja sobie tutaj wykorzystałem historię Basza, bo jestem leniwy, nie chce mi się przepisywać.
+Bardzo słusznie.
+Tylko czy ty chcesz mieć RM też w tym momencie?
+W zasadzie nie.
+Nie ma to znaczenia, dlatego że my i tak docelowo będziemy chcieli ten obraz usunąć i utworzyć go później ponownie, w sensie ten kontener, i otworzyć go później ponownie z nowo zbudowanego obrazu.
+Więc nie ma to większego znaczenia, dlatego też, że ten kontener nie usunie nam się, dopóki go nie zatrzymamy.
+Więc jeśli będziemy chcieli coś w nim zrobić...
+Zrobić, wyjść, wejść i zobaczyć, że to tam jest, będziemy mieli taką możliwość.
+Dobra, to tak zróbmy.
+To uruchamiamy.
+Wchodzimy do naszego obrazu i chcielibyśmy sobie zmodyfikować naszego flaska.
+I dowiadujemy się, że VIM-a nie mamy.
+Mimo tego, że tego VIM-a instalowaliśmy sobie, to teraz go nie ma, bo tak naprawdę to jest trochę tak, jakbyśmy na nowo
+stworzyli ten nasz obraz, tego naszego przepisu, nie?
+Nie tyle obraz, na razie uruchomiliśmy kontener, tak?
+Natomiast każdy kontener jakby osobno uruchomiony z naszego zbudowanego obrazu, bo my sobie możemy takich kontenerów tak naprawdę uruchomić kilka.
+Nic nie stoi na przeszkodzie.
+Możemy sobie w ten sposób nawet zasymulować troszeczkę infrastrukturę, zobaczyć jak działają load balancery.
+Czyli możemy sobie uruchomić kilka instancji naszych aplikacji, przed nimi skonfigurować na przykład NGINX-a, który ruchem będzie kierował.
+Co pozwoli nam też lokalnie przetestować, jak nasza aplikacja zachowuje się w takim scenariuszu, kiedy gdzieś tam tych instancji chcemy wiele uruchamiać, bo chcemy działać w chmurze.
+Także można sobie takie testy zrobić.
+Zachęcam do zabawy, jeśli ktoś już czuje się na siłach.
+Tak.
+Chociaż nie jest to najprostszy temat jeszcze na tym etapie.
+Być może w kolejnych szkoleniach pokażemy Wam, jak to zrobić.
+Tak, ale wracając do rzeczy, gdybyśmy sobie uruchomili teraz tym samym poleceniem tutaj docker run drugi obraz, na przykład nazwalibyśmy go do kodu Python myślnik 2 i byśmy do niego weszli.
+I zmienilibyśmy port jeszcze, bo ten port teraz też ważne, że byłby zajęty, prawda?
+Tak.
+I zmienilibyśmy port, bo ten port po stronie gospodarza jest już zajęty, ale w tym naszym do kodu bez numerka zainstalowalibyśmy Vima, uruchomilibyśmy w tym samym czasie osobny kontener do kodu Python 2, to w tej dwójce tego Vima nie będzie, dlatego że tamtej instalacji nie zrobiliśmy.
+Bo wszystko to, co my robimy w środku uruchomionego kontenera nie...
+Nie przenosi się jakby na stałe.
+To będzie żyło tylko i wyłącznie w tym kontenerze i to będzie żyło w nim tak długo, jak długo sam ten kontener będzie żył.
+To znaczy w momencie usunięcia tego kontenera wszystko, co my zrobiliśmy w ramach działającego kontenera zostanie utracone.
+Ok, dobra. To jest bardzo ważna informacja i myślę, że o tym trzeba pamiętać, czyli tak naprawdę za każdym razem,
+gdy chcemy coś doinstalować, co tak naprawdę ma być dostępne w każdym z kontenerów, to należy pamiętać o tym, żeby edytować plik dockerfile, prawda?
+Czyli żeby dodać to polecenie w dockerfile'u.
+Dokładnie. Musimy dodać polecenie w dockerfile'u, musimy ponownie zbudować ten nasz obraz i utworzyć nowy kontener z tego nowo zbudowanego obrazu, żeby te zmiany tam zobaczyć.
+Ale to jest ważne nie tylko z perspektywy np.
+instalacji pakietów, ale też jest to ważne z perspektywy kontenerów, które mają służyć jako bazy danych.
+Jeśli my np.
+robimy jakieś testy, potrzebujemy wykorzystywać Postgresa i tego Postgresa uruchamiamy, wtedy, żeby bazy danych nie stracić,
+wykorzystujemy wolumeny, o których uczyliśmy się już wcześniej.
+Bo w zależności od tego, jaki problem potrzebujemy rozwiązać, możemy albo coś na stałe dodać do naszego obrazu,
+albo możemy podmontować wolumen.
+Otóż to.
+Dobrze, także teraz sobie edytujemy nasz obraz.
+Może jeszcze zatrzymamy sobie
+ten nasz kontener.
+I tak naprawdę teraz będziemy chcieli wejść do dockerfile'a i wykonać dodatkowe polecenie
+run apt-get update i run apt-get install vim.
+Minus y jeszcze, to też ważne, o tym też musimy wspomnieć.
+Tak.
+Zaczynamy od tego, że wybieramy sobie odpowiednie miejsce dla naszej warstwy.
+I to miejsce też należałoby omówić.
+Bo tak naprawdę to, co mogłoby się wydawać słuszne, to np.
+dodanie tego runa gdzieś poniżej kopii.
+Ale wszystkie te
+rzeczy, które instalujemy w systemie, tak jak wspominał Jan,
+są zapisywane,
+które dzieją się, kiedy budujemy obraz, są uruchamiane od góry.
+Czyli w momencie, w którym
+dodalibyśmy sobie
+ten run apt-get install, czy run apt-update niżej,
+to tak naprawdę on by musiał to przebudowywać za każdym razem np.
+po tym, jak zmienilibyśmy coś w requirementsach.
+A my nie chcemy tego robić w ten sposób.
+Chcemy, żeby on najpierw
+przygotował nam system, a dopiero później, żeby pracował na aplikacji.
+Więc warto sobie te rzeczy właśnie rozdzielać.
+Nawet można zrobić komentarz hash i
+napisać, tu się tworzy system, a tam się buduje aplikacja.
+Tak, dokładnie.
+Tak. I tu jeszcze jedna pewnie rzecz, którą zaraz...
+OK, dobra.
+Bo zdarza się, że nie robimy apt-update i osobnym poleceniu run apt-install vim-y,
+tylko dodajemy ampersand.
+Żeby te polecenia się wykonały
+jednym po drugim. To też jest tutaj ciekawa sprawa.
+Tak, tutaj celowo na razie zapisałem to w ten sposób, dlatego że jest to dobra okazja,
+żeby troszeczkę lepiej omówić warstwy.
+To, co tutaj widzimy, te dwa runy, one utworzą nam dwie osobne warstwy.
+To znaczy, że
+po aktualizacji naszych pakietów, te informacje
+z aktualizacji zostaną zapisane
+i dopiero w kolejnej warstwie nastąpi instalacja.
+I w takim przypadku jeszcze nie ma to dużego znaczenia, bo tutaj to, co za chwilę
+zobaczycie, ograniczy nam jedną warstwę, ale
+perspektywy samego rozmiaru jeszcze wiele nie zmieni.
+Natomiast to, co dzieje się tutaj z apt-update, to jest zaciągnięcie informacji o naszych
+pakietach do cache'u danego obrazu.
+I my tego cache'u raczej w naszym docelowym obrazie mieć nie chcemy.
+Dlatego
+często stosuje się jeszcze usuwanie cache'u.
+Dobra, to ja jeszcze tylko dodam, dlaczego po Vimie znajduje się minus Y.
+I ta informacja też jest ważna, ponieważ
+osoby, które korzystają z Ubuntu czy z Debian'a na pewno kojarzą, że kiedy
+wykonujemy apt-install-vim, to on nas pyta, czy na pewno chcesz zainstalować tę paczkę.
+I w przypadku, kiedy pracujemy z Dockerem,
+zależy nam na tym, żeby wszystkie te polecenia działały nieinteraktywnie.
+Czyli żeby on nie pytał nas o potwierdzenie takiego polecenia.
+Jest to niezwykle ważne.
+I zawsze, kiedy wykonujecie jakieś polecenie, to starajcie się wykonywać te polecenia,
+czy róbcie te polecenia właśnie w taki sposób, żeby tych pytań nie było wcale.
+Każde takie pytanie zatrzymujące proces
+budowania będzie nam po prostu uniemożliwiało budowanie obrazu.
+Tak, dlatego że w takiej sytuacji obraz będzie czekał na potwierdzenie
+z poziomu klawiatury przez użytkownika podczas instalacji.
+No ale w obrębie budowania obrazu nie jesteśmy w stanie tego wykonać, więc ta
+instalacja tak naprawdę stanęłaby w miejscu, czekając cały czas na to nasze potwierdzenie.
+Dlatego zawsze w tym momencie, gdy będziemy w stanie budować obraz, będziemy w stanie budować obraz.
+Warto pamiętać o takich przełącznikach jak właśnie minus Y, który automatycznie
+zatwierdza nam tą naszą instalację.
+Dokładnie tak.
+I tu
+dobrze, że dodałeś tyle tych runów, bo nawet jeżeli one nie są też wszystkie
+potrzebne, to też pokażą nam ładnie te warstwy, o których w tej lekcji chcemy porozmawiać.
+Tak. I teraz
+tej wersji obrazu nie chciałbym budować.
+Myślę, że nie ma potrzeby budować go dwa razy, ale
+tutaj chciałbym omówić to, co po kolei wydarza się w tych czterech ranach i w tych czterech warstwach.
+I tak jak Docker sobie działa, wykonuje nam pierwszą warstwę, zapisuje ją do obrazu.
+Wykonuje drugą warstwę, zapisuje ją do obrazu.
+To jest bardzo ważne, że on ją zapisuje do
+obrazu, bo warstwa zapisana do obrazu pozostaje w tym obrazie.
+I teraz przychodzimy do kolejnej warstwy, która
+wyczyści nam informacje z apta
+i zapisuje do warstw.
+Ale poprzednie warstwy są dalej w obrazie.
+W związku z czym
+ta warstwa jest dalej w naszym obrazie.
+I jeśli my sobie wyczyścimy
+zarówno jednym, jak i drugim poleceniem
+całe cache, które apt sobie zbudował, to my co prawda
+wchodząc do kontenera
+nie zobaczymy tych paczek.
+Natomiast gdybyśmy sobie prześledzili
+warstwy tego obrazu i zajrzeli do poszczególnych warstw, to znajdziemy, że
+w poprzednich warstwach te paczki, te pliki nasze nadal istnieją.
+I dlaczego to jest ważne?
+Jest to ważne przede wszystkim dlatego, że wpływa to na rozmiar.
+Teoretycznie my usuwamy coś z tego obrazu.
+Natomiast przez to, że to zostało zapisane do warstwy poprzedniej,
+nie widzimy tego w już uruchomionym
+kontenerze, ale nadal zajmuje to rozmiar naszego obrazu.
+I jest taka prydna sztuczka,
+która wykorzystuje to, jak działa Bash i że pozwala nam łączyć polecenia
+oraz uruchamiać je też w kolejnych liniach.
+Także zobaczymy tutaj obydwie konfiguracje.
+Zaczniemy sobie od tego, że
+chcemy uruchomić to polecenie
+i po nim chcemy uruchomić kolejne polecenie, ale dla ładnego formatowania
+chcemy je widzieć w nowej linii. Backslash służy do zrobienia nowej linii.
+Od razu widzimy, że nasz run zmienił się tutaj na biało.
+Przechodzimy sobie do tej linii.
+Usuwamy sobie tego runa.
+Także wcieliśmy tutaj sobie kod, żeby ładnie wyglądał.
+Żeby łatwiej nam się to czytało.
+I teraz, dlatego że są to kolejne polecenia,
+to w Bashu do uruchomienia jednego
+polecenia po drugim używamy podwójnego ampersandu.
+Czyli robimy coś takiego.
+Toczymy backslasha tak naprawdę zrobimy tutaj.
+Czy my go zrobimy przed tymi ampersandami?
+Nie ma większego znaczenia.
+On powinien zadziałać w obu miejscach, aczkolwiek być może nie.
+Backslash jest ważny, żeby był na końcu linii.
+Natomiast same ampersandy możemy stosować wcześniej.
+Tylko moje doświadczenie pokazuje, że
+wygodniej jest je mieć po prostu tutaj, bo lepiej widać, że coś po prostu dodawaliśmy
+kiedy dopisujemy nowe linijki.
+Także troszeczkę wygodniej pracuje się, jeśli backslasha mamy na końcu, ale
+ampersandy mamy na początku nowej linii.
+No ok, ale na razie połączyliśmy sobie dwie warstwy.
+I w tej sytuacji, którą widzimy teraz na ekranie
+nadal usunięcie nastąpi w dwóch nowych warstwach.
+W związku z czym cały ten cache w tych naszych warstwach pozostanie.
+No ale nic nie stoi na przeszkodzie, żeby ten sam
+mechanizm stosować dalej, czyli dodajemy kolejną nową linię.
+Widzimy znowu, że ten run zmienił swój kolor.
+Przechodzimy do tej linii.
+Usuwamy go, cinamy,
+dodajemy ampersandy
+i już apt-clean wykonuje się w tej samej warstwie.
+Nie mam pewności, czy sam apt-clean usuwa
+wszystko. Zazwyczaj na wszelki wypadek stosuje się
+obu metod w obrazach, chociaż częściej wykorzystywana jest ta z rm-rf.
+Nic nie zaszkodzi, jeśli zrobimy sobie obie.
+Także wciągamy ostatnie polecenie również do nowej warstwy.
+Dodajemy je w ten sposób i tak jak przed chwilą
+mieliśmy cztery warstwy, z czego one w obrazie zostawały.
+Tak to, co widzimy tutaj teraz, to w obrębie jednej warstwy.
+Pobieramy cache paczek.
+Instalujemy Vima
+i czyścimy wszystkie cache, które wcześniej się pobrały i dopiero na tym etapie ta
+nasza warstwa się zamyka, w związku z czym to usuwanie jest skuteczne.
+Bo warstwa dopiero się zapisuje po zakończeniu wszystkich poleceń w tej
+warstwie, co oznacza, że to, co jeszcze w tej warstwie usuniemy, nie będzie nam
+zwiększało rozmiaru naszego wynikowego obrazu.
+A wielkość obrazów tutaj ma zdecydowanie znaczenie, żeby po prostu odchudzić je,
+żeby nie trzymać w nich niepotrzebnych rzeczy.
+Bardzo to było pouczające, więc bardzo się cieszę, ale nie mogę się doczekać budowania
+i oglądania warstw.
+Jasne, także zapisujemy.
+Sprawdzamy, czy mamy nasz obraz zbudowany.
+Mamy zbudowany.
+Widzimy, że już ponad godzinę temu, ale zbudujemy go sobie jeszcze raz.
+Tym razem chcemy cacha wykorzystać.
+Pamiętamy, że warstwa z aptem doszła nam po env'ie.
+Także env powinien jeszcze pokazać się, że wykorzysta cache'a.
+No a ten apt już tego cache'a gdzieś tam wykorzystywał nie będzie.
+To lecimy.
+Fire.
+Tak, i to jest bardzo ciekawe tutaj.
+Że te warstwy one są numerowane, nie?
+Czyli widzimy, że poszła pierwsza, a potem druga z sześciu i tak dalej.
+Czyli ładnie nam to pokazał, że całe to
+polecenie wykonał w jednej warstwie tak naprawdę.
+Dokładnie tak.
+Widzimy, że później w kolejnej warstwie mamy już workdir, czyli nasze kolejne polecenie.
+No i właśnie wszystko, co tutaj zostało wykonane, jest jako jedna warstwa.
+Bash sobie też spłaszcza kolejne linie, dlatego tutaj nie widzimy tych backslash'y.
+One zostały spłaszczone do jednej linijki.
+Widzimy po prostu ampersandy, które oznaczają kolejne polecenia.
+Przy czym warto zaznaczyć, że ampersand zadziała wtedy, kiedy poprzednie
+polecenie wykona się prawidłowo. Moglibyśmy też wykorzystać w tym miejscu średniki.
+One również zadziałają.
+Problem ze średnikami jest jednak taki, że jeśli np.
+update by nam się nie wykonał, bo przykładowo nie mielibyśmy internetu,
+wtedy spróbujemy zainstalować VIMa,
+mimo że nie mamy informacji w cache'u o tym, że ten VIM gdzieś tam jest dostępny.
+I na tym kroku nasz obraz przestanie się budować.
+Wtedy tutaj budowanie zakończy się błędem.
+A tak naprawdę chcielibyśmy, żeby to budowanie błędem zakończyło się już tutaj.
+Dlatego gdyby kogoś kusiło skorzystać ze średników, uczulam,
+trzeba rozumieć tą różnicę i trzeba świadomie korzystać ze średników wtedy,
+kiedy wiemy, że dany krok nawet jeśli się nie powiedzie, to to nam nie przeszkadza i
+chcemy kontynuować z kolejnymi poleceniami w obrębie danej warstwy.
+Jeśli jednak wszystkie muszą się wykonać i w jakiejś określonej kolejności, wtedy
+zdecydowanie średnika nie używamy, tylko wykorzystujemy właśnie ampersandę.
+To ostatni test. Czy jest VIM?
+Czy jest VIM? Teraz chcemy sobie zobaczyć,
+czy mamy
+kontener. Nie mamy kontenera żadnego, ani uruchomionego, ani zatrzymanego.
+Także uruchomimy sobie kontener z nowego
+obrazu.
+Jeszcze sobie zobaczymy,
+że faktycznie obraz jest świeży.
+Teraz to co tutaj widzimy, co się wydarzyło, jeśli porównamy sobie ten ID,
+to jest taki sam jak ten ID, tutaj wcześniej widzieliśmy do kodu z tagiem
+Python zbudowany ponad godzinę temu, ale dlatego, że my zbudowaliśmy nowy obraz
+z tym samym tagiem, dostał nowe ID, to ten poprzedni obraz, on sobie dalej tutaj
+istnieje, on nie został usunięty, widzimy, że stworzony godzinę temu, z troszeczkę
+mniejszym rozmiarem, także tutaj też widzimy, że coś tam sobie dołożyliśmy.
+On utracił te nazwy, ale dalej gdzieś tam pozostał.
+Dlatego jesteśmy w stanie np.
+wykorzystać go jako cache do budowania gdzieś tam kolejnych obrazów.
+Ale nie jesteśmy w stanie tak wprost
+wykorzystać go po nazwie i po tagu do uruchomienia nowego kontenera.
+Musielibyśmy wtedy skorzystać z jego ID, gdybyśmy chcieli coś takiego zrobić.
+Dokładnie tak.
+OK, czyli tak naprawdę możemy już sobie wykonać teraz polecenie uruchamiające.
+Tak.
+Lecimy z docker run.
+Polecenie już dobrze nam znane.
+Kontener się uruchomił.
+Chcemy sobie do niego wejść.
+I
+spróbujmy zobaczyć nasz plik z flasku.
+Jest, działa.
+Także w ten sposób dodaliśmy Vim'a na stałe do naszego obrazu.
+I
+to chyba tyle w tej lekcji.
+Też mi się tak wydaje.
+Udało nam się przejść przez cały ten flow.
+Czyli udało nam się
+tak naprawdę pokazać wam w jaki sposób doinstalować Vim'a poprawnie.
+No i też bardzo dużo porozmawialiśmy o warstwach.
+Dla mnie też to była bardzo merytoryczna lekcja, merytoryczne spotkanie.
+Więc już nie mogę doczekać się kolejnych i tego czego dowiem się jeszcze.
+Bo tutaj też dowiaduję się pewnych nowych rzeczy.
+Więc cóż, do zobaczenia w kolejnej lekcji.
+Dziękuję. Widzimy się w kolejnej lekcji.

@@ -1,0 +1,174 @@
+Czasem przychodzi też taki moment, że chcemy się upewnić, że wszystko dobrze wiemy
+i wszystko dobrze przechowujemy i wszystko dobrze odbieramy.
+I Mongo posiada również taką funkcjonalność, która pozwala nam o tym się upewnić
+i sprawdzać poprawność dodawanych do kolekcji dokumentów.
+Czego się dowiemy w tej lekcji?
+Po pierwsze, czym jest bison, po drugie, jakie typy pól przechowuje Mongo,
+po trzecie, co zrobić z wymagalnością pól, a po czwarte, jak to wygląda, jeżeli chodzi o wyrażenia.
+Od razu tylko chcę nadmienić, że ja dużo nie pracowałem w Mongo z tym sprawdzaniem poprawności.
+Zazwyczaj sprawdzanie poprawności zrzucałem na aplikacje.
+Po takim wnikliwym przygotowywaniu się też do tych lekcji,
+po czytaniu różnych dokumentów, zastanawiam się, czy to na pewno jest takie dobre.
+W sensie, dobrze jest, jeżeli trzymamy tę odpowiedzialność w bazie
+i tak baza wyrzuci nam wyjątek, który będziemy też mogli później obsłużyć sobie w aplikacji,
+ale raczej używałbym tego w charakterze zabezpieczenia,
+a nie czegoś takiego dla użytkownika bardzo.
+Wiecie, taki e-mail już istnieje.
+To raczej sprawdzałaby mnie aplikacja, a nie baza danych.
+Czyli ja bym...
+Z tego bardziej to traktował w charakterze, wiecie, bezpiecznika,
+a nie w charakterze barierki, tak?
+Bardziej w ten sposób.
+Wiecie, barierka służy do tego, że to jest element interfejsu,
+służy do tego, żeby nie wypaść z balkonu.
+Natomiast to już byłoby takim zabezpieczeniem,
+już jak człowiek już zacząłby lecieć.
+OK.
+BSON to nic innego jak Binary plus JSON.
+Z tego względu, że tutaj różnego rodzaju,
+dane będziemy mogli przechowywać w naszych kolekcjach,
+w naszych dokumentach.
+Nasze dokumenty mogą być różnego typu.
+No i każdy dokument może...
+Właśnie opisujemy go za pomocą tego typu BSON.
+Zaraz zresztą to zobaczycie.
+I typy, które możemy przechowywać, są takie, jak widać na ekranie.
+Czyli mamy double, string, object, array i bin, data,
+czyli jakiś obiekt binary, obiekt binarny, tak?
+Czyli na przykład jakiś plik.
+Nie robiłem tego nigdy.
+Raczej jestem zwolennikiem przechowywania plików na dysku
+i przechowywania URL-a do pliku w bazie danych
+niż konkretne wrzucanie pliku do bazy.
+No ale jak się da, to może kiedyś warto będzie spróbować.
+Double, no to oczywiście chodzi o liczby,
+które mają wartość zmienną przecinkową.
+Jeszcze jest oczywiście integer, zaraz zobaczycie.
+String, no to tekst, obiekt, wiadomo.
+Array, no to taka lista czegoś więcej.
+Cały opis wszystkich tych typów macie też tutaj pod adresem strony internetowej.
+W lekcji, w module jest przypięty link do prezentacji.
+Jeżeli macie ochotę, to kliknijcie, tam znajdziecie więcej informacji.
+Jak skonfigurować najpierw pola tak, aby były wymagane?
+Czyli żeby mieć pewność, że wartość została na pewno przekazana.
+Zobaczcie, tutaj trochę nam się zaczyna nasza kolekcja już komplikować.
+Jak sobie wyobrazimy taką kolekcję, w której podajemy absolutnie wszystko,
+to już widzicie, ta konfiguracja trochę waży, ale okej.
+DB create collection, to oczywiście jest nazwa kolekcji,
+po czym jest obiekcik, który już widzieliście niejednokrotnie,
+chociażby w poprzednich lekcjach, a dalej jest coś, co nazywa się validator,
+czyli validator, coś, co sprawdza poprawność.
+Następnie jest JSON schema z dolarem z przodu i określamy,
+że nasz bison type to jest object. W ten sposób możemy mu przekazać required,
+pole, pole, pole.
+Czyli mówimy, słuchaj, w produkcie potrzebuje konkretnie mieć nazwę, cenę i opis,
+no to required name, description, price. Takie trzy rzeczy możemy mu opisać.
+Ale required tylko i wyłącznie zakłada, że te dane muszą być podane,
+a nie mówi nic o tym, jak te dane mają wyglądać, jakie mają mieć typy,
+jakie warunki mają spełniać. Tego typu dane znajdziecie w properties.
+Tutaj ja wstawiłem trzy kropki, ale zobaczcie, co jest w środku.
+Jak kliknę w te trzy kropki, o właśnie w te,
+to zobaczycie, że properties to zawiera coś takiego, że mamy pole, pole,
+bison type typ pola, bison type typ pola. Czyli tutaj sobie określamy, że pole,
+załóżmy, price ma być bison type float, a name ma być bison type string.
+I tu można mu te typy pól opisywać. Na przykład bison type integer,
+bo to jest jakaś cena. Tu akurat mógłby być double, nie? Bison type integer, minimum to zero,
+maximum to dziesięć tysięcy, no i jeszcze jest description,
+czyli musi być liczbą całkowitą pomiędzy zerem a dziesięcioma tysiącami, tak?
+Analogicznie string, czyli przekazujemy sobie dane w ciapkach jako string,
+w cudzysłowie, więc możemy mu też to określić.
+Również możemy też określić sobie enum, czyli konkretne wartości mogą się znaleźć
+tylko i wyłącznie w dokumentach. Zobaczcie, na przykład mamy kategorie.
+I ka...
+Ta kategoria w tym dokumencie może być tylko jedną z poniższych,
+news, feature albo new products. Nie mamy możliwości przechowywania żadnych
+innych kategorii w naszej kolekcji. I jeszcze mamy location.
+Jeżeli byście chcieli, to też jak najbardziej można byłoby stworzyć taką...
+taki walidator, który będzie sprawdzał, czy nasza właściwość jest obiektem.
+I tu można zakładać, że nasz obiekt musi mieć podane required latitude, longitude, załóżmy.
+No i properties. No i jak widać, troszeczkę mamy tutaj ten...
+rekurencję, tak, czyli znowu mamy bison-type object, znowu jest required,
+no bo to tak naprawdę, mówiąc o tym, że to jest obiekt, to tak naprawdę wracamy sobie
+do tego slajdu, o, do tego, i lecimy dokładnie z tą samą strukturką.
+Zobaczcie, że to jest bardzo, bardzo podobne, to jest takie samo,
+bo dokładnie tak samo to działa. Czyli za chwilę w środku mogę znowu napisać,
+że latitude, to ma być...
+to ma być integer, czy tam double, minimum, maksimum i tak mogę też tym sobie
+ładnie zarządzać. Jeżeli chodzi o konfigurowanie tych naszych operacji,
+no to tutaj określaliśmy sobie...
+tutaj określaliśmy sobie te właśnie te typy, natomiast mamy też możliwość określenia
+podczas walidacji czegoś takiego jak near albo near-sphere i w ten sposób możemy określać,
+że np. interesują nas tylko lokalizacje
+znajdujące się w konkretnych miejscach albo np. znajdujące się w pobliżu jakiegoś punktu
+nie dalej niż tyle i tyle metrów. Taką możliwość też jak najbardziej mamy.
+No i tak samo można też za pomocą takiego czegoś jak tekst określić sobie,
+że chcemy, żeby tylko i wyłącznie... żeby do tego pola mógł się... mógł dostawać się tylko
+i wyłącznie tekst zawierający czy też nie zawierający jakieś konkretne sformułowania.
+No i tu
+dla przećwiczenia tej konkretnej dawki wiedzy mamy zadanie.
+Przygotuj kolekcję students, która będzie zawierała następujące reguły wymagane first name oraz last name.
+Age jako liczba całkowita większa od 18, a mniejsza od 80. Subject pole o jednej z tych wartości matematyka,
+matematyka, angielski, informatyka. Address obiekt z wymaganymi polami,
+street, city, country i postal code. Tych reguł dotyczących walidacji jest bardzo dużo,
+ale no pokazałem wam te najważniejsze. Jeżeli będziecie mieli chęć jeszcze sobie o tym poczytać,
+to jak najbardziej zachęcam. A tak to 3 minuty dla każdego. Widzimy się w rozwiązaniu i zapraszam
+was już za moment do kolejnej lekcji.
+No to co? Przygotuj kolekcję students, która będzie zawierała następujące reguły. No to lecimy.
+db.createcollections.
+I teraz jak wiecie, żeby dorzucić reguły walidacyjne, potrzebujemy przekazać tutaj walidator,
+czyli robimy sobie klamereczki. Klamerki, może nie zdrabniajmy. Walidator, bo co niektórzy wyłączą film
+i będzie słabo. Walidator.
+JSON schema.
+Bison type.
+Z tym bizon też oczywiście trochę tak nabijam, ale, ale, ale, ale bizon.
+Bison type object. Required.
+I co my tam mamy wymagane, moi drodzy? Wymagane mamy.
+Uciekłem. Uciekło mi zadanie. Wymagane jest first name i last name. No to first name
+oraz last name.
+Last name. Natomiast dalej mamy jeszcze zbiór innych reguł, które też powinniśmy przestrzegać,
+których też powinniśmy przestrzegać, czyli properties.
+I nasze properties jest też kolejnym obiektem. I w ramach tego obiektu musimy mu określić
+właściwości dla pól takich jak age, subject oraz address.
+Age, subject oraz address.
+Jeżeli chodzi o age, to ma być to liczba całkowita większa od 18 i mniejsza od 80.
+Czyli możemy sobie zrobić klamerki.
+Bison type to jest integer. Minimum to jest 18.
+Maximum to jest 60.
+Chyba było więcej niż 60.
+Osiemdziesiąt.
+Osiemdziesiąt.
+Ok. Subject.
+Subject to matematyka, angielski albo informatyka, czyli to będzie enum.
+Tutaj po prostu jest enum.
+Czyli enum.
+No i ten nasz enum to może być jeszcze coś innego.
+Ten nasz enum to może być, jeszcze raz, co?
+Bo się rozproszyłem. Matematyka, angielski, informatyka.
+No to.
+Ok. I zostaje nam jeszcze adres, który musi być obiektem.
+No i ma mieć properties.
+Coś ma wymagane?
+No to required, street, city, country and last one, postal code.
+Ok. Hops.
+Wychodzi na to, że wszystko nam się udało.
+Czas dodać jakieś informacje do naszych studentów.
+DB students, insert.
+Nie będę wszystkich tych rzeczy sprawdzał.
+Jeżeli macie ochotę sprawdzić, to śmiało.
+Natomiast to, co dodam, to sobie spróbuję dodać na razie studenta,
+tylko z pierwszym imieniem.
+Kacper.
+Document failed validation.
+No to dajmy mu first name i last name.
+O, przyszedł.
+Age nie był wymagany, ale age, jeżeli jest podany,
+to musi być albo między 18 a 80.
+No to weźmy, podajmy mu age na 3.
+Nie przeszło.
+To podajmy mu age na 20.
+Przeszło.
+Czyli jak widać, działa.
+Bardzo serdecznie Wam dziękuję za tę lekcję
+i zapraszam do kolejnej o może trochę tajemniczym tytule
+Struktura drzewiasta.
+Zapraszam.

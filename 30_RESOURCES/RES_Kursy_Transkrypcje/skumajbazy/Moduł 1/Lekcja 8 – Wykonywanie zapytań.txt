@@ -1,0 +1,92 @@
+Witajcie w kolejnej lekcji jeżeli chodzi o podłączenie się do Dbivera to to zrobiliśmy sobie jakiś czas temu teraz pokażmy sobie co trzeba wykonać żeby do tego Dbivera wysłać nasze polecenie no i w końcu zobaczyć wynik w końcu zacząć pracować z naszymi danymi więc w Dbiverze macie kilka opcji jedna z opcji to kliknięcie na strzałkę obok tego słowa SQL
+no i tam jest coś takiego jak new SQL script równie dobrze możecie też kliknąć słówko SQL to powinno mieć podobny skutek to co jest ważne to jest to że w Dbiverze on nam zapisuje wszystkie zapytania które wykonujemy więc później łatwo będzie wam wrócić do poszczególnych zadań dla mnie to jest bardzo wygodne nie tylko ze względu na to że ja często wykonuję podobne zapytania zapytacie czemu nie robię skryptów no nie zawsze skrypt jest potrzebny czasem po prostu potrzebuje mieć
+podobny skrypt
+więc wówczas po prostu tworzę sobie takie skrypty w Dbiverze no i z tych skryptów pobieram zapytania dodatkowo Dbiver to jest też takie narzędzie stworzone do tego żeby na przykład wykonać zbiór różnych zapytań coś dodać coś odjąć coś pobrać coś sprawdzić więc dlatego też te skrypty tak tutaj są skonstruowane więc nie zdziwcie się jeżeli on was zapyta czy chcecie zapisać ten skrypt czy też poda wam jakąś konkretną nazwę to jest tak naprawdę bardzo wygodne i to jest dla waszego dobra warto to robić
+więc tworzymy sobie ten new SQL script no i w ten sposób powinno pokazać wam się okienko jak widzicie mój SQL script nie jest zapisany dlatego widzę że tutaj mam gwiazdkę skrypt na chwilę obecną ma nazwę skrypt 20 to też nie ma żadnego znaczenia później przydaje się kiedy otwieramy ten skrypt żeby wiedzieć co w tym skrypcie jest więc na przykład kiedy będziecie robili pracę domową zachęcam was do tego żebyście nazwali sobie ten skrypt praca domowa jak będziecie robili jakieś ćwiczenie to nazwijcie sobie to na przykład nazwą skrypt 20 to też nie ma żadnego znaczenia później przydaje się kiedy otwieramy ten skrypt żeby wiedzieć co w tym skrypcie jest więc na przykład kiedy będziecie robili pracę domową zachęcam was do tego żebyście nazwali sobie ten skrypt praca domowa jak będziecie robili jakieś ć
+modułu, czy nazwą lekcji, wówczas
+łatwiej będzie Wam się po tym poruszać.
+I tutaj
+macie przykład zapytania, w którym
+wykonujemy SELECT 1 plus 1
+as result. Jeżeli chodzi
+o to zapytanie, to czym jest SELECT i jak
+pisać te zapytania, jeszcze sobie powiemy.
+Na to, co jest ważne, to widzicie, że
+pobieramy coś, no bo SELECT znaczy
+wybierz, wskaż, czyli SELECT 1 plus
+1 as result, gdzie to
+as result to jest tak zwany alias,
+który przypisujemy sobie do tego
+naszego zapytania. No i
+zobaczcie, że wówczas w wyniku pojawiła nam się
+od razu informacja RESULT.
+To słówko RESULT nie wynika wcale z tego,
+że to jest jakiś standard,
+tylko właśnie jest to ten alias, no i pod spodem
+dostaniemy wynik w postaci
+dwójki. To, co jest bardzo
+ważne, to w momencie, w którym chcecie
+wykonać to zapytanie, musicie
+stanąć na tym konkretnym wierszu
+i następnie wybrać skrót klawiszowy
+CTRL ENTER. CTRL ENTER
+to jest taki sposób na
+zatwierdzenie, gdyż normalny ENTER
+powoduje, że przechodzicie sobie po prostu
+wiersz niżej, możecie dalej pisać,
+natomiast CTRL ENTER wykonuje zapytanie.
+I tu jest jeszcze jedna bardzo ważna
+rzecz, a mianowicie średnik na końcu.
+Ten średnik to nie jest
+przypadek, gdyż
+jeżeli bym wprowadził kolejne zapytanie
+niżej i nie byłoby
+tego średnika, to wtedy DBiver
+będzie miał problem, nie będzie wiedział, jak wygląda
+moje zapytanie. On się nie będzie domyślał.
+Będzie myślał, że to, co jest wyżej, to również
+jest część tego zapytania, które jest
+niżej. Więc rozdzielamy sobie
+tylko już poszczególne zapytania średnikami,
+ustawiamy kursor
+na linii, czy też na zapytaniu
+po prostu, no i wtedy właśnie
+skrótem klawiszowym CTRL ENTER
+wykonujemy sobie to zapytanie.
+W ten sposób w wyniku dostaniemy,
+znaczy w wyniku, pod spodem dostaniemy wynik,
+no i tutaj on nam jeszcze na zielono powie,
+co zostało
+obliczone, co zostało wykonane.
+No i oczywiście pod spodem też tam w prawym
+dolnym rogu będziecie mieli informację,
+ile rekordów zostało zwróconych
+i jak długo to zapytanie trwało.
+Na tym pasku, który pokazywałem Wam
+w poprzedniej lekcji.
+Ach, no i tutaj jeszcze jedna ważna sprawa.
+Jeżeli chcecie zapisać Wasz skrypt,
+no to albo możecie kliknąć na ten
+krzyżyk i wówczas też on Was zapyta,
+co chcecie dalej zrobić,
+albo właśnie korzystając z skrótu klawiszowego
+CTRL S, czyli najpopularniejszy
+też Command S, możemy sobie ten skrypt
+zapisać. To, co ważne, to
+CTRL ENTER to nie jest tylko i wyłącznie
+skrót klawiszowy, który działa
+tylko na Windowsie,
+na Macu też jest to skrót
+CTRL ENTER, natomiast tutaj będzie to
+skrót Command S po prostu.
+OK? I skoro
+już wiemy, jak wykonywać zapytania,
+no to powiedzmy sobie, co w tych
+zapytaniach może siedzieć.
+No i plan numero uno
+to są operatory, czyli
+skoro tutaj zrobiliśmy 1 plus 1,
+to znaczy, że możemy też innych operatorów
+używać. W kolejnej lekcji
+porozmawiamy sobie właśnie o tych operatorach.
+muzyka

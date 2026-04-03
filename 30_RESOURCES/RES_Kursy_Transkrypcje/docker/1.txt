@@ -1,0 +1,76 @@
+No to cóż, mamy taką sytuację, jak patrzę w agendę kursu, że już się przywitaliśmy, już wiecie czym jest docker, już wiecie jakie korzyści płyną z tego, że go macie, bo go macie, bo w poprzednich lekcjach instalowaliśmy tego dockera, no i cóż, teraz porozmawiamy o tym, co w tym dockerze się znajduje.
+I to, co mnie zastanawia, to docker ma taką ładną graficzkę, wszystko tak ładnie wygląda, a teraz, Janie, ty odpaliłeś takie czarne, smutne okienko, czy to znaczy, że my przechodzimy sobie do konsoli? Taki jest plan?
+Tak, dokładnie tak, teraz popracujemy sobie z konsoli i zaczniemy od tego, jakie w ogóle polecenia w dockerze są dostępne.
+Rozumiem.
+Czyli na przykład, jeżeli mam Windowsa, to mogę odpalić sobie CMD i też mogę te polecenia.
+Jak te polecenia wykonywać? Bo tutaj akurat ty pracujesz na Ubuntu, z tego co wiem, ale to też warto nadmienić osobom, które instalowały tego dockera pod Windowsem, że w CMD polecenie docker powinno też wyświetlać te same polecenia, te same informacje, może nie będą tak ładnie oscylowane, ale te same.
+To oddaję ci głos i opowiadaj nam, co tutaj się znajduje.
+Tak, także zaczynamy od sprawdzenia, jakie w ogóle komendy są.
+I zwyczajowo narzędzia mają przełącznik.
+Help, czyli wpisujemy docker minus minus help, żeby zobaczyć, co tutaj mamy dostępne.
+Żeby zobaczyć, początek przewijamy na górę i patrzymy po kolei na nasze polecenia.
+Mamy podstawowe komendy, które są wymienione tutaj.
+Z nich będziemy też korzystać najczęściej.
+Najczęściej to są polecenia, które też będziemy sobie podczas tego kursu omawiać.
+Niekoniecznie wszystkie, nie z wszystkich korzysta się regularnie.
+Natomiast możemy sobie zawsze podejrzeć, do czego takie polecenie jest i możemy sobie sprawdzić też podpowiedź do danego polecenia.
+Jeśli interesuje nas przykładowo docker run, ale nie wiemy, co możemy zrobić z nim dalej,
+możemy sobie zobaczyć docker run.
+I mamy teraz help dla naszego docker run.
+Jak widać, tutaj lista się troszeczkę dłużej przewija niż poprzednim razem.
+Mamy wszystkie przełączniki, jakie możemy użyć z poleceniem docker run.
+Te polecenie będziemy omawiać za chwilę, ale wspomnę w tym momencie tylko o tym, że poleceń jest tak dużo,
+dlatego że docker run służy do uruchamiania naszych kontenerów,
+a możemy im przekazać bardzo dużą liczbę parametrów.
+Dlatego też ten help jest bardzo długi, bo wszystkie te polecenia tutaj zawiera.
+Wszystkie parametry, które możemy przekazać do uruchomienia naszego obrazu.
+Ja też tutaj nadmienię, że podejrzewam, z mojego punktu widzenia to używałem może 10 opcji,
+z tych, które tutaj widzimy.
+Natomiast Jan, ty też pewnie nie znasz wszystkich, co?
+Raczej tu nie ma takiej tendencji, żeby teraz wszystkie wykuwać i się przejmować tym, że jest ich aż tyle.
+Nie, ja też część to tak naprawdę teraz widzę po raz pierwszy.
+Na przykład to nigdy do niczego nie było mi potrzebne i na 100% musiałbym zajrzeć do dokumentacji,
+żeby upewnić się po co w ogóle ten przełącznik jest, dlatego że sam ten opis jest dla mnie
+dość taki lakoniczny, niewiele mi mówi.
+No właśnie, dokumentacja to też jest ważna informacja, bo tak naprawdę o każdym z tych poleceń
+też możemy sobie zawsze doczytać w dokumentacji, zobaczyć co tam w środku się znajduje.
+Tak, możemy o każdym poleceniu sobie poczytać oraz często do tych poleceń są pokazane przykłady
+w samej dokumentacji, tej oficjalnej na stronie Dokera.
+Także warto korzystać.
+Bo czasami jeśli potrzebujemy zrobić coś,
+czego do tej pory nie robiliśmy, tylko wiemy, że to by nam się przydało,
+możemy zobaczyć sobie gotowy kawałek konfiguracji do wykorzystania.
+I tak na zakończenie tej lekcji, bo zaraz będziemy już pracowali z Dockerem
+i nie będziemy omawiali CLI-a, ale mam jeszcze jedno takie pytanie.
+Bo Docker też posiada ten interfejs graficzny, gdzie możemy też sobie
+uruchomić jakiś kontener, zatrzymać. Czy ty korzystasz czasem z czegoś takiego?
+Bo często, wiesz, ludzie uważają, że nie ma sensu uczyć się narzędzi CLI,
+bo mają GUI, w którym prawie wszystko się znajduje.
+Tak. Otóż ja nie korzystam z tego z dwóch tak naprawdę powodów.
+Pierwszy jest taki, że jestem przyzwyczajony do korzystania z terminala,
+bo jednak Linux w moim sercu jest cały czas obecny, w związku z czym
+pewne przyzwyczajenia po prostu zostają. Natomiast tak naprawdę nie znam
+za bardzo tego CLI-a, dlatego że...
+Na Linuxie go w ogóle nie ma.
+Tego GUI chyba, co? Bo CLI-a to nasz.
+CLI-a mam, natomiast nie ma tego GUI, dlatego że GUI jest dostarczane w narzędziu,
+który się nazywa Docker for Desktop. A Docker for Desktop jest dostarczany
+dla Windowsa i dla Maca. I tam dzieje się troszeczkę więcej rzeczy niż na Linuxie,
+bo są tam dostarczane jakby dodatkowe abstrakcje, o które użytkownik nie musi dbać.
+One są przygotowane przez Dockera po to, żebyś po instalacji był w stanie
+sobie zacząć z tego Dockera korzystać i nie musiał się martwić o to,
+jak to tak naprawdę działa. Natomiast to, co tam się dzieje, to instalowany jest
+tak naprawdę Linux w maszynie wirtualnej, który jest uruchamiany, plus są pewne rzeczy
+dodawane do twojego systemu, żebyś się w taki sposób niewidoczny komunikował
+z tym właśnie Linuxem dokładnie tak, jakby to...
+było uruchomione bezpośrednio u ciebie. Natomiast Docker jako sam w sobie
+jest dostępny tylko i wyłącznie dla Linuxa, stąd jest potrzeba dostarczenia
+tej maszyny wirtualnej i Docker dlatego zyskał taką dużą popularność,
+że bardzo zadbał o user experience i dostarczył tego typu rozwiązania.
+Bo to nie jest pierwsze narzędzie do konteneryzacji. Takich narzędzi w przeszłości było więcej,
+ale nie zyskały tak dużej popularności właśnie dlatego, że nie dostarczały tych rzeczy
+dla użytkowników. I próg wejścia w takie narzędzia był bardzo wysoki, przez co adopcja była bardzo niska.
+Dobrze. Czy jeszcze w ramach CLI coś chciałbyś dodać, co naszym użytkownikom będzie pomocne,
+czy już na etapie wprowadzania poszczególnych poleceń będziemy o tym rozmawiać?
+Myślę, że porozmawiamy o tym na etapie wprowadzania poleceń.
+Super. To my dziękujemy za tę lekcję i zapraszamy was do kolejnej.

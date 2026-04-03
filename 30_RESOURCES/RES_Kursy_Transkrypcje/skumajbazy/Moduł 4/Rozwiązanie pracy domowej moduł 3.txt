@@ -1,0 +1,250 @@
+Dzień dobry, witajcie moi drodzy, rozpoczynamy sobie kolejny moduł, ale rozpoczynamy go sobie oczywiście od tego, że rozwiązujemy pracę domową.
+No i w zadaniu pierwszym mieliśmy napisać zapytanie, które pobierze nam dwie kolumny i w pierwszej kolumnie będzie połączony tytuł, nazwisko i imię, czyli na przykład dr Andrew Fuller,
+natomiast w drugiej kolumnie dostaniemy inicjały naszych pracowników, czyli w przypadku pana Andrew Fullera będzie to a.f.
+Ja już sobie przygotowałem dbvera wraz z treścią tego zapytania, więc można śmiało zacząć pisać.
+Czyli to będzie zapytanie select, gwiazdka, from, ojojoj, coś się tutaj pokiczkało, from employees, ok.
+Jeżeli teraz sobie to zapytanie wykonam, to jak widzicie mam wszystkich ludzi, no i potrzebuję mieć najpierw tylko imię i nazwisko i tytuł.
+I te trzy wartości mają być ze sobą połączone, więc będzie mnie interesował title, połączony z first name, połączony z last name.
+Jak widzicie w tym momencie, oj to chyba nie był ten title, czekajcie.
+Jak ta kolumna się nazywała? Title of courtesy.
+Ok, czyli sobie musimy to wymienić na title of courtesy.
+Jak widzicie w ten sposób pokazały nam się wszystkie te wartości połączone, nie ma spacji.
+Jeżeli spację też chcielibyśmy ująć, no to po prostu trzeba byłoby ją przekazać.
+Pamiętając o tym, że string przekazujemy w pojedynczych apostrofach, czyli apostrof, spacja, apostrof, spacja, podwójny, ten podwójny pipe.
+I to samo musimy zrobić tutaj.
+Ops, ctrl, enter.
+I jak widzicie, Mrs. Spacja, Nancy Spacja, Dawulio, wszystko ładnie nam się połączyło.
+Ale obok tego chcieliśmy dostać jeszcze ich inicjały.
+Więc żeby dostać ich inicjały, musimy pobrać sobie po jednej literze z pierwszego, z imienia?
+Chciałem powiedzieć z pierwszego, bo jest first name.
+I z ostatniego imienia, pierwszą literę też musimy sobie pobrać.
+Możemy to pobierać na kilka sposobów.
+Między innymi możemy używać takiej funkcji jak left, no i left first name 1, połączone z kropką, połączone z left last name 1, i połączone z kropką.
+Ojej, ojej, ojej.
+Połączone z kropką.
+Ok, wykonuję.
+Nie dodałem przecinka w tym miejscu.
+Nie dorzuciłem przecinek.
+I jak widzicie, wszystko ładnie mi się wyświetliło.
+Jeżeli chcielibyśmy jeszcze nadać tytuły tym kolumnom, to to można byłoby nazwać s, na przykład person.
+A tutaj dać s, short, cat.
+Hops, i mamy person i short cat.
+Proszę bardzo.
+Lecimy dalej.
+W zadaniu drugim chcemy napisać zapytanie, które odpowie, ile dni będzie miał miesiąc luty w 2024 roku.
+Jak sobie z tym poradzić?
+No sposobów jest kilka.
+Można byłoby, na przykład od 1 marca tego roku odjąć 1 luty tego roku.
+No i w ten sposób wyjdzie nam różnica w postaci ilości dni pomiędzy tymi dwiema datami.
+No i tak naprawdę, to będzie też informacja, ile dni miał luty.
+Możemy napisać zapytanie, w którym odejmiemy sobie date 2024 02 03 01 minus date.
+Możemy napisać zapytanie, w którym odejmiemy sobie date 2024 02 03 01 minus date.
+Możemy napisać zapytanie, w którym odejmiemy sobie date 2024 02 03 01 minus date.
+2024-02-01.
+Jak to zapytanie sobie wykonamy, to dostaniemy
+informację, że tych dni jest 29.
+I jest to data prawidłowa.
+Natomiast, i chyba to jest najprostszy sposób obliczenia tego,
+natomiast jeżeli sobie spojrzycie na rozwiązania,
+które oferuje Stack Overflow, to to jest całkiem ciekawe.
+Dlatego też pamiętam, że jak sugerowałem Wam
+wykonanie tego zadania, opowiadałem Wam o tym zadaniu,
+to sugerowałem, żebyście nie korzystali ze Stack Overflow,
+z tego względu, że praktycznie tam jest rozwiązanie,
+które jest dużo, dużo, dużo bardziej skomplikowane niż to,
+co sobie właśnie zrobiliśmy. Jednakże, nie jest to rozwiązanie złe.
+Zobaczcie, oni tutaj przyjmują, że interesuje nas
+bieżący miesiąc, no ale to bez problemu moglibyśmy
+zmienić na ten luty, podając tutaj tę inną datę.
+I to, co oni robią, to po prostu wyciągają ilość dni
+pomiędzy różnicą pierwszego dnia
+miesiąca względem
+ostatniego dnia miesiąca.
+Tak też, jak najbardziej, można byłoby to sobie zrobić.
+Zobaczcie, jeżeli sobie to odpalę, to dostanę 31,
+bo mnie nie interesuje ten miesiąc, tylko interesuje mnie luty.
+Coś zrobiłem jeszcze źle. Date.
+O, i też dostaję liczbę 29.
+Więc no wszystko zależy od tego, jak sobie pokombinujemy,
+czy chcemy wybrać taką metodę, czy chcemy wybrać taką.
+No tutaj muszę podać dwie daty i muszę te daty znać.
+Tu podaję po prostu jedną datę, więc no,
+zostawiam, zostawiam to Wam.
+Przy okazji zwróćcie uwagę na ciekawą rzecz, o której też mówiłem,
+a mianowicie do wyciągniętego,
+do wyciągniętego miesiąca,
+oni dodali miesiąc i odjęli jeden dzień.
+Takie też to całkiem sprytne.
+Można było po prostu odjąć jeden, ale dlatego, żeby to było ładnie widoczne,
+to zostało to przedstawione w tej postaci.
+No i dodatkowo rzutowanie nie jest rzutowaniem tym,
+tylko jest rzutowaniem tym z dwoma dwukropkami.
+To też jak najbardziej może być.
+W zadaniu trzecim chcemy napisać zapytanie,
+które zwróci nam raport ilustrujący różnicę pomiędzy datą wysyłki
+i zamówienia w takiej postaci.
+W postaci, w której wyświetlają nam się te dwie daty w formie dni.
+Dokładnie w takiej, zobaczcie.
+Czyli mamy ORDER ID, a obok mamy kolumnę DAYS,
+która pokazuje ile dni dzieli nam te dwie daty.
+Czyli SELECT gwiazdka FROM ORDERS,
+to już chyba takie przyzwyczajenie, że zawsze te dane sobie zwracam w całości.
+Na pewno będzie interesował nas ORDER ID.
+Jeżeli chodzi o tę różnicę w postaci dni,
+no to tę różnicę wykonujemy oczywiście za pomocą AGE.
+I AGE będzie nas interesował SHIPPED DATE.
+SHIPPED DATE.
+SHIPPED DATE.
+I druga data ORDER DATE.
+I wtedy dostaniemy właśnie datę zamówienia i konkretne dni.
+Tam jeszcze w treści zadania było DAYS, z tego co pamiętam wpisane tutaj,
+więc robimy sobie SDAYS i pięknie nam to zadziałało.
+I lecimy dalej.
+Napisz zapytanie, które z tabeli ORDER DETAILS zwróci ORDER ID
+oraz łączną wartość zamówienia.
+Tutaj nie zrobiłem przerwy.
+Już Wam pokazuję.
+Łączną wartość zamówienia.
+Jeżeli wartość będzie większa niż 3000,
+to nalicz dodatkowe 10% rabatu.
+Jeżeli będzie mniejsza lub równa 3000
+oraz większa niż 2000,
+to nalicz 5% rabatu.
+OK?
+A jeżeli będzie mniejsza niż 2000,
+to nie mamy żadnego rabatu.
+No to w pierwszej kolejności to, co możemy sobie zrobić,
+to możemy sobie zobaczyć, co w tej tabeli siedzi.
+Czyli SELECT gwiazdka FROM ORDER DETAILS.
+No i widzę, że mam ID zamówienia. OK?
+Mam UNIT PRICE, QUANTITY i DISCOUNT.
+Więc pierwsze, co będę chciał sobie zrobić,
+to będę chciał sobie w ogóle przeliczyć tę wartość.
+Czyli będę chciał zwrócić ORDER ID
+oraz to, co będę chciał zwrócić obok,
+to będzie wartość zamówienia.
+A wartość zamówienia to będzie UNIT PRICE
+przemnożone przez QUANTITY.
+No i od tego chcemy sobie odjąć wartość DISCOUNT-u.
+Czyli minus DISCOUNT,
+bo DISCOUNT jest z tego, co widzę, procentowo.
+Czyli na przykład to jest 15%.
+DISCOUNT razy i raz jeszcze UNIT PRICE razy QUANTITY.
+W ten sposób dostaniemy informację o tym,
+ile wynosi nasze zamówienie.
+I od tego zamówienia mamy zrobić jeszcze jeden warunek.
+Czyli w zależności od tego,
+jaką wartość to zamówienie posiada,
+będziemy chcieli jeszcze doliczać dodatkowy rabat.
+Czyli cóż, będziemy potrzebowali użyć CASE-a.
+Czyli możemy sobie wykonać CASE WHEN.
+I teraz jeżeli ta wartość jest większa niż 3000,
+to wówczas tę wartość będziemy chcieli sobie przemnożyć przez 0,10.
+To, co zrobię, to po prostu zwrócę sobie 0,10.
+W tym miejscu.
+Czyli CASE, mogę zrobić CASE ENTER WHEN.
+To wtedy zwróć mi 0,1.
+Jeżeli ta wartość będzie natomiast mniejsza niż 2000,
+to zwróć mi 0.
+W przeciwnym wypadku zwróć 5%.
+Czyli 0,05.
+No i robimy sobie wtedy END.
+I to sprawi, że on nam zwróci wartość procentową.
+A skoro zwróci nam wartość procentową,
+to możemy sobie tę wartość przemnożyć.
+Czyli zrobić sobie możemy tak.
+UNIT PRICE razy QUANTITY minus DISCOUNT razy OK.
+To, co będę chciał zrobić,
+to będę od tego chciał odjąć to przemnożone przez tę wartość rabatu.
+Czyli jeżeli od tego chcę odjąć to przemnożone przez wartość rabatu,
+to mogę zrobić prościej.
+Bo zobaczcie.
+Jeżeli mam 1 minus 1 razy X.
+Czytam A minus A razy X.
+To ja sobie mogę to A wyciągnąć przed nawias.
+I wtedy mam A razy 1 minus X.
+OK.
+I żeby nie powtarzać tego naszego A,
+którym A jest ta cała długa wartość,
+ja sobie po prostu to wyciągnę przed nawias.
+W ten sposób dostanę UNIT PRICE razy QUANTITY minus to.
+Przemnożone przez.
+I w nawiasie 1 minus.
+I tutaj będzie ten cały case.
+Oczywiście to 1 minus mogę sobie przenieść też na dół.
+Hops.
+ORDER ID DOES NOT EXIST FROM ORDER DETAILS.
+To się nie nazywało ORDER ID?
+Nazywało się.
+Tylko była przerwa.
+I zobaczcie.
+Tutaj mamy 168 w pierwszym wierszu.
+No i coś takiego powinno nam już funkcjonować.
+Czyli po prostu przemnożyłem sobie moją tą wartość całkowitą.
+Razy 1 minus to, co mi zwrócił mój case.
+No i poniżej mamy napisać zapytanie,
+które zwróci imię, nazwisko oraz datę najbliższych urodzin naszych pracowników.
+Pamiętaj, by zwrócić datę z kolejnego roku,
+jeśli w tym roku urodziny już minęły.
+No to jak?
+Będziemy potrzebowali najpierw wyświetlić sobie naszych pracowników.
+Czyli SELECT gwiazdka FROM EMPLOYEES.
+No i będę potrzebował mieć imię, nazwisko.
+No to prościzna.
+FIRST NAME, LAST NAME oraz datę urodzin z tego roku.
+Czyli jeżeli tutaj mamy BIRTH DATE,
+no to musimy sobie zrobić datę.
+Zrobimy sobie datę.
+Na podstawie najpierw mamy rok, czyli bieżącego roku.
+Możemy to zrobić albo wyciągając rok z bieżącej daty,
+czyli to będzie EXTRACT YEAR FROM NOW.
+Albo można byłoby po prostu sobie to wpisać ręcznie.
+Następnie będziemy chcieli wyciągnąć miesiąc z daty urodzenia.
+No i dzień.
+OK?
+No i to samo co mieliśmy przy rozwiązywaniu.
+Trzeba pamiętać o tym, żeby wszystkie te wartości, które tutaj sobie przekazujemy,
+były zamienione na INTEGERY.
+Czyli INTEGER, INTEGER i INTEGER. OK?
+No i w ten sposób dostaliśmy informację o tym,
+kiedy oni mają urodziny.
+Tyle tylko, że na przykład tu ta data już minęła.
+To mogę Wam tak zespoilować.
+Więc jeżeli chcielibyśmy zrobić kolejną datę,
+no to możemy sobie zrobić na przykład za pomocą CASE'a
+i sprawdzić jak się to ma względem dzisiejszej daty.
+Czyli jak to będzie wyglądało?
+CASE MAKE DATE.
+Jeżeli data urodzin jest większa niż data dzisiejsza,
+to znaczy, że te urodziny jeszcze nie minęły.
+Czyli wtedy po prostu zwracamy sobie tę datę.
+Czyli wtedy po prostu zwracamy sobie to.
+Natomiast w przeciwnym wypadku,
+zwracamy sobie też tę datę.
+Tylko, że tutaj do roku musimy dodać 1.
+Czyli robimy po prostu PLUS 1 END.
+No i zobaczcie, w tym momencie pani Nancy D'Avurio
+ma datę urodzin, z racji tego, że to jest grudzień,
+to jeszcze jest ten rok.
+No ale jak Andrew Fuller urodził się w lutym,
+to już wyświetlił mu się rok kolejny.
+Pewnie część z was tutaj zapyta,
+czy jest możliwość zapisania sobie tego
+w formie jakiejś zmiennej, czy czegoś takiego,
+bo na chwilę obecną nie mamy takiej możliwości.
+Użycie S, czyli tego aliasu,
+nie pozwala nam na to, żebyśmy wykorzystywali to gdzie indziej.
+Zobaczcie, jeżeli na przykład
+zrobiłbym sobie nawet taką kolumnę
+tylko po to, żeby ją wyświetlić,
+S SOMETHING,
+to później ja nie mam możliwości
+wymienienia tego na to SOMETHING.
+Dostaję informację COLUMN SOMETHING DOES NOT EXIST,
+bo tak naprawdę to nie jest kolumna, tylko to jest alias.
+Więc to jest taka przykra sprawa,
+z którą musimy się zmierzyć.
+I to było ostatnie zadanie z pracy domowej.
+Mam nadzieję, że praca domowa wam się podobała.
+Zapraszam do modułu.
+Do zobaczenia.

@@ -1,0 +1,139 @@
+I tak jak obiecałem nadszedł czas, żeby porozmawiać czym jest ten SQL.
+Co to jest ten cały SQL, do czego jest nam on potrzebny,
+dlaczego warto go używać i w ogóle o co z tym wszystkim chodzi.
+Zacznijmy.
+Jeżeli chodzi o SQL to jest to skrót.
+Programiści bardzo lubią skróty, na przykład W3C to jest www.consortium
+i 18n to jest internationalization, tylko dlatego, że między i a n jest 18 znaków,
+no to dlatego też sobie to skróciliśmy.
+Natomiast SQL to jest skrót od trzech słów, a Structured Query Language,
+czyli możemy w ten sposób stwierdzić, że skoro jest to structured,
+to znaczy, że jest on w jakiś sposób ustrukturyzowany,
+czyli będzie się charakteryzował jakimiś konkretnymi słowami kluczowymi.
+Po drugie query, czyli informacja, że jest to język służący
+do wykonywania zapytań, no i language to wiadomo, language.
+Ale najważniejsze dla nas będzie to, że jest to właśnie structured i query,
+czyli w momencie, w którym ja będę wam coś pokazywał,
+to najczęściej będzie trzeba po prostu to robić tak.
+Nie będzie można na przykład zmieniać szyku, czy robić czegokolwiek innego,
+ale to łatwo jest zapamiętać, wszystko sobie to jeszcze pokażemy.
+Zobaczcie.
+Do czego służy SQL?
+SQL jest taką formą komunikacji pomiędzy programistą a bazą danych.
+Baza danych musi wiedzieć, jakie dane ma wam,
+jakie dane chcecie zaprezentować, jakie dane chcecie pobrać.
+Natomiast programista musi też wiedzieć, jak to zrobić.
+Więc właśnie w ten sposób za pomocą języka SQL możemy tłumaczyć bazie,
+co ma nam pokazać.
+No i jeszcze jedna kwestia.
+Czy kurs to jest kurs SQL-a, czy kurs postgreSQL-a?
+Jaka w ogóle jest różnica między SQL-em a postgreSQL-em?
+Więc to sobie wytłumaczmy.
+SQL to jest język, czyli zbiór poleceń.
+Ten język będzie się różnił,
+w zależności od tego, z jaką bazą danych pracujemy.
+Bo postgreSQL to jest właśnie nazwa bazy danych,
+tak jak sobie wspomnieliśmy o tym przed chwilą,
+która potrafi ten język zrozumieć i potrafi go, te zapytania, wykonywać.
+Pomiędzy poszczególnymi bazami danych,
+czyli czy będziemy pracowali ze SQLite'em, MySQL-em,
+czy Postgre'Sem, czy Oracle'em,
+będziemy mieli pewne różnice.
+Nigdy nie pracowałem na przykład z MSSQL-em,
+ale widziałem zapytania wykonane,
+w tym języku.
+I część z nich, to nie jest tak, że nie rozumiałem,
+ale część z nich miała takie różne wtrącenia,
+w które musiałem przysiąść, żeby je zrozumieć.
+Natomiast na przykład bazy danych, z którymi pracuję,
+czyli MySQL i Postgre'S,
+mają też SQLite,
+mają różnice, ale są one na tyle małe,
+że po prostu doczytuję sobie każdorazowo w dokumentacji,
+albo jeżeli coś mi nie działa,
+to sobie to też szukam przyczyny.
+Z tego względu, że na przykład jest różnica pomiędzy apostrofem,
+a cudzysłowem, między Postgre'S-em, a MySQL-em.
+I takich różnic jest kilka.
+Niektóre z tych różnic dotyczą tematów,
+których zupełnie jeszcze nie poruszyliśmy
+i też musielibyśmy bardzo głęboko wejść w SQL-a,
+żebyście je zrozumieli, żebyście je poznali.
+Więc na chwilę obecną myślę, że po prostu nie ma to większego sensu.
+Więc tak jak wspomniałem,
+różnice między poszczególnymi dialektami,
+czy poszczególnymi wersjami SQL-a są,
+jednakże są to różnice niewielkie, nie ma sensu ich zapamiętywać.
+No, są też takie niektóre, te większe różnice,
+tak jak wspomniałem, o MSSQL-u.
+Natomiast, no, myślę, że jeżeli uczymy się tutaj Postgre'S-a,
+no to tak naprawdę uczymy się takiego SQL-a,
+który będzie wam przydatny do tworzenia stron internetowych,
+czy też do wykonywania zapytań do bazy danych,
+jaką właśnie jest PostgreSQL, czyli Postgre'S.
+I tutaj jeszcze jedna ważna sprawa,
+a mianowicie jaki zapis stosować.
+Bo wiele osób,
+jeżeli pochodzi na przykład z MySQL-a
+i wcześniej pracowała z MySQL-em,
+to bardzo często, tak jak ja,
+zapisuje wszystko drukowanymi literami, wielkimi literami.
+Czyli to słówko SELECT,
+które jest częścią języka SQL,
+jest zapisane wielką literą,
+FROM jest zapisane wielką literą.
+I wszystkie te części SQL-a,
+które pochodzą jakby bezpośrednio z tego języka,
+są zapisane kapitalikami.
+Natomiast część osób zapisuje to małymi literami.
+I teraz jaka jest różnica?
+Tak naprawdę nie ma żadnej.
+Jeżeli będziecie w DBWerze wpisywali coś wielkimi literami,
+to wówczas on to będzie wam każdorazowo zamieniał na małe litery.
+Ale ważna sprawa, która jest,
+jest taka, że nie ma to znaczenia.
+Szukałem w internecie powodów,
+czy też tego właściwego sposobu,
+ale nie znalazłem odpowiedzi na to pytanie.
+Natomiast znalazłem taką podpowiedź,
+która mówiła, że w momencie,
+w którym ludzie korzystali z SQL-a,
+który nie miał kolorowania składni,
+czy też na przykład pisali,
+używali SQL-a w kodzie,
+gdzie nie mieli kolorowania składni,
+nie mieli zaznaczonych poszczególnych
+części zapytania,
+to wówczas łatwiej było im
+ogarnąć zapytanie,
+które było właśnie zapisane samymi wielkimi literami,
+bo wiedzieli,
+gdzie są te różnice,
+gdzie kończy się SQL,
+a gdzie zaczyna się nazwa tabeli.
+Po prostu było to czytelniejsze.
+Natomiast druga strona to jest strona ludzi,
+którzy krzyczą, że w internecie wszystko to,
+co się dzieje, to jest właśnie krzyk,
+więc jeżeli nie musisz tego zapisywać kapitalikami,
+to tego nie zapisuj.
+Więc ja będę starał się zapisywać
+małymi literami, po prostu,
+natomiast jeżeli gdzieś
+przesiąknie
+ten zapis wielkimi literami,
+no to wybaczcie.
+Tak samo w literaturze,
+jak przygotowywałem też materiał na to szkolenie,
+to znajdowałem zarówno przykłady,
+gdzie zapytania były zapisane małymi literami,
+jak i wielkimi,
+więc to było na tyle ważne,
+żeby teraz tutaj się na tym skupić.
+Okej, no i tutaj kończymy temat SQL-a.
+Pokażmy sobie,
+jak zapytanie wykonać w DBWerze,
+czyli co musimy zrobić,
+żeby w DBWerze udało nam się
+takie zapytanie wykonać,
+skoro już jesteśmy podłączeni do bazy danych.

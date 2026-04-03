@@ -1,0 +1,198 @@
+No i stało się, przechodzimy do lekcji 53, w której porozmawiamy o temacie, jakim są uprawnienia.
+Tutaj uprawnienia w Postgresie są bardzo rozbudowane, gdyż Postgres pozwala ustalać uprawnienia w zależności od schematu,
+od bazy, od tabeli, nawet od pojedynczego wiersza, no ale zła wiadomość, którą mam dla Was jest taka,
+może nie zła, tylko takie wyzwanie, które mam dla Was jest takie, że jeżeli chcemy korzystać z uprawnień,
+no to potrzebujemy mieć uprawnień administratorskich, czyli żeby tworzyć nowych użytkowników,
+nadawać im rolę, nadawać im, określać co mogą, czego nie mogą, musimy być administratorami.
+Więc ja Wam tutaj przygotowałem tę prezentację w taki sposób, żebyście mogli samodzielnie po prostu obejrzeć te polecenia,
+te kwerendy, które te uprawnienia nadają i jeżeli macie chęć, to zachęcam Was do tego,
+żeby zainstalować sobie Postgresa na swoim własnym komputerze, albo z Dockera, albo z, jeżeli nie z Dockera,
+to po prostu jako Postgresa zaimportujcie tę bazę danych, czyli Northwind i możecie wówczas też tymi uprawnieniami się pobawić,
+zobaczyć jak to wygląda, jest z tym dużo radości.
+Natomiast temat uprawnień dla webdevelopera, myślę, że ważne, żeby każdy webdeveloper wiedział,
+że takie uprawnienia są, że czasem jakieś zapytanie może się nie powieść, z tego względu właśnie, że nie mamy do niego uprawnień,
+ale ja jako tako w mojej pracy rzadko kiedy steruję uprawnieniami i zarządzam nimi.
+Raczej zdarza się tak, że po prostu tworzę sobie nowe tabele, do każdej z tych tabel mam możliwość pobrania danych,
+dodania czegoś, zaktualizowania, możliwe, że nie mam takich uprawnień jak dodawanie, zmienianie kolumn,
+ale po prostu tego nie potrzebuję.
+Natomiast myślę, że o uprawnieniach warto, żeby wiedzieć, że po prostu są i mniej więcej chociaż jak działają.
+Więc jeżeli chodzi o to, o czym porozmawiamy, to chciałem Wam pokazać, powiedzieć jak tworzymy nowych użytkowników,
+no bo tych użytkowników możemy mieć wielu, jak zarządzać uprawnieniami dla tych użytkowników,
+co możemy zrobić, żeby określić uprawnienia dla schematów oraz jak sterować uprawnieniami dla konkretnych rekordów.
+No i tu jest ta adnotacja.
+Musimy być administratorem.
+Jeżeli chodzi o tworzenie użytkownika, to w Postgresie jest to bardzo proste, bardzo sympatyczne.
+Wykonujemy polecenie create user, po którym następuje nazwa użytkownika.
+With password wiadomo.
+Create DB to jest takie polecenie, które powoduje, że zostanie utworzona baza danych o nazwie takiej samej jak użytkownik.
+Bardzo wygodne.
+Używałem tego przy naszym...
+projekcie, przy naszym bootcampie.
+Każdy z Was ma nazwę taką samą właśnie jak nazwa użytkownika.
+No i jeszcze jest valid until.
+Tego nie używałem.
+Ale chodzi o to, że każdy użytkownik będzie ważny do wystąpienia jakiejś daty i godziny.
+Tych argumentów jest też bardzo, bardzo dużo innych.
+Natomiast, jeżeli chcecie się z nimi zapoznać, no to zachęcam Was do tego, żeby zerknąć do dokumentacji.
+Ja na potrzeby, no jak widzicie zresztą, całego tego projektu, ja na potrzeby, no jak widzicie zresztą, całego tego projektu, ja na potrzeby, no jak widzicie zresztą, całego tego projektu,
+tego bootcampu, staram się zawsze wybierać te rzeczy z dokumentacji, które po prostu wykorzystuję, których używam, a nie czytać Wam ją.
+Więc zawsze tutaj zaznaczam, że można właśnie w przyszłości może gdzieś skręcić, zrobić mały skok w bok, sobie do niej zerknąć, zobaczyć co tam jeszcze przy tym użytkowniku można nadać.
+Ważna sprawa jeszcze jedna jest taka, jeżeli chodzi o administrację wokół użytkownikami i tworzenie użytkowników, że w Postgresie jest taki plik, który nazywa się pghba.conv.
+pghba.conv.
+plik określa z jakich adresów IP, czy w ogóle skąd już do bazy danych można się podłączyć.
+Jeżeli będziecie walczyli, zakładali właśnie bazę na Postgresie, to też możecie się z tym plikiem parokrotnie gdzieś zmierzyć.
+Warto po prostu o tym wiedzieć, że taki plik istnieje.
+Jeżeli chodzi o zarządzanie uprawnieniami, no to możemy wszystkie te kwerendy, które do tej pory wykonywaliśmy, czyli insert, update, delete, insert, update, delete i select,
+możemy użytkownikom pozwalać na wykonywanie ich,
+a możemy też im takie uprawnienia zabierać.
+Jeżeli chcemy dać uprawnienia,
+no to wówczas używamy polecenia grant.
+Czyli zobaczcie, na przykład tutaj wykonujemy
+grant insert update on table,
+tu nazwa użytkownika.
+I to spowoduje, że użytkownik będzie mógł wykonać
+wszystko, co tylko chcemy, co tylko będzie chciał
+na danej tabeli.
+Jeżeli chcemy mu dać uprawnienia na schemacie,
+no to robimy identycznie, tylko, że...
+inaczej, jeżeli chcemy dać wszystkim użytkownikom
+uprawnienia do danej bazy danych,
+to wówczas jest taka specjalna rola,
+która nazywa się public.
+Tak samo jak mamy ten schemat,
+który nazywa się public, który określa
+taki domyślny schemat,
+tak samo jest też tak dla użytkowników,
+że jeżeli użyjemy nazwy public,
+to będzie to oznaczało wszystkich użytkowników.
+Czyli grant.
+Insert update on tabela to public
+spowoduje, że każdy użytkownik naszej bazy danych
+będzie mógł dodawać i aktualizować dane.
+Inaczej się to ma, jeżeli chodzi o udostępnianie
+wszystkich uprawnień.
+Tutaj nie robimy grant public,
+tylko robimy grant all.
+To jest nadaj wszystkie uprawnienia na tabeli.
+Jeżeli tych tabel ma być kilka,
+to rozdzielamy je, jak widzicie, przecinkiem.
+Tu nazwa użytkownika albo grant all on table.
+Table to public spowoduje,
+że nadamy te uprawnienia wszystkim.
+Odnośnie uprawnień na schematach też zaraz to jeszcze,
+zobaczycie, bo jest odrobineczkę inaczej.
+Jeżeli chodzi o zabieranie,
+no to grant to jest zdawanie,
+a revoke to jest zabieranie.
+Ciekawe, że daje się granty,
+a nie robi się revoków, nie?
+Tego w języku naszym nie ma.
+Ale otrzymał grant za wybitne nauki,
+wybitne wyniki w nauczaniu,
+to tak, ale dostał revoca, nie.
+Jeżeli chcemy zarządzać uprawnieniami dla schematów,
+no to robimy grant,
+insert update on schema.
+Czyli zobaczcie, tutaj nie pojawiło nam się słowo table,
+tylko po prostu pojawiła nam się nazwa tabeli.
+Natomiast jeżeli chcemy wskazać,
+że chcemy dla całego schematu nadać takie uprawnienia,
+no to wtedy wskazujemy on schema,
+nazwa schematu, to jest wtedy nazwa użytkownika.
+Albo możemy wykonać to public,
+wtedy damy wszystkim użytkownikom, przypominam.
+A jeżeli chcemy dać kilku schematom,
+no i dać wszystko, no to jak widzicie jest all,
+no i schematy wymienione są po przecinkach.
+Tak to wygląda, jeżeli chodzi o zarządzanie uprawnieniami dla schematów.
+Czyli na przykład, ja sobie to wyobrażam tak,
+i tak też pracuje się bardzo często z Postgresem,
+że na przykład mamy skimę, schemat, który odpowiada za CRM,
+gdzie mamy klientów, jakieś tam dane dotyczące klientów i kontaktu z nimi.
+Obok mamy schemat, który nazywa się sklep, gdzie mamy zamówienia.
+Obok mamy schemat,
+który nazywa się pracownicy i obok mamy schemat, który nazywa się ERP
+i tam mamy jakieś tematy z zamówieniami, z produktami i innymi takimi rzeczami, nie?
+Więc wtedy możemy sprawić, że na przykład pracownik magazynu
+będzie tylko i wyłącznie dostawał się do tego systemu ERP,
+a absolutnie nie będzie miał dostępu do tego schematu,
+gdzie ma wszystkich pracowników, załóżmy, albo sklep i zamówienia,
+bo w ogóle mu to nie jest potrzebne, załóżmy, tak?
+Więc tak można sobie też tę bazę danych projektować, patrząc tak dużo,
+dużo szerzej i wtedy też okreslając, że możemy stworzyć sobie nawet role,
+które będziemy dawali użytkownikom,
+że będziemy mieli zbiór użytkowników pod tytułem pracownicy magazynu,
+którzy będą mogli robić tylko takie i takie rzeczy,
+a pewnych innych robić po prostu nie będą mogli, no bo też nie powinni mieć.
+Tutaj na te uprawnienia, o których sobie rozmawiamy,
+sprawiają, że praca z bazą jest bezpieczniejsza i to jest ważne,
+ale musicie też...
+musicie też pamiętać o tym, że praca z bazą jest bezpieczniejsza i to jest ważne, ale musicie też...
+musicie też pamiętać o tym, że praca z bazą jest bezpieczniejsza i to jest ważne, ale musicie też...
+że praca z bazą jest bezpieczniejsza i to jest ważne, ale musicie też pamiętać o tym,
+że tu nie tylko chodzi o to, żeby komuś coś zabrać, tak?
+Czyli, ha, teraz magazyn nie potrzebuje mieć dostępu do tego,
+to zaraz im to zbanujemy, bo oni nic nie potrzebują tego,
+tylko tutaj chodzi o to, że my też zarządzając uprawnieniami,
+zaraz znamy też odpowiedzialnością.
+Czyli my nie zawsze chcemy, żeby ktoś coś nie tyle, że widział,
+tylko żeby po prostu coś nie zepsuł nawet, tak zwyczajnie.
+Czy też, jeżeli ktoś przejmie jego konto, to żeby ten ktoś czegoś nie mógł zepsuć, tak?
+Ja pamiętam taki epizod w moim życiu, gdzie byłem małym dzieckiem,
+wcisnąłem jeden guzik nieopatrznie na jednym komputerze,
+no i część użytkowników z pewnego systemu zaczęła znikać.
+Był jakiś taki pasek postępu, on tak narastał, ja się cieszyłem.
+No więc warto zarządzać uprawnieniami.
+Jeżeli chodzi o pracę ze stronami internetowymi,
+no to jak wiecie, każda strona internetowa
+łączy się do bazy danych, znaczy jak wiecie,
+tutaj założyłem to jak wiecie, bo wiem, że część z was już uczestniczyła w innym moim bootcampie,
+między innymi nawet w PyStarcie.
+Natomiast jeżeli chodzi o pracę przy stronach internetowych,
+to jest tak, że skrypt, czy też program, którym jest strona internetowa,
+łączy się z bazą danych, korzystając z jednego loginu,
+z jednego hasła i łączy się do jednej bazy danych albo do wielu.
+Ale zazwyczaj jest to jedyne.
+Jeden login i hasło.
+I nie robimy czegoś takiego, że jak wchodzi sobie magazynier,
+to on wpisuje dane magazyn i hasło magazyn raz, dwa, trzy
+i nagle wtedy definiuje nam połączenie do bazy danych,
+tylko raczej on logując się do strony, on korzysta z tego samego połączenia,
+jakiego będą używali inni pracownicy.
+Dlatego też najczęściej po prostu musimy uogólnić sobie te zasady,
+jakie będzie miała nasza strona internetowa.
+Nie konkretny użytkownik, a cała strona.
+Więc to się sprowadza do tego, że najczęściej,
+jeżeli chodzi o korzystanie właśnie ze strony internetowej,
+czy logowanie się do strony, to jest to jeden użytkownik,
+który ma ograniczenia takie, że może tylko czytać, dodawać, edytować, usuwać
+na określonych tabelach.
+I dalszych uprawnień się nie nadaje po prostu.
+I na chwilę obecną, jeżeli chodzi o uprawnienia, to byłoby to na tyle.
+Zależało mi na tym, żebyście wiedzieli,
+że coś takiego ma miejsce, że może się okazać,
+że spróbujecie wykonać jakieś polecenie
+i nagle nie udaje się wam go wykonać.
+I wtedy najczęściej piszemy do jakiegoś administratora,
+albo sami sobie go grzebiemy z poziomu innego konta.
+No bo poza tymi kontami, które macie,
+jak widzicie zresztą podczas kursu,
+ja też korzystam z konta takiego użytkownika.
+Natomiast oczywiście jest konta administratora,
+na które też nie zawsze warto się logować.
+Nie warto logować,
+z poziomu aplikacji na konto administratorskie,
+no bo to zawsze jest jakieś ryzyko.
+Łącznie z tym, że są sposoby na przykład na to,
+żeby administrator Postgresa miał jakiś dostęp do plików.
+Czy na przykład jakiś plik stworzył,
+czy coś nazmieniał.
+To są takie sytuacje bardzo, bardzo, bardzo niebezpieczne
+i trzeba na to uważać.
+Na co trzeba jeszcze uważać?
+Na wolne zapytania.
+I kolejna lekcja właśnie tego tematu będzie dotyczyła.
+Czyli co zrobić, jeżeli nasza aplikacja zaczyna działać,
+wolno?
+Jak sobie z tym tematem poradzić?
+Zapraszam serdecznie.

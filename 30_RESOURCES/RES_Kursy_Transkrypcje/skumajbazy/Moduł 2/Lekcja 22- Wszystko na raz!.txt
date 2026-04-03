@@ -1,0 +1,197 @@
+No i moi drodzy przyszedł czas takiego podsumowania a mianowicie wszystko naraz czyli na początek powiedzmy sobie co właściwie się wydarzyło do tej pory na chwilę obecną powiedzieliśmy sobie że mamy uera jako sposób na filtrowanie i w tym uerze może w tym uerze czy za tym uerem może znaleźć się wiele różnych rzeczy po pierwsze wyrażenia
+logiczne np. age większy lub równo od 18 no i oczywiście tutaj mamy też ora enda o tym sobie mówiliśmy po drugie mówiliśmy o tym że możemy mieć operator in po którym wewnątrz którego to operatora znajdują się albo pod zapytania albo po prostu wypisane wartości które nasza kolumna może spełniać po trzecie powiedzieliśmy sobie że mamy taki operator jak between za pomocą którego możemy sprawdzać czy dana kolumna mieści się w przedziale od do
+gdzie
+te dwie wartości skrajne się nam zaliczają mówiliśmy też o tym że mamy operator not który może wszystkiemu zaprzeczać i mówiliśmy o tym że mamy like który może stwierdzać czy dany tekst pasuje do pewnego wzorca i teraz jeżeli chodzi o działanie i o kolejność rozliczania warunków to możemy nią też zarządzać za pomocą nawiasów to zawsze są nawiasy okrągłe tutaj warto sobie o tym powiedzieć jeżeli chodzi o end i or to pamiętajcie że end wymaga tego żeby wszystko było prawdziwe
+no i będziemy za Document
+no i możemy w ten sposób właśnie wykonując filtrowanie łączyć całą wiedzę którą widzieliście w tym module dla przykładu załóżmy że robimy zapytanie w którym
+szukamy wycieczek do Barcelony na które można brać ze sobą dzieci które nie posiadają dotykowych kosztów te wycieczki a nie dzieci bądź Popauka
+Zaczynają się od 1 czerwca tego roku i kosztują pomiędzy 2 a 3 tysiące
+lub zaczynają się od 1 września i kosztują pomiędzy 1000 a 2000.
+Czyli mamy takie wyrażenie.
+Jak to wyrażenie zapisać?
+Przede wszystkim, jeżeli szukamy wycieczek do Barcelony,
+no to where destination to Barcelona.
+And, na które możemy wziąć dzieci, czyli children allowed jako 1,
+bo to z najczęściej wartości logicznej przechowujemy właśnie jako 1 i 0,
+jako prawda i fałsz, które nie posiadają dodatkowych kosztów,
+czyli na przykład extra expense is 0 and,
+i teraz mamy sytuację z tym czasem,
+czyli które zaczynają się od takiego czasu i mieszczą się w przedziałach, nie?
+Czyli start at jest większe lub równe 0,9, 0,1
+and total cost between 1000 i 2000,
+lub też start at jest taki and total cost jest between tyle.
+I tutaj ważna uwaga, jeżeli chodzi o kolejność występowania orów.
+Zobaczcie, że ja tę kolejność zamieniłem,
+z tego względu, że łatwiej było mi robić to w ten sposób niż robić between.
+I tak miałbym ten warunek pierwszy,
+tu jest, więc sprawdzam jakby to grupowo,
+ale i tak warto wiedzieć, że jeżeli przygotowujemy sobie jakieś warunki,
+to wystarczy, że pierwszy warunek w orze nam zwróci prawdę
+i już całe zapytanie zwraca prawdę.
+Więc jeżeli będziecie chcieli przyporządkowywać sobie te wiersze,
+stwierdzać czy wiersze mają nam się pokazywać,
+to zawsze warto nad tymi warunkami się zastanowić.
+No i tutaj właśnie o tym wspominam,
+że kolejność wykonywania anda i ora ma znaczenie,
+ponieważ or wystarczy, że pierwsza rzecz będzie prawdziwa,
+natomiast and wystarczy, że jedna rzecz będzie fałszywa
+i już tych kolejnych sprawdzać nie muszę.
+To jest bardzo istotne, jeżeli na przykład w ramach jakiegoś testu
+potrzebowalibyście wykonać jakąś funkcję,
+albo potrzebowalibyście zrobić jakieś podzapytanie,
+to zawsze lepiej wszystkie te takie rzeczy bardziej obciążające
+przenosić na koniec.
+No bo mniej obciążająca rzecz, jeżeli zwróci prawdę,
+no to w tym przypadku dla ora może już to wystarczyć
+i nie trzeba będzie sprawdzać pozostałych.
+Jakiś przykład, zobaczcie.
+Wiersz ma się pokazać, jeżeli ktoś ma określony wiek,
+ma określone wynagrodzenie i dodatkowo nie przepracował
+ani jednego dnia na urlopie chorobowym, załóżmy.
+Więc wtedy łatwiej jest mi sprawdzić jego wiek,
+bo patrzę w kolumnę.
+Jeżeli nie mam jego wynagrodzenia, to łatwiej mi sprawdzić już na podstawie wieku
+stwierdzić, czy go pytać, czy nie pytać o wynagrodzenie,
+no bo pytanie o wynagrodzenie zawsze jest problemem.
+Oraz na sam koniec mamy jeszcze ten warunek odnośnie ilości dni chorobowych.
+Więc po co mam na początek sprawdzać, ile razy był chory,
+skoro i tak mam te pozostałe rzeczy, które mogą mi wystarczyć do tego,
+żeby określić ten wiersz, pokazać.
+I taką kolejność też powinniśmy stosować zawsze, kiedy przygotowujemy,
+żeby jakiekolwiek zapytania, oczywiście SQL-owe.
+No i tu mam dla Was takie zadanka na podsumowanie całej tej naszej wiedzy
+w tym rozdziale, ale nie jest to jeszcze praca domowa.
+Praca domowa będzie dopiero za chwilę.
+Tutaj mamy wyszukać wszystkich klientów, którzy pracują w sprzedaży,
+wszystkich klientów, którzy pracują w sprzedaży lub marketingu.
+To takie rozgrzewkowe.
+Po drugie, wyszukać wszystkie zamówienia,
+które zostały wysłane, ShipCity, do miast Aachen, Korkulb, Londyn lub Sao Paulo.
+No i ważne jest to, że mają być zamówione tylko i wyłącznie w 98 roku.
+No i po trzecie, chcemy wyszukać wszystkie produkty
+według kolumny Quantity Per Unit,
+które w tej kolumnie posiadają wyrażenie Bottles,
+a dodatkowo ich cena mieści się w przedziale pomiędzy 10 a 20.
+Przyjmijmy, że te 10 i 20 mają też się zaliczać.
+No i tu chwila dla Was.
+Widzimy się po krótkiej przerwie.
+Witajcie!
+Wyszukaj wszystkich klientów, którzy pracują w sprzedaży lub marketingu.
+No to Select, gwiazdka From Customers.
+I tutaj, jeżeli chodzi o to, gdzie oni pracują,
+no to będzie nas interesowało Contact Title.
+I jeżeli Contact Title będzie zawierało Sales albo Marketing,
+to zakładamy, że tam pracują.
+Czyli Select gwiazdka From Customers.
+Where Contact Title Like.
+Czyli ma zawierać Sales.
+Mogę zrobić i Like na wszelki wypadek.
+Or Contact Title Like.
+I Like Marketing.
+Jeszcze sobie to szybko przeformatuję.
+Żeby od razu mieć ładnie.
+Hops!
+No i mamy Sales, Sales, Marketing, Sales, Marketing, Marketing.
+Działa.
+Po drugie, wyszukaj wszystkie zamówienia, które zostały wysłane Ship City do miast,
+tych trzech, zamówionych w 1998 roku.
+No to OK.
+Select All From Orders, zapewne.
+No i tutaj mamy Ship City, taką kolumnę.
+Mamy? Mamy.
+No i są te miasta. No to lecimy.
+Select gwiazdka From Orders.
+Where? Ship City.
+In? Aachen, Cork, London lub Sao Paulo.
+Gdzieś zapomniałem o ciapku?
+Nie, wszystko jest OK.
+Dobra.
+Enter.
+Mam te miasta.
+Ale druga rzecz jest jeszcze istotna, bo mają być zamówione w 98 roku.
+Czyli End.
+Mamy Order Date.
+In.
+I tu warto byłoby sobie od razu jeszcze to przeformatować.
+Widzicie, coraz dłuższe nam już zapytania wychodzą.
+Na początku zupełnie nie sugerowaliśmy się tym, jaka jest długość zapytania,
+bo zawsze wszystko się mieściło.
+I nagle już nam się mieścić przestaje.
+And Order Date.
+In.
+In? Nie, nie, nie.
+In.
+Between.
+No i 1998, 0101.
+And 1988, 1231.
+Przedęk.
+I mamy.
+Hurra.
+No i zostało nam jeszcze jedno zapytanie.
+Gdzie mamy wyszukać produkty, które Quantity Per Unit posiadają,
+w kolumnie w Quantity Per Unit posiadają BAFU, BAFUS,
+a cena mieści się w przedziale między 10 a 20.
+No to lecimy.
+Select.
+Gwiazdka.
+From.
+Ja piszę gwiazdki, no bo jakbyście chcieli określić, jakie wartości nas interesują,
+no to zawsze już wiecie, że możemy sobie te wartości po prostu wypisać po przecinkach.
+Ale skoro.
+Skoro.
+W naszym przypadku, no wy już to wiecie, to ja też tutaj nie będę nad tym spędzał czasu.
+Czyli Select.
+Gwiazdka.
+From.
+Products.
+Które posiadają w Quantity Per Unit BAFUS.
+No to Quantity.
+Per Unit.
+Like.
+BAFUS.
+And.
+Unit.
+Price.
+Between.
+10.
+I 20.
+Hopps.
+I mamy te produkty.
+No i.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+I.
+rosyjski w ten sposób będę mógł odpowiedzieć na wasze
+pytania do zobaczenia

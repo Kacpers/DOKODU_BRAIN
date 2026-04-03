@@ -1,0 +1,518 @@
+To może tym razem spróbuję tak trochę bardziej jak Karol Strasburger wprowadzić was w temat tej lekcji, a mianowicie pamiętam jak kiedyś korzystałem z takiego konta shellowego, czyli konta na Linuxie, który ktoś mi udostępnił, żeby korzystać z IRC-a, ale to już długa historia.
+W każdym razie jak się zalogowałem do tego Linuxa, to był taki komunikat, Linux is like wigwam, no windows, no gates, only apache inside.
+No, nie wiem czy was to rozśmieszyło, mnie to bardzo wtedy rozśmieszyło jak zobaczyłem no windows, no gates, ale to może przejdźmy do lekcji 58, w której zmierzymy się z funkcją window.
+Do czego w ogóle ta funkcja służy?
+Jeżeli chodzi o funkcję window, to spójrzcie na lewą stronę.
+Po lewej stronie mamy id, name oraz result, czyli jak widzicie mamy dwa razy Jana, dwa razy Małgosię i jakieś wyniki, które się pojawiły.
+Jeżeli byśmy chcieli teraz zsumować wszystkie operacje wykonane przez Jana i wszystkie operacje wykonane przez Małgosię, no to prościzna, prawda?
+Już wszyscy słyszycie jak, słyszę jak mówicie, aaa grupowanie, nic ciekawego, już tyle razy było, ale tu jest troszeczkę inaczej, ponieważ pytanie, które sobie zadajemy jest odrobinę inne.
+Jaki jest numer?
+Jaki jest procentowy udział jednego zamówienia we wszystkich zamówieniach, czyli nas nie interesuje to, ile łącznie ma Jan i Małgosia, tylko i wyłącznie, tylko nas interesuje też, jeżeli jest 10 i 20 to razem to jest 30, więc 10 trzydziestych to jedna trzecia, 20 trzydziestych to dwie trzecie.
+No i tak samo, 30 plus 40 to jest 70, no i 30 siedemdziesiątych to są trzy siódme, a 40 siedemdziesiątych to czterech siódmych, czyli na oko.
+43% i 58%, ale jestem taki mądry i tak sobie to szybko podzieliłem, bo spojrzałem na prawą stronę, bo po prawej stronie to dzięki funkcjom window jest właśnie rozwiązane.
+Zobaczcie tutaj, Jan 10 trzydziestych to jest 033333, 20 trzydziestych to 0663, aż do 7.
+Małgosia 30 siedemdziesiątych to 043 mniej więcej, a 40 siedemdziesiątych to 057.
+Jak ja to zrobiłem?
+Właśnie, żeby to zrobić użyłem...
+Zobaczcie, tu jest select name, to nam sprawiło, że wyświetliło się te imię, przecinek result, no to wiadomo, że to jest pojedyncza wartość, ale jak została podzielona suma?
+Zobaczcie, suma została policzona, a nie podzielona, poprzez wykonanie sum na result over partition by name, czyli sum result.
+Najpierw ta pierwsza część.
+W tej pierwszej części określamy, co ma się wydarzyć.
+I tutaj możecie użyć dokładnie każdej funkcji agregującej.
+Jaką do tej pory poznaliście.
+To może być average, to może być minimum, to może być maximum.
+Każda ta, którą poznaliście.
+Dalej jest jeszcze ciekawiej.
+Over.
+Doszło nam takie nowe słówko.
+I tu określamy partition by name.
+Czyli tak jak grupowaliśmy, grupowalibyśmy po nazwie, żeby odpowiedzieć ile łącznie ma Jan, ile łącznie ma Małgorzata, Małgosia.
+To tutaj za pomocą tego partition by wskazujemy tę kolumnę.
+Według której chcemy wykonać tę sumę.
+Ale co ciekawe, on nam wtedy nie zrobi tego tak, że zrobi jeszcze drz i złączy te dwa wiersze w jeden, tylko on nam po prostu policzy tę sumę.
+Jeżeli ja bym usunął to result, to wtedy po prostu miałbym Jan 30-30, Małgosia 70-70.
+Jeżeli zostawiłbym sam ten komunikat, który jest pomarańczowy.
+Natomiast dzięki temu, że ja się mogę odnieść do tego result, to mogę właśnie między innymi policzyć udział procentowy jednej wartości w drugiej.
+Czyli raz jeszcze, sum i podajemy nazwę kolumny, po której chcemy dokonać tej operacji.
+Natomiast później dodajemy over, no i w nawiasie jest partition by name, czyli po czym chcemy to podzielić.
+Tutaj to partition, to bynajmniej nie jest to samo partition, które było poprzednio przy partycjonowaniu, tylko po prostu to po czym ten podział ma nastąpić.
+Czyli dla jakich danych on ma nam tę sumę policzyć.
+Ciekawie?
+Mam nadzieję, że tak.
+Zobaczcie co jeszcze.
+Załóżmy, że mamy taką tabelkę, w której mamy wynagrodzenie, dział i imię i nazwisko pracownika.
+I teraz pytajmy, zadają nam pytanie, jakie jest średnie wynagrodzenie w poszczególnych działach.
+Więc robimy sobie select name, department, salary.
+A następnie bierzemy average salary over partition by department.
+Czyli znowu używam funkcji średnia dla wynagrodzenia i wykonuję to dla poszczególnych departamentów.
+Czyli on wtedy sobie zsumuje poszczególne departamenty, podzieli przez ilość osób w departamencie i będziemy mieli średnią.
+Co ciekawe, tutaj jest też oczywiście to, że wybieramy inną kolumnę salary, no i wtedy każda osoba będzie miała oczywiście ten sam wynik.
+Ale on nam nie zmieni ilości wierszy.
+Będziemy mieli tę samą ilość wierszy.
+Ale to jeszcze nie koniec.
+Zobaczcie, tu jest jeszcze jedna bardzo ciekawa rzecz, a mianowicie pojawiła nam się funkcja rank.
+Funkcja rank potrafi powiedzieć, które z kolei jest to wynagrodzenie.
+Czyli jeżeli chcielibyśmy odpowiedzieć na pytanie, kto w danym departamencie ma najwyższe wynagrodzenie, a kto ma najniższe.
+Wiecie, takie medale olimpijskie, jeden, dwa i trzy, albo jeszcze tam dalsze numery.
+To wtedy można właśnie wykonać rank.
+Czyli użyjmy funkcji rank.
+Tu nie wskazujemy kolumny.
+On będzie wiedział, bo będzie po prostu mówił, który to jest kolejny rekord.
+Więc nie ma tutaj potrzeby, żeby mówić mu rank według czego.
+Bo według czego jest tutaj.
+Zobaczcie, over partition by department, order by salary descending.
+Czyli w ten sposób on nam to spartycjonuje.
+Podzieli nam to po departamentach.
+Ułoży te rekordy jeszcze w kolejności według wynagrodzenia.
+A rank odpowie na pytanie.
+Które z kolei jest to wynagrodzenie w ramach danego departamentu.
+Fajne?
+No nie wiem, mi się spodobało bardzo.
+Jak się tego uczyłem.
+I dzięki temu, właśnie jak widzicie, możemy policzyć sobie średnie wynagrodzenie według działu.
+No i które miejsce według wysokości wynagrodzenia ma określona osoba.
+No i w końcu to, co lubicie najbardziej, czyli zadania.
+No poprzednie te nasze takie rozmowy nie miały za bardzo gdzie tych zadań wpleść.
+Bardzo nad tym ubolewałem.
+Ale pracę domową dla was tak mam.
+Zaraz zobaczycie.
+Natomiast tutaj zrobimy sobie jeszcze jedno zadanko.
+Czy nawet nie jedno.
+Napisz zapytanie, którym pobierzesz informacje o łącznej wartości poszczególnych zamówień.
+Oraz informacje, które pracownik obsługiwał to zamówienie.
+Czyli zobaczcie.
+Mamy tutaj quantity unit price.
+Czyli po prostu, jeżeli mamy quantity oraz mamy unit price.
+To chcemy te dwie wartości przez siebie przemnożyć.
+No i wyświetlić też informacje, kto zrealizował to zamówienie.
+A także, jak już to zrobimy.
+To chcemy zmodyfikować to zapytanie, aby zawierało także średnią wartość zamówienia dla danego pracownika.
+Czyli jeżeli tutaj nasze zamówienie realizował pan Steven Buchanan.
+To widzimy, że to zamówienie było na 173, przypuśćmy, dolary.
+Natomiast średnia wartość jego zamówienia to jest 645.
+Czyli nie było to najwyższe jego zamówienie.
+Ale zobaczcie, gdzieś, znaczy to nie zobaczycie, ale gdzieś pewnie poniżej ma inne zamówienie na wyższą wartość.
+Stąd też ta liczba jest inna.
+I to jest zadanie dla was.
+Widzimy się za moment w rozwiązaniu.
+Czyli po pierwsze, robimy to na razie tak, żeby wyświetlić order id, first name, last name i quantity razy unit price.
+A następnie, jak już to zrobimy, to spróbujemy sobie wykonać tę funkcję okienkową.
+Ten window function.
+I znaleźć średnie wynagrodzenie, średnie zamówienie tego pracownika.
+Do zobaczenia.
+To co rozwiązujemy.
+Więc chcemy pobrać łączną wartość poszczególnych zamówień oraz informacje, które pracownik obsługiwał to zamówienie.
+Czyli select gwiazdka from orders.
+Ok.
+Dalej będziemy potrzebowali mieć order details.
+Czyli select gwiazdka from orders, left, join.
+Od razu to sobie sformatuję, żeby było czytelniej.
+Left join order details.
+On orders kropka order id.
+Równa się order details, order details, order id.
+No i w ten sposób zobaczę tutaj takie dwie wartości, które mnie interesują.
+Jak unit price i quantity.
+No to mogę je sobie wyświetlić.
+Czyli unit price razy tak naprawdę od razu quantity.
+To będzie wartość zamówienia.
+Czyli 14 razy 12 daje razem wartość zamówienia.
+To jest jeszcze discount.
+Tym discountem się zupełnie nie musimy przejmować.
+Jeżeli to uda nam się zrobić.
+To jeszcze pada pytanie kto obsługiwał to zamówienie.
+Żeby odpowiedzieć na to pytanie.
+Musimy sobie zerknąć, że tu jeszcze jest employee id.
+Czyli dorzucamy sobie do tego jeszcze left join employees.
+On orders kropka employee id.
+Równa się employee kropka employee id.
+No i interesować nas będzie z tabeli employees.
+First name i last name na przykład.
+Ok. Wyświetlamy to sobie.
+Mamy jakiś błąd.
+From, to jeszcze raz.
+Missing from clause for table employee.
+Left join employees.
+To tu będzie też employees. Ok.
+O i teraz jest.
+To daje nam wartość zamówienia.
+To order value.
+Musi być w apostrofie.
+Nie w apostrofach tylko w cudzysłowie.
+O tak.
+Order value.
+No i mamy.
+Steven Buchman.
+On tutaj jak go sobie posortujemy po nim.
+O to widać, że on tych zamówień ma całkiem sporo.
+I teraz interesuje nas obok jeszcze średnia wartość tego zamówienia.
+I zobaczcie.
+Jeżeli ja bym chciał do tego dorzucić.
+Tu w drugiej kolumnie średnią wartość zamówienia.
+No to nie mogę nic zgrupować.
+Bo jak sobie to zgrupuję.
+No to stracę te wartości.
+I właśnie dlatego przydaje się funkcja okienkowa.
+Więc robię sobie przecinek.
+I teraz będę chciał wyciągnąć.
+Za pomocą funkcji okienkowej.
+Sumę zamówień.
+Albo od razu mogę też wyciągnąć.
+Wyciągnąć sobie średnią.
+Czyli jak to będzie?
+Interesuje mnie średnia.
+No to average unit price.
+Razy quantity.
+I to jest to co chcę zrobić.
+A teraz muszę powiedzieć jak wygląda moja partycja.
+Czyli over partition by.
+No i teraz potrzebujemy jakiejś jednej kolumny.
+Która będzie unikatowa.
+Dla naszego pracownika.
+A jest nią oczywiście employee id.
+Czyli orders kropka employee id.
+Ops.
+No i w ten sposób widzimy, że.
+Nancy Devolio.
+Zrealizowała zamówienie na 6360 dolarów.
+Załóżmy.
+A jej średnia wartość zamówienia to jest 585.
+No i tak moglibyśmy każdą z tych osób.
+Tutaj zweryfikować.
+I sprawdzić.
+Czy to zamówienie, które na przykład ostatnio wpłynęło.
+To to dobre zamówienie jest dla tej osoby.
+Czy stać tą osobę na więcej.
+Dziękuję wam za to zadanie.
+Zobaczcie co jeszcze dla was przygotowałem.
+I w zadaniu domowym 58 kropka 2.
+Mamy napisać zapytanie.
+W którym pobierzesz imię.
+Nazwisko.
+Stanowisko.
+Wiek zatrudnienia.
+Oraz średni wiek zatrudnienia.
+W ramach danego stanowiska w naszej firmie.
+Czyli zobaczcie.
+Wzięliśmy sobie.
+Zatrudniliśmy osobę o imieniu Laura.
+Nasza Laura urodziła się 9 stycznia 58 roku.
+Zatrudniliśmy ją.
+5 marca.
+94.
+Jako.
+Zakładamy, że od początku pracuje na tym samym stanowisku.
+Inside Sales Coordinator.
+Nasza Laura.
+Została zatrudniona w wieku 36 lat.
+No i akurat z racji tego, że jest jedyną osobą, która pracuje na tym stanowisku.
+No to po prostu została zatrudniona w wieku lat 36.
+To jest średni wiek zatrudnienia na te stanowisko.
+Ale na przykład Sales Representative ma już trochę więcej osób.
+Oni byli zatrudniani od 28 lat.
+Jak tyle mieli?
+Aż do 55.
+Co powoduje, że średni wiek zatrudnienia na tym stanowisku wynosi 36.
+Mniej więcej 36 lat.
+Czyli widzimy, że na przykład osoba taka jak Annie.
+Była zatrudniona jako stosunkowo młoda.
+Natomiast osoba taka jak Michelle tutaj, która jest.
+To Michelle czy Margaret?
+Margaret była trochę starsza.
+Kiedy ją zatrudnialiśmy.
+Jej wiek był wyższy niż średnia.
+I chcielibyśmy takie zestawienie sobie.
+Przygotować.
+Czyli w pierwszej kolejności.
+Wyświetlimy sobie po prostu.
+First name, last name, birth date, hire date, title.
+Oraz age when employed.
+To jest taki plan na teraz.
+A później jak już to uda wam się zrobić.
+To spróbujcie wykonać.
+Za pomocą funkcji average.
+Oraz za pomocą window function.
+Znaleźć to średnie zatrudnienie.
+Ten średni wiek zatrudnienia na tym stanowisku.
+No to co?
+Do zobaczenia.
+I jak?
+Udało się?
+Czy gdzieś polegliście i tutaj szukacie odpowiedzi?
+To zadanie jest trochę trudniejsze.
+To sobie z tego zdaję sprawę.
+No ale skoro cierpieliśmy trochę na brak zadań.
+No to tutaj trzeba było trochę przycisnąć.
+Poza tym window function są świetne.
+I też są dobre takie właśnie na poćwiczenie.
+Myślę, że jeżeli nie poradziliście sobie z tym rozwiązaniem.
+Do tej pory.
+To nie bójcie się.
+Naprawdę w trakcie zdania zrobić pauzy.
+I spróbujcie.
+I spróbować zrobić.
+Dokończyć.
+Kiedy ja już będę miał coś wykonane.
+Jakiś tam podpowiedź wam dam.
+To zróbcie pauzę.
+Dokończcie sobie samodzielnie.
+To jest jedna rada.
+Druga rada.
+Jeżeli zobaczycie moje rozwiązanie.
+To spróbujcie wówczas podejść do niego samodzielnie.
+A jeżeli zrobiliście.
+No to chapeau bas.
+Bardzo się cieszę.
+Lecimy.
+Select.
+Co tam mieliśmy pobrać?
+Imię, nazwisko, datę urodzenia, datę zatrudnienia pracownika.
+No to lecimy.
+Nie śpimy.
+Lecimy.
+Select.
+A Select już był.
+First name.
+Last name.
+From employees.
+Ja tutaj sobie pozwolę zrobić to tak na raty.
+Z tego względu, że tak jest po prostu łatwiej.
+Last name.
+Dalej interesuje mnie data zatrudnienia.
+Data urodzenia niech będzie.
+I data zatrudnienia.
+Czyli date of employment.
+Hire date.
+Ok.
+Może być i tak.
+Ops.
+Mamy.
+Ok.
+Pierwsze pytanie.
+Które musimy sobie zadać.
+To jest pytanie.
+Kiedy ta osoba.
+Została.
+Ile ta osoba miała lat.
+Kiedy została zatrudniona u nas w firmie.
+Czyli tak naprawdę.
+Możemy sobie od daty.
+Policzyć.
+Tak jak liczyliśmy wiek.
+Względem daty urodzenia.
+Do daty zatrudnienia.
+Czyli.
+Możemy sobie wykonać wówczas.
+Age.
+No i.
+Hire date.
+Birth date.
+Ops.
+No i.
+Wyjdzie nam.
+Dato zatrudnienia.
+Czyli.
+Możemy sobie wykonać wówczas.
+Age.
+No i.
+Hire date.
+No i.
+Wyjdzie nam.
+Że ta osoba.
+Miała.
+43 lata.
+Kiedy.
+Zatrudniliśmy ją.
+W firmie.
+Dokładnie.
+43 lata.
+4 miesiące.
+I 24 dni.
+Czy to się na pewno zgadza.
+Wydaje mi się.
+Że tak.
+Gdzie mamy małą liczbę.
+Tu mamy 28.
+Niech będzie.
+66.
+No to na oko.
+Tak.
+Wychodzi.
+66.
+Plus 30.
+To byłoby.
+96.
+No minus 2.
+28.
+Jak najbardziej.
+Wierzę mu.
+Ile lat.
+Mieli.
+Skończonych.
+Pełnych.
+Więc.
+Musimy sobie.
+Z tego.
+Wyciągnąć.
+Rok.
+Żeby.
+Z tego.
+Wyciągnąć.
+Rok.
+Możemy.
+Skorzystać.
+Z funkcji.
+Extract.
+Year.
+From.
+From.
+Age.
+No.
+I.
+W ten.
+Sposób.
+Był.
+Extract.
+Albo.
+Date.
+Ile.
+Lat.
+Mieli.
+Ci.
+Pracownicy.
+Kiedy.
+Ich.
+Zatrudniliśmy.
+Extra.
+A teraz.
+Chcemy.
+Zrobić.
+To samo.
+Dla.
+Danego.
+Działu.
+Dla.
+Danego.
+Stanowiska.
+Stanowisko.
+Miał.
+Coś.
+Title.
+W.
+Nazwie.
+Albo.
+Samo.
+Title.
+Albo.
+Nie.
+Wiedział.
+Ale.
+Okej.
+Zrobiłem.
+Enter.
+I.
+Zobaczcie.
+Zadziałało.
+I.
+Teraz.
+Usunąłem.
+Enter.
+I.
+Teraz.
+Będę.
+Chciał.
+Znaleźć.
+Dla.
+Danego.
+Tytułu.
+Tą.
+Średnią.
+Czyli.
+Tak.
+Mówiłem.
+Znajdź.
+Mi.
+Average.
+Partition.
+By.
+Title.
+Co źle jest.
+Year.
+From.
+Year.
+From.
+Average.
+Year.
+From.
+Average.
+Aha.
+Average.
+Extract.
+Musi.
+Być.
+Tak.
+Tak.
+Tak.
+Tak.
+Tak.
+Average.
+Extract.
+Tu.
+Jest.
+Kilka.
+Osoby.
+Pojedynczą.
+Pojedynczą.
+Wszystko.
+Zgadza.
+Natomiast.
+Tutaj.
+Mamy.
+Zbiór.
+Sprzedawców.
+No.
+Jak.
+Byśmy.
+Sobie.
+Wyciągnęli.
+Średnią.
+Z tych.
+Liczb.
+Zapewne.
+Wyszłoby.
+Nam.
+Właśnie.
+36.
+17.
+Więc.
+Tak.
+To.
+Jest.
+Zadanie.
+Co?
+Oraz.
+Te?
+No.
+Bardzo.
+To.
+I��를.
+Najzwyciędej.
+Przek on.
+Nie wiedziałem, że ten na przykład.
+Niczemu.
+Nosyłem.
+Tak.
+Najzły.
+Ch spooli.
+Ta.
+Zgadzał.
+No.
+Ztieszy.
+No data.
+Wszystaczy.
+Gór.
+Ć.
+Bardzo brut.
+W率ach.
+Najzwycięimana.
+Za.
+Tak.

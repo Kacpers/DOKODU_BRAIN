@@ -1,0 +1,420 @@
+Ja nie. Zatem dużo już rozmawialiśmy o tym, jak tworzyć obrazy,
+czy też jak stawiać, może inaczej, jak tworzyć kontenery z gotowych obrazów,
+a ja bym bardzo chciał, żebyś mi teraz pokazał, jak możemy coś w tych obrazach jeszcze pozmieniać.
+No bo ja sobie wyobrażam, że czasem jest tak, że chcę stworzyć sobie na przykład aplikację w Pythonie,
+ale na tym obrazie będę musiał później wykonywać jeszcze jakieś polecenia,
+bo a to jakąś na przykład zmienną środowiskową będę chciał sobie utworzyć,
+a to będę chciał coś doinstalować, a to coś jeszcze.
+I domyślam się, że skoro Docker jest taki świetny, znaczy ja to wiem,
+ale tak trochę udaję pod potrzeby tego kursu, że skoro Docker jest taki świetny,
+to da się pewnie zdefiniować sobie na przykład, żeby w trakcie budowania takiego obrazu
+wykonywały się jeszcze jakieś dodatkowe polecenia. Czy tak jest?
+Tak, dokładnie tak jest i to sobie dzisiaj omówimy.
+Mówicie.
+Dobra, okej. To co mi pokażesz? Widzę, że masz folder przygotowany do kodu Python i do kodu JavaScript.
+Widzę takie dwie zakładki w twoim terminalu, czyli będziesz chciał mi pokazać,
+jak postawić aplikację opartą w Dockerze o Pythona i o JavaScripta, prawda?
+Tak, dokładnie tak. I myślę, że zaczniemy sobie od prezentacji aplikacji Pythonowej,
+którą wcześniej tutaj dla nas przygotowałeś.
+Dobra. Czyli co mamy? Zaczekaj, zaczekaj, powoli. Co mamy w tym katalogu najpierw sobie omówmy?
+Czyli mamy Dockerfile'a, tego zostawiamy sobie na deser. Mamy app.py, gdzie już chciałeś wejść
+i mamy requirements.txt. Czyli tak naprawdę mamy, można byłoby powiedzieć, jakąś najprostszą aplikację
+i dodatkowo musimy tylko do tej aplikacji dorzucić sobie pliczek o nazwie Dockerfile, tak?
+Tak.
+Okej, dobra. Możesz wejść zatem do tego app.py.
+Zobaczmy, co ta aplikacja robi.
+A, czyli flask. No tak, chociaż przed chwilą powiedziałeś, że to ja przygotowałem, więc nie powinienem się dziwić,
+ale ja tutaj udaję to zdziwienie. Czyli w pliku app.py mamy zwykłą aplikację we flasku,
+która wyświetla komunikat w tej świecie. Okej, no to super, to tutaj wszystko wiem.
+To teraz tak naprawdę najbardziej interesuje mnie to, co robi ten Dockerfile, bo tam pewnie jakieś cuda się dzieją.
+Jasne. Myślę, że w pliku requirements.txt.
+możemy pokazywać, bo tam jest tylko flask.
+Także chyba nie ma konieczności go prezentować.
+A teraz widzimy już nasz Dockerfile.
+O, tu się dużo ciekawych rzeczy dzieje z tego, co widzę.
+Tak.
+Ogólnie to, co tutaj widzimy, to są wszystko dyrektywy Dockera.
+Przepraszam, przerwę Ci na momencik, przepraszam, bo oczywiście w słowniczku, który dla Was przygotowaliśmy,
+mówimy, czym jest Dockerfile.
+Natomiast jakbyśmy mieli tak króciutko tylko powiedzieć, to Dockerfile tak naprawdę to jest taki przepis,
+jakie polecenia, jakie czynności chcielibyśmy wykonać na naszym obrazie, kiedy go stawiamy, kiedy robimy znowu kontener.
+Tak, w dużym uproszczeniu jest to taki opis, jak ten nasz obraz, nasz własny, powinien wyglądać po jego docelowym zbudowaniu.
+Mhm, okej. Dobra, rozumiem.
+To co?
+Zaczynamy od samego początku?
+Tak, widzimy tutaj kilka różnych dyrektyw, tak to się chyba po polsku prawidłowo nazywa, które służą do budowania obrazu zgodnie z tym przepisem.
+I zawsze zaczynają się one od dyrektywy from, która to mówi, z jakiego obrazu bazowego będziemy chcieli skorzystać.
+I teraz obrazy bazowe to są na przykład obrazy i przede wszystkim te, o których rozmawialiśmy w kontekście Dockerhuba.
+Dockerhub jest zbiorem takich właśnie obrazów bazowych.
+Oczywiście możemy mieć także nasze własne obrazy bazowe, bo czasami mamy zespół security na przykład, który przygotowuje taki obraz z odpowiednimi patchami
+i wtedy my nie widzimy tego, co się dzieje.
+Z takiego obrazu bazowego, oni sobie tutaj robią to, co potrzebują, żeby obraz dodatkowo zabezpieczyć i nam dają już do wykorzystania tutaj obraz, który jest przygotowany i zabezpieczony zgodnie z wewnętrznymi politykami.
+Okej, czyli tak naprawdę ta pierwsza linijka mówi nam o tym, z jakiego obrazu chcemy to robić.
+Tak samo jak robiliśmy wcześniej docker pool, czy też tam stawialiśmy kontener z jakiegoś obrazu, to tutaj.
+Czyli dokładnie tę samą nazwę powinniśmy wpisać.
+Tak, dokładnie tak.
+I tutaj warto zwrócić uwagę na pełną nazwę, czyli mamy tutaj dwukropek i numerek.
+Po dwukropku jest tag tego obrazu, to jest odniesienie do tych tagów, o których też rozmawialiśmy w kontekście Dockerhuba.
+Możemy sobie jeden z nich wybrać i na bazie tego konkretnego taga, tej konkretnej wersji,
+zbudować nasz obraz docelowy.
+Okej, rozumiem.
+Okej, tutaj wszystko zrozumiałem.
+Czyli tak naprawdę jakbym się zastanawiał, z jakich obrazów mogę tworzyć, to na Dockerhubie znajdę informacje wtedy bez problemu.
+Tak, jak najbardziej.
+Okej.
+I potem mam...
+W zasadzie myślę, że to jest dobry moment, jeśli mógłbyś nam pokazać zawartość Dockerhuba dla obrazu Pythonowego,
+bo z tego co pamiętam, to tam jest pokazana instrukcja, jak z tego konkretnego obrazu można skorzystać.
+Dobra, daj mi momencik dosłownie, zaraz to sobie otworzę.
+W międzyczasie jak otwieram, to jeszcze jakbyś mógł mi tylko powiedzieć, co to jest ten env poniżej?
+Enf to jest ustawienie zmiennej środowiskowej, która będzie obecna w kontekście tego całego obrazu,
+i uruchomionego później z niego kontenera.
+I teraz ta zmienna jest dostępna w każdej warstwie, która następuje po tej warstwie, w której ona jest wykonywana.
+Bo tutaj każda taka dyrektywa tworzy osobną warstwę dla obrazu, i o warstwach jeszcze sobie porozmawiamy w przyszłości.
+Dzisiaj chciałbym tylko zaznaczyć, że coś takiego nie ma.
+Tylko jest, i jakby każda kolejna warstwa jest dobudowywana do poprzedniej.
+Czyli jeśli coś znajduje się tutaj, to znaczy, że tutaj też to jest dostępne.
+Okej, i tu właśnie jedno takie pytanie, jeszcze może nietypowe, ale te entery, które masz pomiędzy fromem a envem,
+to one właśnie oddzielają te warstwy, ale to jest tylko taki, robisz to tak jakby dla estetyki.
+Czy to ma jakieś znaczenie?
+Nie, te entery są tylko i wyłącznie dla czytelników.
+Dla czytelności moglibyśmy równie dobrze mieć to zrobione w taki sposób i zadziała identycznie,
+natomiast gdybyśmy chcieli pójść o krok dalej i zrobić coś takiego, to nam nie zadziała.
+Każdą warstwę trzeba rozpocząć od nowej linijki i widać to też po kolorowaniu tutaj składni.
+Dobra, super. Ja w międzyczasie znalazłem obraz dla Pythona i faktycznie masz rację, że tutaj jak sobie zjedziemy troszeczkę niżej,
+niżej, niżej, niżej i jeszcze ciutkę niżej, to znajdziemy dokładnie takie instrukcje mówiące tak naprawdę o tym,
+jak możemy taki obraz wykorzystać i co możemy z tym obrazem zrobić.
+Więc tak naprawdę, jak się domyślam, to praca będzie się trochę sprowadzała do tego, żeby rozumieć to, co się tutaj znajduje i to dostosowywać do swoich potrzeb.
+Dokładnie tak. Zresztą jak się uważnie przyjrzycie, to to, co teraz Kacper pokazuje bezpośrednio z Docker Hub'a,
+nieznacznie tylko różni się od tego, co mamy już przygotowane w naszym projekcie z Pythonem,
+dlatego, że to, co my razem z Kacperem zrobiliśmy, to dokładnie wzięliśmy tą definicję z Docker Hub'a i jedynie dostosowaliśmy pod nasze potrzeby.
+Przed nagraniem tej lekcji przetestowaliśmy sobie, czy wszystko na pewno nam działa, czy pójdzie gładko i nic nas nie zaskoczy.
+Mhm.
+Dlatego jak pokażesz naszym uczestnikom terminal, to będziecie mogli zaraz zobaczyć, że mamy też linijkę, która jest zakomentowana,
+która jeszcze została z etapu tego naszego dostosowania obrazu, ale tak naprawdę my tutaj bardzo nieznacznie zmieniliśmy to, co dostaliśmy właśnie w tej instrukcji na Docker Hub'ie.
+Okej.
+I tu od razu rodzi mi się takie jeszcze jedno pytanie.
+Bo jak w tym przypadku mamy prostą aplikację, jak widzieliśmy jeden plik, prosty Dockerfile, czy z Twojego doświadczenia wynika, że tego, na przykład tych linii zazwyczaj jest dużo, dużo więcej?
+Na ogół jest ich trochę więcej, ale raczej niedużo.
+Okej.
+To, czego wobec linii, które tutaj widzimy, to czego jeszcze zazwyczaj możemy zazwyczaj zazwyczaj zazwyczaj zazwyczaj zazwyczaj zazwyczaj zazwyczaj zazwyczaj,
+czego jeszcze zazwyczaj można się spodziewać, to instalacja pakietów systemowych.
+Bo na przykład potrzebujemy skorzystać z jakiejś dodatkowej biblioteki, która jest typowo systemowa, natomiast nie jestem pewien, czy mamy taką sytuację w przypadku pracy z Pythonem.
+Wydaje mi się, że pracując z Pythonem nie mamy takiej potrzeby, bo wszystkie zależności są jakby dostarczane wewnątrz tego obrazu.
+Okej.
+To, co byśmy potrzebowali z systemu, a paczki, które są już typowo Pythonowe, są w requirementsach i instalujemy je narzędziem, które już w tym naszym obrazie się znajduje.
+Okej.
+I tu na etapie jeszcze tej pierwszej linijki, czyli tego from Python 3, chciałbym powiedzieć o jeszcze jednej rzeczy.
+Bo tak naprawdę ten nasz kod, ten nasz obraz Pythonowy też powstał na bazie jakiegoś innego obrazu, co?
+W sensie, bo ktoś może się zastanowić, co jest pod spodem.
+Tak.
+Czy pod spodem jest Ubuntu, czy pod spodem jest Debian, czy pod spodem jest coś innego.
+Więc tutaj, z tego co pamiętam, gdzieś jest opcja zobaczenia tego źródła, prawda?
+Tak.
+Wydaje mi się, że możesz kliknąć w któryś z tagów.
+Okej.
+My mamy który?
+Przypomnij mi.
+My mamy Python 2.3 po prostu.
+Okej.
+Więc on powinien też mapować się w tym momencie do 3.14.
+Albo nie, do 3.13, bo 3.14 jest jeszcze w becie.
+Także w 3.13 powinna być też trójka.
+Tu wszędzie jest 3.13, ale on ma bardzo dużo też tych dodatków, więc ja teraz się skupiam może niepotrzebnie na szukaniu 3.13 bez żadnego dodatku.
+Myślę, że nie ma to większego znaczenia tak naprawdę. Możesz wybrać dowolny obraz, bo chcemy tylko zaprezentować, jak to wygląda w środku.
+Chwileczkę to trwało.
+Musiałem zerknąć sobie na tagi bezpośrednio.
+To tylko wam pokażę, że jak wchodzimy na Pythona, to tutaj łatwo jest kliknąć w tags i wtedy można znaleźć poszczególne tagi i są wymienione wszystkie, a nie tylko te, które tam są na liście.
+No i tym sposobem udało mi się znaleźć ten obraz, z którego korzystamy, czyli Python 3.
+I mogę odpowiedzieć na pytanie też, jaki jest system pod spodem, bo zobaczcie, to są te warstwy, o których wspominał Jan.
+I jak zerkniemy, to Python 3 jest stworzony.
+Tu są polecenia.
+Tu są polecenia, które go jakby tworzą.
+Więc jakbyście chcieli się dowiedzieć, co robi Python 3, to można tutaj też sobie podejrzeć taki jakby docker file, który stworzył tego Pythona 3.
+Natomiast wyżej, nad Pytholem 3, jest coś, co się nazywa build...
+Nie pamiętam co, ale tam są trzy kropeczki.
+Tam było build...
+buildpack-debs.
+buildpack-debs.
+O właśnie.
+Jak najechałem, to też się to tu pojawiło.
+I widzę, że pod spodem jest debian-sh.
+Czyli tak naprawdę, jeżeli byśmy chcieli coś sobie doinstalować, to zawsze można to doinstalować po prostu za pomocą apt-geta.
+Tak możecie to najprościej sprawdzić.
+Natomiast, jeżeli wybralibyście na przykład wersję z Alpine'em dopisany, to zobaczcie, że macie na przykład 3.13, Alpine 3.21,
+to w tym momencie też widzimy, że już nie mamy tego buildpack-debs, tylko nad tym obrazem Pythonowym jest Alpine,
+czyli tak naprawdę trzeba byłoby doinstalowywać rzeczy za pomocą Alpine'a.
+I to tyle takiego mojego...
+można powiedzieć wymądrzania się.
+Wracamy do tego, o czym tutaj rozmawialiśmy.
+Ale myślę, że możemy też zrobić...
+później sobie dopisać jakiś apt-get update.
+Pokażemy też, jak to zrobić.
+Okej.
+Czyli tak.
+Mamy już...
+Wiemy, czym jest from.
+Wiemy, na czym te warstwy polegają.
+Wiemy, czym jest env.
+To teraz zastanawia mnie ten workdir.
+Bo to...
+Ty masz Linuxa, ale to jest tak naprawdę nie katalog, w którym w danym momencie się znajduje, tylko katalog już na gościu, prawda?
+Tak.
+To jest katalog, który zostanie utworzony wewnątrz tego naszego obrazu.
+Czyli on będzie dostępny w kontenerze, który z tego obrazu uruchomimy.
+I tutaj taka przydatna, myślę, informacja a propos dyrektywy workdir.
+Ona nie tylko ustawia katalog roboczy, który później będzie domyślnym katalogiem dla wszystkich kolejnych warstw,
+o ile nie zmienimy go ponownie.
+Bo też mamy taką możliwość.
+Ale oprócz tego on tworzy ten katalog, jeśli on nie istnieje i nadaje mu prawidłowe uprawnienia.
+I wspominam o tym dlatego, że w mojej praktyce często widziałem obrazy, których definicja wyglądała na przykład w ten sposób,
+że tutaj mieliśmy run utworzenie katalogu.
+Mhm.
+I na przykład jeszcze mieliśmy run nadanie uprawnień temu katalogowi.
+Okej.
+Natomiast...
+To nie jest potrzebne tak naprawdę.
+Dokładnie. To nie jest potrzebne.
+To nam oszczędza dwie warstwy, które co prawda nie mają dużego znaczenia, bo one nie wpływają jakoś mocno na ten obraz.
+Natomiast...
+Natomiast z perspektywy czytelności takiej definicji na pewno łatwiej jest sobie przeczytać zamiast tych trzech linijek tylko taką jedną.
+Po prostu jedną.
+Okej.
+Tak.
+I czy jeżeli napiszemy ten workdir to to od razu też robi jakby CD i wejście do tego katalogu?
+Tak. Dokładnie. To jest to co się wydarzy.
+Także nie musimy też do tego katalogu wchodzić.
+I w każdej kolejnej warstwie właśnie w tym katalogu się znajdujemy.
+Także w skrócie to co znajduje się w workdirze to na pewno jest utworzenie katalogu, na pewno jest nadanie mu odpowiednich uprawnień i na pewno jest wejściem do tego katalogu.
+Okej.
+Tu mam dużo pytań, bo jakby omawiasz ciekawe tematy, ale czy na przykład kolejność występowania tych poleceń ma znaczenie?
+Czyli że ten workdir celowo został umieszczony tak na samej górze prawie?
+Tak.
+On został celowo umieszczony na samej górze.
+Na samej górze dlatego, że wszystko co robimy w tym naszym obrazie chcemy robić w tym konkretnym katalogu.
+Okej.
+I przechodząc do kolejnej linijki, pierwsza rzecz jaka się dzieje, to kopiujemy sobie plik requirements.txt, który widzieliśmy wcześniej w katalogu na naszym hoście, czyli na naszym gospodarzu.
+Tutaj zawsze te wcześniejsze wskazania są tyle.
+Ostatnie jest tym, co jest na gospodarzu.
+Ostatnie jest tym, co jest na gościu.
+No i kropka oznacza bieżący katalog.
+W związku z czym skopiujemy sobie w tej linijce nasz plik requirements.txt do naszego workdira, bo w poprzedniej linijce go ustawiliśmy.
+Okej.
+Ale okej.
+I to z jednej strony to pewnie znowu może nie będzie zbyt mądre pytanie.
+Ale robisz copy requirements.txt, potem robisz pip install, a potem znowu robisz copy.
+Czemu tak jest?
+Tak.
+To wynika z tego, że chcemy sobie optymalizować czas budowania obrazu.
+To znaczy, jeśli my sobie coś zmienimy w naszym kodzie aplikacji,
+to wszystkie zmiany podczas budowania obrazu powodują, że dana warstwa
+jest inwalidowana, czyli ona jest jakby uznawana za nieważną, za nieaktualną i musimy ją zaktualizować.
+Bo Docker sobie rozpoznaje, że od tego momentu mamy istotne zmiany.
+Okej.
+W związku z czym, żeby przyspieszyć czas budowania aplikacji, my te warstwy, te nasze kolejne dyrektywy układamy w taki sposób,
+żeby na samej górze były rzeczy, które zmieniamy.
+Te rzeczy, które zmieniają się najrzadziej i czym niżej schodzimy, umieszczamy rzeczy, które zmieniają się kolejno najczęściej.
+I requirements.txt będzie się zmieniać stosunkowo rzadko, bo będzie się zmieniać tylko wtedy, kiedy dodajemy nową paczkę do naszej aplikacji.
+Czyli jeśli wiemy, że potrzebujemy skorzystać z nowej biblioteki, bo jest potrzebna do realizacji czegoś w naszym projekcie,
+dodajemy ją, trafia do tego pliku.
+Trafiają importy odpowiednie do kodu i ta instalacja odbywa się raz.
+W kolejnej tutaj linijce dokonujemy właśnie tej instalacji i nie potrzebujemy powtarzać tej instalacji.
+Bo jakby samo wgranie requirementsów trwa czas pomijalny.
+Natomiast instalacja paczek w sytuacji, kiedy mamy ich coraz więcej, mamy na przykład tych requirementsów 20,
+są to jakieś duże biblioteki i teraz dodamy kolejne trzy duże biblioteki.
+Ten czas budowania znowu nam wzrośnie o te trzy kolejne duże biblioteki.
+Gdybyśmy chcieli przy każdym przebudowaniu obrazu je budować, to tak naprawdę większość dnia spędzalibyśmy na budowaniu obrazu,
+zamiast na rozwijaniu naszej aplikacji.
+A jednak zależy nam na tym, żeby robić to w sposób efektywny, wydajny.
+Dlatego to, co zmienia się rzadko.
+Kopiujemy sobie właśnie wcześniej, wykonujemy tą instalację, ona zrobi się raz.
+I później, jeśli zmieniamy kod, ale zależności są stałe, to przebudowa rozpoczyna się od tej już tylko warstwy.
+A w tej warstwie to, co się dzieje, to jest wgranie wszystkich plików z naszego systemu gospodarza, na którym ten obraz jest budowany.
+Do naszego bieżącego workdealu.
+Ja tutaj tylko dodam dwie rzeczy chciałbym uściślić.
+Jedna rzecz jest taka, że przebudowa, o której mówił Jan, to jest polecenie, którego jeszcze nie znamy, bo to jest Docker Build.
+I my go poznamy dopiero za moment, z tego co pamiętam.
+Więc tutaj się nie dziwcie, że nie wiecie, o jaką przebudowę chodzi.
+Natomiast to ułożenie tych linii jest bardzo istotne.
+I to też chciałem raz jeszcze zaznaczyć.
+I to jest coś, czego Jan mnie nauczył w jednym z moich projektów.
+Mianowicie, że jeżeli, tak jak Jan tutaj wspomniał, nie zmienię żadnych zależności i nie zmienię nic w kodzie mojej aplikacji,
+to Docker sam to sobie ogarnie.
+Jedynym poleceniem, które będzie wykonywał, będą te polecenia już za kopii.
+On nie będzie wykonywał tych wszystkich poleceń od samej góry, tylko on sam będzie wiedział, jaka warstwa się zmieniła, w której warstwie jakieś polecenie się zmieniło i co należy zbudować.
+Dokładnie tak.
+I przy okazji, gdy
+pokażemy
+doinstalowywanie tutaj zależności systemowych
+do tego naszego obrazu,
+bo taki też mamy plan,
+omówimy sobie krótko,
+jak te warstwy
+możemy optymalizować.
+I to jest taki bardzo ciekawy bonus,
+bo tutaj moje doświadczenie pokazuje,
+że nawet osoby
+już doświadczone,
+nawet tak naprawdę senior deweloperzy,
+którzy nie mają
+tak dobrej znajomości
+Dockera,
+nie do końca wiedzą,
+jak sobie te warstwy można
+optymalizować.
+A dzięki tym optymalizacjom
+zyskujemy bardzo dużo.
+I to jest też na pewno ciekawa
+informacja,
+z której można skorzystać
+podczas rozmowy rekrutacyjnej.
+Jeśli są to rozmowy na DevOpsa,
+często pojawia się pytanie o to,
+w jaki sposób można te warstwy
+sobie optymalizować.
+I ono też pojawia się nie wprost.
+Ja już z doświadczenia wiem,
+o co jestem pytany.
+Także wiem, że warto o to powiedzieć.
+Natomiast myślę,
+że w przypadku deweloperów pytanie
+może być prostsze i może być
+wprost wyrażone właśnie o te warstwy,
+co możemy z nimi robić,
+jak możemy je optymalizować,
+o co w nich w ogóle chodzi.
+Także to, czego dowiadujemy się
+podczas tej lekcji,
+na pewno będzie wartościową informacją
+do wykorzystania w razie takich rozmów.
+Czyli mamy tak naprawdę
+omówione takie polecenie,
+jak from, env,
+workdir, copy
+i teraz dochodzimy do runa.
+Chociaż w tym runie to myślę,
+że nie będzie to zaskoczeniem,
+że to jest po prostu dyrektywa,
+która wykonuje jakieś polecenie.
+To jest to, o czym też wspominałeś,
+że mamy pip install.
+I później znowu mamy copy,
+czyli bazując na tej wiedzy,
+którą mi przekazałeś dwie linijki wyżej,
+zakładam, że to po prostu skopiuje całą aplikację
+do gościa, tak?
+Dokładnie tak.
+To prawda,
+jeszcze raz zostanie tutaj też skopiowane
+requirements.txt,
+no ale to nam w żaden sposób nie przeszkadza,
+on się jakby i tak nie zmienił,
+a czas jego kopiowania jest
+pomijalny z perspektywy
+całego budowania aplikacji.
+No bo krótki plik tekstowy.
+I teraz, żeby też ta lekcja nie była aż taka bardzo długa,
+bo na pewno jeszcze sporo rzeczy
+zaraz w kolejnych lekcjach do tego dołożymy,
+to jest pytanie, co to jest za cmd?
+I czemu nie run?
+No bo tak naprawdę, skoro run
+wykonuje jakieś polecenie, no to mógłbym napisać
+run flask run i tyle,
+nie? A tu nagle zrobiłeś cmd.
+Mhm, tak.
+To może najpierw zaczniemy od pierwszego,
+cmd. Pierwszy cmd,
+jak widać, różni się kolorystycznie,
+dlatego, że jest to klasyczny
+komentarz,
+które też są dostępne w dockerfile'u
+i działają dokładnie tak samo jak w Pythonie,
+czy w Bashu,
+czyli haszem
+dostajemy sobie komentarz,
+czy jakieś polecenie chcemy
+zakomentować, bo na przykład sobie
+coś testujemy i nie chcemy go jeszcze
+usuwać, żeby zweryfikować,
+czy jakby dobrze myślimy,
+czy chcemy zostawić komuś informację,
+na przykład co się tutaj dzieje.
+Może się zdarzyć, że czasami
+mamy jakąś bardzo specyficzną
+zależność i po
+latach pracy z daną aplikacją wychodzi,
+że na przykład ta zależność musi być w jakiejś
+bardzo konkretnej wersji, żeby ta nasza
+aplikacja działała, wtedy warto sobie
+zostawić taki komentarz, żeby
+osoby pracujące z tym obrazem
+wiedziały też dlaczego
+w danym miejscu korzystamy
+na przykład z takiej właśnie bardzo konkretnej
+paczki, a nie chociażby z najnowszej.
+Czyli tak samo
+jak w kodzie po prostu, nie?
+Tak samo jak w kodzie.
+I teraz to co jest ważne, to jest to, że mamy jakieś
+nawiasy kwadratowe, czy jakąś listę
+i tutaj nie robimy tego w postaci stringa,
+tylko jakby rozdzielamy poszczególne elementy,
+tak?
+CMD przyjmuje sobie
+taką właśnie
+listę i kolejne elementy
+tej listy to są
+kolejne argumenty
+do naszego polecenia.
+Czyli
+zerowy element listy to jest to nasze
+bazowe polecenie
+samo w sobie, które chcemy wykonać.
+Tutaj jest to akurat
+flask i następnie
+są parametry uruchomieniowe
+do tego flaska,
+czyli run oraz
+ustawienie hosta
+na ogólny
+adres
+tego naszego uruchomionego
+kontenera.
+Okej, dobra.
+Czyli to wiem.
+Mhm.
+A, i teraz dlaczego CMD, a nie run?
+Bo to chyba gdzieś uciekło.
+Tak, o tym jeszcze nie powiedzieliśmy.
+CMD to jest
+specjalna dyrektywa, która
+ustala polecenie,
+które będzie domyślnie
+uruchamiane podczas
+startu naszego obrazu.
+Domyślnie to znaczy
+wtedy, kiedy go uruchamiamy,
+jeśli nie podamy mu żadnego
+innego polecenia, które ma
+się w tym obrazie wykonać, to
+wykona się dokładnie to polecenie,
+które w tym CMD się znajduje.
+Okej, czyli to nie jest tak, że robię sobie
+sześć CMD, tylko CMD jest jedno
+na sam koniec i to jest jakby taki return
+mówiący o tym, że to mi rób.
+Tak.
+Okej, dobra. To wydaje mi się, że
+tutaj możemy
+tę lekcję zakończyć, bo już wyszła nam troszeczkę
+długa, natomiast w kolejnych lekcjach
+będziemy omawiali nie tylko
+inną aplikację, ale też pokażemy Wam,
+jak można coś do tej aplikacji
+dodać. Chyba, że chciałbyś coś jeszcze
+Janie dopowiedzieć, a ja Ci tak przerywam
+bezczelnie. Nie,
+myślę, że na tym etapie możemy zakończyć
+tą lekcję, także zapraszam
+do kolejnej lekcji. Dobrze.

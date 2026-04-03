@@ -1,0 +1,222 @@
+Dobrze, a teraz ja bym chciał rozwiązać taką inną sytuację,
+bo mówiłeś o tym, że za pomocą Dockera mogę na przykład testować,
+jak moje skrypty będą uruchamiane przez różne wersje Pythona, nie?
+Tak.
+No dobra, to ja bym chciał zatem, żebyśmy stworzyli sobie jakiś katalog.
+W tym katalogu możemy umieścić jakiś najprostszy skrypt Pythona,
+niech to będzie print hello world.
+Jak nie wiesz, jak go napisać, to nie masz prawy, nauczę cię.
+I teraz, ale wiem, że z Pythonem też trochę gdzieś tam współpracowałeś,
+więc myślę, że wyświetlenie komunikatu to damy radę.
+I teraz zagadnienie jest takie, że chciałbym, żeby ten kod,
+który sobie stworzymy na przykład w katalogu code,
+znalazł się też na kontenerze.
+Dobra, to ja ci najpierw pomogę z tym plikiem Pythonowym,
+a później spróbujemy go uruchomić na wersji Pythona na przykład 3.11.
+Dobra? Albo na najnowszej.
+Zobaczymy, jaka jest najnowsza wersja Pythona w Dockerze.
+To zróbmy rzemka dirra i nazwijmy go, może być do kodu.
+Okej, teraz wchodzimy do do kodu.
+No dobra, to czujemy sobie main py.
+Możesz uruchomić dowolnym edytorem.
+Wiedziałem, że to będzie vim.
+Super.
+No i print, niech to będzie też w tej świecie.
+W nawiasie, nie?
+Bo to ta wersja Pythona.
+I w tej świecie.
+Ciekawe, czy będziesz umiał z tego vima wyjść,
+ale jesteś devopsem, to chyba ci się uda.
+Tak, ja troszeczkę w vima potrafię.
+Może nie jestem jakimś ekspertem,
+ale ma parę fajnych rzeczy,
+które wykorzystywało się na niejednym serwerze.
+Ja zawsze dwukropek x robię.
+Możesz skatować też maina,
+żeby się upewnić, że na pewno tam ten kod jest.
+No to okej, mamy pliki z Pythonem
+i teraz plan jest taki,
+że chciałbym te pliki podmontować
+pod nasz jakiś obraz, tak?
+Bo chciałbym móc je tam wykonywać.
+Czyli co muszę zrobić, żeby teraz je podmontować?
+Okej, to żeby podmontować pliki,
+korzystamy z również polecenia docker run
+do uruchomienia naszego kontenera.
+Koniecznie nie zapominamy o tym,
+że chcemy mieć IT,
+Interactive Terminal, no.
+Dokładnie, bo zapomnienie o tym
+może doprowadzić do pewnych problemów.
+Nie nagrywamy tego wcale drugi raz.
+Wcale, a wcale.
+Okej.
+I używamy przełącznika "-v",
+pod volume, który mówi o tym,
+że podmontowujemy sobie nasze polecenie.
+No właśnie, czyli to nie jest tak,
+że my po prostu będziemy, nasz katalog,
+że my nie będziemy przekazywali tych plików,
+to jest, działa jak podmontowanie w Linuxie.
+Czyli tak jakbym podmontował sobie dysk,
+czyli ja będę mógł jakby w dwie strony coś kopiować,
+wklejać i to będę widział cały czas, tak?
+Tak. Po uruchomieniu tego kontenera
+możemy sobie taką symulację zrobić,
+nie ma problemu.
+O, super.
+To każe, że utworzymy plik albo na komputerze
+i sprawdzimy go w kontenerze,
+albo odwrotnie, albo obydwie wersje.
+Tutaj mamy pełną dowolność, wszystko nam zadziała.
+Okej, dobra, to lecimy.
+"-v", i co po "-v"?
+Po "-v", dajemy ścieżkę do tego naszego katalogu do kodu.
+Okej.
+Podajemy dwukropek
+i po dwukropek podajemy ścieżkę docelową
+w naszym kontenerze, który powstanie.
+Może to być MNT,
+jest to często używana ścieżka,
+żeby coś tam sobie podmontować.
+Dobra, czyli jeszcze raz, po "-v",
+jest najpierw po lewej stronie ten katalog,
+który jest u nas na komputerze,
+a potem po dwukropku jest na kontenerze.
+Tak, dokładnie tak.
+Dobra, i teraz dorzucamy name
+i ten name to jest dokładnie ta sama nazwa,
+która była wcześniej.
+To nie jest żaden name volumena,
+tylko name naszego kontenera, nie?
+Tego, tak jak robiliśmy do kodu.
+Tak, dokładnie tak.
+To jest nazwa naszego kontenera.
+Przez to, że nie usunęliśmy kontenera do kodu
+przy wcześniejszych lekcjach,
+i chociaż nieuruchomiony dalej istnieje,
+wybierzemy sobie nową nazwę,
+niech to będzie tym razem divingdevops,
+bo gdybyśmy teraz użyli do kodu,
+dostalibyśmy błąd, że nazwa jest zajęta.
+A divingdevops przez naszą poprzednią próbę
+nie jest zajęte?
+Więc może zróbmy z podkreśleniem,
+na przykład diving, podkreślenie devops.
+Tak tylko sugeruję, bo być może ten kontener już masz.
+Możemy zrobić.
+Wydaje mi się, że jest usunięty,
+ale faktycznie nie nagrywamy tego drugi raz.
+Tak, więc diving, podkreślenie devops.
+I teraz do tego powinniśmy jeszcze dołożyć polecenie,
+no właśnie, Python.
+Nie, bo my chcielibyśmy wejść do basza,
+żeby później Pythona wykonywać wewnątrz tego kontenera.
+Czy tak się nie da, do basza wejść?
+Powinno się dać wejść do basza,
+natomiast i tak musimy zacząć od Pythona,
+dlatego że, jak widzisz,
+chcemy uruchomić obraz z Pythonem w naszym kontenerze.
+Ach, bo to jest nazwa naszego kontenera.
+Dobrze, patrz, już jest tyle tych parametrów,
+że mi się troszeczkę myli.
+Okej, czyli ja jeszcze raz potrzebuję sobie powtórzyć.
+docker run it, bo to jest interactive terminal,
+potem minus v i mamy kontenery,
+potem name i mamy diving devops,
+bo tak się nazywa nasz kontener.
+I teraz Python, bo to jest nazwa obrazu.
+Tak.
+Dobra.
+I teraz, dopiero teraz po spacji,
+dajemy polecenie, z którego byśmy chcieli uruchomić.
+Tak.
+Okej.
+Okej.
+To bardzo ważne, żeby tę kolejność załapać,
+bo widzicie, ja trochę to robię,
+ja też się pogubiłem już tutaj.
+Dobra.
+No i co? Enter? Fire?
+Tak, lecimy.
+O.
+Widzimy to samo, co wcześniej.
+Jesteśmy w naszym obrazie.
+Tu tylko nadmienię, że Jan już miał wcześniej
+ściągnięty ten obraz z Pythonem,
+w wersji latest,
+więc dlatego on też się pobrał.
+No i możemy zrobić Python minus minus version,
+żeby zobaczyć, jaka jest wersja Pythona.
+O.
+Czyli najnowszą wersją na Dockerze,
+dostępną, jest 3.13.1.
+Super.
+Czyli całkiem świeża wersja,
+jak na moment, kiedy to nagrywamy.
+Okej.
+No i teraz tak naprawdę crème de la crème.
+Test absolutny.
+Czy w katalogu MNT będzie coś?
+Jest.
+Jest main.py.
+Czyli to jest ten nasz plik.
+No to uruchamiamy.
+Jest.
+Witaj w świecie.
+Super.
+Czyli tak naprawdę działa.
+No to to, co chciałbym jeszcze przetestować,
+jeżeli możemy,
+to chciałbym w drugim oknie terminala
+utworzyć sobie nowy pliczek jakiś.
+Do kodu, nie?
+Czyli do kodu ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Ukośnik.
+Niech to będzie test.py po prostu,
+czy tam cokolwiek,
+bo to tylko chcę zobaczyć,
+czy on się pojawi.
+To mnie interesuje.
+I teraz wracamy do...
+Test.py, tak?
+No.
+Możemy testy pisać.
+Tak, tak.
+Tylko to nie na tym kursie.
+Tutaj robimy ls mnt.
+Jest.
+Ok.
+Czyli to działa w dwie strony.
+To bardzo ważna informacja zatem.
+Tak.
+Możemy nawet w drugą stronę też pokazać.
+Dobra.
+Tylko w MNT musisz to zrobić, nie? Bo nie jesteśmy w MNT.
+To prawda.
+Dobra, i zróbmy teraz raz jeszcze, wyświetlmy zawartość katalogu do kodu.
+Śmiało, Enter. Okej, czyli ten test 2 też nam się tutaj utworzył, czyli widzimy, że to działa w dwie strony.
+Z jednej strony utworzyliśmy sobie test z prawego i pojawiło się w lewym, a z lewego w prawym też się pojawiło.
+I może nie byłoby to zbyt zaskakujące, gdyby właśnie nie fakt, że jest to w prawym oknie macie widok gospodarza, w którym jest Ubuntu Jana,
+a w lewym oknie jesteśmy wewnątrz kontenera, w którym tak naprawdę podmontowaliśmy sobie ten zasób, ten wolumen.
+Bardzo mi się to spodobało i tu mam też takie pytanie, bo słyszałem, że można też tworzyć wolumeny osobno.
+Czy pokażesz nam to w następnej lekcji, jak to działa, jakie ma to zalety?
+Tak.
+W następnej lekcji utworzymy sobie taki dedykowany wolumen z poleceniem, które do tego służy.
+Okej, super. To ja już nie mogę się doczekać i zapraszam Was do kolejnej lekcji.
+Ja również zapraszam.

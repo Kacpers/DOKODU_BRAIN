@@ -1,0 +1,241 @@
+No i tak jak obiecałem, kolejna lekcja dotyczy polecenia INSERT, czyli wstawiania nowych rekordów do naszej tabeli.
+Na chwilę obecną wiemy tyle, że z takich poleceń, które służą do typowego CRUD-a, czyli do takiego, to jest taki akronim CREATE, READ, UPDATE i DELETE,
+to wiemy na razie jak odczytać dane tylko i wyłącznie, a teraz powiemy sobie jak zrobić ADA, czyli jak dodawać nowe dane do tabeli.
+Jeżeli chodzi o dodawanie do tabeli nowych rekordów, no to odpowiada za to zapytanie INSERT.
+Czyli mamy INSERT INTO nazwa tabeli, po nazwie tabeli w nawiasie wprowadzamy nazwę COLUMN i tutaj możemy podać tylko niektóre kolumny.
+Oczywiście, jeżeli dla pozostałych, których nie podamy, będzie wyrażenie NOT NULL,
+no to rekord nam się nie doda, dostaniemy błąd.
+Dalej mamy słówko VALUES, w którym ponownie w nawiasie wprowadzamy konkretne wartości.
+No i tutaj ważna sprawa.
+Wartości podajemy w tej samej kolejności, w jakiej podaliśmy nazwy kolumn za nazwą tabeli.
+Jeżeli natomiast nie podaliśmy żadnych nazw kolumn, no to po prostu podajemy wszystkie nazwy wartości.
+Jeżeli chcielibyśmy jakąś wartość pominąć, to mamy jedno koło ratunkowe, jest nim słówko DEFAULT.
+Na przykład, jeżeli stworzyliśmy sekwencję dla identyfikatora i chcecie, żeby kolejne wiersze były numerowane kolejnymi liczbami,
+to zawsze można zrobić DEFAULT i wówczas będziemy mieli kolejne liczby.
+Natomiast, jeżeli nie podamy tej wartości, jaką będzie ID i nie będzie też ono wymienione w kolumnach,
+no to też wskoczy nam kolejna wartość.
+Dla przykładu warto też nadmienić, że jest możliwość dodawania kilku wartości.
+Dla przykładu, warto też nadmienić, że jest możliwość dodawania kilku wartości.
+Dla przykładu, warto też nadmienić, że jest możliwość dodawania kilku wartości.
+Dlatego też, jeżeli mielibyście więcej poleceń dodać sobie za jednym razem, więcej wierszy dodać sobie za jednym razem,
+to można śmiało to zrobić, korzystając z takiej składni INSERT INTO nazwa tabeli,
+znowu możemy podawać kolumny, ale nie musimy, a potem po VALUES znajdują się parę, tam parę,
+znajduje się ileś, jakaś konkretna wartość tych krotek, z których chcecie te nowe wiersze.
+Znowu możemy podawać kolumny, ale nie musimy, a potem po VALUES znajdują się parę, tam parę, znajduje się ileś, jakaś konkretna wartość tych krotek, z których chcecie te nowe wiersze.
+krotek, z których chcecie te nowe wiersze
+robić. Zobaczcie, mamy w nawiasie
+pierwsza kolumna, pierwszy
+wiersz, pierwsza kolumna, przecinek, pierwszy
+wiersz, druga kolumna. Czyli po prostu to jest jeden
+rekord, ten, który dodałem się jako
+pierwszy, po czym jest przecinek
+i jest drugi wiersz, pierwsza kolumna,
+drugi wiersz, druga kolumna. I tak możecie
+po przecinkach wprowadzać dowolną
+ilość wierszy.
+One się ładnie nam dodadzą jeden pod drugim
+i to wszystko zostanie wykonane za pomocą
+jednego zapytania. Tu
+oczywiście znowu
+apeluję o rozwagę, no bo
+jeżeli będziemy mieli do dodania pięćdziesiąt tysięcy
+wierszy, to podejrzewam, że łatwiej
+byłoby dodawać je na przykład
+po pięćdziesiąt tysiąc razy
+niż raz
+na pięćdziesiąt tysięcy, tak? Warto
+w tej materii znaleźć
+pewien, pewien, pewien
+zdrowy rozsądek
+no i potestować sobie, jakie
+dane wasza tabela przyjmuje lepiej.
+Nie chcę dawać
+konkretnych wam liczb tutaj, ponieważ
+wszystko zależy od tego, jak skonfigurować,
+jak skonfigurowana jest tabela, jaka jest wielkość
+bufora, jaka jest wielkość zapytania.
+Te rzeczy po prostu można sobie
+skonfigurować, można wpłynąć na to, żeby działało
+ona wydajniej, ale to jest zagadnienie
+zdecydowanie bardziej administratorskie,
+aniżeli
+takie klienckie. A my tutaj patrzymy
+bardziej na bazę danych z poziomu klienckiego,
+czy też z poziomu
+programisty, a nie z poziomu administratora.
+No i skoro stworzyliśmy sobie w poprzednim zadaniu
+dwie tabele,
+to możemy teraz śmiało te tabele uzupełnić
+danymi. Do tabeli
+Exercises Autors prosiłbym,
+żebyście dodali Sempe Gościnnego
+oraz Towe
+Janssona. Pierwszy
+napisał, pan Gościnny,
+napisał Wakacje Mikołajka
+i ten cykl związany z Mikołajkiem,
+natomiast pan Jansson,
+czy pani Jansson, przepraszam, napisała
+Muminki.
+No i następnie w zadaniu drugim
+do tabeli Exercises Books
+chcemy dodać cztery
+książki. Interesują nas
+opisy i daty dodania
+również, ale możecie śmiało wymyślić
+sobie samodzielnie. No i te
+cztery książki to Wakacje Mikołajka,
+Rekreacje Mikołajka, Lato Muminków
+i Kometa nad Doliną Muminków.
+I tutaj mała taka prośba, jak będziecie
+dodawali te książki, to na przykład spróbujcie
+autorów dodać dwóch naraz,
+natomiast książki dodać cztery
+po jednym razie.
+To co? Piętnaście minut
+dla każdego, czy może piętnaście
+za dużo? Trzy minuty dla każdego,
+i do zobaczenia za moment.
+Okej, jeżeli chodzi teraz o dodanie nowych
+autorów, to możemy sobie wykonać polecenie
+Insert into, ach te wielkie
+litery, Authors.
+Mogę podać w nawiasie
+nazwy kolumn, interesować
+mnie będzie First Name oraz Last
+Name.
+No i interesować mnie będą konkretne
+wartości,
+którymi będzie
+Sempe Gościnny,
+oraz
+Tove
+Jansson.
+Ops.
+Authors does not exist,
+ponieważ to jest
+Library, a Authors.
+Czyli robię sobie
+od razu tak,
+tak,
+tak,
+tak,
+i tak.
+Ops.
+Tu mi się, dodało mi się dwóch autorów,
+czyli Select, gwiazdka,
+From Library
+Authors. Ops. I mam
+dwie osoby.
+No i jeszcze mam dodać książki.
+Jak widzicie tutaj w pierwszym przypadku, no nie podałem
+idka, więc
+nadał mi się on automatycznie.
+Natomiast tu jeżeli chodzi o dodawanie książek,
+to nie podam sobie nazw kolumn
+i pokażę wam co zrobić też, żeby właśnie
+ten id nam się samodzielnie
+policzył. Czyli Insert
+into
+Books
+Books
+Books
+Values
+Values
+No i teraz jakie miały te książki
+tytuły? Id najpierw na pewno
+było, więc jeżeli id było najpierw
+to podajemy sobie słówko default,
+co spowoduje, że te idki nam się
+automatycznie policzą. Ja sobie tylko
+zrobię Selecta, żeby zobaczyć nazwy kolumn,
+bo zapomniałem.
+Select, gwiazdka, From
+Books, Library Books
+i mamy. Okej.
+Później jako druga kolumna to jest
+Author ID, no to pierwszego dodam jakieś
+tam, wakacje Mikołajka, to napisał
+Pan Gościnny, czyli jeden.
+Dalej jest
+tytuł, no to wakacje
+Mikołajka.
+Description
+Czas wakacji
+Mikołajka.
+Nie będzie to jakoś
+szczególnie kreatywne. No i Created
+Add, mogę wpisać sobie datę
+2020
+11 11
+18 54
+30 sekund.
+Okej, i tu się omawialiśmy
+na to, że te wartości będziemy sobie podawali
+pojedynczo,
+więc możemy śmiało
+zrobić Ctrl Enter
+i widać, że zadziałało.
+Jeżeli chcę dodać
+kolejny rekord, no to po prostu mógłbym
+sobie go skopiować, dodać jeszcze raz, ale już dobra,
+bo umówmy się, że za drugim razem
+już możemy to zmieniać i dodać
+od razu dwa na raz.
+Czyli rekord drugi to będzie
+rekord o rekreacjach Mikołajka.
+Też napisał to Pan Gościnny.
+Tym razem są to rekreacje
+Mikołajka.
+Jak Mikołajek spędza czas wolny.
+Bardzo te książki lubiłem.
+Nie wiem, czy kojarzycie.
+Zresztą ostatnio, znaczy ostatnio,
+należę do ludzi,
+którzy mówią, ostatnio dana rzecz się
+wydarzyła 10 lat temu,
+ale przecież była książka o Mikołajku
+i wtedy się mocno spopularyzował ten temat,
+ale pamiętam, że jak czytałem to
+z wypiekami na uszach,
+na twarzy.
+Przecinek.
+Ja nie mam wypieków. Dobra.
+Dodajemy sobie od razu jeszcze dwie książki,
+czyli Lato Muminków i
+Kometa nad Doliną Muminków.
+Czyli Default 2
+Lato Muminków
+Timestamp
+niech to będzie
+2021
+02 02 19
+20 i 10 sekund
+No i tutaj będziemy mieli
+to samo
+Tylko Lato Muminków i potem był
+jeszcze opis, tak?
+Co muminki
+jedzą
+latem
+I Kometa nad Doliną Muminków
+Co się wydarzyło
+na nocnym niebie
+Szarobłoki nad lasem
+Dobra.
+Ctrl Enter
+I jak widzicie wykonałem zapytanie
+I teraz mam już
+plus 3
+Czyli jak sobie zrobię Select All From Books
+No to okazuje się, że tych książek mam już 4
+Czyli w ten sposób nauczyliśmy się
+dodawać nowe rekordy
+Hurra! Prawo my!
+A skoro to już umiemy
+to przyszedł czas na to, żeby
+pouczyć się jak te rekordy teraz aktualizować
+i usuwać
+Ale jak pewnie się spodziewacie
+tego nauczymy się w kolejnej lekcji. Zapraszam!
+KONIEC!

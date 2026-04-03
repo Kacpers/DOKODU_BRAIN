@@ -1,0 +1,18 @@
+I kolejnym poleceniem na naszej liście poleceń, pojęć tak naprawdę wokół dokera jest build.
+Build to jest proces budowy naszego obrazu dokerowego w pliku doker file.
+Czyli mamy plik, który opisuje jak ten nasz obraz powinien wyglądać.
+Chcemy go zbudować, czyli wykonujemy build.
+Jest do tego też polecenie doker build, które pozwala nam właśnie ten obraz zbudować i tak zbudowany obraz możemy później uruchamiać.
+To jest trochę tak jak doker file jest takim przepisem na zrobienie ciasta.
+I w momencie, w którym chcemy to ciasto zrobić, to musimy właśnie stworzyć taki build.
+Gdzie się to przydaje w praktyce?
+Chociażby wtedy, kiedy zmieni się twoja aplikacja, chcesz pewien nowy release, nową wersję tej aplikacji opublikować na serwerze,
+to wtedy na przykład też tworzysz nowy build właśnie po to, żeby zbudować nowy obraz tej aplikacji.
+Czyli jakby na nowo upiec ciasto zgodnie z przepisem.
+Z tymi zmienionymi też plikami, które zmieniły się w samej aplikacji.
+Dokładnie tak.
+Można też wykorzystać ten sam mechanizm do na przykład aktualizacji naszych zależności.
+Czy to wersji Pythona, czy jakichś bibliotek.
+Oczywiście przetestować sobie taki obraz z tymi konkretnymi nowymi wersjami, czy z nową wersją kodu w środowisku testowym.
+I później bez dalszych zmian uruchomić ten zbudowany obraz w identycznej formie już na serwerach produkcyjnych.
+Dzięki czemu minimalizujemy ryzyko tego, że gdzieś będą jakieś różnice i coś nie będzie działało prawidłowo.

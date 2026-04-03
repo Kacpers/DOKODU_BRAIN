@@ -1,0 +1,148 @@
+Przyszedł czas, żeby zmierzyć się z rozwiązaniem pracy domowej z pierwszego modułu.
+Zacznijmy od pierwszego zadania.
+W tym zadaniu mamy posortować dostawców w kolejności według Contact Title rosnąco oraz Contact Name malejąco.
+No i chcemy zapisać wynik tego zapytania do pliku CSV.
+W takim razie będziemy potrzebowali skorzystać z tabeli Suppliers,
+czyli możemy sobie na początek zrobić select gwiazdka from Suppliers.
+Ten alias tutaj nam nie będzie potrzebny.
+No i mamy.
+I teraz chcemy posortować to w kolejności Contact Title rosnąco,
+czyli Order by Contact Title.
+I teraz to ma być rosnąco.
+Descending, czyli desk to jest malejąco, ascending to jest rosnąco, czyli ascending.
+A następnie zakładając, że niektóre z tych,
+kontakt title nam się powtarzają, chcemy posortować według Contact Name malejąco.
+Więc robimy sobie przecineczek, Contact Name, Descending i mamy.
+Zadanie jest pod tym względem zrobione.
+Tego pytania nie było, ale ludzie często zastanawiają się jak formatować dłuższe zapytania.
+Więc jeżeli chodzi o formatowanie dłuższych zapytań, to zdecydowanie wygląda to tak,
+że mamy każdy z tych, każde to słowo klucz, jakby, jest,
+w nowym wierszu, natomiast każda z tych wartości jest po prostu o tak wymieniona wiersz pod wierszem.
+W ten sposób będziemy mieli ładne formatowanie, zapytanie będzie czytelne,
+no i będzie można bez problemu dodawać sobie na przykład, że interesuje nas Company Name
+oraz interesuje nas na przykład Contact Name.
+O, w ten sposób to zapytanie jest dużo czytelniejsze niż wtedy, kiedy było po prostu w jednym wierszu.
+Wracając do eksportu, eksport oczywiście znajduje się pod prawem,
+przyciskiem myszy, tu jest przycisk Export Data, no i skoro miał być to plik CSV,
+no to CSV, Next, Single Query, jak najbardziej OK, Next, no i tutaj już nie będzie różnicy.
+Jedyne co mogę zrobić, to odznaczyć sobie Show Finish Message i zrobić po prostu Next i Finish, czy też Start.
+OK.
+No i ten, to zapytanie, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten, ten.
+No i ten, to zapytanie, ten plik gdzieś tam mi się wygenerował.
+Jest OK.
+Mogę sobie śmiało przejść do zadania numer dwa.
+W zadaniu drugim mamy wyświetlić unikatowe wartości z kolumny Contact Titles, Tabel i Suppliers,
+a następnie wyeksportować wynik do pliku txt.
+No to cóż, jeżeli chodzi o unikatowe wartości, to będziemy potrzebowali Distincta, czyli Select Distinct Contact Title.
+No to cóż, jeżeli chodzi o unikatowe wartości, to będziemy potrzebowali Distincta, czyli Select Distinct Contact Title.
+No to cóż, jeżeli chodzi o unikatowe wartości, to będziemy potrzebowali Distincta, czyli Select Distinct Contact Title.
+No to cóż, jeżeli chodzi o unikatowe wartości, to będziemy potrzebowali Distinct Contact Title.
+No i mamy Export, nie będę go pokazywał wam w całości,
+No i mamy Export, nie będę go pokazywał wam w całości,
+To co jest ważne, to jest tylko to, żebyście weszli właśnie w Export Data
+i pamiętali, żeby na tym kroku, na tym etapie wybrać TXT.
+I pamiętali, żeby na tym kroku, na tym etapie wybrać TXT.
+A dalej już wszystkie opcje znacie.
+W zadaniu domowym trzecim mamy zwrócić uwagę na to,
+że w tabeli Orders mamy coś takiego jak Shipped Date,
+i jest to data wysyłki.
+Mamy też Required date i jest to data wysyłki.
+Mamy też Required date i jest to data wysyłki.
+i jest to data, kiedy produkt miał być dostarczony.
+Odejmując od siebie daty, mamy sprawdzić,
+które zamówienia mają największe opóźnienie.
+Czyli zakładając, że required date to jest ta data,
+kiedy powinniśmy dostać ten produkt,
+no to zakładam, że za każdym razem, kiedy mamy shipped date,
+no to, czy też...
+OK, spójrzmy sobie na to, co znajduje się w tabeli orders.
+Czyli w tabeli orders mamy trzy daty.
+Po pierwsze mamy ordered date,
+jest to data, kiedy ten produkt został zamówiony.
+Po drugie mamy required date,
+to jest data, kiedy ten produkt został, ma być dostarczony.
+No i trzecia informacja, którą mamy, to jest shipped date,
+gdzie ta shipped date to tak naprawdę mogła być też data wysyłki,
+ale już pomińmy to, załóżmy, że interesują nas wszystkie te wiersze,
+chcemy zobaczyć na górze wszystkie te wiersze,
+gdzie ten nasz shipped date jest późniejszy niż required date.
+Czyli tak naprawdę będziemy chcieli od required,
+odejmować shipped date,
+no i wtedy będą nas interesowały wszystkie te wiersze,
+które będą zawierały wartości ujemne.
+Jak to zrobić?
+Możemy sobie na początek po prostu te wiersze,
+tę operację wykonać.
+Czyli shipped date
+minus required date.
+No jak sobie to wywołamy, okaże się, że część
+tych naszych danych jest wartością ujemną,
+natomiast część danych jest
+wartością dodatnią.
+I teraz te, które mają największe opóźnienie,
+to są te, gdzie ta wartość ujemna jest największa.
+Więc jeżeli chcemy to sobie posortować,
+to możemy sobie to posortować,
+posortować po prostu rosnąco.
+Tutaj oczywiście mogę też sobie wyświetlić na przykład ID zamówienia.
+O, wtedy będę wiedział też, które są to zamówienia.
+No i mam order ID, shipped date, required date from orders
+i wystarczy to sobie posortować, czyli order by.
+I teraz jak to posortować?
+Teoretycznie mógłbym tutaj dodać alias,
+o których dowiecie się w przyszłości w tym module,
+ale aliasy nie pozwalają na używanie ich przy sortowaniu.
+Dlatego też, jeżeli chcemy posortować coś po operacji,
+to tę operację po prostu trzeba sobie powtórzyć,
+czyli order by shipped date minus required date.
+Tutaj troszeczkę już mi się przestało to mieścić,
+więc sobie to troszeczkę sformatuję.
+I po drobnym formatowaniu,
+powinienem zaraz mieć wszystko ładnie wykonane.
+Ops, jak widzicie, taką sytuację właśnie mamy.
+Tu jest 41, możemy sobie też te daty wyświetlić jak najbardziej.
+O, i zobaczcie, tutaj datą, która jest tą datą wymaganą,
+jest 5 marca, natomiast shipped date to jest 23 marca.
+Stąd też w tej kolumnie z różnicą mamy minus 41 dni.
+To jest bardzo wygodne, że zawsze odejmując od siebie daty,
+właśnie dostajemy ilość dni, które te daty dzielą.
+I to jest też coś, co chciałem wam tutaj na tym zadaniu pokazać.
+Oraz druga sprawa właśnie, a mianowicie jak sobie sortować nasze dane
+w momencie, w którym wykonujemy sort po jakiejś operacji.
+Po prostu tę operację trzeba raz jeszcze powtórzyć.
+Ważna sprawa, ja nie dopisałem słówka ascending,
+ale oczywiście domyślnie ono jest po prostu w takiej formie, w takiej postaci.
+No to co, chodźmy do chyba ostatniego zadania.
+W tabeli products znajdują się kolumny unit price oraz unit in stock.
+Sprawdź, który magazynowany produkt stanowi naszą największą wartość.
+Wyświetl nazwy, ok, oraz iloczyn unit price oraz unit in stock.
+Czyli zadanie będzie bardzo zbliżone do zadania poprzedniego,
+tylko muszę wykonać inną operację.
+Na pewno będę potrzebował pobierać z tabeli products,
+czyli zrobię sobie select, no i potrzebuję mieć unit price
+razy unit in stock
+from products.
+No i jeszcze proszą nas o to, żebyśmy podali nazwę produktu,
+czyli chyba product name, co?
+Units in stock, z tego, co pamiętam, jest.
+Ops, no i mam product name i ta kolumna.
+Jeżeli teraz chcę sobie odpowiedzieć na pytanie, gdzie mam największą wartość,
+no to muszę posortować też po tej operacji, tyle tylko, że malejąco.
+Czyli order by, no i muszę posortować sobie po tym, tylko że malejąco.
+Ops, i mam.
+Zadziałało.
+Cota de blaje.
+Nie umiem tego przeczytać, absolutnie.
+Nawet się zrymowało.
+I tutaj dziękuję wam bardzo za tę pracę domową.
+Możecie dać znać na Discordzie, czy sprawiła wam ona trudność,
+czy była dobrą formą przećwiczenia, czy wolelibyście mieć więcej zadań, czy mniej.
+Tutaj też w przypadku tych prostszych zadań, takich jak te, które właśnie zrobiliśmy,
+to też trudno jest wymyślać wiele odkrywczych zadań, które byłyby odkrywcze.
+No bo z tego powodu, że właśnie, no,
+nie poruszyliśmy jeszcze wielu tematów,
+ale myślę, że i tak ta praca domowa troszeczkę wam też pozwoliła utrwalić tę wiedzę
+oraz też dla mnie była w tej chwili bardzo dobrą rozgrzewką,
+żeby właśnie przejść do modułu drugiego.
+Do czego was wszystkich bardzo serdecznie zapraszam.
+Do zobaczenia w module drugim.

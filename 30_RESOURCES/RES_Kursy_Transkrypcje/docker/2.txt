@@ -1,0 +1,16 @@
+No to co, już poznałem Dockera, ja tutaj co prawda jestem takim wiecie, adwokatem, już pewne rzeczy ja o Dockerze wiem oczywiście, używam go na co dzień, ale jestem bardzo ciekaw co tutaj Jan będzie nam chciał pokazać, więc Dockera już mam, już wiem co to jest Docker CLI i co dalej?
+I możemy w zasadzie zacząć od uruchomienia pierwszego obrazu, który jest analogią do świata programowania, mianowicie pierwszy obraz to będzie Hello World, Docker przygotował taki obraz i żeby uruchomić obraz, który istnieje w takim repozytorium, które nazywa się Docker Hub, wystarczy znać jego nazwę, możemy powiedzieć
+Docker Run i nazwę tego naszego obrazu i w tym przypadku to jest Hello Myślnik World, to powoduje, że Docker sprawdza czy obraz nam istnieje, jeśli nie istnieje to go pobiera, po pobraniu dostajemy informację, że go pobrał, mamy statystykę, że to jest taka wersja obrazu,
+informację, że został pobrany najnowszy i tutaj mamy treść z samego tego obrazu, to jest dokładnie to, co ten obraz robi, wyświetlił nam parę informacji i zakończył swoje działanie.
+Ok, czyli myśmy o obrazach i o kontenerach rozmawiali sobie już wcześniej, natomiast tu jak rozumiem to mamy Unable to find image, czyli mam jakby taki ten obraz,
+właśnie o którym rozmawialiśmy, że on nie może go znaleźć, nie wie z czego ma go zbudować, następnie go sobie skąd z internetu pobiera, taki przepis jakby na zbudowanie go, potem mamy tam ten digest, to rozumiem, downloaded status, rozumiem, ok i całą tę treść poniżej i te numerki tak naprawdę nam mówią co, w jakiej kolejności się wykonało, żeby też każdy programista czy każda osoba ucząca się do kera mogła stwierdzić w jakiej kolejności te czynności się wykonały.
+Że on napisał, że najpierw się połączył z Docker Demonem, a potem tam pobrał, czyli tak naprawdę on opowiedział to, o czym ja przed chwilą mówiłem, nie?
+Tak, natomiast to jest tylko i wyłącznie jakby informacja, która pochodzi bezpośrednio z tego naszego obrazu, żeby nam trochę opowiedzieć o tym, co się dzieje, no i tutaj mamy zachętę, żeby uruchomić sobie przykładowy obraz, jakim jest akurat Ubuntu.
+Ok, to mi się strasznie podoba.
+Ja jestem ambitny.
+Ja jestem ambitny, więc już się nie mogę doczekać kolejnych lekcji, ale powiem szczerze z mojego doświadczenia, że tego obrazu Witaj Świecie ja używam głównie po to, żeby się upewnić, że wszystko na Dockerze działa, nie?
+Czyli to dla mnie jest, jedno to jest sprawdzenie CLI, a drugie to jest uruchomienie tego Witaj Świecie i jak widzę ten komunikat, to wiem, że mogę iść dalej z moimi projektami.
+Tak, dokładnie o tym samym też mówi oficjalna dokumentacja po instalacji, żeby właśnie sprawdzić, czy wszystko jest ok.
+Ok, uruchamiamy sobie Hello World. Jeśli widzimy komunikat, to wiemy, że nasz Docker jest prawidłowo zainstalowany i możemy rozpocząć z nim pracę.
+Ok, to zakładam, że i my możemy zakończyć tę lekcję i przejść do kolejnej.
+Jak najbardziej.

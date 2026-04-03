@@ -1,0 +1,46 @@
+Witajcie drodzy uczestnicy, którzy już są podłączeni do bazy danych,
+potrafią wykonywać zapytania i czekają na operatory,
+żeby dowiedzieć się jak te zapytania i co w tych zapytaniach może się znajdować.
+Otóż, jeżeli chodzi o operatory, to tutaj interesować nas będą przede wszystkim
+operatory arytmetyczne, gdyż operatory logiczne poznamy dopiero,
+kiedy będziemy pisali pierwsze filtry.
+Więc jeżeli chodzi o operatory arytmetyczne, no to tutaj bardzo jest podobnie jak w Excelu,
+czyli plus to dodawanie, minus to odejmowanie, gwiazdka to mnożenie,
+slash, ważne, że w tę stronę, to dzielenie,
+procent to jest tak zwany operator modulo, czyli reszta z dzielenia,
+czyli 5 modulo 2 da nam wynik 1,
+daszek, czyli karetka, to jest potęga, tutaj to jest karetka
+i w ten sposób 5 do potęgi drugiej.
+Da nam wynik 25, czyli select 5, karetka 2 da nam 25.
+Pierwiastek, to jest pipe i ukośnik, to taka ciekawostka,
+to trochę jakby się tak zastanowić, to to nam trochę ilustruje,
+tak jakby podpowiada jak wygląda pierwiastek, nie?
+No bo jeżeli pierwiastek wygląda tak, no to to jest taka jakby prawie pierwsza część, nie?
+Bez tego daszka góry.
+Więc to jest pierwiastek, no i po prawej stronie macie przykład,
+select, pierwiastek z 25 da nam wynik,
+no i jeszcze mamy wartość bezwzględną, która jest po prostu symbolem małpy.
+No i tutaj małe zadanie dla Was, więc zróbcie sobie w tym momencie przerwę,
+spróbujcie te zadania wykonać.
+Chcielibyśmy pomnożyć 3 i 64, czyli po prostu 3 razy 64.
+W drugim zadaniu, jaka jest reszta z dzielenia 192 i 20?
+W trzecim zadaniu, ile wynosi 9 do potęgi 11?
+No i w czwartym, ile wynosi 1?
+W szerszej z celolimit wonders?
+Dlatego, że wy Viafel między pracowaniem, i kreski
+bardzo ważną sprawą jest ta spacja, czyli myślnik, myślnik, spacja,
+pomnóż 3 i 64, czyli select 3 razy 64, pamiętajmy o średnikach
+i wtedy wracam sobie na górę, robię kontrol średnik i dostaję wynik 192.
+To okienko można sobie też obniżyć, o tak, i można lecieć z drugim.
+Jaka jest reszta z dzielenia 192 i 20? No to select 192, no chodź,
+procent 20, kontrol enter, 12. Dlaczego? No bo select 192 dzielone przez 20
+to jest 9, czyli 9 razy 20 to jest 180, to już mogę zrobić bez SQL-a,
+więc 12 to jest wynik reszty.
+Ile wynosi 9 do potęgi 11? No to select 9 do potęgi 11 wynosi, ojej, jak dużo, aż tyle.
+Ile wynosi pierwiastek z 3721? Select 3721, 61.
+Działa to skojarzenie, że dół i góra?
+Nie wiem, u mnie zadziałało, jak widzicie, zapamiętałem.
+Dobra, wiedziałem to wcześniej.
+Więc jeżeli wyszły i wam takie wyniki, to zapraszam was do kolejnego modułu.
+Jeżeli wyniki są inne, no to poprawiamy i dopiero wtedy przechodzimy dalej.
+Do zobaczenia!

@@ -1,0 +1,106 @@
+Witajcie moi drodzy Cieszę się że dołączyliście do bootcampu
+skumaj bazy mam prośbę jeżeli któraś z tych lekcji wam
+się spodoba nie bójcie się zrobić jakiegoś zrzutu ekranu
+takiego wiecie małego żeby nie za dużo pokazać i wrzucicie
+naprzód na swoje social media z hashtagiem skumaj bazy
+albo z hashtagiem do kodu możecie też mnie oznaczać Będzie
+to będę wtedy wiedział w którym mniej więcej miejscu jesteście
+i czy dobrze się bawicie zanim zaczniemy parę informacji
+organizacyjnych gdzie są toalety że nie wolno pić na lekcjach
+i tak dalej i tak dalej więc i u nas taki przypadek też
+będzie miał miejsce jeżeli chodzi o mnie to osoby które
+mnie nie znają to się przedstawię nazywam się Kacper
+Sieradziński od 2007 roku jestem programistą a na początku
+pracowałem jako freelancer później założyłem swoją własną
+firmę później pracowałem na etacie przez pewien czas
+a teraz pracuję znowu jak freelancer Plus prowadzę szkolenia
+między innymi to po drugie jeżeli chodzi o szkolenia programistyczne
+to prowadziłem też przez około 8 lat szkolenia takie typowe
+na sali dla różnych firm oraz prowadziłem wszystkim wam
+znane bootcampy możecie mnie też kojarzyć ze gdyż buduje
+wraz ze wspaniałą społecznością społeczność do kodu jest
+to serwer Discord oraz w przyszłości będzie też to serwis
+wymiany wiedzy więc jeżeli jeszcze nie oglądacie
+nie jesteście członkami Discordu, zresztą jeżeli dołączacie do tego szkolenia,
+to bardzo serdecznie Was zachęcam, ponieważ jest to też platforma wymiany wiedzy
+pomiędzy kursantami i też ze mną, to bardzo Was zapraszam do tego,
+żebyście właśnie weszli na ten adres dokodu.dev.discord.
+Jeżeli natomiast nie subskrybujecie jeszcze mojego kanału,
+to jest to druga rzecz, którą też możecie zrobić.
+Bardzo serdecznie Was do tego zachęcam, pokazuje się tam dużo wiedzy,
+już trochę wiedzy jest, zupełnie darmowej, na razie z tematów Pythonowych,
+ale nie wykluczam też innych tematów w przyszłości.
+Jeżeli chcecie dołączyć do grupy na Discordzie, to musicie zrobić dwie rzeczy.
+Pierwsza rzecz, to musicie zainstalować klienta Discord,
+ale to przez tą rzecz też poprowadzi Was taki samouczek, który pokazuje się na początku.
+Natomiast druga rzecz, to musicie wejść na adres w swojej przeglądarce
+do kodu .dev.discord, no i wówczas wszystkie osoby,
+które czekają na ten kod, to wejdą na adres w swojej przeglądarce,
+kod wykonają i założą sobie konto na naszym serwerze,
+będą mogły wysłać do mnie wiadomość z informacją, że hej, dołączyłem do SkumajBazy,
+to jest mój adres e-mail i wówczas ja taką osobę wpuszczę na specjalne,
+dostępne tylko i wyłącznie dla uczestników SkumajBazy kanały.
+Więc bardzo poproszę, żebyście weszli na ten serwer i wysłali do mnie wiadomość.
+Dlaczego warto to zrobić? No bo tylko w ten sposób mamy ze sobą kontakt.
+Oczywiście kontakt mailowy też jest możliwy, ale taki kontakt, wiecie,
+prawie że face to face na żywo jest dużo bardziej przystępny.
+Drugą sprawą jest też to, iż dzięki temu macie kontakt ze wszystkimi innymi
+uczestnikami kursu również, co też jest ogromną, ogromną zaletą,
+no bo na pewno będziecie spotykali się z podobnymi problemami,
+z podobnymi wyzwaniami, może będzie okazja, żeby gdzieś wyskoczyć sobie
+na jakieś SkumajBazowe piwo, więc bardzo Was do tego zachęcam.
+Jeżeli chodzi o sam wygląd lekcji, to lekcje wyglądają zawsze, będą wyglądały
+zawsze tak samo. Czyli najpierw będziemy mieli blok teoretyczny,
+gdzie ja w oparciu o prezentację, czy też w oparciu o ćwiczenia praktyczne
+będę pokazywał Wam, jak wykonać określone rzeczy. Następnie będą ćwiczenia
+do samodzielnego rozwiązania i tutaj zachęcam Was do tego, abyście zrobili
+stop klatkę, zrobili pauzę i wykonali te ćwiczenia samodzielnie.
+Następnie ja pokażę Wam, jak ja rozwiązałem to zadanie i tutaj nie bójcie się,
+może się okazać, że to samo, co Wy zrobiliście w taki sposób, ja wykonałem
+zupełnie inne i tutaj nie znaczy to w żadnym wypadku to, że któreś rozwiązanie
+jest lepsze, a któreś rozwiązanie jest gorsze. Ważne jest to, żeby udało nam się
+pobrać odpowiednie dane i żeby czas wykonywania tego zapytania nie był
+monstrualny i żeby ilość zapytań była też podobna. O tym sobie też zaraz
+jeszcze powiemy. No i pod koniec każdego modułu jest praca domowa.
+Jest to kilka ćwiczeń, które możecie wykonać. Ja prac domowych nie sprawdzam,
+ale jeżeli tylko macie ochotę zapytać o coś w ramach tej pracy domowej,
+no to nie bójcie się, będzie ku temu przygotowany kanał, żeby porozmawiać
+o pracach domowych i żeby wymienić się doświadczeniami albo żeby mnie
+zrugać, że coś rozwiązałem mniej optymalnie. I kolejny moduł wówczas,
+czyli drugi moduł będzie zawierał pracę domową z pierwszego modułu,
+rozwiązanie tej pracy domowej, no i tak każdy kolejny moduł.
+Jeżeli chodzi o dane, na których pracujemy, no to baza danych zawiera
+dane prawdziwe, ale fikcyjne. Prawdziwe, czyli jeżeli w kolumnie mamy
+imię i nazwisko, no to w tym przypadku będziemy mieli imię i nazwisko,
+natomiast nie jest to żadna żyjąca osoba. Jeżeli gdzieś znajdziecie
+jakiejś zbieżność imion, nazwisk, no to wybaczcie, jest to zupełny przypadek.
+Struktura bazy danych odzwierciedla realną strukturę danych dla sklepu
+internetowego, czyli to, na czym będziemy pracowali, to jest faktycznie sklep,
+to jest taka baza taka sklepu internetowego przygotowana open source'owo
+przez firmę Microsoft. Każdy może tę bazę sobie pobrać, każdy może na tej bazie
+sobie poćwiczyć. Tutaj dane nie mają znaczenia. Ważne dla nas jest to,
+żeby było ich dużo, żeby były różnorodne, no i żeby łatwo nam się na nich
+i przyjemnie pracowało. Jeżeli będziecie chcieli wykonać podobne ćwiczenia
+na przykład na jakichś swoich bazach danych i też mnie o to zapytać,
+to też się nie bójcie tego robić. Jak najbardziej ja też chętnie pomogę Wam
+w Waszych takich codziennych problemach.
+Jeżeli będziecie na etapie kursu, jedyna prośba, jeżeli w tych danych
+pojawiałyby się jakiekolwiek dane wrażliwe, to ja nie chcę ich widzieć. Dziękuję.
+Jeżeli chodzi o dostęp do bazy danych, bo tu musicie wiedzieć, że praca na tej bazie
+może przebiegać na dwa sposoby. Sposób pierwszy jest taki, że możecie sobie
+postawić tę bazę danych u siebie na komputerze, możecie ją sobie zainstalować,
+zaimportować te dane i pracować. Cała praca może odbywać się na Waszym komputerze.
+Ja wiem, że dla części z Was ten proces może być trochę skomplikowany.
+Myślę, że nie będziemy sobie go robili od razu. Kto będzie chciał go zrobić samodzielnie,
+oczywiście zachęcam. Natomiast kto z Was chciałby ominąć ten proces,
+no to zapraszam Was wówczas do tego, żebyście po prostu skorzystali z danych
+dostępowych, które ja Wam udostępniłem. Dla każdego z Was przygotowałem
+unikatowe konto, unikatowe hasło, unikatowy, dobra, ten sam adres serwera
+i każdy z Was ma możliwość zalogowania się i wykonywania tych zapytań również
+samodzielnie.
+Jeżeli nie doszedł do Ciebie mail z danymi, gdzie te dane zostały przesłane
+na Twój adres e-mail z platformy, to proszę skontaktuj się ze mną na Discordzie,
+no bo jest to sytuacja, którą musimy sobie szybko naprawić.
+No i na tym etapie, jeżeli chodzi o informacje organizacyjne, to wszystko.
+Jeżeli macie do mnie pytania, śmiało piszcie na Discordzie.
+Chętnie na wszystkie tematy odpowiem. Przejdźmy dalej.

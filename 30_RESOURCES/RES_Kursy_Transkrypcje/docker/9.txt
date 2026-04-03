@@ -1,0 +1,106 @@
+Dobrze, Janie, powiem Ci tak. Wziąłem Cię do tego kursu i Ty wziąłeś mnie, bo obaj w pewien sposób się uzupełniamy.
+Ja zadaję pytania, wiesz, jestem takim programistą, który jest po prostu użytkownikiem Dockera,
+więc podejrzewam, że moja definicja Dockera będzie trochę inna niż Twoja.
+Więc ja bym proponował, żebyś najpierw opowiedział, czym jest Docker z Twojego punktu widzenia
+i to będzie takim lepszym wprowadzeniem, a potem ja to wszystko uogólnie spłaszczę
+i powiem, czym Docker jest dla mnie, dobra?
+Jasne. Więc Docker jest otwartą platformą do rozwijania, uruchamiania, dostarczania naszych aplikacji.
+Jest to platforma, która służy...
+konteneryzacji, czyli takiemu opakowywaniu naszej aplikacji w postaci swego rodzaju artefaktu,
+takiej wyizolowanej jednostki, którą możemy uruchomić na dowolnym serwerze.
+I to daje nam taką korzyść, nie wiem w sumie jak obecnie, bo już długo pracuję w takim podejściu mocno DevOpsowym,
+ale zanim jeszcze zostałem DevOpsem, bardzo często spotykałem się w pracy z takimi słowami,
+że u mnie działa, na moim laptopie, na moim komputerze ten program działa.
+I problem pojawiał się wtedy, kiedy aplikacja trafiała od programistów do administratorów
+i administratorzy musieli ją uruchomić na serwerze.
+To jeszcze były takie czasy, kiedy...
+nie było pipeline'ów, nie było CI-CD,
+wdrażało się aplikacje w zasadzie ręcznie,
+w bardziej zaawansowanych podejściach robiło się git-pool.
+To już było super, jeśli robiło się git-pool na serwerze i można było korzystać z repozytorium.
+Ale jeszcze wcześniej zdarzało się tak, że dostawało się jakąś tam paczkę, jakiegoś zipa od programisty,
+wgrywało się...
+N-drive'a.
+Na...
+Yyy...
+Yyy...
+Ja się nie zetknąłem z pendrive'ami.
+Mieliśmy zawsze jakąś tam formę wymiany poprzez lokalny serwer dyskowy.
+Także nie trzeba było z tym pendrive'em na całe szczęście biegać,
+chociaż podobno w ZUS-ie do dziś pracuje się na dyskietkach.
+Słyszałem legendę, nie wiem ile jest w niej prawdy, ale słyszałem, że porty USB zaklejają plasteliną.
+Żeby zapobiec wynoszeniu danych tak naprawdę na zewnątrz.
+Bo o ile to może się wydawać trochę śmieszne, o tyle nigdy nie wiemy kto z nami pracuje.
+Ktoś może mieć niecne plany, nieczyste intencje i potencjalnie mógłby chcieć wynieść jakieś dane z ZUS-u,
+a dane w ZUS-ie...
+Czekaj, czekaj, co to jest docker?
+Co to jest docker?
+Odlatujemy.
+Odlatujemy.
+Tak.
+Wreszcie kurs już tak nie będziemy odlatywać.
+To są takie pierwsze filmy, musicie nas zrozumieć.
+Dorwaliśmy się w końcu do mikrofonów i tutaj chcemy wam przekazać jak najwięcej wiedzy.
+Czy docker wspiera wynoszenie danych z ZUS-u?
+Odpowiedz mi na takie pytanie.
+Nie, docker nie wspiera wynoszenia danych z ZUS-u.
+Docker wspiera nie bieganie z dyskietką, nie przenoszenie aplikacji tak jak robiło się to kiedyś.
+To pozwala nam uniknąć wielu problemów związanych z tym, że dostaliśmy tak naprawdę jakąś tam paczkę z aplikacją od dewelopera z kodem,
+ale nie dostaliśmy żadnej instrukcji instalacji tego oprogramowania, przygotowania i uruchomienia,
+w związku z czym kiedyś to wyglądało tak, że po otrzymaniu aplikacji, szczególnie jakiejś nowej aplikacji od dewelopera, administrator spędzał długie godziny nad tym,
+żeby tą aplikację po raz pierwszy w ogóle uruchomić na serwerze, bo nie znał konfiguracji, bo nie dostał tej dokumentacji, nie wiedział jak to zrobić,
+a deweloper często też nie pamiętał co ma przekazać, bo jeśli pracował nad taką aplikacją kilka miesięcy zanim ją w ogóle przekazał dalej w tej takiej podstawowej wersji,
+to zdążył zapomnieć co doinstalował sobie na swoim laptopie, jakie zależności tam zamieścił, żeby ta aplikacja działała i się uruchamiała.
+Doker pozwala nam od razu skonfigurować sobie w ramach tego naszego obrazu, przygotować zestaw tych zależności.
+W zasadzie dzisiaj deweloperzy nawet już nie uruchamiają tych aplikacji u siebie na laptopie, tylko już też uruchamiają je w tym dokerze.
+I wtedy, kiedy deweloper przygotowuje aplikację w ramach takiego obrazu i przekazuje gotowy obraz,
+który u niego działa, to administratorowi, dzisiaj dewelopsowi, dużo łatwiej jest wdrożyć taką aplikację, żeby ona w innym środowisku też działała.
+Innymi słowy doker daje nam takie środowisko ustandaryzowane, które ma określony sposób uruchamiania naszej aplikacji,
+ażeby działała na moim laptopie.
+Czy u Kacpra, czy na jakimś serwerze.
+To już sam doker zajmuje się tym pod spodem, żeby to uruchamianie na różnych platformach było takie, że jak wsadzimy tamten nasz obraz,
+to on będzie na pewno w tym dokerze działał.
+Dokładnie tak. Jan to wszystko pięknie wytłumaczył. Ja to, tak jak mówiłem, teraz wszystko będę zamieniał na metodę cepa i młotka.
+A mianowicie, jeżeli robię sobie aplikację,
+i potrzebuję w niej Pythona, no to sprawa jest w miarę prosta, bo pytanie, które mi później zada jakiś człowiek, to będzie, na której wersji Pythona to odpalić.
+Natomiast w momencie, w którym ja zaczynam wytwarzać tę aplikację, podczas tego jego działania stwierdzam,
+hmm, tu jeszcze przydałaby się jakaś baz za danych, no to strzelimy sobie postgresa.
+Hmm, a tu jeszcze przydałaby mi się jakieś narzędzie do cache'owania.
+O, to sobie dorzucę Redis'a, Memcache'a i jakieś inne takie rzeczy.
+To ja nie muszę spisywać tych wszystkich tematów, tylko sobie po prostu dorzucam je, jako kolejny element do tego, żeby to się wydarzyło.
+I dzięki temu ten projekt jest cały czas utrzymywany, cały czas działa w ramach jednego takiego setup'u, o którym też będziemy Wam rozmawiali, opowiadali podczas tego kursu.
+I druga rzecz, którą jest dla mnie docker, to jest złoto.
+Bo ja nie pracuję nad jednym projektem na raz, tylko pracuję nad projektami pięcioma.
+Więc w momencie, w którym chcę, żeby dany projekt poszedł spać, a zaczął działać inny projekt,
+to mogę sobie bez problemu z tym pracować.
+Więc bez problemu całą taką infrastrukturę jednym poleceniem położyć do spania, a drugi projekt obudzić i z nim później pracować.
+Więc pod tym względem też jest to niesamowicie wygodna sprawa, patrząc na taki punkt widzenia dewelopera.
+No a devopsi, tak jak słyszeliście, mniej muszą się narobić dzięki temu, bo po prostu otrzymują od nas, jako od programistów, taką paczkę.
+I mogą się bardziej skupić na tym procesie, żeby ta aplikacja działała niezawodnie i żeby ten proces był jak najbardziej taki sprofesjonalizowany, powiedzmy.
+A nie właśnie na tym, żeby doinstalowywać kolejne polecenia do systemu, czy posiadać tych serwerów wirtualnych niezliczonej ilości.
+Bo trzeba mieć dużo różnych aplikacji i najlepiej, żeby każda działała na osobnym serwerze wirtualnym.
+Dokładnie tak.
+Nic nie nabroiłem?
+W takim perfekcyjnym świecie?
+Jak to tłumaczyłem, ja nie?
+Nie. Wszystko jest ok.
+Wszystko się zgadza.
+Co może bym jeszcze do tego dodał?
+To dzięki temu, że my mamy mniej, w sensie devopsi, tej pracy takiej wdrożeniowej,
+możemy skupić się troszeczkę na usprawnieniu samych tych serwerów i procesów wokół.
+I dzięki temu, że mamy taką paczkę ładnie obudowaną,
+z wszystkimi zależnościami, nie musimy się tym martwić,
+możemy tak budować infrastrukturę, że ona nam się ładnie skaluje.
+Czyli powiedzmy, że mamy sobie jakiś sklep.
+Sklep ma ilość tam użytkowników w ciągu roku, ale przychodzi Black Friday.
+Przychodzi ogromna ilość promocji.
+Wiadomo, my w naszym sklepie też te promocje mamy.
+Nagle mamy 100 razy więcej użytkowników niż zwykle.
+I teraz potrzebujemy dostawić więcej serwerów, które ten ruch obsłużą.
+Dzięki temu, że właśnie mamy taki działający, przetestowany jeden artefakt,
+który zawiera w sobie wszystko to, co potrzebuje,
+dostawiamy nowy serwer, wrzucamy tamten artefakt,
+w sposób zautomatyzowany i wszystko nam ładnie działa.
+A więcej na ten temat opowiemy Wam w kolejnej lekcji, która brzmi,
+dlaczego warto poznać Dockera.
+Zapraszamy.

@@ -1,0 +1,252 @@
+I tak jak obiecałem, przyszedł czas na to, żeby operować na zbiorach.
+Co to właściwie oznacza, że operować na zbiorach?
+Otóż zbiór, to tak jak w matematyce, pamiętacie?
+Była taka, takie kółko, w którym na przykład były gruszki,
+było drugie kółko, w którym były jabłka
+i suma zbiorów to był zbiór jabłek i gruszek.
+Jak były na przykład zbiory, w których były różne owoce
+i w drugim były różne owoce, to można było zbiory od siebie odejmować
+no i na przykład tyle, ile było gruszek w prawym zbiorze,
+było usuwanych z lewego zbioru.
+Pamiętacie? Coś takiego było.
+I tak samo można też robić operacje, wykonywać operacje na zbiorach w SQL-u.
+Zbiorem tutaj jest wynik zapytania,
+czyli tak naprawdę możemy operować na zapytaniach.
+Możemy wyniki zapytań od siebie odejmować,
+wyniki zapytań do siebie dodawać.
+Naprawdę tych pomysłów tutaj jest dużo.
+Między innymi mamy union.
+Union łączący wyniki dwóch zapytań.
+Zobaczcie, mam zapytanie query1, które mi zwróciło abc
+i zapytanie query2, które zwróciło cde.
+Jeżeli teraz będę chciał połączyć te dwa zapytania,
+to mogę wykonać select all from query1,
+union select all from query2
+i w wyniku dostanę abcde.
+Co ważne, po prostu on mi wyświetli wszystkie te litery,
+litery c nie zduplikuje.
+Dlaczego to zaznaczam?
+No bo w union all litera c została zduplikowana,
+bo on nam po prostu bierze wszystko to, co jest w pierwszym zbiorze,
+wszystko to, co jest w drugim i nam te zbiory łączy.
+Następnie mamy wyrażenie accept.
+Accept to jest odejmowanie,
+czyli możemy odejmować wszystko to, co jest w zbiorze a
+od zbioru drugiego, czy też w zbiorze query1 od zbioru query2.
+W ten sposób dostaniemy albo tylko ab, albo tylko de.
+No bo to, co jest częścią wspólną, to jest literka c,
+więc tylko ona będzie odejmowana.
+No i część wspólną również można sobie pobierać.
+Żeby ją sobie pobrać, używamy operatora intersect,
+który to operator właśnie wyciąga nam tylko i wyłącznie część wspólną,
+czyli tylko i wyłącznie to, co łączy te nasze dwa zbiory.
+Tylko tutaj, jak operujemy sobie na literkach, no to sprawa jest prosta.
+Natomiast jest jedna bardzo ważna rzecz, o której musimy pamiętać.
+Kiedy wykonujemy operację na zbiorach?
+A jest nią informacja, że wszystkie zapytania, które chcemy łączyć,
+muszą posiadać takie same kolumny.
+I wtedy, jeżeli ten warunek jest spełniony, no to jak najbardziej
+te zapytania uda mi się połączyć, odjąć od siebie, czy robić cokolwiek innego.
+No bo w naszym przykładzie my operowaliśmy tylko na literkach, na jednej kolumnie,
+a wszystkie te zapytania można wykonywać również na bardziej skomplikowanych zapytaniach,
+gdzie, w bardziej skomplikowanych wynikach zapytań, gdzie tych kolumn jest,
+gdzie jest więcej i je będzie ze sobą porównywał.
+Jeżeli tego nie zrobimy, no to dostaniemy informację, jak widać na załącznym obrazku,
+czyli query must have the same number of columns.
+OK?
+Bo tak jak widzieliście na slajdzie, jeżeli łączę ze sobą dwa zapytania, które mają inną ilość kolumn,
+no to wtedy dostaję błąd mówiący o tym, że ilość kolumn się nie zgadza.
+Natomiast jeżeli łączycie ze sobą różne typy, to zobaczcie, pojawia się błąd.
+Tutaj połączyłem akurat product name z product id i dostałem błąd.
+Union types, character, variant and smallint cannot be matched.
+Czyli tak naprawdę może nie muszą mieć tych samych kolumn,
+ale muszą mieć w tej samej kolejności przedstawione takie same i w tej samej ilości,
+takie same typy kolumn.
+Czyli na przykład, jeżeli bym spróbował połączyć ze sobą product name i product description,
+chyba jest, nie ma.
+A co mamy w produktach?
+W produktach mamy quantity per unit.
+O, to już mi się to połączyć uda.
+Mimo tego, że nazwy nie są te same, ale są te same typy i ta sama ilość.
+OK?
+Więc tak to dokładnie funkcjonuje.
+No i zobaczmy jeszcze jeden przykład.
+Jeżeli sobie wykonam zapytanie select 1, 2, 3 union select 1, 2, 3,
+no to zostaje po prostu 1, 2, 3 w wyniku.
+Natomiast jeżeli wykonam select 1, 2, 3 union all select 1, 2, 3,
+no to w wyniku dostaje 1, 2, 3, 1, 2, 3.
+Bardzo przydatna sprawa.
+Często zdarzało mi się na przykład, że właśnie robiłem sobie listę połączonych zapytań,
+wyświetlałem ją gdzieś w select boxie i później się zastanawiałem,
+dlaczego coś mi się pokazuje albo nie pokazuje.
+To właśnie dlatego, bo albo zabrakło all'a, albo powinien on być.
+Znaczy, albo powinien on być, albo nie powinno go być.
+Proponuję, żebyście też spróbowali sobie takie zapytanie wykonać u was w DBVerze.
+Porównujcie sobie też accept.
+Zobaczcie, jak działa intersect.
+Spróbujcie po prostu te zapytania wykonać.
+Bardzo przydatna sprawa właśnie używanie tego typu zapytań.
+Czy uda nam się połączyć te dwie tabele?
+Odpowiedź brzmi oczywiście.
+Możemy albo połączyć sobie po prostu pobierając miasto z jednej tabeli i z drugiej,
+czyli select city from cities union select city from friends
+i dostaniemy unikatową listę miast,
+albo select gwiazdka from cities union select gwiazdka from friends.
+To też nam pozwoli te dane pobrać.
+Nie wiem, jaki to będzie miało sens,
+łączyć ze sobą Iwonę z Polską i Krzyśka z Francją,
+czyli tak jakby, żeby te dane były w jednej kolumnie,
+ale jak najbardziej to zadziała.
+No i raz jeszcze union oraz union all.
+Jak widzicie, jeżeli wykonamy samo union,
+to dostaniemy te miasta w tej postaci,
+natomiast jeżeli byśmy wykonali union all,
+to wartości by nam się powtórzyły,
+czyli po prostu niektóre z miast mogłyby wystąpić kilkukrotnie.
+Oczywiście, jeżeli w jednej tabeli się powtarzają,
+w drugiej się powtarzają, no to i tak się powtórzą.
+Wtedy trzeba byłoby zrobić distincta,
+ale nie udałoby nam się tego zrobić w ten sposób.
+Trzeba byłoby jeszcze zrobić zapytanie łączące dwa zapytania,
+ale to będzie później.
+Natomiast taka jest różnica między union a union all.
+O tym łączeniu zapytań też sobie jeszcze powiemy.
+Mamy na to czas.
+I tutaj dochodzimy sobie do zadanka,
+gdzie chcemy wyświetlić wspólną listę
+zawierającą wszystkie państwa i miasta
+z tabel customers oraz orders.
+Czyli po prostu znajdźcie miasta i państwa z jednej tabeli,
+znajdźcie miasta i państwa z drugiej i to połączmy.
+W zadaniu drugim chcemy znaleźć wszystkie wspólne wartości
+pomiędzy kolumną title w tabeli employees
+oraz contact title w tabeli customers.
+Czyli może się okazać, że na przykład
+sales representative to jest osoba, którą i zatrudniamy
+i mamy ją w ramach naszych klientów,
+więc może na przykład, jeżeli byśmy chcieli zrobić
+dla wszystkich wspólnych stanowisk jakąś imprezę sprzedażową na przykład,
+no to do tego taka lista może nam się przydać.
+No i zadanie trzecie chcemy znaleźć wszystkie miasta,
+które wystąpiły w kolumnie city w tabeli employees,
+ale nie wystąpiły w tabeli customers w kolumnie o tej samej nazwie.
+Czyli mamy tabelę employees, która zawiera city,
+czyli na przykład mamy pracowników z Wałbrzycha,
+ale i chcemy znaleźć te osoby, które pracują w miastach,
+z których nie mamy klientów.
+Czyli jeżeli w klientach mielibyśmy Wałbrzych,
+to Wałbrzych nie powinien się pokazać,
+ale na przykład jeżeli w pracownikach mielibyśmy tylko Wałbrzych,
+a w klientach mielibyśmy tylko Zamość,
+no to Wałbrzych powinien się wyświetlić.
+Mam nadzieję, że wytłumaczyłem wszystko.
+Mam nadzieję, że wytłumaczyłem.
+Do zobaczenia w rozwiązaniu.
+No to cóż, wyświetl wspólną listę zawierającą wszystkie państwa i miasta
+z tabeli customers oraz orders.
+Select all from customers.
+Co my tutaj mamy?
+I select all from orders.
+Tutaj było po prostu city
+i country.
+Zaraz to sobie jeszcze sprawdzimy.
+Natomiast w orders było ship city i ship country.
+Sprawdźmy.
+Tutaj są customers.
+Mamy city, mamy country,
+a tu mamy ship city i ship country.
+Mamy.
+No to możemy sobie to połączyć.
+Jak chcemy to połączyć,
+no to robimy union i jest.
+Zobaczcie, Seattle USA i Köln Germany.
+Jeżeli na przykład zmienimy kolejność,
+czyli tutaj pobierzemy sobie ship country i ship city,
+no to w tym momencie trochę nam się to pokiczka.
+Zobaczcie, tu jest USA,
+a tu już jest Lyon.
+Oulu.
+Widzicie?
+Pomyliliśmy kolejność.
+Więc na to trzeba szczególnie zwrócić uwagę.
+To ważna sprawa.
+To jest jedna ważna rzecz.
+A druga ważna rzecz, że zwróćcie uwagę,
+że też te dane są w różnej kolejności,
+są różnie posortowane.
+I nazwy kolumn pochodzą zawsze z tego pierwszego.
+Czyli wszystko powinniśmy ujednolicać do tego,
+co mamy na początku,
+do czego dołączamy.
+Bo on najpierw wykonuje pierwsze zapytanie,
+a potem do niego dołącza kolejne,
+więc etykiety kolumn bierze z tego pierwszego.
+OK.
+No to idziemy dalej.
+Znajdź wszystkie wspólne wartości
+pomiędzy kolumną title w tabeli employees,
+czyli select title from employees.
+Oraz kontakt title w tabeli customers,
+czyli intersect.
+Select title from customers.
+Tu nie jest title, tylko jest kontakt title.
+Select contact.
+Title customer.
+No i nie mamy ich wiele.
+Jest to tylko sprzedaż.
+Sales representative oraz sales manager.
+No i w ostatnim podpunkcie,
+chcemy znaleźć wszystkie miasta,
+które wystąpiły w kolumnie city w tabeli employees,
+czyli select city from employees.
+Ale nie wystąpiły w tabeli customers
+w kolumnie o tej samej nazwie,
+czyli except select city from customers.
+I tu mamy Redmond i Tacoma.
+Natomiast jeżeli zrobimy to samo,
+tylko, że odwrotnie.
+Czyli tu będzie customers.
+Natomiast tu będzie employees.
+O, no to trochę tych więcej będzie miast.
+Jak widać jest na przykład Paryż, Cork, Lille, Sevilla.
+Tak, trochę jest ich więcej.
+I tak wygląda sprawa z wykonywaniem operacji na bazie danych.
+Chciałem jeszcze nadmienić,
+że to nie są tanie zapytania.
+W sensie jeżeli tych danych jest bardzo, bardzo dużo,
+to może się okazać,
+że szukanie części wspólnych zajmie wam dużo czasu
+i czasem lepiej jest to zepchnąć na jakieś inne operacje.
+Więc jeżeli macie możliwość na przykład ograniczenia w intersekcie
+i szukania tylko i wyłącznie identyfikatorów
+i porównywania identyfikatorów,
+to zdecydowanie warto to zrobić
+i dopiero później na przykład na podstawie tych identyfikatorów,
+które sobie tutaj wykonaliście,
+pobrać te konkretne rekordy z bazy danych.
+Jak by to wyglądało?
+Na przykład tak,
+select, no to jest title,
+powiedzmy select user id from employees,
+intersect select user id from customers,
+no i wtedy select gwiazdka from users where
+i to byłby wynik tego zapytania.
+Where id in i to byłby wynik tego zapytania.
+To będzie zdecydowanie lepsze niż szukanie,
+większej ilości informacji.
+Po prostu warto to sobie tak optymalizować.
+Ja kiedyś miałem problem.
+Używałem Intersecta i tak jak miałem małą tabelę,
+jedną i drugą u siebie lokalnie na komputerze,
+tak w momencie, w którym na produkcji okazało się,
+że te tabele są ogromne,
+to po prostu ten czas wykonywania tego zapytania
+też był bardzo długi.
+No bo tutaj nie pobieramy sobie tych rekordów,
+tylko musimy każdy rekord z każdym porównać,
+więc wyobraźcie sobie, ile to może.
+Trwać.
+Ale zawsze warto wiedzieć, że można coś takiego robić.
+I to byłoby na tyle.
+Bardzo Wam dziękuję.
+Zapraszam Was do kolejnej lekcji.

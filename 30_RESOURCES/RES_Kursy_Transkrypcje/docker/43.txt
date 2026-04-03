@@ -1,0 +1,39 @@
+No to co? Expose, czyli coś będziemy eksponować i z opisu widzę, że porty.
+Czyli to jest mniej więcej to samo co ports w Docker Compose?
+Nie. Ports jest bardzo specyficzne w Docker Compose i o tym wspomnę na zakończenie Expose.
+A jeśli chodzi o samego Expose, no to jest to instrukcja, która informuje Dockera o tym, na jakim porcie kontener uruchomiony z naszego obrazu będzie nasłuchiwał.
+I ta instrukcja nie wystawia nam portu automatycznie.
+Do wystawienia portu ustawiamy flagi.
+W poleceniu Docker Run z wskazanymi naszymi portami, które chcemy wykorzystać i używamy wtedy małego minus p albo dużego minus p możemy użyć wtedy, kiedy chcemy wystawić wszystkie porty opisane naszymi kolejnymi instrukcjami Expose w przypadku tego naszego obrazu.
+Jeśli używamy z kolei Docker Compose'a, wtedy porty ustawiamy w sekcji ports i tutaj niestety, to jest jedna z naprawdę niewielu różnic, gdzie Docker Compose różni się od Docker Run'a, tutaj nie ma możliwości wystawienia wszystkich portów, które są zdefiniowane poleceniem Expose.
+Każdy w Docker Compose'ie trzeba wskazać wprost.
+Każdy port, który chcemy aktywnie udostępniać, musimy do tego naszego Docker Compose'a sobie dopisać, żeby on faktycznie został udostępniony.
+Czyli jeżeli w Docker Compose'ie mamy ports, to tam podajemy po dwukropku gość, gospodarz, natomiast tutaj mamy tak naprawdę tylko i wyłącznie jedną część tego ports?
+Dobrze to zrozumiałem?
+Tak.
+Ok.
+Włącznie informacje, który port ma być udostępniony, ale żeby się do niego podłączyć, to i tak trzeba w Docker Run'ie podać ten port, na który będziemy się łączyć.
+Tak.
+Jeśli chcemy ten port zmienić, wtedy tak, natomiast jeśli byśmy użyli dużego P, wtedy wszystkie porty zostaną wystawione tak jak są, ale zostaną też zmapowane na te same porty po stronie naszego gospodarza, co może też się nie udać.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Zrozumiałem.
+Porty będą już zajęte przez jakiś inny uruchomiony kontener, na przykład przez instancję kontenera wcześniej uruchomioną z tego samego obrazu, no wtedy dostaniemy błąd, że te porty w stronie gospodarza są już zajęte.
+Czyli w skrócie, jeżeli robię re-expose 80 i zrobię Docker Run wielkie minus P, to jeżeli mój port 80 nie jest zajęty niczym na gospodarzu, to to się uruchomi, a jeżeli będzie tam coś innego, to muszę przez małe minus P przypisać, jaki port ma się mapować.
+Czyli na ten 80 wewnątrz, tak?
+Dokładnie tak.
+Okej. I w takim razie, jeżeli używamy Docker File'a, który używa Docker Compose'a, to posiadanie expose jest tak naprawdę niepotrzebne?
+Tak. Zasadniczo jest niepotrzebne, bo jakby i tak ustawiamy to w naszym Docker File'u, więc tak, w Docker Compose'ie, więc te porty będą wtedy odpowiednio przemapowywane.
+Super. To bardzo Ci dziękuję.
+Dziękuję.

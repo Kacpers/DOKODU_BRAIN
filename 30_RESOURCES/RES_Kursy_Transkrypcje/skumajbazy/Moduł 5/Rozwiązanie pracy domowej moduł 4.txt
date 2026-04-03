@@ -1,0 +1,515 @@
+Witajcie moi drodzy, spotykamy się w kolejnym module, czas zająć się pracą domową.
+W zadaniu domowym pierwszym mieliśmy utworzyć tabelę kategorii z posiadającą kolumnę ID oraz name,
+a także utworzyć tabelę product z posiadającą kolumny ID, kategorię ID, name oraz price.
+No to co, nie śpimy, lecimy. Jeżeli chodzi o utworzenie tabeli, to jak na pewno pamiętacie,
+tabelę tworzymy sobie za pomocą polecenia create table, po którym następuje nazwa, products i nawiasy okrągłe.
+Tu jeszcze dodatkowo można dorzucić sformułowanie if not exists, ale zanim to sobie zrobimy,
+jeszcze jedna mała wprawa, a mianowicie my te tabele możemy sobie oczywiście tworzyć w naszej bazie danych,
+ale jest szansa, że już ta nazwa products jest gdzieś zarezerwowana, więc żeby było prościej,
+możemy sobie najpierw wykonać polecenie create schema homework, no i wtedy możemy sobie śmiało utworzyć
+create table homework products, dzięki temu nie będziemy przeszkadzali tej naszej bazie,
+którą mamy z produktami. I nasza tabela ma posiadać następujące kolumny,
+z nimi id oraz name. No to jeżeli chodzi o id, no to wiadomo. I tutaj typem tej kolumny będzie serial,
+no i dodatkowo jest to primary key, przecinek. I druga kolumna to jest name, name to będzie varchar255,
+możemy podać wartość maksymalną. Czyli tutaj chyba już ctrl enter zrobiłem, teraz tu sobie zrobię ctrl enter,
+tabela mi się utworzyła, super.
+Aha, świetnie, to miało się nazywać nie products, tylko categories. No to cóż, alter table homework products,
+rename to homework categories. Ops, tu brakuje średnika.
+Rename to categories, bez homework. No i teraz możemy sobie zrobić select all from homework,
+categories, o, jak widać, id i name działa. Jeżeli pomylicie nazwę tabel, nie ma problemu,
+pamiętajcie, że już alter, polecenie alter sobie omówiliśmy i zawsze możemy sobie nazwę takiej tabeli zmienić.
+Okej? I wtedy, tak jak było przed chwilą, możemy sobie stworzyć tabelę products, zawierającą następujące wartości.
+No to create table homework.
+Products, id, name, id, kategoria id, name oraz price.
+Czyli będzie id, name, kategoria id oraz price, czy coś pominąłem?
+Nic nie pominąłem.
+Więc lecimy tak samo.
+Jeżeli chodzi o id, to będzie to serial i primary key, tutaj różnicy nie będzie żadnej.
+Jeżeli chodzi o name'a, to też będzie to varchar 255, różnicy nie będzie żadnej.
+Jeżeli chodzi o kategorię id, to kategoria id po prostu będzie integerem,
+natomiast price będzie floatem.
+Ops. No i teraz jeżeli sobie wykonamy select gwiazdka from homework products,
+no to wyjdzie nam, że wszystko nam.
+Działa.
+Okej. Możemy iść do drugiego zadania.
+W zadaniu drugim mamy do bazy danych z poprzedniego zadania dodać następujące produkty.
+No i tutaj jak widzicie mamy najpierw dwie kategorie.
+Pierwsza kategoria to owoce, druga kategoria to warzywa.
+Więc jeżeli chodzi o owoce i warzywa, no to możemy sobie śmiało te kategorie podrzucać.
+Czyli insert into.
+Homework.
+Homework categories.
+Values.
+Najpierw jest default, później mamy owoce, przecinek, default, warzywa, średnik.
+No i powinienem mieć teraz dwie kategorie, czyli select gwiazdka from homework categories.
+O, mam owoce i warzywa, czyli działa.
+No i teraz drugi temat to jest dodanie konkretnych nazw produktów, konkretnych produktów.
+Gdzie mamy ananasa, brzoskwinie, pietruszkę i marchewkę.
+Okej, ja to sobie otworzę od razu tutaj.
+Tak, żebym nie musiał co chwilę się przechlikiwać, tylko na drugim ekranie sobie otworzę te nazwy produktów.
+No i po prostu je sobie dodam, czyli insert into homework products.
+Products.
+Values.
+Czy też możemy od razu też zrobić to drugie podejście, czyli bez id-ka wymienić sobie po prostu kategory id name i price.
+No i wtedy values wpisujemy jako kategorię id 1.
+To są owoce.
+Ananas.
+I tutaj widziałem, że część z was pytała, czy te PLN-y też mają być częścią.
+Częścią tej wartości.
+No jeżeli ja bym wpisał PLN-y w tej samej kolumnie, gdzie mam price.
+No to nie daje sobie możliwości pracy z liczbami jakiejkolwiek.
+To zdecydowanie tak bym nie robił.
+Jeżeli bardzo byście chcieli przechowywać walutę, no to walutę bym po prostu przeniósł do osobnej kolumny.
+Albo wręcz no zrobił z niej klucz obcy, czyli byłoby jakieś currency id.
+I w osobnej tabeli posiadałbym wszystkie waluty.
+A bynajmniej nie trzymałbym tego w jednej komórce.
+W jednym polu razem z wartością liczbową.
+No bo to by mi się zemściło później na mnie.
+Ok.
+Kategoria id następne to jest też jedynka.
+Będzie to brzoskwinia.
+Za 3,50.
+Później już mamy warzywa.
+Pietruszka za 2,35.
+Teraz sobie przypomniałem, że chyba pietruszka jest droższa, no ale dobra.
+Marchewka.
+Za 4,80.
+Ok.
+Wykonałem.
+List values list must be all the same length.
+Czyli gdzieś zrobiłem babola.
+Tak, tu zrobiłem 4,80 z przecinkiem.
+Zamieniłem na kropkę.
+Dostałem informację, że 4
+rekordy zostały dodane.
+Mogę sobie zawsze to wykonać.
+Zrobić select gwiazdka from homework products.
+Zresztą nawet mam to zapytanie.
+I widzicie, że wszystkie produkty mamy.
+Więc jest ładnie.
+To co jeszcze można byłoby zrobić korzystając z wiedzy z poprzedniego zadania.
+Można byłoby dodać indeks na kategorię id.
+Bo pewnie często będziemy po tym indeksie, po tym kategorię id szukali.
+Więc add create index.
+Nazwa indeksu.
+Niech to będzie powiedzmy products kategoria id.
+On homework products.
+I nawiasie kategory id.
+Ops.
+No i tyle.
+Więc będzie od tej pory kategoria id indeksowane.
+To co?
+Idziemy do kolejnej pracy domowej.
+To będzie zadanie trzecie.
+Aaa.
+Tu zapomniałem o tym, że w zadaniu nawet wspomniałem o indeksie.
+Ale okej.
+Już to robimy.
+Dodaj indeks unique do nazw przechowywanych w tabelach categories oraz products.
+No to od tego sobie zaczynamy.
+Czyli create index unique kategory name on homework kategories.
+I interesuje nas name.
+I ten indeks to miał być indeks unique.
+Więc create unique index.
+O tak to było.
+Okej.
+No i tak samo chcielibyśmy sobie zrobić indeks na.
+Na czym?
+Na name ale na produktu name.
+Czyli products.
+Oczywiście nazwę też zmienię.
+Czyli unique products.
+Product names.
+Tam name.
+Okej.
+To zrobiliśmy.
+Drugim indeksem, który miał być dodany.
+To jest indeks do nazwy kategorii ułatwiający wyszukiwanie.
+No to już zrobiliśmy na kategorię id.
+Ale jeżeli chcemy na nazwie kategorii też.
+No to bardzo proszę.
+Czyli to będzie category name.
+Homework categories.
+Name.
+Okej.
+I ostatni indeks, który tutaj się ma pojawić.
+To jest indeks, który ma przyspieszyć wywołanie funkcji sum.
+Na kolumnie cena.
+Czyli chcielibyśmy sprawić, żeby wywoływanie funkcji sum.
+Działało szybciej na kolumnie price.
+Znajdującej się wewnątrz produktu.
+Więc możemy sobie wykonać polecenie.
+Create index.
+Product sum.
+Na przykład tak.
+On.
+No i tutaj on.
+Podajemy mu też nazwę tabeli.
+Czyli homework products.
+I w nawiasie podajemy nazwę funkcji.
+I nazwę kolumny.
+Jeżeli chodzi o wykonanie tej funkcji.
+Wyglądałoby ono tak.
+No ale tak jak wspomniałem nawet w lekcji.
+Tutaj pojawia się błąd do wszystkich funkcji agregujących.
+O tym czym są funkcje agregujące dowiecie się w tym module.
+No i niestety nic z tym nie zrobimy.
+Natomiast tak to zapytanie powinno wyglądać.
+Więc to jest jak najbardziej okej.
+Jeżeli chodzi o wygląd zapytania.
+To niestety nie działa.
+Dla funkcji agregujących.
+Okej.
+Przejdźmy sobie do kolejnego zadania domowego.
+I w kolejnym zadaniu domowym.
+Zostaliśmy zadanie gdzie mamy utworzyć tabelę cars.
+Dziedziczącą po tabeli przechowującej produkty.
+Tabela ta powinna dodatkowo posiadać.
+Przebieg, markę, model, spalanie.
+No i chcemy dodać 4 samochody do tabeli cars.
+Czyli.
+Te nasze produkty już sobie tutaj stworzyliśmy.
+Mamy homework products.
+Więc po prostu powinniśmy stworzyć sobie nową tabelę o nazwie cars.
+Czyli create table cars.
+Tu sobie dorzucamy nawiasiki.
+No i chcemy żeby to nam dziedziczyło.
+Czyli inherits z products.
+Jeżeli chodzi o nazwy kolumn.
+To już sobie otwieram to zadanie.
+Żeby też wam tutaj nie przekładać.
+To mamy przebieg, markę, model i spalanie.
+Przebieg.
+Przebieg niech się to nazywa distance.
+Może być zapisane jako float.
+Przebieg marka.
+Niech to będzie name może albo brand.
+Niech to będzie warchar.
+Dalej mamy model.
+No to model to model.
+No i spalanie.
+Consumption.
+I to będzie też ilość litrów na 100.
+Czyli niech to będzie float.
+Raczej tak.
+Albo double.
+O tak.
+Double to jest double.
+Consumption niech to będzie float.
+Ok.
+Must be owner of table.
+Ok.
+Tu oczywiście homework products.
+O.
+I teraz jeżeli sobie wybierzemy select gwiazdka from cars.
+No to powinniśmy zobaczyć, że te nasze samochody są już samochodami jakiejś konkretnej kategorii.
+Są samochodami, które mają id, name, price.
+Więc wszystko jest ok.
+No i teraz jeżeli chcemy sobie dodać 4 przykładowe samochody.
+To myślę, że w tym miejscu możemy sobie zrobić małe cięcie.
+Ja sobie przygotuję te dane.
+I od razu wam pokażę gotowego inserta.
+Ok.
+No i to co zrobiłem poza kamerą to dodałem sobie już jakieś 4 przykładowe samochody.
+Dwa samochody żony.
+Jeden mój.
+Jeden rodzinny.
+To jak widzicie ceny zupełnie z kosmosu.
+Tak samo jak przebiegi.
+No ale żona nigdy nie może się zdecydować czy wolę jeździć Porsche czy Lamborghini.
+Natomiast ja mam gdzieś tam Forda Mustanga gdzieś w pamięci.
+Kiedyś może się uda.
+Zobaczymy.
+Natomiast jeżeli sobie teraz pobierzemy wszystkie te samochody.
+No to powinny one nam się tutaj jak najbardziej wyświetlić.
+Jak widzicie są dostępne.
+No i tak samo jeżeli sobie pobierzemy wszystkie produkty.
+To też powinniśmy wszystkie produkty tutaj mieć.
+No i padło pytanie co się stanie jeżeli dodamy sobie nową kolumnę też do tych naszych produktów.
+Więc jeżeli dodałbym sobie nową kolumnę.
+Czy na przykład alter table homework products add column.
+Niech to będzie favorite jako wartość boolowska.
+W tym momencie zobaczcie na product dostaje ten favorite.
+Natomiast na cars również dostaje ten favorite.
+Czyli każda zmiana która pojawi się wewnątrz tabeli na kolumnach.
+Wewnątrz tabeli products zostaje też odzwierciedlona na tabeli cars.
+No i oczywiście to o czym mówiliśmy wcześniej.
+Jeżeli dodamy sobie jakieś samochody do tabeli cars.
+To również będą one dostępne wewnątrz tabeli products.
+Ale tylko i wyłącznie w tym spektrum w którym sobie je zaplanowaliśmy.
+Okej.
+Więc tak to dokładnie wygląda.
+No i ostatnia rzecz.
+Ostatnie zadanie domowe.
+Które przed nami.
+Które wam zadałem.
+Wyglądało tak.
+To jest normalizacja i przygotuj bazę danych.
+Która będzie przechowywała następujące dane.
+Ja tutaj wszystkich tych tabel nie chcę z wami tworzyć.
+Bo to szkoda na to czasu.
+Natomiast przygotowałem wam normalizację.
+Jeżeli chodzi o normalizację czy w ogóle planowanie bazy danych.
+To mam takie jedno narzędzie które bardzo lubię.
+Może was zaskoczę.
+Ale bardzo dużo pracy z którą wykonuję.
+Wykonuję w tym narzędziu.
+Jest nim excel.
+Po prostu.
+Więc jeżeli tak wyglądały nasze dane.
+To już jak widzicie.
+Tę pracę wykonałem wcześniej.
+Z tego względu że jest to praca mocno koncepcyjna.
+Ale chciałbym to z wami omówić wszystko jak najbardziej.
+Więc mieliśmy te dane które były powyżej.
+Mieliśmy te dane które były powyżej.
+I teraz tu mamy jak widzicie.
+Id, start, stop, wyjazd, wyjazd, geo, przyjazd, przyjazd, geo, cena i ulga.
+Zaczynam od początku.
+Jeżeli chodzi o start i stop.
+To trzymanie tego w jakimkolwiek słowniku nie ma sensu.
+Gdyż bardzo by nam to obciążyło proces.
+Wyszukiwania danych.
+Jeżeli za każdym razem miałbym pobierać.
+Tym bardziej że tutaj z jakiejś zewnętrznej tabeli.
+Czy jakiś start id, stop id.
+To byłoby zupełnie bez sensu.
+Więc po prostu te dane przechowuję sobie jako datę i czas.
+Tak jest najwygodniej.
+I jak najbardziej tak to zostawiam.
+To co jest dalej.
+To wyjazd i wyjazd geo.
+I przyjazd i przyjazd geo.
+To są takie wartości.
+No które tak naprawdę powinny być wyciągnięte na zewnątrz.
+Po pierwsze z tego względu.
+Że dane nam się powtarzają.
+Zobaczcie tu jest Gdynia 54,5.
+I tu jest też gdzieś jeszcze Gdynia 54,5.
+Czyli tak naprawdę.
+Te wartości.
+Wyjazd geo.
+One są zależne od tego.
+Od tej kolumny.
+A jak pamiętacie z normalizacji.
+Nie powinniśmy przechowywać jakichkolwiek danych.
+Które są zależne od tego.
+W tej samej tabeli nie powinny się one powtarzać.
+To jest pierwsza rzecz.
+A druga rzecz.
+Jeżeli mam Gdynię, Wrocław, Warszawa i Gdynię.
+To znaczy że się powtarzam.
+I tutaj powinienem po prostu zastosować klucze obce.
+I tak też zrobiłem.
+Zobaczcie.
+Mam wyjazd City ID.
+I przyjazd City ID.
+Tu nad nazwami angielskimi się za bardzo nie skupiałem.
+Zostawiłem takie nazwy polskie.
+Które jak najbardziej niosą też.
+Sens tego co się tutaj znajduje.
+No i zobaczcie.
+Wyjazd City ID.
+To jest po prostu jakiś identyfikator.
+Jakaś liczba.
+I tutaj mam te liczby wszystkie wymienione.
+Czyli odpowiednie ID.
+Odpowiadają konkretnemu.
+Konkretnej lokalizacji.
+I do tego od razu też.
+To geo.
+Które tutaj jest.
+Czyli ten punkt geograficzny.
+Długość, szerokość geograficzna.
+Też zostały przeniesione tutaj.
+Tak naprawdę.
+Jak na to patrzę.
+To od razu kusi mnie.
+Żeby zrobić jeszcze jedną rzecz.
+No bo tak naprawdę nie powinniśmy.
+Też z okazji normalizacji.
+Trzymać wszystkich tych danych w jednej kolumnie.
+Tylko powinniśmy posiadać.
+Osobną Latitude.
+Osobną Longitude.
+I te wartości powinny zostać.
+Rozbite na dwie.
+Na dwie kolumny.
+Zdecydowanie.
+To też była taka zasada normalizacyjna.
+Nie wiem czy pamiętacie.
+Jak było First Name i Last Name połączone.
+To też mówiłem o tym.
+Że zdecydowanie lepiej jest to.
+Trzymać w osobnych.
+W osobnych kolumnach.
+Raz, że tak jest profesjonalniej.
+A druga rzecz jest też taka.
+Że w ten sposób łatwiej nam będzie w przyszłości.
+Coś pobrać.
+Coś usunąć.
+Coś przetworzyć.
+Napisać Wear'a.
+Bez Like'a.
+No bo ten Like w Wear'e.
+Zawsze jest bardziej obciążający.
+Więc jeżeli nie musimy go stosować.
+To nie powinniśmy go stosować.
+Więc jak widzicie.
+Jeszcze jedna rzecz.
+Przyszła mi do głowy.
+W tak zwanym międzyczasie.
+No i wtedy mam.
+Wyjazd City ID.
+Przyjazd City ID.
+No i ulga ID.
+Gdzie te ulgi.
+Po prostu są tutaj przedstawione.
+Raczej nie 13%.
+Tylko 013.
+Z tego względu.
+To też jest liczba.
+A nie String.
+Bo to jest String.
+I łatwiej się na takich danych.
+Też wtedy pracuje.
+Więc to jak najbardziej.
+Tutaj.
+Konkretne ID'ki.
+Już temu też poprzypisuję.
+Tak to właśnie wygląda.
+Ale to jeszcze nie koniec.
+Naszej normalizacji.
+Z tego względu.
+Że tu.
+Pojawił się jeszcze.
+Jeden temat.
+A mianowicie.
+Cena.
+No i cena.
+Jest tak naprawdę.
+Zależna.
+Od tego.
+Skąd jedziemy.
+I dokąd jedziemy.
+Więc.
+Jeżeli te ceny.
+Dałoby się wyliczyć.
+To raczej.
+Zupełnie usunął bym.
+Jest bazę danych.
+I.
+Pewnie.
+Starałbym się.
+Wyliczać.
+Ewentualnie.
+Jeżeli.
+One nie były.
+Były wyliczane.
+Tylko.
+Nie chciałbym.
+Właśnie.
+Ten proces wyliczania.
+Byłby czasochłonny.
+I chciałbym.
+Te ceny.
+Przechowywał.
+No i tutaj.
+Zdecydowanie.
+Zastosowałbym.
+Compound Key.
+Czyli.
+Taki.
+Ten klucz.
+Który łączy nam.
+Który składa się.
+Z dwóch kolumn.
+No i.
+W tym momencie.
+Miałbym.
+Wyjazd.
+City ID.
+Przyjazd.
+City ID.
+Jako klucz.
+Do którego.
+Przyporządkowaną.
+Wartością.
+Byłoby.
+75.
+No i.
+Analogicznie.
+2.
+3.
+55.
+Na podstawie.
+Tego.
+Co.
+Zostało.
+Wpisane.
+Tutaj.
+Czyli.
+Nie.
+Robiłbym.
+Zapytań.
+Tylko.
+Użył bym.
+Dżojna.
+Natomiast.
+Czym.
+Są.
+Dżojny.
+Dowiecie się.
+W tym.
+Module.
+Jeżeli.
+Zrobiliście.
+Coś.
+Inaczej.
+To.
+Napiszcie.
+Koniecznie.
+Na.
+Discordzie.
+Z.
+Przeoptymalizujemy.
+I.
+Potem.
+Pobieranie.
+Będzie.
+Gehenną.
+Więc.
+Ja.
+Zawsze.
+Staram się.
+Do.
+Tego.
+Podchodzi.
+Ze.
+Zdrowym.
+Rozsądkiem.
+Raczej.
+Praca.
+To.
+Nie.
+Studia.
+Nikt.
+Nam.
+Później.
+Oceny.
+Nie.
+Wystawi.
+Trzeba.
+I.
+Tutaj.
+Pracę.
+Domową.
+Zostawiam.
+Rozwiązaliśmy.
+Zadania.
+Zapraszam.
+Was.
+Do.
+Kolejnego.
+Modułu.
+Chodźcie.

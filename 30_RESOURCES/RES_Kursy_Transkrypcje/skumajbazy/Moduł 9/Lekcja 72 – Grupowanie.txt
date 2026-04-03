@@ -1,0 +1,320 @@
+Myślę, że temat grupowania dla Was wszystkich jest już całkiem znany.
+Otóż w końcu pisaliśmy grupy przy okazji SQL-a.
+Więc tutaj już czym jest grupowanie tłumaczyć Wam nie będę.
+Jedyne na czym się skupię to pokażę Wam jak robi się to w Mongo.
+No bo w tej lekcji właśnie zajmiemy się grupowaniem dokumentów,
+napiszemy sobie kilka agregatów, tu to jest odrobinę inaczej skonstruowane,
+no i wyciągniemy trochę informacji, tak jak w SQL-u,
+które nie są dostępne na pierwszy rzut oka.
+Na przykład, jeżeli chcielibyście odpowiedzieć na pytanie
+ilu jest studentów na danym kierunku, to zobaczcie,
+wykonujemy db students aggregate, no i potrzebujemy użyć polecenia grup,
+wskazujemy mu tak zwany identyfikator.
+Ten identyfikator jest bardzo ważną informacją,
+ponieważ on właśnie mówi o tym,
+po czym chcemy grupować.
+Czyli tak, na początek mówimy o tym, że będziemy grupowali w naszym zapytaniu.
+Po drugie, mówimy o tym, jakie pole jest tym, według którego grupujemy.
+Czyli w momencie, w którym wykonywaliście grupowanie w SQL-u,
+to zapisywaliście group by nazwa kolumny.
+I ten id to jest właśnie nazwa kolumny, po której chcielibyście zgrupować Wasze dane.
+Kolejna informacja to jest,
+jakie informacje chcielibyście wydobyć z mongo.
+I ten counter to jest tylko i wyłącznie nazwa pola, nazwa aliasu,
+który zostanie przypisany do tej grupy.
+Czyli zobaczcie, counter, zwrócona nazwa pola z sumą.
+Na przykład coś jak count gwiazdka s counter, czyli ten counter właśnie do tego służy.
+Natomiast to, co jest w środku, czyli ten count,
+to już, jak pamiętacie, jak jest dolar, to znaczy, że nazwa jakiejś funkcji,
+i jest to właśnie nazwa funkcji służącej do zliczania, czyli count.
+Natomiast po dwukropku wprowadzamy argumenty tej funkcji.
+Tutaj argumentów nie ma, po prostu jest dolar, count, dwukropek, nic.
+I to nam policzy, ile jest książek, ile jest studentów z poszczególnych krajów.
+No i poproszę Was o to, żebyście przerobili ten przykład na nasze potrzeby,
+i abyście policzyli, ile książek zostało wydanych
+w ramach każdego kraju.
+No i po drugie, ile książek wydał, czy napisał każdy z autorów.
+No bo autorzy nie wydają książek, raczej wydawnictwa wydają książki,
+autorzy je piszą, ale wiecie, o co mi chodzi.
+Do zobaczenia za 2 minuty i 49 sekund.
+Okej, na pierwszy rzut oka idzie, ile książek jest w poszczególnych krajach,
+czyli db, books, kropka.
+Db, books, kropka, aggregate.
+Hops, agregować będziemy po czymś i to musimy mu wskazać.
+Czyli najpierw mu mówimy, że słuchaj, będę grupować,
+a następnie mówimy mu, co jest naszym, tym kluczem, po którym chcemy grupować.
+Jest nim kraj, czyli country.
+Okej.
+I po drugie, mówimy mu, co chcemy robić.
+Chcemy zliczać.
+Nazwijmy sobie to counter i mówimy mu, że counter ma robić counta
+i nie mamy żadnych specjalnych wymagań.
+Hops, no i widzimy, Algieria, jedna książka.
+Francja, 9.
+United Kingdom, 10.
+No i tyle dostaliśmy.
+Chcemy więcej, możemy napisać it.
+Dostajemy tych informacji więcej.
+Okej.
+A teraz interesuje nas to samo, ale chcielibyśmy się dowiedzieć,
+jak to wygląda, jeżeli chodzi o autorów.
+Jedyne, co wystarczy, że musimy zrobić, to musimy po prostu zmienić country na autora.
+No i będziemy mieć same informacje.
+Czyli Chinua, Ahebe, jedna i tak dalej.
+Astrid Lindgren, jedna książka.
+Czyli jest i autorka książki Dzieci w Bóg.
+Jest i autorka książki Dzieci z Bullerbyn.
+Chwalę się, że coś wiem.
+I tutaj usłyszałem wasze pytania, mianowicie zapytaliście mnie,
+jak posortować te książki po ilości autorów,
+albo jak posortować te wartości, które dostaliśmy od tego autora,
+który wydał najwięcej do tego, który wydał najmniej, czy napisał najwięcej i najmniej.
+Możemy sobie dopisać sort i bez problemu można tę nazwę kolumny,
+która tutaj jest takim jakby aliasem, użyć w sortowaniu.
+Czyli zrobiłem sort by counter minus 1.
+No i w ten sposób dowiedziałem się, że najwięcej mamy książek autora nieznanego,
+a później jest Fiodor Dostajewski.
+Natomiast jeżeli tę samą informację byśmy chcieli wydobyć w przypadku do krajów,
+no to dowiemy się, że najwięcej mamy z Anglii, potem jest Francja,
+United States, Russia, Italii.
+A skąd najmniej? Pewnie będziemy mieli sporo krajów, gdzie będzie minus jeden,
+minus jeden, gdzie będzie jeden.
+Oj, oj, oj, oj, oj.
+Więc zakładam, że tego będzie dużo. No tak, tak jak myślałem.
+Mamy dużo krajów, gdzie jest jeden.
+I tak to właśnie działa.
+Swoją drogą ciekawe, czy mamy jakiekolwiek książki z Polski.
+DB books find country Poland.
+Lista jest pusta.
+Ok. I agregować możemy też po kilku kluczach.
+O tym sobie zaraz powiemy.
+Oraz są też inne funkcje agregujące.
+Nie tylko trzeba liczyć ilość.
+Można też odpowiedzieć na pytanie, jaka jest suma jakiejś wartości,
+wartość minimalna, maksymalna.
+Więc zapraszam was do kolejnej porcji materiału i do kolejnych ćwiczeń.
+Jeszcze w tej lekcji.
+Zacznijmy sobie od tematu, jakim jest grupowanie po kilku obiektach.
+Więc jeżeli chcemy zgrupować po kilku obiektach, po kilku właściwościach,
+bo na przykład mamy kilka osób po tym samym imieniu i nazwisku,
+to wtedy możemy to zrobić.
+Znaczy najpierw mamy kilka osób po tym samym imieniu,
+a potem chcemy grupować po nazwisku.
+Albo na przykład mamy kategorie i nazwy produktów.
+I chcielibyśmy zliczyć, ile jest produktów w każdej kategorii.
+No to wtedy musimy grupować po kategorii i produkcie.
+Tak, żeby grupowanie odbywało się na podstawie połączonych dwóch pól.
+I robimy to przekazując listę w miejscu.
+Czyli robimy group by, podkreślenie id.
+I przekazujemy first name, last name.
+To pozwoli nam zgrupować właśnie po nazwisku i imieniu.
+Natomiast jeżeli chcemy zostawić counta,
+no to zostawiamy tutaj po prostu w środku counta.
+Jeżeli natomiast chcielibyście wykonać inną czynność,
+na przykład odpowiedź na pytanie, ile łącznie kosztowały produkty,
+czy też kosztują produkty o danej nazwie,
+bo mamy na przykład w tabeli produkty bardzo dużo chlebów,
+które mają różną cenę,
+no to to id, tak jak widzieliście przed chwilą,
+może być to po prostu name, czy też product name.
+Natomiast nazwa funkcji nam się tutaj zmienia.
+Jest to funkcja sum, po której jest dwukropek
+i w cudzysłowie wskazujemy nazwę kolumny, którą chcielibyśmy sumować.
+Czyli na przykład jeżeli chcemy policzyć sumę łącznego zamówienia,
+czy sumę ceny, to wówczas to byłoby price albo order total.
+To jest ta nazwa właśnie kolumny, po której będzie liczona suma.
+I tych funkcji jest sporo.
+Możemy sobie na przykład znaleźć najtańszy i najdroższy produkt o danej nazwie.
+Czyli naszym id, tym co będzie w group by, będzie id.
+Dalej będziemy mieli smallest i largest,
+gdzie to są wyłącznie aliasy naszych wyników, tak jak napisałem.
+Dalej mamy minimum i maximum,
+czyli to są te nazwy tych funkcji, które będziemy chcieli sobie wywołać
+i przepisać je dla smallest i largest.
+No i pole, dla którego wykonujemy to obliczenie, to jest w obu przypadkach order total.
+Oczywiście jakie pole wpiszecie, to zależy tylko i wyłącznie od Was.
+To pole będzie przekazane do funkcji minimum
+i zostanie później przypisane jako osobne pole o nazwie smallest.
+Tak to właśnie funkcjonuje i tak można liczyć agregaty.
+Tych funkcji służących do liczenia agregatów jest całkiem sporo.
+Można je wyróżnić w dokumentacji, gdyż one będą miały w nawiasie aggregate.
+Wtedy będziemy wiedzieli, że one właśnie służą do agregatów.
+No to tak samo jak w przypadku Postgresa,
+to są funkcje takie typowo statystyczne,
+więc zapraszam, jak macie ochotę poczytać, popatrzeć, to śmiało.
+No i tutaj dla przećwiczenia możemy sobie to jeszcze zrobić dwa zadanka.
+Chciałem powiedzieć przećwiczyć, czyli pytanie pierwsze.
+Ile książek zostało wydanych w tym samym kraju w jednym roku?
+Czyli na przykład w 2021 załóżmy, że w Polsce zostało wydanych 5 książek,
+a w 2020 w Polsce 2 książki.
+Następnie pytanie drugie.
+Jaka jest największa i najmniejsza ilość stron opublikowanych książek wydanych w danym kraju?
+Czyli powiedzieliśmy sobie na pytanie,
+ile jest książek, jaka jest największa liczba stron ogółem.
+Natomiast tutaj chcielibyśmy teraz to podzielić per kraj.
+I to jest ostatni slajd z ćwiczeniem na ten moduł.
+Więc zapraszam was za chwilę już do rozwiązania
+i później przed wami będzie stała już tylko praca domowa w tym module.
+Do zobaczenia.
+Okej, więc jeżeli chodzi o nasze książki to wykonujemy dbbooks.
+No i potrzebujemy zrobić agregat, czyli aggregate.
+Następnie jest otwarty nawias.
+No i nawias kwadratowy.
+I w środku będziemy sobie wpisywali nasz agregat.
+Nasz agregat będzie otrzymywał obiekt.
+I w środku w tym obiekcie otrzymuje...
+Klucz.
+Otrzymował obiekt?
+Tak.
+W środku w tym obiekcie otrzymuje słówko o nazwie grup.
+Które też jest obiektem.
+Cały czas mnie kusi ta strzałka w dół.
+Może wiecie co?
+Ja to sobie po prostu przesunę na samą górę.
+Nie pomogło.
+No dobra.
+Group.
+I co dalej mamy w tym grupie?
+ID.
+Czyli to po czym będziemy chcieli grupować.
+My będziemy chcieli grupować w naszym zadaniu.
+Będziemy chcieli grupować po kraju.
+Ponieważ mamy odpowiedź na pytanie ile książek zostało wydanych w tym samym kraju w jednym roku.
+Czyli tutaj będziemy wpisywali country.
+To jest pierwsza rzecz.
+Natomiast druga rzecz to jest to co chcemy sobie policzyć.
+My chcemy sobie policzyć te książki.
+Więc wykonujemy counter.
+Tak sobie możemy nazwać to pole.
+Ono się oczywiście może nazywać też inaczej.
+Nie ma to absolutnie żadnego znaczenia.
+Klamerki, klamerki.
+Klamerek za dużo.
+Ups chyba coś wkleiłem, czego nie chciałem.
+O tak.
+Counter.
+I teraz w ramach tego countera używamy funkcji count.
+Która jak pamiętacie nie ma absolutnie żadnych argumentów.
+Enter.
+No i dowiemy się ile książek zostało wydanych w poszczególnych krajach.
+Jakbyśmy chcieli to sobie posortować.
+Zawsze można potem jak pamiętacie zrobić kropka.
+Sort.
+Counter.
+Jeden.
+Ok.
+I będziemy mieli rosnąco.
+Natomiast pytanie nie dotyczyło tego.
+Pytanie jeszcze miało zakładać, że będziemy sobie też chcieli to agregować po roku.
+Więc w tym momencie nasze id to nie będzie tylko i wyłącznie country.
+Ale będzie country oraz year.
+Enter.
+O i zobaczcie.
+W tym momencie widzimy, że najwięcej książek.
+To nie wiem dlaczego.
+A rok minus sześćsetny.
+Bo to jakaś bardzo stara książka.
+Najwięcej książek zostało wydanych w Czechosłowacji.
+Czemu tak?
+Sort by counter jeden.
+Aha.
+Bo to jest rosnąco.
+Minus jeden malejąco będzie.
+O.
+Zobaczymy.
+O.
+Bez szaleństwa.
+United States w tysiąc dziewięćset pięćdziesiątym drugim.
+Bo dwie książki.
+I w Rosji w tysiąc osiemset osiemdziesiątym szóstym.
+Dwie książki.
+Akurat tyle mamy w bazie danych.
+A potem jest jeszcze właśnie ten.
+Dużo krajów, które mają jedynki same.
+Ok.
+Czyli mało pasjonujące dane.
+Ale możemy sobie te dane odrobinę też przerobić.
+Żeby zrobić drugie zadanie.
+I tutaj chcemy się dowiedzieć jaka jest największa i najmniejsza ilość stron.
+Eee.
+Opublikowanych książek wydanych w danym kraju.
+Czyli w ten sposób.
+Będziemy sobie to ugrupowali tylko po kaunterze.
+Natomiast.
+Jeżeli chodzi o.
+To co chcemy robić.
+To chcemy liczyć.
+Eee.
+Maximum.
+Tam largest.
+Wiecie.
+Największa ilość stron.
+To będzie max.
+I będziemy chcieli liczyć to dla pages.
+Tak się nazywała chyba ta.
+Wartość.
+A drugie co chcemy zrobić.
+To chcemy zrobić minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Minimum.
+Coś jeszcze zrobiłem źle.
+Dajcie zobaczyć, czekajcie.
+Czyli tu jest nawias kwadratowy, nawias okrągły.
+Ok.
+Minimum dwa razy jest ten nawias.
+I teraz widać to pięknie, że mamy najwięcej stron.
+Na przykład jest w Algierii jest 1185, a najmniej 185, czyli pewnie jest jedna
+książka, raczej jedna książka, albo dwie o tej samej ilości.
+Tak samo w Rumunii.
+A jakbyśmy chcieli znaleźć największą książkę, znaczy największą, najdłuższą
+książkę, to wypadałoby to sobie posortować, czyli na koniec dodać kropka sort.
+I tutaj chcemy to sobie posortować na podstawie maksimum minus jeden.
+I teraz pięknie możemy sobie wyczytać, że
+we Francji jest najdłuższa książka ma 2408, potem jest Japonia.
+To 1360, a Rosja 1296, no i tak dalej.
+Czyli tysięczniki kończą się na Włoszech.
+Potem mamy już po 800, a możemy zobaczyć, w którym kraju jest najkrótsza, najdłuższa.
+Rozumiecie, o co mi chodzi, nie?
+Czyli z najdłuższych najkrótsza w Egipcie, nie w Egipcie, na samej górze będzie.
+Meksyk 124 strony i to jest jedna książka, jaką mamy i Sudan 139.
+I tak się można bawić, wyciągać sobie różne informacje z różnych zestawień.
+No i cóż, to byłoby na tyle.
+Bardzo dziękuję Wam za udział w tym module.
+Teraz już czas na Was.
+Zapraszam Was na pracę domową.
+Do zobaczenia.
+Cześć.

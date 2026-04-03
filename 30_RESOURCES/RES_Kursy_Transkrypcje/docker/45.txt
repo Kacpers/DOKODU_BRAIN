@@ -1,0 +1,36 @@
+Kolejną dyrektywą, o której porozmawiamy jest dyrektywa ARK, która również służy
+do deklarowania zmiennych, natomiast ona służy do deklarowania zmiennych,
+które mogą zostać przekazane podczas budowania obrazu i tylko i wyłącznie
+podczas budowania obrazu, aby przekazać jakąś wartość dla naszej, tak naprawdę
+dla naszego argumentu, dla zmiennej, którą ustawiamy dyrektywą ARK,
+jest do tego parametr minus minus build minus ARK, w którym ustawiamy tą konkretną wartość
+i możemy sobie ustawić wartość domyślną dla takiej zmiennej, jeśli chcemy,
+wtedy jeśli nie przekażemy żadnej poprzez wspomniany parametr,
+wtedy ta wartość domyślna zostanie wykorzystana, natomiast oczywiście nie musimy jej definiować,
+możemy zawsze oczekiwać tego, że jakąś wartość przekażemy, tylko jeśli jej nie przekażemy,
+a domyślnie nie mamy, wtedy też to nasze budowanie się najprawdopodobniej nie powiedzie.
+Wartości przekazywane przez dyrektywę ARK są widoczne w poleceniu Docker History,
+pozwala nam przejrzeć, co tam w tym naszym Dockerze gdzieś się działo.
+Dlatego niezalecane jest przekazywanie do konfiguracji w ten sposób zmiennych wrażliwych,
+takich jak hasła, klucze API, tokeny, czy inne tego typu rzeczy.
+Masz może jakieś rady takie, co zazwyczaj w ARKach umieszczasz?
+Tu widzę, że załączane jest na przykład proxy, gdzieś są informacje wyżej były informacje dotyczące,
+jakichś konkretnych wersji. Masz jakieś takie rady, co warto w ARKach trzymać?
+W zasadzie nic takiego z praktyki nie przychodzi mi do głowy, raczej jest to rzadziej wykorzystywana instrukcja.
+Może być sensowna, jeśli chcemy coś konkretnego wysterować, tak jak na przykład to proxy,
+o którym wspomniałeś, ono może być istotne na etapie budowania dlatego,
+że możemy pracować w środowisku bardzo takiej zamkniętej sieci,
+która do internetu musi łączyć się przez jakiś konkretny punkt, jeszcze z dodatkową autoryzacją,
+właśnie przez na przykład takie proxy. I wtedy nasz obraz nie byłby w stanie się zbudować,
+gdybyśmy tej konfiguracji nie dodali. Więc to jest taki fajny przykład, kiedy faktycznie można to wykorzystać.
+Natomiast w mojej praktyce,
+nie pracowałem jeszcze w takiej organizacji, w której faktycznie do tego stopnia byłyby pozamykane sieci,
+żeby trzeba było z tego proxy korzystać.
+Także raczej warto wiedzieć, że mamy taką możliwość.
+Pewnie znajdą się jakieś inne zastosowania dla właśnie dyrektywy ARK.
+Natomiast nie jest ona jakoś szczególna.
+Nie jest ona szczególnie popularna.
+Niemniej warto ją znać, bo tak naprawdę to jest jedyny sposób na to, żeby móc parametryzować swoje zapytania.
+Więc tak jak na początku wspomnieliśmy Wam o tym, że będziemy pokazywali głównie najpopularniejsze dyrektywy,
+tak tutaj myślę, że bardziej postawiliśmy na istotność,
+czy też na możliwości, które za tą dyrektywą stoją, a nie na jej popularność.

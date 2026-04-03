@@ -1,0 +1,12 @@
+Kolejnym poleceniem na naszej liście jest host, czyli gospodarz.
+O gospodarzu wspomniałem już przy omawianiu samego kontenera.
+Gospodarz to jest serwer, na którym jest zainstalowany silnik Dockera
+i na którym możemy uruchamiać wszystkie nasze kontenery.
+Także jest to taki zarządca, podobnie jak jeśli ktoś pracował na przykład z maszynami wirtualnymi,
+korzystał sobie z Virtual Boxa chociażby u siebie na lokalnym komputerze,
+żeby jakiś dodatkowy system uruchomić, to to działa na podobnej zasadzie,
+gdzie jakby Docker w postaci Dimona, w postaci tego silnika jest właśnie gospodarzem,
+jest zarządcą, a kontenery są poszczególnymi gośćmi,
+poniekąd jakby maszynami wirtualnymi.
+Jest tam drobna różnica między kontenerem a maszyną wirtualną,
+natomiast na tym etapie nie jest to kluczowe.

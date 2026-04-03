@@ -1,0 +1,124 @@
+Ok, robimy teraz kolejną lekcję i mam do Ciebie takie pytanie. Ponieważ tam się pojawiła taka informacja, że nie mógł znaleźć Witaj Świecie, więc go sobie pobrał. Ale załóżmy, że ja jadę gdzieś pociągiem i wiem, że będę potrzebował różnych obrazów. Albo mam projekt, który wymaga jakichś obrazów tych samych. Czy on musi mi za każdym razem to pobierać z internetu wtedy?
+Nie musi. Tak naprawdę to, co zobaczyliśmy, to było jednorazowe pobranie, dlatego że tego obrazu nie mieliśmy, ale on już z nami zostaje. Natomiast możemy wykorzystać też sam jakby krok pobrania wcześniej, bo z różnych powodów potrzebujemy, żeby ten obraz był wcześniej dostępny w naszym systemie.
+I do tego służy polecenie dockerpool.
+Okej, to może pobierzmy ten kontener Ubuntu, co on tam sugerował, żeby ulepszyć.
+Uruchamiać na nim jakieś polecenia? To może jakbyśmy zrobili pól Ubuntu, to byśmy pobrali Ubuntu?
+Tak, dokładnie. Także właśnie do tego przechodzimy i dostajemy informację, że używa tagu latest, dlatego że żadnego innego nie podaliśmy.
+A do tego też taguje sobie obrazy, czyli wersjonuje je w pewien sposób.
+I o ile obraz latest jest zawsze nadpisywany najnowszym, mamy do niego digest, o tyle obrazy mogą być wersjonowane w sposób taki, że w ramach wersji się ich nie zmienia, jeśli coś się zmienia, wtedy wypuszcza się nową wersję.
+Praktyka jest taka, żeby tylko nadpisywać ten latest dla naszej wygody, że jeśli nie podamy, to zawsze jest pobierany domyślnie obraz latest.
+Natomiast jeśli potrzebujemy jakiś obraz konkretny, to też możemy tak zrobić.
+Dla przykładu, oprócz tego, że mamy Ubuntu latest, możemy stwierdzić, że chcemy pobrać sobie Ubuntu na przykład 22.04.
+O, czyli tak naprawdę za pomocą Dockera możemy też testować na przykład nasz program na różnych wersjach Ubuntu, co?
+Jak najbardziej.
+To jest coś, co można sobie zastosować.
+Ok.
+Możesz też przetestować na przykład podczas wytwarzania aplikacji, jeśli przykładowo piszesz sobie jakąś aplikację w Pythonie, możesz chcieć ją przetestować na różnych wersjach Pythona, dlatego że, nie wiem, wiesz, że będziesz wdrażać jakieś nowe rzeczy, które pojawią się w Pythonie na przykład najnowszym, którego oficjalne wydanie będzie gdzieś tam, nie wiem, za trzy miesiące na przykład, ale chcesz też korzystać z funkcjonalności innych wcześniej, zanim jeszcze Python będzie udostępniał te specyficzne rzeczy, na których ci zależy.
+I chcesz wtedy sobie tą aplikację rozwijać.
+Więc ty możesz sobie testować, czy ona ci działa na tych wcześniejszych Pythonach, a później tylko zmienić wersję.
+To brzmi strasznie wygodnie.
+Tak.
+Plus możesz mieć czasami sytuację taką, że piszesz bibliotekę, która ma działać pod różnymi Pythonami, tak?
+Nie wiem, chcesz sobie napisać bibliotekę, która będzie miała wszystkie algorytmy sortujące, jakich się, nie wiem, uczy na studiach.
+Ok.
+Na jakiejś uczelni, tak? Bo, nie wiem, potrzebujesz to zebrać sobie w formie biblioteki na plan wykładów i ćwiczeń.
+I możesz udostępnić studentom wtedy konkretną taką...
+Tak. I możesz udostępnić taką bibliotekę studentom na przykład w ramach swojego jakiegoś własnego repozytorium albo na przykład masz potrzebę taką, że chcesz studentom powiedzieć, słuchajcie, macie do napisania jakąś aplikację zaliczeniową i w ramach tej aplikacji,
+nie możecie korzystać z dowolnych bibliotek, które są dostępne w internecie, tylko tutaj nasza uczelnia dostarcza biblioteki te, z których skorzystać możecie.
+Żebyście nie musieli pisać wszystkiego od zera, ale też żebyście musieli troszeczkę pokazać, że potraficie programować i pewne rzeczy gdzieś tam wymyślić, a nie tylko skorzystać z gotowych.
+Ekstra. Czyli tak naprawdę też wspieramy w ten sposób bezpieczeństwo. To brzmi bardzo fajnie, no i też rozwiązuje ten problem umniedziała, o którym często rozmawiamy.
+Bo tak naprawdę mamy środowisko. Natomiast to, co mnie bardzo tutaj zainteresowało, to fakt, że wykonałeś pool. Ten pool potrwał dokładnie taką sekundę, może trzy.
+Ja wiem, że taki devops jak ty to pewnie ma bardzo szybki internet, ale trochę nie mam wiary, że to Ubuntu to jest cały taki zwykły system jakiś Ubuntu.
+Możemy wejść do tego Ubuntu, jakieś polecenie w nim wykonać. Nie chcę tam, wiesz, środowiska graficznego oglądać, ale takie SSH bym chciał odpalić. Da radę to jakoś zrobić?
+Żeby tak pokazać?
+SSH nie będzie tak prosto, dlatego że...
+Nie, chodziło mi o to, żeby do powłoki wejść, do basza na przykład, o.
+Jasne. To zaraz sobie wejdziemy do basza, ale chciałbym najpierw jeszcze pokazać, że te nasze obrazy tutaj istnieją.
+I jest takie polecenie jak docker-images.
+Okej.
+To polecenie daje nam informację...
+Super.
+O tych naszych obrazach, które zostały pobrane. I tutaj widać, kiedy dany obraz został utworzony, czyli nasz Hello World, od którego zaczęliśmy, w pierwszej kolejności był utworzony, modyfikowany po raz ostatni, 20 miesięcy temu.
+Ale ten czas leci.
+Ubuntu 22.04 ostatnią aktualizację dostało 4 miesiące temu.
+I Ubuntu najnowsze dostało aktualizację ostatnią 2 miesiące temu do tego obrazu.
+I tutaj jak sobie spojrzymy, jest kolumna size, gdzie widać, że te rozmiary nie są faktycznie takie jak pełnego systemu.
+Te systemy są przygotowane pod dockera, żeby one nie zawierały absolutnie wszystkiego, bo one nie wszystko potrzebują.
+I każdy też jakby...
+Każdy Ubuntu, który możemy sobie zainstalować, czy to na naszym komputerze, czy na jakiejś maszynie wirtualnej na serwerze, też przychodzi w różnych wersjach.
+Może to być wersja desktop, serwer, wersja minimal. One różnią się tym, jakie pakiety mają na dzień dobry zainstalowane.
+I przykładowo taki obraz dockerowy zazwyczaj nie ma polecenia SSH, dlatego że go nie potrzebuje.
+Rozumiem.
+Nie zdarza się w praktyce, żebyśmy się faktycznie łączyli...
+Faktycznie łączyli do obrazu dockerowego do wewnątrz poprzez SSH.
+Dlatego, że jeśli mamy potrzebę dostania się do obrazu, to łączymy się do serwera, na którym on jest uruchomiony i później z tego serwera wchodzimy do wnętrza obrazu.
+I to właśnie sobie teraz wykonamy.
+Okej. To bardzo ciekawe jest, co pokazałeś, więc nie mogłem się doczekać, żeby zobaczyć, jak do takiego obrazu, można powiedzieć, wejść.
+Tak.
+W tym momencie nasz obraz nie jest uruchomiony, więc będziemy go też potrzebowali sobie uruchomić.
+Dlatego zrobimy podobnie, jak z Hello Worldem, czyli docker run minus it ubuntu. To jest nasz obraz, do którego chcemy wejść.
+Zobaczmy, jaką wersję ma ten latest, nie? Bo 2204 sobie pobraliśmy, zobaczymy, jaką wersję ma latest.
+Bo pewnie udałoby się nam to sprawdzić, nie?
+Tak. Jeśli podajemy po prostu Ubuntu na tym etapie, to też domyślnie to jest Ubuntu latest.
+Gdybyśmy chcieli uruchomić inny, to możemy albo wprost wskazać, że to jest latest, albo możemy pokazać 2204.
+Wtedy zostanie uruchomiony ten konkretny tag naszego obrazu. Natomiast jeśli nie podajemy, no to jest uruchomiony zawsze w wersji latest.
+Jeszcze to it.
+It, z tego co pamiętam, to jest internet.
+Interactive terminal, nie? Ale z drugiej strony it to tak łatwo można zapamiętać.
+Tak. To są, dokładnie mówiąc, dwa przełączniki. Jeden z nich jest od właśnie trybu interactive i to jest i.
+A drugi jest od alokacji czegoś takiego, co się nazywa tty. To jest taka forma wirtualnego terminala w samym Linuxie i ma wiele różnych zastosowań.
+Jest nam potrzebna tutaj, żebyśmy mogli sobie korzystać z tego.
+I myślę, że nie ma sensu wchodzić w szczegóły, czym dokładnie.
+Na tym etapie nie ma, jak najbardziej.
+I na sam koniec podajemy polecenie, które chcemy uruchomić na dzień dobry.
+Dlatego, że chcielibyśmy pokrzątać się po naszym systemie, to najwygodniej będzie nam uruchomić basza i zobaczyć, co się w tym naszym systemie znajduje.
+Po wykonaniu polecenia, które widzimy teraz, w zasadzie przeniosę się z mojego systemu do wnętrza tego dockera.
+I dalsze polecenia w terminalu będą wykonywane już na poziomie Ubuntu, które jest w tym naszym konkretnym kontenerze.
+O, to super.
+Czyli rozumiem, że zamiast bash mógłbym też napisać ls-la i też bym wypisał wszystkie pliki, które się znajdują w środku, nie?
+Tak, możemy to zrobić za chwilę. Nie ma problemu.
+Natomiast w tym momencie weszliśmy sobie do tego naszego systemu.
+Do tego naszego obrazu.
+Mogę mieć pytanie od razu?
+Jasne.
+Bo widzę, że wcześniej był thymic-xps9320, czyli nazwa jakiegoś Twojego urządzenia, a teraz nagle zmieniło się na root, małpa i coś dziwnego z tyłu.
+Jak to rozumieć? Co to jest?
+Więc tak, to co widzimy na Linuxie, to jest nazwa użytkownika, na którym jesteśmy zalogowani, czyli w moim przypadku jest to thymic.
+Oraz nazwa stacji, tudzież serwera, na którym jesteśmy.
+Tak zwane hostname, można to sobie podejrzeć.
+I teraz w przypadku obrazu, na którym jesteśmy w tym momencie, on jest uruchomiony na użytkowniku root, czyli nie najbezpieczniej, ale tym się teraz nie przyjmujemy.
+Oraz dostał tutaj taki hostname, który jest najprawdopodobniej id uruchomionego naszego konta.
+Tak, ale to już pokażemy Wam w kolejnej lekcji.
+Natomiast w tej lekcji jeszcze bardzo bym chciał zobaczyć, czy to Ubuntu to faktycznie takie jest Ubuntu, że na przykład, nie wiem, mam etc password w środku?
+Tak, powinno wszystko być dostępne, także możemy sobie zrobić, zobaczyć czy plik jest, plik jest.
+Możemy do niego nie zaglądać, możemy do niego zajrzeć, w sumie nie ma to znaczenia, bo tutaj nie ma znaczenia.
+I faktycznie widzę, że nie mam loginu tymik w środku, czyli to nie jest Twój komputer, tylko ewidentnie jestem gdzieś w środku.
+Ale IRC powoduje, że łezka mi się wokół kręci, to może teraz przejdźmy do czegoś innego.
+Pokaż proszę, jaka to jest wersja Ubuntu, dasz radę? Bo jest to polecenie tam LSBC, coś tam version.
+Jasne.
+Generalnie nie we wszystkich dystrybucjach wszystkie informacje są dostępne.
+Są dostępne tymi samymi poleceniami, także moja praktyka sprawdzania wersji Linuxa to jest użycie cat w katalogu etc i później robię wszystkie pliki kończące się na myślnik release.
+Okej, no sprytnie.
+I to działa na wszystkich dystrybucjach, z których do tej pory korzystałem.
+Ubuntu.
+Na wszystkich.
+A okej.
+Ubuntu możemy jeszcze skorzystać z tego, co proponowałeś, czyli LSB, release, minus chyba.
+Dobra, nie mieszajmy, bo to nieszkolenie z Ubuntu, takie nagramy kiedy indziej.
+Tak, natomiast tym poleceniem można sprawdzić sobie dowolnego Linuxa, do tej pory działało z każdym, z którym pracowałem i dostajemy komplet informacji.
+Czyli wszystkie pliki release, które znajdują się w katalogu etc są tutaj kolejno wyświetlone.
+Okej.
+To jest Ubuntu w release 2404, codename Noble, tutaj mamy informację pełniejszą, że jest to wersja .1 LTS, Noble Numbat.
+Niestety nie wiem jakie jest to zwierzę zagrożone wyginięciem, natomiast to co Canonical stosuje w przypadku Ubuntu, to ta nazwa zawsze jest według kolejnej litery alfabetu w kolejnym wydaniu.
+Okej.
+I zawsze jest to zwierzę zagrożone, jest to gatunek zagrożony wyginięciem, poprzedzony jakimś rzeczownikiem, który opisuje, niekoniecznie rzeczownikiem, ale słowem opisującym te nasze zwierzę, które również zaczyna się na tą samą literę.
+Czyli tak samo jak świeżaki w Biedronce, ja oczywiście wiem, bo mówiłeś na tyle długo, że zdążyłem znaleźć.
+To jest szlachetny mrów kożer.
+Jest to całkiem możliwe.
+Okej.
+To co?
+Myślę, że w tym momencie możemy tę lekcję zostawić.
+Zwróćcie uwagę ile informacji w tym kursie, nie tylko docker, ale też Ubuntu, ale również informacje zoologiczne, można powiedzieć.
+Okej.
+Robimy cięcie i widzimy się w kolejnej lekcji.
+Dzięki.

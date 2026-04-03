@@ -1,0 +1,193 @@
+ALTER TABLE
+to wystarczy wykonać polecenie
+ALTER TABLE nazwa tabeli
+RENAME TO nowa nazwa tabeli
+zawsze to zapytanie ALTER
+będzie wyglądało w bardzo podobny sposób
+czyli ALTER TABLE
+tutaj jest nazwa
+następnie jest czynność
+i informacja gdzie
+więc jeżeli chcemy na przykład zmienić nazwę kolumny
+to zobaczcie, że podobne jest bardzo
+konsekwentne, jest to konsekwentne
+bardzo podobne do siebie
+ALTER TABLE nazwa tabeli, czyli ten fragment jest znowu taki sam
+RENAME
+i teraz tutaj jeżeli nie zmieniamy
+nazwy tabeli tylko zmieniamy nazwę kolumny
+to wtedy wykonujemy
+RENAME COLUMN TO
+i podajemy nazwę kolumny
+jeżeli chodzi o przenoszenie
+tabeli pomiędzy schematami
+coś co nam się często przydaje na przykład
+jeżeli teraz stworzyliśmy sobie tabelę
+BOOKS wewnątrz schematu LIBRARY
+i chcielibyśmy przenieść to do innego schematu
+no to wtedy można wykonać
+ALTER TABLE nazwa tabeli
+SET SCHEMA
+i tutaj nie ma tu
+SET SCHEMA i tu jest nazwa
+schematu
+czyli prościzna wystarczy
+znaleźć tylko nazwę schematu
+no i nazwę naszej tabeli
+oczywiście jeżeli nasza tabela jest w innym schemacie
+no to też należałoby to napisać
+niż public to należałoby to napisać
+czyli ALTER TABLE
+schemat kropka nazwa
+SET SCHEMA tu i tutaj inna nazwa
+bez już nazwy tabeli tej drugiej
+dodawanie usuwanie kolumn
+to jest coś co się bardzo często przydaje
+szczególnie jeżeli chodzi o dodanie nowej kolumny
+i tam też jest jakaś opcja
+jeżeli by was to interesowało
+jak określić kolejność tych kolumn
+mnie to raczej nie interesuje
+zazwyczaj kolumny dodają się gdzieś na końcu
+no i wtedy robimy to za pomocą
+ALTER TABLE nazwa tabeli
+ADD albo DROP kolumn
+no i oczywiście jeżeli dodajemy kolumnę
+to podajemy kolumnę i TYP
+a jeżeli usuwamy kolumnę
+to wystarczy nam tylko nazwa kolumny
+czyli ALTER TABLE STUDENTS ADD kolumn
+SEMESTER INTEGER
+natomiast jeżeli chodzi o usuwanie
+tabel usuwanie kolumn z tabel
+no to wówczas
+będzie to wyglądało tak
+że to będzie tylko ALTER TABLE nazwa tabeli
+DROP kolumn i nazwa kolumny
+i to jest absolutnie wszystko
+co jest nam potrzebne do tego żeby usunąć
+konkretną kolumnę
+i przyszedł czas żeby też
+to sobie przećwiczyć
+tutaj te rozdziały teraz które będziemy mieli
+nie będą zbyt długie raczej będą składały się
+właśnie z takich jednego dwóch slajdów
+po których przyjdzie czas żeby sobie to
+poćwiczyć i właściwie no wbić
+do głowy czy też zapoznać się
+z tą strukturą no bo mówiąc
+szczerze no wbijać tego na siłę
+sensu nie ma dużo lepiej jest zapoznać
+się właśnie z tą strukturą
+i jak zapoznacie się z tą strukturą
+to potem łatwiej wam będzie to wyszukiwać
+nawet z poziomu dokumentacji bo będziecie
+pamiętali mniej więcej do czego dążycie
+ja nie wiem czy wszystkie te altery
+ja znam na pamięć po prostu
+nie jestem typem człowieka który stara się wszystko
+zapamiętać tylko raczej
+staram się wiedzieć gdzie szukać
+zadanie 36
+dodaj tabelę
+CATEGORIES wraz z kolumnami
+ID oraz NAME
+okej prościzna
+następnie mamy dodać kolumnę
+kategorię ID jako INTEGER
+do tabeli BOOKS czyli tutaj
+będzie nam potrzebny alter
+no i mamy dodać dwie przykładowe kategorie
+na przykład dla dzieci dla młodzieży
+i ustawić te kategorie w przypadku
+książek okej
+no i usunąć kolumnę CREATED ADS
+z BOOKS no to
+lecimy 3 minuty dla każdego
+i do zobaczenia za chwilę
+cześć
+no to lecimy
+dodaj tabelę CATEGORIES wraz z kolumnami
+no to CREATE
+TABLE
+CATEGORIES
+nawias okrągły
+ID
+SERIAL
+SERIAL
+PRIMAL KEY
+SERIAL PRIMAL KEY
+NAME
+VARCHAR50
+VARCHAR50
+OPS
+chwilę nie byłem podłączony
+więc pewnie mi coś tam pokrzyczy
+jeżeli nie zrobiłem żadnej literówki
+zrobiłem
+categories already exists aha
+no tak bo ja chciałem
+library categories
+o widzicie
+w innym schemacie już bez problemu
+można taką tabelę utworzyć
+lecimy dalej
+dodaj kolumnę kategorię ID jako INTEGER
+do tabeli BOOKS
+table, nie wrzucił, alter table library books, add column, kategory id jako integer,
+hops, zrobione, dalej, dodaj dwie przykładowe kategorie,
+na przykład dla dzieci, dla młodzieży, ustaw je do książek, ok,
+no to create, nie create, insert, into library categories, values,
+no mówmy, że od razu mu powiemy, że interesuje nas tylko name,
+values, dla dzieci, dla młodzieży,
+o, coś zrobiłem źle, insert has more expression than columns,
+a, oczywiście,
+bo to są dwie wartości, a nie jedna,
+czyli tu zamykam nawiasik, tu otwieram i teraz poszło, pięknie,
+i ustaw wtedy kategorie dla poszczególnych książek,
+no to ja nie będę się też za bardzo zastanawiał,
+po prostu wezmę update library books,
+set kategory id równa się 1,
+where id równa się 1,
+update library books,
+to jest dobre,
+w środku tu nie ma średnika, ok,
+no i sobie skopiuję ten wiersz i wykonam kategorię id,
+where id równa się 2,
+no i w ten sposób
+będę miał jedną książkę w jednej kategorii,
+drugą książkę w drugiej kategorii, jak widzicie, zadziałało,
+no i usun kolumnę created ads tabeli books,
+no to alter table library books,
+drop column created,
+add, poszło,
+raz jeszcze sobie pobierzemy wszystkie książki,
+żeby się upewnić, że zadziałało,
+no i jak widzicie jest, nie mamy created ad,
+czyli zadanie zhakowane,
+lecimy dalej, do kolejnej lekcji.
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka
+muzyka

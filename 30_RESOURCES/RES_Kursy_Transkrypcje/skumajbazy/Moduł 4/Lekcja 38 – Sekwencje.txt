@@ -1,0 +1,50 @@
+Czas na przedostatnią lekcję z tego modułu, a mianowicie sekwencje.
+O co chodzi z tymi sekwencjami?
+Bo już często mówiłem, że w momencie, w którym robimy sobie serial,
+no to tak naprawdę tworzymy sekwencje.
+Tu chodzi o to, że jeżeli chcemy sobie stworzyć,
+tworzymy sobie serial, to tworzymy sekwencje,
+gdzie numerujemy każdy kolejny rekord kolejnym identyfikatorem.
+W momencie, w którym ta sekwencja nam się tworzy,
+to później możemy bez problemu pobrać sobie zarówno kolejny element tej sekwencji,
+jak i pobrać sobie bieżący element sekwencji,
+jak i też zmienić sekwencję, sterować nią.
+Do tego są specjalne metody.
+Zobaczcie, jeżeli na przykład stworzę sobie sekwencję
+i zrobię create sec, sec student counter,
+mogę określić również ja, od jakiego elementu ma się ten element,
+ta sekwencja zaczynać oraz o ile będę chciał każdorazowo
+zwiększać tę moją sekwencję.
+I wtedy, jeżeli będę chciał sterować właśnie ID studenta,
+no to mogę powiedzieć, że skoro już stworzyłem sobie taką sekwencję,
+to mogę sobie stworzyć create table student's table,
+ID integer default next val i tak.
+Czyli jeżeli nie zostanie podane ID,
+no to wówczas domyślnie powinna być to następna wartość z tej sekwencji.
+Wywołanie next vala spowoduje, że ta sekwencja także zwiększy,
+że nam się o jeden, no i każdy student kolejny będzie numerowany.
+Tak to działa.
+Jeżeli chodzi o funkcje, które możecie wywoływać na sekwencji,
+no to macie next val, to jest zwiększenie w tej sekwencji o jeden,
+current value, czyli pobranie bieżącej wartości sekwencji
+oraz set value, za pomocą którego możemy ustawić konkretny numer dla sekwencji.
+Jak tego się słucha?
+Wcześniej słuchało się informacji,
+o serialach, to wtedy rodzi się takie pytanie.
+Kacper, ale czym różni się sekwencja od serialu?
+O co chodzi?
+Więc serial to jest typ danych.
+W momencie, w którym tworzymy sobie kolumnę, której nadajemy typ serial,
+to wówczas on wie, że to będzie ID po prostu pod spodem.
+Będzie to integer pod spodem, który ma się samoistnie zwiększać
+i on także tworzy sobie sekwencję.
+Ta sekwencja, która ma się samoistnie zwiększać,
+ta sekwencja to prawda nie jest widoczna nigdzie w DBVerze,
+ale musicie mi uwierzyć na słowo, że sekwencja tam po prostu pod spodem jest
+i serial taką wbudowaną sekwencję ma.
+Natomiast jeżeli z jakiegoś powodu chcielibyśmy mieć możliwość sterowania sekwencją
+i na przykład właśnie pobierania sobie następnej bieżącej czy poprzedniej wartości,
+czy ustawiania tej wartości za pomocą takich funkcji,
+to też jest to w ten sposób właśnie możliwe.
+Natomiast mówiąc szczerze, ja najczęściej używam tego serialu
+i po prostu w ten sposób uokreślam ID dla poszczególnych rekordów.

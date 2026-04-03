@@ -1,0 +1,86 @@
+W lekcji tej opowiemy sobie, jak podłączyć się do bazy danych.
+Czyli skoro mamy już dane, bo powinniśmy byli je dostać na maila,
+mamy dbvera, bo będzie nam on potrzebny do podłączenia się do bazy danych,
+no to nic nie stoi na przeszkodzie, żeby teraz te dwie rzeczy połączyć
+i się do tej bazy danych podłączyć.
+Co będzie nam potrzebne?
+Przede wszystkim potrzebny nam będzie adres serwera,
+no bo to jest, generalnie jest tak, że bardzo często jest to adres IP,
+jakiś konkretny, czyli po prostu te cztery pary rozdzielone kropkami,
+albo jest to jakiś adres domenowy, to obie te opcje są jak najbardziej ok.
+Po drugie, będziemy potrzebowali nazwy użytkownika,
+tutaj nazwy mogą wyglądać absolutnie bardzo różnie,
+no i potrzebujemy hasła.
+Tu nie muszę mówić, że jeżeli chodzi o hasła,
+to należy zachowywać się wobec haseł bezpiecznych,
+i nie należy tych haseł gubić.
+Jeżeli chodzi o nasz przypadek, no to powinniście te wszystkie dane dostać mailowo,
+natomiast często jest też tak, że te dane po prostu dostajecie od swojego usługodawcy,
+więc wówczas po prostu też należy dokładnie o te dane zapytać.
+Jeżeli ktoś na przykład nie poda Wam adresu IP serwera,
+mi się to bardzo często zdarzało, to też warto po prostu się o to upomnieć,
+warto się tego dowiedzieć.
+No i wówczas z poziomu DBWera,
+pierwszą czynnością, którą musimy wykonać po jego zainstalowaniu, uruchomieniu,
+jest to kliknięcie na wtyczkę z plusem.
+Tu widzicie, jest taki zielony plusik, niebieska wtyczka,
+w ten sposób właśnie możemy dodać nowe połączenie,
+i wówczas zostaniecie zapytani, do jakiej bazy danych chcielibyście się podłączyć.
+Tutaj tych baz danych jest ogromna ilość,
+więc można albo skorzystać z wyszukiwarki,
+albo zazwyczaj ten postgres jest gdzieś tam na samej górze,
+szczególnie jeżeli chodzi o kategorię SQL,
+którą jak widzicie wybrałem sobie po lewej stronie.
+Po wskazaniu tej kategorii należy uzupełnić odpowiednie pola,
+czyli tutaj pytają nas o host, czyli to jest adres serwera,
+następnie pytają nas o port, to jest po prawej stronie od hostu,
+5.4.3.2 to jest taki najczęstszy port, na jakim zgłasza się właśnie postgres SQL,
+następnie pytają nas o database, czyli o nazwę naszej bazy danych,
+to też znajduje się w mailu,
+no i następnie wybieramy sobie na dole rodzaj autentykacji
+i wpisujemy login i hasło, czyli username oraz password.
+Reszta informacji raczej nie będzie Wam potrzebna.
+Jeżeli chodzi o moją pracę, jeżeli mogę Wam też taką małą radę dać,
+to też czasem zdarza się, że w momencie, w którym łączymy się do bazy danych,
+to baza danych nie pozwala na połączenia z zewnątrz.
+To jest jak najbardziej słuszne, tutaj chodzi o bezpieczeństwo,
+czyli jeżeli ktoś spróbuje się podłączyć z zewnątrz,
+czy do bazy danych, na przykład spróbuje zgadnąć hasło,
+to baza nie powinna go w ogóle wpuszczać.
+I żeby takiej sytuacji uniknąć, administratorzy bardzo często blokują bazę danych
+i mówią, nikt z zewnątrz się do niej nie podłączy.
+I na ten przypadek tutaj Dbiver również nam pomaga.
+Możecie zwrócić uwagę, że jedną z kart jest SSH, SSH.
+I teraz jeżeli mielibyście taki przypadek,
+że ktoś nie dałby Wam dostępu z zewnątrz, powiedziałby tylko możecie się łączyć z wnętrza,
+to możemy go wtedy zapytać o dane dostępowe SSH
+i to jest tak jakbyśmy się logowali do jakiegoś zdalnego komputera.
+To jest mega wygodne, bo wtedy po prostu logujemy się do tego zdalnego komputera,
+a następnie tutaj w tej karcie main, w miejscu gdzie mamy host, wpisujemy localhost.
+I to wyglądałoby tak, jakbyśmy łączyli się po prostu do tego samego serwera, tylko z wnętrza jego.
+Wiem, że to co teraz powiedziałem może być dla niektórych lekko przerażające,
+no bo opowiedziałem Wam o czymś co wykracza,
+poza te podstawy jak podłączyć się do bazy danych.
+Niemniej bardzo często taką sytuację mam, więc od razu też chciałem zaznaczyć,
+że tak czasem może się zdarzyć.
+Ale w naszym przypadku nie musicie się tego martwić, nic takiego nie ma miejsca.
+No i wtedy, jeżeli uda Wam się podłączyć do bazy danych,
+no to powinniście po lewej stronie zobaczyć, że pojawiło nam się nowe połączenie na liście.
+Najczęściej z tym słonikiem, z tikiem zielonym to jest informacja,
+że udało się podłączyć właśnie do bazy danych PostgreSQL.
+Obok macie nazwę tej bazy danych oraz port.
+Ja akurat tutaj łączę się do mojej lokalnej bazy, stąd też mam localhost 5.4.3.1.
+No i pod spodem mam nazwę bazy danych.
+To jest ważne, ponieważ nazw bazy danych możemy mieć kilka
+i to PostgreSQL, który widzicie, to jest nazwa bazy danych właśnie.
+O tym nazewnictwie też sobie zaraz jeszcze powiemy.
+I w środku mamy skimę, schemat, public, no i jak widzicie tables, tam będą nasze tabele.
+Ale o tym obrazku jeszcze sobie dużo, dużo poopowiadamy.
+Na razie najważniejsze było dla mnie tylko to, żebyście podłączyli się do tej bazy danych
+i żebyśmy mogli bez problemu kontynuować naszą pracę.
+Jeżeli chodzi o tę lekcję, to byłoby na tyle.
+Jeżeli z jakiegoś powodu nie udało wam się połączyć do bazy danych,
+to koniecznie napiszcie o tym na Discordzie.
+Ja tutaj wam służę pomocą.
+A jeżeli wszystko przeszło dobrze, to zapraszam was do kolejnej lekcji.
+Do zobaczenia!

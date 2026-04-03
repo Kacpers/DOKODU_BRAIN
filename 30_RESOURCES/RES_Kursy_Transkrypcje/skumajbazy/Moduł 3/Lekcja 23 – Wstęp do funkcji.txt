@@ -1,0 +1,49 @@
+Witajcie moi drodzy. Cały ten moduł, który sobie właśnie teraz otwieramy, będzie przeznaczony na wykorzystywanie gotowych funkcji, czyli takich funkcji, które są wbudowane w Postgresa.
+Mi zależy na tym, żebyście przede wszystkim wiedzieli skąd takie funkcje brać, mniej więcej wiedzieli jak te funkcje działają, mniej więcej mieli też rozeznanie co możecie, a czego nie, bo w przyszłości jak będziemy sobie pisali swoje własne funkcje, no to też warto wiedzieć właśnie jak mniej więcej one działają.
+Na początek temat ważny, a mianowicie skąd w ogóle takie funkcje możemy brać i jak się o nich dowiadywać.
+Zanim sobie o tym powiemy, jeszcze jedna mała uwaga, a mianowicie dlaczego warto z funkcji w ogóle...
+Ale korzystać. Przede wszystkim musicie wiedzieć o tym, że w Postgresie wiele rzeczy, na przykład jeżeli chcemy policzyć sumę jakichś listy, jakichś danych, czy policzyć ile tych wartości jest, no to sum czy count to są funkcje, których po prostu musimy używać.
+Czyli po prostu bez nich nie uda nam się osiągnąć tego co zamierzamy.
+Po drugie w wielu przypadkach bardzo przyspieszają pracę, bo na przykład zamiast wykonywać pewne operacje...
+Najpierw dla jednej grupy osób, później dla drugiej grupy osób, na przykład załóżmy, chcecie policzyć premie dla pracowników, którzy mają staż pracy wyższy niż tyle i tyle, aby przepracowali więcej godzin niż tyle i tyle.
+I wtedy można byłoby oczywiście takie rzeczy dawać w WER-ze, prawda? Przefiltrować sobie te rekordy, potem je gdzieś zrzucać do Excela, przeliczyć ten staż albo jakoś to próbować łączyć, ale takiego if-a, czyli takie pytanie można też od razu byłoby zawrzeć wewnątrz.
+I wtedy można byłoby oczywiście takie rzeczy dawać w WER-ze, prawda? Przefiltrować sobie te rekordy, potem je gdzieś zrzucać do Excela, przeliczyć ten staż albo jakoś to próbować łączyć, ale takiego if-a, czyli takie pytanie można też od razu byłoby zawrzeć wewnątrz.
+Po prostu jednego zapytania, więc zdecydowanie korzystanie z funkcji przyspiesza nam pracę i pozwala na łatwiejsze i też przyjemniejsze pisanie zapytań.
+No i trzecia rzecz, to o czym wspomniałem, czyli dlaczego warto korzystać z funkcji.
+Zobaczycie, jak samodzielnie możecie pisać funkcje, dzięki czemu będziecie mogli po prostu kodować wszystko, co tylko będziecie chcieli.
+Także nie trzeba będzie pisać wielu zapytań, żeby pobrać sobie jakieś interesujące was dane, czy też przetworzyć interesujące was dane, bo wszystko to będzie po prostu już zadeklarowane wewnątrz Postgresa.
+A doświadczenie uczy, że warto niektóre przynajmniej takie operacje zrzucać na bazę danych, ale o tym jeszcze będziemy rozmawiali.
+No i tak, jeżeli chodzi o to, skąd funkcje możemy brać.
+To tutaj zdecydowanie z pomocą przychodzi nam dokumentacja.
+I większość ćwiczeń i większość tych takich, tej prezentacji, którą będziecie oglądali w tym module, powstała właśnie z pomocą dokumentacji.
+Dokumentacja nie zawsze wszystko mówi wprost, nie zawsze wszystko wygląda ładnie, dlatego tutaj postarałem się to ubrać w trochę może ciekawsze przykłady.
+Natomiast, jeżeli będziecie tylko potrzebowali sobie właśnie coś powtórzyć, czy też poćwiczyć.
+To jak najbardziej zachęcam was do tego, żebyście z tej dokumentacji korzystali.
+Dokumentacja znajduje się na stronie postgresql.org docs current functions.
+I tam ważna sprawa, znajdziecie na początku z tego co pamiętam informację najpierw jak deklarować własne funkcje, a dopiero później niżej jest informacja o tym jakie funkcje są wbudowane w Postgresa.
+Więc się nie zniechęcajcie tym, że najpierw u góry będzie trochę kodu.
+Podczas tego modułu poznamy kilka grup funkcji.
+Za wyjątkiem funkcji tablicowych.
+Na które jest przewidziane też miejsce w innym module.
+Natomiast funkcjami tymi są funkcje tekstowe, daty i czasu, logiczne oraz matematyczne.
+Tekstowe pozwalają nam wykonywać wszelkie operacje na tekście, wycinać jakieś fragmenty tekstu, porównywać, pobierać, sprawdzać.
+Naprawdę jest tego całkiem dużo.
+Modyfikować, podmieniać.
+Natomiast drugą grupą są funkcje daty i czasu.
+Dzięki nim możemy sobie sprawdzić, sformatować datę, wyciągnąć z niej jakąś informację.
+Możemy przeformatować sobie różnice między dwiema datami.
+Też tutaj jest spore pole do popisu.
+Następnie mamy funkcje logiczne.
+W Postgresie nie funkcjonuje coś takiego wprost jak if.
+Jest to skonstruowane odrobinę inaczej.
+No i tutaj właśnie też z pomocą przychodzą nam funkcje logiczne, których jest kilka.
+I ostatnia grupa to funkcje matematyczne.
+Na ich temat poświęciłem najmniej czasu.
+No bo myślę, że używa liczenie kosinusów, tangensów i kotangensów.
+No bo myślę, że używa liczenie kosinusów, tangensów i kotangensów.
+No bo myślę, że używa liczenie kosinusów, tangensów i kotangensów.
+To nie jest coś, co chcielibyście robić podczas tego kursu.
+Ale też pokażemy sobie, że można to robić.
+I że takie operacje, jeżeli byście potrzebowali, nawet logarytmiczne jakieś obliczenia, można wewnątrz Postgresa wykonywać.
+I nie przedłużając, zapraszam Was serdecznie do pierwszej grupy, czyli do funkcji tekstowych.
+Dzięki za oglądanie!

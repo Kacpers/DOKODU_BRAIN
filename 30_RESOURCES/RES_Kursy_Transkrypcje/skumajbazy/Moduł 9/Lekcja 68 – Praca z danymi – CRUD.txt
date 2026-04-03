@@ -1,0 +1,261 @@
+No i udało się. Dotarliśmy do momentu, w którym możemy popracować sobie z CRUD-em.
+Czyli będziemy mogli dodać coś do naszej bazy danych.
+Ale zanim coś dodamy, taką bazę danych należałoby sobie stworzyć.
+Więc stworzymy sobie bazę, stworzymy sobie kolekcję,
+dodamy przykładowe dane do tej naszej kolekcji,
+no i zajmiemy się CRUD-em, gdzie CRUD to jest akronim,
+czyli od pierwszych liter wyrażenia CRUD można zrobić takie słowo jak
+CREATE, READ, UPDATE i DELETE, gdzie CREATE to jest dodawanie nowych dokumentów,
+READ to jest odczytywanie, UPDATE aktualizowanie i DELETE wiadomo kasowanie.
+Więc jeżeli chodzi o stworzenie bazy danych, to opcje są dwie.
+Jedna opcja jest taka, że w ramach tego widoku kompasa,
+który odpaliliście, macie tam taki przycisk jak CREATE DATABASE.
+I w momencie, w którym tworzymy sobie bazę danych z poziomu Mongo,
+to najpierw ta baza danych od razu nie jest widoczna.
+Żeby ją utworzyć, trzeba podać nazwę bazy danych oraz nazwę kolekcji,
+czyli stworzyć sobie początkową jakąś kolekcję.
+I dlatego też tutaj on Wam to sugeruje.
+Zobaczcie, jest DATABASE NAME oraz COLLECTION NAME.
+Więc poproszę Was o to, abyście utworzyli nową bazę danych,
+w ramach jej nazwy użyjcie nazwy TRAINING,
+w ramach kolekcji nazwijcie tę kolekcję STUDENTS.
+Jeżeli chodzi o te pozostałe opcje, możecie je spokojnie sobie zostawić nieuzupełnione
+i na dole jest przycisk CREATE DATABASE.
+Alternatywnie można też korzystać z SHELLA,
+czyli z takiej powłoki, na której można wykonywać polecenia i przekazywać je do MongoDB.
+SHELL w kompasie uaktywnia się za pomocą tego takiego małej strzałki w prawym górku,
+czyli strzałki w prawym dolnym rogu.
+I do tej małej strzałki, wtedy jak ją wciśniecie, pokaże Wam się taki jakby terminal.
+I w tym terminalu można wpisać następujące polecenia.
+USE TRAININGS, podkreślenie SHELL, DB.STUDENTS, INSERT 1, FIRST NAME JAN, LAST NAME KOWALSKI.
+Co tu się właściwie wydarzyło?
+O co chodzi z tymi dwoma poleceniami?
+Omówmy je sobie jedno po drugim.
+I na tym etapie też możecie sobie śmiało te polecenia,
+zrobić tej pauzę, na te polecenia możecie sobie śmiało wywołać w SHELL-u
+i zobaczyć, jaki będą miały one skutek.
+Jeżeli chcemy stworzyć sobie nową bazę danych,
+to nie ma takiego polecenia jak CREATE DATABASE, jak było w przypadku SQL-a.
+Jest polecenie USE i nazwa bazy danych.
+Wykonanie tego polecenia na dowolnej nazwie nie sprawi, że Wasza nowa baza zostanie utworzona.
+To tylko i wyłącznie spowoduje, że utworzycie sobie tę bazę danych w pamięci tymczasowej,
+i ona zostanie w tej pamięci, dopóki nie utworzycie jakiejś kolekcji do środka,
+czy też dopóki nie wprowadzicie nowego dokumentu.
+Bo żeby wprowadzić sobie nowy dokument, trzeba właśnie też tutaj z poziomu SHELL-a,
+przynajmniej ja tak zawsze robiłem, trzeba po prostu do niego dodać,
+żeby stworzyć sobie kolekcję, trzeba po prostu dodać do niej nowy dokument.
+Więc USE TRAININGS SHELL spowoduje, że po pierwsze utworzy Wam się ta baza danych gdzieś tam,
+po drugie przełączycie się na tą bazę danych.
+I w ten sposób, kiedy się na nią przełączycie, można za pomocą polecenia db.students.insert1
+dodać nowy obiekt do Waszej kolekcji i stworzyć tę kolekcję.
+Jak widzicie, tutaj użyłem standardowego JSON-a, czyli mam apostrofy wokół firstname, lastname.
+Jeżeli ich nie dodacie, też to zadziała.
+No i to jest wyrażenie, to jest bardzo ważna sprawa, to jest klamerka.
+I to wyrażenie spowoduje, że dodacie do Waszej kolekcji students
+jednego studenta.
+No i tutaj możemy to sobie jeszcze przećwiczyć.
+A mianowicie, jeżeli już utworzyliście bazę danych, utworzyliście kolekcję, to super.
+Jeżeli nie, to zróbcie to teraz.
+I poproszę, abyście oprócz Jana Kowalskiego dodali jeszcze Adama Nowaka,
+Janko Muzykanta na trzecim semestrze.
+No i Johna Smitha na semestrze piątym, który na swoim koncie ma 1000 czegoś.
+Nie wiemy czego.
+Więc 3 minuty dla Was i widzimy się po krótkiej przerwie.
+Jak widzicie, odpaliłem sobie już kompas.
+Wprowadzę polecenie use trainings shell.
+Jest.
+No i teraz, jeżeli będę chciał dodać nowych studentów,
+no to wykonuję db.students,
+gdzie db wskazuje mi już na tę bazę danych, na którą się przełączyłem.
+Insert one.
+Ops, ops, ops.
+Dodałem pusty obiekt.
+I mogę sobie użyć imię, czy tam first name tam było.
+First name John.
+Last name Smith.
+Ops, został dodany.
+Analogicznie miałem dodać jeszcze do mojej bazy danych następujących studentów.
+Adam Nowak na razie tylko.
+Potem Janko Muzykant, semestra trzeci.
+No to lecimy.
+Adam Nowak.
+Adam Nowak.
+Jest.
+Janko Muzykant.
+Semestr trzeci.
+I ostatnią osobą, którą miałem dodać jest John Smith,
+semestr piąty i 1000 czegoś naliczonych.
+Czyli strzałka do góry.
+John Smith.
+Semestr piąty.
+Jakiś dług.
+1000.
+Ok.
+Jak sobie ich teraz wyświetlić?
+Najprościej klikną tutaj na przycisk odśwież.
+Zobaczycie wtedy, że pojawiło wam się już Training Shell jako nowa baza danych.
+W środku mamy kolekcję o nazwie Students.
+No i w środku mamy konkretne obiekty.
+Tutaj jak widać też wstawił mi się ten jeden pusty.
+Po prostu go sobie na szybko usunę.
+I mam John Smith, Adam Nowak, Janko Muzykant i John Smith.
+Czyli wszystko to, mam dwóch Johnów Smithów, no trudno.
+Wszystko to zadziałało tak jak zadziałać miało.
+No to zobaczmy co dalej czeka nas z Mongo.
+No właśnie.
+Skoro dodawaliśmy Insert One trzy razy,
+to może łatwiej byłoby wykonać Insert więcej.
+Czyli tak jak widzieliście nawet na podpowiedzi,
+Insert Manny.
+I owszem, jak najbardziej jest taka możliwość.
+Tak samo jak robimy Insert One i wstawiamy mu po prostu nawiasy klamrowe
+i w środku dajemy name, na przykład ABBA, jeżeli są to zespoły,
+tak samo można też wykonać Insert Manny.
+Tylko ważna sprawa wtedy, trzeba zwrócić uwagę na fakt,
+iż mamy nawiasy kwadratowe na zewnątrz.
+Nawiasy kwadratowe w Pythonie oznaczają listę,
+natomiast w JSONie oznaczają również jakby taką listę.
+Tablicę obiektów.
+Czyli jeżeli przekażecie właśnie te nawiasy kwadratowe,
+a w środku będą nawiasy klamrowe i nawiasy klamrowe,
+to w ten sposób dodadzą nam się nowe zespoły ABBA i BG's.
+Jeżeli chcielibyście dodać to za pomocą polecenia Insert,
+to też można i zobaczcie, że polecenie Insert jest takim poleceniem,
+które nam wykonuje zarówno Insert One jak i Insert Manny.
+Nie musimy pisać One czy Manny, wystarczy podamy Insert
+i w nawiasie wpiszemy nawiasy klamrowe, to doda nam po prostu jeden,
+natomiast jeżeli wpiszecie nawiasy kwadratowe, to wówczas doda wam wiele.
+Tak wygląda ta sprawa, więc bez problemu możecie używać
+jednego albo drugiego polecenia podczas waszej pracy.
+Co zwracają nam te inserty?
+Spójrzmy sobie raz jeszcze na wynik tego polecenia.
+Wykonaliśmy to polecenie Insert One,
+to też jakbyśmy wykonali Insert, zadziałałoby tak samo.
+Mogę dodać...
+Dodam na przykład siebie jeszcze, żeby wam to pokazać, zobaczcie.
+Ustawiam kursor, robię strzałkę do góry,
+wprowadzę sobie polecenie Insert, no i dodaję siebie,
+czyli to będzie jakaś nazywam?
+Kacper Sieradziński, semestr pierwszy,
+piętnasty, oj nie, do piętnastego to bym dochodził z pięćdziesiąt lat.
+Enter i zobaczcie, dostaliśmy komunikat przy okazji,
+że Insert is Deprecated, czyli The Insert jest przestarzały,
+używaj Insert One albo Insert Many, jeszcze jest Bulk Write,
+tym się na razie nie przejmujemy.
+Nawet się zrymowało, w każdym razie Insert One, Insert Many
+to są zdecydowanie lepsze polecenia.
+Ten Deprecation Warning zazwyczaj oznacza, że po jakimś czasie
+po prostu te polecenia znikają, które są oznaczone jako Deprecated.
+Natomiast w środku zobaczycie, że Insert IDs,
+jeżeli wykonaliśmy polecenie Insert, to on nam wówczas zwrócił informację,
+że na zerowej pozycji mamy taki Object ID,
+czyli zwrócił nam ten hash, który został utworzony.
+Natomiast kiedy wykonujecie Insert One,
+dodajmy sobie kogoś, Bartłomiej, albo niech będzie Bartosz,
+może się obrazi na mnie, Borowczyk, Enter.
+I zobaczcie, w tym momencie nie dostaliśmy listy, tylko dostaliśmy,
+bo tu była lista, Insert IDs, jest S, jest lista.
+Natomiast tutaj dostaliśmy po prostu Insert ID, jest Object
+i też jest informacja o tym obiekcie.
+Natomiast ta informacja Acknowledge jest informacją,
+że udało nam się to dodać, że przyjął od nas te dane.
+To właśnie zwracają nam nasze inserty.
+Jeżeli chodzi o ten rezultat, o którym wspomniałem,
+to zawsze jest tak samo.
+Zawsze dostajemy informację, czy udało się dodać nowy element
+oraz albo klucz główny nowego obiektu,
+albo tablicę zwracającą te klucze.
+To się bardzo często przydaje, bo na przykład chcielibyśmy
+gdzieś to sobie przechować, albo wykorzystać,
+albo użyć tego klucza, żeby coś zaktualizować później,
+więc w ten sposób można to jak najbardziej wykonać.
+Jeżeli chodzi o pobieranie danych,
+to pobieranie danych jest możliwe tak samo,
+jak i zapisywanie ich, co jest naturalne.
+I tutaj możemy pobrać albo wszystkie dane
+za pomocą polecenia Find,
+albo pobrać tylko pierwszy dokument za pomocą Find One.
+Zobaczcie, jeżeli wrócę do mojego kompasu
+i wykonam sobie polecenie db.students.find,
+to wówczas dostanę absolutnie wszystkie te osoby,
+czyli możemy przyjąć, że to, co się stało wyżej,
+to jest po prostu wynik tego naszego zapytania Find.
+Wyświetli nam wszystkich, których dodał.
+Natomiast jeżeli chcemy tylko jednego,
+to wówczas wykonujemy polecenie Find One.
+I to spowoduje, że dostaniemy nie listę,
+tylko dostaniemy pojedynczy element.
+Find One, one z małej litery,
+i przez jedno e.
+To trzech razy sztuka, jak to mówią.
+I zobaczcie, zwrócił tylko i wyłącznie pierwszy rekord.
+On zwraca pierwszy rekord, który znalazł na naszej liście.
+Tak to funkcjonuje.
+Dlaczego się to przydaje?
+No bo czasem chcemy zwrócić tylko jeden rekord.
+Oczywiście będziemy też rozmawiali o tym,
+jak filtrować to, aby nam pokazał tylko niektóre z rekordów,
+więc wtedy łatwo się domyśleć,
+że jeżeli na przykład interesuje nas tylko jeden student z danego roku,
+albo o danym ID,
+i nie chcemy później iterować po nim,
+tylko chcemy tego jednego,
+no to po prostu łatwiej skorzystać z polecenia Find One.
+No i zadanie.
+Wykonaj zapytanie Find oraz Find One na naszej kolekcji,
+a następnie sprawdź rezultat.
+Czyli takie zadanie trochę detektywistyczne.
+Ja przed chwilą je rozwiązałem, więc nie będę wam powtarzał.
+Nie będę pokazywał raz jeszcze rozwiązania,
+ale zachęcam was do tego, żebyście i wy sprawdzili,
+co to polecenie wam zwraca.
+I co? Udało się?
+Zwrócił?
+No to bardzo się cieszę.
+Wydaje mi się, że słyszałem, jak mówicie, że tak,
+więc bardzo się cieszę.
+Chodźmy dalej.
+Jeżeli chcielibyśmy sobie to podsumować,
+co na chwilę obecną przekazałem,
+to Insert One dodaje jeden rekord,
+Insert Many dodaje wiele rekordów.
+Find i Find One
+pozwalają na to, żeby zwrócić jeden i wiele rekordów,
+natomiast te polecenia mają też, tak jak wspomniałem,
+możliwość filtrowania.
+O tym filtrowaniu jeszcze sobie powiemy spokojnie,
+natomiast warto już o tym teraz wiedzieć.
+Oprócz tego mamy jeszcze dwa pozostałe polecenia,
+bo skoro mówimy o CRUD-zie,
+czyli o Create, Read, Update i Delete,
+no to o tych dwóch pozostałych też musimy sobie powiedzieć.
+Jeżeli chcemy aktualizować nasze dane,
+no to możemy skorzystać z polecenia Update One.
+Wtedy zaktualizujemy tylko i wyłącznie,
+jeżeli mamy jeden rekord.
+Update Many.
+Wtedy zaktualizujemy jakąś ilość tych rekordów.
+Albo możemy skorzystać z polecenia Replace One.
+Różnica między Update One i Update Many jest taka,
+że kiedy coś aktualizujemy,
+to on nam wówczas podmieni tylko określone właściwości,
+które my przekażemy do tych naszych obiektów.
+Czyli załóżmy, jeżeli chciałbym zmienić rok studiów,
+no to mogę, czy tam semestr,
+to mogę przekazać mu informację,
+że tych studentów masz przenieść na taki semestr.
+I wtedy w tym, co chcę zaktualizować,
+przekazuję tylko i wyłącznie to, co chcę zaktualizować.
+Nie muszę przekazywać pozostałych pól.
+Natomiast Replace One spowoduje,
+że cały obiekt będzie podmieniany na nową wartość.
+Jeszcze do tego wrócimy, ale już teraz zaznaczam.
+No i tak samo, jeżeli chodzi o Delete.
+Delete pozwala nam na wykonanie Delete One albo Delete Many.
+Wszystko zależy od tego, ile rekordów chcielibyśmy usunąć.
+No to cóż, to był taki wstęp.
+Zapraszam Was teraz do kolejnej lekcji,
+w której porozmawiamy o tym,
+jak wywoływać te polecenia,
+czyli Update oraz Delete.
+Zapraszam.

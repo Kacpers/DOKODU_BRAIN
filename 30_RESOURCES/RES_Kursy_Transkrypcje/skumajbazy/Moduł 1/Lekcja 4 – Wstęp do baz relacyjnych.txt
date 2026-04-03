@@ -1,0 +1,121 @@
+I witajcie. W tej lekcji zrobimy sobie taki wstęp do baz danych relacyjnych.
+Jeżeli chodzi o bazy danych relacyjne, no to tak jak wspominałem wcześniej,
+bardzo mocno przypominają one arkusz kalkulacyjny.
+Tu akurat pokazałem wam Google Docs, ale różnic praktycznie nie będzie.
+Zwróćcie uwagę na to, że mamy dane przedstawione w wierszach,
+mamy etykiety kolumn, mamy nazwy kolumn.
+To wszystko będzie bardzo mocno zbliżone.
+Ale do celu. Dlaczego nie warto korzystać z arkusza kalkulacyjnego?
+Dlaczego warto pomyśleć o korzystaniu z baz danych?
+Przede wszystkim ze względu na to, że w arkuszach kalkulacyjnych
+mamy ograniczenie, jeżeli chodzi o ilość tych danych.
+Na przykład w Excelu jest to po prostu ilość wierszy.
+Po drugie, mamy dostępność do tych danych głównie z poziomu aplikacji.
+Oczywiście, no ja wiem, że teraz tutaj podniosą się głosy,
+które powiedzą, hej, ale przecież do Excela mogę sobie bez problemu
+też zaciągnąć SQL-a. No i tak, właśnie dlatego warto się pouczyć SQL-a
+i baz danych. Po trzecie, jeżeli chodzi o to, dlaczego nie warto
+używać arkuszy kalkulacyjnych, tylko warto swoje dane trzymać w SQL-u,
+mamy też taki argument, że dane są dostępne przez Internet.
+Czyli w momencie, w którym będziemy chcieli podłączać się do tej bazy
+razem z kilkoma innymi osobami, to wszyscy możemy razem pracować
+na jednym arkuszu.
+I dostęp do tych danych jest dużo bardziej wygodny, przynajmniej moim zdaniem,
+niż z poziomu Excela. Kolejnym argumentem jest też to, że mamy w ogóle
+coś takiego, czym jest SQL. Czyli jeżeli chodzi o Excela, no to pobierać
+możemy dane używając jakiegoś tam filtrowania, sortowania,
+innego takiego wyklikiwania. Natomiast w przypadku, jeżeli chcemy sobie
+to samo zapytanie wykonać kilka razy, no to najczęściej trzeba wykonać
+kilka kroków na różnych zbiorach danych. Natomiast jeżeli korzystamy
+z baz danych, a nie z Excela, gdzie Excel też, umówmy się, jest jakąś formą
+bazy danych, to wówczas mamy taki język, jakim jest SQL, gdzie po prostu
+piszemy sobie zapytanie i wykonujemy to zapytanie na naszych danych
+i za każdym razem dostajemy piękną odpowiedź. Niezależnie od tego,
+ile razy chcemy to wykonać, wystarczy mieć zapamiętany dany skrypt,
+czy też dane zapytanie, czy też dane zapytanie umieścić w jakimś skrypcie
+i można pięknie analizować zbiory danych.
+Jeżeli chodzi o podobieństwo, to w tym momencie, kiedy mamy
+tak jak wspomniałem, jak najbardziej one są, ale zmienia nam się
+troszeczkę nomenklatura. W przypadku Excela mamy bardzo wiele plików.
+Pliki w przypadku Excela nazywane są skoroszytami. Tutaj taki pojedynczy plik
+to jest po prostu pojedyncza baza danych. Wewnątrz poszczególnych skoroszytów
+mamy arkusze, czyli to wiecie, te pojedyncze takie zakładki na dole.
+W przypadku bazy danych takim pojedynczym arkuszem jest po prostu tabela.
+Jeżeli chodzi o kolumny, no to tutaj nic nam się nie zmienia.
+W jednym i w drugim są kolumny. Kolumny również mogą mieć swoje własne typy.
+Tutaj pod tym względem wszystko jest tak samo. No i wówczas w ramach tabeli mamy wiersze,
+które w przypadku baz danych nazywane są już inaczej, bo są nazywane rekordami.
+W przypadku bazy danych, jaką jest PostgresQL, jeszcze mamy coś takiego jak schematy.
+O schematach będziemy sobie mówili zaraz, ale możecie sobie wyobrazić,
+że schemat to jest taki jakiś worek, który pozwala nam się zrozumieć,
+pozwala nam na grupowanie tabel.
+Zobaczcie, jeżeli chodzi o podobieństwo kolejne, no to zarówno Excel,
+jak i bazy danych relacyjne są bazami danych relacyjnymi.
+Bo tak jak wspomniałem, można spokojnie byłoby też nazwać Excela bazą danych,
+która jest relacyjna. I tutaj ta relacyjność to wcale nie jest to,
+że tabele się ze sobą łączą.
+Pamiętam jak kiedyś na rozmowie o pracę osoby, które mnie znają dłużej,
+słyszały tę historię już pewnie nie raz, ale tak mnie mocno to zabolało wtedy,
+pamiętam, że opowiadam ją wszystkim, a mianowicie, że kiedyś na rozmowie o pracę
+ktoś mi powiedział, słuchaj, co to jest baza danych relacyjna.
+No i ja zacząłem opowiadać, ale okej, no to powiedz mi, czym jest relacja.
+No i zacząłem mówić, że relacja to jest to, że mogą się dane ze sobą wiązać,
+na przykład jedna kategoria może mieć wiele produktów, po czym rekruter mi przerwał
+i mówi, zaraz, zaczekaj, ty mówisz o asocjacjach, ja cię pytam, czym jest relacja.
+Ja wtedy zrobiłem chyba najgłupszą minę, tylko jaką potrafiłem,
+po czym on mi wszystko wytłumaczył. Dostałem tą pracę, powiedział,
+że to jest bardzo popularny błąd, ale jak najbardziej mnie na tym złapał.
+I teraz zobaczcie, relacja polega na tym, że każdy rekord posiada zawsze komplet danych,
+czyli jeżeli mam rekord pierwszy, to rekord pierwszy będzie miał ID,
+first name, last name i score. Rekord drugi też będzie miał ID,
+first name, last name i score, czyli to, że w przypadku baz danych relacyjnych
+czy w przypadku baz danych SQL-owych dostajemy zawsze komplet danych,
+dostajemy tą tuplę, taki niezmienny zbiór wartości, to właśnie jest ta relacyjność.
+I jeżeli ktoś was kiedyś zapyta, na czym polega relacyjność baz danych,
+to możecie śmiało powiedzieć, że ta relacyjność polega na tym,
+że następuje iloczyn kartezjański pomiędzy wierszem a kolumną.
+O Jezu, jakie to było trudne. Co to jest iloczyn kartezjański?
+I iloczyn kartezjański to jest każdy z każdym, czyli jeżeli na przykład mamy sześć osób,
+to iloczyn kartezjański określi nam, ile meczy między tymi osobami będziemy musieli rozegrać,
+żeby każdy zagrał z każdym. I tak samo jest tutaj, czyli iloczyn kartezjański polega na tym,
+że po prostu następuje relacja pomiędzy wierszem a kolumną i każdy wiersz ma tę samą ilość kolumn.
+To jest bardzo ważne. Pamiętajmy o tym.
+I tutaj, jeżeli chodzi o wstęp do bazy danych,
+to na większość tych tematów już sobie powiedzieliśmy, ale przypomnijmy raz jeszcze,
+mamy bazę, w ramach bazy mamy skimę, schemat, w środku mamy tabelę, kolumny oraz rekordy.
+No i tak jak wspomniałem o schemacie jeszcze sobie nie rozmawialiśmy.
+W Postgres QL, znaczy w Postgresie ten schemat jak najbardziej jest dostępny
+i tak jak wam powiedziałem, to jest coś takiego, co pozwala nam grupować tabelę w ramach takich zbiorów.
+Dodatkowo mamy też taki wymóg,
+że w ramach pojedynczego schematu nazwy tabel muszą być unikatowe.
+Czyli na przykład, jeżeli stworzyłbym sobie skimę, którą bym nazwał sklep,
+załóżmy, to mogę w tej schemie, w tym schemacie mieć użytkowników, zakupy, zamówienia
+i wszystkie takie dane nazwijmy je sklepowe.
+Natomiast, jeżeli gdzieś obok stworzyłbym sobie jakiś drugi schemat, nazwałbym go na przykład system,
+to znowu mogę mieć w nim kolejną tabelę, na przykład o nazwie użytkownicy.
+Czyli w ramach jednego schematu nazwy tabel muszą być unikatowe, nie mogą się powtarzać,
+natomiast pomiędzy kilkoma schematami możemy jak najbardziej,
+znaczy w kilku różnych schematach możemy mieć jak najbardziej tę samą nazwę tabeli.
+I wówczas podczas wykonywania zapytania po prostu też trzeba mu powiedzieć,
+słuchaj, to jest z tego schematu tabela użytkownicy, a to jest z tego schematu tabela użytkownicy.
+I to będą dwie zupełnie różne tabele.
+No i jeszcze jedna mała uwaga, a mianowicie takim podstawowym schematem,
+w PostgreSQLu jest schemat public.
+I w naszej bazie danych będziemy mieli na chwilę obecną tylko ten jeden schemat,
+po prostu taki schemat, w którym będzie wszystko.
+I przyjęło się, że nazywa się on właśnie public.
+I zobaczcie, na przykład możemy mieć schemat, nazwiemy go sobie e-commerce,
+czy jakiś schemat odpowiedzialny za przechowywanie danych sprzedażowych w internecie
+i mamy produkty, tabele, produkty, logi o zamówienia i klientów,
+a skoro logi są takim bardzo ważnym miejscem, gdzie będziemy sobie powiedzmy sprawdzali,
+kto ile produktów zamówił, czy kiedy nam klient się nowy utworzył,
+no to tak samo możemy w ramach firmy, drugiego schematu,
+mieć tabele takie jak pracownicy, wakacje, koszty i znowu mogą być logi.
+Jak widzicie, nazwy schematów są unikatowe,
+w każdym schemacie mamy tabele, które mają unikatowe nazwy,
+ale nie ma problemu, żebyśmy w ramach dwóch różnych schematów,
+mieli tabele o takiej samej nazwie.
+I na tym etapie powoli wyczerpujemy sobie nomenklaturę,
+czyli nazewnictwo, które będzie nam potrzebne, żeby wejść w ten temat.
+Przejdźmy sobie jeszcze do typów danych.
+Zapraszam do kolejnej lekcji.

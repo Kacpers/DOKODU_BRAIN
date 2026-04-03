@@ -1,0 +1,179 @@
+No i cóż, dochodzimy sobie do kolejnej lekcji, w której to lekcji popracujemy z tablicami,
+opowiemy sobie o tym, czym są tablice i jak wygląda praca z nimi w Postgresie.
+Ogólnie rzecz biorąc, jeżeli chodzi o tablice, to jest to trochę taki przewrotny temat,
+ponieważ jeżeli wcześniej pracowaliśmy z asocjacjami,
+pokazywałem Wam, jak możemy wiązać ze sobą tabele, to nagle teraz pojawia się temat tablic
+i ten temat jest trochę pod tym względem dyskusyjny,
+ale wszystko sprowadza się do tego, jak z tych tablic korzystamy.
+O co chodzi z tablicami? Dzięki tablicom możemy w jednej kolumnie przechowywać trochę więcej informacji.
+Możemy przechowywać na przykład długość, szerokość geograficzną w jednym polu.
+Może być to na przykład, mogą być to tagi, mogą być to jakieś skojarzenia,
+mogą być to autorzy w jednej konkretnej kolumnie.
+Jeżeli chodzi o typy, to wszystko to, co trzymamy w tej jednej tablicy,
+powinno mieć zawsze ten sam typ, czyli na przykład powinny być to dwie liczby,
+albo dwa stringi, albo coś takiego.
+Trzecia rzecz, ta najważniejsza jest taka, że jeżeli użyłem przed chwilą takiego podpowiedzi,
+że mogą być to autorzy.
+Ale nie do końca.
+Bo jeżeli autorzy będą używani później do pobierania po autorze gdzieś na zewnątrz,
+no to nie jest to zbyt dobry pomysł.
+Z tego względu, że wtedy dużo lepiej sprawdza się asocjacja.
+Tablice wykorzystujemy wtedy, kiedy wiemy, że z tych powiązanych danych
+nie będziemy ponownie używali w żadnej innej tabeli.
+Czyli na przykład właśnie długość, szerokość geograficzna.
+Wyobraźcie sobie coś takiego.
+Jeżeli nie znalibyśmy indeksów postkisowych
+i chcielibyśmy przechowywać te dwie współrzędne,
+no to bardzo dobrze można byłoby je trzymać w tablicy.
+Jakieś x i y, położenie jakieś, to nie ma problemu, że te dwie wartości mam.
+Tworzenie do nich osobnej tabeli, która by miała zawierać te dwie wartości,
+no to byłoby bez sensu.
+Oczywiście tych wartości może być też więcej,
+ale ważne jest to, żeby one się nigdy nam nie powtarzały.
+Załóżmy, imiona dzieci.
+Ja nie będę chciał, zakładam, że nigdy nie potrzebowałbym pisać,
+zapytania wszystkie osoby, które mają dziecko o imieniu Zuzanna, tak?
+Nie robiłbym takich zapytania.
+Raczej bym pobierał sobie osoby wraz z imionami dzieci.
+Więc w ten sposób właśnie do tego typu zastosowań można używać tablic.
+Jeżeli natomiast wiemy, że chcemy dzięki tym używaniu tablic uniknąć redundancji,
+czyli uniknąć powtarzania, no to w tym przypadku takiej gwarancji absolutnie nie mamy.
+Tablice zupełnie nam tego nie dają.
+One nam dają po prostu możliwość przechowywania większej ilości danych,
+w jednej kolumnie, ok?
+Jak wygląda korzystanie z tablic?
+Zobaczcie, stworzyłem sobie tablicę, to się będę mylił w ten sposób,
+stworzyłem sobie tabelę, bo tabela, no to tabela w bazie, a tablica to typ kolumny.
+Stworzyłem sobie tabelę o nazwie products, gdzie mam id, name i tu zobaczcie,
+mam jeszcze dwie rzeczy, tags, czyli jakieś słowa, klucze, skojarzenia,
+oraz grades, czyli jakieś oceny.
+No i tutaj, jeżeli chodzi o deklarację, zwróćcie uwagę na to, że tablicę zadeklarowałem na dwa sposoby.
+W pierwszym przypadku zadeklarowałem ją sobie za pomocą słowa kluczowego array,
+czyli napisałem varchar 50 array.
+To oznacza, że w ramach tych tagów, ja będę mógł mieć dowolną liczbę tagów,
+z których każdy będzie mógł mieć długość 50 znaków.
+Natomiast w drugim przypadku, zadeklarowałem sobie tablicę, która może
+składać się tylko i wyłącznie z 10 liczb.
+To są jakieś oceny.
+Oceny danej osoby też są jak najbardziej okej.
+Zobaczcie, nigdy nie będę potrzebował mieć sytuacji takiej, żeby pobierać sobie wszystkie osoby,
+które z danego sprawdziano całą piątkę.
+Raczej coś takiego nie wystąpi.
+Częściej będę chciał mieć średnią ocenę.
+Raczej oceny są przyporządkowane do studenta, czy tam do ucznia.
+Więc to też jest dobry przykład na to, żeby przechowywać tego typu dane w tablicach.
+Czyli dwa sposoby deklaracji.
+To sobie powiedzieliśmy.
+Jeżeli chodzi o to integer z tą dziesiątką w środku, to można tę dziesiątkę pominąć
+i wtedy też możemy wprowadzać dowolną ilość elementów.
+No i co ciekawe, do tablic możemy też pakować więcej wymiarów.
+Tutaj akurat mam jeden wymiar, po prostu 10 ułożonych obok siebie liczb.
+Ale jeżeli chcielibyście stworzyć coś na kształt macierzy,
+gdzie mielibyście wiersze i kolumny, czy też kolumny i wiersze,
+to wtedy też można sobie w ten sposób tworzyć tablicę.
+Zawierającą więcej wymiarów.
+Zobaczcie ten przykład tu.
+Integer 3 na 2.
+Trochę podobnie jak w grze w okręty.
+No i później też można na tych wymiarach operować.
+W przypadku, w którym chcecie dodać informacje do tej tablicy,
+no to znowu też macie dwa sposoby.
+Sposób pierwszy to skorzystanie z nawiasów klamrowych.
+Zobaczcie.
+Insert into products values.
+No i tutaj mam default, bo chcę kolejny identyfikator.
+Mam chleb jako nazwę produktu.
+No i tu zobaczcie, co się dzieje.
+Jak coś jakby na kształt stringa, ale to nie jest string,
+przekazuje nawiasy klamrowe, w których mam cudzysłów,
+no i mam pieczywo i śniadanie.
+Czyli dodałem sobie dwa tagi, że ten mój chleb jest z pieczywem
+i jest produktem śniadaniowym.
+A poniżej jest to samo.
+W formie trochę chyba bardziej czytelnej.
+Ja wolę ten drugi zapis, ale pokazuję wam dwa, żebyście mieli wybór.
+Insert into products values.
+I znowu jest tak samo, gdzie mamy array jako pieczywo
+i śniadanie rozdzielone przecinkami.
+No i pamiętajmy o tym, że jeżeli wymiarów jest więcej,
+czyli jeżeli miałbym nie tylko te jakby wiersz,
+tylko miałbym też wiersz i kolumny,
+nie tylko kolumny, ale też miałbym wiersz i kolumny,
+no to wówczas trzeba podać wszystkie te poziomy, ile mamy wymiarów.
+Czyli nie można nic pomijać tutaj.
+Trzeba uzupełniać wszystkie te wartości.
+Co ważne, jeżeli chcemy pobierać konkretne elementy tablicy,
+to używamy indeksów.
+I tu jest wielka rewolucja, ponieważ w przypadku tablic
+indeksowanie zaczyna się od jednego.
+Czyli jeżeli dodaliśmy sobie śniadanie i pieczywo,
+czy tam pieczywo, śniadanie, wszystko jedno,
+to mam dwa elementy, gdzie pierwszy znajduje się na indeksie pierwszym,
+drugi znajduje się na indeksie drugim.
+Nie ma już czegoś takiego jak tax od zero, od zera.
+Regularnie się z tym mylę,
+więc zachęcam Was do tego, żebyście się Wy z tym nie mylili,
+tylko żebyście pamiętali, że indeksowanie jest od jedynki.
+Zawsze.
+Jeżeli chcemy dowiedzieć się, jaka jest wielkość tablicy,
+no to mamy też zbiór funkcji, które są funkcjami tablicowymi.
+Jest cała dokumentacja w manualu dotycząca właśnie tych funkcji.
+No i między innymi tutaj array dims pozwoli nam pobrać informacje o tym,
+że mamy, powiedzmy, jeden wymiar w tablicy
+i ile mamy tych elementów.
+Jeżeli chcemy dowiedzieć się natomiast,
+czy jeden z tagów jest taki, jakiego szukamy,
+to wówczas można użyć czegoś takiego jak śniadanie równa się any tags.
+I tu bardzo ważna jest ta kolejność.
+Najpierw jest to, czego szukam i później do tego przyrównuję,
+robię równa się any tags albo all tags.
+All tags, no to oczywiście musiałbym mieć tych elementów więcej,
+natomiast any właśnie sprawdza,
+czy chociażby jeden z tych tagów to jest tag o nazwie śniadanie
+i on wtedy pięknie przefiltruje nam te tagi.
+Przefiltruje nam tylko te produkty, gdzie jednym z tagów jest śniadanie.
+Jeżeli chcielibyście zaktualizować tagi,
+to można to robić albo podmieniając wartość tablicy na nową,
+czyli wykonując set tag,
+set tags równa się pieczywo chleb,
+where id równa się 1,
+albo można podmienić po prostu to na podstawie id,
+na podstawie indeksu,
+update products set tags od 1 równa się test,
+where id równa się 1.
+I to normalnie też zadziała.
+Jeżeli natomiast chcielibyśmy dodać nowy tag,
+no to mamy taką funkcjonalność,
+taką funkcję jak array append.
+I array append, zwróćcie na niego uwagę,
+to jest update products,
+set tags równa się,
+i tutaj nie, jakby nie aktualizujemy tych tagów,
+tylko my musimy do tagów przypisać to,
+co było z tym jednym dodatkowym tagiem na końcu.
+Czyli array append tags, ono jakieś tam pyszne,
+where id równa się 1.
+I to spowoduje, że będziemy mieli pieczywo chleb
+i to na końcu dorzuci nam pyszne.
+Czyli też właściwie to nie pieczywo chleb,
+tylko test chleb pyszne.
+No bo tags od 1 to jest podmienienie pieczywa na test.
+Jeżeli chodzi o te tablice,
+to zależało mi na tym, żeby wam pokazać,
+że coś takiego jak tablice jest w Postgresie.
+Ale mówiąc szczerze,
+nie korzystam z tego jakoś wybitnie często,
+ale to, że w moich projektach tablice się nie przydają,
+nie oznacza, że w waszych projektach gdzieś,
+że nie będą przydatne.
+Dlatego też pokazuję wam to,
+jeżeli będziecie chcieli z nich korzystać,
+no to jak najbardziej zachęcam.
+Po coś są.
+Natomiast jakoś tak mi zazwyczaj łatwiej jest robić asocjacje,
+niż korzystać z tablic.
+Niemniej są.
+Jak macie chęć, to używajcie.
+Tyle ode mnie w tej lekcji.
+Zapraszam do kolejnej.
+Do zobaczenia.

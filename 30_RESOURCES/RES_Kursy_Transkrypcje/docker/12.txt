@@ -1,0 +1,62 @@
+Janie, kolejny temat na naszej liście to jest gość versus gospodarz. To jest temat dotyczący, lista tematów ważnych i potrzebnych. I jak się domyślam, nie będziemy się zastanawiali, który z nas to jest gość, a który to gospodarz, bo tutaj oboje jesteśmy gospodarzami.
+Nie będziemy też się zastanawiali, czy będziemy się sparingować, tylko będziemy rozmawiali o podejściu, czym jest gość, a czym jest gospodarz w świecie Dockera. Ja mam pewne podejrzenie, ale myślę, że ty to jak zawsze opowiesz dużo ładniej.
+Tak. Poprzednio rozmawialiśmy o tym, czym różni się konteneryzacja od wirtualizacji. Oba te pojęcia współdzielą.
+Terminy gościa i gospodarza. I może zacznę wstępem od wirtualizacji. Może będzie łatwiejsza do uzmysłowienia sobie. Żeby stworzyć maszynę wirtualną, musimy mieć jakiś system, który nam na to pozwala.
+Taki system nazywa się hypervisor. Instalujemy go bezpośrednio na fizycznym serwerze i ten system jest systemem gospodarzem.
+On zarządza.
+Tymi naszymi maszynami wirtualnymi, które na nim konfigurujemy i następnie uruchamiamy, czyli przechowuje informacje o tym, jakie mają zasoby przydzielone, jak działają, czy są w danym momencie włączone, wyłączone, zarządza tym wszystkim.
+Dlatego jest gospodarzem. W przypadku Dockera również mamy sytuację analogiczną.
+Różni się o tyle, że systemem gospodarzem może być maszyna wirtualna, dlatego że na takiej maszynie też możemy zainstalować sobie Dockera tak samo jak na serwerze fizycznym.
+I wtedy ta maszyna z zainstalowanym Dockerem staje się gospodarzem, a gośćmi są te nasze kontenery, które uruchamiamy.
+I analogicznie do wirtualizacji gospodarz, nasz Docker, zarządza tymi usługami.
+Pozwala je uruchamiać, zatrzymywać, budować kolejne obrazy, organizować je we wspólne sieci, we wspólne systemy aplikacyjne, które się ze sobą komunikują.
+Pozwala też przydzielać im zasoby w ograniczonej ilości, oczywiście nie musimy tego robić, ale jeśli chcemy, żeby dana aplikacja,
+np.
+nie pobierała więcej RAM-u niż przykładowo 128 MB, możemy również to ograniczyć i właśnie gospodarz opiekuje się takimi obszarami.
+To co mówisz jest bardzo ważne i cenne, natomiast mam taką prośbę, czy mógłbyś zaproponować jakieś zdanie albo jakąś wypowiedź, w jakiej ta nomenklatura ma znaczenie?
+Np. kiedy powiedzieć, że używam gościa, czy kiedy używam aplikacji?
+Kiedy używam gospodarza, tak żeby to ładnie wybrzmiało, żeby to osoby, które to oglądają, mogły sobie z tym poradzić.
+Ja mam też parę przykładów, więc jeżeli gdzieś to pytanie mogło cię zaskoczyć, to możesz też zwalić je na mnie, a ja odpowiem.
+W mojej pracy na co dzień nie spotykam się za bardzo z rozróżnieniem tego pomiędzy gościem a gospodarzem.
+Także nie mam takiego problemu.
+Dobra, to przede wszystkim u nas w pracy bardzo często trzeba wykonywać różne polecenia, czyli np. włączenie jakiegoś, uruchomienie jakiegoś polecenia, które np. będzie miało zasilić bazę danych różnymi danymi.
+I wtedy niektóre z takich poleceń wykonuje się albo na gospodarzu, albo na gościu.
+Takie właśnie wypowiedzi się spotyka, czyli weź wykonaj to polecenie.
+A gdzie mam je wykonać?
+No na systemie gospodarza.
+Okej, no to wiem, bo np. jest to skrypt, który ma tak naprawdę nie tylko wrzucić te dane, ale do swojej pracy, do swojego działania potrzebuje wiedzieć o wszystkich kontenerach, które w tej sieci się znajdują, w tym projekcie się znajdują.
+Bo np. coś będzie musiało być dodane do bazy danych, ale jeszcze później będzie musiał być przeładowany cache.
+Więc z racji tego, że one są widoczne dla gospodarza, to wtedy z systemu gospodarza ten skrypt się wykona.
+Ale jeżeli np. jest polecenie, które ma działać na konkretnym środowisku, bo załóżmy, potrzebuje node'a, czyli takiego też programu w konkretnej wersji, to wtedy się mówi, a to zrób na gościu.
+A okej, a na którym kontenerze?
+No na kontenerze aplikacyjnym.
+I też wtedy ta osoba wie, jakie polecenie należy wykonać.
+Tak samo, jeżeli np. próbujemy położyć...
+Próbujemy połączyć się z jakąś siecią czy z jakąś usługą i okazuje się, że dany adres nie jest dostępny i wtedy też może paść pytanie, a czy próbujesz się z nią połączyć z poziomu gościa czy gospodarza?
+Bo jeżeli masz więcej kontenerów, mówię też Wam, tak, jeżeli macie więcej kontenerów, to te kontenery wtedy dostępne są, załóżmy, w takiej wewnętrznej sieci, ale te adresy rozpoznawane są tylko, przynajmniej w tych projektach, w których ja pracuję, może zaraz mnie tutaj powiesz, że są rozwiązania na pewno na to,
+ale te kontenery mają swoje adresy, które są dostępne tylko jakby wewnętrznej sieci, czyli muszę być na jakimś kontenerze, żeby widzieć drugi kontener, ale jeżeli wykonuję to z poziomu komputera swojego, czyli z systemu gospodarza tak naprawdę, no to tych adresów nie widzę.
+I to są takie moje zdania, gdzie bardzo często właśnie to rozróżnienie pomiędzy gościem a gospodarzem mi się pojawia, czyli gospodarz to jest tak naprawdę mój system, a gość to jest każdy kontener, który uruchamiam.
+Rozwiązania oczywiście istnieją, tak jak wspomniałeś, natomiast raczej się ich nie stosuje, dlatego że wystawiamy do dostępu na przykład do jakiegoś load balancera naszego gospodarza i na ogół jeden konkretny kontener albo jeden konkretny typ kontenerów,
+które są dostępne faktycznie z zewnątrz, a pozostałe kontenery...
+Powinny być odizolowane i w takiej sytuacji faktycznie może mieć znaczenie, czy posługujemy się tutaj gospodarzem, czy też gościem, żeby coś takiego osiągnąć.
+Natomiast tego typu rozwiązania nie są takimi, z którymi ja na co dzień pracuję, dlatego że wykorzystując bardzo silnie usługi AWS-a, troszeczkę inaczej się to organizuje.
+Ok.
+Ja w zasadzie ani na gościa, ani na gospodarza raczej się nie wchodzi, ja raczej buduję systemy tak, żeby nie było takiej potrzeby, że raczej wymienia się cały kontener z aplikacją, niż coś robi się bezpośrednio na nim.
+A baza danych albo serwer cache'owy są wykorzystywane jako usługi dostarczane przez samego AWS-a.
+Ok.
+Ok.
+Ok.
+Ok.
+Ok.
+Ok.
+Ok.
+, daje do nich pewne gwarancje i pewną opiekę, którymi my już nie musimy się zajmować, a jednocześnie odciążamy tego naszego gospodarza, nie przeładowując go dodatkowymi usługami.
+Rozumiem, ale to moje wytłumaczenie, czy też ten mój podział, to było coś, co było dobrze nazwane, czy nawet błędnie używam tej nomenklatury?
+Tak, to było bardzo dobrze nazwane, to jest po prostu troszeczkę inny sposób organizacji projektu.
+Tak, to było bardzo dobrze nazwane, to jest po prostu troszeczkę inny sposób organizacji projektu, niż ten, z którym ja najczęściej pracuję.
+Tak, to było bardzo dobrze nazwane, to jest po prostu troszeczkę inny sposób organizacji projektu, niż ten, z którym ja najczęściej pracuję.
+No, dla nas w przeszłości też spotykałem się faktycznie z takimi projektami, które gdzieś tam współdzieliły sobie Dockera w ramach pojedynczego serwera, wiele usług było tam pouruchamianych i istotnie wtedy miało to znaczenie, czy właśnie rozmawiało się o systemie gospodarza, czy o systemie gościa.
+Ok, super.
+Mam nadzieję, że już teraz też wyczerpaliśmy to tłumaczenie, że zrozumieliście, kto dla...
+Dla kogo jest kim i możemy przejść dalej, a dalej będziemy też rozmawiali o różnych ciekawych tematach, na przykład o Linuxie, więc zapraszamy.
+Zapraszamy.

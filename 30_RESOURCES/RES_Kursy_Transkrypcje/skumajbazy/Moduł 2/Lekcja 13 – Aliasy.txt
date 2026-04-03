@@ -1,0 +1,161 @@
+Aliasy
+W pracy domowej, którą przed chwilą wykonaliśmy, widzieliście taki przypadek, gdzie pokazało nam się coś dziwnego w nazwie kolumny, no a często chcemy w zapytaniu móc potem z tego korzystać, więc zależy nam na tym, żeby ta nazwa wyglądała ładnie.
+Po drugie, aliasy nie tylko służą do tego, żeby nazywać kolumny, one też służą do tego, żeby nazywać tabelę, więc jeżeli nasza tabela ma bardzo długą nazwę i nie chcemy jej każdorazowo powtarzać, no to też możemy używać właśnie do tego celu aliasów.
+No i trzeci warunek.
+Jeżeli wielokrotnie używamy tej samej tabeli, bo na przykład łączymy się i dołączamy sobie do zapytania tę samą tabelę, załóżmy ze studentów, czy też może z pracowników, pobieramy sobie wszystkich tych, którzy do kogoś konkretnego raportują, czyli pobierz mi wszystkich pracowników wraz z ich raportującymi osobami, tak, żeby można było wyświetlić, że powiedzmy Kasper Sieradziński raportuje do Aliny Sieradzińskiej.
+Więc tego typu, tego typu informacje mogą nas interesować.
+I wtedy, żeby.
+Wskazać na przykład, że interesują nas tylko osoby z konkretnego działu, bo na przykład taka informacja jest nam potrzebna, no to wówczas też możemy sobie właśnie użyć tych aliasów, żeby powiedzieć, że tylko interesują nas te osoby, które na przykład jako te, które są podwładne, pochodzą z działu marketing.
+I wtedy niezależnie od tego, kim będą osoby, do których jest ten raport składany, no to i tak nam się pokażą, bo jeżeli byśmy zrobili dla wszystkich użytkowników, no to dostalibyśmy jeszcze jeden błąd mówiący o tym, że kolumna jest.
+Jak aliasy wyglądają?
+Jeżeli chcemy alias wykorzystać przy kolumnie, no to możemy zrobić to w sposób następujący, czyli select first name as imię from students.
+I to spowoduje, że zamiast w wyniku oglądać słówko first name, czy też wyrażenie first name, zobaczycie imię.
+Czasem zdarza się, że interesuje nas stworzenie aliasu dla celów takich wizerunkowych.
+typowych estetycznych i wtedy moglibyśmy chcieć, żeby alias zawierał spację.
+Jeżeli taka potrzeba wystąpi, to wtedy bardzo ważną rzeczą jest pamiętanie,
+że alias taki musi być ujęty w cudzysłowie, nie w apostrofach,
+tu musimy użyć koniecznie cudzysłowu.
+Stąd też wykonując zapytanie select price as cena netto,
+dostaniemy właśnie w kolumnie cenę netto, która będzie ładnie wyglądała.
+W tym przypadku, jeżeli chodzi o używanie tego cudzysłowu,
+ma on jeszcze jedną przewagę, na przykład jeżeli korzystamy ze słów zarezerwowanych,
+bo na przykład zależałoby nam na tym, żeby aliasem danej kolumny
+było słowo column albo było słowo from, jeżeli na przykład przygotowujemy,
+jesteśmy pilotem wycieczek i robimy tabelę przechowującą skąd zaczyna się wycieczka
+i gdzie się kończy, no to wtedy to słówko from jest słowem zarezerwowanym,
+czy też słówkiem słówko select.
+Wszystkie te słówka zawsze będą musiały być brane w cudzysłów.
+No i tutaj macie właśnie taki przykład, gdzie wtedy, kiedy wykonamy sobie takie zapytanie,
+ten alias jest widoczny w miejscu, w którym są kolumny,
+czyli mam company i obok mam name.
+Aliasy, tak jak wspomniałem, dotyczą nie tylko nazw kolumn,
+dotyczą również nazw tabel.
+No i tutaj w kolejnym przykładzie widzicie, że jeżeli robimy select all employees.name
+from all employees.
+No to wówczas musimy podać całą tę nazwę tabeli z przodu.
+To oczywiście jest niewymagane w momencie, w którym mamy tylko jedną tabelę,
+wtedy SQL czy też Postgres będzie po prostu wiedział, że chodzi nam o tabelę all employees
+i sobie z tym bez problemu poradzi.
+Natomiast jeżeli mielibyśmy kilka tabel biorących udział w zapytaniu
+i to name byłoby nam potrzebne, no to w tym momencie właśnie dostalibyśmy błąd,
+że nazwa kolumny is ambiguous.
+I wtedy można sobie z tym poradzić.
+Na przykład właśnie dodając z przodu nazwę tabeli.
+Tak jak widzicie to na przykładzie tym pierwszym.
+Natomiast często po prostu takie zapytania robią się zbyt długie.
+Dlatego też można je sobie skrócić, na przykład za nazwą tabeli dodając po spacji literkę e.
+I ta literka e tutaj jest częstym takim przykładem właśnie, że te aliasy są jednoliterkowe.
+Możemy później ją wykorzystać po prostu wykonując e.name from all employees.
+I to spowoduje, że on nam...
+że on nam też wyświetli ten sam wynik, tylko po prostu zapytanie będzie trochę krótsze.
+Jak widzicie, no w aliasach nie ma żadnej wiedzy tajemnej,
+ale zawsze należy się zastanowić, jakie są korzyści, jakie są wady,
+czy też jakie są zady, jakie są walety tego rozwiązania.
+Jeżeli chodzi o zalety, no to na pewno zapytania są krótsze,
+no bo nie musimy powtarzać tych samych nazw, co jest dosyć wygodne.
+Mogę z doświadczenia powiedzieć, że czasem jest tak,
+że nazwy, to też będzie taki plus i minus, że nazwy tabel są bardzo do siebie łudząco podobne,
+bo na przykład mamy products, info, products, data, products, coś tam, products, coś tam,
+więc korzystanie też z nazw tabel czasem powoduje, może powodować, że się możemy gdzieś pomylić,
+bo powiedzmy mamy user, users, może to taki przypadek raczej nie wystąpi,
+ale chodzi mi o to, że różnice są bardzo niewielkie,
+więc w ten sposób właśnie możemy też za pomocą aliasu uniknąć czegoś takiego.
+Czasem...
+Po prostu jest to mus, na przykład w momencie, w którym mamy te podwójne, dwa razy tę samą tabelę,
+wtedy nie unikniemy skorzystania z aliasu, no i aliasy też przyspieszają pisanie zapytań,
+możemy korzystać z podpowiedzi, ale zawsze jeżeli wiemy, że e to employees,
+to po prostu jest nam łatwiej z takiego aliasu skorzystać.
+Natomiast jeżeli chodzi o wady, to mogę Wam powiedzieć, że kiedyś pracowałem w zespole,
+gdzie pisałem strasznie dużo zapytań i mój przełożony z tego zespołu nienawidził aliasów.
+Uważał, że po to mamy podpowiedzi.
+Żeby z nich korzystać, jeżeli ktoś musi używać aliasów,
+to musi mieć konkretny powód do tego, żeby to użyć,
+gdyż jego zdaniem w ten sposób zapytania stawały się mniej czytelne.
+Tu trochę daję mu racji, no bo jeżeli mamy kolumnę name,
+która, jak sama nazwa wskazuje, jest bardzo uniwersalna,
+albo kolumnę info i przed taką kolumną stoi nagle jakieś e,
+no to czytając długie zapytanie możemy się zastanawiać, co to jest za e,
+czy też co to jest za u.
+I nie wpadniemy na to, że e to akurat...
+employee, a u to user, a powiedzmy p to post, tak?
+Więc to powoduje, że trzeba zawsze znaleźć to miejsce, w którym tworzymy ten alias,
+czyli w tym przypadku albo nazwa tabeli za fromem, albo nazwa tabeli za joinem,
+o joinach oczywiście jeszcze w przyszłości,
+i wówczas wtedy będziemy wiedzieli, czego dotyczy dany alias.
+Natomiast jeżeli od razu mamy całą nazwę tabeli, to stąd od razu wiemy.
+Jak zawsze zalecam zdrowy rozsądek, jeżeli uważacie,
+że alias jest...
+jest wam potrzebny, to po prostu wiedzcie, jak go użyć.
+To wszystko.
+No i drugi przypadek dotyczy samego pisania zapytań,
+czyli istnieje szansa, że po prostu w którymś momencie się pogubimy,
+ile mamy już literek e, zaczniemy dodawać e1, e2, e3.
+Potem będzie pytanie, czy e5 to jest to, czy e6 to jest tamto.
+No więc ma to tak samo, tyle samo, jak widzicie, prawie tyle samo wad co zalet
+i trzeba stosować to rozważnie.
+Ja osobiście,
+gdy muszę stosować aliasów, to po prostu ich nie stosuję.
+Natomiast staram się raczej nie używać aliasów do zwykłych selektów.
+Dopiero właśnie, kiedy muszę, trochę pod wpływem tego mojego przełożonego,
+o którym wspomniałem wcześniej, po prostu dopiero wtedy je zaczynam dodawać.
+No i tutaj mam dla was takie małe zadanko na przećwiczenie tych aliasów.
+Jak widzicie, stworzyłem alias wyjątkowo długi.
+No i zadanko brzmi tak.
+Przygotuj zestawienie zawierające kolumny imię, nazwisko, a także wiek,
+podczas zatrudnienia z tabeli employees.
+Do zamiany ilości dni na liczbę lat wystarczy podzielić liczbę dni przez 365 25.
+O co chodzi?
+W kolumnie employees znajdziecie różne daty.
+Między innymi mamy datę zatrudnienia i datę urodzenia.
+Odejmując te daty od siebie będziemy mogli
+stwierdzić ile dni miała dana osoba w momencie, w którym ją zatrudnialiśmy do
+naszej firmy. Żeby zamienić sobie te dni na lata trzeba byłoby to podzielić przez
+4 lata. Można byłoby podzielić przez 365, ale co 4 lata,
+dobra prawie co 4 lata, mamy rok przestępny.
+Więc żeby tego uniknąć i żeby nie odjąć
+tego jednego dnia możemy dla bezpieczeństwa podzielić to sobie przez
+365,25 co z większym prawdopodobieństwem da nam informację ile lat miała dana osoba
+kiedy ją zatrudnialiśmy. I pod spodem widzicie dokładnie wynik.
+Czyli chciałbym żeby właśnie pojawiło się imię zamiast first name, nazwisko zamiast
+last name oraz kolumna wiek podczas zatrudniania zamiast wieku.
+No to trzy minuty dla was i widzimy się po krótkiej przerwie.
+No to co chcemy pobrać dane z tabeli employees.
+No to możemy sobie wykonać SELECT gwiazdka FROM EMPLOYEES.
+Alias nie chcecie. Na razie.
+W tym momencie widzimy, że mamy last name, first name i mamy tak jak wspomniałem
+date i hire date. Więc na początek możemy sobie pobrać po prostu first name, last name
+i tę różnicę. Czyli co? First name, last name oraz różnicę pomiędzy zatrudnieniem
+a urodzeniem. Zawsze od większej wartości odejmuje mniejszą.
+Łatwo w ten sposób stwierdzić,
+znaczy łatwo spojrzeć sobie po prostu na te wartości zamiast zastanawiać z którą
+to będzie. Musimy mieć wartość dodatnią.
+Raczej nikogo nie zatrudniamy, kto się jeszcze nie narodził.
+Chociaż u niektórych to wiadomo gdzie będą pracowali, ale nie uprzedzajmy faktów tutaj.
+Jeżeli sobie to pobierzemy to mamy właśnie first name, last name.
+Mamy też hire date i birth date.
+Teraz zamiast tego chcielibyśmy dostać liczbę lat.
+Jak widzimy tutaj mamy 15 tysięcy dni miała Nancy Davoglio, kiedy ją zatrudnialiśmy.
+Zamiast tego lepiej byłoby, lepiej brzmi
+właśnie wartość w latach, więc możemy sobie to wziąć w nawias.
+Dlaczego wziąć to w nawias?
+Bo w matematyce mamy coś takiego jak kolejność działań.
+No i dzielenie, mnożenie jest przed dodawaniem, odejmowaniem.
+Jeżeli byśmy nie wzięli tego w nawias, no to w tym momencie byśmy sobie odjęli
+hire date minus birth date podzielone przez 365.
+To byłoby bez sensu.
+Podzielone przez 365, 25.
+No i w ten sposób dowiemy się, że Nancy miała 43
+lata z haczykiem, kiedy ją zatrudnialiśmy.
+Więc teraz, jeżeli chcemy sobie do tych wartości dorzucić aliasy, no to możemy
+sobie śmiało wykonać first name, s, imię, last name, s, nazwisko.
+No i tutaj s, wiek podczas zatrudnienia.
+No i dostaniemy dokładnie takie dane.
+Jeżeli chcielibyście
+otrzymać liczbę całkowitą, to tutaj małe takie spoiler przed jeszcze kolejnym
+modułem, że mamy funkcję, która nazywa się round.
+Oczywiście zapisałem wielkimi literami, nie musiałem round i wtedy
+całą tę wartość bierzemy w tę funkcję round i on nam to zaokrągli.
+Głodnym wiedzy polecam poczytanie właśnie dokumentacji.
+Natomiast wszystkim innym ten round niech na razie wystarczy.
+Jak widzicie, ładnie nam się to sformatowało.
+Jeżeli się udało, to zapraszam was do kolejnego modułu.

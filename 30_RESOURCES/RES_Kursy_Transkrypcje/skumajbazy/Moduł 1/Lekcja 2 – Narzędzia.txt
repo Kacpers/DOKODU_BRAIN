@@ -1,0 +1,130 @@
+No i tak jak obiecałem,
+przyszedł czas, żeby porozmawiać o dostępnych narzędziach,
+czyli o tym, jakich narzędzi będziemy używali podczas naszego bootcampu.
+Tutaj, jeżeli chodzi o narzędzia, będą to narzędzia dwa.
+Po pierwsze, będzie to baza danych, o tym już sobie powiedzieliśmy,
+ale uzasadnimy sobie, dlaczego właśnie ta.
+A drugim narzędziem będzie narzędzie klienckie,
+czyli takie narzędzie służące do podłączenia się do tej bazy danych.
+I tutaj ja naciskam na Was, żebyście skorzystali z tego narzędzia,
+ale jeżeli będziecie chcieli skorzystać z dowolnego innego,
+no to droga wolna, możecie użyć też innego.
+Natomiast ja podczas tego kursu na pewno będę używał tylko właśnie tego
+i też Wam powiem, dlaczego tak robię.
+OK. I tak jak sobie wspomnieliśmy,
+bazą danych, której będziemy używali, będzie właśnie baza PostgresQL,
+dlatego że jest darmowa.
+To jest pierwszy jej wielki atut.
+I najprawdopodobniej darmowa będzie zawsze,
+z tego względu, że nie zależy od żadnej wielkiej firmy.
+Jest ona po prostu tworzona przez użytkowników.
+To, że jest darmowa, też nie znaczy o tym, że jest nieprofesjonalna,
+gdyż korzysta z niej naprawdę wielu
+i jest to jedna z takich bardziej, myślę, profesjonalnych baz danych.
+Po drugie, ze względu na to, że jest bardzo szybka.
+Inne bazy danych, na przykład MySQL, mają coś takiego,
+że można wykonywać odpowiedni silnik, żeby zapytania wzajemnie się nie blokowały.
+Tutaj pod tym względem PostgresQL bije MySQL na głowę,
+gdyż po prostu wiele zapytań można wykonywać w jednym i tym samym czasie.
+Silnik bazodanowy sobie z tym radzi.
+Po trzecie, jest bardzo mocno wspierana
+i tutaj za nią stoi ogromna społeczność,
+nie tylko jeżeli chodzi o rozwój tej bazy danych,
+ale też jeżeli chodzi o korzystanie z niej.
+Często wybierając jakąś bardzo niszową bazę danych,
+później otrzymujemy problemy z podłączeniem się do niej,
+czy też, no po prostu nie jest ona bardzo łatwa w wykorzystaniu.
+Natomiast tutaj pod tym względem jest tych narzędzi wszelkiej maści mnóstwo
+i niezależnie od tego, czy później będziecie chcieli korzystać właśnie z narzędzia klienckiego,
+czy może łączyć się do bazy danych z poziomu Pythona,
+czy z poziomu PHP, czy z poziomu Javascripta,
+czy z jakiegokolwiek innego poziomu,
+to będzie to jak najbardziej możliwe.
+No i ostatni argument tutaj jest taki,
+że Postgres posiada
+bardzo dużo rozszerzeń i bardzo dużo dodatkowych modułów,
+o których też powiemy sobie w przyszłości.
+Natomiast to, czym będziemy zajmowali się na Bootcampie,
+to z góry, mówię, będzie z grubsza tylko to, co jest wewnątrz Postgresa,
+a i tak jest tego bardzo dużo.
+Należałoby sobie powiedzieć, jak w ogóle wygląda praca z taką bazą danych.
+No bo jeżeli mamy Excela, no to, jak każdy rozumie,
+otwieramy sobie taki plik, coś sobie do niego wpisujemy, zapisujemy,
+i możemy jechać do domu.
+Natomiast w sytuacji, w której pracujemy z bazami danych,
+to troszeczkę to wygląda inaczej.
+Ponieważ wiele osób naraz może się łączyć do bazy danych.
+No i tutaj należałoby sobie zadać pytanie,
+czy to na pewno są tylko i wyłącznie osoby?
+No bo z bazy danych nie tylko korzystamy my, jako programiści,
+czy jako użytkownicy, żeby wyciągać sobie z niej jakieś dane.
+Bardzo często uczymy się baz danych głównie po to,
+a właściwie przede wszystkim po to, żeby pisać skrypty,
+które pozwalają na obsługiwanie tej bazy danych.
+Czyli załóżmy, jeżeli ktoś zapyta mnie,
+powiedz mi, jakie były najlepiej sprzedające się produkty w poprzednim tygodniu,
+to ja mogę odpalić sobie moje narzędzie, mogę wpisać zapytanie,
+czyli wpisać to pytanie, powiedz, powiedz mi, jakie produkty,
+oczywiście w języku SQL, wykonać, dostanę ich listę,
+będę mógł wysłać wtedy tę listę jakiejś osobie,
+no a ta osoba może mi odpowiedzieć, wiesz co, ale my potrzebujemy to
+w formie jakiegoś ładnego raportu, jeszcze z wykresem,
+jest czymś jeszcze, no bo kierownik lubi to wiedzieć na bieżąco.
+I przygotuj się, będę cię o to pytać każdego dnia.
+Więc w tym momencie, żeby nie pisać tego zapytania każdego dnia,
+nie wrzucać sobie tego zapytania każdego dnia do jakiegoś tam Excela właśnie
+i nie robić z niego każdego dnia takiego samego wykresu,
+korzystamy z języków programowania, które pozwalają nam na obsłużenie
+takiego zapytania, na pobranie go i od razu przeformatowanie
+w jakiś sposób tej odpowiedzi, żeby na przykład od razu pojawił nam się wykres,
+żeby część danych została, mówiąc brzydko, wypluta i zaprezentowana
+w formie na przykład PDF-a, a inna część danych, żeby była zaprezentowana
+na stronie, bo tylko interesuje nas powiedzmy jedna cyfra,
+jaka jest suma jakiejś kolumny, tak?
+Więc w ten sposób właśnie potrzebujemy skryptów, które pozwalają nam
+na analizę tych danych, na przetwarzanie ich i na zwracanie ich
+w jakiejś przyjemnej postaci.
+Często natomiast, jeżeli programujemy, no to też łączymy się bezpośrednio
+do bazy danych.
+Na przykład chcemy sprawdzić, czy nasz program zadziałał prawidłowo
+i do tego też często bazę danych wykorzystują testerzy,
+czyli tester sprawdza sobie, czy na przykład, kiedy dodał produkty
+do koszyka i zrealizował zamówienie, to czy w bazie danych
+wszystkie tabele zostały uzupełnione, no bo nie zawsze jest tak,
+że to, co pokazuje się użytkownikowi, to jest wszystko.
+Czasem trzeba na przykład wygenerować kilka raportów, żeby się upewnić,
+czy programista zrealizował całe zadanie swoje, tak?
+Więc w tym przypadku, jeżeli tester łączy się do bazy danych,
+po to, żeby sprawdzić, no to on też tak naprawdę wykonuje taką pracę kliencką.
+I teraz odpowiedzmy sobie na pytanie, skąd wziąć Postgres QL-a?
+Ja będę mówił Postgres QL, będę mówił też Postgres.
+Jeżeli będę nazywał to Postgresem, to po prostu nie gniewajcie się,
+to jest skrót i też wiele osób takiego skrótu używa.
+Jeżeli chodzi o pytanie, skąd możemy wziąć sobie Postgresa,
+no to odpowiedzi jest kilka.
+Jedno z rozwiązań to jest na przykład takie, że możemy skorzystać z danych,
+które udostępnił nam jakiś usługodawca.
+Albo może być to nasz pracodawca, albo może być to po prostu jakaś firma,
+u której mamy tę bazę danych i z niej w ten sposób korzystamy.
+Opcja inna jest taka, że możemy sobie po prostu pobrać tę bazę danych
+na nasz komputer, zainstalować ją i w ten sposób też możemy
+jak najbardziej z niej korzystać.
+Po drugie, jeżeli chodzi o aplikacje, jakich będziemy potrzebowali,
+będzie to właśnie ta aplikacja kliencka i w tym przypadku będzie to DBeaver.
+DBeaver, czyli taka aplikacja z przyjemnym bobrem w logu
+i ta aplikacja to jest prawdziwy kombajn służący do łączenia się
+z wieloma różnymi bazami danych.
+W ten sposób połączysz się nie tylko z Postgresem,
+połączysz się też z MySQL, z Oracle, z czymkolwiek tylko będziesz
+potrzebować się połączyć.
+Więc teraz zapraszam do kolejnej lekcji, w której właśnie pokażemy sobie,
+jak zrealizować takie połączenie i ogromna prośba ode mnie jest taka,
+żebyście na tę lekcję już się przygotowali i posiadali DBeavera zainstalowanego.
+Instalacja tego narzędzia polega po prostu na pobraniu pliku .exe
+czy też pobraniu jakiegoś innego pliku, w zależności od tego,
+jakiego systemu operacyjnego używacie i wówczas po pobraniu go wystarczy
+po prostu go odpalić, odpowiednią ilość razy kliknąć Next,
+jeżeli chodzi o Windowsa i na pewno wszystko Wam zadziała.
+Ja z DBeavera korzystałem na Windowsie, Linuxie i Windowsie,
+więc wierzę, że i Wam się uda z niego skorzystać.
+Zapraszam do kolejnej lekcji.

@@ -1,0 +1,697 @@
+i w końcu stało się
+nie uwierzycie jak bardzo czekałem na tą chwilę
+żeby pokazać wam jak łączyć ze sobą tabelę
+z tego względu, że ilość możliwości
+które w tej chwili będziemy przechodzili
+stanie się po prostu dużo, dużo większa
+ponieważ wiecie już czym są klucze główne
+czym są klucze obce
+nadszedł czas, żeby porozmawiać o tym
+jak to wszystko ze sobą się łączy
+zapraszam
+więc warto sobie powiedzieć o tym raz jeszcze
+że mamy produkty z na przykład
+i mamy kategorie
+w produktach mamy takie pole
+taką wartość jak kategoria ID
+i to kategoria ID to jest klucz obcy
+przechowujący ID kategorii
+jak łatwo się domyśleć
+ID kategorii, czyli gdzieś mamy drugą tabelę
+nazywającą się kategorię
+albo categories
+która posiada takie pole, taką kolumnę
+jak kategoria ID
+i teraz te wartości się ze sobą łączą
+wy o tym już powinniście wiedzieć
+ponieważ w bardzo podobny sposób
+wykonywaliśmy sobie selekty z podzapytaniami
+właśnie pobierając te wartości po sobie
+korzystając z tej cechy
+jednakże ta cecha nie jest jedyną korzyścią
+znaczy możliwość robienia podzapytań
+to nie jest jedyna korzyść
+no bo podzapytanie zawsze jest drugim zapytaniem
+a dużo, dużo wygodniej jest łączyć te tabele za sobą
+za pomocą joinów
+jeżeli chodzi o joiny
+to są cztery rodzaje joinów
+po pierwsze jest to inner join
+right join
+left join
+i full join
+czym one się od siebie różnią?
+to jaki wybierzemy rodzaj joina
+spowoduje, że pokaże nam się więcej
+albo mniej danych
+ważnym do zapamiętania jest jeszcze to
+że jeżeli pobieram sobie z produktów
+i dołączam kategorię ID
+to produkty są po lewej stronie
+a kategorie są po prawej
+jest to ważne
+ponieważ jeżeli używamy left joina
+to wtedy wiążemy do tego co jest po lewej
+jeżeli używamy right joina
+wtedy wiążemy do tego co jest po prawej
+jeżeli używamy inner joina
+to wtedy bierzemy wszystko
+to co jest częścią wspólną
+a jak robimy full joina
+to pobieramy absolutnie wszystko
+jakby to można było wytłumaczyć
+tak na takim normalnym przykładzie
+załóżmy, że
+kompletujemy skarpetki
+i w lewym worku
+mamy
+worek skarpetek
+w prawym worku mamy worek skarpetek
+jeżeli użyjemy left joina
+to weźmiemy wszystkie skarpetki
+z lewego worka
+nawet jeżeli nie znaleźliśmy im pary
+jeżeli użyjemy
+inner joina
+to wówczas weźmiemy tylko skarpetki
+którym znaleźliśmy parę
+jeżeli używamy right joina
+to mamy skarpetki z prawego worka
+ale tych które były w lewym worku
+a nie znaleźliśmy im pary
+nie weźmiemy
+natomiast jeżeli używamy full joina
+to po prostu łapiemy oba te worki
+i z nimi wychodzimy
+to chyba pierwszy raz jak przyszedł mi do głowy
+przykład ze skarpetkami
+ale wydaje mi się, że jest dosyć obrazowy
+więc left join
+jeżeli używamy nie skarpetek
+tylko produktów i kategorii
+to wówczas inner join
+to są tylko produkty
+które posiadają przypisaną kategorię
+czyli tylko to co jest po lewej stronie
+z przypisaną kategorią
+natomiast
+jeżeli użyjemy right joina
+to wówczas pobierzemy produkty
+które mają kategorie
+oraz kategorie nie posiadające produktów
+no bo po lewej stronie jest produkt
+po prawej stronie jest kategoria
+więc ja tak naprawdę bardziej mnie interesują kategorie
+interesuje mnie to co je łączy
+oraz interesują mnie kategorie
+natomiast nie interesują mnie produkty
+które przypisałem
+jeżeli używam left joina
+to jest chyba najpopularniejszy rodzaj joina
+jeżeli używam left joina
+przynajmniej ja go chyba najczęściej piszę
+jeżeli używam left joina
+to wtedy pobiorę wszystkie produkty
+wraz z kategoriami
+oraz te produkty, które nie mają kategorii
+bo ważne jest dla mnie to co jest po lewej
+jeżeli po lewej są produkty
+to mam pewność, że biorę wszystkie produkty
+jeżeli przypisałem kategorie
+to biorę z kategorią
+jeżeli nie przypisałem kategorii to biorę po prostu produkt
+wiecie już bierzemy zarówno produkty
+jak i kategorie niezależnie od tego
+czy mamy przypisaną jakąś parę
+czy nie mamy
+tak to wygląda
+podsumowując na jednym obrazku
+jeżeli po lewej stronie jest produkt
+po prawej stronie jest kategoria
+to left join pobierzemy wszystkie produkty
+w tym te bez kategorii
+no bo po lewej jest produkt
+wiążemy do lewej
+więc tak to jest
+jeżeli po lewej jest produkt
+a wiążemy right joinem
+to nie ma produktów
+tu ważne jest to czego nie będziemy mieli
+zastanówcie się czego nie ma
+wiecie czego nie ma
+nie ma produktów
+którym nie znaleźliśmy kategorii
+ok
+inner join
+to są produkty tylko i wyłącznie z kategoriami
+czego nie ma
+nie ma produktów
+którym nie dopasowaliśmy kategorii
+oraz kategorii
+którym nie dopasowaliśmy produktów
+no i ostatnie to jest full join
+pobieramy absolutnie wszystko
+czego nie ma
+nie ma niczego
+czyli wszystko zostało wzięte
+tak to wygląda
+jeżeli chcielibyśmy zapisać joina
+czyli chcielibyśmy zapisać takie zapytanie
+do bazy danych
+słuchaj pobieram dane
+i one razem z tabelami
+które dołączam
+to wygląda to mniej więcej tak
+from tabela lewa
+napisałem lewa tylko dlatego
+żebyście wiedzieli
+że to co jest za fromem
+to jest to co stoi po lewej stronie
+dalej jest left join
+czyli wiąże do lewej strony
+tu jak widzicie mamy rodzaj joina
+tu może być właśnie left join
+right join
+inner join
+no i tu jest rodzaj joina
+następnie jest informacja
+do jakiej tabeli chcemy go podowiązać
+zakładając że ten join
+że ta tabela wtedy będzie uważana za tą która stoi po prawej stronie
+i jakie kolumny
+odpowiadają za to żeby te tabele
+ze sobą powiązać
+najczęściej robi się to tak że podaje się najpierw
+nazwę tabeli albo jej alias
+czyli na przykład tabela lewa
+bo to jest nazwa tabeli
+kropka kolumna czyli na przykład
+products kropka kategoria id
+równa się
+tabela prawa kropka kolumna
+czyli na przykład categories kropka id
+w ten sposób możemy ze sobą
+powiązać tabelę
+odpowiedzialną za produkty
+odpowiedzialną za kategorie
+na przykład
+jeżeli chcemy do tego dowiązać coś jeszcze
+to absolutnie nie ma żadnego problemu
+nie wiem czy jest jakiś limit który dotyczy
+ilości joinów które możemy wykonać
+ja na taki limit nigdy nie trafiłem
+no jak widzicie potem następuje znowu
+inner join tabela prawa 2 on
+i jest powiązanie
+i w tym momencie ta tabela jest jakby jeszcze bardziej z prawej strony
+czyli jeżeli byśmy teraz wiązali
+inner joinem
+to akurat nie miałoby to znaczenia
+ale związalibyśmy tym inner joinem
+coś co znajdowałoby się w left joinie
+to też jak najbardziej można
+byłoby to robić i wtedy to co byłoby tutaj
+w tabeli prawej to ta tabela prawa już wtedy
+byłaby uznawana za tą która stoi bardziej po lewej
+natomiast to
+mielibyśmy coś co stoi po prawej
+czyli perspektywa by nam się odrobinę zmieniła
+bo nie ma problemu z tym żeby do tego
+zapytania dowiązywać
+jakby ta tabela prawa 2 którą będziemy dowiązywali
+żeby ona uwzględniała też
+wartości które pobraliśmy za pomocą
+tabeli prawej
+tak można sobie jak najbardziej dowiązywać
+tabelę za tabelą
+tabelę za tabelą
+okej
+no i jeżeli chodzi o powiązanie tych
+kolumn to te kolumny
+te pola po których wiążemy te tabele
+muszą mieć
+ten sam typ
+i tę samą wartość
+no ta sama wartość to jest jakby logiczne
+nie da się wiązać czegoś co ma
+jakąś różną wartość
+natomiast chyba sobie skastujemy
+natomiast
+ten sam typ to też jest wymóg
+i tu można jeszcze dorzucić warunki
+można byłoby na przykład zrobić
+left join tabela prawa on tabela lewa kolumna
+równa się coś tam end
+i na przykład dodać rodzaj powiązania
+tak ale to już jest sprawa trudniejsza
+na razie zatrzymajmy się na tym
+jak to wygląda
+do tego momentu
+jeżeli chodzi o powiązanie
+to warto byłoby wiedzieć też
+że można powiązać dwie tabele
+po jednej kolumnie
+zakładając że ta kolumna w obu tabelach
+ma tą samą nazwę
+i wtedy wygląda to tak
+from tabela lewa
+left join tabela prawa using
+using oznacza że zarówno w tabeli lewej
+jak i w tabeli prawej mam kolumnę
+o nazwie kolumna
+w tym przykład gdzie
+i to spowoduje
+że my obie te tabele powiążemy ze sobą
+za pomocą tejże kolumny właśnie
+czyli na przykład
+jeżeli mielibyśmy wiązać
+kategorie z produktem
+i produkty miałyby pole
+kolumnę o nazwie kategoria id
+oraz w kategoriach
+mielibyśmy kolumnę o nazwie kategoria id
+to wtedy można byłoby zrobić
+left join
+categories using
+kategoria id
+i to spowoduje że on będzie wiedział
+że w obu tych tabelach
+mamy tę samą kolumnę
+o tej samej nazwie
+ok więc jeżeli chcemy powiązać
+sobie wspomniane wcześniej produkty
+z kategoriami
+załóżmy że interesują nas tylko
+produkty w sensie ich nazwy
+oraz nazwy kategorii
+więc
+najpierw robimy sobie select
+to co jest tutaj na razie pominiemy
+select from products
+tu oczywiście mógłbym użyć aliasu
+czyli po spacji wprowadzić sobie alias
+i wtedy od tego momentu
+używałbym tylko tego aliasu
+zamiast używać całej nazwy
+ja tego nie zrobiłem więc używam całej nazwy
+czyli select from products
+left join categories
+products kropka kategoria id
+równa się categories kropka kategoria id
+bo tutaj mam
+kategorię id
+i tutaj w categories mam kategorię id
+czyli mógłbym zrobić using ale nie zrobiłem
+on
+no i właśnie tutaj określam to po czym
+chcę to powiązać
+order by oczywiście nie jest wymagane
+natomiast to co jest tutaj u góry w selekcie
+no to
+może się zdarzyć że na przykład
+nasze products miałoby
+kolumnę o nazwie
+description
+i tak samo categories ma kolumnę o nazwie
+description
+więc jeżeli bym wykonał select description
+to wówczas dostałbym błąd
+column description is ambiguous
+czyli kolumna description
+jest niejednoznaczna
+on nie wie jaka kolumna nas interesuje
+on tylko wie że ta kolumna jest
+niejednoznaczna co to oznacza
+że on po prostu jej nie pobierze
+więc trzeba mu wskazać jaka jest tabela
+z której pochodzi ta kolumna
+więc wtedy wykonuje się select nazwa tabeli
+czytasz nazwę aliasu
+kropka nazwa kolumny
+z racji tego że rzadko kiedy ktoś chce się zastanawiać
+czy ta kolumna jest
+unikatowa
+w ramach wszystkich tabel które pobieram
+czy może nie jest
+to raczej zazwyczaj podaje się nazwę tabeli
+po prostu z przodu czy też nazwę aliasu
+czyli to co widzicie tutaj
+products kropka product name
+categories kropka category name
+to raczej jest standardem
+kolumny i tabeli podaje się
+za każdym razem
+wszędzie bo nie tylko w przypadku selectu
+ale np. w przypadku order
+czy where'a czy having
+też jak najbardziej się to podaje
+o tym trzeba po prostu pamiętać
+no i oczywiście jeżeli chodzi o to co w selekcie
+to możemy sobie wypisywać
+wszystkie kolumny które są nam potrzebne
+jeżeli chcielibyśmy
+oprócz nazwy i kategorii mieć
+quantity per unit albo unit price
+albo cokolwiek innego
+no to po prostu sprawdzamy w jakiej tabeli
+to leży i dopisujemy przecinek
+products kropka units in stock
+no i będziemy wiedzieli
+czy ten produkt o tej kategorii
+jest w naszej bazie danych
+i w jakiej ilości
+tutaj
+założyliśmy sobie że mamy powiązanie
+wiele do jednego
+czyli jedna kategoria
+ma wiele produktów
+a wiele produktów ma jedną kategorię
+i dlatego też
+możemy tak sobie tutaj zrobić
+jeżeli wiązalibyśmy to
+mając na przykład powiązanie
+wiele do wielu
+to wtedy też ilość tych wierszy
+bardzo by nam się zwiększyła
+i w późniejszej lekcji pokażę wam
+co możemy zrobić żeby takiego problemu nie mieć
+i jak ten problem dokładnie wygląda
+ale to na razie się nie przejmujemy problemami
+cieszmy się tym że udało nam się dojść
+do takiego miejsca
+i mam nadzieję że na chwilę obecną
+te joiny są dla was jasne
+a żeby się o tym przekonać
+zapraszam was do wykonania zadania
+zadanie pierwsze
+wiedząc że w tabeli products
+posiadamy klucz obcy o nazwie supplier id
+znajdź wszystkich dostawców tofu
+czyli interesują nas produkty
+które w nazwie
+zawierają słowo tofu
+zadanie drugie
+połącz tabelę orders
+oraz order details
+a następnie wyświetl
+informacje o wszystkich produktach
+zamówionych przez klienta
+o id quick lub romay
+quick lub romay
+zadanie trzecie
+wyświetl wszystkich pracowników
+interesuje nas tabela employees
+wraz z osobami do których raportują
+jeśli pracownik
+nie raportuje do nikogo
+to nie powinien się on pokazywać
+no i tutaj co jest ciekawe zadanie
+ponieważ employees
+raportuje do innego employees
+więc będziemy musieli tabelę
+wiązać do tabeli o tej samej nazwie
+do zobaczenia w rozwiązaniu
+lecimy
+wiedząc że w tabeli products
+posiadamy klucz obcy supplier id
+znajdź wszystkich dostawców tofu
+select all from products
+i sprawdzamy
+mamy supplier id
+mamy
+mamy też product name
+i w ramach tego product name
+występują takie produkty
+gdzie w nazwie jest słowo tofu
+no to sprawdzamy
+select all from products
+where product name
+like tofu
+mogę zrobić
+i like żeby nie przejmować się
+wielkością liter
+o mamy i takich
+takie produkty mamy dwa
+no to teraz sobie to połączymy
+czyli select
+all from products
+where product name
+i like tofu super
+i tutaj
+nasze joiny są przed where
+więc robimy sobie przerwę tutaj
+no i będziemy do produktów
+chcieli dokładać producenta
+jeżeli z jakiegoś powodu nie mielibyśmy
+tego producenta podanego
+no to i tak chcemy ten produkt mieć
+czyli left join
+tak bo jeżeli po lewej stronie są produkty
+a my chcemy do nich powiązać producentów
+no to robimy left joina
+jeżeli bym zrobił inner joina
+zakładając że gdzieś supplier id
+mógłby być nullem na przykład
+mógłby mieć rację bytu
+natomiast jeżeli bym wykonał right joina
+no to wtedy dostanę
+wszystkich producentów
+w tym tych którzy produkują tofu
+left join
+suppliers
+on
+products kropka
+supplier id
+równa się suppliers kropka
+suppliers kropka
+nie podpowiadam zbyt dobrze
+ja nie wiem czy to było id czy
+supplier id
+chyba supplier id wychodzi na to
+no i widzicie
+product name long life tofu
+wyprodukował
+wyprodukowała firmą o nazwie
+tokyo traders
+natomiast ten drugi myumis
+wyświetlmy sobie tylko nazwy produktów
+i tylko nazwy firm
+czyli product name
+to będzie products kropka
+product name
+przecinek
+i suppliers
+kropka company name
+wydaje mi się że to było company name
+ale jeszcze się upewnię bo jakbym
+zrobił teraz ctrl enter to wtedy to by mi
+zniknęło i musiałbym to zapytanie to
+usunąć pisać gwiazdkę albo sobie
+wyszukać nazwy kolumn natomiast
+tak jest jak najbardziej okej
+no i mamy product name long life tofu
+tokyo traders i tofu to myumis
+co mogłoby nam nie pójść
+okej w ramach tego zapytania
+to co mogłoby się wydarzyć z złego
+to mogłoby się okazać że oba
+te produkty są wykonywane
+dostarczane przez tego samego dostawcę
+czyli tym samym
+dostarczy nam oba produkty
+jeżeli chcielibyśmy mieć unikatową
+listę dostawców no to tutaj
+trzeba byłoby zrobić grupę jeszcze
+czyli trzeba byłoby połączyć leftjoina
+z grupowaniem
+no to nie jest jakoś strasznie
+trudne jeżeli macie chęć to możecie
+spróbować też takie zagadnienie
+do takiego zagadnienia sobie podejść
+ale ja do niego jeszcze podejdę
+w tym module no i idziemy sobie
+do zadania drugiego połącz
+tabele orders oraz order details
+a następnie wyświetl
+informacje o wszystkich produktach
+zamówionych przez klienta o id
+quick oraz romay no okej
+czyli robimy
+select all from orders
+oho
+from orders
+i tutaj mamy interesować nas będzie
+właśnie customer id który ma być
+quick oraz romay okej
+ale
+interesują nas tylko zamówienia
+tylko
+order details
+które przez nich zostały wykonane
+czyli jak to sobie
+możemy połączyć możemy sobie
+pobrać wszystkie zamówienia
+i dołączyć
+sobie informacje order details
+a następnie przefiltrować je tak
+żeby pokazały nam się tylko te
+jak to będzie wyglądało
+select
+gwiazdka
+from orders
+znowu do ordera
+do zamówienia dowiązuje sobie
+wszystkie te informacje czyli left join
+order details
+na przykład using
+sobie zrobię order id
+okej mam wszystko
+i teraz zwróćcie uwagę
+co się wydarzyło mimo tego
+że w orders mieliśmy
+tylko jeden wiersz
+o jednym idku
+to on tutaj nam zwrócił tyle wierszy
+ile mamy order details
+na temat każdego wiersza widzicie
+tutaj okazuje się
+że zamówiliśmy w ramach jednego zamówienia
+w ramach jednego
+order id mamy kilka
+wierszy
+order details i to właśnie spowodowało
+że on nam te dane tutaj
+powtórzył bo na przykład
+zamówiliśmy raz taki produkt
+a raz taki a raz jeszcze taki
+w tym samym zamówieniu więc to jest
+ważna sprawa żeby zwrócić
+na coś takiego uwagę
+okej natomiast nas interesują
+wszystkie informacje o zamówieniach
+czyli select gwiazdka
+from orders możemy sobie dorzucić
+where
+przez klienta quick oraz
+romay czyli where customer
+id
+in
+quick lub
+romay
+ops
+i macie quick
+romay ale jak widać to wszystko
+jest wykonywane w ramach dwóch
+zamówień no dobra trochę większej liczby zamówień
+ale pamiętajcie o tym
+że jedno to co
+mieliśmy w jednym zapytaniu może nam tutaj
+zwrócić więcej informacji właśnie
+za pomocą grup wtedy możemy sobie
+to może nie tyle posprzątać
+co uporządkować okej
+idziemy dalej
+wyświetl wszystkich pracowników
+employees wraz z osobami do których
+raportują jeśli pracownik
+nie raportuje do nikogo to nie powinien
+się on pokazać czyli
+select gwiazdka
+from employees
+wykonanie tego że zapytania spowoduje
+że dostajemy last name first
+name oczywiście ale dostajemy też tutaj
+taką kolumnę jak reports to
+hmm i teraz
+my chcemy pokazać tylko
+pracowników którzy raportują
+do kogoś więc jeżeli użyjemy leftjoina
+to on nam pokaże
+wszystkich pracowników ale pokaże nam również
+tych którzy do nikogo nie raportują
+czyli 0 też nam się pokażą a my chcemy
+tylko tych którzy do kogoś raportują
+więc inner
+join bo jeżeli bym zrobił
+leftjoina to dostałbym wszystkich
+pracowników nawet tych nie raportujących
+jeżeli zrobię innerjoina
+dostanę tylko tych którzy mają
+kogoś do kogo raportują a jeżeli
+bym zrobił rightjoina to dostałbym
+znowu wszystkich bo dostałbym też tych którzy
+są po prawej czyli tych którzy
+nie raportują więc
+select gwiazdka from employees i tu
+tutaj bardzo ważne jest to żebym
+użył aliasu czyli
+employees nazwę sobie e1 dlaczego
+aliasu bo za chwilę
+zrobimy sobie innerjoina
+i drugi raz
+dowiązujemy się do employees
+jeżeli ta
+nazwa tabeli jest taka sama no to konieczne
+jest tutaj użycie aliasu żeby móc
+mu powiedzieć słuchaj mnie interesuje
+takie powiązanie żeby z e1
+wziął sobie reports to
+i to ma się równać e2
+kropka i to ma być
+to jest id naszego klienta
+naszego tam pracownika czyli to reports to 2
+oznacza że on raportuje
+do Andrew Fuller
+czyli innerjoin e2
+kropka employee id
+i nas będzie interesowało kto
+raportuje do kogo czyli
+e1 kropka first name
+e1
+kropka last name
+e2 kropka
+first name e2 kropka
+last name
+kropka last name
+e2 kropka
+last name
+e2 kropka econ
+e2 kropka account
+bank account
+ается
+e2 kropka
+kropka
+bank account
+kropka
+bank account
+bank
+bank
+e2 kropka
+bank account
+bank account
+bank account
+bo parę innych osób raportuje do Stevena.
+Czyli tak to u nas funkcjonuje.
+I w ten sposób nie pokazał nam się tutaj Andrew Fuller,
+który chyba jako jedyny wtedy nie raportuje do nikogo.
+Sprawdźmy to.
+Select all from employees.
+Where?
+Jak sprawdzić, czy report tu jest nulem?
+Pamiętacie?
+Nie słyszę.
+Jest nul? Ktoś powiedział?
+Tak.
+Jest nul.
+Oczywiście sobie wyobrażam, że to mówicie, ale okej.
+Jak widać, Andrew Fuller to u nas jest wiceprezydent, dyrektor
+i on jako jedyny nie raportuje do nikogo.
+Tak wygląda sytuacja, jeżeli chodzi o wykonywanie joinów.
+Tyle tylko, że w naszym zadaniu my cały czas robimy joina
+po jednej tabeli.
+Jedna tabela łączy się z drugą.
+A ja chciałbym wam pokazać jeszcze,
+jak można łączyć więcej tabel ze sobą.
+Dlatego zapraszam was do kolejnej lekcji,
+gdzie właśnie sobie o tym porozmawiamy.
+Do zobaczenia.

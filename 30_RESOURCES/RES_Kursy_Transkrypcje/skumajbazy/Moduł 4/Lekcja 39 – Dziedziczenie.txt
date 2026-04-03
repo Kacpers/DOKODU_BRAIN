@@ -1,0 +1,107 @@
+I tym sposobem dochodzimy sobie do kolejnego tematu, jakim jest dziedziczenie.
+Czasem zdarza się, że mamy tabelę, gdzie każda z tych tabel ma bardzo podobne do siebie kolumny.
+Dajmy na to studenta i użytkownika.
+W jednym i drugim przypadku mamy first name i last name.
+I takich przypadków będzie jeszcze pewnie sporo, gdzie po prostu te kolumny będą nam się pokrywały.
+Do takich zastosowań świetnie nadaje nam się dziedziczenie,
+dzięki czemu nie musimy powtarzać kolumn, nie musimy powtarzać indeksów,
+nie musimy powtarzać absolutnie nic, z tego względu, że zdefiniowanie takiej tabeli
+i określenie, że inna tabela ma po niej dziedziczyć,
+powoduje, że ta tabela, która dziedziczy, posiada wszystkie kolumny.
+Znowu myślę, że lepiej będzie, jak pokażę Wam przykład. Zobaczcie.
+Stworzyłem sobie tabelę o nazwie human.
+No i ta tabela posiada first name oraz posiada last name, czyli takie dwie kolumny.
+Następnie stworzyłem sobie tabelę student.
+Określiłem, że tabela student ma posiadać semestr, który ma być liczbą
+i ta tabela student ma dziedziczyć po człowieku.
+Co się wówczas stało? Wówczas stało się coś takiego, że utworzyła mi się tabela student,
+która posiada zarówno first name, jak i last name.
+Zobaczcie, możemy to sobie na spokojnie też tutaj przeklikać.
+Czyli robię create table human.
+Określam, że moja tabela człowiek ma posiadać pole first name,
+kolumnę first name jako warchar,
+no i kolumnę last name też jako warchar.
+I teraz, jeżeli chciałbym stworzyć tabelę, która będzie mnie dziedziczyła po tej tabeli,
+no to robię tabelę zupełnie normalnie, create table student.
+Określam, że będę chciał student,
+żeby studenci mieć semestr.
+I tutaj dorzucam takie słówko jak inherits i określam, że chcę dziedziczyć po człowieku.
+Zobaczcie, co teraz stanie.
+Stworzę sobie tę tabelę.
+Oj, coś zrobiłem nie tak. Przecinka zabrakło.
+Stworzę sobie tę tabelę.
+Dalej sobie stworzę tę tabelę.
+No i teraz, jeżeli pobiorę sobie wszystko, wszystkich ludzi,
+no to dostanę, ohoho, to czego zabrakło?
+Select, gwiazdka from human.
+No to dostanę po prostu imię i nazwisko.
+Natomiast, jeżeli pobiorę sobie wszystkich studentów,
+to dostanę imię, nazwisko i semestr.
+Zobaczmy, co się stanie, jeżeli dodamy nowe wiersze.
+Insert into human.
+No i jakieś imię, nazwisko, values.
+A, B.
+Ua, o tak.
+W tym momencie, jeżeli sobie pobiorę wszystkich ludzi,
+a i b, jak pobiorę sobie wszystkich studentów,
+no to oczywiście mam pusto.
+Ale do studentów też sobie mogę kogoś dodać.
+Insert into student.
+Niech to będzie cd.
+No i na pierwszym semestrze.
+Hops.
+I teraz, jak sobie pobiorę ludzi,
+to zobaczcie, co się wydarzyło.
+Widzicie?
+To jest bardzo ciekawa sprawa.
+Bo jeżeli,
+gdzie używamy dziedziczenia,
+to w studencie mamy tylko i wyłącznie tego osobnika cd i semestr pierwszy.
+Natomiast dodał nam się kolejny człowiek.
+I jeżeli teraz spowodujemy jakąkolwiek zmianę w człowieku
+dla tego rekordu,
+czyli na przykład zmienimy mu last name z d na Daniel,
+czyli update student set last name
+równa się Daniel
+where first name
+i znowu znowu znowu znowu znowu znowu znowu znowu znowu znowu znowu znowu znowu znowu.
+To jest c.
+To wówczas ten rekord nam się zmieni.
+I zobaczcie, student jest też Danielem.
+I tutaj też jest Daniel.
+Czyli dziedziczenie to nie jest tylko takie coś,
+co powoduje, że tworzymy sobie w szybszy sposób tabelę na bazie jakiegoś wzoru,
+tylko wszystkie te tabele, które już wykorzystujemy w dziedziczeniu,
+one również powodują, że uzupełniamy tę tabelę nadrzędną.
+Sprawa wygodna.
+Czasem, na przykład, jeżeli mamy produkty,
+to możemy sobie część tych...
+I produkty mają być...
+mają być jakimiś elementami inwentarza
+oraz mają mieć jakieś swoje własne cechy,
+to można użyć do czegoś takiego dziedziczenia.
+No bo jeżeli listujemy produkty na stronie,
+to korzystamy z tabeli products.
+Natomiast jeżeli chcemy wypisać, na przykład,
+tylko same stany magazynowe
+i w magazynie przechowujemy nie tylko produkty,
+ale też jakieś elementy wyposażenia magazynu,
+no to też może to jako items być gdzieś tam u góry.
+Nie korzystam z tego często,
+ale też chciałem wam pokazać,
+że coś takiego jest i czym się to cechuje.
+I to już tyle.
+I to już tyle tego długiego modułu.
+W tym module troszeczkę mniej ćwiczyliśmy.
+Trochę było mniejsze pole do popisu,
+jeżeli chodzi o ćwiczenia,
+ale przekazałem wam bardzo dużo teorii,
+co mam nadzieję, że pozwala wam teraz
+raz, że podejść do pracy domowej,
+a dwa, pozwoli wam również
+zacząć pracować na swoich własnych tabelach,
+czego wam bardzo serdecznie życzę.
+No i oczekuję kontaktu na kanale
+z jakimikolwiek pytaniami.
+Do zobaczenia!
+www.youtube.com

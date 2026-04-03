@@ -1,0 +1,24 @@
+Mam takie wrażenie, że w momencie, w którym ktoś, kto jest takim
+początkującym użytkownikiem Dockera, weźmie ten nasz kurs, to może go trochę
+zaskoczyć ilość pojęć. I my bardzo często opowiadamy o tych pojęciach, czyli mówimy
+słuchaj, teraz robimy obraz, teraz robimy kontener, teraz robimy wolumen i te
+pojęcia gdzieś się przenikają. Ale z własnego doświadczenia wiem, że często
+osoby, które robią taki kurs, raz usłyszały obraz, będą sobie myślały ok, obraz to, to
+już wiem, ale za chwilę wrócą do tego, wrócą do jakiegoś innego filmu i znowu
+usłyszą obraz i sobie pomyślą kurczę, jak się nazywało to drugie.
+Nie myślisz, że dobrze byłoby naszym słuchaczom dać jakąś formę takiego
+słowniczka, w którym mogliby sobie weryfikować poszczególne pojęcia, Janie?
+Jak najbardziej, dlatego też właśnie się tutaj spotykamy.
+Otóż to, więc drogi słuchaczu, drogi
+widzu, drogi kursancie czy kursantko, jeżeli będziesz mieć ochotę powtórzyć sobie
+jakieś pojęcie, zobaczyć, co dane pojęcie znaczy, to pamiętaj, że ten słowniczek
+zarówno w wersji tekstowej, jak i w wersji wideo jest tu dla ciebie i możesz zawsze
+sobie w to miejsce zerknąć i znaleźć poszczególne pojęcia.
+Więc to jest taki krótki wstęp, a my już po tym wstępie przechodzimy do
+wyjaśniania poszczególnych rzeczy. I tu też jeszcze jedna prośba, jeżeli pojawi się
+jakieś pytanie, na przykład o inne jakieś słowo, którego do tej pory nie
+umieściliśmy w słowniczku, a uważasz, że warto, żeby się takie
+słowo pojawiło, to pod tym filmem zostaw komentarz z informacją
+Ej, wyjaśnijcie, czym jest i tutaj trzy kropeczki, a my postaramy się w ciągu
+paru dni czy może tygodni zobaczymy, jak to wyjdzie w praniu taki film nagrać.
+To co? Zapraszamy do słowniczka.

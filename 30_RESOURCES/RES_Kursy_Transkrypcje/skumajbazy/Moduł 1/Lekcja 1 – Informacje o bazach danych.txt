@@ -1,0 +1,47 @@
+Czas zmierzyć się z ogólnymi informacjami o bazach danych, czyli tutaj w tym module porozmawiamy sobie o tym, czym w ogóle jest baza danych, jakie rodzaje baz danych wyróżniamy, czym one się od siebie różnią, tak i zrobimy sobie mały wstęp.
+Więc jeżeli chodzi o rodzaje baz danych, to wyróżniamy trzy rodzaje. Pierwszy rodzaj baz danych to są bazy danych relacyjne, drugi to bazy danych nierelacyjne i trzeci to bazy danych grafowe.
+Każdy z tych rodzajów teraz sobie pokrótce omówimy. Jeżeli chodzi o bazy danych grafowe, to nie stanowią one treści bootcampu, natomiast jeżeli będziecie mieli ochotę skorzystać z takiego rodzaju baz danych, no to oczywiście zapraszam.
+Po pierwsze, takie bazy danych grafowe możecie kojarzyć z grafem, czyli z czymś, co ma wierzchołek, z każdego wierzchołka wychodzą jakieś punkty, mamy to potem dalej jakieś punkty, już pewnie podałem parę nieprawdziwych, znaczy przekręciłem trochę terminologię, natomiast takim bardzo znanym chyba grafem jest m.in. drzewo genealogiczne, czyli mamy jakichś przodków, później mamy jakichś dzieci, potem te dzieci mają prawnuki i tak dalej, i tak dalej.
+Tego typu bazy danych mogą być wykorzystywane.
+Na przykład do wymodelowania struktury menu, czyli mam jakieś menu główne, w nim mam jakieś podmenu, w nim mam jeszcze dalej jakieś podmenu i tak dalej, i tak dalej.
+Te bazy danych też bardzo często wykorzystywane są do systemów podpowiedzi, czyli na przykład ja lubię Metallica i Linkin Park, ktoś inny lubi Linkin Park, więc wówczas zostanie mu podpowiedziana Metallica jako zespół, który może mu się też podobać.
+Po prostu na podstawie jakby takiego ważności tej relacji będą.
+Możecie na przykład stworzyć projekt, w którym wybieracie ulubiony batonik, no i na podstawie zbioru danych taka baza będzie mogła Wam zaproponować, jaki batonik może Wam się podobać, skoro lubicie taki, taki i taki.
+No i po trzecie, jeżeli chodzi o te bazy danych, to one posiadają wiele takich metod specjalnych, które można wykorzystywać w tych bazach, na przykład pobierz mi wszystkie dzieci, pobierz mi wszystkie prawnuki i tak dalej, i tak dalej.
+To tutaj chodzi było mi tylko i wyłącznie o taki zarys, żebyście wiedzieli, że takie bazy są i żebyście w razie czego wiedzieli, do czego też te bazy służą.
+Takim najpopularniejszym, najpopularniejszym reprezentantem tej bazy danych jest baza, która nazywa się Neo4j, więc jeżeli będziecie szukali konkretnej bazy, no to właśnie warto pomyśleć o tej.
+Jeżeli chodzi o bazy danych nierelacyjne, to baza danych nierelacyjna to jest taka baza, w której nie mamy rekordów, tylko mamy dokumenty.
+Każdy dokument może posiadać dynamiczną ilość pól, czyli przykładem takiej bazy danych może być na przykład plik JSON, czyli jeżeli sobie wyobrazicie na przykład taki dokument, w którym mamy wiele różnych cech, każda cecha ma różne właściwości, te właściwości mogą być później jeszcze bardziej rozbudowywane wzdłuż i wszerz, to właśnie tego typu bazę danych możemy wykorzystać.
+Na przykład, jeżeli chcielibyśmy przechowywać informacje o książkach, gdzie będziemy mieli różne tytuły, czasem będzie jeden autor, czasem będzie ich wielu, czasem będzie opis, czasem tego opisu nie będzie.
+Czasem będzie streszczenie, czasem go nie będzie, to jest właśnie moment, w którym stwierdzamy, aha, mogę skorzystać z bazy danych nierelacyjnej.
+Tutaj, jeżeli chodzi o to, w jaki sposób przechowujemy te dane, to tymi właśnie jednostkami są dokumenty, natomiast dokumenty nie znajdują się w żadnych tablicach, tabelach, czy w czymkolwiek takim, tylko znajdują się w kolekcjach, czyli na przykład książki to byłaby kolekcja, no i poszczególne książki miałyby dokumenty, byłyby po prostu dokumentami.
+I tu oczywiście również mamy możliwość robienia asocjacji, czyli jeżeli na przykład książka ma autora, to autor może być dokumentem znajdującym się w innej kolekcji.
+Wiem, że używam trochę takiej terminologii, której jeszcze nie znacie, ale na pewno ją w ramach tego bootcampu poznacie.
+Ważne jest tylko to, żebyście wiedzieli, że jeżeli chodzi o nierelacyjne bazy danych, to znaczy, że mamy bardzo różną ilość pól, czyli tak jak wspomniałem, mamy na przykład studenta, który posiada zdane przedmioty,
+niezdane przedmioty i imię i nazwisko, a inny student jeszcze posiada parę dodatkowych cech, na przykład ile razy brał urlop dziekański, albo co ze sobą, nie wiem, robi w wolnym czasie, tak?
+Więc tutaj pod tym względem możemy sobie rozbudowywać te dokumenty, mogą mieć one bardzo różną strukturę.
+No i takim najbardziej popularnym reprezentantem bazy danych nierelacyjnej jest baza MongoDB.
+I ostatni typ baz danych to są bazy danych relacyjne.
+Czyli te, którymi zajmiemy się na początku.
+W tym przypadku najłatwiej chyba porównanie, no bo jest nim najprościej porównać sobie taką bazę danych po prostu do Excela.
+Czyli jak wiecie, Excel posiada, możemy mieć wiele plików Excela, czyli wiele różnych skoroszytów.
+Każdy skoroszyt posiada wiele różnych arkuszy, arkusze posiadają kolumny, wiersze i tak dalej.
+Więc taki styl, taki model bardzo mocno może nam przypominać bazę danych relacyjną.
+Tutaj w tym przypadku, w tym przypadku, w tym przypadku, w tym przypadku, w tym przypadku, w tym przypadku, w tym przypadku, w tym przypadku, w tym przypadku, w tym roku, w tym roku, w tym roku, w tym roku, w tym roku, w tym roku, w tym roku, w tym roku.
+W tym przypadku, jeżeli chodzi o to, jak przechowujemy dane, no to tak jak wspomniałem, mamy bazę danych, baza danych posiada tabele, tabele posiadają kolumny, no i w kolumnach mamy już wartości.
+Ważne jest dla nas to, że w tabelach tak naprawdę są rekordy, czyli pojedynczy wiersz tabeli nazywany jest właśnie rekordem, czyli pojedynczy rekord to jest tak naprawdę lista tupli,
+czyli lista takich stałych.
+Wartości. My zawsze mamy pewność, że kiedy pobieramy sobie dane z bazy danych, pobieramy sobie dane z jakiejś tabeli właściwie powinienem powiedzieć, to wówczas za każdym razem ilość tych elementów tej tupli będzie niezmienna, czyli zawsze będziemy mieli, załóżmy, jeżeli chodzi o studenta, ID, imię, nazwisko, semestr i coś jeszcze.
+Czyli zawsze w tych wierszach mamy przedstawiony komplet danych. Każdy wiersz zawiera komplet danych i ten komplet danych jest niezmienny. W bazach relacyjnych mamy komplet danych niezmienny, a w bazach nierelacyjnych.
+Te dane mogą nam się bardzo zmieniać. Na tym właśnie polega ta różnica pomiędzy jednym rodzajem bazy danych a drugim.
+Jeżeli chodzi o pobieranie danych z bazy danych, to w przypadku danych przechowywanych w bazie relacyjnej mamy SQL-a i to za pomocą języka SQL, o którym też sobie zaraz powiemy, wykonujemy tak zwane zapytania i pobieramy sobie informacje z bazy danych.
+Natomiast w przypadku bazy danych nierelacyjnej mamy taką możliwość pisania takiego zapytania.
+W takim jakby ichnim języku, gdzie też możemy sobie pobierać dane z określonych kolekcji.
+Natomiast SQL dotyczy tylko i wyłącznie baz danych relacyjnych.
+No i tutaj przykładów możemy wymieniać wiele. Nie chciałem żadnej z baz danych tutaj odpuścić, ponieważ, znaczy i tak odpuściłem wiele, ale z tych takich wiodących nie chciałem żadnej odpuścić, bo wiem, że część z Was na przykład zna MySQL-a, czy też poznawała MySQL-a.
+Niektórzy z Was zna MySQL-a, czy też poznawała MySQL-a.
+Niektórzy z Was zna MySQL-a, czy też poznawała MySQL-a.
+Niektórzy z Was na pewno kojarzą Oracle, taką bazę danych. Niektórzy kojarzą SQLite'a, bo na przykład pracowali na tej bazie na innym bootcampie wraz ze mną. To też są bazy danych relacyjne.
+No i tym przykładem, który będzie najbliższy naszemu sercu przez następne kilka tygodni będzie PostgreSQL, czyli baza danych, która jest darmowa, baza danych, która jest niesamowita i baza danych, która jest bardzo, bardzo wydajna.
+I na tym chciałbym zakończyć nasz moduł. Przejdźmy do kolejnego, w którym porozmawiamy o tym, jak ich nakładać.
+Jakich narzędzi będziemy używali podczas pracy w tym kursie. Do zobaczenia.

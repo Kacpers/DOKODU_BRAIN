@@ -1,0 +1,135 @@
+Ok, i w ramach pracy z grupowaniem i z joinami brakuje nam jeszcze połączenia tego grupowania i joinów.
+Jeżeli chodzi o łączenie grupowania i joinów, no to nie ma praktycznie żadnej różnicy względem tego, co robiliśmy do tej pory.
+Czyli jeżeli pobieracie sobie jakąś tabelę, łączycie tę tabelę z innymi danymi, to też bez problemu po tych danych możecie robić joiny.
+Tego zupełnie się nie bójcie.
+Ale czasem zdarza się, że potrzebujemy zrobić pewną sztuczkę, żeby coś sobie zgrupować i zjoinować,
+bo grupowanie i joinowanie może być używane w kilku takich bardzo przydatnych miejscach.
+Zobaczcie, załóżmy, że mamy dane w takiej postaci, czyli mamy produkt,
+to jest posiada id i name, mamy attributes, też mamy id i name, no i mamy product attributes,
+id, product id, attribute i value.
+I to jest bardzo częsty przypadek, że dane są przedstawione w takiej postaci.
+I później, kiedy mamy wyświetlić te dane, bardzo często trafiamy na dosyć nieprzyjemne schody,
+które ze schody chciałem Wam pokazać i chciałem Wam też pokazać, jak możemy z tego problemu wyjść.
+Ja to będę wszystko na bieżąco tłumaczył i pokazywał Wam to na początku.
+Po szczególnych slajdach.
+Ale jeżeli macie ochotę robić to ze mną, to zachęcam Was do tego, abyście utworzyli zgodnie z tym schematem,
+zgodnie z takimi danymi, po prostu takie tabele i je uzupełnili.
+Wówczas zobaczycie, jak to działa dokładnie i będziecie mogli to zrobić wraz ze mną.
+Więc tu możecie zrobić teraz sobie stopklatkę i po prostu potworzyć takie tabele w ramach schematu,
+na przykład o nazwie groups.
+OK? Zrobione? Dobra.
+Przejdźmy dalej.
+I teraz w ramach tego wymyśliłem sobie takie zadanie.
+Chcę napisać zapytanie, które pobierze wszystkie produkty wraz ze wszystkimi atrybutami.
+Efekt powinien być zgodny z poniższym.
+Jeżeli macie tę strukturę odzwierciedloną, również możecie to zadanie zrobić.
+Czyli po prostu zobaczcie, mamy jedną tabelę, która zawiera ID, Product ID, Attribute i Value.
+I teraz mamy dwie dodatkowe tabele z produktem i z atrybutami.
+I chcielibyśmy
+pobrać sobie Product, pobrać sobie atrybuty w taki sposób, żeby w miejscu ID wyświetliła nam się
+konkretna nazwa produktu i w miejscu atrybutu wyświetlił nam się konkretny atrybut, a nie identyfikator.
+Daję Wam chwilę.
+Zrobione?
+Dobra, jeszcze minuta.
+OK. Mam nadzieję, że po poprzednich ćwiczeniach z joinowaniem już teraz poszło to bez problemu.
+I teraz, jeżeli sobie spojrzymy na wynik, który dostaniemy,
+to tutaj wygląda tak. ID, Product, Attribute, Value.
+I ile mamy produktów, to każdy z tych produktów ma tyle wierszy, ile jest rekordów.
+A my nie zawsze chcemy wyświetlać wszystkie atrybuty, to jest po pierwsze.
+A po drugie, dużo łatwiej byłoby, gdybyśmy mogli zamiast posiadać takie informacje
+w wierszach, wyświetlić je sobie w kolumnach.
+No i to najczęściej wykonuje się właśnie za pomocą przetwarzania tych zapytań później
+w ramach jakiegoś
+PHP, Python czy czegokolwiek innego.
+A można bardzo fajnym sposobem, przyjemnym
+sposobem zamienić to sobie właśnie do takiej postaci.
+Czyli zamienić sobie te wartości, które są w wierszach, na wartości, które są w
+kolumnach. I chciałbym Wam pokazać, jak to zrobić.
+Po pierwsze, potrzebujemy sobie powiedzieć o tym, jak te dane sobie pobrać.
+Czyli po prostu jak napisać joina, w którym zamiast dostawać,
+zamiast dostawać
+id-ki, będziemy dostawali konkretne nazwy.
+To jest taki join. Jeżeli macie ochotę, możecie go wykonać.
+I następnie teraz, co zrobić, żeby sprawić, żeby nasze te atrybuty poszły nam do kolumn.
+Czyli powinniśmy się zastanowić nad tym, co należałoby zrobić, żeby z naszych dwóch
+wierszy pojawił nam się jeden wiersz. Zastanówcie się, co robiliśmy do tej pory,
+żeby z dwóch wierszy pojawiał nam się jeden.
+Ktoś ma pomysł?
+Udaję, że Was słyszę.
+Tak, możemy zgrupować te dane, zgrupować np.
+po id-ku produktu. Jeżeli tutaj mamy id produktu, czy też mamy w dowolnym innym
+miejscu, to zawsze możemy sobie dopisać group by product id.
+No i wtedy nie będziemy mieli problemu z id-kiem,
+nie będziemy mieli problemu z produktem, ale będziemy mieli problem z atrybutem i z value.
+Ale możemy sobie z tym poradzić.
+Wyobraźcie sobie, że teraz nasze wiersze zaczynają się ścieśniać i one tak się miażdżą,
+każdy kolejny, zamieniając się powoli w jeden.
+Co się powinno w tym momencie dziać?
+Powinniśmy w tym momencie sprawdzić np. w jednej kolumnie.
+Hej, czy tutaj się wyświetla szerokość?
+Jeżeli tak, to wyświetl wartość i przypisz ją jako szerokość.
+W kolumnie obok. Hej, czy to jest wysokość?
+Jeżeli tak, to napisz u góry na główek wysokość i daj tutaj wartość wysokości.
+Grubość. Jeżeli tak, to napisz na górze na główek grubość i daj tutaj wartość z grubości.
+Czyli powinniśmy wtedy te dane, jak one tak
+się ścieśniają, to każdą kolejną dodawać kolumnę dalej.
+I właśnie tak możemy to zrobić.
+Zobaczcie, jeżeli to wysokość, to ją tutaj wyświetl, jeżeli szerokość, to ją wyświetl.
+Czyli po prostu dodkładaj kolejne kolumny.
+Jak by wyglądało takie zapytanie?
+Case'a znamy.
+Więc zobaczcie, pobierz P name as product.
+Następnie case.
+Case. Jeżeli nazwą atrybutu jest szerokość, to wtedy wyświetl value.
+Czyli to value, które było w tej tabeli pośredniczącej.
+I zapisz to jako szerokość.
+Jeżeli nazwa atrybutu jest wysokość, to wówczas zwróć value i zapisz to jako wysokość.
+I tak można dokładać kolejne, kolejne kolumny, tak żeby to działało.
+Pamiętając oczywiście o tym, że sobie to grupujemy.
+Ja to akurat zgrupowałem po nazwie produktu.
+Jeżeli zgrupujecie po ID-ku, będzie dokładnie tak
+samo. I tutaj taki mały disclaimer.
+Jeżeli chodzi o Postgresa, to Postgres w
+przypadku grupowania jest troszeczkę bardziej wymagający niż MySQL.
+MySQL wam by to łyknął.
+Powiedziałby, że jest szczęśliwy.
+Wszystko zadziałało ładnie, wyświetliłyby nam się kolejne atrybuty.
+Ale w przypadku Postgresa jest mały haczyk.
+Postgres w tym momencie mówi.
+Column a name, czy też kolumn, ta kolumna, po której grupujemy, którą używamy,
+musi wystąpić w group by.
+Jeżeli nie wystąpi, to musi wystąpić w agregowanej funkcji.
+I to jest coś, co nam trochę podcina skrzydła.
+I mówiąc szczerze, w tym miejscu się często
+zatrzymywałem i pioczyłem na Postgresa, mówiąc kurczę, w MySQL działa, a ty jesteś
+tak dokładny, że musisz to mieć tak ładnie, inaczej tego nie łykasz w ogóle.
+Co z tobą? Co z tobą? I się denerwowałem.
+Więc znalazłem obejście.
+Akurat tego typu też operacja, tego typu zapis bardzo często jest wykorzystywane
+nie w Postgresie, tylko w WordPressie, który działa na MySQLu.
+Więc nie mam tego problemu, ale rozwiązanie jest bardzo proste.
+Więc jeżeli gdziekolwiek indziej też
+znajdziecie tego typu problem, to zobaczcie, nie jest to problem, tylko wyzwanie.
+Wystarczy opakować tego case'a w wyrażenie, które nazywa się max.
+To wyrażenie nie zrobi nam absolutnie nic, a zadziała.
+Bo skoro on powiedział, że kolumn a name musi być w group by albo musi być użyte wewnątrz
+agregowanej
+funkcji, to nie ma żadnego problemu, żeby wokół tego zastosować maxa.
+No i to jest taki haczyk, który spowoduje, że zadziała.
+Więc jeżeli będziecie mieli takie wyzwanie, to bardzo proszę.
+To jest fix na to, żeby to zrobić, żeby dostać tabelę w tej formie.
+No i ja sobie zdaję sprawę, że jest to trochę taka szpachla, ale tak jak mówię,
+od lat tego używam i w MySQLu akurat ta szpachla, ten max nie jest konieczny.
+I to jest taka może krótka lekcja, którą
+chciałbym pokazać, żeby pokazać taką sztuczkę, która po prostu kiedyś
+uratowała mi życie, to że się jej nauczyłem, bo nagle zapytania, które właśnie musiałem
+przetwarzać przez jakieś PHP później przez jakieś języki programowania nagle mogłem
+napisać z palca i wyglądały bardzo przyjemnie.
+Więc ta sztuczka z case'em i ta sztuczka z maxem wraz z grupą.
+To jest coś, co chciałem wam też pokazać.
+Jeżeli może i wy macie jakieś takie doświadczenia albo znajdziecie jakieś
+ciekawe snippety, które uratowały wam życie, dajcie koniecznie znać na Discordzie.
+Chętnie zobaczę, chętnie o nich podyskutuję.
+A ode mnie to wszystko.
+Zapraszam was do kolejnej lekcji. Do zobaczenia.
+Cześć.

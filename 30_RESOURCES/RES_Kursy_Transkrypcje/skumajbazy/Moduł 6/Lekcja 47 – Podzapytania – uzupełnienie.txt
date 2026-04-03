@@ -1,0 +1,225 @@
+I pierwszym tematem w tym module są podzapytania.
+Ja zdaję sobie sprawę z tego, że już podzapytań trochę napisaliśmy
+podczas tych lekcji, ale warto byłoby sobie jeszcze powiedzieć
+o kilku różnych rodzajach podzapytań, które mogą się wam gdzieś przytrafić,
+ponieważ na chwilę obecną podzapytania, których używaliśmy,
+no to przeważnie były podzapytania, które występowały za UR-em
+w ramach jakiegoś warunku, a to nie jest wcale tak,
+że tylko tam one mogą wystąpić. Zobaczcie, podzapytania mogą wystąpić
+też w momencie, w którym chcemy na przykład połączyć ze sobą kilka zapytań
+i tutaj od jednej wartości chcę odjąć drugą. Zobaczcie, jedno zapytanie
+odpowiada za to, żeby policzyć mi, odpowiedzieć na pytanie,
+ile mam studentów, którzy uczą się na drugim roku.
+Drugie zapytanie odpowiada na pytanie, ilu mam studentów uczących się
+na pierwszym roku. Jeżeli chciałbym odpowiedzieć na pytanie,
+ilu z tych studentów jakby przeszło, tak, z pierwszego na drugi,
+zakładając, że to jest ta sama grupa studentów, no to musiałbym
+od jednej wartości odjąć drugą. Nie ma problemu, można to zrobić,
+tylko trzeba napisać jeden SELECT w nawiasie
+SELECT COUNT FROM STUDENTS WHERE YEAR równa się 2
+minus SELECT COUNT FROM STUDENTS WHERE YEAR równa się 1.
+To oczywiście spowoduje, że nie ma problemu, że nie ma problemu,
+że my nie wyślemy jednego zapytania do bazy, tylko musi się wykonać
+tych zapytań trzy, bo jest raz, dwa, trzy, z czego trzecie nie robi się
+na bazie, ale i tak, tak to dokładnie działa.
+Inny przykład łączenia ze sobą zapytań jest wtedy, kiedy chcemy
+wykonać jeszcze jedno zapytanie na wynikach, które przyniosło nam
+zapytanie inne. Czyli mamy jakieś zapytanie, które na przykład
+pobiera mi te osoby wraz z tymi aliasami, bo często pytacie,
+jak, dlaczego na przykład w ŁER-ze nie mogę aliasów używać.
+Nie, że pokazuje wam, że kolumna taka nie istnieje i wtedy,
+żeby wyleczyć się z tego problemu, czyli żeby sprawić, żeby można
+było używać aliasów, można wykonać nowe zapytanie na wyniku
+zapytania, które dostaliście wraz z tymi aliasami i zobaczcie
+SELECT gwiazdka FROM to jest takie zapytanie, które powoduje,
+że pobieramy sobie wszystkie kolumny z jakiegoś, z jakiejś tabeli,
+ale za FROM-em może też wystąpić inne zapytanie.
+I zobaczcie, SELECT gwiazdka FROM jest nawias, zamknięty nawias
+i tu bardzo ważna sprawa, musicie koniecznie pamiętać o tym,
+żeby dodać S, ponieważ on musi mieć alias, czyli SELECT gwiazdka FROM
+jest otwarty nawias, zamknięty nawias, w środku jest zapytanie,
+o nim sobie zaraz powiemy, AS OUR USERS jakiś alias i dalej
+WHERE OUR USERS.PersonalDetails LIKE Kowalski, bo to, co zrobiłem
+sobie w środku, oczywiście takie zapytanie nie ma sensu, bo skoro w środku mógłbym
+sobie przefiltrować osobę po nazwisku Kowalski, no to nie ma sprawy,
+natomiast tutaj chcę Wam pokazać po prostu ideę, że można na bazie jednego zapytania
+przekazywać je sobie na zewnątrz do innego zapytania i na nim dokonywać jeszcze
+jakiejś operacji. Mi się często zdarza używać tej konstrukcji właśnie kiedy
+pobieram sobie jakąś bardzo skomplikowaną tabelę i później jeszcze na niej
+chcę dokonać jakichś filtrów albo do niej coś jeszcze dojoinować,
+albo połączyć jej wyniki, które otrzymałem z inną tabelą.
+Więc wtedy tego typu konstrukcja bardzo ułatwia życie.
+Też jest to konstrukcja taka cięższa. Mówimy sobie tutaj o takich trudniejszych
+zapytaniach w tej lekcji, ale warto wiedzieć, że też takie przypadki się zdarzają
+i takie przypadki, można powiedzieć, chodzą po ludziach, gdzie potrzebujemy
+właśnie wykonać jeszcze jakieś zapytanie na wynikach z tego zapytania.
+Jak najbardziej to można zrobić. Inny przykład to używanie podzapytania
+wewnątrz WHERE'a.
+To jest coś, z czym się już niejednokrotnie mierzyliście,
+tylko że to, co robiliśmy do tej pory, to do tej pory robiliśmy,
+używaliśmy operatora IN, tylko i wyłącznie, czyli to, co macie w drugim przypadku,
+WHERE z IN-em. Natomiast WHERE'a można używać też z, czy też podzapytania i WHERE'a
+można używać też w momencie, w którym mamy każdy inny operator,
+tylko ważne jest wtedy, żeby to zapytanie zwróciło nam jeden, jedną konkretną wartość.
+Zobaczcie, SELECT gwiazdka FROM STUDENTS WHERE GRADES
+większe niż średnia ocen tych studentów. Czyli pobierz mi wszystkich studentów,
+dla których ich średnia ocen jest większa niż ogólna średnia wszystkich studentów.
+Jak najbardziej też można sobie coś takiego skonstruować.
+Pamiętajcie tylko o tym, żeby te zapytania zawsze były w nawiasach.
+Jeżeli tych zapytań nie będzie w nawiasach, to niestety to nie będzie wam działało.
+No i tutaj trzy zadanka dla przećwiczenia tych, tego tematu.
+Zadanie pierwsze.
+Jaka jest różnica między najtańszym a najdroższym produktem?
+Interesuje nas oczywiście tabela PRODUCTS.
+Zadanie drugie.
+Połącz adresy zawierające się w tabelach SUPPLIERS, EMPLOYEES oraz CUSTOMERS,
+a następnie przefiltruj tylko te, które w środku zawierają wyrażenie AV.
+I zapytanie trzecie.
+Wyświetl wszystkich klientów z tabeli CUSTOMERS, którzy pochodzą z tych samych miast, co nasi dostawcy.
+I zapytanie trzecie.
+Wyświetl wszystkich klientów z tabeli CUSTOMERS, którzy pochodzą z tych samych miast, co nasi dostawcy.
+Z tabeli SUPPLIERS.
+Wyświetl wszystkich klientów z tabeli CUSTOMERS, którzy pochodzą z tych samych miast, co nasi dostawca.
+I zdaję sobie sprawę z tego, że pewnie można byłoby do tych trzech zadań podejść też inaczej,
+ale tutaj starajmy się podchodzić, trenując właśnie pod zapytania.
+To co?
+Przeczytajcie sobie raz jeszcze te treści i widzimy się za chwilę w rozwiązaniu.
+A najpierw rozwiążcie.
+Do zobaczenia!
+No to co?
+Zadanie pierwsze.
+Jaka jest różnica między najtańszym a najdroższym produktem?
+to pobierzmy sobie te produkty
+czyli SELECT, gwiazdka, filtr,
+gwiazdka from products
+interesować
+nas będzie oczywiście minimalna
+cena, czyli min
+price
+to chyba nie było price, tylko to było
+coś innego, unit price
+czyli select min
+unit price from products
+no i interesuje
+nas też największa cena, czyli
+select max
+unit price from products
+jeżeli chcemy teraz odjąć
+no to potrzebujemy zrobić select
+no i w nawiasie
+jedno zapytanie
+minus
+w nawiasie drugie zapytanie
+oczywiście średnik jest
+na końcu samym, czyli
+ten średnik i ten
+musi nam przepaść
+no i mamy 261
+lecimy dalej
+połącz adresy
+zawierające się w tabelach
+suppliers, employees oraz customers
+a następnie przefiltruj tylko te, które
+w środku zawierają af
+no to select
+all from suppliers
+interesuje nas
+adres, no to add
+SS
+union
+select
+adres
+from employees
+no i union
+select
+adres
+from
+customers
+ok i mamy wszystkie adresy
+ale jeżeli teraz chcemy dodać
+where'a no to trzeba byłoby zrobić
+select adres from suppliers
+where
+select adres from employees
+where i select adres from customers
+where bez sensu dużo
+lepiej będzie zrobić
+select gwiazdka
+from
+nawiasik
+s addresses
+na przykład
+where addresses
+adres
+tutaj adres jest bo to jest mój alias
+adres bo to jest nazwa tej kolumny
+jak widzicie bo po prostu wziął pierwszą
+tak jak zawsze przy unionie
+like
+no i można zrobić av
+no i można zrobić av
+no i w ten sposób
+dostaniemy tylko i wyłącznie
+adresy z tych trzech miejsc
+jeżeli byście chcieli
+tak dodatkowo
+jeżeli byście chcieli wiedzieć
+skąd te adresy pochodzą
+czy pochodzą z supplierów
+employee czy customers
+można sobie zawsze zrobić
+przecinek
+supplier as type
+supplier as type
+employee
+employee
+employee
+employee
+napisy
+employee
+employee
+assembly
+employee
+s-type
+sh Proporcja napisoc jeszcze
+wesołe tires
+w Therefore
+może wiecie co po prostu to
+może wiecie co po prostu to
+zapiszę
+w ciapkach
+w akcentach
+bo wiadomo
+a adres przecinek
+a adres przecinek
+customer
+S matter tam będzie
+tam są pojedyncze
+tam są pojedyncze
+tam są poj typing
+to są po jeito
+pojedyncze te więc nie będzie działało musimy zrobić podwójnych
+tak sprawdzam są tak równie tak wydaje mi się że muszą być
+podwójnych nie w pojedynczych to było dobrze tu w pojedynczych
+ale to mi się też nie podoba source musi być w podwójnych
+za dużo znaczków o widzicie i w ten sposób widzimy że AV
+jest tylko w customerze i w supplierze często to pytanie padało
+na szkolenia właśnie jeżeli jest Union dopiero teraz mi się
+przypomniało jak jest Union to jak do niego dorzucić jeszcze
+właśnie na przykład źródło skąd ten rekord pochodzi więc jak
+widzicie można tak jeżeli oczywiście tutaj usunąłbym tego
+uera no to miałbym
+wszystkie trzy widzicie customer supplier customer supplier
+employee też tam gdzieś jest obiecuję chyba widziałem więc
+employee też na pewno tu jest jak widać natomiast tak to
+można też zrobić no i ostatni podpunkt wyświetl wszystkich
+klientów którzy pochodzą z tych samych miast co nasi dostawcy
+czyli select all from customers
+where city jest city nie pamiętam
+where city tak where city in select city from suppliers i
+mamy klientów pochodzących z tych samych miast co dostawcy
+Bardzo wam dziękuję za to ćwiczenie Mam nadzieję że wam się
+udało takie wyszło trochę trudniejsze No ale tutaj już piszemy
+trudniejsze zapytania tym bardziej że poziom naszego szkolenia
+sukcesywnie wzrasta i zapraszam was do kolejnej lekcji do zobaczenia
+cześć

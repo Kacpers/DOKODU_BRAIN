@@ -1,0 +1,45 @@
+Tak jak zapowiedziałem ta lekcja będzie poświęcona operatorom logicznym, czyli porozmawiamy sobie o tym jakie inne operatory mogą być wykorzystywane podczas wykonywania naszych filtrów, no bo jak wiecie z matematyki jest ich przynajmniej kilka.
+No i tutaj tak w maksymalnym skrócie mamy większe, mniejsze, większe lub równe, mniejsze lub równe, tu uwaga to są dwa znaki, po prostu wprowadzamy najpierw operator większości, potem równości i tak samo mniejsze lub równe.
+Co jest też ważne to jest to, że one muszą być koniecznie podane w tej kolejności, nie możemy sobie zamienić mniejsze, większe czy równe, nierówne, co ważne one muszą być podane w tej kolejności.
+Znam osoby, które jakoś tak się nauczyły, że mówią równe, większe, równorówności.
+Równe, mniejsze, nie wiem z czego to wynika, ale tu jest większe, równe, mniejsze, równe.
+Równe, no to już znacie to jest pojedynczy znak, równa się, a nierówne możemy zapisać na dwóch operatorach, albo tak, albo nieprawda, że.
+Nieprawda to jest w wielu językach wykrzyknik i tak samo też jest w SQL-u, czyli nieprawda, że, równe, no to jest wykrzyknik, równa się.
+No i w SQL-u mamy też słówko not, które też jest słówkiem, które powoduje u nas negację.
+Dla przykładu, jeżeli chcielibyśmy na przykład znaleźć wszystkich studentów, których wiek zmieści się między 30 a 40 lat, no to możemy wykonać select gwiazdka from students where age jest większe od 30 and age jest mniejsze niż 40.
+Oczywiście w tej sytuacji wartość 30 i 40 nie będzie uwzględniana, tylko od 31 do 39 tak naprawdę.
+Natomiast w drugim przypadku chcemy sobie pobrać produkty o wartości, o ilości.
+I tutaj możemy sobie zdać, że o cenie wyższej niż 5, no to wtedy po prostu robimy sobie select gwiazdka from products where quantity jest większe lub równej 10, or rating jest większe od 5.
+I w ten sposób będziemy mieli właśnie takie produkty wskazane.
+To, co jest ważne, to jest to, że te same operatory mogą być również wykorzystywane do dat.
+Ja Wam o tym wspomniałem, że daty mają to do siebie, że im mniej.
+mniejsza data, tym historycznie wydarzyła się ona dawniej, czyli data urodzenia
+będzie datą mniejszą niż data zgonu, czy też data czegokolwiek innego.
+I tu, jeżeli chcemy sobie pobrać daty późniejsze, czy też daty wcześniejsze
+niż jakaś konkretna data, to również możemy to wykonać za pomocą zapytania.
+Zobaczcie, select order date from orders, where order date jest większe lub równe
+od 10 października 2020 roku. I tutaj ważna sprawa, też są pojedyncze apostrofy,
+jeżeli porównujemy sobie coś z datą. No i jak widzicie w wyniku dostajemy 10, 11, 12,
+no i jakąś datę też ze stycznia 2021. I tutaj trzy zadanka dla Was.
+Poproszę, abyście pobrali produkty, które posiadają jakikolwiek zapas units in stock.
+Po drugie, abyście pobrali produkty o cenie, czyli unit price,
+mniejszej niż 50 lub większej niż 100. Po trzecie, chcemy pobrać wszystkie zamówienia
+utworzone przed 10 lipca 1996 roku, czyli interesuje nas order date,
+no bo data zatrudnienia to jest ta data, kiedy to zamówienie zostało utworzone.
+Trzy minuty dla Was i do zobaczenia za chwilę w rozwiązaniu.
+No to co? Nie śpimy, lecimy, obliczamy. Pobierz produkty, których posiadamy jakikolwiek zapas,
+czyli units in stock musi być większy od zera. Select all from products where units in stock
+będzie większy niż zero. Proszę bardzo, mamy tych produktów 72.
+Te informacje widzimy w prawym dolnym rogu. Akurat ją zasłaniam, ale na pewno ją widzicie.
+Drugi przypadek. Pobierz produkty, czyli znowu products, o cenie unit price
+mniejszej niż 50 lub większej niż 100. Czyli mamy ten przypadek o ten.
+Czyli nas będą interesowały albo te, które są tutaj, albo te, które są tutaj.
+Czyli select all from products where unit price jest mniejsze niż 50 or unit price jest większy niż 100.
+Gotowe. No i ostatnie. Pobierz wszystkie zamówienia utworzone przed 10 lipca 96.
+Czyli select all from orders where order date jest mniejsze lub równe od 1996, 07, 10.
+No i oczywiście nie chcę tych wartości od siebie odejmować. Chcę, żeby to była data, więc apostrofy.
+I jak? Zadziałało? No to co?
+No to co? Chodźcie dalej.
+Dalej czeka nas bardzo ciekawy temat, a mianowicie nie wiem, czy zwróciliście uwagę, ale czasem gdzieś pojawia nam się wartość 0.
+No i trzeba byłoby sobie porozmawiać o tym, czym są te 0 i z jakimi sprawami one się wiążą.
+Do zobaczenia.

@@ -1,0 +1,164 @@
+Często dochodzimy do takiego momentu, że napisaliśmy bardzo długie zapytanie
+i chcielibyśmy móc wynik tego zapytania gdzieś sobie zapisać.
+Ale żebyście mnie zrozumieli dobrze, nie chodzi mi o to, że chcę wyeksportować te dane,
+żeby móc się nimi z kimś podzielić, tylko chcę zapamiętać to zapytanie.
+Mogę oczywiście zrobić to tak, że mogę w DBWerze sobie je zapamiętać
+i mogę je wykonać jeszcze raz i potem mogę je modyfikować i tak dalej.
+Ale czasem zdarza się, że chcemy je komuś pokazać, na przykład powiedzieć mu
+słuchaj, weź, otwórz sobie to zapytanie tak i tak.
+Albo chcielibyśmy potem jeszcze je zmodyfikować, czyli na przykład na bazie tego zapytania
+chcielibyśmy do niego dopisywać jeszcze kolejne filtry, joiny, coś sobie zgrupować.
+I tutaj właśnie przychodzą nam na pomoc widoki.
+Widoki, które działają w ten sposób, że możemy sobie dzięki nim uprościć
+skomplikowane zapytania.
+Dzięki temu zamiast powtarzać to zapytanie wielokrotnie, możemy po prostu klikając sobie w widok
+otworzyć je i sprawdzić, co było jego wynikiem.
+A ponadto, właśnie to o czym wspomniałem, możemy jeszcze na tych widokach
+wykonywać dalsze zapytania.
+Te widoki oczywiście mają też ten przywilej, że one się aktualizują za każdym razem,
+kiedy zmieniają się nasze dane.
+Czyli jeżeli dodamy jakieś wiersze, a te wiersze będą się mieścić,
+w ramach naszego zapytania, no to też dzięki temu będzie to działało wydajniej.
+I ostatni aspekt jest jeszcze taki, że zawsze możemy też na tych widokach
+wykonywać dalsze operacje.
+Bardzo wygodna, przyjemna sprawa.
+Jak z nich korzystać?
+Musimy nauczyć się nowego polecenia.
+Jest to polecenie, które pojawia się bezpośrednio przed poleceniem select.
+I dalej ten select, wszystkie te selekty, wszystko to, czego się nauczyliście do tej pory,
+możecie tego śmiało używać.
+Jedyna właśnie różnica jest taka, że z przodu pojawia się takie coś jak
+create view nazwa S.
+To może się nazywać, możemy też napisać create or replace view,
+co się niezwykle przydaje wtedy, kiedy chcemy zmodyfikować nasz widok.
+Natomiast jeżeli chcemy go po prostu stworzyć, no to robimy create view nazwa widoku S
+i dalej zapytanie.
+Czyli na przykład create or replace view student details S students
+i tak dalej widzicie jest zapytanie.
+Co to spowoduje?
+Spowoduje to to, że później można będzie wykonać jakby w zapytaniu
+select all from student details i on nam pokaże wszystkie te szczegóły
+dotyczące naszych studentów.
+Czyli po prostu to, co robiliśmy do tej pory, to zapytanie, które sobie wykonaliśmy,
+ono będzie cały czas widoczne.
+Jego wynik będzie widoczny.
+No i będzie pozwalało na dalszą operację, albo też będzie można go sobie pięknie podmienić.
+No bo tak jak wspomniałem, można bez problemu wykonać select gwiazdka from student details.
+W ten sposób pobierzemy informacje z tego widoku, ale też możemy usunąć widok zawsze
+wykonując polecenie drop view if exists znowu wyrażenie dodatkowe student details.
+To spowoduje, że te widoki nam się usuną.
+No i tu nie ma zbyt wielu informacji dodatkowych.
+Poza tym, czym są widoki?
+Jak je tworzyć?
+Więc myślę, że najlepiej będzie, jeżeli spędzimy teraz chwilę na tym, żeby sobie to po prostu przećwiczyć i mam dla was zadania z tym związane.
+Poproszę, abyście przygotowali zestawienie wszystkich pracowników w formie widoku o nazwie formate employees i my chcemy, żeby ta tabela ten raport z pracownikami zawierał tylko kolumny takie jak imię i nazwisko, adres oraz telefon, czyli nic specjalnego.
+Po prostu niektóre kolumny.
+Niektóre wyświetlimy, niektórych nie wyświetlimy.
+No i zapytanie drugie, widok drugi.
+Przygotuj widok o nazwie available products przechowujący nazwy produktów, ich ceny oraz nazwy.
+Dobra, czyli nazwy produktów oraz ich ceny.
+No i widok powinien przechowywać tylko produkty, które są w danym momencie dostępne w sprzedaży, czyli takie, które mają discontinued ustawione na zero oraz takie, które są w chwili obecnej dostępne, czyli units in stock.
+Większe niż.
+Zero.
+I wtedy możecie spróbować jeszcze poza zawodami wykonać jakieś zapytanie na tych widokach, na przykład, żeby dokonać dalszej filtracji albo żeby coś do nich dojoinować.
+Widzimy się w rozwiązaniu.
+Do zobaczenia.
+No to zapraszam.
+Zaczynamy od create or replace view.
+Podajemy nazwę formatted employees.
+No i lecimy z zapytaniem.
+Select first name, last name, adres, phone from employees.
+Jeżeli wszystko zrobiłem dobrze, coś zrobiłem źle.
+Phone does not exist.
+Select all from employees.
+Nie mamy phone, tylko mamy co?
+Home phone.
+Niech będzie home phone.
+No i w ten sposób nie dostaliśmy żadnego rekordu.
+Dostaliśmy tylko i wyłącznie informację, że widok został utworzony.
+Dzięki temu możecie z powodzeniem zrobić select gwiazdka from formatted employees.
+No i dostaniecie.
+O, coś się nie tak.
+Dostaniecie dokładnie takie wyniki.
+Jeżeli chcielibyśmy coś jeszcze sobie przefiltrować, to żaden problem.
+Where first name to Steven.
+Zadziałało.
+No i analogicznie joinowanie, wszystkie tego typu rzeczy też działają.
+Idziemy dalej, ale możecie spróbować.
+Zapraszam.
+Tylko w widokach nie można nic aktualizować, bo to byłoby bez sensu.
+Prawda?
+No aktualizujemy źródło tego widoku,
+a nie dane w widoku.
+Przygotuj widok o nazwie available products,
+czyli create or replace view available products as,
+przechowujący nazwy produktów oraz ich ceny.
+Select all from products.
+Oczywiście nie all, tylko select product.
+Product name przecinek unit price.
+No i interesują nas produkty, które mają, spełniają też jakiś określony warunek.
+Zobaczmy, cóż to za warunek.
+Discontinued ma być ustawione na zero,
+czyli where discontinued jest ustawione na zero
+oraz są dostępne, czyli and units in stock.
+Jest większe niż zero.
+Ops.
+No i select gwiazdka from available products.
+I mamy wszystkie te rekordy.
+Jak widać unit price, no tutaj nie sprawdzimy sobie, jakie są te wartości,
+ale zawsze można wykonać sobie pytanie raz jeszcze,
+dorzucając po prostu discontinued i units in stock.
+Jeżeli chcecie się upewnić, tak najbardziej można.
+Coś zrobiłem źle.
+O, create or replace view nie chce zadziałać?
+To ciekawe.
+A teraz zróbmy drop view.
+Available products.
+I raz jeszcze create or replace.
+To przedziwne.
+Wydawało mi się, że tworzenie widoków powinno zadziałać.
+Tym bardziej, że on się jakby przyczepił, że można przy edycji,
+a przy tworzeniu się nie przyczepił.
+Ciekawe.
+Ale zobaczcie, usunąłem sobie widok po prostu wykonując drop view.
+No i wykonałem raz jeszcze create or replace.
+To już zadziałało.
+No i robię select gwiazdka from available products
+i mam tylko i wyłącznie te, gdzie discontinued jest zerem
+i te, gdzie units in stock jest większe niż zero.
+Czyli wszystko pięknie działa.
+Widoki są przydatne też wtedy,
+kiedy nie chcemy pisać wielokrotnie tych samych długich zapytań.
+Później w aplikacji łatwiej się wykonuje jakieś krótsze zapytania
+niż dłuższe.
+Dodatkowo też niż takie, wiecie, przydługa.
+Dodatkowo też widoki, nie wiem, na ile to jest prawda,
+nie robiłem nigdy takich badań,
+ale one też podobno przyspieszają nam zapytania.
+Czyli jeżeli już z pewną długą jakąś zawartość umieściliśmy w widoku,
+długie zapytania umieściliśmy w widoku,
+to podobno są one gdzieś kaszowane.
+Ale tak jak wspomniałem, nie weryfikowałem tej informacji.
+Jeżeli macie chęć, możecie również ją sobie jakoś przetestować
+albo poczytać o tym, czy faktycznie tak jest.
+Na pewno widoki są bardzo przydatną sprawą
+związaną z każdą bazą danych i polecam wam ich stosowanie.
+Nawet jeżeli nie będziecie korzystali z nich w aplikacjach,
+to czasem się przydają jako taki wynik zapytania.
+Zamiast pokazywać komuś konkretne zapytanie,
+można pokazać mu konkretny widok.
+I widoki też możemy sobie przeglądać.
+Jeżeli klikniecie sobie tutaj na naszą bazę danych,
+wybierzecie sobie naszą skimę,
+to gdzieś tutaj również powinny być views.
+Nie odświeżyłem, zrobię refresh.
+O, i dostajecie wszystkie widoki.
+Wystarczy kliknąć i od razu można sobie podejrzeć,
+co w tym widoku siedzi.
+Bardzo wygodna sprawa, jako takie zakładki nawet,
+pomagające nam w pracy.
+I to byłoby na tyle.
+Lekcja taka krótka, ale myślę, że zawierająca ciekawe informacje.
+Bardzo dziękuję wam za ten moduł
+i zapraszam was do pracy domowej.
+Wszystkie prawa zastrzeżone.

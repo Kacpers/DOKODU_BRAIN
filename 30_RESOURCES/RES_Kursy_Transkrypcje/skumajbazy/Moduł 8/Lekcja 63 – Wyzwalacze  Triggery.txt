@@ -1,0 +1,507 @@
+Temat wyzwalaczy i triggerów pojawiał się już w mojej narracji kilkukrotnie.
+Na przykład kiedy mówiłem o tym, że można będzie aktualizować tabelę
+dodając jakieś informacje właśnie za pomocą wyzwalacza,
+czy też mówiłem, że można będzie wysłać komuś sms, notyfikacje,
+coś zrobić w momencie, w którym nasza tabela zostanie zmodyfikowana.
+Z tego względu, że nie mieliśmy jeszcze czasu o tym pogadać,
+nie powiedziałem Wam wszystkiego.
+Uściślając, jeżeli chodzi o wyzwalacze,
+i tak jak mówię, wyzwalacz, trigger to to samo będą używał tych nazw wymiennie,
+to one pozwalają nam wypełniać, wykonywać pewne czynności, pewne instrukcje
+zarówno przed, jak i po aktualizacji, albo po wstawieniu danych.
+Czyli załóżmy, jeżeli dodajecie coś do tabeli,
+to możecie za pomocą wyzwalacza nawet jeszcze zanim to coś do tabeli
+zostanie dodane, coś zrobić.
+Dlaczego robi się to też przed?
+Z tego względu, że poza tą automatyzacją,
+czyli poza tym, że chcę wykonać jakieś czynności po tym,
+jak coś mi się doda, to ja mogę użyć też wyzwalacza do tego,
+żeby wykonać jakieś czynności zanim coś mi się doda.
+Na przykład sprawdzić, czy to, co użytkownik dodaje jest OK.
+Bo oczywiście mamy constrainty, ale może się też zdarzyć,
+że w jakiś sposób będziemy chcieli weryfikować proceduralnie,
+czy to, czy te dane, które wprowadzi użytkownik, są dobre.
+I tutaj znowu jest to dyskusyjne.
+Czy taka walidacja zawarta w bazie danych na pewno jest dobrą rzeczą?
+Część z was może uważać, że dobrą.
+Ja uważam, że można to zrobić w innym miejscu,
+ale oczywiście wszędzie złoty środek, wszędzie trzeba się zastanowić, co jest lepsze.
+Natomiast, jeżeli byście chcieli, to też chcę wam pokazać,
+jaką macie możliwość, żeby właśnie też taką walidację zmieścić w bazie danych.
+Dodatkowo, jeżeli chodzi o wyzwalacze, to wyzwalacze pozwolą wam też rejestrować
+na przykład historię zmian albo logować wszystkie zmiany realizowane na tabeli.
+Czyli załóżmy, wygląda to tak.
+Jeżeli ja zmieniam temperaturę w danym dniu,
+a chcę zachować też wykres temperatury, żeby pokazywał mi się dzień po dniu,
+no to właśnie za pomocą wyzwalacza mogę coś takiego zrobić.
+Do tego na przykład używałem wyzwalaczy właśnie w tym konkretnym przypadku,
+kiedy robiłem taki crawler analizujący ceny,
+bo po prostu chodziłem po pewnych stronach internetowych,
+szukałem pewnych produktów, sprawdzałem ich ceny, aktualizowałem ceny w bazie danych
+i wyzwalacz właśnie miał takie zadanie, że kiedy cena była zmieniana,
+to wpisywał do tabeli z historycznymi cenami cenę tego produktu.
+Dzięki temu w łatwy sposób, bez zbędnego projektowania na bazie danych,
+takiego nadmiarowego,
+można było przechowywać po prostu ceny produktów.
+Bardzo to było wygodne i przyjemne,
+więc też zapisuję Wam to jako potencjalne rozwiązanie, dlaczego wyzwalacze się przydają.
+Jeżeli chodzi o to coś, co można byłoby sprawdzić,
+to do tej pory mówiliśmy sobie o insercji i update,
+ale to nie tylko tyle, ponieważ wyzwalacz może też nam pomóc,
+jeżeli robimy delete albo jeżeli chcemy zrobić truncate,
+czyli w momencie, w którym chcemy wyczyścić tabelę.
+Oczywiście do pewnych rzeczy dużo bardziej sprawiają nam się uprawnienia,
+ale na przykład, jeżeli chcielibyście zweryfikować coś,
+czy można usunąć dany rekord,
+czy na przykład zamiast usuwać rekord, chcielibyście go nie usuwać,
+tylko robić tak zwany soft delete,
+czyli na przykład przenosić go w jakieś inne miejsce,
+to też można coś takiego zrobić.
+Wiecie, tutaj rozwiązań jest naprawdę bardzo dużo.
+A co dzieje się w przypadku, w którym dana tabela ma wiele wyzwalaczy?
+Czyli załóżmy, zrobiliśmy sobie wyzwalacz przy insercie,
+za chwilę przyszliśmy z drugim wyzwalaczem przy insercie,
+z trzecim wyzwalaczem przy insercie,
+no i nagle i lista tych wyzwalaczy nam puchnie.
+Oczywiście nie jest to rekomendowane, nie jest to dobre,
+że tych wyzwalaczy mamy więcej, więcej, więcej, więcej.
+Należy raczej zachować umiar, jak prawie wszędzie.
+Natomiast, jeżeli chodzi właśnie o decyzję,
+który wyzwalacz uruchamia się wcześniej, który później,
+to tu jest całkiem zabawnie.
+Bo istotna jest kolejność alfabetyczna.
+Więc jeżeli zobaczycie, że gdzieś w kodzie przed wyzwalaczem
+będzie A, a gdzieś będzie B, a gdzieś będzie BA,
+no to znaczy, że ktoś próbował dodać kolejny wyzwalacz,
+który ma się uruchomić zaraz po BA, szybciej niż C.
+No to BA na przykład. Taka ciekawostka.
+OK. Jak zaimplementować wyzwalacz?
+Możemy tutaj razem sobie to pokodować.
+Zachęcam was do tego, żebyście w momencie,
+w którym ja będę wam o tym opowiadał,
+sprawdzali, jak zachowa się wasza tabela w trakcie,
+kiedy będziemy taki wyzwalacz sobie tworzyli.
+Na początek zachęcam do tego, żebyśmy stworzyli sobie pustą skimę.
+Możemy ją sobie nazwać create schema me and triggers,
+czyli ja i wyzwalacze.
+No i do tego dokładamy sobie dwie tabele.
+Zobaczcie, stworzyłem sobie tabelę create table me and triggers students.
+Tabela ta posiada id, first name i last name.
+OK. A do tego dołożyłem sobie drugą tabelę,
+me and triggers students log,
+gdzie mam first name, last name, old first name, old last name i updated at.
+Czyli w ten sposób ja będę chciał przechowywać wszystkie zmiany.
+Jeżeli mój student będzie zmieniał imię albo zmieniał nazwisko,
+albo jedno i drugie, to będę chciał w tej tabeli me and triggers
+posiadać historyczne wartości, które były po prostu wcześniej.
+Jak to zrobić?
+Bardzo ważna sprawa, to o czym wspominałem przy okazji PLPG SQL-a,
+że nie da się tworzyć wyzwalaczy, przynajmniej mi się nie udało nigdy wcześniej,
+tworzyć wyzwalacza, który byłby napisany w zwykłym SQL-u.
+Dlatego też od razu create or replace function student update.
+I to, co ważne, to jest to to, że w tym przypadku używamy właśnie funkcji,
+z tego względu, że jeżeli chcemy, żeby coś było zwracane,
+a w tym przypadku wyzwalacz ma nam coś zwracać,
+no to musi być to funkcja.
+Więc robimy create or replace function students update,
+czyli coś, co ma się dziać przy aktualizacji studenta,
+czy też przy dodawaniu akurat w tym przypadku, returns trigger.
+I to returns trigger to jest bardzo ważna sprawa.
+S, dolary, dolary, language.plpgsql, to wiadomo.
+Badging end to znowu jest coś, co już widzieliście wcześniej,
+że zawsze, kiedy jest PLPG SQL, zawsze musi być to badging end.
+No i zobaczcie, co jest w środku.
+I nagle okazuje się, że pomimo tego, że nie mieliśmy nigdzie takiego argumentu jak old i new,
+to te wyzwalacze, takie dwa słówka, mają po prostu w sobie wbudowane.
+Jeżeli robimy trigger, to po prostu zarówno old, jak i new jest dostępne.
+I old, jak łatwo się domyśleć, to jest to, co będzie, co było w tabeli,
+ale może być to też wartość pusta oczywiście.
+Natomiast new jest to to, co będzie w tabeli.
+Czyli old first name to będzie poprzednie imię i nazwisko przed zmianą,
+a new to jest po zmianie.
+Czyli jest old first name, old last name, new first name, new last name,
+no i default, z tego względu, że tam było updated at,
+domyślnie current timestamp, więc dlatego jest default.
+Co dalej? Return new.
+Jeżeli używamy pl, pg, squela, to musimy napisać, co on ma nam zwracać.
+Zwraca nam ten nowy obiekt, tak po prostu tego nam wymaga od nas tego wyzwalacz.
+Return trigger, no i ten language to też ważna sprawa, też zaznaczyłem wam kolorem.
+I druga rzecz, no bo oczywiście w momencie, w którym stworzę sobie taki wyzwalacz,
+taką funkcję, to muszę jeszcze tę funkcję wyzwolić.
+Czyli w momencie, w którym ona jest, ja muszę powiedzieć Postgresowi, słuchaj,
+ty masz ją wyzwalać za każdym razem, kiedy coś się stanie.
+Jeżeli chcemy stworzyć wyzwalacz, to używamy polecenia create trigger,
+nazywamy jakoś ten wyzwalacz, najczęściej nazwa wyzwalacza po prostu jest to nazwa,
+która mówi o tym, na jakiej tabeli, jaka funkcjonalność została wykonana,
+czyli students update trigger, czyli można się domyślać, że na każdym update'cie
+jest taki wyzwalacz, na tabeli students.
+After update.
+On właśnie mówi o tym, kiedy ten wyzwalacz ma się ruszyć, czyli po update'cie.
+On mówi na jakiej tabeli, czyli on me and triggers students,
+no i ostatnia rzecz, która się dzieje, to jakie wiersze chciałbym ruszyć,
+czy też na jakiej, na podstawie co chciałbym zrobić.
+No i tu jest informacja, że chciałbym dla każdego wiersza, czyli for each row,
+czyli dla każdego wiersza, który został zmieniony, no bo musicie pamiętać o tym, że update nie musi wcale,
+polecenie update nie musi wcale edytować jednego wiersza,
+może edytować wiele wierszy, prawda?
+Więc dla każdego zmienionego wiersza to takie jest coś, co zazwyczaj przepisuję,
+po prostu pamiętam, for each row execute i uruchom funkcję students update.
+Tę funkcję, którą sobie zdefiniowaliśmy przed chwilą.
+I w ten sposób, jeżeli chcecie to przetestować, to dodajcie nowy rekord, niech to będzie
+insert into me and trigger students value default jan kowalski,
+wtedy okaże się, że wyzwalacz nam nie ruszy, ponieważ on ma ruszyć tylko after update on,
+ale skoro już jesteście w tym miejscu, to możecie się pobawić, zrobić jeszcze jeden wyzwalacz na insert na przykład.
+Następnie robimy aktualizację, czyli update i to powinno nam już wyzwolić trigger,
+czyli update me and trigger students set first name to john, last name smith, where id równa się 1,
+czyli modyfikujemy jeden rekord, ale oczywiście, jeżeli modyfikujemy jeden rekord,
+modyfikowalibyście wiele, to też by to zadziałało.
+No i jeżeli sprawdzicie select all from me and trigger students log,
+to wówczas oczywiście w tabeli students powinniście mieć poprawne dane, te zmodyfikowane,
+czyli jan kowalski powinien się przemianować na jona smitha,
+natomiast w tej tabeli students log powinniście zobaczyć old value jan, new value john,
+czyli powinno to po prostu logować te zmiany.
+I to byłoby na tyle, jeżeli chodzi o wyzwalacze, które mają zrobić coś po,
+po dodaniu, usunięciu czy jakiejkolwiek innej modyfikacji,
+natomiast wspominałem też o tym, że triggery, wyzwalacze mogą też być wykonywane w taki sposób,
+żeby sprawdzać poprawność, czyli żeby weryfikować, czy to co dodajecie do bazy danych ma rację bytu,
+bo na przykład chcielibyście założyć, że nie można zamówić więcej niż jest w magazynie,
+załóżmy albo cokolwiek takiego i można to oczywiście zrobić.
+Wówczas trzeba pamiętać o tym,
+że nasz wyzwalacz musi być podpięty przed insertem lub update'em,
+zaraz sobie o tym powiemy,
+natomiast jak to zrobić, zobaczcie,
+create or replace function check student returns trigger as $$language.pl.pgsql,
+żadna nowość.
+Badge in end, żadna nowość. Nowość jest w środku.
+Jeżeli new first name jest puste or new last name jest puste,
+wtedy zwróć błąd, to jest rise exception,
+czyli jakby podnieść wyjątek.
+To jest takie, nie chcę Wam teraz tłumaczyć osobom nieprogramującym, co to są wyjątki,
+ale to jest takie, zwróć błąd, powiedzmy sobie.
+First name and last name cannot be empty, czyli imię i nazwisko nie mogą być puste.
+If, który znajduje się tutaj, to jest takie wyrażenie logiczne.
+On, ten rise, wykona nam się tylko wtedy, jeżeli to, co zwrócił ten if, będzie prawdą,
+czyli wystarczy, żeby jedno imię lub nazwisko, bo to jest lub, było puste,
+żeby ten wyzwalacz właśnie nam się wyzwolił.
+Co ważne, oczywiście, to nie jest w żaden sposób powiązane jeszcze z żadną tabelą.
+To się nazywa, co prawda, check student,
+żeby ktoś, kto patrzył na ten kod, czy patrzył na ten wyzwalacz,
+wiedział, co tam się właściwie stało.
+Natomiast w żaden sposób jeszcze nie powiązaliśmy go sobie z żadną tabelą.
+Dopiero w tym drugim, prostoprzednim,
+wyzwalaczu na koncie wykonujemy zapytanie
+create trigger students check trigger before insert or update.
+W momencie, w którym rozmawialiśmy poprzednio o wyzwalaczach,
+pewnie w niektórych waszych głowach,
+jakby ktoś miał kilka głów,
+ale u niektórych z was pojawiło się pytanie,
+a jak zrobić, żeby jeden wyzwalacz obsługiwał kilka eventów?
+Więc tutaj można sobie to właśnie zrobić na jednej tabeli,
+żeby obsługiwał insert lub update,
+wykonując właśnie before insert or update on,
+me and trigger students,
+dla każdego wiersza wykonaj check student.
+I to spowoduje, że skoro to jest before insert or update,
+to on nie pozwoli mu zmodyfikować tych danych,
+bo jeżeli te dane będą puste,
+to wówczas zostanie zwrócony wyjątek.
+I wyrzucenie tego wyjątku zatrzyma wykonanie triggera,
+tak jak napisałem, i wiersz nie zostanie dodany.
+Przyjemna taka opcja.
+Myślę, że na przykład jeżeli pracujecie z bazą danych,
+zależy wam bardzo na jakim jest bezpieczeństwie,
+na tym, żeby ktoś nie zmodyfikował danych sobie od tak,
+gubiąc logikę,
+to wtedy takie wyzwalacze można dodać.
+Należy jednak pamiętać, że wyzwalacz to jest coś,
+co opóźnia w pewien sposób wykonywanie naszych,
+z naszych wszystkich zapytań,
+więc może się okazać, że kiedy dodacie tych wyzwalaczy wiele
+i sprawdzacie wiele rzeczy,
+zamiast to robić przed operacją na bazie danych,
+to ta baza gdzieś będzie działała wolniej.
+Znowu, raczej starałbym się tutaj podchodzić do tego zdroworozsądkowo,
+niż stwierdzić hura, teraz wszystko będzie miało wyzwalacze.
+No bo to też wiązać się będzie z tym,
+że czas na dopisanie wszystkich tych wyzwalaczy
+też będzie mocno wam się kurczył.
+Ale tyle mówiłem ja, teraz czas, żebyście pogadali wy.
+Przygotuj wyzwalacz, który w momencie,
+gdy pojawi się nowy wpis w tabeli order details,
+zwiększy wartość w tabeli units on order dla tego produktu.
+Czyli dodajemy sobie wyzwalacz trigger w momencie,
+w którym dodamy coś do order details,
+no i dla tego pojednego produktu będziemy chcieli
+zwiększyć wartość units on order.
+To jest jedno zadanie.
+I zadanie drugie, przygotuj wyzwalacz,
+który zweryfikuje wartości wprowadzane
+dla tabeli orders tak, aby wartość w kolumnie order date
+nie mogła być wcześniejsza niż data dzisiejsza.
+I to byłoby na tyle w tej lekcji.
+Widzimy się za chwilę jeszcze w rozwiązaniu.
+Ja oczywiście z wami to rozwiążę,
+po czym będziemy szli dalej w kierunku Pythona.
+Do zobaczenia, trzymajcie się,
+widzimy się na 5 minut. Cześć.
+No to co? Nie śpimy, lecimy i wyzwalamy.
+Zadanie pierwsze.
+Przygotuj wyzwalacz, który w momencie,
+gdy pojawi się nowy wpis w tabeli order details,
+zwiększy wartość w tabeli units on order
+dla tego produktu.
+No to cóż, zaczniemy sobie oczywiście od funkcji,
+która będzie nam wyzwalała to wydarzenie,
+no bo jeżeli robimy trigger, no to musimy używać funkcji,
+bo zwracamy po prostu funkcję.
+Więc zwracamy trigger, funkcja zwraca trigger.
+Create or replace function order details update.
+Tutaj pojawi się nowy wpis, to order details insert niech będzie.
+Returns trigger as dolary and, przepraszam,
+to dolary to bedding and i OK.
+Language plpgsql.
+Dobra.
+I teraz tak, będziemy chcieli po prostu dodać,
+czy też zaktualizować units on order dla tego produktu.
+Jak to zapytanie w ogóle wygląda?
+To units on order.
+Jak pamiętacie, select all from units,
+nie, przepraszam,
+zwiększy wartość w tabeli,
+ale w tabeli products.
+I w tabeli products mamy units on order,
+mamy coś takiego.
+Czyli za każdym razem, jak będzie nam się pojawiało nowe zamówienie,
+to będziemy chcieli zwiększać units on order.
+Czyli powinno to wyglądać tak,
+update products set units on order,
+równa się units on order plus,
+i plus to, co zostało dodane do order details.
+W order details mamy quantity, z tego co pamiętam.
+Sprawdzam, tak, mamy quantity.
+Czyli plus new kropka quantity.
+Coś takiego powinno wyjść.
+No i oczywiście wtedy musimy sobie jeszcze zwrócić te nasze new.
+Średnik, return new,
+no bo jak robimy wyzwalacz,
+to zawsze ten wyzwalacz musimy zwrócić,
+tę nową wartość powiedzmy.
+Ctrl Enter.
+No i do tego należy teraz ten trigger podpiąć do naszej tabeli.
+Czyli create trigger,
+możemy go nazwać tak samo jak nazwę funkcji,
+order details insert,
+new order details,
+to jest coś, ten desen, żeby to ładnie brzmiało.
+After insert on,
+no i tutaj interesuje nas dodanie nowej wartości do order details.
+Order details.
+No i teraz dla każdego wiersza,
+for each row execute function,
+tu możemy sobie przenieść,
+ojojoj, coś zepsułem.
+For each row execute function,
+order details,
+insert.
+Średnik,
+nawiasy,
+Ctrl Enter.
+Syntax error,
+create trigger.
+Ach, tu nie ma apostrofów.
+Ops.
+No i teraz wypadałoby to sprawdzić.
+Czyli weźmy sobie select all from products,
+to dobra,
+select gwiazdka from products,
+wyjdzie nam z tego na przykład,
+weźmy product id konbu,
+where product id to 13.
+Interesować nas będzie product name
+oraz units on order.
+O, akurat zero, no to w sam raz.
+Zamawiamy konbu.
+Insert, weźmy tylko jeszcze jakieś ostatnie zamówienie,
+select gwiazdka from orders,
+order by id descending,
+order id.
+Ok, 11077.
+Czyli mamy takie zamówienie,
+no i załóżmy, że ten klient zamówił jeszcze konbu.
+No to insert into order details,
+tylko jeszcze select all from order details
+by się przydało zrobić,
+bo nie pamiętam nazw kolumn.
+Oj, oj, oj, oj, co ty robisz kadprze.
+Ok, no i lecimy.
+Select all from order details jest.
+Insert into order details,
+najpierw order id.
+Order id, moi drodzy, to 11077.
+Product id to nasze konbu, czyli 13.
+Unit price, nie mam pojęcia, niech będzie 10.
+Quantity to 59.
+No i discount to 0.
+Ctrl Enter.
+Syntax values.
+Ok.
+Duplicate constant order details,
+order id, product id.
+Aha, już 13 jest w tym zamówieniu?
+Czy dwa razy musiałem dodać?
+Czekajcie, coś zepsułem.
+Dobra, units on order jest dalej 0.
+Więc to tutaj jest ok.
+Znaczy, nie jest ok, bo się nie wykonało,
+ale tam się błąd pokazał, nie?
+Natomiast tu wychodzi na to, że już jest 13.
+To ciekawe.
+Bo widzicie, jest detail key,
+order id, product id, 11007.
+Select, już niby takie zamówienie było w tym zamówieniu.
+Już takie, ten produkt jest w tym zamówieniu.
+Select gwiazdka from order.
+Details where order id równa się 11077.
+Mamy to szczęście, że tu już jest zamówiona 13.
+I dlatego nam nie zadziałało?
+Tak, mamy to szczęście.
+Jest 13.
+Dobra.
+To jednak 13 nie jest zamawiana.
+Bo, panie, musimy zmienić to zamówienie.
+Ten kombu to jednak jest ważniejsze.
+Unit price to 6.
+Nie, my musimy mieć taniej, drożej, coś tam.
+Ok.
+Jeszcze raz.
+I teraz dodaję sobie to raz jeszcze.
+I poszło.
+Sprawdźmy tą naszą tabelę.
+Działa.
+Czyli widzicie, dodanie triggera,
+tego, zarejestrowanie tego triggera,
+spowodowało, że kiedy wykonałem insert na order details,
+a następnie wykonałem sobie select,
+product name i units on order na products,
+no to już mam 13.
+Jeżeli raz jeszcze bym zamówił w innym jakimś zamówieniu,
+niech to będzie inne zamówienie,
+ale jakbym zamówił w innym zamówieniu,
+znowu na to to,
+to by mi się to wówczas zwiększyło.
+I miałbym już nie 59,
+tylko po prostu 59 plus 40, czyli 99.
+I tak dalej.
+Ok.
+Lecimy do drugiego.
+Przygotuj wyzwalacz, który zweryfikuje wartości
+wprowadzane do tabeli orders,
+tak aby wartość w kolumnie order date
+nie mogła być wcześniejsza niż data dzisiejsza.
+No to lecimy.
+Zrobimy sobie jakieś zamówienie,
+dodamy sobie nowe zamówienie za zeszły rok.
+Zaczynamy tak samo jak poprzednio,
+po prostu będziemy tworzyli sobie nową funkcję.
+Order details, niech to będzie check order date.
+Return stringer, bagging, return new zostaje.
+Ok.
+No i zmiana.
+Jaka będzie zmiana?
+Jeżeli new order date
+jest większy niż current timestamp,
+then and if.
+I then rise exception invalid order date.
+Ops.
+Coś mi się nie spodobało.
+Current timestamp nie ma nawiasów,
+bo to jest o tak.
+And if średnik.
+And if też ma średnik, o tak.
+Zapominam o średnikach.
+Za dużo Pythonu ostatnio.
+W Pythonie nie ma średników.
+Mówię tym, którzy nie programują w Pythonie.
+Ok.
+No i teraz, jeżeli chcielibyśmy sobie to,
+to nie znaczy, że to jest zły język, bardzo dobry.
+Jeżeli teraz chcielibyśmy to sobie uruchomić,
+no to tak samo jak poprzednio,
+musimy sobie ten trigger wywołać.
+Jak pamiętacie, trigger wywołujemy na before,
+czyli create trigger,
+check order date, niech się nazywa.
+Before, insert or update,
+on orders,
+for each row, execute function,
+check order date.
+No to wtedy robimy select gwiazdka from orders,
+no i będziemy mogli sobie zaktualizować,
+przynajmniej spróbować zaktualizować
+nasze,
+naszą tabelę o new order date.
+A ona miała być większa,
+czy mniejsza?
+Ten błąd miał się pokazywać wtedy,
+kiedy nie mogły być wcześniejsze,
+niż data dzisiejsza.
+Czyli new order date to źle.
+A odwrotnie musi być.
+Ok.
+Teraz powinny być ok.
+I jak to zrobić?
+Hmm.
+Insert,
+updata zrobimy po prostu,
+bo i tak sprawdzamy updata.
+Czyli select gwiazdka from orders.
+Logika tego zadania trochę cooler,
+mam wrażenie,
+no bo teoretycznie można byłoby zrobić zamówienie,
+które byłoby,
+które nie mogą być wcześniejsze,
+niż data dzisiejsza.
+Czyli można byłoby zrobić wcześniejsze zamówienia,
+i tam na,
+nie, nie można zamówić coś na przeszłość,
+ale można byłoby z jakiegoś powodu pozwolić na coś takiego.
+Ale dobra.
+Załóżmy, że sobie chcemy zaktualizować to zamówienie
+i zrobić datę rok później,
+niż jest tutaj wpisane.
+No to robimy.
+Update,
+orders set,
+order date,
+równa się 1907.07.04,
+where,
+order id równa się 10.2.4.8.
+Ops.
+Jest błąd.
+A właśnie,
+invalid order date.
+Widzicie?
+Czyli wyświetlił nam dokładnie ten błąd.
+A jeżeli sobie zrobimy datę 2097,
+to przejdzie.
+Jeżeli oglądacie ten kurs po tej dacie,
+to dajcie znać,
+czy używacie jeszcze SQL-a.
+Żartuję.
+Nie wiadomo, co się będzie działo w tej dacie.
+Ja się pewnie nie dowiem.
+A może się dowiem.
+Zobaczymy.
+Rany.
+Teraz sobie wyobraziłem dożyć tak 2100 roku.
+Nie wyobrażam sobie tego.
+Co by się musiało dziać.
+A może będzie to możliwe.
+Ciekawe.
+Dobra.
+Nie gadajmy o tym,
+bo robi się przerażająco.
+To tyle,
+jeżeli chodzi o wyzwalacze.
+Idziemy teraz do Pythona.
+Zapraszam.

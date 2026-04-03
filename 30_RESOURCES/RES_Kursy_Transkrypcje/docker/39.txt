@@ -1,0 +1,12 @@
+To skoro Ada mamy za sobą, to teraz Kopi. I przyznam szczerze, że z mojego punktu widzenia ciężki orzech do zgryzienia przed tobą, bo dla mnie różnicy nie ma żadnej, ale o różnicach między Adem a Kopi jeszcze porozmawiamy, podejrzewam później, chyba, że będziesz chciał wspomnieć teraz też tutaj, to myślę, że możesz śmiało.
+Bo Kopi, Ad, no przecież skoro Ad nie zabiera plików z komputera gospodarza, no bo nie może tego zrobić, to czym one się różnią?
+Tak, więc instrukcja Kopi również służy do dodawania rzeczy do naszego obrazu, podobnie jak Ad jest bardzo podobna, ma też podobną składnię i co ona tak naprawdę robi?
+Kopiuje nam nowe pliki lub katalogi z jakiegoś źródła i dodaje je do naszego obrazu.
+I w zasadzie operuje w kontekstach wszystkich lokalnych, czyli możemy wykorzystać do kopiowania z naszego komputera, z jakiegoś serwera, możemy kopiować z innego stage'a, z innego kontekstu albo z innego obrazu.
+Możemy też chcieć sobie skopiować coś z jakiegoś innego obrazu w ramach budowania jakby naszego docelowego obrazu.
+I wtedy też takie polecenie Kopi można będzie sobie tutaj wykonać.
+No i tutaj też zachęcam do spojrzenia do dokumentacji, do Docker File Reference, dlatego że tam są też omówione wszystkie dodatkowe parametry, w jaki sposób możemy efektywnie z tego polecenia skorzystać.
+No a różnice między Kopi i Adem omówimy sobie w kolejnych.
+Dobrze, to trzymaj mnie jeszcze chwilę w niepewności, a mam nadzieję, że już za chwilę się tego dowiem, bo nie mogę wytrzymać z ciekawości.
+Nie zapomnijcie zasubskrybować oraz zafollowować mnie na Facebooku i Instagramie.
+Wszystkie prawa zastrzeżone.

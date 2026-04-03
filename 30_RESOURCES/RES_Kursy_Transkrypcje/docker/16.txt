@@ -1,0 +1,229 @@
+Dobrze.
+Okej, Janie, sprawa jest taka. Mamy dockerfile'a, czyli jak rozumiem to jest taki przepis, tak jak rozmawialiśmy.
+Ja bym teraz chciał coś ugotować, because I'm the one who knocks, taki żarcik.
+I kto zrozumiał, ten zrozumiał. Możecie napisać pod tym, do czego się odnoszę.
+Więc ugotowałbym ten przepis, zrobiłbym z tego tak naprawdę kontener. Co muszę zrobić? Co musimy zrobić?
+Zbudować chyba, co?
+Tak. Natomiast na tym etapie najważniejsze to jest wyjść z Vim'a, co można sobie zawsze wpisać do CV.
+Okej, no ładnie.
+Dobrze. I teraz, żeby nasz obraz zbudować, mamy takie polecenie jak dockerfile'a.
+Build.
+Okej, nowe polecenie.
+Tak. Do tego polecenia mamy wiele różnych parametrów. Czy chcemy zobaczyć sobie help'a, czy lecimy od razu z budowaniem?
+Możemy help'a pokazać, bo ci, którzy są ciekawi, jeżeli nie pokażemy help'a, to pewnie w tym momencie zatrzymają film i polecą oglądać help'a i może o tym filmie zapomną.
+Więc pokażmy film, dajmy znać, że coś takiego jest.
+Tak.
+Wszystkie polecenia, wszystkie parametry do naszego help'a, do naszego dockerfile'a.
+To, co nas będzie interesowało, to budując obraz, zawsze musimy go otagować.
+Okej.
+Także na pewno będziemy używać sobie "-t", żeby ten nasz obraz nazwać odpowiednio, żeby później z niego uruchomić kontakt.
+I to, co jeszcze jest istotne, to na początku mamy "-usage", i po opcjach, które tutaj widzimy, następuje jeszcze "-path", czyli ścieżka.
+I ta ścieżka to jest ścieżka, taki jakby kontekst, w którym my będziemy budować ten nasz obraz.
+Czyli jeśli my mamy dockerfile'a w katalogu, w którym się znajdujemy, i wszystko inne też mamy w tym katalogu,
+wtedy podajemy kropkę, czyli ten nasz bieżący katalog.
+Ale nie musimy tego robić, nie?
+Wydaje mi się, że musimy.
+Możemy to sprawdzić.
+Możemy to sprawdzić, natomiast jeśli mamy podany taki "-usage", to on jest zawsze w pewien taki charakterystyczny sposób,
+opisywany i jeśli coś jest opcjonalne, to znajduje się w nawiasie kwadratowym.
+Także teoretycznie nie musielibyśmy podawać taga do naszego obrazu, ale pewnie dostanie jakąś domyślną nazwę.
+I mówię pewnie dlatego, że nie wiem, bo nigdy w praktyce tego w ten sposób nie stosowałem, nie spotkałem się nigdzie z takim zastosowaniem.
+Poradź sobie.
+Obraz tagujemy dlatego, że jest to przyjęty standard po prostu.
+Ale zachęcam oczywiście do eksperymentów, do sprawdzenia we własnym zakresie, bo wtedy też człowiek najlepiej się uczy.
+Jeżeli to jest taki przyjęty standard, to Kacper, znany antysystemowiec, może powiedzieć, że sobie radzi bez tagów.
+Nigdy nie dodawałem tagów.
+Tagi dodawałem, powiem ja od siebie, tylko wtedy, kiedy wiedziałem, że to jest jakiś konkretny release, konkretna wersja.
+Ale na prawdę, jeżeli testowałem coś, to tych tagów nie dodawałem, po prostu.
+A masz tutaj na myśli tylko tą część po dwukropku, czy jakby całą nazwę obrazu?
+Bo technicznie cała nazwa obrazu jest tagiem.
+Ok, dobra.
+Czyli i ten człon przed dwukropkiem, i ten człon po dwukropku jest tym naszym tagiem.
+A ja teraz mówię o sytuacji, kiedy byśmy nie podali w wersji.
+Ok, dobra.
+Żebyśmy nie podali w ogóle tego przełącznika i w ogóle żadnego członu.
+Ok, dobra.
+To możemy też to przetestować, zobaczymy jak to wyjdzie wtedy w praktyce.
+Ok, czyli tak naprawdę teraz, jeżeli mamy tego dockerfile'a, to wykonujemy docker build i kropka, zgodnie z tym, co mówisz.
+Tak.
+Także w tym momencie testujemy, co się wydarzy.
+Ok.
+Jeżeli coś się zbudowało, dostaliśmy informację writing image z haszem, to zobaczmy sobie docker image ls, który pokazuje jakie obrazy są dostępne w naszym systemie.
+Oprócz tego, że pokazuje obrazy, które pobraliśmy, o czym już wspominaliśmy w poprzednich lekcjach.
+docker image ls pokaże nam także obrazy, które samodzielnie zbudowaliśmy.
+Ok.
+I widzimy nadle.
+Ok.
+Ale to nie jest ten obraz, to jest z 47 godzin temu, to jakiś inny.
+Właśnie jest to troszeczkę dla mnie zaskakujące, dlatego że na pewno przed nagraniami usuwałem wszystkie takie obrazy, na 100% takiego obrazu nie było.
+W związku z czym, z jakiegoś powodu on czyta tą starszą datę, nie wiem z jakiego, ale możemy sobie sprawdzić.
+Może faktycznie popełniłem jakiś błąd i nie usunąłem.
+Także możemy sobie usunąć ten nasz obraz.
+Ok.
+Zrobić jeszcze raz.
+Jan musi zacząć pracę w swojej pracy od nowa, bo usunął sobie obraz?
+Tak.
+Patrzymy, że na pewno nie mamy żadnego takiego obrazu, który byłby utworzony 47 godzin temu, tak jak było to tutaj.
+Budujemy go sobie jeszcze raz.
+Ok.
+Ok. I jeszcze raz patrzymy.
+I faktycznie pokazuje, że jest zbudowany 47 godzin temu.
+Ok.
+Dlaczego?
+Szczerze przyznam, nie mam pojęcia.
+Musiałbym się zastanowić.
+Bo z tego, co tutaj widzę, to kolejne polecenia, które tutaj się pojawiają i jednocześnie kolejne warstwy, które się tutaj pojawiają, są tymi, które są opisane w naszym docker file'u.
+Natomiast to, co tutaj widzę i to, o czym chciałem też powiedzieć, co może być przyczyną, a teraz jestem pewien, tutaj mamy informację cached.
+To jest to, o czym mówiliśmy wcześniej.
+Że każda nasza warstwa, która się nie zmieniła, jest cachowana.
+A my budowaliśmy ten obraz.
+47 godzin temu.
+Tak, kiedy pracowaliśmy nad poprzednimi lekcjami.
+I on co prawda był zbudowany pod jakąś konkretną nazwą.
+Natomiast ja nie czyściłem dockera w 100%, żeby mieć takie zerowe, zerowe środowisko.
+W związku z czym najprawdopodobniej docker gdzieś ma jeszcze jakieś pozostałości tego cacha.
+I on je wykorzystał.
+I w sytuacji, kiedy też ten cache jest wykorzystywany, faktycznie informacje dostajemy o tym, kiedy ten cache powstał.
+Czyli jeśli żadna warstwa po drodze się nie zmieniła, wszystkie warstwy zostały wymienione z tego i wykorzystane z tego cache'a,
+to jeśli on został zbudowany na przykład tydzień temu, to dostaniemy informację o tym, że on został zbudowany tydzień temu.
+Dlatego, że jest to czas tego pierwszego utworzenia.
+A nie tego bieżącego zbudowania.
+Okej.
+No to cóż, to w takim razie też przy okazji mamy lekcję tego, że jeżeli faktycznie te warstwy wcześniej były zbudowane,
+no to on tak naprawdę pobiera je sobie z cache'a.
+Czyli to, o czym wspominaliśmy moment temu.
+Natomiast w poprzedniej lekcji.
+Natomiast jeżeli u was wykonacie to polecenie, to zobaczycie najprawdopodobniej, że po prawej stronie ten czas, który widać, on będzie ciut dłuższy,
+bo ten czas, który widać, on będzie ciut dłuższy, bo ten czas, który widać, on będzie ciut dłuższy, bo ten czas, który widać, on będzie ciut dłuższy,
+on będzie ciut dłuższy, nie będzie wynosił 0 sekund, no bo faktycznie docker będzie musiał pewne czynności dla was wykonać, żeby móc taki obraz utworzyć.
+No bo faktycznie docker będzie musiał pewne czynności dla was wykonać, żeby móc taki obraz utworzyć.
+Tak. Tutaj w zasadzie jedyny czas, jaki był widoczny, to tutaj, kiedy czytał sobie metadany od siebie, żeby przystąpić do budowania tego naszego obrazu.
+Tak. Tutaj w zasadzie jedyny czas, jaki był widoczny, to tutaj, kiedy czytał sobie metadany od siebie, żeby przystąpić do budowania tego naszego obrazu.
+Tutaj spędził jakiś czas, no a później poleciał z tego, co sobie odczytał i to zbudował.
+Mhm, dobra.
+No i tak naprawdę to, co teraz mnie interesuje, to jeszcze chcemy dodać te tagi? Chcesz pokazać, co te tagi zmienią, czy na razie to sobie zostawiamy?
+Tak. Pokazałbym teraz te tagi, ale oprócz tagów, dlatego że tutaj faktycznie widzimy ten cache, dodałbym też parametr, który był w naszym helpie widoczny, ale go nie umówiliśmy,
+który jest odpowiedzialny za to, żeby z tego cache'a nie korzystać.
+który jest odpowiedzialny za to, żeby z tego cache'a nie korzystać.
+który jest odpowiedzialny za to, żeby z tego cache'a nie korzystać.
+Bo czasami możemy mieć sytuację, w której chcemy faktycznie z tego cache'a nie skorzystać, żeby mieć pewność, że na 100% przebudowaliśmy nasz obraz od zera, a nie wykorzystał coś, co już miał.
+Mhm, pewnie.
+Dobrze.
+Także lecimy...
+Wspaniale.
+Także lecimy po kolei.
+docker build
+docker build
+Minus Te
+Dlaczego minus te?
+A cinnamon to jest tag.
+Tak.
+I teraz nazwiemy ten obrad do kodu z tagiem python,
+Python dlatego, że to nie jest jedyny język, z którego będziemy korzystać w ramach tego kursu, ale o tym będzie osobna lekcja.
+i tak jak wspomniałem przed chwilą, to pasuje.
+Przed chwilą chcemy sobie wykorzystać zbudowanie od nowa, żeby zobaczyć też jak
+ten proces budowania trwa.
+Koniecznie.
+Ok. Było bez pieniędzy, teraz jest bez cache'a.
+Także teraz jest bez cache'a i nasz kontekst, czyli kropka, bo jesteśmy w tym
+katalogu, w którym jest i nasz dockerfile i cała reszta.
+To jest w katalogu Python, co też widzimy po lewej stronie, nie?
+Tak, natomiast tą jakby ścieżką na końcu zawsze wskazujemy to miejsce, w którym
+znajduje się nasz dockerfile.
+Ok.
+Dobrze, to odpalamy.
+Fajer. Już myślałem, że tak długo u Ciebie się buduje.
+No i teraz widzimy, że ta budowa faktycznie chwilę potrwała.
+Tutaj mamy półtora sekundy, tu mamy trzy i pół sekundy, tutaj mamy jakieś mniejsze
+wartości, chwilę to trwało i tutaj też w zasadzie nie widzimy cache'a.
+Jedynie co, to skeshował nam workdir.
+Nie jestem pewien, dlaczego go akurat skeshował,
+ale to już mogą być bardziej zaawansowane mechanizmy Dockera i myślę, że to wykracza
+poza
+tego kursu.
+Jak najbardziej.
+I tak naprawdę dalej widzimy wszystkie te polecenia.
+I to, co jest też ciekawe, to, o czym też
+wspominaliśmy przed momentem, to jest exporting layers, czyli tak naprawdę on
+mimo tego, że wskazaliśmy mu, że nie chce cache'a, to on i tak sobie te warstwy tutaj
+tworzy i też je sobie w jakiś sposób pewnie zapisuje, nie?
+Tak, bo to, co my tutaj wskazaliśmy, to
+podaliśmy informację, że my nie chcemy z tego cache'a teraz korzystać podczas
+budowania
+tagu, o takim konkretnym tagu.
+Natomiast on wszystkie te warstwy zapisuje w tym obrazie, który utworzyliśmy.
+I teraz, jeśli ja bym ten obraz wypchnął sobie na przykład do Docker Huba,
+to wszystkie te warstwy, które zbudowałem, w tym obrazie będą.
+I to jest też to, co widzieliśmy tak naprawdę w poprzedniej lekcji, kiedy
+przeglądaliśmy, z czego ten nasz Python jest już zbudowany.
+To my tam widzieliśmy dokładnie te warstwy.
+I to jest dokładnie analogiczna sytuacja.
+W jakimś pipelinie, w jakimś CICD obraz został zbudowany, został wgrany na Docker Huba
+i my możemy sobie zobaczyć, z jakich warstw on się składa.
+Nawet się zrymowało.
+Absolutnie tak, w stu procentach się zgadzam.
+Bardzo mi się to spodobało.
+To właśnie pokazałeś. I teraz pytanie, czy jak sobie taki obraz zbudowaliśmy,
+to co musimy zrobić, żeby go uruchomić?
+Myślę, że do uruchomienia przejdziemy za chwilę.
+A widzisz, ja niecierpliwy jestem.
+Na ten moment chciałbym tylko pokazać, że nasz obraz się zbudował.
+I tutaj faktycznie widzimy.
+Słowem wyjaśnienia do tego taga, kiedy my podajemy tag, to my tak naprawdę podajemy
+repozytorium
+kopek tag i jak listujemy sobie obrazy, to widzimy, że repozytorium
+tutaj mamy do kodu i tak mamy Python.
+No i faktycznie widzimy, obraz został zbudowany dwie minuty temu.
+Tutaj mamy jego ID oraz jego rozmiar.
+Widzisz, to też jest rzecz, której się uczę tutaj.
+Nie wiedziałem, że tak to działa, a teraz już wiem.
+Ale to też kwestią tego jest pewnie, że
+wspomniałem, nie dodawałem tych tagów, więc zawsze tam mi się pokazywały jakieś cuda.
+A teraz już wiem, jak to ładnie ułożyć, więc też Ci za tę wiedzę dziękuję.
+Ogólnie też jest tak, że jeśli nie podajesz tego tagu, to Docker domyślnie korzysta z
+tagu latest, także zbudujemy sobie obraz,
+który będzie bez taga i zobaczymy, czy on dostanie tego taga latest.
+Test bez taga w katalogu bieżącym.
+I Enter.
+Naming to docker.
+Test bez taga.
+Także dostajemy informację o tym, jak nasz obraz został nazwany.
+Robimy podgląd i test bez taga istotnie dostał nazwę latest.
+Ale zaczekaj, teraz będzie kolejne pytanie z serii głupich, ale jeżeli on tak napisał ten
+adres docker.io-library-test-bez-taga, to jak Ty byś wszedł pod ten adres, to byś
+zobaczył, że ten obraz gdzieś tam jest? Nie, to dopiero jest taka nazwa przygotowana
+przed wypchnięciem, prawda?
+Zasadniczo to jest jakaś nazwa wewnętrzna,
+której Docker używa, dlatego też, że
+adres Docker Hub'a to też nie jest docker.io.
+No tak.
+Jest to wewnętrzna taka nazwa, której gdzieś tam
+gdzieś tam Docker używa.
+Przy czym przyjęli taką konwencję, żeby korzystać ze ścieżek.
+Bo widocznie tak jest łatwiej sobie z tym
+pracować i łatwiej jest to sobie gdzieś tam uzmysłowić.
+Natomiast myślę, że to nie jest jakieś bardzo istotne.
+Myślę, że tym jakby co tutaj Docker nam dokładnie powiedział,
+nie musimy się martwić.
+Chyba, że chcemy zostać naprawdę takimi mega ekspertami od Dockera.
+Ale osób znających go tak bardzo głęboko jest niewiele.
+W naszym kraju znam jedną osobę, która jest Docker kapitanem i myślę, że
+zapytając jego byłaby szansa, że byłby w stanie na to odpowiedzieć.
+Chociaż pewności też nie mam.
+No widzisz, jestem taki ciekawski, więc zadaję pytania.
+Nie konsultowaliśmy wcześniej listy pytań, ale dobrze.
+Idźmy dalej. Już nie będę ci tutaj przeszkadzał.
+Ale widzę natomiast rzecz, o której
+rozmawialiśmy, czyli że jest laytest obok test bez taga, czyli to zadziałało.
+Tak, dokładnie tak.
+Także jeśli tego taga nie podamy przy tworzeniu obrazu, jak i przy pobieraniu
+obrazu, jak również wewnątrz naszego Dockerfile'a, gdybyśmy tutaj nie podali,
+że chcemy Pythona w wersji 3, wykorzystany
+w wersji latest. Jest to zawsze domyślny tag w Dockerze.
+Dlatego też nie mamy obowiązku podawania go, bo jest domyślnie używany.
+OK, super.
+I to chyba tyle w naszej dzisiejszej lekcji.
+W następnej lekcji ten nasz zbudowany obraz sobie uruchomimy i trochę z nim popracujemy.
+Już chciałem o to pytać, ale skoro zrobimy to w następnej lekcji, w sumie czas jest zacny, więc jak
+będzie, to do zobaczenia.
+Do zobaczenia.

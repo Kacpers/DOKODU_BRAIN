@@ -1,0 +1,192 @@
+jak obiecałem tak zrobimy czyli pokażę
+wam teraz jak możemy filtrować wyniki
+grupa i do tego będziemy potrzebowali
+jeszcze jednego klocka naszej układanki
+którym będzie to having jeżeli chodzi
+o having to kolejność występowania
+havinga w zapytaniu jest taka że jest
+select from tabela grup by kolumna tam
+oczywiście jeszcze po drodze może być
+where i później jest having warunek
+różnica między where a having jest taka
+że having wykonuje się dopiero po
+zadziałaniu grupa Zobaczcie from where
+group having i dopiero tu jest select
+czyli najpierw ja mówię skąd chcę
+pobrać potem mówię jak chcę to
+przefiltrować następnie mogę sobie ten
+wynik pogrupować na tym grupie
+w grupowaniu mogę użyć having żeby
+ograniczyć wiersze które mi się
+wyświetliły i dopiero wtedy za pomocą
+selecta określam jakie kolumny mnie
+interesują to ten wykres na dole ma
+służyć lepszemu zrozumieniu natomiast
+tak naprawdę jeżeli skupicie się na tym
+co jest na górze czyli jaka jest kolejność
+występowania poszczególnych tych
+elementów zapytania no to będziecie
+wiedzieli że jak najbardziej ten having
+też tutaj ma wystąpić za grupę to całkiem robi się wtedy czytanie grupy
+intelne że sobie możemy też wyobrazić
+że tak jak dla naszego from a mamy
+where który określa jakie wiersze mają
+się pokazać tak po grupie mamy having
+które określa jakie grupy mają się
+pokazać bo having działa już tylko i
+wyłącznie na grupach no i to właśnie
+pytanie having czy where jeżeli używam
+having to on działa tylko i wyłącznie
+na grupach where działa przed grupami
+więc jeżeli tylko mamy jakieś wiersze które chcielibyśmy ukryć to mamy takie wiersze które chcielibyśmy ukryć
+to zdecydowanie lepiej użyć where'a, a having używać tylko wtedy,
+kiedy chcemy filtrować konkretne grupy.
+No i tu kolejny raz to samo, no ale jak będziecie czytali prezentację,
+to nie będziecie mieli mojego gadania, więc żeby było dla czytających
+to powiedziane jeszcze raz.
+No i zobaczcie, zrobiliśmy sobie takie zapytanie,
+gdzie mamy select city some amount from item group by city.
+No i wynikiem tego zapytania jest Gdynia, Warszawa, Zakopane i Kraków
+z jakimiś tam liczbami 30, 30, 40, 55.
+I teraz załóżmy, że interesują mnie tylko i wyłącznie te wiersze,
+te wyniki, te grupy, które sumę amounta mają większą niż 30.
+No i w ten sposób właśnie możemy sobie to zrobić,
+czyli group by city having some amount większe niż 30.
+W ten sposób Gdynia i Warszawa nam znikają,
+pozostaje tylko i wyłącznie Zakopane i Kraków,
+ponieważ tylko w tych dwóch miastach ta suma była większa niż 30.
+Dokładnie tak to działa, nie ma tutaj żadnej filozofii.
+Jeżeli dodacie alias do sumy, to to również nie zadziała,
+czyli on nie pokaże nam, nie pozwoli nam używać aliasu wewnątrz sumy,
+można tylko i wyłącznie używać tego wyrażenia raz jeszcze,
+czy jeszcze raz je powtórzyć.
+No i małe zadanko, w których latach i miesiącach suma fraktu była wyższa niż 5000?
+To jest pierwsze zadanie.
+No i zadanie drugie, pobierz wszystkie produkty,
+które według tabeli order details posiadają średnią ilość zamówienia quantity
+pomiędzy 19 a 20.
+Czyli tutaj trzeba sobie przypomnieć between, to jest jedna rzecz.
+Druga rzecz to order details, coś tam trzeba pogrupować,
+to jest jedna rzecz, to jest jedna rzecz, to jest jedna rzecz,
+to jest jedna rzecz, to jest jedna rzecz, to jest jedna rzecz,
+to jest jedna rzecz, to jest jedna rzecz, to jest jedna rzecz,
+nie przeszkadzam, do zobaczenia za chwilę w rozwiązaniu.
+Okej, no to co?
+W których latach i miesiącach suma fraktu była wyższa niż 5000?
+Select all from orders.
+No i jak sobie to wykonam, to za chwilę zobaczę,
+że tam mam taką kolumnę jak frakt,
+ale mnie będzie interesowało nie suma na frachcie,
+tylko będzie mnie interesował rok zamówienia i miesiąc zamówienia.
+Więc od razu mogę sobie wyciągnąć year na order date,
+month na order date,
+no i fracht, fracht czyli freight,
+czyli sum na frejcie.
+No i teraz jak mam rok, miesiąc i sumę,
+no to mogę sobie wówczas to zgrupować,
+no i grupuję to na podstawie roku i miesiąca.
+Oczywiście nie tak,
+bo to jest przecież,
+to jest przecież postgres,
+więc używamy date part.
+Za dużo MySQL, ale widzicie, mówiłem o tym, że są różnice,
+więc w przypadku MySQL właśnie jedną z różnic jest to,
+że tam mamy funkcję, która nazywa się year i month,
+natomiast tutaj takich funkcji nie mamy,
+zamiast tego używamy,
+czyli mamy date part.
+Okej, no i dostajemy date part, date part sum, okej.
+Możemy sobie to jeszcze zrobić as year,
+as month i mamy year, month, sum.
+Okej, ale nie o to nas pytali.
+Pytali nas o to, w których latach i miesiącach
+suma frachtu była wyższa niż 5 tysięcy.
+Więc having sum na frejcie większe niż 5 tysięcy.
+Hop.
+I mamy w 98, w kwietniu, w styczniu i w marcu tak było.
+Gotowe.
+I w zadaniu drugim chcemy pobrać wszystkie produkty products,
+które według tabeli order details posiadają średnią ilość zamówienia quantity między 19 a 20.
+No dobra, to najpierw pobierzmy sobie z order details informacje o tych produktach,
+czyli select gwiazdka from order details.
+Robię tak, bo nie pamiętam jak się nazywają moje kolumny.
+I teraz pobierz wszystkie produkty za chwilę.
+Średnia ilość zamówienia między 19 a 20,
+czyli będzie nas interesowało product id.
+Będzie nas interesowała średnia ilość zamówienia,
+czyli average na quantity.
+No i to chcemy sobie zgrupować, czyli group by product id.
+Okej.
+Okej.
+Okej.
+Okej.
+W ten sposób wyświetliły nam się
+wszystkie średnie ilości zamówienia dla poszczególnych produktów.
+To takie dobre też ćwiczenie jest
+żeby sobie rozmawiać o tym co się udało tak naprawdę pobrać,
+bo dzięki temu też łatwiej jest zrozumieć jak daleko jeszcze do celu.
+I teraz interesuje nas tylko te wartości,
+gdzie mamy między 19 a 20.
+Czyli having,
+average quantity,
+between,
+no i możemy sobie wprowadzić
+jak między 19 a 20
+niech będzie between 19 a 20
+ok, będziemy mieli wartość
+19 dokładnie też tutaj pobraną
+ale załóżmy, że o to chodziło, jakbyśmy chcieli
+mieć, żeby 19
+było wykluczone, no to wiadomo tutaj trzeba byłoby
+zrobić 19,1 na przykład
+tak, żeby było tam 19,01
+jakoś tak
+ale ok
+no i cóż, i teraz
+to o co byliśmy zapytani
+to teoretycznie mogłoby tak zostać, ale
+nas pytają o wszystkie produkty z tabeli
+products, więc
+pobieramy
+tylko product id
+i wykonujemy
+select gwiazdka from
+products, where product
+id, jest product id
+czy jest product, czy jest
+id
+product id, where product
+id in
+in to
+o tym będziemy sobie jeszcze
+rozmawiali w tym module
+bo w tym module jest cały też
+dział poświęcony pod zapytaniom
+lekcja poświęcona pod zapytaniom
+ale warto też pamiętać o tym, że
+to już sobie robiliśmy kiedyś
+jak najbardziej operator in
+i tego typu zapytanie też może
+tutaj wystąpić
+i warto sobie też tę wiedzę
+powtarzać, nawet jeżeli o pewne rzeczy
+nie pytam, to zawsze w ramach utrudnienia
+jak najbardziej możecie stawiać sobie
+wyzwania i pobierać
+trudniejsze rzeczy, tym te ciekawsze
+też chętnie
+jeżeli takie wyzwania wymyślicie
+i wrzucicie je sobie na discorda
+czy też napiszecie do mnie, że hej
+ale wymyśliłem zapytanie, to bardzo chętnie
+umieszczę to albo w ramach pracy domowej
+albo zrobimy sobie taki
+arkusz z ćwiczeniami dodatkowymi
+jak macie chęć, jeżeli coś wymyślicie
+dawajcie koniecznie znać, a ja jeżeli
+chodzi o tę lekcję, bardzo wam dziękuję
+zapraszam do kolejnej, gdzie pooperujemy
+sobie na zbiorach i porozmawiamy
+w ogóle o tym, jak zapytania
+można ze sobą łączyć. Do zobaczenia!
+www.astronarium.pl www.facebook.com

@@ -1,0 +1,35 @@
+I tym sposobem nadeszła wielka, wiekopomna chwila.
+Przechodzimy do pierwszej w historii pracy domowej z bootcampu z Kuma i Bazy.
+Praca domowa moduł pierwszy.
+Zadanie domowe pierwsze brzmi
+Posortuj dostawców według kolejności contact title rosnąco oraz contact name malejąco.
+Zapisz wyniki tego zapytania do pliku csv.
+Wszystko jasne? To do roboty.
+Tutaj mojego rozwiązania nie zobaczycie.
+Pojawi się ono dopiero w kolejnym module na dzień dobry.
+Zadanie domowe drugie brzmi
+Wyświetl unikatowe wartości z kolumny contact title z tabeli suppliers,
+a następnie wyeksportuj wynik do pliku txt.
+Tutaj zwróćcie uwagę w ogóle co się ciekawego stanie,
+kiedy wyeksportujecie sobie wynik do pliku txt.
+Jaki to będzie miało format.
+Zadanie domowe trzecie.
+Zwróć uwagę, że w tabeli orders shipped date to data wysyłki,
+a required date to data kiedy produkt miał być dostarczony.
+Odejmując od siebie te daty sprawdź, które zamówienia mają największe opóźnienie.
+Pamiętajcie, że order by może przyjmować też wyrażenie w miejscu,
+w którym znajduje się kolumna.
+Czyli tam też możecie powtórzyć sobie i jeszcze raz te dwie daty od siebie odjąć.
+I ostatnie zadanie domowe.
+W tabeli products znajdź kolumny unit price unit in stock.
+Sprawdź, który magazynowany produkt stanowi największą wartość.
+Czyli unit price razy unit in stock po prostu wyświetli nam ile mamy,
+za ile mamy towaru niesprzedanego.
+Czyli mamy wyświetlić nazwy oraz iloczyn unit price oraz unit in stock.
+I to byłoby na tyle, jeżeli chodzi o pracę domową.
+I to byłoby na tyle, jeżeli chodzi o pracę domową.
+Życzę Wam przyjemnego rozwiązywania i pamiętajcie,
+że widzimy się już w kolejny poniedziałek
+i będziemy rozmawiali sobie o filtrowaniu między innymi.
+Do zobaczenia.
+Napisy by Jacek Makarewicz

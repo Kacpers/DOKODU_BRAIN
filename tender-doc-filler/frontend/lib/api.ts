@@ -1,4 +1,4 @@
-const API_BASE = "/api";
+const API_BASE = "/formularze/api";
 
 export interface FieldResult {
   location_id: string;

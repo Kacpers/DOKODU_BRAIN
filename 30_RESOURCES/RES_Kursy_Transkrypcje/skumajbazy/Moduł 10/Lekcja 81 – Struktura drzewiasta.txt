@@ -1,0 +1,92 @@
+MongoDB to dokumenty.
+Dokumenty to jakaś hierarchia, prawda?
+Mówiąc dokument, możemy kojarzyć sobie folder, katalog.
+W folderze czy w katalogu możemy mieć dokumenty, możemy mieć
+też kolejny folder, katalog, no i tak się świat nam kręci.
+No i w Mongo też coś takiego jest, też możemy takie rzeczy
+przemywać jak w takiej strukturze jak strukturze drzewiastej.
+I o tej strukturze sobie teraz porozmawiajmy.
+Jak wygląda drzewo?
+Każdy wie, mamy pień, od pnia odchodzą gałęzie, każda gałąź
+może dzielić się na mniejsze gałęzie.
+No i tu jest tak samo, możemy mieć pojazdy, pojazdy to mogą
+być samochody albo jednoślady, jak samochody to osobowe albo
+ciężarowe, a jak jednoślady to motocykle albo rowery.
+Więc rower to jednoślad, który jest pojazdem, a samochód
+ciężarowy to samochód, który jest pojazdem.
+I tak możemy to sobie tłumaczyć i również możemy te dane
+przechowywać w Mongo.
+Tu jest kilka podejście, chciałem wam pokazać dwa przykładowe.
+Po pierwsze, każdy element może mieć bezpośrednio wskazane
+dzieci, czyli mówię słuchaj, to są moje dzieci, dzieci mają
+swoje dzieci i tak dalej.
+No wiecie jak to wygląda, zresztą poniżej nie bez przyczyny
+narysowałem drzewo genealogiczne.
+Albo też może być tak, że każdy element posiada wskazanie
+rodzica, czyli ja mogę powiedzieć to mój rodzic i on może
+powiedzieć to mój rodzic i tak mogą się wzajemnie wskazywać.
+Jak naprawdę wina jest rodziców, to każdy pokazuje wyżej, wyżej
+i wyżej. Jak tak sobie pokazują, no to w kodzie też to jakoś
+musi wyglądać, więc w kodzie będzie to wyglądało tak, zobaczcie
+db many items, insert many, no bo chcę dodać od razu więcej,
+wskazuje nawiasy kwadratowe, które będą mówiły, że będę
+dodawał więcej elementów.
+No i wtedy lecę.
+Takim przykładem, który był, czyli id, slack, parent, id, slack, parent,
+id, slack, parent i tak dalej, i tak dalej i wszystkie te elementy
+to mamy zmapowane.
+Co ważne, pojazdy, które były na samej górze nie mają rodzica, więc
+mają parent 0, czyli jak wracają do tej winy, to wina będzie ich.
+Okej i co można zrobić dalej?
+No oczywiście później można robić zapytania, na przykład pokaż mi
+wszystkie, wszystkie elementy, które są dzieckiem samochodów.
+No to mogę sobie po prostu wyświetlić.
+Osobowe, ciężarowe, korzystając z zwykłego tego wskazania, wiecie,
+że jest obiekt w środku, parent, samochody i wyświetli nam się,
+wyświetlą nam się wszystkie dzieci samochodów, czy też wszystkie
+dzieci pojazdów, jak tam potrzebujemy.
+Natomiast tutaj też możemy wykorzystać coś, co nazywa się graph lookup.
+Graph lookup, to wygląda w ten sposób, że mówimy db many items,
+czyli z jakich kolekcji wskazujemy, znowu jest aggregate i wówczas ten
+graph lookup też przyjmuje from many items, czyli mówimy mu z jakich
+kolekcji będziemy chcieli korzystać.
+Start with, czyli mówimy mu od czego on ma zacząć, zacznę od parenta,
+connect from field parent, connect to field slug, czyli mówimy, że w
+naszej tej układance każdy parent łączy się ze slugiem.
+No i ponownie as parent information, tu chodzi o to, że robi nam się taki embed, do którego wskazujemy.
+W którym to wskazywane są te nasze obiekty, które są tak naprawdę
+wyżej, no bo to jest bardzo istotne, żebyście wiedzieli, że my wskazujemy
+rodzica, więc my tak naprawdę będziemy łączyli się z tym, co jest
+wyżej, a nie z tym, co jest niżej.
+I zobaczcie, między innymi rowery mają parent w postaci jednośladów,
+stąd też nad jednośladami mamy pojazdy, a pojazdy mają nula.
+Idąc dalej, samochody to pojazdy, pojazdy mają tylko pojazdy,
+pojazdy wyżej, już tak nic nie ma, więc tak naprawdę samochody to
+pojazdy, no i pojazdy to jest ten najwyższy, więc nic nie ma i tak dalej.
+Jak widzicie, ładnie nam to wszystko grupuje w ten sposób, można
+też albo rysować drzewa, albo jakieś breadcampy takie robić, gdzie
+wiecie, wskazujemy, co jest wcześniej. Do tego typu rzeczy jak najbardziej
+się to przydaje. Co jeszcze możemy zrobić? Możemy na przykład
+wskazywać sobie też, tworzyć tę strukturę drzewiastą, wskazując dzieci.
+Czyli tu mamy odwrotną sytuację. Zobaczcie, mamy E, F, D, tu nie ma żadnych dzieci,
+C ma dzieci jako F, które nie ma żadnych dzieci, B ma dzieci D i E i A ma dzieci B, C.
+Czyli to wygląda tak, że na samej górze, na samym wierzchołku jest A, od A idzie B i C,
+B ma D, E, które ma już, które z kolei D, E nie ma nic, natomiast od C,
+czyli od tego drugiego wierzchołka wychodzącego z A,
+tutaj też pusto. Takie tam ułożenie literek. No i tu niestety pokazuje
+wam po prostu to, jak to można też przechowywać. To jest też jedna z
+takich podejść, natomiast niestety tutaj nie mamy żadnego takiego
+czegoś jak to tree structure przed chwilą do wyświetlenia takiego drzewa,
+czy tam graph do wyświetlenia takiego drzewa. Natomiast jeżeli byście chcieli
+pobrać tylko dzieci, no to można zawsze zrobić db.letters.find1, id to A,
+children i to nam wyświetli wszystkie te elementy, które są w pierwszym tym poziomie,
+pod dziećmi. No tych sposobów do przechowywania drzew jeszcze jest
+kilka. Można korzystać z takich czterech właściwości jak left, right, coś tam
+i root. To też pozwala na rozpisywanie, na wskazywanie tych elementów.
+Jest tego naprawdę sporo, no ale takim idealną bazą danych do tego typu
+zastosowań, czyli bazą służącą do pracy z grafami jest oczywiście baza
+danych grafowa. No i tutaj najlepszym przykładem tego będzie Neo4j, no ale my tą
+zajmiemy zupełnie podczas naszego bootcampu. Natomiast też wam nakreślam,
+bo może gdzieś w przyszłości wam się taka baza przyda. I to byłoby na tyle,
+jeżeli chodzi o ten moduł. Zapraszam was do modułu ostatniego, jakim będzie
+podłączenie się do MongoDB z poziomu Pythona.

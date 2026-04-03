@@ -1,0 +1,138 @@
+Zrobiliśmy takie wprowadzenie, czym jest Docker i każdy z nas opowiedział trochę o swoim świecie.
+I teraz mamy nagrać takie wyjaśnienie, dlaczego warto poznać Dockera.
+I ja jak się zastanawiam nad czymś, dlaczego warto pracować w danej firmie,
+dlaczego warto robić daną rzecz, to zaczynam się zastanawiać, co by było, gdyby tej rzeczy nie było.
+I moje pytanie do ciebie, Janie, jest takie.
+Czy ty sobie w ogóle wyobrażasz swoje życie w tej chwili bez Dockera?
+Tak, ale nie jest to życie usłane różami.
+Dlaczego nie jest to życie usłane różami?
+Przecież to kolejna usługa, której musiałeś się nauczyć, spędzić nad nią dużo czasu,
+a jednak z jakiegoś powodu uważasz, że to jest czas wartościowo spędzony z Dockerem i przy nauce Dockera?
+Tak, jest to czas bardzo wartościowo spędzony,
+dlatego że mając ustandaryzowany sposób budowania naszej aplikacji
+z wszystkimi zależnościami, z mojej perspektywy jako devopsa jest to swego rodzaju taka instrukcja,
+jak w ogóle ta aplikacja jest budowana.
+Można powiedzieć, że jest to swego rodzaju nawet taka dokumentacja, której kiedyś deweloperzy nie tworzyli,
+przez co nasze zadanie jako devopsów, jako administratorów było o tyle utrudnione,
+że nie widzieliśmy tego.
+Nie wiedzieliśmy jak daną aplikację trzeba uruchamiać,
+nie wiedzieliśmy jakich potrzebuje zależności, czasami na jakich portach ta aplikacja działa.
+Teraz deweloper pracujący nad aplikacją, przygotowujący ją,
+w zasadzie żeby ją uruchomić już u siebie i przetestować w takim podstawowym zakresie,
+czy to co napisał działa tak jak się spodziewa, że napisał,
+pisze tą konfigurację, zamieszcza sobie wszystkie zależności w obrazie,
+zamieszcza informacje na jakim porcie ta aplikacja będzie działała
+i to wszystko w tym opisie się znajduje.
+I wtedy ja nawet dostając taki opis jestem w stanie zobaczyć co jeszcze muszę po stronie serwera dokonfigurować,
+żeby to wszystko uruchomić.
+Natomiast tej pracy po mojej stronie jest już bardzo, bardzo mało,
+dzięki czemu ja mogę się skupić na trochę innych obszarach
+i jestem w stanie przygotować lepszą, bardziej wydajną, bardziej stabilną infrastrukturę,
+dzięki temu, że tej pracy już nie muszę wykonywać,
+a z mojej perspektywy to jest taka praca, którą deweloper przygotowując swoje środowisko,
+nawet na swoim komputerze do dewelopmentu tej aplikacji,
+i tak musi to przygotować, i tak musi zainstalować te zależności,
+i tak musi tą aplikację skonfigurować.
+A tak robimy.
+I robi to w sposób, który innym później ułatwia pracę.
+I to nie tylko mnie.
+Ale mając zbudowany taki obraz możemy przekazać go także testerowi.
+Tester też może uruchomić go u siebie,
+może w jakimś środowisku przygotowanym dla testów,
+też uruchamia to w taki sam sposób, nie musi się zastanawiać jak to zrobić,
+i może taką aplikację testować.
+Co ważne,
+w takiej samej wersji, w takim samym stanie, w jakim deweloper ją przygotował.
+Mhm.
+Ale czasem przychodzą, zresztą będziemy o tym mówili za chwilę też w lekcji pod tytułem
+Różnice między konteneryzacją a wirtualizacją,
+ale potem jak opowiadam komuś czym jest Docker,
+to często słyszę, panie, ja sobie na Virtual Boxie postawię taką maszynkę,
+albo jeszcze ostatnio mi kolega pokazał takiego Vagranta,
+i tam też wszystkie te rzeczy mam powypisywane.
+To coś jeszcze byś dał dla takich osób?
+Wiesz, ja tutaj jakby reprezentuję tych takich marudów.
+Tak, marudów? Chyba tak się zmienia.
+Coś byś im powiedział, dlaczego warto poznać Dockera,
+jeżeli oni uważają, że przecież mają takie narzędzia,
+których już nauczyli się, używają ich sto lat,
+to po co im ten Docker?
+Tak.
+Zysk jest taki, że w przypadku wykorzystania,
+na przykład Virtual Boxa, nawet z Vagrantem,
+to nie jest takie ustandaryzowane środowisko.
+To nie jest sposób, w jaki my to uruchamiamy na serwerach.
+Ten Virtual Box może się różnić w zależności od konfiguracji,
+od zainstalowanych do niego dodatkowych pakietów.
+On będzie się różnił w jakiś sposób pomiędzy Linuxem, Maciem, a Windowsem.
+Dla Maca wydaje mi się nawet, że taki Virtual Box już nie jest dostępny
+i to też stanowiłoby swego rodzaju problem.
+Dlatego, że dzisiaj branża daje nam dosyć dużą swobodę
+w wyboru sprzętu, na jakim my pracujemy.
+I pracujemy tak naprawdę na wielu różnych systemach,
+nad tymi samymi aplikacjami.
+Teraz w sytuacji, gdyby osoba pracująca na Windowsie czy Linuxie
+wykorzystywała Virtual Box,
+i do naszego zespołu miałby dołączyć ktoś, kto pracuje na Macu,
+okazałoby się, że Virtual Box nie jest dla niego dostępny,
+no to tutaj już pojawia się problem w postaci
+chociażby przekazania tej wiedzy tak,
+żeby ten deweloper mógł ją wykorzystać na swojej stacji i uruchomić.
+Docker zadbał o to, żeby był dostępny na wszystkich popularnych platformach.
+Oczywiście nie uruchomimy go na przykład,
+na Androidzie, przynajmniej nie jest dostępny w sklepie Play.
+Na Amidze chyba też go nie uruchomimy.
+Na Amidze też go raczej nie uruchomimy.
+Na Atari też jest ryzyko, że nie.
+Tak, to wynika z tego, że Docker działa tak naprawdę na Linuxie,
+a to co dostajemy na Windowsie i na Macu,
+to jest taka maszyna wirtualna z Linuxem,
+plus trochę dodatków, które usprawniają nam tą pracę,
+to co zrobił Docker, to taką obudowę do tego,
+że my korzystając ze środowiska innego niż Linux,
+nie martwimy się o to, jak to uruchomić i jak z tego korzystać.
+Ta praca wygląda w taki sam sposób.
+Jeśli byśmy korzystali na przykład z Virtual Boxa,
+no to już nie do końca będzie to tak wyglądało.
+Plus musimy się martwić o jakieś przekierowania portów
+na przykład do takiego Virtual Boxa.
+Nie każdy z nas,
+który zna się na tych aspektach sieciowych,
+jest to też problematyczne.
+Czasami potrzebujemy pomocy kogoś z zewnątrz,
+gdzie tych problemów przy Dockerze na ogół jednak nie mamy.
+I to jest ogromna wartość,
+że Docker właśnie jako firma to wszystko przygotował,
+bo to nie jest też pierwsza platforma,
+która służy do konteneryzacji.
+Było kiedyś coś takiego jak LXC, LXD,
+jedno awansowało w drugie,
+też dostarczało takie środowisko wyizolowane do pewnego zakresu,
+tam jest troszeczkę mniejsza izolacja niż w maszynie wirtualnej,
+ale można zbudować sobie teoretycznie taki bardzo mały komponent,
+który potrzebuje dużo mniej zasobów też niż taka maszyna wirtualna,
+bo to też jest warte, o tym też warto powiedzieć.
+Jednak przez brak takiego wsparcia do wykorzystania tego,
+deweloperzy w zasadzie nie znają na ogół tych rozwiązań,
+administratorzy, devopsi coś słyszeli, niektórzy korzystali,
+ale wiele osób tak naprawdę nie korzystało,
+bo to się nigdy nie stało standardem w naszej branży,
+nie dawało aż tak dużej wartości,
+jaką jednak teraz daje Docker.
+Została minuta mniej więcej, bo chciałbym, żeby lekcje zawsze były do 10 minut,
+więc ja tylko szybko powiem w formie takiej małej dygresji,
+że skoro Docker wymaga Linuxa, to na Thermomixie pójdzie.
+Natomiast druga rzecz, którą chciałem tylko dopowiedzieć,
+dlaczego warto się uczyć Dockera,
+zerknijcie sobie na oferty pracy,
+z tego względu, że praktycznie w każdej ofercie pracy,
+w której będziecie pracowali w IT,
+niezależnie od tego, czy to będzie Python, PHP, Java,
+czy cokolwiek innego,
+ten Docker jest potrzebny,
+więc Dockera uczyć się warto.
+Tak, tak samo jest obowiązkowym narzędziem na pewno dla DevOpsów,
+tak samo testerzy, nie wiem jak manualni,
+ale automatyzujący na 100% też muszą Dockera znać.
+Więc uczcie się Dockera,
+a my zapraszamy na kolejny odcinek.

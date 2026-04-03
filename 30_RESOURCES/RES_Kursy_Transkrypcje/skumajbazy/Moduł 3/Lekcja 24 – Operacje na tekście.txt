@@ -1,0 +1,617 @@
+O pracy z tekstem nie mówiliśmy sobie prawie wcale, a bardzo często kiedy pracujemy z danymi potrzebujemy nie tylko właśnie wyszukać sobie coś w zależności od pierwszej litery, ostatniej litery, tylko na przykład właśnie chcemy sobie coś zmodyfikować.
+Na przykład jeżeli tekst pasuje nam do jakiegoś wzorca to chcemy wykonać jakąś czynność, jeżeli nie pasuje to chcemy wykonać coś innego. Często zdarza się, że w momencie w którym pobieramy sobie dane gdzieś z internetu czy wykonujemy jakieś importy to okazuje się, że nasze dane nie są ładnie posprzątane, bo część tekstu jest zapisana wielkimi literami, część małymi.
+No i chcielibyśmy wiedzieć jak tego typu operacje posprzątać, jak tego typu dane posprzątać, jak spowodować,
+żeby ten tekst wyglądał ładnie i spójnie. No to mam nadzieję, że ten moduł będzie odpowiedzią na tą wątpliwość.
+Przede wszystkim zanim przejdziemy sobie do tych dalszych funkcji chciałem Wam powiedzieć o jeszcze jednej rzeczy, a mianowicie jak możemy ze sobą łączyć teksty.
+W przypadku Postgresa mamy takie rozwiązania dwa. Pierwsze rozwiązanie to jest korzystanie z funkcji concat i na tym przykładzie też chciałem Wam powiedzieć jak wygląda w ogóle wywoływanie funkcji w Postgresie.
+Natomiast drugie rozwiązanie to jest korzystanie z funkcji concat i na tym przykładzie też chciałem Wam powiedzieć jak wygląda w ogóle wywoływanie funkcji w Postgresie.
+Octawnym rozwiązanie to jest korzystanie z operatora służącego do concatenacji, którym w Postgresie są dwie pionowe kreski.
+Może się to Wam, którzy może programujecie w innych językach programowania trochę kojarzyć z loop, ale jak pomyślicie to loop to także jest suma, prawda?
+Suma przedziałów też jest prawie tym samym znaczkiem określana, więc po części concatenacja, takie też łączenie może Wam to pomoże zapamiętać ten operator.
+Natomiast jeżeli chodzi o wywoływanie funkcji.
+to wywołujemy funkcje, wywoływać funkcje możemy praktycznie w każdym tym samym miejscu,
+w którym wprowadzamy jakąś wartość, czyli albo za select, bo tam w ten sposób będziemy chcieli
+coś sobie właśnie obliczyć, pobrać, albo na konkretnych wartościach, albo na kolumnach.
+Drugim takim miejscem może być, które znacie, może być where, no bo wewnątrz where'a też można
+wykonywać jakąś funkcję, na przykład znaleźć taką osobę, której połączone imię i nazwisko
+to Kacper Sieradziński, załóżmy, więc tam też taka funkcja się przydaje.
+No i trzecim miejscem, gdzie czasem też używa się funkcji jest order, czyli tam jak sobie
+decydowaliśmy o kolejności danych, to tam można byłoby na przykład użyć funkcji random
+i posortować te dane według losowej kolejności. Natomiast jeżeli chodzi o łączenie
+za pomocą funkcji, to zwróćcie uwagę, że to będzie wyglądało tak, że mamy słówko select,
+następnie jest słówko concat, gdzie jest to nazwa funkcji właśnie wbudowana w Postgres,
+i później w nawiasie przekazywane są argumenty. Argumenty funkcji, czyli to, co będzie do tej
+funkcji przekazywane i na czym ta funkcja będzie nam pracowała. Czyli w tym przypadku ja mówię,
+słuchaj Postgres, masz połączyć mi teksty, dostałeś ABC, to są trzy teksty, które masz połączyć,
+no i w wyniku powinniśmy dostać właśnie ABC. Podczas obliczenia, podczas wykonywania
+wszystkich tych przykładów, ja praktycznie zawsze, w 99%,
+będę używał przykładów wpisanych. Czyli tak jak i tutaj widzicie, jest ABC wpisane jako string
+i nie chciałbym, żebyście się surregerowali, że to tylko mogą być właśnie te stringi wpisane.
+Bo na przykład, jeżeli zamiast tego ja bym chciał połączyć wartości znajdujące się w jakichś kolumnach,
+no to równie dobrze zamiast wpisywać ABC w apostrofach, mógłbym po prostu tutaj wpisać na przykład
+firstname, lastname i w ten sposób połączyłbym imię i nazwisko.
+Zobaczcie, wykonałem zapytanie select gwiazdka from employees i pobrałem sobie wszystkie te osoby.
+I teraz to co widzieliście przed chwilą na slajdzie wyglądało mniej więcej tak, select concat, no i na przykład Kacper Sieradziński.
+Jeszcze by tego brakowało, żebym swoje imię i nazwisko przekręcił.
+Hop i zobaczcie, dostałem Kacper Sieradziński połączone.
+Natomiast ja nie muszę w ten sposób łączyć ze sobą tylko tekstów wpisanych.
+Ja mogę też ze sobą łączyć nazwy kolumn.
+Jeżeli chciałbym zrobić to samo tutaj, czyli chciałbym połączyć firstname i lastname,
+to zamiast wpisywać gwiazdkę, mogę sobie wpisać słówko concat i użyć nazw kolumn.
+Ale to co jest bardzo ważne, to jest to, że tutaj nie używacie apostrofów.
+Różnica pomiędzy apostrofem a wartością wpisaną bez apostrofu jest taka, że jeżeli wpisuję apostrof, to jest to, że tutaj nie używacie apostrofów.
+Różnica pomiędzy apostrofem a wartością wpisaną bez apostrofu jest taka, że jeżeli wpisuję apostrof, to jest to, że tutaj nie używacie apostrofów.
+Różnica pomiędzy apostrofem a wartością wpisaną bez apostrofu jest taka, że jeżeli wpisuję apostrof, to jest to, że tutaj nie używacie apostrofów.
+Różnica pomiędzy apostrofem a wartością wpisaną bez apostrofu jest taka, że jeżeli wpisuję apostrof, to jest to, że tutaj nie używajcie apostrofów.
+Różnica pomiędzy apostrofem a wartością wpisaną bez apostrofu jest taka, że jeżeli wpisuję apostrof, to jest to, że tutaj nie używajcie apostrofów.
+Różnica pomiędzy apostrofem a wartością wpisaną bez apostrofu jest taka, że jeżeli wpisuję apostrof, to jest to, że tutaj nie używacie apostrofów.
+na przykład from. Jeżeli na przykład robilibyście jakiś bilet lotniczy
+from tu, to potrzebowalibyście właśnie tego słówka używać.
+I tutaj wtedy nie można słówka from po prostu użyć od tak. Trzeba je wówczas
+umieścić w cudzysłowie, czyli w podwójnych ciapkach, tak?
+Jeżeli chodzi o to. I tak samo, jeżeli sobie wykonam concat first name, last name
+from employees, to zobaczcie, dostałem praktycznie to samo, co dostałem przed chwilą,
+czyli swoje imię i nazwisko połączone. Tu jest tak samo.
+Też Nancy Davoglio połączył mi imię i nazwisko,
+też Andrew Fuller, te po prostu dane się połączyły.
+Jeżeli natomiast chciałbym połączyć to z pacją, to muszę jako drugi element
+dopisać spację. I spację jak najbardziej mogę
+sobie dopisać, pamiętając o tym, że musi być ona ujęta w apostrofach,
+bo spacja też jest stringiem, który chcę po prostu ująć w tym
+obliczeniu. I tak samo u mnie, jak widać poniżej
+Nancy Davoglio już ma spec.
+Spację, spację pomiędzy. Więc tutaj u siebie zrobię to samo, czyli zrobię
+Kacper Średziński, dorzucam przecinek, hops i też mam spację.
+Zobaczcie, jeszcze trochę się uciąłem, ale jak się poszerzę, o, to
+będzie dobrze. Więc tak to właśnie działa. Pamiętajcie, że mimo tego, że
+w przykładach będziecie widzieli to w tej postaci, no bo mi zależy na tym,
+żebyście, ten przykład, żeby był taki namacalny, żebyście
+mogli go też uruchomić u siebie zawsze, tak? Tutaj
+zawsze możecie zamiast wpisywać nazwy, konkretne stringi,
+możecie też wpisywać nazwy kolumn i również wówczas to
+zadziała. No i kolejny przykład
+to długość tekstu, czyli czasem zdarza się, że chcemy na przykład
+przefiltrować sobie wszystkie te rekordy, gdzie długość tekstu nie mieści się
+w jakimś przedziale, bo wiemy, że nam się, nie wiem, nie zmieści na jakiejś poczytówce czy na czymś.
+Jeżeli będziemy chcieli później to gdzieś drukować. I tutaj długość
+tekstu można zrobić na dwa sposoby, albo za pomocą car length,
+czyli tutaj widzicie jest z podkreśleniem
+car length i wówczas w nawiasie
+jest słówko postgres, no i dostajemy 10 znaków.
+I to każdy znak traktuje zawsze tak samo, natomiast
+każdy znak nie zawsze zajmuje tyle samo w pamięci, więc na przykład
+jeżeli chcielibyście sprawdzić też długość pod względem bitowym, pamięciowym
+to jest też funkcja, która nazywa się bit length i za jej pomocą
+zobaczcie, możemy sobie sprawdzić ile zajmuje literka mała a, to jest 8 znaków
+hash, 8 znaków, ale na przykład literka on, czyli znak
+diakrytyczny, to już jest tych znaków 16. To bardziej w ramach
+takiej ciekawostki zdecydowanie częściej będziecie korzystali z tego
+pierwszego rozwiązania niż z tego drugiego. Jeżeli chodzi o to
+co jeszcze możemy robić z tekstem, no to tak jak wspominałem często do oczyszczania
+tekstu musimy
+uporządkować wielkość liter. I tutaj jeżeli chodzi o
+wielkość liter, to z pomocą przychodzą nam takie funkcje jak
+upper, lower oraz init cap. Init cap jest to
+funkcja, która po prostu zamieni każdą pierwszą literę w słowie
+w wyrażeniu na wielką. Zobaczcie, jeżeli przekażę znowu swoje
+imię i nazwisko zapisane małymi literami, to wówczas on mi po prostu
+każdą pierwszą literę zamieni na wielką. Widzicie? To jest k, tam
+jest si i trzy kropeczki. Niżej mamy dwie kolejne funkcje, które
+pozwolą nam na zamianę wszystkich liter na wielkie. Czyli na przykład
+jeżeli wykonamy upper i jako parametr przekażemy słówko
+pystart, to wówczas dostaniemy pystart zapisany wielkimi literami.
+Natomiast jeżeli użyjemy funkcji lower, to dostaniemy to samo zapisane
+małymi. Tego typu funkcje przydają się też na przykład wtedy, kiedy
+potrzebujemy jakiś kod wygenerować albo login albo cokolwiek
+takiego, gdzie zależy nam na tym, żeby dane były uporządkowane i żeby
+stworzyć jakiś właśnie kod czy jakieś wyrażenie, które ma wyglądać
+tak jak ma wyglądać. No i skoro pokazaliśmy sobie już kilka tych
+funkcji, wypadałoby teraz sobie to przećwiczyć, no bo jak zawsze
+łatwo się patrzy, trudniej się wykonuje. W tych rozdziałach będziemy mieli
+wiele takich sytuacji, gdzie zadania będą pojawiały się kilkukrotnie,
+ponieważ nie chcę po 15 minutach wymagać od Was tego, żebyście
+pamiętali jaką funkcję omawiałem 15 minut temu, więc też się nie zdziwcie,
+że jest tych podejść do zadań kilka. W zadaniu 24.1.1 mamy połączyć kolumny
+tabeli customers, postal code oraz city, tak by powstał wyświetlony napis
+zgodny z przykładem, czyli ma powstać kod pocztowy i miasto połączone,
+rozdzielone spacją.
+W zadaniu 2 mamy napisać zapytanie, w którym pobierzemy z tabeli
+customers nazwy państw, ale tylko małymi literami oraz nazwy miast,
+ale tylko wielkimi literami, czyli przypominamy sobie, jakie funkcje
+zamieniały coś na wielkie, jakie na małe i ich używamy, a w zadaniu
+3 mamy znaleźć wszystkich klientów z tabeli customers, dla których
+długość nazwy firmy, czyli tam jest jak pewnie jakaś kolumna company name
+czy coś takiego, wynosi 8 znaków.
+Czyli tylko te firmy, których długość to 8.
+No to co?
+3 minuty dla każdego i do zobaczenia.
+No to co?
+Nie śpimy, tylko lecimy.
+Połącz kolumny tabeli customers, postal code oraz city, tak by został
+wyświetlony napis zgodny z przykładem.
+Ok, no to select gwiazdka from customers.
+Hops, hops, hops, mamy.
+I teraz chcemy połączyć sobie postal code oraz city.
+I teraz chcemy połączyć sobie postal code oraz city.
+I teraz chcemy połączyć sobie postal code oraz city.
+I teraz chcemy połączyć sobie postal code oraz city.
+Czyli select i gwiazdkę zamieniam na postal code przecinek spacja i
+druga wartość to jest city.
+I druga wartość to jest city.
+I druga wartość to jest city.
+Control enter, mam.
+Tyle tylko, że te wartości miały być połączone ze sobą i rozdzielone
+spacją, więc zamiast wykonywać to w tej postaci, wykonam sobie tutaj
+funkcję concat i dodatkowo dorzucę sobie jeszcze spację jako separator.
+I mam.
+Żeby w tym miejscu nie widzieć concat, zawsze mogę sobie zrobić jeszcze
+saddress.
+Hops.
+Działa.
+Lecimy dalej.
+Napisz zapytanie, w którym pobierzesz z tabeli customers nazwy państw
+małymi literami i nazwy miast tylko wielkimi.
+No to select.
+Najpierw po prostu sobie to pobiorę, czyli city country from customers.
+I teraz, jeżeli chciałbym zapisać coś wielkimi literami, no to po prostu
+użyć słówka upper.
+Słówka to właściwie nie, funkcji, upper.
+Natomiast nazwy miast miały być małymi, no to w drugą stronę to jest lower.
+Nie wiem, czy zwróciliście uwagę już na to, ale w momencie, w którym
+wpisujecie tutaj te funkcje, to też dbiver wam od razu podpowiada, że tych
+funkcji jest trochę więcej, są też inne.
+Możecie sobie zawsze zerknąć, poszukać w dokumentacji, czym te funkcje
+małymi literami są.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+Zobaczmy.
+customers to na dobry początek jak widzicie mamy company name
+no to potrzebujemy użyć operatora where i teraz jak to było
+z tą długością char char length od company name równa się
+równa się pojedyncze 8 ctrl enter no i mamy bon app właścicielem
+jest Lorenz lebihan jest właścicielem No i jest to Marsylia
+najważniejsze że działa lecimy dalej kolejna rzecz którą
+chciałbym wam pokazać dotyczy zawierania się jednego tekstu
+w dróg czy też wyszukiwania tekstu w tekście i tutaj z
+pomocą przychodzą nam dwie funkcje jedną z funkcji jest
+str pos drugą funkcją jest position te dwie funkcje wyglądają
+identycznie i w momencie w którym będziecie poznawali funkcję
+okaże się że w kilku przykładach mamy właśnie taką sytuację
+gdzie te funkcje mogą wyglądać praktycznie identycznie ale
+jeżeli się przyjrzycie to zobaczcie że między tymi funkcjami
+jest jeden bardzo mały ale mocno kłujący haczyk Zobaczcie
+str pos jako pierwszy argument przyjmuje tekst czyli ten
+tekst który chcemy przeszukiwać a drugim argumentem jest
+wartość szukana stąd też jeżeli poszukamy sobie w wyrażeniu
+postgresql
+słówka SQL No to w odpowiedzi dostaniemy 8 dlaczego p o s
+ty g r e no i na ósmym zaczyna nam się SQL dlatego też
+wyszło nam 8 Natomiast jeżeli będziemy chcieli skorzystać z
+position to to zobaczcie co się stało najpierw jest wartość
+szukana a później jest tekst to jest pierwsza różnica a po
+drugie pomiędzy szukaną a tekstem jeszcze wkradł się taki operator jak in
+moim zdaniem te funkcje wyglądają trochę ładniej trochę kojarzą mi
+się tak z Pythonem wyglądają trochę Pythonowo ale też to całkiem
+jest sympatyczne takie określenie select position SQL in
+postgresql podoba mi się i takich przypadków też zobaczycie kilka
+ale to jest właśnie ważne że zwróćcie uwagę to jest jak ja
+właściwie jeden argument natomiast najpierw jest szukana a
+później jest tekst no i wynik jest ten sam No bo SQL nam nie
+bazuje w postgresie tylko jest zawsze na końcu więc jeżeli
+wykonacie position SQL in PostgreSQL no to też dostaniecie
+osiem i tu ważna rzecz co się stanie jeżeli tego SQL aby
+nie było Czyli jeżeliby postgre coś innego No to wtedy dostalibyśmy
+zero to Was No i zaraz tutaj będzie też zadanko w którym sobie
+sprawdzimy co się w takim razie dzieje jeżeli nasze słowo zaczyna
+się od tego wyrażenia a nie to wyrażenie zaczyna się zawiera się
+gdzieś
+w środku. Mogę Wam od razu podpowiedzieć, że to będzie jeden, ale lepiej to przekonać się o tym na własnej skórze.
+Jeżeli chodzi o wycinanie tekstu, czyli o pozbywanie się tekstu, czy też wyciąganie fragmentu tekstu,
+na przykład mamy imię, nazwisko, rozdzielone spacją, chcielibyśmy sobie pobrać nazwisko,
+albo mamy kod pocztowy i miasto wpisane właśnie w jednej kolumnie, a my potrzebujemy miasto mieć w kolumnie obok.
+Do takich operacji oczywiście przydaje się też zapytanie aktualizujące, żeby nie wykonywać go za każdym razem,
+tylko na przykład dodać sobie właśnie tę dodatkową kolumnę, ale i tak potrzebujemy wiedzieć, jak to pobrać.
+A żeby to pobrać, możemy znowu skorzystać z kilku funkcji.
+Tutaj funkcja substring to jest funkcja, która pobiera jakiś fragment tekstu z jego środka,
+może być też z początku, z końca, wybieramy sami.
+Alternatywa to left, czyli pobieranie czegoś z lewej.
+Z lewej strony, no i right, czyli pobieranie czegoś ze strony prawej.
+Jeżeli chodzi o substring, to zobaczcie, jaka jest konstrukcja.
+Text to jest ten tekst, z którego będziemy chcieli wycinać naszą zawartość.
+From to jest początek, to i to jest koniec.
+Czyli znowu mamy takie ładne wyrażenie, to jest bardzo unikatowe dla Postgresa,
+że tak samo jak select musi wyglądać,
+select, from, where, limit,
+czyli tak to mniej więcej wyglądało, tak samo jest tutaj.
+Select substring i argumentem dla substringa też jest takie zapytanie,
+które ma przypominać język mówiony.
+I zobaczcie, select substring, pi start, from 1 to 2.
+I to nam zwróci tylko i wyłącznie pi.
+No bo tylko od pierwszego znaku pobiera nam 2.
+Innym przykładem, select substring from 3.
+Zobaczcie, nie podałem mu tego wyrażenia for
+i to spowodowało, że on domyślnie wie, że interesuje nas pobieranie do samego końca.
+I dlatego też w tym przypadku zwróci nam start.
+Czyli po prostu od tego miejsca pobierze wszystko aż do samego końca.
+Z leftem, zobaczcie jak jest, jeżeli sobie leftem pobiorę 2 znaki od lefta, od lewej,
+no to dostanę też słówko pi.
+Natomiast jeżeli używam funkcji write i pobieram sobie 5 znaków,
+to dostaję samo start.
+Tutaj zauważyłem...
+Zauważyłem, że bardzo często moi kursanci, mi się wydawało,
+że jeżeli używamy od write i pobieramy coś od prawej,
+to jeszcze trzeba będzie to odwrócić,
+że on będzie zwracał jakby t, r, a, t, s, czyli odwrócony start.
+Natomiast tutaj absolutnie to tak nie działa.
+On po prostu od tego miejsca sobie cofa i pobiera tę wartość.
+Bardzo przydatna sprawa, na przykład właśnie do pobierania ostatniej litery,
+nie wiem, nazwiska, czy nazwisko się kończy na ski,
+czy się nie kończy na ski, tylko na ska i tak dalej, i tak dalej.
+Bardzo fajne.
+Bardzo fajne funkcje, przydatne.
+No i skoro przeszliśmy sobie przez takie zagadnienia,
+wypadałoby je sobie też przećwiczyć,
+żeby to nie było tylko takim moim wytłukiwaniem wam funkcji,
+bo to byłoby bez sensu.
+Sprawdź, co zwróci str pos lub position,
+jeżeli szukana wartość jest na samym początku stringa.
+To sobie zaraz sprawdzimy, ale już wam powiedziałem.
+Ale sprawdźmy to.
+W zadaniu drugim chcemy napisać zapytanie
+pobierające trzy pierwsze litery z kolumny country z tabeli custom.
+Czyli troszeczkę tak, wiecie, jak latają samoloty,
+to mają też pol z przodu na przykład, nie?
+Po trzecie, napisz zapytanie pobierające trzy ostatnie litery
+z kolumny category name z tabeli categories.
+Czyli po prostu chcielibyśmy sobie użyć tutaj funkcji write.
+Czyli w pierwszym przypadku sprawdzamy sobie str pos position,
+w drugim piszemy zapytanie pobierające trzy pierwsze litery z nazwy kraju,
+a w trzecim pobieramy trzy ostatnie litery z kategorii name z categories.
+No to trzy minuty dla każdego
+i do zobaczenia za chwilę w rozwiązaniach.
+No to witajcie.
+Żeby sobie sprawdzić pierwszą rzecz,
+sprawdzę, gdzie w moim imieniu znajduje się ka,
+czyli select str pos,
+no i tekstem będzie kacper,
+a szukaną będzie ka.
+A hops, wykonuję zapytanie
+i po chwili dostanę informację,
+mhm, rozłączyło mnie.
+To cięcie i widzimy się na moment, ok?
+I po chwili widzimy informację,
+że jeżeli szukam w kacprze ka,
+no to jest to na początku.
+Hmm, może inaczej będzie, jeżeli użyjemy position,
+czyli position ka
+in kacper.
+Nie, dokładnie tak samo.
+Możemy sobie zrobić s,
+gdzie jest ka.
+O, będzie dokładnie tak samo, jak widzicie,
+tylko jeszcze z aliasem.
+Ok, idziemy dalej.
+Napisz zapytanie pobierające trzy pierwsze litery
+z kolumny country z tabeli customers.
+No to select od lewej z country
+trzy znaki from customers.
+Hops, i mamy ger, mex, mex, uk i tak dalej.
+Jakbyśmy chcieli unikatowo, no to żaden problem, distinct,
+i też możemy sobie tak to zrobić.
+To nie było treścią zadania, ale też zaznaczam,
+że jak najbardziej można to też tu sobie wykorzystywać.
+W zadaniu trzecim chcemy napisać zapytanie
+pobierające trzy ostatnie litery
+z kolumny category name z tabeli categories.
+No to select gwiazdka from categories.
+Hops, mamy category name i jak chcemy trzy ostatnie litery,
+możemy sobie zawsze pobrać category name.
+Jak trzy ostatnie to write, category name i trzy hops.
+Beverages to jest jizz, condiments to jest nc,
+confections i tak dalej jak widać zadziałało.
+Seafood ma ud, czyli jest ok.
+I to było ostatnie zadanie, lecimy dalej.
+Co jeszcze można robić z tekstem?
+Jeszcze w tekście można zamieniać jakieś fragmenty.
+Można albo wycinać brzydkie słowa, zamieniać je na inne wyrażenia,
+albo można po prostu sobie coś podmienić,
+jeżeli czegoś nie chcemy wyświetlić,
+albo co tylko wam byłoby potrzebne.
+Mi osobiście bardzo często tego typu funkcje przydają się na przykład wtedy,
+kiedy potrzebuję zmienić adres domeny.
+Czyli na przykład mam stronę, na tej stronie są linki.
+Te linki są osadzone w jakimś bardzo długim tekście.
+I teraz chciałbym wymienić całą, wszystkie domeny,
+żeby zamiast czegoś było na przykład do kodu .dev.
+No to jak najbardziej mogę sobie tak to zrobić.
+Ok, ale nie przedłużając zobaczcie.
+Nadpisywanie tekstu można wykonywać za pomocą funkcji, która nazywa się overlay.
+I tutaj jeżeli sobie zrobimy overlay xx start placing py from 1 for 2,
+no to to spowoduje, że on nam w miejscu tych yxów, no bo od pierwszego do drugiego,
+miejsca wstawi wyrażenie py, czyli dostaniemy po prostu py start.
+Ale dużo częściej w moim przypadku możemy skorzystać sobie z wyrażenia replace,
+które działa tak select replace py end i zamieńmy end na start.
+Gdzie kolejność jest taka gdzie, co zamienić i na co zamienić.
+I w ten sposób właśnie możecie wykonać sobie takie funkcje i sobie te rzeczy
+pozamieniać tak, które potrzebujecie.
+Czyli na przykład zamiast jakiegoś adresu,
+def kropka do kodu kropka def, ma się pojawić do kodu kropka def.
+Czyli gdzie to jest ten nasz content, później tu jest def kropka do kodu kropka def,
+a tu jest po prostu do kodu kropka def.
+I w ten sposób wymieniam sobie ładnie jedną domenę na drugą.
+Inny przykład to użycie funkcji translate.
+To jest funkcja, którą bardzo wdzięcznie można wykorzystać na przykład
+do usuwania polskich znaków.
+Zamiast literki on chcielibyśmy mieć a, a zamiast en chcielibyśmy mieć e,
+no to translate jest na to rozwiązanie.
+I tu zobaczcie, podmienia kolejne znaki szukanego na kolejne znaki tekstu
+do podmienienia.
+Czyli jeżeli sobie wykonam select translate abcdef i chcę zamienić ace na 123,
+to wówczas zamiast a dostaję 1, zamiast c dostaję 2, a zamiast e dostaję 3.
+Jeżeli tutaj znajdowałoby się więcej liter, a tu nie byłoby takiej ilości,
+to po prostu te litery stąd byłyby usuwane.
+To też jest wygodne, no bo dzięki temu można na przykład usuwać
+wszystkie znaki specjalne z naszego tekstu.
+Takie jak hash, slash, bardzo wdzięczne właśnie do robienia
+wszelkiej maści adresów, czy też takich zwanych slagów,
+czyli tekstu nie zawierającego polskich znaków
+i nie zawierającego znaków specjalnych.
+Albo takich mówmy pseudo haseł, tak?
+Jeżeli w słówku password będę chciał aso zamienić na małpę,
+dolar i zero, no to dostanę password, czyli takie standardowe hasło,
+chyba standardowe hasło Microsoftowe.
+Wiem, że na wszystkich kursach Microsoftowych bardzo podobne hasło było używane.
+I tu jeszcze jedna ważna sprawa, o której to sprawie sobie nie mówiliśmy,
+a bardzo zależy mi na tym, żebyście wiedzieli, że tak można.
+Funkcje można w sobie zagnieżdżać.
+Czyli tak samo jak sobie zagnieździliśmy zapytanie select
+i przekazaliśmy je do środka i mogliśmy je wykorzystać w operatorze,
+tak samo wynik jednej funkcji możemy przekazać do drugiej.
+Zobaczcie, wykonuję sobie select substring,
+czyli pobieram sobie jakieś wyrażenie.
+I w tym substringu nie wprowadziłem wartości wszystkich ręcznie.
+Część tych wartości ma zostać obliczona,
+bo zrobiłem select substring,
+contact name from zero,
+for position,
+spacja, incont na contact name.
+Czyli on wie, że ma pobrać mi
+z contact name,
+czyli z imienia i z nazwiska,
+od pozycji zerowej,
+czyli od samego początku,
+do pozycji spacji w moim wyrażeniu.
+Możemy sobie to zapytanie też wykonać w naszym DBWerze.
+Zobaczycie, jak ono działa raz jeszcze.
+I zobaczcie, w ten sposób,
+za pomocą takiego zapytania pobrałem sobie poszczególne te contact name.
+Zrobię sobie to jeszcze,
+żebyście zobaczyli.
+I jeszcze sobie wyświetlimy to.
+From for position.
+Zobaczcie.
+Tu oczywiście zero mogłaby być też jedynka,
+nie ma z tym żadnego problemu.
+To jest ok.
+Natomiast substring łączy dwie funkcje.
+On przede wszystkim pracuje na contact name,
+czyli pracuje na czymś,
+gdzie mamy imię i nazwisko rozdzielone spacją.
+Pozycję spacji wyliczyłem sobie za pomocą funkcji
+position.
+Czyli powiedz mi, na jakiej pozycji leży spacja.
+I to jest szóstka.
+Więc, żeby pobrać sobie imię Maria,
+ja mogę mu powiedzieć,
+słuchaj, pobierz mi od tego początku do szóstego znaku.
+I w ten sposób, jak widzicie,
+on mi ładnie pobrał całe imię Maria.
+Właściwie to pobrał mi to Maria z jednym znakiem więcej,
+więc jak najbardziej powinienem sobie tutaj jeszcze odjąć jeden,
+żeby tych spacji na końcu nie mieć.
+Właściwie były spacje, a już tych spacji nie ma.
+I teraz wszystko działa zdecydowanie ładniej.
+Ale to, co jest ważne,
+to zobaczcie, on pobrał sobie ten contact name.
+Z tego contact name'a pobrał sobie pozycję spacji.
+Wyszła mu szóstka,
+więc wiedział, na której pozycji znajduje się spacja.
+I dzięki temu ten operator substring,
+ta funkcja substring,
+może pobrać z contact name'a
+od pierwszego znaku do pozycji spacji.
+Minus jeden jeszcze.
+I tego typu operacje można robić bez problemu.
+Czyli można jedną funkcję przyłączyć,
+przekazywać do funkcji drugiej,
+dzięki czemu te funkcje wiedzą o swoim istnieniu
+i te wartości z tych funkcji można bardzo ładnie przekazywać.
+Tu jeszcze jedna taka uwaga.
+Warto robić to, co zrobiłem przed chwilą.
+Czyli jeżeli dopiero uczycie się zagnieżdżania funkcji,
+albo uczycie się w ogóle programowania,
+bo na przykład nie programujecie,
+to też bardzo dobrym pomysłem jest właśnie to,
+żeby najpierw sobie takie funkcje porozbijać,
+a dopiero później powklejać je do siebie nawzajem.
+No bo w ten sposób łatwiej się debaguje,
+czy łatwiej się szuka błędu,
+bo wiemy, a ta funkcja zwróciła sześć,
+miała pięć, a no to minus jeden.
+No bo to akurat w przypadku spacji inaczej się nie dało.
+Ale w ten sposób łatwiej jest właśnie dociekać,
+co się stało, że nie zadziałało
+i też takie rozwiązania wam rekomenduję.
+Ok, i przyszedł czas na zadania.
+W zadaniu pierwszym chcemy napisać zapytanie,
+które wyświetli listę takich kluczy dla pracowników,
+tabela z tabeli employees,
+w postaci połączonych trzech pierwszych liter imienia
+oraz nazwiska.
+Na przykład Kacper Śradziński powinien wyświetlić kac się,
+czyli trzy pierwsze litery imienia,
+trzy pierwsze litery nazwiska połączone,
+zapisane wielkimi literami.
+W zadaniu drugim, nie używając lajka,
+chcemy pobrać wszystkie rekordy z tabeli products
+zawierające w słowie słowo hot,
+w nazwie słowo hot.
+I zadanie trzecie,
+we wszystkich rekordach, które zostały pobrane w zadaniu drugim,
+mamy zamienić słówko hot na słówko cold.
+No i w zapytaniu chcemy wyświetlić oryginalną nazwę
+oraz nazwę zamienioną.
+No to co, trzy minuty dla każdego,
+a że jest to ostatnie zadanie w tej lekcji,
+no to do zobaczenia za chwilę w rozwiązaniu,
+a później w kolejnej lekcji.
+Do zobaczenia.
+Ok, i mamy napisać zapytanie,
+które wyświetli nam listę kluczy dla pracowników
+z tabeli employees.
+No to select gwiazdka from employees.
+Tak jak opowiadałem,
+będę starał się robić to krok po kroku,
+tak żebyście widzieli poszczególne etapy,
+a później sobie po prostu te etapy połączymy w jednym zapytaniu.
+Czyli select gwiazdka from employees,
+to jest zrobione.
+Teraz idę dalej.
+Żeby pobrać trzy pierwsze litery imienia i nazwiska,
+potrzebuję mieć first name, last name.
+I teraz trzy pierwsze litery,
+no to od lewej strony będę pobierał trzy znaki.
+Left, first name, trzy znaki.
+Right, first name, trzy znaki.
+Sprawdzam, czy działa.
+Hops, i jest.
+Nen, nci, last name.
+O, hops, i teraz jest.
+Nanlio, Andler, no, coś tam wychodzi.
+Marok, o, nawet można byłoby ciekawe tutaj,
+ciekawe pseudonimy im wymyślać na tej podstawie.
+Okej, i teraz te dwa wyrażenia będę chciał połączyć.
+Żeby te wyrażenia połączyć, mogę użyć funkcji concat.
+Czyli concat, no i łączę sobie left z right.
+Czyli left, no chodź.
+I do tego dokładam right.
+W ten sposób robię ctrl enter,
+no i zobaczcie, że mam te wyrażenia połączone.
+I ostatnią rzeczą, którą muszę zrobić,
+jest zamiana na wielkie litery.
+Czyli po prostu mogę sobie wokół tego mojego concat
+użyć instrukcji aper, hops, i mam nanlio.
+W tym momencie te wyrażenia nie są mi już zupełnie potrzebne.
+Natomiast zamiast tego zrobię sobie małe, lekkie formatowanko.
+Tak, żeby to wyglądało trochę przyjaźniej.
+Bo na chwilę obecną, jeżeli mamy zagnieżdżone funkcje
+i wszystko wpisujemy naraz,
+no to nie wygląda to ładnie.
+Natomiast jeżeli sobie to robimy właśnie w takiej postaci,
+to od razu widać, jaka funkcja, jakie funkcje są przekazane do czego,
+to jest przekazane gdzieś dalej, po prostu jest czytelniej.
+A zdecydowanie czytelność kodu to jest jedna z ważniejszych rzeczy,
+więc dbajcie o tę czytelność.
+I działa.
+Andler, robbing, luhan, wszystko antrch.
+Dobra, nie wszyscy mogą mieć dobre ksywki.
+Więc działa.
+Możecie też sprawdzić, jak to by wyglądało u was.
+Okej, co dalej?
+Lecimy sobie do kolejnego zadanka.
+A w kolejnym zadanku, nie używając like'a,
+chcemy pobrać wszystkie rekordy z tabeli product,
+zawierające w nazwie słowo hot.
+Jak to zrobić?
+Najpierw zrobimy sobie po prostu select,
+w którym to selekcję wyświetlimy sobie nazwy wszystkie rzeczy.
+Czyli select gwiazdka from products.
+Hops. Okej.
+W ten sposób widzimy, że faktycznie mamy kolumnę product name
+i w tej kolumnie product name może gdzieś wystąpić słówko nam hot.
+Więc wyświetlimy sobie zamiast wszystkiego,
+po prostu wyświetlimy sobie to słówko product name.
+Product name from products, co mi się nie podoba.
+Przecież jest, okej.
+Za dużo przerwy było.
+I teraz, jeżeli mamy product name,
+to teraz druga rzecz, którą bym chciał wyświetlić,
+to informacja, czy w tej nazwie jest hot.
+Żeby to zrobić, możemy użyć position hot
+in product name.
+To oczywiście spowoduje, że zwróci nam pozycję.
+Zobaczcie, tam, gdzie nie ma, mamy zera.
+Natomiast, jeżeli gdzieś będzie, to się okazuje, że mamy wartość.
+Czyli tak naprawdę będzie nas interesowało pobranie wszystkich produktów,
+gdzie pozycja hot jest większa niż zero,
+też różna od zera.
+Stąd też możemy sobie się tego śmiało pozbyć
+i dopisać zapytanie where.
+Position hot in products jest większe niż zero.
+W ten sposób dostajemy dwa produkty.
+Louisiana fiery hot pepper sauce,
+no i Louisiana hot spiced okra.
+Działa.
+I możemy przejść do ostatniego.
+We wszystkich rekordach, które zostały pobrane w zadaniu drugim,
+zamień słowo hot na słowo cold.
+W zapytaniu wyświetl oryginalną nazwę oraz zmienioną.
+No to co za pytanie możemy sobie skopiować,
+wklejamy je sobie poniżej.
+No i będziemy potrzebowali użyć zamiany.
+Zamianę robiliśmy za pomocą wyrażenia replace,
+gdzie na pierwszym miejscu stało to,
+skąd będziemy chcieli zamieniać,
+na drugim miejscu, co będziemy chcieli zamieniać,
+a na trzecim, na co będziemy chcieli zamieniać.
+W ten sposób właśnie wpisując sobie product name hot i cold,
+możemy spowodować, że dostaniemy Louisiana fiery hot pepper sauce,
+a tu dostaniemy Louisiana fiery cold pepper sauce.
+I tak samo niżej.
+Louisiana hot spiced okra, Louisiana cold spiced okra.
+Ciekawe, czy kiedyś dojdziemy do takiego momentu,
+gdzie rzeczy, które są nieostre, będą miały cold w nazwie.
+Zobaczymy.
+Tymczasem po tym długim module was żegnam.
+Zapraszam do kolejnego modułu,
+gdzie zajmiemy się datą i czasem.
+Do zobaczenia.
+Subtitles by the Amara.org community

@@ -1,0 +1,209 @@
+Więc tak jak obiecałem, temat na teraz to postać normalna.
+Czym to jest? Czym grozi nieumiejętność stosowania tego?
+Zobaczcie.
+Temat, o którym już raz mówiliśmy, to jest nadmiarowość, czyli redundancja.
+Redundancja i nadmiarowość pojawiają się zawsze wtedy, kiedy powtarzamy się,
+kiedy nie korzystamy ze słowników, bądź kiedy nasze dane są przechowywane w sposób nieefektywny.
+I w ramach tego powstało coś takiego jak pięć postaci normalnych,
+gdzie pierwszych trzy są to takie postacie, które warto znać i które warto stosować.
+Natomiast jeżeli interesują Was dwie pozostałe, czyli czwarta i piąta,
+to zachęcam Was do tego, żeby się naprawdę zapoznać z Wikipedią,
+bo są to takie postacie, które dotyczą tylko rozważań teoretycznych,
+a ja tutaj zdecydowanie bardziej wolę skupiać się na praktyce niż na teorii.
+Mówi się o takim jeszcze pojęciu jak normalizacja, dekompozycja.
+Bardzo często w momencie, w którym będziecie projektowali bazę danych,
+to o czym wspomniałem wcześniej, trzeba podchodzić do tego tematu iteracyjnie.
+Czyli nawet jeżeli dostajemy na początku dane, które wyglądają jak dane z Excela
+i są po prostu jedną wielką tabelą, to jest to bardzo dobry początek.
+I wtedy z tej tabeli można sobie wykrawać poszczególne...
+elementy, używając asocjacji, modelować sobie dane.
+Więc jeżeli na przykład Wasz klient mówi, jedyne co mam to Excel,
+to wiedzcie, że macie już całkiem dużo, no bo w jakiś sposób go już pewnie zaplanował.
+Gorzej, jeżeli to, co zaplanował w Excelu, to nie są tabele, tylko takie placki powkrawane,
+bo takie rzeczy też się zdarzają.
+Bardzo często takie rzeczy widziałem, czyli po prostu takie dane zupełnie nietabelaryczne.
+Nie mamy tam żadnych rekordów, tylko mamy takie cosie porozsiewane,
+po dokumencie.
+Więc takich sytuacji zdecydowanie lepiej unikać.
+Natomiast tutaj porozmawiajmy sobie o takim scenariuszu, co jeżeli klient dał nam dużego Excela
+i teraz z tego dużego Excela chcemy zrobić ładną bazę danych.
+Zapraszam.
+Pierwsze, o czym musicie wiedzieć, jeżeli chodzi o to, czym w ogóle jest postać normalna,
+to jest to taki zbiór rad, zasad, których warto się trzymać,
+żeby nasze dane były zaprojektowane ładnie, aby praca z nimi przebiegała efektywnie.
+Dodatkowo,
+jeżeli korzystamy z normalizacji, czy też znamy zasady normalizacji,
+to później łatwiej jest nam projektować bazę danych,
+ponieważ jeżeli już siadamy do tej bazy, to nie musimy od razu zastanawiać się nad tym,
+gdzie wstawić jaką kolumnę, tylko pewne rzeczy przychodzą nam już samodzielnie.
+Pewne rzeczy po prostu widzimy od razu o tak.
+Kolejna rzecz, to dzięki normalizacji unikamy powtórzeń,
+czyli unikamy po prostu redundancji.
+Sprawiamy, że nasza tabela działa szybciej i działa wydajniej.
+Pierwsza postać normalna ma założenia następujące,
+że jeden rekord to jeden obiekt, co oznacza,
+że jeżeli przechowuje jakieś dane w wierszu,
+no to powinienem w tym wierszu mieć komplet informacji.
+Nie powinienem robić czegoś takiego, że na przykład któraś z kolumn
+zawiera jakiś większy obiekt, czy większego JSON-a.
+Oczywiście Postgres umożliwia i możemy skorzystać z tych opcji,
+ale to jest trochę tak samo jak z asertywnością.
+Nie wiem, czy wiecie, ale pierwsza zasada asertywności jest taka,
+że mogę zdecydować wtedy, kiedy nie chcę być asertywny.
+Więc tak naprawdę, jeżeli chodzi o pracę z normalizacją,
+no to warto wiedzieć, że tego JSON-a używamy w danej kolumnie świadomie,
+bo na przykład tak chcemy i tak jest nam wygodniej,
+czy też używamy tablic.
+Natomiast to musi wynikać z naszej wiedzy,
+a nie z tego, że najprościej by było, no to wezmę tak.
+I to może się później na nas bardzo mocno zemścić.
+Trzeba to robić świadomie.
+No i ostatnia rzecz.
+Postać normalna zakłada, że kolejność wierszy nie ma znaczenia.
+Co to oznacza?
+To znaczy, że my możemy sobie te dane oczywiście sortować,
+tak żeby znaleźć, nie wiem, największą, najmniejszą wartość,
+ale nie może być na przykład tak, że dane stanowią jakąś oś czasu,
+w której te osi narzucamy sobie, że to, co jest niżej,
+musi pojawić się po tym, co jest wyżej, a nie odwrotnie.
+I te dane nie mogą bazować na sobie wzajemnie,
+tylko po prostu muszą być jedną, nierozerwalną całością,
+którą oczywiście możemy sortować,
+ale nie może być tak, że jakakolwiek logika wymusza na nas
+trzymanie odpowiedniej kolejności.
+I tu, jeżeli chodzi o postać normalną, to zobaczcie,
+załóżmy, że sobie stworzyłem taką tabelkę przed,
+jak województwo pomorskie, no i w środku dodałem cztery nazwy miejscowości,
+Bytów, Gdynia, Gdańsk i Sopot.
+No i poniżej mam województwo Mazowieckie, Warszawa i Dolnośląskie
+i mam znowu trzy wartości.
+Takie dane nie pozwolą nam efektywnie ze sobą pracować.
+Dużo lepiej jest, jeżeli powtórzymy sobie te wiersze
+tyle razy, ile mamy województw.
+Czyli, jak widzicie, mamy sytuacja po,
+no to po prostu są wymienione nazwy miast,
+no i po lewej stronie są wymienione nazwy województw.
+To jest zdecydowanie lepsza forma.
+Niestety, no, wciąż spotykamy w wielu miejscach,
+taką sytuację, jaka jest przed.
+Jeżeli chodzi o przykłady nieznormalizowanych danych,
+no to załóżmy, może być to adres.
+Jeżeli dostajecie adres w postaci ulica Bajkowa 13 81 592 Bazo Danowo,
+no to jest to adres, którego nie powinniśmy pakować w całości do jednej komórki.
+No bo znowu, jeżeli ten adres zawiera takie elementy,
+jak miasto, ulica, numer, kod,
+to one powinny być w indywidualnych, przygotowanych do tego,
+kolumnach.
+Inny przykład, no to Adam Adamowski, czyli imię i nazwisko.
+Bardzo często też przetwarzamy dane w ten sposób.
+Dużo ładniej będzie, jeżeli sobie te dane rozbijemy,
+w innej kolumnie będziemy trzymali imię, w osobnej nazwisko.
+Jeżeli chodzi o drugą postać normalną,
+tutaj powoli zaczniemy wchodzić na takie małe schodki,
+to po pierwsze musimy spełniać wymagania pierwszej postaci normalnej,
+to już pamiętamy.
+Po drugie, wszystkie kolumny, które mamy w tabelach,
+muszą być zależne wyłącznie,
+od klucza głównego, czyli stanowić jeden zbiór danych.
+Co to oznacza?
+Zobaczcie, stworzyłem sobie taką tabelę, nazwałem ją kontakty
+i w ramach tej tabeli mam id, imię, miasto i województwo.
+Nie powinienem tych danych przechowywać w tej postaci,
+bo dużo lepiej byłoby, gdybym stworzył sobie osobne zbiory danych,
+takie jak miasto i województwo,
+i w tych zbiorach danych właśnie te informacje przetwarzał.
+Z tego względu, że jeżeli wykonuję te dane,
+z tego względu, że jak mówi ta zasada,
+wszystkie kolumny tabeli muszą być zależne wyłącznie od klucza głównego,
+czyli w tej postaci właśnie to sobie wymusiliśmy.
+No i została nam trzecia postać normalna,
+która zakłada, że musimy spełniać wymagania pierwszej i drugiej postaci normalnej.
+Ona, mam wrażenie, troszeczkę się zlewa z tą drugą, przynajmniej może mi,
+a mianowicie żadna kolumna nie jest zależna od innej kolumny,
+która nie jest kluczem.
+Co to oznacza?
+Że jeżeli posiadamy tabele, w tabeli posiadamy wiele kolumn,
+to jedna kolumna zależy od drugiej,
+to ta kolumna, od której zależy ta druga,
+musi być kluczem, albo kluczem głównym, albo kluczem obcym,
+po prostu tak musi być.
+Kluczem głównym to już wynika z drugiej postaci normalnej,
+natomiast kluczem obcym wynika z trzeciej.
+Zobaczcie, jeżeli stworzyłem sobie przed taką sytuację,
+że mam login country population,
+gdzie ta populacja wyrażona jest w milionach,
+no to ewidentnie kolumna country zależy od kolumny population,
+właściwie odwrotnie, kolumna population zależy od kolumny country.
+W tej postaci zdecydowanie nie wygląda to ładnie.
+Dużo lepiej byłoby, gdybyśmy po prostu w tabeli users
+zostawili tylko id, login i country,
+natomiast populacja w ogóle w tej tabeli w tym miejscu nie musi być.
+Dużo lepiej byłoby jakby ją przenieść,
+tak żeby stała się ona po prostu właściwością poszczególnego kraju,
+no i możemy sobie stworzyć właśnie tutaj przykład klucz tekstowy,
+jako klucz główny, no i klucz obcy też.
+W tym momencie w tabeli kontakty country stało się naszym kluczem obcym,
+w którym mamy jak widzicie Polska, Francja, Polska, Ukraina, Francja,
+natomiast w kluczu głównym stworzyliśmy sobie asocjacje jeden do wielu,
+mamy po prostu country oraz mamy konkretną populację.
+W ten sposób unikamy powtórzeń, no i nie mamy też takich sytuacji,
+że gdzieś nagle się okaże, że musimy dbać i pilnować tego,
+czy wszędzie populacja Polski jest taka sama.
+Jeżeli się zmieni, no to trzeba będzie też tego pilnować.
+I to są takie trzy główne zasady, jak projektować bazę danych.
+Mówiąc szczerze, ja te zasady gdzieś miałem z tyłu głowy,
+ale nigdy nie korzystałem z nich tak formalnie,
+że wiedziałem, że tak one mają dokładnie wyglądać
+i że tak dokładnie te zasady brzmią.
+Wydaje mi się, że trudno byłoby mi nawet
+teraz te zasady tak wprost sobie wymienić,
+że to jest pierwsza, to jest druga, to jest trzecia,
+bo ja jestem bardziej praktykiem niż teoretykiem.
+Jeżeli chodzi o moją praktykę, to wiem, że jeżeli coś jest własnością,
+tak jak tutaj populacja jest własnością państwa,
+a nie jest własnością użytkownika,
+to po prostu należy tę wartość przenieść
+i trzymać ją obok państwa, a nie obok użytkownika.
+I druga zasada, którą mam, to jest takie podsumowanie,
+wszędzie, gdzie tylko można, należy stosować asocjacje,
+czyli jeżeli tylko mogę, widzę, że dane mi się powtarzają,
+to od razu jest to sygnał, żeby stworzyć sobie osobną tabelę,
+bo trzeba szukać i eliminować powtórzenia,
+tak się pracuje z tabelami, z bazami danych,
+najefektywniej, czy projektowanie ich polega właśnie na tym,
+że sobie rozrysowujemy coś, po czym się okazuje,
+ty patrz, tu mamy to, to, to i to,
+lepiej to wszystko wykreślić, przenieść to w jedno miejsce,
+tak po prostu ta praca przebiega,
+bo później łatwiej się tymi danymi też zarządza,
+czyli szukamy powtórzeń, usuwamy je,
+poprzez tworzenie nowych tabel,
+w których będziemy przechowywali informacje,
+z tego względu, że nie ma sensu się ograniczać,
+nie ma czegoś takiego, jak jakiś wymóg,
+tyle i tyle tabel możesz stworzyć i więcej, to już jest błąd,
+zdecydowanie lepiej jest, moim zdaniem, mieć więcej tabel,
+które oczywiście zawierają jakieś zbiory danych,
+aniżeli tworzyć tabele, w których jest bardzo dużo kolumn,
+bardzo dużo wierszy, bo później nam to po prostu się odbije czkawką.
+I cóż,
+jeżeli macie ochotę po tym rozdziale stworzyć sobie swoją własną bazę danych
+i chcielibyście skonsultować coś, co zrobiliście na papierze,
+czy też w jakimś programie wraz ze mną,
+no to zachęcam was do tego, żebyście udostępniali zrzuty ekranu,
+wrzucajcie je na kanał na Discordzie, ten nasz ogólny,
+bardzo chętnie to przeanalizuję i na pewno wraz z innymi użytkownikami
+chętnie to ocenimy i porozmawiamy o tym, podyskutujemy,
+no bo zależy mi na tym, żeby właśnie krzewić tę wiedzę,
+żebyśmy też bazowali na waszych takich bieżących doświadczeniach.
+Więc jeżeli tylko macie ochotę, to myślę, że to już jest taki dobry moment,
+żeby zacząć sobie rozplanowywać waszą bazę danych,
+to, z czym przyszliście na ten bootcamp, to, co chcielibyście osiągnąć po tym bootcampie.
+Jeżeli nie macie pomysłu, to wymyślcie sobie jakiś pomysł,
+jakąś bazę, którą chcielibyście przeanalizować,
+niech to będzie nawet wirtualne jakieś przedsiębiorstwo, czy wirtualny problem,
+możecie sobie takiego wymyśleć i spróbujcie sobie taką bazę danych zacząć powoli projektować,
+bo większość rzeczy, które będziemy dodawali od tego momentu,
+to są rzeczy, które bez problemu możemy dodawać nawet później,
+ale o projektowaniu można myśleć już spokojnie teraz.
+To co? Zapraszam was do kolejnej lekcji.

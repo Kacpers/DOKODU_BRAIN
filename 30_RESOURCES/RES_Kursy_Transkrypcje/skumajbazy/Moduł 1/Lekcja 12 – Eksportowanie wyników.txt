@@ -1,0 +1,138 @@
+Czas zająć się eksportowaniem naszych danych.
+Jeżeli chodzi o eksport, to przydaje się on mi dosyć często.
+Zapytacie do czego? W sytuacji może być wiele.
+Jeden z przykładów to dalsza obróbka danych w Excelu.
+Czasem tak się zdarza, że po prostu potrzebuję na przykład jeszcze to,
+co pobrałem z bazy danych, porównać sobie z jakimiś danymi z zewnątrz.
+Czasem potrzebuję na przykład z tych danych sobie później zrobić wykres.
+Czasem potrzebuję po prostu je komuś wysłać, bo ktoś chce to odrobić.
+I wiecie, różni ludzie mają różne potrzeby.
+Sytuacja druga dotyczy momentu, w którym chcemy te dane załadować do innego programu.
+Czy też do jakiegoś programu magazynowo-księgowego,
+czy na przykład chcemy gdzieś do Google, tam są takie narzędzia w Analyticsie,
+gdzie możemy załadować sobie nazwy produktów, czy to w Facebooku było,
+katalog produktów. Wtedy też nam się przydaje właśnie możliwość eksportu tych danych z bazy danych.
+Inna rzecz to może być sytuacja, w której chcemy zrobić sobie kopię zapasową tych danych.
+Oczywiście są do tego też lepsze sposoby, chociażby serwerowe takie,
+żeby zrobić backup na serwerze, natomiast czasem przed wykonaniem jakiejś operacji
+chcemy się zabezpieczyć, upewnić się, że wszystkie dane są też u nas,
+bezpiecznie na naszym dysku, więc robimy sobie eksport,
+właśnie po to. No i ostatnia sytuacja, to jest sytuacja, gdzie chcemy po prostu
+przenieść te dane do jakiejś innej bazy, czy też do bazy jakiejś plikowej,
+czy chcemy je zaimportować sobie do swojego jakiegoś skryptu i je użyć,
+czy po prostu eksportujemy dużego SQL-a i chcemy je sobie przenieść.
+Jeżeli już wiemy, do czego nam ten eksport, to teraz powiedzmy sobie,
+jak to wyeksportować. Pierwsze, co jest nam potrzebne, żeby wyeksportować dane,
+ja tutaj będę się skupiał głównie nie na tym, żeby przenieść tabele,
+tylko na tym, żeby wynik zapytania wyeksportować, ok?
+Więc żeby wyeksportować sobie wynik zapytania, potrzebuję mieć jakieś zapytanie.
+No i tu widzicie, wykonałem sobie select gwiazdka from suppliers,
+w ten sposób dostałem wszystkich dostawców. Wówczas, jak zobaczycie tę tabelkę poniżej,
+tę, którą znacie dosyć dobrze, to klikamy sobie gdziekolwiek,
+na którymkolwiek elemencie prawym przyciskiem myszy i gdzieś w opcjach
+powinniście zobaczyć, że pojawi nam się tam taka opcja jak export data
+tekstowy. Po wykonaniu, po kliknięciu w tę opcję, zobaczycie wiele możliwości.
+No i tutaj między innymi możecie eksportować sobie dane do CSV,
+XML, możecie eksportować do SQL, do pliku tekstowego.
+Wszystko zależy od tego, co później z tymi danymi chcemy robić.
+Na przykład eksport do formatu CSV jest świetny, jeżeli chodzi o importowanie
+danych do Excela. Natomiast XML przydaje się na przykład wtedy, kiedy mamy
+jakąś, jakiś program, który po prostu te XML obsługuje.
+Jeszcze innym przykładem może być SQL, który właśnie przydaje się wtedy,
+kiedy później chcemy te dane łatwo sobie zaimportować. Na przykład,
+jeżeli teraz dodałbym kilka nowych rekordów i chciałbym tylko te rekordy
+Wam przekazać, no to właśnie zaznaczę, wykonałbym sobie zapytanie,
+w którym wyświetliłbym te nowe rekordy, następnie bym wyeksportował te dane
+do Excela i później dałbym Wam te dane, tak żebyście mogli je śmiało sobie
+zaimportować i wgrać do Waszych baz danych. Tak to właśnie wygląda.
+No i zakładając, że na przykład chcielibyśmy wyeksportować sobie listę
+tych naszych customerów, listę tych naszych klientów, tą, którą sobie
+zrobiliśmy przed chwilą, no to tak jak Wam pokazałem, załóżmy, że to będzie
+format XML, możemy sobie kliknąć prawym przyciskiem myszy, wybrać Export
+data, następnie zaznaczyć XML na tej liście, wykonać Next i tutaj bardzo
+często oni nas pytają, czy chcemy ten eksport wykonać w jednym zapytaniu, czy
+na przykład w wielu. Tu chodzi o to, że jeżeli tych danych byłoby bardzo
+dużo, no to przerobienie takiego na przykład jednogigabajtowego zapytania
+byłoby dosyć czasochłonne, więc wtedy czasem lepiej jest je podzielić na kilka
+mniejszych. My się tym nie musimy przejmować. Tutaj jak widać tych opcji
+jeszcze jest kilka, możemy mu wskazać, żeby wyeksportował tylko niektóre
+kolumny albo tylko niektóre wiersze, no i określamy sobie nasze połączenie.
+Tu akurat w tym połączeniu on wybiera to, którego używamy, więc nie ma
+problemu, możemy sobie śmiało kliknąć na Next. No i w kolejnym kroku zostanie
+my zapytani, gdzie te dane mają nam się pokazać, czyli gdzie ma te dane
+zapisać. Ja akurat wybrałem sobie jakiś tam katalog mój domowy, wówczas
+tutaj będę miał nazwę tabeli, czyli po prostu to będzie ten
+Customers, no i dalej będę miał nazwę Time Stump, czyli jak widzicie
+rok, miesiąc, dzień, godzinę, minuta. To się przydaje, jeżeli często
+robimy te dumpy, te eksporty, żeby później stwierdzić, co właściwie
+wyeksportowaliśmy. No i wtedy klikam sobie na Next.
+No i ostatni krok to jest takie podsumowanie tego, co zrobiliśmy.
+Na tym etapie po prostu klikam sobie na Start i po chwili pokaże mi się
+okno z tymi danymi. Okno mi się już pokazało. Prosiłem o format XML,
+więc otworzę sobie w jakimś przyjemnym edytorze tego XML-a.
+I zobaczcie, mamy XML-a zawierającego
+wszystkie te dane. I tak właśnie działa eksport w Dbiverze.
+Bardzo przyjemna, bardzo łatwa sprawa, ale warto byłoby to sobie
+jeszcze przećwiczyć, dlatego też mam dla was kilka zadań.
+Właściwie to parę zadań, a nie kilka, bo są dwa, a nie trzy.
+Więc mamy wyeksportować do pliku CSV wyłącznie nazwy produktów
+oraz ich ceny posortowane według ceny rosnąco. Jak widzicie, za
+każdym razem dokładam kolejny klocek do tej naszej łyżki.
+Układanki tak, żeby sobie wszystko raz jeszcze powtórzyć.
+W zadaniu drugim mamy wyeksportować do pliku XML kompletny adres
+dostawy. Interesować nas będzie z tabeli Orders, Ship Address,
+Ship Postal Code, Ship City oraz Ship Country, czyli takie dwa zadanka.
+Do zobaczenia za parę chwil. Upewnijcie się, że wszystko dobrze
+zrozumieliście i wszystko zostało poprawnie wyeksportowane.
+Do zobaczenia.
+Okej, ale nic nie wyeksportuję, jak nie napiszę zapytania, czyli mam
+zapytać, wyświetlić nazwy produktów oraz ich ceny posortowane
+według ceny rosnącą. No to lecimy. Select gwiazdka from products.
+To jest taki wygodny bardzo sposób też, żeby się upewnić, jak
+wyglądają nazwy kolumn, więc będzie to product name oraz drugą
+kolumną będzie kolumna
+unit price.
+From products, świetnie.
+I chcemy je posortować według ceny rosnącą, czyli od najmniejszych do
+największych, czyli ascending. Order, buy, unit price, ascending.
+Będę mówił ascending, a nie asked, bo to jakoś tak brzmi poważnie.
+Jak widzicie zadziałało i mamy z tego zrobić plik CSV, czyli
+klikamy gdzieś sobie prawym, export data, CSV, next.
+Next, next i start.
+I po chwili waszym oczom powinien ukazać się plik.
+From products.
+Ok, zawierający właśnie takie dane.
+Jak widać mamy product name, unit price, wszystko się
+zgadza, jest tak jak miało być pod spodem.
+I w zadaniu drugim chcemy wyeksportować do pliku XML kompletny adres
+dostawy, czyli z tabeli orders.
+No to select, gwiazdka from orders, no i wtedy możemy sobie
+popodmieniać. Ship address, ship postal code, ship city i ship country.
+Wielokrotnie robiłem coś takiego, chociażby dlatego, że ktoś robił
+etykiety i potrzebował tych danych.
+Na przykład do Worda, żeby zrobić korespondencję seryjną albo po prostu
+wgrywał to do jakiegoś programu, który może nie programu, ale do
+jakiegoś systemu typu courier, coś takiego, który później generował
+etykiety, które można było poprzyklejać i oni się dowiadywali, dokąd
+mają wysłać paczki i myśmy mieli wszystkie rzeczy poprzyklejane.
+Więc zapytanie jak najbardziej życiowe.
+No i z tego chcemy zrobić XML, to już robiliśmy, ale zróbmy sobie
+raz jeszcze, czyli export data, XML, next.
+Next, next, start.
+Ja już widzę, że zamówienia mi się wszystkie wygenerowały, tylko
+on nie wie, czym to otworzyć, ale już mu pomogę.
+Ok, otworzył najlepszą przeglądarką na świecie, czyli Internet
+Explorerem i proszę, jak widać, wszystko nam pięknie zadziałało.
+Jeżeli chodzi o mnie, to w tej lekcji to byłoby na tyle, ale mam
+dla was jeszcze pracę domową.
+Więc zachęcam was do tego, żebyście teraz uzbroili się w
+cierpliwość, otworzyli kolejną lekcję, kolejną pracę domową, więc
+zachęcam was teraz do tego, żebyście wzięli łyk kawy, łyk herbaty,
+czy tam co macie na biurku, zrobili sobie krótką przerwę, następnie
+usiedli do pracy domowej i nie wstali, póki jej nie skończyli.
+Prac domowych, tak jak zaznaczyłem, nie będę sprawdzał, ale praca
+domowa jest jedynym sposobem na to, żeby przećwiczyć sobie cały ten
+materiał.
+Użyć go, utrwalić, no i co najważniejsze, zapamiętać, więc żadna
+praca domowa nie powinna zostać przez was odpuszczona.
+Do zobaczenia w pracy domowej.

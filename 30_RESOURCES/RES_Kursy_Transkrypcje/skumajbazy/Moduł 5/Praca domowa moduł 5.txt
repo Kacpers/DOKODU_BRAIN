@@ -1,0 +1,27 @@
+A praca domowa w tym module wygląda następująco.
+Zadanie pierwsze, policz średnią, minimalną oraz maksymalną cenę dostawy
+dla poszczególnych krajów, czyli w zależności od tego jakie mamy
+ship country chcemy dowiedzieć się do jakich krajów średnia jest najwyższa,
+do jakich krajów średnia jest najniższa, no i jak się ma do tego
+minimum i maksimum. Zadanie drugie, policz klientów, customers
+według ich kraju, kolumna country, a następnie według miasta,
+czyli kolumna city. Czyli chcemy dowiedzieć się ilu mamy klientów
+z poszczególnych państw i z poszczególnych miast.
+W zadaniu domowym drugim chcemy odpowiedzieć, czy też już trzecim,
+drugi slajd zadania domowego, chcemy powiedzieć,
+jaka jest średnia cena dla poszczególnych kategorii, kategorii ID
+i ile jest takich produktów wewnątrz poszczególnych kategorii.
+Natomiast w zadaniu domowym czwartym chcemy policzyć wszystkie produkty
+według quantity per unit, a następnie wyświetlić tylko te,
+których ilość jest większa niż jeden. Czyli quantity per unit to jest to,
+gdzie mieliśmy tam bottles i inne takie i chcemy wyświetlić te produkty,
+gdzie dane quantity per unit występuje więcej niż jeden.
+Raz. Slajd trzeci pracy domowej. Przygotuj listę miast, czyli city,
+które znajdują się w tabeli customers, ale nie znajdują się w kolumnie city
+w tabeli suppliers. No i zadanie domowe szóste. Przygotuj transakcję,
+za pomocą której do tabeli shippers dodasz następujące firmy,
+czyli zwiększamy ilość naszych dostawców. I to byłoby już na tyle.
+Bardzo Wam dziękuję za ten moduł. Pamiętajcie o tym,
+jeśli macie jakiekolwiek pytania, to jestem dla Was na Discordzie.
+Życzę dobrej zabawy przy rozwiązywaniu pracy domowej
+i zapraszam na kolejny moduł już niedługo. Cześć!

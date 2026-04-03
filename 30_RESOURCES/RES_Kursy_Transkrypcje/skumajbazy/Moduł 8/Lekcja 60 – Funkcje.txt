@@ -1,0 +1,268 @@
+No i tak, jeżeli chodzi o funkcje, to wiele sobie już o tych funkcjach
+powiedzieliśmy wcześniej, myślę, że przejdźmy sobie od razu do kodu.
+Jak stworzyć funkcje? Tak jak Wam wspomniałem, żeby stworzyć funkcje
+używamy wyrażenia create function, oczywiście tak samo jak w przypadku
+paru innych rzeczy, na przykład widoków, mamy też możliwość dodania wyrażenia
+all replace. Następnie wprowadzamy nazwę funkcji i w nawiasie przekazujemy
+jej argumenty. O argumentach funkcji też jeszcze możemy sobie dużo bardzo
+powiedzieć, na razie się na nich nie skupiajmy, po prostu argument to jest
+coś, na czym ta funkcja ma pracować. Tak samo jak w przypadku funkcji
+cosinus od x, to o x mówiło się, że to jest argument funkcji, tak też będzie
+tutaj, jeżeli będziemy chcieli, żeby funkcja pracowała na jakiejś wartości,
+coś z nią robiła, to wówczas jest to, będzie to przekazane w tym miejscu.
+Natomiast tu znajduje się tylko deklaracja tego argumentu, czyli tylko mówimy,
+że słuchaj, ta funkcja pracuje na jakimś x, on nie ma jeszcze swojej wartości,
+po prostu używamy tego później w środku, natomiast określamy to właśnie w deklaracji,
+że takie argumenty będą mogły tutaj się znaleźć. Następnie określamy returns,
+to jest ten blok zaznaczony na pomarańczowo, w którym określamy,
+jaki będzie zwracany typ, czyli tak jak do tej pory uczyliśmy się tego,
+że kolumny mogą mieć typ int, varchar, text, boolean i tak dalej,
+to w argumentach też określamy sobie właśnie ten typ tych argumentów,
+natomiast returns również ma zawierać zwracany typ tych argumentów,
+czyli tutaj też będziemy wstawiali na przykład returns, varchar albo returns,
+text albo returns, integer, ok? Czyli na przykład możemy sobie powiedzieć,
+że funkcja sum to jest taka funkcja, która jako argument,
+otrzymuje jakieś zapytanie, natomiast jako returns, zwraca nam integer,
+czy zwraca nam float jako konkretną liczbę.
+Dalej jest language sql, a później zaczyna się coś ciekawego,
+zobaczcie jest s, dwa dolary i dwa dolary. To jest tak, że w momencie,
+w którym piszemy funkcję, ona musi mieć gdzieś swój początek i koniec.
+W przypadku sqla, jak widzicie, jest bardzo dużo różnych słówek i funkcja nie wiedziałaby,
+w którym momencie ma się przerwać, dlatego też określa się tak zwane delimitery,
+czyli takie coś, co określi nam właśnie początek i koniec.
+I za pomocą, i te dolary to są takie umowne dwa delimitery.
+Czasem można zauważyć, że ktoś używa na przykład dwóch małp,
+dwóch z symboli et, natomiast no ja używam dwóch dolarów,
+też w największej ilości przykładów znalazłem właśnie dwa dolary.
+Nie ma argumentu dlaczego, po prostu no najrzadziej te dolary będą gdzieś tam się
+w środku pojawiały, dwa. No i tak jak wspomniałem, ten return,
+więc w środku pomiędzy tymi dolarami stawiamy kod naszej funkcji.
+A jak taki kod może wyglądać? Zobaczcie.
+Na przykład stworzyłem sobie create or replace function, nazwałem ją sumuj liczby.
+Funkcja, która ma dodać dwie liczby do siebie.
+Jej argumentami jest integer, przecinek integer, czyli określiłem,
+że po prostu dwie liczby całkowite będą do tej funkcji mogły być przekazywane.
+I to jest bardzo ważne, bo jeżeli przekażecie argumenty innych typów,
+to może się okazać, że wam wyświetli komunikat, że taka funkcja nie istnieje.
+Nie wiem, czy mieliście ten problem wcześniej, ja jak tutaj przygotowywałem się
+do tych naszych wcześniejszych modułów, to taki problem wyskakiwał mi dosyć często,
+że gdzieś próbowałem jakąś funkcję wywołać, wcześniej na przykład nie rzuciłem czegoś
+na integer, nie zmieniłem typu, no i w ten sposób ten kod mi się wysypał.
+Tutaj o tym trzeba koniecznie pamiętać, żeby jeżeli określamy,
+że funkcja będzie przyjmowała intedgery, to żeby te intedgery,
+które mamy, do tej funkcji przekazywać.
+Dalej mamy returns integer, wiadomo, czyli, przepraszam, otrzymuje dwie liczby,
+zwraca liczbę, language to SQL, no i ma zwrócić nam $1 plus $2.
+Cóż to takiego jest ten $1, $2? Z tym $1, $2 chodzi o to,
+że w momencie, w którym ja określiłem, że przyjmuję dwa intedgery,
+nie nadając im nazw, to wówczas pod $1 wskoczy mi integer pierwszy,
+pod $2 wskoczy mi integer drugi.
+Czyli $1 to jest pierwsza wartość zmiennej, $2 to druga wartość zmiennej.
+Natomiast ja na tym etapie wciąż nie wiem, jaka ta wartość będzie,
+bo w funkcji ja tylko mówię, weź to i weź to, zwróć mi sumę tego i tego, tak?
+Natomiast jeżeli sobie spojrzymy na wywołanie, to później na dole,
+zobaczcie, to mamy select sumu i liczby 2,3 i on w tym momencie już będzie wiedział,
+że to jest $1, czyli $1 to jest 2, $2 to jest 3,
+czyli zwróci mi 5.
+Jeżeli będę chciał wywołać tę funkcję dowolną ilość razy,
+za każdym razem mogę robić select sumu i liczby i przekazywać różne inne wartości.
+Każda z tych wartości będzie wskakiwała mi pod konkretny element,
+pierwsza albo drugi, no i będzie analizowana w środku.
+W ten sposób w Sky is the Limit możemy sobie dowolne operacje wykonywać.
+Na przykład, nie wiem, liczenie podatku, tak?
+Jeżeli wiemy, że chcemy odjąć od wartości 19%,
+no to możemy sobie to też zrobić za pomocą funkcji,
+policz podatek dla jakichś liczby i odejmie nam 19%.
+No, jeżeli chcemy więcej logiki do środka, to już tak jak mówiłem,
+inny język może być nam potrzebny, no ale skoro ludzie go używają,
+to i wy możecie, więc zachęcam do rozważenia.
+Jeżeli uważacie, że wasza przyszłość jest w bazach danych
+i chcecie dalej iść tą drogą, na pewno pl.pgsql to jest dobry pomysł.
+Czasem zdarza się, że chcemy też zwrócić więcej informacji z naszej funkcji.
+To znaczy, nie tylko chcemy zwrócić jedną liczbę,
+ale na przykład chcielibyśmy zwrócić jakiś zbiór danych.
+Do takich przypadków możemy użyć czegoś, co nazywa się ReturnsTable
+i tutaj wskazujemy konkretne typy kolumn.
+Tak samo, jakbyśmy tworzyli tabelę, tak samo tutaj określamy,
+że z tej funkcji zwracaną wynikiem będzie tabela,
+która może mieć taką kolumnę i taką kolumnę.
+Dla przykładu, zobaczcie, Create or Replace Function nazwa funkcji,
+jakieś mamy argumenty, ReturnsTable, FirstName, LastName,
+no i w środku mielibyśmy Warchar, Warchar i wtedy w środku mielibyśmy jakieś zapytanie,
+które na przykład na podstawie tych argumentów zwracałoby tylko i wyłącznie
+FirstName i LastName z jakiejś tabeli, czyli powiedzmy z naszej tabeli Customers.
+Zwrócilibyśmy sobie na podstawie argumentu, którym mógłby być na przykład,
+nie wiem, dział albo stanowisko, konkretne osoby lub czasem może się też zdarzyć,
+że chcemy zwrócić kilka wierszy z określonej tabeli i wtedy, żeby określić,
+że chcemy zwrócić kilka wierszy z określonej tabeli, nie musimy koniecznie wpisywać
+wszystkich tych kolumn, które nas interesują, wystarczy powiedzieć,
+nasza funkcja zwraca Set of Customers, czyli zwraca zbiór, Set of zbiór jakiegoś typu,
+no i poprzez ten typ wskazujemy nazwę tabeli. W ten sposób nie trzeba będzie powtarzać wszystkich kolumn,
+jeden po drugim za pomocą przecinków, wystarczy zrobić coś takiego,
+no i wtedy w zapytaniu Select gwiazdka from Customers where ContactTitle równa się 1,
+czyli tutaj widzicie przyjąłem sobie warchar jako tę nazwę kontaktu,
+ten ContactTitle to SalesRepresentative i tak dalej, no i wtedy przyporządkowałem sobie to tu,
+no i w ten sposób on mi to ładnie zwrócił i zobaczcie Select CompanyName from GetByContactTitleOwner,
+też wrzuci mi konkretne wyniki. I to jest jeszcze jedna rzecz świetna w funkcjach,
+o której wam nie wspominałem, bo na razie mówiłem o tym, że funkcje mogą znajdować się za selectem,
+bądź też w where, ale jeżeli funkcja zwraca nam tabele lub zwraca nam zbiór,
+to możemy też na tej funkcji robić dalsze kwerendy, na przykład właśnie Select CompanyName from GetByContactTitleOwner,
+w ten sposób najpierw ta funkcja wykona nam jedno zapytanie, w którym to zapytaniu pobierze nam,
+wszystkie rekordy, które są ownerem, właścicielem, a następnie na tym wyniku wykona nam drugie zapytanie
+i pobierze z tych rekordów tylko CompanyName. Bardzo przydatna sprawa.
+No i dochodzimy do zadania. Przygotuj zapytanie, w którym pobierzesz sumę zamówień dla klienta VNet.
+Weź pod uwagę, że musisz użyć Join Group By oraz przemnożyć ilość przez cenę jednostkową.
+Wy to wiecie, bo przed chwilą obejrzeliście rozwiązanie, które jest w opisie.
+Wy to wiecie, bo przed chwilą obejrzeliście rozwiązanie, które jest w opisie.
+Wy to wiecie, bo przed chwilą obejrzeliście rozwiązanie, które jest w opisie.
+Wy to wiecie, bo przed chwilą obejrzeliście rozwiązanie, które jest w opisie.
+Wy to wiecie, bo przed chwilą obejrzeniście rozwiązanie pracy domowej, które bardzo do tego było podobne, jeżeli chodzi o Joina.
+Wy to wiecie, bo przed chwilą obejrzeniście rozwiązanie pracy domowej, które bardzo do tego było podobne, jeżeli chodzi o Joina.
+Natomiast tam nie robiliśmy Groupa. Czyli Group By służy do tego, żeby wszystkie te rekordy, wszystkie te wyniki zsumować, połączyć ze sobą.
+Bo nie chcemy mieć wyniku w postaci wielu wierszy, tylko chcemy, żeby wynikiem był jeden rekord,
+mówiący o tym, ile łącznie, za ile łącznie zamówił u nas klient winet.
+Nie bierzemy pod uwagę zniżki, kolumny Discount.
+No i chcemy zaokrąglić ten wynik matematycznie do liczby całkowitej.
+Prawidłowy wynik to 1480.
+I oczywiście na razie nie róbcie jeszcze funkcji. Funkcję z tego zrobimy sobie dopiero w kolejnym zadaniu.
+Trochę uprzedzam fakty, ale trudno. Jedziemy.
+Czyli cóż, interesują mnie zamówienia.
+SELECT, gwiazdka FROM ORDERS.
+Gwiazdkę mogę sobie przenieść.
+FROM ORDERS mogę sobie przenieść.
+CTRL ENTER. Pięknie.
+Interesuje mnie tylko winet, więc WHERE.
+Tak, tak.
+CUSTOMER NAME.
+Ojej, ojej, ojej.
+To winet.
+Winet musi być CUSTOMER NAME.
+CUSTOMER ID.
+O tak.
+SELECT, gwiazdka.
+I teraz do tego będziemy musieli sobie te informacje dojoinować.
+Czyli tu może zostać ta gwiazdka, niech będzie.
+A tutaj dorzucamy sobie LEFT JOIN ORDER DETAILS ON ORDERS kropka ORDER ID.
+Równa się ORDER DETAILS kropka ORDER ID.
+I mamy wszystkie zamówienia oraz wszystkie szczegóły.
+Zamówień.
+Nas interesuje tylko QUANTITY razy UNIT PRICE.
+No to sobie policzmy.
+QUANTITY razy UNIT PRICE.
+OK.
+Ale my nie chcemy dostawać tylu rekordów.
+My chcemy dostać jeden z sumą.
+Więc wybieramy sobie SAM.
+I mamy.
+Można byłoby zrobić grupa, ale tutaj grupa jak widać nam nie jest potrzebna.
+Jeżeli mamy tylko jeden rekord.
+Po prostu on nam wtedy, znaczy jeden rekord.
+Jeden rodzaj firmy.
+On nam wtedy wszystkie te dane po prostu podsumuje.
+OK.
+Jeszcze mamy zaokrąglić wynik matematycznie do liczby całkowitej.
+No to ROUND.
+Ops. Mamy 1480.
+Widzę, że się zgadza z wynikiem.
+Chodźmy do zadania drugiego, bo tam się dopiero zacznie robić ciekawie.
+Poprzednie zadanie wiem, że było dla was bułką z masłem.
+Więc teraz przechodzimy do czegoś, do miecha.
+A mianowicie.
+Wykorzystując kwerendę z poprzedniego zadania.
+Przygotuj funkcję, która będzie potrafiła zwrócić taki wynik dla dowolnego CustomerID.
+Zgodnie z przykładem poniżej.
+SELECT getTotalByCustomerID vnet
+Powinno nam zwrócić sumę dla tego klienta.
+Rozumiemy się?
+To cóż.
+Trzy minuty dla was.
+I widzimy się za chwilę.
+OK.
+Możemy wykorzystywać poprzednio napisaną kwerendę.
+Więc ja sobie ją od razu delikatnie wetnę.
+No i lecę.
+CREATE FUNCTION
+Aha. Oczywiście zapomniałem jak ma się nazywać nasza funkcja.
+Ona ma się nazywać getTotalByCustomerID.
+OK. No to cóż.
+CREATE FUNCTION getTotalByCustomerID
+No i naszymi argumentami będzie jeden warchar.
+Dobra. To mamy.
+Nasza funkcja zwraca zaokrąglony wynik, czyli zwraca integer.
+Dalej mamy S.
+I tutaj są te dwa symbole.
+Niech to będą dwa dolary.
+Tak jak wam mówiłem.
+Dwa dolary. OK.
+I teraz SELECT rounds from left where CustomerID.
+I tutaj będziemy otrzymywać.
+I tutaj będziemy potrzebowali użyć tego argumentu, który przekazaliśmy sobie tutaj.
+Czyli tak jak pokazałem wcześniej.
+$1
+CTRL ENTER
+Coś jeszcze jest.
+Aha. LANGUAGE nie został określony.
+Czyli jednak trzeba go podać.
+Ja się pomyliłem.
+Wydawało mi się, że domyślnie jest SQL.
+LANGUAGE SQL. LANGUAGE SQL.
+Coś tu jest nie tak.
+Zamieszałem kolejnością.
+Najpierw jest returns integer.
+Potem jest LANGUAGE SQL S.
+No i wtedy już wszystko zadziałało.
+Jak widzicie poniżej funkcja nam się wygrywa.
+No to SELECT.
+Sprawdzamy czy działa.
+1480 było.
+Czyli GET.
+TOTAL BY CUSTOMERID.
+VNET.
+Ops. 1480 jest.
+A jak sobie zrobimy SELECT gwiazdka FROM ORDERS.
+To jeszcze sprawdźmy.
+Czy jak wybierzemy TOM SP.
+Czyli Tomek ze szkoły podstawowej.
+Nie. To jest TOM SPECIALITET.
+To wyjdzie nam 4954.
+Czyli wyjdzie nam lepiej.
+W ogóle co jest ciekawe.
+Jakbyście chcieli.
+To możecie nawet zrobić tak.
+To oczywiście jest zapytanie.
+Które można byłoby zrobić dużo wydajniej.
+Ale skoro można to czemu nie.
+SELECT CUSTOMERID.
+GET TOTAL BY CUSTOMERID.
+CUSTOMERID.
+FROM ORDERS.
+Ops.
+I będziemy mieli wszystkich klientów.
+I wszystkie zamówienia.
+Tylko nie dajcie się zwieść.
+Że to jest fajne.
+To.
+Znaczy to jest fajne.
+Ale zwróćcie uwagę na to.
+Ile zamówień.
+Ile zamówień.
+Ile zamówień.
+Ile zamówień.
+Ile zamówień.
+Ile zamówień.
+Ile zamówień.
+Ile zapytań.
+To idzie pod spodem.
+On pod spodem.
+Sobie bierze to.
+I dla każdego klienta.
+Wykonuje.
+To pobranie.
+Nie wiem.
+Zdecydowanie do wydajnych.
+Nie należy.
+I cóż.
+Bardzo dziękuję wam za tę lekcję.
+Zapraszam.
+Do lekcji kolejnej.
+Do zobaczenia.

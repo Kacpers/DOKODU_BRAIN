@@ -1,0 +1,40 @@
+Kolejną instrukcją, o której sobie porozmawiamy jest instrukcja EntryPoint, o której wspomniałem już wcześniej przy okazji omawiania CMD i instrukcja EntryPoint służy do ustawienia głównego polecenia naszego obrazu.
+Jest to polecenie, które będzie zawsze wykonywane w momencie jego uruchomienia i możemy do niego przekazywać dodatkowe argumenty właśnie z wykorzystaniem instrukcji CMD.
+I tutaj widzimy w Docker File Reference, że jest bardzo dużo możliwości, natomiast ja też przygotowałem taki swój roboczy przykład, który chciałbym Wam też teraz pokazać.
+Dlatego, że na nim najłatwiej będzie mi wytłumaczyć taką zasadę działania, żeby to można było bardzo łatwo zrozumieć i jednocześnie przekazać jakby esencję tego, jak to można wykorzystać.
+Także Kacprze, jeśli mógłbym Cię prosić o zmianę widoku.
+Już przełączam taką sztuczkę, zobacz. O i przełączone.
+Super, dzięki bardzo.
+I tak, w moim przykładzie tutaj mamy EntryPoint, gdzie polecenie wykorzystane to jest S3CMD.
+To jest takie polecenie z chmury AWS-owej do zarządu...
+Może tu troszeczkę powiększysz, co? To będziemy lepiej widzieli, bo jeszcze tak...
+Jasne, już powiększam.
+O, teraz jest wersja dla mnie w sam raz. W moim wieku to już trzeba sobie czasem powiększać czcionkę.
+Dlatego ja mam okulary.
+Także polecenie S3CMD jest to polecenie do zarządzania usługą S3 z AWS-a, z chmury amazonowej, do tak naprawdę przeglądania paketów,
+czyli tego miejsca, gdzie znajdują się nasze pliki.
+I teraz tworząc nasz obraz, możemy sobie jako EntryPoint wskazać to polecenie.
+S3CMD, w ramach obrazu możemy dać domyślne CMD, tak jak tutaj widać, na "-help", co spowoduje, że jeśli nie zmienimy tego w żaden sposób,
+wtedy dostaniemy tak naprawdę helpa, który mówi o tym, jak z tego polecenia S3CMD możemy korzystać.
+Więc jeśli nie przekażemy żadnego własnego CMD w momencie uruchamiania kontenera z tak zakończonych plików,
+więc jeśli nie przekażemy żadnego własnego CMD w momencie uruchamiania kontenera z tak zakończonych plików,
+więc jeśli nie przekażemy żadnego własnego CMD w momencie uruchamiania kontenera z tak zakończonych plików,
+wtedy dostajemy właśnie tą instrukcję.
+Natomiast jeśli sobie zrobimy tak, jak tutaj widać poniżej, właśnie jest docker run S3CMD naszego obrazu, wtedy dostaniemy tą właśnie pomoc.
+Natomiast jeśli nasz przypadek zakłada, że nie będziemy mieć tego domyślnego polecenia,
+że potrzebujemy, nie wiem, uruchamiać z tego samego obrazu w różny sposób ten nasz obraz,
+bo na przykład chcemy uruchamiać główną aplikację, ale może chcemy też uruchamiać jakiś worker z kronami,
+z operacjami, które wykonują się okresowo, cyklicznie, jakby baza kodu jest cały czas ta sama,
+ale chcemy inne zadanie na tym kodzie uruchamiać.
+Wtedy...
+My chcemy świadomie decydować, co dokładnie uruchamiamy i chcemy zawsze przekazać to polecenie.
+Wtedy tak naprawdę zarówno entry point, jak CMD mogą nam przeszkadzać w tym wykorzystaniu,
+więc nie dodajemy ich, no bo po co komplikować sobie życie.
+Jeśli chcemy z nich korzystać, korzystamy, jeśli widzimy, że nie będzie z nich wartości, jak najbardziej pomijamy.
+Nic się nie dzieje, jest to wręcz wskazane, żeby ich nie używać.
+Ja przyznam, że przez moment straciłem audio i nie słyszałem tego, co mówi Jan,
+ale na pewno podczas montażu sobie to odsłucham.
+W każdym razie dziękuję Ci za to, że to wytłumaczyłeś, bo entry point był kolejnym poleceniem,
+z którym nie do końca wiedziałem, jak sobie poradzić.
+I dzięki temu, że je wyjaśniłeś, to mam nadzieję, że już tego problemu mieć nie będę.
+Bardzo się z tego cieszę.

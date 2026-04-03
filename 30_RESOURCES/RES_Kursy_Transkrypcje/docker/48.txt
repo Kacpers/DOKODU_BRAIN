@@ -1,0 +1,10 @@
+Nazwaliśmy to podstawowe pojęcia w Dockerze, ale jednak trochę tego tutaj jest, tych pojęć. Są kontenery, są kurcze obrazy. Ja powiem szczerze, że nawet jak z Tobą rozmawiałem podczas tego kursu, to wiem, że parę razy się pomyliłem, gdzieś nazwałem coś obrazem, coś nazwałem kontenerem. Trochę idzie się w tym pogubić, co?
+Tak, mnie też to się zdarza, też często łapię się na tym, że w momencie, kiedy chcę powiedzieć o obrazie, mówię o kontenerze, kiedy chcę powiedzieć o kontenerze, mówię o obrazie, domyślnie wiedząc o co chodzi w danym momencie, natomiast przekazując tutaj wiedzę, ważne jest jednak to, żeby w danym momencie mówić dokładnie o to, o co nam chodzi,
+dlatego, że wy drodzy uczestnicy nie macie jeszcze,
+tej takiej biegłości, płynności i często też tego kontekstu, który domyślnie podpowiada o co chodzi, dlatego ważne jest tutaj, żeby jednak starać się trzymać tych prawidłowych pojęć w danym momencie.
+To trochę tak jak butla tlenowa, nie? Że w środku w butli tlenowej wcale nie ma tlenu, tylko jest powietrze.
+A to zależy.
+Dobrze.
+Dość tych dygresji. Jeżeli będziecie mieli ochotę posłuchać o butlach tlenowych, to zapraszam Was oczywiście na Diving Devops, tam się pewnie dowiecie dużo więcej niż tutaj na kursie.
+Myślałem, że zabłysnę, ale teraz tylko spalę buraka. To co? Chodźmy dalej.
+Chodźmy dalej.

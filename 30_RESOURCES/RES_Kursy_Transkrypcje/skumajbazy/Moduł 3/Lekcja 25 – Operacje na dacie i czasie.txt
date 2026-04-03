@@ -1,0 +1,669 @@
+Witajcie moi drodzy, dziś porozmawiamy sobie już w lekcji 25 o operacjach, które możecie wykonywać na dacie, na czasie i ogólnie jak mierzyć te wartości, czyli taka lekcja, w której porozmawiamy sobie o przemijaniu.
+Jeżeli chodzi o operacje, które można wykonywać, no to na chwilę obecną wiecie jedną rzecz, a mianowicie to, że możemy jedną datę odejmować od drugiej i wtedy, kiedy odejmujemy jedną datę od drugiej, w wyniku dostajemy ilość dni i ta ilość dni mówi nam o tym, ile te dwie daty dzieli.
+To jest pierwsza informacja. Druga informacja była taka, że mówiliśmy sobie, że jeżeli daty sortujemy, to też ta data, która jest datą historycznie, która wydarzyła się dawniej, to jest data mniejsza.
+Od tej, która historycznie wydarzy się dopiero, czy już się dzieje obecnie.
+Ale o samym typie danych musimy powiedzieć sobie odrobinę więcej, ponieważ poza samymi datami wyróżniamy jeszcze dwa takie typy powiązane z datą i z czasem.
+Pierwszym z nich jest interwał, drugim jest timestamp.
+Jeżeli chodzi o datę i o timestamp, no to myślę, że sprawa jest prosta, no bo data to sama data, natomiast timestamp to jest data i czas.
+No i ja będę używał też takiego spolszczenia, czyli używamy timestampu, korzystamy z timestampu i tak dalej.
+Nie będę szukał jakiegoś odpowiednika polskiego.
+Natomiast jeżeli chodzi o interwał, to jest to po prostu różnica pomiędzy dwiema datami.
+Ale różnica nie tylko pod kątem takim, jaki czas dzieli dwie daty, ale również takie interwały możemy sobie dodawać, bądź też odejmować od daty.
+W efekcie dostajemy po prostu przesunięcie na konkretnej dacie.
+To, że tutaj z przodu pokazuje się słówko date, interwał albo timestamp, to jest dokładnie to samo, jakbyście robili tę datę, wpisywali jako string, podawali dwa dwukropki i zaraz za tym wpisywali typ, jaki przechowuje, jaki ma być zwrócony.
+Czyli powiedzmy ta data 11 listopada, dwukropek, dwukropek, date.
+Wyszłoby na to samo, ale po prostu pokazuje Wam jeszcze jeden sposób, jak możemy też sobie rzutować te stringi na konkretne daty.
+Jeżeli chodzi o sam interwał, to konstrukcja interwału zawsze wygląda tak samo.
+Czyli najpierw mamy ilość, potem czego ilość, a następnie kierunek.
+Jeżeli chodzi o ilość, no to wiadomo, chodzi głównie o to, że ma być to liczba całkowita, zależnie od tego, ile tego czegoś upłynęło.
+Drugą rzeczą jest jednostka.
+Jak widzicie, jednostka jest po angielsku.
+Zaraz pokażę Wam wszystkie jednostki, które są dostępne, no ale łatwo sobie to będzie przetłumaczyć, że to będzie date.
+No i tak dalej w szczególności możemy przekazać mu właśnie godziny, minuty, sekundy i dni, miesiące oraz lata.
+Konstrukcja długiego interwału, takiego gdzie chcemy z dokładnością co do sekundy na przykład podać, ile czasu upłynęło, jest taka jak widzicie w ostatnim przykładzie.
+Czyli możemy napisać interwał, jeden rok, dwa miesiące, trzy dni, cztery godziny, pięć minut i sześć sekund.
+Pomiędzy poszczególnymi jednostkami nie ma żadnego symbolu typu przecinek, jest tylko spacja.
+Postgres sam sobie to po prostu odczyta, odpowiednio zinterpretuje i wyświetli Wam odpowiednie informacje w tym miejscu.
+Jeżeli chodzi o operacje, które możemy wykonywać na datach, to jest ich całkiem sporo.
+Ostatnio mówiliśmy sobie po prostu o tym, że odejmując datę od daty dostajemy ilość dni, ale jeżeli w wyniku dostajemy liczbę, to jak widzicie na pierwszym przykładzie możemy też tą liczbę do daty dodać.
+Ale jeżeli w wyniku dostajemy liczbę, to jak widzicie na pierwszym przykładzie możemy też tą liczbę do daty dodać.
+Ale jeżeli w wyniku dostajemy liczbę, to jak widzicie na pierwszym przykładzie możemy też tą liczbę do daty dodać.
+I taka liczba, czyli 11 listopada plus 5 spowoduje, że na ekranie zobaczycie 16 listopada.
+Jeżeli macie chęć, to proponuję otworzyć teraz DBivera i spróbować sobie wklepać takie polecenia, zobaczycie co zostanie zwrócone.
+Data plus liczba to jest data przesunięta po prostu o tyle dni.
+Jeżeli chcielibyśmy dokładniej określić ten interwał, no to jak widzicie możemy na przykład podać data plus interwał.
+No to jak widzicie możemy na przykład podać data plus interwał.
+No to jak widzicie możemy na przykład podać data plus interwał.
+No to jak widzicie możemy na przykład podać data plus interwał.
+To spowoduje, że tę datę przesuniemy sobie o tyle dni, no i dostaniemy 18 listopada.
+Poniżej macie też datę plus czas.
+I w ten sposób w wyniku otrzymacie timestamp.
+Czyli dodając datę do czasu dostajecie po prostu timestamp, który spowoduje, że będzie to 11 listopada godzina 11.30.
+Dobrze, że nie 11.11.
+Dodając do siebie dwa interwały po prostu dostajemy kolejny interwał, tylko troszeczkę większy.
+Czyli dodając do siebie jeden tydzień, drugi tydzień.
+Czyli dodając do siebie jeden tydzień, drugi tydzień.
+Czyli dodając do siebie jeden tydzień, drugi tydzień.
+Dostaniemy dwa tygodnie.
+Dodając miesiąc i trzy miesiące dostaniemy cztery miesiące i tak dalej możemy sobie to wykonywać.
+Na przykład jeżeli wiecie, że jakieś zadanie wam się nie wiem przesuwa i chcecie dodawać dobra jeszcze tydzień, jeszcze tydzień, jeszcze tydzień, jeszcze trzy dni, jeszcze dwa dni, jeszcze coś tam.
+To to się pięknie nam zsumuje i w ten sposób ta data nam się właśnie przesunie.
+Inne przykłady operacji, które możemy wykonywać na dacie.
+No to na przykład timestamp plus interwał.
+Zadziała tak samo jak w przypadku.
+Datę plus interwał, oczywiście w wyniku dostaniemy timestamp, czyli po prostu datę przesuniętą o, datę i czas przesuniętą o określony, określoną przestrzeń.
+Interwał plus interwał już było.
+No i odejmowanie dat, to też było, pokazywałem wam, czyli date minus date dostajemy ilość dni.
+No i ostatnia rzecz, o której też chciałem powiedzieć, to jest date minus interwał, czyli daty też, od daty też możemy interwał odejmować.
+Przy interwale jeszcze jedna ważna sprawa, a mianowicie zobaczcie tutaj jest jeszcze kierunek.
+Przy interwale jeszcze jedna ważna sprawa, a mianowicie zobaczcie tutaj jest jeszcze kierunek.
+Przy interwale jeszcze jedna ważna sprawa, a mianowicie zobaczcie tutaj jest jeszcze kierunek.
+Można nie podawać kierunku, wtedy wiadomo, że będziemy sobie traktowali ten interwał jako interwał dodatni, natomiast jeżeli dopiszecie słówko ego, to będzie to oznaczało, że tak naprawdę jest to interwał, który ma odejmować określoną ilość czasu, a nie dodawać.
+Zachęcam też tutaj do eksperymentów, żeby włączyć sobie DBivera, poklikać, popróbować, tak żeby poczuć się z tymi interwałami dobrze, no bo warto po prostu wiedzieć, że tak to jest skonstruowane.
+Można nie podawać kierunku, wtedy wiadomo, że tak naprawdę jest to interwał, który ma odejmować określoną ilość czasu, a nie dodawać.
+Zachęcam też tutaj do eksperymentów, żeby włączyć sobie DBivera, poklikać, popróbować, tak żeby poczuć się z tymi interwałami dobrze, no bo warto po prostu wiedzieć, że tak naprawdę jest to interwał, który ma odejmować określoną ilość czasu, a nie dodawać.
+A moim zdaniem to, że właśnie on potrafi sobie sparsować ten interwał i zamienić go pod spodem tam na ilość dni, wykonać tę operację, ładnie nam to wyświetlić, to naprawdę jest coś, co nam bardzo ułatwia życie, no i warto być z tym za pan brat.
+ok
+i skoro ten temat
+powoli nam się ma uleżeć
+no to przyszedł czas na zadanie
+tutaj tych zadań będzie kilka
+znowu podzielimy sobie materiał na kilka takich
+wprawek
+praktycznych
+więc w zadaniu 25.1
+mamy odejmując dwie daty od siebie
+sprawdzić ile dni upłynęło
+od początku roku
+to jest pierwsze zadanie
+a w drugim zadaniu mamy napisać
+zapytanie, które z tabeli orders
+pobierze wszystkie daty dostawy
+przesunięte, powiększone o jeden rok
+no to co?
+trzy minuty dla każdego
+i widzimy się za chwileczkę
+no to co?
+nie śpimy, lecimy
+odejmując dwie daty od siebie
+sprawdź ile dni upłynęło od początku roku
+no to będziemy potrzebowali datę dzisiejszą
+przypuśćmy, że dzisiaj jest 1 czerwca
+no to 2021-06-01
+oczywiście jest to data
+więc potrzebuję sobie to rzucić
+na datę
+mogę też rzucić tak, jeżeli chcę
+wtedy tego nie potrzebuję
+minus
+no i data początkowa
+czyli 2021-01-01
+ops
+no i w wyniku dostanę informację, że minęło
+151 dni
+jeżeli chcielibyście wyświetlić
+godziny, minuty, sekundy
+i tak w ładniejszej formie zaprezentować
+to za chwilę będzie funkcja, która
+Wam to umożliwi.
+W zadaniu drugim mamy napisać zapytanie,
+które z tabeli orders pobierze wszystkie daty dostawy
+czyli kolumnę order date
+powiększoną o 1 rok
+czyli potrzebujemy dodać sobie interwał
+no to pobierzmy sobie najpierw wszystko
+co tylko mamy z tabeli orders
+hops
+no i teraz interesuje nas order date
+przesunięte o 1 rok
+więc będzie to select order date
+jak przesunąć o 1 rok?
+plus
+plus
+interval
+one year
+hops
+no i nie wiem co przesuwałem o 1 rok
+więc sobie mogę śmiało dorzucić
+order date
+96, 97
+wszystko zadziałało
+tutaj ważna sprawa jest taka, że oczywiście
+jeżeli kolumna zawiera już datę
+no to nie trzeba tego rzutować na datę
+to byłoby bez sensu
+natomiast interwał jak najbardziej już musi być zrzutowany
+tak żeby on wiedział o co nam chodzi
+i tu jeszcze jedna rzecz
+a mianowicie tu mamy kolumn
+nie wiemy co to jest za kolumn
+więc możemy sobie zawsze dopisać
+as
+na przykład one year later
+ach
+oczywiście jeżeli jest to nazwa kolumny
+to w cudzysłowie
+a nie w apostrofach
+hops
+i widzicie zadziałało
+order date i one year later
+wszystko jest ok
+no to co
+nie przedłużamy
+wracamy do teorii
+przechodzimy sobie do funkcji
+którą właśnie przed momentem zapowiedziałem
+że będzie
+która nam w ładny sposób formatuje
+te daty i te różnice
+i wyświetla ją w takiej postaci
+w jakiej moglibyśmy chcieć to oglądać
+za pomocą funkcji age
+możemy sprawdzić wiek
+czyli ile dokładnie czasu upłynęło
+między dwiema datami
+zobaczcie mamy datę początkową
+i datę końcową
+w momencie w którym wykonujemy sobie operację
+okazuje się że dostajemy w wyniku
+coś co nazywa się age
+jest to 11 months i 20 days
+czyli 11 miesięcy 20 dni
+co ciekawe
+zobaczycie też już niedługo
+kolejną funkcję która pozwala wyciągać
+określoną informację z daty
+czy na przykład dzień albo miesiąc
+a jej pozwala też wyciągnąć taką informację
+z interwału który na przykład
+mamy też zdefiniowany właśnie tutaj
+dobra czyli ta funkcja jak widzicie
+pozwala nam na
+pobranie tej informacji w ładny sposób
+jeżeli chodzi o funkcję
+no to tak samo jak poprzednio mam age
+i mam po prostu dwa argumenty
+oba te argumenty muszą być datą czasem
+mogą być też zwykłą datą
+ok
+jeżeli chodzi o pobranie
+bieżącego czasu
+no to mamy do dyspozycji taką funkcję
+czy może nie funkcję tylko takie
+coś co nazywa się current time
+jeżeli wykonacie select current time
+też zachęcam do tego żebyście
+spróbowali to sobie wykonać
+to powinniście dostać bieżący czas
+zgodny oczywiście z czasem
+który jest na serwerze
+natomiast jeżeli chcielibyście pobrać bieżącą datę
+i czas no to jest też do dyspozycji
+coś takiego co się nazywa current time stamp
+i w ten sposób dostajecie
+zarówno datę jak i czas
+no i
+możemy sobie teraz to przećwiczyć
+wiedząc że postgresql
+powstał 8 lipca
+96 roku
+napisz zapytanie które
+odpowie jaki jest jego wiek
+czyli chcielibyśmy się dowiedzieć
+ile dokładnie dni
+upłynęło od tej daty
+no to cóż
+3 minuty dla każdego
+i do zobaczenia za moment
+oczywiście przy rozwiązaniu
+dwóch zadań
+drugie zadanie to korzystając z daty bieżącej
+wyświetl datę za dokładnie 2 tygodnie
+czyli current timestamp plus 2 tygodnie
+do zobaczenia
+no to cóż
+wiedząc że postgresq powstał 8 lipca 96 roku
+czyli select
+no i potrzebuje
+datę bieżącą
+datę bieżącą czyli oczywiście
+current timestamp
+i
+będę chciał używając funkcji
+age oczywiście sprawdzić
+ile czasu minęło czyli
+current timestamp
+przecinek no i tutaj potrzebuje
+datę powstania postgresa czyli
+1996
+07
+08
+i to jest date
+i w ten sposób
+dostaniecie informacje że od
+bieżącego czasu jeżeli
+odejmiemy sobie datę
+powstania postgresa
+to dostaniemy informacje że jest to dokładnie
+24 lata 11
+miesięcy 19 dni
+no i też dostajemy czas ten czas
+oczywiście nam dużo nie daje ten czas wynika z faktu
+że jak to nagrywam jest 12
+więc mniej więcej on sobie odjął
+te
+godziny i tyle ile mu zostało do
+kolejnego dnia wyświetlił
+ok no i w drugim zadaniu
+korzystając z bieżącej daty
+wyświetl datę za dokładnie 2 tygodnie
+no to select
+bieżąca data
+to znowu current timestamp
+plus
+plus co
+plus interwał
+2
+weeks
+hops no i dostajemy też
+datę 2021
+07 11 11 10
+za 2 tygodnie
+będziemy gdzieś w połowie bootcampu
+do zobaczenia
+lecimy dalej z teorią i tak jak obiecałem
+pokażemy sobie teraz jak
+z daty wyciągnąć jakiś
+kawałek tej daty
+czasem tak się zdarza że naprawdę z daty potrzebujemy
+wyciągnąć miesiąc albo rok
+albo dzień albo
+powiedzmy czas i do tego
+są dwa sposoby jeden sposób
+to jest date part a drugi sposób zobaczycie
+za chwileczkę jak
+pokażę wam przykład jeżeli chodzi
+o date part to argumenty są
+następujące najpierw jest co
+czyli informuje postgresa
+że chce wyciągnąć dzień miesiąc
+albo rok albo godzinę minutę
+z hundy natomiast drugi argument
+to jest ten timestamp czyli
+data i czas z której
+to date i czasu chce te informacje
+wyciągnąć przykład
+zobaczcie jeżeli chcemy
+pobrać sobie rok z bieżącego
+z bieżącego timestampu
+to po prostu przekazujemy sobie
+current timestamp i wówczas
+ta informacja się nam
+wyświetli analogicznie
+date part minute
+current timestamp też wyświetli nam
+bieżącą minutę natomiast
+jeżeli chcielibyśmy pobrać
+sobie to w inny sposób to można też
+analogicznie wykonać extract
+minute from current timestamp
+i też dostaniecie
+minutę zobaczcie
+jeżeli zrobię select
+date part
+year
+current timestamp
+year
+current timestamp
+to dostanę informację
+że kolumna year nie istnieje
+stąd też muszę ten rok
+wziąć apostrofy jako string
+wtedy dostanę
+konkretny rok
+natomiast jeżeli to samo chciałbym
+zrobić za pomocą extract
+to
+oczywiście by zabrakło mi nawiasów
+jeszcze to wtedy
+już absolutnie żadnych
+żadnego stringa
+tutaj nie potrzebuje po prostu
+wykonuje to w ten sposób
+różnica pomiędzy jednym a drugim zapisem
+jest taka że tutaj
+extract nie potrzebuje
+stringa i musimy pamiętać
+o słówku from natomiast tu po prostu
+przekazujemy jako dwa argumenty
+mi zawsze bliższe
+mojemu sercu jest sposób gdzie
+coś ma więcej języka
+pisanego niż więcej jakichś
+znaczków typu przecinki apostrofy
+więc pewnie no ja bym wolał ja wolę ten
+zapis i częściej pewnie
+ten zapis będę wykorzystywał podczas
+kursu natomiast wam pokazuje
+oba no bo wiem że oba
+gdzieś czy w dokumentacji czy w wykorzystaniu
+możecie zobaczyć więc też chciałbym
+żebyście mieli wybór
+czyli year w apostrofach current
+timestamp albo year
+bez apostrofów from current timestamp
+jak pamiętacie kiedy pracowaliśmy
+ze stringami to tam też mieliśmy kilka
+takich funkcji chyba dwie
+gdzie też można było przekazywać
+argumenty jako stringi
+po przecinkach albo też w takiej
+konstrukcji z jakimiś słówkami
+dookoła i też
+dałem wam wybór więc i tutaj jest tak samo
+w takim razie
+możemy przejść sobie do kolejnej funkcji
+czyli funkcji date trunk
+funkcja date trunk
+to jest skrót od truncate czyli takiego
+oczyść i tutaj
+jako pierwszy argument mówimy
+do jakiej dokładności chcielibyśmy
+oczyścić te datę natomiast
+drugim argumentem jest nasz
+timestamp czyli ta data którą
+chcemy oczyścić i oczyszczać
+możemy do tej samej dokładności jak przy
+wyciąganiu ja się kiedyś złapałem na tym że
+chciałem sobie stworzyć datę na przykład w tym samym
+miesiącu ale miał być to dzień pierwszy
+tego miesiąca to pobierałem
+dzień miesiąc rok
+i wszystkie te informacje po czym
+z tych informacji tworzyłem sobie nową datę
+funkcję do tworzenia daty zaraz
+poznacie natomiast jak
+później zobaczyłem że jest funkcja która nazywa się
+date trunk to się okazało że to co
+robiłem za pomocą sześciu funkcji mogę zrobić
+za pomocą jednej bez żadnego zagnieżdżania
+i kombinowania więc też
+zachęcam was do tego żebyście
+gdzieś tę funkcję sobie odnotowali
+o dokładności
+mówiłem o timestampie mówiłem no to
+zobaczcie jak to wygląda
+użycie tej funkcji jest
+następujące jeżeli sobie wykonam
+select date trunk i jako argument
+przekażę mu
+dokładność w postaci minut a drugim
+argumentem będzie konkretna
+data to wówczas on mi
+po prostu z tego zrobi 0 sekund
+w tej minucie jeżeli
+natomiast ustawiłbym dokładność do
+godzin to wtedy dostałbym 0
+minut czyli byłaby to 18.00
+jeżeli ustawiłbym
+dokładność do miesięcy
+czy najpierw
+do dni to wtedy dostałbym północ
+tego dnia do miesięcy to byłby
+pierwszy dzień miesiąca no i do
+roku pierwszy dzień roku
+jak widzicie poniżej ustawiłem
+dokładność zgodnie do roku dla takiej
+daty i dostałem 1 stycznia
+dokładnie o północy
+czyli taki data startowa
+to trochę tak jakbyście sobie wyobrazili taki
+stoper w którym klikacie guzik reset
+czasem może by się chciało
+któryś rok zrestartować
+zacząć tylko od nowa co
+ale okej
+bez takich tutaj
+negatywnych spraw jeżeli chodzi
+o budowanie daty to do
+budowania daty służy funkcja make
+date mamy też do dyspozycji
+funkcję make time jeżeli
+chodzi o budowanie daty to bardzo
+ważna sprawa przekazujemy datę
+w kolejności rok miesiąc dzień
+czyli w takiej samej jak ten taki
+standardowy format jak widzicie rok miesiąc
+dzień po myślnikach tutaj
+nic się nie zmienia jeżeli
+przekażemy datę w tej postaci to po prostu on nam
+zwróci w wyniku
+datę gdzie będzie to 12
+marca 2021
+roku natomiast jeżeli chcemy
+tworzyć czas no to analogicznie
+robimy używamy funkcji make time
+przekazujemy godziny minuty sekundy
+co ważne żadnego tego elementu
+nie możemy pominąć więc jeżeli interesuje
+was 12 w południe to trzeba
+po prostu napisać make time 12
+przecinek 0,0 żeby to
+zadziałało jeżeli w odpowiedzi
+chcielibyście dostać time stamp
+składający się zarówno z daty jak i z
+godziny no to wtedy trzeba użyć
+funkcji make date i do tej funkcji
+make date dodać make
+time i w ten sposób właśnie w
+odpowiedzi otrzymacie time stamp z
+datą i z godziną jeszcze jedna
+ważna uwaga wszystkie te
+elementy które przekazujemy zarówno
+do funkcji make date jak i do funkcji make
+time zawsze muszą być
+integerami jak będziecie robili za
+chwilę zadanie to zwrócicie uwagę
+że możliwe że
+postgres zje strona was
+na krzyczy więc pamiętajcie że zawsze
+możecie sobie rzucić taką
+liczbę i spowodować że
+będzie ona integerem po prostu robiąc
+dwukropek dwukropek integer
+to co przećwiczymy sobie
+te tematy zadanie
+pierwsze napisz zapytanie którym
+pobierzesz imię i nazwisko oraz
+rok urodzenia pracownika
+zadanie drugie przygotuj zapytanie
+którym pobierzesz daty urodzin
+naszych pracowników w bieżącym
+roku zadanie trzecie
+napisz zapytanie które zwróci
+następujące daty no i tu jest pierwszy
+sierpnia data szczególna
+dla mnie godzina 14
+i po drugie 31 grudnia
+2021 godzina
+23 59
+to co 3 minuty dla każdego
+i do zobaczenia za moment
+w rozwiązaniu
+jeżeli chodzi o napisanie
+zapytania którym pobierzemy sobie imię
+nazwisko oraz rok urodzenia pracownika
+no to lecimy select
+gwiazdka
+from employees
+chwilę gadałem więc się
+rozłączyłem z bazą zaraz wrócę
+ok i teraz
+jeżeli zamiast wszystkich kolumn
+i chcielibyśmy pobrać tylko imię
+nazwisko i rok urodzenia
+no to na początek pobierzmy
+sobie first name
+last name
+oraz rok urodzenia czyli
+na razie całą datę birth date
+i mamy
+jeżeli teraz chcielibyśmy sam rok
+no to wystarczy sobie go wyekstraktować
+czyli extract
+year
+from
+.
+.
+mamy analogicznie
+date part
+analogicznie miałem na myśli
+alternatywnie
+date part
+i jak widzicie
+wyniki mamy dokładnie takie same
+w zadaniu drugim mamy
+przygotować zapytanie które pobierze daty
+urodzin naszych pracowników w bieżącym
+roku czyli będzie to wyglądało
+trochę podobnie natomiast
+nie interesuje nas w tym momencie
+data
+urodzenia
+tylko interesuje nas data urodzin
+czyli jeżeli na przykład ktoś
+urodził się
+8 grudnia
+to nie chcemy wyświetlić 8 grudnia
+48 tylko chcemy
+wyświetlić 8 grudnia bieżącego
+roku jak to zrobić
+po pierwsze będziemy potrzebowali
+stworzyć sobie datę
+i nasza data musi się składać
+z trzech elementów po pierwsze
+z bieżącego roku mógłbym
+napisać sobie 2021 ale zakładam
+że możliwe że ktoś ogląda te filmy
+w roku innym niż ten rok
+więc a chciałbym mieć podobne wyniki
+chociaż wyniku się nie uda mieć podobnych
+albo chciałby żeby to też zadziałało
+i było zgodne z treścią zadania więc
+możemy sobie po prostu wyciągnąć
+rok z bieżącej daty
+czyli extract year
+from
+current timestamp
+to ma też do siebie to że
+jeżeli gdzieś zahardkodujecie gdzieś
+wpiszecie na sztywno na przykład
+taki rok no to
+może się okazać że 1 stycznia
+po sylwestrze będziecie mieli przykrą
+niespodziankę i będzie trzeba szybko
+naprawiać jakiegoś buga albo co nie daj boże
+parę dni później nagle cofać
+czas i naprawiać błąd
+więc jeżeli chodzi
+o datę to najpierw mamy
+datę bieżącą czyli rok bieżący
+a następnie
+będziemy potrzebowali mieć miesiąc
+z daty urodzenia
+i dzień z daty urodzenia
+i dzień z daty urodzenia
+i dzień z daty urodzenia
+i dzień z daty urodzenia
+i dzień z daty urodzenia
+i dzień z daty urodzenia
+po prostu sobie użyłem metody
+amerykańskiego uczonego kopiego paste
+i skopiowałem sobie te informacje
+jeżeli to wywołam to dostanę błąd
+zobaczcie co już to jest za błąd
+nie mam niestety jak wam go
+powiększyć ale na pewno widzicie go też
+u siebie czy widzieliście go
+function make date
+double precision double precision double precision
+double precision does not exist
+co oznacza że funkcja która otrzymuje
+trzy
+argumenty które są floatami
+a właściwie to dublami
+czyli liczbą z podwójną dokładnością
+nie istnieje
+istnieje natomiast funkcja make date
+która przyjmuje trzy intedgery
+dlatego też żeby mieć pewność
+że wszystko nam działa musimy sobie
+te trzy rzeczy
+zamienić na intedgery
+...
+...
+...
+...
+...
+...
+...
+...
+...
+...
+...
+...
+...
+...
+Co dalej? Dalej mamy napisać zapytanie, które zwróci następujące daty.
+No to piszemy select, make date i lecimy 2, 0, 1, 2.
+Sierpień to 8, pierwszy, 14, 0, 0 i 0.
+Coś mu się nie podoba? Select, make date.
+Function make date z samymi integerami does not exist.
+Ach, bo oczywiście 14 nie mogę wpisać przecież tutaj, tylko muszę do tego sobie dodać make time.
+Gadałem, myślałem o swoich urodzinach w tym roku i się pomyliłem.
+No i oczywiście jeżeli byście chcieli mieć jakąś nazwę zamiast takiego wyrażenia kolumn,
+no to zawsze można zrobić sobie na przykład coś takiego.
+I jeżeli chcemy dostać obok kolejną datę,
+no to zawsze można zrobić sobie na przykład coś takiego.
+No to można śmiało sobie zrobić enter, make date i analogicznie 31 grudnia 2021, czyli 2, 0, 2, 1.
+Grudzień to 12, 31 plus make time 23, 59, 0 minut.
+S, exercise number 2.
+Ops, zadziałało.
+To co? Wracamy do naszej lekcji.
+I w lekcji tej chciałbym...
+Chciałbym pokazać Wam jeszcze jedną rzecz.
+Bardzo przydatną.
+A mianowicie bardzo często w momencie, w którym pracujemy z datami,
+bo na przykład planujemy grafik, albo planujemy urlopy,
+albo chcemy policzyć, znaleźć wszystkich pracowników, którzy nie są na urlopie w danym momencie,
+to okazuje się, że praca z datami jest trochę ciężka.
+Bo załóżmy, że ktoś idzie na urlop od 1 czerwca do 12 czerwca,
+a my szukamy osób, które nie są na urlopie od 6 czerwca do 15.
+Więc wtedy musimy się zastanowić nad tym, jakie warunki muszą spełniać nasze daty,
+aby się na siebie nie nakładały.
+No bo data początkowa musi być określona, ale nie zawsze musi być w przedziale.
+Bo przecież może być też data szersza niż ta data, którą potrzebujemy, prawda?
+Trochę jest takich przypadków, które tutaj psują zabawę i trzeba je przewidzieć,
+jeżeli naprawdę szukamy, czy daty się wzajemnie pokrywają.
+No i programiści Postgresa to przewidzieli i wyszli nam naprzeciw, tworząc taką...
+Aaaa...
+mechanikę jak overlaps.
+I w ten sposób możemy sprawdzić, czy daty wzajemnie się pokrywają.
+Zobaczcie, można wykonać zapytanie selectDateTime.
+Zachęcam, żebyście je wykonali u siebie w DBWerze.
+selectDateTime, przecinek DateTime, overlaps DateTime, DateTime.
+I w ten sposób, w zależności od tego, czy daty się pokrywają, czy też nie,
+dostaniecie informacje.
+Co jest też genialne, bardzo przydatne, można też używać takiego overlapsa wewnątrz where'a,
+jako kolejny z warunków.
+Czyli na przykład where DateTime, DateTime overlaps DateTime, DateTime.
+Oczywiście temu można też zaprzeczać, robiąc, używając słówka not.
+I dzięki temu łatwiej będzie Wam szukać pracowników, którzy są w danym momencie w pracy,
+czy też planować swój urlop, wolny od jakichkolwiek spotkań,
+czy też wykonywać wszelkiej maści tego typu operacje,
+nie zastanawiając się nad tym, jakie musimy testy logiczne przedsięwziąć,
+żeby sprawdzić, czy daty się nie pokrywają.
+Jeżeli chodzi o ten moduł,
+to byłoby to na tyle.
+Zapraszam Was bardzo serdecznie do kolejnego,
+w którym to module porozmawiamy sobie o funkcjach logicznych.

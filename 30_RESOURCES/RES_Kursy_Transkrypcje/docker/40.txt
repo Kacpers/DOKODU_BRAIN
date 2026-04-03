@@ -1,0 +1,38 @@
+W poprzednich filmach omówiliśmy sobie dwa polecenia, było to polecenie add i polecenie copy,
+które są do siebie bardzo podobne, różnią się jednak pewnymi szczegółami.
+I teraz zacznę tutaj od polecenia copy.
+Polecenie copy wspiera przede wszystkim takie podstawowe kopiowanie plików do kontenera
+z kontekstu, z innego stage'a w buildach multistage'owych, czy z osobnego obrazu.
+Add natomiast wspiera pobieranie plików z zewnętrznych URL'i, z zewnętrznych repozytoriów gitowych,
+a także automatyczne rozpakowywanie archiwów tar podczas dodawania plików z kontekstu builda.
+Także ma takie jakby dodatkowe...
+No i teraz najczęściej chcemy korzystać z polecenia copy wtedy, kiedy wszystkie nasze zasoby są dostępne lokalnie w miejscu budowania obrazu.
+Czyli są dostępne na Twoim komputerze, może w Twoim pipeline'ie, jeśli pipeline też dostarcza jakieś dodatkowe rzeczy,
+to wszystko tam można sobie...
+w obrębie tego wykorzystać.
+Natomiast polecenie add sprawdzi się przede wszystkim wtedy, kiedy potrzebujesz dodawać zasoby z zewnątrz,
+czy to z internetu, czy może z Twojej sieci wewnętrznej, ale niekoniecznie w obrębie danego pipeline'a.
+Może w organizacji masz jakąś usługę, która jest dostępna tylko wewnątrz organizacji,
+ale z perspektywy budowania jest to usługa tak naprawdę zewnętrzna,
+bo nie znajduje się bezpośrednio w tym miejscu, gdzie ten obraz jest budowany.
+Czyli tak naprawdę add wykorzystywany jest do wszystkiego, co nie jest dostępne lokalnie.
+Ok, to czemu częściej widzę w dockerfile'ach instrukcję add-requirements.txt, a nie copy-requirements.txt?
+Czy to ja się mylę?
+Czy to jest...
+W zasadzie add można wykorzystywać też do tych operacji, które chcemy wykorzystać lokalnie.
+Jakby instrukcje są zamienne.
+Ok.
+Musiałbym sam też dokładnie przeczytać, bo jest pewnie w zakresie tego wykorzystania lokalnego
+jest pewnie jakaś drobna różnica, która wynika albo ze szczegółowej konfiguracji,
+z jakichś parametrów.
+Może copy obsługuje coś, czego add nie obsługuje.
+Być może działa szybciej, bo też jest mniejszą instrukcją, ma mniej tych możliwości, mniej rzeczy obsługuje.
+Właśnie nie obsługuje wszystkich tych kontekstów zewnętrznych, przez co może być mniejsza i działać troszeczkę szybciej.
+I to co prawda w takim pojedynczym wykorzystaniu, jeśli to nam zrobi sekundę, dwie sekundy różnicy, możemy tego nie zauważyć.
+Ale jeśli nasz...
+Dockerfile będzie ogromny, będzie się w nim działo dużo rzeczy, wtedy w efekcie skali i w ramach ilości takich budowań, które mogą gdzieś wykonywać się w pipeline'ach,
+to już może mieć naprawdę duże znaczenie i w jakby samym czasie budowania, ale też i w pieniądzach, bo czym krótszy jest pipeline, tym my szybciej dostajemy wyniki,
+ale też ten pipeline mniej kosztuje, no bo krócej się wykonuje.
+Jak najbardziej.
+Tu cofam, widzę, że to jest copy, a nie add, to mea culpa, to u mnie był błąd w moim takim jakimś dockerfile'u, natomiast jak zerknąłem sobie na oficjalny chociażby dockerfile dżango, to też jest to copy, więc jak najbardziej się to potwierdza.
+Broń Boże, nie chciałem się tutaj wpuścić na minę, tylko wydawało mi się, że to był add, a już zweryfikowałem, był to copy, więc przepraszam, nic nie szkodzi.

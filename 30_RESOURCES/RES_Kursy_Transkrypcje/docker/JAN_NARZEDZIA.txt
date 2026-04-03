@@ -1,0 +1,1069 @@
+Ja nie muszę ci się do czegoś przyznać. Ostatnio nasza rozmowa o kryzysie, kto nie oglądał rozmowy o kryzysie, to też zapraszamy, gdzieś tutaj u góry macie zakładkę, sprawiła, że zacząłem zastanawiać się nad alternatywą dla siebie, że jeżeli jedna ta sztuczna inteligencja zabierze mi pracę, to co mogę robić? No i zająłem się różnymi ogrodniczymi porządkami. I ty też masz jakieś doświadczenia, nie? Ostatnio budowlano-ogrodnicze?
+Tak, ja ostatnio ćwiczyłem troszeczkę remont, bardziej porządki po remoncie, bo tutaj jednak ekipa się zajęła tą częścią główną, bo ja się nie znam na takich różnych rzeczach gdzieś tam remontowych, a niestety rynny wymagały konserwacji, także jak w oprogramowaniu, tak i w życiu o rozwiązania trzeba dbać, trzeba je co jakiś czas konserwować,
+bo ząb czasu potrafi je nadgryźć.
+Bardzo spodobało mi się to twoje nawiązanie właśnie pomiędzy tym światem, mówmy, namacalnym do świata tego życiowego, tego programistycznego, bo ja miałem właśnie podobne, bo skupiałem się na tym, że już drzewa dawno, dawno, lata temu były ścięte i musiałem powyrywać korzenie z ziemi, powyrywać to dobre słowo, bo tam trzeba było je poodkopywać, powyciągać i taka przyszła mnie refleksja trochę, że to takie debagowanie, że chodzenie od takiego problemu do tego, że to jest tak, że to jest tak, że to jest tak.
+Do tego sedna, to trochę takie szukanie korzeni, a druga refleksja, jaka mnie naszła, to w momencie, w którym właśnie współpracowałem, robiłem to z córką moją, to w którymś momencie powiedziałem jej, że bo o narzędzia trzeba dbać i tak jak sobie to zdanie jej powiedziałem, to przyszła mi taka, przynaszła mi taka myśl, że moglibyśmy porozmawiać o takich narzędziach, których tak naprawdę używamy w naszej codziennej pracy i na przykład się powymieniać takimi swoimi jakimiś wskazówkami,
+tym bardziej, że skoro ktoś nas słucha, skoro ktoś nas ogląda, to może też pojawią się refleksje w komentarzach na ten temat. Co myślisz?
+Jak najbardziej. O narzędzia warto dbać, warto mieć dobre narzędzia, zresztą to w sumie tak jak z dbaniem o samochód, jeśli konserwujemy go na bieżąco, robimy przeglądy, wymieniamy olej tak jak trzeba, to na ogół samochód służy nam długie lata raczej bezproblemowo,
+nie dbujemy te podstawowe czynności serwisowe, te regularne serwisy eksploatacyjne, no tutaj samochód zaczyna nam się niestety psuć.
+I teraz tak może na gorąco, jakbyś miał powiedzieć o takim jednym narzędziu, które dla Ciebie jest takim, no nie wyobrażasz sobie życia bez niego, czyli ktoś Ci mówi, słuchaj z Twojego całego stacku wybierz to jedno narzędzie jako DevOps, a ja później powiem podobnie jako programista, to co byś powiedział?
+Na pewno Linux. Na start bez wątpienia Linux, dlatego że cały dzisiejszy internet na Linuxie stoi. Wiele osób ma telefony z Androidem, które są bazowane na Linuxie. Nie wiem, Netflix działa na Linuxie.
+To co znaczy, że Netflix działa na Linuxie?
+I tutaj Jan zaserwował nam bardzo długą i bardzo ciekawą dygresję.
+Natomiast, ok, Janie, to co powiedziałeś było bardzo ciekawe, natomiast ja się obawiam, że troszeczkę odbiega to od wersji rozmowy o tym, jakie narzędzia deweloperzy mają, więc umówmy się, że ja tę dygresję przenoszę na sam koniec i kto ma ochotę, to może zaczekać do samego końca i wtedy posłuchać o tym, co ciekawego ma, jakie połączenie jest między Netflixem, Big Techami i jądrem Linuxa, bo ta dygresja była bardzo ciekawa.
+Ale wracając na moment do, dla naszych widzów to jest dosłownie sekunda, ale wracając do tego, dlaczego Linux jest dla Ciebie podstawowym narzędziem, co byś powiedział?
+Tak, dla mnie jest podstawowym narzędziem dlatego, że aplikacje, z którymi ja pracuję, czyli aplikacje webowe, przede wszystkim są rozwijane właśnie na Linuxie.
+Czy tak naprawdę aplikacje w PHP, z którymi zaczynałem,
+czy po drodze do Windowsa.
+Czy tak naprawdę aplikacje w PHP, z którymi zaczynałem.
+Czy aplikacje w Pythonie, czy aplikacje w Ruby, czy w Javascriptie, one wszystkie tak naprawdę działają na Linuxie.
+Oczywiście można je też uruchomić na Windowsie, ale się tego nie robi.
+Z wielu różnych powodów się tego nie robi, a dzisiaj nawet Microsoft zauważył, że jest duża wartość w tym, żeby uruchamiać te aplikacje na Linuxie.
+I dlaczego o tym będziemy rozmawiać później?
+Później chciałem tylko tutaj powiedzieć, że nowsza wersja dotnetu od dotnetu w wersji piątej też już działa bezpośrednio na Linuxie.
+Dobra, ale zaczekaj. Ja cię jeszcze będę trochę męczył tym Linuxem, bo to jest rzecz, która mnie tutaj zainteresowała, bo mam wrażenie, że trochę unikasz tej odpowiedzi na pytanie.
+Zaraz ci powiem dlaczego, bo ja sobie jako narzędzie wyobrażam tą łopatę i teraz ja tą łopatą mogę wykopać rów.
+Jeżeli ktoś mi powie, Kacper, koprów bez łopaty, to ja mówię, ale to jest moje podstawowe narzędzie, ja muszę wtedy to robić rękoma.
+Będę musiał robić, to trudno, rób to rękoma. Więc teraz, jeżeli ja ci powiem, że zabieram ci Linuxa, to ty nie możesz mi na to opowiadać o Microsoftzie, bo ja pytam o ciebie.
+Co by było, gdybyś nie miał Linuxa? Może nie odpowiadaj mi na to pytanie w ten sposób, tylko wykorzystując tę myśl spróbuj powiedzieć, dlaczego ten Linux jest dla ciebie taki ważny jak od DevOps.
+Wiemy, że o to ci chodzi.
+Dla mnie Linux, poza tym, o czym już wspomniałem, jest też ważny dlatego, że ja na nim na co dzień pracuję jako moja stacja robocza, chociaż to też zależy od tego, czy klient ma jakieś wymagania, czy np. dostarcza mi swój sprzęt.
+Natomiast jeśli mogę wybrać to, na czym chciałbym pracować, to jednak pierwszym wyborem zawsze jest tutaj Linux.
+Dziś w dużej mierze z przyzwyczajenia.
+Kiedy zaczynałem swoją przygodę z Linuxem, trochę to było kierowane ciekawością, trochę chęcią rozwoju w tym kierunku, lepszego poznania tego systemu, ale też dostępnością narzędzi i tym takim powiedzmy zunifikowanym środowiskiem, czyli ja na swojej stacji roboczej pracuję w taki sam sposób jak na serwerze,
+co pozwala...
+Ja na co dzień robiąc jakieś rzeczy też dla siebie lokalnie, coś rozwijając, też uczę się tych narzędzi, które później jestem w stanie na serwerach wykorzystać, żeby tam pewne rzeczy, pewną pracę sobie ułatwić.
+I takie, nie wiem, chociażby przeszukiwanie logów z jakiejś aplikacji, tak?
+Nie wyobrażam sobie, że miałbym to robić bez wykorzystania Linuxa.
+Mam tam narzędzie, które nazywa się grep, pozwala mi bardzo łatwo przejrzeć pod kątem danego słowa kluczowego cały log, cały zestaw logów, nawet spakowane logi też można przeglądać, co prawda nie tym samym narzędziem, ale z zetką na początku, więc praktycznie prawie, że prawie, że te same narzędzie.
+Mhm.
+I można sobie znaleźć to, czego potrzebujemy znaleźć.
+I to bardzo ułatwia pracę, bo jeśli mamy naprawdę ogrom logów do przeszukania, jeśli wiemy, czego szukamy, ale nie wiemy, gdzie tego szukamy, możemy sobie zapuścić grep na wszystkie te logi, które mamy, pójść sobie na kawę, wrócić za pięć minut i jest spora szansa, że znajdziemy albo całe linijki, albo konkretne pliki, w których poszukujemy tych informacji,
+żeby chociażby na start sobie zawęzić ten obszar poszukiwań.
+I teraz na Windowsie w ogóle nie znam takich narzędzi, na Macu chyba też grep jest dostępny, niekoniecznie jest to ta sama wersja, bo tutaj czasami są pewne różnice, ale system, na którym macOS jest bazowany,
+jest pewną formą.
+I to jest też taki system dosyć podobny do Linuxa, to jest jakiś tam Unix, z którego Linux też tak naprawdę w pewien sposób się wywodzi, więc jest duże podobieństwo.
+I teraz jeśli ja na przykład pracuję na Macu, bo klient wymaga tego z różnych powodów, żebym pracował na Macu, a nie na Linuxie, to ta praca dla mnie, dzięki temu, że mam dużo podobieństw, też jest dużo prostsza.
+Zünec na Windowsa jest bardziej prostsza niż gdybym miał się przysiadać na system w którym brakuje mi takich podstawowych narzędzi do pracy, do których jestem przyzwyczajony.
+Z którym jestem za Pan brat i potrafię na co dzień wykorzystywać.
+I trochę też jest tak dlatego, że, dzisiaj w Windowsie mamy PowerShell, który jest już dosyć rozbudowaną formą takiego Shella.
+Takiego ekosystemu.
+Który integruje się z tymi cudownymi projektami.
+Więc też jest to trochę takie.
+Takich dwustępnych wyrównania, 맛있ów, day faire'a też można zobaczyć.
+tymi rzeczami Windowsowymi i dużo rzeczy nam tam upraszcza, usprawnia,
+pozwala robić prościej.
+Natomiast to nie jest narzędzie, które istniało 15 lat temu,
+kiedy ja gdzieś zaczynałem swoją przygodę, w zasadzie 16 już nawet lat temu,
+kiedy zaczynałem swoją przygodę z Linuxem,
+Windows nie miał bardzo wielu rzeczy, które dzisiaj ma.
+Dlatego to, że ja miałem tam rzeczy, które bardzo ułatwiały mi moją codzienną pracę,
+moje codzienne w ogóle życie, poruszanie się po samym systemie,
+zaważyły na tym, że ja się jakby bezpowrotnie przesiadłem
+i dzisiaj nie wyobrażam sobie powrotu do Windowsa.
+U mnie jeżeli chodzi o Linuxa, bo też miałem dłuższy taki epizod pracy z Linuxem
+i przechodziłem przez wiele różnych Linuxów, to było to też podyktowane ciekawością,
+później było podyktowane wygodnością.
+Bo na przykład, głupia sprawa, łączenie się z serwerami po SSH za pomocą Putiego,
+jak najbardziej w porządku, ale jednak w momencie, w którym masz SSH config
+i możesz po prostu wykonać SSH serwer i od razu na podstawie tej nazwy
+łączysz się z daną usługą, używasz danego klucza, to wszystko to staje się dużo wygodniejsze.
+To, co mi w Linuxie zawsze przeszkadzało, zresztą też mam nawet film na ten temat na kanale,
+dotyczy tego, że...
+Mam wrażenie, że to jest system delikatnie taki niedorobiony
+i zawsze ma jakieś braki takie pod kątem użyteczności.
+Natomiast też uważam, że praca na Linuxie, jako dla takim narzędziu deweloperskim,
+jest bardzo wygodna, dlatego też jeżeli od kiedy pojawiła się możliwość posiadania
+poprzez WSL-a Linuxa na Windowsie, to po prostu wybrałem to rozwiązanie
+i jest to dla mnie coś porównywalnego do OSX-a, czyli mam Windowsa, który jest dopracowanym systemem,
+moim zdaniem już teraz.
+Najmniej.
+I większość rzeczy, które chcę na nim odpalić, skonfigurować, nie skutkują tym, że pojawia się blue screen,
+ale dodatkowo mam też tę wygodę.
+Natomiast tutaj, tak jak wspomniałeś o tych narzędziach, to sobie pomyślałem o jednym jeszcze narzędziu,
+takim związanym też z Linuxem, którym są chmury.
+No bo tak naprawdę ja, jeżeli ty mówisz Linux, to ja sobie myślę serwer przede wszystkim,
+a teraz złapałem się na tym, że już coraz rzadziej o serwerze, jako o miejscu, w którym przechodzę,
+chowuję moją aplikację, myślę przez pryzmat takiego on-premise,
+czy takiego, wiesz, serwera, do którego się łączę, który jest moim całym światem
+i tam stoi moja aplikacja, czy moje aplikacje.
+Już nie pamiętam, kiedy ostatnio tworzyłem na jakimkolwiek serwerze virtual hosta,
+żeby skonfigurować kolejną usługę, raczej jest to dokładanie kolejnego jakiegoś node'a,
+czy dokładanie jakiegoś kolejnego, po prostu kolejnej maszyny wirtualnej
+i cały świat, myślę, zmierza w stronę takiej wirtualizacji, a nie w stronę tworzenia virtual hostu,
+na jednym wielkim serwerze, więc dla mnie na pewno jest to AWS.
+W przypadku chmur, wiem, że o AWSie ty masz dużo większe doświadczenie niż ja,
+więc zaraz też chętnie tego posłucham, natomiast o chmurach też myślę przez to,
+że tak naprawdę korzystanie z chmur też zdejmuje duży ciężar z mojej głowy,
+czyli na przykład takie tematy jak zwykłe backupy, jeżeli masz serwer,
+stawiasz sobie serwer od zera, to musisz o wszystko zatroszczyć się sam,
+musisz wszystko sobie samodzielnie skonfigurować.
+W przypadku chmury czy AWSa wystarczy kilka kliknięć i wszystko wtedy działa.
+Konfiguracja wielu usług dla takiego dewelopera, jakim jestem ja,
+jest dużo prostsza na AWSie, bo wystarczy też obejrzeć kilka tutoriali,
+wszystko stało się w pewien sposób ustrukturyzowane, mogę według tych tutoriali
+poklikać sobie po jakichś, mówmy, interfejsach i wiele rzeczy sobie poustawiać.
+Pewnie nie robię tego idealnie, pewnie nie robię tego tak jak ty byś to zrobił,
+ale jednak w momencie...
+W momencie, w którym robię to ja, to mam wrażenie, że jest to dużo bezpieczniejsze,
+niż jakbym jako taki deweloper miał sobie skonfigurować jakąś usługę na serwerze,
+to jednak tam byłoby potencjalnie dużo więcej podatności,
+niż jeżeli robię to przez stronę internetową i sobie to wyklikuję.
+I tutaj też zwracam, zaraz oddam ci głos, bo wiem, że już się palisz zapewne do tego,
+żeby w AWSie porozmawiać jako specjalista z tej dziedziny,
+natomiast chciałbym też zapytać was, widzowie czy słuchacze,
+którzy tutaj jesteście po drugiej stronie, jakie narzędzia dla was,
+jako dla programistów, devopsów, są takimi podstawowymi narzędziami?
+My jeszcze parę tematów mamy na dziś przygotowanych, więc zostańcie jeszcze z nami,
+natomiast Janie, scena jest twoja, AWS.
+Tak, AWS bardzo silnie działa na Linuxie, w zasadzie chyba wszystkie swoje rozwiązania,
+które nie są typowo rozwiązaniami jakimiś zewnętrznymi typu serwery Windowsowe,
+również dostarczają, ale wszystko to, co mają u siebie pod spodem,
+to działa na Linuxie, dostarczają swoją własną dystrybucję dla tych maszyn wirtualnych,
+które można w AWSie sobie uruchomić.
+Alpina?
+Nie, oni dostarczają Amazon Linux.
+Wersja była pierwsza, jest wersja teraz druga też dostępna.
+On już jest dostępny od razu z narzędziami powiązanymi z AWSem,
+czyli jeśli bierzemy sobie tego Amazon Linuxa,
+albo na przykład Ubuntu, które też oni dostarczają,
+to tam już są przygotowane te paczki, z których możemy sobie korzystać,
+żeby ułatwić komunikację tego naszego serwera z zewnętrznym naszej chmury.
+To jest dystrybucja, którą instalujesz na maszynie wirtualnej,
+czy to jest dystrybucja, którą instalujesz u siebie na komputerze,
+żeby lepiej współpracować z chmurą?
+To jest dystrybucja, którą instalujesz u nich na maszynie wirtualnej.
+Na pewno technicznie da się ją wyciągnąć.
+Ale nie o to chodzi.
+Chodzi o to, że oni dostarczają taki zoptymalizowany system pod tą swoją chmurę.
+Jeśli przykładowo weźmiesz sobie nawet Ubuntu w Amazonie,
+to na pewno nie ma w nim wszystkiego.
+Na pewno pewne rzeczy musisz sobie na dzień dobry doinstalować.
+A jeśli bierzesz Amazon Linuxa, wszystkie rzeczy Amazon dostarcza.
+I dbają o to, żeby to było też spatchowane,
+żeby to było bezpieczne, aktualizują te dystrybucje.
+Więc dbają o to, żebyś ty dostawał jakościowe środowisko
+i żebyś miał jak najmniej takiego własnego dbania o te środowisko.
+Do tego stopnia, że jeśli pojawiają się podatności i na te podatności czasami rozwiązanie,
+jest inna konfiguracja domyślna, to oni też dostarczają tą konfigurację domyślną.
+Mam do ciebie pytanie a propos w ogóle AWS-a.
+Bo moje spostrzeżenie jest takie, że ja w którymś momencie stałem się klikaczem takim AWS-owym.
+Czyli po prostu sobie klikam, wyklikuję, przechodzę przez jakieś rzeczy.
+Później okazało się, że musiałem dla innego konta wykonać dokładnie te same czynności.
+No i ponownie byłem klikaczem.
+Czy ty jako DevOps też jesteś takim klikaczem?
+Też wszystkie rzeczy, które ustawiasz, to musisz sobie właśnie tak wyklikiwać?
+Czy są do tego jakieś inne narzędzia?
+Może to będzie jakieś kolejne narzędzie, o którym tutaj opowiesz?
+Zacznę od klikania.
+Zaczynając swoją przygodę z AWS-em też byłem takim klikaczem.
+Zajmowało to mnóstwo czasu.
+Dziś zdarza mi się być klikaczem, jeśli jest jakieś nowe rozwiązanie w Amazonie.
+Które potrzebuję szybko przetestować.
+Które testuję tak naprawdę po łebkach.
+Bo takie testowanie bardzo wstępne zazwyczaj robi się, żeby jak najszybciej zwalidować pomysł.
+A nie żeby go dopracować od każdej strony.
+Więc wtedy zdarza mi się klikać.
+Natomiast na ogół jednak Infrastructure as Code.
+Infrastruktura jako kod to jest podstawa dzisiejszej klikacji.
+Przede wszystkim przy pracy z chmurami.
+Ale także już z infrastrukturą on-premise też już pojawiają się rozwiązania w postaci kodu.
+Natomiast co to daje?
+Dzięki temu, że infrastruktura jest opisana.
+My ją możemy odtwarzać i replikować na kolejnych kontach.
+I tutaj jednym z narzędzi.
+O to chciałem pytać.
+Właśnie.
+I preferowanym jest Terraform.
+Dzięki któremu ja mogę sobie te środowiska przygotować.
+Napisać tak jak potrzebuję.
+Jeśli potrzebuję zrobić jakieś bardziej zaawansowane.
+Albo może zabezpieczone rozwiązania.
+Bo to też się zdarza, żeby czasem spełnić compliance.
+Jakieś przepisy lokalne, unijne, nie wiem światowe.
+Pod kątem danych medycznych.
+Żeby to wszystko było bezpieczne.
+I żeby to było zgodne z wymaganiami prawnymi.
+Wtedy ja mogę przygotować sobie taki moduł.
+Który nawet ty mógłbyś sobie wziąć jako deweloper.
+I z niego postawić kawałek infrastruktury dla swojej aplikacji.
+Ale dzięki temu, że ja w tym module zaszyłem odpowiednie mechanizmy bezpieczeństwa.
+To ty na przykład masz ograniczoną możliwość tego co możesz zrobić.
+A jednocześnie dostajesz takie najlepsze praktyki ode mnie.
+Jako tej osoby dbającą właśnie o tą infrastrukturę.
+I wtedy w zasadzie na twoje potrzeby.
+To jest uproszczony taki system.
+Który bierzesz sobie jakby z pudełka.
+Masz taką zbudowaną paczkę.
+I stawiasz sobie ten kawałek infrastruktury.
+Bo jest potrzebny dla twojej aplikacji.
+Ale też nie musisz się martwić.
+Bo wiesz, że ja zadbałem o to.
+Żeby wszystko to co tam ci jest potrzebne.
+Żeby w tej paczce się znajdowało.
+Tu zatrzymajmy się chwilę.
+Bo powiedziałeś hasło terraform.
+Infrastructure is the code.
+To są bardzo ważne pojęcia.
+Ja tutaj trochę zgrywam głupa.
+Bo wiem o co chodzi.
+Natomiast chodzi mi o to też.
+Żeby nasi widzowie.
+Którzy słuchają też jakby dowiedzieli się.
+Dlaczego ten terraform jest taki ważny.
+I czym ten terraform tak naprawdę jest.
+Jeżeli dobrze zrozumiałem.
+Ten terraform jest takim narzędziem.
+Które tak naprawdę.
+Trochę tak jak docker i docker compose.
+O dockerze już będziemy rozmawiali niedługo.
+Jest to takie narzędzie.
+Które pozwala na to.
+Żeby sobie w pliku jakimś tam YML.
+Czy w różnych plikach skonfigurować.
+Jak ma twoja infrastruktura wyglądać.
+I później jednym poleceniem.
+Ten terraform jakby w cudzysłowie klika.
+Tak naprawdę pod spodem wysyła jakieś żądania.
+Poprzez pewnie API AWS.
+I ustawia różne opcje.
+Tak to jest. Dobrze powiedziałem?
+Tak.
+Dokładnie tak opisałeś.
+Jak jest.
+Terraform pozwala nam opisać tą infrastrukturę.
+Tak jak ona powinna wyglądać.
+Sparametryzować ją.
+Połączyć ze sobą.
+Poszczególne komponenty tej infrastruktury.
+I faktycznie.
+Jednym poleceniem.
+Później poprzez.
+Odpowiednie zapytania do API AWS.
+Nie tylko AWS.
+Bo terraform wspiera też.
+I Azura.
+I Googla.
+Google nawet nie ma swojego dedykowanego rozwiązania.
+Bo AWS ma.
+Swoje rozwiązanie.
+Ma Cloud Formation.
+Ma AWS CDK.
+Też do opisu tej infrastruktury.
+Natomiast.
+Bardzo też dużo inwestują czasu.
+W rozwój.
+Swojego providera.
+Terraformowego.
+Dlatego, że terraform.
+Został się swego rodzaju.
+Standardem.
+I ja też jestem wielkim fanem.
+Uważam, że jest to niedoskonałe.
+Ale z mojej perspektywy.
+Najlepsze narzędzie.
+Jakiego możemy użyć.
+Do opisywania tej infrastruktury.
+Dobrze.
+Tutaj przyznam szczerze.
+Że zauważyłem w sobie taką rzecz.
+A mianowicie.
+Jak rozmawialiśmy o Linuxie.
+Linuxa myślę znam bardzo dobrze.
+To gdzieś tak sobie myślałem.
+Jak zaczynamy mówić o terraformie.
+To jak tak patrzę na zegarek.
+To sobie myślę, że czasu trochę nie starczy.
+Żeby tak o nim wnikliwie porozmawiać.
+Więc jeżeli chcielibyście na przykład.
+Osobny odcinek o terraformie.
+To koniecznie zostawcie komentarz na dole.
+Że więcej terraforma.
+To jest coś co by was interesowało.
+Ja wiem, że dla Jana terraform.
+To jest bardzo takie no.
+Może nie ulubione.
+Ale jedno z takich narzędzi.
+Które jako pierwsze.
+I idąc dalej.
+Właśnie a propos terraforma.
+Cloud formation.
+I w ogóle pracy z devopsa.
+Pracy programisty.
+Przychodzi mi do głowy też temat.
+Tak naprawdę możliwości.
+Wytwarzania takiej infrastruktury.
+Poprzez AI.
+Bo AI to jest narzędzie które.
+No umówmy się.
+Produkuje jakieś w tej chwili.
+Ten AI o którym myślę.
+Produkuje jakiś tekst.
+Produkuje filmy.
+Natomiast ja się skupiam głównie na tekście.
+To nie jest klikacz.
+Który potrafi sobie wejść na wsa i wyklikać.
+Tylko jest to narzędzie.
+Które potrafi wypluć infrastrukturę.
+I przyznam, że ja tego jeszcze nie robiłem.
+Ale zacząłem się zastanawiać nad tym.
+Czy na przykład mając takiego kursora.
+Którego używam.
+Albo mając czata GPT.
+Albo jakiegoś innego cloda.
+Czy dałoby się stworzyć taki w terraformie.
+Taki zarys infrastruktury.
+I można było później zastosować.
+Czy to znaczy, że też pod tym względem.
+AI może nam pomagać.
+Nie tylko wytwarzać oprogramowanie.
+Ale też tworzyć infrastrukturę.
+Jak myślisz?
+Tak jak najbardziej.
+Zdecydowanie wiadomo.
+Ma jakieś tam swoje ograniczenia.
+I to co z perspektywy biznesowej.
+My potrzebujemy dostarczyć.
+To my musimy wiedzieć.
+I rozumieć co chcemy zrobić.
+Ale przykład z mojego życia.
+Sprzed kilku miesięcy.
+Zastanawiałem się.
+Nad zmianą projektu.
+Gdzieś tam byłem.
+W kilku procesach rekrutacyjnych.
+I w ramach jednego z nich.
+Dostałem zadanie takie domowe.
+Do przygotowania.
+Jakaś prosta infrastruktura.
+Ale też z uwarunkowaniem.
+Że nie mogę wykorzystać gotowych modułów.
+Tylko wszystko muszę na tych samych.
+Jakby surowych zasobach terraforma.
+Opisać.
+No i nie chciało mi się tego opisać od zera.
+To jest tylko zadanie rekrutacyjne.
+Nie będę tutaj spędzał.
+Nie wiadomo ile godzin.
+To ma po prostu działać.
+Także poprosiłem Chapa.
+Żeby przygotował mi kawałek.
+Tej infrastruktury.
+Ja mu powiedziałem co tam jest potrzebne.
+Ale powiedziałem żeby mi wziął po prostu.
+Te surowe zasoby.
+Z terraforma.
+Żeby nie korzystał z żadnych modułów.
+Żeby mi przygotował taką.
+Mniej więcej infrastrukturę.
+Że tam w niej ma być to, to, to i tamto.
+Żeby mi to przygotował.
+Ja tam wdrożyłem do tego.
+Drobne poprawki.
+Które były istotne z perspektywy.
+Tego co dostałem w zadaniu.
+Jakieś adresy do konfiguracji.
+Tego typu rzeczy.
+Natomiast nie musiałem tworzyć.
+Całej tej infrastruktury.
+Nie musiałem sprawdzać dokumentacji.
+Upewniać się.
+Jeśli na przykład był jakiś zasób.
+Którego nie konfiguruje tak często.
+Nie pamiętam tej konfiguracji tak dobrze.
+Albo było coś specyficznego w tej konfiguracji.
+W tym zadaniu.
+No to ja przekazując tą informację.
+Do czata.
+Byłem w stanie dostać wszystko to co było mi potrzebne.
+I później to sobie tylko sparametryzować.
+Zadbać o to.
+Żeby to na przykład ładnie wyglądało.
+Żeby się to ładnie czytało.
+Znając te wszystkie.
+Najlepsze praktyki.
+Jakby też organizacji tego kodu.
+Ale nie musiałem się skupiać na tym.
+Że a tutaj potrzebuję C2.
+A dla tej C2.
+To ja potrzebuję VPC.
+A VPC składa się z tego.
+A z tamtego.
+A jeszcze z tamtego.
+I teraz wszystkie te komponenty.
+To tutaj czat też jakby nauczony.
+Tymi infrastrukturami które się tworzy.
+Gdzieś tam wiedział.
+Że jeśli ja potrzebuję EC2.
+To EC2 potrzebuje VPC.
+Ona potrzebuje sieci.
+Ona potrzebuje adresacji do tej sieci.
+Ona potrzebuje internet gateway.
+Żeby miała wyjście na zewnątrz.
+Także zadbał o to.
+O te rzeczy.
+Które kiedyś ja też klikałem ręcznie.
+I o których jakby raz.
+Że klikało się je przez cały dzień.
+A dwa że często zapominało się.
+Że aha jeszcze ten internet gateway.
+Tak tak tak.
+Z ręką na sercu.
+Z kolegami w zespole.
+Ile razy szukaliśmy.
+Dlaczego do maszyny nie można się dostać.
+I każdy z nas zapominał.
+O tym internet gateway.
+To jest po prostu nie do opisania.
+To jest po prostu nie do opisania.
+To jest po prostu nie do opisania.
+To jest po prostu nie do opisania.
+Nie zapomnijmy o tym.
+Raz konfigurujemy to co działa.
+Raz ustawiamy ten VPC.
+Ten internet gateway.
+Cokolwiek tam potrzebujemy.
+I to tam jest.
+I bierzemy i używamy dalej.
+Jesteśmy super szczęśliwi.
+I tu mam pytanie.
+Bo ja powiem że tak jak wspominałem przed momentem.
+Ja programuję w Pythonie.
+I na chwilę obecną.
+Coraz częściej przesiadam się.
+Mam nadzieję że nikt z firmy JetBrains tego nie słucha.
+Z PyCharma.
+I z PhpStorma na Coursora.
+I jestem zafascynowany.
+Możliwościami jakie Coursor daje.
+I tym że tak naprawdę.
+Pisząc prompty.
+Generuje mi on kod.
+Ja tylko sprawdzam te różnice które się pojawiają.
+I dostaje kod który działa.
+Wygląda.
+A jeżeli napisze dobrze prompt.
+Co nawet jest napisane ładnie.
+To jest to co się pojawia.
+W przypadku kursorów projektowych.
+Czy innych takich rzeczy.
+Więc jeżeli też chcielibyście odcinek o Coursorze.
+To koniecznie dajcie znać.
+W komentarzu.
+A jakich narzędzi używa DevOps.
+Też używa Coursora.
+Czy czegoś innego.
+Czy macie jakieś swoje.
+Gdzie D to DevOps.
+Czy coś innego.
+Nie wiem czy Coursor jest powszechny.
+Wśród DevOpsów.
+To co pojawia się najczęściej.
+Dlatego że jako pierwszy.
+Miał najlepsze wsparcie dla Terraforma.
+Miał Language Server.
+Który pomagał pisanie tego kodu.
+Podpowiadał snippety.
+Podpowiadał dokumentację.
+Więc to bardzo mocno przyspieszało pracę.
+Natomiast.
+Drugim takim.
+Idę.
+Które jest najczęściej wybierane.
+To jest VS Code.
+Ja osobiście też z tego VS Code korzystam.
+Obydwa te narzędzia wspierają.
+Z nimi.
+Github Co-pilota.
+Czy Amazon Q Developer.
+Też jest przez nie obsługiwany.
+I wydaje mi się że można z niego korzystać.
+Również za darmo.
+Natomiast osobiście.
+Jeszcze go nie testowałem.
+Dlatego że.
+Ja mam Githubowego Co-pilota za darmo.
+Raz że w organizacji.
+Dla której pracuję.
+Korzystamy i faktycznie usprawnia nam pracę.
+A dwa.
+Prywatnie też mam.
+Że dostałem go za.
+Rozwój otwartego oprogramowania.
+Gdzieś tam.
+Jakieś pojedyncze pomniejsze rzeczy zrobiłem.
+Czy jakieś poprawki do dokumentacji.
+Czy jakiś prosty kod.
+I dzięki temu.
+Github uznał.
+Że jakby.
+Ten mój wkład jest na tyle wartościowy.
+Że.
+Należy mi się.
+Ten Co-pilot.
+Bez limitu też.
+Bo w momencie kiedy ja go dostałem.
+To jeszcze nie było w ogóle tego.
+Bezpłatnego Co-pilota.
+W tym momencie.
+W jakiejś tam ograniczonej.
+Liczbie jest dostępny.
+Dla wszystkich.
+Także jakiś swój hobbystyczny.
+Projekt można rozwijać.
+Natomiast ja od samego praktycznie początku.
+Miałem dostęp od razu.
+Do tej pełnej wersji.
+Bezpłatnie.
+Dzięki czemu też usprawniał on.
+Moją pracę.
+Ja tego firmowego.
+Ostatnio miałem okazję testować.
+Agent mode.
+Bo też pojawił się tryb agentowy.
+I miałem taką.
+Trudną infrastrukturę.
+Do opisania.
+Tutaj troszeczkę w drugą stronę.
+Dlatego że ona już była utworzona.
+Ona co prawda była w Terraformie.
+Wcześniej opisana.
+Ale tam była bardzo duża zmiana.
+W samym providerze.
+Tak naprawdę wywrócili go do góry nogami.
+I sami napisali.
+Od jednego do drugiego.
+Więc ty drogi DevOpsie.
+Usuń wszystko.
+Opisz tą infrastrukturę.
+I zaimportuj.
+Zacznij od nowa.
+Ok.
+Czegoś było za dużo.
+Coś mam skrócić.
+I drogi DevOpsie.
+Zacznij od nowa.
+To było dokończenie twojego.
+Nie nie.
+Dobrze dobrze.
+Też chcę trochę w tym filmie.
+Zaistnieć.
+Ok. Dobrze.
+Bardzo się cieszę.
+Trochę tak było faktycznie.
+Zacznij od nowa.
+Natomiast dlaczego w ogóle o tym mówię.
+To co było przygotowane.
+Było w taki.
+Żeby łatwo było dodawać nowe rzeczy.
+Bo to też był system.
+Który składał się tak naprawdę.
+Z takiej pętli for each.
+Przechodzącej przez wszystkie zasoby.
+Dla wielu różnych komponentów sieciowych.
+Żeby łatwo było.
+Korzystać.
+Z dodawania nowych zasobów.
+Tam była taka dosyć nieczytelna logika.
+Zastosowana przy tych zasobach.
+Ja musiałem dodać jeszcze nowe.
+Dodatkowe zasoby.
+Których wcześniej nie mieliśmy opisanych.
+A których opisanie było.
+Jeszcze jeszcze trudniejsze.
+I tak naprawdę.
+Ja miałem ten kawałek kodu.
+Ja wrzucałem jakby kawałek.
+Snippetu z dokumentacji.
+Tutaj drogi co-pilot agencie.
+Ten kod wygląda tak.
+To jest to co jest w dokumentacji.
+I teraz.
+Weź mi tutaj stwórz zasób.
+Który bierze tą moją listę.
+Która ma się składać z tego i z tamtego.
+W sensie ja mu powiedziałem.
+Jak to ma mniej więcej wyglądać.
+I on mi to generował.
+I nie robił tego bezbłędnie oczywiście.
+Tam były pewne rzeczy.
+Które trzeba było poprawić.
+Ale to też on to poprawiał.
+Ja mu mówiłem.
+To działa źle.
+Albo to się nie tak tworzy.
+Albo coś mi dopiero po czasie się okazało.
+Że to działa inaczej.
+Bo sam też nie do końca wiedziałem.
+Bo to było dla mnie nowe.
+To jakby.
+Korzystając z tego systemu agentowego.
+On mi bardzo ułatwił moją pracę.
+Ja w tym czasie mogłem nie wiem.
+Posprzątać sobie gdzieś tikety.
+Zrobić coś innego.
+Odzyskał mi trochę czasu.
+I energii którą mogłem przełożyć gdzieś indziej.
+I ja mogłem poprawić już.
+Jakby coś gotowego.
+Gdybym ja sam miał nad tym się zastanowić.
+Jak zbudować tą logikę.
+Przejścia po całej tej konfiguracji.
+Na pewno zajęłoby mi to długie godziny.
+A tak w ciągu kwadransa.
+Powiedzmy dostawałem ten jeden kawałek.
+Nad którym mogłem gdzieś tam dalej pracować.
+I prosić o kolejne poprawki.
+Czytasz mi w myślach.
+Bo chciałem właśnie o to zapytać.
+Już odpowiedziałeś.
+Bo chciałem zapytać.
+Czy czas pracy który przeznaczasz.
+Na sprawdzanie tych rzeczy.
+Jest dla ciebie dłuższy.
+Niż czas na poznanie ich i napisanie.
+To już wiem.
+To już mam odpowiedzi.
+I tak naprawdę teraz przychodzą mi dwa takie narzędzia.
+Bo zaczęliśmy od wymieniać te narzędzia.
+Które tak naprawdę.
+Są naszymi podstawowymi.
+Od systemu operacyjnego.
+Wspomnieliśmy o chmurze.
+Rozmawialiśmy chwilę o AI.
+W dzisiejszych czasach nie da się.
+Praktycznie bez tego.
+I żadnej rozmowy.
+Są to moje spostrzeżenia.
+Że nawet z teściową czasem.
+O sztucznej inteligencji gdzieś porozmawiam.
+Natomiast wracając do tych.
+Podstawowych narzędzi jeszcze.
+Przychodzi mi na myśl dwa.
+Jedno o którym już pewnie się spodziewacie.
+Że gdzieś tam się pojawi.
+Jest to docker.
+A drugie to jest python.
+Ja zacznę od siebie.
+Powiem tutaj dwa słowa o samym dockerze.
+O samym pythonie.
+I wtedy też chętnie posłucham twojego zdania.
+Pojawił się u mnie na tapecie.
+Z tego względu, że to był taki.
+Iberbash.
+Czyli najpierw pisałem w baszu.
+A później zacząłem potrzebować czegoś więcej.
+Więc zacząłem pisać w pythonie.
+I okazało się, że w tym pythonie pisze mi się lepiej niż w baszu.
+Więc wykorzystywałem go.
+Najpierw jako narzędzie serwerowe.
+Później zacząłem pisać w nim różne scrapery.
+Crawlery.
+I później oczywiście też web aplikacje.
+Więc tak naprawdę python jest dla mnie narzędziem.
+Bardzo mocno wszechstronnym.
+Warto też tutaj wspomnieć.
+Że oczywiście AI.
+Jest również bardzo mocno wykorzystywany.
+Przez świat pythona.
+Jeżeli chcecie się podłączyć do chata GPT.
+Odbierać czy też API OpenAI.
+Odbierać od niego odpowiedzi.
+To tutaj też korzystanie z pythona.
+Pod tym względem jest świetne.
+Natomiast jeżeli do tego dołożymy jeszcze dockera.
+No to mamy tak naprawdę.
+Przynajmniej z mojego punktu widzenia.
+Combine, który jest niezwykle wygodny.
+W korzystaniu.
+Bo docker sprawia, że.
+Dodawanie.
+Tworzenie infrastruktury.
+Czy lokalnie czy na serwerze.
+Jest niezwykle łatwe.
+Proste i przyjemne.
+Ja ostatnio miałem takie wyzwanie.
+Że chciałem sobie skonfigurować N8n.
+N8n też.
+Notabene poruszamy ten temat.
+Wątek tego narzędzia.
+W naszym kursie, który z Janem przygotowaliśmy.
+O dockerze.
+Link znajdziecie w opisie.
+I w ramach tej pracy z dockerem.
+Potrzebowałem tam.
+Potestować sobie różne narzędzia.
+Chciałem się pobawić chwilę kudrantem.
+Chciałem się pobawić baserowem.
+Chciałem się pobawić paroma takimi różnymi.
+Open source'owymi narzędziami.
+Do.
+Właśnie do pracy z N8n.
+Czyli do pracy przy automatyzacji.
+I powiem ci Janie.
+Że byłem zaskoczony.
+Oni wszyscy mają obrazy.
+Bardzo to było wygodne.
+Tak.
+Zanim jeszcze o dockerze.
+To chciałbym też powiedzieć, że.
+Baserowem Python również odgrywa.
+Ogromną rolę.
+Ja sam też wykorzystuję.
+Jego tutaj siłę.
+Aby rozwiązywać pewne problemy.
+Takie gdzieś tam wokół infrastruktury.
+Zdarzyło mi się.
+Przygotowywać.
+Kawałek kodu, który.
+Robił coś czego AWS.
+W tym momencie nie robi.
+To znaczy.
+Robi to czterema różnymi serwisami.
+I nawet jak połączę wszystkie cztery.
+To nie daje mi pełni tego rozwiązania.
+Które mi jest potrzebne.
+W oparciu o.
+Mój przypadek biznesowy.
+Więc nie miałem tak naprawdę.
+Za bardzo alternatywy.
+W sensie mogłem wykorzystać.
+Dowolny język programowania.
+No ale przez tutaj.
+Popularność Pythona.
+W świecie DevOpsowym.
+Która też wynika z tego.
+Że Python ma mnóstwo bibliotek.
+Które ułatwiają pracę z nim na co dzień.
+Przełożyło się na to.
+Że ja nie tworzyłem rozwiązanie.
+Które pomagało mi.
+Uzyskać ten efekt.
+Który gdzieś tam był mi potrzebny.
+O tym efekcie.
+Gdyby ktoś był zainteresowany.
+Co to w ogóle było.
+Na pewno będę przygotowywał z tego.
+Duże case study na swojego bloga.
+I planuję też.
+Występować z tym tematem.
+Na różnych meetupach.
+Tutaj w naszym kraju.
+Być może za granicą też.
+Ale do tego jeszcze trochę czasu musi upłynąć.
+Jeszcze muszę troszeczkę tam.
+Przygotować informacji.
+Dopracować to wszystko.
+Więc nie chcę tak bardzo.
+Wybiegać w przyszłość.
+I przechodząc tutaj.
+Do Dockera.
+I do tego.
+O czym wspomniałeś.
+Że do wszystkiego są.
+Obrazy.
+To jest jedna z.
+Największych myślę wartości.
+Że do wszystkiego są obrazy.
+Co.
+Przypomina mi o sytuacji.
+Z przeszłości.
+Wymieniłeś tutaj.
+Parę różnych narzędzi.
+Parę różnych aplikacji.
+Które dzisiaj dostarczają obrazy.
+Dzisiaj wszyscy dostarczają tak naprawdę obrazy.
+I bez problemu można z tego.
+Korzystać.
+Jeśli ktoś chce się liczyć.
+Na dzisiejszym rynku.
+To zawsze ten obraz będzie dostarczać.
+Natomiast kiedyś tak nie było.
+Kiedyś ten docker nie był jeszcze popularny.
+Nie wszyscy te.
+Obrazy dostarczali.
+I tak.
+10 lat temu.
+Sam musiałem.
+Kiedyś zainstalować.
+Taki system.
+Który nazywa się Redmine.
+Jest to system do zarządzania tiketami.
+W pracy.
+Tak jak dzisiaj najpopularniejsza jest Jira.
+Ale Jira też kosztuje.
+Redmina można było sobie postawić.
+U siebie za darmo.
+Taką instalacją.
+Open source.
+Napisaną w Ruby.
+I.
+Żeby zrobić taką.
+Instalację Redmina.
+Żeby przygotować konfigurację.
+Ona składała się z.
+Kilku różnych kroków.
+Konfiguracyjnych.
+Oprócz tego, że był sam Redmine.
+Oprócz tego, że trzeba było mieć Ruby.
+Do Ruby.
+Trzeba było mieć jeszcze.
+Serwer http.
+Który potrafił rozmawiać z Ruby.
+I z tym kodem.
+I ten serwer.
+Trzeba było połączyć jeszcze z Apache.
+Albo Nginx.
+Który potrafił to wystawiać.
+Gdzieś tam dalej.
+I współpracować też z innymi aplikacjami.
+Trzeba było składać.
+Wiele komponentów.
+Dziś.
+Wchodzimy na Google.
+Wpisujemy docker redmine.
+I dostajemy oficjalny obraz.
+Wystarczy uruchomić. Dziękuję.
+Ile mi zajęła instalacja?
+Pięć dni.
+Myślę.
+Tak.
+Myślę, że to było około pięciu dni.
+I robiłem ją trzy razy.
+Bo dwa razy coś zwaliłem po drodze.
+A to jeszcze były też początki mojej kariery.
+Jeszcze nie do końca rozumiałem też co robię.
+W związku z czym.
+Jak gdzieś się pomyliłem.
+Gdzieś się zgubiłem.
+To już nie potrafiłem rozwiązać tego problemu.
+Z tamtą wiedzą.
+Którą miałem wtedy.
+I zaczynałem od nowa.
+Dzisiaj.
+Nawet gdybym popełnił podobne błędy.
+No to wziąłbym obraz.
+Ruszyłbym znowu z tego samego miejsca.
+I powiedzmy.
+Że nawet z problemami.
+Byłbym w stanie postawić to w dwie godziny.
+I dużo lepszej jakości.
+Wtedy nie wiedząc w ogóle pierwszy raz.
+Instalując takiego redmina.
+No trwało to tyle ile trwało.
+I z innymi aplikacjami.
+Byłoby podobnie.
+Gdybym chciał dzisiaj wziąć aplikację.
+Której nie znam.
+I postawić ją bez dockera.
+Oczywiście dałbym radę.
+Oczywiście zrobiłbym to.
+Natomiast nie powiem, że bez problemu.
+I na pewno zajęłoby to czas.
+A jeśli ta aplikacja dostarcza mi ten obraz.
+To po co ja mam się męczyć.
+Ktoś kto zna tą aplikację.
+Zadbał o to.
+Żeby w tym obrazie wszystko było.
+Żebym ja mógł wziąć.
+Korzystać.
+Zacząć pracę z tym narzędziem.
+I zakupić się na tym wszystkim dookoła.
+Co jest potrzebne.
+Żeby w ogóle to narzędzie zaczęło działać.
+I dostarczać dla mnie jakąkolwiek wartość.
+Szczególnie jeżeli mówimy.
+O takich bardziej popularnych obrazach.
+To jest zdecydowanie prawda.
+I myślę, że powoli możemy tę naszą rozmowę kończyć.
+Bo i tak jest dużo dłuższa niż planowaliśmy.
+No i tutaj ogromna prośba.
+Też do wszystkich oglądających.
+Słuchających.
+Żebyście zostawili komentarz.
+Jakie są wasze narzędzia.
+Czy obecnie nie wyobrażacie sobie pracy.
+Niezależnie od tego czy jesteście devopsem.
+Czy jesteście programistą.
+Czy jesteście testerem.
+Czy być może kopiecie rowy.
+Dobrze.
+Ja tutaj o kopaniu rowów.
+Bo ostatnio bardzo dużo.
+Nie chcę powiedzieć, że szacunku nabrałem.
+Bo tak to brzmi jakbym nigdy nie miał.
+Ale zawsze miałem.
+Ale ostatnio nabrałem jeszcze więcej.
+Bo ręce mnie bolą do tej pory.
+Robiąc taką pętlę, klamrę.
+Więc nie byłbym sobą.
+Gdybym nie wspomniał o tym, że w opisie.
+Znajdziecie też linki.
+Do naszego kursu.
+Znajdziecie też link do materiałów.
+Jeżeli macie ochotę o nich jeszcze poczytać.
+No i zachęcamy was.
+Do dużej aktywności w komentarzach.
+Bo tylko w ten sposób dowiemy się.
+O czym chcielibyście posłuchać kolejnym razem.
+Dokładnie.
+Dzięki bardzo za rozmowę.
+Cześć czołem.
+Kluski z rosołem.
+Cześć.
+Co to znaczy, że Netflix działa na Linuxie?
+Pod jakby tą warstwą aplikacyjną.
+Jest sobie system operacyjny.
+I system operacyjny, który jest pod spodem.
+To jest Linux.
+Dlaczego?
+Dlatego, że Linux jest darmowy.
+Jest rozwijany przez społeczność.
+Przez bardzo silną społeczność.
+Duże firmy.
+Płacą też często.
+Swoim programistom.
+Za to, żeby rozwijali jądro Linuxa.
+Bo widzą w tym wartość.
+Bo dzięki temu,
+że osoby
+z różnych organizacji pracują nad tym
+jednym projektem.
+I starają się rozwiązywać jakieś
+wspólne problemy.
+Są też osoby z
+różnym doświadczeniem.
+Z różnym backgroundem.
+Spotykają się
+z różnymi problemami.
+W swoich aplikacjach.
+W swoich zastosowaniach na co dzień.
+Dzięki czemu
+łatwiej jest
+zderzyć swój jakiś problem
+z kimś innym.
+I efektywniej podejść do danego
+rozwiązania.
+Na przykład Netflix ma jakiś tam problem.
+Powiedzmy optymalizacyjny.
+Coś potrzebują zrobić.
+I między innymi wykorzystują
+sieć.
+Specjalistami od sieci
+niewątpliwie jest firma Cisco.
+Bo oni tworzą sprzęt sieciowy.
+Który
+nie jest na Linuxie.
+Jakby bezpośrednio. Oni mają taki swój
+system operacyjny.
+Ale on jest dosyć zbliżony.
+I oni też widzą wartość w tym.
+Żeby tego Linuxa
+wspierać i rozwijać.
+Dlatego, że nawet jeśli oni mają swój
+dedykowany system operacyjny.
+Który tworzy tą całą
+gamę produktów Cisco.
+To
+inna firma może korzystać
+z rozwiązania
+na przykład do VPN.
+Opartego właśnie o Linuxa.
+I teraz
+co może się wydarzyć.
+To dwie firmy między sobą.
+Jedna może korzystać w całości ze sprzętu Cisco.
+Inna może na przykład
+nie mieć specjalistów od Cisco.
+Albo nie mieć tyle pieniędzy, żeby pozwolić sobie
+na wykupienie Cisco.
+Albo
+zaczynają dopiero swój biznes.
+I potrzebują połączyć się z jakimś dużym
+partnerem, który to Cisco ma.
+I teraz jest taki
+rodzaj VPN, który nazywa się IPSec.
+Służy ogólnie do łączenia
+nie pojedynczych urządzeń między sobą.
+Na przykład partnerzy potrzebują
+swoje aplikacje
+skomunikować między sobą.
+Nie wiem, bank z bankiem, żeby wymieniać się
+sesjami.
+I teraz taka firma, która potrzebuje
+połączyć się z kimś, kto korzysta
+z Cisco, ale sami jakby
+nie mogą sobie na to pozwolić
+w tym momencie. Mogą wziąć sobie
+rozwiązanie oparte o Linuxa.
+Czy to bezpośrednio jakąś dystrybucję.
+Czy może przygotowane jakieś rozwiązanie
+sieciowe, które też
+obsługuje ten
+IPsec.
+I wtedy są w stanie takie połączenie
+nawiązać także z tym Cisco.
+Także samo Cisco ma interes
+w tym, żeby akurat ta część
+w Linuxie była zaopiekowana
+i żeby działała, bo wtedy
+oni wiedzą, że
+ich klient może śmiało kupować
+to Cisco dalej, bo wiedzą, że
+są w stanie się połączyć z innymi
+partnerami, nawet jeśli tamci
+partnerzy tego Cisco
+nie posiadają.
+To jest taka duża wartość dla organizacji,
+żeby właśnie nad tymi
+rozwiązaniami pracować.
+Ok. Natomiast to wszystko
+zmierza do takiej konkluzji, że tak naprawdę
+świat Linuxa to jest też
+świat łączenia się ze sobą
+Big Techów, czy też łączenia się ze sobą
+pasjonatów i to daje możliwość
+dalszego rozwoju dla poszczególnych
+tych grup.
+Dokładnie tak. No wiele branż
+tak naprawdę z tego korzysta,
+bo chociażby
+superkomputery. Wydaje mi się, że
+to są top 500
+superkomputerów światowych.
+Chyba wszystkie 500
+w tym momencie korzysta
+tylko i wyłącznie
+z Linuxa. Wiem, że kiedyś na tej
+liście były jakieś pojedyncze
+Windowsy, natomiast w tym momencie
+lista jest chyba w 100%
+zdominowana przez
+Linuxy i to, że oni się na przykład
+nastawiają na ogromne obliczenia
+to też daje wartość dla innych
+organizacji, bo chociażby taki
+Netflix też wykonuje
+obliczenia, kiedy robi streaming.
+Nie wiem, sieci też muszą obliczać
+jakieś tam rzeczy na procesorze
+i to wszystko trafia nam do tego
+jądra Linuxa i dzięki temu
+każdy może z tego korzystać,
+ale też przez to, że każdy może
+z tego korzystać, ludzie mają interes
+w tym, żeby do tego dokładać.
+No i ktoś zna się na tym, jak to
+dobrze procesować, więc
+zajmuje się optymalizacją
+przetwarzania tych procesów. Ktoś
+zna się na sieci, zajmuje się tymi
+rzeczami sieciowymi,
+ktoś zna się na przykład na systemach
+plików, więc zajmuje się tą warstwą
+odpowiedzialną za
+systemy plików i dzięki temu
+tak się to wszystko kręci,
+a Linux znajduje
+coraz szersze zastosowania
+we współczesnym świecie.

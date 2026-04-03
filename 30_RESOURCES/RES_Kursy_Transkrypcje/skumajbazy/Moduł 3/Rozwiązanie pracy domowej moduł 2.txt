@@ -1,0 +1,127 @@
+Witajcie moi drodzy, mam niewyobrażalną przyjemność powitać Was w kolejnym module kursu SkumajBazy.
+No i tak jak za każdym razem, tak i dziś, zaczniemy sobie od rozwiązania pracy domowej.
+W zadaniu domowym pierwszym mamy znaleźć wszystkich pracowników, czyli wpisy rekordy z tabeli employees,
+których nazwisko zaczyna się od litery N, a imię kończy się na NE.
+No i tutaj rozmawialiśmy sobie o tym, tutaj już sobie przygotowałem te zadania domowe,
+rozmawialiśmy sobie o tym, że jeżeli interesują nas wszyscy pracownicy, no to oczywiście select,
+ach te wielkie litery, gwiazdka from employees, prawda?
+No i w ten sposób znajdziemy wszystkich pracowników.
+Musimy mieć natomiast na uwadze, że w naszych danych nie mamy żadnej osobowości,
+osoby, której nazwisko, czyli last name, zaczyna się na literę N.
+Mamy osoby, których imię zaczyna się na literę N, natomiast w przypadku nazwiska czegoś takiego nie mamy.
+Więc ja sobie napiszę to wyrażenie z nazwiskiem zaczynającym się na literę N,
+natomiast będę chciał, żeby mi się pokazała finalnie any, więc tutaj zamienię te litery na D po prostu za chwilę.
+Ale no, czy D, czy N, to wygląda to tak samo.
+Czyli like, przepraszam, where, last name.
+Like, no i tak jak ma się zaczynać od N, to robimy sobie w apostrofach oczywiście N%,
+wtedy takiej osoby nie dostaniemy żadnej, jeżeli weźmiemy D%, no to dostaniemy tych osób kilka.
+Więc mimo tego, że miałem na N, to zmieniłem na D, żeby jakieś rekordy mieć.
+No i tutaj, jeżeli interesowałoby mnie tylko any, czyli tylko osoba, której imię kończy się na literę N,
+no to wówczas możemy dorzucić sobie operator end, no bo chcę, żeby spełniało oba te kryteria.
+First name.
+Like, i znowu procent, N, E.
+Bo procent, jak pamiętacie, mam nadzieję, zastępuje dowolną ilość znaków,
+a symbol podkreślenia zastępuje dokładnie jeden znak.
+Więc kiedy zrobimy sobie end, first name, like, N, E, no to wówczas dostaniemy tylko te osoby.
+Oczywiście na N, to musiałbym zrobić wielkie N, ale po prostu takich osób nie dostałbym ani jednej.
+Okej, idziemy dalej.
+Znajdź wszystkie produkty organiczne.
+Czyli takie, gdzie słówko, gdzie nazwa produktu zawiera słowo organic.
+No to znowu select, gwiazdka, from products.
+I w ten sposób zobaczę, że tych produktów jest tutaj wiele.
+Nazwa kolumny to product name, okej.
+No i słówko to organic.
+Ale wyobrażam sobie taką sytuację, że mogę mieć zarówno organic z wielkiej, jak i organic z małej.
+Chciałbym być przygotowany na obie takie ewentualności.
+Więc mogę zamiast używać operatora like, użyć operatora ilike.
+Czyli select, gwiazdka, from products, where, product name i like.
+I teraz, jeżeli chcę, żeby zawierało się słówko organic, to robię procent organic.
+I zwróćcie uwagę na to, że tutaj już nie zapisałem tego z wielkiej litery.
+Tak jak w tym przypadku, jeżeli bym zmienił literę z małej na wielką, z wielkiej na małą,
+to rekordy by mi się przestały pokazywać, bo like zwraca uwagę na wielkość liter.
+Natomiast.
+I like nie zwraca uwagi.
+Ja staram się, żeby to rozwiązanie pracy domowej było też takim przypomnieniem tego, co było w zeszłym tygodniu,
+więc stąd też takie uzupełnienie.
+No i mamy jeden taki produkt.
+Uncle Bob's Organic Dried Peers.
+Ciekawe, czy to jest Uncle Bob, czyli Robert's Martin, czy jakiś inny Uncle Bob.
+Okej, idziemy dalej.
+W zadaniu trzecim chcemy wyświetlić listę wszystkich produktów, które obecnie są w sprzedaży.
+Czyli warto jest discontinued.
+Jest ustawiona na zero.
+No to select, gwiazdka from products, where discontinued równa się zero.
+Ops.
+I jest.
+Sprawdźmy sobie to jeszcze.
+Żeby nie szukać tam daleko, możemy, przypominam, zawsze sobie ograniczyć ilość wyświetlanych kolumn,
+tylko do product name i na przykład właśnie do tej kolumny.
+Jak widzicie, działa.
+W zadaniu czwartym pytanie brzmi,
+Ile mamy łącznie klientów pochodzących z jednej z trzech stolic, Berlina, Londynu lub Madrytu?
+No to lecimy.
+Select.
+Ilu mamy łącznie klientów?
+Ja najpierw ich sobie wyświetlę, a potem pokażę wam, jak policzyć.
+Gwiazdka from customers, where city.
+Z tego, co pamiętam, tam była taka kolumna, in, no i tutaj w nawiasikach sobie wypisujemy Berlin.
+London.
+Oraz Madrid.
+Madrid.
+Madrid.
+Ops.
+No i mamy Berlin, Londyn, Madryt.
+Wszystko się zgadza.
+Ale pytanie brzmi, ile jest takich osób, więc oczywiście możemy sobie zawsze zerknąć tu, akurat pode mną.
+Może się odsunę.
+O, tutaj gdzieś.
+Nie, nie, nie sięgnę.
+Ale gdzieś tu jest informacja, że takich osób jest ten Rose Fetched.
+To jest informacja, że takich osób jest ten Rose Fetched.
+Takich osób jest dziesięć.
+Zresztą to też widać tu.
+Natomiast, jeżeli byśmy chcieli po prostu mieć ilość, to można zawsze w tym miejscu, zamiast gwiazdki, wpisać słówko count.
+I przypominamy, przypomnieliśmy sobie już o tym, że count zliczy nam wtedy, ile jest niepustych komórek w tej kolumnie.
+Natomiast, jeżeli wpisuję gwiazdkę, to on po prostu zliczy wszystko.
+No i dostaniemy informację, że takich rekordów jest dziesięć.
+Okej.
+No i dochodzimy sobie do ostatniego zadania naszej pracy domowej.
+Pytanie brzmi.
+Ile łącznie przechowujemy produktów?
+Pytanie dotyczy kolumny unit price, których kategorią jest condiments.
+I to zapytanie będzie troszeczkę trudniejsze.
+Ponieważ zobaczcie, jeżeli sobie wybierzemy produkty.
+O, to tutaj nie mamy nazwy kategorii nigdzie.
+Ale mamy kategorię ID.
+Natomiast, jeżeli sobie pobierzemy wszystkie kategorie.
+To okaże się, że tutaj mamy ID-ki, kategorie.
+Czyli będziemy chcieli pobrać wszystkie te produkty, których kategorię ID to ten kategorię ID.
+Czyli pierwsze co muszę zrobić, to muszę dowiedzieć się, cóż to jest za kategorię ID.
+Czyli sobie zrobię zapytanie.
+Select gwiazdka from categories where kategorię name to jest condiments.
+Hops, zadziałało.
+I teraz mnie interesują z tego zapytania.
+I nie interesuje mnie cała, wszystkie kolumny.
+Tylko interesuje mnie tylko i wyłącznie kategoria ID.
+Więc sobie tutaj mogę śmiało zrobić kategorię ID.
+O, i w ten sposób jakby możemy powiedzieć.
+Słuchaj, to jest tylko dwójka.
+Więc select all from products where kategorię ID.
+No i tu można by było powiedzieć równa się 2.
+Nie, można tak zrobić.
+Ale jeżeli wiemy, że to ma być IN wewnątrz jakiegoś zakresu.
+To można zawsze zrobić IN.
+Otworzyć sobie pięknie nawiasik.
+Zamknąć sobie pięknie nawiasik.
+I w ramach tych nawiasów wstawić to zapytanie.
+Bo skoro to zapytanie zwraca konkretne ID-ki, konkretne liczby.
+No to właśnie w ten sposób sobie to możemy rozkminić.
+Uwaga.
+Kura jest błąd.
+No bo średnika nie usunąłem.
+Już mnie z tego znacie, że w tym przypadku najczęściej tego średnika nie usunąłem.
+Ale jak usunąłem średnik, wykonałem zapytanie raz jeszcze.
+To wszystko zadziałało.
+Bardzo dziękuję Wam za tę pracę domową.
+I zapraszam do kolejnego modułu, do pierwszej lekcji.
+Do zobaczenia.

@@ -1,0 +1,131 @@
+Witajcie moi drodzy w zeszłym tygodniu od kilkorga z was dostałem zapytanie gdzie są te kreski a mianowicie projektowaliśmy sobie nasze tabele robiliśmy między tymi tabelami jakieś asociacje powiązania a kresek nie było no i chciałem się z tego wytłumaczyć a mianowicie co z kreskami
+więc jeżeli chodzi o te kreski to odpowiedź jest jedna i odpowiedzią jest też tytuł tej lekcji i są nią constraint i za pomocą constraintów mamy możliwość określenia między innymi tego co się stanie w momencie w którym usuniemy powiązane ze sobą tabele czy usuniemy rekordy powiązane ze sobą tabel no i co i jak nasza tabela ma się zachować kiedy wykonamy update
+ale zaraz o tym wszystkim wam opowiem
+pytanie które powinniśmy sobie zadać jak skoro stworzyliśmy nasze tabele to teraz jak do tych tabel dodać właśnie te constrainty
+otóż opcji oczywiście są dwie jedna opcja jest taka że kiedy tworzycie tabelę możecie już wprost ten constraint podać
+czyli zobaczcie stworzyłem sobie jakąś jeszcze skimę w międzyczasie nazwałem ją constraints testing no i tutaj w ramach tej skimy stworzyłem sobie dwie tabele
+jedna z tabel nazywa się quiz
+druga z tabel nazywa się quiz
+i ta druga jest same question no i jak pewnie można się domyśleć każdy quiz będzie miał wiele pytań tak no bo w jednym quizie Привет przyrodniczy mamy pytania o przylaszkę i o grze grzółkę i inne tego typu rzeczy no i tutaj chcielibyśmy sprawić żeby ten quiz z tymi pytaniami
+No i tutaj chcielibyśmy sprawić żeby ten quiz z tymi pytaniami był powiązany i to co sobie zrobiliśmy oczywiście to jest to że mamy id tutaj mamy quiz id więc sprawa jest prosta ale chcielibyśmy spowodować żeby te tabele były ze sobą powiązane z jednym i drugim quizem.
+i można to zrobić określając, że foreign key to jest quiz ID,
+czyli tak samo jak sobie zdefiniowaliśmy klucz główny jako primary key,
+tak samo definiujemy sobie na samym końcu informację,
+że foreign key to jest quiz ID i że ten quiz ID łączy się,
+to tam jest referencją, odwołuje się do tabeli quiz do kolumny ID.
+I tu jeszcze jest coś takiego onUpdateCascade, o tym za moment.
+To co ważne to to, że jeżeli robicie tego typu zapis,
+to powinniście mieć te tabele puste.
+To może się okazać, że gdzieś zacznie nam on krzyczeć,
+że skoro dodaliśmy quiz ID od 0, robimy tę referencję,
+no to jak to się może dziać, że te dane gdzieś tam się nie pokrywają.
+Więc lepiej, ja przynajmniej jeżeli dodaję constraint'a,
+to bardzo często tabele po prostu sobie wcześniej wyczyszczę
+i dopiero później te dane dodaję.
+Jakieś taki mam zwyczaj, bo wiem, że te błędy
+się pokazują i są to takie wredne błędy.
+Mam z nimi często problem. Może to moja słabość,
+a nie rzetelna wiedza, ale po prostu tak robię.
+Natomiast druga rzecz jest taka, że zawsze quiz u mnie
+pokazuje się wcześniej niż ta tabela, w której jest powiązanie.
+Bo zobaczcie, że w quizie nie ma powiązania.
+Powiązanie pokazuje się dopiero wtedy, kiedy definiuje sobie klucz obcy.
+Więc staram się zawsze zrobić tak, żeby tabele, które mają mniej zależności,
+pokazywały się wyżej niż te, w których jest wiele zdefiniowanych constraint'ów.
+Opcja B jest też taka, że można też te constraint'y dodawać po utworzeniu tabeli,
+co też za chwileczkę sobie pokażemy.
+No i pytanie, co to jest to onUpdateCascade?
+Jeżeli ktoś nie słucha, tylko czyta albo czyta post factum,
+to też będzie miał tutaj streszczenie tej wiedzy, którą przed chwilą opowiedziałem.
+Natomiast onUpdateCascade to jest informacja, co ma się stać,
+jeśli zostanie zmienione.
+To id w tabeli quiz, no i jeszcze jest opcja onDeleteCascade,
+czyli co ma się stać, jeżeli usuniemy rekord id z tabeli quiz.
+A co może się stać?
+Zobaczcie.
+Jeżeli wykonamy onUpdateRestrict, to znaczy, że nie będziemy mogli zmienić tego identyfikatora.
+Po prostu, skoro coś jest powiązane z czymś, to nie ma, jest restrykcja,
+jest zakaz wykonywania tego typu operacji.
+Jeżeli wykonamy onUpdateNoAction, to będzie to miało efekt taki sam,
+jak powyżej.
+Jeżeli wykonamy onUpdateCascade, to wówczas zostaną zmienione wszystkie klucze obce.
+Czyli zmiana klucza głównego spowoduje, że wszystkie klucze obce nam się również
+automatycznie zaktualizują.
+Natomiast, jeżeli wykonacie onUpdateSetNull, no to klucze zostaną zmienione na nul.
+W tym przypadku, mówiąc szczerze, taką opcją, którą praktycznie zawsze wykorzystuję,
+jest onUpdateCascade i po prostu tę opcję też wpisuję.
+Natomiast, jeżeli chcemy zarządzić,
+tym, co ma się stać, kiedy próbujemy usunąć coś, co jest powiązane z czymś innym,
+na przykład mamy kategorie, w ramach kategorii mamy wiele produktów
+i teraz usuwamy sobie kategorie, to jeżeli wybierzemy Restrict,
+to w momencie, w którym będziemy mieli jeszcze produkty, to nie pozwoli nam usunąć kategorii.
+Jeżeli wybierzemy NoAction, to tutaj w tym przypadku efekt będzie taki sam,
+po prostu byśmy zaburzali integralność danych, więc też dostaniemy błąd.
+Jeżeli wybierzecie Cascade,
+to w tym momencie usunięcie kategorii spowoduje, że kaskadowo usuniemy wszystkie produkty.
+Po prostu, tak jak usuwanie folderu w Windowsie.
+Jeżeli w folderze mamy wiele plików i wiele innych folderów,
+to usunięcie tego najniższego spowoduje, że wszystko to, co jest w środku, też przestanie istnieć.
+I tu jest tak samo.
+Natomiast onDeleteSetNull spowoduje, że już straciłem możliwość wskazania,
+kto jest tym, na kogo wskazuje mój klucz obcy, na jaki klucz główny wskazuje mój klucz obcy.
+Więc w ten sposób, wybierając onDeleteSetNull, po prostu ta kolumna ustawi się jako 0.
+Oczywiście pod warunkiem, że my jej na to pozwolimy.
+Bo jeżeli w tej kolumnie ustawiliście, że ta kolumna ma być not nullem,
+no to to będzie też Wam krzyczało błędami.
+No i tutaj właśnie pytanie. A co, jeżeli tabelę stworzyliśmy wcześniej?
+I tak, jak mówiłem, to jest czasem tak, że...
+sami tworzymy tę tabelę wcześniej.
+Po prostu jest nam wygodniej najpierw stworzyć tabelę,
+a później do tych tabel dodawać constrainty.
+No bo na przykład trudno jest określić, jaka ma być kolejność w tych tabelach.
+To jest jedna opcja.
+Albo druga opcja.
+Jeżeli na constraincie nasz kod się wysypie,
+no to może się okazać, że on nam stworzy 30 tabel na górze,
+po czym kod się wysypał, bo coś się stało z constraintem
+i pozostałych nie tworzy.
+I wtedy trzeba znowu zrobić deleta, stworzyć tabelę.
+Więc pod tym względem dodawanie constraintów później jest wygodniejsze,
+bo możemy sobie dynamicznie zarządzać tym momentem, w którym coś się zepsuło
+i na przykład naprawiać nasze tabele.
+Więc to też jest z tego powodu wygodniejsze.
+No i wtedy, zobaczcie, co jeśli tabela została utworzona wcześniej?
+Możemy wykonać polecenie alter table,
+w którym to poleceniu wskazujemy mu,
+że tą zmianą, którą chcemy przedsięwziąć na tabeli,
+jest zmiana add constraint.
+I tutaj jedna nowa rzecz,
+a mianowicie, kiedy wykonujecie zapytanie add constraint,
+to zostaniecie zapytani, jak ten constraint ma się nazywać,
+gdyż każdy constraint ma swoją nazwę.
+I te nazwy, mam wrażenie, różnią się w zależności od tego,
+skąd tego constrainta tworzymy.
+Czy tworzymy go wewnątrz dbvera,
+czy tworzymy go jakoś inaczej,
+czy może to jest kwestia baz danych,
+ale czasem nazwy te są f-ki jako foreign-ki,
+czasem widziałem foreign zapisane foreign-ka,
+różne te nazwy napotykałem,
+więc myślę, że najprościej po prostu przyjąć sobie taką,
+jak jest tutaj, czyli mówimy,
+jeżeli dodajemy ją do question, do tego constrainta,
+no to nasz constraint nazywa się question.
+Następnie, jeżeli ten constraint służy do tego,
+żeby łączyć się z quizem,
+to dodajemy add constraint question quiz,
+no i foreign-ki, żeby wskazać, że jest to klucz obcy.
+Takie nazewnictwo jest myślę całkiem ok,
+no i później ta nazwa służy mniej więcej do tego,
+żeby usunąć ten constraint, usunąć to powiązanie.
+I to takie małe uzupełnienie.
+Jeżeli macie ochotę, to możecie skorzystać z tego uzupełnienia
+i dodać te zmiany na tych naszych poprzednich tabelach.
+Sprawdźcie, czy te kreski się pokazały.
+Ja to sprawdziłem, działa.
+Zresztą tak jak mówię, no używam tego na co dzień,
+ale gdzieś mi ten wątek umknął.
+Cieszę się, że zwróciliście na to uwagę
+i że mogłem to uzupełnić.
+A teraz zapraszam was do lekcji następnej.
+Do zobaczenia.

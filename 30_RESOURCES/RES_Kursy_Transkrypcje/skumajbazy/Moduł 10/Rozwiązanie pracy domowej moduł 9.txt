@@ -1,0 +1,196 @@
+No to cóż, zaczniemy sobie od rozwiązania pracy domowej, więc jak widzicie stworzyłem sobie już bazę danych o nazwie szkolenie, w bazie danych szkolenie znajduje się NBA jako kolekcja, no i teraz do tej kolekcji będę chciał dodać sobie te nowe dokumenty pochodzące od Algoli, z tego adresu URL.
+No i już tak jak zrobimy, możemy sobie zrobić dokładnie tak samo jak poprzednio, czyli wejdę w row, skopiuję to, no i po prostu wykonam db.nba.insert.meny i w nawiasie sobie te dane wkleję.
+Ops, chwilę mi poprzetwarzał, wszystkie mecze mi dodał, czyli jeżeli wykonam db.nba.find, to powinienem zobaczyć wszystkie mecze,
+a jeżeli chciałbym zobaczyć na przykład...
+Wszystkie mecze, w których, czy mam wszystkich graczy, wszystkich graczy drużyny Heat, to mogę zrobić db.nba.find, no i tutaj team, no i na przykład Heat, chyba Miami, nie?
+Ops, zobaczę wówczas wszystkich tych graczy. No dobrze, ale tego nie dotyczyło nasze zadanie. W zadaniu mieliśmy, w zadaniu po zaimportowaniu tej kolekcji mieliśmy wyświetlić 20 graczy,
+którzy zdobyli najwięcej punktów, więc w pierwszej kolejności powinienem ich sobie po prostu posortować.
+Jeżeli teraz chciałbym mieć tych, którzy mają najwięcej punktów, no to musiałbym sobie to posortować korzystając z sort, no i tutaj interesowałoby mnie points minus 1.
+Wtedy na samej górze mam tych, którzy mają ich najwięcej, a na samym dole mam tych, którzy mają ich najmniej.
+Tyle tylko, że to co widzę tutaj to są tylko i wyłącznie wyniki Heatów, więc mogę...
+mogę sobie tego finda stąd usunąć i oczywiście muszę dopisać finda pustego.
+Jeszcze raz. Ops. I teraz mam zupełnie wszystkich.
+Okej, ale w treści zadania zostało powiedziane jeszcze, że chcielibyśmy ograniczyć ilość tych rekordów tak, żeby pokazały nam się tylko niektóre z nich.
+Więc w tym celu, do naszego zapytania możemy wrócić do tego, że...
+...no, nie, nie, nie, nie, nie, nie, nie, nie, nie, nie, nie, nie, nie, nie.
+W tym celu, do naszego zapytania możemy jeszcze dorzucić limit, no i na przykład limit 10 pokaże nam 10, limit 1 pokaże nam tylko jednego, czyli Kevin Durant z drużyny Thunder zdobył aż 2472 punkty.
+Natomiast, jeżeli byśmy chcieli tego, który zdobył najmniej, no to można zrobić po prostu points 1, sortowanie rosnące, dostaniemy pana Jameson Curry.
+A jeżeli byśmy zrobili 3, no to byśmy mieli 3 z 0.
+Natomiast, w treści zadania pytanie dotyczyło 20 graczy w tę i w tą, no to wiadomo, trzeba po prostu sobie zmienić wartość na limicie.
+W zadaniu trzecim chcielibyśmy znaleźć wszystkich graczy z drużyny Bulls oraz z drużyny Rockets.
+Robiliśmy sobie coś moment temu, czyli robiliśmy find i tutaj drużyna Heat nas interesowała.
+Natomiast, jeżeli chcemy Bulls, no to wpisujemy...
+Bulls, no to wpisujemy Bulls.
+I to są wszyscy gracze z drużyny Bulls.
+Natomiast, tych graczy, jakbyśmy chcieli sobie policzyć, ilu ich jest, żeby widzieć.
+Tu możemy dorzucić count, a dowiemy się, że jest ich 18.
+A w Rocketsach ilu jest?
+34.
+Czyli, żeby wyświetlić aura i żeby połączyć sobie tych dwóch, te dwa warunki, no to założymy sobie, że wówczas tych osób, tych graczy, które są w tym wypadku, to są 18.
+Czyli, żeby wyświetlić ora i żeby połączyć sobie tych dwóch, te dwa warunki, no to założymy sobie, że wówczas tych osób, tych graczy, które są w tym wypadku, to są 18.
+Czyli, żeby wyświetlić ora i żeby połączyć sobie tych dwóch, te dwa warunki, no to założymy sobie, że wówczas tych osób, tych graczy, które są w tym wypadku, to są 18.
+Czyli, żeby wyświetlić ora i żeby połączyć sobie tych dwóch, te dwa warunki, no to założymy sobie, że wówczas tych osób, tych graczy powinniśmy mieć 18 plus 34, czyli 40 overly of 42…
+Czyli, żeby wyświetlić ora i żeby połączyć sobie tych dwóch, te dwa warunki, no to założymy sobie, że wówczas tych osób, tych graczy powinniśmy mieć 18 plus 34, czyli 40 Chill
+czyli db.nba.find
+i wówczas to co będziemy wkładali do środka to będzie or
+i nasz or jako argument przyjmuje listę
+czyli tutaj musimy sobie stawić nawiasy kwadratowe
+jest to lista
+i wtedy będziemy mieli pierwszy element listy
+to jest team
+bools
+a drugi element listy
+to będzie team rockets
+ops
+coś nam się tam pokazało
+a jak ich sobie zrobimy razem
+52
+czyli na podstawie tej sumy możemy założyć, że wszystkie te osoby nam się pokazały
+ok
+to idziemy dalej
+chcielibyśmy znaleźć wszystkich graczy, którzy zdobyli więcej niż 1000 punktów
+no to znowu będziemy mieli db.nba.find
+więcej niż 1000 punktów
+czyli points
+i jak pamiętacie
+jeżeli chcemy zrobić większe niż
+no to wówczas potrzebujemy mieć operator gt
+czyli greater than
+czyli robimy $gt 2000
+i to będą wszyscy gracze, którzy zdobyli więcej niż 1000 punktów
+i to będą wszyscy gracze, którzy zdobyli więcej niż 1000 punktów
+i to będą wszyscy gracze, którzy zdobyli więcej niż 1000 punktów
+w kolejnym zadaniu
+mamy znaleźć minimalną, maksymalną oraz średnią ilość punktów
+zdobytą przez poszczególne drużyny
+czyli będziemy potrzebowali znaleźć
+znaczy znaleźć
+zrobić agregację
+i za pomocą tej agregacji
+będziemy chcieli wyświetlić minimum, maksimum oraz średnią
+dla poszczególnych drużyn
+czyli jak to będzie wyglądało
+db.nba.find
+czyli jak to będzie wyglądało? db.nba.find
+db.nba.find
+.aggregate
+wówczas wstawiamy sobie nawiasy kwadratowe
+bo będziemy chcieli agregować
+po pewnej ilości rzeczy
+natomiast do środka wstawiamy nawiasy klamrowe
+bo tą listą jest lista obiektów
+no i lecimy
+group
+strasznie jest to niewygodne, że tak to przeskakuje
+ale no cóż
+id, no i
+tym naszym id, czyli tym po czym będziemy
+chcieli grupować jest nazwa
+tej naszej drużyny, czyli
+team
+tak, dobrze pamiętamy, że to
+miało być, znajdź
+minimalną, maksymalną, zrobioną przez poszczególne drużyny
+tak, czyli to będzie team, no i teraz
+będziemy chcieli mieć minimalną
+czyli pole small
+tam smallest
+smallest
+co to będzie smallest? to będzie minimum
+na kolumnie
+points
+przecinek
+a
+chciałem wkleić, a wykonałem
+w ten sposób zepsułem sobie zabawę
+już wiem, że zadziałało, no ale dobra
+smallest
+ok, źle mi się coś
+kopiuje, to zróbmy largest
+kiedyś
+korzystałem głównie z robomongo, a później
+robomongo, czy robo3t, stało się płatne
+ale jest to bardzo wygodne
+narzędzie, czyli
+points
+no nie
+left
+ok.
+ok to mamy
+między
+dwa razy
+99
+znowu mi się pewnie samo zamknęło
+a ja to zamknąłem jeszcze samodzielnie
+no właśnie
+i widzicie, teraz mamy dokładnie
+dokładną informację, jak bardzo
+ci niektórzy gracze są
+do tyłu, smallest 2
+a average to 462
+punkty, niezła różnica
+co? ok, no i ostatnia
+rzecz, którą możemy sobie zrobić to
+wyświetl ilość graczy
+w poszczególnych drużynach
+czyli ponownie będziemy chcieli to sobie zgrupować
+po drużynie
+natomiast tym, co będzie
+nas interesowało, będzie
+zliczanie, po prostu będzie
+count, więc możemy wykonać
+counter
+count, no i tutaj
+nie musimy przekazywać parametrów
+i będziemy widzieli ilu
+graczy jest w poszczególnych drużynach
+oczywiście zarejestrowanych, to podejrzewam, że
+nie są wszyscy, a może są?
+muszę wam się przyznać, że nie jestem
+wielkim fanem NBA
+kiedyś grałem jeszcze, jak to była gra
+IEA, to grałem, natomiast
+tak to nie zabawiam, znaczy dalej
+jest gra IEA, ale
+już w to nie gram, ale
+nieważne, w inny się tłumaczę, idziemy
+dalej, co tam dalej na nas czeka?
+w zadaniu czwartym, bo to
+było zadanie trzecie, mamy odpowiedź
+na pytanie, jaka jest średnia ilość
+książek wydanych w danym
+języku
+czyli cóż
+dbbooks.aggregate
+dbbooks.aggregate
+znowu lista
+lista słowników
+lista słowników
+lista słowników
+tu już sobie trochę
+pozwolę to inaczej sformatować
+grup, no i grupujemy po czym?
+po języku
+czyli podkreślenie id
+to jest nasz język
+to jest nasz język
+no i counter
+no i counter
+to jest nasz język
+no i counter
+no i dojdziemy się
+isz
+najwięcej, znaczy dwie
+książki po norwesku
+6 książek po
+hiszpańsku
+29 po angielsku
+jedna po
+ojej, Icelandic
+to będzie język ten
+ten, ojej, islamski
+jeden szwedzki, no i tu jest jeszcze parę jedynek
+no, na przykład hebrajski jest też i chiński jeden, to dziwne
+może po chińsku będzie więcej akurat w naszej bazie.
+Ale to byłoby na tyle, jeżeli chodzi o pracę domową.
+Zapraszam Was do modułu.

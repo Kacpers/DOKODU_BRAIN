@@ -1,0 +1,66 @@
+Dobrze, Janie, ja mam do Ciebie takie pytanie, nawet zrymowałem.
+Z tego względu, że Ty mi powiedziałeś, że ten plik do kodu, który stworzyliśmy w jednej z ostatnich lekcji na jednym z tych kontenerów, on tam dalej jest.
+Natomiast jak robimy docker.ps, to nie widzimy kontenerów.
+To jest pierwsza rzecz, która mnie zastanawia.
+Druga rzecz, że jak stworzyliśmy ten nowy kontener, to tego pliku do kodu tam nie było.
+Więc załóżmy, że ja sobie coś stworzyłem, popracowałem i tak dalej i powiedziałeś mi też, że ten plik jakoś mogę odzyskać.
+To co muszę zrobić? Jakie kroki wykonać, żeby móc w ogóle wejść na ten kontener ten dawny, tego słodkiego Antonellego?
+Tak, kontenery, które były uruchomione, ale już nie są, ale też nie zostały usunięte, możemy sobie podejrzeć,
+dodając do polecenia docker.ps.
+Przełącznik "-a", który oznacza all, czyli wszystkie.
+I wtedy dostajemy informację o kontenerach wszystkich, które były w tym systemie uruchomione i nie zostały wyczyszczone.
+Także mamy nasz Hello World, od którego zaczynaliśmy naszą siłownię.
+Mamy słodkiego Antonelliego, w którym, jeśli dobrze pamiętam, tworzyliśmy plik.
+Tak, tak było.
+I przypominam sobie też, że nie zobaczymy tego pliku, bo ja go usunąłem przed wyjściem z tego kontenera, ale nie szkodzi.
+Będziemy mogli pokazać symulację tego i mamy kontener nasz do kodu, który był utworzony jako ostatni, któremu daliśmy już naszą własną nazwę.
+Ok, czyli cykl życia, tak teraz to uściszlając, jest taki, że jak sobie utworzę jakiś kontener, to on zawsze będzie na moim komputerze, dopóki ja tego kontenera nie usunę, ale ja go sobie mogę w dowolnym momencie zatrzymywać.
+Tak, to się zgadza.
+Ok, to ja bym chciał wejść na tego Antonellego wtedy. Jak to zrobić?
+Ok, to żeby uruchomić kontener, który jest zatrzymany, musimy użyć polecenia docker start.
+Wiedziałem, czyli czekaj. Kolejne polecenie. Mamy run, mamy pól do pobierania, mamy run do uruchamiania.
+Mamy exec do wykonywania poleceń i start, żeby uruchomić coś, co było zatrzymane.
+Tak.
+Ok, dobra. To wszystko sobie powtórzyłem, to teraz chciałbym wykonać to start, no i tego suite Antonelli uruchomić.
+Także przekazujemy nazwę kontenera do uruchomienia.
+Ok.
+I robimy docker start. I już.
+I możemy sobie z tym.
+Dokrps.
+Zobaczy nam ten kontener, że on działa?
+Tak.
+A, no to to jest proste w sumie. A czy tak samo jak robię docker start, mogę też zrobić docker stop w tym miejscu?
+Dokładnie tak. Możesz w dowolnym momencie uruchomiony kontener zatrzymać.
+To chwilę potrwa.
+Czyli to działa dokładnie tak samo, jakbym wszedł na kontener i go zatrzymał poleceniem tam powiedzmy exit czy control D, tak?
+Tak.
+Ok, dobra.
+Ok, no to temat myślę, że jest już jasny i nie musimy wchodzić tego pliku oglądać, natomiast powiedziałyśmy jeszcze, że mamy jakieś polecenie, które pozwoli na usunięcie takiego kontenera, w sensie załóżmy, że mamy już jakieś pliki na tym kontenerze i teraz chcę, w cudzysłowie, zatrzeć ślady, chciałbym już nie mieć tego kontenera, to jest też jakiś sposób na to, żeby też tak łatwo ten kontener zatrzymać.
+Tak, to jest też jakiś sposób na to, żeby też tak łatwo ten kontener zatrzymać.
+Tak.
+Możemy ten kontener usunąć, jakiś docker.rm, skoro tutaj jest docker.ps, to może jakoś tak?
+Tak, możemy sobie oczywiście skorzystać z naszego helpa, jeśli nie wiemy, czego potrzebujemy i możemy sobie przejrzeć, co mamy dostępne i akurat od dołu mamy rm oraz rmi.
+Są dwa polecenia do usunięcia.
+Chyba kiedyś go używałem, tego polecenia.
+Pewnie tak, w praktyce czasami się przydaje.
+Istotnie, istotnie docker.rm służy do usunięcia kontenerów, nie obrazów, bo jak już wiemy, to nie jest to samo.
+Tak, jak najbardziej.
+Czyli co, no to w takim razie chciałbym zrobić tak, żeby tego słodkiego nie udało się już więcej podnieść.
+Dobrze, czyli usuwamy słodkiego Antonelly'ego.
+Bach, jest usunięty.
+O, i go nie ma już.
+Nie ma go już. Już się do niego nie wrócimy.
+Ok.
+Także w tym momencie wszystko, co na nim było, zniknęło.
+Ok. No to w sumie to proste jest. Spodziewałem się, że będzie trochę trudniej.
+Wydaje mi się, że w tej lekcji możemy zrobić sobie małą pauzę.
+Natomiast kolejna rzecz, o którą będę chciał cię zapytać i to może będzie też taka zachęta, żeby wiesz, taki, jak to się mówi, zatrzymanie takie.
+Tak jak jest czasem.
+W serialu, żeby dowiedzieć się...
+Cliffhanger.
+Cliffhanger, o właśnie.
+Co mogę zrobić, żeby mieć jakiś taki folder na przykład, który byłby dostępny u mnie na komputerze i żeby go udostępnić takiemu kontenerowi.
+To też się da zrobić chyba, nie?
+Tak, to omówimy sobie w następnej lekcji.
+Aj, kurczę, myślałem, że chociaż podpowiesz, jak to się nazywa.
+Ale dobra, to do zobaczenia w kolejnej lekcji.

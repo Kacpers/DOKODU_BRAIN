@@ -1,0 +1,118 @@
+No to hej, co tam? Przyszedł kolejny moduł, kolejne lekcje i kolejna praca domowa.
+Zaczniemy więc sobie od rozwiązania tych zadań.
+Zadanie pierwsze. Policz średnią, minimalną oraz maksymalną cenę dostawy dla poszczególnych krajów.
+I zadanie drugie. Policz klientów, customers według ich kraju, a następnie według miasta.
+Ok. Zapraszam do rozwiązywania.
+Co by nie skakać, zebrałem już wszystkie zadania po prostu tutaj w formie komentarzy.
+Więc, policz średnią, minimalną oraz maksymalną cenę dostawy dla poszczególnych krajów, ship, country.
+No to select all from orders.
+No i tutaj oczywiście będą nas interesowały...
+Nas interesowały trzy funkcje.
+Average, mean oraz max.
+Czyli średnia, minimalna oraz maksymalna.
+I to chcemy zrobić dla ceny dostawy, czyli zrobiliśmy.
+I dla poszczególnych krajów.
+No to ok, czyli group by, ship, country.
+Ops.
+No i mamy.
+Jeszcze ship, country też sobie wyświetlmy.
+Jak widzicie nie musieliśmy tego robić, ale warto to zrobić, żeby to widzieć.
+Coś jest źle.
+A, po selekcji jest przecinek.
+Ok.
+No i w ten sposób zobaczymy, że na przykład dla Argentyny średnia wartość zamówienia to 37.
+Średni koszt dostawy.
+Natomiast tu mamy minimalną 0,33, maksymalną 217.
+Najwyższy koszt...
+Dostawy.
+Najwyższy, najwyższy koszt dostawy był do Niemiec.
+Z tego względu, że tu jest aż taka liczba tysiąc, tysiąc czegoś.
+Nie wiem jaka to jest waluta u nas, ale tysiąc w każdym razie.
+Więc dużo.
+A najwyższy, najniższy?
+175.
+O, tu jest coś nie tak.
+Źle płacimy.
+O tym sortuję, widzicie?
+Czy ja coś źle zrobiłem?
+Może nie powinienem ufać.
+Jest ok.
+80.
+Najwyższy, najniższy.
+Ok.
+Idziemy dalej.
+Policz klientów, customers według ich kraju, a następnie według miasta.
+No to analogicznie.
+Select.
+Kraj i miasto.
+No to country, city, from, customers.
+No i interesować nas będzie ich ilość.
+Czyli select country, city, count, from customers, group, by, country, city, ops, no i mamy informację ilu jest tych klientów.
+Najwięcej mamy klientów z Londynu i z Nantes, najmniej dwójka, a poza tym Meksiko, Sao Paulo, Rio de Janeiro, Buenos Aires, no działa.
+Ale nam się firma zrobiła.
+Idziemy dalej.
+Jaka jest średnia cena unit price dla poszczególnych kategorii i ile jest takich produktów wewnątrz poszczególnych kategorii?
+No to lecimy.
+Select.
+Ale się nagrupujemy, co?
+Select.
+Count.
+Przecinek.
+A, to wyżej.
+Przepraszam.
+Jaka jest średnia cena?
+Average.
+Unit price.
+Dla poszczególnych kategorii i kategorii ID i ile jest takich produktów, czyli from categories, from products.
+To będzie najpewniej.
+I kategorię ID.
+Group by kategorię ID.
+I mamy.
+Tu oczywiście trzeba byłoby jeszcze dołączyć sobie te kategorie, ale to już dowiemy się, jak dołączać, dowiemy się już w tym module.
+Więc wyszło.
+A ile jest takich produktów?
+No to count.
+I się dowiemy.
+Policz wszystkie produkty według quantity per unit, a następnie wyświetl tylko te, których ilość jest większa niż jeden.
+No to select.
+From products.
+Group by quantity per unit.
+I to, co będziemy pobierali, to będziemy pobierali właśnie quantity per unit i counta.
+I to, co będziemy pobierali, to będziemy pobierali właśnie quantity per unit i counta.
+I teraz chcemy tylko te, których ilość jest większa niż jeden, więc potrzebujemy having.
+Having count większy niż jeden.
+Gotowe.
+Gotowe.
+Ale nam to idzie sprawnie.
+Idziemy dalej.
+Przygotuj listę miast, które znajdują się w tabeli Customers, ale nie znajdują się w kolumnie, w tabeli Suppliers.
+No to select city from Customers accept.
+Select city from Suppliers.
+I ostatnie.
+Przygotuj listę.
+przygotuj transakcję za pomocą której do tabeli shippers dodasz następujące
+firmy select gwiazdka from shippers bo oczywiście nie pamiętam nas w kolumn
+już pamiętam no i co badging insert into tak naprawdę jak robimy jeden insert
+z trzema wartościami no to transakcja nam jest poniedź więc robię trzy
+czyste insert into shippers values default fedex i numer telefonu
+o i coś zepsułem przepraszam null value in column shipperid
+if offrelation shippers not null constant czy to jest nie tak
+dobra coś zepsułem end
+czy to możliwe że tam nie ma kolejnej wartości po prostu nie ma
+czy to możliwe że nasze shippers nie posiada
+że nasze shippers nie posiada wiecie czego
+kolejnych numerków jest to możliwe właśnie sprawdzam czyli public
+tables shippers i struktura jest not null int 2 nie ma tutaj żadnej
+informacji o tym żeby to był żeby tutaj była jakaś ta uciekło mi słowo
+oczywiście ale mam na myśli out increment
+ok no to wpiszmy mu ręcznie czyli raz jeszcze muszę zrobić badging
+i będziemy mieli 7
+doplikuje tutaj 8
+będzie to impost
+i 9 to będzie dpd dpd czy dpd jak tam u was u mnie jest zazwyczaj
+takie nazwy czytam po polsku to jest php no i commit
+hop
+i w ten sposób jeżeli zrobimy select gwiazdka from shippers
+to powinniśmy mieć też dodatkowe te firmy i są na samym dole
+hura jeżeli i u was praca domowa przeszła gładko to zapraszam was
+do kolejnego modułu do zobaczenia

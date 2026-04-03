@@ -1,0 +1,131 @@
+Słyszałem waszą ciekawość kiedy
+skończyła się poprzednia lekcja o nie
+muszę zaczekać nie lekcja już
+jest dostępna można śmiało ją
+sobie też studiować a mianowicie
+Cóż to takiego jest ten look-up
+look-up trochę mi się kojarzył
+z takim excelowym w look-upem
+pod dobieraniem danych to się
+nazywa chyba wyszukaj pionowo w
+Excelu więc można to sobie też
+to tak interpretować No i
+później mamy taką sytuację że
+jest są sobie książki books to
+jest jakaś kolekcja w tej
+kolekcji mamy id name i autor
+i niżej znowu jest id name i
+autor No i oczywiście obie te
+książki napisał Henryk Sienkiewicz
+a sobie stworzyłem taką sytuację
+że to jest autor autor a to
+jest Slag który określa mi
+tego autora mogłem używać id
+ale uznałem że przyjemniej
+będzie że to będzie na przykład
+jakiś tekst i teraz
+skoro wiemy że autor posiada
+autor posiada Slaga a książki
+posiadają autora czyli książki
+posiadają autora autor posiada
+Slaga to możemy sobie to połączyć
+zaczynając od książek choćby
+czy libibooks aggregate pokaż
+mi wszystkie książki ale zrób
+mi jeszcze tak że z autorów
+weź mi po autorze Zobaczcie
+local field skoro jestem w
+książkach to moim local fieldem jest autor
+czym autor natomiast moim
+foreign fieldem jest Slag więc
+w ten sposób właśnie sobie to określam
+i as autor info z tego względu
+że on będzie nam dociągał te dane
+z innej kolekcji Ważne jest
+tylko bardzo to żeby te kolekcje
+obie musiały muszą być w tej
+samej bazie danych i żeby jak
+on tam będzie to dociągał to
+musi wskazać jakieś pole w którym
+ta kolekcja ma się znaleźć ten
+jakby taki embed ma się znaleźć
+i to pole to jest właśnie ta
+nazwa która występuje tutaj Zobaczcie
+tak to będzie wyglądało czyli mam
+id w pustyni w puszczy autor Henryk
+Sienkiewicz no i autor info to
+jest dokładnie cały ten obiekt który
+pobrał nam się z tej tabeli obok
+bardzo ważna tylko jedna rzecz jest
+taka że jeżeli będziecie wiązali
+coś po idku to tutaj tego idk ma
+podkreślenie natomiast w tym look upie
+tego podkreślenia nie dodajecie to jest to podkreślenie w tym look upie tego podkreślenia nie dodajecie
+też wam to zadziała w ten
+sposób i będzie można sobie też
+dane tak pobierać wchodzimy
+już trochę w takie tematy relacyjne
+i te zabele mogą bazy danych
+mogą się teraz coraz bardziej
+podobać No i właśnie taka jest
+taka była tak jest cel żeby
+tak właśnie było No i tu mam
+dla was małe zadanko korzystając
+z bazy danych z poprzedniego
+modułu z książkami stwórz dodatkową
+kolekcję w tej samej tabeli o
+nazwie countries i stwórz
+kolekcję zawierającą dodatkowe
+informacje o kraju kolekcja
+powinna zawierać polskie tłumaczenia
+państw na przykład możecie tylko
+niektóre Iceland France i
+Italii a następnie napisz
+zapytanie którymi pobierzesz
+dodatkowo te informacje czyli
+chcielibyśmy żeby w książkach tam
+gdzie macie kraj wydania bodajże
+że można było pobierać jeszcze
+dodatkowe informacje to możecie
+dodatkowo co tylko chcecie możecie
+do tego kraju sobie dodać niech
+to będzie stolica chociażby
+spróbujcie sobie te dane też
+pobierać samodzielnie to
+co widzimy się po krótkiej przerwie
+czy tak jak sobie rozmawialiśmy
+mamy DB books find no i tutaj
+tych książek jest dużo mamy
+mamy też country
+jako informację nie Russia i tak dalej
+i teraz chcielibyśmy dorzucić jakieś
+informacje dla niektórych z państw do kolehów z kraju
+z państw do kolekcji o nazwie countries.
+No to robimy db.countries.insert men.
+No i możemy sobie dołożyć, tutaj tak samo możemy przyjąć, że interesować nas
+będzie ten slug, albo to name po prostu, tylko muszę pamiętać, że nazwałem to name,
+żeby potem się nie pogubił, Russia capital Moscow, przecinek.
+Co tam jeszcze mamy?
+Francja, name France capital Paris.
+I tam takie nam dwa państwa wystarczą, bo tu chodzi tylko i wyłącznie
+o przećwiczenie.
+Tego łączenia danych pomiędzy tabelami, czyli skorzystamy sobie po prostu z lookup.
+Okej, czyli jak to będzie wyglądało?
+db.books aggregate, co chcę zagregować?
+Lookup, lookup.
+Jak mam lookup, to mogę sobie podarować tę klamerkę.
+I będzie from, from books, local field tych naszych booksów, to jest country.
+Natomiast foreign field.
+No to jest country.
+No to jest country.
+No to jest country.
+No to jest country.
+Widzę, że zrobiłem błąd, zaraz go naprawię.
+To jest name i ten foreign key to oczywiście nie jest w books, tylko jest w countries.
+Okej, no i as details niech będzie po prostu, enter.
+Okej, no i zobaczcie, na końcu była Russia, więc nam podał detale Rosji, tak Rosji.
+Mamy Moskwę, no i w ten sposób to zadanie udało nam się rozwiązać.
+No i tak agregacje jak najbardziej, jak najbardziej działają.
+Jak najbardziej to powiązywanie, powiązanie z lookupem działa.
+Zapraszam więc was do kolejnej lekcji, w której poćwiczymy różne rodzaje kolekcji.
+Zapraszam.

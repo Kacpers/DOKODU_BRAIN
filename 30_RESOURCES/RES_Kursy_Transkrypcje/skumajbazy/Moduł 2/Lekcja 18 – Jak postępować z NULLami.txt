@@ -1,0 +1,107 @@
+Witajcie moi drodzy, przechodzimy sobie już do lekcji 18, w której porozmawiamy sobie o tym, jak postępować z nulami.
+Pewien polski zespół śpiewał kiedyś zero, czyli nic.
+Natomiast w świecie baz danych zero i nic to dwie różne rzeczy.
+No bo zero to tak naprawdę wartość liczbowa, która jest zerem, czyli niesie jakąś konkretną informację.
+Natomiast nul, no to jest właśnie takie nic.
+Więc teraz porozmawiamy sobie o tym, jak możemy sprawdzić, czy w danej kolumnie jest wartość, która jest nulem,
+oraz ogólnie kilka takich informacji, jak z nulami należy postępować.
+Zacznijmy sobie od tego, że wartości z nulami mogą być dowolne.
+To może być brak wartości tekstowej, brak wartości liczbowej, czy też po prostu ogólnie zwyczajnie brak wartości.
+Nie zawsze brak wartości może być ustawiony.
+Gdyż w momencie, w którym konfigurujecie sobie jakąś tabelę, możecie określić, że dla tej tabeli, dla danej kolumny not nul jest zaznaczone.
+Jeżeli to not nul jest zaznaczone, tak jak widzicie przy customer ID oraz przy company name, to oznacza to nie mniej, nie więcej, a tyle,
+że po prostu baza danych nie pozwoli Wam zapisać, właściwie to nie zapisać wartości do danej kolumny, bo po prostu za każdym razem ta wartość musi być podana.
+I to nie jest walidacja.
+Jakby pójdzie taki wyjątek, w błąd, kompletnie nie dopuści Was do tego, żeby nie podać tej wartości sama baza.
+I teraz, jeżeli chcielibyśmy pobrać sobie takie przypadki, w których jednak pozwoliliśmy na to, żeby ten nul został zapisany i chcielibyśmy wyszukać wszystkie te wartości,
+gdzie nule zdarzają się w kilku miejscach, albo właśnie nie podaliśmy, albo kiedy robimy złączenia, o złączeniach będziemy jeszcze mówili w przyszłości,
+to też te nule czasem nam się pojawiają.
+I jeżeli chcemy sobie zapisać, czy coś jest nulem, no to nie możemy zrobić kolumn równa się 0.
+To nam nie zadziała, gdyż nule nie pozwalają się porównywać.
+To zobaczycie za chwilę.
+Kolumn równa się string pusty też nam nie zadziała, no bo string pusty to to nie jest, to jest nul, czyli nic, a nie string pusty.
+Jeżeli sobie natomiast chcemy pobrać, to możemy sobie to pobrać albo za pomocą wyrażenia is null, albo wyrażenia is not null.
+Oczywiście wtedy, kiedy chcemy pobrać wszystko to, co nie jest nulem.
+Oczywiście wtedy, kiedy chcemy pobrać wszystko to, co nie jest nulem.
+Ale z tym jeszcze też, z tym is not i z tym nie równa się, to też jeszcze sobie zaraz o tym poopowiadamy.
+I tutaj mam dla was takie trzy małe zadanka.
+Po pierwsze, chcemy pobrać wszystkich pracowników, employees, którzy nie raportują do nikogo, czyli w kolumnie reports to mają 0.
+Po drugie, chcemy pobrać wszystkich klientów, customers, którzy nie posiadają kodu pocztowego, no bo takich też niestety zebraliśmy.
+No i po trzecie, chcemy pobrać wyłącznie klientów, którzy podali nam stwór, że nie mają kodu pocztowego, no bo takich też niestety zebraliśmy.
+No i po trzecie, chcemy pobrać wyłącznie klientów, którzy podali nam numer swojego faksu.
+Czyli nie chcemy wyświetlić tylko tych, którzy nie mają 0 w kolumnie z faksem.
+No to co, 5 minut dla każdego i do zobaczenia za chwilę.
+Ok, no to zadanie pierwsze.
+Pobierz wszystkich pracowników, którzy nie raportują do nikogo.
+Czyli najpierw sobie pobierzemy wszystkich pracowników, select gwiazdka from employees.
+No i zobaczcie, że tutaj mamy między innymi taką kolumnę, która nazywa się właśnie reports to.
+No i jak widać na załączonym obrazku, są też takie osoby, które mają 0 w tej kolumnie.
+Więc where reports to is 0.
+O, jak widać jest tylko jedna taka osoba.
+Czyli to jest jakiś tam nasz najważniejszy pracownik, Fuller Andrew, a wicepresident, no on już widocznie na samej górze.
+Pytanie kto jest prezydentem, pewnie ten prezydent byłby nad nim, ale ok.
+Po drugie, pobierz wszystkich klientów, którzy nie posiadają kodu pocztowego.
+No to lecimy, select, all from customers, where postal code is 0.
+Hops, no i mamy też jedną tylko taką osobę, akurat tak wyszło.
+No i teraz wszystkich pracowników, wszystkich klientów, którzy podali nam numer swojego faksu.
+No i teraz wszystkich pracowników, wszystkich klientów, którzy podali nam numer swojego faksu.
+Czyli is not 0.
+Select gwiazdka from customers, where fax, jest kolumna fax, coś mi tutaj nie chce podpowiadać.
+Najpierw zrobię sobie select gwiazdka from customers.
+Ach, już miałem wcześniej, więc mogłem to zostawić.
+Fax to tylko fax, ok.
+Where fax is not 0.
+Sprawdzam, o, jak widzicie tutaj w tym przypadku tych klientów mamy troszkę więcej.
+I tak wygląda sprawa z powrotem.
+I tak wygląda sprawa z powrotem.
+Tak wygląda sprawa z powrotem.
+Jak wygląda sprawa z porównywaniem sobie czy w danej Excellent it
+Size volunteer columnie mamy 0?
+Czy też go nie mamy.
+Czy też go nie mamy.
+Tak wygląda sprawa z powrotem.
+Jak wygląda sprawa z powrotem.
+Tak wygląda sprawa z powrotem.
+Ale, jeżeli chodzi o korzystanie z 0 to trzeba wiedzieć odrobinę więcej.
+Ale, jeżeli chodzi o korzystanie z 0 to trzeba wiedzieć odrobinę więcej.
+Dlatego też zapraszam was do kilku dodatkowych informacji w sprawie 0.
+Dlatego też zapraszam was do kilku dodatkowych informacji w sprawie 0.
+Do zobaczenia za chwilę.
+Do zobaczenia za chwilę.
+co się stanie w momencie, w którym będziemy chcieli sobie pobrać
+wszystkie wartości, wszystkich klientów, którzy są z Niemiec
+i nie podali nam faksu. Zrobiłem zapytanie select gwiazdka from customers
+where country równa się Germany and fax is nul.
+Okej, no i dostałem trzy takie osoby. Branderburgia,
+Leipzig i Kuhnewalde. No i teraz są rekordy.
+Okej, zobaczmy co się stanie dalej.
+Okej, następnie wykonamy sobie zapytanie
+select all from customers where country równa się Germany and fax
+jest inny niż 123. No i w tym momencie tych rekordów też dostajemy
+trochę, ale zwróćcie uwagę na to, że tutaj nie ma żadnych nuli.
+Możecie sobie wykonać zapytanie, okaże się, że w momencie, w którym je wykonujecie
+no to nie widzimy ani jednego nula. Dlaczego tak jest?
+Dzieje się tak dlatego, że nul nie jest chętny do porównywania się.
+Czyli w momencie, w którym chcielibyście pobrać wszystkie dane z wykluczeniem
+nuli, no to możecie zrobić is not nul.
+Natomiast, jeżeli sprawdzacie, czy są inne niż,
+albo czy są większe niż, albo mniejsze niż, to z marszu wszystkie nule też
+będą Wam znikały. To jest bardzo ważna informacja. Dlaczego tak jest?
+Dzieje się tak dlatego, że nul po prostu to nie jest nic
+no i nie da się go porównać. Tak jak wspomniałem przed momentem. Trzeba to zrobić inaczej
+i można spróbować za pomocą wyrażenia distinct.
+Zobaczcie, select gwiazdka from customers, where country to Germany
+and fax is distinct from 123. I w momencie, w którym wykonacie takie zapytanie,
+czyli is distinct from, to wówczas nule nam wróciły.
+Ja tak się zastanawiałem, jak Wam to wytłumaczyć.
+I na myśl przyszło mi, że powinniśmy sobie właściwie zastanowić się nad tym,
+co tak naprawdę oznacza samo wyrażenie distinct.
+A distinct oznacza?
+Różni się od nul. Czyli tak naprawdę jest to bardzo zbliżone
+do tego, że nie jest równe, ale czy jest różne od.
+Natomiast tutaj nie możemy wykonywać różności za pomocą tego operatora,
+tylko, czy też wykrzyknika zrówna się, tylko musimy użyć właśnie tego wyrażenia
+is distinct from nul. I dopiero w ten sposób uda nam się to wykonać.
+I to byłoby na tyle w tej lekcji. Zapraszam Was do lekcji następnej.
+Do zobaczenia. Cześć.
+Muzyka

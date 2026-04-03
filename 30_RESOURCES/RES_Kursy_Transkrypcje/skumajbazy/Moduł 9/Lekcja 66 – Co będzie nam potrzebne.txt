@@ -1,0 +1,91 @@
+Tak jak wspomniałem, bazą danych, której będziemy używali, będzie MongoDB.
+Więc siłą rzeczy pierwsze, co musimy wykonać, to musimy sobie to MongoDB zainstalować.
+I tutaj, jeżeli chodzi o instalację, to polecam Wam wejść na stronę mongodb.com
+slash try, slash download, slash community.
+Z tego względu, że MongoDB jest wydawane w kilku różnych wersjach,
+nas interesuje wersja bezpłatna.
+Dodatkowo, jeżeli korzystacie z MongoDB i instalujecie go właśnie z tego linku,
+to powinien Wam się dodatkowo zainstalować taki programik, który nazywa się Kompas.
+On służy do tego, żeby śledzić, tak jak na Dockerze jest Docker Hub,
+kojarzycie na pewno tą, znaczy nie Docker Hub, tylko jest Docker,
+to takie ustrojstwo, które pokazuje, jakie obrazy są w danej chwili włączone.
+Tak samo Kompas to jest takie narzędzie, które pokazuje, jakie bazy danych mamy,
+pozwala nam się do różnych baz danych.
+Popodłączać tylko MongoDB, MongoDB pozwala nam wykonywać polecenia,
+no i myślę, że jest bardzo wygodny.
+Do tej pory też często używałem takiego narzędzia, które nazywało się Robo3T,
+natomiast też RoboMongo, tak to ono zmieniało nazwy,
+jednakże tam jest bardzo duża partia na to, żeby zainstalować takie całe środowisko,
+które kosztuje, więc też Wam tego nie polecam, w sensie nie używałem go,
+więc nie mogę go polecić, natomiast ta wersja darmowa ma jeden mankament,
+który uniemożliwia mi używanie go podczas kursu, a mianowicie nie da się zmienić wielkości czcionki
+i na nagraniach ta wielkość czcionki była bardzo, bardzo mała,
+ale jeżeli Wam by się spodobało, to też Robo3T bodajże to się nazywa,
+też jest takie narzędzie, z którego możecie śmiało, śmiało korzystać,
+żeby podczas naszego kursu.
+Natomiast...
+Po ściągnięciu tego linka, naszego MongoDB,
+będziemy musieli go sobie zainstalować,
+więc tutaj 3 minuty dla każdego na instalację.
+Mam nadzieję, że MongoDB udało nam się zainstalować.
+Instalacja, z tego co pamiętam, polega tylko i wyłącznie na klikaniu Next pod Windowsem,
+a pod Linuxem, OSXem pewnie wszystko przebiega tak, że sobie sami poradzicie.
+Natomiast później, w momencie, w którym uruchomicie Mongo,
+kiedy sobie zainstalujecie Mongo, przynajmniej pod Windowsem działa to tak.
+Hej, hej, hej.
+Chcę to pokazać, ale nie mogę.
+Że jeżeli w każdym razie wpiszecie Mongo, to wówczas on Wam pokaże MongoDB Kompas.
+I to MongoDB Kompas to jest polecenie, które powinniśmy sobie uruchomić,
+natomiast MongoDB samo powinno działać cały czas w tle.
+Jeżeli mielibyście jakikolwiek problemy, pamiętajcie, że jest Discord,
+ja na tym Discordzie jestem, staram się by Ci odpowiadać, więc śmiało możecie pytać.
+Jest to też super społeczność, która wzajemnie sobie pomaga, więc też jest to opcja.
+I wówczas, jak uruchomicie Kompas, to powinniście zobaczyć takie okienko,
+w które można wpisać tzw. connection string.
+Można też kliknąć przycisk Fill in Connection Fields Individually,
+jeżeli mamy te dane skądś in don't, natomiast jeżeli chcecie pracować na Waszym komputerze,
+no to zainstalowaliście Mongo, wystarczy, że klikniecie w przycisk Connect,
+i wówczas to Mongo powinno się, do tego Mongo powinien on się sam podłączyć.
+Natomiast często, jeżeli korzystacie z jakichś aplikacji zewnętrznych,
+no tak samo jak z Postgresem, jak najbardziej można też sobie to Mongo
+doinstalować na jakimś serwerze i łączyć się z tym zdalnym serwerem,
+czy też tworzyć na Dockerze jakieś obrazy z Mongo,
+więc wtedy tutaj należałoby wpisać po prostu connection string właściwy dla miejsca,
+gdzie to Mongo się znajduje, ale tego niestety Wam nie powiem,
+no bo tak samo jak i z Postgresem, wszystko zależy od tego jak go zainstalowaliście,
+gdzie, no i to trzeba byłoby podać.
+Ja osobiście rzadziej korzystam z tego connection stringa,
+chyba, że go dostaję wprost.
+Z tego co pamiętam, to na przykład jest taka strona Mongo Everywhere chyba,
+zaraz sobie przypomnę jak to się nazywało,
+i na tej stronie oni jedyne co robią, to udostępniają hosting.
+Ach, teraz to się nazywa MLab.
+I to jest MongoDB Hosting, kiedyś z tego korzystałem
+i oni po prostu udostępniają nawet chyba za darmo takie Mongo,
+można się do niego podłączyć i można też na nim wykonywać różne ćwiczenia.
+Więc jeżeli z jakiegoś powodu nie chcielibyście instalować Mongo u siebie,
+to można też z tego MLaba skorzystać.
+Widzę, że dają 500 MB za darmo, spokojnie Wam ta ilość wystarczy.
+I oni z kolei dają właśnie taki connection string,
+więc wtedy wystarczy go wkleić,
+wybrać miejsce, zrobić connect i będziecie podłączeni.
+Za długo chyba na tym jednym slajdzie wiszę, idziemy dalej.
+Po podłączeniu się do bazy danych powinniście zobaczyć rzecz taką jak u mnie,
+a mianowicie będziecie mieli local,
+będziecie mieli po lewej stronie, akurat to są trzy bazy danych,
+no i to jest admin, config i local, jak widać.
+To są trzy różne bazy danych,
+gdyż w przypadku Mongo jest tak samo jak w przypadku Postgresa,
+też mamy pewien podział,
+czyli mamy bazy danych,
+później w przypadku Postgresa mieliśmy schematy,
+tu schematów nie będzie, o tym powiem za chwilę,
+no i potem mieliśmy tabele, tutaj są kolekcje.
+Jak widać też wyświetlił nam w bazie danych określoną liczbę kolekcji i danych,
+tak powinno wyglądać połączenie się do bazy danych z sukcesem.
+Jeżeli chcemy rozpocząć pracę,
+no to wypadałoby stworzyć sobie swoją własną bazę danych.
+Sposoby są dwa, ale powiem o nich już za moment,
+przejdźmy jeszcze tylko przez słowniczek pojęć.
+W kolejnej lekcji zapraszam do niej.
+Do zobaczenia.

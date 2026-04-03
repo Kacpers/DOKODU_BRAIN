@@ -1,0 +1,19 @@
+Kolejnym poleceniem, które sobie omówimy jest network, czyli sieć.
+Tutaj nie ma niespodzianek, nie ma zaskoczeń.
+Sieć to sieć.
+W przypadku Dockera jest to sieć wirtualna, która jest obsługiwana przez samego gospodarza.
+Możemy sobie takie sieci podefiniować w ramach naszych potrzeb.
+Możemy mieć jedną taką sieć, kilka takich sieci.
+Możemy nie definiować żadnej, korzystać z domyślnej.
+I wykorzystując te sieci możemy określić w jaki sposób kontenery mogą się ze sobą komunikować.
+Na przykład możemy mieć jedną sieć, która jest jakby współdzielona z gospodarzem,
+bo mamy aplikację front-endową, którą chcemy wystawić z tego naszego serwera,
+ale pod spodem możemy mieć też sieć dla aplikacji back-endowej,
+która działa na tym samym gospodarzu, sieć dla bazy danych i możemy sobie rozdzielić,
+który kontener z którym, po której sieci może się komunikować.
+Tak, to jest trochę tak jakbyśmy potraktowali każdy kontener jako osobny komputer
+i decydowali ile kart sieciowych ma być wpiętych do każdego z tych kontenerów
+i które z nich mają być ze sobą połączone kabelkami.
+Tak żeby się widziało.
+Jeżeli dany kontener będzie widoczny w innej sieci niż pozostałe,
+no to może po prostu nie mieć dostępu do tych pozostałych kontenerów.

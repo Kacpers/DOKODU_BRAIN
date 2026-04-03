@@ -1,0 +1,73 @@
+A praca w tym tygodniu domowa jest i wygląda tak.
+Po pierwsze, utwórz tabelę Subjects oraz Lessons według przykładu poniżej.
+Pamiętaj o Constraintach.
+Sprawdź jak zadziała Restrict, gdy spróbujesz usunąć temat, który posiada lekcję
+oraz co się stanie, gdy usuniesz Constraint i zamienisz go na Cascade.
+Czyli będziemy chcieli sobie kilka rzeczy przećwiczyć.
+Najpierw stworzenie tabeli wraz z Constraintem, który ma być Restrict dla usuwania.
+Następnie dodajemy rekordy poniżej.
+Widzicie, że mamy Subject i Lessons.
+Spróbujemy po prostu je dodać.
+Nie powinno się nie udać.
+Następnie próbujemy usunąć temat, który posiada lekcję.
+Powinniśmy zobaczyć błąd.
+Następnie możemy usunąć Constraint.
+Tak jak go dodajemy, tak samo możemy go usuwać.
+No i dodajemy go raz jeszcze, ale tym razem w wersji Cascade.
+Wtedy próbujemy usunąć Subjects i powinniśmy nie mieć lekcji.
+Takie trochę zajęcie dla poćwiczenia tego, o czym mówiłem tak długo.
+Idziemy dalej.
+Zadanie domowe drugie.
+Korzystając z obrazu Dockera, czyli jeżeli nie postawiliście wcześniej Dockera,
+to jak najbardziej możecie go postawić teraz.
+Dobra, to było suche, przepraszam.
+Dockera teraz.
+Nie ważne.
+Spróbuj postawić Dockera na swoim komputerze.
+Będziesz wówczas jego administratorem.
+Sprawdź, co się stanie, jeśli utworzysz nowe konto użytkownika
+i zabierzesz mu uprawnienia do dodawania treści,
+a następnie podłączysz się do bazy danych z tego konta
+i spróbujesz dodać nowy wpis.
+Sprawdź, co się dzieje, gdy inny użytkownik nie będzie mógł nawet czytać z danej tabeli.
+Jednym słowem, spróbuj przetestować to, o czym mówiłem.
+Have fun.
+Myślę, że rozumiecie.
+Opowiadałem sporo o tym, jak dodawać uprawnienia,
+jak zabierać uprawnienia, jak tworzyć konta użytkowników,
+więc mając u siebie Postgresa z Northwindem od razu wbudowanym,
+nie trzeba nic importować.
+Jeżeli postawicie go z tego obrazu, to będziecie mieli wszystko.
+Bawcie się dobrze.
+Ja oczywiście przy rozwiązywaniu tej pracy domowej
+też będę starał się dobrze bawić.
+Zadanie domowe trzecie.
+Przygotuj strukturę bazy danych dla listy to do
+zawierającą kolumny Remind me, add, title oraz done.
+Czyli robimy sobie taką bazę danych.
+No i chcemy, żebym miała takie kolumny i chcemy stworzyć partycję, która będzie
+zawierała wykonane zadania, czyli te, gdzie done jest ustawione na true.
+Niewykonane zadania, czyli te, gdzie done jest ustawione na false.
+No i partycje dla zadań z zeszłego roku, czyli dla mnie to będzie rok 2020.
+Jeżeli rozwiązujecie to zadanie w przyszłych latach,
+to mam nadzieję, że też wam to wyjdzie.
+Zadanie domowe czwarte.
+Przygotuj zapytanie, które zwróci nam zamówienia wraz z informacjami.
+Jaki udział procentowy kwoty tego zamówienia w całym miesiącu?
+Jaki jest udział procentowy kwoty tego zamówienia w całym miesiącu?
+Zamówienia podzielone przez sumę zamówień z miesiąca dla klienta Vnet.
+Czyli to, co widzicie teraz na ekranie, to są tylko zamówienia dla klienta
+Vnet. I teraz i w tym miejscu mamy wartości poszczególnych zamówień.
+Czyli to jest zamówienie za 168, to jest zamówienie na 98, a to jest zamówienie na
+173. I teraz, jeżeli to są jedyne zamówienia, które zostały zrealizowane w
+lipcu, to te trzy wartości chcemy zsumować i policzyć udział.
+Czyli jaka jest wartość tej liczby względem sumy?
+Macie bardzo podobne rozwiązanie, prawie identyczne.
+Na pierwszym slajdzie, jak mówimy sobie o liczeniu o
+funkcjach rynkowych, ale spróbujcie tam za bardzo nie zerkać.
+Albo jak zerkać tylko jednym okiem, tym słabiej widzącym.
+To byłoby na tyle, jeżeli chodzi o pracę domową.
+Życzę Wam powodzenia i zapraszam już
+niedługo do kolejnych zmagań w kolejnym module, a tam trochę zaczniemy sobie
+programować, ale nie uprzedzajmy faktów, praca domowa czeka.
+Cześć.

@@ -1,0 +1,244 @@
+Hej, hej, hej!
+Zobaczcie, mamy playera. Player to jest gracz.
+Gracz gra w zespole, no więc gracz ma team ID, no i tu jest drużyna.
+Gracz pochodzi z jakiejś konkretnej lokalizacji,
+więc nasz gracz ma taką tabelę jak player location,
+która zawiera ID, player ID, city ID i counter ID.
+Counter ID znajduje się w tabeli country, a city ID znajduje się w tabeli city.
+I teraz, jeżeli chcielibyśmy wykonać zabawę,
+a pytanie pobierające informacje o tym, że ktoś gra,
+nie wiem, Cristiano Ronaldo gra, ojej, już nie gra w Realu chyba, co?
+Dobra, Robert Lewandowski gra w Bayernie Monachium
+i pochodzi z Monachium, z Niemiec,
+i chcielibyśmy to wszystko wyświetlić w jednym wyniku,
+no to musimy się połączyć z jedną tabelą na zewnątrz, tak?
+Z jedną tabelą inną oraz z tabelą pośredniczącą,
+tylko po to, żeby z niej pociągnąć sobie city i z niej pociągnąć sobie country.
+I takie zapytanie nie jest niczym strasznym,
+chociaż na kursach zauważyłem, że często pierwsze wrażenie jest delikatnie przerażające,
+ale nie bójcie się, damy radę.
+Jak to zrobić?
+No po prostu trzeba odpowiednią ilość razy się pojojnować.
+Zróbmy to sobie razem, zupełnie na spokojnie, zobaczcie.
+Mówimy sobie o tym, że mamy playera, player ma team.
+No to robimy select player name, team name from player left join team
+on player team ID, równa się team ID, ok?
+Dlaczego tak?
+No bo mnie interesują wszyscy gracze.
+Jeżeli gracz nie ma drużyny, no to chcę zobaczyć, że w ramach jego drużyny jest nul.
+Jeżeli bym tego nie chciał, to zrobiłbym innerjoina.
+Nie interesują mnie drużyny, w których to drużynach nie mam w tej chwili żadnych graczy zarejestrowanych.
+Totalnie.
+Nie, mi to nie interesuje.
+Dlatego też wybrałem leftjoina.
+Jeżeli ktoś pyta, dlaczego nie innerjoina, to nie ma sprawy.
+Zmień na inner, tylko zdawaj sobie sprawę z tego, że wtedy pokażą ci się wszyscy piłkarze,
+wszystkie takie drużyny z piłkarzami, a nie zobaczysz piłkarzy nieprzydzielonych.
+Jeżeli z tego sobie zdajesz sprawę, zrób innerjoina.
+Nie ma problemu.
+Dalej, nasz gracz ma swoją lokalizację.
+To, co jest w select, to już tutaj usunąłem.
+Mamy trzy kropeczki.
+Nie będę tego wszystkiego wypisywał.
+No, ale jak widać, doszedł nam jeszcze jeden leftjoin.
+Czyli select coś tam from player p.
+Doszedł też alias.
+Dlaczego doszedł alias?
+Żeby nie pisać całych tych nazw.
+To po pierwsze.
+A po drugie, zobaczcie, że player location nie może mieć aliasu p, tylko ma już pl, bo player, p od player i location, bo l.
+Więc select coś tam from player leftjoin team t on p team id.
+Równa się t kropka id.
+No i leftjoin player location pl on pl kropka player id równa się p kropka id.
+I w ten sposób będziemy mieli już kolejną informację, czyli będzie nasz gracz, drużyna i lokalizacja.
+Na chwilę obecną w każdej tabeli mamy dokładnie jeden wiersz odpowiadający temu naszemu graczowi, więc też będziemy mieli jeden wiersz wynikowy.
+Problemu nie ma.
+Idziemy dalej.
+No i dochodzimy sobie do sytuacji, w której chcemy.
+Jeszcze coś dowiązać, no i dowiązujemy sobie city oraz country.
+Skoro już pobraliśmy sobie city oraz country id ich i mamy je w player location, no to raz jeszcze robimy leftjoin i zobaczcie, co tutaj się dzieje.
+Leftjoin city, czyli mówię, że wiąże się z tabelą city on pl kropka city id dlaczego pl no, bo ja się wiążę z player location i pl kropka city id.
+Równa się city kropka id no i leftjoin country on i znowu pl.
+Tutaj częstym błędem jest nie wiem czemu, ale częstym błędem jest, że ktoś napisał on city kropka country id.
+A to nie jest tak.
+My mamy city.
+Przechowujemy je w player location, więc też musimy skorzystać z tej informacji.
+Moglibyśmy teoretycznie mieć city i z city moglibyśmy iść do country, ale na chwilę obecną mamy tak, że wszystkie te informacje pochodzą z player location.
+Czyli leftjoin country.
+On pl kropka country id równa się country kropka id no i tak wykonując cztery joiny, gdzie jeden był bezpośredni, a jak widać dwa były pośrednie przez player location udało nam się pobrać komplet informacji.
+Dzięki temu możemy skorzystając z p bo player wyświetlić p kropka name t bo team wyświetlić nazwę drużyny city name country name.
+No bo to są dwie.
+A kolumny.
+Które zawierają informacje o nazwie kraju i o nazwie miasta i tyle.
+I tak jak na początku mam wrażenie, że te joiny są lekko przerażające.
+Tak im dalej w las, tym robi się to coraz bardziej automatycznie.
+Jedyne w czym się człowiek gubi.
+Może mówię człowiek, a myślę o sobie, a więc może jedyne w czym ja się przynajmniej gubię.
+To są nazwy kolumn.
+I dlatego warto mieć zawsze gdzieś te sobie albo wydrukowane albo mieć na podorędziu gdzieś możliwe.
+Sprawdzenia jak się nazywają nasze kolumny albo po prostu tak jak ja wykonywać za każdym razem selekt gwiazdka from i sprawdzać, bo tak jest po prostu łatwiej.
+Często sami przejdziemy dalej, że pozwolę sobie na małą dygresję, często jestem pytany na szkoleniach, czy też byłem pytany na szkoleniach, jak to jest, że siedząc na przykład w języku programowania mogę bez problemu napisać zapytanie sqlowe.
+To do końca tak nie jest, jeżeli ja się jestem w języku programowania i pisze jakiś program.
+I w ramach tego programu mam napisać zapytanie sqlowe, które mi coś pobiera, to raczej nie robię tak, że siedzę w tym moim idee w edytorze i siedzę i pisze kod i nagle przełączam się i pisze sqla, tylko uruchamiam sobie dbwera w dbwerze przygotowuje zapytanie, upewniam się, że zapytanie zwraca to, co mi jest potrzebne i jak jest okej, dopiero wtedy przełączam tego dbwera, w sensie przełączam, kopiuję z dbwera zapytanie, wklejam je sobie do pycharma, czy do phpstorma, czy do czegokolwiek innego.
+I to jest to, co ja robię.
+I to jest to, co ja robię.
+I to jest to, co ja robię.
+Modyfikuję tak, żeby mi wszystko działało i dopiero wtedy zaczynam pracę, idę dalej.
+Czyli często w dbwerze piszę zapytania i potem po prostu je wykorzystuję w ramach kodu.
+Czasem też zdarza się tak, że piszę zapytania w tak zwanym ORM-ie, czyli w czymś, co zupełnie nie przypomina sqla, ale ja i tak muszę mieć sqla z tyłu głowy, żeby wiedzieć, jak to zapytanie powinno wyglądać.
+I wtedy też.
+Jeżeli zapytanie jest trudniejsze, to najpierw wpiszę je sobie w dbwerze, upewniam się, że to zapytanie ma rację bytu, mogę je wykonać i wtedy szukam sposobów, albo po prostu nie szukam, tylko wiem jak, przetłumaczę to zapytanie na tego ORM-a.
+ORM to jest taki Object Relation Mapper.
+Jeżeli ktoś z Was jeszcze nie programuje, czy tam nie planuje programować, to się zupełnie tym tematem nie przejmujcie.
+To też jest taki sposób na radzenie sobie z zapytaniami.
+I niektórzy twierdzą, że jeżeli korzysta z tego, to nie ma sensu.
+Jeżeli korzysta się z ORM-a, to nie trzeba znać sqla, ja się z tym absolutnie nie zgadzam, bo uważam, że pracując z ORM-em jakimkolwiek, trzeba i tak wiedzieć, co on pod spodem robi i myśleć w ORM-ie, tak jakby się pisało zapytania sqlowe.
+Ok, koniec dygresji.
+Mam nadzieję, że to powiązanie pomiędzy tabelami przez kilka tabel Wam się spodobało i macie ochotę to przećwiczyć.
+Jeżeli tak, to zachęcam Was serdecznie do zadania 48.1.
+W którym to zadaniu mamy przygotować zestawienie zawierające następujące kolumny.
+Interesują nas data zamówienia, nazwa produktu, kategoria produktu oraz zadanie drugie, w którym to zadaniu mamy przygotować zestawienie wyświetlające zamówienia oraz przełożonych pracowników odpowiedzialnych za te zamówienia.
+Czyli wyświetlamy sobie zamówienie i przełożonych, czyli możemy wyświetlić po prostu imię, nazwisko.
+Zwróćcie uwagę na to, że...
+Z Orders możemy przejść do pracowników korzystając z Employees, gdzie mamy kolumnę Employee ID i z niej można znowu powiązać się z Employees, gdzie mamy Reports To.
+Czyli zupełnie analogicznie jak to robiliśmy przed chwilą, spróbujcie nie patrzeć w rozwiązanie, to które razem zrobiliśmy, tylko spróbujcie wykonać to samodzielnie.
+Trzy minuty dla Was i do zobaczenia.
+No to cóż.
+Data zamówienia to oczywiście z Order.
+Nazwa produktu, no to z Products, no i kategoria produktu to też z Products.
+Czyli Select gwiazdka From Orders.
+Zobaczmy najpierw co tam siedzi, żeby wiedzieć co możemy pobrać.
+I jak zrobimy sobie Select gwiazdka From Orders, to on nam wyświetla wtedy informację o zamówieniach.
+Nas interesuje data zamówienia, no to lecimy.
+Datę zamówienia znamy, to będzie Order Date.
+Nazwa produktu.
+Skąd możemy pobrać sobie nazwę produktu?
+Warto się nad tym zastanowić.
+Jak się nad tym zastanawiać?
+Otworzyć sobie najprościej naszą piękną tabelkę ER Diagram i tutaj patrzymy.
+Jeżeli mamy Order, ok, i z tego Ordera chcemy przejść do produktów, no to zwróćcie uwagę na to, że można po prostu przejść przez Order Details.
+Bo tu mamy Order ID, Product ID i Products.
+Ok, to chyba jest całkiem dobry pomysł.
+No to lecimy.
+Select Order Date.
+Tu na razie to zostawię.
+Już wiem, że muszę zrobić O.
+No i O kropka.
+Left Join.
+Left Join? Hmm.
+Czy mnie interesują zamówienia bez produktów?
+Może mnie nie interesują.
+Interesują mnie tylko zamówienia, gdzie są konkretne produkty.
+To oczywiście nie ma żadnego znaczenia, bo u nas wszystkie zamówienia mają konkretne produkty i produktów żadnych nie usuwaliśmy z bazy, więc powinno wszystko być ok.
+Inner Join.
+Order Details.
+No i tu możemy sobie śmiało zrobić Using Order ID.
+No i teraz będziemy chcieli do tego dowiązać sobie jeszcze Products.
+Products będziemy chcieli sobie powiązać na podstawie.
+Tu wiecie co, ja nie zrobię Using, tylko zrobię On.
+O kropka Order ID równa się od kropka Order ID.
+No i teraz będę chciał sobie dowiązać Products właśnie na podstawie tego Od.
+Czyli Products On Od kropka Product ID równa się P kropka Product ID.
+Skąd o tym wiem?
+Bo pamiętam jak wygląda ta tabelka.
+A pamiętam, że tutaj w Orders mam Order ID.
+W Order Details mam Order ID.
+I Product.
+Więc mogę z Order Details powiązać sobie Product ID w taki sposób, żeby mi pobrał Product.
+Ok?
+Więc dlatego tak zrobiłem.
+I to co mnie będzie interesowało to data zamówienia już mam.
+Nazwa produktu.
+No to P kropka Product Name.
+Podpowiedział.
+To miło, bo w życiu nie pamiętałem jak się nazywa ta informacja.
+No i jeszcze chcę kategorię produktu.
+Jeżeli chcę kategorię produktu no to znowu Inner Join Categories C On P kropka Category ID równa się C kropka Category ID.
+Skąd o tym wiem?
+No bo pamiętam, że Products ma kategorię ID.
+Skoro Products ma kategorię ID no to muszę sobie polecieć do Categories gdzie też jest kategoria ID.
+I pobrać sobie kolumnę o nazwie Category Name.
+Trochę trudne co?
+Ale za to jakie satysfakcjonujące.
+C kropka Category Name.
+Control Enter.
+Hurra jest zapytanie.
+Nie wie co to jest C.
+Categories C.
+Jak to nie wie co to jest C?
+Missing from for table C.
+Inner Join Categories C.
+A bo tu średnik mi uciekł.
+Patrzcie.
+Teraz.
+I mamy.
+Order Date, Product Name i Category Name.
+I wiemy dokładnie, że Tofu zostało zamówione 5 lipca 96 roku i jest ono w kategorii Produce.
+A Seafood tu mamy jakieś cuda też 8 lipca.
+I w ten sposób wyszło nam ładne zapytanie gdzie korzystaliśmy z trzech Joinów.
+To lecimy dalej.
+Przygotuj zestawienie wyświetlające zamówienia.
+Oraz przełożonych pracowników odpowiedzialnych za te zamówienia.
+Okej.
+I wiemy, że mamy Orders.
+Z Orders mamy Employees.
+Z Employees mamy Employee Reports To.
+No to lecimy.
+Select From Orders.
+No i Orders ma Employee ID.
+Tak ma?
+Sprawdźmy.
+Public.
+Szukamy Orders.
+Orders ma Employee ID.
+Okej.
+Czyli z Employee ID możemy się powiązać z Employees.
+No to lecimy.
+Select From Orders.
+No i tu może być na przykład Left Join.
+Naprawdę to na razie u nas nie ma.
+Znaczy na razie.
+U nas to po prostu nie ma znaczenia bo wszystkie zamówienia mają wpisanego Employee ID.
+I ten Employee ID istnieje.
+Więc czy Left Join czy Inner Effect będzie ten sam.
+Możecie sprawdzić.
+Left Join Employees on o.EmployeeID równa się e.EmployeeID.
+Chyba tak.
+W ten sposób mamy nasze zamówienie oraz mamy naszych pracowników.
+I potrzebujemy ich przełożonych.
+Czyli Left Join Employees e2 super on e.Reports To.
+Równa się e2.EmployeeID.
+No bo tak samo jak poprzednio chcemy z ID którego mamy w Reports To powiązać sobie ten dany z Employee ID.
+Które też pochodzi z pracowników.
+Tylko z tej drugiej tabeli.
+Którą sobie drugi raz doczepiliśmy.
+I co nas będzie interesowało?
+Data.
+Czyli o.OrderDate.
+Eee.
+Kto jest odpowiedzialny za to zamówienie.
+Niech tak będzie.
+Czyli e.FirstName.
+E.LastName.
+No i analogicznie możemy sobie zrobić przełożony.
+Czyli tak samo tylko że e2.
+Hura jest błąd.
+Przecinek musi być usunięty.
+I mamy.
+Jeżeli chodzi o zamówienie z tego roku.
+Z tej daty.
+Odebrał to Steven Buchman.
+A odpowiedzialnym za Stevena Buchmana jest Andrew Fuller.
+No i jeżeli byście chcieli to teraz można sobie to pogrupować i sprawdzić.
+O!
+Tu nawet Andrew Fuller poza tym że jest przełożonym to on sam też odpowiada za obsługiwanie jakichś zamówień.
+To bardzo ciekawe.
+Nie spodziewałem się że tak jest.
+Ale jak widać Andrew Fuller też twardo stoi i pracuje.
+Postawa godna pochwalenia.
+I w tej lekcji to byłoby na tyle.
+Bardzo serdecznie wam za nią dziękuję.
+Zapraszam was do jeszcze jednej lekcji.
+W której porozmawiamy o joinowaniu i grupowaniu.
+Czyli zrobimy sobie dwie rzeczy w jednej.
+Do zobaczenia.

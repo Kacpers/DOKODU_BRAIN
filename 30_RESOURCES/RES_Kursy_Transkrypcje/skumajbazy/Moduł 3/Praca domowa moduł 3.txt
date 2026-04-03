@@ -1,0 +1,37 @@
+No to cóż, zapraszam Was do pięciozadaniowej pracy domowej, którą przygotowałem dla Was na ten tydzień.
+Zadanie pierwsze. Napisz zapytanie, które pobierze dwie kolumny.
+Tytuł, imię, nazwisko. Na przykład Dr. Andrew Fuller, to ma być w jednej kolumnie.
+Natomiast w drugiej kolumnie mają wyświetlić się inicjały naszych pracowników,
+czyli na przykład a.f.
+Zadanie domowe numer dwa. Napisz zapytanie, które odpowie,
+ile dni będzie miał miesiąc luty w 2024 roku.
+To jest takie trudniejsze zadanie do pogłówkowania.
+Zachęcam Was do tego, żebyście nie próbowali od razu szukać odpowiedzi w Google,
+bo wychodzi ona dosyć szybko i zanim zobaczyłem tę odpowiedź,
+to próbowałem do tego podejść samodzielnie i faktycznie,
+na kilka sposobów da się to zrobić, ale jeżeli ktoś by nie chciał sobie spalić zabawę,
+to jak najbardziej można sprawdzić te rozwiązanie Google'owe,
+spróbować je przeanalizować i potem zrobić raz jeszcze samodzielnie.
+Zadanie domowe numer trzy. Napisz zapytanie, które zwróci raport ilustrujący różnicę
+pomiędzy datą wysyłki i zamówienia w takiej postaci, czyli chcielibyśmy mieć ID zamówienia
+oraz informację, ile dni dzieli te dwie daty. W takiej postaci, czyli ma się to wyświetlić razem,
+po prostu ze słówkiem dni.
+Zadanie domowe numer cztery. Napisz zapytanie, które z tabeli order details zwróci
+order ID oraz łączną wartość zamówienia. Uwaga, zwróćcie uwagę, że tam też jest discount.
+Musicie wziąć go też pod uwagę. Jeżeli wartość będzie większa niż 3000,
+ta łączna wartość zamówienia, to mamy naliczyć dodatkowe 10% rabatu.
+Jeżeli wartość zamówienia będzie między 3 a 2 tysiące, to mamy naliczyć dodatkowe 10% rabatu.
+Jeżeli wartość zamówienia będzie między 3 a 2 tysiące, to mamy naliczyć dodatkowe 10% rabatu.
+Jeżeli wartość zamówienia będzie między 3 a 2 tysiące, to mamy naliczyć dodatkowe 10% rabatu.
+Jeżeli wartość zamówienia będzie między 3 a 2 tysiące, to mamy naliczyć dodatkowe 10% rabatu.
+Jeżeli wartość zamówienia będzie między 3 a 2 tysiące, to mamy naliczyć dodatkowe 10% rabatu.
+i ostatnie zadanie domowe na ten tydzień. Napisz zapytanie, które zwróci imię, nazwisko
+i ostatnie zadanie domowe na ten tydzień. Napisz zapytanie, które zwróci imię, nazwisko
+oraz datę najbliższych urodzin naszych pracowników.
+oraz datę najbliższych urodzin naszych pracowników.
+Pamiętaj, żeby zwrócić datę z kolejnego roku, jeśli w tym rrku urodziny już minęły
+Pamiętaj, żeby zwrócić datę z kolejnego roku, jeśli w tym rrku urodziny już minęły
+że data będzie dla roku kolejnego, jeżeli już w tym roku rodziny były.
+To tyle, jeżeli chodzi o pracę domową.
+Życzę Wam przyjemnego rozwiązywania.
+Do zobaczenia. Cześć!

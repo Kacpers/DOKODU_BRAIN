@@ -1,0 +1,64 @@
+Kolejnym poleceniem na naszej liście jest add i add jest to polecenie, które przenosi dane
+bezpośrednio z komputera gospodarza do gościa.
+Jest to bardzo istotne polecenie, ponieważ często kiedy budujemy projekt i nie
+skopiowaliśmy całej tej zależności, wszystkich tych plików,
+no to może się okazać, że coś nam nie będzie działało.
+Czyli po prostu plików będzie brakowało.
+I pamiętam, że mieliśmy taki problem, Janie, prawda?
+Kiedy tworzyliśmy projekt, ty mi tłumaczyłeś, dlaczego warto, żeby pewne pliki
+przenosić wcześniej, pewne pliki przenosić później, że w tym jest też jakaś logika dodatkowa, nie?
+Tak, dlatego że to również wpływa na tworzenie warstw.
+Tak jak wspominałem przy runach, tak naprawdę każda instrukcja w naszym
+dockerfile tworzy nową warstwę i taki add również tworzy nowe warstwy.
+W związku z czym,
+kiedy dodajemy jakieś pliki, no to jeśli mamy plik np.
+requirements.txt, który opisuje zależności bibliotek Pythonowych,
+raczej chcemy go dodać pojedynczo, gdzieś na samym początku, po tym jak
+zainstalujemy zależności systemowe, które są potrzebne, dlatego że nowe biblioteki
+najprawdopodobniej będziemy dodawać rzadko, więc wystarczy,
+że
+dodajemy nowe tylko wtedy, kiedy dopiszemy nowe do tego pliku
+i nie będziemy przebudowywać tego za każdym razem.
+Instalacja bibliotek też trwa.
+To też jest jakiś czas, który wpływa na te nasze
+budowanie, w związku z czym, żeby ten czas budowania móc skrócić,
+układamy sobie w taki sposób wszystkie polecenia w dockerfile, żeby to było
+jak najbardziej optymalne.
+Co do samego polecenia add, tutaj chciałbym jeszcze nadmienić, że
+pozwala on także
+kopiować z kontekstu budowania, tzn.
+możemy tym poleceniem kopiować np.
+z innych obrazów, bo czasami możemy mieć taki tzw.
+multistage build.
+Czyli budujemy wiele obrazów w
+pojedynczym pliku i dzielimy go na takie poszczególne etapy.
+Teraz pomiędzy tymi etapami czasami potrzebujemy coś przenosić, więc możemy
+wykorzystać do tego właśnie polecenie add.
+Albo jeśli chcemy
+ściągnąć coś z zewnątrz, spod jakiegoś adresu, czy może repozytorium gitowe,
+też możemy wykorzystać polecenie add.
+I za chwilę będziemy omawiali drugie polecenie, polecenie copy, które jest
+podobne do tego, ale są w nim pewne różnice i tymi różnicami zajmiemy się
+na samym końcu, kiedy oba polecenia będą omówione.
+Co do samego jeszcze polecenia add, tutaj
+zachęcam, żeby sprawdzić sobie dockerfile reference, dlatego że tam są opisane
+wszystkie jego możliwości, tamtych
+opcji do wykorzystania.
+Tutaj jest całkiem sporo, także warto
+sobie zerknąć, bo są i takie związane typowo z konfiguracją security.
+Także jeśli chcemy, żeby nasz obraz był
+bezpieczny albo mamy wymóg taki, żeby był bezpieczny, można tam znaleźć
+parametryzację, która pozwoli nam podnieść to bezpieczeństwo.
+No właśnie, zawsze myślałem o addzie jako takim zwykłym
+CP czy MV, ale widzę, że tutaj faktycznie jest całkiem sporo różnych
+opcji i wiem, że na pewno po naszych nagraniach zerknę sobie też na to, bo
+widzę, że być może coś z tego mi się też przyda już niebawem.
+Tak, to też w nawiązaniu do tego, o czym już mówiliśmy,
+zazwyczaj ani ja, ani Kacper nie zaglądamy do dockerfile reference, natomiast czasem
+warto, właśnie można znaleźć jakieś dodatkowe rzeczy.
+To, co teraz jest dodane do polecenia add,
+to kiedyś nie wszystkie te opcje były dostępne.
+To też pokazuje, że ten docker jednak cały czas się rozwija.
+Nowe rzeczy dochodzą i czasami warto sobie nawet na te najpopularniejsze polecenia
+spojrzeć, bo może faktycznie coś ciekawego się pojawiło.
+To prawda, jak najbardziej.

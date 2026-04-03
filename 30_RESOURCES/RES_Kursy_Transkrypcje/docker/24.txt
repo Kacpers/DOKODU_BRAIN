@@ -1,0 +1,193 @@
+Janie, no to cóż, spędziliśmy dobre parę chwil omawiając Docker Compose'a
+i ja przyznam szczerze, że zdążyłem się nawet przebrać w międzyczasie, bo już po
+prostu nie mogłem z tych nerwów, zanim jak...
+Chcę po prostu zobaczyć jak to działa, jak to uruchomisz.
+I nie wiem jak to uruchomić.
+Dobrze, to przechodzimy do uruchamiania naszego Docker Compose'a.
+My robimy to poleceniem docker-compose-app.
+I po wykonaniu tego polecenia zaczynają
+nam się pobierać obrazy, jeśli jeszcze nie mamy.
+No i uruchamia się wszystko to, co w tym naszym Docker Compose'ie jest opisane.
+To co tutaj teraz widzimy, to są
+logi, które są dostępne z wszystkich naszych kontenerów.
+Mamy uruchomioną
+jakby cały ten stos naszej aplikacji, cały n8n z wszystkimi dodatkami.
+Mamy uruchomione
+w procesie głównym, czyli widzimy wszystko co tam się dzieje, ale jednocześnie
+straciliśmy teraz tą konsolę. I w momencie, kiedy ja nacisnę teraz
+Ctrl C, to zacznie nam się wszystko zatrzymywać.
+Tutaj, że kontenery były stopped, w sensie teraz
+mamy stopped.
+Ale żeby można było pracować jakby dalej i nie martwić się tym, bo gdyby nam się
+nasza konsola wysypała, to też procesy przestałyby działać.
+Żeby się tym nie przejmować, możemy sobie dodać przełącznik minus D, czyli uruchom
+jako daemon. I wtedy wszystkie nasze kontenery uruchamiają się w tle.
+Także możemy sobie je
+podejrzeć
+w ten sposób.
+Widzimy, że to są nasze uruchomione kontenery z tego naszego docker compose'a.
+Jeśli chcemy je sobie zatrzymać, możemy to oczywiście...
+Zaczekaj, zaczekaj. Przejdźmy sobie przez to.
+Czyli tak, docker compose app, tak naprawdę on uruchamia nam kontenery i cały czas
+zostawia to okno uruchomione. W sensie cały czas te kontenery sobie działają.
+I my tam po lewej stronie widzimy ich logi i możemy sobie zawsze te kontenery
+w ten sposób, rozumiem, podglądać.
+Natomiast nie możemy z tego podglądania w żaden sposób wyjść.
+Zdetachować tego w żaden sposób, nie?
+Tak, to się zgadza.
+Ok.
+Potem robimy docker compose app minus D i to właśnie jest ten daemon czy tam detach,
+który powoduje, że możemy oglądać, że możemy je uruchomić sobie w tle.
+I później pokazałeś nam, że docker compose ps pozwala na wyświetlenie tych wszystkich
+informacji, tak?
+Tak, dokładnie tak. Widzimy te nasze kontenery, które z tego compose'a,
+z którym pracujemy, są uruchomione. Widzimy kiedy zostały uruchomione, jakie tam
+są obrazy, w jaki sposób są skonfigurowane, jak są zmapowane ich porty, czyli wszystko to,
+co sobie omawialiśmy przechodząc przez cały ten nasz plik compose.
+Ok.
+I teraz możemy sobie dalej gdzieś tam albo z tej aplikacji korzystać, albo możemy ją sobie
+zastopować, albo możemy podejrzeć jej logi.
+No właśnie to bym chciał, żebyś mi pokazał.
+Te logi mnie interesują, bo tam te logi cały czas mogłem oglądać.
+Natomiast tutaj jak mi zatrzymasz te wszystkie kontenery, to już tych logów nie
+będę miał, a przyznam szczerze, że do logów często lubię sobie zerknąć, albo żeby
+zobaczyć tam właśnie informacje, czy z jakiegoś błędu nie było, czy coś się nie
+zatrzymało, to jak to zrobić? Tak.
+Możesz uruchomić sobie polecenie docker compose logs.
+Które pokaże ci jakiś tam ostatni zakres tych logów, to co działo
+gdzieś tam w ostatniej chwili w tej aplikacji.
+Natomiast zazwyczaj, kiedy sięgamy do logów, to dlatego, że chcemy nie tylko
+przeanalizować to, co się działo wcześniej, ale potencjalnie też przeanalizować
+sobie to, co się dzieje na bieżąco i żeby móc sobie logi obserwować cały czas.
+Używamy do tego docker compose.
+Logs z przełącznikiem minus F.
+Czyli follow po prostu, żeby śledził.
+Tak. I wtedy mamy jakby na bieżąco te wszystkie informacje.
+W momencie, kiedy ja sobie tutaj na boku w przeglądarce spróbuję wejść na localhost.
+To widzimy, że równie rzeczy się.
+Dokładnie. Mamy informacje z tej mojej próby wejścia.
+No i w ten sposób możemy sobie to podglądać.
+Jeśli ja sobie teraz odświeżę, pojawiają nam się kolejne logi.
+Może, żeby to było widać, zróbmy sobie troszeczkę wolnego.
+I właśnie. I troszeczkę tutaj doszło.
+Co pozwala nam na bieżąco obserwować właśnie logi pojawiające się w naszej aplikacji.
+I jest to pomocne przy analizowaniu
+wszelkiego rodzaju problemów, no bo wtedy widzimy na bieżąco co się w tej aplikacji dzieje.
+Ekstra. I teraz mówi, że to jest logs minus F i to nie jest to samo co app.
+Czyli tu mogę spokojnie sobie zrobić ctrl C i w dowolnym momencie też mogę do tego wrócić, nie?
+Tak. Oczywiście gdybyśmy zrobili samo app
+bez minus D, to mielibyśmy dokładnie tą samą sytuację co teraz, tylko wtedy robiąc ctrl C zatrzymalibyśmy kontenery.
+A teraz wyjdziemy z followowania tych logów.
+I możemy sobie zobaczyć
+docker-compose.ps, że nasze kontenery cały czas są uruchomione.
+Cały czas działają.
+Jeśli będziemy potrzebowali, możemy sobie z powrotem uruchomić logs minus F i dalej obserwować co tam się dzieje.
+Ok. Super. Wszystko rozumiem.
+Wiem już w takim razie jak mogę zerknąć sobie na te kontenery.
+Wiem jak mogę to sprawdzić.
+To tylko jeszcze jednej rzeczy nie wiem, a mianowicie jak te
+ustrojstwo zatrzymać.
+Bo rozumiem, że ono cały czas będzie chodziło mi na tym swoim komputerze.
+Tak. Będzie chodziło cały czas dopóki tego nie zatrzymamy.
+Natomiast zanim przejdziemy do zatrzymania chciałbym jeszcze pokazać jedno polecenie.
+Jest coś takiego jak docker-compose-stats.
+To jest polecenie, które pokazuje nam statystyki naszych uruchomionych kontenera.
+Tego nie znałem.
+Dlatego chciałem też
+pokazać to polecenie zanim zatrzymamy.
+No bo żebyśmy nie musieli ponownie tego uruchamiać.
+No i tutaj sobie możemy podejrzeć jakie mamy zużycie procesora, pamięci, jaki mamy
+limit przydzielony do tych kontenerów. Tutaj limit jest akurat nieokreślony, więc
+to jest pełny zasób mojego laptopa, na którym to uruchamiam.
+Mamy też informacje o ruchu sieciowym.
+Także.
+Jeśli spróbuję sobie uruchomić
+ponownie stronę w przeglądarce, no to gdzieś troszeczkę
+tego ruchu nam się tutaj pojawia więcej dla tego NGINX-a.
+To też pozwala nam analizować sytuację, bo jeśli mamy taką aplikację, która np.
+korzysta z bazy danych,
+chcielibyśmy sobie przetestować jakąś sytuację, że aplikacja działa nam wolno,
+no to jeśli możemy uruchomić właśnie takie środowisko, nawet z określonymi tymi
+limitami, żeby obwzorować jakieś takie nasze środowisko produkcyjne, gdzie możemy
+mieć powiedzmy 4 GB RAM-u dla takiej bazy danych i chcemy zobaczyć czy ona nie
+wysyca się w pełni, jeśli mamy jakieś takie zapytanie.
+Oczywiście też musimy mieć podobną wielkościowo
+bazę danych, bo jeśli mamy bazę znacznie mniejszą,
+to możemy nie zaobserwować tych samych rzeczy.
+Natomiast na pewno jest to polecenie właśnie pomocne w
+obserwacji tego naszego performance'u kontenerów, aplikacji i pozwala nam
+przynajmniej częściowo zobaczyć, co w tej naszej aplikacji może się dziać.
+Pozwala nam to w prostszy sposób analizować
+problemy, które gdzieś tam mogą się pojawiać.
+Ekstra. To bardzo mi się podoba, bo przyznam szczerze, że często mam problem właśnie z
+Dockerem pod tym względem, że coś chcę, że właśnie chcę zobaczyć ile coś zużywa
+pamięci i do tej pory radziłem sobie tak, że wchodziłem sobie na Docker Desktop i tam
+też podobne informacje mogłem zobaczyć. Natomiast tutaj widzę, że w konsoli jest to
+bardzo przydatne, bardzo ładnie wizualnie też przedstawiona opcja.
+Może czcionka trochę za duża, przez co zawijają nam się wiersze, ale tak to bardzo
+też to ciekawa informacja. Dzięki za nią. To coś nowego dla mnie.
+Tak. Plusem też jest to, że nie mamy zazwyczaj Docker Desktop'a dostępnego na
+serwerze. Pewnie można go w jakiś sposób podpiąć aczkolwiek nikt takich rzeczy nie robi.
+Często też nie ma dostępu do tych środowisk na tyle szerokiego, żeby można było sobie
+takiego Docker Desktop'a podpiąć.
+Pod nasz gdzieś tam serwer, czy to testowy, czy produkcyjny.
+A oczywiście też możemy na takim właśnie
+serwerze produkcyjnym, jeśli też korzysta z Docker Composa, możemy sobie te
+statystyki zobaczyć, podejrzeć i nawet analizować na żywym organizmie po prostu
+co się dzieje i czy gdzieś czegoś nie wysycamy do granic możliwości.
+Ekstra. Super. Bardzo mi się to spodobało. To co? To możemy już go zatrzymać?
+Tak.
+Możemy go zatrzymać.
+Zatrzymujemy go poprzez Docker Compose.
+Stop.
+I teraz jak sobie uruchomimy PS, no to już tych naszych obrazów tutaj nie ma.
+Z ciekawości zobaczę, bo nie jestem pewien, czy minus A działa tak samo jak w zwykłym Docker PS.
+Tak. Otrzymujemy informacje o obrazach, które gdzieś tam
+były uruchomione.
+Także możemy sobie z tego też skorzystać.
+Oprócz tego jest jeszcze jedno polecenie.
+Docker Compose Run, ale nie chcę go dzisiaj prezentować.
+Chciałbym o nim tylko wspomnieć, dlatego że mamy możliwość uruchomienia obrazu
+kontenera, pojedynczego kontenera np. albo całego naszego stosu, tylko po to, żeby
+wykonała się jakaś pojedyncza operacja i żeby on się zakończył.
+To może być stosowane np.
+jeśli robimy migrację bazy danych do jakiejś nowej skimy, coś tam dodajemy i
+musimy taką operację wykonać, to możemy sobie wybrać np.
+pojedynczy kontener do uruchomienia.
+Natomiast nie mamy przygotowanego takiego przykładu, żeby to tutaj zaprezentować.
+Dlatego wspominam tylko o tym, że jest taka możliwość.
+I pozostawiam chętnym do sprawdzenia gdzieś tam w własnym zakresie, pobawienia się
+tym, bo też najlepiej człowiek się uczy.
+Oprócz tego jest jeszcze jedno polecenie dla Docker Compose.
+Natomiast tutaj też nie mamy przygotowanego przykładu.
+To jest polecenie Docker Compose Build, dlatego że
+tak jak wspominaliśmy w poprzedniej lekcji, oprócz tego, że możemy wykorzystać
+nowe klocki do poskładania naszego Docker Compose, możemy też wykorzystać rzeczy
+nasze własne. Jeśli teraz w Docker Compose takim najczęstszym scenariuszu, z którym
+stykamy się pracując w firmie nad rozwojem jakiejś aplikacji,
+mamy tą naszą aplikację i mamy tam wskazany Docker File, z którego będziemy budować.
+Polecenie Docker Compose Build pozwoli nam
+zbudować ten obraz.
+Jeśli np.
+potrzebujemy gdzieś, nie wiem,
+umieścić go w repozytorium np.
+mamy sobie proces CICD.
+W ramach tego procesu CICD chcemy ten kontener zbudować.
+Możemy wykorzystać oczywiście Docker Compose w tym celu.
+Później możemy dalej wgrać do naszego repozytorium albo po prostu możemy sobie
+lokalnie podzielić nawet uruchamianie na
+etap budowania, etap uruchamiania późniejszego naszej aplikacji i to tutaj wykorzystać.
+OK, super.
+To budowanie przyznam, że jest bardzo interesującym tematem.
+Parę razy miałem z tym problem właśnie i kiedy wykonywałem Docker Build, a nie
+wykonywałem Docker Compose Build, no to z tego wynikały moje problemy, że pewne
+rzeczy nie chciały mi działać. Już nie pamiętam dokładnie, z czego to dotyczyło,
+ale właśnie to polecenie Docker Compose
+Build było tym zakręciem, którego mi brakowało.
+Myślę, że jeśli będziecie zainteresowani tutaj zgłębieniem tego tematu, to będziemy
+mogli coś dodatkowego przygotować jako dodatek do kursu,
+zasymulować taką problematyczną sytuację i tutaj szerzej omówić.
+Pewnie. Pod każdym filmem jest też opcja zostawienia komentarza, więc zawsze możecie
+zostawić komentarz, dać znać, a my wtedy też rozpatrzymy
+taką prośbę i się do niej dostosujemy, bądź też nie.
+I gorąco was do tych komentarzy zachęcamy.

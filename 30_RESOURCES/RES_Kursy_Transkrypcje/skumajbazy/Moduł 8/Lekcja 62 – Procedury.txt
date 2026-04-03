@@ -1,0 +1,416 @@
+No i procedury. Jeżeli chodzi o procedury, to przypominam funkcje zwracały nam coś, pozwoliły nam to wyświetlać, natomiast procedury robią coś pod spodem i to robienie na tym się kończy.
+Czyli możemy procedurę sobie wywołać, ona nam zautomatyzuje pewne czynności, wykona pewne czynności, ale efekt będzie widoczny np. w postaci dodania nowej tabeli, stworzenia nowego widoku, jakichś tam wiecie, tego typu operacje.
+Zapraszam do oglądania.
+Pierwszym właśnie o czym chciałem Wam powiedzieć, jeszcze wyuprzedzając trochę fakty, to jest powtórka.
+Czyli jeżeli chodzi o funkcje, to funkcje pozwalają na odbieranie wyników, natomiast procedury wykonują jakąś czynność.
+No i ta ważna uwaga, nie zwracają nic, wykonują coś i np. mogą nam usuwać dane, kopiować, wstawiać, tworzyć tabelę, robić różne tego typu rzeczy.
+No i poza tym tworzenie procedur będzie bardzo, bardzo podobne do tworzenia funkcji, z tą różnicą, że oczywiście słówko create będzie miało po sobie procedur, a nie function.
+No to lecimy. Reszta bez zmian. Dokładnie tak.
+Jeżeli chodzi o to, do czego służą procedury, no to najczęściej procedury używane...
+są do tego, żeby robić jakieś zmiany w tabelach, np. żeby coś wykonywać, żeby nawet wyobraźcie sobie robienie backupu polegające na tym, że kopiujemy dane z jednej tabeli do drugiej.
+Albo np. tworzymy sobie, mamy pewne zapytania, które muszą się wykonywać po sobie każdego dnia, bo np. chcielibyśmy coś pobrać z internetu.
+To jest też całkiem ciekawe, że bez problemu właśnie korzystając z procedur, w których to procedurach byłby jeszcze wykorzystywany Python, można sobie spokojnie wysyłać dane.
+Można sobie spokojnie wysyłać dane.
+Można sobie spokojnie wysyłać jakieś strzały do API, czyli pobierać jakieś dane z zewnątrz, umieszczać je w bazie danych, można wysyłać maila, wysyłać nawet smsa i tego typu rzeczy możemy sobie właśnie wyzwalać procedurami.
+Albo np. jeżeli polecenie wykonuje się bardzo długo, no to możemy też sobie uruchomić taką procedurę i ono się będzie w tle wykonywało, a po czym dostaniemy wiadomość, że się już wykonało.
+I np. dane zostaną skopiowane do jakiejś tabeli.
+A kolejna rzecz jest taka, że procedury możemy też wyzwalać.
+Czyli właśnie, kiedy ktoś doda coś do jakiejś tabeli, to coś ma się wykonać.
+Załóżmy, w każdej chwili, kiedy dodamy nowe zamówienie, to chcielibyśmy powiadomić o tym jakiegoś handlowca, bo chcielibyśmy dodać handlowcowi jakiś wpis, albo chcielibyśmy zmienić stany magazynowe, albo chcielibyśmy przebudować jakąś inną tabelę, która odpowiada za kesza, taką podręczną tabelę.
+Naprawdę tutaj bardzo wiele rzeczy można z tym zrobić.
+Lecimy dalej.
+Jeżeli chodzi o deklaracje.
+No to zobaczcie, nie ma praktycznie żadnej różnicy, jeżeli chodzi o deklaracje względem funkcji.
+Też mamy create or replace procedur, insert student, znowu są argumenty, znowu jest s, dolary, dolary, no i w tle robi się insert into human, first name, last name, values i tyle.
+Tutaj jeszcze taka jedna uwaga, mamy language przesunięty na koniec, ale wydaje mi się, że to tak samo jak dodawaliśmy go wcześniej tutaj na początku, też bez problemu można było sobie to dodać.
+Chociaż ten zapis może być trochę bardziej czytelny.
+No i wywołanie procedury oczywiście przez call, insert student, a da się niezgódka, doda nam nowego studenta do tabeli human.
+No i z tym związane mamy jedno małe zadanko, możemy sobie już to przećwiczyć.
+Poproszę Was o to, abyście utworzyli tabelę products to order, która ma zawierać product id oraz quantity.
+I chcemy stworzyć procedurę.
+Która wybierze wszystkie produkty z tabeli products, których units on order jest większe niż units in stock.
+A następnie zaktualizuje products to order o te produkty.
+Czyli o co chodzi?
+Mamy jakąś tabelę products to order, która ma zawierać te idki produktów, które należałoby zamówić.
+A zamówić należy produkty wtedy, kiedy w zamówieniach, czyli w trakcie zamówienia mamy więcej produktów niż w tej chwili mamy w magazynie.
+I tworzymy sobie procedurę, która będzie miała te rzeczy ujednolicać.
+To trzy minuty dla Was i widzimy się za moment.
+Do zobaczenia.
+To jak tam? Jesteście gotowi?
+Create or replace procedur i nasza procedura miała się nazywać products to order.
+Jak się nazywa products to order?
+Albo prepare products to order.
+Ja wolę tak samo jak w przypadku funkcji i w programowaniu, że jeżeli coś jest jakąś procedurą czy funkcją to jest takim nazwaniem jakiejś czynności.
+Czyli samo products to order to raczej jest taki opis.
+To są produkty do zamówienia.
+Natomiast procedura by się nazywała prepare products to order.
+Ok.
+Jak sobie stworzymy create or replace procedur.
+To wówczas możemy określić argumenty tej procedury.
+Nasza procedura argumentów nie będzie miała wcale.
+Oczywiście te apostrofy tutaj są zbędne.
+Więc dorzucam sobie po prostu zwykłe nawiasy.
+S, dolary, dolary, no i language SQL.
+Dobra.
+Co muszę zrobić w pierwszej kolejności?
+W pierwszej kolejności muszę stworzyć sobie tabelę.
+No to create or replace table.
+Nie, to by było inaczej.
+Create if not exactly.
+Create if not exist.
+Tabela ma się nazywać products to order.
+I nasza tabela ma posiadać takie kolumny jak product id oraz quantity.
+No to lecimy produkt id jako integer i quantity jako integer.
+Wybierę wszystkie produkty z tabeli products.
+Ok.
+Czyli których units on order jest większe niż units in stock.
+Czyli select all from products where units in stock.
+Units in order.
+Widzimy tym torem co było w zadaniu.
+Units on order.
+Jest większe niż units in stock.
+I teraz my możemy sobie śmiało dodać te produkty od razu do naszej tabeli.
+Było takie zadanie we wcześniejszych modułach.
+Insert into products to order.
+Insert into products to order.
+No i w momencie w którym nie mamy, nie mamy, jakby używamy zapytania wtedy nie mamy słówka values.
+Tyle tylko, że musimy mu powiedzieć wtedy jakie kolumny mamy umieścić w product id i quantity.
+W products mamy product id.
+Natomiast quantity ile mamy zamówić.
+No to będzie nasze co?
+Nasze units on order minus units in stock.
+No to będzie nasze co?
+Nasze units on order minus units in stock.
+Możemy to sobie wykonać.
+No i mamy jakiś błąd przy ifie.
+Błąd przy ifie.
+Create if not exists.
+Tutaj coś jest z tym create if not exists.
+Muszę sobie zerknąć jak się tworzyło.
+Create table if not exists.
+Chyba o to chodziło.
+Create table if not exists.
+Coś jeszcze mu się nie podoba.
+Products to order does not exist.
+I to jest to o czym mówiłem.
+Że w momencie w którym tworzymy sobie to.
+I to jest to o czym mówiłem.
+Mamy dwa zapytania w jednym.
+To to nam nie będzie działało w przypadku SQL.
+Musielibyśmy to zmienić na PLSQL.
+O tym na razie sobie nie rozmawiajmy.
+Natomiast mogę sobie zawsze to wyciągnąć na zewnątrz.
+Natomiast mogę sobie zawsze to wyciągnąć na zewnątrz.
+Natomiast mogę sobie zawsze to wyciągnąć na zewnątrz.
+Najpierw sobie stworzyć te tabele.
+Najpierw sobie stworzyć te tabele.
+A później to sobie wykonać procedurą.
+A później to sobie wykonać procedurą.
+Jeżeli teraz będę chciał sprawdzić.
+Jeżeli teraz będę chciał sprawdzić.
+Jak to wygląda.
+Wykonać call prepare products to order.
+Wykonać call prepare products to order.
+Wykonać call prepare products to order.
+OK, wykonałem.
+No i select all from products to order.
+No i select all from products to order.
+No i select all from products to order.
+W ten sposób pokaże się, że mam już informacje
+W ten sposób pokaże się, że mam już informacje
+o konkretnych wartościach.
+Ale to nie wszystko.
+Ponieważ, jeżeli tak to robimy,
+to w tym momencie on nam będzie
+to za każdym razem dodawał.
+jak wykonam tę procedurę raz jeszcze,
+no to okaże się, że już tych wierszy będę miał
+28, po prostu za każdym razem
+dodaję. Więc należałoby
+na początek
+te tabele wyczyścić.
+Ale wydaje mi się, że to
+może nam się też nie udać. Czy udało się?
+Udało się, no to dobrze.
+To utworzenie tabeli nie zadziałało,
+natomiast w momencie, w którym sobie za każdym razem
+te tabele czyścimy, a potem robimy insert, to to już
+nam działa. Więc możemy sobie
+śmiało wywoływać taką procedurę
+i za każdym razem możemy
+mieć pewność, że to products to order
+zawiera dobre wartości.
+Co jest też wygodne, to jest
+to, że te wartości,
+że to zapytanie się aktualizuje
+oczywiście. Co to oznacza?
+Oznacza to tyle, że
+jeżeli byśmy
+teraz dodali, zmienili
+wartość units in stock,
+no to oczywiście w tej tabeli by nam się
+to nie zmieniło. Ale jeżeli uruchomimy
+raz jeszcze procedurę, no to już wtedy
+ta tabelka nam się zmodyfikuje.
+Stąd też prosty wniosek,
+że jeżeli chcielibyście
+sprawić, żeby ta tabela się aktualizowała
+przy każdej zmianie
+ilości, no to bardzo
+proszę, wystarczy zrobić wyzwalacz.
+A jak zrobić wyzwalacz, pokażę
+Wam już niedługo.
+Teraz jeszcze trochę porozmawiajmy o procedurach.
+No właśnie.
+Mieliśmy przed chwilą problem z tym
+create table. Jak zrobiliśmy ten
+create table, to wtedy okazało się,
+że nasza procedura nam nie
+zadziałała i mówiłem Wam o tym, że
+jeżeli dopisalibyśmy język
+plp.gsql, no to by nam
+to funkcjonowało.
+Jednakże to nie wszystko.
+Chodzi mi o to, że to nie jest
+wystarczające dopisanie tylko
+i wyłącznie plp.gsql, ponieważ
+wybór tego rozwiązania
+sprawia, że nasza procedura musi wyglądać
+odrobinę inaczej. Zobaczcie,
+co się zmieniło. Stworzyłem
+sobie procedurę create or replace
+procedur get customers by city.
+I to, co się znajduje w tej procedurze
+to odbieram sobie jakiś argument
+w postaci search city, no i
+chcę usuwać tabelę,
+tworzyć nową tabelę i dodawać nazwy
+firm, które pochodzą
+z danego miasta. Pierwsza
+zmiana jest taka, że musiałem sobie właśnie
+dorzucić language plp.gsql.
+Potem s, dolary, dolary,
+tak samo jak poprzednio, nic się tutaj nie zmienia,
+ale zmiany dotyczą tego,
+co jest w środku. Zobaczcie,
+bedgin, end
+i w środku jest drop table,
+selected customers, create
+table, selected customers,
+company name i insert.
+Czyli tak naprawdę to, co jest
+tu, nie ma żadnej różnicy.
+Różnica dotyczy tylko i łącznie
+słówka bedgin i end.
+Więc nie ma też co się bać, że to jest
+tak zupełnie inny język programowania.
+Wiele rzeczy będzie miał wspólnych ze SQL-em,
+no bo nie oszukujmy się, nie da się
+za radę, nie damy rady za daleko
+uciec. Natomiast bedgin i end
+to są takie dwa słówka, które muszą się znaleźć.
+One określają, gdzie zaczyna się i gdzie
+kończy się nasza procedura.
+Więc wydawać by się mogło, że
+można też to zrobić za pomocą widoku.
+Zobaczcie, w ten sposób.
+Create or replace procedure, get customers by city view.
+No i właśnie tak, jak tu widzicie.
+Ani z PLPG
+SQL-em, ani z SQL-em takie zapytanie
+nie zadziała, bo to jest jakby takie podzapytanie.
+Nie umiem tego dokładnie wytłumaczyć,
+ale tego typu zapytanie
+u mnie nie działało. Więc
+smutek. Ale chciałem Wam
+pokazać, jak można tego typu
+zapytanie sobie rozwiązać.
+Czyli co można zrobić, żeby on
+sobie poradził z tym.
+Jest taki sposób,
+jak takie
+właściwie funkcja, taka procedura
+w ramach PLPG SQL-a, która
+nazywa się execute. Ona
+pozwala wykonywać zapytania.
+Tak jak robilibyście to zapytanie
+zwyczajnie, to możecie za pomocą
+executa właśnie je sobie wykonać.
+No i normalnie, tak jak było wcześniej,
+między bedgin a end, istnieje słówko
+execute, w którym znajduje się
+format. I format,
+pozwala na to, żeby do
+SQL-a, czy tam do jakiegoś stringa
+wstawić
+dodatkową zmienną.
+I zobaczcie.
+Create or replace view selected customers view
+as select company name from customers
+where city równa się
+i tu jest procent l.
+Procent l oznacza wartość, ale nie wartość
+taką
+jak nazwa kolumny,
+bo nazwę kolumny można byłoby zrobić
+procent s, zobaczcie, ale procent l
+to jest podstawienie wartości w tych,
+w tym cudzysłowie.
+I wtedy, jeżeli wykonamy takie zapytanie,
+to on będzie potrafił
+wstawić sobie w to miejsce
+tę właśnie nazwę,
+którą podacie. I on wtedy
+tworzy nam widok. Więc jest też
+parę takich kruczków, których
+warto pamiętać.
+Między innymi właśnie
+ten wspomniany wcześniej execute,
+no i format. Chociaż format przydaje się
+też w wielu innych miejscach. Jeżeli byście chcieli
+wstawić do dowolnego tekstu
+jakieś właśnie wartości,
+ze zmiennych, czy wartości z argumentów,
+no to właśnie robi się to w ten sposób.
+No i możemy sobie
+zrobić na podstawie tego małe zadanko,
+żeby też to sobie przećwiczyć,
+żebyście też mogli te magiczne
+fragmenty
+tutaj wykorzystać.
+Co jest treścią zadania? Przygotuj
+procedurę, która utworzy widok
+zawierający imiona i nazwiska
+pracowników oraz klientów
+pracujących na określonym stanowisku.
+Na przykład
+call find by title
+sales
+sales
+representative
+spowoduje, że stworzy nam się
+widok, który nazywa się by title
+i w tym widoku będą wszystkie
+osoby pracujące na stanowisku
+sales representative. A jeżeli
+sobie wywołamy find by title
+owner, to wówczas stworzy nam wszystkie
+osoby pracujące na stanowisku owner.
+Trzy minuty dla Was.
+Możecie śmiało korzystać z tego widoku,
+sobie też na niego zerknąć,
+żeby było łatwiej. I do zobaczenia.
+Trzymajcie się. Cześć.
+No to co? Nie śpimy, lecimy.
+Create or replace
+Create or replace
+procedure
+Nasza procedura ma się nazywać
+find by title
+ma przyjmować jeden argument, będzie nim
+search title
+no i jest to warczar.
+Language to
+plpgsql
+s$
+$
+bergin
+end
+To jest taki wzór. Tutaj jeszcze przed
+berginem może znaleźć się declare, jeżeli byśmy
+chcieli jakieś zmienne, ale tym się nie przejmujmy.
+Ok, jak mamy bergin end, to możemy
+sobie te zapytania napisać najpierw wyżej.
+Select gwiazdka from employees
+Hop, wyjdzie nam first name
+i last name. To jest
+imię i nazwisko.
+Ok.
+No i z tego chcemy sobie zrobić widok, czyli
+create or replace
+view
+i to musi się znaleźć
+wewnątrz execute
+format
+create or replace
+view i my ten
+widok nazywamy by title
+więc create or replace
+view by title
+as, no i tu będzie
+to nasze zapytanie, select
+first name, last name from employees
+where
+i tu pytanie, jak to się nazywa
+w pracowniku. Select gwiazdka
+from employees
+to się nazywa
+title, czyli where title
+równa się
+procent l
+no i możemy sobie wstawić search title
+w to miejsce
+i wtedy
+jeszcze sobie dorzucę złamanie wiersza, żeby było
+czytelnie,
+o, w ten sposób,
+ale nie tak.
+O tak.
+I wtedy powinno nam się udać wstawić,
+przecinek zostanie tu, o.
+I wtedy powinno nam się udać wstawić
+pod to procent l, ten konkretny,
+to konkretne stanowisko.
+Możemy sobie więc,
+ja jeszcze zrobiłem drop procedur,
+bo wcześniej ją miałem jak testowałem,
+zrobię create or replace procedur,
+no i wtedy, jeżeli sobie wykonam
+call find by title,
+no i wtedy jeżeli sobie wykonam call find by title,
+no i nazwa stanowiska, to będzie
+sales representative,
+no i nazwa stanowiska, to będzie
+sales representative,
+wywołuję to sobie,
+no i robię call
+find by title,
+no i wtedy jeżeli wykonam
+select gwiazdka from by title,
+no i wtedy jeżeli wykonam select gwiazdka from by title,
+to mam first name, last name,
+czyli działa, ok?
+Tak możemy sobie też tworzyć te widoki
+właśnie z tym słówkiem format.
+Potem się zdarza, że potrzebujemy gdzieś
+użyć apostrofu, na przykład jeżeli chcielibyśmy
+coś połączyć, czego chcielibyśmy użyć,
+to tylko Wam chciałem zaznaczyć, że jeżeli chcielibyście
+dołożyć gdzieś tutaj,
+na przykład jeszcze first name, last name
+i dołożyć jeszcze jakiś tekst,
+no to dodanie czegoś, jakiegoś tekstu w apostrofach
+spowoduje, że ten tekst jakby będzie wykluczony,
+on nie będzie traktowany jako tekst,
+tylko jako coś, co zamyka ten apostrof.
+więc w Postgresie
+dodaje się kolejny
+apostrof z przodu,
+to jest employees.
+O!
+Można zrobić coś takiego
+i wtedy będzie wiadomo, że ci, co są tutaj
+w tym widoku naszym, to są właśnie
+nasi pracownicy.
+Więc w ten sposób się escape'uje,
+to się mówi, czyli jakby
+sprawia się,
+że ten apostrof nie działa jak apostrof,
+dodając po prostu dwa apostrofy
+jeden za drugim.
+I jeżeli chodzi o tę lekcję,
+to byłoby to na tyle.
+Zapraszam Was do kolejnych
+w której poznacie
+wyzwalacze, czyli triggery.
+Do zobaczenia!

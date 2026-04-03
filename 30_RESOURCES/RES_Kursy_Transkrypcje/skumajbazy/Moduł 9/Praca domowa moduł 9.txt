@@ -1,0 +1,37 @@
+A w pracy domowej w tym module zajmiemy się powtórzeniem w całej tej wiedzy,
+przećwiczeniem sobie tych rzeczy, o których sobie mówiliśmy w tym module.
+Czyli po pierwsze poproszę Was o to, abyście utworzyli nową kolekcję o nazwie Players,
+a następnie dodali do niej dokumenty z tego pliku.
+To jest taka lista, algolia to jest w ogóle, tu jest algolia, widzicie?
+To jest taki system służący do wyszukiwania, oni też udostępniają trochę danych,
+możemy sobie z nich myślę śmiało skorzystać w celu edukacyjnym.
+No i strona jest plik NBA Players i tam są różni gracze, którzy zdobywają punkty dla różnych drużyn.
+I w ramach tego mam kilka ćwiczeń dla Was.
+Po pierwsze, korzystając z kolekcji Players, w pierwszym zapytaniu znajdź 20 graczy,
+którzy zdobyli najwięcej punktów, a w drugim zapytaniu znajdź 20 graczy,
+którzy zdobyli najmniej punktów.
+Po trzecie, znaczy już po czwarte, jakoś tak,
+znajdź wszystkich graczy z drużyny Bulls oraz Rockets, po prostu, wylistujmy ich.
+Następnie znajdź wszystkich graczy, którzy zdobyli więcej niż 1000 punktów.
+Nie wiem, czy to jest ogółem, czy na sezon, wydaje mi się, że ogółem.
+Znajdź minimalną, maksymalną oraz średnią ilość punktów zdobytych przez poszczególne drużyny.
+Możemy zobaczyć na przykład, jaka drużyna w całej historii tego pliku
+zdobyła najwięcej i najmniej punktów, no i interesuje nas też średnia punktów poszczególnych drużyn.
+Tam mamy graczy, nie? Więc po prostu będzie trzeba sobie to zsumować,
+znajdować tak naprawdę najwięcej punktów, ile zdobył dany gracz
+i najmniej punktów, ile zdobył dany gracz. Tak powinniśmy to sobie interpretować.
+No i ostatnie, wyświetl ilość graczy w poszczególnych drużynach.
+To możecie też zawsze dorzucić tutaj do minimalnej, maksymalnej i średniej.
+Możecie też dodać counta.
+W ten sposób będzie można zobaczyć, czy drużyny mają dużo punktów,
+bo może mają wielu graczy i każdy z graczy zdobył jeden punkt na przykład,
+a graczy było tysiąc. Oczywiście nierealne, ale wiecie, o co mi chodzi.
+My w zadaniu czwartym wracamy jeszcze na chwilę do naszych książek.
+Odpowiedź na pytanie, jaka jest średnia ilość książek wydanych w danym języku.
+Jest oczywiście funkcja, nazywa się average, a VG możecie też jej użyć tutaj.
+No i na przykład chodzi o to, że ile zostało średnio wydanych książek po angielsku,
+czy po niemiecku, czy po rosyjsku.
+Pewnie angielski będzie na przodzie, a może rosyjski? Sprawdźmy to.
+No i cóż, to byłoby na tyle.
+Życzę Wam miłego rozwiązywania i już niedługo zapraszam Was do kolejnego modułu.
+Do zobaczenia, trzymajcie się, cześć!

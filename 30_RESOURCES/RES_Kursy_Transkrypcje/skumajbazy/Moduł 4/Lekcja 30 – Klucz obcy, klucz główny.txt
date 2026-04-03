@@ -1,0 +1,127 @@
+Tych kluczy w przypadku baz danych mamy całkiem sporo.
+Mówi się ucz się ucz, nauka to potęgi klucz, to jest jedna rzecz,
+ale tutaj też na pewno będziemy musieli o tych kluczach troszeczkę się pouczyć.
+Klucz opcję i klucz główny to nie jedyne klucze, o których porozmawiamy sobie w tej lekcji.
+Czym jest klucz główny?
+Klucz główny to po prostu jest to ID, które widzieliście z przodu,
+czyli najczęściej możemy sobie powiedzieć, że jest to po prostu jedna kolumna jakaś liczbowa,
+która zawiera wartości od 1 do nieskończoności.
+Te wartości zwiększają się przy każdym stworzeniu nowego wiersza o 1.
+To, że one się zwiększają wynika z tego, że tam jest sekwencja,
+o sekwencjach też jeszcze sobie powiemy.
+To, co ważne, to to, że wartości w takich kolumnach nie mogą być nulami,
+nie mogą być puste.
+Mówi się o tym, że klucz główny ma być taką wartością,
+która będzie nam posłużyła.
+Do rozpoznawania dalnego wiersza i nie będzie pozwalała nam na pomyłkę.
+Czyli na przykład, jeżeli wzięlibyśmy sobie naszą populację polską,
+to moglibyśmy, dobra, nie u wszystkich, ale u osób, które posiadają przyjąć,
+że mamy PESEL, który mógłby być kluczem głównym.
+Ale jak widzicie, już tutaj się zawahałem, no bo nie każdy PESEL posiada,
+więc w tym momencie miałby on nulę, a to by prowadziło do błędów w przyszłości,
+więc absolutnie czegoś takiego nie moglibyśmy zrobić, ale na przykład w przypadku,
+w przypadku firm, chyba, moglibyśmy założyć, że kluczem głównym byłby na przykład NIP.
+To jak najbardziej może się wydarzyć.
+Natomiast nie mogą być to nule, no bo każda wartość powinna ten swój klucz główny mieć.
+Powiedzieliśmy sobie też o tym, że to jest jedna kolumna, najczęściej jest to jedna kolumna,
+ponieważ może być też tak, że kluczem głównym będzie tak zwany compound key,
+czyli klucz stworzony z kilku kolumn.
+Dane w tej kolumnie nie mogą się powtarzać.
+Skoro ten klucz, ten, ta wartość,
+może wyróżniać nam wiersz, no to nie ma możliwości, żeby ten, ta wartość powtarzała się,
+żeby kilka rekordów miało tę samą wartość.
+No i ostatnia rzecz, to jest taka, że w rekordach nie zmieniamy klucza głównego,
+czyli jeżeli rekord utworzymy już z jakimś kluczem głównym,
+to przez całe życie tego rekordu ten klucz główny powinien tam zostać.
+Jeżeli z jakiegoś powodu chcielibyśmy zmienić ten klucz,
+no to poprawniej byłoby usunąć rekord, dodać go jeszcze raz,
+bo klucz główny najczęściej generuje się automatycznie.
+Tak jak wspomniałem, jest to liczba od 1 do n,
+ale jak widać po naszej bazie, to też nie zawsze
+i w ten sposób właśnie te dane sobie przechowujemy.
+Tutaj warto też wspomnieć o takim pojęciu jak klucz potencjalny albo klucz kandydujący,
+ponieważ nasza kolumna może bez problemu posiadać klucz główny,
+ale na przykład jeżeli chodzi o to bycie osobą,
+to bardzo często do wskazania jakiejś osoby,
+może wystarczyć nam imię, nazwisko i miasto na przykład,
+albo imię, nazwisko i adres,
+więc w ten sposób też tworzymy sobie tak zwany klucz kandydujący.
+To jest tak zwany minimalny zestaw atrybutów, jak widzicie,
+który jednoznacznie identyfikuje nam każdy rekord.
+Kluczem kandydującym mogłyby być na przykład numery rejestracyjne samochodu.
+I dodatkowo tutaj warto zaznaczyć,
+że w przypadku każdego rekordu możemy wskazać wiele kluczy potencjalnych,
+czyli każda taka wartość, po której będziemy mogli sobie
+pobrać konkretny rekord, możemy ją po prostu sobie nazwać kluczem potencjalnym.
+Natomiast ze wszystkich kluczy potencjalnych wybieramy ten jeden najważniejszy,
+który właśnie jest kluczem głównym.
+I tutaj to, o czym wspominałem, że możemy przyjąć,
+że kluczem głównym może być również kilka kolumn.
+I w tym przypadku nazywane jest to albo compound, albo composite key.
+I prowadzi to do tego, że po prostu wskazujemy sobie kilka kolumn.
+Czyli na przykład, tak jak wspomniałem wcześniej,
+klucze rejestracyjne albo, nie wiem, numer nadwozia, marka i model.
+Mam nadzieję, że to wystarczy, albo może sam numer nadwozia by wystarczył.
+To wszystko to też połączone z jakąś inną jeszcze kolumną
+mogłoby być również naszym kluczem głównym,
+tylko że przedstawionym w formie dwóch czy trzech kolumn.
+No a reszta zasad jest taka sama.
+Też nie zmieniamy tych wartości, zostawiamy takie, jakie są.
+Nie mogą być te wartości puste.
+No i muszą być te wartości unikatowe względem wszystkich.
+Rekordów, które mamy w ramach danej tabeli oczywiście.
+I tutaj małe przykłady kluczy głównych.
+Ten najpopularniejszy, czyli po prostu id, gdzie mamy liczby.
+Drugim bardzo często występującym kluczem głównym mogą być na przykład
+skróty od nazw miejscowości.
+Czyli jak widać mamy gdy, waw i fg.
+Czyli zielona góra chyba, tak?
+Można sobie w ten sposób też określić, że będą to klucze główne.
+Oczywiście pamiętając o tym, że te wartości nigdy nie mogą nam się powtórzyć.
+Compoundki, compositki, czyli przypadek, gdzie mamy first name i last name.
+Tylko tutaj to niezbyt fortunny przypadek.
+No bo jak wiadomo, może się zdarzyć, że imię i nazwisko nam się powtórzy.
+Tutaj zawęziliśmy sobie populację, jak widać, tylko do skoczków narciarskich.
+Więc w ten sposób możemy założyć, że będziemy mieli tylko jednego Adama Małysza,
+Roberta Mateje i Wojciecha Skupnia, tak?
+W ramach danej tabeli.
+Ale lepiej myślę myśleć przyszłościowo i najczęściej jednak spotykamy się z tym
+kluczem głównym, którym jest
+liczba całkowita, ale też chciałem pokazać wam, że można inaczej.
+Jeżeli chodzi o klucz obcy, to obcy tutaj w tym przypadku nie oznacza czegoś
+niezrozumiałego czy czegoś, jakiegoś intruza.
+Tylko obcy oznacza coś, co pochodzi z zewnątrz.
+Tak jak język obcy.
+To nie jest nic złego, tylko po prostu język, który jest, przychodzi z zewnątrz.
+I klucz obcy jest używany do tego, żeby wiązać ze sobą tabele.
+Czyli żeby powiedzieć, że słuchaj,
+tam osoby, tam dalej mam miasta.
+Na podstawie tego wiąże ze sobą te dwie tabele.
+Wiązanie tabel wygląda zawsze tak samo.
+Czyli w jednej tabeli mamy klucz obcy, w drugiej tabeli mamy klucz główny,
+primary key.
+I teraz, jeżeli chcemy odwołać się do tego klucza, na podstawie klucza
+obcego do klucza głównego, to najczęściej wygląda to właśnie tak,
+jak widzicie na załączonym obrazku.
+Czyli nazewnictwo jest takie, że to jest city id, gender id, czyli tak jak tabele
+nazywamy liczbą mnogą, tak kolumny, które są kluczem obcym,
+nazywamy liczbą pojedynczą i doklejamy do tego jeszcze podkreślenie id,
+gdzie gender id, city id, właśnie to robimy w ten sposób.
+I tu pytanie, ponieważ spotkałem też na swojej drodze wiele tabel,
+w których kluczem głównym nie było id, tylko na przykład student id.
+Czy to się sprawdza?
+Moim zdaniem nie.
+To oczywiście zależy od indywidualnych preferencji.
+Zauważycie, że niektóre tabele po prostu tak mają, że kluczem głównym jest
+na przykład w tabeli student jest student id, jest na samym przodzie.
+Moim zdaniem łatwiej jest wtedy o pomyłkę, jeżeli chcemy wiązać tabelę ze
+sobą, no to lepiej jest wiedzieć, co jest kluczem głównym, co jest kluczem
+obcym, no i ten klucz główny trzymać po lewej stronie.
+O tym jeszcze sobie będziemy mówili, natomiast no moim zdaniem lepiej jest
+używać nazwy id niż student id w ramach tabeli, po prostu, żeby się nie
+pomylić. Natomiast jeżeli pracujecie z tabelami i ta druga konwencja jest wam
+większa, czyli chcecie nazywać klucz główny jako na przykład właśnie student
+podkreślenia id, no to róbcie tak.
+To nie jest absolutnie żaden błąd.
+Jeżeli chodzi o rozmowę o kluczach, to byłoby to na tyle.
+Zapraszam was do kolejnej lekcji.

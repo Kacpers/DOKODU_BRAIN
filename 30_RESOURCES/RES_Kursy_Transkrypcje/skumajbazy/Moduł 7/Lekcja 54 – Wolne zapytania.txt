@@ -1,0 +1,431 @@
+Na pewno wszyscy kojarzycie ten moment, kiedy piszecie zapytanie,
+robicie Ctrl-Enter i ta sytuacja trwa i trwa.
+Natomiast tu nie do końca zawsze o to chodzi.
+Bardzo często, kiedy wciskacie ten Ctrl-Enter,
+to na przykład to, że to zapytanie działa wolno,
+wynika z faktu, że po prostu nie jesteście podłączeni do bazy
+i DBiver musi raz jeszcze podłączyć się do bazy i wykonać zapytanie.
+I to nie jest wolne zapytanie.
+Wolne zapytanie jest wtedy, kiedy piszecie jakąś aplikację,
+albo kiedy napisaliście już właśnie zapytanie,
+mimo tego, że jesteście podłączeni do bazy, robicie Ctrl-Enter
+i przez to, że baza danych musi przetworzyć sobie bardzo wiele rekordów,
+bardzo wiele danych, to po prostu samo zapytanie bardzo długo trwa.
+Pracowałem kiedyś w takiej aplikacji, z taką aplikacją,
+która przetwarzała naprawdę gigabajty, czy nawet prawie terabajty danych
+i wykonanie jednego zapytania określonego po prostu trwało, trwało, trwało i trwało
+i to było strasznie denerwujące.
+Było strasznie denerwujące po pierwsze dlatego,
+że jeżeli ktoś chciał wygenerować raport, to musiał czekać.
+No więc oczywiście był na to sposób.
+Zrobiłem tak, że sobie zeznałem,
+lepchnąłem część odpowiedzialności do pamięci,
+jakby zakolejkowałem to zapytanie,
+czyli sprawiłem, że w momencie, w którym ktoś chciał wygenerować raport,
+klikał stwórz mi raport, no i w tym momencie aplikacja mówiła
+dostaniesz maila wraz z linkiem do pobrania raportu.
+No i czasem ten mail przychodził po 15 minutach,
+czasem po 20 minutach, czasem po godzinie,
+bo tyle tych danych było do przetworzenia,
+żeby ten raport stworzyć.
+Jednakże z czasem, gdy ilość tych użytkowników narastała
+i oni coraz częściej chcieli wykonywać te raporty,
+no to okazywało się, że ten czas nie tylko już zamiera,
+ale jest cała, serwer przestaje być wydajny.
+No i tutaj oczywiście zawsze, jeżeli serwer przestaje być wydajny,
+mamy możliwość powiedzenia, że to wina serwera
+i możemy dokładać do niego kolejne kostki RAMu,
+tu też oczywiście się śmieję, bo to najczęściej jest,
+że realizuje się na jakiejś chmurze poprzez przesunięcie suwaczka
+albo po prostu kupienie droższego serwera czy coś takiego,
+natomiast takie coś generuje kolejne koszty.
+No i winą za to, że tak było, było po prostu to,
+że baza danych była przygotowana na mniejszą ilość danych,
+a te dane po prostu regularnie puchły.
+No i w którymś momencie powiedziałem stop, tak nie może być,
+spotkałem się z zespołem, który odpowiadał za właśnie wykonywanie tych raportów,
+no i okazało się, że tak naprawdę ja przetwarzam raporty
+z dziesięciu lat wstecz, dane z dziesięciu lat wstecz,
+a im wystarczy tylko jeden rok.
+No i cały taki, pamiętam, czerwony, wystraszony,
+oczywiście kopii zapasowych miałem multum,
+ale musiałem wykonać polecenie delete i usunąć 90% bazy danych,
+no bo od biznesu dowiedziałem się, że te dane są niepotrzebne.
+Ale i tak, wiecie, zawsze jest gdzieś z tyłu na plecach taka myśl,
+że a jeżeli oni zaraz przyjdą i powiedzą,
+a Kasper, wiesz, zrobiłeś to już, a mamy kopię?
+Zawsze to gdzieś z tyłu głowy się czai
+i zawsze jest to jakieś ryzyko, że tak się właśnie stanie.
+No ale cóż, założyłem, że takiej sytuacji nie będzie,
+usunąłem te dane, aplikacja działa, zaczęła działać szybciej,
+ale wciąż były rzeczy, które można było poprawić.
+I mniej więcej na ten temat chciałbym dzisiaj z wami pogadać.
+Dlaczego ogólnie rzecz biorąc szybkość zapytań jest ważna?
+Po pierwsze, no tak jak napisałem i zresztą z tej historii możecie wywnioskować,
+jeżeli aplikacje działają wolno,
+zapytania wykonują się długo,
+no to najczęściej rodzi to frustracje po stronie naszych użytkowników.
+No bo jeżeli ktoś ma internet, chce pobrać z tego internetu jakieś dane,
+i te dane są mu potrzebne do dalszej pracy,
+no to on nie chce za każdym razem iść na kawę,
+tylko chciałby, żeby to działało, siedziało się tu i teraz.
+Po drugie, właśnie jeżeli chcemy, to możemy zawsze dokładać te kolejne kostki,
+no ale każda kolejna kostka kosztuje, powiedzmy,
+50 dolarów, więc jak dołożymy już ich 10,
+to nagle się okaże, że nasz serwer kosztuje 500 dolarów więcej miesięcznie,
+co jest kosztem bardzo dużym.
+No i po trzecie, zazwyczaj jest to traktowane jako brak profesjonalizmu.
+Niezależnie od tego, jak bardzo rozbudowaną aplikację i wspaniałą napiszemy,
+i jak bardzo będziemy dumni z tego pięknego kodu,
+który znajduje się pod spodem i z tych prostu rewelacyjnych zapytań,
+jeżeli ta aplikacja będzie działała wolno,
+to zazwyczaj użytkownicy będą mieli zastrzeżenia do nas,
+bo to jest nasza wina, że aplikacja działa wolno.
+I to my powinniśmy zrobić coś, żeby aplikacja działała szybciej.
+Co możemy zrobić?
+Przede wszystkim należałoby się zastanowić nad tym,
+dlaczego zapytania są wolne.
+Tutaj rozwiązań może być wiele.
+Jedno z rozwiązań jest takie, że dysk jest wolny.
+Czyli mamy jakiegoś bardzo starego peceta, który służy nam za bazę danych
+i po prostu to wykonuje się wolno.
+Właśnie dlatego.
+Rzadko, ale musiałem dopisać coś, co nie jest zależne ode mnie.
+Po drugie, niezoptymalizowane zapytania.
+Wspominałem wam na przykład, że kiedy robicie intersecta
+pomiędzy dwoma zapytaniami,
+to zdarza się, że to jest zapytanie, które wykonuje się wolno.
+No bo on za każdym razem porównuje sobie te zapytania
+i to nie jest zapytanie, które jest najszybsze.
+Jeżeli byście chcieli to zrobić na gigabajcie,
+porównać gigabajt z gigabajtem,
+gwarantuję wam, że zauważylibyście,
+że zapytanie wykonuje się wolniej niż inne zapytania.
+Po trzecie, możemy na przykład chcieć wyciągać ogromną ilość wierszy na raz.
+Czyli załóżmy, robimy sobie jakieś grupy,
+na grupach robimy having,
+no i za pomocą having wyrzucamy 3 czwarte danych z naszych grup.
+To po co robimy grupy, group by, na całej tabeli?
+Może łatwiej będzie część rzeczy z having przenieść do where,
+żeby mniejszą ilość danych grupować.
+Albo może warto byłoby podczas wykonywania grupy
+też ograniczyć te dane, które sobie dojojnowujemy,
+tak żeby tych wierszy było trochę mniej.
+To są takie kruczki, które warto zastosować,
+jeszcze o nich sobie będziemy mówili.
+No i po czwarte, zapytania mogą być wolne,
+no bo nie dodawaliśmy żadnych indeksów.
+Jeżeli po kolumnach szukamy często,
+no to do tych kolumn te indeksy warto pododawać.
+Zachęcam was do powrotu do lekcji o indeksach,
+jeżeli nie pamiętacie tematu.
+Ale jeżeli już uznajemy, że wydaje nam się,
+że wszystko to zrobiliśmy,
+albo napisał tą aplikację ktoś inny,
+a teraz my mamy po nim posprzątać i sprawić,
+żeby aplikacja działała szybciej,
+no to warto byłoby chociaż wiedzieć,
+co są te wolne zapytania.
+Czyli jak je znaleźć?
+Co możemy zrobić, żeby je znaleźć?
+No i tutaj znowu niestety część tych operacji,
+o których będziemy rozmawiali,
+one również dotyczą bycia administratorem.
+Tak samo jak w przypadku uprawnień.
+Czyli tutaj niekoniecznie wszystkie te dane,
+które wam pokażę, jak je wyciągnąć,
+będziecie mogli wyciągać na naszej tabeli,
+na naszej bazie.
+Zresztą na naszej bazie nie będzie raczej wolnych zapytań.
+Natomiast jeżeli w waszej pracy by się takie zdarzyło,
+no to warto o tym wiedzieć.
+Jak ja to robię?
+Najczęściej po prostu sobie robię kopię tej bazy danych,
+jeżeli mam taką możliwość,
+przenoszę ją na mój komputer
+i sobie wykonuję to w ten sposób.
+Albo po prostu korzystam z jakiegoś serwera deweloperskiego,
+na którym mam uprawnienia administratorskie,
+może danych mam trochę mniej,
+wtedy tych danych sobie generuję,
+tak żeby móc jak najbardziej odzwierciedlić
+tą sytuację, która jest na serwerze produkcyjnym,
+no i znaleźć te wolne zapytania.
+A jak je znaleźć?
+Dobra, bo gadam, gadam, a zero konkretów.
+Już mówię.
+Po pierwsze, oczywiście są to testy funkcjonalne.
+Czyli po prostu klikamy sobie po stronie
+i szukamy wolnych zapytań.
+Gdzie one się pokazują?
+Zaraz wam pokażę.
+Po drugie,
+w każdej bazie danych,
+i w Postgresie też tak jest,
+możemy sobie skonfigurować coś,
+co się nazywa slow log
+i do tego slow loga będą odkładały się zapytania,
+które po prostu są wolniejsze niż inne.
+Jeżeli nie mamy dostępu do tego loga,
+a jesteśmy administratorami,
+to jeszcze możemy skorzystać z czegoś takiego,
+co nazywa się PG Stat Statements.
+To wymaga jednej,
+kilku operacji,
+za chwilę zobaczycie
+i wtedy zapytania po prostu będą te wolne
+odkładały nam się w bazie danych.
+No i opcja ostatnia,
+to po prostu jak już znaleźliśmy to wolne zapytanie,
+albo można to robić na chybił trafił,
+ale załóżmy,
+że znaleźliśmy wolne zapytanie,
+chcielibyśmy się dowiedzieć,
+co ten Postgres robi tam pod spodem,
+to właśnie korzystając z Explain'a
+możemy obejrzeć plan zapytania,
+ale to za chwilę.
+Na razie porozmawiajmy o tych testach funkcjonalnych.
+Jak to działa?
+Jeżeli chodzi o te testy funkcjonalne,
+to testy funkcjonalne wyglądają tak,
+że po prostu wchodzimy sobie po stronie
+ale jak wtedy znaleźć zapytania?
+Jeżeli strona
+ładuje nam się wolno,
+czyli wiecie, klikam sobie na listę produktów
+i czekam i sobie myślę,
+hmm, chyba to trochę działa zbyt wolno,
+wydawało mi się, że mogłoby to działać szybciej,
+no bo już czekam 30 minut,
+a produktów nie ma.
+No to zobaczmy, co się stało,
+że tak wolno się one ładują.
+Na przykład w Django,
+który jest frameworkiem Pythonowym,
+jest możliwość podejrzenia sobie w takim pasku
+na dole zapytań
+i widzicie, tu są zapytania,
+select, rating, blablabla, from
+i mamy informację, że to zapytanie
+wykonało się z 0,18 sekundy,
+czyli całkiem szybkie zapytanie,
+ale może się zdarzyć, że znajdziecie jakieś,
+które wykonuje się 4 sekundy,
+5 sekund, 3 minuty, tak?
+No to są takie zapytania,
+które warto byłoby przyspieszyć,
+zastanowić się nad tym,
+co się stało, że działa wolno.
+Jeżeli nie używacie Pythona,
+no bo wiem, że tutaj też część z was
+nie pochodzi z tego świata,
+na przykład może was zainteresować PHP,
+w którym to PHP
+jest framework między innymi,
+który nazywa się Laravel
+i tam też jest coś takiego, taki profiler,
+który też w pasku na dole
+pokazuje wam queries,
+no i tam jest informacja, że jest 6 zapytań
+i mamy też zapytania i czas ich wykonania.
+Widzicie? Tutaj minuta, sekunda 64,
+to jest szybciej.
+Więc to też jest rozwiązanie.
+Jeżeli pochodzicie z innego języka,
+to też można zawsze sobie to sprawdzić
+w tym innym języku.
+Jeżeli korzystamy z DBivera,
+on też po wykonaniu zapytania
+informuje nas gdzieś tutaj na dole o tym,
+jaki jest czas wykonania.
+Nie będę wam teraz tego szukał,
+ale gdzieś ta opcja tam na pewno się znajduje.
+To spokojnie, o DBiverze też jeszcze za chwilę
+pokażę wam, jak z tymi zapytaniami działać.
+Po drugie, PG Stat Statements,
+czyli jeżeli chcemy odkładać
+nasze zapytania do bazy danych,
+to jak to zrobić?
+Można po prostu
+przeedytować sobie plik
+postgresql.conf
+i dorzucić informację,
+że chcemy załadować sobie taką bibliotekę,
+jak Shared Preload Libraries
+i to jest PG Stat Statements
+i określamy wówczas,
+jaki czas to jest ten maksymalny
+i jakie zapytania chcemy śledzić.
+Tu polecam zerknąć sobie po prostu
+do dokumentacji Postgresa.
+Wtedy oczywiście
+potrzebujemy restartu
+naszego serwera
+no i za pomocą polecenia
+Create Extension PG Stat Statements
+te zapytania będą też nam się odkładały.
+Zaraz zobaczycie, gdzie.
+Tu tylko bardzo ważna uwaga.
+Wszystko to, co pokazuję w tej lekcji
+nie nadaje się
+do testowania na produkcji.
+To jest trochę tak, jakbyście powiedzieli
+pani kasjerce w banku
+słuchaj tam
+Helena, załóżmy, słuchaj Helena,
+mam taką sprawę, no bo mam wrażenie,
+że gdzieś znikają nam pieniądze.
+Jakbyś mogła
+to odnotowuj każdą jedną transakcję
+i wszystkie te, które są
+większe, czy tam coś tam, to sobie jeszcze
+dodatkowo idź do szefa i mów o tym,
+że tak coś takiego się wydarzyło.
+To wyobraźcie sobie, o ile spadnie
+wydajność tej naszej koleżanki Heleny,
+jeżeli ona będzie miała
+taką, takie operacje wykonywać.
+I teraz wyobraźcie sobie, że
+są też inne operacje, które ona normalnie
+wykonywała szybko, ale nagle ona teraz musi
+sprawdzić, czy to nie jest
+czy to jest dobre, czy to nie jest za wolne,
+czy to nie jest za szybkie, czy to nie jest jakieś.
+Potem musi iść do tego szefa
+i nagle klienci, którzy do tej pory byli
+w cudzysłowie załatwiani w
+ułamek sekundy, muszą czekać
+sekund kilka. Więc zachęcam was
+do tego, żeby pobawić się też
+i tym, ale nie na aplikacjach
+jakichś waszych produkcyjnych,
+bo jeżeli kogoś z was wyrzucą z pracy
+przez to, że zaczniecie szukać wolnych
+zapytań na serwerach produkcyjnych,
+to ja do tego was nie namawiałem,
+okej? No tak się umawiamy,
+że tak jest.
+No i wtedy, jeżeli sobie
+zarejestrujemy to PG State Statements,
+włączymy, zrestartujemy, no to może się okazać,
+że właśnie wykonanie zapytania
+SELECT gwiazdka FROM PG STATE STATEMENTS,
+to jest taka, tabelowidok,
+sprawi, że dostaniemy
+informacje,
+jaki, ile łącznie czasu
+spędziła nasza baza
+nad wykonywaniem tych zapytań,
+ile razy te zapytania były wykonywane,
+no i średni czas trwania
+tego zapytania. Czyli załóżmy
+tu widzimy, że jakiś SELECT poszedł 3 razy,
+łącznie to trwało
+3,7 minuty.
+Nie wiem, czy to jest
+3 minuta, nie pamiętam,
+ale 3,7, no i to jest
+zapytanie SELECT, a INSERT
+szedł zdecydowanie dłużej, no i
+22,3. Czasem oczywiście
+jest tak, że kiedy włącza się jakaś strona,
+to w tym czasie
+tak naprawdę wykonuje nam się bardzo wiele
+zapytań. No ale naszym zadaniem nie jest
+jakby skupienie się na
+ich wszystkich, tylko chociażby na tych, które
+bardziej nam to zwalniają.
+I to
+parę razy życie mi,
+może nie życie, ale
+trwał mi czas, że po prostu wychwyciłem te zapytania,
+które były wolniejsze
+i mogłem szybko je naprawić i już
+w sposób zauważalny aplikacja
+przyspieszała. No i opcja ostatnia,
+to możemy logować
+wolne zapytania, czy tak jak wspominałem
+jest coś takiego, co nazywa się SLOW LOG,
+no i jeżeli sobie to wykonamy,
+to możemy wejść do
+LOG MIN DURATION STATEMENT
+do pliku Postgres QL Conf, czyli do
+konfiguracji Postgresa, określić, że
+chcemy logować te zapytania,
+które trwają dłużej niż 1000 milisekund,
+no i zrestartujemy Postgresa,
+to zależy oczywiście od tego, jakiego
+mamy Linuxa, czy też
+jeżeli używamy Windowsa, to możemy to zrobić
+zapewne gdzieś tam z jakiegoś okienka,
+natomiast później on nam będzie
+w tym pliku określał, jakie
+zapytanie, kiedy się
+wykonało i ile
+milisekund trwało.
+Jak widzicie, mamy no bardzo długie
+obciążające zapytania
+i takie zapytania się zdarzają.
+Ja osobiście też miałem takie zapytania
+w pracy, gdzie pisałem je,
+wykonywałem i wiedziałem, że mogę
+iść na kawę, czy też może
+bardziej po kawę,
+zanim to zapytanie się wykona,
+no bo ono trwało chwilę, tylko, że to zapytanie
+mi służyło do tego, żeby wygenerować jakiś
+raport i to akurat nie było problemu z tym, że ono
+trwało tak długo, natomiast jeżeli
+mówimy o aplikacjach typu strona internetowa,
+gdzie ktoś klika, chce szybko
+dostać wynik, no to
+zazwyczaj every second counts, czyli
+w momencie, w którym ktoś ma
+spędzić na stronie 10 sekund,
+no to jest ryzyko, że tą stronę po prostu
+odpuści, albo uzna, hmm, chyba coś się zawiesiło,
+coś nie działa i wyjdzie, a
+w przypadku Postgresa, czy w ogóle
+w przypadku baz danych, takie zapytania
+i tak trwają w pamięci, i tak one się
+gdzieś tam wykonują, i tak
+ten wasz skrypt dostanie odpowiedź
+tego zapytania. To nie jest tak, że
+kiedy wykonujemy zapytanie i zamykamy klienta,
+to to zapytanie przestaje się wykonywać,
+ono i tak zabiera zasoby serwera.
+No i też są sposoby na to, żeby właśnie
+usuwać takie zapytania, przeglądać je,
+ale też są takie prace administratorstwa,
+wszystkie, natomiast warto wiedzieć, że takie
+rzeczy się dzieją i mogą
+wpływać na wydajność waszego serwera.
+No bo jeżeli, załóżmy, stworzyłbym
+taki jeden, wygenerowałbym jeden raport,
+drugi, trzeci, czwarty, piąty, szósty
+i nie czekałbym na odpowiedzi, a one,
+każdy z nich regenerowałby się przez parę
+minut, no to ten czas
+jakby by się na siebie nałożył.
+To by sprawiło, że serwer by się pocił
+przy wykonywaniu tych zapytań,
+no i jeżeli bym chciał jakiś taki raport, który
+byłby strasznie dla mnie ważny, no to ten jeden,
+ten ostatni i tak by
+wykonywał się wolniej, przez to, że tamte
+też by się wykonywały. No tak to niestety
+działa. I trzeba pisać
+zapytania szybkie i wydajne. A teraz
+przechodzimy sobie do kolejnego tematu,
+a mianowicie, skoro już znaleźliśmy
+zapytanie, które działa wolno,
+albo
+prawie nie działa, to warto byłoby
+się zastanowić nad tym,
+co się takiego dzieje, że ono wykonuje się
+tak wolno. I do tego
+też są narzędzia.
+Jakie? To już powiemy sobie w kolejnej
+lekcji. Zapraszam.
+muzyka

@@ -1,0 +1,125 @@
+I tak jak powiedziałem w tej lekcji, to już jest lekcja jedenasta,
+zajmiemy się zmianą kolejności naszych rekordów,
+czyli po prostu będziemy je sobie sortowali według największych do najmniejszych
+albo od najmniejszych do największych, jak kto woli.
+Zobaczcie.
+Jeżeli chodzi o sortowanie, no to sortowanie to jest oczywiście czynność
+polegająca na zmianie kolejności wierszy.
+Możemy też, co jest ważne, sortować sobie po kilku kolumnach naraz.
+Co się wtedy stanie?
+Wtedy jeżeli jakieś rekordy będą miały taką samowartość w tej jednej kolumnie,
+czyli ten pierwszy, pierwsza kolejność sortowania nie pozwoli nam wyłonić zwycięzcy,
+czy nie pozwoli stwierdzić, który rekord powinien być wyświetlony wyżej,
+wówczas zostanie użyta druga kolejność.
+Przykładem bardzo dobrym na to jest sortowanie po nazwiskach,
+a następnie po ich.
+Czyli jeżeli mamy pana, który nazywa się Kowalski, załóżmy,
+to wówczas na samej górze będzie Kowalski Antoni,
+później będzie Kowalski Henryk, zakładając, że sortujemy sobie alfabetycznie od A do Z
+według obu tych kryteriów.
+Tutaj też możemy to zmieniać.
+To, co musimy wiedzieć, żeby wykonać sortowanie, to to, jak się do tego zabrać.
+A żeby się do tego zabrać, dodajemy sobie jeszcze jeden klocek układzanki do naszego selecta.
+I zobaczcie, że za select co?
+To, from, skąd pojawiło się coś, to się nazywa order by, gdzie występuje kolejność.
+I teraz, jeżeli chodzi o kolejność, to na razie wystarczy nam to,
+że kolejność wygląda tak, że mamy kolumna, a następnie asts albo desc.
+Asts, bo to jest ascending, czyli rosnąco, natomiast desc, czy tam dist, to jest descending, czyli malejąco.
+Czyli jeżeli chodzi o sortowanie rosnące, to jest to sortowanie od A do Z,
+albo od najmniejszych do największych.
+Albo od dat, które wydarzyły się dawno, do dat, które wydarzyły się niedawno.
+Bo im mniejsza data, tym jakby bliżej początku epoki.
+Czyli na przykład data dzisiejsza będzie mniejsza niż data jutrzejsza.
+Bo im data jest późniejsza, tym po prostu jest większa.
+Strasznie to jest namieszane, ale jak na chwilę się nad tym zastanowicie,
+wyobrazicie sobie oś liczbową, to wyjdzie Wam dokładnie to, co przed chwilą powiedziałem.
+Dodatkowo, jeżeli chcielibyśmy sortować po kilku kryteriach narodowych,
+teraz to ważnym jest to, żeby wiedzieć, że te kryteria rozdzielone są przecinkiem.
+Czyli to będzie wyglądało tak.
+Select from, order by, i na przykład first name as, last name dest.
+Czyli first name ascending, last name descending.
+Czyli najpierw będziemy mieli sortowanie alfabetyczne od A do Z,
+a dopiero potem po nazwisku od Z do A.
+Czyli najpierw będziemy mieli Antoniego Zamenhofa, a potem Antoniego Abrahama.
+OK?
+Zamenhof i Abraham, dwa ważne nazwiska w historii Gdyni. Polecam.
+I skoro już to wiemy, jak wykonać sortowanie, to zróbmy sobie dwa zadanka.
+Oczywiście to są zadanka dla Was. Ja pokażę moje rozwiązania po chwili.
+Jaki produkt ma najwyższą cenę?
+Interesuje nas wartość z kolumny unit price.
+Wyświetl wyłącznie nazwy oraz ceny produktów.
+I zadanie drugie.
+Uporządkuj klientów w kolejności według kraju malejąco,
+a następnie według miasta rosnąco.
+No to co?
+Trzy minuty dla Państwa, trzy minuty dla Was.
+Widzimy się po chwili.
+No to nie śpimy, tylko lecimy.
+Jaki produkt ma najwyższą cenę?
+Czyli, żeby powiedzieć o najwyższej cenie,
+potrzebuję posortować je sobie malejąco według kolumny unit price.
+Czyli select.
+Interesują nas tylko nazwy oraz ceny.
+Od razu sobie zrobię from products.
+Wówczas sobie wpiszę tutaj name.
+Nie ma name, jest product name.
+Nie ma product name, a na pewno będzie unit price.
+A, coś mu się nie podoba innego.
+Wiecie co?
+Jeżeli to podpowiadanie jest tutaj zawodne,
+to ja się nie będę na niego zdawał,
+tylko od razu sobie otworzę products, columns.
+Co ja się tam będę szczypał?
+Product name, miałem rację.
+No to dobra.
+Select product name,
+przecinek unit price from products.
+No i teraz interesuje nas posortowanie ich po cenie malejąco.
+Czyli order by unit price descending.
+Control enter i mamy.
+Najwyższą cenę ma Kutadebleje.
+Potem mamy Thuringer Rostabor Wurst.
+A potem Michiko Beniku.
+I to są ceny.
+Pewnie w dolarach.
+263 dolary.
+A poniżej mamy uporządkowane ceny.
+No i teraz interesuje nas posortowanie ich po cenie malejące.
+Możemy uporządkować klientów w kolejności według kraju malejące,
+a następnie według miasta rosnące.
+No to lecimy.
+Select kraj malejąco count i h.
+Możemy sobie wyświetlić wszystko.
+Czyli najpierw możemy zrobić select gwiazdka from customers.
+Nie jest określone co ma się wyświetlić,
+więc możemy sobie wyświetlić wszystko.
+No i wtedy po zrobieniu control enter
+możemy sobie śmiało dołożyć order by.
+No i najpierw kraj malejąco,
+czyli country zapewne.
+Sprawdźmy to jeszcze.
+Oczywiście, że country.
+I jeżeli według kraju malejące,
+to to będzie desks descending przecinek,
+a następnie według miasta rosnące,
+czyli city ascending.
+Control enter.
+No i dostaniemy w ten sposób wszystkie dane posortowane.
+Na samej górze mam Wenezuelę,
+bo to jest mój kraj.
+No i moje city to jest Barquis.
+Barquis i Meto.
+Natomiast niżej mam Wenezuelę i Caracas.
+Pod tym względem już umiem przeczytać.
+Znam tą nazwę miejscowości pierwszej nazwy.
+Nie znam.
+U was też tak powinno wyjść.
+Jeżeli wyszło, to super.
+W tej lekcji nauczyliśmy się sortować dane.
+Umiemy już określać kolumny,
+znajdować tabele, sortować.
+Czas na ostatni element tego modułu.
+A mianowicie na to, aby eksportować.
+Nasze wyniki gdzieś.
+A eksport przydać się nam może.
+Do zobaczenia w kolejnej lekcji.

@@ -1,0 +1,174 @@
+No i kolejny moduł, czyli już moduł dziesiąty,
+jest trochę takim małym oszustwem.
+No bo jak to? Pierwszy selekt, skoro przed chwilą pisaliśmy selekty.
+No dobra, no ale czym innym jest pisanie selekta pod tytułem
+select i powiek pokaż mi wynik jakichś operacji,
+a czymś innym jest faktycznie napisanie pierwszego,
+takiego poważnego, większego zapytania.
+Zobaczmy, co tam się czai za rogiem.
+Żeby wykonać sobie takie zapytanie prawidłowo,
+możecie też zobaczyć, co się stanie w momencie,
+w którym klikniecie w słówko public, a następnie klikniecie w er diagram.
+Wówczas dostaniecie bardzo ładno, w ładnej formie
+zaprezentowany schemat waszej bazy danych.
+Zobaczcie. Czyli wszedłem sobie właśnie w ten er diagram,
+kliknąłem sobie tutaj na public, następnie przeszedłem do drugiej zakładki
+i widzę wszystkie tabele mojej bazy.
+To, co jest ważne, to są jeszcze te kreski.
+To są właśnie powiązania pomiędzy naszymi tabelami, ale nie, ja nie o tym.
+Żeby napisać dobre zapytanie, żeby napisać select, będziemy
+potrzebowali wiedzieć, jak wygląda nasza tabela, więc można sobie
+oczywiście ją wyklikać, albo można też właśnie z czegoś takiego
+sobie ją pooglądać.
+Tego typu zestawienia da się też drukować.
+To jeżeli byście chcieli coś poprzeciągać, możecie też sobie śmiało
+to położyć w jakiejś takiej formie, w której byłoby to dla was bardziej
+czytelne.
+I przyznam się wam do tego, że bardzo często, jeżeli mam jakiś bardziej
+złożony projekt, to faktycznie sobie takie zapytania potrafię drukować,
+albo potrafię sobie nawet na kartce gdzieś w formie notatek takie rzeczy
+przepisać.
+Z tego względu, że później zapamiętywanie nazw kolumn wszystkich, jak wiecie
+z moich poprzednich filmów, też filmów na kanale, nie jest moją najmocniejszą
+stroną, więc jeżeli mam taki układ, taki obrazek wydrukowany, to później łatwiej
+jest mi się wtać.
+Możecie też w takiej bazie odnaleźć, zachęcam, ale oczywiście nie
+zmuszam.
+No i teraz zastanówmy się nad tym, jak może wyglądać zapytanie select.
+To zapytanie zawsze wygląda praktycznie tak samo, czyli zawsze mamy select.
+Następnie jest co, czyli tak naprawdę to, co chcemy pobrać.
+Tak jak widzieliście, chcieliśmy pobrać sobie wynik, tyle tylko, że kiedy
+pobieraliśmy sobie wynik, no to pobieraliśmy sobie wynik jakichś operacji
+po prostu jakiegoś obliczenia.
+Natomiast tutaj będziemy chcieli pobrać wynik jakichś operacji z jakiejś
+konkretnej tabeli, stąd też select co potrzebuje mieć jeszcze dalszy ciąg,
+a mianowicie from skąd, czyli musimy mu powiedzieć, co pobieramy i skąd
+pobieramy.
+Odnośnie tego, co chcemy pobrać, to tutaj opcji jest całe mnóstwo.
+Na razie dowiedzieliście się tylko o tej przedostatniej opcji, czyli
+wywoływanie operacji na przykład 1 plus 1, 100 razy 3 i tak dalej.
+To jest to, co sobie zrobiliśmy przed chwilą, ale oprócz tego możemy też
+w miejscu co wpisać na przykład gwiazdkę i to spowoduje, że zostaną
+pobrane wszystkie kolumny z naszej tabeli.
+Opcja druga to możemy wpisać nazwy kolumn, czyli po prostu jedną kolumnę
+albo trzy kolumny rozdzielone przecinkami, tak jak widzicie tutaj.
+Kolumna, kolumna, kolumna, czyli na przykład select first name, last name,
+select ulica, numer.
+I tak dalej.
+Natomiast jeżeli chcielibyśmy zobaczyć tylko i wyłącznie wartości
+unikatowe, czyli załóżmy mamy tabelę, w której jest bardzo duża
+liczba studentów, chcielibyśmy sprawdzić, jakie imiona studentów mamy
+w tej tabeli, więc możemy wykonać select distinct first name from students.
+I to zadziała w ten sposób, że on nam nie będzie sprawdzał, ile jest tych
+osób, tylko po prostu wyświetli nam same unikatowe wartości.
+Zwróćmy uczestnika.
+Ostatnia to na przykład sprawdzenie ilu jest takich studentów.
+Możecie na przykład wykorzystać funkcję np.
+count.
+O takich funkcjach agregujących będziemy sobie mówili jeszcze więcej i
+na przykład jeżeli wykonamy select count w nawiasie, piszemy jakąś
+nazwę kolumny to nam policzy, ile jest takich rekordów, które w tej
+kolumnie mają jakąś wartość.
+Jeżeli w tej kolumnie byłby 0
+albo wartość byłaby pusta, to po prostu nie byłoby to zliczane.
+Ale na przykład select sum w nawiasie, aujourd' BOB na przykład erreicht one records, które na случasie, które mają jakąś wartość, które w kolumnie byłaby nul ale albo wartość byłaby pusta to po prostu nie byłoby to zliczane.
+sum w nawiasie, wpiszemy jakąś kolumnę zawierającą liczby,
+dostaniemy informację, ile łącznie jest takich wartości.
+Znaczy i jaka jest suma wartości leżących w tej kolumnie.
+OK? I skoro już wiemy, co może znajdować się w miejscu co,
+to powiedzmy sobie jeszcze, co może znajdować się w miejscu skąd.
+A w miejscu skąd mogą znajdować się dwie rzeczy.
+Może znajdować się nazwa tabeli, z której pobieramy dane
+oraz może znajdować się też inne zapytanie, tak zwane podzapytanie.
+Ale tym zajmiemy się dopiero w przyszłości.
+Na razie będą nas z grubsza interesowały nazwy tabel.
+OK. Skoro już wiemy, co wpisać w poszczególnych miejscach,
+no to pokażmy sobie kilka przykładów.
+Przykład pierwszy. Tak jak wspomniałem,
+select imię, przecinek, nazwisko from studenci.
+To jest zapytanie, które pobierze nam wszystkie imiona i nazwiska
+wszystkich studentów z naszej tabeli.
+Jeżeli mielibyśmy taką tabelę jak studenci.
+Inny przykład.
+Select sum w nawiasie czesne from studenci
+odpowie nam pytanie, jaka jest łączna wartość czesnego.
+Jeżeli to byłoby czesne płacone miesięcznie,
+no to wtedy zobaczymy oczywiście sumę,
+ile miesięcznie po prostu zarabiamy na tym, że mamy jakichś studentów.
+Innym przykładem może być użycie na przykład distincta do tego,
+żeby pobrać sobie unikatowe miasta, które znajdują się w tabeli,
+tylko po to, żeby zrobić na przykład następne.
+Na stronie select box, czyli takiej listę rozwijaną,
+w której wylistuje wszystkie miasta,
+choćby do wyszukiwarki czy do filtra.
+Czasem tego typu rzecz się też przydaje.
+Inny przykład selecta to jest select count z gwiazdką from studenci.
+Wówczas dostaniemy po prostu ilość tych studentów.
+No bo jak wiecie, można sobie w DBWerze zerknąć w prawy dolny róg
+i tam on nam też powie, ile tych ich rekordów zostało znalezionych.
+No ale jeżeli chcielibyśmy na przykład tę liczbę jakoś wykorzystać,
+no to wówczas ten student, który jest w tym tabeli,
+select count z gwiazdką, właśnie nam to wykorzystać pozwoli.
+No i dotarliśmy do takiego momentu, w którym mamy kilka zadań do zrobienia.
+Zadanie pierwsze, pobierz unikatową listę miast z tabeli customers.
+Zadanie drugie, pobierz product name oraz quantity per unit z tabeli products.
+Zadanie trzecie, pobierz ilość dostawców, czyli suppliers.
+Chcę o tym powiedzieć, ilu ich jest.
+Zadanie czwarte, pobierz nazwę odbiorcy, czyli ship name,
+oraz cenę dostawy, freight, z tabeli orders.
+No i zadanie piąte, zaktualizuj zadanie czwarte, tak by cena dostawy była wyższa o 10%.
+No to co, kilka minut dla Was na rozwiązanie i widzimy się po krótkiej przerwie.
+Ok, to przejdźmy do rozwiązania.
+Pobierz unikatową listę miast z tabeli customers.
+No to select.
+Tutaj warto sobie zrobić też taki mały szachermacher.
+Można zrobić select gwiazdka from customers.
+I wtedy on nam będzie chętniej podpowiadał tutaj te nazwy kolumn.
+Ale jeżeli chodzi o unikatową listę miast, no to potrzebujemy distinct.
+No i chyba to będzie city.
+Jeżeli nie pamiętacie też, jakie są nazwy naszych kolumn,
+to pamiętajcie, że możemy sobie zawsze rozwinąć tę skimę,
+rozwinąć następnie tables, wybrać customers, no i w customers znajdziemy nazwy kolumn.
+Pod tym względem korzystanie z DBWare'a też jest bardzo przyjemne.
+W zadaniu drugim mamy pobrać product name oraz quantity per unit z tabeli products.
+No to ponownie możemy sobie śmiało wykonać select product name quantity per unit from products.
+Tutaj wskoczył nam jeszcze taki alias.
+Te aliasy, czyli to p, które jest na końcu, to jest takie coś, co można używać zamiennie,
+natomiast nazwy tabeli, ale więcej powiemy sobie o nich wtedy, kiedy będą nam potrzebne,
+czyli gdzieś na etapie joinów, czyli złączeń.
+W ten sposób, jak widzicie, wyświetliły nam się wszystkie te nazwy.
+W zadaniu trzecim mamy pobrać ilość dostawców, czyli ilość wierszy,
+które mamy w tabeli suppliers.
+Można byłoby to oczywiście osiągnąć wykonując select gwiazdka from suppliers.
+W ten sposób on by nam odpowiedział, ile jest wierszy.
+Tu akurat ja tę wartość chyba zasłaniam, ale gdzieś ona jest tutaj w prawym dolnym rąku,
+że jest ich 29, tutaj też widzicie tę liczbę, gdzieś tutaj o 29, tu o 29,
+ale możemy też sobie zawsze pobrać po prostu ich ilość.
+W ten sposób należy tutaj wpisać funkcję count, w której można wpisać gwiazdkę,
+wtedy mamy pewność, że zliczy nam wszystkie wiersze,
+albo można podać jakąś nazwę kolumny, która jest niepusta,
+ale u nas wystarczy gwiazdka, faktycznie tych osób jest 29.
+No i w zadaniu kolejnym.
+W zadaniu kolejnym mamy pobrać nazwę odbiorcy, czyli ship name oraz cenę dostawy, czyli freight.
+No to select ship name przecinek freight from,
+from co, from shipping, shippers, nie pamiętam jak się nazywała ta tabela,
+z tabeli orders, no to bardzo proszę.
+No to,
+from orders,
+no i zadziałało.
+No i mamy zaktualizować zadanie czwarte tak, aby cena dostawy była wyższa o 10%,
+czyli przemnożymy to sobie razy 1,1.
+Czyli możemy sobie skopiować to zapytanie i po prostu przemnożyć to razy 1,1,
+pamiętając o tym, że mamy taką możliwość.
+Tu jest 32, tu jest 35, czyli działa.
+I to byłoby na tyle, jeżeli chodzi o tę część,
+czyli na chwilę obecną powinniśmy,
+żeby umieć pobierać dane z pojedynczej tabeli,
+określać jakie kolumny nas interesują oraz odnajdywać poszczególne tabele w naszej bazie danych.
+Czas przejść teraz odrobinę dalej i zastanowić się nad tym jak te dane sobie posortować,
+czyli co zrobić, żeby na przykład dane były posortowane rosnąco, czy też malejąco,
+żeby sprawdzić jaka jest najwyższa data, czy też sprawdzić jaka jest najniższa liczba.
+Zapraszam was do kolejnej lekcji.
+www.astronarium.pl www.facebook.com
+Produkcja Polskie Towarzystwo Astronomiczne Telewizja Polska
+Transkrypcja Magdalena Świerczek-Gryboś
