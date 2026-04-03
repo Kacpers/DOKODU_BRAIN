@@ -40,14 +40,23 @@ Przetestowano na 7 prawdziwych dokumentach od Borysa:
 
 ## API Endpoints
 
+Uproszczony flow: upload → auto-analyze → preview → download (bez osobnego kroku "analyze").
+
 | Method | Path | Opis |
 |--------|------|------|
-| POST | `/api/upload` | Upload DOCX, zwraca document_id |
-| POST | `/api/analyze/{doc_id}` | Analizuje pola (query param: mode=rule/ai/hybrid) |
-| GET | `/api/preview/{doc_id}` | Lista wypełnionych pól z metadanymi |
-| POST | `/api/fill/{doc_id}` | Generuje wypełniony DOCX do pobrania |
+| POST | `/api/upload?mode=hybrid` | Upload DOCX, auto-analiza, zwraca document_id + wyniki |
+| GET | `/api/documents/{doc_id}` | Wyniki analizy (lista pól z metadanymi) |
+| GET | `/api/documents/{doc_id}/download` | Pobiera wypełniony DOCX |
 | GET | `/api/profile` | Dane firmy z profilu |
 | PUT | `/api/profile` | Aktualizacja profilu |
+
+**Document ID:** UUID4, pliki w `/tmp/tender/{uuid}/`. TTL 1h, cleanup cronem.
+
+**Error contract:**
+```json
+{"error": "message", "code": "INVALID_FORMAT|NOT_FOUND|AI_FAILED|INTERNAL"}
+```
+HTTP status: 400 (bad input), 404 (stale doc_id), 500 (internal), 422 (AI timeout — fallback do rule-only).
 
 ## Rule Engine
 
@@ -61,9 +70,18 @@ Mapowanie: ~20 znanych etykiet (case-insensitive, z wariantami) → pola profilu
 ## AI Engine
 
 - **Model:** Claude Sonnet (szybki, ~$0.01/dokument)
-- **Input:** Treść dokumentu z oznaczeniami pozycji ([P0], [T0R1] itd.) + profil firmy
-- **Output:** Structured JSON — lista pól z location_id, label, suggested_value, confidence
-- **Fallback:** Uruchamiany tylko dla pól nieznalezionych przez Rule Engine (tryb hybrid)
+- **Input:** Treść dokumentu z oznaczeniami pozycji + profil firmy
+- **Oznaczenia pozycji:** `[P0]` = paragraf o indeksie 0, `[T0R3]` = tabela 0 wiersz 3
+- **Output:** Structured JSON via tool_use — lista pól z location_id, label, suggested_value, confidence
+- **Confidence threshold:** high/medium = wypełnij (🔵), low = oznacz jako niepewne (🔴)
+- **Fallback:** W trybie hybrid uruchamiany tylko dla pól nieznalezionych przez Rule Engine
+- **Timeout:** 30s, przy timeout → zwróć wyniki rule-only z kodem 422
+
+### DOCX Write-back
+
+- **Table cells:** `doc.tables[t_idx].rows[r_idx].cells[1].paragraphs[0].text = value` — zachowuje formatowanie komórki
+- **Paragrafy z wielokropkami:** Zamiana wielokropków w tekście runa (`run.text.replace(dots, value)`), zachowuje font/styl runa
+- **Paragrafy bez etykiet (AI-only):** AI zwraca location_id (`P13`), backend wstawia wartość w miejsce wielokropków/pustego tekstu w `doc.paragraphs[13]`, iterując po runach
 
 ## Frontend UI
 
@@ -100,7 +118,9 @@ Jedna strona, 3 kroki:
 
 **Backend:** Python 3.11+, FastAPI, python-docx, anthropic SDK, uvicorn
 **Frontend:** Next.js 14, React, TypeScript, Tailwind CSS
-**Deploy:** Docker Compose, nginx reverse proxy
+**Deploy:** Single multi-stage Dockerfile (Next.js static export + FastAPI/uvicorn), nginx reverse proxy
+**CORS:** Nginx proxies `/api/*` do FastAPI — brak potrzeby CORS middleware
+**Encoding:** UTF-8 throughout — python-docx natywnie obsługuje polskie znaki
 
 ## Scope MVP (do 09.04)
 
@@ -141,9 +161,8 @@ tender-doc-filler/
 │   │   └── ProfileCard.tsx
 │   ├── package.json
 │   └── tailwind.config.ts
-├── docker-compose.yml
-├── Dockerfile.backend
-├── Dockerfile.frontend
+├── Dockerfile
+├── nginx.conf
 └── README.md
 ```
 
