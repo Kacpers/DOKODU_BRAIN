@@ -3,16 +3,16 @@ import uuid
 import shutil
 import subprocess
 from pathlib import Path
-from fastapi import FastAPI, UploadFile, File, Query, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.responses import FileResponse
-from .models import AnalysisMode, AnalysisResponse, CompanyProfile, ErrorResponse
-from .engines.hybrid import analyze
+from .models import AnalysisResponse, CompanyProfile, ErrorResponse
+from .engines.ai_engine import analyze_ai
 from .docx_writer import write_fields
 from .profile import load_profile, save_profile
 
 ALLOWED_EXTENSIONS = {".docx", ".doc"}
 
-app = FastAPI(title="TenderScope Document Filler", version="0.1.0")
+app = FastAPI(title="TenderScope Document Filler", version="0.2.0")
 
 UPLOAD_DIR = Path("/tmp/tender")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -24,7 +24,6 @@ _results: dict[str, AnalysisResponse] = {}
 @app.post("/api/upload", response_model=AnalysisResponse)
 async def upload_and_analyze(
     file: UploadFile = File(...),
-    mode: AnalysisMode = Query(default=AnalysisMode.HYBRID),
 ):
     if not file.filename:
         raise HTTPException(
@@ -61,7 +60,7 @@ async def upload_and_analyze(
         source_path = converted
 
     profile = load_profile()
-    fields = analyze(source_path, profile, mode)
+    fields = analyze_ai(source_path, profile)
 
     # Write filled document
     filled_path = doc_dir / f"FILLED_{file.filename}"
@@ -71,7 +70,6 @@ async def upload_and_analyze(
     response = AnalysisResponse(
         document_id=doc_id,
         filename=file.filename,
-        mode=mode,
         fields=fields,
         total_fields=len(fields),
         filled_fields=len(filled),

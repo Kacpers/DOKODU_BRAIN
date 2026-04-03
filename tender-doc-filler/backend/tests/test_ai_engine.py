@@ -1,9 +1,7 @@
 import pytest
-import json
-from unittest.mock import patch, MagicMock
-from pathlib import Path
+from unittest.mock import patch
 from backend.engines.ai_engine import analyze_ai, _extract_doc_text
-from backend.models import FieldResult, FieldSource
+from backend.models import FieldResult
 
 
 def test_extract_doc_text(simple_table_docx):
@@ -45,11 +43,10 @@ def test_analyze_ai_returns_fields(mock_claude, paragraph_dots_docx, sample_prof
     results = analyze_ai(paragraph_dots_docx, sample_profile)
     assert len(results) == 2
     assert all(isinstance(r, FieldResult) for r in results)
-    assert all(r.source == FieldSource.AI for r in results)
 
 
 @patch("backend.engines.ai_engine._call_claude")
-def test_analyze_ai_timeout(mock_claude, paragraph_dots_docx, sample_profile):
-    mock_claude.side_effect = TimeoutError("Claude timeout")
-    results = analyze_ai(paragraph_dots_docx, sample_profile)
-    assert results == []
+def test_analyze_ai_handles_error(mock_claude, paragraph_dots_docx, sample_profile):
+    mock_claude.side_effect = Exception("API error")
+    with pytest.raises(Exception):
+        analyze_ai(paragraph_dots_docx, sample_profile)

@@ -6,14 +6,12 @@ export interface FieldResult {
   label: string;
   original_value: string;
   filled_value: string;
-  source: "rule" | "ai";
   confidence: "high" | "medium" | "low";
 }
 
 export interface AnalysisResponse {
   document_id: string;
   filename: string;
-  mode: string;
   fields: FieldResult[];
   total_fields: number;
   filled_fields: number;
@@ -35,12 +33,11 @@ export interface CompanyProfile {
 }
 
 export async function uploadDocument(
-  file: File,
-  mode: "rule" | "ai" | "hybrid" = "hybrid"
+  file: File
 ): Promise<AnalysisResponse> {
   const formData = new FormData();
   formData.append("file", file);
-  const resp = await fetch(`${API_BASE}/upload?mode=${mode}`, {
+  const resp = await fetch(`${API_BASE}/upload`, {
     method: "POST",
     body: formData,
   });

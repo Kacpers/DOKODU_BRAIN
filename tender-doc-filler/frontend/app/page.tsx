@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import ModeToggle, { Mode } from "@/components/ModeToggle";
 import Upload from "@/components/Upload";
 import FieldPreview from "@/components/FieldPreview";
 import ProfileCard from "@/components/ProfileCard";
@@ -29,7 +28,6 @@ const EMPTY_PROFILE: CompanyProfile = {
 };
 
 export default function Home() {
-  const [mode, setMode] = useState<Mode>("hybrid");
   const [profile, setProfile] = useState<CompanyProfile>(EMPTY_PROFILE);
   const [result, setResult] = useState<AnalysisResponse | null>(null);
   const [loading, setLoading] = useState(false);
@@ -47,7 +45,7 @@ export default function Home() {
       setError(null);
       setResult(null);
       try {
-        const res = await uploadDocument(file, mode);
+        const res = await uploadDocument(file);
         setResult(res);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Wystapil blad");
@@ -55,7 +53,7 @@ export default function Home() {
         setLoading(false);
       }
     },
-    [mode]
+    []
   );
 
   return (
@@ -72,8 +70,6 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col gap-6">
-          <ModeToggle mode={mode} onChange={setMode} />
-
           <ProfileCard profile={profile} onUpdate={setProfile} />
 
           <Upload loading={loading} onUpload={handleUpload} />

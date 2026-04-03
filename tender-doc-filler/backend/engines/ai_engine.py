@@ -1,11 +1,12 @@
 """AI engine: Claude API for field detection in tender documents."""
 import json
+from datetime import date
 from pathlib import Path
 from docx import Document
 import anthropic
-from ..models import CompanyProfile, FieldResult, FieldSource, Confidence
+from ..models import CompanyProfile, FieldResult, Confidence
 
-_TIMEOUT = 30
+_TIMEOUT = 120
 
 
 def _extract_doc_text(docx_path: Path) -> str:
@@ -23,10 +24,33 @@ def _extract_doc_text(docx_path: Path) -> str:
 
 
 def _build_prompt(doc_text: str, profile: CompanyProfile, filename: str) -> str:
-    profile_json = json.dumps(profile.model_dump(), ensure_ascii=False, indent=2)
+    p = profile
+    today = date.today().strftime("%d.%m.%Y")
+    contact_line = ", ".join(filter(None, [p.osoba_kontaktowa, p.telefon, p.email]))
+
+    profile_data = {
+        "nazwa_firmy": p.nazwa_firmy,
+        "nip": p.nip,
+        "regon": p.regon,
+        "krs": p.krs,
+        "adres": p.adres,
+        "adres_korespondencyjny": p.adres_korespondencyjny or p.adres,
+        "email": p.email,
+        "telefon": p.telefon,
+        "osoba_kontaktowa": p.osoba_kontaktowa,
+        "stanowisko": p.stanowisko,
+        "status_przedsiebiorcy": p.status_przedsiebiorcy,
+        "miejscowosc": p.miejscowosc,
+        "miejscowosc_i_data": f"{p.miejscowosc}, {today}",
+        "kontakt_pelny": contact_line,
+        "regon_nip_krs": f"{p.regon} / {p.nip} / {p.krs}",
+        "nazwa_i_adres": f"{p.nazwa_firmy}, {p.adres}",
+    }
+    profile_json = json.dumps(profile_data, ensure_ascii=False, indent=2)
+
     return f"""Analizujesz formularz przetargowy "{filename}".
 
-Profil firmy wykonawcy:
+Dane firmy wykonawcy do wpisania:
 {profile_json}
 
 Treść dokumentu (z oznaczeniami pozycji):
@@ -36,18 +60,42 @@ Treść dokumentu (z oznaczeniami pozycji):
 {doc_text}
 ---
 
-Znajdź WSZYSTKIE pola w dokumencie, które powinny być wypełnione danymi wykonawcy.
-Pola to: puste komórki tabel obok etykiet, wielokropki, kropki, puste nawiasy, pola opisane w nawiasach pod nimi.
+ZADANIE: Znajdź WSZYSTKIE pola w dokumencie, które powinny być wypełnione danymi wykonawcy z profilu powyżej.
 
-Dla każdego pola zwróć obiekt JSON z polami:
-- "location_id": "T0R3" lub "P13"
-- "location_type": "table_cell" lub "paragraph"
-- "label": etykieta pola
-- "current_value": co jest teraz w polu
-- "suggested_value": wartość z profilu firmy
-- "confidence": "high", "medium" lub "low"
+GDZIE SZUKAĆ PÓL:
+1. TABELE: puste komórki obok etykiet (np. "Nazwa Wykonawcy | " — pusta druga komórka)
+2. PARAGRAFY z wielokropkami: "NIP: ............" lub "e-mail: ……………"
+3. PARAGRAFY z podkreśleniami: "Nazwa firmy: ________________"
+4. PARAGRAFY z pustymi nawiasami lub opisami w nawiasach: "(nazwa lub pieczęć wykonawcy)"
+5. TABELE ze złożonymi etykietami: "REGON / NIP/ KRS" → wpisz "520149113 / 5882473305 / 0000925166"
+6. Pola podpisu: "miejscowość i data", "pieczęć wykonawcy", "pieczęć Oferenta"
+7. Pola wieloliniowe: etykieta może zawierać newline, np. "Osoba do kontaktu\n(imię i nazwisko)"
 
-Zwróć TYLKO tablicę JSON. Nie dodawaj pól, dla których nie ma danych w profilu."""
+CZEGO NIE WYPEŁNIAĆ:
+- Pola dotyczące cen, kwot, wartości oferty
+- Pola techniczne (specyfikacje, parametry)
+- Checkboxy TAK/NIE
+- Pola już wypełnione prawidłowymi danymi
+- Pola dotyczące zamawiającego (nie wykonawcy)
+- Numery pozycji, nagłówki tabel
+
+WAŻNE:
+- Dla pola "status przedsiębiorcy" z opcjami "mikro/małe/średnie/duże" → wpisz "{p.status_przedsiebiorcy}"
+- Dla pól łączonych (imię + telefon + email) → użyj pełnego kontaktu: "{contact_line}"
+- Dla "miejscowość i data" / "miejscowość, data" → wpisz "{p.miejscowosc}, {today}"
+- Dla "nazwa lub pieczęć wykonawcy" / "pieczęć wykonawcy" → wpisz "{p.nazwa_firmy}"
+- Dla "REGON / NIP/ KRS" → wpisz "{p.regon} / {p.nip} / {p.krs}"
+- Jeśli pole pyta o "Nazwa i adres" razem → wpisz "{p.nazwa_firmy}, {p.adres}"
+
+Dla każdego pola zwróć:
+- location_id: dokładne oznaczenie z dokumentu (np. "T0R3" lub "P13")
+- location_type: "table_cell" lub "paragraph"
+- label: etykieta pola jak w dokumencie
+- current_value: co jest teraz w polu (wielokropki, puste, etc.)
+- suggested_value: wartość do wpisania z profilu
+- confidence: "high" jeśli jednoznaczne dopasowanie, "medium" jeśli prawdopodobne, "low" jeśli niepewne
+
+Zwróć TYLKO pola dla których masz dane w profilu. Nie zgaduj wartości."""
 
 
 _EXTRACT_FIELDS_TOOL = {
@@ -81,7 +129,7 @@ def _call_claude(prompt: str) -> list[dict]:
     client = anthropic.Anthropic()
     response = client.messages.create(
         model="claude-sonnet-4-20250514",
-        max_tokens=4096,
+        max_tokens=8192,
         timeout=_TIMEOUT,
         tools=[_EXTRACT_FIELDS_TOOL],
         tool_choice={"type": "tool", "name": "extract_fields"},
@@ -95,13 +143,10 @@ def _call_claude(prompt: str) -> list[dict]:
 
 def analyze_ai(docx_path: Path, profile: CompanyProfile) -> list[FieldResult]:
     """Analyze DOCX using Claude AI and return detected fields."""
-    try:
-        doc_text = _extract_doc_text(docx_path)
-        filename = Path(docx_path).name
-        prompt = _build_prompt(doc_text, profile, filename)
-        raw_fields = _call_claude(prompt)
-    except Exception:
-        return []
+    doc_text = _extract_doc_text(docx_path)
+    filename = Path(docx_path).name
+    prompt = _build_prompt(doc_text, profile, filename)
+    raw_fields = _call_claude(prompt)
 
     results = []
     for f in raw_fields:
@@ -112,7 +157,6 @@ def analyze_ai(docx_path: Path, profile: CompanyProfile) -> list[FieldResult]:
                 label=f["label"],
                 original_value=f.get("current_value", ""),
                 filled_value=f["suggested_value"],
-                source=FieldSource.AI,
                 confidence=Confidence(f.get("confidence", "medium")),
             ))
         except (KeyError, ValueError):

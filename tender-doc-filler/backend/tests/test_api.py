@@ -1,7 +1,18 @@
 import pytest
 from pathlib import Path
+from unittest.mock import patch
 from fastapi.testclient import TestClient
 from backend.main import app
+from backend.models import FieldResult, Confidence
+
+
+MOCK_FIELDS = [
+    FieldResult(
+        location_id="T0R0", location_type="table_cell", label="Firma",
+        original_value="", filled_value="TestFirma Sp. z o.o.",
+        confidence=Confidence.HIGH,
+    ),
+]
 
 
 @pytest.fixture
@@ -11,15 +22,17 @@ def client():
 
 @pytest.fixture
 def uploaded_doc(client, simple_table_docx):
-    with open(simple_table_docx, "rb") as f:
-        resp = client.post("/api/upload", files={"file": ("test.docx", f)}, params={"mode": "rule"})
+    with patch("backend.main.analyze_ai", return_value=MOCK_FIELDS):
+        with open(simple_table_docx, "rb") as f:
+            resp = client.post("/api/upload", files={"file": ("test.docx", f)})
     assert resp.status_code == 200
     return resp.json()
 
 
 def test_upload_docx(client, simple_table_docx):
-    with open(simple_table_docx, "rb") as f:
-        resp = client.post("/api/upload", files={"file": ("test.docx", f)}, params={"mode": "rule"})
+    with patch("backend.main.analyze_ai", return_value=MOCK_FIELDS):
+        with open(simple_table_docx, "rb") as f:
+            resp = client.post("/api/upload", files={"file": ("test.docx", f)})
     assert resp.status_code == 200
     data = resp.json()
     assert "document_id" in data

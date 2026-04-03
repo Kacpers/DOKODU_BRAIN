@@ -3,17 +3,6 @@ from enum import Enum
 from pydantic import BaseModel
 
 
-class AnalysisMode(str, Enum):
-    RULE = "rule"
-    AI = "ai"
-    HYBRID = "hybrid"
-
-
-class FieldSource(str, Enum):
-    RULE = "rule"
-    AI = "ai"
-
-
 class Confidence(str, Enum):
     HIGH = "high"
     MEDIUM = "medium"
@@ -26,14 +15,12 @@ class FieldResult(BaseModel):
     label: str
     original_value: str
     filled_value: str
-    source: FieldSource
     confidence: Confidence
 
 
 class AnalysisResponse(BaseModel):
     document_id: str
     filename: str
-    mode: AnalysisMode
     fields: list[FieldResult]
     total_fields: int
     filled_fields: int

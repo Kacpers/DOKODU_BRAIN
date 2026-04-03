@@ -2,7 +2,7 @@ import pytest
 from pathlib import Path
 from docx import Document
 from backend.docx_writer import write_fields
-from backend.models import FieldResult, FieldSource, Confidence
+from backend.models import FieldResult, Confidence
 
 
 def test_write_table_cell(simple_table_docx, tmp_path):
@@ -10,12 +10,12 @@ def test_write_table_cell(simple_table_docx, tmp_path):
         FieldResult(
             location_id="T0R0", location_type="table_cell", label="Firma",
             original_value="", filled_value="Test Corp",
-            source=FieldSource.RULE, confidence=Confidence.HIGH,
+            confidence=Confidence.HIGH,
         ),
         FieldResult(
             location_id="T0R1", location_type="table_cell", label="NIP",
             original_value="", filled_value="1234567890",
-            source=FieldSource.RULE, confidence=Confidence.HIGH,
+            confidence=Confidence.HIGH,
         ),
     ]
     out_path = tmp_path / "filled.docx"
@@ -30,7 +30,7 @@ def test_write_paragraph_dots(paragraph_dots_docx, tmp_path):
         FieldResult(
             location_id="P1", location_type="paragraph", label="NIP",
             original_value="……………………………………", filled_value="1234567890",
-            source=FieldSource.RULE, confidence=Confidence.HIGH,
+            confidence=Confidence.HIGH,
         ),
     ]
     out_path = tmp_path / "filled.docx"
