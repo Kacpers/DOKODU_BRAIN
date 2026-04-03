@@ -12,7 +12,7 @@ from .profile import load_profile, save_profile
 
 ALLOWED_EXTENSIONS = {".docx", ".doc"}
 
-app = FastAPI(title="TenderScope Document Filler", version="0.2.0")
+app = FastAPI(title="Dokodu - Formularze przetargowe", version="0.2.0")
 
 UPLOAD_DIR = Path("/tmp/tender")
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)

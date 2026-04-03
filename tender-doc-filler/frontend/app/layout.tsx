@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TenderScope Document Filler",
-  description: "Automatyczne uzupelnianie danych wykonawcy w dokumentach przetargowych",
+  title: "Automatyczne wypelnianie danych w dokumentach przetargowych",
+  description: "Wrzuc formularz przetargowy, a system uzupelni dane Twojej firmy",
 };
 
 export default function RootLayout({

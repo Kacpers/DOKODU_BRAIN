@@ -61,11 +61,10 @@ export default function Home() {
       <div className="flex-1 max-w-3xl mx-auto w-full px-4 py-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900">
-            TenderScope Document Filler
+            Automatyczne wypelnianie danych w dokumentach przetargowych
           </h1>
           <p className="text-gray-500 mt-2">
-            Automatyczne uzupelnianie danych wykonawcy w dokumentach
-            przetargowych
+            Wrzuc formularz, a system uzupelni dane Twojej firmy
           </p>
         </div>
 
@@ -114,7 +113,7 @@ export default function Home() {
       </div>
 
       <footer className="text-center text-gray-400 text-xs py-4 border-t border-gray-100">
-        Demo MVP — Dokodu x TenderScope
+        Dokodu.it — demo
       </footer>
     </div>
   );

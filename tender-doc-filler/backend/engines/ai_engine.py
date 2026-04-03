@@ -79,6 +79,9 @@ CZEGO NIE WYPEŁNIAĆ:
 - Pola już wypełnione prawidłowymi danymi
 - Pola dotyczące zamawiającego (nie wykonawcy)
 - Numery pozycji, nagłówki tabel
+- Treści oświadczeń — NIE wpisuj danych w paragrafy zaczynające się od "Oświadczam", "przewiduję", "Załączniki", "Informacja dla"
+- Paragrafy z pełnymi zdaniami — to treść dokumentu, nie pola do wypełnienia
+- Gwiazdki, przypisy, instrukcje ("*niepotrzebne skreślić", "*-wpisuje Wykonawca")
 
 WAŻNE:
 - Dla pola "status przedsiębiorcy" z opcjami "mikro/małe/średnie/duże" → wpisz "{p.status_przedsiebiorcy}"
