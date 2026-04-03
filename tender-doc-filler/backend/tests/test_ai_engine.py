@@ -37,7 +37,7 @@ MOCK_AI_RESPONSE = [
 ]
 
 
-@patch("backend.engines.ai_engine._call_claude")
+@patch("backend.engines.ai_engine._call_llm")
 def test_analyze_ai_returns_fields(mock_claude, paragraph_dots_docx, sample_profile):
     mock_claude.return_value = MOCK_AI_RESPONSE
     results = analyze_ai(paragraph_dots_docx, sample_profile)
@@ -45,7 +45,7 @@ def test_analyze_ai_returns_fields(mock_claude, paragraph_dots_docx, sample_prof
     assert all(isinstance(r, FieldResult) for r in results)
 
 
-@patch("backend.engines.ai_engine._call_claude")
+@patch("backend.engines.ai_engine._call_llm")
 def test_analyze_ai_handles_error(mock_claude, paragraph_dots_docx, sample_profile):
     mock_claude.side_effect = Exception("API error")
     with pytest.raises(Exception):

@@ -1,12 +1,13 @@
-"""AI engine: Claude API for field detection in tender documents."""
+"""AI engine: OpenAI API for field detection in tender documents."""
 import json
 from datetime import date
 from pathlib import Path
 from docx import Document
-import anthropic
+from openai import OpenAI
 from ..models import CompanyProfile, FieldResult, Confidence
 
 _TIMEOUT = 120
+_MODEL = "gpt-4o"
 
 
 def _extract_doc_text(docx_path: Path) -> str:
@@ -69,7 +70,7 @@ GDZIE SZUKAĆ PÓL:
 4. PARAGRAFY z pustymi nawiasami lub opisami w nawiasach: "(nazwa lub pieczęć wykonawcy)"
 5. TABELE ze złożonymi etykietami: "REGON / NIP/ KRS" → wpisz "520149113 / 5882473305 / 0000925166"
 6. Pola podpisu: "miejscowość i data", "pieczęć wykonawcy", "pieczęć Oferenta"
-7. Pola wieloliniowe: etykieta może zawierać newline, np. "Osoba do kontaktu\n(imię i nazwisko)"
+7. Pola wieloliniowe: etykieta może zawierać newline, np. "Osoba do kontaktu\\n(imię i nazwisko)"
 
 CZEGO NIE WYPEŁNIAĆ:
 - Pola dotyczące cen, kwot, wartości oferty
@@ -99,54 +100,60 @@ Zwróć TYLKO pola dla których masz dane w profilu. Nie zgaduj wartości."""
 
 
 _EXTRACT_FIELDS_TOOL = {
-    "name": "extract_fields",
-    "description": "Return all detected company fields from the tender document.",
-    "input_schema": {
-        "type": "object",
-        "properties": {
-            "fields": {
-                "type": "array",
-                "items": {
-                    "type": "object",
-                    "properties": {
-                        "location_id": {"type": "string", "description": "e.g. T0R3 or P13"},
-                        "location_type": {"type": "string", "enum": ["table_cell", "paragraph"]},
-                        "label": {"type": "string"},
-                        "current_value": {"type": "string"},
-                        "suggested_value": {"type": "string"},
-                        "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+    "type": "function",
+    "function": {
+        "name": "extract_fields",
+        "description": "Return all detected company fields from the tender document.",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "fields": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "location_id": {"type": "string", "description": "e.g. T0R3 or P13"},
+                            "location_type": {"type": "string", "enum": ["table_cell", "paragraph"]},
+                            "label": {"type": "string"},
+                            "current_value": {"type": "string"},
+                            "suggested_value": {"type": "string"},
+                            "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+                        },
+                        "required": ["location_id", "location_type", "label", "suggested_value", "confidence"],
                     },
-                    "required": ["location_id", "location_type", "label", "suggested_value", "confidence"],
-                },
-            }
+                }
+            },
+            "required": ["fields"],
         },
-        "required": ["fields"],
     },
 }
 
 
-def _call_claude(prompt: str) -> list[dict]:
-    client = anthropic.Anthropic()
-    response = client.messages.create(
-        model="claude-sonnet-4-20250514",
+def _call_llm(prompt: str) -> list[dict]:
+    client = OpenAI()
+    response = client.chat.completions.create(
+        model=_MODEL,
         max_tokens=8192,
         timeout=_TIMEOUT,
         tools=[_EXTRACT_FIELDS_TOOL],
-        tool_choice={"type": "tool", "name": "extract_fields"},
+        tool_choice={"type": "function", "function": {"name": "extract_fields"}},
         messages=[{"role": "user", "content": prompt}],
     )
-    for block in response.content:
-        if block.type == "tool_use" and block.name == "extract_fields":
-            return block.input.get("fields", [])
+    for choice in response.choices:
+        if choice.message.tool_calls:
+            for tool_call in choice.message.tool_calls:
+                if tool_call.function.name == "extract_fields":
+                    data = json.loads(tool_call.function.arguments)
+                    return data.get("fields", [])
     return []
 
 
 def analyze_ai(docx_path: Path, profile: CompanyProfile) -> list[FieldResult]:
-    """Analyze DOCX using Claude AI and return detected fields."""
+    """Analyze DOCX using OpenAI and return detected fields."""
     doc_text = _extract_doc_text(docx_path)
     filename = Path(docx_path).name
     prompt = _build_prompt(doc_text, profile, filename)
-    raw_fields = _call_claude(prompt)
+    raw_fields = _call_llm(prompt)
 
     results = []
     for f in raw_fields:
