@@ -14,6 +14,9 @@ scripts/*.pyc
 *.json
 *.key
 
+# Wyjątki dla tender-doc-filler (pliki JSON są częścią kodu)
+!tender-doc-filler/**/*.json
+
 # Logi
 *.log
 /tmp/
@@ -34,3 +37,7 @@ npm-debug.log
 # Pliki tymczasowe
 *.tmp
 *.bak
+
+# Sync daemon state (regenerowane przez sync daemon)
+.sync_state.json
+.sync_mapping.json
