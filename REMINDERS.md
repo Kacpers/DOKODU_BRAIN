@@ -19,6 +19,7 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - 2026-04-04 | BIZNES | 9:30 Call z Jakubem Gibulą (Administratiekantoor Gibula) — pytania do systemu fakturowego, warianty cenowe. Przed callem: /brain-prep-call
 - ~~2026-03-27 | BIZNES | Animex: napisz do Kamila Kowalskiego~~ → DONE 2026-03-30, brief wysłany
 - 2026-04-07 | BIZNES | Animex: follow-up do Kamila ws. wdrożenia n8n (security review powinien być zakończony)
+- 2026-04-08 | BIZNES | SayFlu/Krystian: sprawdź czy poszła oferta/umowa na szkolenie Gemini w Google Workspace (14-15 osób, zespół wewnętrzny). Agencja SayFlu = ta sama co product placement Nvidia.
 - 2026-04-01 | BIZNES | Animex: wystawić fakturę za szkolenia (nr zamówienia na fakturze!)
 - 2026-04-03 | BIZNES | DEADLINE Animex: certyfikaty + paczka z plikami szkoleniowymi — musi wyjść do piątku!
 - 2026-04-10 | BIZNES | 15:30 Rotunda — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak, Polskie Polisy)

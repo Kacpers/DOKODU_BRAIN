@@ -67,9 +67,32 @@ tags: [prospect, holandia, faktury, webapp, custom-dev]
 ### Wizja Jakuba (cytat kluczowy)
 > "Chcemy uprościć życie naszym klientom żeby nie musieli wysyłać do nas swoich wystawionych faktur tylko same koszty, a dwa sobie ułatwić tym że za pomocą jednego przycisku automatycznie wszystkie wystawione faktury księgują u nas w programie. Na etapie jak to będzie dobrze działało chcemy wyjść z tym produktem dla przedsiębiorców oraz księgowych."
 
+## Status projektu (aktualizacja 2026-04-04)
+
+**Call 04.04 — odbył się.** Jakub przyszedł z szefem (Grzegorzem). Ustalenia:
+
+- **Kwota finalna:** 66 000 PLN netto
+- **Bramka płatności:** Mollie (Jakub zna osobiście, potwierdzone)
+- **Oferty:** w zakresie V1.0 (oferta = faktura z oznaczeniem OFERTA, konwersja jednym kliknięciem)
+- **Specyfikacja funkcjonalna:** gotowa (`WYSTAWIANIE_FAKTUR/DOC/SPECYFIKACJA_FUNKCJONALNA_V1.md` + `.docx`)
+
+### Kluczowe decyzje architektoniczne (propozycja Kacpra, zatwierdzone):
+- **3 typy kont:** Administrator → Księgowy → Użytkownik
+  - Użytkownik podpięty pod biuro = brak abonamentu
+  - Użytkownik niezależny = płaci sam
+  - Księgowy ma pulę kont do zarządzania
+- **Rozliczenie kwartalne:** eksport Excel per klient, kompatybilny z Exact Online
+- **Creditnota:** powiązana z fakturą źródłową, automatyczne przeliczenie
+
+### Rozszerzenia opcjonalne (Etap 2, osobna wycena):
+- **OCR faktur zakupowych** (PNG/PDF → automatyczny odczyt) — orientacyjnie 3-4k PLN
+- Peppol (pełna integracja)
+- Magazyn
+- Dodatkowe języki interfejsu
+
 ## Następne kroki
-- [ ] **Sobota 04.04, 9:30** — Call z Jakubem (WhatsApp) — potwierdzić zakres, omówić bramkę płatności (Stripe vs Mollie), ustalić finalną cenę
-- [ ] Po callu: precyzyjna wycena + umowa
+- [ ] Podpisanie umowy — **początek przyszłego tygodnia (w/c 07.04)**
+- [ ] Specyfikacja jako Załącznik nr 1 do umowy
 - [ ] Reconciliation: czekamy na feedback zespołu (maj)
 
 ## Historia korespondencji
