@@ -22,7 +22,8 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 | 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Kontakt | ~20 000 | Czekamy na odpowiedzi techniczne → wycena | 2026-04-03 |
 | 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | Discovery | ~55 000 | Call sobota 04.04 9:30 → precyzyjna wycena | 2026-04-04 |
 | 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Kontakt | ~25 000 | Czekamy na odpowiedź n8n ws. reseller → oddzwonić | 2026-04-07 |
-| 6 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
+| 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | [Oferta szkolenie Gemini](../AREA_Customers/_PROSPECTS/SayFlu/Oferta_Szkolenie_Gemini.md) — wysłać ofertę | 2026-04-08 |
+| 7 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
 <!-- /SYNC:PIPELINE -->
 
 **Pipeline Value (otwarty):** ___ PLN
@@ -169,6 +170,25 @@ Kacper
 - [2026-04-01 ~09:00]: Kacper wysłał maila do n8n (formularz n8n.io) z pytaniem o reseller/partner program
 **Status:** Kontakt — czekamy na odpowiedź n8n ws. modelu licencyjnego
 **Nastepny krok:** Po odpowiedzi n8n → oddzwonić do Rafała z propozycją (wdrożenie + szkolenie + opcja licencji)
+```
+
+### SayFlu (agencja)
+```
+**Firma:** SayFlu
+**Branza:** Agencja (product placement, marketing — ta sama co Nvidia PP)
+**Wielkosc:** ~15 osób (zespół wewnętrzny)
+**Kontakt:** Krystian | LinkedIn DM
+**Zrodlo leadu:** LinkedIn — Krystian napisał bezpośrednio
+**Data pierwszego kontaktu:** 2026-04-04
+**Problem klienta:** Chce przeszkolić zespół z Gemini w Google Workspace — przyspieszenie pracy
+**Budzet orientacyjny:** Do wyceny
+**Decydent:** Do potwierdzenia (Krystian pyta o cenę — może być decydent lub delegowany)
+**Timeline klienta:** Aktywnie szuka — szybkie zapytanie
+**Oferta:** [Oferta_Szkolenie_Gemini.md](../AREA_Customers/_PROSPECTS/SayFlu/Oferta_Szkolenie_Gemini.md)
+**Historia rozmow:**
+- [2026-04-04]: Krystian pyta na LI o cenę i zakres szkolenia. Kacper dopytuje. Ustalone: Gemini w Google, 14-15 osób, zespół wewnętrzny. Kacper obiecał przygotować ofertę.
+**Status:** Propozycja — oferta do przygotowania
+**Nastepny krok:** Uzupełnić ofertę i wysłać Krystianowi
 ```
 
 ### [Nazwa Firmy] — szablon notatki
