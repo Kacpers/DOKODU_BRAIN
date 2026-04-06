@@ -17,13 +17,13 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 <!-- SYNC:PIPELINE -->
 | # | Firma | Kontakt | Zrodlo | Etap | Wartosc (PLN) | Nastepny krok | Deadline |
 | :- | :--- | :--- | :--- | :--- | ---: | :--- | :---: |
-| 1 | Animex | Kamil Kowalski | Ref. | WYGRANA | 18 000 | Faktura za szkolenia (nr zamówienia!) → czekamy na decyzję ws. wdrożenia n8n (security review) | 2026-04-07 |
+| 1 | Animex | Kamil Kowalski | Ref. | WYGRANA | 40 000 | Faktura wystawiona, certyfikaty do wysłania ASAP. Sesje konsultacyjne czekają na security review n8n. | 2026-04-08 |
 | 2 | Corleonis | [imie] | LinkedIn | WYGRANA | 35 000 | Faza UAT | — |
 | 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Kontakt | ~20 000 | Czekamy na odpowiedzi techniczne → wycena | 2026-04-03 |
-| 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | Discovery | ~55 000 | Call sobota 04.04 9:30 → precyzyjna wycena | 2026-04-04 |
-| 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Kontakt | ~25 000 | Czekamy na odpowiedź n8n ws. reseller → oddzwonić | 2026-04-07 |
-| 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | [Oferta szkolenie Gemini](../AREA_Customers/_PROSPECTS/SayFlu/Oferta_Szkolenie_Gemini.md) — wysłać ofertę | 2026-04-08 |
-| 7 | ___ | ___ | ___ | Nowy | ___ | Kwalifikacja | ___ |
+| 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | WYGRANA | 66 000 | Wycena zaakceptowana 04.04. Faktura za reconciliation do wystawienia → potem faktura zaliczkowa po podpisaniu umowy | 2026-04-15 |
+| 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Odłożona | — | Chcą tylko licencję n8n, brak projektu wdrożeniowego | — |
+| 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | Oferta czeka na dokończenie strony dokodu.it → potem wysłać | 2026-04-10 |
+| 7 | LexLegali | Marcin Chrostek / Danuta Zawada-Miernik | Kontakt Kacpra | Propozycja | 35 000 | Oferta Automotive-Legal 32k+3k wysłana. Alina ma skontaktować się z decydentem (Danuta) | 2026-04-15 |
 <!-- /SYNC:PIPELINE -->
 
 **Pipeline Value (otwarty):** ___ PLN

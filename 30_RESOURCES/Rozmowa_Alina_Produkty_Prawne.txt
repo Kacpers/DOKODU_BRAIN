@@ -1,0 +1,168 @@
+========================================================================
+        ROZMOWA Z ALINĄ — PRODUKTY PRAWNE DOKODU
+========================================================================
+Wydrukuj, usiądźcie razem, zapisuj odpowiedzi ręcznie.
+Przynieś mi wyniki.
+========================================================================
+
+
+KONTEKST (przeczytaj Alinie na głos)
+-------------------------------------
+Dokodu ma unikalną przewagę: Tech + Legal pod jednym dachem.
+Żadna inna agencja AI w Polsce tego nie oferuje. Ale dziś ta
+przewaga istnieje tylko w naszych głowach — klienci tego nie
+widzą, bo nie mamy produktów prawnych z cenami.
+
+Chcę, żebyśmy stworzyli 3 "pudełkowe" produkty prawne, które:
+- Alina może sprzedawać i dostarczać samodzielnie
+- mają stałą cenę (klient wie ile zapłaci zanim zadzwoni)
+- mogą być entry pointem do większych wdrożeń
+- dają Alinie osobny strumień przychodu w Dokodu
+
+
+========================================================================
+PRODUKT 1: POLITYKA AI DLA FIRMY
+Dokument, który firma musi mieć zanim zacznie używać AI.
+========================================================================
+
+1. Ile godzin zajmuje Ci przygotowanie takiej polityki od zera?
+
+   ...............................................................
+
+2. Czy masz już szablon / draft, który adaptowałaś dla kogoś?
+
+   ...............................................................
+
+3. Co wchodzi w zakres? (zaznacz / dopisz)
+
+   [ ] Audyt obecnego użycia AI w firmie
+   [ ] Zasady korzystania z AI przez pracowników
+   [ ] Klasyfikacja ryzyka wg AI Act
+   [ ] Procedura zgłaszania incydentów
+   [ ] Polityka przetwarzania danych osobowych z AI
+   [ ] Szkolenie wstępne dla zespołu
+   [ ] Inne: ....................................................
+
+4. Jaka cena wydaje Ci się uczciwa? (orient. 4 000-6 000 PLN?)
+
+   ...............................................................
+
+5. Ile takich polityk mogłabyś zrobić miesięcznie (max)?
+
+   ...............................................................
+
+
+========================================================================
+PRODUKT 2: LEGAL SAAS SETUP
+Komplet dokumentów prawnych dla firmy budującej/używającej
+SaaS z AI.
+========================================================================
+
+6. Co wchodzi w zakres? (zaznacz / dopisz)
+
+   [ ] Regulamin usługi
+   [ ] Polityka prywatności
+   [ ] Umowa powierzenia danych (DPA)
+   [ ] Klauzule AI w umowach z klientami
+   [ ] Consent management (zgody)
+   [ ] Inne: ....................................................
+
+7. Ile godzin zajmuje pełny setup?
+
+   ...............................................................
+
+8. Czy robiłaś coś takiego dla AI Hero lub innego klienta?
+
+   ...............................................................
+
+9. Jaka cena? (orientacyjnie 5 000-8 000 PLN?)
+
+   ...............................................................
+
+
+========================================================================
+PRODUKT 3: AUDYT AI ACT
+Przegląd firmy pod kątem zgodności z AI Act (EU 2024/1689).
+========================================================================
+
+10. Jak wyobrażasz sobie przebieg takiego audytu?
+    (np. ankieta -> analiza -> raport -> spotkanie?)
+
+    ...............................................................
+
+    ...............................................................
+
+11. Ile godzin pracy?
+
+    ...............................................................
+
+12. Jaki byłby deliverable dla klienta?
+    (np. raport PDF, checklista, roadmapa?)
+
+    ...............................................................
+
+13. Jaka cena? (orientacyjnie 8 000-15 000 PLN?)
+
+    ...............................................................
+
+14. Czy potrzebujesz czegoś od Kacpra (technicznego)
+    żeby to dostarczyć?
+
+    ...............................................................
+
+
+========================================================================
+PYTANIA OGÓLNE
+========================================================================
+
+15. Który z tych 3 produktów jest dla Ciebie najłatwiejszy
+    do zrobienia TERAZ (masz materiały, doświadczenie, szablon)?
+
+    ...............................................................
+
+16. Czy widzisz klientów z BNI, którzy mogliby to kupić?
+    Kto konkretnie? (imię, firma, branża)
+
+    ...............................................................
+
+    ...............................................................
+
+17. Czy chciałabyś prowadzić krótkie szkolenie (1-2h) jako
+    dodatek do tych produktów?
+    Np. "AI Act w 90 minut dla zarządu"?
+
+    ...............................................................
+
+18. Jak chcesz być wynagradzana za te produkty?
+
+    [ ] % od ceny produktu
+    [ ] Stała kwota za dostarczenie
+    [ ] Wzrost zaliczki miesięcznej
+    [ ] Inne: ....................................................
+
+19. Co Cię blokuje przed zrobieniem tego? Czego potrzebujesz?
+
+    ...............................................................
+
+    ...............................................................
+
+20. Czy jest coś, co chciałabyś dodać / zmienić w tym pomyśle?
+
+    ...............................................................
+
+    ...............................................................
+
+
+========================================================================
+PO ROZMOWIE
+========================================================================
+Kacper — zrób zdjęcie tej kartki i daj mi ją w konwersacji.
+Albo przepisz hasłowo odpowiedzi. Na tej podstawie:
+- spiszemy scope każdego produktu
+- ustalimy cennik
+- zrobimy landing page / sekcję na dokodu.it
+- przygotujemy pierwszy pitch do klienta z BNI
+
+========================================================================
+Wygenerowane 2026-04-06 | DOKODU BRAIN
+========================================================================

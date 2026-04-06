@@ -153,3 +153,6 @@ Dla kazdego elementu zadaj pytanie:
 
 ## Przypomnienia z 2026-04-04
 - [BIZNES] 9:30 Call z Jakubem Gibulą (Administratiekantoor Gibula) — pytania do systemu fakturowego, warianty cenowe. Przed callem: /brain-prep-call
+
+## Przypomnienia z 2026-04-07
+- [BIZNES] Animex: follow-up do Kamila ws. wdrożenia n8n (security review powinien być zakończony)
