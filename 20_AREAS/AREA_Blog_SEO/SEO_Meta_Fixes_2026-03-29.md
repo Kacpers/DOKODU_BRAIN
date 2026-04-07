@@ -109,6 +109,50 @@ Autor: Claude (na podstawie danych GSC z ostatnich 28 dni)
 | 3 | /blog/sql/normalizacja-baz-danych | Dobra pozycja, łatwy wzrost CTR po zmianie tytułu |
 | 4 | /blog/python/podstawy/podstawy-programowania | Mniejszy wolumen, ale warto zaktualizować przy okazji |
 
+---
+
+# Meta Title Fixes — 2026-04-07 (Runda 2)
+
+**Data wdrożenia:** 2026-04-07 ~22:50
+**Dane baseline:** GSC 2026-03-07 → 2026-04-04 (28 dni)
+**Kiedy mierzyć efekt:** po 2026-04-21 (14 dni) — odpal `/seo-sync` i porównaj z tabelą poniżej
+
+## Baseline przed zmianą
+
+| Strona | Frazy główne | Impressions | Kliknięcia | CTR | Pozycja | Stary title |
+|--------|-------------|-------------|-----------|-----|---------|-------------|
+| `/blog/n8n` | n8n, n8n co to jest, n8n co to | 18 753 + 1 449 + 470 = **20 672** | 412 + 96 + 34 = **542** | 2.2% / 6.6% / 7.2% | #2.8 / #1.6 / #2.1 | N8n - co to jest? Kompletny przewodnik od zera do eksperta w automatyzacji |
+| `/blog/agenci-ai/claude-code-agent` | claude agent, claude code | **137** (top query) / **6 729** (total impr. strony) | 3 + 85 = **88** | 2.2% / 1.3% | #5.0 / #5.4 | Claude Code jako agent AI — jak działa i do czego go używać? |
+| `/blog/python/podstawy/list-comprehension` | python list comprehension, list comprehension python, list comprehension | 2 335 + 318 + 247 = **2 900** | 4 + 9 + 14 = **27** | 0.2% / 2.8% / 5.7% | #2.2 / #3.0 / #3.0 | List Comprehension w Pythonie - Praktyczne przykłady |
+
+## Nowe meta title (wdrożone)
+
+| Strona | Nowy meta title | Cel CTR |
+|--------|----------------|---------|
+| `/blog/n8n` | **n8n — co to jest? Automatyzacja workflow krok po kroku [2026]** | 2.2% → 4%+ |
+| `/blog/agenci-ai/claude-code-agent` | **Claude Code — AI agent w terminalu \| Jak używać i co potrafi [2026]** | 1.3% → 3%+ |
+| `/blog/python/podstawy/list-comprehension` | **Python List Comprehension — składnia, przykłady i cheatsheet [2026]** | 0.2% → 1.5%+ |
+
+## Szacowany łączny wzrost
+
+| Metryka | Baseline (28d) | Cel po zmianach | Delta |
+|---------|---------------|-----------------|-------|
+| Kliknięcia (te 3 strony) | 657 | ~1 050 | **+393 klik/mies.** |
+| Kliknięcia (cały serwis) | 1 360 | ~1 750 | **+390 klik/mies. (+29%)** |
+
+## Jak zmierzyć
+
+1. Po 2026-04-21 odpal: `/seo-sync` → `/seo-stats`
+2. Porównaj CTR i kliknięcia z tabelą baseline powyżej
+3. Jeśli CTR wzrósł <0.5pp → title nie działa, testuj kolejny wariant
+4. Jeśli CTR wzrósł >1pp → sukces, zostaw i szukaj kolejnych stron do optymalizacji
+
+## Poprzednie zmiany (Runda 1 — 2026-03-29)
+
+Status: **Częściowo wdrożone** — meta title dla `/blog/n8n` zmieniony ponownie w Rundzie 2 (nowy wariant). Pozostałe strony z Rundy 1 (list-comprehension, podstawy-programowania, normalizacja) — sprawdź czy meta description zostało wdrożone.
+
+---
+
 ## Uwagi Dodatkowe
 
 1. **A/B testing:** Jeśli CMS pozwala, rozważ test A/B wariantów tytułów dla /blog/n8n i /blog/python/podstawy/list-comprehension — to dwie strony z największym wolumenem.

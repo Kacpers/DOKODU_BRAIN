@@ -12,6 +12,48 @@ last_updated: 2026-03-29
 
 ---
 
+## Insights — 2026-04-07
+
+**Okres danych:** 2026-03-07 → 2026-04-04 (28 dni)
+**Kliknięcia:** 1 360 | **Impressions:** 49 520 | **Avg CTR:** 11.74% | **Avg pozycja:** #4.9
+
+### Porównanie z poprzednim okresem (luty-marzec)
+- Kliknięcia: 1 384 → 1 360 (-1.7%) — lekki spadek
+- Impressions: 50 178 → 49 520 (-1.3%) — lekki spadek
+- CTR: 12.51% → 11.74% (-0.77pp) — spadek
+- Pozycja: #5.6 → #4.9 (+0.7) — POPRAWA
+- **Diagnoza: rankujesz wyżej ale klikają mniej = meta title/description nie konwertują**
+
+### Quick Wins
+- `pytest` (poz. 4.0, 1 041 impr) — rośnie z 4.5→4.0, poprawić H1 + quick start na górze
+- `tkinter` (poz. 4.3, 663 impr) — CTR 1.5%, zmienić title na "Python Tkinter — tworzenie GUI krok po kroku"
+- `automatyzacja ai` (poz. 12.5, 175 impr) — SPADŁ z 11.2, brak dedykowanej strony, ICP Dokodu
+- `claude agent` (poz. 5.0, 137 impr) — dodać sekcję o Claude Code CLI
+
+### Niski CTR — priorytet poprawy meta
+- `n8n` — 18 753 impr, poz #2.8, CTR 2.2%. Poprawa do 4% = +337 klik/mies.
+- `python list comprehension` — 2 335 impr, poz #2.2, CTR 0.2%. Skandalicznie niski.
+- `claude code agent` — 6 729 impr, CTR 1.3%. Ogromny potencjał po poprawie title.
+
+### Content Gaps
+- `automatyzacja ai` / `automatyzacje dla firm` → napisać pillar page
+- `perplexity vs chatgpt` (149 impr, poz 7) → osobny post porównawczy
+- `n8n ai agent` → post w Ideas Bank (ID 50), czas napisać
+
+### Top Performers
+- `/blog/n8n` — 629 klik, bounce 77.4%, BRAK CTA do kursu. Dodanie CTA = najszybsza konwersja.
+- `/blog/sql/sql-interview` — CTR 9.2%, najlepszy konwerter SQL. Dodać lead magnet.
+- `/blog/agenci-ai/claude-code-agent` — 6 729 impr ale CTR 1.3%. Poprawić title = +67 klik/mies.
+
+### Quick Actions
+1. Zmienić meta title `/blog/n8n` → +300-500 klik/mies.
+2. Dodać CTA do kursu n8n na `/blog/n8n` → konwersja z 1 250 sesji
+3. Naprawić list-comprehension (cheatsheet + title) → +60 klik/mies.
+4. Zmienić title claude-code-agent → +67 klik/mies.
+5. Napisać "Automatyzacja AI w firmie" → ICP + commercial intent
+
+---
+
 ## Insights — 2026-03-29
 
 **Okres danych:** 2026-02-26 → 2026-03-26 (28 dni)

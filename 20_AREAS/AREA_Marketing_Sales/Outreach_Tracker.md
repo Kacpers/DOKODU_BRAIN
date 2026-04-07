@@ -35,12 +35,14 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 | 7a | CUK Ubezpieczenia | Ireneusz Dęboski | Kierownik Działu Wsparcia IT | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
 | 7b | CUK Ubezpieczenia | Krzysztof Łosiakowski | Head of Sales Operations / Trainer | A | 2026-04-01 | dm_wysłany | Czekaj na odpowiedź → cold email dzień 3 (05.04) | 2026-04-05 |
 | 7c | CUK Ubezpieczenia | Piotr Radka | Dyrektor działu IT | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
-| 8a | Scania Polska | Agnieszka Biczyk-Siembab | Kier. działu automatyzacji i danych | A | 2026-04-01 | dm_wysłany | Czekaj na odpowiedź → cold email dzień 3 (05.04) | 2026-04-05 |
+| 8a | Scania Polska | Agnieszka Biczyk-Siembab | Kier. działu automatyzacji i danych | A | 2026-04-01 | odpowiedziała | Stanowisko obsadzone, mają bazę. Furtka: "będę się odzywać". Warm lead — nie pushuj, bądź na radarze | 2026-05-07 |
 | 8b | Scania Polska | Julia Wojnarowska | Team Manager Learning Support | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
 | 8c | Scania Polska | Wiktoria Jarecka | P&C Operations / AI w HR | A | 2026-04-01 | zaproszenie_wysłane | Czekaj na akceptację → DM (szkolenia) | 2026-04-04 |
 | 9a | Miele Global Services | Katarzyna Kubicka | Continuous Improvement Team Leader | A | 2026-04-02 | zaproszenie_wysłane | Czekaj na akceptację → DM (O2C/automatyzacja) | 2026-04-05 |
 | 9b | Miele Global Services | Katarzyna Zak-Jankowska | Head of Reporting & Controlling | A | 2026-04-02 | zaproszenie_wysłane | Czekaj na akceptację → DM (O2C/automatyzacja) | 2026-04-05 |
-| 10 | GAIA Institute | Damian Ciachorowski | CEO, Digital Transformation | B | 2026-04-03 | dm_wysłany | Networking — relacja, nie pitch. Czekaj na odpowiedź | 2026-04-08 |
+| 10 | GAIA Institute | Damian Ciachorowski | CEO, Digital Transformation | B | 2026-04-03 | dm_wysłany | Przeczytał, nie odpisał. Czekaj — skomentuj jego post na LI przy okazji | 2026-04-14 |
+| 11a | ENEA Centrum | Agnieszka Zając-Feliczak | St. specjalista ds. Doskonalenia i Automatyzacji Procesów | A | 2026-04-07 | zaproszenie_wysłane | Czekaj na akceptację → DM (automatyzacja procesów SSC) | 2026-04-10 |
+| 11b | ENEA Centrum | Michał Szułczyński, MBA | Kierownik Biura Strategii i Rozwoju IT | A | 2026-04-07 | zaproszenie_wysłane | Czekaj na akceptację → DM (strategia ICT, automatyzacja, szkolenia AI) | 2026-04-10 |
 <!-- /SYNC:OUTREACH -->
 
 ## Kolejka (Score A — następne w kolejności)

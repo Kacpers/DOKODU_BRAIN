@@ -156,3 +156,9 @@ Dla kazdego elementu zadaj pytanie:
 
 ## Przypomnienia z 2026-04-07
 - [BIZNES] Animex: follow-up do Kamila ws. wdrożenia n8n (security review powinien być zakończony)
+
+## Przypomnienia z 2026-04-08
+- [BIZNES] COP Kartoszyno: zadzwoń do faceta — mamy gotową ofertę (9 999 PLN + opcja opieki miesięcznej). Przedstaw ofertę, zamknij deal. Profil: AREA_Customers/_PROSPECTS/COP_Kartoszyno/
+- [BIZNES] SayFlu/Krystian: sprawdź czy poszła oferta/umowa na szkolenie Gemini w Google Workspace (14-15 osób, zespół wewnętrzny). Agencja SayFlu = ta sama co product placement Nvidia.
+- [BIZNES] Animex: WYŚLIJ certyfikaty + paczkę szkoleniową do Kamila (wystawione, czekają na wysyłkę)
+- [BIZNES] NAGRAJ VSL kursu n8n — tekst w VSL_Skrypt_v1.md. Bez tego nie ma launchu 09.04!
