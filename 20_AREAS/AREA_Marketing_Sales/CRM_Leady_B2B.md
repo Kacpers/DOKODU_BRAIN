@@ -187,8 +187,9 @@ Kacper
 **Oferta:** [Oferta_Szkolenie_Gemini.md](../AREA_Customers/_PROSPECTS/SayFlu/Oferta_Szkolenie_Gemini.md)
 **Historia rozmow:**
 - [2026-04-04]: Krystian pyta na LI o cenę i zakres szkolenia. Kacper dopytuje. Ustalone: Gemini w Google, 14-15 osób, zespół wewnętrzny. Kacper obiecał przygotować ofertę.
-**Status:** Propozycja — oferta do przygotowania
-**Nastepny krok:** Uzupełnić ofertę i wysłać Krystianowi
+- [2026-04-08]: Oferta wysłana. Krystian: "pewnie w piątek lub weekend będę przeglądał". Chce spotkanie w przyszłym tygodniu, będzie miał pytania. Umówili się że Kacper odezwie się w poniedziałek 14.04.
+**Status:** Propozycja — oferta wysłana, czeka na przegląd
+**Nastepny krok:** Pn 14.04 — odezwij się, umów spotkanie na tydzień 14-18.04
 ```
 
 ### [Nazwa Firmy] — szablon notatki

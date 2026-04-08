@@ -1,6 +1,6 @@
 ---
 type: prospect
-status: active
+status: on-hold
 firma: TenderScope sp. z o.o.
 kontakt: Borys Kowalik
 email: boryskowalik@gmail.com
@@ -8,7 +8,7 @@ telefon: 574 555 940
 adres: ul. Stanisława Moniuszki 11, 35-015 Rzeszów
 zrodlo: Inbound (biuro@dokodu.it)
 data_kontaktu: 2026-03-30
-wartosc_est: ~20 000 PLN
+wartosc_est: 10 000 PLN (budżet Borysa, wybiera najtańszą ofertę)
 dofinansowanie: UE FEPW 2021-2027, "Platforma startowa HugeTECH Revolution"
 owner: alina+kacper
 tags: [prospect, govtech, python, dofinansowanie-ue, startup]
@@ -76,9 +76,13 @@ Alina poprosiła o:
 
 **Czekamy na odpowiedzi Borysa.**
 
+### Email #3 — Borys → (08.04.2026)
+Potwierdził działanie demo. Budżet: 10k PLN, wybiera najtańszą ofertę.
+Zmiana architekturalna: w produkcji bez uploadu — dokumenty z API + Scrapy z platform przetargowych, przycisk "Wypełnij dokumenty danymi firmy" w karcie przetargu.
+
 ## Następne kroki
 
-- [ ] Borys odpowiada na pytania techniczne Aliny
-- [ ] Przygotować wycenę (est. 15-25k netto)
-- [ ] Wypełnić formularz szacowania wartości zamówienia
-- [ ] Wysłać ofertę do **03.04.2026**
+- [ ] **Decyzja: go/no-go** — 10k za 28 dni roboczych = poniżej stawki Dokodu
+- [x] ~~Borys odpowiada na pytania techniczne Aliny~~
+- [ ] ~~Przygotować wycenę (est. 15-25k netto)~~ → budżet 10k
+- [ ] ~~Wysłać ofertę do **03.04.2026**~~ → deadline minął
