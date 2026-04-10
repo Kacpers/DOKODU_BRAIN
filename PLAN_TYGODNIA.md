@@ -190,8 +190,8 @@ Publikacja o 20:30.
 - [ ] Śr 9.04: **LAUNCH early bird n8n** — email N1 "999 PLN, 20 miejsc" + post LinkedIn
 - [ ] Śr 9.04: Nagrać Short "Ile kosztuje Zapier vs n8n rocznie?"
 - [ ] **Pt 10.04: 15:30 Rotunda** — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak)
-- [ ] **Sob 11.04: Bank&InsurHack dzień 1** (9:00–20:00, Rotunda) — mentoring + jury
-- [ ] **Ndz 12.04: Bank&InsurHack dzień 2** (9:00–17:00) — pitchowanie MVP od 15:00, jury, nagranie filmu ze zwycięzcami
+- [ ] **Sob 11.04:** wolne (Bank&InsurHack — skip dnia 1)
+- [ ] **Ndz 12.04: Bank&InsurHack** (9:00–17:00, Rotunda) — pitchowanie MVP od 15:00, jury, nagranie filmu ze zwycięzcami
 - [ ] Nagranie BONUS 1 PyStart — przesunąć na inny termin (weekend zajęty hackathonem)
 
 ### Tydzień 14-18.04

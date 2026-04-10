@@ -20,10 +20,11 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 | 1 | Animex | Kamil Kowalski | Ref. | WYGRANA | 40 000 | Faktura wystawiona, certyfikaty do wysłania ASAP. Sesje konsultacyjne czekają na security review n8n. | 2026-04-08 |
 | 2 | Corleonis | [imie] | LinkedIn | Odłożona | 35 000 | WSTRZYMANE — klient poprosił o pauzę. Nie kontaktować do odwołania. | — |
 | 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Kontakt | ~20 000 | Czekamy na odpowiedzi techniczne → wycena | 2026-04-03 |
-| 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | WYGRANA | 66 000 | Wycena zaakceptowana 04.04. Faktura za reconciliation do wystawienia → potem faktura zaliczkowa po podpisaniu umowy | 2026-04-15 |
+| 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | WYGRANA | 66 000 | Faktura za reconciliation OPŁACONA. Następny krok: faktura zaliczkowa po podpisaniu umowy. | 2026-04-15 |
 | 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Odłożona | — | Chcą tylko licencję n8n, brak projektu wdrożeniowego | — |
 | 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | Info przekazane na Messengerze (znajomy Kacpra). Czekamy na akceptację i dalsze info od Krystiana. | — |
 | 7 | LexLegali | Marcin Chrostek / Danuta Zawada-Miernik | Kontakt Kacpra | Propozycja | 35 000 | Spotkanie 20 lub 21.04 — Alina potwierdza datę. Oferta Automotive-Legal 32k+3k wysłana. | 2026-04-21 |
+| 8 | COP Kartoszyno | — | Inbound | Propozycja | 10-14 000 | Oferta wysłana 08.04 (2 pakiety: 9 999 / 13 900 PLN). Zdzwonka OK. Czekamy na decyzję. | — |
 <!-- /SYNC:PIPELINE -->
 
 **Pipeline Value (otwarty):** ___ PLN

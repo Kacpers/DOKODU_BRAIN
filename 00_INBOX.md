@@ -162,3 +162,6 @@ Dla kazdego elementu zadaj pytanie:
 - [BIZNES] SayFlu/Krystian: sprawdź czy poszła oferta/umowa na szkolenie Gemini w Google Workspace (14-15 osób, zespół wewnętrzny). Agencja SayFlu = ta sama co product placement Nvidia.
 - [BIZNES] Animex: WYŚLIJ certyfikaty + paczkę szkoleniową do Kamila (wystawione, czekają na wysyłkę)
 - [BIZNES] NAGRAJ VSL kursu n8n — tekst w VSL_Skrypt_v1.md. Bez tego nie ma launchu 09.04!
+
+## Przypomnienia z 2026-04-10
+- [BIZNES] 15:30 Rotunda — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak, Polskie Polisy). UWAGA: piątek WOLNY, tylko to spotkanie.
