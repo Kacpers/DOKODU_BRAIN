@@ -1,11 +1,11 @@
 ---
 type: plan
 status: active
-week: 2026-03-30 → 2026-04-04
-last_updated: 2026-03-29
+week: 2026-04-07 → 2026-04-13
+last_updated: 2026-04-10
 ---
 
-# Plan Tygodnia — 30 marca – 4 kwietnia 2026
+# Plan Tygodnia — 7–13 kwietnia 2026
 
 ---
 
@@ -129,119 +129,120 @@ Publikacja o 20:30.
 
 ---
 
-## Poniedziałek 30.03
+## Poniedziałek 07.04
+*Po Wielkanocy — powrót do pracy*
 
-- [x] 9:00–11:30 — Deep Work: Skrypt VSL kursu n8n ✅
-- [ ] 11:30–12:00 — Dashboard review
-- [x] 12:00–12:30 — Animex follow-up ✅ wysłane
-- [ ] 13:00–14:00 — LinkedIn Outreach — 5 firm
-- [ ] 14:00–14:30 — SEO: sprawdź meta title
-- [ ] 14:30–15:00 — MailerLite: wklej 3 maile
+- [ ] Animex: follow-up do Kamila ws. wdrożenia n8n (security review)
+- [ ] Animex: WYŚLIJ certyfikaty + paczkę szkoleniową (wystawione, czekają!)
 
-## Wtorek 31.03
+## Wtorek 08.04
 
-- [ ] **Platforma LMS** — dokończyć żeby kursanci mogli oglądać (BLOCKER sprzedaży!)
-- [ ] **Wrzucić prośbę o testimoniale na Discord PyStart** (tekst w PRJ_Sprzedaz_Kursy_Q2_2026.md)
-- [ ] **Napisać email W1** — "Wielkanocna promocja: Python za 599 PLN" → MailerLite draft
-- [ ] **Napisać email W2** — "Bundle Python + SQL za 999 PLN" → MailerLite draft
-- [ ] **Nagrać Short** — "3 powody żeby nauczyć się Pythona w 2026" (45s)
-- [ ] LinkedIn Outreach: sprawdź kto zaakceptował zaproszenia → DM
+- [x] COP Kartoszyno: zdzwonka WIECZOREM → oferta wysłana (9 999 / 13 900 PLN)
+- [x] SayFlu: oferta wysłana Krystianowi (Gemini w Google Workspace)
+- [ ] NAGRAJ VSL kursu n8n — tekst w VSL_Skrypt_v1.md
 
-## Środa 01.04
+## Środa 09.04
 
-- [x] **Cichy-Zasada (dealer VW/Audi/Porsche)** — inbound lead, wysłano maila do n8n ws. reseller program. Czekamy na odpowiedź → oddzwonić do Rafała Nawrockiego
-- [ ] **Animex: wystawić fakturę za szkolenia** — nr zamówienia: Z1089/10377/1 - [ZAK/2025/002198]
-- [ ] **Wysłać email W1** — Wielkanocna promocja PyStart 599 PLN (cała lista 15 404)
-- [ ] **Post LinkedIn** — promocja wielkanocna (edu styl)
-- [ ] **Opublikować Short** — "3 powody żeby nauczyć się Pythona"
+- [ ] LAUNCH early bird n8n — email N1 "999 PLN, 20 miejsc" + post LinkedIn (odłożone?)
 
-## Czwartek 02.04
+## Czwartek 10.04 ← DZIŚ
 
-- [ ] **Fryzjer 15:30**
-- [ ] **Nagranie VSL kursu n8n** (~20:00, po fryzjerze) — tekst w `VSL_Skrypt_v1.md`
-- [ ] **Nagranie Moduł 0 n8n** (~20:00+, jeśli starczy czasu) — skrypt gotowy
-- [ ] **Nagranie YT: Error Handling w n8n** (opcja, 12-15 min)
-- [ ] **Wysłać email W2** — "Bundle Python + SQL za 999 PLN"
-- [ ] **Nagrać Short** — "SQL czy Python — czego uczyć się najpierw?" (30s)
+**📅 Kalendarz:**
+- 09:00 — **FOTC: Warsztat "Optymalizacja procesów" — Grupa 1** (AI Hero)
+- 11:00 — Rozalia: wizyta u okulisty w Olsztynie (Familijne)
+- 13:00 — Przygotuj pliki dla księgowej
 
-## Sobota 04.04
+**📋 Taski:**
+- [ ] 📞 Zadzwonić do Kwater Pracowniczych — jak idzie klikanie po prototypie
+- [ ] 📧 Odpowiedzieć Aleksandrowi Ambrożkowi (PyStart — chce wrócić do kursu)
+- [ ] 📧 Odpowiedzieć Richardowi Thompsonowi (ECS — kurs automation with Python?)
+- [ ] 📧 Sprawdzić Passionfroot — kampania reklamowa warta rozważenia?
 
-- [ ] 9:30 — **Call z Jakubem Gibulą** (Administratiekantoor Gibula) — omówienie pytań do systemu fakturowego
-- [ ] **Wielkanoc 5-6.04** — cisza emailowa, odpoczynek
+## Piątek 11.04
 
-## Piątek 03.04
+**📅 Kalendarz:**
+- 09:00 — **Growth Advisors: Warsztat "Codzienna efektywność" — AI dla Trenerów 3/3** (AI Hero)
+- Wieczór — **Koncert Friendz** na Euro Arenie w Gdańsku (Familijne)
 
-- [ ] **DEADLINE: Animex certyfikaty** — wystawić wszystkie certyfikaty (lista w załączniku od Kamila, hasło SMS)
-- [ ] **DEADLINE: Animex paczka szkoleniowa** — przygotować paczkę z plikami ze szkolenia do wysyłki
-- [ ] **Wysłać email W3** — "Wesołych Świąt + ostatnie 4 dni promocji"
-- [ ] **Weekly Review** — `/brain-weekly-review`
-- [ ] **SEO Weekly** — `/seo-weekly`
-- [ ] **Plan następnego tygodnia:**
+**📋 Taski:**
+- [ ] Szkolenie + koncert z córką. **WOLNE od Dokodu.**
 
-### Następny tydzień 7-11.04 (po Wielkanocy)
+## Sobota 12.04 (niedziela)
 
-- [ ] **EPALE — rejestracja i setup** (30 min, darmowe):
-  - [ ] Załóż konto na epale.ec.europa.eu
-  - [ ] Dodaj kurs n8n + PyStart do Course Catalogue
-  - [ ] Opublikuj 1 artykuł (repurposing z bloga, np. "AI w edukacji dorosłych")
-  - [ ] Sprawdź Partner Search pod kątem grantów Erasmus+
-- [ ] Pon 7.04: Wysłać email W4 (ostatni dzień promocji) + sprawdź LinkedIn akceptacje
-- [ ] Wt 8.04: Zamknięcie promocji wielkanocnej o 23:59
-- [ ] Śr 9.04: **LAUNCH early bird n8n** — email N1 "999 PLN, 20 miejsc" + post LinkedIn
-- [ ] Śr 9.04: Nagrać Short "Ile kosztuje Zapier vs n8n rocznie?"
-- [ ] **Pt 10.04: 15:30 Rotunda** — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak)
-- [ ] **Sob 11.04:** wolne (Bank&InsurHack — skip dnia 1)
-- [ ] **Ndz 12.04: Bank&InsurHack** (9:00–17:00, Rotunda) — pitchowanie MVP od 15:00, jury, nagranie filmu ze zwycięzcami
-- [ ] Nagranie BONUS 1 PyStart — przesunąć na inny termin (weekend zajęty hackathonem)
+**📅 Kalendarz:**
+- 09:00–17:00 — **Bank&InsurHack** (Rotunda) — pitchowanie MVP od 15:00, jury
 
-### Tydzień 14-18.04
+## Niedziela 13.04
 
-- [ ] Pon 12.04: Email N2 "Już X osób w early bird"
-- [ ] Wt 15.04: Webinar "Automatyzacja firmy w 60 min z n8n" (opcja)
-- [ ] Śr 16.04: Email N3 "Ostatnie miejsca early bird" + Short
-- [ ] Czw-Pt: **Nagranie Moduły 1-2 n8n** (~6h)
-- [ ] Pt: **Nagranie BONUS 2 PyStart** (API OpenAI/Anthropic, ~5h)
-
-### Tydzień 21-25.04
-
-- [ ] Pon 20.04: Email N4 "Early bird zamknięty, od jutra 1490"
-- [ ] Wt-Śr: **Nagranie Moduły 3-4 n8n** (~7h)
-- [ ] Czw-Pt: **Nagranie BONUS 3 PyStart** (Automatyzacja + AI, ~4h)
-- [ ] Pt: Nowa struktura cenowa PyStart na stronie (499/899/999)
-
-### Tydzień 28.04-2.05 (Majówka)
-
-- [ ] Pon 28.04: **PyStart Relaunch** — email M1 + film YT + post LinkedIn
-- [ ] Śr 30.04: Email M2 "Majówka za rogiem"
-- [ ] Pt 2.05: Email M3 "Siedzisz na kanapie? Zacznij kurs"
-- [ ] 1-4.05: Majówka — emaile zaplanowane, ludzie kupują
+**📅 Kalendarz:**
+- 10:00 — **DSH: Warsztat Developerzy 1.5/2** (AI Hero, Teams)
+- 15:00–20:00 — Slot konsultacyjny (Rezerwacje)
 
 ---
 
-## Zrobione w weekend (29.03)
+### Następny tydzień 14–18.04
 
-- [x] GSC + GA4 sync + GA Insights + SEO Insights
-- [x] Meta title /blog/n8n + list-comprehension — wdrożone
-- [x] Meta title /blog/wdrozenie-ai-w-firmie — optymalizacja
-- [x] 158 leadów zakwalifikowanych → `Lead_Qualification_Full_2026-03-29.md`
-- [x] Outreach Kit top 5 firm + Outreach Tracker
-- [x] Skill `/outreach` z buying signals
-- [x] Skrypt `pracuj_leads.py`
-- [x] LinkedIn Profile Optimization
-- [x] AI Act Checklist lead magnet
-- [x] MailerLite cleanup (11 pustych draftów usunięte)
-- [x] 3 emaile kursu n8n → `Emaile_Launch.md`
-- [x] Slidev: Vue wizualizacje, animacje, Key Takeaway + Exercise layouts
-- [x] Case Study Animex draft
-- [x] PLAN_TYGODNIA.md + memory
+**📅 Kalendarz:**
+- Pon 14.04: cały dzień — **BNI Orłowo** + Slot konsultacyjny 10:00–15:00
+- Wt 15.04: 09:00 — **FOTC: Warsztat "Codzienna efektywność" — AI w researchu** + 16:00 Developerskie synchra + Slot 16:00–21:00
+- Śr 16.04: Slot konsultacyjny 12:30–17:30
+- Pt 17.04: 14:00–15:00 — **Dokodu × CX Factory** (Dawid Wielec, Teams)
+
+**📋 Taski:**
+- [ ] Pon 14.04: Odezwij się do Krystiana (SayFlu) — umów spotkanie
+- [ ] Pt 17.04: Przed callem CX Factory → `/brain-lead-research` Dawid Wielec
+- [ ] COP Kartoszyno: jeśli brak odpowiedzi do 15.04 → follow-up
+
+### Tydzień 21–25.04
+
+**📅 Kalendarz:**
+- Pon 21.04: 09:00 — **FOTC: Warsztat "Optymalizacja procesów" — Grupa 4**
+- Wt 22.04: 16:00 — Developerskie synchra
+- Śr 23.04: 09:00 — **FOTC: Warsztat "Optymalizacja procesów" — Grupa 5**
+- 20 lub 21.04 — **LexLegali: spotkanie** (Alina potwierdza datę)
+
+**📋 Taski:**
+- [ ] Przed LexLegali → `/brain-prep-call`
+
+### Tydzień 28.04–02.05
+
+**📅 Kalendarz:**
+- Wt 29.04: 16:00 — Developerskie synchra
+- Śr 30.04: 09:00 — ~~[anulowane] DSH Warsztat Developerzy 2/2~~
+- Czw 01.05: 09:00 — **POWER TEAM IT** (Olaf Pospischil, Teams) — **ODPOWIEDZ NA ZAPROSZENIE!**
+- Czw 01.05: 20:00 — **Sanah na Stadionach** (Polsat Plus Arena Gdańsk)
+
+### Tydzień 05–09.05
+
+**📅 Kalendarz:**
+- Śr 06.05: 09:00 — **FOTC: Program "Ambasadorzy AI" — Start programu**
+- Śr 06.05: 16:00 — Developerskie synchra
+
+---
+
+## Backlog (nieprzypisane do dnia)
+
+### P1 — Must do
+- [ ] **NAGRAJ VSL kursu n8n** — tekst w VSL_Skrypt_v1.md. Bez tego nie ma launchu!
+- [ ] **Animex: wyślij certyfikaty + paczkę szkoleniową** — gotowe, czekają na wysyłkę
+- [ ] **Odpowiedz na zaproszenie POWER TEAM IT (01.05)** — tak/nie?
+
+### P2 — Should do
+- [ ] **LinkedIn Outreach — 5 firm** — `/outreach`
+- [ ] **Blog: nowy artykuł** — n8n vs Anthropic Managed Agents (temat z daily briefing 10.04)
+- [ ] **Bank&InsurHack follow-up** — po 12.04: scorecard, LinkedIn requests, follow-up Tier 1
+
+### P3 — Nice to have
+- [ ] **EPALE — rejestracja** (30 min, darmowe)
+- [ ] **Odśwież leady Pracuj** — `python3 scripts/pracuj_leads.py --save`
+- [ ] **Dashboard review** — zaktualizuj 000_DASHBOARD.md
 
 ---
 
 ## Metryki sukcesu tygodnia
 
-- [ ] Skrypt VSL gotowy do nagrania
-- [ ] 5 zaproszeń LinkedIn wysłanych
-- [x] 3 meta title wdrożone
-- [ ] 3 emaile wklejone w MailerLite
-- [ ] 1 rozmowa z Animex o kontynuacji
-- [ ] Profil LinkedIn zaktualizowany
+- [ ] VSL nagrany
+- [ ] Certyfikaty Animex wysłane
+- [ ] Bank&InsurHack: 3+ kontaktów Tier 1
+- [ ] 2 emaile od klientów obsłużone (Ambrożek, Thompson)
+- [ ] CX Factory research przed callem 17.04

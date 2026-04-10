@@ -29,7 +29,8 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - 2026-04-08 | BIZNES | NAGRAJ VSL kursu n8n — tekst w VSL_Skrypt_v1.md. Bez tego nie ma launchu 09.04!
 - 2026-04-22 | BIZNES | Kasia Lewandowska (nieruchomości/AI): jeśli się nie odezwała — przypomnij się. Mail: ke.lewandowska@gmail.com. Kontekst: kurs AI dla agentów nieruchomości, sprawdza konkurencję z platformą której jest ambasadorką. Alina miała dać jej dane do 2 pośredników.
 - 2026-04-20 | BIZNES | LexLegali: spotkanie 20 lub 21.04 (Alina potwierdza). Przed spotkaniem: /brain-prep-call
-- 2026-04-10 | BIZNES | 15:30 Rotunda — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak, Polskie Polisy). UWAGA: piątek WOLNY, tylko to spotkanie.
+- 2026-04-10 | BIZNES | Zadzwonić do Kwater Pracowniczych — zapytać jak idzie klikanie po prototypie
+- ~~2026-04-10 | BIZNES | 15:30 Rotunda — spotkanie organizacyjne Bank&InsurHack~~ → ODWOŁANE, hackathon tylko w niedzielę 12.04
 - 2026-04-11 | BIZNES | Sobota: szkolenie + koncert z córką. WOLNE — brak Bank&InsurHack.
 - 2026-04-12 | BIZNES | Bank&InsurHack TYLKO niedziela (9:00–17:00, Rotunda) — pitchowanie MVP od 15:00, jury, nagranie filmu ze zwycięzcami
 - 2026-04-15 | BIZNES | Bank&InsurHack follow-up: wypełnić scorecard, wysłać LinkedIn requests, follow-up messages do Tier 1
