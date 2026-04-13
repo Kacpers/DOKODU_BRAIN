@@ -14,8 +14,16 @@ scripts/*.pyc
 *.json
 *.key
 
-# Wyjątki dla tender-doc-filler (pliki JSON są częścią kodu)
+# Wyjątki dla plików w podprojektach i skillach
 !tender-doc-filler/**/*.json
+!.claude/skills/**/*.json
+!.claude/skills/**/*.py
+!.claude/skills/**/*.sh
+!.claude/skills/**/*.ts
+
+# Virtual environments (w skillach SEO itp.)
+.venv/
+__pycache__/
 
 # Logi
 *.log
