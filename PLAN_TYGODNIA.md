@@ -234,6 +234,9 @@ Publikacja o 20:30.
 - [ ] **LinkedIn Outreach — 5 firm** — `/outreach`
 - [ ] **Blog: nowy artykuł** — n8n vs Anthropic Managed Agents (temat z daily briefing 10.04)
 - [ ] **Bank&InsurHack follow-up** — po 12.04: scorecard, LinkedIn requests, follow-up Tier 1
+- [ ] **Dokończ stronę ebooka** — `dokodu.it/ebooki/automatyzacja-biznesowa` (checkout, treść, ebook niedokończony). Potem redirect `lp.dokodu.it/transformacja` → `dokodu.it/ebooki/automatyzacja-biznesowa#kup-pelny-ebook`
+- [ ] **Checklista AI → wrzuć na stronę** — `dokodu.it/checklista` z bramką emailową + segment MailerLite
+- [ ] **Uporządkuj marketing assets** — mapa: co jest, dla kogo, jaki URL, jaki lejek (ebook / checklista / AI Act / kursy)
 
 ### P3 — Nice to have
 - [ ] **EPALE — rejestracja** (30 min, darmowe)
