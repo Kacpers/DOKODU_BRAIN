@@ -184,14 +184,17 @@ Publikacja o 20:30.
 
 **📅 Kalendarz:**
 - Pon 14.04: cały dzień — **BNI Orłowo** + Slot konsultacyjny 10:00–15:00
-- Wt 15.04: 09:00 — **FOTC: Warsztat "Codzienna efektywność" — AI w researchu** + 16:00 Developerskie synchra + Slot 16:00–21:00
+- Wt 15.04: 09:00 — **FOTC: Warsztat "Codzienna efektywność" — AI w researchu** + 13:15 **SayFlu/Krystian — spotkanie** + 16:00 Developerskie synchra + Slot 16:00–21:00
 - Śr 16.04: Slot konsultacyjny 12:30–17:30
 - Pt 17.04: 14:00–15:00 — **Dokodu × CX Factory** (Dawid Wielec, Teams)
 
 **📋 Taski:**
-- [ ] Pon 14.04: Odezwij się do Krystiana (SayFlu) — umów spotkanie
+- [x] Pon 14.04: Odezwij się do Krystiana (SayFlu) — ✅ spotkanie umówione wt 15.04 13:15
+- [ ] Pon 14.04: **LinkedIn DM — 3 osoby** (gotowe teksty poniżej):
+  - [ ] Agnieszka Zając-Feliczak (RPA + ISO 27001) — pytanie o narzędzia RPA
+  - [ ] Tomasz Bystronski (CERI International, Head of Process Automation) — uzupełnienie Blue Prism o AI
+  - [ ] Kamil Jagodziński (AIUT, Operations Manager) — automatyzacja procesów biznesowych
 - [ ] Pt 17.04: Przed callem CX Factory → `/brain-lead-research` Dawid Wielec
-- [ ] COP Kartoszyno: jeśli brak odpowiedzi do 15.04 → follow-up
 
 ### Tydzień 21–25.04
 

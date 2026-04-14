@@ -2,7 +2,7 @@
 type: prospect
 name: COP Kartoszyno
 industry: Noclegi pracownicze / hospitality
-contact_person: Wojciech (nazwisko nieznane)
+contact_person: Wojciech Lubowiedzki
 phone: (do uzupełnienia)
 email: (do uzupełnienia)
 source: (do uzupełnienia)
@@ -86,5 +86,15 @@ score: 8/10
 - Plik v2: Oferta_COP_Kartoszyno_2026-04_v2.docx (aktualna, pełny system, nowe screeny)
 - Go-live: ~2 tygodnie od podpisania umowy (w ofercie 4 tyg.)
 
+## Nowe wymagania (feedback 2026-04-14)
+Uwagi od Wojciecha Lubowiedzki po testowaniu prototypu:
+
+1. **Rejestr lokatorów w pokojach** — koordynatorzy firm wynajmujących muszą mieć obowiązek wpisywania nazwisk lokatorów przypisanych do konkretnych pokoi
+2. **Usuwanie lokatorów po wyjeździe** — gdy lokator wyjeżdża, koordynator musi móc usunąć jego nazwisko z systemu
+3. **Wyszukiwanie lokatorów po nazwisku** — policja i straż graniczna regularnie dzwonią pytając o konkretne osoby. System musi umożliwiać szybkie wyszukanie nazwiska i zwrócenie informacji: z jakiej firmy jest lokator i gdzie mieszka (budynek/moduł/lokal/pokój)
+
+> _"Bardzo często do nas dzwoni policja lub straż graniczna i pytają się o informację o dane nazwisko czy jest. Taki system by nam pomagał w wyszukiwaniu danego nazwiska i przekazywaniu informacji z jakiej firmy jest i gdzie mieszka."_ — Wojciech Lubowiedzki
+
 ## Historia kontaktu
 - **2026-04-09** — Wysłany mail do Pana Wojciecha z ofertą PDF, linkiem do sandboxa (dev.dokodu.it/wynajem) i opisem 3 perspektyw (Zarząd/Recepcja/Koordynator). Zaznaczono że makieta jest poglądowa, docelowe rozwiązanie po warsztacie. Szacowany czas wdrożenia: 4 tygodnie od umowy. Czekamy na feedback.
+- **2026-04-14** — Feedback od Wojciecha po testach prototypu: rejestr lokatorów (nazwiska w pokojach), wyszukiwanie po nazwisku (policja/SG). Renegocjacja zamknięta na 10k netto. Status: WYGRANA → implementacja.

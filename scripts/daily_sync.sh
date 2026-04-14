@@ -39,6 +39,11 @@ if [ "$(date +%u)" = "1" ]; then
     echo "  ✓ YT done" >> "$LOG_FILE"
 fi
 
+# Calendar
+echo "  → Calendar..." >> "$LOG_FILE"
+python3 /home/kacper/DOKODU_BRAIN/scripts/calendar_sync.py --pull --days 14 --save >> "$LOG_FILE" 2>&1
+echo "  ✓ Calendar done" >> "$LOG_FILE"
+
 # Sprawdź REMINDERS.md i wstrzyknij do INBOX jeśli termin nadszedł
 REMINDERS_FILE="/home/kacper/DOKODU_BRAIN/REMINDERS.md"
 INBOX_FILE="/home/kacper/DOKODU_BRAIN/00_INBOX.md"

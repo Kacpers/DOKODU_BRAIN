@@ -24,7 +24,7 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 | 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Odłożona | — | Chcą tylko licencję n8n, brak projektu wdrożeniowego | — |
 | 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | Info przekazane na Messengerze (znajomy Kacpra). Czekamy na akceptację i dalsze info od Krystiana. | — |
 | 7 | LexLegali | Marcin Chrostek / Danuta Zawada-Miernik | Kontakt Kacpra | Propozycja | 35 000 | Spotkanie 20 lub 21.04 — Alina potwierdza datę. Oferta Automotive-Legal 32k+3k wysłana. | 2026-04-21 |
-| 8 | COP Kartoszyno | — | Inbound | Propozycja | 10-14 000 | Oferta wysłana 08.04 (2 pakiety: 9 999 / 13 900 PLN). Zdzwonka OK. Czekamy na decyzję. | — |
+| 8 | COP Kartoszyno (Kwatery Pracownicze) | — | Inbound | WYGRANA | 10 000 | Renegocjacja 10.04 — stanęło na 10k netto. Robimy. | — |
 <!-- /SYNC:PIPELINE -->
 
 **Pipeline Value (otwarty):** ___ PLN

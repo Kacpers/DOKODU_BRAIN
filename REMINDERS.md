@@ -20,9 +20,10 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - ~~2026-03-27 | BIZNES | Animex: napisz do Kamila Kowalskiego~~ → DONE 2026-03-30, brief wysłany
 - 2026-04-07 | BIZNES | Animex: follow-up do Kamila ws. wdrożenia n8n (security review powinien być zakończony)
 - ~~2026-04-08 | BIZNES | COP Kartoszyno: zdzwonka WIECZOREM~~ → DONE 08.04, oferta wysłana (9 999 / 13 900 PLN), czekamy na decyzję
-- 2026-04-15 | BIZNES | COP Kartoszyno: jeśli brak odpowiedzi — follow-up. Profil: AREA_Customers/_PROSPECTS/COP_Kartoszyno/
+- ~~2026-04-15 | BIZNES | COP Kartoszyno: jeśli brak odpowiedzi — follow-up~~ → DONE 10.04, WYGRANA 10k netto
 - ~~2026-04-08 | BIZNES | SayFlu/Krystian: sprawdź czy poszła oferta/umowa na szkolenie Gemini w Google Workspace (14-15 osób, zespół wewnętrzny). Agencja SayFlu = ta sama co product placement Nvidia.~~ → przesunięte na pon 14.04
-- 2026-04-14 | BIZNES | SayFlu/Krystian: odezwij się w pn — Krystian przegląda ofertę w weekend, będzie miał pytania, chce spotkanie w przyszłym tygodniu. Umówcie termin.
+- ~~2026-04-14 | BIZNES | SayFlu/Krystian: odezwij się w pn~~ → DONE 14.04, spotkanie umówione wt 15.04 13:15
+- 2026-04-15 | BIZNES | SayFlu/Krystian: spotkanie 13:15. Przed: przejrzyj ofertę Gemini, przygotuj odpowiedzi na pytania.
 - 2026-04-01 | BIZNES | Animex: wystawić fakturę za szkolenia (nr zamówienia na fakturze!)
 - ~~2026-04-03 | BIZNES | DEADLINE Animex: certyfikaty + paczka z plikami szkoleniowymi — musi wyjść do piątku!~~ → certyfikaty wystawione, wysyłka przeniesiona
 - 2026-04-08 | BIZNES | Animex: WYŚLIJ certyfikaty + paczkę szkoleniową do Kamila (wystawione, czekają na wysyłkę)

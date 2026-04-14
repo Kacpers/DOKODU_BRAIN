@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI w firmie — 15 punktów do sprawdzenia</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+  :root {
+    --primary: #1a1a2e;
+    --accent: #e94560;
+    --accent-light: #fef2f4;
+    --blue: #0f3460;
+    --blue-light: #e8f0fe;
+    --gray-50: #f8f9fa;
+    --gray-100: #f1f3f5;
+    --gray-200: #e9ecef;
+    --gray-400: #ced4da;
+    --gray-600: #868e96;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+    --green: #2b8a3e;
+    --green-light: #ebfbee;
+    --orange: #e67700;
+    --orange-light: #fff9db;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--gray-900);
+    font-size: 10.5pt;
+    line-height: 1.6;
+    background: white;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 0;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page:last-child { page-break-after: auto; }
+
+  /* ===== COVER PAGE ===== */
+  .cover {
+    background: linear-gradient(145deg, #0d1b2a 0%, var(--primary) 40%, var(--blue) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 55px;
+    position: relative;
+  }
+
+  /* Subtle geometric pattern overlay */
+  .cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(233,69,96,0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(15,52,96,0.15) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .cover > * { position: relative; z-index: 1; }
+
+  .cover-logo {
+    height: 48px;
+    margin-bottom: 50px;
+  }
+
+  .cover-badge {
+    display: inline-block;
+    background: rgba(233,69,96,0.15);
+    color: var(--accent);
+    border: 1px solid rgba(233,69,96,0.3);
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 8px 28px;
+    border-radius: 30px;
+    margin-bottom: 36px;
+  }
+
+  .cover h1 {
+    font-size: 28pt;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    max-width: 480px;
+    letter-spacing: -0.5px;
+  }
+
+  .cover h1 .line2 {
+    display: block;
+    color: var(--accent);
+    font-size: 36pt;
+  }
+
+  .cover h1 .line3 {
+    display: block;
+    font-size: 28pt;
+    font-weight: 700;
+    opacity: 0.85;
+  }
+
+  .cover .subtitle {
+    font-size: 11.5pt;
+    font-weight: 400;
+    opacity: 0.75;
+    margin: 20px 0 50px;
+    max-width: 440px;
+    line-height: 1.65;
+  }
+
+  .cover-footer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding-top: 28px;
+  }
+
+  .cover-footer img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+    object-fit: cover;
+  }
+
+  .cover-footer-text {
+    text-align: left;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+
+  .cover-footer-text strong { font-weight: 600; }
+  .cover-footer-text span { opacity: 0.6; }
+  .cover-footer-text a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .cover-year {
+    position: absolute;
+    bottom: 24px;
+    right: 40px;
+    font-size: 8pt;
+    opacity: 0.3;
+  }
+
+  /* Decorative accent line */
+  .cover-accent-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--accent), transparent);
+  }
+
+  /* ===== CONTENT PAGES ===== */
+  .content {
+    padding: 36px 45px 50px;
+  }
+
+  .page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 26px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gray-200);
+  }
+
+  .page-header img {
+    height: 18px;
+  }
+
+  .page-header .section-label {
+    font-size: 8pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent);
+  }
+
+  /* Section intro text */
+  .section-intro-text {
+    color: var(--gray-600);
+    font-style: italic;
+    margin-bottom: 22px;
+    font-size: 10pt;
+    padding-left: 14px;
+    border-left: 3px solid var(--accent);
+  }
+
+  /* Checklist items */
+  .checklist-item {
+    margin-bottom: 24px;
+  }
+
+  .checklist-item h3 {
+    font-size: 12.5pt;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .checklist-item h3 .num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    background: var(--accent);
+    color: white;
+    font-size: 11pt;
+    font-weight: 800;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .item-why {
+    font-size: 10pt;
+    color: var(--gray-800);
+    margin-bottom: 7px;
+    line-height: 1.6;
+  }
+
+  .item-example {
+    background: var(--gray-50);
+    border-left: 3px solid var(--blue);
+    padding: 10px 14px;
+    margin: 7px 0;
+    font-size: 9.5pt;
+    border-radius: 0 6px 6px 0;
+    line-height: 1.55;
+  }
+
+  .item-example strong {
+    color: var(--blue);
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .red-flag {
+    background: var(--accent-light);
+    border-left: 3px solid var(--accent);
+    padding: 9px 14px;
+    margin: 7px 0;
+    font-size: 9.5pt;
+    border-radius: 0 6px 6px 0;
+    line-height: 1.55;
+  }
+
+  .red-flag strong {
+    color: var(--accent);
+    font-size: 7.5pt;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 3px;
+  }
+
+  .red-flag::before {
+    content: '';
+  }
+
+  /* Explainer box */
+  .explainer {
+    background: var(--blue-light);
+    border-radius: 8px;
+    padding: 11px 16px;
+    margin: 7px 0;
+    font-size: 9.5pt;
+    line-height: 1.55;
+  }
+
+  .explainer .explainer-title {
+    color: var(--blue);
+    font-weight: 700;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* CTA blocks */
+  .cta-block {
+    background: linear-gradient(135deg, var(--primary), var(--blue));
+    color: white;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 24px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: rgba(233,69,96,0.1);
+    border-radius: 50%;
+  }
+
+  .cta-block h3 {
+    font-size: 13pt;
+    font-weight: 700;
+    margin-bottom: 6px;
+    position: relative;
+  }
+
+  .cta-block p {
+    font-size: 9.5pt;
+    opacity: 0.85;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    font-size: 10.5pt;
+    padding: 9px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    position: relative;
+  }
+
+  /* Score table */
+  .score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 9.5pt;
+  }
+
+  .score-table th {
+    background: var(--primary);
+    color: white;
+    padding: 9px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8.5pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .score-table td {
+    padding: 9px 14px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+  }
+
+  .score-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .score-green { color: var(--green); font-weight: 700; }
+  .score-orange { color: var(--orange); font-weight: 700; }
+  .score-red { color: var(--accent); font-weight: 700; }
+
+  /* Comparison table in point 10 */
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 6px 0;
+    font-size: 9pt;
+  }
+
+  .compare-table th {
+    background: var(--primary);
+    color: white;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 8pt;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .compare-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid var(--gray-200);
+    vertical-align: top;
+    font-size: 9pt;
+  }
+
+  .compare-table tr:nth-child(even) td { background: var(--gray-50); }
+
+  .compare-table .tool-name {
+    font-weight: 700;
+    font-size: 9.5pt;
+  }
+
+  .compare-table .tool-examples {
+    font-size: 7.5pt;
+    color: var(--gray-600);
+  }
+
+  /* Final CTA page */
+  .final-cta {
+    background: linear-gradient(145deg, #0d1b2a 0%, var(--primary) 40%, var(--blue) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 55px 55px;
+    position: relative;
+  }
+
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(circle at 30% 70%, rgba(233,69,96,0.06) 0%, transparent 50%),
+      radial-gradient(circle at 70% 30%, rgba(15,52,96,0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .final-cta > * { position: relative; z-index: 1; }
+
+  .final-cta h2 {
+    font-size: 24pt;
+    font-weight: 800;
+    margin-bottom: 24px;
+    max-width: 460px;
+    line-height: 1.25;
+    letter-spacing: -0.3px;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 50px;
+    margin: 20px 0 30px;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat .stat-num {
+    font-size: 26pt;
+    font-weight: 900;
+    color: var(--accent);
+    display: block;
+    line-height: 1.1;
+  }
+
+  .stat .stat-label {
+    font-size: 8pt;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    display: block;
+    margin-top: 4px;
+  }
+
+  .final-cta .benefits-title {
+    font-size: 11pt;
+    opacity: 0.9;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .benefit-list {
+    text-align: left;
+    margin: 0 0 28px;
+    font-size: 10.5pt;
+    line-height: 2;
+    list-style: none;
+    padding: 0;
+  }
+
+  .benefit-list li::before {
+    content: "\2713  ";
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  .final-cta .contact-block {
+    margin-top: 28px;
+    font-size: 10pt;
+    line-height: 1.9;
+  }
+
+  .final-cta .contact-block strong {
+    font-size: 11pt;
+  }
+
+  .final-cta .contact-block a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+
+  .final-cta .contact-block .contact-dim {
+    opacity: 0.7;
+  }
+
+  .final-cta .tagline {
+    margin-top: 36px;
+    font-size: 9pt;
+    opacity: 0.45;
+    letter-spacing: 0.5px;
+  }
+
+  .final-cta .copyright {
+    margin-top: 20px;
+    font-size: 7.5pt;
+    opacity: 0.25;
+  }
+
+  /* Intro/author page */
+  .author-box {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    background: var(--gray-50);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 24px;
+    border: 1px solid var(--gray-200);
+  }
+
+  .author-box img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--gray-200);
+  }
+
+  .author-box .author-info h4 {
+    font-size: 11pt;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--primary);
+  }
+
+  .author-box .author-info p {
+    font-size: 9pt;
+    color: var(--gray-600);
+    line-height: 1.5;
+  }
+
+  .highlight-stat {
+    display: inline;
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+  }
+
+  .formula-box {
+    background: var(--gray-50);
+    border: 2px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 12px 18px;
+    margin: 8px 0;
+    text-align: center;
+    font-size: 10.5pt;
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .formula-box .formula-note {
+    display: block;
+    font-size: 8.5pt;
+    font-weight: 400;
+    color: var(--gray-600);
+    margin-top: 4px;
+    font-style: italic;
+  }
+
+  /* Section heading on content pages */
+  .section-heading {
+    font-size: 15pt;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+
+  /* Page footer */
+  .page-footer {
+    position: absolute;
+    bottom: 18px;
+    left: 45px;
+    right: 45px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 7.5pt;
+    color: var(--gray-400);
+  }
+
+  .page-footer a {
+    color: var(--gray-400);
+    text-decoration: none;
+  }
+
+  /* Decorative top bar for content pages */
+  .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--blue));
+  }
+
+  /* Icon decorations using CSS */
+  .icon-circle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 10px;
+    margin-right: 4px;
+    flex-shrink: 0;
+  }
+
+  .icon-warn { background: var(--accent-light); color: var(--accent); }
+  .icon-info { background: var(--blue-light); color: var(--blue); }
+  .icon-ok { background: var(--green-light); color: var(--green); }
+
+  /* List styling for item-why */
+  .item-list {
+    margin: 4px 0 0 18px;
+    font-size: 10pt;
+    color: var(--gray-800);
+    line-height: 1.7;
+  }
+
+  .item-list li {
+    margin-bottom: 2px;
+  }
+
+  @media print {
+    .page { page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <div class="cover-accent-line"></div>
+  <img src="logo_white.png" class="cover-logo" alt="Dokodu">
+  <div class="cover-badge">Praktyczna checklista</div>
+  <h1>
+    AI w firmie
+    <span class="line2">15 punktów</span>
+    <span class="line3">do sprawdzenia</span>
+  </h1>
+  <p class="subtitle">15 konkretnych punktów, które przejdziesz ze swoim zespołem, zanim wydasz złotówkę na automatyzację. Każdy punkt to lekcja wyniesiona z realnych wdrożeń.</p>
+
+  <div class="cover-footer">
+    <img src="kacper.png" alt="Kacper Sieradziński">
+    <div class="cover-footer-text">
+      <strong>Kacper Sieradziński</strong> — CEO Dokodu<br>
+      <span>Wdrożenia AI &amp; Automatyzacja procesów</span><br>
+      <a href="https://dokodu.it">dokodu.it</a> · <a href="mailto:kacper@dokodu.it">kacper@dokodu.it</a>
+    </div>
+  </div>
+  <div class="cover-year">&copy; 2026 Dokodu sp. z o.o.</div>
+</div>
+
+<!-- PAGE 2: INTRO + AUTHOR -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Wprowadzenie</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <div class="author-box">
+    <img src="kacper.png" alt="Kacper Sieradziński">
+    <div class="author-info">
+      <h4>Kacper Sieradziński</h4>
+      <p>Założyciel Dokodu. Wdraża automatyzację i AI w firmach 50–500 osób — FMCG, automotive, logistyka. Prowadzi szkolenia zamknięte dla zespołów. Autor „Automatyzacja biznesowa 2026" (112 stron, 10 000+ pobrań).</p>
+    </div>
+  </div>
+
+  <h2 class="section-heading">Dlaczego powstała ta checklista?</h2>
+
+  <p style="margin-bottom: 12px;">Polskie firmy wdrażające automatyzację odnotowują średnio <span class="highlight-stat">o 23% wyższe przychody</span> niż konkurencja (dane: Polski Instytut Ekonomiczny). Jednocześnie <strong>80% wdrożeń AI upada w ciągu pierwszych 3 miesięcy</strong>.</p>
+
+  <p style="margin-bottom: 12px;">Powód jest prawie zawsze ten sam: firma zaczyna od narzędzia zamiast od problemu. Kupuje licencję, podłącza trzy systemy, a po miesiącu nikt nie wie, kto za to odpowiada i czy w ogóle działa.</p>
+
+  <p style="margin-bottom: 12px;">Ta checklista powstała z kilkudziesięciu wdrożeń w polskich firmach. Każdy punkt to coś, co kogoś kosztowało czas, pieniądze albo jedno i drugie. Przejdź przez nią ze swoim zespołem, zanim zaczniesz wydawać budżet na automatyzację.</p>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>2</span>
+  </div>
+</div>
+
+<!-- PAGE 3: SECTION 1 + POINTS 1-2 -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 1 &mdash; Zanim zaczniesz</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <p class="section-intro-text">Największy błąd? Zaczynanie od technologii. Zanim otworzysz jakiekolwiek narzędzie, musisz wiedzieć co automatyzujesz i dlaczego.</p>
+
+  <div class="checklist-item">
+    <h3><span class="num">1</span> Zmapuj procesy, które pożerają czas</h3>
+    <p class="item-why">90% polskich MŚP wydaje nawet 45% czasu pracy na powtarzalne, manualne zadania. Ale większość firm nie wie które to zadania. Zanim pomyślisz o AI, usiądź z zespołem i spisz procesy — te prawdziwe, nie te z dokumentacji ISO.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      W firmie logistycznej okazało się, że jeden pracownik spędzał 3 godziny dziennie na przepisywaniu danych z maili do arkusza. Od dwóch lat. Nikt o tym nie wiedział, bo „tak się zawsze robiło".
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Jeśli nie potrafisz narysować procesu na kartce w 5 minut — nie jesteś gotowy na automatyzację.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">2</span> Policz realny koszt ręcznej pracy</h3>
+    <p class="item-why">Automatyzacja ma sens tylko wtedy, gdy oszczędność jest większa niż koszt wdrożenia. Zaskakująco mało firm to liczy.</p>
+    <div class="formula-box">
+      Koszt miesięczny = liczba osób &times; godziny tyg. &times; 4,33 &times; stawka/h
+      <span class="formula-note">4,33 = średnia liczba tygodni w miesiącu (52 tygodnie &divide; 12 miesięcy)</span>
+    </div>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Dla firmy FMCG policzyliśmy, że ręczne przetwarzanie zamówień kosztowało 8 200 PLN/mies. w roboczogodzinach. Automatyzacja zajęła 3 tygodnie i kosztowała mniej niż 2 miesiące dotychczasowej pracy manualnej.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Jeśli nie potrafisz podać kwoty, którą tracisz na manualną pracę — wróć do punktu 1.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>3</span>
+  </div>
+</div>
+
+<!-- PAGE 4: POINTS 3-4 + CTA -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 1 &mdash; Zanim zaczniesz</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">3</span> Określ co nie powinno być automatyzowane</h3>
+    <p class="item-why">Nie wszystko trzeba automatyzować. Negocjacje z kluczowym klientem? Nie automatyzuj. Obsługa wściekłego klienta? Chatbot to pogorszy. Decyzje strategiczne na niekompletnych danych? To domena człowieka.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Klient chciał zautomatyzować odpowiedzi na wszystkie maile AI. Ale klienci to duże firmy z indywidualnymi umowami — kontekst, którego AI nie miało. Zamiast tego zautomatyzowaliśmy klasyfikację maili i propozycje odpowiedzi, a finalną decyzję podejmuje człowiek.
+    </div>
+    <div class="explainer">
+      <span class="explainer-title">Human in the loop</span>
+      System przetwarza dane i przygotowuje propozycję, ale czeka na zatwierdzenie przez człowieka. Łączy szybkość automatyzacji z jakością ludzkiej oceny.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Jeśli planujesz automatyzować „wszystko" — zatrzymaj się. Najlepsza automatyzacja jest celowa i osadzona w kontekście biznesowym.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">4</span> Sprawdź czy Twoje dane są w jednym miejscu</h3>
+    <p class="item-why">Automatyzacja żywi się danymi. Jeśli dane klientów są w 5 Excelach, zamówienia w mailach, a faktury w trzecim systemie — żadne narzędzie nie pomoże, dopóki nie uporządkujesz fundamentów.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Firma z danymi w Google Sheets, historią zamówień w starym ERP i notatkami w prywatnych mailach handlowców. Tydzień na konsolidację danych — nie stracony czas, a fundament.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Jeśli na pytanie „gdzie macie dane klientów?" słyszysz „to zależy kogo zapytasz" — masz problem z danymi, nie z automatyzacją.
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h3>Nie wiesz od którego procesu zacząć?</h3>
+    <p>Umów 15-minutową rozmowę — przejdziemy przez Twoje procesy i wskażemy ten z najszybszym zwrotem.</p>
+    <span class="cta-btn">dokodu.it/kontakt</span>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>4</span>
+  </div>
+</div>
+
+<!-- PAGE 5: SECTION 2 + POINTS 5-6 -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 2 &mdash; Compliance i bezpieczeństwo</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <p class="section-intro-text">Technologia to połowa roboty. Druga połowa to pewność, że dane klientów są bezpieczne i że nie łamiesz przepisów, o których jeszcze nie wiesz.</p>
+
+  <div class="checklist-item">
+    <h3><span class="num">5</span> Sprawdź czy dane osobowe są gotowe na AI</h3>
+    <p class="item-why">Jeśli firma przetwarza dane osobowe (wystarczy lista klientów z mailami), każde wdrożenie AI musi być zgodne z RODO. Kluczowe pytanie: czy dane, które „podajesz" AI, mogą opuścić Twój serwer?</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Firma HR chciała użyć ChatGPT do analizy CV. CV to dane osobowe. Wysyłanie do API bez zabezpieczeń to potencjalne naruszenie RODO. Rozwiązanie: anonimizacja przed wysłaniem + przetwarzanie wrażliwych danych lokalnie.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Jeśli nie wiesz, gdzie fizycznie przechowywane są dane przetwarzane przez Twoje narzędzia AI — „w chmurze" to za mało. Musisz wiedzieć w czyjej chmurze i w jakim kraju.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">6</span> Zrób mini-audyt AI Act</h3>
+    <p class="item-why">Od sierpnia 2025 w UE obowiązuje AI Act (Rozporządzenie 2024/1689). Nie każde użycie AI podlega tym samym wymogom — musisz wiedzieć, gdzie na skali ryzyka znajduje się Twoje zastosowanie.</p>
+    <div class="explainer">
+      <span class="explainer-title">Kategorie ryzyka AI Act</span>
+      <strong style="color: var(--green); font-size: 9pt; font-weight: 600;">Minimalne</strong> — chatbot FAQ, raporty. Brak dodatkowych wymogów.<br>
+      <strong style="color: var(--orange); font-size: 9pt; font-weight: 600;">Ograniczone</strong> — generowanie treści. Wymóg: poinformuj użytkownika, że to AI.<br>
+      <strong style="color: var(--accent); font-size: 9pt; font-weight: 600;">Wysokie</strong> — rekrutacja, scoring. Pełna dokumentacja, audyt, nadzór.<br>
+      <strong style="color: var(--gray-900); font-size: 9pt; font-weight: 600;">Zakazane</strong> — manipulacja, social scoring. Zakaz bezwzględny.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      AI do oceniania ludzi (pracowników, kandydatów, klientów) wymaga konsultacji prawnej. AI Act przewiduje kary do 35 mln EUR lub 7% obrotu — warto to sprawdzić przed wdrożeniem, nie po.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>5</span>
+  </div>
+</div>
+
+<!-- PAGE 6: POINTS 7-8 + CTA -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 2 &mdash; Compliance i bezpieczeństwo</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">7</span> Ustal gdzie będą przetwarzane dane</h3>
+    <p class="item-why">Self-hosted (VPS) daje pełną kontrolę nad danymi. Cloud (SaaS) jest prostszy, ale oddajesz kontrolę. 82% polskich firm używa modelu hybrydowego — podstawowe automatyzacje w chmurze, wrażliwe procesy na własnych serwerach.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Dla klienta finansowego — dedykowany serwer w polskim data center. 30 PLN/mies. za VPS. Dane nigdy nie opuszczają granic Polski. Dla agencji marketingowej — chmura wystarczyła, bo przetwarzali tylko publiczne dane o kampaniach.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Jeśli dostawca nie potrafi powiedzieć, w jakim kraju przechowuje Twoje dane — zmień dostawcę.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">8</span> Przygotuj politykę AI dla pracowników</h3>
+    <p class="item-why">Wojtek, młody ambitny pracownik, instaluje ChatGPT i wkleja maile klientów, żeby szybciej pisać odpowiedzi. Dane osobowe klientów właśnie wyciekły do zewnętrznego serwisu. Wojtek nie chciał źle — nikt mu nie powiedział, czego robić nie wolno.</p>
+    <p class="item-why" style="margin-top: 4px;">Polityka AI nie musi być 50-stronicowym dokumentem. Wystarczy jasna instrukcja:</p>
+    <ul class="item-list">
+      <li>Jakich narzędzi AI wolno używać?</li>
+      <li>Jakich danych nie wolno wklejać do zewnętrznych narzędzi?</li>
+      <li>Kto zatwierdza nowe narzędzia AI w firmie?</li>
+      <li>Co robić, jeśli nie jesteś pewien?</li>
+    </ul>
+    <div class="red-flag" style="margin-top: 8px;">
+      <strong>Czerwona flaga</strong>
+      Jeśli pracownicy już używają ChatGPT, Gemini czy Claude do pracy, a nie masz żadnej polityki — to nie pytanie, czy dojdzie do wycieku. To pytanie, kiedy.
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h3>Nie masz pewności co do wymogów?</h3>
+    <p>15-minutowa rozmowa wystarczy, żeby ustalić, na czym stoisz i co zrobić dalej.</p>
+    <span class="cta-btn">dokodu.it/kontakt</span>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>6</span>
+  </div>
+</div>
+
+<!-- PAGE 7: SECTION 3 + POINTS 9-10 -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 3 &mdash; Wybór narzędzi i dostawcy</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <p class="section-intro-text">Wiesz co automatyzować, dane masz ogarnięte, compliance sprawdzony. Teraz pora wybrać narzędzia. I tu zaczyna się prawdziwy chaos.</p>
+
+  <div class="checklist-item">
+    <h3><span class="num">9</span> Nie zaczynaj od narzędzia — zaczynaj od problemu</h3>
+    <p class="item-why">To jak otwieranie paczki chipsów spawarką. Prawidłowy flow: 1) Mam problem &rarr; 2) Szukam rozwiązania &rarr; 3) Wybieram narzędzie. Nie odwrotnie.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Klient z branży automotive pytał o wdrożenie konkretnej platformy, bo „konkurencja też ją ma". Realny problem — chaos w dokumentacji serwisowej — rozwiązaliśmy prostszym narzędziem. Oszczędność: 40% budżetu.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Potrafisz nazwać narzędzie, ale nie potrafisz w jednym zdaniu opisać problemu, który ma rozwiązać? Cofnij się o krok.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">10</span> Porównaj: SaaS vs dedykowany vs automatyzacja</h3>
+    <p class="item-why">Trzy ścieżki, każda ma sens w innej sytuacji:</p>
+    <table class="compare-table">
+      <tr>
+        <th style="width: 30%;">Opcja</th>
+        <th style="width: 35%;">Zalety</th>
+        <th style="width: 35%;">Wady</th>
+      </tr>
+      <tr>
+        <td><span class="tool-name">SaaS</span><br><span class="tool-examples">HubSpot, Monday, Salesforce</span></td>
+        <td>Szybki start, gotowa infrastruktura</td>
+        <td>Płacisz za użytkownika, vendor lock-in</td>
+      </tr>
+      <tr>
+        <td><span class="tool-name">Automatyzacja</span><br><span class="tool-examples">n8n, Make, Zapier</span></td>
+        <td>Łączy istniejące systemy, elastyczna, tania</td>
+        <td>Wymaga kogoś, kto to zbuduje i utrzyma</td>
+      </tr>
+      <tr>
+        <td><span class="tool-name">Dedykowany</span><br><span class="tool-examples">Budowany na zamówienie</span></td>
+        <td>Dokładnie dopasowany, pełna kontrola</td>
+        <td>Wyższy koszt, dłuższy czas</td>
+      </tr>
+    </table>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Płacisz za 3+ niezintegrowane narzędzia SaaS i nadal ręcznie przenosisz dane? Potrzebujesz automatyzacji albo dedykowanego systemu.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>7</span>
+  </div>
+</div>
+
+<!-- PAGE 8: POINTS 11-12 + CTA -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 3 &mdash; Wybór narzędzi i dostawcy</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">11</span> Sprawdź vendor lock-in</h3>
+    <p class="item-why">Przed podpisaniem umowy zadaj trzy pytania:</p>
+    <ol class="item-list">
+      <li>Czy mogę wyeksportować wszystkie dane w standardowym formacie?</li>
+      <li>Czy mogę przenieść workflow do innego narzędzia?</li>
+      <li>Co się stanie z moimi danymi, jeśli dostawca zbankrutuje?</li>
+    </ol>
+    <p class="item-why" style="margin-top: 6px;">Rozwiązania open-source i self-hosted dają tu ogromną przewagę — pełna kontrola nad kodem, danymi i infrastrukturą.</p>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Dostawca nie oferuje eksportu danych albo workflow działają tylko w jego ekosystemie? Jesteś zakładnikiem, nie klientem.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">12</span> Ustal budżet: TCO, nie sama licencja</h3>
+    <p class="item-why">Cena licencji to wierzchołek góry lodowej. Prawdziwy koszt (TCO &mdash; Total Cost of Ownership) obejmuje:</p>
+    <ul class="item-list">
+      <li><strong>Licencja/abonament</strong> — od 0 PLN (open-source) do dziesiątek tysięcy rocznie</li>
+      <li><strong>Wdrożenie</strong> — konfiguracja, integracja, migracja danych</li>
+      <li><strong>Szkolenie zespołu</strong> — najlepsze narzędzie jest bezwartościowe bez kompetencji</li>
+      <li><strong>Utrzymanie</strong> — aktualizacje, monitoring, naprawy</li>
+      <li><strong>Skalowanie</strong> — co, jeśli za rok potrzebujesz 10x więcej operacji?</li>
+    </ul>
+    <div class="item-example" style="margin-top: 8px;">
+      <strong>Przykład z praktyki</strong>
+      Klient migrujący z SaaS do self-hosted zaoszczędził 73% miesięcznych wydatków. Jednorazowy koszt migracji zwrócił się w 11 tygodni.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Budżet uwzględnia tylko licencję? Niekompletna kalkulacja to najczęstszy powód „przekroczonego budżetu" w projektach IT.
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h3>Trzy opcje na stole i nie wiesz, która pasuje?</h3>
+    <p>Policzymy TCO razem i wskażemy, co ma sens przy Twojej skali.</p>
+    <span class="cta-btn">dokodu.it/kontakt</span>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>8</span>
+  </div>
+</div>
+
+<!-- PAGE 9: SECTION 4 + POINTS 13-14 -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 4 &mdash; Wdrożenie i utrzymanie</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <p class="section-intro-text">Narzędzie wybrane, koszty policzone, compliance sprawdzony. Teraz wdrożenie. W praktyce wygląda inaczej niż w teorii.</p>
+
+  <div class="checklist-item">
+    <h3><span class="num">13</span> Zaplanuj pilota — jeden proces, 2&ndash;4 tygodnie</h3>
+    <p class="item-why">Nie automatyzuj 15 procesów naraz. Wybierz jeden — powtarzalny, dobrze zmapowany, dotyczący jednego zespołu. Pilot odpowiada na jedno pytanie: <strong>czy to działa w naszej firmie, z naszymi danymi i ludźmi?</strong></p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Firma spożywcza: automatyczna klasyfikacja zapytań z maila + przekierowanie do odpowiedniego działu. Po 2 tygodniach czas odpowiedzi spadł z 4 godzin do 12 minut. To przekonało zarząd lepiej niż jakakolwiek prezentacja.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Ktoś proponuje „kompleksowe wdrożenie AI w całej firmie" od razu? Uciekaj. Dobre wdrożenie zaczyna się małe i skaluje po udowodnieniu wartości.
+    </div>
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">14</span> Przeszkol zespół przed wdrożeniem</h3>
+    <p class="item-why">Technologia to potencjał — potężny, ale nieokiełznany. Bez szkolenia prowadzi do frustracji, błędów i obaw o „utracone stanowiska". Firmy, które szkolą przed wdrożeniem, szybciej adaptują się i rzadziej napotykają opór.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      W firmie produkującej żywność przeprowadziliśmy dwudniowy warsztat przed automatyzacją. Pracownicy sami identyfikowali procesy, ustalali priorytety, widzieli korzyści. Efekt: zero oporu przy wdrożeniu. Ocena szkolenia: 4,8/5.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Wdrożenie bez szkolenia to opór, sabotaż i „po staremu było lepiej". Ludzie nie boją się technologii — boją się niezrozumiałej zmiany.
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>9</span>
+  </div>
+</div>
+
+<!-- PAGE 10: POINT 15 + SCORE TABLE -->
+<div class="page content">
+  <div class="page-header">
+    <span class="section-label">Sekcja 4 &mdash; Wdrożenie i utrzymanie</span>
+    <img src="logo_black.png" alt="Dokodu">
+  </div>
+
+  <div class="checklist-item">
+    <h3><span class="num">15</span> Ustal kto jest „właścicielem" automatyzacji</h3>
+    <p class="item-why">Każdy zautomatyzowany proces musi mieć jedną konkretną osobę, która wie, jak to działa, monitoruje, czy działa, naprawia, gdy się zepsuje, i decyduje o zmianach. Bez właściciela automatyzacja umiera po cichu.</p>
+    <div class="item-example">
+      <strong>Przykład z praktyki</strong>
+      Wyznaczyliśmy „championów automatyzacji" — po jednej osobie z każdego działu po rozszerzonym szkoleniu. Nie programiści — ludzie rozumiejący proces. Rok później: 15 aktywnych automatyzacji. Wszystkie działały.
+    </div>
+    <div class="red-flag">
+      <strong>Czerwona flaga</strong>
+      Na pytanie „kto odpowiada za tę automatyzację?" odpowiedzią jest cisza albo „chyba IT"? To moment, w którym wdrożenie zaczyna umierać.
+    </div>
+  </div>
+
+  <h2 class="section-heading" style="margin-top: 28px;">Gdzie jesteś? Policz wynik.</h2>
+
+  <table class="score-table">
+    <tr>
+      <th style="width: 22%;">Wynik</th>
+      <th style="width: 22%;">Etap</th>
+      <th>Co dalej</th>
+    </tr>
+    <tr>
+      <td><span class="score-red">0&ndash;5 odhaczonych</span></td>
+      <td>Wczesny etap</td>
+      <td>Zacznij od mapowania procesów i porządkowania danych. Nie kupuj jeszcze narzędzi.</td>
+    </tr>
+    <tr>
+      <td><span class="score-orange">6&ndash;10 odhaczonych</span></td>
+      <td>Gotowy na pilota</td>
+      <td>Wybierz jeden proces i przetestuj. Zmierz efekty po 2 tygodniach.</td>
+    </tr>
+    <tr>
+      <td><span class="score-green">11&ndash;15 odhaczonych</span></td>
+      <td>Czas skalować</td>
+      <td>Skup się na integracji i budowaniu kompetencji wewnątrz zespołu.</td>
+    </tr>
+  </table>
+
+  <div class="page-footer">
+    <a href="https://dokodu.it">dokodu.it</a>
+    <span>10</span>
+  </div>
+</div>
+
+<!-- PAGE 11: FINAL CTA -->
+<div class="page final-cta">
+  <div class="cover-accent-line"></div>
+
+  <img src="logo_white.png" style="height: 36px; margin-bottom: 36px;" alt="Dokodu">
+
+  <h2>Przejdź tę checklistę z&nbsp;kimś, kto już to wdrażał</h2>
+
+  <div class="stats-row">
+    <div class="stat">
+      <span class="stat-num">4,8/5</span>
+      <span class="stat-label">Ocena szkoleń</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">75+</span>
+      <span class="stat-label">Uczestników</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num">20</span>
+      <span class="stat-label">Lat doświadczenia</span>
+    </div>
+  </div>
+
+  <p class="benefits-title">Co wyniesiesz z 15-minutowej rozmowy:</p>
+
+  <ul class="benefit-list">
+    <li>Ocenę gotowości Twojej firmy do automatyzacji</li>
+    <li>Wskazanie 1&ndash;2 procesów z najwyższym potencjałem zwrotu</li>
+    <li>Konkretny następny krok — bez zobowiązań</li>
+  </ul>
+
+  <span class="cta-btn" style="font-size: 12pt; padding: 12px 38px;">dokodu.it/kontakt</span>
+
+  <div class="contact-block">
+    <strong>Kacper Sieradziński</strong> — CEO / Tech Lead<br>
+    <a href="mailto:kacper@dokodu.it">kacper@dokodu.it</a> <span class="contact-dim">|</span> 508 106 046<br>
+    <a href="https://linkedin.com/in/kacpersieradzinski">linkedin.com/in/kacpersieradzinski</a>
+  </div>
+
+  <p class="tagline">Szkolenia AI dla zespołów &middot; Dedykowane systemy &middot; Automatyzacja procesów</p>
+  <p class="copyright">&copy; 2026 Dokodu sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+</div>
+
+</body>
+</html>
