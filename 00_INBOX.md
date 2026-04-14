@@ -14,6 +14,7 @@ tags: [inbox, capture, wrzutki]
 
 ## NOTATKI Z TELEFONU / MYS LOT
 
+- [ ] TODO: Wrócić do marketingu/lead magnetów po launchu n8n: 1) Dokończyć PDF checklisty AI (TOV, logo) 2) Strona dokodu.it/checklista + bramka email + MailerLite 3) Uporządkować ebooka (Canva, checkout, redirect LP) 4) Przegląd Marketing_Assets_Map.md — 2026-04-14
 - [ ] SPRAWDZ: z.ai, gllm, kimmi — narzędzia AI do sprawdzenia — 2026-04-03
 - [ ] POMYSL: Pakietyzacja usług prawnych Aliny — 3 pudełkowe produkty (Polityka AI ~4.5k, Legal SaaS Setup ~6k, Audyt AI Act ~8k), compliance jako standard w każdej wycenie, Alina jako opener leadów B2B. Przegadać z Aliną zanim cokolwiek wdrażamy. — 2026-04-03
 - [ ] Pomysl: seria "AI w 60 sekund" na LinkedIn — mikrotresci dla managerow
