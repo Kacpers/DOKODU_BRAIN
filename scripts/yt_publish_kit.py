@@ -27,7 +27,7 @@ from datetime import datetime
 
 BRAIN_DIR       = Path(__file__).parent.parent
 MOVIES_DIR      = BRAIN_DIR / "30_RESOURCES" / "RES_YouTube" / "movies"
-REMOTION_DIR    = Path("/home/kacper/DOKODU/remotion")
+REMOTION_DIR    = BRAIN_DIR / "remotion"
 DROPBOX_DIR     = Path("/mnt/c/Users/Kacper/Dropbox/Scenariusze")
 PARROT_DIR      = Path("/mnt/c/Users/Kacper/Dropbox/Apps/Parrot Teleprompter")
 EXPORT_SCRIPT   = Path(__file__).parent / "export_prompter.py"

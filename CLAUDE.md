@@ -62,6 +62,7 @@ Zarządzaj systemem przez skille, nie edytując plików manualnie:
 | `/yt-plan-video` | Planuje nowy odcinek: SEO tytuł, hook, struktura, opis, tagi, thumbnail brief |
 | `/yt-weekly` | Tygodniowy przegląd kanału: pipeline produkcji + metryki + plan |
 | `/yt-publish-kit` | Generuje komplet do publikacji: thumbnail (Remotion), opis, tagi, prompter, checklist → Dropbox |
+| `/tiktok-pipeline` | Pipeline TikTok: scenariusze → Dropbox (teleprompter) → post-production (Whisper + FFmpeg napisy + cięcie pauz) → opis + hashtagi |
 
 **Skille Blog SEO (dokodu.it):**
 
@@ -118,6 +119,21 @@ Przy pracy z YouTube (kanał "Kacper Sieradzinski"):
 - `30_RESOURCES/RES_YouTube/YT_Insights.md` — kumulatywna baza insightów ze statystyk
 - `scripts/youtube_fetch.py` — skrypt Python do pobierania danych z YouTube API
 - `scripts/YOUTUBE_SETUP.md` — instrukcja konfiguracji API (jednorazowa)
+
+Przy pracy z TikTok / Shorts:
+- `30_RESOURCES/RES_YouTube/TikTok_Playbook.md` — **ZAWSZE czytaj przed pisaniem scenariuszy** — hook patterns, struktura, TOV TikTok, metryki
+- `20_AREAS/AREA_YouTube/TikTok_Ideas_Bank.md` — bank 40+ pomysłów na krótkie formy
+- `20_AREAS/AREA_YouTube/tiktok_publish/` — output folder (gotowe klipy + opisy)
+- `scripts/tiktok_pipeline.py` — pipeline: scenariusze, post-production, DaVinci export
+- `remotion/src/compositions/TikTok/` — Remotion compositions (Intro, CTA, TopicCard)
+- `remotion/src/style/tiktok-theme.ts` — vertical theme (1080x1920)
+
+Remotion (animacje wideo):
+- `remotion/` — projekt Remotion (React, 1080p YT + 1080x1920 TikTok)
+- `remotion/src/compositions/YT002/` — animacje do filmów YT
+- `remotion/src/compositions/TikTok/` — animacje TikTok (Intro, CTA, TopicCard)
+- `remotion/src/style/theme.ts` — YouTube theme (1920x1080)
+- `remotion/src/style/tiktok-theme.ts` — TikTok theme (1080x1920)
 
 Przy pracy z Blog SEO (dokodu.it/blog/):
 - `20_AREAS/AREA_Blog_SEO/AREA_Blog_SEO.md` — strategia SEO, pillary, KPI

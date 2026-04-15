@@ -1,12 +1,10 @@
 #!/usr/bin/env node
 /**
- * Dokodu Offer Generator
+ * Dokodu Offer Generator v2
  * Przyjmuje plik JSON z danymi oferty, generuje PDF.
  *
  * Użycie:
  *   node generate.js <offer_data.json> [output.pdf]
- *
- * Lub z danymi wbudowanymi (tryb testowy):
  *   node generate.js --test
  */
 
@@ -37,82 +35,142 @@ const outputPath = args[1] || path.join(
 const templatePath = path.join(__dirname, 'template.html');
 let html = fs.readFileSync(templatePath, 'utf8');
 
-const logoPath = path.join(__dirname, 'assets', 'logo_black.avif');
-const logoDataUrl = `data:image/avif;base64,${fs.readFileSync(logoPath).toString('base64')}`;
+const logoBlackPath = path.join(__dirname, 'assets', 'logo_black.avif');
+const logoBlackDataUrl = `data:image/avif;base64,${fs.readFileSync(logoBlackPath).toString('base64')}`;
 
-// Helpery do generowania bloków HTML
-function painItem(icon, title, desc) {
-  return `<div class="pain-item"><div class="icon">${icon}</div><div class="text"><strong>${title}</strong>${desc}</div></div>`;
+// Logo white for cover (if exists, else use black with filter)
+const logoWhitePath = path.join(__dirname, 'assets', 'logo_white.avif');
+let logoWhiteDataUrl = logoBlackDataUrl;
+if (fs.existsSync(logoWhitePath)) {
+  logoWhiteDataUrl = `data:image/avif;base64,${fs.readFileSync(logoWhitePath).toString('base64')}`;
+}
+
+// ── Helpery HTML (matchują klasy w template.html) ─────────
+
+function painItem(title, desc) {
+  return `<div class="pain-item"><span class="pain-title">${title}</span><span class="pain-desc">${desc}</span></div>`;
 }
 
 function approachStep(num, title, desc) {
-  return `<div class="step"><div class="step-number">${num}</div><div class="step-body"><strong>${title}</strong><span>${desc}</span></div></div>`;
+  return `<div class="step"><div class="step-num-cell"><span class="step-num">${num}</span></div><div class="step-body-cell"><span class="step-title">${title}</span><span class="step-desc">${desc}</span></div></div>`;
 }
 
-function deliverableItem(text) {
-  return `<li>${text}</li>`;
-}
-
-function scopeCard(featured, badge, title, deliverables) {
-  const cls = featured ? 'option-card featured' : 'option-card';
-  const items = deliverables.map(deliverableItem).join('');
-  return `<div class="${cls}"><div class="badge">${badge}</div><h3>${title}</h3><ul class="deliverable-list">${items}</ul></div>`;
+function scopeCol(featured, badge, title, deliverables) {
+  const cardCls = featured ? 'scope-card featured' : 'scope-card';
+  const items = deliverables.map(d => `<div class="scope-item">${d}</div>`).join('');
+  return `<div class="scope-col"><div class="${cardCls}"><span class="scope-badge">${badge}</span><h3>${title}</h3>${items}</div></div>`;
 }
 
 function timelineItem(week, label, widthPct) {
-  return `<div class="timeline-item"><div class="timeline-week">${week}</div><div class="timeline-bar-wrap"><div class="timeline-bar" style="width:${widthPct}%"></div><div class="timeline-label">${label}</div></div></div>`;
+  return `<div class="tl-row"><span class="tl-week">${week}</span><div class="tl-bar-cell"><div class="tl-bar-bg"><div class="tl-bar-fill" style="width:${widthPct}%"></div></div></div><span class="tl-label">${label}</span></div>`;
 }
 
-function priceCard(featured, optionLabel, name, amount, amountSub, features) {
+function priceCol(featured, optionLabel, name, amount, amountSub, features) {
   const cls = featured ? 'price-card featured' : 'price-card';
   const items = features.map(f => `<div class="price-feature">${f}</div>`).join('');
-  return `<div class="${cls}"><div class="option-label">${optionLabel}</div><div class="price-name">${name}</div><div class="amount">${amount}</div><div class="amount-sub">${amountSub}</div><hr>${items}</div>`;
+  return `<div class="pricing-col"><div class="${cls}"><span class="price-option-label">${optionLabel}</span><span class="price-name">${name}</span><span class="price-amount">${amount}</span><span class="price-vat">${amountSub}</span><hr class="price-hr">${items}</div></div>`;
 }
 
-function whyItem(icon, title, desc) {
-  return `<div class="why-item"><div class="why-icon">${icon}</div><strong>${title}</strong><span>${desc}</span></div>`;
+function whyCard(num, title, desc) {
+  return `<div class="why-col"><div class="why-card"><div class="why-icon-box">${num}</div><span class="why-title">${title}</span><span class="why-desc">${desc}</span></div></div>`;
+}
+
+function agendaTable(title, rows) {
+  const rowsHtml = rows.map(r => {
+    if (r.break) return `<tr class="agenda-break"><td colspan="3">${r.label || 'Przerwa'}</td></tr>`;
+    return `<tr><td class="agenda-time">${hs(r.time)}</td><td class="agenda-block">${hs(r.block)}</td><td class="agenda-desc">${hs(r.desc)}</td></tr>`;
+  }).join('');
+  const titleHtml = title ? `<h3>${title}</h3>` : '';
+  return `${titleHtml}<table class="agenda-table"><thead><tr><th>Czas</th><th>Blok</th><th>Co robimy</th></tr></thead><tbody>${rowsHtml}</tbody></table>`;
+}
+
+// ── Twarde spacje (polskie typografia) ────────────────────
+// Zamienia "z ", "w ", "i ", "o ", "u ", "a " na wersje z &nbsp;
+// żeby krótkie przyimki nie zostawały na końcu linii
+function hardSpaces(text) {
+  if (!text) return text;
+  return text
+    .replace(/(\s)(z|w|i|o|u|a|Z|W|I|O|U|A)\s/g, '$1$2\u00A0')
+    .replace(/^(z|w|i|o|u|a|Z|W|I|O|U|A)\s/g, '$1\u00A0');
 }
 
 function ctaStep(num, text) {
-  return `<div class="cta-step"><div class="num">${num}</div><div class="text">${text}</div></div>`;
+  return `<div class="cta-step"><div class="cta-num-cell"><span class="cta-num">${num}</span></div><div class="cta-text-cell">${text}</div></div>`;
 }
 
-// ── Buduj sekcje z danych ─────────────────────────────────
-const painHtml = (data.pains || []).map(p => painItem(p.icon, p.title, p.desc)).join('');
-const approachHtml = (data.approach || []).map((s,i) => approachStep(i+1, s.title, s.desc)).join('');
+// ── Buduj sekcje z danych (z twardymi spacjami) ──────────
+const hs = hardSpaces; // alias
 
-const scopeHtml = [
-  scopeCard(false, 'Opcja A — MVP', data.optionA.name, data.optionA.deliverables),
-  scopeCard(true,  'Opcja B — Pełne rozwiązanie', data.optionB.name, data.optionB.deliverables),
+const painHtml = (data.pains || []).map(p => painItem(hs(p.title), hs(p.desc))).join('');
+const approachHtml = (data.approach || []).map((s,i) => approachStep(i+1, hs(s.title), hs(s.desc))).join('');
+
+const scopeColsHtml = [
+  scopeCol(false, data.optionA.badge || 'Szkolenie 1', hs(data.optionA.name), data.optionA.deliverables.map(hs)),
+  scopeCol(true,  data.optionB.badge || 'Szkolenie 2', hs(data.optionB.name), data.optionB.deliverables.map(hs)),
 ].join('');
 
-const timelineHtml = (data.timeline || []).map(t => timelineItem(t.week, t.label, t.width)).join('');
+const timelineHtml = (data.timeline || []).map(t => timelineItem(t.week, hs(t.label), t.width)).join('');
 
-const pricingHtml = [
-  priceCard(false, 'Opcja A', data.optionA.name, data.optionA.price, 'netto + 23% VAT', data.optionA.features),
-  priceCard(true,  'Opcja B', data.optionB.name, data.optionB.price, 'netto + 23% VAT', data.optionB.features),
+const pricingColsHtml = [
+  priceCol(false, data.optionA.badge || 'Szkolenie 1', hs(data.optionA.name), data.optionA.price, 'netto + 23% VAT', data.optionA.features.map(hs)),
+  priceCol(true,  data.optionB.badge || 'Szkolenie 2', hs(data.optionB.name), data.optionB.price, 'netto + 23% VAT', data.optionB.features.map(hs)),
 ].join('');
 
-const whyHtml = (data.whyUs || []).map(w => whyItem(w.icon, w.title, w.desc)).join('');
-const ctaHtml = (data.ctaSteps || []).map((s,i) => ctaStep(i+1, s)).join('');
+// Why rows — 2x2 grid with numbered icons
+const whyItems = data.whyUs || [];
+let whyRowsHtml = '';
+for (let i = 0; i < whyItems.length; i += 2) {
+  whyRowsHtml += '<div class="why-row">';
+  whyRowsHtml += whyCard(i+1, hs(whyItems[i].title), hs(whyItems[i].desc));
+  if (whyItems[i+1]) {
+    whyRowsHtml += whyCard(i+2, hs(whyItems[i+1].title), hs(whyItems[i+1].desc));
+  }
+  whyRowsHtml += '</div>';
+}
+
+const ctaHtml = (data.ctaSteps || []).map((s,i) => ctaStep(i+1, hs(s))).join('');
+
+// Agenda pages (optional — each agenda gets its own page)
+let agendaPageHtml = '';
+if (data.agendas && data.agendas.length > 0) {
+  agendaPageHtml = data.agendas.map((a, idx) => `
+<div class="page">
+  <div class="page-header">
+    <div class="logo-cell"><img src="${logoBlackDataUrl}" alt="Dokodu"></div>
+    <div class="client-cell">${data.clientName} — Propozycja ${data.date}</div>
+  </div>
+  <span class="section-label">Agenda${data.agendas.length > 1 ? ` (${idx+1}/${data.agendas.length})` : ''}</span>
+  <h2>${hs(a.title)}</h2>
+  ${agendaTable('', a.rows)}
+  <div class="page-footer">
+    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.it | dokodu.it</span>
+    <span class="footer-right">${4 + idx}</span>
+  </div>
+</div>`).join('');
+}
 
 // ── Podmień placeholdery ──────────────────────────────────
+const coverTitle = data.coverTitle || `Automatyzacja AI<br>dla <span class="cover-title-highlight">${data.clientName}</span>`;
+
 const replacements = {
-  '{{LOGO_PATH}}':      logoDataUrl,
+  '{{LOGO_COVER}}':     logoWhiteDataUrl,
+  '{{LOGO_PATH}}':      logoBlackDataUrl,
   '{{CLIENT_NAME}}':    data.clientName,
   '{{DATE}}':           data.date,
   '{{VALID_UNTIL}}':    data.validUntil,
-  '{{COVER_SUBTITLE}}': data.coverSubtitle,
-  '{{EXEC_SUMMARY}}':   data.execSummary,
-  '{{PROBLEM_INTRO}}':  data.problemIntro,
+  '{{COVER_TITLE}}':    coverTitle,
+  '{{COVER_SUBTITLE}}': hs(data.coverSubtitle),
+  '{{EXEC_SUMMARY}}':   hs(data.execSummary),
+  '{{PROBLEM_INTRO}}':  hs(data.problemIntro),
   '{{PAIN_ITEMS}}':     painHtml,
   '{{APPROACH_STEPS}}': approachHtml,
-  '{{SCOPE_CARDS}}':    scopeHtml,
+  '{{SCOPE_COLS}}':     scopeColsHtml,
+  '{{AGENDA_PAGE}}':    agendaPageHtml,
   '{{TIMELINE_ITEMS}}': timelineHtml,
-  '{{PRICING_CARDS}}':  pricingHtml,
+  '{{PRICING_COLS}}':   pricingColsHtml,
   '{{ROI_HEADLINE}}':   data.roiHeadline,
   '{{ROI_DETAIL}}':     data.roiDetail,
-  '{{WHY_ITEMS}}':      whyHtml,
+  '{{WHY_ROWS}}':       whyRowsHtml,
   '{{CTA_STEPS}}':      ctaHtml,
 };
 
@@ -145,55 +203,53 @@ function getTestData() {
   const fmt = d => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
 
   return {
-    clientName:    'Firma Przykładowa S.A.',
-    clientSlug:    'FirmaPrzykladowa',
+    clientName:    'SayFlu',
+    clientSlug:    'SayFlu',
     date:          fmt(today),
     validUntil:    fmt(valid),
-    coverSubtitle: 'Automatyzacja procesów operacyjnych działu obsługi klienta z wykorzystaniem AI.',
-    execSummary:   'Wasz dział BOK obsługuje miesięcznie ok. 2 000 zapytań, z czego 70% to powtarzalne pytania wymagające ręcznego wyszukiwania odpowiedzi. Proponujemy wdrożenie agenta AI zintegrowanego z Waszym systemem CRM, który automatycznie odpowie na 65% zapytań bez udziału człowieka — szacowana oszczędność: 3 etaty i 40 000 PLN miesięcznie.',
-    problemIntro:  'W trakcie discovery call zidentyfikowaliśmy trzy główne obszary generujące straty operacyjne:',
+    coverTitle:    `Szkolenia AI<br>dla <span class="cover-title-highlight">SayFlu</span>`,
+    coverSubtitle: 'Promptowanie i automatyzacja dla zespolu agencji kreatywnej.',
+    execSummary:   'Testowy executive summary.',
+    problemIntro:  'Testowy wstep do problemu:',
     pains: [
-      { icon: '⏱️', title: 'Czas odpowiedzi: 4–6 godzin', desc: 'Klienci czekają na prostą informację, którą agent AI udzieliłby w 3 sekundy.' },
-      { icon: '🔁', title: '70% zapytań jest powtarzalnych', desc: 'Konsultanci ręcznie piszą te same odpowiedzi każdego dnia, zamiast zająć się złożonymi sprawami.' },
-      { icon: '📉', title: 'CSAT spada przez czas oczekiwania', desc: 'Niezadowolenie klientów rośnie proporcjonalnie do czasu odpowiedzi — bezpośrednie ryzyko churn.' },
+      { title: 'Raporty kampanii', desc: 'Kazda kampania = raport.' },
+      { title: 'Przeciazony email', desc: 'Watki uciekaja, brak priorytetyzacji.' },
     ],
     approach: [
-      { title: 'Analiza i mapowanie',         desc: 'Audyt Waszych procesów BOK: kategorie zapytań, źródła danych, systemy (CRM, helpdesk). Definiujemy zakres automatyzacji.' },
-      { title: 'Budowa agenta AI',             desc: 'Wdrożenie agenta w n8n zintegrowanego z Waszym CRM i bazą wiedzy. Agent rozumie kontekst i odpowiada po polsku.' },
-      { title: 'Testy i kalibracja',           desc: 'Dwutygodniowy okres testów z Waszym teamem. Uczymy agenta na realnych przypadkach z Waszej historii.' },
-      { title: 'Wdrożenie i transfer wiedzy',  desc: 'Go-live na produkcji. Szkolenie Waszego zespołu z obsługi i monitorowania systemu.' },
+      { title: 'Szkolenie AI (5h)', desc: 'Prompt engineering, GEMs, maile.' },
+      { title: 'Szkolenie n8n (7h)', desc: 'Automatyzacja workflow.' },
     ],
     optionA: {
-      name:        'Start AI',
-      deliverables: ['Agent FAQ — 50 najczęstszych zapytań', 'Integracja z Waszym helpdeskiem', 'Dashboard monitoring w n8n', 'Szkolenie dla 2 administratorów', '1 miesiąc wsparcia po wdrożeniu'],
-      features:    ['50 zautomatyzowanych odpowiedzi', 'Integracja helpdesk', 'Szkolenie zespołu', '1 mies. support'],
-      price:       '24 900 PLN',
+      badge: 'Szkolenie 1',
+      name: 'AI & Promptowanie',
+      deliverables: ['5h warsztatu', 'Prompt engineering', 'Google GEMs'],
+      features: ['5 godzin', 'Do 10 osob', 'Certyfikat'],
+      price: '4 900 PLN',
     },
     optionB: {
-      name:        'AI Full Stack',
-      deliverables: ['Wszystko z Opcji A', 'Agent obsługujący 200+ scenariuszy', 'Integracja CRM + helpdesk + e-mail', 'Eskalacja do człowieka (smart routing)', 'Miesięczny raport efektywności', 'Retainer 6 miesięcy (monitoring + optymalizacja)'],
-      features:    ['200+ scenariuszy automatyzacji', 'CRM + helpdesk + e-mail', 'Smart routing do konsultantów', 'Retainer 6 mies. w cenie', 'Raport ROI co miesiąc'],
-      price:       '54 900 PLN',
+      badge: 'Szkolenie 2',
+      name: 'Automatyzacja n8n',
+      deliverables: ['7h warsztatu', 'n8n od zera', '2-3 workflow'],
+      features: ['7 godzin', 'Do 10 osob', 'Nagranie'],
+      price: '5 900 PLN',
     },
     timeline: [
-      { week: 'Tyg. 1–2',  label: 'Analiza i mapowanie procesów',    width: 30 },
-      { week: 'Tyg. 3–5',  label: 'Budowa agenta AI',                 width: 55 },
-      { week: 'Tyg. 6–7',  label: 'Testy z teamem klienta',           width: 42 },
-      { week: 'Tyg. 8',    label: 'Go-live i przekazanie',            width: 20 },
-      { week: 'Mies. 2–7', label: 'Retainer — monitoring (Opcja B)', width: 80 },
+      { week: 'Krok 1', label: 'Ankieta', width: 15 },
+      { week: 'Szkolenie 1', label: 'AI (5h)', width: 40 },
+      { week: 'Szkolenie 2', label: 'n8n (7h)', width: 65 },
     ],
-    roiHeadline: 'Zwrot inwestycji w ok. 2 miesiące',
-    roiDetail:   'Przy obecnym koszcie 3 etatów BOK (~40 000 PLN/mies.) oszczędność za rok to ok. 480 000 PLN. Opcja A zwraca się w ~3 tygodnie.',
+    roiHeadline: 'Pakiet: 9 400 PLN netto',
+    roiDetail:   'Oszczednosc 1 400 PLN.',
     whyUs: [
-      { icon: '🏭', title: 'Znamy Waszą branżę',   desc: 'Zrealizowaliśmy podobny projekt dla firmy w branży produkcyjnej — efekty po 6 tygodniach.' },
-      { icon: '⚖️', title: 'Tech + Legal w jednym', desc: 'Wdrożenie i compliance AI Act w jednym pakiecie. Alina (COO/Legal) dba o bezpieczeństwo prawne.' },
-      { icon: '🔓', title: 'Zero lock-in',          desc: 'Cały kod i konfiguracja na Waszej infrastrukturze. Możecie to obsługiwać sami po przekazaniu.' },
-      { icon: '🇵🇱', title: 'Polski support',       desc: 'Dostępni w języku polskim, w polskich godzinach pracy. Bez czekania na odpowiedź z innej strefy.' },
+      { title: 'Praktyk', desc: 'Live demo, nie PowerPoint.' },
+      { title: 'Znamy agencje', desc: 'Szkolilismy Animex.' },
+      { title: 'Szyte na miare', desc: 'Dedykowane pod Was.' },
+      { title: 'Po polsku', desc: 'Polski jezyk, polska faktura.' },
     ],
     ctaSteps: [
-      'Odpiszcie na maila z potwierdzeniem wybranej opcji (A lub B)',
-      'Prześlę umowę w ciągu 24 godzin',
-      'Kickoff call — zarezerwujemy termin już teraz',
+      'Omowcie oferte wewnetrznie',
+      'Wybierzcie szkolenie i termin',
+      'Wysle ankiete i agende',
     ],
   };
 }

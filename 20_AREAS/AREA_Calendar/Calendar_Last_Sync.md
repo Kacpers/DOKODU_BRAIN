@@ -1,13 +1,12 @@
 # Google Calendar — przegląd 14 dni
-Pobrano: 2026-04-15 08:00 | Konta: ksieradzinski@gmail.com, kacper@dokodu.it
+Pobrano: 2026-04-16 00:00 | Konta: ksieradzinski@gmail.com, kacper@dokodu.it
 Kalendarze: Prywatny, AI Hero, Dokodu akcje, Familijne, Dzieci, Dokodu
 
-## Śr 2026-04-15 ← DZIŚ
-  09:00 | Warsztat AI w Researchu i Analizie Danych [AI Hero]
-  09:00 |  FOTC - Warsztat "Codzienna efektywność" - AI w researchu i analizie danych  [AI Hero]
-  13:15 | SayFlu / Krystian — spotkanie ws. szkolenia Gemini [Dokodu akcje]
+## Czw 2026-04-16 ← DZIŚ
+  18:00 | masaż tajski Kacpra [Prywatny]
+  18:00 | masaż tajski Kacpra [Dokodu]
 
-## Pt 2026-04-17
+## Pt 2026-04-17 ← JUTRO
   14:00 | Dokodu × CX Factory (Dawid Wielec, Teams) [Dokodu akcje]
 
 ## Sob 2026-04-18
@@ -22,4 +21,8 @@ Kalendarze: Prywatny, AI Hero, Dokodu akcje, Familijne, Dzieci, Dokodu
 
 ## Wt 2026-04-28
   16:00 | Developerskie synchra [Zajęty slot] [AI Hero]
+
+## Śr 2026-04-29
+  09:00 |  DSH - Warsztat Developerzy - 2/2 [AI Hero]
+  09:00 | warsztat Copilot Studio z AI Hero [AI Hero]
 

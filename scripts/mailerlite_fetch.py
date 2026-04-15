@@ -168,9 +168,19 @@ def ml_get(path: str, params: dict = None) -> dict | list:
 # FETCH
 # ══════════════════════════════════════════════
 
-def fetch_subscriber_count() -> int:
-    r = ml_get("subscribers/count")
-    return r.get("count", 0)
+def fetch_subscriber_stats() -> dict:
+    """Pobiera /stats — zwraca breakdown: subscribed, unsubscribed, open_rate itp."""
+    r = ml_get("stats")
+    return {
+        "subscribed": r.get("subscribed", 0),
+        "unsubscribed": r.get("unsubscribed", 0),
+        "total": r.get("subscribed", 0) + r.get("unsubscribed", 0),
+        "campaigns_total": r.get("campaigns", 0),
+        "sent_emails": r.get("sent_emails", 0),
+        "open_rate": r.get("open_rate", 0),
+        "click_rate": r.get("click_rate", 0),
+        "bounce_rate": r.get("bounce_rate", 0),
+    }
 
 
 def fetch_campaigns(limit: int = 20) -> list:
@@ -193,9 +203,9 @@ def fetch_automations() -> list:
 
 
 def fetch_all(campaigns_limit: int = 20) -> dict:
-    print("  → Liczba subskrybentów...", end=" ", flush=True)
-    count = fetch_subscriber_count()
-    print(f"✓ ({count:,} total)")
+    print("  → Statystyki konta...", end=" ", flush=True)
+    stats = fetch_subscriber_stats()
+    print(f"✓ ({stats['subscribed']:,} active / {stats['unsubscribed']:,} unsub / {stats['total']:,} total)")
 
     print("  → Kampanie...", end=" ", flush=True)
     camps = fetch_campaigns(campaigns_limit)
@@ -211,7 +221,8 @@ def fetch_all(campaigns_limit: int = 20) -> dict:
 
     data = {
         "fetched_at": datetime.now().isoformat(),
-        "subscriber_count": count,
+        "subscriber_count": stats["subscribed"],
+        "subscriber_stats": stats,
         "campaigns": camps,
         "groups": groups,
         "automations": autos,
@@ -263,13 +274,20 @@ def format_markdown(data: dict) -> str:
     autos       = data.get("automations", [])
     prev_groups = data.get("prev_groups", {})
 
+    stats = data.get("subscriber_stats", {})
+    subscribed = stats.get("subscribed", count)
+    unsubscribed = stats.get("unsubscribed", 0)
+    total = stats.get("total", count)
+
     lines = []
 
     # Frontmatter
     lines += [
         "---",
         f"last_updated: {now_str}",
-        f"subscriber_count: {count}",
+        f"subscriber_count: {subscribed}",
+        f"subscriber_unsubscribed: {unsubscribed}",
+        f"subscriber_total: {total}",
         f"campaigns_fetched: {len(camps)}",
         "source: mailerlite_classic_v2",
         "---",
@@ -281,9 +299,23 @@ def format_markdown(data: dict) -> str:
         "",
         "## Subskrybenci",
         "",
-        f"**Łączna liczba subskrybentów:** {num(count)}",
-        "",
+        f"| Metryka | Wartość |",
+        f"|---------|--------|",
+        f"| **Aktywni (subscribed)** | **{num(subscribed)}** |",
+        f"| Wypisani (unsubscribed) | {num(unsubscribed)} |",
+        f"| Łącznie w bazie | {num(total)} |",
     ]
+    if stats.get("open_rate"):
+        lines.append(f"| Globalny Open Rate | {stats['open_rate']*100:.1f}% |")
+    if stats.get("click_rate"):
+        lines.append(f"| Globalny Click Rate | {stats['click_rate']*100:.1f}% |")
+    if stats.get("bounce_rate"):
+        lines.append(f"| Bounce Rate | {stats['bounce_rate']*100:.2f}% |")
+    if stats.get("sent_emails"):
+        lines.append(f"| Łącznie wysłanych maili | {num(stats['sent_emails'])} |")
+    if stats.get("campaigns_total"):
+        lines.append(f"| Łącznie kampanii | {num(stats['campaigns_total'])} |")
+    lines.append("")
 
     # Historia subskrybentów
     history = get_history_table(10)
@@ -305,20 +337,20 @@ def format_markdown(data: dict) -> str:
     # Grupy
     if groups:
         has_prev = bool(prev_groups)
-        header = "| Nazwa grupy | Aktywni | Zmiana | Sent | Opened | Clicked |" if has_prev else "| Nazwa grupy | Aktywni | Wypisani | Sent | Opened | Clicked |"
-        sep    = "|-------------|---------|--------|------|--------|---------|" if has_prev else "|-------------|---------|----------|------|--------|---------|"
         lines += [
             "## Grupy / Segmenty",
             "",
-            header,
-            sep,
+            "| Nazwa grupy | Aktywni | Unsub | Bounced | Δ | Sent | Opened | Clicked |",
+            "|-------------|---------|-------|---------|---|------|--------|---------|",
         ]
-        for g in groups:
-            gname  = g.get("name", "—")
-            active = g.get("active", 0)
-            sent   = g.get("sent", 0)
-            opened = g.get("opened", 0)
-            clicked= g.get("clicked", 0)
+        for g in sorted(groups, key=lambda x: x.get("active", 0), reverse=True):
+            gname   = g.get("name", "—")
+            active  = g.get("active", 0)
+            unsub   = g.get("unsubscribed", 0)
+            bounced = g.get("bounced", 0)
+            sent    = g.get("sent", 0)
+            opened  = g.get("opened", 0)
+            clicked = g.get("clicked", 0)
             if has_prev:
                 prev_active = prev_groups.get(gname)
                 if prev_active is not None:
@@ -327,10 +359,9 @@ def format_markdown(data: dict) -> str:
                     delta_str = f"{sign}{d}"
                 else:
                     delta_str = "nowa"
-                lines.append(f"| {gname} | {num(active)} | {delta_str} | {num(sent)} | {num(opened)} | {num(clicked)} |")
             else:
-                unsub = g.get("unsubscribed", 0)
-                lines.append(f"| {gname} | {num(active)} | {num(unsub)} | {num(sent)} | {num(opened)} | {num(clicked)} |")
+                delta_str = "—"
+            lines.append(f"| {gname} | {num(active)} | {num(unsub)} | {num(bounced)} | {delta_str} | {num(sent)} | {num(opened)} | {num(clicked)} |")
         lines.append("")
 
     # Automatyzacje
@@ -447,10 +478,13 @@ def main():
     if args.save:
         AREA_DIR.mkdir(parents=True, exist_ok=True)
         OUTPUT_FILE.write_text(md, encoding="utf-8")
+        s = data.get("subscriber_stats", {})
         print()
         print(f"✓ Zapisano do: {OUTPUT_FILE}")
         print()
-        print(f"  Subskrybenci:     {num(data.get('subscriber_count', '?'))}")
+        print(f"  Aktywni:          {num(s.get('subscribed', data.get('subscriber_count', '?')))}")
+        print(f"  Wypisani:         {num(s.get('unsubscribed', '?'))}")
+        print(f"  Łącznie w bazie:  {num(s.get('total', '?'))}")
         print(f"  Kampanie pobrane: {len(data.get('campaigns', []))}")
         print()
         print("Następny krok: /mailerlite-stats — analiza i rekomendacje")
