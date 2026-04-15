@@ -14,6 +14,10 @@ tags: [inbox, capture, wrzutki]
 
 ## NOTATKI Z TELEFONU / MYS LOT
 
+- [ ] TODO: Usunąć stronę /szkolenia/automatyzacja-dla-agencji z dokodu.it — nieaktualna — 2026-04-15
+- [ ] SPRAWDZ: Hanna Gruzdowska — Owner @ analiza IT, Senior Strategic Business Analyst @ Lufthansa Systems, CPOA & CBDA certified (IIBA). Connected na LinkedIn 14.04.2026. Potencjalny rekrut do Dokodu — pomoc przy analizach biznesowych. Do kontaktu później. — 2026-04-14
+- [ ] CONTENT: Post LinkedIn — "Zbudowałem sobie narzędzie do transkrypcji spotkań Meet + Whisper". Praktyk pokazuje warsztat. Napisać po wdrożeniu meet_transcribe.py. — 2026-04-14
+- [ ] POMYSL: Produktyzacja systemu Kwater Pracowniczych — portfolio gotowych systemów dla hoteli/pensjonatów/kwater (PMS), upsell modułów do COP Kartoszyno, ewentualnie strona + chatbot doradczy. WARUNEK: wrócić dopiero po zamknięciu LexLegali, Gibula i launchu kursu n8n. Najpierw zapytać klienta czego im brakuje. — 2026-04-14
 - [ ] TODO: Wrócić do marketingu/lead magnetów po launchu n8n: 1) Dokończyć PDF checklisty AI (TOV, logo) 2) Strona dokodu.it/checklista + bramka email + MailerLite 3) Uporządkować ebooka (Canva, checkout, redirect LP) 4) Przegląd Marketing_Assets_Map.md — 2026-04-14
 - [ ] SPRAWDZ: z.ai, gllm, kimmi — narzędzia AI do sprawdzenia — 2026-04-03
 - [ ] POMYSL: Pakietyzacja usług prawnych Aliny — 3 pudełkowe produkty (Polityka AI ~4.5k, Legal SaaS Setup ~6k, Audyt AI Act ~8k), compliance jako standard w każdej wycenie, Alina jako opener leadów B2B. Przegadać z Aliną zanim cokolwiek wdrażamy. — 2026-04-03
@@ -166,3 +170,7 @@ Dla kazdego elementu zadaj pytanie:
 
 ## Przypomnienia z 2026-04-10
 - [BIZNES] 15:30 Rotunda — spotkanie organizacyjne Bank&InsurHack (Kamil Bartkowiak, Polskie Polisy). UWAGA: piątek WOLNY, tylko to spotkanie.
+
+## Przypomnienia z 2026-04-15
+- [BIZNES] SayFlu/Krystian: spotkanie 13:15. Przed: przejrzyj ofertę Gemini, przygotuj odpowiedzi na pytania.
+- [BIZNES] Bank&InsurHack follow-up: wypełnić scorecard, wysłać LinkedIn requests, follow-up messages do Tier 1

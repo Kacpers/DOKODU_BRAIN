@@ -1,30 +1,30 @@
 ---
-last_updated: 2026-04-14 15:34
-subscriber_count: 15446
+last_updated: 2026-04-15 08:00
+subscriber_count: 15449
 campaigns_fetched: 20
 source: mailerlite_classic_v2
 ---
 
 # Newsletter — MailerLite Sync
-> Ostatnia synchronizacja: 2026-04-14 15:34
+> Ostatnia synchronizacja: 2026-04-15 08:00
 
 ---
 
 ## Subskrybenci
 
-**Łączna liczba subskrybentów:** 15 446
+**Łączna liczba subskrybentów:** 15 449
 
 ## Historia subskrybentów
 
 | Data | Łącznie | Zmiana |
 |------|---------|--------|
+| 2026-04-15 | 15 449 | +2 |
+| 2026-04-14 | 15 447 | +1 |
 | 2026-04-14 | 15 446 | +11 |
 | 2026-04-10 | 15 435 | +1 |
 | 2026-04-09 | 15 434 | +7 |
 | 2026-04-08 | 15 427 | +3 |
 | 2026-04-07 | 15 424 | +0 |
-| 2026-04-06 | 15 424 | +0 |
-| 2026-04-06 | 15 424 | +0 |
 | 2026-04-06 | 15 424 | +0 |
 | 2026-04-06 | 15 424 | +0 |
 | 2026-04-06 | 15 424 | — |
@@ -33,31 +33,31 @@ source: mailerlite_classic_v2
 
 | Nazwa grupy | Aktywni | Zmiana | Sent | Opened | Clicked |
 |-------------|---------|--------|------|--------|---------|
-| Klienci PyWWW | 287 | +0 | 36 646 | 17 632 | 2 881 |
-| Klienci Pycamp | 524 | +0 | 63 948 | 29 180 | 4 917 |
+| Klienci PyWWW | 287 | +0 | 36 646 | 17 633 | 2 881 |
+| Klienci Pycamp | 524 | +0 | 63 948 | 29 181 | 4 917 |
 | Zainteresowani Pycampem | 474 | +0 | 65 553 | 21 784 | 3 489 |
-| Klienci Pyrest | 113 | +0 | 13 621 | 7 127 | 1 338 |
-| Zainteresowani Pystart | 596 | -1 | 74 136 | 35 031 | 7 663 |
-| Zainteresowani Pyrest | 251 | +0 | 34 840 | 13 707 | 2 426 |
-| Chcę się uczyć Pythona | 4 098 | +4 | 440 631 | 152 430 | 18 848 |
-| Dostał "o mnie" | 4 510 | +4 | 488 281 | 172 906 | 20 815 |
-| Klienci | 1 293 | +0 | 149 186 | 68 158 | 10 880 |
-| Klienci Pystart | 851 | +0 | 100 255 | 48 371 | 7 741 |
-| Klienci SkumajBazy | 314 | +0 | 39 583 | 19 503 | 3 428 |
+| Klienci Pyrest | 113 | +0 | 13 621 | 7 128 | 1 338 |
+| Zainteresowani Pystart | 596 | +0 | 74 136 | 35 031 | 7 663 |
+| Zainteresowani Pyrest | 251 | +0 | 34 840 | 13 708 | 2 426 |
+| Chcę się uczyć Pythona | 4 099 | +1 | 440 632 | 152 435 | 18 849 |
+| Dostał "o mnie" | 4 511 | +1 | 488 282 | 172 912 | 20 816 |
+| Klienci | 1 293 | +0 | 149 186 | 68 159 | 10 880 |
+| Klienci Pystart | 851 | +0 | 100 255 | 48 372 | 7 741 |
+| Klienci SkumajBazy | 314 | +0 | 39 583 | 19 504 | 3 428 |
 | Zainteresowani PyWWW | 47 | +0 | 5 051 | 1 186 | 131 |
 | ABANDONED CHECK | 96 | +0 | 15 092 | 6 760 | 1 269 |
-| Pystart / Webinary | 200 | -1 | 14 758 | 5 392 | 568 |
-| Zainteresowani Pycamp - moduł "0" | 353 | +0 | 45 863 | 18 627 | 3 109 |
+| Pystart / Webinary | 200 | +0 | 14 758 | 5 392 | 568 |
+| Zainteresowani Pycamp - moduł "0" | 353 | +0 | 45 863 | 18 628 | 3 109 |
 | Podstawy PHP | 30 | +0 | 4 606 | 2 259 | 506 |
 | Klienci Pystart v2 | 704 | +0 | 84 427 | 41 015 | 7 334 |
 | Platforma Marketing | 361 | +0 | 38 581 | 19 204 | 3 928 |
 | Platforma nieopłacone | 131 | +0 | 13 579 | 6 375 | 1 188 |
-| Webinary zostań programistą | 892 | -1 | 119 738 | 38 981 | 7 763 |
-| GROUP / Jak zostać programistą? | 796 | -1 | 110 938 | 35 470 | 7 260 |
+| Webinary zostań programistą | 892 | +0 | 119 738 | 38 982 | 7 763 |
+| GROUP / Jak zostać programistą? | 796 | +0 | 110 938 | 35 471 | 7 260 |
 | Wyzwanie #1 Nauka od podstaw | 431 | +0 | 56 374 | 23 593 | 5 324 |
-| Form / Ebook / Jak wejść do świata IT? | 853 | -2 | 85 097 | 35 197 | 6 487 |
-| Download / Ebook / Jak wejść do świata IT | 567 | -2 | 66 867 | 29 617 | 6 440 |
-| Platforma dokodu.it | 527 | +0 | 69 279 | 30 927 | 4 591 |
+| Form / Ebook / Jak wejść do świata IT? | 853 | +0 | 85 097 | 35 197 | 6 487 |
+| Download / Ebook / Jak wejść do świata IT | 567 | +0 | 66 867 | 29 618 | 6 440 |
+| Platforma dokodu.it | 527 | +0 | 69 279 | 30 928 | 4 591 |
 | Testerzy | 2 | +0 | 168 | 18 | 2 |
 | Form / Ebook / Jak wejść do świata IT / Traffic | 1 | +0 | 79 | 19 | 3 |
 | Form / Ebook / Jak wejść do świata IT / Lead | 31 | +0 | 2 776 | 790 | 91 |
@@ -65,21 +65,21 @@ source: mailerlite_classic_v2
 | Klienci Skumajbazy / Dane dostępowe | 2 | +0 | 268 | 132 | 49 |
 | Zarejestrowani-pomiedzy-2023-06-01-2023-10-11 | 858 | +0 | 86 994 | 28 579 | 2 571 |
 | Zapisy na webinar 27.10.2023 | 135 | +0 | 19 270 | 9 742 | 2 500 |
-| Otworzyli e-maila - frekwencja 1 email. | 1 254 | -1 | 189 885 | 105 476 | 10 155 |
+| Otworzyli e-maila - frekwencja 1 email. | 1 254 | +0 | 189 885 | 105 478 | 10 155 |
 | Starzy z konta Najlepszego  Programisty | 815 | +0 | 57 694 | 19 874 | 670 |
-| Tymczasowa / Otworzyli drugi mail z promocją | 1 831 | -2 | 262 659 | 137 744 | 12 797 |
-| Tymczasowa / Kliknęli w promocja - frekwencjawyborcza, Tymczasowa / Kliknęli w promocja - frekwencjawyborcza, Tymczasowa / Kliknęli w promocja - frekwencjawyborcza | 130 | -1 | 17 943 | 9 416 | 2 057 |
-| Tymczasowa / Otworzyli mail o webinarze 27.10 | 1 258 | -1 | 189 929 | 107 380 | 10 038 |
+| Tymczasowa / Otworzyli drugi mail z promocją | 1 831 | +0 | 262 659 | 137 746 | 12 797 |
+| Tymczasowa / Kliknęli w promocja - frekwencjawyborcza, Tymczasowa / Kliknęli w promocja - frekwencjawyborcza, Tymczasowa / Kliknęli w promocja - frekwencjawyborcza | 130 | +0 | 17 943 | 9 418 | 2 057 |
+| Tymczasowa / Otworzyli mail o webinarze 27.10 | 1 258 | +0 | 189 929 | 107 381 | 10 038 |
 | Zapisy na webinar 21.11.2023 | 127 | +0 | 17 525 | 9 255 | 2 363 |
-| Zapisy na webinar 23.11.2023 | 167 | -1 | 21 574 | 11 706 | 2 775 |
+| Zapisy na webinar 23.11.2023 | 167 | +0 | 21 574 | 11 706 | 2 775 |
 | Zapisy na webinar 06.12.2023 | 156 | +0 | 20 350 | 10 051 | 2 721 |
 | Zapisy na webinar 19.12.2023 | 98 | +0 | 10 232 | 4 443 | 1 012 |
-| Zapisy na webinar 09.02.2024 | 311 | +0 | 27 835 | 10 982 | 2 666 |
+| Zapisy na webinar 09.02.2024 | 311 | +0 | 27 835 | 10 983 | 2 666 |
 | Webinar - 7 sposobów.. - 29.02 | 0 | +0 | 0 | 0 | 0 |
 | Zapisy na webinar 29.02.2024 | 276 | +0 | 19 739 | 6 700 | 957 |
 | Zapisy na webinar 07.03.2024 | 148 | +0 | 11 882 | 4 944 | 940 |
 | Testuje zapisy na nowej stronie | 1 | +0 | 116 | 47 | 8 |
-| Newsletter Nowa strona | 41 | +1 | 1 527 | 809 | 279 |
+| Newsletter Nowa strona | 41 | +0 | 1 527 | 809 | 279 |
 | Zapisy na webinar - Szybciej, łatwiej, lepiej | 465 | +0 | 40 575 | 17 790 | 3 863 |
 | Zapisy na webinar - Skuteczny prompt engineering | 45 | +0 | 3 150 | 1 343 | 179 |
 | Zapisy na webinar - bugi | 3 | +0 | 203 | 94 | 2 |
@@ -90,7 +90,7 @@ source: mailerlite_classic_v2
 | studiuje.it | 55 | +0 | 3 844 | 1 566 | 368 |
 | Newsletter AI | 80 | +0 | 4 941 | 2 180 | 510 |
 | Group / Ebook / MySQL - Jak zacząć? | 117 | +0 | 5 959 | 3 014 | 527 |
-| Warsztaty/Podstawy_chatgpt_2024_03_06 | 1 349 | -1 | 61 675 | 25 128 | 4 303 |
+| Warsztaty/Podstawy_chatgpt_2024_03_06 | 1 349 | +0 | 61 675 | 25 128 | 4 303 |
 | Kończy im się dostęp 5 marca | 529 | +0 | 69 568 | 31 848 | 4 587 |
 | KUPILI PYSTART PRZEDŁUŻENIE 05.03.2025 | 59 | +0 | 7 063 | 3 819 | 901 |
 | Pystart z datami zakończenia | 287 | +0 | 30 013 | 15 755 | 3 131 |
@@ -102,13 +102,13 @@ source: mailerlite_classic_v2
 | Studiuje.it - active | 7 | +0 | 510 | 281 | 70 |
 | Studiuje.it - inactive | 0 | +0 | 13 | 7 | 0 |
 | Warsztaty/Python_2025_05_07 | 189 | +0 | 16 793 | 7 884 | 2 069 |
-| Group / Ebook / Docker - komendy | 100 | +0 | 8 914 | 5 202 | 1 387 |
+| Group / Ebook / Docker - komendy | 100 | +0 | 8 916 | 5 202 | 1 387 |
 | Klienci Docker | 23 | +0 | 1 971 | 1 382 | 293 |
 | lipiec/czerwiec do przedłużenia | 0 | +0 | 0 | 0 | 0 |
 | Ebook "Orzeł" | 0 | +0 | 0 | 0 | 0 |
-| Transformacja | 655 | +1 | 19 725 | 9 320 | 1 962 |
+| Transformacja | 656 | +1 | 19 729 | 9 322 | 1 963 |
 | Pystart/NIEWAKACJE | 7 | +0 | 804 | 369 | 70 |
-| Waitlist n8n | 11 | +0 | 217 | 98 | 26 |
+| Waitlist n8n | 11 | +0 | 218 | 98 | 26 |
 | Konkurs - Helion - wrzesień 2025 | 4 | +0 | 193 | 91 | 17 |
 | Zapisy na webinar - automatyzacja | 289 | +0 | 15 457 | 7 792 | 2 010 |
 | Warsztaty Premium „n8n + AI + Q&A (13-14.12.2025r.) + Konsultacje 1:1+ kurs OPENAI DEV | 0 | +0 | 0 | 0 | 0 |
@@ -120,14 +120,15 @@ source: mailerlite_classic_v2
 | Warsztaty n8n + AI – automatyzacja procesów w 1 dzień 13.12.2025r. | 4 | +0 | 171 | 118 | 35 |
 | Warsztaty n8n + AI – automatyzacja procesów w 1 dzień 15.11.2025r. | 1 | +0 | 18 | 12 | 1 |
 | Warsztaty n8n + AI – automatyzacja procesów w 1 dzień 18.10.2025r. | 8 | +0 | 573 | 301 | 65 |
-| Chcę się uczyć baz danych | 18 | +2 | 71 | 18 | 0 |
+| Chcę się uczyć baz danych | 18 | +0 | 71 | 18 | 0 |
 | Tymczasowa grupa do usunięcia (nikt tu nie powinien byc) | 0 | +0 | 0 | 0 | 0 |
+| Firmy automatyzacje | 0 | +0 | 0 | 0 | 0 |
 
 ## Kampanie (ostatnie wysłane)
 
 | Kampania | Wysłane | Open Rate | CTR | Data wysyłki |
 |----------|---------|-----------|-----|--------------|
-| 🎁Świąteczny dostęp od Dokodu: Bank & InsurHac… | 6 186 | 38.3% | 1.6% | 2026-04-02 |
+| 🎁Świąteczny dostęp od Dokodu: Bank & InsurHac… | 6 186 | 38.4% | 1.6% | 2026-04-02 |
 | Programista 2.0: Twój kod zostaje w domu (ost… | 6 216 | 47.7% | 1.4% | 2026-02-16 |
 | Czy Twoje sekrety są bezpieczne?  | 6 273 | 43.0% | 1.1% | 2026-02-09 |
 | Przełom w moim studiu (i współpraca, o której… | 3 781 | 9.5% | 0.4% | 2026-02-03 |
@@ -156,4 +157,4 @@ source: mailerlite_classic_v2
 - **Kampanie w próbie:** 20
 
 ---
-*Wygenerowano: 2026-04-14 15:34 | mailerlite_fetch.py (Classic API v2)*
+*Wygenerowano: 2026-04-15 08:00 | mailerlite_fetch.py (Classic API v2)*

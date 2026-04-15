@@ -153,7 +153,7 @@ Publikacja o 20:30.
 - 13:00 — Przygotuj pliki dla księgowej
 
 **📋 Taski:**
-- [ ] 📞 Zadzwonić do Kwater Pracowniczych — jak idzie klikanie po prototypie
+- [x] 📞 Zadzwonić do Kwater Pracowniczych — jak idzie klikanie po prototypie ✅
 - [ ] 📧 Odpowiedzieć Aleksandrowi Ambrożkowi (PyStart — chce wrócić do kursu)
 - [ ] 📧 Odpowiedzieć Richardowi Thompsonowi (ECS — kurs automation with Python?)
 - [ ] 📧 Sprawdzić Passionfroot — kampania reklamowa warta rozważenia?

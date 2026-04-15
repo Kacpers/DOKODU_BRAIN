@@ -63,6 +63,11 @@ if [ -f "$REMINDERS_FILE" ]; then
     fi
 fi
 
+# Meet Transcribe
+echo "  → Meet Transcribe..." >> "$LOG_FILE"
+python3 /home/kacper/DOKODU_BRAIN/scripts/meet_transcribe.py --model small >> "$LOG_FILE" 2>&1
+echo "  ✓ Meet Transcribe done" >> "$LOG_FILE"
+
 # Gmail
 echo "  → Gmail..." >> "$LOG_FILE"
 python3 /home/kacper/DOKODU_BRAIN/scripts/gmail_fetch.py --days 2 >> "$LOG_FILE" 2>&1

@@ -1,82 +1,83 @@
 # Google Analytics 4 — dokodu.it
-Pobrano: 2026-04-05 00:00 | Okres: 2026-03-08 → 2026-04-04 (28 dni)
+Pobrano: 2026-04-15 08:00 | Okres: 2026-03-18 → 2026-04-14 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
 |---------|---------|
-| Łączne sesje | **6,925** |
-| Unikalni użytkownicy | **4,950** |
-| Odsłony | **7,286** |
-| Średni bounce rate | 53.1% |
+| Łączne sesje | **6,712** |
+| Unikalni użytkownicy | **4,837** |
+| Odsłony | **7,064** |
+| Średni bounce rate | 55.2% |
 
 ## Top 20 Stron (wg sesji)
 | # | Strona | Sesje | Użytkownicy | Bounce | Avg. czas |
 |---|--------|-------|-------------|--------|-----------|
-| 1 | `/blog/n8n` | 1250 | 755 | 77.4% | 1m 12s |
-| 2 | `/` | 456 | 339 | 59.4% | 1m 55s |
-| 3 | `/kursy/pystart` | 286 | 195 | 59.8% | 1m 13s |
-| 4 | `/newslettery/podstawy-pythona` | 167 | 129 | 62.9% | 1m 2s |
-| 5 | `/blog/n8n/docker-instalacja-konfiguracja` | 157 | 68 | 77.1% | 1m 0s |
-| 6 | `/blog/python/podstawy/podstawy-programowania` | 131 | 52 | 50.4% | 1m 33s |
-| 7 | `/blog/python/podstawy/list-comprehension` | 128 | 124 | 93.8% | 0m 13s |
-| 8 | `/blog/sql/normalizacja-baz-danych` | 124 | 110 | 75.8% | 0m 55s |
-| 9 | `/blog/sql/zadania-sql-poziom-podstawowy` | 119 | 105 | 64.7% | 0m 57s |
-| 10 | `/blog/sql/case-when-w-sql` | 115 | 99 | 77.4% | 1m 38s |
-| 11 | `/blog/sql/sql-interview-pytania` | 107 | 80 | 64.5% | 1m 19s |
-| 12 | `/blog/agenci-ai/claude-code-agent` | 104 | 90 | 65.4% | 1m 31s |
-| 13 | `/kursy/n8n` | 103 | 62 | 37.9% | 2m 49s |
-| 14 | `/blog/n8n/przyklady-workflow-automatyzacji` | 94 | 70 | 61.7% | 2m 9s |
-| 15 | `/oto/pystart-newsletter` | 85 | 36 | 50.6% | 0m 57s |
-| 16 | `/blog/sql/sql-dla-poczatkujacych-roznice-mysql-postgresql-sqlite` | 81 | 50 | 75.3% | 0m 43s |
-| 17 | `/blog/python` | 79 | 37 | 26.6% | 2m 13s |
-| 18 | `/blog/python/praktyka/programowanie-obiektowe-w-pythonie-klasy-i-obiekty` | 76 | 56 | 59.2% | 1m 18s |
-| 19 | `/blog/n8n/licencja-cennik` | 72 | 60 | 63.9% | 1m 39s |
-| 20 | `/blog/agenci-ai/narzedzia-agenty-ai` | 68 | 60 | 66.2% | 0m 59s |
+| 1 | `/blog/n8n` | 1148 | 630 | 79.1% | 1m 0s |
+| 2 | `/` | 458 | 322 | 63.5% | 2m 15s |
+| 3 | `/kursy/pystart` | 271 | 185 | 66.4% | 1m 14s |
+| 4 | `/blog/agenci-ai/claude-code-agent` | 221 | 197 | 68.8% | 0m 58s |
+| 5 | `/newslettery/podstawy-pythona` | 160 | 124 | 65.6% | 0m 54s |
+| 6 | `/blog/python/podstawy/list-comprehension` | 152 | 148 | 94.1% | 0m 14s |
+| 7 | `/blog/n8n/docker-instalacja-konfiguracja` | 144 | 65 | 73.6% | 0m 44s |
+| 8 | `/blog/agenci-ai/narzedzia-agenty-ai` | 121 | 111 | 64.5% | 1m 2s |
+| 9 | `/blog/sql/normalizacja-baz-danych` | 121 | 104 | 77.7% | 0m 53s |
+| 10 | `/blog/sql/case-when-w-sql` | 110 | 90 | 82.7% | 1m 13s |
+| 11 | `/blog/sql/zadania-sql-poziom-podstawowy` | 109 | 98 | 62.4% | 0m 41s |
+| 12 | `/blog/python/podstawy/podstawy-programowania` | 100 | 50 | 53.0% | 2m 12s |
+| 13 | `/blog/n8n/przyklady-workflow-automatyzacji` | 95 | 69 | 60.0% | 2m 19s |
+| 14 | `/blog/sql/sql-interview-pytania` | 94 | 69 | 61.7% | 2m 30s |
+| 15 | `/kursy/n8n` | 87 | 44 | 46.0% | 2m 20s |
+| 16 | `/oto/pystart-newsletter` | 78 | 32 | 51.3% | 0m 54s |
+| 17 | `/blog/n8n/licencja-cennik` | 67 | 55 | 71.6% | 1m 28s |
+| 18 | `/transformacja/` | 67 | 52 | 29.9% | 1m 37s |
+| 19 | `/blog/sql/funkcje-agregujace-w-sql` | 66 | 62 | 71.2% | 2m 3s |
+| 20 | `/blog/google-workspace/gemini-vs-chatgpt` | 59 | 56 | 81.4% | 0m 52s |
 
 ## Źródła Ruchu
 | Źródło | Medium | Sesje | Użytkownicy |
 |--------|--------|-------|-------------|
-| google | organic | 3994 | 2736 |
-| (direct) | (none) | 929 | 672 |
-| bing | organic | 328 | 276 |
-| youtube.com | referral | 315 | 182 |
-| (not set) | (not set) | 209 | 178 |
-| statics.teams.cdn.office.net | referral | 70 | 60 |
-| duckduckgo | organic | 51 | 42 |
-| sieradzinski.pl | referral | 29 | 19 |
-| chatgpt.com | referral | 27 | 10 |
-| pl.search.yahoo.com | referral | 23 | 16 |
-| newsletter | email | 14 | 6 |
-| perplexity.ai | referral | 12 | 11 |
-| perplexity | (not set) | 9 | 6 |
-| chatgptpolsku.app | referral | 8 | 1 |
-| ecosia.org | organic | 8 | 8 |
+| google | organic | 3990 | 2770 |
+| (direct) | (none) | 815 | 626 |
+| (not set) | (not set) | 302 | 226 |
+| bing | organic | 279 | 244 |
+| youtube.com | referral | 272 | 171 |
+| duckduckgo | organic | 51 | 43 |
+| statics.teams.cdn.office.net | referral | 44 | 34 |
+| chatgpt.com | referral | 40 | 9 |
+| sieradzinski.pl | referral | 31 | 21 |
+| linkedin.com | referral | 27 | 5 |
+| pl.search.yahoo.com | referral | 21 | 15 |
+| mamstartup.pl | referral | 13 | 5 |
+| perplexity | (not set) | 12 | 9 |
+| newsletter | email | 11 | 2 |
+| ecosia.org | organic | 9 | 7 |
 
 ## Ścieżki B2B — Lead Generation
 | Strona | Źródło | Medium | Sesje |
 |--------|--------|--------|-------|
+| /sciezki/microsoft | google | organic | 4 |
 | /sciezki/google | google | organic | 3 |
 | /sciezki/google | chatgptpolsku.app | referral | 2 |
-| /sciezki/openai | (direct) | (none) | 2 |
 | /sciezki/openai | google | organic | 2 |
 | /sciezki/google | (direct) | (none) | 1 |
-| /sciezki/microsoft | (direct) | (none) | 1 |
-| /sciezki/microsoft | google | organic | 1 |
+| /sciezki/microsoft | (not set) | (not set) | 1 |
+| /sciezki/microsoft | linkedin.com | referral | 1 |
+| /sciezki/openai | (direct) | (none) | 1 |
 | /sciezki/openai | chatgptpolsku.app | referral | 1 |
 
 ## Strony z Wysokim Bounce Rate (>70%)
 | Strona | Bounce | Sesje |
 |--------|--------|-------|
-| `/blog/cursor-cursor-pro-programowanie-ai` | 94.2% | 52 |
-| `/blog/python/podstawy/list-comprehension` | 93.8% | 128 |
-| `/blog/python/testowanie/testowanie-jednostkowe-python` | 87.5% | 40 |
-| `/blog/python/podstawy/obsluga-plikow-czytanie-zapisywanie` | 81.2% | 32 |
-| `/blog/sql/funkcje-okienkowe-sql-postgresql-i-mysql` | 79.4% | 63 |
-| `/blog/python/automatyzacja/tkinter-gui` | 79.2% | 24 |
-| `/blog/google-workspace/gemini-vs-chatgpt` | 78.4% | 37 |
-| `/blog/n8n` | 77.4% | 1250 |
-| `/blog/sql/case-when-w-sql` | 77.4% | 115 |
-| `/blog/n8n/docker-instalacja-konfiguracja` | 77.1% | 157 |
+| `/blog/automatyzacja-procesow/no-code-vs-low-code` | 95.2% | 21 |
+| `/blog/python/podstawy/list-comprehension` | 94.1% | 152 |
+| `/blog/cursor-cursor-pro-programowanie-ai` | 92.3% | 52 |
+| `/blog/sql/transakcje-i-poziomy-izolacji-sql` | 90.3% | 31 |
+| `/blog/python/testowanie/testowanie-jednostkowe-python` | 89.3% | 28 |
+| `/blog/python/automatyzacja/tkinter-gui` | 86.2% | 29 |
+| `/blog/python/ai/dane/tworzenie-wykresow-matplotlib` | 84.2% | 57 |
+| `/blog/n8n/make-com-vs-n8n` | 82.9% | 35 |
+| `/blog/sql/case-when-w-sql` | 82.7% | 110 |
+| `/blog/google-workspace/gemini-vs-chatgpt` | 81.4% | 59 |
 
 ---
-*DOKODU BRAIN GA4 Integration | 2026-04-05 00:00*
+*DOKODU BRAIN GA4 Integration | 2026-04-15 08:00*
