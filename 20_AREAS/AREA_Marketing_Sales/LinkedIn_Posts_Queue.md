@@ -3,53 +3,74 @@ type: content-queue
 status: active
 owner: kacper
 created: 2026-04-15
+updated: 2026-04-16
 ---
 
 # LinkedIn Posts — Kolejka
 
 ---
 
-## ŚRODA 16.04 | "Co biznes chce automatyzować"
+## ŚRODA 16.04 | "Copilot i promptowanie"
 
-**Status:** do publikacji ~8:00
-**Grafika:** do przygotowania (Kacper)
+**Status:** ZATWIERDZONY — publikacja ~8:00
 
-Firmy pytają mnie o AI. Ale jak siadamy do rozmowy, okazuje się że nie chcą AI. Chcą przestać ręcznie sprawdzać czy dane w raporcie się zgadzają, przestać upominać ludzi o dokumenty i przestać szukać jednej informacji w pięciu miejscach.
+Szkolenie z promptowania w 5 godzin daje nieomal każdemu zespołowi więcej, niż Copilot za 140 zł/osobę/miesiąc przez pół roku bez wdrożenia.
 
-To nie są problemy technologiczne. To procesy, które ktoś kiedyś zaczął robić ręcznie i nikt nigdy nie zapytał czy to musi tak wyglądać. Zanim włączysz jakiekolwiek narzędzie, policz ile godzin tygodniowo Twój zespół spędza na rzeczach, które powinny dziać się same. Ta liczba zwykle zaskakuje bardziej niż demo AI.
+Wiem, bo widzę to regularnie. Firma kupuje licencje, rozsyła loginy itd. Po trzech miesiącach 80% zespołu używa AI tylko do tłumaczenia maili i generowania bullet pointów. Reszta zapomniała, że w ogóle ma to narzędzie. 
 
-A Ty — wiesz ile czasu Twój zespół traci na powtarzalnych czynnościach?
+Rezultat? Komenda: "Podsumuj tego maila".  To czyste marnowanie potencjału... Najprościej będzie wtedy uznać, że AI jest do kitu.
 
-#Automatyzacja #Procesy #AI #ZarzadzanieZespolem
+A teraz weź ten sam zespół i posadź ich na 5 godzin z praktykiem. Pokaż im, jak napisać prompt do ich konkretnego raportu, oferty, procesu. Bez teorii i list "top 10 promptów". Pracujemy na ich zadaniach, danych i workflow.
 
----
+Po takim warsztacie osoba, która wcześniej pisała "zrób mi raport", tworzy prompt generujący dokument w wymaganym formacie, ze wskazanymi danymi i w tonie firmy. To nie jest ta sama osoba co tydzień wcześniej. Odzyskujemy jej czas.
 
-## CZWARTEK 17.04 | "Frustracje z AI"
+Różnica nie leży w narzędziu – Copilot, Gemini, Claude to tylko technologia. Różnica leży w tym, czy ktoś nauczył zespół, jak z nią rozmawiać. Większość firm pomija ten krok, bo "to intuicyjne". Nie jest. Excel też jest intuicyjny. A ile osób w Twojej firmie naprawdę umie go używać?
 
-**Status:** do publikacji ~8:00
-**Grafika:** do przygotowania (Kacper)
+Jak to wygląda u Was? Wasz zespół sam "gryzie" narzędzia AI, czy prowadzicie ich za rękę na konkretnych procesach? 👇
 
-Trzy zdania, które słyszę najczęściej od ludzi pracujących z AI na co dzień: zmyśla dane wyglądające wiarygodnie, gubi wątek po trzech wiadomościach, a im bardziej szczegółowo opisuję czego chcę — tym gorszy wynik dostaję.
-
-I to nie są narzekania osób, które nie umieją promptować. To frustracje ludzi, którzy korzystają z tych narzędzi codziennie. Tyle że zamiast ułożyć proces pracy z AI, piszą zapytania na dwie strony A4 próbując jednym promptem rozwiązać problem, który wymaga pięciu kroków.
-
-Różnica między frustracją a efektem nie leży w lepszym modelu. Leży w tym, jak dzielisz zadanie na etapy, jak weryfikujesz wynik i kiedy mówisz modelowi stop. Wrzucisz chaos do AI — dostaniesz szybszy chaos.
-
-Większość problemów z AI to nie problem technologii. To problem procesu pracy z nią.
-
-#AI #Procesy #Produktywnosc #ZarzadzanieZespolem
+#SzkoleniaAI #Copilot #Microsoft365 #AIwBiznesie
 
 ---
 
-## PIĄTEK 18.04 | "Back-office, nie front-end"
+## CZWARTEK 17.04 | "Dlaczego AI halucynuje?"
 
-**Status:** do publikacji ~8:00
-**Grafika:** do przygotowania (Kacper)
+**Status:** ZATWIERDZONY — publikacja ~8:00
+**Grafika:** thumbnail z twarzą Kacpra + tekst "DLACZEGO AI HALUCYNUJE?" (biały + czerwony), ciemne tło, glitch efekt
 
-Jak słyszę "AI w e-commerce" to większość ludzi myśli o opisach produktów i chatbotach. A największe oszczędności leżą zupełnie gdzie indziej — w back-office, którego nikt nie liczy.
+Dlaczego AI halucynuje? Bo Ty mu na to pozwalasz.
 
-Kalkulacja cen żyjąca w arkuszu aktualizowanym raz w tygodniu. Monitoring stocku, gdzie o brakach dowiadujesz się od klienta. Analiza sprzedaży robiona ręcznie w Excelu zamiast alertu że produkt nagle przestał rotować.
+Słyszę to w każdej firmie: "wpisałem zapytanie, a model zmyślił dane". "Podał mi źródło, które nie istnieje". "Wygenerował raport z liczbami wziętymi z sufitu". I stąd wniosek — AI się nie nadaje do poważnej pracy.
 
-Back-office nie jest sexy, ale tam leżą godziny do odzyskania bez zmieniania czegokolwiek od strony klienta. Najdroższe procesy w firmie to te, których nikt nie mierzy bo "tak po prostu robimy".
+Tyle że nikt nie sprawdza jak wyglądał prompt. A wygląda zwykle tak: jedno zdanie, zero kontekstu, zero ograniczeń. "Przygotuj mi analizę rynku". No to model przygotował. Wymyślił dane, bo mu nie dałeś prawdziwych. Wymyślił źródła, bo mu nie powiedziałeś skąd brać. Zrobił dokładnie to, o co go poprosiłeś — wypełnił luki domysłami.
 
-#Ecommerce #Automatyzacja #AI #n8n
+To nie jest halucynacja. To brak instrukcji.
+
+Zespoły które nie mają tego problemu robią trzy rzeczy: podają modelowi konkretne dane zamiast kazać mu szukać, dzielą złożone zadania na pojedyncze kroki i weryfikują wynik po każdym etapie zanim idą dalej. Żadnej magii. Zwykła higiena pracy.
+
+Wrzuć niejasne zadanie nowemu pracownikowi bez kontekstu i onboardingu — też będzie "halucynował". Różnica jest taka, że jemu dasz drugie szanse i wytłumaczysz czego oczekujesz, a AI skwitujemy po jednej próbie słowami "to nie działa".
+
+AI nie halucynuje dlatego, że jest głupie. Halucynuje dlatego, że nie powiedziałeś mu jak ma pracować.
+
+Kiedy ostatni raz sprawdziłeś jak Twój zespół pisze prompty?
+
+#AI #Halucynacje #Promptowanie #AIwBiznesie
+
+---
+
+## PIĄTEK 18.04 | "Automatyzacja to nie AI"
+
+**Status:** szkic
+
+Połowa firm, które przychodzą do mnie po "wdrożenie AI", tak naprawdę nie potrzebuje AI. Potrzebuje automatyzacji.
+
+To nie jest to samo. AI myśli, analizuje, generuje. Automatyzacja po prostu robi to co ktoś robił ręcznie, ale bez człowieka. I większość procesów które zjadają czas w firmach to ta druga kategoria.
+
+Ktoś ręcznie sprawdza czy dane w raporcie się zgadzają. Ktoś ręcznie przypomina współpracownikom o terminach. Ktoś ręcznie przekłada dane z jednego systemu do drugiego. To nie wymaga sztucznej inteligencji. To wymaga jednego dobrze ułożonego workflow.
+
+Problem w tym, że "automatyzacja" brzmi nudno. "AI" brzmi jak przyszłość. Więc firmy kupują licencje na Copilota żeby rozwiązać problem, który rozwiązałby prosty workflow w n8n za ułamek ceny. Bez miesięcznego abonamentu.
+
+Zanim wydasz budżet na AI, zadaj sobie pytanie: czy ten proces wymaga myślenia, czy tylko powtarzania? Jeśli powtarzania — nie potrzebujesz AI. Potrzebujesz automatu.
+
+Co w Twojej firmie robi człowiek, a mogłaby robić maszyna bez żadnego AI?
+
+#Automatyzacja #n8n #Procesy #AIwBiznesie

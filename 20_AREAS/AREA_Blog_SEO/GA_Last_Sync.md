@@ -1,19 +1,19 @@
 # Google Analytics 4 — dokodu.it
-Pobrano: 2026-04-16 00:00 | Okres: 2026-03-19 → 2026-04-15 (28 dni)
+Pobrano: 2026-04-16 09:00 | Okres: 2026-03-19 → 2026-04-15 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
 |---------|---------|
-| Łączne sesje | **6,623** |
-| Unikalni użytkownicy | **4,774** |
-| Odsłony | **6,927** |
+| Łączne sesje | **6,629** |
+| Unikalni użytkownicy | **4,779** |
+| Odsłony | **6,936** |
 | Średni bounce rate | 56.0% |
 
 ## Top 20 Stron (wg sesji)
 | # | Strona | Sesje | Użytkownicy | Bounce | Avg. czas |
 |---|--------|-------|-------------|--------|-----------|
-| 1 | `/blog/n8n` | 1119 | 604 | 79.7% | 1m 3s |
-| 2 | `/` | 462 | 324 | 64.1% | 2m 10s |
+| 1 | `/blog/n8n` | 1121 | 605 | 79.8% | 1m 3s |
+| 2 | `/` | 463 | 325 | 64.1% | 2m 9s |
 | 3 | `/kursy/pystart` | 268 | 180 | 65.3% | 1m 15s |
 | 4 | `/blog/agenci-ai/claude-code-agent` | 223 | 199 | 68.6% | 1m 1s |
 | 5 | `/newslettery/podstawy-pythona` | 154 | 121 | 63.6% | 0m 53s |
@@ -30,15 +30,15 @@ Pobrano: 2026-04-16 00:00 | Okres: 2026-03-19 → 2026-04-15 (28 dni)
 | 16 | `/oto/pystart-newsletter` | 76 | 32 | 51.3% | 0m 56s |
 | 17 | `/blog/n8n/licencja-cennik` | 68 | 56 | 72.1% | 1m 26s |
 | 18 | `/blog/sql/funkcje-agregujace-w-sql` | 67 | 63 | 71.6% | 2m 1s |
-| 19 | `/transformacja/` | 63 | 52 | 34.9% | 1m 23s |
+| 19 | `/transformacja/` | 64 | 53 | 35.9% | 1m 22s |
 | 20 | `/blog/google-workspace/gemini-vs-chatgpt` | 59 | 56 | 79.7% | 0m 52s |
 
 ## Źródła Ruchu
 | Źródło | Medium | Sesje | Użytkownicy |
 |--------|--------|-------|-------------|
-| google | organic | 3999 | 2753 |
-| (direct) | (none) | 811 | 628 |
-| (not set) | (not set) | 307 | 231 |
+| google | organic | 4001 | 2755 |
+| (direct) | (none) | 813 | 630 |
+| (not set) | (not set) | 308 | 232 |
 | bing | organic | 278 | 241 |
 | youtube.com | referral | 260 | 171 |
 | duckduckgo | organic | 51 | 45 |
@@ -80,4 +80,4 @@ Pobrano: 2026-04-16 00:00 | Okres: 2026-03-19 → 2026-04-15 (28 dni)
 | `/blog/n8n/make-com-vs-n8n` | 82.4% | 34 |
 
 ---
-*DOKODU BRAIN GA4 Integration | 2026-04-16 00:00*
+*DOKODU BRAIN GA4 Integration | 2026-04-16 09:00*

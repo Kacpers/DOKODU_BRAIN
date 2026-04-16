@@ -194,6 +194,7 @@ Publikacja o 20:30.
   - [ ] Agnieszka Zając-Feliczak (RPA + ISO 27001) — pytanie o narzędzia RPA
   - [ ] Tomasz Bystronski (CERI International, Head of Process Automation) — uzupełnienie Blue Prism o AI
   - [ ] Kamil Jagodziński (AIUT, Operations Manager) — automatyzacja procesów biznesowych
+- [ ] Śr 16.04 RANO: **TikTok — pierwszy batch nagrań.** Scenariusze od Claude (3 lekkie, wartościowe, BEZ sprzedaży). Nagrać telefonem pionowo, wrzucić MP4 → Claude odpala pipeline (napisy + montaż). Cel: test pipeline + pierwsze 3 klipy gotowe do publikacji.
 - [ ] Pt 17.04: Przed callem CX Factory → `/brain-lead-research` Dawid Wielec
 
 ### Tydzień 21–25.04
@@ -237,6 +238,9 @@ Publikacja o 20:30.
 - [ ] **Dokończ stronę ebooka** — `dokodu.it/ebooki/automatyzacja-biznesowa` (checkout, treść, ebook niedokończony). Potem redirect `lp.dokodu.it/transformacja` → `dokodu.it/ebooki/automatyzacja-biznesowa#kup-pelny-ebook`
 - [ ] **Checklista AI → wrzuć na stronę** — `dokodu.it/checklista` z bramką emailową + segment MailerLite
 - [ ] **Uporządkuj marketing assets** — mapa: co jest, dla kogo, jaki URL, jaki lejek (ebook / checklista / AI Act / kursy)
+- [ ] **MailerLite: Welcome sequence "Newsletter nowa strona"** — 41 osób zapisanych bez żadnego maila! Zaprojektować 3 maile (przedstawienie → wartość → segmentacja). Grupy bez automatyzacji: "Newsletter Nowa strona" (41), "Chcę się uczyć baz danych" (18)
+- [ ] **MailerLite: Reactivation Pystart** — 3-mailowa seria do "Chcę się uczyć Pythona" minus klienci Pystart (~2 500 osób). Cel: 75-125 sprzedaży
+- [ ] **MailerLite: Ankieta n8n** — "Co automatyzujesz?" do Transformacja (657) + Newsletter AI (80) + Python (4101). Walidacja kursu + tematy na content
 
 ### P3 — Nice to have
 - [ ] **EPALE — rejestracja** (30 min, darmowe)

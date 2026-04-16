@@ -1,5 +1,5 @@
 # Google Calendar — przegląd 14 dni
-Pobrano: 2026-04-16 00:00 | Konta: ksieradzinski@gmail.com, kacper@dokodu.it
+Pobrano: 2026-04-16 09:00 | Konta: ksieradzinski@gmail.com, kacper@dokodu.it
 Kalendarze: Prywatny, AI Hero, Dokodu akcje, Familijne, Dzieci, Dokodu
 
 ## Czw 2026-04-16 ← DZIŚ

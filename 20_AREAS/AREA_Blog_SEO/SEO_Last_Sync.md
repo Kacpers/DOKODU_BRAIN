@@ -1,5 +1,5 @@
 # Google Search Console — dokodu.it
-Pobrano: 2026-04-16 00:00 | Okres: 2026-03-16 → 2026-04-13 (28 dni)
+Pobrano: 2026-04-16 09:00 | Okres: 2026-03-16 → 2026-04-13 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
@@ -140,4 +140,4 @@ Pobrano: 2026-04-16 00:00 | Okres: 2026-03-16 → 2026-04-13 (28 dni)
 | `/blog/etyka-ograniczenia-chatgpt` | 112 | #6.6 |
 
 ---
-*DOKODU BRAIN GSC Integration | 2026-04-16 00:00*
+*DOKODU BRAIN GSC Integration | 2026-04-16 09:00*
