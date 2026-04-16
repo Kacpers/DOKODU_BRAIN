@@ -1,0 +1,120 @@
+<!-- LinkedIn Newsletter: AI w pracy — Transkrypcje spotkań -->
+
+<p>W zeszłym tygodniu napisałem na LinkedIn, że zbudowałem sobie system do transkrybowania spotkań. Kilka osób odpisało to samo: <em>"Fajnie, ale jak to zrobić u siebie?"</em></p>
+
+<p>Więc dziś Ci to pokażę. Krok po kroku. Bez kodowania, bez abonamentów, bez wysyłania nagrań do żadnego zewnętrznego serwisu.</p>
+
+<p>Jedyne czego potrzebujesz to komputer i trochę cierpliwości na pierwszy raz. Cały proces wygląda tak:</p>
+
+<p><strong>[WSTAW OBRAZEK: diagram_pipeline.png]</strong></p>
+
+<p>Pięć kroków. Żaden z nich nie jest trudny. Przejdźmy przez nie.</p>
+
+<h2>Dlaczego nie Fireflies / Otter / Fathom?</h2>
+
+<p>Są serwisy, które robią to za Ciebie. Podłączasz je do spotkania, dostajesz transkrypcję. Wygodne. Ale:</p>
+
+<table>
+<thead>
+<tr><th></th><th>Fireflies / Otter</th><th>Whisper (lokalnie)</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Koszt</strong></td><td>~500-1500 PLN/rok</td><td>0 PLN</td></tr>
+<tr><td><strong>Twoje dane</strong></td><td>ich serwery (USA)</td><td>Twój komputer</td></tr>
+<tr><td><strong>Polski</strong></td><td>średnia jakość</td><td>dobra (model large-v3)</td></tr>
+<tr><td><strong>Internet</strong></td><td>tak, zawsze</td><td>tylko przy instalacji</td></tr>
+<tr><td><strong>Konfiguracja</strong></td><td>5 min</td><td>15-30 min (raz)</td></tr>
+</tbody>
+</table>
+
+<p>Uczciwie — konfiguracją przegrywamy. Ale jeśli na Twoich spotkaniach padają budżety klientów, warunki umów albo dane osobowe, to pytanie <em>"gdzie lecą te nagrania?"</em> przestaje być akademickie.</p>
+
+<h2>Czym jest Whisper?</h2>
+
+<p>Whisper to model od OpenAI (tak, tych od ChatGPT), który zamienia mowę na tekst. Rozumie polski. Jest darmowy i open source. Po instalacji działa offline — nagranie nigdzie nie wylatuje z Twojego komputera.</p>
+
+<h2>Krok 1: Google Drive — synchronizacja nagrań na dysk</h2>
+
+<p>Jeśli nagrywasz spotkania w Google Meet, nagrania lądują automatycznie na Twoim Google Drive, w folderze "Meet Recordings".</p>
+
+<p>Żeby nie ściągać ich ręcznie za każdym razem, zainstaluj <strong>Google Drive na komputer</strong> (Google Drive for Desktop). To oficjalna aplikacja Google — po instalacji Twoje pliki z Drive pojawiają się jako zwykły folder na dysku.</p>
+
+<p>Po instalacji: ustawienia Google Drive → wybierasz foldery do synchronizacji → zaznaczasz "Meet Recordings". Od tego momentu po każdym spotkaniu nagranie pojawi Ci się lokalnie.</p>
+
+<blockquote><strong>Używasz Zoom lub Teams?</strong> Ten sam schemat. Zoom zapisuje nagrania lokalnie domyślnie. Teams — po włączeniu opcji "Record to this computer". Wynik ten sam: plik wideo na Twoim dysku.</blockquote>
+
+<h2>Krok 2: Instalacja Whispera</h2>
+
+<p>Tutaj potrzebujesz terminala. Jeśli nigdy go nie używałeś — terminal to konsola, w którą wpisujesz komendy tekstem zamiast klikać w ikonki. Na Windowsie szukasz "PowerShell" w menu Start. Na Macu — "Terminal" w Spotlight.</p>
+
+<p>Nie musisz go rozumieć w całości. Wystarczy że umiesz wkleić komendę i wcisnąć Enter.</p>
+
+<p><strong>Najpierw Python.</strong> Wejdź na python.org, pobierz najnowszą wersję, zainstaluj.</p>
+
+<blockquote><strong>Windows tip:</strong> Przy instalacji Pythona zaznacz "Add Python to PATH". Bez tego terminal nie znajdzie Pythona i będziesz się zastanawiać co poszło nie tak. Wiem, bo sam to przeoczyłem za pierwszym razem.</blockquote>
+
+<p><strong>Potem Whisper.</strong> Otwierasz terminal i wklejasz:</p>
+
+<pre><code>pip install openai-whisper</code></pre>
+
+<p>Enter. Czekasz. To tyle — Whisper się zainstaluje.</p>
+
+<h2>Krok 3: Transkrypcja</h2>
+
+<p>Masz nagranie na dysku. Masz Whispera. Teraz jedna komenda:</p>
+
+<pre><code>whisper "ścieżka/do/nagrania.mp4" --model large-v3 --language pl</code></pre>
+
+<p>Co tu się dzieje:</p>
+<ul>
+<li><code>whisper</code> — wywołujesz program</li>
+<li><code>"ścieżka/do/nagrania.mp4"</code> — wskazujesz plik z nagraniem</li>
+<li><code>--model large-v3</code> — największy model, najdokładniejszy dla polskiego</li>
+<li><code>--language pl</code> — mówisz Whisperowi, że to polski</li>
+</ul>
+
+<blockquote><strong>Pierwsza transkrypcja?</strong> Model large-v3 waży ok. 3 GB. Pobierze się raz, przy pierwszym uruchomieniu. Potem Whisper działa offline.</blockquote>
+
+<p>Ale nie każdy komputer udźwignie największy model. Sprawdź co wybrać:</p>
+
+<p><strong>[WSTAW OBRAZEK: diagram_model_wybor.png]</strong></p>
+
+<p>Zmiana modelu to zamiana jednego słowa w komendzie: <code>--model medium</code> zamiast <code>--model large-v3</code>. Reszta bez zmian.</p>
+
+<p>Na wyjściu dostajesz kilka plików. Najważniejsze dwa:</p>
+<ul>
+<li><strong>.txt</strong> — pełny tekst rozmowy</li>
+<li><strong>.srt</strong> — tekst z timestampami (kto co mówił o której minucie)</li>
+</ul>
+
+<p>Jakość jest zaskakująco dobra — odmiana polska, liczby, nazwy własne. Dużo lepsza niż wbudowane napisy w Google Meet.</p>
+
+<blockquote><strong>Nie masz karty NVIDIA?</strong> Spokojnie. Whisper działa na procesorze. Wolniej, ale działa. Model <code>small</code> poradzi sobie z godzinnym spotkaniem w kilkanaście minut.</blockquote>
+
+<h2>Co dalej z surowym tekstem?</h2>
+
+<p>Masz transkrypcję. Surowy tekst ze spotkania. Co z nim zrobić — zależy od Ciebie.</p>
+
+<p>Możesz:</p>
+<ul>
+<li>Przygotować podsumowanie dla klienta</li>
+<li>Wrócić do rozmowy sprzed miesiąca i sprawdzić co ustaliliście</li>
+<li>Wyciągnąć wymagania projektowe na podstawie tego, co naprawdę padło — nie tego, co zapamiętałeś</li>
+<li>Wychwycić wszystkie decyzje podjęte podczas spotkania</li>
+</ul>
+
+<p>Ja poszedłem krok dalej i zintegrowałem to z lokalnym modelem AI, który analizuje transkrypcje bez wysyłania danych na zewnątrz. <strong>O tym opowiem w kolejnym wpisie.</strong></p>
+
+<p>Dziś chodziło o fundamenty: nagranie → tekst, lokalnie, za darmo.</p>
+
+<h2>Jedno zastrzeżenie</h2>
+
+<p>Nagrywanie spotkań wymaga zgody uczestników. To nie jest opcjonalne — to wymóg prawny. Upewnij się, że masz na to zgodę zanim naciśniesz "Nagraj".</p>
+
+<hr>
+
+<p><strong>Najcenniejsze dane w firmie powstają w rozmowach. Jeśli ich nie zapisujesz, to jakbyś je wyrzucał.</strong></p>
+
+<p>Napisz mi — masz spotkania, które chciałbyś zacząć transkrybować? A może już próbowałeś i coś Cię zatrzymało? Chętnie usłyszę.</p>
+
+<p>Pozdrawiam,<br>Kacper</p>

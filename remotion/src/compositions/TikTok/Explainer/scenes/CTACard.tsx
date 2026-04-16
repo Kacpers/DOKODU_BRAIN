@@ -6,7 +6,7 @@ import {
   spring,
   useVideoConfig,
 } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/PlusJakartaSans";
 import { tiktokTheme as t } from "../../../../style/tiktok-theme";
 
 const { fontFamily } = loadFont();
@@ -67,7 +67,7 @@ export const CTACard: React.FC<CTACardProps> = ({
     <AbsoluteFill
       style={{
         backgroundColor: t.colors.bg,
-        background: `radial-gradient(circle at ${gradientX}% ${gradientY}%, #0d2b1a 0%, #000000 60%)`,
+        background: `radial-gradient(circle at ${gradientX}% ${gradientY}%, #1a0a1e 0%, ${t.colors.bg} 60%)`,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",

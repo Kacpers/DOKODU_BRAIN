@@ -6,10 +6,12 @@ import {
   spring,
   useVideoConfig,
 } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/PlusJakartaSans";
+import { loadFont as loadBody } from "@remotion/google-fonts/DMSans";
 import { tiktokTheme as t } from "../../../../style/tiktok-theme";
 
 const { fontFamily } = loadFont();
+const { fontFamily: bodyFont } = loadBody();
 
 export interface StatCounterProps {
   value: number;
@@ -144,7 +146,7 @@ export const StatCounter: React.FC<StatCounterProps> = ({
         {/* Label */}
         <div
           style={{
-            fontFamily,
+            fontFamily: bodyFont,
             fontWeight: 400,
             fontSize: 40,
             color: t.colors.gray,

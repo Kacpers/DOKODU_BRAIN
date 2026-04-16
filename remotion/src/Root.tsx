@@ -21,6 +21,10 @@ import { TikTokIntro } from "./compositions/TikTok/Intro";
 import { TikTokCTA } from "./compositions/TikTok/CTA";
 import { TopicCard } from "./compositions/TikTok/TopicCard";
 
+// TikTok Explainer compositions
+import { ExplainerVideo, calculateExplainerMetadata } from "./compositions/TikTok/Explainer/ExplainerVideo";
+import { Lookbook } from "./compositions/TikTok/Explainer/Lookbook";
+
 export const RemotionRoot: React.FC = () => {
   const base = { width: theme.width, height: theme.height, fps: theme.fps };
   const tikTokBase = {
@@ -53,6 +57,27 @@ export const RemotionRoot: React.FC = () => {
         durationInFrames={75}
         {...tikTokBase}
         defaultProps={{ topic: "Temat TikToka", category: "AI Tips" }}
+      />
+
+      {/* ─── TikTok Explainer ─── */}
+      <Composition
+        id="TikTok-Explainer"
+        component={ExplainerVideo as any}
+        calculateMetadata={calculateExplainerMetadata as any}
+        {...tikTokBase}
+        defaultProps={{
+          scenes: [
+            { type: "KineticText", text: "Który AI\nwybrać?", emphasis: "wybrać", duration: 3 },
+            { type: "VSCompare", left: { title: "ChatGPT", points: ["Obrazy", "Browsing"] }, right: { title: "Claude", points: ["Dokumenty", "Kod"] }, duration: 7 },
+            { type: "CTACard", duration: 3 },
+          ],
+        }}
+      />
+      <Composition
+        id="TikTok-Lookbook"
+        component={Lookbook}
+        durationInFrames={2850}
+        {...tikTokBase}
       />
     </>
   );

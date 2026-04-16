@@ -6,10 +6,12 @@ import {
   interpolate,
   spring,
 } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/PlusJakartaSans";
+import { loadFont as loadBody } from "@remotion/google-fonts/DMSans";
 import { tiktokTheme as t } from "../../../../style/tiktok-theme";
 
 const { fontFamily } = loadFont();
+const { fontFamily: bodyFont } = loadBody();
 
 const EXIT_FRAMES = 10;
 const DIVIDER_HEIGHT = 300;
@@ -99,9 +101,10 @@ export const VSCompare: React.FC<VSCompareProps> = ({
           alignItems: "center",
           justifyContent: "center",
           width: "100%",
-          paddingLeft: 40,
-          paddingRight: 40,
+          paddingLeft: 60,
+          paddingRight: 60,
           position: "relative",
+          overflow: "hidden",
         }}
       >
         {/* Left column */}
@@ -158,7 +161,7 @@ export const VSCompare: React.FC<VSCompareProps> = ({
                 />
                 <span
                   style={{
-                    fontFamily,
+                    fontFamily: bodyFont,
                     fontSize: 28,
                     color: t.colors.text,
                     lineHeight: 1.4,
@@ -273,7 +276,7 @@ export const VSCompare: React.FC<VSCompareProps> = ({
                 />
                 <span
                   style={{
-                    fontFamily,
+                    fontFamily: bodyFont,
                     fontSize: 28,
                     color: t.colors.text,
                     lineHeight: 1.4,

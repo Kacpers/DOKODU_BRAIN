@@ -14,6 +14,7 @@ tags: [inbox, capture, wrzutki]
 
 ## NOTATKI Z TELEFONU / MYS LOT
 
+- [ ] POMYSL: Post LinkedIn/blog: "AI bez ludzi nie istnieje" — human in the loop jako fundament, nie dodatek. Operator > użytkownik. Kąt: anty-teza "AI zastąpi ludzi". — 2026-04-16
 - [x] PROJEKT: TikTok pipeline — ZROBIONE: pełny pipeline (scenariusze + Whisper + napisy ASS + FFmpeg montaż + DaVinci FCPXML + Remotion intro/CTA + Playbook). Skill `/tiktok-pipeline`. Na start: ręczny upload przez apkę. — 2026-04-15
 - [ ] TODO: Założyć TikTok Developer Account (developers.tiktok.com) + zgłosić appkę na scope `video.upload` — automatyczny upload do drafts. Niska priorytet, zrobić jak będzie chwila. — 2026-04-15
 - [ ] TODO: Usunąć stronę /szkolenia/automatyzacja-dla-agencji z dokodu.it — nieaktualna — 2026-04-15

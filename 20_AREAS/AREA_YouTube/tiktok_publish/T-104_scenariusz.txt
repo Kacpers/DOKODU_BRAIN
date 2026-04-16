@@ -1,0 +1,36 @@
+# T-104 — "Dane firmowe w ChatGPT"
+# Format: OBS screencast + face w rogu
+# Czas: ~45 sekund
+# Filar: EDUKACJA | Wariant: OBALANIE MITU
+# Przerobiony T-005
+# ─────────────────────────────────────
+
+## EKRAN: ChatGPT Settings otwarty
+
+## TEKST:
+
+5 na 10 osób na moich warsztatach nie wie czy wolno wrzucić dane firmy do ChatGPT.
+
+Odpowiedź: zależy od JEDNEGO ustawienia.
+
+Patrzcie. Settings. Data controls. "Improve the model for everyone."
+
+[pokaż ekran Settings → Data controls]
+
+Jeśli to jest włączone — wszystko co wklejasz może być użyte do treningu modelu. Twoje dane klientów, umowy, raporty. Wszystko.
+
+[wyłącz toggle]
+
+Wyłączasz — i Twoje dane zostają w rozmowie, nie idą do treningu.
+
+Ale uwaga — to dotyczy ChatGPT Plus. Na Team i Enterprise to jest domyślnie wyłączone. Na darmowym planie? Zawsze włączone. Nie wyłączysz.
+
+Operator wie co wysyła i dokąd. Użytkownik wkleja i liczy na szczęście.
+
+Jestem Kacper — uczę myśleć z AI, nie kopiować prompty.
+
+## OPIS TIKTOK:
+Jedno ustawienie w ChatGPT decyduje czy Twoje dane firmowe trafiają do treningu AI. Sprawdź to TERAZ.
+
+## HASHTAGI:
+#AI #ChatGPT #RODO #DaneOsobowe #BezpieczenstwoAI #AIwFirmie

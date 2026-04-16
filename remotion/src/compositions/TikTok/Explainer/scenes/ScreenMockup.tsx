@@ -6,7 +6,7 @@ import {
   interpolate,
   spring,
 } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/PlusJakartaSans";
 import { loadFont as loadMono } from "@remotion/google-fonts/JetBrainsMono";
 import { tiktokTheme as t } from "../../../../style/tiktok-theme";
 
@@ -228,6 +228,8 @@ export const ScreenMockup: React.FC<ScreenMockupProps> = ({
         alignItems: "center",
         flexDirection: "column",
         gap: 32,
+        padding: "0 60px",
+        overflow: "hidden",
         transform: `translateY(${exitTranslateY}px)`,
       }}
     >

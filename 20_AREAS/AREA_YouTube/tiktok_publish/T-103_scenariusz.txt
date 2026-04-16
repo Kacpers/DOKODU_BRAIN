@@ -1,0 +1,33 @@
+# T-103 — "AI zdecydował za Ciebie"
+# Format: OBS screencast + face w rogu
+# Czas: ~50 sekund
+# Filar: KONTROWERSJA | Wariant: OBALANIE MITU
+# ─────────────────────────────────────
+
+## EKRAN: ChatGPT/Claude otwarty, nowa rozmowa
+
+## TEKST:
+
+AI właśnie podjął za Ciebie decyzję. I nawet tego nie zauważyłeś.
+
+Patrzcie. Piszę: "Mamy problem z rotacją pracowników w magazynie. Co zrobić?"
+
+[wpisz, poczekaj — AI da jedną konkretną strategię, np. "Wprowadźcie system mentoringu + podwyżki retencyjne"]
+
+Brzmi rozsądnie? Pewnie. Ale on właśnie WYBRAŁ za Ciebie. Nie zapytał o budżet. Nie zapytał o skalę. Nie dał opcji. Po prostu zdecydował.
+
+Teraz inaczej. Piszę: "Daj mi 3 różne podejścia do tego problemu. Każde z innym budżetem i trade-offami. Ja wybiorę."
+
+[wpisz, poczekaj — AI da 3 opcje z porównaniem]
+
+Widzicie? Teraz JA decyduję. AI przygotował opcje, ale wybór jest mój.
+
+Użytkownik pozwala AI decydować. Operator wymaga opcji.
+
+Jestem Kacper — uczę myśleć z AI, nie kopiować prompty.
+
+## OPIS TIKTOK:
+AI podejmuje za Ciebie decyzje — nawet tego nie widzisz. Jedna zmiana i znów Ty rządzisz.
+
+## HASHTAGI:
+#AI #HumanInTheLoop #ChatGPT #AIwFirmie #Decyzje #Automatyzacja

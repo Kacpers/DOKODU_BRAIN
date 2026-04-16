@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  AbsoluteFill,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -28,7 +29,7 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
   if (type === "glitch") {
     // Snap to clean after 4 frames
     if (frame >= 4 && !isExiting) {
-      return <>{children}</>;
+      return <AbsoluteFill>{children}</AbsoluteFill>;
     }
 
     if (isExiting) {
@@ -36,7 +37,7 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
         extrapolateLeft: "clamp",
         extrapolateRight: "clamp",
       });
-      return <div style={{ opacity }}>{children}</div>;
+      return <AbsoluteFill style={{ opacity }}>{children}</AbsoluteFill>;
     }
 
     // Glitch enter: 3 overlapping copies with RGB offsets
@@ -49,30 +50,26 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
     const progress = frame / 4; // 0→1 over first 4 frames
 
     return (
-      <div style={{ position: "relative", width: "100%", height: "100%" }}>
+      <AbsoluteFill>
         {offsets.map((offset, i) => (
-          <div
+          <AbsoluteFill
             key={i}
             style={{
-              position: "absolute",
-              inset: 0,
               transform: `translateX(${offset * (1 - progress)}px)`,
               mixBlendMode: i === 0 ? "normal" : "screen",
             }}
           >
             {children}
-            <div
+            <AbsoluteFill
               style={{
-                position: "absolute",
-                inset: 0,
                 backgroundColor: tints[i],
                 pointerEvents: "none",
                 opacity: 1 - progress,
               }}
             />
-          </div>
+          </AbsoluteFill>
         ))}
-      </div>
+      </AbsoluteFill>
     );
   }
 
@@ -83,14 +80,14 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
         extrapolateRight: "clamp",
       });
       return (
-        <div
+        <AbsoluteFill
           style={{
             transform: `translateY(${exitProgress * -300}px)`,
             opacity: 1 - exitProgress,
           }}
         >
           {children}
-        </div>
+        </AbsoluteFill>
       );
     }
 
@@ -102,9 +99,9 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
     const translateY = interpolate(enterSpring, [0, 1], [1920, 0]);
 
     return (
-      <div style={{ transform: `translateY(${translateY}px)` }}>
+      <AbsoluteFill style={{ transform: `translateY(${translateY}px)` }}>
         {children}
-      </div>
+      </AbsoluteFill>
     );
   }
 
@@ -115,14 +112,14 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
         extrapolateRight: "clamp",
       });
       return (
-        <div
+        <AbsoluteFill
           style={{
             transform: `scale(${1 - exitProgress * 0.15})`,
             opacity: 1 - exitProgress,
           }}
         >
           {children}
-        </div>
+        </AbsoluteFill>
       );
     }
 
@@ -138,9 +135,9 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
     });
 
     return (
-      <div style={{ transform: `scale(${scale})`, opacity }}>
+      <AbsoluteFill style={{ transform: `scale(${scale})`, opacity }}>
         {children}
-      </div>
+      </AbsoluteFill>
     );
   }
 
@@ -148,9 +145,11 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
     const enterOpacity = frame === 0 ? 0 : 1;
     const exitOpacity = frame >= durationInFrames - 1 ? 0 : 1;
     return (
-      <div style={{ opacity: Math.min(enterOpacity, exitOpacity) }}>
+      <AbsoluteFill
+        style={{ opacity: Math.min(enterOpacity, exitOpacity) }}
+      >
         {children}
-      </div>
+      </AbsoluteFill>
     );
   }
 
@@ -170,5 +169,9 @@ export const TransitionWrapper: React.FC<TransitionWrapperProps> = ({
   );
   const opacity = isExiting ? exitOpacity : enterOpacity;
 
-  return <div style={{ opacity }}>{children}</div>;
+  return (
+    <AbsoluteFill style={{ opacity }}>
+      {children}
+    </AbsoluteFill>
+  );
 };

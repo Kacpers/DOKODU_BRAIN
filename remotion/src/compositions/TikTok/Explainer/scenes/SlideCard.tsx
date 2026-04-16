@@ -6,10 +6,12 @@ import {
   spring,
   useVideoConfig,
 } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/PlusJakartaSans";
+import { loadFont as loadBody } from "@remotion/google-fonts/DMSans";
 import { tiktokTheme as t } from "../../../../style/tiktok-theme";
 
 const { fontFamily } = loadFont();
+const { fontFamily: bodyFont } = loadBody();
 
 export interface SlideCardProps {
   title: string;
@@ -153,7 +155,7 @@ export const SlideCard: React.FC<SlideCardProps> = ({
                 {/* Bullet text */}
                 <div
                   style={{
-                    fontFamily,
+                    fontFamily: bodyFont,
                     fontWeight: 400,
                     fontSize: 34,
                     color: t.colors.text,

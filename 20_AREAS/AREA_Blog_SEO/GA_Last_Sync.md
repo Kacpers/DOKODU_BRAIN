@@ -1,56 +1,56 @@
 # Google Analytics 4 — dokodu.it
-Pobrano: 2026-04-16 09:00 | Okres: 2026-03-19 → 2026-04-15 (28 dni)
+Pobrano: 2026-04-17 01:00 | Okres: 2026-03-20 → 2026-04-16 (28 dni)
 
 ## Podsumowanie
 | Metryka | Wartość |
 |---------|---------|
-| Łączne sesje | **6,629** |
-| Unikalni użytkownicy | **4,779** |
-| Odsłony | **6,936** |
-| Średni bounce rate | 56.0% |
+| Łączne sesje | **6,636** |
+| Unikalni użytkownicy | **4,783** |
+| Odsłony | **6,933** |
+| Średni bounce rate | 56.9% |
 
 ## Top 20 Stron (wg sesji)
 | # | Strona | Sesje | Użytkownicy | Bounce | Avg. czas |
 |---|--------|-------|-------------|--------|-----------|
-| 1 | `/blog/n8n` | 1121 | 605 | 79.8% | 1m 3s |
-| 2 | `/` | 463 | 325 | 64.1% | 2m 9s |
-| 3 | `/kursy/pystart` | 268 | 180 | 65.3% | 1m 15s |
-| 4 | `/blog/agenci-ai/claude-code-agent` | 223 | 199 | 68.6% | 1m 1s |
-| 5 | `/newslettery/podstawy-pythona` | 154 | 121 | 63.6% | 0m 53s |
-| 6 | `/blog/python/podstawy/list-comprehension` | 151 | 147 | 95.4% | 0m 11s |
-| 7 | `/blog/n8n/docker-instalacja-konfiguracja` | 136 | 62 | 74.3% | 0m 45s |
-| 8 | `/blog/agenci-ai/narzedzia-agenty-ai` | 120 | 109 | 64.2% | 1m 1s |
-| 9 | `/blog/sql/normalizacja-baz-danych` | 117 | 100 | 78.6% | 0m 45s |
-| 10 | `/blog/sql/zadania-sql-poziom-podstawowy` | 110 | 98 | 65.5% | 0m 53s |
-| 11 | `/blog/sql/case-when-w-sql` | 108 | 87 | 83.3% | 1m 20s |
-| 12 | `/blog/n8n/przyklady-workflow-automatyzacji` | 95 | 70 | 62.1% | 2m 5s |
-| 13 | `/blog/python/podstawy/podstawy-programowania` | 94 | 50 | 54.3% | 2m 26s |
-| 14 | `/blog/sql/sql-interview-pytania` | 94 | 68 | 63.8% | 2m 5s |
-| 15 | `/kursy/n8n` | 79 | 38 | 45.6% | 2m 19s |
-| 16 | `/oto/pystart-newsletter` | 76 | 32 | 51.3% | 0m 56s |
-| 17 | `/blog/n8n/licencja-cennik` | 68 | 56 | 72.1% | 1m 26s |
-| 18 | `/blog/sql/funkcje-agregujace-w-sql` | 67 | 63 | 71.6% | 2m 1s |
-| 19 | `/transformacja/` | 64 | 53 | 35.9% | 1m 22s |
-| 20 | `/blog/google-workspace/gemini-vs-chatgpt` | 59 | 56 | 79.7% | 0m 52s |
+| 1 | `/blog/n8n` | 1093 | 580 | 79.4% | 1m 5s |
+| 2 | `/` | 465 | 323 | 64.3% | 2m 8s |
+| 3 | `/kursy/pystart` | 268 | 175 | 65.7% | 1m 14s |
+| 4 | `/blog/agenci-ai/claude-code-agent` | 228 | 205 | 69.7% | 1m 5s |
+| 5 | `/newslettery/podstawy-pythona` | 153 | 119 | 62.1% | 0m 54s |
+| 6 | `/blog/python/podstawy/list-comprehension` | 150 | 147 | 96.0% | 0m 6s |
+| 7 | `/blog/n8n/docker-instalacja-konfiguracja` | 132 | 62 | 74.2% | 0m 47s |
+| 8 | `/blog/agenci-ai/narzedzia-agenty-ai` | 125 | 114 | 65.6% | 0m 58s |
+| 9 | `/blog/sql/normalizacja-baz-danych` | 111 | 95 | 79.3% | 0m 48s |
+| 10 | `/blog/sql/zadania-sql-poziom-podstawowy` | 109 | 101 | 63.3% | 0m 48s |
+| 11 | `/blog/sql/case-when-w-sql` | 104 | 84 | 83.7% | 1m 4s |
+| 12 | `/blog/sql/sql-interview-pytania` | 99 | 70 | 63.6% | 2m 0s |
+| 13 | `/blog/n8n/przyklady-workflow-automatyzacji` | 97 | 72 | 61.9% | 2m 6s |
+| 14 | `/blog/python/podstawy/podstawy-programowania` | 96 | 53 | 60.4% | 2m 18s |
+| 15 | `/kursy/n8n` | 76 | 35 | 47.4% | 2m 5s |
+| 16 | `/oto/pystart-newsletter` | 73 | 32 | 45.2% | 0m 58s |
+| 17 | `/blog/sql/funkcje-agregujace-w-sql` | 67 | 62 | 71.6% | 2m 0s |
+| 18 | `/blog/n8n/licencja-cennik` | 64 | 53 | 71.9% | 1m 27s |
+| 19 | `/blog/google-workspace/gemini-vs-chatgpt` | 63 | 60 | 81.0% | 0m 50s |
+| 20 | `/transformacja/` | 61 | 50 | 29.5% | 1m 26s |
 
 ## Źródła Ruchu
 | Źródło | Medium | Sesje | Użytkownicy |
 |--------|--------|-------|-------------|
-| google | organic | 4001 | 2755 |
-| (direct) | (none) | 813 | 630 |
-| (not set) | (not set) | 308 | 232 |
-| bing | organic | 278 | 241 |
-| youtube.com | referral | 260 | 171 |
-| duckduckgo | organic | 51 | 45 |
-| statics.teams.cdn.office.net | referral | 43 | 33 |
-| chatgpt.com | referral | 41 | 8 |
-| sieradzinski.pl | referral | 31 | 21 |
-| linkedin.com | referral | 30 | 5 |
-| pl.search.yahoo.com | referral | 23 | 17 |
-| mamstartup.pl | referral | 15 | 5 |
-| newsletter | email | 11 | 2 |
-| perplexity | (not set) | 11 | 8 |
-| search.google.com | referral | 11 | 1 |
+| google | organic | 3980 | 2767 |
+| (direct) | (none) | 796 | 621 |
+| (not set) | (not set) | 328 | 247 |
+| bing | organic | 276 | 238 |
+| youtube.com | referral | 247 | 160 |
+| duckduckgo | organic | 46 | 41 |
+| chatgpt.com | referral | 43 | 7 |
+| statics.teams.cdn.office.net | referral | 42 | 32 |
+| sieradzinski.pl | referral | 32 | 22 |
+| linkedin.com | referral | 31 | 6 |
+| pl.search.yahoo.com | referral | 22 | 16 |
+| mamstartup.pl | referral | 17 | 5 |
+| perplexity | (not set) | 13 | 10 |
+| search.google.com | referral | 13 | 1 |
+| newsletter | email | 10 | 2 |
 
 ## Ścieżki B2B — Lead Generation
 | Strona | Źródło | Medium | Sesje |
@@ -68,16 +68,16 @@ Pobrano: 2026-04-16 09:00 | Okres: 2026-03-19 → 2026-04-15 (28 dni)
 ## Strony z Wysokim Bounce Rate (>70%)
 | Strona | Bounce | Sesje |
 |--------|--------|-------|
-| `/blog/python/podstawy/list-comprehension` | 95.4% | 151 |
-| `/blog/automatyzacja-procesow/no-code-vs-low-code` | 95.2% | 21 |
-| `/blog/cursor-cursor-pro-programowanie-ai` | 90.7% | 54 |
-| `/blog/sql/transakcje-i-poziomy-izolacji-sql` | 89.3% | 28 |
-| `/blog/python/testowanie/testowanie-jednostkowe-python` | 88.9% | 27 |
-| `/blog/python/podstawy/petle-i-warunki` | 85.4% | 41 |
-| `/blog/python/automatyzacja/tkinter-gui` | 83.9% | 31 |
+| `/blog/python/podstawy/list-comprehension` | 96.0% | 150 |
+| `/blog/cursor-cursor-pro-programowanie-ai` | 90.4% | 52 |
+| `/blog/sql/transakcje-i-poziomy-izolacji-sql` | 90.0% | 30 |
+| `/blog/python/testowanie/testowanie-jednostkowe-python` | 88.5% | 26 |
+| `/blog/python/podstawy/petle-i-warunki` | 84.6% | 39 |
+| `/blog/sql/case-when-w-sql` | 83.7% | 104 |
 | `/blog/python/ai/dane/tworzenie-wykresow-matplotlib` | 83.6% | 55 |
-| `/blog/sql/case-when-w-sql` | 83.3% | 108 |
-| `/blog/n8n/make-com-vs-n8n` | 82.4% | 34 |
+| `/blog/sql/postgresql-wprowadzenie-instalacja-pierwsza-baza` | 82.1% | 28 |
+| `/blog/vector-database-co-to-jest-pgvector-milvus-weaviate-pinecone` | 81.8% | 55 |
+| `/blog/n8n/make-com-vs-n8n` | 81.8% | 33 |
 
 ---
-*DOKODU BRAIN GA4 Integration | 2026-04-16 09:00*
+*DOKODU BRAIN GA4 Integration | 2026-04-17 01:00*

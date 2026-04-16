@@ -6,7 +6,7 @@ import {
   interpolate,
   spring,
 } from "remotion";
-import { loadFont } from "@remotion/google-fonts/Inter";
+import { loadFont } from "@remotion/google-fonts/PlusJakartaSans";
 import { tiktokTheme as t } from "../../../../style/tiktok-theme";
 
 const { fontFamily } = loadFont();
@@ -22,7 +22,9 @@ interface KineticTextProps {
 
 /** Parsed line structure: each line is an array of word strings */
 function parseLines(text: string): string[][] {
-  return text.split("\n").map((line) =>
+  // Handle both real newlines and literal \n from JSON props
+  const normalized = text.replace(/\\n/g, "\n");
+  return normalized.split("\n").map((line) =>
     line.split(" ").filter((w) => w.length > 0)
   );
 }
@@ -68,6 +70,8 @@ export const KineticText: React.FC<KineticTextProps> = ({
         alignItems: "center",
         flexDirection: "column",
         gap: fontSize * 0.25,
+        padding: "0 60px",
+        overflow: "hidden",
       }}
     >
       {lines.map((lineWords, lineIdx) => (
@@ -80,6 +84,7 @@ export const KineticText: React.FC<KineticTextProps> = ({
             justifyContent: "center",
             alignItems: "center",
             gap: `0 ${fontSize * 0.28}px`,
+            width: "100%",
           }}
         >
           {lineWords.map((word, wordIdx) => {
