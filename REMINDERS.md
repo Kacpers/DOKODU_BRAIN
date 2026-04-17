@@ -25,7 +25,9 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - ~~2026-04-14 | BIZNES | SayFlu/Krystian: odezwij się w pn~~ → DONE 14.04, spotkanie umówione wt 15.04 13:15
 - ~~2026-04-15 | BIZNES | SayFlu/Krystian: spotkanie 13:15~~ → DONE, discovery + oferta wysłana (AI 4900 + n8n 5900 + pakiet 9400 + Whisper 1750)
 - 2026-04-19 | BIZNES | SayFlu/Krystian: follow-up — zapytaj o status decyzji wspólników ws. szkoleń. Jeśli cisza → krótki DM na LI.
-- 2026-04-01 | BIZNES | Animex: wystawić fakturę za szkolenia (nr zamówienia na fakturze!)
+- ~~2026-04-01 | BIZNES | Animex: wystawić fakturę za szkolenia (nr zamówienia na fakturze!)~~ → DONE 01.04.2026, 40 000 PLN netto, termin płatności 01.05.2026
+- 2026-05-02 | BIZNES | Animex: sprawdź czy wpłynął przelew 40 000 PLN netto (fv 01.04 + 30 dni). Jeśli NIE — ping do Kamila/cuw.zobowiazania@animex.pl
+- 2026-05-09 | BIZNES | Animex: jeśli wciąż brak przelewu — twardy follow-up (odsetki zgodnie z umową)
 - ~~2026-04-03 | BIZNES | DEADLINE Animex: certyfikaty + paczka z plikami szkoleniowymi — musi wyjść do piątku!~~ → certyfikaty wystawione, wysyłka przeniesiona
 - 2026-04-08 | BIZNES | Animex: WYŚLIJ certyfikaty + paczkę szkoleniową do Kamila (wystawione, czekają na wysyłkę)
 - 2026-04-08 | BIZNES | NAGRAJ VSL kursu n8n — tekst w VSL_Skrypt_v1.md. Bez tego nie ma launchu 09.04!

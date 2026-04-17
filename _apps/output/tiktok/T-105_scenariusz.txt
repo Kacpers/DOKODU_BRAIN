@@ -1,0 +1,36 @@
+# T-105 — "Podsumowanie spotkania — ale czy prawdziwe?"
+# Format: OBS screencast + face w rogu
+# Czas: ~50 sekund
+# Filar: EDUKACJA | Wariant: QUICK WIN DEMO
+# Przerobiony T-010
+# ─────────────────────────────────────
+
+## EKRAN: Claude otwarty, wklejone notatki ze spotkania (zanonimizowane)
+
+## TEKST:
+
+2 godziny spotkania. AI podsumuje w 15 sekund. Ale czy to podsumowanie jest prawdziwe?
+
+Patrzcie. Wklejam notatki ze spotkania. Mówię: "Podsumuj i wypisz action items z odpowiedzialnymi."
+
+[wklej notatki, poczekaj na podsumowanie]
+
+Wygląda super. Ale teraz kluczowe pytanie.
+
+[wpisz: "Które z tych action items DOSŁOWNIE padły na spotkaniu, a które sam dodałeś bo uznałeś że powinny być?"]
+
+I teraz najlepsze...
+
+[AI zacznie przyznawać: "Punkt 3 i 5 dodałem na podstawie kontekstu, nie były wymienione wprost..."]
+
+Widzicie? AI dopisał dwa zadania których nikt nie ustalił. A Ty byś to wysłał na Slacka jako oficjalne ustalenia.
+
+Użytkownik kopiuje podsumowanie. Operator sprawdza co AI dopisał od siebie.
+
+Jestem Kacper — uczę myśleć z AI, nie kopiować prompty.
+
+## OPIS TIKTOK:
+AI podsumowuje spotkanie w 15 sekund. Ale dopisuje zadania których nikt nie ustalił. Sprawdź zanim wyślesz.
+
+## HASHTAGI:
+#AI #Spotkania #Produktywnosc #ChatGPT #Claude #AIwPracy #Automatyzacja

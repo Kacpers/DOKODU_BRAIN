@@ -1,0 +1,35 @@
+# T-101 — "Skąd to wiesz?"
+# Format: OBS screencast + face w rogu
+# Czas: ~50 sekund
+# Filar: EDUKACJA | Wariant: OBALANIE MITU
+# ─────────────────────────────────────
+
+## EKRAN: ChatGPT otwarty, nowa rozmowa
+
+## TEKST:
+
+Większość ludzi wierzy AI na słowo. Ja go przesłuchuję.
+
+Patrzcie. Pytam ChatGPT: "Jaki jest średni czas wdrożenia systemu ERP w firmie 200 osób?"
+
+[wpisz pytanie, poczekaj na odpowiedź — AI powie coś pewnie, np. "6-12 miesięcy"]
+
+Brzmi wiarygodnie, nie? Teraz zadaję jedno pytanie.
+
+[wpisz: "Skąd to wiesz? Czego musiałeś się domyślić żeby mi odpowiedzieć?"]
+
+I teraz najlepsze...
+
+[AI zacznie przyznawać: "bazowałem na ogólnych danych...", "nie miałem informacji o konkretnej branży...", "przyjąłem założenie że..."]
+
+Widzicie? On właśnie powiedział wam DOKŁADNIE czego nie wie. Te założenia to są miejsca gdzie się pomyli.
+
+Użytkownik bierze pierwszą odpowiedź. Operator sprawdza źródło.
+
+Jestem Kacper — uczę myśleć z AI, nie kopiować prompty.
+
+## OPIS TIKTOK:
+Jedno pytanie które zmienia sposób pracy z AI. "Skąd to wiesz?" — i widzisz gdzie AI zgaduje.
+
+## HASHTAGI:
+#AI #ChatGPT #PromptEngineering #AIwFirmie #SztucznaInteligencja #Automatyzacja

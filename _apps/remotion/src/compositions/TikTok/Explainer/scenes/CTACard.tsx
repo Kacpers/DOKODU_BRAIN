@@ -66,8 +66,7 @@ export const CTACard: React.FC<CTACardProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: t.colors.bg,
-        background: `radial-gradient(circle at ${gradientX}% ${gradientY}%, #1a0a1e 0%, ${t.colors.bg} 60%)`,
+        background: `radial-gradient(circle at ${gradientX}% ${gradientY}%, #1a0a1e 0%, transparent 60%)`,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",

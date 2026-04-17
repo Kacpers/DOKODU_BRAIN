@@ -63,7 +63,6 @@ export const SlideCard: React.FC<SlideCardProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: t.colors.bg,
         justifyContent: "center",
         alignItems: "center",
       }}
@@ -87,11 +86,13 @@ export const SlideCard: React.FC<SlideCardProps> = ({
           <div
             style={{
               fontSize: 64,
+              fontFamily: "'Noto Color Emoji', 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif",
               marginBottom: 24,
               transform: `scale(${Math.max(0, iconSpring)})`,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              lineHeight: 1,
             }}
           >
             {icon}

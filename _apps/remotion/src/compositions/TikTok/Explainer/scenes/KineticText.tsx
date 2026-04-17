@@ -65,7 +65,6 @@ export const KineticText: React.FC<KineticTextProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: t.colors.bg,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",

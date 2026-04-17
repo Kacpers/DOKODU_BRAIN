@@ -25,6 +25,7 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 | 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | Info przekazane na Messengerze (znajomy Kacpra). Czekamy na akceptację i dalsze info od Krystiana. | — |
 | 7 | LexLegali | Marcin Chrostek / Danuta Zawada-Miernik | Kontakt Kacpra | Propozycja | 35 000 | Spotkanie 20 lub 21.04 — Alina potwierdza datę. Oferta Automotive-Legal 32k+3k wysłana. | 2026-04-21 |
 | 8 | COP Kartoszyno (Kwatery Pracownicze) | — | Inbound | WYGRANA | 10 000 | Umowa + specyfikacja wysłane 14.04. Czekamy na podpis. | — |
+| 9 | Vector Group | Tomasz Wasiluk | Relacja biurowa (wynajem Krzemowa 6) | Propozycja | 3 500 – 17 000+ (menu) | Oferta wysłana 17.04 (3 warsztaty 4h/4h/2dni + konsultacje 400/h + wdrożenia po NDA). Vector przygotowuje NDA. Rabat 36-37% na szkoleniach. | 2026-05-01 |
 <!-- /SYNC:PIPELINE -->
 
 **Pipeline Value (otwarty):** ___ PLN

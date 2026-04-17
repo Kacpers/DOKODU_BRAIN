@@ -223,7 +223,6 @@ export const ScreenMockup: React.FC<ScreenMockupProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: t.colors.bg,
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",

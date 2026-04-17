@@ -89,7 +89,6 @@ export const VSCompare: React.FC<VSCompareProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: t.colors.bg,
         justifyContent: "center",
         alignItems: "center",
       }}

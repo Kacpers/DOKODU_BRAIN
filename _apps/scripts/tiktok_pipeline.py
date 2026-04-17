@@ -38,9 +38,11 @@ from pathlib import Path
 from datetime import timedelta
 from typing import Optional
 
-BRAIN_DIR = Path(__file__).parent.parent
-REMOTION_DIR = BRAIN_DIR / "remotion"
-TIKTOK_DIR = BRAIN_DIR / "20_AREAS" / "AREA_YouTube" / "tiktok_publish"
+APPS_DIR = Path(__file__).parent.parent          # _apps/
+BRAIN_DIR = APPS_DIR.parent                       # DOKODU_BRAIN/
+REMOTION_DIR = APPS_DIR / "remotion"
+TIKTOK_DIR = APPS_DIR / "output" / "tiktok"
+SCENARIOS_DIR = TIKTOK_DIR / "scenarios"
 IDEAS_BANK = BRAIN_DIR / "20_AREAS" / "AREA_YouTube" / "TikTok_Ideas_Bank.md"
 DROPBOX_DIR = Path.home() / "Dropbox" / "Apps" / "Parrot Teleprompter"
 
@@ -320,10 +322,14 @@ def concat_videos(parts: list, output_path: Path) -> bool:
     return result.returncode == 0
 
 
-def render_remotion_clip(composition_id: str, output_path: Path) -> bool:
+def render_remotion_clip(composition_id: str, output_path: Path,
+                         props_path: Optional[Path] = None) -> bool:
     """Render a Remotion composition to MP4."""
+    cmd = ["npx", "remotion", "render", composition_id, str(output_path.resolve())]
+    if props_path:
+        cmd.extend(["--props", str(props_path.resolve())])
     result = subprocess.run(
-        ["npx", "remotion", "render", composition_id, str(output_path)],
+        cmd,
         cwd=str(REMOTION_DIR),
         capture_output=True, text=True,
     )
@@ -739,6 +745,100 @@ def process_batch(input_dir: Path, output_dir: Path, **kwargs) -> None:
 
 
 # ══════════════════════════════════════════════
+# EXPLAINER RENDER
+# ══════════════════════════════════════════════
+
+def render_explainer(scenario_path: Path, output_dir: Path) -> bool:
+    """Render an explainer video from a JSON scenario file."""
+    if not scenario_path.exists():
+        print(f"ERROR: Plik nie istnieje: {scenario_path}")
+        return False
+
+    with open(scenario_path, "r", encoding="utf-8") as f:
+        scenario = json.load(f)
+
+    clip_id = scenario.get("id", scenario_path.stem)
+    title = scenario.get("title", clip_id)
+    scenes = scenario.get("scenes", [])
+
+    if not scenes:
+        print(f"ERROR: Brak scen w {scenario_path}")
+        return False
+
+    print(f"\n{'='*50}")
+    print(f"Explainer Pipeline — {title}")
+    print(f"{'='*50}\n")
+    print(f"  Sceny: {len(scenes)}")
+    total_dur = sum(s.get("duration", 4) for s in scenes)
+    print(f"  Czas: ~{total_dur}s")
+
+    # Prepare output directory
+    work_dir = output_dir / clip_id
+    work_dir.mkdir(parents=True, exist_ok=True)
+
+    # Write Remotion props (only {scenes: [...]})
+    props_path = work_dir / "props.json"
+    props_path.write_text(
+        json.dumps({"scenes": scenes}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+    # Render via Remotion
+    output_path = work_dir / f"{clip_id}_explainer.mp4"
+    print(f"  Renderowanie Remotion...")
+    if not render_remotion_clip("TikTok-Explainer", output_path, props_path):
+        print("  ERROR: Render nie powiódł się")
+        return False
+
+    file_size = output_path.stat().st_size / (1024 * 1024)
+    print(f"  ✓ {output_path.name} ({file_size:.1f} MB)")
+
+    # Generate description + hashtags
+    metadata = generate_tiktok_metadata(title, clip_id)
+    (work_dir / f"{clip_id}_opis.txt").write_text(
+        metadata["description"], encoding="utf-8"
+    )
+
+    # Cleanup props
+    props_path.unlink(missing_ok=True)
+
+    print(f"\n{'─'*50}")
+    print(f"  ✓ GOTOWE: {output_path}")
+    print(f"  Pliki w: {work_dir}")
+    print(f"  - {clip_id}_explainer.mp4  (gotowy do uploadu)")
+    print(f"  - {clip_id}_opis.txt       (opis + hashtagi)")
+    return True
+
+
+def render_explainer_batch(scenarios_dir: Path, output_dir: Path) -> None:
+    """Render all JSON scenarios in a directory."""
+    json_files = sorted(scenarios_dir.glob("*.json"))
+    if not json_files:
+        print(f"Brak plików .json w {scenarios_dir}")
+        return
+
+    print(f"\nZnaleziono {len(json_files)} scenariuszy\n")
+    success = 0
+    for i, jf in enumerate(json_files, 1):
+        print(f"\n[{i}/{len(json_files)}] {jf.name}")
+        if render_explainer(jf, output_dir):
+            success += 1
+
+    print(f"\n{'='*50}")
+    print(f"BATCH COMPLETE: {success}/{len(json_files)} explainerów zrenderowanych")
+
+
+def render_lookbook(output_path: Path) -> bool:
+    """Render the lookbook demo reel."""
+    print(f"\nRenderowanie Lookbook...")
+    if render_remotion_clip("TikTok-Lookbook", output_path):
+        file_size = output_path.stat().st_size / (1024 * 1024)
+        print(f"\n✓ Lookbook: {output_path} ({file_size:.1f} MB)")
+        return True
+    return False
+
+
+# ══════════════════════════════════════════════
 # CLI
 # ══════════════════════════════════════════════
 
@@ -793,6 +893,24 @@ def main():
                       help="Ile scenariuszy wygenerować")
     p_sc.add_argument("--dropbox", action="store_true",
                       help="Eksportuj do Dropbox (Parrot Teleprompter)")
+
+    # explainer — render explainer from JSON scenario
+    p_exp = subparsers.add_parser("explainer", help="Renderuj explainera z JSON scenariusza")
+    p_exp.add_argument("scenario", type=Path, help="Ścieżka do pliku JSON scenariusza")
+    p_exp.add_argument("--output", "-o", type=Path, default=TIKTOK_DIR,
+                       help=f"Katalog wyjściowy (domyślnie: {TIKTOK_DIR})")
+
+    # explainer-batch — render all JSON scenarios in a directory
+    p_expb = subparsers.add_parser("explainer-batch", help="Renderuj wszystkie explainery z folderu")
+    p_expb.add_argument("scenarios_dir", type=Path,
+                        help=f"Katalog z JSON scenariuszami (domyślnie: {SCENARIOS_DIR})",
+                        nargs="?", default=SCENARIOS_DIR)
+    p_expb.add_argument("--output", "-o", type=Path, default=TIKTOK_DIR)
+
+    # lookbook — render lookbook demo reel
+    p_look = subparsers.add_parser("lookbook", help="Renderuj lookbook (katalog scen)")
+    p_look.add_argument("--output", "-o", type=Path,
+                        default=TIKTOK_DIR / "lookbook.mp4")
 
     args = parser.parse_args()
 
@@ -907,6 +1025,15 @@ def main():
                 filepath.write_text(sc["script"], encoding="utf-8")
             print(f"\n✓ Scenariusze w: {TIKTOK_DIR}")
             print("  Dodaj --dropbox żeby wyeksportować do Parrot Teleprompter")
+
+    elif args.command == "explainer":
+        render_explainer(args.scenario, args.output)
+
+    elif args.command == "explainer-batch":
+        render_explainer_batch(args.scenarios_dir, args.output)
+
+    elif args.command == "lookbook":
+        render_lookbook(args.output)
 
 
 if __name__ == "__main__":

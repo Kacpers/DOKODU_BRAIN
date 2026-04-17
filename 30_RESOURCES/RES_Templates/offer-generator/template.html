@@ -287,6 +287,38 @@
   .price-card.featured .price-feature { color: rgba(255,255,255,0.85); }
   .price-card.featured .price-feature::before { color: #4ade80; }
 
+  .pricing-comparison {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 10.5pt;
+    margin-top: 8px;
+  }
+  .pricing-comparison thead tr { background: var(--navy); color: var(--white); }
+  .pricing-comparison thead th {
+    text-align: left; padding: 10px 12px; font-weight: 600; font-size: 9pt;
+    letter-spacing: 0.04em; text-transform: uppercase;
+  }
+  .pricing-comparison tbody tr { border-bottom: 1px solid var(--border); }
+  .pricing-comparison tbody tr:last-child { border-bottom: none; }
+  .pricing-comparison tbody td { padding: 12px; vertical-align: middle; }
+  .pricing-comparison .pc-item { font-weight: 600; color: var(--navy); }
+  .pricing-comparison .pc-meta { color: var(--muted); font-size: 10pt; }
+  .pricing-comparison .pc-market {
+    color: var(--muted); text-decoration: line-through; text-align: right;
+    white-space: nowrap;
+  }
+  .pricing-comparison .pc-vector {
+    color: var(--navy); font-weight: 700; text-align: right; white-space: nowrap;
+    font-size: 11pt;
+  }
+  .pricing-comparison .pc-discount {
+    color: var(--red); font-weight: 700; text-align: center; white-space: nowrap;
+  }
+  .pricing-comparison tfoot td {
+    padding: 10px 12px; font-size: 9pt; color: var(--muted);
+    border-top: 2px solid var(--navy);
+  }
+
   /* ─── ROI BOX ─── */
   .roi-box {
     background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px;
@@ -427,10 +459,10 @@
   </div>
 
   <span class="section-label">Executive Summary</span>
-  <h2>W skrócie: co robimy i co z tego macie?</h2>
+  <h2>W skrócie: co robimy i co to Państwu daje?</h2>
   <div class="summary-box"><p>{{EXEC_SUMMARY}}</p></div>
 
-  <span class="section-label">Rozumiemy Wasz Problem</span>
+  <span class="section-label">Rozumiemy Państwa Problem</span>
   <h2>Obecna sytuacja</h2>
   <p>{{PROBLEM_INTRO}}</p>
 
@@ -480,7 +512,7 @@
   {{TIMELINE_ITEMS}}
 
   <span class="section-label" style="margin-top: 26px; display: block;">Inwestycja</span>
-  <h2>Dwie opcje dopasowane do Waszych potrzeb</h2>
+  <h2>{{PRICING_HEADLINE}}</h2>
   <div class="pricing-table">
     {{PRICING_COLS}}
   </div>

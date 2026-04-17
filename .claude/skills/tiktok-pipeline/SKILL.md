@@ -43,6 +43,51 @@ Użytkownik mówi: "przygotuj tiktoki", "scenariusze tiktok", "batch tiktok"
 7. Zaktualizuj status w Ideas Bank: `POMYSŁ` → `SCENARIUSZ`
 8. Powiedz Kacprowi: "10 scenariuszy czeka w Parrot Teleprompter, siadaj nagrywaj"
 
+### Faza 1b: Pre-production (explainery — bez nagrywania)
+
+Użytkownik mówi: "zrób explainera", "explainer o X", "rolka bez nagrywania", "animowany tiktok"
+
+Explainery to rolki złożone z animowanych scen Remotion — tekst, statystyki, porównania.
+Kacper nie nagrywa — dodaje tylko muzykę z platformy lub voiceover.
+
+1. Załaduj `30_RESOURCES/RES_YouTube/TikTok_Playbook.md` — zasady i ton
+2. Załaduj `20_AREAS/AREA_YouTube/TikTok_Ideas_Bank.md` — wybierz temat (lub użyj tematu od usera)
+3. Napisz scenariusz jako JSON z sekwencją scen:
+
+   **Dostępne sceny:**
+   | Scena | Props | Domyślny czas |
+   |---|---|---|
+   | `KineticText` | text, emphasis?, fontSize? | 3s |
+   | `SlideCard` | title, icon?, bullets, accentColor? | 5s |
+   | `StatCounter` | value, from?, label, suffix?, prefix? | 4s |
+   | `VSCompare` | left: {title, points, color?}, right: {title, points, color?}, vsText? | 7s |
+   | `ScreenMockup` | device (phone/monitor/browser), title?, lines?, highlightLine? | 6s |
+   | `CTACard` | text?, handle?, showLogo? | 3s |
+
+   **Dostępne przejścia:** `glitch`, `swipeUp`, `zoom`, `cut`, `dissolve`
+
+   Przykładowy JSON:
+   ```json
+   {
+     "id": "T-033",
+     "title": "ChatGPT vs Claude vs Gemini",
+     "scenes": [
+       { "type": "KineticText", "text": "Który AI\\nwybrać?", "emphasis": "wybrać", "duration": 3, "transition": "glitch" },
+       { "type": "VSCompare", "left": { "title": "ChatGPT", "points": ["Obrazy", "Browsing"] }, "right": { "title": "Claude", "points": ["Dokumenty", "Kod"] }, "duration": 7 },
+       { "type": "CTACard", "duration": 3 }
+     ]
+   }
+   ```
+
+4. Zapisz JSON do `_apps/output/tiktok/scenarios/T-XXX.json`
+5. Renderuj:
+   ```bash
+   python3 _apps/scripts/tiktok_pipeline.py explainer _apps/output/tiktok/scenarios/T-XXX.json
+   ```
+6. Wynik: `tiktok_publish/T-XXX/T-XXX_explainer.mp4` + opis
+7. Zaktualizuj status w Ideas Bank: `POMYSŁ` → `SCENARIUSZ`
+8. Powiedz Kacprowi: "Explainer gotowy, dodaj muzykę i publikuj"
+
 ### Faza 2: Post-production (po nagraniu)
 
 Użytkownik mówi: "obróbka tiktok", "zmontuj tiktoki", "przerób nagrania"
@@ -50,16 +95,16 @@ Użytkownik mówi: "obróbka tiktok", "zmontuj tiktoki", "przerób nagrania"
 Uruchom skrypt pipeline:
 ```bash
 # Pojedynczy klip:
-python3 scripts/tiktok_pipeline.py process /ścieżka/do/klipu.mp4
+python3 _apps/scripts/tiktok_pipeline.py process /ścieżka/do/klipu.mp4
 
 # Cały batch:
-python3 scripts/tiktok_pipeline.py batch /ścieżka/do/folderu/
+python3 _apps/scripts/tiktok_pipeline.py batch /ścieżka/do/folderu/
 
 # Tylko napisy:
-python3 scripts/tiktok_pipeline.py subtitles /ścieżka/do/klipu.mp4
+python3 _apps/scripts/tiktok_pipeline.py subtitles /ścieżka/do/klipu.mp4
 
 # Eksport do DaVinci Resolve (timeline FCPXML):
-python3 scripts/tiktok_pipeline.py davinci /ścieżka/do/klipu.mp4
+python3 _apps/scripts/tiktok_pipeline.py davinci /ścieżka/do/klipu.mp4
 ```
 
 Pipeline automatycznie:
@@ -71,14 +116,29 @@ Pipeline automatycznie:
 - Generuje FCPXML timeline (import w DaVinci: File > Import > Timeline)
 - Generuje opis + hashtagi
 
-Wyniki lądują w: `20_AREAS/AREA_YouTube/tiktok_publish/<clip_name>/`
+Wyniki lądują w: `_apps/output/tiktok/<clip_name>/`
+
+### Faza 2a: Render explainerów (bez nagrywania)
+
+Użytkownik mówi: "wyrenderuj explainera", "zrenderuj tiktoki"
+
+```bash
+# Pojedynczy explainer z JSON:
+python3 _apps/scripts/tiktok_pipeline.py explainer _apps/output/tiktok/scenarios/T-XXX.json
+
+# Batch — wszystkie JSON z folderu:
+python3 _apps/scripts/tiktok_pipeline.py explainer-batch _apps/output/tiktok/scenarios/
+
+# Lookbook (katalog scen do podglądu):
+python3 _apps/scripts/tiktok_pipeline.py lookbook
+```
 
 ### Faza 2b: DaVinci Resolve (opcjonalnie)
 
 Użytkownik mówi: "eksport do davinci", "timeline davinci", "chcę sam zmontować"
 
 ```bash
-python3 scripts/tiktok_pipeline.py davinci /ścieżka/do/klipu.mp4
+python3 _apps/scripts/tiktok_pipeline.py davinci /ścieżka/do/klipu.mp4
 ```
 
 Generuje:
@@ -109,11 +169,11 @@ Użytkownik mówi: "wrzuć tiktoki", "publikuj"
 
 ## PLIKI SYSTEMU
 
-- `scripts/tiktok_pipeline.py` — główny skrypt pipeline
-- `remotion/src/compositions/TikTok/` — Remotion compositions (Intro, CTA, TopicCard)
+- `_apps/scripts/tiktok_pipeline.py` — główny skrypt pipeline
+- `_apps/remotion/src/compositions/TikTok/` — Remotion compositions (Intro, CTA, TopicCard)
 - `remotion/src/style/tiktok-theme.ts` — vertical theme (1080x1920)
 - `20_AREAS/AREA_YouTube/TikTok_Ideas_Bank.md` — bank pomysłów
-- `20_AREAS/AREA_YouTube/tiktok_publish/` — output folder
+- `_apps/output/tiktok/` — output folder
 
 ## WYMAGANIA
 

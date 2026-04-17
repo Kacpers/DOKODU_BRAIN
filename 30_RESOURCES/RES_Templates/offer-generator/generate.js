@@ -111,10 +111,41 @@ const scopeColsHtml = [
 
 const timelineHtml = (data.timeline || []).map(t => timelineItem(t.week, hs(t.label), t.width)).join('');
 
-const pricingColsHtml = [
-  priceCol(false, data.optionA.badge || 'Szkolenie 1', hs(data.optionA.name), data.optionA.price, 'netto + 23% VAT', data.optionA.features.map(hs)),
-  priceCol(true,  data.optionB.badge || 'Szkolenie 2', hs(data.optionB.name), data.optionB.price, 'netto + 23% VAT', data.optionB.features.map(hs)),
-].join('');
+let pricingColsHtml;
+if (data.pricingTable && Array.isArray(data.pricingTable)) {
+  const rows = data.pricingTable.map(r => {
+    if (r.isNote) {
+      return `<tr><td colspan="5" style="background:#F8FAFC;font-style:italic;color:var(--muted);padding:10px 12px;">${hs(r.note)}</td></tr>`;
+    }
+    return `<tr>
+      <td>
+        <div class="pc-item">${hs(r.item)}</div>
+        ${r.meta ? `<div class="pc-meta">${hs(r.meta)}</div>` : ''}
+      </td>
+      <td class="pc-market">${hs(r.marketPrice)}</td>
+      <td class="pc-vector">${hs(r.vectorPrice)}</td>
+      <td class="pc-discount">${hs(r.discount || '')}</td>
+    </tr>`;
+  }).join('');
+  const footNote = data.pricingFootnote ? `<tfoot><tr><td colspan="4">${hs(data.pricingFootnote)}</td></tr></tfoot>` : '';
+  pricingColsHtml = `<table class="pricing-comparison">
+    <thead>
+      <tr>
+        <th>Pozycja</th>
+        <th style="text-align:right;">Cena standardowa</th>
+        <th style="text-align:right;">Cena dla ${data.clientName}</th>
+        <th style="text-align:center;">Rabat</th>
+      </tr>
+    </thead>
+    <tbody>${rows}</tbody>
+    ${footNote}
+  </table>`;
+} else {
+  pricingColsHtml = [
+    priceCol(false, data.optionA.badge || 'Szkolenie 1', hs(data.optionA.name), data.optionA.price, 'netto + 23% VAT', data.optionA.features.map(hs)),
+    priceCol(true,  data.optionB.badge || 'Szkolenie 2', hs(data.optionB.name), data.optionB.price, 'netto + 23% VAT', data.optionB.features.map(hs)),
+  ].join('');
+}
 
 // Why rows — 2x2 grid with numbered icons
 const whyItems = data.whyUs || [];
@@ -168,6 +199,7 @@ const replacements = {
   '{{AGENDA_PAGE}}':    agendaPageHtml,
   '{{TIMELINE_ITEMS}}': timelineHtml,
   '{{PRICING_COLS}}':   pricingColsHtml,
+  '{{PRICING_HEADLINE}}': hs(data.pricingHeadline || 'Dwie opcje dopasowane do Państwa potrzeb'),
   '{{ROI_HEADLINE}}':   data.roiHeadline,
   '{{ROI_DETAIL}}':     data.roiDetail,
   '{{WHY_ROWS}}':       whyRowsHtml,

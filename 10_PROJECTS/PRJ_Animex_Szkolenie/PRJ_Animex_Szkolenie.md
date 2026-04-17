@@ -82,9 +82,9 @@ Szkolenie 2-dniowe (8h + 8h) dla 15 osob. Zakres:
   - Prośba o listę uczestników (imiona, nazwiska, emaile z podziałem na grupy)
   - Ustalenie terminów 6 sesji konsultacyjnych (początek kwietnia)
   - Zgoda na logo + propozycja case study
-- [ ] **Po odpowiedzi:** Certyfikaty imienne + paczka materiałów (zip: PDFy + JSONy)
+- [x] **Certyfikaty imienne wysłane** (2026-04-17) — 85 PDF w `/mnt/d/DOKODU/ANIMEX/Certyfikaty/`
 - [ ] **Sesje konsultacyjne** (6 × 30 min, początek kwietnia) — zaproszenia po otrzymaniu listy
-- [ ] **Faktura końcowa 40 000 PLN netto** — po ostatniej sesji konsultacyjnej (celowo kwiecień → Q2)
+- [x] **Faktura końcowa 40 000 PLN netto wystawiona i wysłana** (2026-04-01, termin płatności 2026-05-01) — czekam na przelew
 - [ ] **Logo Animex** na dokodu.it — po pisemnej zgodzie emailowej
 - [ ] **Case study** — draft → autoryzacja Kamila → publikacja
 

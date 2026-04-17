@@ -81,7 +81,6 @@ export const StatCounter: React.FC<StatCounterProps> = ({
   return (
     <AbsoluteFill
       style={{
-        backgroundColor: t.colors.bg,
         justifyContent: "center",
         alignItems: "center",
       }}

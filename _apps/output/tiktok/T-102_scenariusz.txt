@@ -1,0 +1,33 @@
+# T-102 — "Pokaż mi jak myślisz"
+# Format: OBS screencast + face w rogu
+# Czas: ~50 sekund
+# Filar: EDUKACJA | Wariant: QUICK WIN DEMO
+# ─────────────────────────────────────
+
+## EKRAN: Claude lub ChatGPT otwarty, nowa rozmowa
+
+## TEKST:
+
+AI nie myśli — ale możesz go zmusić żeby pokazał swoją pracę.
+
+Patrzcie. Daję zadanie: "Ile będzie kosztować przeniesienie naszego CRM do chmury?"
+
+[wpisz, poczekaj — AI wypluje jakąś liczbę od razu]
+
+Dostałem liczbę. Nie wiem skąd. Nie wiem co pominął.
+
+Teraz to samo, ale dodaję: "Rozpisz swoje myślenie krok po kroku. Pokaż co bierzesz pod uwagę i gdzie nie masz danych."
+
+[wpisz, poczekaj — AI rozpisze: koszty licencji, migracji, szkolenia, ale zaznaczy co szacuje]
+
+Widzicie różnicę? Teraz widzę GDZIE zgaduje, a gdzie ma podstawy. Mogę poprawić jego założenia zamiast ślepo wierzyć w wynik.
+
+Nie chodzi o lepszy prompt. Chodzi o to żebyś widział gdzie AI się myli.
+
+Jestem Kacper — uczę myśleć z AI, nie kopiować prompty.
+
+## OPIS TIKTOK:
+Jedna technika która pokazuje JAK AI dochodzi do odpowiedzi. Nie wierz w wynik — sprawdź proces.
+
+## HASHTAGI:
+#AI #ChainOfThought #ChatGPT #Claude #AIwBiznesie #SztucznaInteligencja

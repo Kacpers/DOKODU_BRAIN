@@ -1,9 +1,9 @@
 ---
 type: customer-profile
-status: prospect
+status: po-discovery
 owner: kacper
-last_reviewed: 2026-04-15
-tags: [prospekt, telekomunikacja, ict, n8n, szkolenie-ai, microsoft]
+last_reviewed: 2026-04-17
+tags: [prospekt, telekomunikacja, ict, n8n, szkolenie-ai, microsoft, propozycja-wyslana]
 client_since: 2026-04-15
 nip: "[do uzupelnienia]"
 ---
@@ -11,7 +11,9 @@ nip: "[do uzupelnienia]"
 # PROSPEKT: VECTOR GROUP
 
 > Konsorcjum technologiczne, Twój wynajmujący biuro (Krzemowa 6, Gdynia).
-> Zainteresowani n8n + szkoleniem z AI. Spotkanie discovery 16.04.
+> Discovery 16.04 → oferta wysłana 17.04 (menu modularne: 3 warsztaty + konsultacje + wdrożenia po NDA).
+> **Oferta:** [[Oferta_VectorGroup_2026-04-17]] (PDF: `Oferta_VectorGroup_2026-04-17.pdf`)
+> **Czekamy na:** NDA od Vector → wybór modułów → kickoff call.
 
 ---
 

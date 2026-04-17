@@ -24,6 +24,7 @@ import { TopicCard } from "./compositions/TikTok/TopicCard";
 // TikTok Explainer compositions
 import { ExplainerVideo, calculateExplainerMetadata } from "./compositions/TikTok/Explainer/ExplainerVideo";
 import { Lookbook } from "./compositions/TikTok/Explainer/Lookbook";
+import { BGCompare } from "./compositions/TikTok/Explainer/BGCompare";
 
 export const RemotionRoot: React.FC = () => {
   const base = { width: theme.width, height: theme.height, fps: theme.fps };
@@ -77,6 +78,12 @@ export const RemotionRoot: React.FC = () => {
         id="TikTok-Lookbook"
         component={Lookbook}
         durationInFrames={2850}
+        {...tikTokBase}
+      />
+      <Composition
+        id="TikTok-BGCompare"
+        component={BGCompare}
+        durationInFrames={2250}
         {...tikTokBase}
       />
     </>
