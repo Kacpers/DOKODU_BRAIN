@@ -1,9 +1,18 @@
 /* ============================================================
-   DOKODU PDF Design System v5
-   Fixes: less red, page breaks, light cover, no emoji icons
-   Palette: dokodu.it (#0F2137, #E63946, Plus Jakarta Sans)
-   Components: Canva ebook reference
+   DOKODU PDF Design System v6
+   Self-hosted fonts: Inter, JetBrains Mono
+   Palette: dokodu.it (#0F2137, #E63946)
    ============================================================ */
+
+/* --- Self-hosted Fonts --- */
+@font-face { font-family: 'Inter'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/Inter-Regular.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/Inter-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 600; font-style: normal; font-display: swap; src: url('fonts/Inter-SemiBold.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/Inter-Bold.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; font-weight: 800; font-style: normal; font-display: swap; src: url('fonts/Inter-ExtraBold.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 400; font-style: normal; font-display: swap; src: url('fonts/JetBrainsMono-Regular.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 500; font-style: normal; font-display: swap; src: url('fonts/JetBrainsMono-Medium.woff2') format('woff2'); }
+@font-face { font-family: 'JetBrains Mono'; font-weight: 700; font-style: normal; font-display: swap; src: url('fonts/JetBrainsMono-Bold.woff2') format('woff2'); }
 
 /* --- Page Setup --- */
 @page {
@@ -925,36 +934,36 @@ p {
     color: var(--color-text-muted);
 }
 
-/* --- Code Block with Language Header (Monokai Dark) --- */
+/* --- Code Block with Language Header (One Dark Pro) --- */
 .code-block {
     margin: 1.2em 0;
     border-radius: var(--radius);
     overflow: hidden;
     page-break-inside: avoid;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
 }
 
 .code-block .code-header {
-    background: #1e1e2e;
-    color: #cdd6f4;
+    background: #21252b;
+    color: #9da5b4;
     padding: 10px 16px;
-    font-family: var(--font-mono);
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.72rem;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border-bottom: 1px solid #313244;
+    border-bottom: 1px solid #333842;
 }
 
 .code-block pre {
     margin: 0;
     border-radius: 0;
-    background: #1e1e2e;
-    color: #cdd6f4;
-    padding: 20px;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+    background: #282c34;
+    color: #abb2bf;
+    padding: 22px 20px;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 0.82rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .code-block code {

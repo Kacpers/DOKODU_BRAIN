@@ -303,7 +303,7 @@ def render_code(content: str, lang_arg: str) -> str:
             lexer = get_lexer_by_name(lang)
         except Exception:
             lexer = TextLexer()
-        formatter = HtmlFormatter(nowrap=True, linenos=False, noclasses=True)
+        formatter = HtmlFormatter(nowrap=True, linenos=False, noclasses=True, style='monokai')
         highlighted = highlight(code_text, lexer, formatter)
     except ImportError:
         highlighted = _esc(code_text)
