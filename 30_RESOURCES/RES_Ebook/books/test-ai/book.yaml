@@ -1,17 +1,17 @@
 title: "AI Praktycznie"
-subtitle: "Przewodnik wdrazania sztucznej inteligencji w firmie"
-author: "Kacper Sieradzinski"
+subtitle: "Przewodnik wdrażania sztucznej inteligencji w firmie"
+author: "Kacper Sieradziński"
 author_role: "CEO Dokodu | AI Trainer"
 brand: "DOKODU"
 version: "0.1"
-date: "kwiecien 2026"
+date: "kwiecień 2026"
 badge: "PRZEWODNIK 2026"
 cover: dark
 
 back_cover:
-  description: "Praktyczny przewodnik po wdrazaniu AI w polskich firmach. Od pierwszego chatbota po pelna automatyzacje procesow."
+  description: "Praktyczny przewodnik po wdrażaniu AI w polskich firmach. Od pierwszego chatbota po pełną automatyzację procesów."
   testimonials:
-    - text: "Najbardziej praktyczna publikacja o AI, jaka czytalem."
+    - text: "Najbardziej praktyczna publikacja o AI, jaką czytałem."
       author: "Jan Kowalski, CTO TechCorp"
 
 series:

@@ -40,8 +40,8 @@ def render_callout(content: str, variant: str) -> str:
 
     css_class = 'danger' if variant == 'trap' else variant
     title_map = {
-        'tip': 'WSKAZOWKA', 'warning': 'UWAGA', 'info': 'INFORMACJA',
-        'danger': 'OSTRZEZENIE', 'trap': 'UWAGA NA PULAPKE',
+        'tip': 'WSKAZÓWKA', 'warning': 'UWAGA', 'info': 'INFORMACJA',
+        'danger': 'OSTRZEŻENIE', 'trap': 'UWAGA NA PUŁAPKĘ',
     }
     title = title_map.get(variant, variant.upper())
     body = '\n'.join(lines).strip()
@@ -372,7 +372,7 @@ def render_decision(content: str, _arg: str) -> str:
 def render_series(content: str, _arg: str) -> str:
     """Render from raw content. Auto-generation from book.yaml handled in auto_sections.py."""
     lines = content.strip().split('\n')
-    title = lines[0] if lines else 'Zobacz takze'
+    title = lines[0] if lines else 'Zobacz także'
     books = []
     for line in lines[1:]:
         if line.strip():

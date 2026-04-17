@@ -1,48 +1,48 @@
 ---
 chapter: 1
 title: Wprowadzenie do AI
-subtitle: Dlaczego teraz jest najlepszy moment na wdrozenie
+subtitle: Dlaczego teraz jest najlepszy moment na wdrożenie
 reading_time: 5 min
 ---
 
-## Rewolucja, ktora juz trwa
+## Rewolucja, która już trwa
 
-Sztuczna inteligencja przestala byc technologia przyszlosci. W 2026 roku jest narzedziem, ktore polskie firmy wdrazaja na co dzien — od automatyzacji obslugi klienta po analize dokumentow prawnych.
+Sztuczna inteligencja przestała być technologią przyszłości. W 2026 roku jest narzędziem, które polskie firmy wdrażają na co dzień — od automatyzacji obsługi klienta po analizę dokumentów prawnych.
 
 :::callout tip
-Nie musisz byc programista, zeby wdrozyc AI w swojej firmie. Wystarczy zrozumiec, jakie problemy AI rozwiazuje najlepiej.
+Nie musisz być programistą, żeby wdrożyć AI w swojej firmie. Wystarczy zrozumieć, jakie problemy AI rozwiązuje najlepiej.
 :::
 
 :::stats
-67% | polskich firm planuje wdrozenie AI do 2027
-3x | szybszy czas reakcji na zapytania klientow
-42% | redukcja kosztow operacyjnych po wdrozeniu
+67% | polskich firm planuje wdrożenie AI do 2027
+3x | szybszy czas reakcji na zapytania klientów
+42% | redukcja kosztów operacyjnych po wdrożeniu
 :::
 
-## Dla kogo jest ta ksiazka
+## Dla kogo jest ta książka
 
-Ta publikacja jest dla decydentow, managerow i specjalistow, ktorzy chca zrozumiec AI od strony praktycznej — bez kodu, bez teorii, z konkretnymi przykladami z polskiego rynku.
+Ta publikacja jest dla decydentów, managerów i specjalistów, którzy chcą zrozumieć AI od strony praktycznej — bez kodu, bez teorii, z konkretnymi przykładami z polskiego rynku.
 
 :::prerequisites
-Otwarta glowa na nowe technologie
-Dostep do internetu i przegladarki
-30 minut dziennie na cwiczenia praktyczne
+Otwarta głowa na nowe technologie
+Dostęp do internetu i przeglądarki
+30 minut dziennie na ćwiczenia praktyczne
 :::
 
-## Kluczowe pojecia
+## Kluczowe pojęcia
 
 :::info
 LLM (Large Language Model)
-Duzy model jezykowy — to silnik stojacy za ChatGPT, Claude i Gemini. Trenowany na miliardach tekstow, potrafi generowac, analizowac i transformowac tekst w sposob zblizony do ludzkiego.
+Duży model językowy — to silnik stojący za ChatGPT, Claude i Gemini. Trenowany na miliardach tekstów, potrafi generować, analizować i transformować tekst w sposób zbliżony do ludzkiego.
 :::
 
 :::info
 RAG (Retrieval-Augmented Generation)
-Technika laczaca wyszukiwanie informacji z generowaniem tekstu. Pozwala AI odpowiadac na pytania na podstawie Twoich wlasnych dokumentow — bez koniecznosci trenowania modelu od zera.
+Technika łącząca wyszukiwanie informacji z generowaniem tekstu. Pozwala AI odpowiadać na pytania na podstawie Twoich własnych dokumentów — bez konieczności trenowania modelu od zera.
 :::
 
 :::summary
-AI w 2026 to narzedzie dostepne dla kazdej firmy, nie tylko korporacji
-Nie potrzebujesz zespolu programistow — wystarczy zrozumienie problemu
-Kluczowe technologie to LLM i RAG — poznasz je w kolejnych rozdzialach
+AI w 2026 to narzędzie dostępne dla każdej firmy, nie tylko korporacji
+Nie potrzebujesz zespołu programistów — wystarczy zrozumienie problemu
+Kluczowe technologie to LLM i RAG — poznasz je w kolejnych rozdziałach
 :::

@@ -51,7 +51,7 @@ def generate_legal(meta: dict) -> str:
         f'<p>{_esc(meta.get("author_role", ""))}</p>'
         f'<br>'
         f'<p>Wersja {_esc(meta.get("version", "1.0"))}, {_esc(meta.get("date", "2026"))}</p>'
-        f'<p>&copy; {_esc(meta.get("brand", "Dokodu"))}. Wszelkie prawa zastrzezone.</p>'
+        f'<p>&copy; {_esc(meta.get("brand", "Dokodu"))}. Wszelkie prawa zastrzeżone.</p>'
         f'<br>'
         f'<p>Niniejsza publikacja jest chroniona prawem autorskim. '
         f'Reprodukcja lub rozpowszechnianie bez pisemnej zgody autora jest zabronione.</p>'
@@ -64,24 +64,24 @@ def generate_how_to_read() -> str:
     """Static page explaining the book's visual conventions."""
     return (
         '<div class="how-to-read content">'
-        '<h2>Jak czytac te ksiazke</h2>'
-        '<p>W tej publikacji uzyto kilku wizualnych oznaczen, ktore pomagaja w nawigacji:</p>'
+        '<h2>Jak czytać tę książkę</h2>'
+        '<p>W tej publikacji użyto kilku wizualnych oznaczeń, które pomagają w nawigacji:</p>'
         '<div class="icon-legend">'
         #
-        '<div class="icon-sample" style="background:#f0fdf4;color:#22c55e;border:1px solid #22c55e;">WSKAZOWKA</div>'
-        '<div class="icon-desc">Praktyczna rada lub sprawdzony sposob — cos, co warto zastosowac od razu.</div>'
+        '<div class="icon-sample" style="background:#f0fdf4;color:#22c55e;border:1px solid #22c55e;">WSKAZÓWKA</div>'
+        '<div class="icon-desc">Praktyczna rada lub sprawdzony sposób — coś, co warto zastosować od razu.</div>'
         #
         '<div class="icon-sample" style="background:#fffbeb;color:#f59e0b;border:1px solid #f59e0b;">UWAGA</div>'
-        '<div class="icon-desc">Potencjalna pulapka lub ograniczenie, o ktorym warto wiedziec.</div>'
+        '<div class="icon-desc">Potencjalna pułapka lub ograniczenie, o którym warto wiedzieć.</div>'
         #
         '<div class="icon-sample" style="background:#eef2ff;color:#6366f1;border:1px solid #6366f1;">INFORMACJA</div>'
-        '<div class="icon-desc">Definicja terminu lub dodatkowe wyjasnienie pojecia.</div>'
+        '<div class="icon-desc">Definicja terminu lub dodatkowe wyjaśnienie pojęcia.</div>'
         #
-        '<div class="icon-sample" style="background:#eef2ff;color:#6366f1;border:2px dashed #6366f1;">SPROBUJ SAM</div>'
-        '<div class="icon-desc">Cwiczenie praktyczne — krok po kroku do samodzielnego wykonania.</div>'
+        '<div class="icon-sample" style="background:#eef2ff;color:#6366f1;border:2px dashed #6366f1;">SPRÓBUJ SAM</div>'
+        '<div class="icon-desc">Ćwiczenie praktyczne — krok po kroku do samodzielnego wykonania.</div>'
         #
         '<div class="icon-sample" style="background:#f8fafc;color:#0F2137;border-top:3px solid #0F2137;">KLUCZOWE WNIOSKI</div>'
-        '<div class="icon-desc">Podsumowanie najwazniejszych punktow rozdzialu.</div>'
+        '<div class="icon-desc">Podsumowanie najważniejszych punktów rozdziału.</div>'
         '</div>'
         '</div>'
     )
@@ -99,7 +99,7 @@ def generate_toc(chapters: list[dict]) -> str:
         )
     return (
         f'<div class="toc-page content">'
-        f'<h2>Spis tresci</h2>'
+        f'<h2>Spis treści</h2>'
         f'{"".join(entries)}'
         f'</div>'
     )
@@ -123,7 +123,7 @@ def generate_chapter_opener(meta: dict, h2_titles: list[str]) -> str:
 
     return (
         f'<div class="chapter-opener">'
-        f'<div class="chapter-number">Rozdzial {num}</div>'
+        f'<div class="chapter-number">Rozdział {num}</div>'
         f'<h1>{_esc(title)}</h1>'
         f'<div class="chapter-subtitle">{_esc(subtitle)}</div>'
         f'{time_badge}'
@@ -148,7 +148,7 @@ def generate_glossary(terms: list[dict]) -> str:
         )
     return (
         f'<div class="glossary-page content">'
-        f'<h2>Slowniczek</h2>'
+        f'<h2>Słowniczek</h2>'
         f'{"".join(entries)}'
         f'</div>'
     )
@@ -170,7 +170,7 @@ def generate_resources(qr_items: list[dict]) -> str:
     return (
         f'<div class="resources-page content">'
         f'<h2>Zasoby</h2>'
-        f'<p>Zeskanuj kody QR, aby przejsc do zasobow online:</p>'
+        f'<p>Zeskanuj kody QR, aby przejść do zasobów online:</p>'
         f'<div class="resources-grid">{"".join(cards)}</div>'
         f'</div>'
     )
@@ -193,7 +193,7 @@ def generate_series(meta: dict) -> str:
         )
     return (
         f'<div class="series-promo content page-break">'
-        f'<div class="series-title">Zobacz takze w serii {_esc(series.get("name", ""))}</div>'
+        f'<div class="series-title">Zobacz także w serii {_esc(series.get("name", ""))}</div>'
         f'<div class="series-books">{"".join(cards)}</div>'
         f'</div>'
     )

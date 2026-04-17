@@ -1,59 +1,59 @@
 ---
 chapter: 3
 title: AI w Twojej firmie
-subtitle: Praktyczny plan wdrozenia krok po kroku
+subtitle: Praktyczny plan wdrożenia krok po kroku
 reading_time: 10 min
 ---
 
-## Gdzie AI daje najwiecej wartosci
+## Gdzie AI daje najwięcej wartości
 
-Nie kazdy proces nadaje sie do automatyzacji. Oto cztery obszary, w ktorych AI przynosi najszybszy zwrot z inwestycji:
+Nie każdy proces nadaje się do automatyzacji. Oto cztery obszary, w których AI przynosi najszybszy zwrot z inwestycji:
 
 :::tiles 2
-Obsluga klienta | Chatboty, klasyfikacja zgloszen, automatyczne odpowiedzi na FAQ
-Analiza dokumentow | Ekstrakcja danych z faktur, umow, formularzy — bez recznego przepisywania
-Sprzedaz i marketing | Scoring leadow, personalizacja ofert, analiza sentymentu
+Obsługa klienta | Chatboty, klasyfikacja zgłoszeń, automatyczne odpowiedzi na FAQ
+Analiza dokumentów | Ekstrakcja danych z faktur, umów, formularzy — bez ręcznego przepisywania
+Sprzedaż i marketing | Scoring leadów, personalizacja ofert, analiza sentymentu
 Raportowanie | Automatyczne raporty z danych, dashboardy, alerty o anomaliach
 :::
 
-## Przed i po wdrozeniu
+## Przed i po wdrożeniu
 
 :::beforeafter
-Reczne przetwarzanie faktur: 15 minut na fakture, 3 bledy na 100 dokumentow, frustracja zespolu
+Ręczne przetwarzanie faktur: 15 minut na fakturę, 3 błędy na 100 dokumentów, frustracja zespołu
 ---
-Automatyczne przetwarzanie: 30 sekund na fakture, 0.1% bledow, zespol skupiony na wyjatkach
+Automatyczne przetwarzanie: 30 sekund na fakturę, 0.1% błędów, zespół skupiony na wyjątkach
 :::
 
 :::pullquote
-Firmy, ktore wdraza AI w 2026, beda mialy 3-letnia przewage nad tymi, ktore zaczna w 2029.
+Firmy, które wdrażają AI w 2026, będą miały 3-letnią przewagę nad tymi, które zaczną w 2029.
 :::
 
-## Checklist gotowosci
+## Checklist gotowości
 
 :::checklist
-Zidentyfikowales min. 3 procesy do automatyzacji
-Masz dostep do danych (Excel, CRM, email)
-Wyznaczyles osobe odpowiedzialna za projekt
-Masz budzet na narzedzia (min. 500 PLN/mies.)
-Zespol jest otwarty na zmiany
+Zidentyfikowałeś min. 3 procesy do automatyzacji
+Masz dostęp do danych (Excel, CRM, email)
+Wyznaczyłeś osobę odpowiedzialną za projekt
+Masz budżet na narzędzia (min. 500 PLN/mies.)
+Zespół jest otwarty na zmiany
 :::
 
 :::highlight
-80% udanych wdrozen AI zaczyna sie od jednego, prostego procesu — nie od rewolucji.
+80% udanych wdrożeń AI zaczyna się od jednego, prostego procesu — nie od rewolucji.
 :::
 
-## Porownanie narzedzi
+## Porównanie narzędzi
 
 :::compare
 ChatGPT (OpenAI)
 Najlepsza generacja tekstu
-Swietne do konwersacji
+Świetne do konwersacji
 Plugin ecosystem
 Od 20 USD/mies.
 ---
 Claude (Anthropic)
 Najlepszy reasoning i analiza
-200K kontekst — cale dokumenty
+200K kontekst — całe dokumenty
 Bezpieczniejszy (Constitutional AI)
 Od 20 USD/mies.
 :::
@@ -61,24 +61,24 @@ Od 20 USD/mies.
 ## Zasoby
 
 :::qr https://dokodu.it/ai
-Strona Dokodu — szkolenia i wdrozenia AI
+Strona Dokodu — szkolenia i wdrożenia AI
 :::
 
 :::qr https://youtube.com/@KacperSieradzinski
-Kanal YouTube — praktyczne tutoriale AI
+Kanał YouTube — praktyczne tutoriale AI
 :::
 
-## Nastepne kroki
+## Następne kroki
 
 :::cta
-Gotowy na wdrozenie AI?
-Umow sie na bezplatna konsultacje — pokaze Ci, od czego zaczac w Twojej firmie.
+Gotowy na wdrożenie AI?
+Umów się na bezpłatną konsultację — pokażę Ci, od czego zacząć w Twojej firmie.
 kontakt@dokodu.it | dokodu.it/konsultacja
 :::
 
 :::summary
-Najlepsze obszary na start: obsluga klienta, dokumenty, sprzedaz, raportowanie
+Najlepsze obszary na start: obsługa klienta, dokumenty, sprzedaż, raportowanie
 Zacznij od jednego procesu, nie od rewolucji
-Porownaj narzedzia: ChatGPT vs Claude — oba maja swoje mocne strony
-Uzyj checklisty gotowosci zanim zaczniesz
+Porównaj narzędzia: ChatGPT vs Claude — oba mają swoje mocne strony
+Użyj checklisty gotowości zanim zaczniesz
 :::
