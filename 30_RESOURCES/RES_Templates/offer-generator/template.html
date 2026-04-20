@@ -319,6 +319,116 @@
     border-top: 2px solid var(--navy);
   }
 
+  /* ─── DEMO ACCESS BOX ─── */
+  .demo-creds {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 14px;
+    padding: 22px 24px 20px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+  }
+  .demo-creds-title {
+    font-size: 13pt; font-weight: 800;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .demo-creds-sub {
+    font-size: 10pt; color: rgba(255,255,255,0.65);
+    margin-bottom: 16px; line-height: 1.45;
+  }
+  .demo-creds-grid {
+    display: table; width: 100%; table-layout: fixed;
+    border-collapse: separate; border-spacing: 10px 0;
+    margin-bottom: 2px;
+  }
+  .demo-creds-cell {
+    display: table-cell; width: 33.33%;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 10px;
+    padding: 11px 14px;
+    vertical-align: middle;
+  }
+  .demo-creds-label {
+    font-size: 8pt; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--red); display: block; margin-bottom: 3px;
+  }
+  .demo-creds-value {
+    font-size: 10.5pt; font-weight: 600;
+    color: #fff; word-break: break-all;
+    line-height: 1.3;
+  }
+  .demo-tips {
+    margin-top: 4px;
+  }
+  .demo-tip {
+    padding: 10px 14px;
+    margin-bottom: 8px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--red);
+    border-radius: 0 10px 10px 0;
+    font-size: 10pt; line-height: 1.5;
+    color: var(--text);
+    display: table; width: 100%;
+  }
+  .demo-tip-num-cell {
+    display: table-cell; width: 26px; vertical-align: top;
+    padding-top: 1px;
+  }
+  .demo-tip-num {
+    display: inline-block; width: 20px; height: 20px; border-radius: 10px;
+    background: var(--navy); color: var(--white);
+    font-weight: 800; font-size: 8.5pt; text-align: center; line-height: 20px;
+  }
+  .demo-tip-text-cell { display: table-cell; vertical-align: top; }
+
+  /* ─── FEATURE FULLWIDTH (produktowy showcase) ─── */
+  .feature-card {
+    display: block; width: 100%;
+    border: 1.5px solid var(--border); border-radius: 14px;
+    background: #fff; overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .feature-card-body {
+    padding: 16px 20px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .feature-card-head {
+    display: table; width: 100%; table-layout: fixed;
+  }
+  .feature-num-cell { display: table-cell; width: 36px; vertical-align: top; }
+  .feature-num {
+    display: inline-block; width: 26px; height: 26px; border-radius: 13px;
+    background: var(--red); color: var(--white);
+    font-weight: 800; font-size: 11pt; text-align: center; line-height: 26px;
+  }
+  .feature-text-cell { display: table-cell; vertical-align: top; padding-left: 4px; }
+  .feature-title {
+    font-weight: 800; font-size: 12pt; color: var(--navy);
+    display: block; margin-bottom: 3px; line-height: 1.25;
+    letter-spacing: -0.005em;
+  }
+  .feature-desc {
+    font-size: 9.5pt; color: var(--muted); line-height: 1.5;
+    display: block;
+  }
+  .feature-screen-wrap {
+    background: #f8fafc;
+    padding: 14px 18px;
+    text-align: center;
+  }
+  .feature-screen {
+    display: block; margin: 0 auto;
+    max-width: 100%;
+    max-height: 320px;
+    width: auto; height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(15,23,42,0.10), 0 1px 3px rgba(15,23,42,0.06);
+  }
+
   /* ─── ROI BOX ─── */
   .roi-box {
     background: #f0fdf4; border: 1.5px solid #86efac; border-radius: 10px;
@@ -420,7 +530,7 @@
   <div class="cover-accent-bottom"></div>
 
   <div class="cover-logo">
-    <img src="{{LOGO_COVER}}" alt="Dokodu">
+    <img src="{{LOGO_COVER}}" alt="">
   </div>
 
   <div class="cover-body">
@@ -454,7 +564,7 @@
 <!-- ═══════════ STRONA 2: EXECUTIVE SUMMARY + PROBLEM ═══════════ -->
 <div class="page">
   <div class="page-header">
-    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt=""></div>
     <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
   </div>
 
@@ -469,7 +579,7 @@
   {{PAIN_ITEMS}}
 
   <div class="page-footer">
-    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.it | dokodu.it</span>
+    <span class="footer-left">{{FOOTER_CONTACT}}</span>
     <span class="footer-right">2</span>
   </div>
 </div>
@@ -477,7 +587,7 @@
 <!-- ═══════════ STRONA 3: PODEJŚCIE + ZAKRES ═══════════ -->
 <div class="page">
   <div class="page-header">
-    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt=""></div>
     <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
   </div>
 
@@ -492,7 +602,7 @@
   </div>
 
   <div class="page-footer">
-    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.it | dokodu.it</span>
+    <span class="footer-left">{{FOOTER_CONTACT}}</span>
     <span class="footer-right">3</span>
   </div>
 </div>
@@ -500,10 +610,16 @@
 <!-- ═══════════ STRONA 3B: AGENDA (opcjonalna) ═══════════ -->
 {{AGENDA_PAGE}}
 
+<!-- ═══════════ STRONA 3C: FUNKCJONALNOŚCI (opcjonalna) ═══════════ -->
+{{FEATURES_PAGES}}
+
+<!-- ═══════════ STRONA 3D: SPRAWDŹ SAMI (opcjonalna) ═══════════ -->
+{{DEMO_PAGE}}
+
 <!-- ═══════════ STRONA 4: TIMELINE + INWESTYCJA ═══════════ -->
 <div class="page">
   <div class="page-header">
-    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt=""></div>
     <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
   </div>
 
@@ -526,7 +642,7 @@
   </div>
 
   <div class="page-footer">
-    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.it | dokodu.it</span>
+    <span class="footer-left">{{FOOTER_CONTACT}}</span>
     <span class="footer-right">4</span>
   </div>
 </div>
@@ -534,11 +650,11 @@
 <!-- ═══════════ STRONA 5: DLACZEGO DOKODU + NEXT STEP ═══════════ -->
 <div class="page last">
   <div class="page-header">
-    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt="Dokodu"></div>
+    <div class="logo-cell"><img src="{{LOGO_PATH}}" alt=""></div>
     <div class="client-cell">{{CLIENT_NAME}} — Propozycja {{DATE}}</div>
   </div>
 
-  <span class="section-label">Dlaczego Dokodu</span>
+  <span class="section-label">{{WHY_LABEL}}</span>
   <h2>Co nas wyróżnia?</h2>
   <div class="why-table">
     {{WHY_ROWS}}
@@ -551,14 +667,14 @@
     {{CTA_STEPS}}
     <hr class="cta-divider">
     <div class="cta-contact-table">
-      <div class="cta-contact-cell">Email: <strong>kacper@dokodu.it</strong></div>
-      <div class="cta-contact-cell">Web: <strong>dokodu.it</strong></div>
+      <div class="cta-contact-cell">Email: <strong>{{CONTACT_EMAIL}}</strong></div>
+      <div class="cta-contact-cell">Web: <strong>{{CONTACT_SITE}}</strong></div>
       <div class="cta-contact-cell">Oferta ważna do: <strong>{{VALID_UNTIL}}</strong></div>
     </div>
   </div>
 
   <div class="page-footer">
-    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.it | dokodu.it</span>
+    <span class="footer-left">{{FOOTER_CONTACT}}</span>
     <span class="footer-right">5</span>
   </div>
 </div>

@@ -161,20 +161,149 @@ for (let i = 0; i < whyItems.length; i += 2) {
 
 const ctaHtml = (data.ctaSteps || []).map((s,i) => ctaStep(i+1, hs(s))).join('');
 
+// Vendor / white-label config (needs to be defined before features/agenda generation)
+const vendor = data.vendor || { name: 'Dokodu Sp. z o.o.', email: 'kacper@dokodu.it', site: 'dokodu.it' };
+const footerContact = `${vendor.name} | ${vendor.email} | ${vendor.site}`;
+const BLANK_LOGO = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=';
+const coverLogoUrl = data.whiteLabel ? BLANK_LOGO : logoWhiteDataUrl;
+const innerLogoUrl = data.whiteLabel ? BLANK_LOGO : logoBlackDataUrl;
+
+// Features pages (optional — showcase product features with screenshots)
+let featuresPagesHtml = '';
+if (data.features && data.features.length > 0) {
+  const featureCard = (num, title, desc, screenDataUrl) => {
+    const imgWrap = screenDataUrl
+      ? `<div class="feature-screen-wrap"><img class="feature-screen" src="${screenDataUrl}" alt=""></div>`
+      : '';
+    return `<div class="feature-card">
+      <div class="feature-card-body">
+        <div class="feature-card-head">
+          <div class="feature-num-cell"><span class="feature-num">${num}</span></div>
+          <div class="feature-text-cell">
+            <span class="feature-title">${hs(title)}</span>
+            <span class="feature-desc">${hs(desc)}</span>
+          </div>
+        </div>
+      </div>
+      ${imgWrap}
+    </div>`;
+  };
+
+  const toDataUrl = (screenPath) => {
+    if (!screenPath) return '';
+    const resolved = path.isAbsolute(screenPath)
+      ? screenPath
+      : path.resolve(path.dirname(args[0] || '.'), screenPath);
+    if (!fs.existsSync(resolved)) return '';
+    const ext = path.extname(resolved).slice(1).toLowerCase();
+    const mime = ext === 'jpg' || ext === 'jpeg' ? 'image/jpeg' : `image/${ext}`;
+    return `data:${mime};base64,${fs.readFileSync(resolved).toString('base64')}`;
+  };
+
+  // Group features 2 per row, 2 rows per page = 4 per page
+  const featuresWithData = data.features.map((f) => ({
+    ...f,
+    screenDataUrl: toDataUrl(f.screenshot),
+  }));
+
+  const CARDS_PER_PAGE = 2;
+  const pagesCount = Math.ceil(featuresWithData.length / CARDS_PER_PAGE);
+  featuresPagesHtml = featuresWithData.reduce((acc, _f, idx) => {
+    if (idx % CARDS_PER_PAGE !== 0) return acc;
+    const pageIdx = idx / CARDS_PER_PAGE;
+    const chunk = featuresWithData.slice(idx, idx + CARDS_PER_PAGE);
+    const cards = chunk
+      .map((f, i) => featureCard(idx + i + 1, f.title, f.desc, f.screenDataUrl))
+      .join('');
+    const sectionLabel = pagesCount > 1
+      ? `Funkcje w praktyce (${pageIdx + 1}/${pagesCount})`
+      : 'Funkcje w praktyce';
+    const heading = pageIdx === 0 ? 'Co zobaczą Państwo w panelu?' : 'Więcej funkcji';
+    return acc + `
+<div class="page">
+  <div class="page-header">
+    <div class="logo-cell"><img src="${innerLogoUrl}" alt=""></div>
+    <div class="client-cell">${data.clientName} — Propozycja ${data.date}</div>
+  </div>
+  <span class="section-label">${sectionLabel}</span>
+  <h2>${heading}</h2>
+  ${cards}
+  <div class="page-footer">
+    <span class="footer-left">${footerContact}</span>
+    <span class="footer-right"></span>
+  </div>
+</div>`;
+  }, '');
+}
+
+// Demo access page (optional — lets the prospect try the bot before buying)
+let demoPageHtml = '';
+if (data.demoAccess) {
+  const d = data.demoAccess;
+  const tips = (d.tips || [])
+    .map(
+      (t, i) => `<div class="demo-tip">
+        <div class="demo-tip-num-cell"><span class="demo-tip-num">${i + 1}</span></div>
+        <div class="demo-tip-text-cell">${hs(t)}</div>
+      </div>`,
+    )
+    .join('');
+
+  demoPageHtml = `
+<div class="page">
+  <div class="page-header">
+    <div class="logo-cell"><img src="${innerLogoUrl}" alt=""></div>
+    <div class="client-cell">${data.clientName} — Propozycja ${data.date}</div>
+  </div>
+
+  <span class="section-label">Sprawdź sami</span>
+  <h2>Proszę się zalogować i przetestować</h2>
+
+  <div class="demo-creds">
+    <div class="demo-creds-title">Dane dostępowe do demo</div>
+    <div class="demo-creds-sub">Proszę otworzyć poniższe adresy i zalogować się hasłem. Konto jest read-write — można wgrać dokumenty, stworzyć drzewo, przetestować rozmowę.</div>
+    <div class="demo-creds-grid">
+      <div class="demo-creds-cell">
+        <span class="demo-creds-label">Strona z chatbotem</span>
+        <span class="demo-creds-value">${hs(d.widgetUrl || '—')}</span>
+      </div>
+      <div class="demo-creds-cell">
+        <span class="demo-creds-label">Panel admina</span>
+        <span class="demo-creds-value">${hs(d.adminUrl || '—')}</span>
+      </div>
+      <div class="demo-creds-cell">
+        <span class="demo-creds-label">Hasło</span>
+        <span class="demo-creds-value">${hs(d.password || '—')}</span>
+      </div>
+    </div>
+  </div>
+
+  <span class="section-label" style="margin-top: 10px; display: block;">Co warto sprawdzić</span>
+  <div class="demo-tips">
+    ${tips}
+  </div>
+
+  <div class="page-footer">
+    <span class="footer-left">${footerContact}</span>
+    <span class="footer-right"></span>
+  </div>
+</div>`;
+}
+
 // Agenda pages (optional — each agenda gets its own page)
 let agendaPageHtml = '';
 if (data.agendas && data.agendas.length > 0) {
   agendaPageHtml = data.agendas.map((a, idx) => `
 <div class="page">
   <div class="page-header">
-    <div class="logo-cell"><img src="${logoBlackDataUrl}" alt="Dokodu"></div>
+    <div class="logo-cell"><img src="${innerLogoUrl}" alt=""></div>
     <div class="client-cell">${data.clientName} — Propozycja ${data.date}</div>
   </div>
   <span class="section-label">Agenda${data.agendas.length > 1 ? ` (${idx+1}/${data.agendas.length})` : ''}</span>
   <h2>${hs(a.title)}</h2>
   ${agendaTable('', a.rows)}
   <div class="page-footer">
-    <span class="footer-left">Dokodu Sp. z o.o. | kacper@dokodu.it | dokodu.it</span>
+    <span class="footer-left">${footerContact}</span>
     <span class="footer-right">${4 + idx}</span>
   </div>
 </div>`).join('');
@@ -184,8 +313,12 @@ if (data.agendas && data.agendas.length > 0) {
 const coverTitle = data.coverTitle || `Automatyzacja AI<br>dla <span class="cover-title-highlight">${data.clientName}</span>`;
 
 const replacements = {
-  '{{LOGO_COVER}}':     logoWhiteDataUrl,
-  '{{LOGO_PATH}}':      logoBlackDataUrl,
+  '{{LOGO_COVER}}':     coverLogoUrl,
+  '{{LOGO_PATH}}':      innerLogoUrl,
+  '{{FOOTER_CONTACT}}': footerContact,
+  '{{CONTACT_EMAIL}}':  vendor.email,
+  '{{CONTACT_SITE}}':   vendor.site,
+  '{{WHY_LABEL}}':      data.whiteLabel ? 'Dlaczego my' : 'Dlaczego Dokodu',
   '{{CLIENT_NAME}}':    data.clientName,
   '{{DATE}}':           data.date,
   '{{VALID_UNTIL}}':    data.validUntil,
@@ -197,6 +330,8 @@ const replacements = {
   '{{APPROACH_STEPS}}': approachHtml,
   '{{SCOPE_COLS}}':     scopeColsHtml,
   '{{AGENDA_PAGE}}':    agendaPageHtml,
+  '{{FEATURES_PAGES}}': featuresPagesHtml,
+  '{{DEMO_PAGE}}':      demoPageHtml,
   '{{TIMELINE_ITEMS}}': timelineHtml,
   '{{PRICING_COLS}}':   pricingColsHtml,
   '{{PRICING_HEADLINE}}': hs(data.pricingHeadline || 'Dwie opcje dopasowane do Państwa potrzeb'),
