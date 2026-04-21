@@ -44,6 +44,7 @@ Zarządzaj systemem przez skille, nie edytując plików manualnie:
 | `/brain-remind` | Reminder z datą → jednocześnie do REMINDERS.md i Google Calendar |
 | `/pdf` | Czyta i analizuje PDF — dla umów wyciąga kluczowe klauzule (płatność, zakres, kary, logo) |
 | `/brain-new-offer` | Generuje ofertę handlową dla klienta — 2 opcje cenowe, szablon propozycji, zapis w katalogu klienta |
+| `/brain-new-ebook` | Tworzy ebook w 11-szablonowym design systemie Dokodu (light paper + navy + pomarańcz) — plan TOC, mapa szablonów, struktura rozdziałów MD |
 | `/meet-transcribe` | Pobiera nagrania Meet z Drive, paruje z kalendarzem, transkrybuje Whisper PL → `meetings_transcripts/` |
 | `/skill-creator` | Tworzy nowe skille — wywiad, SKILL.md, test cases, zapis |
 | `/survey-sync` | Pobiera wyniki ankiet poszkoleniowych z dokodu.it API → `Survey_Last_Sync.md` |

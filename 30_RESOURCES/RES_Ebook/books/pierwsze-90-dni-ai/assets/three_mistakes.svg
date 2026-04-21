@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <style>
+      .card-bg { fill:#FFFFFF; stroke:#E2E8F0; }
+      .num { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:48px; fill:#E63946; }
+      .title { font-family:Inter,sans-serif; font-weight:700; font-size:20px; fill:#0F2137; }
+      .desc { font-family:Inter,sans-serif; font-size:13px; fill:#5A6677; }
+      .tag { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:0.14em; fill:#5A6677; text-transform:uppercase; }
+      .accent { fill:#E63946; }
+      .arrow { stroke:#E63946; stroke-width:2; fill:none; }
+    </style>
+  </defs>
+  <rect width="900" height="380" fill="url(#bg)"/>
+  <text x="40" y="48" class="tag">TRZY BŁĘDY · KATEGORIE RYZYKA</text>
+
+  <!-- Card 1 -->
+  <g transform="translate(40, 80)">
+    <rect x="0" y="0" width="260" height="260" rx="4" class="card-bg"/>
+    <rect x="0" y="0" width="260" height="3" class="accent"/>
+    <text x="20" y="60" class="num">01</text>
+    <text x="20" y="110" class="title">Narzędzie</text>
+    <text x="20" y="135" class="title">przed procesem</text>
+    <foreignObject x="20" y="150" width="220" height="100">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:13px;line-height:1.55;color:#5A6677">
+        "Kupiliśmy licencje, zobaczcie co się da z tego zrobić". Efekt: 15% użytkowania po 3 miesiącach.
+      </div>
+    </foreignObject>
+    <text x="20" y="245" class="tag">41% FIRM · STRATA ~220 TYS.</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(320, 80)">
+    <rect x="0" y="0" width="260" height="260" rx="4" class="card-bg"/>
+    <rect x="0" y="0" width="260" height="3" class="accent"/>
+    <text x="20" y="60" class="num">02</text>
+    <text x="20" y="110" class="title">Pilot w kontakcie</text>
+    <text x="20" y="135" class="title">z klientem</text>
+    <foreignObject x="20" y="150" width="220" height="100">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:13px;line-height:1.55;color:#5A6677">
+        Chatbot dla klientów jako pierwszy projekt. Najwyższe ryzyko reputacyjne przy najmniejszym doświadczeniu.
+      </div>
+    </foreignObject>
+    <text x="20" y="245" class="tag">24% FIRM · STRATA ~180 TYS.</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(600, 80)">
+    <rect x="0" y="0" width="260" height="260" rx="4" class="card-bg"/>
+    <rect x="0" y="0" width="260" height="3" class="accent"/>
+    <text x="20" y="60" class="num">03</text>
+    <text x="20" y="110" class="title">Brak osoby</text>
+    <text x="20" y="135" class="title">odpowiedzialnej</text>
+    <foreignObject x="20" y="150" width="220" height="100">
+      <div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Inter,sans-serif;font-size:13px;line-height:1.55;color:#5A6677">
+        IT mówi "nie nasz zakres", HR to samo, operacje "nie mamy czasu". Projekt wali się miesiącami.
+      </div>
+    </foreignObject>
+    <text x="20" y="245" class="tag">18% FIRM · STRATA ~340 TYS.</text>
+  </g>
+</svg>

@@ -14,6 +14,8 @@ tags: [inbox, capture, wrzutki]
 
 ## NOTATKI Z TELEFONU / MYS LOT
 
+- [ ] LEAD/PR: Wojciech Luściński (dziennikarz Radio Gdańsk SA, twórca audycji/podcastu "Radiowe AI") — spotkanie dziś z Aliną. Ustalenia: wymiana wystąpień (ja u niego w audycji, on u mnie na kanale YT). Zapytałem wstępnie o termin. TODO: (1) dogadać termin nagrania, (2) po nagraniu → content social media "wystąpiłem w Radio Gdańsk" (PR). — 2026-04-20
+- [ ] BIZNES: TenderScope (Borys Kowalik) — nieoficjalnie 99% wchodzi! Autouzupełnianie formularzy przetargowych. Czekamy na oficjalne ogłoszenie. Poza Corleonis = 100% conversion rate. — 2026-04-17
 - [ ] POMYSL: Post LinkedIn/blog: "AI bez ludzi nie istnieje" — human in the loop jako fundament, nie dodatek. Operator > użytkownik. Kąt: anty-teza "AI zastąpi ludzi". — 2026-04-16
 - [x] PROJEKT: TikTok pipeline — ZROBIONE: pełny pipeline (scenariusze + Whisper + napisy ASS + FFmpeg montaż + DaVinci FCPXML + Remotion intro/CTA + Playbook). Skill `/tiktok-pipeline`. Na start: ręczny upload przez apkę. — 2026-04-15
 - [ ] TODO: Założyć TikTok Developer Account (developers.tiktok.com) + zgłosić appkę na scope `video.upload` — automatyczny upload do drafts. Niska priorytet, zrobić jak będzie chwila. — 2026-04-15

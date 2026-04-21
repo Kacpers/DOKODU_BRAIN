@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8" />
+<title>Dokodu — System ebooka AI</title>
+<meta name="viewport" content="width=1400" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: light; }
+  html, body { margin: 0; padding: 0; background: #F5F0E4; font-family: 'Inter', system-ui, sans-serif; color: #141B2D; }
+  * { box-sizing: border-box; }
+  body { min-height: 100vh; }
+  .wrap { padding: 80px 60px 200px; max-width: 2880px; margin: 0 auto; }
+
+  .doc-head {
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 60px;
+    padding: 40px 0 48px; margin-bottom: 60px;
+    border-bottom: 1px solid rgba(20,25,45,0.14);
+  }
+  .kicker {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    letter-spacing: 0.28em; text-transform: uppercase;
+    color: oklch(0.58 0.18 45); margin-bottom: 20px;
+  }
+  h1.doc-title {
+    font-size: 88px; font-weight: 700; letter-spacing: -0.035em;
+    line-height: 0.92; margin: 0 0 24px;
+  }
+  h1.doc-title em { font-style: italic; font-weight: 400; color: oklch(0.58 0.18 45); }
+  .lede { font-size: 18px; line-height: 1.55; color: #3A4560; max-width: 620px; margin: 0; }
+
+  .meta-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px 28px; align-self: end;
+  }
+  .meta-grid .cell {
+    border-top: 1px solid rgba(20,25,45,0.14); padding-top: 10px;
+  }
+  .meta-grid .lbl {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.2em; text-transform: uppercase; color: #7A8299; margin-bottom: 6px;
+  }
+  .meta-grid .val { font-size: 13.5px; color: #141B2D; line-height: 1.5; }
+
+  .system-bar {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    margin: 0 0 80px;
+    border: 1px solid rgba(20,25,45,0.14);
+    border-radius: 2px; overflow: hidden;
+    background: #FFFFFF;
+  }
+  .system-bar > div { padding: 22px 26px; border-right: 1px solid rgba(20,25,45,0.1); }
+  .system-bar > div:last-child { border-right: none; }
+  .system-bar .lbl {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: #7A8299; margin-bottom: 10px;
+  }
+  .swatches { display: flex; gap: 6px; align-items: center; }
+  .swatches span { width: 22px; height: 22px; border-radius: 2px; border: 1px solid rgba(20,25,45,0.12); }
+  .type-specimen { font-size: 22px; font-weight: 600; letter-spacing: -0.02em; }
+  .type-specimen .mono { font-family: 'JetBrains Mono', monospace; font-size: 15px; color: #3A4560; display: block; margin-top: 4px; }
+
+  .section-head {
+    display: flex; align-items: baseline; justify-content: space-between;
+    margin: 20px 0 24px;
+  }
+  .section-head h2 {
+    font-size: 36px; font-weight: 600; letter-spacing: -0.025em; margin: 0;
+  }
+  .section-head .count {
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    letter-spacing: 0.2em; color: #7A8299;
+  }
+
+  .template-row {
+    display: grid; grid-template-columns: 280px 1fr; gap: 48px;
+    margin-bottom: 96px;
+    align-items: start;
+  }
+  .template-info .n {
+    font-family: 'JetBrains Mono', monospace; font-size: 13px;
+    letter-spacing: 0.16em; color: oklch(0.58 0.18 45); margin-bottom: 12px;
+  }
+  .template-info h3 {
+    font-size: 32px; font-weight: 600; letter-spacing: -0.025em;
+    line-height: 1.1; margin: 0 0 16px;
+  }
+  .template-info p {
+    font-size: 13.5px; line-height: 1.6; color: #3A4560; margin: 0 0 16px;
+  }
+  .template-info ul {
+    margin: 0; padding: 0; list-style: none;
+    border-top: 1px solid rgba(20,25,45,0.14);
+  }
+  .template-info li {
+    padding: 10px 0; border-bottom: 1px solid rgba(20,25,45,0.1);
+    display: flex; gap: 10px; align-items: flex-start;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: #3A4560; letter-spacing: 0.02em;
+  }
+  .template-info li::before {
+    content: '→'; color: oklch(0.58 0.18 45); flex-shrink: 0;
+  }
+
+  .template-preview {
+    position: relative;
+    display: flex; justify-content: center;
+    background:
+      linear-gradient(to right, rgba(20,25,45,0.05) 1px, transparent 1px) 0 0 / 40px 40px,
+      linear-gradient(to bottom, rgba(20,25,45,0.05) 1px, transparent 1px) 0 0 / 40px 40px,
+      #EFE8D6;
+    border: 1px solid rgba(20,25,45,0.1);
+    padding: 60px 40px;
+    border-radius: 4px;
+  }
+  .template-preview .scale {
+    transform: scale(0.62); transform-origin: top center;
+    margin-bottom: calc(-1754px * 0.38);
+  }
+
+  .footer {
+    margin-top: 120px; padding-top: 40px;
+    border-top: 1px solid rgba(20,25,45,0.14);
+    display: flex; justify-content: space-between; align-items: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px;
+    color: #7A8299; letter-spacing: 0.12em;
+  }
+
+  .spread-row .template-preview .scale { transform: scale(0.42); margin-bottom: calc(-1754px * 0.58); }
+  .spread-row { grid-template-columns: 280px 1fr; }
+
+  /* Tweaks panel */
+  .tweaks {
+    position: fixed; right: 24px; bottom: 24px; z-index: 200;
+    width: 300px;
+    background: #FFFFFF;
+    border: 1px solid rgba(20,25,45,0.18); border-radius: 4px;
+    box-shadow: 0 20px 50px rgba(20,25,45,0.15);
+    padding: 18px 20px 20px;
+    font-family: 'Inter', sans-serif; font-size: 13px;
+    display: none;
+  }
+  .tweaks.open { display: block; }
+  .tweaks h4 {
+    font-family: 'JetBrains Mono', monospace; font-size: 10px;
+    letter-spacing: 0.22em; text-transform: uppercase; color: oklch(0.58 0.18 45);
+    margin: 0 0 14px; display: flex; justify-content: space-between;
+  }
+  .tweaks label { display: block; margin-bottom: 14px; }
+  .tweaks label > span { color: #3A4560; font-size: 11px; margin-bottom: 6px; display: block; }
+  .tweaks input[type=range], .tweaks select {
+    width: 100%; background: #F5F0E4; color: #141B2D;
+    border: 1px solid rgba(20,25,45,0.14); padding: 6px 8px; border-radius: 2px;
+    font-family: inherit;
+  }
+  .tweaks .accent-row { display: flex; gap: 8px; }
+  .tweaks .accent-row button {
+    flex: 1; padding: 8px 0; background: transparent; color: #F2EEE6;
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 2px; cursor: pointer;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.12em;
+  }
+  .tweaks .accent-row button.active { border-color: var(--accent); color: var(--accent); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="application/json" id="tweak-defaults">
+/*EDITMODE-BEGIN*/{
+  "scale": 0.74,
+  "variant": "all"
+}/*EDITMODE-END*/
+</script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script type="text/babel" src="components/tokens.jsx"></script>
+<script type="text/babel" src="components/pages1.jsx"></script>
+<script type="text/babel" src="components/pages2.jsx"></script>
+<script type="text/babel" src="components/pages3.jsx"></script>
+
+<script type="text/babel">
+const TEMPLATES = [
+  { n: '01', id: 'cover',     name: 'Okładka / Hero Cover',
+    Page: () => <PageCover />,
+    desc: 'Minimalistyczna, z mocnym akcentem typograficznym i subtelną grafiką generatywną. Gradient mesh + siatka punktów jako tło; gigantyczny tytuł łamany na 3 wiersze, jeden akcent italic w gradiencie.',
+    specs: ['Typo · Inter 132 / 0.92 lh', 'Akcent · gradient blue → purple', 'Placeholder · brak', 'Bleed · TAK, do krawędzi'],
+    variant: 'full' },
+  { n: '02', id: 'toc',        name: 'Spis treści / Interactive Index',
+    Page: () => <PageTOC />,
+    desc: 'Niesymetryczna siatka 2-kolumnowa, „oddychająca" biała przestrzeń. Każdy rozdział = numer, tytuł, abstrakt, licznik sekcji jako pasek postępu.',
+    specs: ['Grid · 12 kol., 2+3 span', 'Numerologia · JetBrains Mono', 'Progress · paski 4-6 sekcji', 'Nagłówek · duża typo 88px'],
+    variant: 'full' },
+  { n: '03', id: 'chapter',    name: 'Otwarcie rozdziału / Chapter Break',
+    Page: () => <PageChapterBreak />,
+    desc: 'Całostronicowa grafika z gradientem + gigantyczny numer outline. Po lewej tytuł i abstrakt, po prawej meta-kolumna (czas czytania, poziom, sekcje).',
+    specs: ['Outline numeral · 820px', 'Gradient · radial blue + purple', 'Meta · 3 bloki JetBrains', 'Bleed · TAK'],
+    variant: 'full' },
+  { n: '04', id: 'standard',   name: 'Strona tekstowa / Standard Layout',
+    Page: () => <PageStandard />,
+    desc: 'Dwukolumnowy układ z marginesem na notatki boczne. Drop-cap, inline code-inset, zdjęcie placeholder w sidebarze, przypisy w monospace po prawej.',
+    specs: ['Grid · 3 / 3 / 2', 'Body · Inter 13.5 / 1.65', 'Sidenotes · JetBrains 10.5', 'Code · inline, 2px left accent'],
+    variant: 'full' },
+  { n: '05', id: 'case',       name: 'Case Study / Wywiad',
+    Page: () => <PageCaseStudy />,
+    desc: 'Ramka z odmiennym tłem (bgElev), portret + dane rozmówcy w nagłówku, Q&A z kolorem oznaczającym mówcę, pull-quote z paskiem akcentu, 4 szklane karty KPI.',
+    specs: ['Tło · wariant elev', 'Akcent · pomarańcz Dokodu', 'Pull-quote · orange border-left', 'KPI cards · 4× glass'],
+    variant: 'full' },
+  { n: '06', id: 'info',       name: 'Infografika / Wykres',
+    Page: () => <PageInfographic />,
+    desc: 'Diagram architektury sieci neuronowej generowany z SVG — 6 warstw, krawędzie ważone, nody z glow. Legenda kolorów + mini-tabela wymiarów modelu.',
+    specs: ['SVG · viewBox 900×440', 'Glow · box-shadow na nodach', 'Legenda · 4 warstwy', 'Metryki · 5-row table'],
+    variant: 'full' },
+  { n: '07', id: 'cheat',      name: 'Cheat Sheet / Podsumowanie',
+    Page: () => <PageCheatSheet />,
+    desc: 'Lista kontrolna jako 6 „kart" w grid 3×2. Każda karta: numer, tytuł, blok kodu z szablonem, jedna wskazówka. Top border 3px akcentu, diamond marker.',
+    specs: ['Grid · 3 × 2', 'Karta · 20px padding', 'Akcent · neon purple 3px top', 'Typo · 20px H, mono 11px code'],
+    variant: 'full' },
+  { n: '08', id: 'code',       name: 'Code Deep-Dive / Listing',
+    Page: () => <PageCodeDive />,
+    desc: 'Pełny listing kodu w proporcji 2:1 z kolumną komentarza. Numery linii, podświetlona składnia (pomarańcz/blue/purple/green), przypisy do konkretnych zakresów linii.',
+    specs: ['Code block · mono 12px', 'Line numbers · 36px gutter', 'Syntax · 4 kolory akcentu', 'Callouts · L.xx-yy'],
+    variant: 'full' },
+  { n: '09', id: 'data',       name: 'Dane: Tabela + Wykres',
+    Page: () => <PageData />,
+    desc: 'Tabela porównawcza 5-kol. + pionowy wykres słupkowy w szklanej karcie. Podświetlony jeden wiersz wynikowy. Stopka ze źródłem i wielkością próby.',
+    specs: ['Tabela · 5 kol × 5 rows', 'Wykres · bar chart + highlight', 'Badge · TOP result glow', 'Źródło · JetBrains 9.5px'],
+    variant: 'full' },
+  { n: '10', id: 'image',      name: 'Spread zdjęciowy / Pull-quote full-bleed',
+    Page: () => <PageImageLed />,
+    desc: 'Pełnobleedowe zdjęcie z scrim-gradientem u dołu. W centrum pull-quote 48px italic z nazwiskiem autora. Caption w dolnym rogu z instrukcją wymiany.',
+    specs: ['Bleed · 1240×1754', 'Placeholder · stripe + radial', 'Quote · 48px / 1.15', 'Scrim · linear bottom'],
+    variant: 'full' },
+  { n: '11', id: 'back',       name: 'Zamknięcie / Back Page',
+    Page: () => <PageBack />,
+    desc: 'Strona końcowa z CTA (konsultacja, blog) + kolofon (typografia, druk, wydawca). Outline typography w hero z italic „Zaczynaj" jako akcent.',
+    specs: ['3 CTA/info bloki', 'Kolofon · stopka', 'Typo mix · solid + outline', 'Bleed · TAK'],
+    variant: 'full' },
+];
+
+const Summary = () => (
+  <>
+    <div className="doc-head">
+      <div>
+        <div className="kicker">Dokodu · System ebooka</div>
+        <h1 className="doc-title">Architektura wizualna<br/><em>publikacji o AI.</em></h1>
+        <p className="lede">
+          11 unikalnych typów stron gotowych do zasilenia treścią z plików Markdown w Claude Code.
+          Ciepły kremowy papier z deep-navy tekstem i pomarańczowym akcentem Dokodu — tylko okładka, otwarcie rozdziału i spread zdjęciowy utrzymują dark-mode jako kontrapunkt.
+          Siatka 12-col, para Inter + JetBrains Mono. Każda strona „oddycha".
+        </p>
+      </div>
+      <div className="meta-grid">
+        <div className="cell"><div className="lbl">Format</div><div className="val">1240 × 1754 px · A4 portrait · 150 dpi-eq.</div></div>
+        <div className="cell"><div className="lbl">Grid</div><div className="val">12 kolumn · 24 px gutter · 72 px margin</div></div>
+        <div className="cell"><div className="lbl">Typografia</div><div className="val">Inter (sans) · JetBrains Mono (tech)</div></div>
+        <div className="cell"><div className="lbl">Paleta</div><div className="val">Cream paper · Deep navy ink · Dokodu orange</div></div>
+        <div className="cell"><div className="lbl">Stron</div><div className="val">11 typów · każdy gotowy do powielenia</div></div>
+        <div className="cell"><div className="lbl">Integracja</div><div className="val">Markdown-ready · Claude Code workflow</div></div>
+      </div>
+    </div>
+
+    <div className="system-bar">
+      <div>
+        <div className="lbl">Paleta — light paper</div>
+        <div className="swatches">
+          <span style={{ background: '#FAF7F0' }}/>
+          <span style={{ background: '#F2ECDF' }}/>
+          <span style={{ background: '#141B2D' }}/>
+          <span style={{ background: 'oklch(0.70 0.17 50)' }}/>
+          <span style={{ background: 'oklch(0.45 0.12 250)' }}/>
+          <span style={{ background: '#0B1120' }}/>
+        </div>
+      </div>
+      <div>
+        <div className="lbl">Typo · sans</div>
+        <div className="type-specimen">Aa — Inter<span className="mono">200 · 300 · 400 · 500 · 600 · 700</span></div>
+      </div>
+      <div>
+        <div className="lbl">Typo · mono</div>
+        <div className="type-specimen" style={{ fontFamily: 'JetBrains Mono' }}>{`{ code }`}<span className="mono" style={{ fontFamily: 'Inter' }}>JetBrains Mono · 400 · 500</span></div>
+      </div>
+      <div>
+        <div className="lbl">Siatka</div>
+        <div className="type-specimen">12 / 24 / 72<span className="mono">kol. / gutter / margin (px)</span></div>
+      </div>
+    </div>
+  </>
+);
+
+const App = () => {
+  const [scale, setScale] = React.useState(0.62);
+  const [variant, setVariant] = React.useState('all');
+  const [tweaksOpen, setTweaksOpen] = React.useState(false);
+
+  // edit-mode bridge
+  React.useEffect(() => {
+    const onMsg = (e) => {
+      if (e?.data?.type === '__activate_edit_mode') setTweaksOpen(true);
+      else if (e?.data?.type === '__deactivate_edit_mode') setTweaksOpen(false);
+    };
+    window.addEventListener('message', onMsg);
+    window.parent.postMessage({ type: '__edit_mode_available' }, '*');
+    return () => window.removeEventListener('message', onMsg);
+  }, []);
+
+  const set = (patch) => {
+    if (patch.scale != null) setScale(patch.scale);
+    if (patch.variant != null) setVariant(patch.variant);
+    window.parent.postMessage({ type: '__edit_mode_set_keys', edits: patch }, '*');
+  };
+
+  const visible = TEMPLATES.filter(t =>
+    variant === 'all'
+      || (variant === 'dark' && t.id !== 'case')
+      || (variant === 'interior' && !['cover','chapter','image','back'].includes(t.id))
+      || (variant === 'hero' && ['cover','chapter','image','back'].includes(t.id))
+  );
+
+  return (
+    <div className="wrap">
+      <Summary />
+
+      <div className="section-head">
+        <h2>Typy stron — szczegółowe schematy</h2>
+        <div className="count">{String(visible.length).padStart(2,'0')} / {String(TEMPLATES.length).padStart(2,'0')} SZABLONÓW</div>
+      </div>
+
+      {visible.map(t => {
+        const isFullBleed = ['cover','chapter','image','back'].includes(t.id);
+        return (
+          <div key={t.id} className={`template-row ${isFullBleed ? 'spread-row' : ''}`}>
+            <div className="template-info">
+              <div className="n">SZABLON {t.n} · {t.id.toUpperCase()}</div>
+              <h3>{t.name}</h3>
+              <p>{t.desc}</p>
+              <ul>
+                {t.specs.map(s => <li key={s}>{s}</li>)}
+              </ul>
+            </div>
+            <div className="template-preview">
+              <div className="scale" style={{ transform: `scale(${isFullBleed ? scale * 0.7 : scale})` }}>
+                <t.Page />
+              </div>
+            </div>
+          </div>
+        );
+      })}
+
+      <div className="footer">
+        <span>DOKODU.IT · EBOOK TEMPLATE SYSTEM · v1.0</span>
+        <span>11 / 11 · Ready for Markdown content</span>
+      </div>
+
+      <div className={`tweaks ${tweaksOpen ? 'open' : ''}`}>
+        <h4>
+          <span>Tweaks</span>
+          <span style={{ color: '#6C7390' }}>ebook</span>
+        </h4>
+        <label>
+          <span>Zoom podglądu ({Math.round(scale * 100)}%)</span>
+          <input type="range" min="0.3" max="1" step="0.02" value={scale}
+            onChange={e => set({ scale: parseFloat(e.target.value) })} />
+        </label>
+        <label>
+          <span>Zestaw szablonów</span>
+          <select value={variant} onChange={e => set({ variant: e.target.value })}>
+            <option value="all">Wszystkie (11)</option>
+            <option value="hero">Tylko hero / bleed (4)</option>
+            <option value="interior">Tylko wnętrze (7)</option>
+            <option value="dark">Bez case-study</option>
+          </select>
+        </label>
+      </div>
+    </div>
+  );
+};
+
+// load persisted defaults
+try {
+  const defaults = JSON.parse(document.getElementById('tweak-defaults').textContent.match(/\{[\s\S]*\}/)[0]);
+  window.__defaults = defaults;
+} catch(e) {}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

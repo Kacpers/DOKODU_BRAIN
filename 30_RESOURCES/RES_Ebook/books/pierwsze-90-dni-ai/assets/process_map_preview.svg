@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320">
+  <style>
+    .hdr { font-family:'JetBrains Mono',monospace; font-size:9px; fill:#FFFFFF; letter-spacing:0.14em; font-weight:500; }
+    .cell { font-family:Inter,sans-serif; font-size:10px; fill:#0F2137; }
+    .cell-muted { fill:#5A6677; }
+    .row-alt { fill:#F8FAFC; }
+    .accent-bar { fill:#E63946; }
+  </style>
+  <rect x="0" y="0" width="420" height="320" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="420" height="34" fill="#0F2137"/>
+  <text x="12" y="21" class="hdr">ID</text>
+  <text x="50" y="21" class="hdr">DZIAŁ</text>
+  <text x="120" y="21" class="hdr">PROCES</text>
+  <text x="260" y="21" class="hdr">MIN</text>
+  <text x="300" y="21" class="hdr">/MC</text>
+  <text x="340" y="21" class="hdr">H/MC</text>
+  <text x="385" y="21" class="hdr">BÓL</text>
+
+  <!-- Rows -->
+  <g transform="translate(0, 34)">
+    <rect x="0" y="0" width="420" height="28" class="row-alt"/>
+    <text x="12" y="18" class="cell">001</text>
+    <text x="50" y="18" class="cell">Finanse</text>
+    <text x="120" y="18" class="cell">Raport miesięczny</text>
+    <text x="260" y="18" class="cell cell-muted">45</text>
+    <text x="300" y="18" class="cell cell-muted">4</text>
+    <text x="340" y="18" class="cell">3.0</text>
+    <rect x="380" y="8" width="28" height="12" class="accent-bar"/>
+    <text x="385" y="18" class="cell" style="fill:#FFFFFF;font-weight:600">5</text>
+  </g>
+  <g transform="translate(0, 62)">
+    <text x="12" y="18" class="cell">002</text>
+    <text x="50" y="18" class="cell">Sprzedaż</text>
+    <text x="120" y="18" class="cell">Obsługa RFP</text>
+    <text x="260" y="18" class="cell cell-muted">90</text>
+    <text x="300" y="18" class="cell cell-muted">8</text>
+    <text x="340" y="18" class="cell">12.0</text>
+    <rect x="380" y="8" width="28" height="12" fill="#F0A500"/>
+    <text x="385" y="18" class="cell" style="fill:#FFFFFF;font-weight:600">4</text>
+  </g>
+  <g transform="translate(0, 90)">
+    <rect x="0" y="0" width="420" height="28" class="row-alt"/>
+    <text x="12" y="18" class="cell">003</text>
+    <text x="50" y="18" class="cell">HR</text>
+    <text x="120" y="18" class="cell">Onboarding pracownika</text>
+    <text x="260" y="18" class="cell cell-muted">120</text>
+    <text x="300" y="18" class="cell cell-muted">3</text>
+    <text x="340" y="18" class="cell">6.0</text>
+    <rect x="380" y="8" width="28" height="12" fill="#CBD5E1"/>
+    <text x="385" y="18" class="cell" style="fill:#0F2137;font-weight:600">3</text>
+  </g>
+  <g transform="translate(0, 118)">
+    <text x="12" y="18" class="cell">004</text>
+    <text x="50" y="18" class="cell">Operacje</text>
+    <text x="120" y="18" class="cell">Kwartalne raporty KPI</text>
+    <text x="260" y="18" class="cell cell-muted">180</text>
+    <text x="300" y="18" class="cell cell-muted">1</text>
+    <text x="340" y="18" class="cell">3.0</text>
+    <rect x="380" y="8" width="28" height="12" class="accent-bar"/>
+    <text x="385" y="18" class="cell" style="fill:#FFFFFF;font-weight:600">5</text>
+  </g>
+  <g transform="translate(0, 146)">
+    <rect x="0" y="0" width="420" height="28" class="row-alt"/>
+    <text x="12" y="18" class="cell">005</text>
+    <text x="50" y="18" class="cell">Legal</text>
+    <text x="120" y="18" class="cell">Przegląd umów NDA</text>
+    <text x="260" y="18" class="cell cell-muted">60</text>
+    <text x="300" y="18" class="cell cell-muted">12</text>
+    <text x="340" y="18" class="cell">12.0</text>
+    <rect x="380" y="8" width="28" height="12" fill="#F0A500"/>
+    <text x="385" y="18" class="cell" style="fill:#FFFFFF;font-weight:600">4</text>
+  </g>
+  <g transform="translate(0, 174)">
+    <text x="12" y="18" class="cell">006</text>
+    <text x="50" y="18" class="cell">Finanse</text>
+    <text x="120" y="18" class="cell">Fakturowanie klientów</text>
+    <text x="260" y="18" class="cell cell-muted">25</text>
+    <text x="300" y="18" class="cell cell-muted">80</text>
+    <text x="340" y="18" class="cell">33.3</text>
+    <rect x="380" y="8" width="28" height="12" fill="#CBD5E1"/>
+    <text x="385" y="18" class="cell" style="fill:#0F2137;font-weight:600">2</text>
+  </g>
+  <g transform="translate(0, 202)">
+    <rect x="0" y="0" width="420" height="28" class="row-alt"/>
+    <text x="12" y="18" class="cell">007</text>
+    <text x="50" y="18" class="cell">Sprzedaż</text>
+    <text x="120" y="18" class="cell">Follow-upy po spotkaniach</text>
+    <text x="260" y="18" class="cell cell-muted">15</text>
+    <text x="300" y="18" class="cell cell-muted">60</text>
+    <text x="340" y="18" class="cell">15.0</text>
+    <rect x="380" y="8" width="28" height="12" class="accent-bar"/>
+    <text x="385" y="18" class="cell" style="fill:#FFFFFF;font-weight:600">5</text>
+  </g>
+  <g transform="translate(0, 230)">
+    <text x="12" y="18" class="cell">008</text>
+    <text x="50" y="18" class="cell">Marketing</text>
+    <text x="120" y="18" class="cell">Newsletter miesięczny</text>
+    <text x="260" y="18" class="cell cell-muted">180</text>
+    <text x="300" y="18" class="cell cell-muted">1</text>
+    <text x="340" y="18" class="cell">3.0</text>
+    <rect x="380" y="8" width="28" height="12" fill="#CBD5E1"/>
+    <text x="385" y="18" class="cell" style="fill:#0F2137;font-weight:600">3</text>
+  </g>
+
+  <!-- Footer "..." -->
+  <g transform="translate(0, 260)">
+    <rect x="0" y="0" width="420" height="28" class="row-alt"/>
+    <text x="12" y="18" class="cell cell-muted" style="font-style:italic">…</text>
+    <text x="50" y="18" class="cell cell-muted" style="font-style:italic">… 72 pozycji dalej</text>
+    <text x="340" y="18" class="cell cell-muted">—</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(12, 298)">
+    <text x="0" y="10" class="cell cell-muted" style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.1em">BÓL:</text>
+    <rect x="35" y="2" width="14" height="8" class="accent-bar"/>
+    <text x="52" y="10" class="cell cell-muted" style="font-family:'JetBrains Mono',monospace;font-size:9px">5 wysoki</text>
+    <rect x="110" y="2" width="14" height="8" fill="#F0A500"/>
+    <text x="127" y="10" class="cell cell-muted" style="font-family:'JetBrains Mono',monospace;font-size:9px">4 średni</text>
+    <rect x="185" y="2" width="14" height="8" fill="#CBD5E1"/>
+    <text x="202" y="10" class="cell cell-muted" style="font-family:'JetBrains Mono',monospace;font-size:9px">1–3 niski</text>
+  </g>
+</svg>

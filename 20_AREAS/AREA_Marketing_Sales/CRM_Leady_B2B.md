@@ -19,7 +19,7 @@ tags: [crm, leady, sprzedaz, pipeline, b2b, discovery]
 | :- | :--- | :--- | :--- | :--- | ---: | :--- | :---: |
 | 1 | Animex | Kamil Kowalski | Ref. | WYGRANA | 40 000 | Faktura wystawiona, certyfikaty do wysłania ASAP. Sesje konsultacyjne czekają na security review n8n. | 2026-04-08 |
 | 2 | Corleonis | [imie] | LinkedIn | Odłożona | 35 000 | WSTRZYMANE — klient poprosił o pauzę. Nie kontaktować do odwołania. | — |
-| 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Kontakt | ~20 000 | Czekamy na odpowiedzi techniczne → wycena | 2026-04-03 |
+| 3 | TenderScope | Borys Kowalik | Inbound (dokodu.it) | Negocjacje | ~20 000 | 🔥 Nieoficjalnie: 99% wchodzi (autouzupełnianie formularzy przetargowych). Czekamy na oficjalne ogłoszenie. | — |
 | 4 | Adm. Gibula | Jakub Gibula | Istniejący klient | WYGRANA | 66 000 | Umowa + specyfikacja wysłane 14.04. Następny krok: czekamy na podpis → faktura zaliczkowa. | — |
 | 5 | Cichy-Zasada (dealer VW/Audi/Porsche) | Rafał Nawrocki | Inbound (dokodu.it) | Odłożona | — | Chcą tylko licencję n8n, brak projektu wdrożeniowego | — |
 | 6 | SayFlu | Krystian | LinkedIn DM | Propozycja | do wyceny | Info przekazane na Messengerze (znajomy Kacpra). Czekamy na akceptację i dalsze info od Krystiana. | — |

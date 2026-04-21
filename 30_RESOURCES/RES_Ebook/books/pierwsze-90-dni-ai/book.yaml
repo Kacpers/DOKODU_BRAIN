@@ -1,0 +1,144 @@
+title: "Pierwsze 90 dni z AI w firmie"
+subtitle: "Praktyczny przewodnik wdrożenia dla polskiego MŚP"
+slug: pierwsze-90-dni-ai
+author: "Kacper Sieradziński"
+author_role: "CEO Dokodu | AI Trainer"
+brand: "DOKODU"
+version: "0.1"
+date: "kwiecień 2026"
+edition: "PL / Vol. 01"
+badge: "PRZEWODNIK 2026"
+isbn: "978-83-0000-001-4"
+pages_target: 96
+cover_title:
+  main: "Pierwsze 90 dni"
+  accent: "z AI"
+  muted: "w firmie"
+
+audience:
+  primary: "CEO i członkowie zarządu MŚP 50–500 osób"
+  level: "Początkujący / Średniozaawansowany"
+  context: "Firmy, które dopiero zaczynają poważne wdrożenie AI poza dorywczym użyciem ChatGPT przez pojedynczych pracowników"
+
+design_system: "30_RESOURCES/RES_Ebook/design_system"
+palette: light   # cover, chapter, image-led są dark
+
+format:
+  w: 1240
+  h: 1754
+  margin: 72
+  cols: 12
+  gutter: 24
+
+chapters:
+  - n: "01"
+    title: "Dlaczego większość wdrożeń AI się psuje"
+    abstract: "Trzy błędy, które kosztują polskie firmy 6–12 miesięcy i ponad 200 tys. PLN. Co robić inaczej."
+    slug: diagnoza
+    file: chapters/01_diagnoza.md
+    pages: 10
+    parts: 4
+    templates: [chapter, standard, standard, data, standard]
+
+  - n: "02"
+    title: "Tydzień 1–2: Mapa procesów"
+    abstract: "Jak zinwentaryzować to, co robią ludzie — zanim zautomatyzujesz. Bez tego każde wdrożenie jest hazardem."
+    slug: mapa-procesow
+    file: chapters/02_mapa_procesow.md
+    pages: 12
+    parts: 5
+    templates: [chapter, standard, standard, info, cheat, standard]
+
+  - n: "03"
+    title: "Tydzień 3–4: Wybór pierwszego use case'a"
+    abstract: "Matryca wartość × ryzyko. Dlaczego nie zaczynasz od kontaktu z klientem, tylko od procesu wewnętrznego."
+    slug: wybor-usecase
+    file: chapters/03_wybor_usecase.md
+    pages: 10
+    parts: 4
+    templates: [chapter, standard, data, standard]
+
+  - n: "04"
+    title: "Tydzień 5–8: Pierwszy pilot"
+    abstract: "Od MVP do działającego procesu. Kod, n8n, ludzie w pętli — po kolei."
+    slug: pilot
+    file: chapters/04_pilot.md
+    pages: 14
+    parts: 5
+    templates: [chapter, standard, code, standard, info]
+
+  - n: "05"
+    title: "Wywiad: jak NovaLogistics odzyskał 4h tygodniowo"
+    abstract: "6 tygodni, 240 osób, 38% mniej czasu na raporty. Rozmowa z CFO."
+    slug: case-novalogistics
+    file: chapters/05_case_novalogistics.md
+    pages: 8
+    parts: 3
+    templates: [chapter, case, image, standard]
+
+  - n: "06"
+    title: "Tydzień 9–10: Rollout i trening zespołu"
+    abstract: "Najtrudniejsza część wdrożenia to nie technologia — to ludzie. 6 zasad, które działają."
+    slug: rollout
+    file: chapters/06_rollout.md
+    pages: 10
+    parts: 4
+    templates: [chapter, standard, cheat, standard]
+
+  - n: "07"
+    title: "Tydzień 11–12: Mierzenie ROI"
+    abstract: "Trzy liczby, które musisz mieć, zanim powiesz zarządowi 'działa'. I jedna, której lepiej nie pokazywać."
+    slug: roi
+    file: chapters/07_roi.md
+    pages: 10
+    parts: 4
+    templates: [chapter, standard, data, info, standard]
+
+  - n: "08"
+    title: "Co dalej: od pilota do strategii"
+    abstract: "Kiedy uruchomić drugi projekt. Jak nie wpaść w pułapkę AI-washingu. Roadmapa na kolejne 12 miesięcy."
+    slug: co-dalej
+    file: chapters/08_co_dalej.md
+    pages: 8
+    parts: 3
+    templates: [chapter, standard, standard, back]
+
+back_cover:
+  description: "Po 90 dniach powinni Państwo wiedzieć: który proces się autyomatyzuje, ile to zwraca i co robić dalej. Ten przewodnik prowadzi krok po kroku — od mapy procesów, przez pilot, po rollout i mierzenie ROI. Bez żargonu, z prawdziwymi liczbami z polskich firm."
+  testimonials:
+    - text: "Najbardziej praktyczna publikacja o AI, jaką widzieliśmy — zaczęliśmy od rozdziału 2 i po 10 dniach mieliśmy pierwszą mapę procesów."
+      author: "Magdalena Wiśniewska, CFO NovaLogistics"
+    - text: "Kacper pisze tak, jak rozmawia. Konkretnie, z liczbami i bez obietnic bez pokrycia."
+      author: "Tomasz Górski, COO TechCorp PL"
+
+series:
+  name: "Dokodu AI Library"
+  volume: 1
+  other_books:
+    - title: "Agenci AI w praktyce"
+      slug: agenci-ai
+      status: planned
+      release: "jesień 2026"
+    - title: "Automatyzacja z n8n dla MŚP"
+      slug: automatyzacja-n8n
+      status: planned
+      release: "zima 2026"
+
+cta:
+  primary:
+    label: "Umów bezpłatną konsultację"
+    url: "dokodu.it/konsultacje"
+    note: "30 minut, bez zobowiązań, bez slajdów"
+  secondary:
+    label: "Kontynuuj na blogu"
+    url: "dokodu.it/blog"
+
+colophon:
+  publisher: "Dokodu sp. z o.o."
+  address: "ul. Kosynierów 76/22, 84-230 Rumia"
+  email: "biuro@dokodu.it"
+  krs: "0000925166"
+  typography: "Inter + JetBrains Mono (self-hosted)"
+  paper: "120 g, matowy"
+  print: "Poligrafia Gdańsk"
+  copyright: "© 2026 Dokodu sp. z o.o."
