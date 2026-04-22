@@ -636,6 +636,254 @@ def build_report(conn):
     return "\n".join(lines)
 
 
+# ── Batch recommendations for quick wins ─────────────────────────────────────
+
+def _quick_win_slugs(conn, period_days=90, min_impressions=500, max_incoming=1):
+    """Returns list of (slug, title, url, impressions, incoming) for posts
+    meeting the quick-win criteria."""
+    rows = conn.execute("""
+        SELECT a.slug, a.title, a.url,
+               (SELECT COUNT(*) FROM blog_links WHERE to_slug = a.slug) AS inc
+        FROM blog_articles a
+        WHERE a.status = 'published'
+    """).fetchall()
+    result = []
+    for slug, title, url, inc in rows:
+        if inc > max_incoming:
+            continue
+        gsc = get_gsc_stats_for_slug(conn, slug, period_days)
+        if gsc and gsc["impressions"] >= min_impressions:
+            result.append((slug, title, url, gsc["impressions"], gsc["clicks"], inc))
+    result.sort(key=lambda r: -r[3])
+    return result
+
+
+def build_batch_recommendations(conn, period_days=90):
+    """
+    Dla wszystkich quick wins generuje listę postów które powinny je linkować,
+    plus konkretne sugestie anchor text.
+    """
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    quick_wins = _quick_win_slugs(conn, period_days)
+
+    lines = [
+        f"# Link Graph Recommendations — dokodu.it",
+        f"Wygenerowano: {now} | Zakres GSC: ostatnie {period_days} dni",
+        "",
+        f"Rekomendacje dla **{len(quick_wins)} quick winów** (posty z ≥500 impressions ale ≤1 incoming link).",
+        "",
+        "Każda sekcja zawiera top 5-8 postów które **powinny linkować** do tego quick wina.",
+        "Dodaj link w treści tych postów z kontekstem (nie forced), używając sugerowanego anchor text.",
+        "",
+        "---",
+        "",
+    ]
+
+    for i, (slug, title, url, impr, clicks, inc) in enumerate(quick_wins, 1):
+        recs = recommend_inbound_links(conn, slug, limit=8)
+        target = conn.execute(
+            "SELECT tags_csv, category_name, pillar FROM blog_articles WHERE slug = ?",
+            (slug,)
+        ).fetchone()
+        tags_csv, cat, pillar = target or ("", "", "")
+        t_tags = _split_tags(tags_csv)
+        # Use first tag as suggested anchor fallback
+        suggested_anchor = title[:50]
+        if t_tags:
+            # Pick the most meaningful tag (skip generic ones)
+            for tag in sorted(t_tags, key=len, reverse=True):
+                if len(tag) > 3 and tag.lower() not in {"ai", "it", "co", "jak", "dla"}:
+                    suggested_anchor = tag
+                    break
+
+        lines.append(f"## {i}. {title}")
+        lines.append(f"**URL:** `{url}` · **GSC:** {impr:,} impr / {clicks:,} clicks · **Incoming:** {inc}")
+        if pillar or cat:
+            lines.append(f"**Pillar/kategoria:** {pillar or cat}")
+        lines.append(f'**Sugerowany anchor:** *„{suggested_anchor}"*')
+        lines.append("")
+
+        if not recs:
+            lines.append("_Brak kandydatów w DB — sprawdź czy są posty o podobnych tagach._")
+            lines.append("")
+            continue
+
+        lines.append("| Score | Z tego posta | Powód |")
+        lines.append("|-------|--------------|-------|")
+        for r in recs:
+            lines.append(
+                f"| {r['score']} | [{r['title'][:60]}](/blog/{r['slug']}) | {r['reason']} |"
+            )
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    lines += [
+        "## Jak stosować",
+        "",
+        '1. Wejdź w admina bloga dla każdego posta z kolumny „Z tego posta"',
+        "2. Znajdź naturalne miejsce w treści (np. paragraph o temacie związanym z targetem)",
+        "3. Dodaj Markdown link: `[sugerowany anchor](/blog/<target-slug>)`",
+        "4. Variuj anchor text — nie używaj tego samego 5 razy na tej samej stronie",
+        "5. Regeneruj raport: `python3 scripts/link_graph.py --sync-full && --analyze`",
+        "",
+        "## Priorytet wykonania",
+        "",
+        "- **Tier 1 (top 5)** — najwyższy GSC traffic, zrób w tym tygodniu",
+        "- **Tier 2 (6-15)** — w tym miesiącu",
+        "- **Tier 3 (reszta)** — jak będzie czas",
+        "",
+        f"*Recommendations | {now}*",
+    ]
+    return "\n".join(lines)
+
+
+# ── Broken links checker ─────────────────────────────────────────────────────
+
+def check_broken_links(conn, timeout=8):
+    """
+    Dla każdego broken internal link (/blog/* target nie w DB) wykonuje HTTP HEAD
+    żeby sklasyfikować: 404 (totally missing), 200 (actually exists — slug mismatch bug),
+    301/302 (redirected). Returns grouped report.
+    """
+    import urllib.request
+    import urllib.error
+
+    broken = conn.execute("""
+        SELECT DISTINCT target_url, COUNT(*) as refs
+        FROM blog_external_links
+        WHERE target_url LIKE '/blog/%'
+        GROUP BY target_url
+        ORDER BY refs DESC
+    """).fetchall()
+
+    results = []
+    for target_url, refs in broken:
+        full_url = f"{SITE}{target_url}"
+        # Count referring posts for context
+        refs_list = [r[0] for r in conn.execute(
+            "SELECT from_slug FROM blog_external_links WHERE target_url = ? LIMIT 10",
+            (target_url,)
+        ).fetchall()]
+
+        status = None
+        final_url = None
+        error = None
+        try:
+            req = urllib.request.Request(
+                full_url, method="HEAD",
+                headers={"User-Agent": "Dokodu-Brain-LinkGraph/1.0"}
+            )
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                status = r.status
+                final_url = r.url
+        except urllib.error.HTTPError as e:
+            status = e.code
+        except Exception as e:
+            error = str(e)[:60]
+
+        results.append({
+            "target_url": target_url,
+            "refs_count": refs,
+            "refs_from": refs_list,
+            "status": status,
+            "final_url": final_url,
+            "error": error,
+        })
+    return results
+
+
+def build_broken_report(conn):
+    """Markdown report of broken internal links with classification."""
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    print("→ Sprawdzam HTTP status każdego broken target…", file=sys.stderr)
+    results = check_broken_links(conn)
+
+    # Classify
+    real_404 = [r for r in results if r["status"] == 404]
+    actually_ok = [r for r in results if r["status"] == 200]
+    redirects = [r for r in results if r["status"] in (301, 302, 307, 308)]
+    errors = [r for r in results if r["error"] or (r["status"] and r["status"] >= 500)]
+
+    lines = [
+        f"# Broken Internal Links — dokodu.it",
+        f"Wygenerowano: {now}",
+        "",
+        f"Łącznie unikalnych broken targets: **{len(results)}**",
+        f"- 🚫 Prawdziwe 404: **{len(real_404)}** (trzeba naprawić lub usunąć linki)",
+        f"- 🟢 Actually 200 OK: **{len(actually_ok)}** (slug w DB out of sync, samo się naprawi po sync-full)",
+        f"- ↪️ Redirecty 3xx: **{len(redirects)}** (działają, ale update linków byłby lepszy)",
+        f"- ⚠️ Errors: **{len(errors)}**",
+        "",
+        "---",
+        "",
+    ]
+
+    if real_404:
+        lines += [
+            "## 🚫 Prawdziwe 404 — DO NAPRAWY",
+            "",
+            "Linki w treści postów wskazujące na nieistniejące URLe. **3 opcje:**",
+            "1. **Usunąć link** z treści linkujących postów (jeśli content był kiedyś, teraz nie ma)",
+            "2. **Opublikować target** (jeśli to draft który był planowany)",
+            "3. **Podmienić na inny post** (jeśli content przeniesiony/rebranded)",
+            "",
+            "| Target | Refs | Z tych postów |",
+            "|--------|------|---------------|",
+        ]
+        for r in real_404:
+            refs_str = ", ".join(f"`{s}`" for s in r["refs_from"][:5])
+            if r["refs_count"] > 5:
+                refs_str += f" *+{r['refs_count'] - 5}*"
+            lines.append(f"| `{r['target_url']}` | {r['refs_count']} | {refs_str} |")
+        lines.append("")
+
+    if actually_ok:
+        lines += [
+            "## 🟢 Actually OK (200) — Slug Mismatch w DB",
+            "",
+            "Target URL zwraca 200 — czyli strona istnieje. Nasz `blog_articles` DB nie ma tego sluga",
+            "(prawdopodobnie inna struktura folderów). Najbliższy sync-full powinien to wyłapać.",
+            "",
+            "| Target | Refs |",
+            "|--------|------|",
+        ]
+        for r in actually_ok:
+            lines.append(f"| `{r['target_url']}` | {r['refs_count']} |")
+        lines.append("")
+
+    if redirects:
+        lines += [
+            "## ↪️ Redirecty",
+            "",
+            "Target redirectuje. Działa, ale update do final URL usuwa extra hop (lepszy UX + SEO).",
+            "",
+            "| From | → Do (final) | Refs |",
+            "|------|-------------|------|",
+        ]
+        for r in redirects:
+            final = r["final_url"] or "?"
+            lines.append(f"| `{r['target_url']}` | `{final}` | {r['refs_count']} |")
+        lines.append("")
+
+    if errors:
+        lines += [
+            "## ⚠️ Errors / Timeouts",
+            "",
+            "| Target | Error |",
+            "|--------|-------|",
+        ]
+        for r in errors:
+            lines.append(f"| `{r['target_url']}` | {r['error'] or r['status']} |")
+        lines.append("")
+
+    lines += [
+        "---",
+        f"*Broken Links Report | {now}*",
+    ]
+    return "\n".join(lines)
+
+
 # ── Analyze (rich report) ────────────────────────────────────────────────────
 
 def build_analyze_report(conn, period_days=90):
@@ -1020,6 +1268,32 @@ def main():
             for line in report.splitlines()[:30]:
                 print(line)
             print(f"\n✅ Pełny raport zapisany: {OUT_FILE}", file=sys.stderr)
+
+        elif cmd_name == "batch-recommend":
+            period = 90
+            for i, a in enumerate(args_rest):
+                if a == "--period" and i + 1 < len(args_rest):
+                    try:
+                        period = int(args_rest[i + 1])
+                    except ValueError:
+                        pass
+            out_path = OUT_FILE.parent / "Link_Graph_Recommendations.md"
+            report = build_batch_recommendations(conn, period_days=period)
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(report, encoding="utf-8")
+            # Preview top sections
+            for line in report.splitlines()[:25]:
+                print(line)
+            print(f"\n✅ Zapisano: {out_path}", file=sys.stderr)
+
+        elif cmd_name == "check-broken":
+            out_path = OUT_FILE.parent / "Link_Graph_Broken.md"
+            report = build_broken_report(conn)
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(report, encoding="utf-8")
+            for line in report.splitlines()[:20]:
+                print(line)
+            print(f"\n✅ Zapisano: {out_path}", file=sys.stderr)
 
         elif cmd_name == "recommend":
             target_slug = args_rest[0] if args_rest and not args_rest[0].startswith("--") else ""

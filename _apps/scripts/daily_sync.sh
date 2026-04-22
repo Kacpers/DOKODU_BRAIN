@@ -39,6 +39,16 @@ if [ "$(date +%u)" = "1" ]; then
     echo "  ✓ YT done" >> "$LOG_FILE"
 fi
 
+# Link Graph — tylko w poniedziałek (po GSC sync, żeby quick wins używały świeżych danych)
+if [ "$(date +%u)" = "1" ]; then
+    echo "  → Link Graph (poniedziałek)..." >> "$LOG_FILE"
+    python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --sync-full >> "$LOG_FILE" 2>&1
+    python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --analyze >> "$LOG_FILE" 2>&1
+    python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --batch-recommend >> "$LOG_FILE" 2>&1
+    python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --check-broken >> "$LOG_FILE" 2>&1
+    echo "  ✓ Link Graph done" >> "$LOG_FILE"
+fi
+
 # Calendar
 echo "  → Calendar..." >> "$LOG_FILE"
 python3 /home/kacper/DOKODU_BRAIN/scripts/calendar_sync.py --pull --days 14 --save >> "$LOG_FILE" 2>&1
