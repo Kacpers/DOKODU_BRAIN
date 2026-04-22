@@ -46,6 +46,7 @@ if [ "$(date +%u)" = "1" ]; then
     python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --analyze >> "$LOG_FILE" 2>&1
     python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --batch-recommend >> "$LOG_FILE" 2>&1
     python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --check-broken >> "$LOG_FILE" 2>&1
+    python3 /home/kacper/DOKODU_BRAIN/scripts/link_graph.py --content-gaps >> "$LOG_FILE" 2>&1
     echo "  ✓ Link Graph done" >> "$LOG_FILE"
 fi
 

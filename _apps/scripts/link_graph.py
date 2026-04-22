@@ -884,6 +884,224 @@ def build_broken_report(conn):
     return "\n".join(lines)
 
 
+# ── Content gaps (new articles to write) ─────────────────────────────────────
+
+def _existing_urls_covering(conn, query, period_days=90):
+    """Return list of (page, impressions, position) where this GSC query appears."""
+    rows = conn.execute("""
+        SELECT page, SUM(impressions), AVG(position)
+        FROM gsc_query_page
+        WHERE query = ?
+          AND period_start >= date('now', ?)
+        GROUP BY page
+        ORDER BY SUM(impressions) DESC
+    """, (query, f'-{period_days} days')).fetchall()
+    return [(r[0], int(r[1] or 0), float(r[2] or 0)) for r in rows]
+
+
+def find_keyword_demand_gaps(conn, period_days=90, min_impressions=500, min_avg_position=10):
+    """
+    GSC queries with high impressions but poor average position, indicating
+    no existing page is ranking well. Candidates for new dedicated posts.
+    """
+    rows = conn.execute("""
+        SELECT query, SUM(impressions) AS total_impr, AVG(position) AS avg_pos,
+               SUM(clicks) AS total_clicks
+        FROM gsc_queries
+        WHERE period_start >= date('now', ?)
+        GROUP BY query
+        HAVING total_impr >= ? AND avg_pos > ?
+        ORDER BY total_impr DESC
+        LIMIT 40
+    """, (f'-{period_days} days', min_impressions, min_avg_position)).fetchall()
+
+    gaps = []
+    for query, impr, pos, clicks in rows:
+        # Check what pages Google picked for this query (if any)
+        pages = _existing_urls_covering(conn, query, period_days)
+        # If top page position > 10 → no page is ranking well = real gap
+        top_page_pos = pages[0][2] if pages else 999
+        if top_page_pos <= 8:
+            continue  # Some existing page ranks OK-ish, not a gap
+        gaps.append({
+            "query": query,
+            "impressions": int(impr),
+            "clicks": int(clicks or 0),
+            "avg_position": float(pos),
+            "top_existing_page": pages[0][0] if pages else None,
+            "top_existing_pos": top_page_pos,
+        })
+    return gaps
+
+
+def find_tag_pillars_missing(conn, min_posts_per_tag=5):
+    """
+    Tags used by many posts but WITHOUT a pillar post covering the topic.
+    Identifies clusters waiting for an introductory hub article.
+    """
+    # Aggregate tags from tags_csv
+    tag_posts = {}
+    tag_slugs = {}  # tag → list of (slug, is_pillar, title, word_count)
+    rows = conn.execute("""
+        SELECT slug, title, tags_csv, is_pillar, word_count
+        FROM blog_articles
+        WHERE status = 'published' AND tags_csv IS NOT NULL AND tags_csv != ''
+    """).fetchall()
+    for slug, title, tags_csv, is_pillar, wc in rows:
+        for tag in _split_tags(tags_csv):
+            tag_posts.setdefault(tag, 0)
+            tag_posts[tag] += 1
+            tag_slugs.setdefault(tag, []).append((slug, bool(is_pillar), title, wc or 0))
+
+    missing = []
+    for tag, count in tag_posts.items():
+        if count < min_posts_per_tag:
+            continue
+        posts = tag_slugs[tag]
+        has_pillar = any(is_pillar for (_, is_pillar, _, _) in posts)
+        # Also consider a "de facto pillar": long (>2000 words) post with the tag word in the URL
+        has_defacto_pillar = any(
+            wc > 2000 and tag.lower() in slug.lower()
+            for (slug, _, _, wc) in posts
+        )
+        if has_pillar or has_defacto_pillar:
+            continue
+        missing.append({
+            "tag": tag,
+            "post_count": count,
+            "sample_slugs": [s for (s, _, _, _) in posts[:5]],
+        })
+    missing.sort(key=lambda m: -m["post_count"])
+    return missing
+
+
+def build_content_gaps_report(conn, period_days=90):
+    """
+    Consolidated "what to write next" report pulling three signals:
+      A. Planned drafts — /blog/* targets referenced in content but returning 404
+      B. Keyword demand gaps — high-impression GSC queries with no well-ranking page
+      C. Tag clusters missing a pillar — many posts share a tag, no hub exists
+    """
+    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+
+    # Section A: reuse broken link classification
+    print("→ A. Checking broken link targets (HTTP HEAD)…", file=sys.stderr)
+    broken = check_broken_links(conn)
+    real_404 = [r for r in broken if r["status"] == 404]
+    # Enrich with anchor texts for outline hints
+    for r in real_404:
+        anchors = [row[0] for row in conn.execute(
+            "SELECT DISTINCT anchor_text FROM blog_external_links WHERE target_url = ? LIMIT 5",
+            (r["target_url"],)
+        ).fetchall() if row[0]]
+        r["anchors"] = anchors
+
+    # Section B: GSC demand
+    print("→ B. Analyzing GSC keyword demand…", file=sys.stderr)
+    keyword_gaps = find_keyword_demand_gaps(conn, period_days)
+
+    # Section C: tag-based pillar gaps
+    print("→ C. Detecting tag clusters without pillar…", file=sys.stderr)
+    tag_gaps = find_tag_pillars_missing(conn)
+
+    lines = [
+        f"# Content Gaps — dokodu.it",
+        f"Wygenerowano: {now} | Zakres GSC: ostatnie {period_days} dni",
+        "",
+        "## Podsumowanie",
+        "",
+        f"- **A. Planowane drafty** (linki 404 w treści postów): **{len(real_404)}**",
+        f"- **B. Keyword demand gaps** (GSC impr ≥500, brak dobrego targetu): **{len(keyword_gaps)}**",
+        f"- **C. Tagi bez pillara** (≥5 postów, brak huba): **{len(tag_gaps)}**",
+        "",
+        "---",
+        "",
+        "## A. Planowane drafty",
+        "",
+        "Linki `/blog/*` w treści istniejących postów wskazujące na **nieistniejące URL**.",
+        "Hub post już zrobił kontekst i anchor text — wystarczy napisać content. Najszybsza droga.",
+        "",
+    ]
+
+    if not real_404:
+        lines.append("_Brak._")
+    else:
+        lines.append("| Sugerowany URL | Z huba | Anchor z treści (hint na outline) |")
+        lines.append("|----------------|--------|-----------------------------------|")
+        for r in real_404:
+            refs = ", ".join(f"`{s}`" for s in r["refs_from"][:3])
+            if r["refs_count"] > 3:
+                refs += f" *+{r['refs_count'] - 3}*"
+            anchors = "; ".join(a[:60] for a in (r.get("anchors") or []))
+            lines.append(f"| `{r['target_url']}` | {refs} | {anchors or '—'} |")
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## B. Keyword demand gaps (z GSC)",
+        "",
+        "Frazy z wysokim impressions (≥500) i średnią pozycją > 10 — "
+        "Google pokazuje strony, ale żadna nie rankuje dobrze (top page pos > 8).",
+        "Dedykowany post na tę frazę zazwyczaj szybko zabiera ruch.",
+        "",
+    ]
+
+    if not keyword_gaps:
+        lines.append(
+            "_Brak danych lub wszystkie frazy mają już dobrze rankujące URLe. "
+            "Uruchom `python3 scripts/gsc_fetch.py --days 90 --save` żeby odświeżyć._"
+        )
+    else:
+        lines.append("| Query | Impr | Clicks | Pozycja | Obecny top URL |")
+        lines.append("|-------|------|--------|---------|-----------------|")
+        for g in keyword_gaps:
+            top_pg = g["top_existing_page"] or "—"
+            # Trim to just path
+            if top_pg.startswith("https://"):
+                top_pg = top_pg.replace("https://dokodu.it", "")
+            lines.append(
+                f"| {g['query']} | {g['impressions']:,} | {g['clicks']} | "
+                f"{g['avg_position']:.1f} | `{top_pg[:50]}` |"
+            )
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## C. Tagi bez pillara",
+        "",
+        "Tagi używane przez ≥5 postów, ale bez dedicated pillar post (oznaczenie `isPillarPage=true`) "
+        "i bez długiego (>2000 słów) posta zawierającego tag w URL.",
+        '**Akcja:** napisać pillar post typu „<tag> — kompletny przewodnik" '
+        "który linkuje do wszystkich postów z tym tagiem.",
+        "",
+    ]
+
+    if not tag_gaps:
+        lines.append("_Brak — każdy rozbudowany klaster ma już pillara._")
+    else:
+        lines.append("| Tag | Postów | Przykładowe slugi |")
+        lines.append("|-----|--------|--------------------|")
+        for t in tag_gaps[:25]:
+            sample = ", ".join(f"`{s}`" for s in t["sample_slugs"][:3])
+            lines.append(f"| **{t['tag']}** | {t['post_count']} | {sample} |")
+
+    lines += [
+        "",
+        "---",
+        "",
+        "## Priorytet wykonania",
+        "",
+        "1. **A. Planowane drafty** — zacznij tu (outline już istnieje, masz anchor z hub post)",
+        "2. **B. Keyword demand** — top 5 po impressions — wysokie ROI",
+        "3. **C. Tagi bez pillara** — strategiczne (pillar redefiniuje cluster na dłużej)",
+        "",
+        f"*Content Gaps | {now}*",
+    ]
+    return "\n".join(lines)
+
+
 # ── Analyze (rich report) ────────────────────────────────────────────────────
 
 def build_analyze_report(conn, period_days=90):
@@ -1282,6 +1500,22 @@ def main():
             out_path.parent.mkdir(parents=True, exist_ok=True)
             out_path.write_text(report, encoding="utf-8")
             # Preview top sections
+            for line in report.splitlines()[:25]:
+                print(line)
+            print(f"\n✅ Zapisano: {out_path}", file=sys.stderr)
+
+        elif cmd_name == "content-gaps":
+            period = 90
+            for i, a in enumerate(args_rest):
+                if a == "--period" and i + 1 < len(args_rest):
+                    try:
+                        period = int(args_rest[i + 1])
+                    except ValueError:
+                        pass
+            out_path = OUT_FILE.parent / "Link_Graph_Content_Gaps.md"
+            report = build_content_gaps_report(conn, period_days=period)
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            out_path.write_text(report, encoding="utf-8")
             for line in report.splitlines()[:25]:
                 print(line)
             print(f"\n✅ Zapisano: {out_path}", file=sys.stderr)
