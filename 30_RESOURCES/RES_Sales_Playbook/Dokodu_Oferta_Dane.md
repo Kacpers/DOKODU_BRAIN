@@ -1,14 +1,18 @@
 ---
 type: reference
-last_updated: 2026-03-18
-source: scrape dokodu.it (bez /blog/)
+last_updated: 2026-04-22
+source: scrape dokodu.it (2026-03-18) + korekta cennika i roli Aliny (2026-04-22)
 tags: oferta, cennik, usługi, dane-firmy
 ---
 
 # Dokodu — Dane firmy i pełna oferta
 
 > Źródło: scrape dokodu.it — 2026-03-18
+> Korekta 2026-04-22: cennik warsztatów (Kacper) + doprecyzowanie roli Aliny
 > Do użycia przy: tworzeniu ofert, propozycji handlowych, briefów sprzedażowych
+
+> ⚠️ Cennik warsztatów poniżej jest aktualną wewnętrzną pozycją cenową Dokodu (2026-04-22).
+> Strona dokodu.it/szkolenia nadal pokazuje „wycena indywidualna" — nie jest zsynchronizowana (trwają prace nad stroną).
 
 ---
 
@@ -40,10 +44,13 @@ tags: oferta, cennik, usługi, dane-firmy
 - 15+ lat w branży
 - Twórca kursów (PyStart 1400+ kursantów)
 - YouTube ~50K subskrybentów
+- **Prowadzi warsztaty i wdrożenia** (core delivery)
 
 **Alina Sieradzińska** — COO & Legal Expert
 - IT & AI Legal Expert
 - Specjalizacja: GDPR / AI Act / IP
+- **Rola w ofercie:** upsell / add-on (moduły AI Act & RODO, audyty compliance) — nie stała część delivery szkoleń, dorzucana do ofert jako dodatkowy moduł/dzień
+- Marketing może wspominać o niej jako części zespołu, ale nie bazuj argumentów sprzedażowych na „Alina prowadzi" — prowadzi Kacper, Alina wchodzi gdy zamówiony jest moduł compliance
 
 ---
 
@@ -52,7 +59,7 @@ tags: oferta, cennik, usługi, dane-firmy
 | Segment | Oferta | Widełki cenowe |
 |---------|--------|----------------|
 | Enterprise B2B | Wdrożenia agentów AI, automatyzacje, chatboty | 8 000–80 000+ PLN |
-| SMB B2B | Warsztaty modułowe, szkolenia zamknięte | 2 500–4 500 PLN / grupa |
+| SMB B2B | Warsztaty zamknięte, szkolenia dla zespołów | 6 999–13 999 PLN / dzień (grupa do 15 os) |
 | Indywidualni | Kursy VOD online | 1 490–2 490 PLN |
 
 ---
@@ -105,20 +112,32 @@ tags: oferta, cennik, usługi, dane-firmy
 
 ---
 
-### 3. Warsztaty modułowe (dla firm)
+### 3. Warsztaty zamknięte (dla firm)
 
 **Hasło:** "Przestańcie oglądać. Zacznijcie działać."
 
 **Charakterystyka:**
-- 100% Live Online
-- Minimum 4 uczestników
+- 100% Live Online (prowadzi Kacper osobiście)
+- Grupa do 15 osób
 - Zero nagrań VOD
-- Konfiguracja oferty w 3 minuty (konfigurator na stronie)
 - Formuła: 20% teoria / 60% praktyka / 20% podsumowanie
 - Moduły 45–60 min, breakout rooms
+- JSON paczki projektowe w pakiecie
 
-**Cennik:**
-- **2 500–4 500 PLN netto** za grupę do 10 osób (zależy od liczby modułów)
+**Cennik (stan 2026-04-22):**
+
+| Wariant | Cena netto | Co zawiera |
+|---------|------------|-------------|
+| **Standard** | **od 6 999 PLN / dzień / do 15 os** | Kacper, 1 dzień, standardowe curriculum n8n/AI, JSON paczki |
+| **Premium** | **od 8 999 PLN / dzień** | + custom case klienta, pre-audit procesu, follow-up 1:1 |
+| **Enterprise 2-dniowe** | **od 13 999 PLN** | Rabat ~15% vs. 2× Standard |
+| **AI Act & RODO add-on** | **+4 000–5 000 PLN** | Moduł 3–4h z Aliną Sieradzińską, checklist, certyfikat |
+| **Custom (>20 os, multi-day, curriculum od zera)** | wycena indywidualna | Dedykowana agenda, ew. workshop + wdrożenie package |
+
+**Zasady negocjacji:**
+- Nie obniżamy ceny — dorzucamy wartość (dodatkowy moduł, templates, godzina 1:1 follow-up)
+- 6 999 PLN to baseline floor (poziom zwalidowany wg rynku PL 2026-04 — Sages/Altkom zamknięte: 10–15k/dzień/15 os, JSystems otwarte: ~900 zł/os/dzień)
+- Cel: po 3–5 udanych szkoleniach podnieść baseline do 7 999 PLN / dzień
 
 ---
 
@@ -185,10 +204,10 @@ Gwarancja zadowolenia 14 dni. Max 50 osób w edycji.
 
 - **"AI ma pracować na Twój biznes"** (główne hasło)
 - Bez vendor lock-in — klient dostaje kod i IP
-- Compliance wbudowany (GDPR / AI Act / ISO) — Alina jako ekspert prawny
+- Compliance jako opcjonalny moduł — Alina jako ekspert prawny dostępny jako add-on (AI Act / GDPR audyt)
 - Praktyczne podejście: 60% czasu to ćwiczenia
 - Elastyczność: self-hosted n8n = brak abonamentów SaaS
-- Social proof: 140+ firm, 4.9/5, 1000+ pracowników przeszkolonych
+- Social proof: 140+ firm, 4.9/5, 1000+ pracowników przeszkolonych, 50K subs YouTube (Kacper)
 
 ---
 

@@ -13,8 +13,15 @@ Użycie:
   python3 blog_publish.py create --title "..." --slug "..." --content "..."
   python3 blog_publish.py create --from-idea 5 --content-file /tmp/post.md
   python3 blog_publish.py update --id clxxx... --content "..." [--status published]
+  python3 blog_publish.py update --id clxxx... --featured-image /images/posts/my-slug.png
+  python3 blog_publish.py gen-image --slug my-post [--prompt "..."] [--flash]
   python3 blog_publish.py publish --id clxxx...
   python3 blog_publish.py delete --id clxxx...   (uwaga: nieodwracalne)
+
+Featured image:
+  Flagi --featured-image w create/update oraz subcommand gen-image pozwalają
+  zarządzać obrazem wyróżniającym. gen-image korzysta ze skryptu generate_image.py
+  (Nano Banana / Gemini) i zapisuje PNG+WEBP+AVIF do public/images/posts/<slug>.*
 """
 
 import os
@@ -38,6 +45,8 @@ DB_FILE      = CONFIG_DIR / "gsc_data.db"
 
 SITE_URL_PROD = "https://dokodu.it"
 SITE_URL_DEV  = "http://localhost:3001"
+
+DEFAULT_SITE_IMAGES_DIR = Path.home() / "Projects" / "dokodu" / "website-nextjs" / "public" / "images" / "posts"
 
 
 # ══════════════════════════════════════════════
@@ -309,17 +318,18 @@ def cmd_create(args, site_url, api_key):
                 payload["tags"].insert(0, kw)
 
     # --- Override z argumentów CLI ---
-    if args.title:        payload["title"]       = args.title
-    if args.slug:         payload["slug"]        = args.slug
-    if args.excerpt:      payload["excerpt"]     = args.excerpt
-    if args.meta_title:   payload["metaTitle"]   = args.meta_title
-    if args.author:       payload["author"]      = args.author
-    if args.category:     payload["category"]    = args.category
-    if args.tags:         payload["tags"]        = [t.strip() for t in args.tags.split(",")]
-    if args.status:       payload["status"]      = args.status
-    if args.post_type:    payload["postType"]    = args.post_type
-    if args.pillar_page:  payload["isPillarPage"] = True
-    if args.published_at: payload["publishedAt"] = args.published_at
+    if args.title:          payload["title"]         = args.title
+    if args.slug:           payload["slug"]          = args.slug
+    if args.excerpt:        payload["excerpt"]       = args.excerpt
+    if args.meta_title:     payload["metaTitle"]     = args.meta_title
+    if args.author:         payload["author"]        = args.author
+    if args.category:       payload["category"]      = args.category
+    if args.tags:           payload["tags"]          = [t.strip() for t in args.tags.split(",")]
+    if args.status:         payload["status"]        = args.status
+    if args.post_type:      payload["postType"]      = args.post_type
+    if args.pillar_page:    payload["isPillarPage"]  = True
+    if args.published_at:   payload["publishedAt"]   = args.published_at
+    if args.featured_image: payload["featuredImage"] = args.featured_image
 
     # --- Treść ---
     content = ""
@@ -377,15 +387,16 @@ def cmd_create(args, site_url, api_key):
 
 def cmd_update(args, site_url, api_key):
     payload: dict = {}
-    if args.title:        payload["title"]       = args.title
-    if args.slug:         payload["slug"]        = args.slug
-    if args.excerpt:      payload["excerpt"]     = args.excerpt
-    if args.meta_title:   payload["metaTitle"]   = args.meta_title
-    if args.author:       payload["author"]      = args.author
-    if args.category:     payload["category"]    = args.category
-    if args.tags:         payload["tags"]        = [t.strip() for t in args.tags.split(",")]
-    if args.status:       payload["status"]      = args.status
-    if args.published_at: payload["publishedAt"] = args.published_at
+    if args.title:          payload["title"]         = args.title
+    if args.slug:           payload["slug"]          = args.slug
+    if args.excerpt:        payload["excerpt"]       = args.excerpt
+    if args.meta_title:     payload["metaTitle"]     = args.meta_title
+    if args.author:         payload["author"]        = args.author
+    if args.category:       payload["category"]      = args.category
+    if args.tags:           payload["tags"]          = [t.strip() for t in args.tags.split(",")]
+    if args.status:         payload["status"]        = args.status
+    if args.published_at:   payload["publishedAt"]   = args.published_at
+    if args.featured_image: payload["featuredImage"] = args.featured_image
 
     content = ""
     if args.content_file:
@@ -574,6 +585,101 @@ def cmd_publish(args, site_url, api_key):
 # MAIN
 # ══════════════════════════════════════════════
 
+def _build_image_prompt(title: str, excerpt: str) -> str:
+    """Fallback prompt dla Nano Banana gdy user nie podał własnego — oparty o metadane posta."""
+    context = (excerpt or "").strip().replace("\n", " ")[:250]
+    return (
+        f"Modern minimalist infographic for Polish B2B tech blog post titled \"{title}\". "
+        f"Dark tech background (#0f172a) with subtle gradient, red accent color (#e92d49) for "
+        f"headlines and dividers, clean sans-serif typography, professional SaaS aesthetic, "
+        f"16:9 composition with focal visual element representing the topic. Avoid stock-photo look. "
+        f"Context/excerpt: {context}"
+    )
+
+
+def cmd_gen_image(args, site_url, api_key):
+    """Generuje featured image przez Nano Banana (generate_image.py) i opcjonalnie ustawia featuredImage w API."""
+    # Import generate_image.py z tego samego katalogu
+    script_dir = Path(__file__).resolve().parent
+    if str(script_dir) not in sys.path:
+        sys.path.insert(0, str(script_dir))
+    try:
+        from generate_image import (
+            MODEL_PRO, MODEL_FLASH,
+            load_api_key as load_genai_key,
+            parse_size, generate_with_gemini, save_formats,
+        )
+    except ImportError as e:
+        print(f"❌ Nie można zaimportować generate_image.py: {e}", file=sys.stderr)
+        print(f"   Upewnij się że {script_dir}/generate_image.py istnieje.", file=sys.stderr)
+        sys.exit(1)
+
+    # 1. Pobierz post przez slug
+    print(f"🔍 Sprawdzam post o slug '{args.slug}'...", file=sys.stderr)
+    post = api_get_by_slug(site_url, api_key, args.slug)
+    if not post:
+        print(f"❌ Nie znaleziono posta o slug '{args.slug}' w API.", file=sys.stderr)
+        sys.exit(1)
+    post_id = post.get("id")
+
+    # 2. Zbuduj prompt
+    prompt = args.prompt
+    if not prompt:
+        title = post.get("title", "")
+        excerpt = post.get("excerpt") or post.get("metaDescription") or ""
+        prompt = _build_image_prompt(title, excerpt)
+        print(f"📝 Prompt wygenerowany z metadanych posta (użyj --prompt żeby nadpisać).", file=sys.stderr)
+
+    # 3. Przygotuj ścieżkę zapisu
+    images_dir = Path(args.images_dir or os.environ.get(
+        "DOKODU_SITE_IMAGES_DIR", str(DEFAULT_SITE_IMAGES_DIR)
+    )).expanduser()
+    if not images_dir.exists():
+        print(f"⚠️  Katalog {images_dir} nie istnieje — tworzę.", file=sys.stderr)
+        images_dir.mkdir(parents=True, exist_ok=True)
+    output_path = images_dir / f"{args.slug}.png"
+
+    model = MODEL_FLASH if args.flash else MODEL_PRO
+    target_size = parse_size(args.size)
+
+    print(f"🎨 Model: {model}")
+    print(f"📐 Rozmiar: {target_size[0]}x{target_size[1]}")
+    print(f"💾 Zapis: {output_path}")
+    print(f"📝 Prompt: {prompt[:100]}{'...' if len(prompt) > 100 else ''}")
+    print()
+
+    # 4. Generuj + zapisz (PNG + WEBP + AVIF — zgodnie z konwencją Dokodu)
+    google_ai_key = load_genai_key()
+    print("⏳ Generuję obraz przez Nano Banana...")
+    raw_png = generate_with_gemini(prompt, model, google_ai_key)
+    save_formats(raw_png, output_path, target_size, ("png", "webp", "avif"))
+
+    cost_usd = 0.067 if args.flash else 0.134
+    print(f"\n💰 Szacunkowy koszt: ${cost_usd:.3f} (~{cost_usd * 4.0:.2f} PLN)")
+
+    # 5. (opcjonalnie) Ustaw featuredImage w API
+    if args.no_update:
+        print(f"\n✅ Pliki zapisane. Pamiętaj: commit obrazów + ustaw ręcznie featuredImage.")
+        return
+
+    rel_path = f"/images/posts/{args.slug}.png"
+    print(f"\n📡 Ustawiam featuredImage='{rel_path}' w API (post id: {post_id})...")
+    result = api_update(site_url, api_key, post_id, {"featuredImage": rel_path})
+    if result.get("success"):
+        print(f"✅ featuredImage ustawione.")
+        rev = api_revalidate(site_url, api_key, args.slug)
+        if rev.get("success"):
+            print(f"   🔄 Revalidacja ISR: {rev.get('revalidated', [])}")
+    else:
+        print(f"⚠️  Update postu się nie udał: {result}", file=sys.stderr)
+
+    print(
+        f"\n⚠️  Obrazy są LOKALNE (w repo strony). Musisz je scommitować i zdeploy-ować, "
+        f"żeby były widoczne na dokodu.it:"
+    )
+    print(f"   cd ~/Projects/dokodu/website-nextjs && git add public/images/posts/{args.slug}.* && git commit -m 'feat(blog): featured image for {args.slug}'")
+
+
 def main():
     parser = argparse.ArgumentParser(description="DOKODU BRAIN — Blog Publishing Client")
     parser.add_argument("--dev", action="store_true", help="Użyj localhost:3001 zamiast produkcji")
@@ -611,6 +717,8 @@ def main():
                           dest="post_type")
     p_create.add_argument("--pillar-page",   action="store_true", dest="pillar_page")
     p_create.add_argument("--published-at",  default=None, dest="published_at")
+    p_create.add_argument("--featured-image", default=None, dest="featured_image",
+                          help="Ścieżka /images/posts/... lub URL do featured image")
 
     # UPDATE
     p_update = sub.add_parser("update", help="Aktualizuj post")
@@ -626,6 +734,8 @@ def main():
     p_update.add_argument("--tags",         default=None)
     p_update.add_argument("--status",       choices=["draft", "published"], default=None)
     p_update.add_argument("--published-at", default=None, dest="published_at")
+    p_update.add_argument("--featured-image", default=None, dest="featured_image",
+                          help="Ścieżka /images/posts/... lub URL do featured image")
     p_update.add_argument("--idea-id",      default=None, dest="idea_id", type=int,
                           help="ID w ideas bank do synchronizacji statusu")
 
@@ -643,17 +753,31 @@ def main():
     p_pub.add_argument("--idea-id", default=None, dest="idea_id", type=int,
                        help="ID w ideas bank do synchronizacji statusu")
 
+    # GEN-IMAGE
+    p_genimg = sub.add_parser("gen-image", help="Wygeneruj featured image przez Nano Banana (Gemini)")
+    p_genimg.add_argument("--slug",    required=True, help="Slug posta (post musi istnieć w API)")
+    p_genimg.add_argument("--prompt",  default=None,
+                          help="Prompt dla generatora (jeśli brak — wygenerowany z title+excerpt posta)")
+    p_genimg.add_argument("--flash",   action="store_true",
+                          help="Użyj Nano Banana 2 Flash zamiast Pro (ok. 50%% taniej)")
+    p_genimg.add_argument("--size",    default="1920x1080", help="Rozmiar WxH (default 1920x1080)")
+    p_genimg.add_argument("--no-update", action="store_true",
+                          help="Tylko zapisz pliki — nie ustawiaj featuredImage w API")
+    p_genimg.add_argument("--images-dir", default=None,
+                          help=f"Katalog zapisu (domyślnie {DEFAULT_SITE_IMAGES_DIR})")
+
     args = parser.parse_args()
     api_key  = get_api_key()
     site_url = get_site_url(args.dev)
 
     cmds = {
-        "list":    cmd_list,
-        "get":     cmd_get,
-        "create":  cmd_create,
-        "update":  cmd_update,
-        "publish": cmd_publish,
-        "faq":     cmd_faq,
+        "list":       cmd_list,
+        "get":        cmd_get,
+        "create":     cmd_create,
+        "update":     cmd_update,
+        "publish":    cmd_publish,
+        "faq":        cmd_faq,
+        "gen-image":  cmd_gen_image,
     }
     cmds[args.cmd](args, site_url, api_key)
 

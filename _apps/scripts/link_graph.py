@@ -206,13 +206,18 @@ def _read_api_key():
 
 
 def _fetch_all_posts(api_key, limit=500):
-    """Pobiera wszystkie posty z /api/external/posts (jeden request z limit=500)."""
+    """Pobiera wszystkie posty z /api/external/posts (jeden request z limit=500).
+    Cache-bust przez timestamp w query — inaczej Cloudflare zwraca stałe dane
+    sprzed edycji (TTL 7200s), a link-graph pokazuje nieaktualne liczby."""
     import urllib.request
+    import time
+    bust = int(time.time())
     req = urllib.request.Request(
-        f"{BLOG_API}/external/posts?status=published&limit={limit}",
+        f"{BLOG_API}/external/posts?status=published&limit={limit}&_bust={bust}",
         headers={
             "x-api-key": api_key,
             "User-Agent": "Dokodu-Brain-LinkGraph/1.0",
+            "Cache-Control": "no-cache",
         },
     )
     with urllib.request.urlopen(req, timeout=30) as r:

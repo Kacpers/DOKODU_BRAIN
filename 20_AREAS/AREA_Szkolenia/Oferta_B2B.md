@@ -2,9 +2,13 @@
 type: reference
 status: active
 owner: kacper
-last_reviewed: 2026-03-25
+last_reviewed: 2026-04-22
 tags: [szkolenia, b2b, strategia, oferta, sciezki]
 ---
+
+> ⚠️ Korekta 2026-04-22: ceny flagshipów wyrównane do nowego cennika warsztatów Dokodu (baseline 6 999 PLN/dzień/do 15 os).
+> Strona dokodu.it nie publikuje żadnych cen publicznie (wszędzie „wycena indywidualna"), więc aktualizacja nie powoduje rozjazdu z publikiem.
+> Szczegóły: `30_RESOURCES/RES_Sales_Playbook/Dokodu_Oferta_Dane.md`
 
 # Oferta B2B — Mapa Szkoleń Zamkniętych
 
@@ -73,8 +77,9 @@ Kryterium: pełna agenda + doświadczenie z realizacji + można wycenić bez kon
 - **Dla kogo:** Działy BOK, Operations, IT, Administracja
 - **Technologie:** n8n, Microsoft 365 (Outlook/Teams/SharePoint), GPT-4o/Azure OpenAI, SAP (opcja)
 - **Wynik:** Uczestnicy wychodzą z działającymi automatyzacjami
-- **Cena:** od 8 000 PLN netto / grupa do 15 os.
+- **Cena:** od 13 999 PLN netto / grupa do 15 os. (= Enterprise 2-dniowe z nowego cennika, rabat 15% vs 2× Standard)
 - **Status:** ✅ Zrealizowane 5x (Animex, 75 uczestników, ocena 4.8/5)
+- **Historyczna cena:** 8 000 PLN (Animex et al., 2025-2026Q1) — nowa oferta od 2026-04-22
 - **Agenda:** Pełna — plik `10_PROJECTS/PRJ_Animex_Szkolenie/`
 - **Social proof:** 4.8/5 ogólna, 4.9/5 trener, cytaty z ankiet
 
@@ -84,8 +89,9 @@ Kryterium: pełna agenda + doświadczenie z realizacji + można wycenić bez kon
 - **Dla kogo:** Programiści wewnętrzni, zespoły które chcą budować własne narzędzia webowe
 - **Technologie:** Django, Python, SQL Server, Docker, REST API, Celery
 - **Wynik:** Uczestnicy budują i wdrażają własną aplikację webową
-- **Cena:** od 14 000 PLN netto / grupa do 12 os. (szacunek)
+- **Cena:** od 23 999 PLN netto / grupa do 12 os. (4 dni × 6 999 × rabat 15% ≈ 23 800, zaokr.)
 - **Status:** ✅ Pełna agenda dostępna (wklejona przez Kacpra 25.03.2026)
+- **Historyczny szacunek:** 14 000 PLN — zaktualizowane 2026-04-22
 - **Agenda:** W `AREA_Szkolenia/Agendas/Django_4dni.md`
 
 ### 🏆 FLAGSHIP #3: Microsoft Copilot Specialist dla Firmy
@@ -93,8 +99,9 @@ Kryterium: pełna agenda + doświadczenie z realizacji + można wycenić bez kon
 - **Format:** 1 dzień × 8h (lub 2 × 4h "pół na pół")
 - **Dla kogo:** Każdy pracownik biurowy na M365
 - **Wynik:** Zespół odzyskuje 30–60 min dziennie per osoba
-- **Cena:** od 4 000 PLN netto / grupa do 15 os. (szacunek)
+- **Cena:** od 6 999 PLN netto / grupa do 15 os. (= Standard z nowego cennika)
 - **Status:** ✅ Moduły gotowe w ścieżce, realizowane wielokrotnie
+- **Historyczny szacunek:** 4 000 PLN — zaktualizowane 2026-04-22
 - **Uwaga:** Nie ma dedykowanej strony produktowej — CTA "Umów audyt" prowadzi do konsultacji
 
 ### 🟡 KANDIDAT #4: Google Gemini Specialist dla Firmy
