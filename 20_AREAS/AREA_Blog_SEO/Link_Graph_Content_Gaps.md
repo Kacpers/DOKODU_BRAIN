@@ -1,9 +1,9 @@
 # Content Gaps — dokodu.it
-Wygenerowano: 2026-04-22 19:12 | Zakres GSC: ostatnie 90 dni
+Wygenerowano: 2026-04-24 21:56 | Zakres GSC: ostatnie 90 dni
 
 ## Podsumowanie
 
-- **A. Planowane drafty** (linki 404 w treści postów): **12**
+- **A. Planowane drafty** (linki 404 w treści postów): **0**
 - **B. Keyword demand gaps** (GSC impr ≥500, brak dobrego targetu): **14**
 - **C. Tagi bez pillara** (≥5 postów, brak huba): **1**
 
@@ -14,20 +14,7 @@ Wygenerowano: 2026-04-22 19:12 | Zakres GSC: ostatnie 90 dni
 Linki `/blog/*` w treści istniejących postów wskazujące na **nieistniejące URL**.
 Hub post już zrobił kontekst i anchor text — wystarczy napisać content. Najszybsza droga.
 
-| Sugerowany URL | Z huba | Anchor z treści (hint na outline) |
-|----------------|--------|-----------------------------------|
-| `/blog/wykorzystanie-generative-ai-w-automatycznym-generowaniu-kodu` | `automatyzacja-codziennych-zadan-jak-odzyskalem-czas-dla-siebie`, `generative-ai-w-grach-i-symulacjach` | Wykorzystanie Generative AI w automatycznym generowaniu kodu |
-| `/blog/google-meet-transkrypcja` | `google-workspace/gemini-co-to-jest` | Szczegóły → |
-| `/blog/google-docs-gemini` | `google-workspace/gemini-co-to-jest` | Szczegóły → |
-| `/blog/gmail-gemini-ai-asystent` | `google-workspace/gemini-co-to-jest` | Szczegóły → |
-| `/blog/agenci-ai/stable-diffusion-flux-lora-comfyui-rtx` | `agenci-ai` | Lokalne generowanie obrazów — Flux LoRA i ComfyUI na RTX 508 |
-| `/blog/agenci-ai/rag-chatbot-n8n-qdrant` | `agenci-ai` | Jak zbudować chatbota RAG z n8n i Qdrant |
-| `/blog/agenci-ai/python-mcp-server-fast-mcp` | `agenci-ai` | Własny serwer MCP w Pythonie (FastMCP) |
-| `/blog/agenci-ai/mcp-n8n-claude-code-automatyzacja` | `agenci-ai` | MCP w n8n — jak Claude Code tworzy workflowy |
-| `/blog/agenci-ai/lokalny-rag-rtx-5080-colqwen-lancedb` | `agenci-ai` | Lokalny RAG bez chmury — RTX 5080, ColQwen i LanceDB |
-| `/blog/agenci-ai/lokalny-asystent-ai-qwen3-cursor-docker` | `agenci-ai` | Lokalny asystent AI dla programistów — Qwen 3, Ollama, Docke |
-| `/blog/agenci-ai/gemini-imagen-edycja-zdjec-n8n` | `agenci-ai` | Gemini Imagen w n8n — automatyczna edycja zdjęć produktów |
-| `/blog/agenci-ai/agent-ai-wlasne-dane-n8n-gemini` | `agenci-ai` | Agent AI na własnych danych bez RAG — n8n i Gemini |
+_Brak._
 
 ---
 
@@ -72,4 +59,4 @@ Tagi używane przez ≥5 postów, ale bez dedicated pillar post (oznaczenie `isP
 2. **B. Keyword demand** — top 5 po impressions — wysokie ROI
 3. **C. Tagi bez pillara** — strategiczne (pillar redefiniuje cluster na dłużej)
 
-*Content Gaps | 2026-04-22 19:12*
+*Content Gaps | 2026-04-24 21:56*
