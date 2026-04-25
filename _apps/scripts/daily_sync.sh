@@ -50,6 +50,13 @@ if [ "$(date +%u)" = "1" ]; then
     echo "  ✓ Link Graph done" >> "$LOG_FILE"
 fi
 
+# Performance check (PSI mobile dla 12 URL dokodu.it) — tylko w poniedziałek
+if [ "$(date +%u)" = "1" ]; then
+    echo "  → Performance check (poniedziałek)..." >> "$LOG_FILE"
+    bash /home/kacper/DOKODU_BRAIN/scripts/perf_check.sh >> "$LOG_FILE" 2>&1
+    echo "  ✓ Performance check done" >> "$LOG_FILE"
+fi
+
 # Calendar
 echo "  → Calendar..." >> "$LOG_FILE"
 python3 /home/kacper/DOKODU_BRAIN/scripts/calendar_sync.py --pull --days 14 --save >> "$LOG_FILE" 2>&1
