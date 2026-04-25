@@ -1,5 +1,15 @@
 # Blog SEO — Bank Pomysłów
-Eksport: 2026-03-16 22:21 | Łącznie: 40 pomysłów
+Eksport: 2026-04-25 16:50 | Łącznie: 43 pomysły | Nowe wpisy z DataForSEO 2026-W17
+
+## 🆕 Dodane 2026-04-25 z DataForSEO weekly research
+
+| ID | Pri | Status | Pillar | Keyword | Tytuł | Notatki |
+|----|-----|--------|--------|---------|-------|---------|
+| 55 | 🔴 high | BRIEF | n8n Automatyzacja | n8n self-hosted | [REFRESH] n8n self-hosted z Dockerem — kompletny tutorial 2026 | REFRESH istniejącego /blog/n8n/docker-instalacja-konfiguracja (16k słów, #3 ranking). Dual-target: n8n self-hosted (780) + n8n docker (590) = 1370 vol. Brief: BRIEF_REFRESH_n8n-docker-instalacja_2026-04-25.md. KACPER10 box + Caddy + AI Act compliance. |
+| 56 | 🔴 high | BRIEF | n8n Automatyzacja | n8n templates | [REFRESH] n8n Templates — 25+ gotowych workflow do skopiowania (2026) | REFRESH istniejącego /blog/n8n/przyklady-workflow-automatyzacji (7.5k słów). Dual-target: n8n templates (590) + n8n workflow (480) = 1070 vol. Brief: BRIEF_REFRESH_n8n-przyklady-workflow_2026-04-25.md. 5 nowych templates 2026 (Claude Code, Gemini, AI Agent). |
+| 57 | 🔴 high | BRIEF | AI w firmie / Agent AI | agent ai | Agent AI dla firm — co to, kiedy się opłaca, jak wdrożyć (PILLAR) | NOWY pillar lead-gen. agent ai (6 600) + ai agent (6 600) = 13 200 vol commercial. THE artykuł lead-genowy. Brief: BRIEF_agent-ai-dla-firm_2026-04-25.md. Case study Animex. Sprawdź istniejące drafty. |
+
+## Pierwotne pomysły z marca 2026
 
 | ID | V | Pri | Status | Pillar | Keyword | Tytuł | Notatki |
 |----|---|-----|--------|--------|---------|-------|---------|

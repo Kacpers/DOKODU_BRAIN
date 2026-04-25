@@ -10,6 +10,9 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 
 ## Aktywne
 
+- 2026-05-01 | SEO | Piątkowy weekly DataForSEO research (`/seo-dataforseo` lub `python3 scripts/dataforseo_fetch.py weekly`) — łącznie z `/seo-weekly`. Koszt ~$0.15/tydz. Pierwszy run: 2026-04-25, 2026-W17 ✅
+- 2026-05-15 | SEO | DataForSEO budget check — sprawdź `dataforseo_fetch.py budget`, jeśli >$2/mies. zoptymalizuj seedy
+
 - 2026-03-27 | SEO | Sprawdź CTR frazy "llm" po zmianie title/meta — było 0.0% na #1.2, powinno wzrosnąć
 - 2026-03-27 | SEO | Sprawdź CTR "python list comprehension" po zmianie meta — było 0.3% na #2.1
 - 2026-03-27 | SEO | Sprawdź CTR "Cursor Pro" po zmianie meta — było 0.1% na #8
