@@ -65,22 +65,22 @@ Statusy: `POMYSŁ` → `SCENARIUSZ` → `NAGRANY` → `OPUBLIKOWANY`
 | T-042 | "Narzędzie AI jest NAJMNIEJ ważne" | Wszyscy pytają "ChatGPT czy Claude?" Nikt nie pyta "jaki problem rozwiązuję?" Narzędzie zmieni się za 3 miesiące. Problem zostanie. | Talking head | POMYSŁ |
 | T-043 | "Twój Copilot jest drogi i bezużyteczny" | 30$/użytkownika/miesiąc. Większość firm kupuje, nikt nie konfiguruje, nikt nie używa. Pieniądze w błoto. | Talking head, prowokacja | POMYSŁ |
 
-## Kategoria: SERIA WDRAŻANIE AUTOMATYZACJI (batch 2026-04-25)
+## Kategoria: SERIA WDRAŻANIE AUTOMATYZACJI (batch 2026-04-25, v2 — 75-90s)
 
 > Pełne scenariusze: [Batch_2026-04-25_Wdrazanie_Automatyzacji.md](./Batch_2026-04-25_Wdrazanie_Automatyzacji.md)
 
-| # | Hook (pierwsze 2s) | Treść (30-60s) | Format | Status |
+| # | Hook (pierwsze 2s) | Treść (75-90s) | Format | Status |
 |---|---|---|---|---|
-| T-050 | "Zanim wdrożysz automatyzację, zrób te 3 rzeczy" | TRAILER serii. 1) spisz proces 2) znajdź właściciela 3) policz aktualny koszt godzinowy. Większość zaczyna od narzędzia — dlatego im nie wychodzi. | Talking head | SCENARIUSZ |
-| T-051 | "Zaczynasz automatyzację od narzędzia? Już przegrałeś." | n8n vs Make, ChatGPT vs Claude — drugorzędne. Zacznij od pytania który proces kradnie najwięcej godzin. Narzędzie zmieni się za rok, proces zostanie. | Talking head | SCENARIUSZ |
-| T-052 | "Twoja firma wdraża n8n od złej strony" | Drag & drop wygląda no-code, ale po 3 mies. workflow padnie (token, API change). Marketingowiec nie naprawi, IT nie wie co to robi. n8n to low-code, nie no-code. | Talking head | SCENARIUSZ |
-| T-053 | "Najgłupszy błąd przy AI w firmie — robi go prawie każdy" | Kupujesz Copilota wszystkim, 100 osób × 30$. 3 osoby używają. Lepsze: 5 osób, pełna konfiguracja, prawdziwy use case, mierzysz oszczędność, dopiero skalujesz. | Talking head | SCENARIUSZ |
-| T-054 | "Twoja automatyzacja umrze za 6 miesięcy" | Buduje zewnętrzny dev / entuzjasta z marketingu. Odchodzi → bus factor 1 → workflow pika → nikt nie wie co to robi. Każda automatyzacja musi mieć właściciela na etacie + dokumentację. | Talking head | SCENARIUSZ |
-| T-055 | "3 procesy które MUSISZ zautomatyzować jako pierwsze" | 1) kwalifikacja leadów (-5min/dzień handlowca) 2) opisywanie faktur (-1h/dzień księgowej) 3) raportowanie tygodniowe (-3h piątku managera). 4h dziennie odzyskane. | Talking head | SCENARIUSZ |
-| T-056 | "Najszybsze ROI z automatyzacji nie jest tym co myślisz" | Wszyscy patrzą na sprzedaż/marketing. Najszybszy zwrot: onboarding pracownika, raportowanie do zarządu, powtarzalne pytania do HR. Sprzedaż jest sexy, procesy wewnętrzne są pieniędzmi. | Talking head | SCENARIUSZ |
-| T-057 | "Przeszkoliłem 200 firm. Większość ma TEN sam problem." | Nie brak narzędzi/budżetu/ludzi. Brak właściciela. AI = "wszystkich" = "nikogo". Każda firma która wdrożyła miała: 1 osoba, 1 KPI, 1 budżet. AI Lead / AI Champion. | Talking head | SCENARIUSZ |
-| T-058 | "3 rzeczy których sprzedawca AI Ci NIE powie" | 1) cena per user to początek (+integracja/szkolenie/support = 2-3× więcej) 2) halucynacje istnieją w każdym modelu, wymagają weryfikacji 3) lock-in danych/workflowów/promptów. | Talking head | SCENARIUSZ |
-| T-059 | "Jeśli nie masz TEGO w firmie — n8n Ci nie pomoże" | n8n wymaga kogoś kto rozumie API: token, auth, format danych, error handling. Marketingowiec nie ogarnie. Bez programisty/tech-savvy konsultanta — zostajesz z Zapierem. | Talking head | SCENARIUSZ |
+| T-050 | "Zanim wydasz 10 tys. na automatyzację, zrób te 3 rzeczy" | TRAILER serii. 1) spisz proces konkretnie (Miro warsztat, kto/co/kiedy/system/output) 2) właściciel z imienia + KPI + kalendarz 3) baseline w h × stawka × 52 tyg. Bez tego zarząd nie da budżetu na drugi projekt. | Talking head | SCENARIUSZ |
+| T-051 | "Zaczynasz automatyzację od narzędzia? Już przegrałeś." | Case logistyka 150 osób, $4.5k/mc Copilot wszystkim, problem to było awizowanie kierowców i odprawa celna — Copilot tego nie ogarnie. Narzędzie POD proces, nie odwrotnie. | Talking head | SCENARIUSZ |
+| T-052 | "Twoja firma wdraża n8n od złej strony" | Case Allegro→Subiekt: API zmienia format, błąd 422, marketingowiec nie czyta JSON, IT nie wie co workflow robi. n8n to low-code wymagający REST/OAuth/JSON/error handling. Buduj z partnerem co zostawia dokumentację. | Talking head | SCENARIUSZ |
+| T-053 | "Najgłupszy błąd przy AI — sam go popełniałem" | Case 120 os × $30 = $3.6k/mc = $43k rocznie. Audyt M365: 11 aktywnych. Brak konkretnego use case'u w działach. Pilot 5 os, 2 use case'y, 2 tyg., mierzysz, skalujesz. | Talking head | SCENARIUSZ |
+| T-054 | "Twoja automatyzacja umrze za 6 miesięcy" | Case Pipedrive→HubSpot kupił, API się zmieniło, 38 nodów bez komentarzy, 6h na zrozumienie. Każda automatyzacja MUSI mieć: README, komentarze, logging do Slack/Sentry, drugą osobę (backup biologiczny). | Talking head | SCENARIUSZ |
+| T-055 | "3 procesy które MUSISZ zautomatyzować pierwsze" | 1) kwalifikacja leadów (Aleo/Bisnode → CRM, -8h/100 leadów) 2) faktury kosztowe (OCR → Comarch/iFirma, -700zł/mc) 3) raport tyg. zarządu (Pipedrive+Slack+GA → 3 slajdy, -3h piątku). | Talking head | SCENARIUSZ |
+| T-056 | "Najszybsze ROI z automatyzacji nie jest tym co myślisz" | Wszyscy patrzą sprzedaż/marketing. Real wins: onboarding (M365+Slack+Asana+VPN przez Azure AD = -60h IT/mc), powtarzalne pytania HR (-1.5h/dzień), raport zarząd (4h piątku → minuta). | Talking head | SCENARIUSZ |
+| T-057 | "Przeszkoliłem 200 firm. 90% ma TEN problem." | Nie brak narzędzi/budżetu/ludzi. Brak właściciela. AI = "wszystkich" = "nikogo". Każda firma która wdrożyła miała: imię+nazwisko, KPI (3 wdrożenia/Q), 20% etatu w kalendarzu, budżet ~100k rocznie. | Talking head | SCENARIUSZ |
+| T-058 | "3 rzeczy których sprzedawca AI Ci NIE powie" | 1) cena per user = max 40% TCO (+integracja, SSO, szkolenie, support = 2-3× licencji przez 3 lata) 2) halucynacje w każdym modelu, prawnicza klientka straciła 6 cyfr 3) lock-in (3-6 mc migracji + godziny). | Talking head | SCENARIUSZ |
+| T-059 | "Jeśli nie masz TEGO w firmie — n8n Ci nie pomoże" | n8n = potężne narzędzie inżynierskie. Wymaga kompetencji: REST API (401/403/422), OAuth refresh, JSON/jq/Function node, error handling z webhookiem do Slacka. Bez tego — Zapier. | Talking head | SCENARIUSZ |
 
 ---
 

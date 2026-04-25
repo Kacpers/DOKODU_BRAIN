@@ -8,81 +8,84 @@ tags: [tiktok, shorts, batch, automatyzacja, wdrażanie, scenariusze]
 
 # Batch nagraniowy 2026-04-25 — Wdrażanie Automatyzacji
 
-> Pakiet 10 rolek talking-head do batch recording session (~45-60 min).
+> Pakiet 10 rolek talking-head do batch recording session (~50-70 min).
 > Mix angle: fundamenty (2) + błędy (3) + quick wins (2) + insider/kontrowersja (3).
 > Wszystkie zgodne z TOV TikTok (TikTok_Playbook.md) i ŻELAZNĄ ZASADĄ — nie strasz AI, pokaż że Kacper wie jak to zrobić dobrze.
 > Cross-post: TikTok → YT Shorts → IG Reels → LinkedIn Video.
+
+**Wersja v2 (2026-04-25):** wydłużone do 75-90s, dodane konkretne case'y z warsztatów, liczby, nazwane narzędzia (n8n, Pipedrive, Comarch, Aleo, Azure AD, M365 admin), struktury API (status 422, OAuth refresh, JSON), kwoty w PLN i USD.
 
 ---
 
 ## Notatki produkcyjne (przed nagraniem)
 
 - **Format:** 1080x1920, 30 fps, talking-head, eye-level
-- **Długość docelowa:** 45-60s każdy
+- **Długość docelowa:** 75-90s (TikTok wciąż OK, YT Shorts ≤90s)
 - **Tło:** czyste — białe biurko / monitor z kodem
 - **Koszulka:** zmień co 3-4 klipy (T-050/051/052 → zmiana → T-053/054/055 → zmiana → T-056/057/058 → zmiana → T-059)
 - **Między klipami:** 5s pauza + klaśnięcie (markery do cięcia)
 - **Teleprompter:** Parrot (Dropbox sync) — wgraj scenariusze poniżej
-- **Speed:** szybciej niż normalnie — TikTok pace
+- **Speed:** szybciej niż normalnie — TikTok pace, ale daj oddech przy liczbach (na nich zatrzymuj się 0.3s)
 - **Patrz w obiektyw, nie w ekran**
+- **Pauzy emfatyczne:** przed punchline, po hookach typu "powiem Wam dlaczego"
 
 ---
 
 ## T-050 — "Zanim wdrożysz automatyzację, zrób te 3 rzeczy"
 
-**Angle:** A (fundamenty) | **Hook:** H4 (ostrzeżenie) + H2 (lista) | **Rola:** TRAILER serii | **~60s**
+**Angle:** A (fundamenty) | **Hook:** H4 + H2 | **Rola:** TRAILER serii | **~80s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Zanim wdrożysz automatyzację w firmie, zrób te trzy rzeczy. Bo inaczej wyrzucisz pieniądze.
+**[0-4s HOOK]**
+Zanim wydasz dziesięć tysięcy na automatyzację, zrób te trzy rzeczy. Bo inaczej te pieniądze pójdą w błoto.
 
-**[3-8s PROBLEM]**
-U klientów widzę to non-stop. Firma kupuje narzędzie, wdraża na hurra, a po pół roku nikt z tego nie korzysta.
+**[4-13s PROBLEM]**
+Przeszkoliłem prawie dwieście firm. Widziałem to dziesiątki razy. Firma kupuje n8n, Make albo licencję Copilota. Wdraża na hurra. Pół roku później — jeden nieużywany dashboard i frustracja zarządu.
 
-**[8-50s WARTOŚĆ]**
-Pierwsze. Spisz proces na kartce. Krok po kroku. Jak nie umiesz tego napisać — nie umiesz tego zautomatyzować.
+**[13-65s WARTOŚĆ — 3 konkretne kroki]**
+**Pierwsze: spisz proces — ale konkretnie.** Nie "obsługujemy zamówienia". Tylko: kto, co, kiedy, w jakim systemie, na jaki output. Dla każdego kroku. Ja zaczynam zawsze od godziny warsztatu na Miro — i osiemdziesiąt procent projektu jest jasne zanim ktokolwiek dotknie n8n. Jak nie umiesz tego napisać na kartce — żaden workflow tego nie zautomatyzuje.
 
-Drugie. Znajdź właściciela. Jedna osoba w firmie odpowiedzialna za to wdrożenie. Bez tego automatyzacja rozpadnie się pierwszego dnia gdy coś pęknie.
+**Drugie: znajdź właściciela z imienia i nazwiska.** Nie "IT się tym zajmie". Nie "wszyscy". Konkretna osoba, która dostaje za to KPI i godziny w kalendarzu na utrzymanie. Bez tego — pierwsza zmiana tokenu w Google API i automatyzacja leży miesiąc.
 
-Trzecie. Policz ile czasu Cię to kosztuje teraz. Konkretne godziny tygodniowo. Bo jak nie wiesz ile Cię to boli — nie zmierzysz czy wdrożenie pomogło.
+**Trzecie: policz baseline w godzinach i złotówkach.** Cztery godziny księgowej tygodniowo razy stawka razy pięćdziesiąt dwa tygodnie. Konkretna kwota. Bez tego nigdy nie udowodnisz że wdrożenie się zwróciło — i drugi projekt zarząd Ci już nie zaaprobuje.
 
-**[50-55s PUNCHLINE]**
-Większość firm zaczyna od wyboru narzędzia. To dlatego im nie wychodzi.
+**[65-73s PUNCHLINE]**
+Większość firm wybiera narzędzie zanim spisała pierwszy proces. To jak budowa domu zaczynając od wyboru mebli.
 
-**[55-60s CTA]**
-Obserwuj — przez najbliższe dni pokażę resztę.
+**[73-80s CTA]**
+Obserwuj — kolejne dziewięć odcinków rozwija każdy z tych punktów na konkretnych przypadkach z warsztatów.
 
 **Hashtagi:** #automatyzacja #ai #wdrażanieAI #n8n #firma
 
 ---
 
-## T-051 — "Zaczynasz automatyzację od narzędzia? Już przegrałeś."
+## T-051 — "Zaczynasz automatyzację od narzędzia? Już przegrałeś"
 
-**Angle:** A (fundamenty) | **Hook:** H1 (przestań robić X) | **~50s**
+**Angle:** A (fundamenty) | **Hook:** H1 (przestań robić X) | **~80s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Zaczynasz automatyzację od wyboru narzędzia? Słuchaj — już przegrałeś.
+**[0-4s HOOK]**
+Zaczynasz automatyzację od wyboru narzędzia? Słuchaj — już przegrałeś. I to spektakularnie.
 
-**[3-8s PROBLEM]**
-n8n czy Make. ChatGPT czy Claude. To drugorzędne. Naprawdę.
+**[4-12s PROBLEM]**
+n8n versus Make. ChatGPT versus Claude. Power Automate versus Zapier. Widzę firmy które trzy miesiące porównują licencje, nim w ogóle zdecydują CO chcą zautomatyzować.
 
-**[8-45s WARTOŚĆ]**
-Widziałem firmy które trzy miesiące zastanawiały się nad licencją. Trzy miesiące.
+**[12-65s WARTOŚĆ]**
+Przykład z warsztatu w marcu. Firma logistyczna, sto pięćdziesiąt osób. Zarząd zdecydował że "robimy AI". Wybrali Microsoft Copilota. Wszystkim. Trzydzieści dolarów per użytkownik. Cztery i pół tysiąca dolarów miesięcznie.
 
-A potem? Wdrożyły. Bez procesu. Bez właściciela. Bez sensu.
+Pytam: który proces to ma rozwiązać? Cisza. Rozglądają się. Odpowiedź: "no... wszystkie".
 
-Zacznij od jednego pytania: który proces kradnie nam najwięcej godzin tygodniowo? Spisz go. Pokaż zespołowi. Sprawdź czy wszyscy rozumieją to samo.
+A wystarczyło zacząć od pytania: gdzie tracimy najwięcej godzin tygodniowo? W tej firmie odpowiedź to było awizowanie kierowców i przygotowywanie dokumentów odprawy celnej. Ani Copilot ani ChatGPT tego nie ogarnia. Tam potrzebny był konkretny agent na n8n integrowany z ich TMS-em.
 
-Dopiero wtedy wybieraj narzędzie. Pod proces. Nie odwrotnie.
+Cztery i pół tysiąca dolarów miesięcznie wydane na narzędzie które ich problemu nie rozwiązuje.
 
-**[45-55s PUNCHLINE]**
-Narzędzie zmieni się za rok. Proces zostanie z Tobą na zawsze.
+**[65-73s PUNCHLINE]**
+Narzędzie wybiera się POD proces. Nie odwrotnie. Bo narzędzie zmieni się za rok. Proces zostanie z firmą przez najbliższą dekadę.
 
-**[55-60s CTA]**
-Zgadzacie się? Dawajcie znać w komentarzu.
+**[73-80s CTA]**
+Macie u siebie podobne wpadki? Komentarz, ciekawe ile osób się odnajdzie.
 
 **Hashtagi:** #automatyzacja #procesy #wdrażanieAI #firma #management
 
@@ -90,61 +93,67 @@ Zgadzacie się? Dawajcie znać w komentarzu.
 
 ## T-052 — "Twoja firma wdraża n8n od złej strony" (zmęczony n8n)
 
-**Angle:** B (błędy) | **Hook:** H7 (powiem dlaczego nie działa) | **~55s**
+**Angle:** B (błędy) | **Hook:** H7 (powiem dlaczego nie działa) | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Twoja firma wdraża n8n od złej strony. Powiem Ci dokładnie dlaczego.
+**[0-4s HOOK]**
+Twoja firma wdraża n8n od złej strony. Powiem Wam dokładnie dlaczego — i jak to naprawić.
 
-**[3-10s PROBLEM]**
-Każdy widzi w internecie że n8n robi cuda. Drag and drop, sto integracji, no-code. I co? Wszyscy chcą.
+**[4-13s PROBLEM]**
+Każdy widzi w internecie że n8n robi cuda. Drag and drop, czterysta plus integracji, no-code rewolucja. Marketingowiec klika dwie godziny i ma agenta. I tak to się zaczyna.
 
-**[10-50s WARTOŚĆ]**
-Tylko nikt nie mówi co dzieje się trzy miesiące później.
+**[13-70s WARTOŚĆ]**
+A teraz co dzieje się trzy miesiące później. Realny przykład.
 
-Workflow padnie. Bo ktoś zmienił hasło API. Bo Google odświeżył tokeny. Bo n8n wypuścił update i node przestał działać.
+Klient wdrożył sobie sam workflow do pobierania zamówień z Allegro i wpisywania ich do Subiekta. Działało. Aż przestało.
 
-I teraz pytanie: kto to naprawi? Marketingowiec który to zbudował? Nie ogarnia logów. IT? Nie wie co ten workflow w ogóle robi.
+Allegro zmieniło format API. Workflow zwraca błąd 422. Marketingowiec który to budował patrzy w logi n8n — JSON, headery, payloady. Nic z tego nie rozumie. IT też nie wie co ten workflow w ogóle robił.
 
-n8n to nie no-code. To low-code. Wymaga kogoś kto rozumie API, JSON i debugowanie.
+Dwa tygodnie firma fakturuje ręcznie. Bo n8n to NIE jest no-code. To low-code.
 
-**[50-58s PUNCHLINE]**
-Nie zaczynaj od n8n. Zacznij od pytania: kto to utrzyma za pół roku.
+Realnie potrzebujesz w firmie kogoś kto rozumie cztery rzeczy: REST API, autoryzacja OAuth versus klucze, format JSON i error handling. Bez tego — każde wdrożenie ma datę ważności.
 
-**[58-60s CTA]**
-Macie taki problem? Komentarz.
+Rozwiązanie? Buduj z partnerem który zostawia dokumentację i monitoring. Albo zatrudnij juniora dewelopera dwa-trzy dni w tygodniu na utrzymanie. To i tak taniej niż dwa tygodnie ręcznego fakturowania.
+
+**[70-78s PUNCHLINE]**
+n8n to nie różdżka z Hogwartu. To narzędzie inżynierskie z ładnym interfejsem.
+
+**[78-85s CTA]**
+Jak u Was wygląda utrzymanie automatyzacji — komentarz.
 
 **Hashtagi:** #n8n #automatyzacja #lowcode #wdrożenia #it
 
 ---
 
-## T-053 — "Najgłupszy błąd przy AI w firmie — robi go prawie każdy"
+## T-053 — "Najgłupszy błąd przy AI — robi go prawie każdy"
 
-**Angle:** B (błędy) | **Hook:** H13 (popełniałem ten błąd) | **~55s**
+**Angle:** B (błędy) | **Hook:** H13 (sam ten błąd popełniałem) | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Najgłupszy błąd przy wdrażaniu AI w firmie? Sam go popełniałem.
+**[0-4s HOOK]**
+Najgłupszy błąd przy wdrażaniu AI w firmie. Sam go popełniałem rok i kosztowało mnie to klientów.
 
-**[3-10s PROBLEM]**
-Kupujesz Copilota. Wszystkim. Trzydzieści dolarów na osobę. Sto osób. Trzy tysiące dolarów miesięcznie. Z miejsca.
+**[4-13s PROBLEM]**
+Robi to prawie każda firma między pięćdziesiąt a pięćset osób. Zarząd czyta artykuł o ChatGPT. Decyzja: kupujemy Copilota. Wszystkim. Bo "trzeba być w temacie AI".
 
-**[10-45s WARTOŚĆ]**
-I co się dzieje? Trzy osoby z niego korzystają. Reszta włączyła raz, kliknęła i zapomniała.
+**[13-70s WARTOŚĆ]**
+Liczby z prawdziwego klienta. Sto dwadzieścia osób. Trzydzieści dolarów per user. Trzy tysiące sześćset dolarów miesięcznie. Czterdzieści trzy tysiące dolarów rocznie.
 
-Bo nikt im nie pokazał na czym KONKRETNIE ma im to pomóc. W ICH pracy. W ICH procesie.
+Po dwóch miesiącach uruchomiłem im audyt użycia. Z M365 admin center wyciągnąłem dane. Wynik?
 
-AI bez kontekstu pracy to aplikacja na telefonie której się nie otwiera.
+Aktywnych użytkowników: jedenaście osób. Reszta otworzyła Copilota raz, kliknęła, zamknęła.
 
-Lepsze podejście? Pięć osób. Pełna konfiguracja. Prawdziwy use case. Mierzysz oszczędność. Dopiero potem skalujesz.
+Dlaczego? Bo nikt im nie pokazał konkretnego use case'u w ICH dziale. Księgowa nie wie czy może tam wkleić numer NIP. Handlowiec nie wie czy to widzi maile klientów. Project manager nie ma pomysłu jak to wpiąć w Asanę.
 
-**[45-55s PUNCHLINE]**
-Większość firm KUPUJE AI. Mało która je WDRAŻA.
+Co działa zamiast tego: pilot z pięcioma osobami z jednego działu, dwa konkretne use case'y, dwa tygodnie, mierzysz oszczędność godzin. Dopiero wtedy decyzja o skalowaniu — i to ze szkoleniem które startuje w PRACY tych osób, nie z teorii promptów.
 
-**[55-60s CTA]**
-Jak u Was — kupiliście i nie używacie?
+**[70-78s PUNCHLINE]**
+Większość firm KUPUJE AI w wielkim stylu. Mało która faktycznie je WDRAŻA. To dwie różne dyscypliny.
+
+**[78-85s CTA]**
+Macie Copilota i nie używacie? Komentarz — dziękuję za szczerość.
 
 **Hashtagi:** #ai #copilot #wdrażanieAI #firma #produktywność
 
@@ -152,30 +161,30 @@ Jak u Was — kupiliście i nie używacie?
 
 ## T-054 — "Twoja automatyzacja umrze za 6 miesięcy"
 
-**Angle:** B (błędy) | **Hook:** H4 (zanim zrobisz X) | **~55s**
+**Angle:** B (błędy) | **Hook:** H4 (zanim zrobisz X) | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Twoja automatyzacja umrze za sześć miesięcy. Powiem Ci dokładnie dlaczego.
+**[0-4s HOOK]**
+Twoja automatyzacja umrze za sześć miesięcy. Powiem Ci dokładnie dlaczego — i jak temu zapobiec.
 
-**[3-10s PROBLEM]**
-Buduje ją zewnętrzny developer. Albo entuzjasta z marketingu. Wdraża, działa, ekipa się cieszy.
+**[4-13s PROBLEM]**
+Standardowy scenariusz. Buduje ją zewnętrzny developer freelancer. Albo pasjonat z marketingu który robi to po godzinach. Wdrożone, działa, fajerwerki na Slacku.
 
-**[10-45s WARTOŚĆ]**
-A potem? Dev odchodzi. Albo entuzjasta dostaje awans i ma inne priorytety.
+**[13-70s WARTOŚĆ]**
+Sześć miesięcy później. Freelancer ma już innych klientów, nie odbiera. Pasjonat dostał awans, nie ma czasu. Workflow zaczyna pikać błędami.
 
-Workflow zaczyna pikać błędami. Nikt nie wie co to robi. Dokumentacji brak. Komentarzy w kodzie zero.
+Realny case z lutego. Klient miał automatyzację która generowała oferty handlowe z Pipedrive. Działała półtora roku. Aż HubSpot kupił Pipedrive i zmienili strukturę API. Workflow padł.
 
-Bus factor jeden. Jak ten jeden człowiek wypadnie — zgadujesz co się popsuło.
+Otworzyłem ich projekt n8n. Trzydzieści osiem nodów. Zero komentarzy. Zero dokumentacji. Trzy ukryte sub-workflowy. Zajęło mi sześć godzin żeby zrozumieć co to w ogóle ma robić — to znaczy SZEŚĆ GODZIN klienta na moim koszcie.
 
-Rozwiązanie? Każda automatyzacja w firmie musi mieć właściciela na etacie. Dokumentację. Logging. I drugą osobę która rozumie chociaż dwadzieścia procent.
+Co MUSI mieć każda automatyzacja w firmie: README w repo z opisem co robi i kogo pingować jak padnie. Komentarze przy każdym nietrywialnym kroku. Logging błędów do Slacka albo Sentry — nie ślepe nody. I druga osoba która rozumie chociaż dwadzieścia procent — backup biologiczny.
 
-**[45-55s PUNCHLINE]**
-Automatyzacja bez utrzymania to dług techniczny w przebraniu zysku.
+**[70-78s PUNCHLINE]**
+Bus factor jeden to nie automatyzacja. To bomba zegarowa z kalendarzem na sześć miesięcy.
 
-**[55-60s CTA]**
-Macie automatyzacje od których wszystko wisi? Dajcie znać.
+**[78-85s CTA]**
+Macie automatyzacje od których wszystko wisi i zna je jeden człowiek? Dajcie znać.
 
 **Hashtagi:** #automatyzacja #busfactor #it #wdrożenia #dokumentacja
 
@@ -183,28 +192,30 @@ Macie automatyzacje od których wszystko wisi? Dajcie znać.
 
 ## T-055 — "3 procesy które MUSISZ zautomatyzować jako pierwsze"
 
-**Angle:** C (quick wins) | **Hook:** H2 (X rzeczy których nie wiesz) | **~55s**
+**Angle:** C (quick wins) | **Hook:** H2 (X rzeczy których nie wiesz) | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Trzy procesy które MUSISZ zautomatyzować jako pierwsze. Zapisuj.
+**[0-4s HOOK]**
+Trzy procesy które MUSISZ zautomatyzować jako pierwsze w firmie. Kolejność też ma znaczenie. Zapisuj.
 
-**[3-8s PROBLEM]**
-Bo jak zaczniesz od czegoś egzotycznego — utopisz tydzień bez efektu.
+**[4-12s PROBLEM]**
+Bo jak zaczniesz od czegoś egzotycznego — utopisz tydzień bez efektu i zarząd Ci nie da budżetu na drugi projekt.
 
-**[8-50s WARTOŚĆ]**
-Pierwsze: kwalifikacja leadów. Ktoś wypełnia formularz. Agent sprawdza profil firmy, ocenia fit, dodaje do CRM z notatką. Pięć minut pracy handlowca dziennie znika.
+**[12-72s WARTOŚĆ]**
+**Pierwszy: kwalifikacja leadów przychodzących.** Ktoś wypełnia formularz na stronie. Agent w n8n: pobiera dane firmy z Aleo albo Bisnode, sprawdza zatrudnienie, branżę, kondycję finansową, ocenia fit z waszym ICP, dodaje do CRM z gotową notatką dla handlowca. Pięć minut research handlowca per lead znika. Przy stu leadach miesięcznie — osiem godzin odzyskane.
 
-Drugie: opisywanie faktur kosztowych. Wpada faktura na maila. Agent wyciąga dane, kategoryzuje koszt, dopisuje do księgowości. Godzina księgowej dziennie znika.
+**Drugi: opisywanie faktur kosztowych.** Wpada PDF na maila. Agent: wyciąga dane przez OCR, kategoryzuje koszt według planu kont, dopisuje do Comarchu albo iFirmy. Godzina księgowej dziennie znika. Przy minimalnej krajowej księgowej — to siedemset złotych miesięcznie czystej oszczędności.
 
-Trzecie: raportowanie tygodniowe. Dane z CRM, Slacka, kalendarza. Agent generuje podsumowanie. Trzy godziny menedżera w piątek znikają.
+**Trzeci: raport tygodniowy do zarządu.** Agent zbiera dane z Pipedrive, Slacka, kalendarza i Google Analytics. Generuje trzy slajdy z highlightami i tabelą KPI. Trzy godziny menedżera w piątek znikają.
 
-**[50-55s PUNCHLINE]**
-Trzy procesy. Cztery godziny dziennie odzyskane. W każdej firmie.
+Wszystkie trzy zaczniesz w jednym sprincie. Wszystkie trzy mają natychmiastowe ROI mierzalne w godzinach.
 
-**[55-60s CTA]**
-Który byście odpalili pierwszy?
+**[72-80s PUNCHLINE]**
+Cztery godziny dziennie odzyskane w każdej firmie powyżej dwudziestu osób. To nie jest hipoteza. To matematyka.
+
+**[80-85s CTA]**
+Który byście odpalili u siebie pierwszy?
 
 **Hashtagi:** #automatyzacja #ai #produktywność #crm #firma
 
@@ -212,30 +223,34 @@ Który byście odpalili pierwszy?
 
 ## T-056 — "Najszybsze ROI z automatyzacji nie jest tym co myślisz"
 
-**Angle:** C (quick wins) | **Hook:** H8 (co by było gdyby) + twist | **~55s**
+**Angle:** C (quick wins) | **Hook:** H8 + twist | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Najszybsze ROI z automatyzacji nie jest tam gdzie wszyscy patrzą.
+**[0-4s HOOK]**
+Najszybsze ROI z automatyzacji nie jest tam gdzie patrzysz. Dosłownie wszyscy szukają nie tam.
 
-**[3-10s PROBLEM]**
-Wszyscy patrzą na sprzedaż. Marketing. Obsługę klienta. Bo te procesy widać.
+**[4-12s PROBLEM]**
+Wszyscy patrzą na sprzedaż, marketing, obsługę klienta. Bo te procesy widać. Bo o nich się mówi na konferencjach.
 
-**[10-45s WARTOŚĆ]**
-A najszybszy zwrot? Wewnątrz. W rzeczach których nikt nie widzi.
+**[12-72s WARTOŚĆ]**
+A najszybszy zwrot? Wewnątrz. W rzeczach których nikt nie pokazuje na slajdach.
 
-Onboarding pracownika. Ręczne tworzenie kont w pięciu systemach. Trzy godziny działu IT. Co tydzień.
+Trzy realne wdrożenia z ostatniego półrocza:
 
-Raportowanie do zarządu. Manager kopiuje dane do slajdów. Cztery godziny w piątek. Co tydzień.
+**Onboarding nowego pracownika.** Ręczne tworzenie kont w Microsoft 365, Slack, Asana, Confluence, GitHub plus dostępy w VPN. Trzy godziny działu IT per osoba. Firma rekrutująca dwadzieścia osób miesięcznie? Sześćdziesiąt godzin IT zżartych. Po automatyzacji w Azure AD plus n8n — piętnaście minut per osoba.
 
-Powtarzalne pytania od pracowników do HR. To samo pytanie dwadzieścia razy dziennie. Agent odpowiada w trzy sekundy.
+**Powtarzalne pytania pracowników do HR.** "Ile mam urlopu?". "Jak złożyć wniosek o sprzęt?". "Kiedy wypłata?". Agent na bazie firmowego intranetu odpowiada instantowo. HR oszczędza półtorej godziny dziennie na samym odpisywaniu.
 
-**[45-55s PUNCHLINE]**
-Sprzedaż jest sexy. Ale procesy wewnętrzne — tam są pieniądze.
+**Raport miesięczny do banku albo na zarząd.** Manager kopiuje dane z trzech systemów do PowerPointa. Cztery godziny w ostatni piątek miesiąca. Agent generuje go w minutę.
 
-**[55-60s CTA]**
-Co u Was kradnie najwięcej godzin? Komentarz.
+Nikt o tym nie mówi bo to nudne. Ale ROI mierzalny od pierwszego tygodnia.
+
+**[72-80s PUNCHLINE]**
+Sprzedaż jest sexy. Procesy wewnętrzne są pieniędzmi. Wybieraj pieniądze.
+
+**[80-85s CTA]**
+Co u Was kradnie najwięcej godzin tygodniowo — komentarz, polecę gdzie szukać quick winów.
 
 **Hashtagi:** #automatyzacja #roi #firma #produktywność #procesy
 
@@ -243,32 +258,34 @@ Co u Was kradnie najwięcej godzin? Komentarz.
 
 ## T-057 — "Przeszkoliłem 200 firm. Większość ma TEN sam problem."
 
-**Angle:** D (insider) | **Hook:** H9 (nikt Ci nie powie) + H14 (oto dowód) | **~55s**
+**Angle:** D (insider) | **Hook:** H9 + H14 | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Przeszkoliłem prawie dwieście firm z AI. Większość ma dokładnie ten sam problem.
+**[0-4s HOOK]**
+Przeszkoliłem prawie dwieście firm z AI. Dziewięćdziesiąt procent z nich ma dokładnie ten sam problem.
 
-**[3-10s PROBLEM]**
-I to nie chodzi o brak narzędzi. Nie o brak budżetu. Nawet nie o brak ludzi.
+**[4-13s PROBLEM]**
+I to nie jest brak narzędzi. Nie brak budżetu. Nawet nie brak ludzi do wdrażania. Mają wszystko.
 
-**[10-45s WARTOŚĆ]**
+**[13-72s WARTOŚĆ]**
 Chodzi o to że nikt w firmie nie wie czyje to jest.
 
-AI? IT mówi że to nie ich. Marketing że to nie ich. Zarząd że to wszystkich.
+AI? Pytam na warsztacie: kto u Was odpowiada za wdrożenia AI? IT mówi że to projekty biznesowe, nie ich. Marketing że to nie ich kompetencja. Operacje że nie mają budżetu. Zarząd że "to wszystkich".
 
-A "wszystkich" znaczy "nikogo".
+A "wszystkich" znaczy "nikogo". I dlatego po warsztacie nic się nie dzieje. Mimo że osiem godzin szkolenia kosztowało firmę kilkanaście tysięcy złotych.
 
-Efekt? Żaden konkretny człowiek nie ma KPI z wdrożenia AI. I jak nikt nie odpowiada — nikt nie wdraża.
+Każda firma która rzeczywiście wdrożyła AI po naszej współpracy — i mówię o realnych case'ach, nie o slajdach — miała to samo.
 
-Każda firma która szła do przodu miała to samo: jedna osoba, jedno KPI, jeden budżet. AI Lead. AI Champion. Nazwij jak chcesz.
+**Jedna konkretna osoba.** Imię, nazwisko, mail. Z formalną rolą. AI Lead, AI Champion, Head of Automation — nazwa drugorzędna. Dostaje konkretne KPI: na przykład trzy wdrożenia kwartalnie. Dostaje czas w kalendarzu — dwadzieścia procent etatu minimum. Dostaje budżet — choćby skromny, sto tysięcy rocznie.
 
-**[45-55s PUNCHLINE]**
-Firmy nie potrzebują ChatGPT. Potrzebują człowieka który za to odpowiada.
+To jest ten jeden warunek. Reszta jest do zrobienia.
 
-**[55-60s CTA]**
-Macie takiego człowieka? Komentarz.
+**[72-80s PUNCHLINE]**
+Firmy nie potrzebują ChatGPT. Potrzebują człowieka który za AI bierze odpowiedzialność.
+
+**[80-85s CTA]**
+Macie u siebie tę jedną osobę? Komentarz tak / nie — ciekawi mnie statystyka.
 
 **Hashtagi:** #ai #wdrażanieAI #firma #management #aichampion
 
@@ -276,28 +293,30 @@ Macie takiego człowieka? Komentarz.
 
 ## T-058 — "3 rzeczy których sprzedawca AI Ci NIE powie"
 
-**Angle:** D (insider) | **Hook:** H9 (nikt Ci nie powie) | **~55s**
+**Angle:** D (insider) | **Hook:** H9 (nikt Ci nie powie) | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Trzy rzeczy których sprzedawca AI Ci nie powie. Słuchaj uważnie.
+**[0-4s HOOK]**
+Trzy rzeczy których sprzedawca AI w życiu Ci nie powie. Słuchaj uważnie — to ratuje budżety.
 
-**[3-8s PROBLEM]**
-Bo zarobią więcej jeśli kupisz teraz, mniej myśląc.
+**[4-12s PROBLEM]**
+Bo na każdy dolar który wydasz mniej myśląc, on dostaje większą prowizję. To nie jest osobiste — to jest model biznesowy.
 
-**[8-50s WARTOŚĆ]**
-Pierwsze: cena per user to dopiero początek. Doliczysz integrację, szkolenie, support, konfigurację. Realny koszt to dwa, trzy razy więcej niż licencja.
+**[12-72s WARTOŚĆ]**
+**Pierwsze: cena per user to maksymalnie czterdzieści procent realnego kosztu.** Reszta to: integracja z waszymi systemami — kilkadziesiąt tysięcy. Konfiguracja Single Sign-On — kolejne kilkanaście. Szkolenie zespołu — dwa, trzy dni stawek konsultantów. Utrzymanie i support pierwszej linii. Realny TCO przez trzy lata to dwa do trzech razy ich oferta z PDF-a.
 
-Drugie: halucynacje istnieją. Każdy model. Bez wiedzy czego nie wie — śmiało zmyśla. Bez weryfikacji człowieka — wkładasz firmie minę.
+**Drugie: halucynacje są w KAŻDYM modelu.** Nawet w GPT-5. Nawet w Claude Opus. Bez procesu weryfikacji człowieka — wkładasz firmie minę. Klient prawnicza, sprawdzała umowy AI bez review prawnika. Trzy umowy podpisane z błędnymi paragrafami. Strata sześciocyfrowa.
 
-Trzecie: lock-in. Twoje dane, workflowy, prompty — w ich infrastrukturze. Wyjście kosztuje miesiące migracji.
+**Trzecie: lock-in danych.** Prompty, fine-tuned modele, embeddingi, baza wiedzy — wszystko w ich infrastrukturze. Zmiana dostawcy za dwa lata? Trzy do sześciu miesięcy migracji plus kilkadziesiąt godzin pracy zespołu. Często firmy się poddają i płacą podwyżki.
 
-**[50-55s PUNCHLINE]**
-AI to nie magia. To narzędzie. Z konkretnymi kosztami i ryzykami.
+Pytaj o to przed podpisaniem umowy. Zapisuj odpowiedzi. Wracaj do nich za rok.
 
-**[55-60s CTA]**
-Jakie pułapki Wam się zdarzyły? Komentarz.
+**[72-80s PUNCHLINE]**
+AI to nie magia. To narzędzie z konkretnymi kosztami, ryzykami i polityką dostawcy. Reszta to marketing.
+
+**[80-85s CTA]**
+Jakie ukryte koszty Wam się objawiły po wdrożeniu? Komentarz.
 
 **Hashtagi:** #ai #wdrażanieAI #copilot #saas #lockin
 
@@ -305,30 +324,36 @@ Jakie pułapki Wam się zdarzyły? Komentarz.
 
 ## T-059 — "Jeśli nie masz TEGO w firmie — n8n Ci nie pomoże"
 
-**Angle:** D (kontrowersja, drugi take na n8n) | **Hook:** H7 (powiem dlaczego nie działa) | **~55s**
+**Angle:** D (kontrowersja, drugi take na n8n) | **Hook:** H7 | **~85s**
 
 ### Scenariusz
 
-**[0-3s HOOK]**
-Jeśli nie masz tego w firmie — n8n Ci nie pomoże. Serio.
+**[0-4s HOOK]**
+Jeśli nie masz tego jednego w firmie — n8n Ci nie pomoże. Choćbyś zapłacił za pakiet enterprise.
 
-**[3-10s PROBLEM]**
-Wszyscy mówią o n8n jak o magicznej różdżce. Drag, drop, automatyzacja gotowa.
+**[4-13s PROBLEM]**
+Wszyscy mówią o n8n jak o magicznej różdżce. Drag, drop, automatyzacja gotowa, marketing pisze że "no-code dla każdego". Półprawda.
 
-**[10-45s WARTOŚĆ]**
-A prawda? n8n to potężne narzędzie. Tylko wymaga jednego: kogoś kto rozumie API.
+**[13-72s WARTOŚĆ]**
+Realnie n8n to potężne narzędzie inżynierskie. Tylko wymaga jednej kompetencji w firmie — kogoś kto rozumie cztery rzeczy:
 
-Bo każda integracja to: token, autoryzacja, format danych, error handling, edge case'y.
+**REST API i HTTP** — co znaczy GET, POST, PUT, DELETE. Co zwraca status 401, 403, 422. Bo każda integracja to gadanie z czyimś API.
 
-Marketingowiec tego nie ogarnie. Księgowa też nie. Potrzebujesz programisty albo tech-savvy konsultanta.
+**OAuth versus klucze API.** Jak refreshować token. Co zrobić gdy Google rotuje credentials. Bo tutaj pada osiemdziesiąt procent automatyzacji.
 
-Jak nie masz w firmie nikogo takiego — albo zatrudniasz, albo wynajmujesz, albo zostajesz z Zapierem.
+**JSON i transformacje danych.** Function node, expressions, jq. Bo dane między systemami nigdy nie pasują jeden do jednego.
 
-**[45-55s PUNCHLINE]**
-n8n to nie no-code dla każdego. To low-code dla ludzi którzy wiedzą co robią.
+**Error handling.** Try-catch w n8n. Webhook do Slacka jak coś padnie. Bo workflow który pada cicho jest gorszy niż brak workflow.
 
-**[55-60s CTA]**
-Macie kogoś od n8n czy outsourcujecie?
+Marketingowiec tego nie ogarnie. Księgowa też nie. Potrzebujesz programisty na pół etatu, tech-savvy konsultanta z umową albo zewnętrznego partnera z SLA.
+
+Bez tej osoby — zostań przy Zapierze. Tańsze, prostsze, mniej możliwości ale i mniej rozczarowań.
+
+**[72-80s PUNCHLINE]**
+n8n to nie no-code dla każdego. To low-code dla ludzi którzy wiedzą co robią z API.
+
+**[80-85s CTA]**
+Macie kogoś od n8n in-house czy outsourcujecie? Komentarz.
 
 **Hashtagi:** #n8n #automatyzacja #it #lowcode #wdrożenia
 
