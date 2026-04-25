@@ -65,6 +65,23 @@ Statusy: `POMYSŁ` → `SCENARIUSZ` → `NAGRANY` → `OPUBLIKOWANY`
 | T-042 | "Narzędzie AI jest NAJMNIEJ ważne" | Wszyscy pytają "ChatGPT czy Claude?" Nikt nie pyta "jaki problem rozwiązuję?" Narzędzie zmieni się za 3 miesiące. Problem zostanie. | Talking head | POMYSŁ |
 | T-043 | "Twój Copilot jest drogi i bezużyteczny" | 30$/użytkownika/miesiąc. Większość firm kupuje, nikt nie konfiguruje, nikt nie używa. Pieniądze w błoto. | Talking head, prowokacja | POMYSŁ |
 
+## Kategoria: SERIA WDRAŻANIE AUTOMATYZACJI (batch 2026-04-25)
+
+> Pełne scenariusze: [Batch_2026-04-25_Wdrazanie_Automatyzacji.md](./Batch_2026-04-25_Wdrazanie_Automatyzacji.md)
+
+| # | Hook (pierwsze 2s) | Treść (30-60s) | Format | Status |
+|---|---|---|---|---|
+| T-050 | "Zanim wdrożysz automatyzację, zrób te 3 rzeczy" | TRAILER serii. 1) spisz proces 2) znajdź właściciela 3) policz aktualny koszt godzinowy. Większość zaczyna od narzędzia — dlatego im nie wychodzi. | Talking head | SCENARIUSZ |
+| T-051 | "Zaczynasz automatyzację od narzędzia? Już przegrałeś." | n8n vs Make, ChatGPT vs Claude — drugorzędne. Zacznij od pytania który proces kradnie najwięcej godzin. Narzędzie zmieni się za rok, proces zostanie. | Talking head | SCENARIUSZ |
+| T-052 | "Twoja firma wdraża n8n od złej strony" | Drag & drop wygląda no-code, ale po 3 mies. workflow padnie (token, API change). Marketingowiec nie naprawi, IT nie wie co to robi. n8n to low-code, nie no-code. | Talking head | SCENARIUSZ |
+| T-053 | "Najgłupszy błąd przy AI w firmie — robi go prawie każdy" | Kupujesz Copilota wszystkim, 100 osób × 30$. 3 osoby używają. Lepsze: 5 osób, pełna konfiguracja, prawdziwy use case, mierzysz oszczędność, dopiero skalujesz. | Talking head | SCENARIUSZ |
+| T-054 | "Twoja automatyzacja umrze za 6 miesięcy" | Buduje zewnętrzny dev / entuzjasta z marketingu. Odchodzi → bus factor 1 → workflow pika → nikt nie wie co to robi. Każda automatyzacja musi mieć właściciela na etacie + dokumentację. | Talking head | SCENARIUSZ |
+| T-055 | "3 procesy które MUSISZ zautomatyzować jako pierwsze" | 1) kwalifikacja leadów (-5min/dzień handlowca) 2) opisywanie faktur (-1h/dzień księgowej) 3) raportowanie tygodniowe (-3h piątku managera). 4h dziennie odzyskane. | Talking head | SCENARIUSZ |
+| T-056 | "Najszybsze ROI z automatyzacji nie jest tym co myślisz" | Wszyscy patrzą na sprzedaż/marketing. Najszybszy zwrot: onboarding pracownika, raportowanie do zarządu, powtarzalne pytania do HR. Sprzedaż jest sexy, procesy wewnętrzne są pieniędzmi. | Talking head | SCENARIUSZ |
+| T-057 | "Przeszkoliłem 200 firm. Większość ma TEN sam problem." | Nie brak narzędzi/budżetu/ludzi. Brak właściciela. AI = "wszystkich" = "nikogo". Każda firma która wdrożyła miała: 1 osoba, 1 KPI, 1 budżet. AI Lead / AI Champion. | Talking head | SCENARIUSZ |
+| T-058 | "3 rzeczy których sprzedawca AI Ci NIE powie" | 1) cena per user to początek (+integracja/szkolenie/support = 2-3× więcej) 2) halucynacje istnieją w każdym modelu, wymagają weryfikacji 3) lock-in danych/workflowów/promptów. | Talking head | SCENARIUSZ |
+| T-059 | "Jeśli nie masz TEGO w firmie — n8n Ci nie pomoże" | n8n wymaga kogoś kto rozumie API: token, auth, format danych, error handling. Marketingowiec nie ogarnie. Bez programisty/tech-savvy konsultanta — zostajesz z Zapierem. | Talking head | SCENARIUSZ |
+
 ---
 
 ## Seria: "PROBLEM → ROZWIĄZANIE W 60 SEKUND" (format powtarzalny)
