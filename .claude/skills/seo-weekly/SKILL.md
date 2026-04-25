@@ -21,9 +21,25 @@ python3 gsc_fetch.py --from-db --mode opportunities
 ## KROK 2: Wczytaj kontekst
 
 Przeczytaj:
-- `DOKODU_BRAIN/20_AREAS/AREA_Blog_SEO/SEO_Last_Sync.md` — aktualne dane
-- `DOKODU_BRAIN/20_AREAS/AREA_Blog_SEO/SEO_Insights.md` — poprzednie wnioski
-- `DOKODU_BRAIN/20_AREAS/AREA_Blog_SEO/SEO_Ideas_Bank.md` — jeśli istnieje
+- `20_AREAS/AREA_Blog_SEO/SEO_Last_Sync.md` — aktualne dane GSC
+- `20_AREAS/AREA_Blog_SEO/SEO_Insights.md` — poprzednie wnioski
+- `20_AREAS/AREA_Blog_SEO/SEO_Ideas_Bank.md` — pomysły do publikacji
+- `20_AREAS/AREA_Blog_SEO/SEO_Action_Triggers.md` — **trigger logic** (if pozycja X then akcja Y)
+- `20_AREAS/AREA_Blog_SEO/dataforseo/weekly/2026-W{nr}.md` — najnowszy DataForSEO weekly raport
+- `20_AREAS/AREA_Blog_SEO/dataforseo/weekly/2026-W{nr-1}.md` — poprzedni tydzień (do diff)
+
+## KROK 2b: SEO Triggers — sprawdź wszystkie aktywne
+
+Dla każdego triggera w `SEO_Action_Triggers.md`:
+1. Sprawdź aktualną pozycję / metrykę z GSC + DataForSEO weekly
+2. Porównaj z warunkiem (np. "fraza w top 20", "pozycja spadła >5")
+3. Klasyfikuj jako:
+   - 🟢 **Aktywny pozytywny** — można wykonać akcję boost
+   - 🔴 **Aktywny krytyczny** — wymaga pilnej akcji
+   - ⚪ **Nieaktywny** — metric nie spełnia warunku
+4. W raporcie dodaj sekcję "🚨 Aktywne triggery" z konkretnymi akcjami
+
+Po wykonaniu akcji dla triggera → oznacz jako `[OSIĄGNIĘTE: data]` w `SEO_Action_Triggers.md`.
 
 ## KROK 3: Raport tygodniowy
 

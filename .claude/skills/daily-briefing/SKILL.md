@@ -45,6 +45,27 @@ gmail_search_messages(q="is:unread newer_than:2d -category:promotions -category:
 - `REMINDERS.md` — przypomnienia na dziś/jutro
 - `20_AREAS/AREA_YouTube/YT_Videos.md` — pipeline (nie powtarzaj tematów)
 - `20_AREAS/AREA_Blog_SEO/SEO_Ideas_Bank.md` — istniejące pomysły (nie duplikuj)
+- `20_AREAS/AREA_Blog_SEO/SEO_Action_Triggers.md` — **SEO trigger logic** ("if pozycja X then akcja Y")
+- `20_AREAS/AREA_Blog_SEO/SEO_Last_Sync.md` — ostatnie pozycje GSC (pobrane przez `/seo-sync`)
+
+**SEO Triggers — sprawdzanie automatyczne:**
+
+Dla każdego aktywnego triggera w `SEO_Action_Triggers.md`:
+1. Sprawdź aktualną pozycję frazy w `SEO_Last_Sync.md` (jeśli stale >24h → odpal `python3 scripts/gsc_fetch.py --days 7 --save`)
+2. Porównaj z warunkiem triggera (np. "fraza w top 20")
+3. Jeśli pasuje → **dorzuć sekcję "🚨 SEO TRIGGER" do briefingu** z konkretną akcją do podjęcia
+
+Format alertu w briefingu (przykład):
+```
+🚨 SEO TRIGGER ACTIVE
+Fraza: claude code (33 100 vol/mc)
+Pozycja: 18 (wczoraj 25)
+Akcja: Boost pillara — FAQ od czytelników, 2-3 case studies, screenshot UI
+Termin: 1 tydzień
+Komenda: /seo-research claude code
+```
+
+Jeśli ŻADEN trigger nie pasuje → pomiń sekcję (nie pokazuj "no triggers").
 
 **Zasady planowania dnia (nie pytaj, sam stosuj):**
 - Szkolenia AI Hero / FOTC / BNI = cały dzień zajęty, NIE sugeruj nagrywania
