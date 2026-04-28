@@ -91,7 +91,7 @@ Następnie wypisz raport dla użytkownika:
 ✅ DEMO READY
 
 URL: https://dev.dokodu.it/crm-{slug}
-Login: admin@dokodu.it / haslo z prisma seed (zwykle "admin123" — zmień po pierwszej prezentacji)
+Login: kacper@dokodu.it / haslo z prisma seed (ADMIN_PASSWORD env var, default "admin123" — zmień po pierwszej prezentacji)
 
 Co dostajesz w demie:
 - Brand z {url} (logo + kolory + Plus Jakarta Sans typography)
