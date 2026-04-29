@@ -25,6 +25,7 @@ tags: [n8n, infrastruktura, docker, vault, devops, standardy, presidio, neo4j, m
 | **Lokalne LLM (>24GB VRAM)** | Ollama / vLLM | Modele lokalne bez wysyłania PII | GPU server |
 | **AI → DB/K8s** | MCP (Model Context Protocol) | Bezpieczne łączenie AI z K8s i bazami (Read-Only + Human-in-the-loop) | Lokalnie |
 | **AI Terminal Agent** | Claude Code | Automatyzacja kodu z regułami w CLAUDE.md | WSL / CLI |
+| **Claude Code ↔ n8n** | `czlonkowski/n8n-mcp` (stdio, npx) | Agentic layer nad n8n: listowanie/tworzenie/edycja workflowów z Claude Code | Lokalnie (laptop Kacpra) |
 
 ### Presidio — PII Redaction (kluczowa tarcza danych)
 ```
@@ -45,6 +46,18 @@ Architektura:
 ### MCP dla K8s i DB (Human-in-the-loop)
 - Tryb: **Read-Only** domyślnie — żaden agent nie pisze do produkcji bez zatwierdzenia
 - Zastosowanie: inspekcja infrastruktury klienta bez ryzyka zmian
+
+### Claude Code → n8n MCP (decyzja: 2026-04-24)
+- **Dokodu prod (`n8n.dokodu.it`):** **Full access, ask-before-write.** Claude ma pełne CRUD przez MCP (workflows, executions, credentials-refs). Odpowiedzialność: Kacper, świadoma decyzja o odstępstwie od zasady Read-Only dla własnej instancji prod.
+- **Klienckie n8n (Corleonis, Animex, przyszłe):** zasada **Read-Only + HITL pozostaje** — nigdy nie podpinamy pisemnego dostępu do klienckich instancji bez ich zgody na piśmie.
+- Server: `czlonkowski/n8n-mcp` (npm `n8n-mcp`, stdio, npx). Bundle dokumentacji 548 node'ów + walidacja workflow JSON.
+- Klucz API: `~/.config/dokodu/n8n_api_key` (mode 600), expiration 90 dni, rotacja zgodnie ze standardem.
+- Enforcement: n8n Community nie ma scoped API keys — pełny dostęp wynikający z klucza. **Protokół zmian na prod (Kacper 2026-04-24):**
+  - Claude wykonuje CRUD bezpośrednio przez MCP (nie zmusza Kacpra do manualnego importu JSON).
+  - **PRZED każdą operacją pisania** (create/update/delete/activate/deactivate/execute-manual) Claude opisuje zwięźle: *co zmienia, w którym workflow, jaki będzie efekt, czy to reversible*.
+  - Claude czeka na wyraźne OK/NIE. Brak explicit approval = brak akcji.
+  - Po akceptacji — Claude wykonuje i raportuje rezultat (np. workflow ID, liczba zmienionych node'ów, link do n8n UI).
+  - Batch changes: każda oddzielna decyzja osobnym pytaniem (nie "czy wykonać 5 rzeczy?" tylko 5 pytań po jednej, chyba że Kacper poprosi o batch).
 
 ---
 

@@ -12,6 +12,7 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 
 - 2026-05-01 | SEO | Piątkowy weekly DataForSEO research (`/seo-dataforseo` lub `python3 scripts/dataforseo_fetch.py weekly`) — łącznie z `/seo-weekly`. Koszt ~$0.15/tydz. Pierwszy run: 2026-04-25, 2026-W17 ✅
 - 2026-05-15 | SEO | DataForSEO budget check — sprawdź `dataforseo_fetch.py budget`, jeśli >$2/mies. zoptymalizuj seedy
+- 2026-05-15 | TECH | Kutt server-side tracking (Phase B) — czy ruszyła pierwsza kampania płatna (Meta/LI Ads)? Jeśli TAK: postaw nginx mirror w `/srv/reverse-proxy/conf.d/linki.conf` + n8n webhook flow → fan-out do Meta CAPI / GA4 MP / LinkedIn CAPI. Kontekst: memory `project_social_stack.md`. Jeśli kampanii brak — przesuń o miesiąc.
 
 - 2026-03-27 | SEO | Sprawdź CTR frazy "llm" po zmianie title/meta — było 0.0% na #1.2, powinno wzrosnąć
 - 2026-03-27 | SEO | Sprawdź CTR "python list comprehension" po zmianie meta — było 0.3% na #2.1
@@ -44,6 +45,7 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - 2026-04-12 | BIZNES | Bank&InsurHack TYLKO niedziela (9:00–17:00, Rotunda) — pitchowanie MVP od 15:00, jury, nagranie filmu ze zwycięzcami
 - 2026-04-15 | BIZNES | Bank&InsurHack follow-up: wypełnić scorecard, wysłać LinkedIn requests, follow-up messages do Tier 1
 - 2026-05-12 | BIZNES | Bank&InsurHack ROI check: ile follow-upów → discovery call → oferta?
+- 2026-05-10 | SEO | Sprawdź dane SEO po sesji 26.04: GSC impressions 13 nowych URL (claude-code, agent-ai-*, n8n/templates, narzedzia-ai-dla-developera-2026), CTR licencja-cennik (baseline 1.3%, target 4-6%), pozycje pillarów. Otwórz `20_AREAS/AREA_Blog_SEO/SEO_Action_Triggers.md` i ewaluuj 6 aktywnych triggerów. DataForSEO weekly W18/W19 powinno mieć diff vs W17. Decyzja: kolejne content moves vs wait.
 
 ## Wykonane
 

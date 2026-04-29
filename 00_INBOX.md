@@ -14,6 +14,7 @@ tags: [inbox, capture, wrzutki]
 
 ## NOTATKI Z TELEFONU / MYS LOT
 
+- [ ] LEKCJA/MARKETING: Mam 80% skuteczność konwersji na ~5 inboundach (4/5 zamknięte) — wszystkie leady **za 0 zł reklamy**. Jeśli puścimy reklamę FB/Google → multiplikator. Przed hire'em handlowca rozważyć: budżet ~2-5k/mies na ads, target ICP (logistyka/produkcja/finanse 50-500 prac.), lead magnet (PDF checklista AI / kalkulator ROI / case study Animex). Cel: zwiększyć podaż MQL z ~2/mies → 8-15/mies → przejście z modelu Pure Hunter na Hybrid dla handlowca w 2027. — 2026-04-29
 - [ ] LEAD/PR: Wojciech Luściński (dziennikarz Radio Gdańsk SA, twórca audycji/podcastu "Radiowe AI") — spotkanie dziś z Aliną. Ustalenia: wymiana wystąpień (ja u niego w audycji, on u mnie na kanale YT). Zapytałem wstępnie o termin. TODO: (1) dogadać termin nagrania, (2) po nagraniu → content social media "wystąpiłem w Radio Gdańsk" (PR). — 2026-04-20
 - [ ] BIZNES: TenderScope (Borys Kowalik) — nieoficjalnie 99% wchodzi! Autouzupełnianie formularzy przetargowych. Czekamy na oficjalne ogłoszenie. Poza Corleonis = 100% conversion rate. — 2026-04-17
 - [ ] POMYSL: Post LinkedIn/blog: "AI bez ludzi nie istnieje" — human in the loop jako fundament, nie dodatek. Operator > użytkownik. Kąt: anty-teza "AI zastąpi ludzi". — 2026-04-16
