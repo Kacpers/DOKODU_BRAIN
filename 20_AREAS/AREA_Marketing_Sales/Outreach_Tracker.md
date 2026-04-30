@@ -17,7 +17,7 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 |---|-------|-------|-----------|-------|-----------------|--------|---------------|-----------|
 | 1 | VTS Group | Rafał Wiatr | CTO | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 2a | Rossmann SDP | Małgorzata Kołodziejczyk | IT Director / Digital Transformation | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
-| 2b | Rossmann SDP | Piotr Jugiel | IT Director / Consumer Systems & Data Analytics | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
+| 2b | Rossmann SDP | Piotr Jugiel | IT Director / Consumer Systems & Data Analytics | A | 2026-03-30 | dm_wysłany | Zaakceptował zaproszenie 21.04, DM 28.04. Czekaj na odp. → cold email dzień 3 (01.05) | 2026-05-01 |
 | 2c | Rossmann SDP | Anna Hesiak | Analityk Procesów / Dział Technologii i Innowacji / RPA / AI | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 3 | CAPITAL SERVICE S.A. | Marzena Szulim | Head of Risk and Operations, Board Member | A | 2026-03-30 | zaproszenie_wysłane | Czekaj na akceptację → DM | 2026-04-02 |
 | 4a | UNIQA Polska | Błażej Misztal | Lider Zespołu Gen AI i Automatyzacji - PO | A | 2026-03-30 | dm_wysłany | Cold email po świętach | 2026-04-08 |
@@ -43,6 +43,7 @@ tags: [sprzedaz, outreach, linkedin, tracker]
 | 10 | GAIA Institute | Damian Ciachorowski | CEO, Digital Transformation | B | 2026-04-03 | dm_wysłany | Przeczytał, nie odpisał. Czekaj — skomentuj jego post na LI przy okazji | 2026-04-14 |
 | 11a | ENEA Centrum | Agnieszka Zając-Feliczak | St. specjalista ds. Doskonalenia i Automatyzacji Procesów | A | 2026-04-07 | zaproszenie_wysłane | Czekaj na akceptację → DM (automatyzacja procesów SSC) | 2026-04-10 |
 | 11b | ENEA Centrum | Michał Szułczyński, MBA | Kierownik Biura Strategii i Rozwoju IT | A | 2026-04-07 | zaproszenie_wysłane | Czekaj na akceptację → DM (strategia ICT, automatyzacja, szkolenia AI) | 2026-04-10 |
+| 12 | Seprotec Multilingual Solutions | Wojciech Kalinski | Director of BMS & Process Automation (od 03.2026) | A | — (już w sieci) | dm_wysłany | DM 28.04 (gratulacje awansu + easter egg stopka 2024). Czekaj na odp. → bump +5 dni z linkiem do filmu | 2026-05-03 |
 <!-- /SYNC:OUTREACH -->
 
 ## Kolejka (Score A — następne w kolejności)
