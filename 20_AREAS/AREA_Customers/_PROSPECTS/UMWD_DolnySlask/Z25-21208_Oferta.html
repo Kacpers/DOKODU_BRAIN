@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Kalkulacja cenowa Z25/21208 — Dokodu</title>
+<style>
+:root {
+    --primary: #0F2137;
+    --secondary: #1a3352;
+    --accent: #E63946;
+    --accent-soft: #fde8ea;
+    --text: #343D48;
+    --muted: #5A6677;
+    --bg-light: #F8FAFC;
+    --bg-warm: #faf9f7;
+    --border: #E2E8F0;
+}
+
+@page {
+    size: A4;
+    margin: 14mm 14mm 14mm 14mm;
+    @bottom-left {
+        content: "Dokodu sp. z o.o. — Kalkulacja cenowa Z25/21208";
+        font-family: 'Inter', sans-serif;
+        font-size: 8pt;
+        color: #999;
+    }
+    @bottom-right {
+        content: "Strona " counter(page) " / " counter(pages);
+        font-family: 'Inter', sans-serif;
+        font-size: 8pt;
+        color: #999;
+    }
+}
+
+@page :first {
+    margin: 0;
+    @bottom-left { content: none; }
+    @bottom-right { content: none; }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+    font-family: 'Inter', 'Segoe UI', 'DM Sans', system-ui, -apple-system, sans-serif;
+    color: var(--text);
+    line-height: 1.45;
+    font-size: 9.5pt;
+    -webkit-print-color-adjust: exact;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary);
+    line-height: 1.18;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 20pt;
+    margin-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 14pt;
+    margin-top: 1em;
+    margin-bottom: 0.35em;
+    padding-bottom: 0.2em;
+    border-bottom: 2px solid var(--primary);
+    page-break-after: avoid;
+}
+
+h3 {
+    font-size: 10.5pt;
+    color: var(--secondary);
+    margin-top: 0.9em;
+    margin-bottom: 0.3em;
+    page-break-after: avoid;
+}
+
+p {
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+strong { color: var(--primary); font-weight: 700; }
+
+ul, ol { margin-left: 1.3em; margin-bottom: 0.5em; }
+li { margin-bottom: 0.15em; line-height: 1.45; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.5em 0 0.7em 0;
+    font-size: 8.8pt;
+}
+table th {
+    background: var(--primary);
+    color: white;
+    text-align: left;
+    padding: 6px 9px;
+    font-weight: 600;
+    font-size: 8.8pt;
+}
+table td {
+    padding: 5px 9px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    line-height: 1.4;
+}
+table tr:nth-child(even) td {
+    background: var(--bg-light);
+}
+
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+/* === COVER === */
+.cover {
+    page: first;
+    width: 100%;
+    height: 297mm;
+    background: var(--primary);
+    color: white;
+    position: relative;
+    page-break-after: always;
+    padding: 0;
+    overflow: hidden;
+}
+.cover::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--accent) 0%, #f0a500 50%, var(--accent) 100%);
+}
+.cover::after {
+    content: '';
+    position: absolute;
+    right: -120mm;
+    top: -80mm;
+    width: 280mm;
+    height: 280mm;
+    border-radius: 50%;
+    background: rgba(230, 57, 70, 0.06);
+}
+.cover-inner {
+    position: relative;
+    z-index: 2;
+    padding: 30mm 22mm 22mm 22mm;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.cover .brand {
+    font-size: 11pt;
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: white;
+    text-transform: uppercase;
+}
+.cover .brand-tagline {
+    font-size: 9pt;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+.cover .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 2px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 22mm;
+    margin-bottom: 12mm;
+}
+.cover h1.cover-title {
+    font-size: 38pt;
+    line-height: 1.05;
+    color: white;
+    font-weight: 800;
+    margin-bottom: 8mm;
+    letter-spacing: -0.5px;
+}
+.cover h1.cover-title .accent {
+    color: var(--accent);
+}
+.cover .subtitle {
+    font-size: 14pt;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    line-height: 1.4;
+    margin-bottom: auto;
+    max-width: 140mm;
+}
+.cover-meta {
+    margin-top: auto;
+    padding-top: 20mm;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    color: rgba(255,255,255,0.85);
+    font-size: 9.5pt;
+    line-height: 1.7;
+}
+.cover-meta .row {
+    display: flex;
+    margin-bottom: 4px;
+}
+.cover-meta .label {
+    color: rgba(255,255,255,0.5);
+    width: 42mm;
+    text-transform: uppercase;
+    font-size: 8pt;
+    letter-spacing: 1px;
+    padding-top: 1px;
+}
+.cover-meta .value {
+    color: white;
+    flex: 1;
+    font-weight: 500;
+}
+
+/* === CONTENT === */
+.page {
+    /* naturalny flow — bez forced page breaks żeby uniknąć pustych stron */
+}
+.page-break {
+    page-break-before: always;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    background: var(--bg-light);
+    padding: 14px 16px;
+    border-left: 3px solid var(--accent);
+    margin: 1em 0 1.4em 0;
+    font-size: 9.5pt;
+}
+.stats .stat {
+    flex: 1;
+    min-width: 110px;
+    padding: 4px 8px;
+}
+.stats .stat .num {
+    font-size: 16pt;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+}
+.stats .stat .label {
+    color: var(--muted);
+    font-size: 8.5pt;
+    line-height: 1.3;
+}
+
+.callout {
+    background: var(--bg-warm);
+    border-left: 3px solid var(--primary);
+    padding: 12px 16px;
+    margin: 1em 0;
+    font-size: 10pt;
+    line-height: 1.55;
+}
+.callout.accent {
+    border-left-color: var(--accent);
+    background: var(--accent-soft);
+}
+.callout strong { color: var(--primary); }
+
+.price-table {
+    margin: 1em 0;
+}
+.price-table th, .price-table td {
+    font-size: 11pt;
+    padding: 12px 14px;
+}
+.price-table .price {
+    font-weight: 800;
+    font-size: 14pt;
+    color: var(--accent);
+}
+
+.contact-block {
+    background: var(--primary);
+    color: white;
+    padding: 18px 22px;
+    margin-top: 1.5em;
+    border-left: 4px solid var(--accent);
+}
+.contact-block h3 { color: white; margin-top: 0; }
+.contact-block .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 28px;
+    margin-top: 10px;
+    font-size: 9.5pt;
+}
+.contact-block .contact-grid .label {
+    color: rgba(255,255,255,0.55);
+    font-size: 8pt;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+.contact-block .contact-grid .value {
+    color: white;
+    font-weight: 500;
+}
+
+.disclaimer {
+    margin-top: 1.5em;
+    font-size: 8.5pt;
+    color: var(--muted);
+    font-style: italic;
+    line-height: 1.5;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+}
+
+.section-intro {
+    color: var(--muted);
+    font-size: 10pt;
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 8.5pt;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-right: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- ============= COVER ============= -->
+<section class="cover">
+    <div class="cover-inner">
+        <div>
+            <div class="brand">DOKODU</div>
+            <div class="brand-tagline">Praktyczne wdrożenia AI</div>
+        </div>
+
+        <div class="badge">Kalkulacja cenowa</div>
+
+        <h1 class="cover-title">
+            Wykorzystanie<br>
+            <span class="accent">sztucznej inteligencji</span><br>
+            w pracy Urzędnika
+        </h1>
+
+        <div class="subtitle">
+            Odpowiedź na rozeznanie cenowe Z25/21208 dotyczące szkoleń zamkniętych
+            dla pracowników UMWD zaangażowanych w realizację programu
+            Fundusze Europejskie dla Dolnego Śląska 2021–2027.
+        </div>
+
+        <div class="cover-meta">
+            <div class="row">
+                <span class="label">Postępowanie</span>
+                <span class="value">Z25/21208 — rozeznanie cenowe</span>
+            </div>
+            <div class="row">
+                <span class="label">Zamawiający</span>
+                <span class="value">Urząd Marszałkowski Województwa Dolnośląskiego</span>
+            </div>
+            <div class="row">
+                <span class="label">Wykonawca</span>
+                <span class="value">Dokodu sp. z o.o., Rumia</span>
+            </div>
+            <div class="row">
+                <span class="label">Data</span>
+                <span class="value">27 kwietnia 2026</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============= PAGE 2: O DOKODU + ZROZUMIENIE ============= -->
+<section class="page">
+    <h2>O Dokodu</h2>
+    <p>
+        Dokodu jest agencją zajmującą się praktycznym wdrażaniem sztucznej inteligencji
+        i automatyzacji w polskich firmach oraz instytucjach. Pracujemy z zespołami,
+        które mają już rozpoczętą pracę z narzędziami AI i chcą poukładać ją
+        w sprawny, bezpieczny i zgodny z prawem proces. Tworzymy szkolenia zamknięte,
+        wdrożenia agentów AI oraz materiały edukacyjne — wszystko w oparciu o realne
+        procesy klienta, nie generyczne case study.
+    </p>
+
+    <div class="stats">
+        <div class="stat">
+            <span class="num">140+</span>
+            <span class="label">firm i instytucji obsłużonych</span>
+        </div>
+        <div class="stat">
+            <span class="num">1 000+</span>
+            <span class="label">przeszkolonych pracowników</span>
+        </div>
+        <div class="stat">
+            <span class="num">4,9 / 5</span>
+            <span class="label">średnia ocena szkoleń zamkniętych</span>
+        </div>
+        <div class="stat">
+            <span class="num">15+</span>
+            <span class="label">lat doświadczenia prowadzącego</span>
+        </div>
+        <div class="stat">
+            <span class="num">50 000+</span>
+            <span class="label">subskrybentów kanału edukacyjnego</span>
+        </div>
+        <div class="stat">
+            <span class="num">9</span>
+            <span class="label">autorskich kursów technologicznych</span>
+        </div>
+    </div>
+
+    <h2>Zrozumienie zamówienia</h2>
+    <p class="section-intro">
+        Zapoznaliśmy się z treścią analizy rynku z 24 kwietnia 2026 i zakresem
+        11 obszarów tematycznych. Poniższa tabela pokazuje nasze podejście do każdego
+        z nich — by potwierdzić, że oferowany program nie jest gotowym szablonem,
+        lecz kursem dopasowanym do realiów pracy w Urzędzie i projektach FEDS 2021–2027.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 32%">Obszar (wg analizy rynku UMWD)</th>
+                <th>Podejście Dokodu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td><strong>1. Generatywne AI</strong></td><td>Krótkie, operacyjne wprowadzenie. Bez teorii sieci neuronowych — pokazujemy, co model „wie", a czego nie i dlaczego.</td></tr>
+            <tr><td><strong>2. Bezpieczeństwo, etyka, AI Act</strong></td><td>Konkretna lista danych, których nie wolno wprowadzać (dane osobowe, tajemnice służbowe, projekty uchwał). Zasada Human-in-the-loop wyjaśniona przez przykłady decyzji urzędowych. Podstawy AI Act z perspektywy obowiązków pracownika.</td></tr>
+            <tr><td><strong>3. Prawa autorskie i wiarygodność</strong></td><td>Procedura weryfikacji odpowiedzi w 3 krokach. Zasady oznaczania treści wygenerowanych. Jak rozpoznać halucynację w typowych sytuacjach urzędniczych.</td></tr>
+            <tr><td><strong>4. Możliwości i ograniczenia AI</strong></td><td>Mapa „gdzie AI pomaga, a gdzie szkodzi" — przygotowana w oparciu o pracę z zespołami administracyjnymi i compliance.</td></tr>
+            <tr><td><strong>5. Przegląd narzędzi (ChatGPT, Gemini, Claude, Copilot)</strong></td><td>Live demo wszystkich czterech, kryteria wyboru w zależności od ekosystemu instytucji, porównanie wersji darmowych i płatnych.</td></tr>
+            <tr><td><strong>6. Identyfikacja procesów do usprawnienia</strong></td><td>Praca w grupach: każdy uczestnik wybiera własny realny proces i wychodzi z minimum jednym pomysłem na usprawnienie. Uwzględniamy wymagania dostępności cyfrowej (WCAG, ustawa o dostępności).</td></tr>
+            <tr><td><strong>7. Prompting</strong></td><td>Technika roli i kontekstu — pokazujemy, jak sformułować polecenie, by model „pisał jak doświadczony specjalista ds. funduszy europejskich". Struktura: zadanie, kontekst, format wyniku.</td></tr>
+            <tr><td><strong>8. Praca z tekstem, Plain Language</strong></td><td>Tłumaczenie języka urzędowego i prawniczego na komunikatywny — z naciskiem na standardy dostępności językowej i czytelność dla mieszkańca.</td></tr>
+            <tr><td><strong>9. Analiza przepisów i dokumentacji UE</strong></td><td>Ćwiczenia na realnych wytycznych krajowych i unijnych — przeszukiwanie, porównywanie spójności, streszczanie obszernych dokumentów programowych.</td></tr>
+            <tr><td><strong>10. Excel i dane</strong></td><td>Tworzenie skomplikowanych formuł krok po kroku, analiza trendów w danych operacyjnych, generowanie tabel i zestawień.</td></tr>
+            <tr><td><strong>11. Prezentacje i treści wizualne</strong></td><td>Tworzenie prezentacji z naciskiem na dostępność wizualną (kontrasty, opisy alternatywne, czytelność dla osób z ograniczeniami percepcji).</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ============= PAGE 3: PRZEBIEG DNIA ============= -->
+<section class="page">
+    <h2>Przebieg jednego dnia szkolenia</h2>
+    <p class="section-intro">
+        Szkolenie online w czasie rzeczywistym, 8:00–15:00, z 6 godzinami zegarowymi
+        merytorycznymi. Format: 20% wprowadzenie i kontekst, 60% praca praktyczna
+        z narzędziami, 20% pytania i indywidualne konsultacje.
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 18%">Blok</th>
+                <th style="width: 14%">Czas</th>
+                <th>Treść</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>8:00 – 9:30</strong></td>
+                <td>90 min</td>
+                <td>Wprowadzenie do GenAI. Bezpieczeństwo, etyka, AI Act, Human-in-the-loop. Co wolno, czego nie wolno — z przykładami z pracy urzędu.</td>
+            </tr>
+            <tr>
+                <td>9:30 – 9:45</td>
+                <td>15 min</td>
+                <td>Przerwa</td>
+            </tr>
+            <tr>
+                <td><strong>9:45 – 11:15</strong></td>
+                <td>90 min</td>
+                <td>Przegląd narzędzi (ChatGPT, Gemini, Claude, Copilot) — live demo. Prompting w technice roli i kontekstu. Praca z tekstem i Plain Language.</td>
+            </tr>
+            <tr>
+                <td>11:15 – 11:45</td>
+                <td>30 min</td>
+                <td>Przerwa</td>
+            </tr>
+            <tr>
+                <td><strong>11:45 – 13:15</strong></td>
+                <td>90 min</td>
+                <td>Analiza przepisów i dokumentacji unijnej. Excel i dane. Identyfikacja procesów do usprawnienia w zespole uczestnika.</td>
+            </tr>
+            <tr>
+                <td>13:15 – 13:30</td>
+                <td>15 min</td>
+                <td>Przerwa</td>
+            </tr>
+            <tr>
+                <td><strong>13:30 – 15:00</strong></td>
+                <td>90 min</td>
+                <td>Tworzenie prezentacji i treści wizualnych. Dostępność cyfrowa i wizualna. Q&amp;A, indywidualne konsultacje, zaświadczenia.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Platforma teleinformatyczna</h3>
+    <p>
+        Microsoft Teams lub Google Meet — do uzgodnienia z zamawiającym.
+        Bez płatnych aplikacji po stronie uczestników. Lista obecności automatyczna,
+        transmisja wideo uczestników, pytania głosowe i tekstowe.
+        Zgodne z wymaganiami z analizy rynku.
+    </p>
+
+    <h3>Materiały szkoleniowe (forma elektroniczna dla każdego uczestnika)</h3>
+    <ul>
+        <li>kompletny zestaw slajdów ze szkolenia</li>
+        <li>biblioteka <strong>30+ gotowych promptów</strong> dostosowanych do pracy urzędniczej (analiza dokumentów, streszczenia, korespondencja, Plain Language)</li>
+        <li>checklista bezpieczeństwa AI Act i Human-in-the-loop do codziennego użytku</li>
+        <li>lista rekomendowanych narzędzi z porównaniem wersji darmowych i płatnych</li>
+        <li>krótki przewodnik <em>„czego nie wolno wpisywać do AI"</em> — gotowy do wydruku</li>
+    </ul>
+
+    <h3>Zaświadczenia / certyfikaty</h3>
+    <p>
+        Indywidualny certyfikat ukończenia dla każdego uczestnika, podpisany cyfrowo,
+        gotowy do dołączenia do akt osobowych. Uwzględnia liczbę godzin merytorycznych
+        i pełen zakres tematyczny zgodny z analizą rynku UMWD.
+    </p>
+
+    <div class="callout">
+        <strong>Wsparcie po szkoleniu.</strong> Każdy uczestnik ma dostęp
+        do wsparcia e-mailowego prowadzącego przez 14 dni od dnia szkolenia —
+        krótkie pytania merytoryczne, wątpliwości przy stosowaniu nowych narzędzi
+        w realnej pracy. Bez dodatkowych kosztów.
+    </div>
+</section>
+
+<!-- ============= PAGE 4: TRENER ============= -->
+<section class="page">
+    <h2>Prowadzący szkolenie</h2>
+
+    <h3>Kacper Sieradziński — CEO Dokodu</h3>
+    <p>
+        Architekt systemów oraz edukator z ponad piętnastoletnim doświadczeniem
+        w branży IT i AI. Trzy lata pracy jako trener techniczny w polskim
+        programie bootcampowym (Python, JavaScript, PHP — od początkujących
+        po deweloperów komercyjnych). Twórca biblioteki ponad 40 sprawdzonych
+        promptów do pracy biurowej i urzędniczej. Autor cotygodniowego newslettera
+        <em>„Pracownik biurowy przyszłości"</em>. Prelegent konferencji branżowych
+        poświęconych zastosowaniom AI w polskich firmach.
+    </p>
+
+    <h3>Spełnienie typowych wymagań do szkoleń z AI w sektorze publicznym</h3>
+    <table>
+        <tbody>
+            <tr><td style="width: 50%"><strong>Doświadczenie jako trener / wykładowca</strong></td><td>3+ lat (wraz z rolą trenera technicznego w bootcampie)</td></tr>
+            <tr><td><strong>Doświadczenie praktyczne w branży IT / AI</strong></td><td>15+ lat (architektura systemów, wdrożenia, edukacja)</td></tr>
+            <tr><td><strong>Przeprowadzonych szkoleń z AI w ostatnich 12 miesiącach</strong></td><td>10+ (sektor prywatny i publiczny)</td></tr>
+            <tr><td><strong>Własne materiały dydaktyczne</strong></td><td>9 autorskich kursów technologicznych, ponad 40 promptów w bibliotece, e-book wdrożeniowy</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Moduł opcjonalny — AI Act i RODO w praktyce urzędniczej</h2>
+    <p>
+        Dla zamawiających, którzy chcą rozszerzyć program o twardy moduł zgodności
+        prawnej, oferujemy uzupełnienie 3–4 godzinne, prowadzone przez:
+    </p>
+
+    <h3>Alina Sieradzińska — COO Dokodu, ekspert prawny ds. AI Act i RODO</h3>
+    <p>
+        Specjalista z zakresu prawa AI, ochrony danych osobowych oraz własności
+        intelektualnej. Prowadzi audyty zgodności wdrożeń AI z rozporządzeniem
+        2024/1689 (AI Act), przygotowuje listy kontrolne i wewnętrzne polityki
+        użycia AI dla firm i instytucji. Stale współprowadzi z Kacprem webinary
+        i materiały edukacyjne łączące perspektywę technologiczną i prawną.
+    </p>
+
+    <p>
+        <strong>Zakres modułu opcjonalnego:</strong>
+    </p>
+    <ul>
+        <li>obowiązki pracownika administracji publicznej w świetle AI Act</li>
+        <li>RODO przy korzystaniu z narzędzi AI w pracy urzędniczej</li>
+        <li>jak udokumentować decyzję wspomaganą przez AI (Human-in-the-loop)</li>
+        <li>klasyfikacja systemów AI wysokiego ryzyka — co dotyczy administracji</li>
+        <li>wewnętrzna polityka użycia AI w urzędzie — szablon do adaptacji</li>
+    </ul>
+
+    <p>Dostępny jako oddzielny moduł półdniowy lub jako rozszerzenie pełnodniowego programu.</p>
+</section>
+
+<!-- ============= PAGE 5: KALKULACJA ============= -->
+<section class="page page-break">
+    <h2>Kalkulacja cenowa</h2>
+
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Szkolenie / zadanie</th>
+                <th class="text-right" style="width: 30%; white-space: nowrap;">Cena netto / 1 grupa</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>Wykorzystanie sztucznej inteligencji w pracy Urzędnika</strong><br>
+                    <span style="font-size: 8.5pt; color: var(--muted)">Szkolenie online, 1-dniowe, 8:00–15:00, 6 godzin zegarowych merytorycznych</span>
+                </td>
+                <td class="text-right"><span style="font-weight: 800; font-size: 16pt; color: var(--accent); white-space: nowrap;">6 999 PLN</span><br><span style="font-size: 8pt; color: var(--muted);">netto / 1 grupa</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>W cenę wliczone</h3>
+    <ul>
+        <li>pełna organizacja szkolenia (koordynacja, harmonogram, lista uczestników)</li>
+        <li>przeprowadzenie 6 godzin zegarowych merytorycznych przez prowadzącego</li>
+        <li>platforma teleinformatyczna (bez kosztów dla uczestników)</li>
+        <li>elektroniczna paczka materiałów dla każdego uczestnika</li>
+        <li>indywidualne zaświadczenia / certyfikaty (20 sztuk per grupa)</li>
+        <li>wsparcie e-mailowe uczestników przez 14 dni po szkoleniu</li>
+    </ul>
+
+    <h3>Propozycja rabatu wolumenowego</h3>
+    <p style="font-size: 9.5pt; color: var(--muted); margin-bottom: 0.5em;">
+        W przypadku zlecenia większej liczby grup w ramach jednego postępowania,
+        możliwe jest obniżenie ceny jednostkowej. Propozycje wstępne:
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 50%">Liczba zamówionych grup</th>
+                <th class="text-right">Cena netto za 1 grupę</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1 – 4 grupy</td><td class="text-right">6 999 PLN</td></tr>
+            <tr><td>5 – 9 grup</td><td class="text-right">6 799 PLN</td></tr>
+            <tr><td>10 – 16 grup</td><td class="text-right">6 599 PLN</td></tr>
+            <tr style="background: var(--accent-soft);">
+                <td><strong>17 grup (cały zakres)</strong></td>
+                <td class="text-right"><strong>6 499 PLN</strong></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p style="font-size: 9pt; color: var(--muted); margin-top: 0.4em;">
+        Powyższe widełki rabatowe są propozycją do uzgodnienia w pełnym
+        postępowaniu o udzielenie zamówienia publicznego.
+    </p>
+
+    <div class="callout accent">
+        <strong>Moduł opcjonalny — AI Act i RODO (Alina Sieradzińska):</strong>
+        + 4 000 PLN netto / grupa (3–4 godziny dodatkowo lub jako oddzielne pół-dnia).
+    </div>
+</section>
+
+<!-- ============= PAGE 6: WARUNKI + KONTAKT ============= -->
+<section class="page page-break">
+    <h2>Warunki</h2>
+    <ul>
+        <li><strong>Okres związania ofertą:</strong> 60 dni od dnia 30 kwietnia 2026</li>
+        <li><strong>Forma rozliczenia:</strong> faktura VAT z odroczonym terminem płatności do 30 dni od dnia szkolenia (do uzgodnienia)</li>
+    </ul>
+
+    <div class="contact-block">
+        <h3>Wykonawca i kontakt w sprawie</h3>
+        <div class="contact-grid">
+            <div>
+                <div class="label">Firma</div>
+                <div class="value">Dokodu sp. z o.o.</div>
+            </div>
+            <div>
+                <div class="label">Adres siedziby</div>
+                <div class="value">ul. Kosynierów 76 / 22<br>84-230 Rumia</div>
+            </div>
+            <div>
+                <div class="label">NIP</div>
+                <div class="value">5882473305</div>
+            </div>
+            <div>
+                <div class="label">KRS</div>
+                <div class="value">0000925166</div>
+            </div>
+            <div>
+                <div class="label">Reprezentant w sprawie</div>
+                <div class="value">Kacper Sieradziński, CEO</div>
+            </div>
+            <div>
+                <div class="label">Strona</div>
+                <div class="value">dokodu.it</div>
+            </div>
+            <div>
+                <div class="label">E-mail</div>
+                <div class="value">szkolenia@dokodu.it</div>
+            </div>
+            <div>
+                <div class="label">Telefon</div>
+                <div class="value">+48 508 106 046</div>
+            </div>
+        </div>
+    </div>
+
+    <p class="disclaimer">
+        Niniejsza kalkulacja jest odpowiedzią na rozeznanie cenowe Z25/21208
+        i nie stanowi oferty w rozumieniu art. 66 § 1 Kodeksu Cywilnego ani zapytania
+        ofertowego w rozumieniu ustawy Prawo zamówień publicznych. Pozostajemy
+        do dyspozycji w razie pytań merytorycznych lub potrzeby uszczegółowienia.
+    </p>
+</section>
+
+</body>
+</html>
