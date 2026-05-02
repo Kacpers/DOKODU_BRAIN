@@ -71,6 +71,16 @@ Na podstawie zebranych danych zaproponuj:
 
 Zasada wyceny wdrożeń: `(godziny × 1.3) × stawka + infrastruktura + 20% marża`, zaokrąglij do "przyjaznych" kwot (np. 24 900 zamiast 25 100).
 
+### Pricing Psychology — świadome decyzje
+
+Załaduj `references/pricing-psychology.md` przed finalizacją cen. Quick checklist (apply silently, don't expose to client):
+
+- **Charm vs Round:** Premium / strategiczne wdrożenia → round (24 900). Szkolenia katalogowe / discount → charm (4 999, 3 990).
+- **Anchoring:** W tabeli pokazuj Opcję B (premium) **pierwszą lub po prawej z bold** — kotwicząc wyżej. Opcja A wygląda potem rozsądnie. NIE zaczynaj od ceny minimum.
+- **Decoy (3 opcje):** Tylko jeśli klient waha się i targetujesz Opcję B — dodaj C "racjonalne ale za drogie" jako decoy. Pomiń jeśli klient zdecydowany.
+- **Mental Accounting:** Pod ceną dodaj rozbicie: "24 900 = 2 075 zł/mies. amortyzacji" lub "4 999 = 333 zł/osoba przy 15 uczestnikach".
+- **Loss Framing:** W "Dlaczego Warto" wstaw 1 (max 2) loss frame — "co tracicie nie wdrażając". Nie nadużywaj — PL klienci wyczuleni na fear-mongering.
+
 Pokaż kalkulację Kacprowi i poczekaj na potwierdzenie/korektę przed generowaniem dokumentu.
 
 ---

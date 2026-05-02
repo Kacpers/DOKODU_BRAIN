@@ -94,6 +94,29 @@ Na podstawie historii Kacpra i subject line:
 
 ---
 
+## KROK 4B (opcjonalne): Deep Sweep dla high-stakes maili
+
+**Włącz dla:** launch kampanii, sprzedażowych, ważnych ogłoszeń. Skip dla zwykłych edukacyjnych newsletterów (KROK 4 wystarczy).
+
+Załaduj `references/seven-sweeps.md` i przeprowadź 7 sequencyjnych passów (Clarity → Voice → So What → Prove It → Specificity → Emotion → Zero Risk). Po każdym sweep loop'uj wstecz — sprawdź czy poprawki nie zepsuły poprzedniego sweepa.
+
+**Quick Anti-Pattern Check** (uruchom zawsze, nawet dla zwykłych maili):
+
+| Anti-pattern | Flag jeśli |
+| :--- | :--- |
+| Wall of Features | 5+ bulletów co produkt umie, bez "więc Ty zyskasz X" |
+| Corporate Speak | "leverage", "synergy", "best-in-class", "kompleksowy" |
+| Buried CTA | CTA pod fold, w PS, lub tylko w stopce |
+| No Proof | "najlepszy", "wiodący" bez liczb / casu / cytatu |
+| One-Mail-Many-Goals | newsletter + sales + event w jednym mailu |
+| Weak Subject | >60 znaków, generyczny, brak hook |
+| Fake Urgency | "TYLKO DZIŚ -30%" bez powodu |
+| All "Ja" Focused | "zrobiłem", "moja firma", "nasz produkt" zamiast "Ty zyskasz" |
+
+Każdy zflagowany anti-pattern → wpisz do "🔴 Krytyczne błędy" w raporcie z KROKU 4.
+
+---
+
 ## KROK 5: Zaproponuj poprawioną wersję
 
 Jeśli ocena < 7/10 — napisz poprawioną wersję emaila lub przynajmniej kluczowych fragmentów.

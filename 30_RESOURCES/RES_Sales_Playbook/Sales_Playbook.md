@@ -254,3 +254,243 @@ Wyslij follow-up (PROMPT-020 variant B).
 ---
 
 *Sprzedaz to system, nie talent. Jezeli nie zamykasz — sprawdz, na ktorym etapie tracisz klientow i napraw ten etap.*
+
+---
+
+## OBJECTION LIBRARY (mapa typowych obiekcji + odpowiedzi)
+
+> Adaptacja `sales-enablement/references/objection-library.md` (coreyhaines31/marketingskills) — przetłumaczone i dostosowane do PL B2B + ICP Dokodu (CEO/COO/IT manager firmy 50-500 prac.).
+
+**Framework odpowiedzi:** Acknowledge → Reframe → Proof → Forward (powtarzaj świadomie, każda obiekcja = 4 kroki, nie 1).
+
+### Quick-Reference (do live calls)
+
+| Obiekcja | Odpowiedź (1-line) | Proof point |
+|---|---|---|
+| "Za drogo" | "Drogo wobec czego? Sprawdźmy ile kosztuje Was ten problem dziś." | ROI calc + case study z payback w X mies. |
+| "Brak budżetu" | "Co musiałoby się zdarzyć, żeby budżet się znalazł w przyszłym kwartale?" | Klient który zaczął od PoC za 15-25k |
+| "X tańszy" | "Tak — i oto co tracicie przy tej cenie." | Side-by-side feature comparison |
+| "Nie ten moment" | "Co zmienia się w przyszłym kwartale, że wtedy będzie lepiej?" | Cost-of-delay calculation (godziny × stawka × tygodnie) |
+| "Może w Q następnym" | "Ok. Jaki minimalny krok teraz, żeby Q nie zaczynał się od zera?" | Klient który zaczął od audytu, dostarczył w Q+1 |
+| "Mamy już [system]" | "Jak to działa w obszarze [konkretny pain]?" | Klient który migrował od podobnego systemu |
+| "Co Was wyróżnia?" | "Dla firm jak Wasza najważniejsza różnica to [konkret]." | Case study z podobnej branży |
+| "Muszę pogadać z szefem" | "Jasne. Co pomoże Ci to przedstawić? Mogę przygotować materiały." | One-pager, ROI calculator |
+| "Komitet decyduje" | "Kto jest w komitecie i co dla każdego z nich jest ważne?" | Multi-persona case study |
+| "U nas wszystko działa" | "Działa — pytanie czy nie kosztuje Was to więcej niż musi." | Benchmark efficiency gaps |
+| "Bezpieczeństwo / RODO?" | "Słusznie. Tu nasza dokumentacja — chętnie zaproszę naszego prawnika." | RODO checklist Dokodu, Alina (Legal partner) |
+| "Próbowaliśmy podobnego — nie wyszło" | "Co konkretnie nie wyszło? Pomogę pokazać dlaczego u nas będzie inaczej." | Klient z podobnym failedem który u nas się udał |
+| "Chcemy najpierw obejrzeć ChatGPT" | "Świetnie — pokażę gdzie ChatGPT się kończy i kiedy potrzeba czegoś innego." | Diagnostic call (bezpłatny) |
+| "Nie chcemy lock-in" | "Wszystko deployujemy na Waszej infrastrukturze. Wy macie kod." | Standard deliverables: code repo + docs |
+
+---
+
+### Szczegółowe odpowiedzi (talk tracks)
+
+#### Cena — "To za drogo"
+
+**Czemu mówi:** Może realne ograniczenie budżetu, sticker shock, lub negocjacyjny taktyka. Często znaczy "nie widzę jeszcze wartości na tę cenę".
+
+**Approach:**
+1. Nie broń ceny od razu. Zapytaj "Drogo wobec czego?"
+2. Re-frame z kosztu na inwestycję — ile kosztuje ich problem dziś?
+3. Przejdź wspólnie ROI calculation
+4. Jeśli budżet jest realnie ograniczony — eksploruj mniejszy entry point
+
+**Talk track:**
+> "Słyszę. Pozwól mi zapytać — ile kosztuje Was ten problem o którym rozmawiamy? Mówiłeś że zespół spędza ~[X godzin] na [zadaniu] tygodniowo. Przy stawce [Y zł] to ~[Z zł] rocznie. Nasz projekt to [W zł] — pytanie brzmi czy wyeliminowanie tego problemu jest warte tej inwestycji."
+
+**Proof:** ROI calculator albo case study z payback period.
+
+**Follow-up Q:** "Gdyby ROI było jasne — czy to coś, co priorytetyzowałbyś w tym kwartale?"
+
+---
+
+#### Cena — "Brak budżetu"
+
+**Czemu mówi:** Budżet może być realnie zalokowany. Albo nie widzą priorytetu — bo jeszcze nie ustanowiony.
+
+**Approach:**
+1. Validate — ograniczenia budżetowe są realne
+2. Zrozum timing — kiedy reset cyklu budżetowego?
+3. Eksploruj alternatywy — PoC, mniejszy zakres, inny budget line
+4. Pomóż zbudować business case żeby stworzyć budżet
+
+**Talk track:**
+> "Rozumiem. Dwa pytania: Kiedy otwiera się Wam następny cykl budżetowy? I — gdybyśmy mogli pokazać jasny ROI z PoC, czy to coś, co dałoby się sfinansować z innego budgetu? Czasem teamy finansują to z oszczędności które ten projekt potem generuje."
+
+**Proof:** Klient który zaczął od PoC 15-25k i potem rozszerzył.
+
+**Follow-up Q:** "Pomógłbym jeśli przygotuję ROI brief który możesz puścić swojemu CFO?"
+
+---
+
+#### Konkurencja — "Mamy już X"
+
+**Czemu mówi:** Mają istniejące rozwiązanie i switching kosztuje. Mogą być zadowoleni — albo nieujawnione frustracje.
+
+**Approach:**
+1. NIE krytykuj konkurencji — zapytaj jak to działa
+2. Probe konkretny pain z ich obecnego setupu
+3. Pozycjonuj jako uzupełnienie jeśli możliwe, replacement jeśli nie
+4. Zaproponuj side-by-side comparison
+
+**Talk track:**
+> "A jak to się sprawdza? Konkretnie w obszarze [gdzie my jesteśmy mocni] — czy spełnia Wasze potrzeby? Pytam bo większość teamów które do nas trafiają od [konkurent] mówi że [konkretny pain point] był tipping point. Nie mówię że to Wy — ale warto wyjaśnić."
+
+**Proof:** Klient który migrował od tego konkretnego konkurenta.
+
+**Follow-up Q:** "Gdybyś mógł zmienić jedną rzecz w obecnym setupie — co by to było?"
+
+---
+
+#### Authority — "Muszę pogadać z szefem"
+
+**Czemu mówi:** Może nie być decision makerem, albo potrzebuje internal buy-in. Czasem stall tactic.
+
+**Approach:**
+1. Wsparcie, NIE presja
+2. Uzbrój ich w materiały do sprzedaży wewnętrznej
+3. Zaproponuj wspólny call z szefem
+4. Zrozum co szef ceni
+
+**Talk track:**
+> "Naturalnie. Co pomoże Ci to przedstawić? Mogę przygotować 1-pager: Wasz problem + nasze rozwiązanie + cyfry ROI. Plus opcja: mogę dołączyć do calla, jeśli to ułatwia. Powiedz tylko czego potrzebujesz."
+
+**Proof:** Champion one-pager + ROI calculator.
+
+**Follow-up Q:** "Co najbardziej interesuje Twojego szefa — ROI, czas, ryzyko czy coś innego?"
+
+---
+
+#### Timing — "Nie ten moment"
+
+**Czemu mówi:** Konkurencyjne priorytety, organizational change, realna capacity, brak urgencji.
+
+**Approach:**
+1. Zrozum co konkuruje o ich uwagę
+2. Skwantyfikuj koszt czekania (cost of delay)
+3. Eksploruj low-commitment kroki które utrzymują momentum
+4. Konkretna data follow-upu
+
+**Talk track:**
+> "Rozumiem — timing ma znaczenie. Mogę zapytać co teraz priorytetyzujecie? Wracam do timingu, bo każdy miesiąc [problemu], na bazie naszej rozmowy, kosztuje team ~[X zł]. 3 mies. opóźnienia = [3X zł]. Co jeśli zmapujemy start tak, żeby pasował do Waszego kalendarza i nie tracicie tej wartości?"
+
+**Proof:** Cost-of-delay calculation z ich konkretnymi liczbami.
+
+**Follow-up Q:** "Co musiałoby się zmienić, żeby to weszło wyżej w priorytetach?"
+
+---
+
+### Czerwone flagi w obiekcjach (kiedy odpuścić)
+
+- "Wszystko nas pasuje, tylko jeszcze nie teraz" + 3 follow-upy bez ruchu → mark as cold, breakup email
+- "Komitet decyduje" + brak dostępu do komitetu po 2 tyg → ask for warm intro lub close
+- "Skoro tak — może mamy lepsze opcje" + cena = jedyny argument → walk away, anti-ICP
+- Pytania techniczne bez kupującego intent ("a jak to działa pod spodem? a jak skaluje?") → educational, nie sales call
+
+---
+
+## BUYER PERSONA CARDS
+
+> Szybkie karty per persona — używane w przygotowaniu do calla (`/brain-prep-call`) i przy customizacji oferty.
+
+### Persona 1: CEO (Pragmatic Innovator)
+
+| Atrybut | Detail |
+|---|---|
+| **Typowe stanowisko** | CEO, Founder, Prezes Zarządu |
+| **Wielkość firmy** | 50-300 prac. (sweet spot dla CEO mającego pełny ogląd) |
+| **Co go boli** | Zespół ginie w operacjach, on/ona spędza za dużo czasu na reaktywności, brak skali |
+| **Czego szuka** | Spokojny sen + skalowalność + retention zespołu |
+| **Co działa** | Konkretny ROI w PLN/mies., case study z podobnej branży, "spokojny sen CEO" framing |
+| **Czego unikać** | Żargon techniczny (Llama vs Claude, RAG vs fine-tune), długie demo techniczne |
+| **CTA** | Diagnoza bezpłatna 30 min + 1-pager "co się zmieni w 90 dni" |
+| **Decision speed** | Szybko (1-2 calle) gdy ROI jasny, free hand budgetowy do ~50k bez komitetu |
+
+### Persona 2: COO / Dyrektor Operacyjny
+
+| Atrybut | Detail |
+|---|---|
+| **Typowe stanowisko** | COO, Dyrektor Operacyjny, Head of Operations |
+| **Wielkość firmy** | 100-500 prac. (gdzie operacje to oddzielna funkcja) |
+| **Co boli** | Procesy ręczne, błędy, koszt zatrudniania junior do "klikania", brak audit trail |
+| **Czego szuka** | Mierzalne KPI po wdrożeniu (czas, błędy, koszt/transakcja), kontrola, predictable scope |
+| **Co działa** | Mierzalne metryki + pilot/PoC pokazujący "before/after", ścisły scope dokumentacja |
+| **Czego unikać** | "Magia AI" framing — chce konkretu krok po kroku |
+| **CTA** | Audyt procesowy 8-15k jako standalone, potem PoC z konkretnym KPI |
+| **Decision speed** | Średnio (2-4 calle), często konsultuje z CEO i CFO. Audyt może puszczać samodzielnie. |
+
+### Persona 3: IT Manager / Head of IT
+
+| Atrybut | Detail |
+|---|---|
+| **Typowe stanowisko** | IT Manager, Head of IT, CTO (jeśli decyzyjny) |
+| **Wielkość firmy** | 100-500 prac. (ma realny budget IT) |
+| **Co boli** | Pressure od biznesu na "wdróżmy AI", brak in-house expertise, security concerns |
+| **Czego szuka** | Architektura, integracje, security/compliance, control nad infrastrukturą |
+| **Co działa** | Self-hosted opcja, kod na ich repo, RODO checklist, security whitepaper |
+| **Czego unikać** | SaaS vendor pitch, "magic platform", "all-in-one" — chce składaków na ich stack |
+| **CTA** | Audyt + Architektura jako Tier 1 — tu wygrywa kompetencjami |
+| **Decision speed** | Wolno (3-5 calli), wymaga PoC i security review. Często jest gatekeeper, nie buyer. |
+
+### Persona Anti-ICP (NIE Twój klient)
+
+- **CTO akademik** — chce dyskutować technologię, nie kupować. Zignoruje cenę.
+- **HR "musi odhaczyć szkolenie"** — bez budżetu transformacyjnego, kupi byle co tanio
+- **CEO mikrofirmy <20 osób bez budgetu >10k** — za mało skali na nasze rozwiązania
+- **"Próbowaliśmy 5 agencji, każda obiecywała"** bez własnego ownership — nie wyniki nas zatrudniają, tylko atmosfera
+
+---
+
+## PITCH DECK FRAMEWORK (10-12 slajdów)
+
+> Adaptacja `sales-enablement/references/deck-frameworks.md`. Używać gdy klient prosi o deck (zamiast PDF oferty), albo Kacper jedzie na call enterprise.
+
+### Story arc, NIE feature tour
+
+Każdy deck opowiada 1 historię: świat ma problem → jest lepszy sposób → oto dowód → oto jak tam dotrzeć.
+
+### Slide-by-slide
+
+1. **Tytuł** — Nazwa Klienta × Dokodu | Data | Ich wyzwanie w 1 zdaniu
+2. **Świat dziś** — Pain który klient żyje (ich język z discovery, nie nasz)
+3. **Koszt problemu** — Co kosztuje bezczynność? (czas/PLN/ryzyko) — KONKRETNA liczba
+4. **Co się zmienia** — Trend rynku/technologii tworzący urgency (AI Act, koszt pracy 2026, branżowy disruption)
+5. **Nasze podejście** — JAK rozwiązujemy inaczej niż konkurencja (3 punkty max)
+6. **Demo / Walkthrough** — 3-4 kluczowe workflow, NIE tour po featurach
+7. **Proof points** — Liczby z naszych projektów (Animex 40 os., Corleonis X efekt, Pedrollo demo) + logos
+8. **Case study** — JEDNA historia klienta dobrze opowiedziana (problem → co zrobili → wynik)
+9. **Implementacja / Timeline** — Jak dojadą z tu do live: tygodnie 1-2 / 3-6 / 7-8
+10. **ROI / Wartość** — Expected return + payback period w miesiącach
+11. **Inwestycja** — Transparentnie, 2-3 opcje (Good-Better-Best)
+12. **Następny krok** — Konkretna akcja z timelinem (kickoff w tygodniu X)
+
+### Customization per Buyer
+
+| Buyer | Wzmocnij | Ścisz |
+|---|---|---|
+| **CEO** | ROI, payback, business outcome, spokojny sen | Architektura, technical detail |
+| **COO** | KPI before/after, mierzalne metryki, scope, kontrola | Marketing buzzwords, "AI magic" |
+| **IT Manager / CTO** | Architektura, integracje, security, code repo | ROI calculations, business metrics |
+
+### Deck Principles
+
+- **One idea per slide** — jeśli potrzeba 2 punkty, to 2 slajdy
+- **Design for presenting, not reading** — minimum tekstu, mocne wizuale, deck wspiera rozmowę
+- **Cyfry > przymiotniki** — "ROI 4 mies." > "wysoki ROI"
+- **Zawsze custom subscription** — slajd 8 (case study) zawsze z PODOBNEJ branży klienta
+
+### Tooling
+
+- Generuj przez `/pptx` skill (Python python-pptx)
+- Template w: `30_RESOURCES/RES_Templates/Pitch_Deck_Template.pptx` (do utworzenia)
+- Custom dla każdego klienta: zmień slajdy 2 (świat dziś), 3 (koszt), 8 (case study), 11 (inwestycja)
+
+---
+
+## NOTATKA O ŹRÓDLE
+
+Sekcje **Objection Library**, **Buyer Persona Cards**, **Pitch Deck Framework** dodane 2026-05-02 z adaptacji `sales-enablement` skill (coreyhaines31/marketingskills) — dostosowane do PL B2B, ICP Dokodu i TOV Kacpra.
+
+Pełen oryginalny Objection Library w: `/tmp/marketingskills/skills/sales-enablement/references/objection-library.md` (~30 obiekcji w EN, jeśli chcesz głębiej).
+

@@ -125,7 +125,7 @@ Gdy Kacper poda imię, nazwisko i stanowisko, wygeneruj:
 - Podpis: Kacper | dokodu.it
 
 **C) Cold email jako backup**
-- Subject line (krótki, z nazwą firmy)
+- Subject line: 2-4 słowa, lowercase, BEZ imienia odbiorcy (-12% reply!), bez sales speak — wzór patrz `references/subject-lines.md`
 - Body: 5-7 zdań max
 - CTA: 30-min rozmowa
 - Podpis z linkiem do dokodu.it/automatyzacja-ai
@@ -151,10 +151,28 @@ Zapytaj:
 
 ## Tryb `/outreach status`
 
-Pokaż tabelę ze wszystkimi kontaktami i ich statusem. Podświetl:
-- Zaproszenia bez akceptacji >5 dni → "Rozważ cold email"
-- Akceptacje bez DM → "Wyślij DM dziś"
-- DM bez odpowiedzi >7 dni → "Ostatni follow-up"
+Pokaż tabelę ze wszystkimi kontaktami i ich statusem. Podświetl wg cadence (patrz `references/follow-up-cadence.md`):
+
+| Sygnał | Akcja |
+| :--- | :--- |
+| Zaproszenia bez akceptacji >5 dni | Rozważ cold email z innym angle |
+| Akceptacje bez DM | Wyślij DM dziś (Day 0 sequence) |
+| DM bez odpowiedzi 3 dni | Touch 1 — nowa wartość/insight |
+| DM bez odpowiedzi 7-8 dni | Touch 2 — social proof / mini-case |
+| DM bez odpowiedzi 14 dni | Touch 3 — resource (ebook, post bloga) |
+| DM bez odpowiedzi 21-28 dni | Touch 4 — **breakup email** (1-2-3 format), potem STOP |
+
+**Reguła brzegowa:** Jeśli wysłałeś breakup mail — nie kontaktuj się ponownie z tej osoby. Honor zobowiązania.
+
+## Follow-up content rules
+
+Każdy follow-up musi spełniać:
+- [ ] Wnosi NOWĄ wartość (nie "bumping this up")
+- [ ] Inny angle niż poprzedni touch
+- [ ] Brak phrases-killerów ("just checking in", "wracam do mojej wiadomości")
+- [ ] CTA dopasowane do seniority (CEO = ultra-low effort, manager = konkret)
+
+Pełna kadencja + przykłady polskich breakup maili → `references/follow-up-cadence.md`
 
 ## Tryb `/outreach [firma]`
 
