@@ -46,6 +46,9 @@ Kategorie: SEO, GA, YT, BIZNES, TECH, INNE
 - 2026-04-15 | BIZNES | Bank&InsurHack follow-up: wypełnić scorecard, wysłać LinkedIn requests, follow-up messages do Tier 1
 - 2026-05-12 | BIZNES | Bank&InsurHack ROI check: ile follow-upów → discovery call → oferta?
 - 2026-05-10 | SEO | Sprawdź dane SEO po sesji 26.04: GSC impressions 13 nowych URL (claude-code, agent-ai-*, n8n/templates, narzedzia-ai-dla-developera-2026), CTR licencja-cennik (baseline 1.3%, target 4-6%), pozycje pillarów. Otwórz `20_AREAS/AREA_Blog_SEO/SEO_Action_Triggers.md` i ewaluuj 6 aktywnych triggerów. DataForSEO weekly W18/W19 powinno mieć diff vs W17. Decyzja: kolejne content moves vs wait.
+- 2026-05-04 | BIZNES | 09:00 — wyślij warm email do **Karolina Pawlak** (`karolina.pawlak@konrem.pl`, Konrem S.A., grupa "transformacja"). Subject: `back-office Konrem`. Angle: paradoks (sprzedają OT, robią Excele). Pełen content w Google Calendar event 09:00. Po wysłaniu: update Outreach_Tracker.md (#16a), follow-up Day 3 (2026-05-07).
+- 2026-05-04 | BIZNES | 09:15 — wyślij warm email do **dr Dariusz Michalak** (`dmichalak@komag.eu`, KOMAG, grupa "transformacja"). Subject: `LLM w R&D`. Angle: research-mode pytanie o LLM w wnioskach grantowych. EDU-AUDIENCE — nie pchaj wdrożenia. Pełen content w Google Calendar event 09:15. Po wysłaniu: update Outreach_Tracker.md (#17a), follow-up Day 7 (2026-05-11).
+- 2026-05-04 | BIZNES | 09:30 — wyślij warm email do **Alan Mrozik** (`alan.mrozik@summ-it.pl`, Summ-IT, junior DBA, grupa "newsletter nowa strona"). Subject: `DBA + n8n`. Angle: tech-tech rozmowa, bridge do Wencela (CEO) lub Okraski (CBDO) w Touch 2. Pełen content w Google Calendar event 09:30. Po wysłaniu: update Outreach_Tracker.md (#18a), follow-up Day 3 (2026-05-07).
 
 ## Wykonane
 
