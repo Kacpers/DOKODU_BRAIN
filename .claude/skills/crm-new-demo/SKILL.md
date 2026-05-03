@@ -109,7 +109,14 @@ Co dalej:
 
 ## Uwagi techniczne
 
-- Każda instancja ma własną bazę i własny container — ~250 MB RAM + 100 MB dysk per instancja
+- Każda instancja ma własną bazę + Meilisearch container + CRM container — ~330 MB RAM + 200 MB dysk per instancja
 - TTL: zalecam manual destroy po 30 dniach jeśli klient nie wraca (Plan 3 doda auto-destroy)
 - Browser cache: jeśli klient zobaczy starą wersję, hard reload Ctrl+Shift+R
 - Jeśli SSL klienta jest zepsuty (np. self-signed), Playwright fetch może failnąć — wtedy dodaj `ignoreHTTPSErrors: true` ad-hoc lub spróbuj URL z http://
+
+### Co dziedziczy każda nowa instancja (nie ruszać, działa out-of-the-box)
+
+- **Meilisearch fuzzy search** — własny container `meilisearch-{slug}` z masterkey w `.env`. Po deployu user musi wejść w `/settings` i kliknąć "Przebuduj indeks" (lub via `/api/admin/reindex`).
+- **AUTH_URL + AUTH_SECRET** — `docker-compose.template.yml` mapuje legacy `NEXTAUTH_*` na `AUTH_*` (Auth.js v5). Bez tego po loginie leci do `https://0.0.0.0:3001`.
+- **NEXTAUTH_URL bez `/api/auth` suffix** — Auth.js v5 ma `basePath:'/api/auth'` w configu osobno. Wcześniejsze instancje (pre-2026-05) miały `/api/auth` w URL — `deploy-instance.sh` automatycznie strippuje przy reuploadzie.
+- **Nginx `proxy_buffer_size 16k`** — JWT cookie z permissions list (~6KB) nie mieści się w default 4KB → 502. Fix już w `/srv/reverse-proxy/conf.d/smartmatch.conf` location `crm-{slug}` (od 2026-05-03).
